@@ -832,6 +832,11 @@ function preencherFormulario() {
     'Quando a nota e liberada ao aluno so da para definir na interface:\n' +
     'abra o formulario -> Configuracoes -> Testes -> "Divulgar nota".\n';
 
+  // Guarda o ID do formulario realmente usado, para as funcoes auxiliares
+  PropertiesService.getScriptProperties().setProperty('FORM_ID_ATIVO', form.getId());
+
+  aplicar_(function () { renomearColunaPontuacao(); }, 'renomear coluna Pontuacao');
+
   Logger.log(resumo);
   aplicar_(function () {
     MailApp.sendEmail(Session.getActiveUser().getEmail(),
@@ -851,6 +856,66 @@ function conferirGabarito() {
   }
   linhas.push('Distribuicao: ' + JSON.stringify(contagem));
   Logger.log(linhas.join('\n'));
+}
+
+/**
+ * Renomeia o cabecalho automatico "Score" para "Pontuacao" na planilha
+ * de respostas. O Google gera essa coluna no idioma do formulario, e pode
+ * reescreve-la quando o formulario e editado.
+ *
+ * USO MANUAL: selecione esta funcao e clique em Executar.
+ *
+ * USO AUTOMATICO (recomendado): crie um gatilho para que ela rode sozinha
+ * a cada resposta enviada:
+ *   1. No menu da esquerda, clique no icone de RELOGIO (Acionadores)
+ *   2. "Adicionar acionador"
+ *   3. Funcao ............: renomearColunaPontuacao
+ *   4. Origem do evento ..: Do formulario
+ *   5. Tipo de evento ....: Ao enviar formulario
+ *   6. Salvar
+ */
+function renomearColunaPontuacao() {
+  var DE = ['Score', 'Pontuação', 'Pontuacao'];
+  var PARA = 'Pontuação';
+
+  var idAtivo = PropertiesService.getScriptProperties().getProperty('FORM_ID_ATIVO');
+  var form = FormApp.openById(idAtivo || CONFIG.FORM_ID);
+  var destinoId;
+  try {
+    destinoId = form.getDestinationId();
+  } catch (e) {
+    Logger.log('Este formulario ainda nao tem planilha de respostas vinculada.');
+    return;
+  }
+  if (!destinoId) {
+    Logger.log('Este formulario ainda nao tem planilha de respostas vinculada.');
+    return;
+  }
+
+  var ss = SpreadsheetApp.openById(destinoId);
+  var abas = ss.getSheets();
+  var renomeadas = 0;
+
+  for (var a = 0; a < abas.length; a++) {
+    var aba = abas[a];
+    if (aba.getLastColumn() < 1 || aba.getLastRow() < 1) { continue; }
+
+    var cabecalhos = aba.getRange(1, 1, 1, aba.getLastColumn()).getValues()[0];
+    for (var c = 0; c < cabecalhos.length; c++) {
+      var atual = String(cabecalhos[c]).trim();
+      if (DE.indexOf(atual) !== -1 && atual !== PARA) {
+        aba.getRange(1, c + 1).setValue(PARA);
+        renomeadas++;
+        Logger.log('Aba "' + aba.getName() + '": coluna ' + (c + 1) +
+                   ' renomeada de "' + atual + '" para "' + PARA + '".');
+      }
+    }
+  }
+
+  if (renomeadas === 0) {
+    Logger.log('Nada a renomear (a coluna ja se chama "' + PARA + '" ou nao foi encontrada).');
+  }
+  return renomeadas;
 }
 
 /** Apaga todas as respostas ja recebidas. Use so para reaplicar a prova. */
