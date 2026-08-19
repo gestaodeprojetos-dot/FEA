@@ -27,6 +27,11 @@ var CONFIG = {
   // Formulario EM BRANCO que voce criou. O script escreve dentro dele.
   FORM_ID: '1NI4fXMCdU0efDH2hop9IbD9HPjd9ocCE_2fYgeoRMOI',
 
+  // Se nao conseguir abrir o FORM_ID acima (conta errada, sem permissao de
+  // edicao, ID invalido), cria um formulario NOVO em vez de parar com erro.
+  // Deixe true para a prova sair de qualquer jeito.
+  CRIAR_NOVO_SE_FALHAR: true,
+
   // Pasta "Diretorio do Formulario". O formulario e a planilha vao para ca.
   FOLDER_ID: '1P5Rl4qnDru-Wjk3hIDr9Q7UwFbN0d5Bp',
 
@@ -661,17 +666,32 @@ function aplicar_(fn, nome) {
 }
 
 function preencherFormulario() {
-  var form;
-  try {
-    form = FormApp.openById(CONFIG.FORM_ID);
-  } catch (e) {
-    throw new Error(
-      'Nao consegui abrir o formulario ' + CONFIG.FORM_ID + '.\n' +
-      'Confira se o ID esta certo e se voce tem permissao de EDICAO nele.\n' +
-      'Detalhe: ' + e);
+  var titulo = CONFIG.ID_POS + ' — ' + CONFIG.TITULO_BASE;
+
+  var form = null;
+  var criouNovo = false;
+
+  if (CONFIG.FORM_ID) {
+    try {
+      form = FormApp.openById(CONFIG.FORM_ID);
+      Logger.log('Formulario existente aberto: ' + CONFIG.FORM_ID);
+    } catch (e) {
+      Logger.log('AVISO: nao consegui abrir o formulario ' + CONFIG.FORM_ID + '.');
+      Logger.log('Causa mais comum: a conta Google logada aqui nao e a dona do ' +
+                 'formulario, ou nao tem permissao de EDICAO nele.');
+      Logger.log('Detalhe: ' + e);
+      if (!CONFIG.CRIAR_NOVO_SE_FALHAR) {
+        throw new Error('Rode o script na MESMA conta dona do formulario, ou ' +
+                        'deixe CRIAR_NOVO_SE_FALHAR = true para gerar um novo.');
+      }
+    }
   }
 
-  var titulo = CONFIG.ID_POS + ' — ' + CONFIG.TITULO_BASE;
+  if (!form) {
+    form = FormApp.create(titulo);
+    criouNovo = true;
+    Logger.log('Formulario NOVO criado: ' + form.getId());
+  }
 
   // ---- limpeza ----
   if (CONFIG.LIMPAR_ANTES) {
@@ -798,6 +818,9 @@ function preencherFormulario() {
   var resumo =
     'FORMULARIO PREENCHIDO\n\n' +
     'Titulo ..........: ' + titulo + '\n' +
+    'Origem ..........: ' + (criouNovo
+        ? 'FORMULARIO NOVO — nao consegui abrir o FORM_ID configurado'
+        : 'formulario existente ' + CONFIG.FORM_ID) + '\n' +
     'ID da Pos .......: ' + CONFIG.ID_POS + '\n' +
     'Questoes ........: ' + QUESTOES.length + '\n' +
     'Pontuacao total .: ' + totalPontos + '\n' +
