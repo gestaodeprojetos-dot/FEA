@@ -44,9 +44,9 @@ var CONFIG = {
   // para bater com o gabarito impresso. Embaralhar bagunça essa referencia.
   EMBARALHAR_ALTERNATIVAS: false,
 
-  // Quando o aluno ve a nota:
-  // 'IMEDIATO' = logo apos enviar | 'MANUAL' = so depois de voce liberar
-  LIBERAR_NOTA: 'MANUAL',
+  // true = exige login Google e limita a 1 resposta por aluno.
+  // Em conta Gmail comum isso pode nao ser aceito; o script avisa e segue.
+  EXIGIR_LOGIN: true,
 
   // Mostrar ao aluno, na revisao: questoes erradas / respostas certas / pontuacao
   MOSTRAR_ERRADAS: true,
@@ -56,6 +56,46 @@ var CONFIG = {
   // true = cria tambem a planilha de respostas ja vinculada
   CRIAR_PLANILHA_RESPOSTAS: true
 };
+
+
+// ======================== IMAGENS (opcional) ========================
+/**
+ * Mapa: numero da questao -> ID de um arquivo de IMAGEM no Drive (PNG/JPG).
+ *
+ * Como preencher:
+ *   1. Salve a imagem (recorte de slide, foto de caso, esquema anatomico)
+ *      em uma pasta do Drive
+ *   2. Abra a imagem, copie o ID da URL:
+ *      drive.google.com/file/d/<<ESTE_PEDACO_E_O_ID>>/view
+ *   3. Cole abaixo na questao correspondente
+ *
+ * Deixe vazio ({}) para gerar a prova sem imagens.
+ *
+ * LIMITACAO DO GOOGLE: o Apps Script nao consegue anexar imagem DENTRO
+ * do bloco da pergunta. O script insere a imagem como um item logo ACIMA
+ * da questao, com legenda. Visualmente funciona bem; se quiser a imagem
+ * colada na pergunta, e preciso arrastar manualmente no editor do Forms.
+ *
+ * MATERIAL DE APOIO ja existente na planilha de aulas, util para recortar
+ * imagens (os links estao na coluna "LINK DO MATERIAL DE APOIO"):
+ *   Q1-Q5   Anatomia   -> "Fisiologia do envelhecimento e anatomia facial"
+ *                         "Anatomia facial completa"
+ *   Q11-Q16 Reologia   -> "Introducao ao preenchimento e industrializacao do AH"
+ *   Q17-Q24 Full face  -> "Raciocinio clinico para o preenchimento de ..."
+ *                         (sulco nasolabial, malar e olheira, mandibula, mento,
+ *                          pre jowl, labiomentoniano, labial, rinomodelacao,
+ *                          temporas, terco superior)
+ *   Q25-Q31 Intercorr. -> "Amaurose - Protocolo de manejo das complicacoes"
+ *                         "Complicacoes agudas isquemicas"
+ *   Q32-Q36 Fios       -> "Estrutura quimica da polidioxanona"
+ */
+var IMAGENS = {
+  // 1:  'COLE_AQUI_O_ID_DA_IMAGEM',
+  // 18: 'COLE_AQUI_O_ID_DA_IMAGEM',
+  // 26: 'COLE_AQUI_O_ID_DA_IMAGEM',
+};
+
+var LEGENDA_IMAGEM = 'Imagem de apoio — questão ';
 
 // ======================= DADOS DA PROVA =========================
 
@@ -624,6 +664,16 @@ var QUESTOES = [
 
 // ============================ SCRIPT ============================
 
+/** Aplica uma configuracao opcional sem derrubar a execucao. */
+function aplicar_(fn, nome) {
+  try {
+    fn();
+  } catch (e) {
+    Logger.log('AVISO: "' + nome + '" nao foi aplicado nesta conta. Ajuste manualmente ' +
+               'nas configuracoes do formulario, se precisar. Detalhe: ' + e);
+  }
+}
+
 function criarFormularioProva() {
   var nome = CONFIG.ID_POS + ' — ' + CONFIG.TITULO_BASE;
 
@@ -639,19 +689,19 @@ function criarFormularioProva() {
   );
 
   form.setIsQuiz(true);
-  form.setCollectEmail(CONFIG.COLETAR_EMAIL);
-  form.setRequireLogin(CONFIG.COLETAR_EMAIL);
   form.setShuffleQuestions(CONFIG.EMBARALHAR_QUESTOES);
   form.setProgressBar(true);
   form.setAllowResponseEdits(false);
-  form.setLimitOneResponsePerUser(true);
-  form.setPublishingSummary(false);
 
-  form.setFeedbackDisplayMode(
-    CONFIG.LIBERAR_NOTA === 'IMEDIATO'
-      ? FormApp.FeedbackType.IMMEDIATE
-      : FormApp.FeedbackType.AFTER_GRADING
-  );
+  // Estas dependem do tipo de conta (Gmail comum x Workspace).
+  // Se nao forem suportadas, o script segue sem quebrar.
+  aplicar_(function () { form.setCollectEmail(CONFIG.COLETAR_EMAIL); }, 'setCollectEmail');
+  aplicar_(function () { form.setPublishingSummary(false); }, 'setPublishingSummary');
+  if (CONFIG.EXIGIR_LOGIN) {
+    aplicar_(function () { form.setRequireLogin(true); }, 'setRequireLogin');
+    aplicar_(function () { form.setLimitOneResponsePerUser(true); }, 'setLimitOneResponsePerUser');
+  }
+
 
   // Identificação do aluno
   form.addSectionHeaderItem()
@@ -665,6 +715,8 @@ function criarFormularioProva() {
 
   var blocoAtual = '';
   var totalPontos = 0;
+  var imagensOk = 0;
+  var imagensFalhas = [];
 
   for (var i = 0; i < QUESTOES.length; i++) {
     var q = QUESTOES[i];
@@ -672,6 +724,23 @@ function criarFormularioProva() {
     if (q.bloco !== blocoAtual) {
       blocoAtual = q.bloco;
       form.addPageBreakItem().setTitle(blocoAtual);
+    }
+
+    // Imagem de apoio, se houver mapeada para esta questao
+    if (IMAGENS[q.n]) {
+      try {
+        var blob = DriveApp.getFileById(IMAGENS[q.n]).getBlob();
+        form.addImageItem()
+            .setTitle(LEGENDA_IMAGEM + q.n)
+            .setImage(blob)
+            .setAlignment(FormApp.Alignment.CENTER)
+            .setWidth(520);
+        imagensOk++;
+      } catch (e) {
+        imagensFalhas.push(q.n);
+        Logger.log('AVISO: nao consegui carregar a imagem da questao ' + q.n +
+                   ' (ID: ' + IMAGENS[q.n] + '). Erro: ' + e);
+      }
     }
 
     var item = form.addMultipleChoiceItem();
