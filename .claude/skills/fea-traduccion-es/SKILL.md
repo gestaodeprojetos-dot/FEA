@@ -70,9 +70,23 @@ o ligamento trocado, a camada invertida, o plano de injeção deslocado.
   filiações, DOI e capas de artigo reproduzidos no material ficam em inglês.
 - **Não traduza marca nem denominação de princípio ativo.** Grafia exata, com ®
   onde o original traz.
-- **Texto embutido em arte não é traduzível no arquivo.** Rótulos dentro de
-  JPG/PNG não têm camada de texto. Levante todos em anexo separado, com página
-  e tradução, para o designer aplicar.
+- **Texto embutido em arte exige OCR, não inspeção.** Rótulos dentro de JPG/PNG
+  não têm camada de texto e **não aparecem na extração normal** — a camada de
+  texto do PDF mente por omissão. Rode OCR em todas as páginas e faça diff
+  contra a camada de texto para isolar o que só existe como imagem:
+
+  ```
+  tesseract pagina.png stdout -l por+eng --psm 3
+  ```
+
+  No ebook de olheiras essa passagem encontrou 194 linhas em 29 páginas que a
+  extração normal não via — incluindo o título na capa. Sem OCR, o inventário
+  de arte sai incompleto e o designer descobre o que falta na diagramação.
+
+  Classifique o achado em três categorias, porque o tratamento difere:
+  **(A)** português na arte → traduzir; **(B)** prancha de atlas de terceiros em
+  inglês → manter e legendar por fora; **(C)** slide do próprio autor em inglês
+  → decisão do autor.
 - **Erros de digitação do original** são corrigidos em silêncio no espanhol e
   listados à parte para o autor. Nunca replique o erro por fidelidade.
 - **Nunca invente dose, unidade ou nome de produto** que não esteja no original.
