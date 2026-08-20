@@ -31,13 +31,13 @@
  *  criarDashboard ......... Monta a aba "Dashboard" na planilha, com os
  *                           dados agrupados. Rode depois das respostas.
  *
- *  conferirGabarito ....... Imprime o gabarito no Registro.
- *  conferirObrigatorias ... Audita se todas as questoes estao obrigatorias.
- *  renomearColunaPontuacao  Troca "Score" por "Pontuacao" na planilha.
- *  encerrarProva .......... Para de aceitar respostas.
- *  limparRespostas ........ Apaga as respostas recebidas (para reaplicar).
+ *  encerrarProva .......... Para de aceitar respostas, no fim do prazo.
  *
- *  As funcoes terminadas com  _  sao internas. Nao precisa rodar.
+ *  myFunction ............. Atalho: faz o mesmo que criarProvaCompleta.
+ *                           Existe para o caso de voce executar a funcao
+ *                           que o Apps Script deixa selecionada por padrao.
+ *
+ *  O dropdown mostra so essas quatro. Todo o resto e interno (sufixo _).
  * ============================================================
  */
 
@@ -664,6 +664,16 @@ var QUESTOES = [
   }
 ];
 
+// ====================== ATALHO / PROTECAO ===========================
+/**
+ * O Apps Script deixa "myFunction" selecionada por padrao em projeto novo.
+ * Este atalho garante que, mesmo executando ela sem trocar no dropdown,
+ * a prova seja criada corretamente.
+ */
+function myFunction() {
+  return criarProvaCompleta();
+}
+
 // ======================== FUNCAO PRINCIPAL ==========================
 
 function criarProvaCompleta() {
@@ -797,7 +807,7 @@ function criarProvaCompleta() {
     relato.push('OK      planilha de respostas ja existia');
   }
   aplicar_(relato, 'renomear coluna de nota para "Pontuacao"',
-           function () { renomearColunaPontuacao(); });
+           function () { renomearColunaPontuacao_(); });
 
   // ---------- 7. pasta ----------
   if (CONFIG.FOLDER_ID) {
@@ -913,7 +923,7 @@ function compartilhar_(relato, rotulo, fileId, nivel) {
 // ========================= FUNCOES DE APOIO =========================
 
 /** Renomeia a coluna automatica de nota para "Pontuacao". */
-function renomearColunaPontuacao() {
+function renomearColunaPontuacao_() {
   var DE = ['Score', 'Pontuação', 'Pontuacao'], PARA = 'Pontuação';
   var form = FormApp.openById(idFormAtivo_());
   var destinoId = null;
@@ -939,7 +949,7 @@ function renomearColunaPontuacao() {
 }
 
 /** Imprime o gabarito no Registro. */
-function conferirGabarito() {
+function conferirGabarito_() {
   var linhas = ['GABARITO (' + QUESTOES.length + ' questoes)'], cont = {};
   for (var i = 0; i < QUESTOES.length; i++) {
     linhas.push(QUESTOES[i].n + ' -> ' + QUESTOES[i].gab);
@@ -950,7 +960,7 @@ function conferirGabarito() {
 }
 
 /** Audita a obrigatoriedade das questoes, sem alterar nada. */
-function conferirObrigatorias() {
+function conferirObrigatorias_() {
   var form = FormApp.openById(idFormAtivo_());
   var itens = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE), faltando = [];
   for (var i = 0; i < itens.length; i++) {
@@ -971,7 +981,7 @@ function encerrarProva() {
 }
 
 /** Apaga as respostas recebidas. Use so para reaplicar a prova. */
-function limparRespostas() {
+function limparRespostas_() {
   FormApp.openById(idFormAtivo_()).deleteAllResponses();
   Logger.log('Respostas apagadas.');
 }
