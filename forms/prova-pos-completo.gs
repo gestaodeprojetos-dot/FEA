@@ -1,88 +1,99 @@
 /**
- * PREENCHE O GOOGLE FORMS DA PROVA DA POS — TECNICAS INJETAVEIS
- * Mentoria Imparavel — Pithon Napoli Experience
+ * ============================================================
+ *  PROVA DA POS — TECNICAS INJETAVEIS  |  ARQUIVO UNICO
+ *  Mentoria Imparavel — Pithon Napoli Experience
+ * ============================================================
  *
- * Este script pega o SEU formulario em branco e insere as 40 questoes,
- * ja como questionario (quiz) autocorrigivel, com gabarito e explicacao.
- * As respostas dos alunos caem numa planilha vinculada.
+ * Este e o unico arquivo necessario. Apague qualquer outro do projeto.
  *
- * ---------------------------- COMO RODAR ----------------------------
- * 1. Abra  script.google.com  ->  Novo projeto
- * 2. Apague o conteudo padrao e cole ESTE arquivo inteiro
- * 3. No topo, selecione a funcao  preencherFormulario  e clique em Executar
- * 4. Autorize quando o Google pedir. Se aparecer "app nao verificado",
- *    clique em  Avancado  ->  Acessar o projeto (nao seguro)
- *    — e o seu proprio script, na sua conta
- * 5. Ao terminar, os links aparecem no Log (Ctrl+Enter) e chegam por e-mail
+ * -------------------------- COMO USAR -----------------------
  *
- * Nao precisa editar nada para rodar. O ID do formulario em branco e o da
- * pasta ja estao preenchidos abaixo.
- * --------------------------------------------------------------------
+ * 1. Abra  script.google.com  e clique em  Novo projeto
+ * 2. Apague o  function myFunction() {}  e cole ESTE arquivo inteiro
+ * 3. Salve com Ctrl+S
+ *    (o dropdown de funcoes so lista as funcoes depois de salvar)
+ * 4. No dropdown do topo, escolha  criarProvaCompleta
+ * 5. Clique em  Executar  e autorize:
+ *       Revisar permissoes -> sua conta -> Avancado ->
+ *       Acessar o projeto (nao seguro) -> Permitir
+ * 6. Espere 1 a 2 minutos. No fim, o Registro mostra os 3 links.
+ *
+ * DEPOIS, quando ja houver respostas:
+ *    escolha  criarDashboard  no dropdown e execute.
+ *
+ * ------------------------ AS FUNCOES ------------------------
+ *
+ *  criarProvaCompleta ..... FAZ TUDO. E a unica que voce precisa rodar.
+ *                           Cria o formulario, insere as 40 questoes com
+ *                           gabarito, configura como prova, cria a planilha,
+ *                           move para a pasta e libera os acessos.
+ *
+ *  criarDashboard ......... Monta a aba "Dashboard" na planilha, com os
+ *                           dados agrupados. Rode depois das respostas.
+ *
+ *  conferirGabarito ....... Imprime o gabarito no Registro.
+ *  conferirObrigatorias ... Audita se todas as questoes estao obrigatorias.
+ *  renomearColunaPontuacao  Troca "Score" por "Pontuacao" na planilha.
+ *  encerrarProva .......... Para de aceitar respostas.
+ *  limparRespostas ........ Apaga as respostas recebidas (para reaplicar).
+ *
+ *  As funcoes terminadas com  _  sao internas. Nao precisa rodar.
+ * ============================================================
  */
 
 // ============================== CONFIG ==============================
 
 var CONFIG = {
 
-  // Formulario EM BRANCO que voce criou. O script escreve dentro dele.
-  FORM_ID: '1NI4fXMCdU0efDH2hop9IbD9HPjd9ocCE_2fYgeoRMOI',
+  // Deixe VAZIO ('') para criar um formulario novo — recomendado.
+  // Para reaproveitar um formulario existente, cole o ID dele aqui.
+  FORM_ID: '',
 
-  // Se nao conseguir abrir o FORM_ID acima (conta errada, sem permissao de
-  // edicao, ID invalido), cria um formulario NOVO em vez de parar com erro.
-  // Deixe true para a prova sair de qualquer jeito.
-  CRIAR_NOVO_SE_FALHAR: true,
-
-  // Pasta "Diretorio do Formulario". O formulario e a planilha vao para ca.
+  // Pasta do Drive onde o formulario e a planilha ficam guardados.
+  // Deixe vazio para usar a raiz do seu Drive.
   FOLDER_ID: '1P5Rl4qnDru-Wjk3hIDr9Q7UwFbN0d5Bp',
 
-  // Identificador da turma/curso. Entra no titulo e no cabecalho.
+  // Identificador da turma. Entra no titulo do formulario e da planilha.
   ID_POS: 'POS-TI-2026',
 
   TITULO_BASE: 'Prova Final — Pós-Graduação em Técnicas Injetáveis',
 
   PONTOS_POR_QUESTAO: 1,
 
-  // ATENCAO: true apaga tudo o que ja existe no formulario antes de
-  // escrever. Como o formulario esta em branco, e o comportamento certo.
-  // Se um dia voce editar a prova a mao e rodar de novo, isso sobrescreve.
-  LIMPAR_ANTES: true,
-
-  // Secao inicial pedindo nome / CPF / turma
-  INCLUIR_IDENTIFICACAO: true,
-
-  COLETAR_EMAIL: true,
-
-  // Exige login Google e 1 resposta por aluno.
-  // Em conta Gmail comum pode nao ser aceito — o script avisa e segue.
-  EXIGIR_LOGIN: true,
-
+  // ---------------------- REGRAS DA PROVA ---------------------------
+  EXIGIR_LOGIN: true,               // aluno precisa de conta Google
+  COLETAR_EMAIL: true,              // registra quem respondeu
+  UMA_RESPOSTA_POR_PESSOA: true,    // resposta unica
+  PERMITIR_EDITAR_RESPOSTA: false,  // nao pode alterar depois de enviar
+  TODAS_OBRIGATORIAS: true,         // nenhuma questao em branco
+  QUEBRA_POR_BLOCO: true,           // uma pagina por bloco tematico
   EMBARALHAR_QUESTOES: false,
 
-  // Uma pagina por bloco tematico (7 blocos). false = tudo numa pagina so.
-  QUEBRA_POR_BLOCO: true,
+  // ------------------- ACESSO DA EQUIPE (por link) ------------------
+  // 'EDITOR' | 'LEITOR' | 'PRIVADO'
+  // Em EDITOR, quem tem o link ve o gabarito e as notas.
+  // Envie esses links somente para a equipe.
+  ACESSO_FORMULARIO: 'EDITOR',
+  ACESSO_PLANILHA: 'EDITOR',
 
-  // Cria e vincula a planilha de respostas
-  CRIAR_PLANILHA_RESPOSTAS: true,
+  // Outros arquivos do Drive para liberar junto. Ex.: ['1abc...', '1def...']
+  ARQUIVOS_EXTRA: [],
 
-  // Move formulario e planilha para FOLDER_ID
-  MOVER_PARA_PASTA: true
+  // Nota minima para aprovacao, em porcentagem
+  NOTA_CORTE_PCT: 60
 };
+
+// Usado pelo dashboard
+var NOTA_CORTE_PCT = CONFIG.NOTA_CORTE_PCT;
 
 // ========================= IMAGENS (opcional) =======================
 /**
- * Mapa: numero da questao -> ID de uma imagem (PNG/JPG) no Drive.
- * Pegue o ID na URL:  drive.google.com/file/d/<<ID>>/view
+ * Mapa: numero da questao -> ID de uma imagem (PNG/JPG) do Drive.
+ * O ID esta na URL:  drive.google.com/file/d/<<ID>>/view
  * Deixe {} para gerar sem imagens.
  *
- * LIMITACAO DO GOOGLE: o Apps Script nao anexa imagem DENTRO do bloco da
- * pergunta. A imagem entra como item logo ACIMA da questao, com legenda.
- *
- * Material de apoio ja existente na planilha de aulas, util para recortar:
- *   Q1-Q5    "Fisiologia do envelhecimento e anatomia facial" / "Anatomia facial completa"
- *   Q11-Q16  "Introducao ao preenchimento e industrializacao do AH"
- *   Q17-Q24  "Raciocinio clinico para o preenchimento de ..." (10 PDFs)
- *   Q25-Q31  "Amaurose - Protocolo" / "Complicacoes agudas isquemicas"
- *   Q32-Q36  "Estrutura quimica da polidioxanona"
+ * O Apps Script nao anexa imagem DENTRO da pergunta — ela entra como
+ * item logo acima, com legenda.
  */
 var IMAGENS = {
   // 18: 'COLE_AQUI_O_ID_DA_IMAGEM',
@@ -653,57 +664,38 @@ var QUESTOES = [
   }
 ];
 
-// ============================== SCRIPT ==============================
+// ======================== FUNCAO PRINCIPAL ==========================
 
-/** Aplica configuracao opcional sem derrubar a execucao. */
-function aplicar_(fn, nome) {
-  try {
-    fn();
-  } catch (e) {
-    Logger.log('AVISO: "' + nome + '" nao foi aplicado nesta conta. ' +
-               'Ajuste manualmente nas configuracoes do formulario. Detalhe: ' + e);
-  }
-}
-
-function preencherFormulario() {
+function criarProvaCompleta() {
+  var relato = [];
   var titulo = CONFIG.ID_POS + ' — ' + CONFIG.TITULO_BASE;
 
-  var form = null;
-  var criouNovo = false;
-
+  // ---------- 1. formulario ----------
+  var form = null, criouNovo = false;
   if (CONFIG.FORM_ID) {
     try {
       form = FormApp.openById(CONFIG.FORM_ID);
-      Logger.log('Formulario existente aberto: ' + CONFIG.FORM_ID);
+      relato.push('OK      formulario existente aberto');
     } catch (e) {
-      Logger.log('AVISO: nao consegui abrir o formulario ' + CONFIG.FORM_ID + '.');
-      Logger.log('Causa mais comum: a conta Google logada aqui nao e a dona do ' +
-                 'formulario, ou nao tem permissao de EDICAO nele.');
-      Logger.log('Detalhe: ' + e);
-      if (!CONFIG.CRIAR_NOVO_SE_FALHAR) {
-        throw new Error('Rode o script na MESMA conta dona do formulario, ou ' +
-                        'deixe CRIAR_NOVO_SE_FALHAR = true para gerar um novo.');
-      }
+      relato.push('AVISO   nao consegui abrir o FORM_ID informado — vou criar um novo');
+      relato.push('        (a conta logada precisa ter permissao de edicao nele)');
     }
   }
-
   if (!form) {
     form = FormApp.create(titulo);
     criouNovo = true;
-    Logger.log('Formulario NOVO criado: ' + form.getId());
+    relato.push('OK      formulario novo criado');
+  }
+  guardarIdForm_(form.getId());
+
+  // ---------- 2. limpa e escreve o cabecalho ----------
+  try { form.deleteAllResponses(); } catch (e) {}
+  var antigos = form.getItems();
+  for (var k = antigos.length - 1; k >= 0; k--) { form.deleteItem(antigos[k]); }
+  if (antigos.length) {
+    relato.push('OK      ' + antigos.length + ' item(ns) antigo(s) removido(s)');
   }
 
-  // ---- limpeza ----
-  if (CONFIG.LIMPAR_ANTES) {
-    aplicar_(function () { form.deleteAllResponses(); }, 'deleteAllResponses');
-    var itens = form.getItems();
-    for (var k = itens.length - 1; k >= 0; k--) {
-      form.deleteItem(itens[k]);
-    }
-    Logger.log('Formulario limpo: ' + itens.length + ' item(ns) removido(s).');
-  }
-
-  // ---- cabecalho ----
   form.setTitle(titulo);
   form.setDescription(
     'ID da Pós: ' + CONFIG.ID_POS + '\n\n' +
@@ -711,37 +703,22 @@ function preencherFormulario() {
     '(alternativas A a E), valendo ' + CONFIG.PONTOS_POR_QUESTAO + ' ponto cada — ' +
     'total de ' + (QUESTOES.length * CONFIG.PONTOS_POR_QUESTAO) + ' pontos.\n\n' +
     'Leia cada caso com atenção e assinale a alternativa mais adequada. ' +
-    'Há apenas uma resposta correta por questão.'
+    'Há apenas uma resposta correta por questão. Todas as questões são ' +
+    'obrigatórias e você pode responder apenas uma vez.'
   );
-
   form.setIsQuiz(true);
-  form.setShuffleQuestions(CONFIG.EMBARALHAR_QUESTOES);
-  form.setProgressBar(true);
-  form.setAllowResponseEdits(false);
 
-  aplicar_(function () { form.setCollectEmail(CONFIG.COLETAR_EMAIL); }, 'setCollectEmail');
-  aplicar_(function () { form.setPublishingSummary(false); }, 'setPublishingSummary');
-  if (CONFIG.EXIGIR_LOGIN) {
-    aplicar_(function () { form.setRequireLogin(true); }, 'setRequireLogin');
-    aplicar_(function () { form.setLimitOneResponsePerUser(true); }, 'setLimitOneResponsePerUser');
-  }
+  // ---------- 3. identificacao ----------
+  form.addSectionHeaderItem()
+      .setTitle('Identificação')
+      .setHelpText('Preencha seus dados antes de iniciar a prova.');
+  form.addTextItem().setTitle('Nome completo').setRequired(true);
+  form.addTextItem().setTitle('CPF').setRequired(true);
+  form.addTextItem().setTitle('Turma / ID da Pós').setRequired(false)
+      .setHelpText('Referência: ' + CONFIG.ID_POS);
 
-  // ---- identificacao do aluno ----
-  if (CONFIG.INCLUIR_IDENTIFICACAO) {
-    form.addSectionHeaderItem()
-        .setTitle('Identificação')
-        .setHelpText('Preencha seus dados antes de iniciar a prova.');
-    form.addTextItem().setTitle('Nome completo').setRequired(true);
-    form.addTextItem().setTitle('CPF').setRequired(true);
-    form.addTextItem().setTitle('Turma / ID da Pós').setRequired(false)
-        .setHelpText('Referência: ' + CONFIG.ID_POS);
-  }
-
-  // ---- questoes ----
-  var blocoAtual = '';
-  var totalPontos = 0;
-  var imagensOk = 0;
-  var imagensFalhas = [];
+  // ---------- 4. questoes ----------
+  var blocoAtual = '', totalPontos = 0, imagensOk = 0, imagensFalhas = [];
   var letras = ['A', 'B', 'C', 'D', 'E'];
 
   for (var i = 0; i < QUESTOES.length; i++) {
@@ -760,11 +737,7 @@ function preencherFormulario() {
             .setAlignment(FormApp.Alignment.CENTER)
             .setWidth(520);
         imagensOk++;
-      } catch (e) {
-        imagensFalhas.push(q.n);
-        Logger.log('AVISO: imagem da questao ' + q.n + ' nao carregou (ID: ' +
-                   IMAGENS[q.n] + '). ' + e);
-      }
+      } catch (e) { imagensFalhas.push(q.n); }
     }
 
     var item = form.addMultipleChoiceItem();
@@ -780,165 +753,243 @@ function preencherFormulario() {
     }
     item.setChoices(escolhas);
 
-    var feedback = FormApp.createFeedback()
-        .setText('Resposta correta: ' + q.gab + '\n\n' + q.exp)
-        .build();
-    item.setFeedbackForIncorrect(feedback);
-    item.setFeedbackForCorrect(feedback);
+    var fb = FormApp.createFeedback()
+        .setText('Resposta correta: ' + q.gab + '\n\n' + q.exp).build();
+    item.setFeedbackForCorrect(fb);
+    item.setFeedbackForIncorrect(fb);
+  }
+  relato.push('OK      ' + QUESTOES.length + ' questoes inseridas — ' + totalPontos + ' pontos');
+  if (imagensOk) { relato.push('OK      ' + imagensOk + ' imagem(ns) inserida(s)'); }
+  if (imagensFalhas.length) {
+    relato.push('AVISO   imagens que nao carregaram: ' + imagensFalhas.join(', '));
   }
 
-  // ---- planilha de respostas ----
-  var linkPlanilha = '(nao criada)';
-  if (CONFIG.CRIAR_PLANILHA_RESPOSTAS) {
-    var destinoExistente = null;
-    try { destinoExistente = form.getDestinationId(); } catch (e) { destinoExistente = null; }
+  // ---------- 5. regras da prova ----------
+  // Ordem importa: login primeiro, porque e-mail e resposta unica dependem dele.
+  aplicar_(relato, 'exigir login do aluno',
+           function () { form.setRequireLogin(CONFIG.EXIGIR_LOGIN); });
+  aplicar_(relato, 'coletar e-mail do respondente',
+           function () { form.setCollectEmail(CONFIG.COLETAR_EMAIL); });
+  aplicar_(relato, 'limitar a 1 resposta por pessoa',
+           function () { form.setLimitOneResponsePerUser(CONFIG.UMA_RESPOSTA_POR_PESSOA); });
+  aplicar_(relato, 'bloquear edicao apos o envio',
+           function () { form.setAllowResponseEdits(CONFIG.PERMITIR_EDITAR_RESPOSTA); });
+  aplicar_(relato, 'aceitar respostas',
+           function () { form.setAcceptingResponses(true); });
+  aplicar_(relato, 'barra de progresso',
+           function () { form.setProgressBar(true); });
+  aplicar_(relato, 'embaralhar questoes = ' + CONFIG.EMBARALHAR_QUESTOES,
+           function () { form.setShuffleQuestions(CONFIG.EMBARALHAR_QUESTOES); });
 
-    if (destinoExistente) {
-      linkPlanilha = SpreadsheetApp.openById(destinoExistente).getUrl() + '  (ja existia)';
-    } else {
-      var ss = SpreadsheetApp.create(CONFIG.ID_POS + ' — Respostas da Prova');
-      form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
-      linkPlanilha = ss.getUrl();
-      if (CONFIG.MOVER_PARA_PASTA) {
-        aplicar_(function () {
-          DriveApp.getFileById(ss.getId()).moveTo(DriveApp.getFolderById(CONFIG.FOLDER_ID));
-        }, 'mover planilha para a pasta');
-      }
-    }
+  if (CONFIG.TODAS_OBRIGATORIAS) {
+    relato.push('OK      ' + marcarTodasObrigatorias_(form) + ' pergunta(s) obrigatoria(s)');
   }
 
-  // ---- pasta ----
-  if (CONFIG.MOVER_PARA_PASTA) {
-    aplicar_(function () {
+  // ---------- 6. planilha de respostas ----------
+  var ssId = null;
+  try { ssId = form.getDestinationId(); } catch (e) { ssId = null; }
+  if (!ssId) {
+    var ss = SpreadsheetApp.create(CONFIG.ID_POS + ' — Respostas da Prova');
+    form.setDestination(FormApp.DestinationType.SPREADSHEET, ss.getId());
+    ssId = ss.getId();
+    relato.push('OK      planilha de respostas criada');
+  } else {
+    relato.push('OK      planilha de respostas ja existia');
+  }
+  aplicar_(relato, 'renomear coluna de nota para "Pontuacao"',
+           function () { renomearColunaPontuacao(); });
+
+  // ---------- 7. pasta ----------
+  if (CONFIG.FOLDER_ID) {
+    aplicar_(relato, 'mover formulario para a pasta', function () {
       DriveApp.getFileById(form.getId()).moveTo(DriveApp.getFolderById(CONFIG.FOLDER_ID));
-    }, 'mover formulario para a pasta');
+    });
+    aplicar_(relato, 'mover planilha para a pasta', function () {
+      DriveApp.getFileById(ssId).moveTo(DriveApp.getFolderById(CONFIG.FOLDER_ID));
+    });
   }
 
-  // ---- resumo ----
-  var resumo =
-    'FORMULARIO PREENCHIDO\n\n' +
-    'Titulo ..........: ' + titulo + '\n' +
-    'Origem ..........: ' + (criouNovo
-        ? 'FORMULARIO NOVO — nao consegui abrir o FORM_ID configurado'
-        : 'formulario existente ' + CONFIG.FORM_ID) + '\n' +
-    'ID da Pos .......: ' + CONFIG.ID_POS + '\n' +
-    'Questoes ........: ' + QUESTOES.length + '\n' +
-    'Pontuacao total .: ' + totalPontos + '\n' +
-    'Imagens .........: ' + imagensOk +
-      (imagensFalhas.length ? '  (falharam: ' + imagensFalhas.join(', ') + ')' : '') + '\n\n' +
-    'LINK PARA O ALUNO: ' + form.getPublishedUrl() + '\n' +
-    'Link de EDICAO ..: ' + form.getEditUrl() + '\n' +
-    'Planilha ........: ' + linkPlanilha + '\n\n' +
-    'Quando a nota e liberada ao aluno so da para definir na interface:\n' +
-    'abra o formulario -> Configuracoes -> Testes -> "Divulgar nota".\n';
+  // ---------- 8. acessos ----------
+  compartilhar_(relato, 'formulario / perguntas', form.getId(), CONFIG.ACESSO_FORMULARIO);
+  compartilhar_(relato, 'planilha de respostas', ssId, CONFIG.ACESSO_PLANILHA);
+  for (var x = 0; x < CONFIG.ARQUIVOS_EXTRA.length; x++) {
+    compartilhar_(relato, 'arquivo extra', CONFIG.ARQUIVOS_EXTRA[x], CONFIG.ACESSO_PLANILHA);
+  }
 
-  // Guarda o ID do formulario realmente usado, para as funcoes auxiliares
-  PropertiesService.getScriptProperties().setProperty('FORM_ID_ATIVO', form.getId());
+  // ---------- 9. resumo ----------
+  var saida =
+    'PROVA PRONTA\n\n' +
+    relato.join('\n') + '\n\n' +
+    '============================================================\n' +
+    'PARA OS ALUNOS  — exige login, resposta unica\n' +
+    form.getPublishedUrl() + '\n\n' +
+    'PARA A EQUIPE  — editar as perguntas\n' +
+    form.getEditUrl() + '\n\n' +
+    'PARA A EQUIPE  — planilha de respostas e dashboard\n' +
+    SpreadsheetApp.openById(ssId).getUrl() + '\n' +
+    '============================================================\n\n' +
+    'Titulo ....: ' + titulo + '\n' +
+    'Questoes ..: ' + QUESTOES.length + '  |  Pontuacao total: ' + totalPontos + '\n' +
+    'Origem ....: ' + (criouNovo ? 'formulario novo' : 'formulario existente') + '\n\n' +
+    'PROXIMOS PASSOS\n' +
+    '1. Teste o link do aluno numa janela anonima (Ctrl+Shift+N)\n' +
+    '2. Se for conta Workspace, confira em Configuracoes > Respostas se nao\n' +
+    '   esta restrito a usuarios da organizacao — isso bloqueia Gmail comum\n' +
+    '3. Quando o aluno ve a nota: Configuracoes > Testes > Divulgar nota\n' +
+    '4. Depois das respostas, rode  criarDashboard\n\n' +
+    'Os dois links da equipe expoem o gabarito e as notas.\n' +
+    'Nao envie nenhum deles aos alunos.\n';
 
-  aplicar_(function () { renomearColunaPontuacao(); }, 'renomear coluna Pontuacao');
-
-  Logger.log(resumo);
-  aplicar_(function () {
+  Logger.log(saida);
+  aplicar_(null, 'e-mail de resumo', function () {
     MailApp.sendEmail(Session.getActiveUser().getEmail(),
-                      '[' + CONFIG.ID_POS + '] Prova pronta no Google Forms', resumo);
-  }, 'enviar e-mail de resumo');
-
-  return resumo;
+                      '[' + CONFIG.ID_POS + '] Prova pronta no Google Forms', saida);
+  });
+  return saida;
 }
 
-/** Conferencia rapida: imprime o gabarito no Log. */
-function conferirGabarito() {
-  var linhas = ['GABARITO (' + QUESTOES.length + ' questoes)'];
-  var contagem = {};
-  for (var i = 0; i < QUESTOES.length; i++) {
-    linhas.push(QUESTOES[i].n + ' -> ' + QUESTOES[i].gab);
-    contagem[QUESTOES[i].gab] = (contagem[QUESTOES[i].gab] || 0) + 1;
-  }
-  linhas.push('Distribuicao: ' + JSON.stringify(contagem));
-  Logger.log(linhas.join('\n'));
-}
+// ========================= FUNCOES INTERNAS =========================
 
-/**
- * Renomeia o cabecalho automatico "Score" para "Pontuacao" na planilha
- * de respostas. O Google gera essa coluna no idioma do formulario, e pode
- * reescreve-la quando o formulario e editado.
- *
- * USO MANUAL: selecione esta funcao e clique em Executar.
- *
- * USO AUTOMATICO (recomendado): crie um gatilho para que ela rode sozinha
- * a cada resposta enviada:
- *   1. No menu da esquerda, clique no icone de RELOGIO (Acionadores)
- *   2. "Adicionar acionador"
- *   3. Funcao ............: renomearColunaPontuacao
- *   4. Origem do evento ..: Do formulario
- *   5. Tipo de evento ....: Ao enviar formulario
- *   6. Salvar
- */
-function renomearColunaPontuacao() {
-  var DE = ['Score', 'Pontuação', 'Pontuacao'];
-  var PARA = 'Pontuação';
-
-  var idAtivo = PropertiesService.getScriptProperties().getProperty('FORM_ID_ATIVO');
-  var form = FormApp.openById(idAtivo || CONFIG.FORM_ID);
-  var destinoId;
+/** Executa uma configuracao opcional sem derrubar a execucao. */
+function aplicar_(relato, rotulo, fn) {
   try {
-    destinoId = form.getDestinationId();
+    fn();
+    if (relato) { relato.push('OK      ' + rotulo); }
   } catch (e) {
-    Logger.log('Este formulario ainda nao tem planilha de respostas vinculada.');
+    if (relato) { relato.push('FALHOU  ' + rotulo + '  ->  ' + e); }
+    Logger.log('AVISO: "' + rotulo + '" nao foi aplicado. ' + e);
+  }
+}
+
+/** Guarda o ID do formulario em uso, para as outras funcoes o encontrarem. */
+function guardarIdForm_(id) {
+  PropertiesService.getScriptProperties().setProperty('FORM_ID_ATIVO', id);
+}
+
+/** ID do formulario em uso: o da ultima execucao, ou o do CONFIG. */
+function idFormAtivo_() {
+  var id = PropertiesService.getScriptProperties().getProperty('FORM_ID_ATIVO');
+  if (!id) { id = CONFIG.FORM_ID; }
+  if (!id) {
+    throw new Error('Nenhum formulario encontrado. Rode criarProvaCompleta primeiro.');
+  }
+  return id;
+}
+
+/** Marca todas as perguntas como obrigatorias. Devolve quantas ficaram. */
+function marcarTodasObrigatorias_(form) {
+  var itens = form.getItems(), total = 0;
+  for (var i = 0; i < itens.length; i++) {
+    var it = itens[i], tipo = it.getType(), alvo = null;
+    if (tipo === FormApp.ItemType.MULTIPLE_CHOICE) { alvo = it.asMultipleChoiceItem(); }
+    else if (tipo === FormApp.ItemType.CHECKBOX) { alvo = it.asCheckboxItem(); }
+    else if (tipo === FormApp.ItemType.LIST) { alvo = it.asListItem(); }
+    else if (tipo === FormApp.ItemType.TEXT) { alvo = it.asTextItem(); }
+    else if (tipo === FormApp.ItemType.PARAGRAPH_TEXT) { alvo = it.asParagraphTextItem(); }
+    else if (tipo === FormApp.ItemType.SCALE) { alvo = it.asScaleItem(); }
+    else if (tipo === FormApp.ItemType.GRID) { alvo = it.asGridItem(); }
+    else if (tipo === FormApp.ItemType.DATE) { alvo = it.asDateItem(); }
+    if (!alvo) { continue; }                                   // cabecalho, imagem, quebra
+    if (it.getTitle() === 'Turma / ID da Pós') { continue; }    // campo opcional
+    alvo.setRequired(true);
+    total++;
+  }
+  return total;
+}
+
+/** Compartilha um arquivo do Drive no nivel pedido. */
+function compartilhar_(relato, rotulo, fileId, nivel) {
+  if (!fileId) { return; }
+  if (nivel === 'PRIVADO') {
+    relato.push('OK      ' + rotulo + ' mantido PRIVADO');
     return;
   }
-  if (!destinoId) {
-    Logger.log('Este formulario ainda nao tem planilha de respostas vinculada.');
-    return;
-  }
+  var permissao = (nivel === 'EDITOR') ? DriveApp.Permission.EDIT : DriveApp.Permission.VIEW;
+  aplicar_(relato, rotulo + ' liberado por link (' + nivel + ')', function () {
+    DriveApp.getFileById(fileId).setSharing(DriveApp.Access.ANYONE_WITH_LINK, permissao);
+  });
+}
 
-  var ss = SpreadsheetApp.openById(destinoId);
-  var abas = ss.getSheets();
-  var renomeadas = 0;
+// ========================= FUNCOES DE APOIO =========================
 
+/** Renomeia a coluna automatica de nota para "Pontuacao". */
+function renomearColunaPontuacao() {
+  var DE = ['Score', 'Pontuação', 'Pontuacao'], PARA = 'Pontuação';
+  var form = FormApp.openById(idFormAtivo_());
+  var destinoId = null;
+  try { destinoId = form.getDestinationId(); } catch (e) { destinoId = null; }
+  if (!destinoId) { Logger.log('Sem planilha de respostas vinculada.'); return 0; }
+
+  var abas = SpreadsheetApp.openById(destinoId).getSheets(), renomeadas = 0;
   for (var a = 0; a < abas.length; a++) {
     var aba = abas[a];
     if (aba.getLastColumn() < 1 || aba.getLastRow() < 1) { continue; }
-
-    var cabecalhos = aba.getRange(1, 1, 1, aba.getLastColumn()).getValues()[0];
-    for (var c = 0; c < cabecalhos.length; c++) {
-      var atual = String(cabecalhos[c]).trim();
+    var cab = aba.getRange(1, 1, 1, aba.getLastColumn()).getValues()[0];
+    for (var c = 0; c < cab.length; c++) {
+      var atual = String(cab[c]).trim();
       if (DE.indexOf(atual) !== -1 && atual !== PARA) {
         aba.getRange(1, c + 1).setValue(PARA);
         renomeadas++;
-        Logger.log('Aba "' + aba.getName() + '": coluna ' + (c + 1) +
-                   ' renomeada de "' + atual + '" para "' + PARA + '".');
       }
     }
   }
-
-  if (renomeadas === 0) {
-    Logger.log('Nada a renomear (a coluna ja se chama "' + PARA + '" ou nao foi encontrada).');
-  }
+  Logger.log(renomeadas ? renomeadas + ' coluna(s) renomeada(s) para "Pontuacao".'
+                        : 'Nada a renomear.');
   return renomeadas;
+}
+
+/** Imprime o gabarito no Registro. */
+function conferirGabarito() {
+  var linhas = ['GABARITO (' + QUESTOES.length + ' questoes)'], cont = {};
+  for (var i = 0; i < QUESTOES.length; i++) {
+    linhas.push(QUESTOES[i].n + ' -> ' + QUESTOES[i].gab);
+    cont[QUESTOES[i].gab] = (cont[QUESTOES[i].gab] || 0) + 1;
+  }
+  linhas.push('Distribuicao: ' + JSON.stringify(cont));
+  Logger.log(linhas.join('\n'));
+}
+
+/** Audita a obrigatoriedade das questoes, sem alterar nada. */
+function conferirObrigatorias() {
+  var form = FormApp.openById(idFormAtivo_());
+  var itens = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE), faltando = [];
+  for (var i = 0; i < itens.length; i++) {
+    var mc = itens[i].asMultipleChoiceItem();
+    if (!mc.isRequired()) { faltando.push(mc.getTitle().substring(0, 45)); }
+  }
+  Logger.log('Questoes: ' + itens.length + '  |  nao obrigatorias: ' + faltando.length +
+             (faltando.length ? '\n' + faltando.join('\n') : '  — tudo certo.'));
+}
+
+/** Para de aceitar respostas. */
+function encerrarProva() {
+  var form = FormApp.openById(idFormAtivo_());
+  form.setAcceptingResponses(false);
+  form.setCustomClosedFormMessage(
+    'A prova foi encerrada. Em caso de dúvida, procure a coordenação.');
+  Logger.log('Prova encerrada — nao aceita mais respostas.');
+}
+
+/** Apaga as respostas recebidas. Use so para reaplicar a prova. */
+function limparRespostas() {
+  FormApp.openById(idFormAtivo_()).deleteAllResponses();
+  Logger.log('Respostas apagadas.');
 }
 
 // ============================ DASHBOARD =============================
 /**
- * Monta a aba "Dashboard" (2a aba) da planilha de respostas, com os dados
- * agrupados: visao geral, distribuicao de notas, desempenho por bloco,
- * questoes mais erradas e mais acertadas, tabela completa e ranking.
+ * Monta a aba "Dashboard" (2a aba) da planilha de respostas: visao geral,
+ * distribuicao de notas, desempenho por bloco, questoes mais erradas e mais
+ * acertadas, tabela completa e ranking.
  *
- * USO MANUAL: selecione  criarDashboard  e clique em Executar.
+ * Rode depois de haver respostas. Para atualizar sozinho a cada prova
+ * entregue, crie um gatilho (icone de RELOGIO no menu da esquerda):
+ *   Funcao = criarDashboard | Origem = Do formulario | Evento = Ao enviar
  *
- * USO AUTOMATICO: crie um gatilho (icone de RELOGIO no menu da esquerda):
- *   Funcao = criarDashboard | Origem = Do formulario | Evento = Ao enviar formulario
- * Assim o painel se atualiza sozinho a cada prova entregue.
- *
- * A aba e recriada do zero a cada execucao — nao edite nada dentro dela,
- * porque sera sobrescrito.
+ * A aba e recriada a cada execucao — nao edite nada dentro dela.
  */
-
-var NOTA_CORTE_PCT = 60;   // % minimo para considerar aprovado
-
 function criarDashboard() {
-  var idAtivo = PropertiesService.getScriptProperties().getProperty('FORM_ID_ATIVO');
-  var form = FormApp.openById(idAtivo || CONFIG.FORM_ID);
+  var form = FormApp.openById(idFormAtivo_());
 
   var destinoId = null;
   try { destinoId = form.getDestinationId(); } catch (e) { destinoId = null; }
@@ -1232,10 +1283,4 @@ function criarDashboard() {
             (aprovados / total * 100).toFixed(1) + '%.';
   Logger.log(msg);
   return msg;
-}
-
-/** Apaga todas as respostas ja recebidas. Use so para reaplicar a prova. */
-function limparRespostas() {
-  FormApp.openById(CONFIG.FORM_ID).deleteAllResponses();
-  Logger.log('Respostas apagadas.');
 }
