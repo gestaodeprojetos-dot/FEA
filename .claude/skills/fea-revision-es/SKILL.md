@@ -82,6 +82,24 @@ O que esta camada pega e as outras não: o número certo na estrutura errada, o
 ligamento trocado, a ordem dos passos invertida, o «não» perdido. São erros que
 o texto espanhol não denuncia — ele fica perfeitamente legível e diz outra coisa.
 
+### Camada 3b — Mídia e QR Codes
+
+Confira que existe **inventário de mídia** e que ele está completo:
+
+```
+python3 ../fea-traduccion-es/scripts/inventario_midia.py original.pdf
+```
+
+Compare o que o script encontra com o inventário entregue. Falta de ativo no
+inventário é **classe A** — não é estilo, é entrega incompleta: um QR levando a
+vídeo em português num material espanhol quebra a experiência do aluno.
+
+Verifique também:
+- todo destino de **vídeo** tem linha no inventário, com rótulo ES e assunto;
+- todo `?t=` foi marcado para **recalcular** (corte diferente move o trecho);
+- **ativos únicos vs QR a regerar** estão contados separadamente;
+- QR de **artigo científico** não foi alterado.
+
 ### Camada 4 — Voz nativa
 
 Leia como leitor final, sem o original ao lado. Pergunte em cada parágrafo:

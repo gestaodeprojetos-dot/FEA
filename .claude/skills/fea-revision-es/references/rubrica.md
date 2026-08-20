@@ -19,6 +19,9 @@ severidades, escolha a mais alta.
 - Tuteo ou voseo em material de registro formal.
 - Ênclise em verbo finito (`aplicase`), mesóclise, futuro do subjuntivo.
 - Trecho do original simplesmente ausente na tradução.
+- Vídeo referenciado no material sem linha no inventário de mídia, ou QR
+  apontando para ativo em português numa entrega espanhola.
+- Marcador de tempo `?t=` reaproveitado sem recálculo na versão ES.
 
 ## GRAVE — corrige antes de publicar
 

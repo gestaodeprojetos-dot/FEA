@@ -111,6 +111,50 @@ o ligamento trocado, a camada invertida, o plano de injeção deslocado.
 - **Nunca invente dose, unidade ou nome de produto** que não esteja no original.
   Se o original é ambíguo, traduza mantendo a ambiguidade e sinalize ao autor.
 
+## Passagem obrigatória — inventário de mídia e QR Codes
+
+**Todo vídeo referenciado no material precisa de versão em espanhol.** Um ebook
+traduzido cujos QR levam a vídeo em português está entregue pela metade: o aluno
+hispano-hablante lê em espanhol e assiste em português.
+
+Nos materiais FEA os botões de vídeo são **arte, não anotação de link** — o
+destino está codificado dentro da imagem do QR. Extração normal de PDF não vê
+nada. Rode:
+
+```
+python3 scripts/inventario_midia.py material.pdf
+```
+
+O script decodifica os QR (OpenCV, 300 e 450 dpi), separa YouTube de Drive,
+detecta marcador de tempo `?t=` e aponta quais IDs do Drive classificar. Depois,
+classifique cada destino do Drive pelo **mimeType real** (`video/mp4` = traduzir;
+`application/pdf` = artigo, permanece em inglês).
+
+Produza a tabela de inventário com, para cada ativo:
+
+| Campo | Por quê |
+|---|---|
+| **Página** do PDF | Para localizar o QR na arte |
+| **Rótulo PT** e **rótulo ES** | Para o designer saber qual botão é qual |
+| **Assunto** | Para achar o ativo depois sem abrir o vídeo |
+| **Arquivo de origem** | Nome real no Drive, não o rótulo do botão |
+| **Link atual** | Destino de hoje |
+| **Link ES** | Em branco, a preencher quando o ativo ES existir |
+| **Marcador de tempo** | Se havia `?t=`, **recalcular** — corte diferente move o trecho |
+| **Status** | pendente / em produção / pronto |
+
+Três regras que evitam erro de planejamento:
+
+1. **Ativos únicos ≠ QR a regerar.** Um mesmo vídeo pode ser chamado de várias
+   páginas. No ebook de olheiras: 19 ativos a produzir, 22 QR a regerar.
+2. **QR de artigo científico não se toca.** Citação permanece em inglês, link
+   permanece igual.
+3. **O QR é imagem.** Trocar o link não muda o QR — a imagem tem de ser regerada
+   e substituída na arte, e conferida por escaneamento real antes de fechar.
+
+Se o material não for PDF (slide, página, aula), levante os links pelo formato
+de origem, mas produza a **mesma tabela**: sem ela o vídeo em português passa.
+
 ## Handoff obrigatório para a revisão
 
 Tradução própria não se auto-aprova. Ao fechar, passe o material para a skill
