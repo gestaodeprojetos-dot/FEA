@@ -1,4 +1,4 @@
-# CLAUDE.md
+# CLAUDE.md (projeto FEA)
 
 Arquivo único de contexto deste repositório. Regras de comportamento válidas em toda sessão, sistema de gestão de projetos e ClickUp, e todo o contexto do cliente FEA (Dr. João Pithon).
 
@@ -47,6 +47,22 @@ Crivo antes de qualquer entrega: *"Isso passaria pela avaliação minuciosa dos 
 ## Postura
 
 Parceria direta. Se discordar de uma sugestão da Keila, falar com o raciocínio, nunca concordar só para agradar. Olhar juntos quando houver divergência.
+
+## Nomenclatura obrigatória: prefixo FEA
+
+Todo arquivo, pasta ou skill criado neste projeto leva **FEA** no nome, para nunca misturar com material de outro cliente ou projeto.
+
+| Tipo | Padrão | Exemplo |
+|------|--------|---------|
+| Markdown, documento, análise, relatório | `FEA-` no início do nome | `FEA-briefing-funil-eterno.md`, `FEA-analise-ebook.md` |
+| HTML, dashboard, apresentação | `FEA-` no início | `FEA-dash-clickup-15dias.html` |
+| Skill do Claude Code | prefixo `fea-` (skill exige minúsculas e hífen) | `fea-copy-lancamento`, `fea-clickup-ronda` |
+| Pasta de entrega | `FEA-` no início | `FEA-lancamento-dez-2026/` |
+| Script | `fea_` ou `FEA-` conforme a linguagem | `fea_ronda_prazos.py` |
+
+**Duas exceções técnicas, e só elas:** `CLAUDE.md` e `README.md` precisam manter esses nomes exatos porque o Claude Code e o GitHub só reconhecem esses arquivos por nome. Nos dois casos, identificar o projeto no título dentro do arquivo, como está feito aqui.
+
+Nome de skill não aceita maiúscula nem espaço, então ali o prefixo vai minúsculo (`fea-`). Em todo o resto, `FEA-` maiúsculo, que é como aparece na pasta e no Drive.
 
 ## Regras gerais de arquivo
 
