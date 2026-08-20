@@ -16,14 +16,20 @@ técnico seja decidido no improviso.
 `references/00-nucleo.md` é **obrigatório em toda tradução**. Depois carregue o
 módulo do tema tratado:
 
-| Módulo | Cobre |
-|---|---|
-| `00-nucleo.md` | Anatomia facial, planos e camadas, instrumental, assepsia, avaliação, registro clínico, linguagem didática e comercial, convenções de unidade e formato |
-| `11-rellenos-ah-ojeras.md` | Ácido hialurônico, reologia (G', SF), região infraorbital, ligamentos retentores, pertuitos, efeito Tyndall, hialuronidase |
-| `12-toxina-botulinica.md` | Toxina botulínica, unidades, diluição, músculos da mímica, ptose, marcas |
-| `13-bioestimuladores.md` | PLLA, CaHA, PDRN, skinboosters, neocolagênese |
-| `14-fios.md` | Fios de PDO/PLLA, tração, vetores, agulha-guia |
-| `15-complicaciones-vasculares.md` | Isquemia, necrose, cegueira, protocolo de emergência |
+| Módulo | Cobre | Base |
+|---|---|---|
+| `00-nucleo.md` | Anatomia facial, planos e camadas, produtos e ativos, técnica e instrumental, avaliação e registro clínico, linguagem didática e comercial, convenções de formato | 2 ebooks + 684 títulos de aula |
+| `11-rellenos-ah-ojeras.md` | Ácido hialurônico, reologia (G', SF), região infraorbital, ligamentos retentores, pertuitos, efeito Tyndall | ebook de olheiras |
+| `15-intercurrencias.md` | 30 intercorrências, farmacologia de emergência, doses e vias, protocolos PDRR e PithonNapoli | ebook de intercorrências |
+| `12-toxina-botulinica.md` | Toxina, unidades, diluição, músculos da mímica, ptose | ⏳ 8 módulos no catálogo, material pendente |
+| `13-bioestimuladores.md` | PLLA, CaHA, PDRN, skinboosters, neocolagênese | ⏳ 3 módulos no catálogo, material pendente |
+| `14-hilos.md` | Fios de colágeno e de tração, vetores, previsibilidade | ⏳ 9 módulos no catálogo, material pendente |
+| `16-corporales.md` | Glúteo, mama, membros, celulite, estrias | ⏳ 4 módulos no catálogo, material pendente |
+| `17-tecnologias.md` | Laser, ultrassom, radiofrequência | ⏳ 2 módulos no catálogo, material pendente |
+| `18-dermatologia.md` | Peelings, skincare, tricologia, intradermoterapia | ⏳ 4 módulos no catálogo, material pendente |
+| `19-gestion.md` | Gestão de clínicas, marketing, vendas, precificação | ⏳ 7 módulos no catálogo, material pendente |
+| `90-decisiones.md` | Registro de decisões terminológicas e pendências do autor | vivo |
+| `91-catalogo-aulas.txt` | Mapa das 684 aulas em 62 módulos, para dimensionar escopo | planilha de produção |
 
 Se o tema não tem módulo, traduza com o núcleo, **registre os termos novos** e
 crie o módulo ao final. Um glossário que não cresce a cada trabalho é um
