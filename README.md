@@ -1,10 +1,5 @@
 # FEA
 
-## Skill instalada
+Contexto operacional em arquivo único: `CLAUDE.md` na raiz.
 
-`.claude/skills/fea-central/` carrega o contexto de operação da Keila Quaresma (autonomia, disciplina de estilo, gestão de projetos, ClickUp) e do cliente FEA (Dr. João Pithon): tom de voz, linha vermelha, identidade visual, calendário, equipe e templates.
-
-- `SKILL.md`: regras sempre aplicáveis.
-- `references/gestao-projetos-clickup.md`: ClickUp, backlog de lançamento, ronda de prazos.
-- `references/fea-contexto.md`: produtos, calendário, equipe, Funil Eterno, acessos.
-- `references/template-sop.md`: template de SOP e checklist rápido.
+Cobre as regras de comportamento da Keila (autonomia, disciplina de estilo, protocolo de execução, padrão de qualidade, regras de arquivo, multi-cliente), o sistema de gestão de projetos e ClickUp (regra de datas, backlog de lançamento, ronda de prazos), todo o contexto do cliente FEA (identidade, tom médico-científico, linha vermelha, identidade visual, produtos, calendário, equipe, copy, Funil Eterno, acessos) e o template de SOP.
