@@ -102,14 +102,64 @@ Procure:
 Consulte `01-voz-y-estilo.md` para o repertório e para os oito lusismos
 sintáticos.
 
-## Severidades
+## Aceitação em dois níveis
 
-| Severidade | Critério | Consequência |
+Perfeição não é critério de entrega, e média não é critério de segurança. Por
+isso a aceitação tem **dois níveis separados**, e o percentual existe só no
+segundo.
+
+### Classe A — barreira clínica · tolerância zero · fora do percentual
+
+Dose · concentração · unidade · posologia · via de administração · nome de
+fármaco · plano anatômico · camada · lado e sentido · negação · omissão de
+trecho · contraindicação ou alerta suavizado · sigla de autor quebrada ·
+tuteo/voseo em material formal.
+
+**Um único achado de classe A retém a entrega, qualquer que seja o índice.**
+
+Não se calcula percentual de segurança clínica. Um material com 99 % de índice
+e uma dose trocada não está 99 % bom: está errado no ponto que importa. Esta
+classe é pequena e barata de verificar — não é ela que atrasa a entrega.
+
+### Classe B — índice editorial · admite grau
+
+Terminologia fora do glossário · lusismo sintático · inconsistência interna ·
+ortotipografia · registro · conector.
+
+```
+índice = segmentos sem achado de classe B / segmentos totais
+```
+
+| Índice | Veredito | O que acontece |
 |---|---|---|
-| **BLOQUEANTE** | Erro clínico, de dose, de anatomia, de sentido, ou omissão. | Não publica. |
-| **GRAVE** | Denuncia tradução a um leitor especialista. Termo fora do glossário, lusismo sintático, inconsistência interna. | Corrige antes de publicar. |
-| **MENOR** | Ortotipografia, conector, preferência de registro. | Corrige se houver tempo. |
-| **QUESTÃO AO AUTOR** | O original é ambíguo, contraditório ou tem erro próprio. | Decisão do autor, não do revisor. |
+| **≥ 95 %** | `LIBERADO` | Entrega segue. Pontos para análise anexos. |
+| **80 % a 95 %** | `LIBERADO COM RESSALVAS` | **Entrega segue.** Pontos para análise anexos, com prioridade. |
+| **< 80 %** | `RETIDO` | Volta para tradução. |
+
+O índice vem sempre com **numerador, denominador e densidade por mil
+palavras** — número sem denominador não é medida, é impressão.
+
+### Por que 95 % e não 80 % como linha de liberação
+
+80 % é o **piso de retenção**, não a meta. Num ebook de 300 segmentos, 80 %
+tolera 60 parágrafos com achado — um a cada cinco. O leitor não lê percentual,
+lê parágrafo, e a cada cinco encontra um problema.
+
+Com glossário travado e auditor rodando, o índice observado fica em 99–100 %.
+Portanto 95 % já é folga real, e a faixa 80–95 % existe justamente para o que
+você pediu: **não travar entrega por imperfeição**. Nessa faixa o material
+**sai**, com a lista de pontos anexa.
+
+Se preferir outro par de limiares, mude em `references/rubrica.md` e em
+`fea-traduccion-es/scripts/auditar.py` (`LIMIAR_LIBERA`, `LIMIAR_MINIMO`), e
+registre a decisão em `90-decisiones.md`.
+
+### QUESTÃO AO AUTOR — não entra em nenhum dos dois
+
+O original é ambíguo, se contradiz, ou tem erro próprio. Não é defeito de
+tradução e **não afeta o veredito**. Um material pode estar `LIBERADO` com
+cinco questões ao autor: são coisas distintas — uma é qualidade da tradução, a
+outra é qualidade do original.
 
 ## Formato do relatório
 
@@ -117,8 +167,12 @@ sintáticos.
 REVISÃO — <material> · <data>
 Cobertura: <o que foi revisado; se faltou o original PT, declarar>
 
-VEREDITO: APROVADO | APROVADO COM RESSALVAS | REPROVADO
-  n BLOQUEANTE · n GRAVE · n MENOR · n QUESTÃO AO AUTOR
+VEREDITO: LIBERADO | LIBERADO COM RESSALVAS | RETIDO
+  Classe A (barreira clínica): n   ← qualquer valor > 0 retém
+  Classe B (índice editorial): XX,X %  (n de N segmentos limpos)
+                               n,nn achados por mil palavras
+                               n GRAVE · n MENOR
+  Questões ao autor: n  (não afetam o veredito)
 
 ── BLOQUEANTE ────────────────────────────────
 [1] pág. X · <categoria>
@@ -140,9 +194,14 @@ VEREDITO: APROVADO | APROVADO COM RESSALVAS | REPROVADO
 <falsos positivos encontrados e regra proposta>
 ```
 
-**Veredito é obrigatório e é uma só palavra.** `APROVADO` só com zero
-BLOQUEANTE e zero GRAVE. Um único BLOQUEANTE = `REPROVADO`. Não existe
-«aprovado com um bloqueante pequeno».
+**O bloco PONTOS PARA ANÁLISE é obrigatório em todos os vereditos**, inclusive
+em `LIBERADO`. É o que permite entregar sem travar: a entrega segue e os pontos
+seguem com ela, priorizados. Um relatório que só lista problemas quando reprova
+força o falso binário entre perfeição e silêncio.
+
+Ordene os pontos por **custo de não corrigir**, não por severidade nominal:
+inconsistência interna de um termo que aparece 40 vezes pesa mais que três
+achados menores isolados.
 
 ## O que o revisor não faz
 

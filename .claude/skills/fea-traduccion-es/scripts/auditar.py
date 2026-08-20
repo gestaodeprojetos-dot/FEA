@@ -10,10 +10,24 @@ resíduo de português, lusismo sintático, falso amigo clínico, ortotipografia
 posologia e tratamento. O que sobra depois disto é julgamento — e é aí que
 entra a skill fea-revision-es.
 
-Severidades:
-    BLOQUEANTE  erro clínico ou de sentido; não pode publicar
-    GRAVE       denuncia tradução; leitor especialista percebe
-    MENOR       ortotipografia e preferência de registro
+Dois níveis de aceitação, deliberadamente separados:
+
+CLASSE A — barreira clínica (severidade BLOQUEANTE)
+    Dose, via, fármaco, plano anatômico, lado, negação, omissão, sigla de
+    autor quebrada, tratamento. Tolerância ZERO e NÃO entra no percentual:
+    não se calcula média de segurança clínica.
+
+CLASSE B — índice editorial (severidades GRAVE e MENOR)
+    Terminologia, lusismo, ortotipografia, registro. Aqui sim há percentual,
+    porque é qualidade editorial e admite grau.
+
+    índice = segmentos sem achado de classe B / segmentos totais
+
+Limiares (ajustáveis em references/90-decisiones.md):
+    >= 95 %   LIBERADO
+    80–95 %   LIBERADO COM RESSALVAS  (entrega segue, pontos vão para análise)
+    <  80 %   RETIDO
+Qualquer achado de classe A: RETIDO, independente do índice.
 """
 import re, sys, json, unicodedata
 
@@ -120,6 +134,38 @@ def audita(texto):
                     sugestao='abrir com '+abre))
     return achados
 
+LIMIAR_LIBERA = 95.0
+LIMIAR_MINIMO = 80.0
+
+def indice(texto, achados):
+    """Índice editorial: % de segmentos livres de achado classe B.
+    Classe A fica fora do cálculo de propósito."""
+    segmentos=[l for l in texto.split('\n') if len(l.strip())>2
+               and not l.strip().startswith('[SE CONSERVA')]
+    total=len(segmentos) or 1
+    # linha -> tem achado classe B?
+    linhas_b={a['linha'] for a in achados if a['sev'] in ('GRAVE','MENOR')}
+    # mapear nº de linha do arquivo para índice de segmento
+    mapa={}; n=0
+    for i,l in enumerate(texto.split('\n'),1):
+        if len(l.strip())>2 and not l.strip().startswith('[SE CONSERVA'):
+            mapa[i]=n; n+=1
+    sujos={mapa[x] for x in linhas_b if x in mapa}
+    limpos=total-len(sujos)
+    palavras=len(texto.split()) or 1
+    return dict(
+        segmentos=total, segmentos_limpos=limpos, segmentos_com_achado=len(sujos),
+        indice=round(100.0*limpos/total,1),
+        palavras=palavras,
+        densidade_por_mil=round(1000.0*len(linhas_b)/palavras,2))
+
+def veredito(achados, ind):
+    barreira=[a for a in achados if a['sev']=='BLOQUEANTE']
+    if barreira: return 'RETIDO', 'barreira clínica: %d achado(s) de classe A'%len(barreira)
+    if ind['indice'] >= LIMIAR_LIBERA: return 'LIBERADO', 'índice %.1f %% ≥ %.0f %%'%(ind['indice'],LIMIAR_LIBERA)
+    if ind['indice'] >= LIMIAR_MINIMO: return 'LIBERADO COM RESSALVAS', 'índice %.1f %% na faixa %.0f–%.0f %%'%(ind['indice'],LIMIAR_MINIMO,LIMIAR_LIBERA)
+    return 'RETIDO', 'índice %.1f %% < %.0f %%'%(ind['indice'],LIMIAR_MINIMO)
+
 def cobertura(texto):
     t=texto.lower()
     return {k:len(re.findall(k,t)) for k in TERMOS_ESPERADOS}
@@ -128,15 +174,29 @@ def main():
     if len(sys.argv)<2: print(__doc__); sys.exit(2)
     texto=open(sys.argv[1],encoding='utf-8').read()
     ach=audita(texto); cob=cobertura(texto)
+    ind=indice(texto,ach); ver,motivo=veredito(ach,ind)
     if '--json' in sys.argv:
-        print(json.dumps(dict(achados=ach,cobertura=cob),ensure_ascii=False,indent=1)); return
+        print(json.dumps(dict(veredito=ver,motivo=motivo,indice=ind,
+            achados=ach,cobertura=cob),ensure_ascii=False,indent=1)); return
     ordem={'BLOQUEANTE':0,'GRAVE':1,'MENOR':2}
     ach.sort(key=lambda a:(ordem[a['sev']],a['linha']))
     n_b=sum(1 for a in ach if a['sev']=='BLOQUEANTE')
     n_g=sum(1 for a in ach if a['sev']=='GRAVE')
     n_m=sum(1 for a in ach if a['sev']=='MENOR')
     print('AUDITORIA — %s'%sys.argv[1])
-    print('%d BLOQUEANTE · %d GRAVE · %d MENOR\n'%(n_b,n_g,n_m))
+    print()
+    print('VEREDITO: %s  (%s)'%(ver,motivo))
+    print()
+    print('  CLASSE A — barreira clínica (tolerância zero, fora do percentual)')
+    print('    %d achado(s) BLOQUEANTE'%n_b)
+    print('  CLASSE B — índice editorial')
+    print('    índice: %.1f %%   (%d de %d segmentos limpos)'%(
+        ind['indice'],ind['segmentos_limpos'],ind['segmentos']))
+    print('    densidade: %.2f achados por mil palavras (%d palavras)'%(
+        ind['densidade_por_mil'],ind['palavras']))
+    print('    %d GRAVE · %d MENOR'%(n_g,n_m))
+    print()
+    if n_b or n_g or n_m: print('PONTOS PARA ANÁLISE\n')
     for a in ach:
         print('[%s] %s  (linha %d)'%(a['sev'],a['regra'],a['linha']))
         print('   encontrado: %s'%a['encontrado'])
@@ -145,6 +205,10 @@ def main():
     print('COBERTURA DE TERMOS OBRIGATÓRIOS')
     for k,v in cob.items():
         print('   %-18s %s'%(k, v if v else '0  ← ausente, verificar se deveria aparecer'))
-    sys.exit(1 if n_b else 0)
+    print()
+    print('Limiares: LIBERADO >= %.0f %% · COM RESSALVAS %.0f–%.0f %% · RETIDO < %.0f %%'%(
+        LIMIAR_LIBERA,LIMIAR_MINIMO,LIMIAR_LIBERA,LIMIAR_MINIMO))
+    print('Classe A bloqueia sempre, qualquer que seja o índice.')
+    sys.exit(1 if ver=='RETIDO' else 0)
 
 if __name__=='__main__': main()
