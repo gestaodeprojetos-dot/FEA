@@ -13,8 +13,15 @@ técnico seja decidido no improviso.
 
 ## Carregue os glossários antes de traduzir
 
-`references/00-nucleo.md` é **obrigatório em toda tradução**. Depois carregue o
-módulo do tema tratado:
+**Dois arquivos são obrigatórios em toda tradução, sem exceção:**
+
+- `references/00-nucleo.md` — a terminologia que vale para todo o catálogo.
+- `references/01-voz-y-estilo.md` — o que separa espanhol correto de espanhol
+  que soa nativo. O glossário garante o termo; este garante o texto. Um material
+  pode ter todos os termos certos e ainda denunciar português na sintaxe, na
+  pontuação e nos conectores — e o leitor injetor percebe em três parágrafos.
+
+Depois carregue o módulo do tema tratado:
 
 | Módulo | Cobre | Base |
 |---|---|---|
@@ -51,11 +58,23 @@ Mantenha:
   "Complicaciones". Sempre verifique se a sigla fecha no idioma-alvo;
 - o registro: técnico, dirigido a profissional, tratamento formal (usted).
 
-### Passagem 2 — Revisão terminológica contra o glossário
-Varra o texto ES procurando cada entrada dos módulos carregados. Confirme que
-toda ocorrência usa a forma ES obrigatória, que nenhuma armadilha da seção de
-alto risco passou, que as unidades estão normalizadas e que as marcas têm
-grafia exata. Rode um `grep -n` pelas armadilhas do núcleo antes de fechar.
+### Passagem 2 — Auditoria mecânica (script, não olho)
+
+```
+python3 scripts/auditar.py texto_es.txt
+```
+
+Cobre resíduo de português, lusismo sintático, falso amigo clínico, posologia,
+via de administração, ortotipografia e tratamento. Exit code 1 = há
+BLOQUEANTE; não entregue nesse estado.
+
+Depois do script, varra à mão o que ele não modela: cada entrada dos módulos
+carregados, grafia exata de marca, e coerência do mesmo termo ao longo de todo
+o material — inconsistência interna é o achado mais frequente e o mais danoso,
+porque o aluno vê dois nomes para a mesma estrutura.
+
+Falso positivo do script não se ignora: ajuste a regra. Um auditor que cria
+ruído deixa de ser lido.
 
 ### Passagem 3 — Back-translation dos trechos técnicos
 Retraduza para português **apenas** as passagens com carga técnica — doses,
@@ -91,6 +110,17 @@ o ligamento trocado, a camada invertida, o plano de injeção deslocado.
   listados à parte para o autor. Nunca replique o erro por fidelidade.
 - **Nunca invente dose, unidade ou nome de produto** que não esteja no original.
   Se o original é ambíguo, traduza mantendo a ambiguidade e sinalize ao autor.
+
+## Handoff obrigatório para a revisão
+
+Tradução própria não se auto-aprova. Ao fechar, passe o material para a skill
+**`fea-revision-es`**, que revisa como par especialista e emite veredito.
+
+A revisão é deliberadamente **cega**: não forneça a ela as suas justificativas
+de escolha. Quem traduz acumula razões para as próprias decisões, e essas razões
+cegam para o erro. Entregue o texto ES, o original PT e os glossários — nada
+mais. Se uma escolha sua precisa de justificativa para sobreviver, ela pertence
+a `90-decisiones.md`, não a uma explicação avulsa ao revisor.
 
 ## Entregável padrão
 
