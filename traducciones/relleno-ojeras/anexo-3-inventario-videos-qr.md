@@ -94,20 +94,11 @@ automaticamente (`APznzaZrSXQ1h-hy-YqrVEpYOw4YIiN1n4lN...`), ilegível e frágil
 Vale renomear no Drive antes de publicar a versão ES, porque um arquivo com esse
 nome é impossível de auditar depois.
 
-## D. Decisão necessária: como produzir a versão ES dos vídeos
+## D. Escopo
 
-Três caminhos, com consequência diferente. **Não é decisão de tradução, é sua.**
-
-| Caminho | Custo | Resultado |
-|---|---|---|
-| **Legenda em ES** sobre o áudio PT | Baixo | Rápido; aluno ouve português. Aceitável para vídeo de demonstração prática, ruim para aula falada |
-| **Dublagem** | Médio | Boa experiência; exige locutor e sincronia |
-| **Regravação** em espanhol | Alto | Melhor resultado; é o que um curso premium entrega |
-
-Recomendação prática: **legenda** para os vídeos curtos de técnica (shorts de
-marcação, pertuitos, botão anestésico — o aluno está olhando a mão, não ouvindo)
-e **dublagem ou regravação** para as aulas longas de anatomia e para os casos
-clínicos de hialuronidase, que são conteúdo falado.
+Este inventário **lista e localiza** os vídeos e seus links. A produção da versão
+em espanhol — legenda, dublagem ou regravação — é decisão e execução da FEA, e
+não faz parte deste levantamento nem da skill de tradução.
 
 ## E. Regeneração dos QR — checklist
 

@@ -96,9 +96,14 @@ Produza e **mostre ao autor** antes de começar:
    tipo de destino.
 2. **Inventário de mídia** — a tabela completa (ver 0.4).
 3. **Lista de decisões pendentes** — tudo que caiu em DECIDE O AUTOR.
-4. **Estimativa do que não é tradução** — quantos vídeos precisam de legenda,
-   dublagem ou regravação; quantos QR precisam ser regerados; quantos rótulos
-   de arte precisam ser reaplicados pelo designer.
+4. **Estimativa do que não é tradução de texto** — quantos vídeos precisam de
+   versão em espanhol; quantos QR precisam ser regerados; quantos rótulos de arte
+   precisam ser reaplicados pelo designer.
+
+> **Fronteira do escopo.** A skill **lista** os vídeos, com página, rótulo,
+> assunto e link, para que sejam localizados depois. Ela **não** produz, não
+> legenda, não dubla e não recomenda método de produção — isso é decisão e
+> execução da FEA.
 
 O ponto 4 é o que evita a surpresa de orçamento. Traduzir 8.000 palavras é
 barato; produzir 18 vídeos em espanhol não é. O autor precisa saber disso
