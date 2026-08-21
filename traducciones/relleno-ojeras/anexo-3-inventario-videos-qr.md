@@ -14,12 +14,15 @@ dentro da imagem do QR. Sem decodificar, este inventário seria impossível.
 | Tipo de destino | Ocorrências | Únicos | Precisa versão ES? |
 |---|---|---|---|
 | Vídeo no Google Drive | 8 | 8 | **SIM** |
-| Vídeo no YouTube | 14 | 11 | **SIM** |
-| Artigo/PDF científico | 10 | 10 | Não — permanece em inglês |
-| **Total de QR** | **32** | **29** | **19 ativos a traduzir** |
+| Vídeo no YouTube | 12 | 10 | **SIM** |
+| Artigo/PDF científico | 12 | 10 | Não — permanece em inglês |
+| **Total de QR** | **32** | **28** | **18 ativos a traduzir** |
 
-**19 ativos de vídeo precisam de versão em espanhol.** Depois de prontos, os 22
+**18 ativos de vídeo precisam de versão em espanhol.** Depois de prontos, os 20
 QR Codes que apontam para eles precisam ser **regerados**, porque o link muda.
+
+Contagem conferida por script sobre os 32 QR decodificados. Uma versão anterior
+deste anexo trazia 19 ativos e 22 QR — números incorretos, agora substituídos.
 
 ---
 
@@ -64,8 +67,9 @@ e o QR leva o aluno ao lugar errado. Cada um precisa ser recalculado na versão 
 | `shorts/l05fBSo_5ws` | pág. 49 **e** 57 | **1 versão ES** atende **2 QR** |
 | `drive/1KMqjjp5S5...` (PDF) | pág. 18, 25 **e** 30 | 1 arquivo, 3 QR |
 
-Logo: **19 ativos únicos a produzir**, mas **22 QR a regerar**. Confundir esses
-dois números é o erro clássico de planejamento aqui.
+Logo: **18 ativos únicos a produzir**, mas **20 QR a regerar** (os 12 QR de
+artigo não entram, porque não mudam). Confundir esses dois números é o erro
+clássico de planejamento aqui.
 
 ## C. Artigos e PDFs — permanecem em inglês, não traduzir
 

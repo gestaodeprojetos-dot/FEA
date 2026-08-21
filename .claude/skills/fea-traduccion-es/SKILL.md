@@ -42,9 +42,106 @@ Se o tema não tem módulo, traduza com o núcleo, **registre os termos novos** 
 crie o módulo ao final. Um glossário que não cresce a cada trabalho é um
 glossário que vai sendo abandonado.
 
-## As três passagens
+## Passagem 0 — Curadoria do material (antes de traduzir uma única palavra)
 
-Não pule nenhuma. Cada uma pega uma classe de erro diferente.
+**Nada é traduzido antes desta passagem.** Traduzir primeiro e inventariar depois
+produz retrabalho garantido: o texto sai pronto, e só então se descobre que
+metade do material não é texto — é arte, vídeo e QR Code apontando para conteúdo
+em português.
+
+O objetivo é responder, antes de começar: **o que exatamente existe neste
+material, e o que de tudo isso precisa de versão em espanhol?**
+
+### 0.1 — Levantar as quatro camadas do material
+
+Um material FEA tem quatro camadas, e três delas são invisíveis à extração
+normal de texto.
+
+| Camada | Como levantar | Se pular |
+|---|---|---|
+| **1. Texto corrido** | extração normal (pymupdf, python-docx) | — |
+| **2. Texto embutido em arte** | **OCR de todas as páginas** + diff contra a camada de texto | O designer descobre o que falta durante a diagramação |
+| **3. Vídeos e QR Codes** | `scripts/inventario_midia.py` — decodifica os QR | O aluno lê em espanhol e assiste em português |
+| **4. Artigos e citações** | classificar cada destino pelo mimeType real | Traduz-se citação que deveria ficar em inglês |
+
+```
+python3 scripts/inventario_midia.py material.pdf
+tesseract pagina.png stdout -l por+eng --psm 3     # camada 2, página a página
+```
+
+Medida no ebook de olheiras: a camada 2 tinha **194 linhas em 29 páginas** que a
+extração normal não via — inclusive o título da capa. A camada 3 tinha **32 QR
+Codes**, e o PDF não tinha **nenhuma** anotação de link: todo destino existia só
+dentro da imagem do QR.
+
+### 0.2 — Classificar cada item: traduz, não traduz, ou decide o autor
+
+Esta é a curadoria propriamente dita. Todo item levantado recebe **uma** destas
+marcas:
+
+- **TRADUZ** — texto corrido, rótulo em português na arte, vídeo do autor.
+- **NÃO TRADUZ** — citação bibliográfica, abstract, prancha de atlas de
+  terceiros, marca, princípio ativo, artigo científico linkado.
+- **DECIDE O AUTOR** — rótulo em inglês dentro de arte de terceiros; slide do
+  próprio autor que está em inglês no material português; destino de QR que
+  aponta para material em outro idioma.
+
+Item sem marca é item que vai dar problema depois. Não deixe nenhum.
+
+### 0.3 — Entregar o mapa do material antes de traduzir
+
+Produza e **mostre ao autor** antes de começar:
+
+1. **Contagem por camada** — palavras de texto corrido, linhas em arte, QR por
+   tipo de destino.
+2. **Inventário de mídia** — a tabela completa (ver 0.4).
+3. **Lista de decisões pendentes** — tudo que caiu em DECIDE O AUTOR.
+4. **Estimativa do que não é tradução** — quantos vídeos precisam de legenda,
+   dublagem ou regravação; quantos QR precisam ser regerados; quantos rótulos
+   de arte precisam ser reaplicados pelo designer.
+
+O ponto 4 é o que evita a surpresa de orçamento. Traduzir 8.000 palavras é
+barato; produzir 18 vídeos em espanhol não é. O autor precisa saber disso
+**antes**, não depois de aprovar a tradução.
+
+### 0.4 — A tabela de inventário de mídia
+
+Para cada ativo, registre:
+
+| Campo | Por quê |
+|---|---|
+| **Página** do PDF | Para localizar o QR na arte |
+| **Rótulo PT** e **rótulo ES** | Para o designer saber qual botão é qual |
+| **Assunto** | Para achar o ativo depois sem abrir o vídeo |
+| **Arquivo de origem** | Nome real no Drive, não o rótulo do botão |
+| **Link atual** | Destino de hoje |
+| **Link ES** | Em branco, a preencher quando o ativo ES existir |
+| **Marcador de tempo** | Se havia `?t=`, **recalcular** — corte diferente move o trecho |
+| **Status** | pendente / em produção / pronto |
+
+Três regras que evitam erro de planejamento:
+
+1. **Ativos únicos ≠ QR a regerar.** Um mesmo vídeo pode ser chamado de várias
+   páginas. No ebook de olheiras: 19 ativos a produzir, 22 QR a regerar.
+2. **QR de artigo científico não se toca.** Citação permanece em inglês, link
+   permanece igual.
+3. **O QR é imagem.** Trocar o link não muda o QR — a imagem tem de ser regerada
+   e substituída na arte, e conferida por escaneamento real antes de fechar.
+
+Se o material não for PDF (slide, página, aula), levante os links pelo formato
+de origem, mas produza a **mesma tabela**: sem ela o vídeo em português passa.
+
+
+### 0.5 — Só então comece a traduzir
+
+Com o mapa aprovado, siga para as três passagens. Se durante a tradução aparecer
+item novo que a curadoria não pegou, **volte e atualize o mapa** — não resolva de
+improviso, porque a revisão vai cobrar o inventário completo.
+
+## As três passagens de tradução
+
+Só começam depois da Passagem 0. Não pule nenhuma — cada uma pega uma classe
+de erro diferente.
 
 ### Passagem 1 — Tradução
 Traduza por blocos de sentido, não linha a linha. PDFs exportados de InDesign
@@ -110,50 +207,6 @@ o ligamento trocado, a camada invertida, o plano de injeção deslocado.
   listados à parte para o autor. Nunca replique o erro por fidelidade.
 - **Nunca invente dose, unidade ou nome de produto** que não esteja no original.
   Se o original é ambíguo, traduza mantendo a ambiguidade e sinalize ao autor.
-
-## Passagem obrigatória — inventário de mídia e QR Codes
-
-**Todo vídeo referenciado no material precisa de versão em espanhol.** Um ebook
-traduzido cujos QR levam a vídeo em português está entregue pela metade: o aluno
-hispano-hablante lê em espanhol e assiste em português.
-
-Nos materiais FEA os botões de vídeo são **arte, não anotação de link** — o
-destino está codificado dentro da imagem do QR. Extração normal de PDF não vê
-nada. Rode:
-
-```
-python3 scripts/inventario_midia.py material.pdf
-```
-
-O script decodifica os QR (OpenCV, 300 e 450 dpi), separa YouTube de Drive,
-detecta marcador de tempo `?t=` e aponta quais IDs do Drive classificar. Depois,
-classifique cada destino do Drive pelo **mimeType real** (`video/mp4` = traduzir;
-`application/pdf` = artigo, permanece em inglês).
-
-Produza a tabela de inventário com, para cada ativo:
-
-| Campo | Por quê |
-|---|---|
-| **Página** do PDF | Para localizar o QR na arte |
-| **Rótulo PT** e **rótulo ES** | Para o designer saber qual botão é qual |
-| **Assunto** | Para achar o ativo depois sem abrir o vídeo |
-| **Arquivo de origem** | Nome real no Drive, não o rótulo do botão |
-| **Link atual** | Destino de hoje |
-| **Link ES** | Em branco, a preencher quando o ativo ES existir |
-| **Marcador de tempo** | Se havia `?t=`, **recalcular** — corte diferente move o trecho |
-| **Status** | pendente / em produção / pronto |
-
-Três regras que evitam erro de planejamento:
-
-1. **Ativos únicos ≠ QR a regerar.** Um mesmo vídeo pode ser chamado de várias
-   páginas. No ebook de olheiras: 19 ativos a produzir, 22 QR a regerar.
-2. **QR de artigo científico não se toca.** Citação permanece em inglês, link
-   permanece igual.
-3. **O QR é imagem.** Trocar o link não muda o QR — a imagem tem de ser regerada
-   e substituída na arte, e conferida por escaneamento real antes de fechar.
-
-Se o material não for PDF (slide, página, aula), levante os links pelo formato
-de origem, mas produza a **mesma tabela**: sem ela o vídeo em português passa.
 
 ## Handoff obrigatório para a revisão
 
