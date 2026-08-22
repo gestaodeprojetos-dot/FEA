@@ -57,3 +57,35 @@ Limiares em `scripts/auditar.py`: `LIMIAR_LIBERA = 95.0`, `LIMIAR_MINIMO = 80.0`
 
 Em todos os vereditos — inclusive `LIBERADO` — o relatório traz o bloco
 **PONTOS PARA ANÁLISE**, ordenado por custo de não corrigir.
+
+## Fonte e tipografia dos PDFs
+
+**Completar a fonte, nunca substituí-la.** O corpo dos PDFs da FEA usa
+GuardianTextEgyp embutida como subconjunto de 82 a 89 glifos — só o que o
+português usa. Faltam `ñ Ñ Ó Í Ú ü • —`. Trocar a fonte alteraria a tipografia
+de 49 páginas de texto; por isso `scripts/completar_fonte.py` **monta os glifos
+faltantes a partir dos que a própria fonte já tem**:
+
+| Glifo | Como é montado |
+|---|---|
+| `ñ Ñ` | base `n`/`N` + til isolado de `ã` |
+| `Ó Í Ú Á É` | maiúscula + acento isolado de `ó`/`í`/`ú`, escalado a 0,92 |
+| `ü` | `u` + dois pontos derivados de `period` |
+| `—` | `endash` ou `hyphen` alongado até 1 em |
+| `•` | copiado do peso irmão que já o tem |
+| `D J , ; “ ” k 7` no negrito | doados do Regular e engrossados sinteticamente |
+
+Detalhe que custou depuração: para o `Í`, a referência de altura é `n`, não `i` —
+o pingo do `i` falseia a detecção do acento.
+
+**Aspas `“ ”`, não `« »`.** Decisão técnica: a fonte tem as curvas nativas e não
+tem guillemets. Sintetizar guillemets a partir do sinal de maior gera glifo
+pequeno e desalinhado — testado e descartado. Aspas curvas são igualmente
+corretas em espanhol latino-americano.
+
+**Apóstrofo curvo `G’`.** `quoteright` existe na fonte; o apóstrofo reto não.
+Aplicado às 25 ocorrências de notação reológica da tradução.
+
+**Resultado verificado:** cobertura completa do texto ES no corpo e no negrito
+inline. O único glifo não sintetizável, o dígito `6`, aparece apenas em títulos
+em HelveticaNeue-Bold, que tem 2.080 glifos e cobre tudo.

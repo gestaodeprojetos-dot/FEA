@@ -132,7 +132,12 @@ Este bloco é o que mais rápido identifica um texto traduzido às pressas.
 
 - **Interrogação e exclamação:** abrem **e** fecham. `¿Qué es la SOOF?`
   `¡Atención!` Nunca só o de fechar.
-- **Aspas:** primárias `«…»`; internas `"…"`. Reserve `'…'` para terceiro nível.
+- **Aspas:** primárias `“…”` (curvas duplas), internas `‘…’`. As angulares `«…»`
+  são igualmente corretas em espanhol, mas **preferimos as curvas neste catálogo
+  por razão técnica**: as fontes embutidas nos PDFs da FEA têm
+  `quotedblleft`/`quotedblright` nativos e não têm guillemets — sintetizá-las a
+  partir do sinal de maior produz desenho ruim. Ver `90-decisiones.md`.
+- **Apóstrofo sempre curvo:** `G’`, nunca `G'`. O reto não existe nas fontes.
 - **Raya (—):** para aparte, **sem espaço interno**: `—como el edema—`. Não use
   hífen `-` no lugar da raya.
 - **Decimal com coma, milhar com ponto:** `0,3 mm`; `1.000 UTR`; `5.000
