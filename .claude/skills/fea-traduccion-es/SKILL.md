@@ -213,6 +213,62 @@ o ligamento trocado, a camada invertida, o plano de injeção deslocado.
 - **Nunca invente dose, unidade ou nome de produto** que não esteja no original.
   Se o original é ambíguo, traduza mantendo a ambiguidade e sinalize ao autor.
 
+## Produção do PDF final — sem designer
+
+O material sai traduzido no próprio arquivo, com imagens, posição, fonte, corpo,
+cor e entrelinha preservados. Três scripts, nesta ordem:
+
+### 1. Completar as fontes
+
+```
+python3 scripts/completar_fonte.py     material.pdf --saida fontes/   # CFF/Type1
+python3 scripts/completar_fonte_ttf.py fontes/ --precisa 'éíúóáñÑ¿—’' # TrueType
+```
+
+PDFs de InDesign embutem apenas o **subconjunto** de glifos do idioma original.
+Um subconjunto português não tem `ñ ¿ ¡ « » —`. Os scripts montam os que faltam
+a partir dos que a fonte já tem — til de `ã`, acento de `ó`, `¿` girando o `?` —
+em vez de trocar a fonte e alterar a tipografia do material inteiro.
+
+⚠️ **O cmap mente.** Nos subconjuntos, glifos como `ñ` e `¿` continuam listados
+no cmap com contorno **vazio**. Medir cobertura pelo cmap dá falso positivo: a
+medida válida é «o glifo tem contorno?». Foi assim que um `¿` sumiu de um título
+que a checagem por cmap dava como coberto.
+
+### 2. Substituir o texto
+
+```
+python3 scripts/traduzir_pdf.py material.pdf --estrutura > estrutura.json
+# preencher o mapa id → texto ES, com <b> onde o original tem negrito
+python3 scripts/traduzir_pdf.py material.pdf mapa.json --fontes fontes/ --saida es.pdf
+```
+
+O PDF exporta **uma linha por bloco**; o script reagrupa em parágrafos pela
+**margem esquerda** — a última linha de um parágrafo justificado é curta, então
+agrupar pela margem direita quebraria o parágrafo ali. Depois remove o original
+por redação (imagens preservadas) e refluí o espanhol no mesmo retângulo com
+justificação, entrelinha e recuo de primeira linha. Se não couber, reduz
+entrelinha até 6% e corpo até 4%, **e registra o ajuste**. Transbordo vira erro,
+nunca texto cortado.
+
+### 3. Traduzir o texto que está dentro das imagens
+
+```
+python3 scripts/traduzir_arte.py material.pdf --pagina 1 --detectar
+python3 scripts/traduzir_arte.py material.pdf --pagina 1 --mapa capa.json --saida capa_es.pdf
+```
+
+Detecta os pixels do texto por cor, delimita as faixas por perfil de linha (para
+nunca tocar moldura ou fotografia), reconstrói o fundo por inpainting e redesenha
+em espanhol. Para o acabamento de folha metálica, preenche as letras com um
+**campo de textura** extraído dos próprios pixels dourados do original — cor
+chapada denunciaria o retoque.
+
+### Verificação obrigatória
+
+Renderize original e traduzido lado a lado, página por página, antes de entregar.
+Defeito de glifo e de refluxo **só aparece no render** — nenhum log os pega.
+
 ## Handoff obrigatório para a revisão
 
 Tradução própria não se auto-aprova. Ao fechar, passe o material para a skill
