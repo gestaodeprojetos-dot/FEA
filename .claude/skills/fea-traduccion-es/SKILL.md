@@ -264,6 +264,29 @@ em espanhol. Para o acabamento de folha metálica, preenche as letras com um
 **campo de textura** extraído dos próprios pixels dourados do original — cor
 chapada denunciaria o retoque.
 
+### 4. Apontar os QR Codes para os ativos traduzidos
+
+```
+python3 scripts/atualizar_qr.py es.pdf links_es.json --conferir   # relatório
+python3 scripts/atualizar_qr.py es.pdf links_es.json --saida final.pdf
+```
+
+**O QR é imagem — não existe link a editar.** O destino está codificado nos
+módulos preto-e-branco, então trocar de destino exige gerar um QR novo e
+substituir a imagem. O script decodifica cada QR, casa o destino com o mapa
+**pelo ID do arquivo** (não pela URL inteira, que muda de forma com `?usp=` e
+`?t=`), gera o QR novo no mesmo lugar preservando a moldura decorativa, e
+**confere lendo de volta** o QR gerado. Se não decodificar para o destino
+esperado, aborta e reporta em vez de entregar um QR quebrado.
+
+QR de artigo científico não é tocado: sem link no mapa, fica como está.
+
+⚠️ **Marcador de tempo não sobrevive à retradução do vídeo.** Se o link original
+tinha `?t=`, o ativo em espanhol quase sempre foi reencodado com duração
+diferente — no ebook de olheiras, um vídeo de 667 MB virou 98 MB. Sem o
+timestamp novo, o QR abre o vídeo do início. Sinalize ao autor; não invente
+tempo.
+
 ### Verificação obrigatória
 
 Renderize original e traduzido lado a lado, página por página, antes de entregar.
