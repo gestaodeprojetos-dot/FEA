@@ -1,0 +1,60 @@
+{
+ "rotulos": [
+  {
+   "es": "Relleno de ojeras",
+   "rect": [
+    46,
+    22,
+    249,
+    35
+   ],
+   "cor": [
+    39,
+    39,
+    39
+   ],
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+   "grupo": "ui",
+   "ancora": "esquerda",
+   "folga": 1.3,
+   "folga_alt": 1.25
+  },
+  {
+   "es": "Pérdida tono",
+   "rect": [
+    317,
+    516,
+    521,
+    539
+   ],
+   "cor": [
+    40,
+    39,
+    40
+   ],
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "grupo": "cap",
+   "folga": 1.25,
+   "folga_alt": 1.9
+  },
+  {
+   "es": "Cambio SOOF",
+   "rect": [
+    981,
+    537,
+    1110,
+    558
+   ],
+   "cor": [
+    34,
+    33,
+    34
+   ],
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "grupo": "cap",
+   "ancora": "esquerda",
+   "folga": 1.3,
+   "folga_alt": 1.9
+  }
+ ]
+}

@@ -89,3 +89,53 @@ Aplicado às 25 ocorrências de notação reológica da tradução.
 **Resultado verificado:** cobertura completa do texto ES no corpo e no negrito
 inline. O único glifo não sintetizável, o dígito `6`, aparece apenas em títulos
 em HelveticaNeue-Bold, que tem 2.080 glifos e cobre tudo.
+
+---
+
+## Decisões de produção registradas no ebook de olheiras (rodada completa)
+
+### Tipografia e fontes
+
+| Decisão | Motivo |
+|---|---|
+| Fundir todos os subconjuntos da mesma família antes de medir cobertura | 6 subconjuntos de Helvetica Neue no mesmo PDF; um só dá 38 glifos, os 6 fundidos dão 73 |
+| Ler `ToUnicode` do PDF para subconjunto Type0/Identity-H | não tem cmap; é a única fonte do mapa caractere → glifo |
+| Parsear `beginbfchar` e `beginbfrange` em blocos separados | um regex único casa através das linhas e importa lixo (`Ē ī ࠮`) |
+| Remover entradas de cmap com glifo vazio | o motor desenha nada em vez de recorrer à alternativa; `influencia` saía `in uencia` por causa de `U+FB02` fantasma |
+| Achatar compostos posicionados por *point matching* | motores de PDF ignoram; o acento do `Í` saía atravessado sobre as letras |
+| Doar glifo de outro corte da família com inclinação de 12° | Helvetica Neue Italic é uma **oblíqua**: inclinar o romano é exato, não aproximação |
+| Doar para a Medium com arraste horizontal de 29/1000 em | medido na diferença de haste do `l` entre Regular (85) e Medium (114) |
+| Usar o Playfair Display genuíno (SIL OFL, `npm pack @fontsource/…`) | `ÍNDICE` precisa de `C D E N`, ausentes de todos os cortes embutidos e não deriváveis. **Só depois de conferir contorno e largura de avanço glifo a glifo contra o subconjunto** |
+| `¿` por rotação de 180° do próprio `?` | mantém peso, largura e desenho da família |
+
+### Refluxo
+
+| Decisão | Motivo |
+|---|---|
+| Compor por **coluna**, não por parágrafo isolado | o espanhol corre 10–20 % mais longo; a coluna cresce para baixo até o próximo obstáculo em vez de encolher onde havia espaço livre |
+| Calibrar a linha de base compondo num rascunho e medindo | o htmlbox posiciona a 1ª linha em função da entrelinha; com entrelinha fechada ela sobe vários pontos |
+| Título e parágrafo de uma linha crescem **para a direita** | não são justificados; encolher de corpo seria pior que ganhar largura no espaço livre |
+| Contar fio desenhado e imagem como obstáculo | sem isso a coluna cresce por cima do filete de rodapé e da fotografia |
+| Detectar contorno de arte por **medida igual entre si** e ≥ 20 pt do resto | linha só curta é ragged (bullet), não contorno; a distinção evita partir listas |
+| Display de entrelinha < 1,05 em assentado linha por linha | a caixa corta o acento da primeira linha (`ÍN DI CE`, 0,76 em) |
+| Guardar e redesenhar o texto **não traduzido** que a redação atinge | os numerais `01.`–`05.` das aberturas cruzam a caixa do título e desapareciam |
+| `scale_low=0` no assentamento final, com o valor registrado | a escada já escolheu o corpo; deixar o htmlbox reduzir é o que garante que **nunca se perde texto** |
+| Escada ampliada para entrelinha −8 % e corpo −6 % | com −6 %/−4 % sobravam 95 parágrafos sendo reduzidos em silêncio pelo htmlbox |
+| Encurtar o espanhol em vez de reduzir o corpo, quando a caixa é fixa | 2 parágrafos (p30, p66); comprimir a redação é decisão de tradutor, reduzir o corpo é defeito de produção |
+
+### Arte
+
+| Decisão | Motivo |
+|---|---|
+| `modo: luz` para texto claro sem matiz | a capa em P&B; a máscara por matiz não pega |
+| `fundo: gradiente` quando o texto tem sombra projetada | o inpainting apaga o traço e deixa a sombra: o fantasma do português aparece atrás do espanhol |
+| Caminho `rotulos` com retângulo exato, para infográfico | texto escuro sobre fundo claro não se isola por cor |
+| `partes` para misturar fontes na mesma linha | o subtítulo da capa é Playfair itálico + `ARTI` em sans |
+| Substituir a itálica de máquina de escrever por Liberation Mono Italic **e registrar** | a fonte só existe como pixel; é o único ponto do material que troca de tipo |
+
+### Auditoria
+
+| Decisão | Motivo |
+|---|---|
+| Ignorar linhas em inglês no `auditar.py` | artigo reproduzido e prancha de atlas geram falso positivo em série (`Japanese` cai na regra de ênclise) |
+| Rodar o auditor sobre a camada de texto do **PDF entregue** | é o único texto que o leitor vai ver; auditar o rascunho não prova nada |

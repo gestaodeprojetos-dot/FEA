@@ -1,0 +1,326 @@
+{
+ "saida": "e1.pdf",
+ "paginas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59,
+  60,
+  61,
+  62,
+  63,
+  64,
+  65,
+  66,
+  67,
+  68,
+  69,
+  70,
+  71,
+  72,
+  73,
+  74
+ ],
+ "ajustes": [
+  {
+   "pagina": 3,
+   "id": "p3_00",
+   "ajuste": "display assentado linha por linha (entrelinha fechada)"
+  },
+  {
+   "pagina": 5,
+   "id": "p5_00",
+   "ajuste": "display assentado linha por linha (entrelinha fechada)"
+  },
+  {
+   "pagina": 6,
+   "id": "p6_02a",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 9,
+   "id": "p9_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 9,
+   "id": "p9_03",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 14,
+   "id": "p14_02",
+   "ajuste": "coluna: entrelinha -8% corpo -0%"
+  },
+  {
+   "pagina": 15,
+   "id": "p15_19",
+   "erro": "reduzido pelo htmlbox para 97% do corpo"
+  },
+  {
+   "pagina": 18,
+   "id": "p18_01",
+   "ajuste": "coluna: entrelinha -8% corpo -0%"
+  },
+  {
+   "pagina": 20,
+   "id": "p20_04",
+   "erro": "reduzido pelo htmlbox para 96% do corpo"
+  },
+  {
+   "pagina": 21,
+   "id": "p21_04",
+   "erro": "reduzido pelo htmlbox para 100% do corpo"
+  },
+  {
+   "pagina": 23,
+   "id": "p23_01a",
+   "ajuste": "coluna: entrelinha -8% corpo -4%"
+  },
+  {
+   "pagina": 25,
+   "id": "p25_01",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 25,
+   "id": "p25_02a",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 29,
+   "id": "p29_01",
+   "ajuste": "coluna: entrelinha -2% corpo -4%"
+  },
+  {
+   "pagina": 30,
+   "id": "p30_01",
+   "ajuste": "coluna: entrelinha -4% corpo -6%"
+  },
+  {
+   "pagina": 31,
+   "id": "p31_01",
+   "ajuste": "coluna: entrelinha -0% corpo -2%"
+  },
+  {
+   "pagina": 35,
+   "id": "p35_01",
+   "ajuste": "coluna: entrelinha -2% corpo -2%"
+  },
+  {
+   "pagina": 36,
+   "id": "p36_01",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 38,
+   "id": "p38_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 39,
+   "id": "p39_04",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 39,
+   "id": "p39_07",
+   "erro": "reduzido pelo htmlbox para 96% do corpo"
+  },
+  {
+   "pagina": 41,
+   "id": "p41_02",
+   "erro": "reduzido pelo htmlbox para 98% do corpo"
+  },
+  {
+   "pagina": 43,
+   "id": "p43_04",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 44,
+   "id": "p44_03",
+   "ajuste": "coluna: entrelinha -0% corpo -2%"
+  },
+  {
+   "pagina": 48,
+   "id": "p48_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 48,
+   "id": "p48_05",
+   "erro": "reduzido pelo htmlbox para 99% do corpo"
+  },
+  {
+   "pagina": 49,
+   "id": "p49_01",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 50,
+   "id": "p50_04",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 51,
+   "id": "p51_02",
+   "ajuste": "coluna: entrelinha -0% corpo -2%"
+  },
+  {
+   "pagina": 52,
+   "id": "p52_01",
+   "ajuste": "coluna: entrelinha -6% corpo -0%"
+  },
+  {
+   "pagina": 52,
+   "id": "p52_03",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 55,
+   "id": "p55_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 55,
+   "id": "p55_03",
+   "erro": "reduzido pelo htmlbox para 99% do corpo"
+  },
+  {
+   "pagina": 56,
+   "id": "p56_01",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 60,
+   "id": "p60_01",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 60,
+   "id": "p60_02",
+   "ajuste": "coluna: entrelinha -0% corpo -2%"
+  },
+  {
+   "pagina": 61,
+   "id": "p61_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 62,
+   "id": "p62_01",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 62,
+   "id": "p62_03",
+   "ajuste": "coluna: entrelinha -0% corpo -2%"
+  },
+  {
+   "pagina": 64,
+   "id": "p64_01",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 65,
+   "id": "p65_01",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 66,
+   "id": "p66_02",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 67,
+   "id": "p67_01",
+   "ajuste": "coluna: entrelinha -0% corpo -4%"
+  },
+  {
+   "pagina": 67,
+   "id": "p67_03",
+   "ajuste": "coluna: entrelinha -0% corpo -6%"
+  },
+  {
+   "pagina": 68,
+   "id": "p68_01",
+   "ajuste": "coluna: entrelinha -2% corpo -2%"
+  },
+  {
+   "pagina": 68,
+   "id": "p68_04",
+   "ajuste": "coluna: entrelinha -8% corpo -6%"
+  },
+  {
+   "pagina": 69,
+   "id": "p69_01",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 72,
+   "id": "p72_02",
+   "ajuste": "coluna: entrelinha -2% corpo -0%"
+  },
+  {
+   "pagina": 72,
+   "id": "p72_03",
+   "erro": "reduzido pelo htmlbox para 99% do corpo"
+  }
+ ]
+}

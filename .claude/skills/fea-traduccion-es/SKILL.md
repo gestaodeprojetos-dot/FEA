@@ -221,9 +221,25 @@ cor e entrelinha preservados. Três scripts, nesta ordem:
 ### 1. Completar as fontes
 
 ```
+python3 scripts/fundir_subconjuntos.py material.pdf --saida fontes/   # 1º: fundir
 python3 scripts/completar_fonte.py     material.pdf --saida fontes/   # CFF/Type1
 python3 scripts/completar_fonte_ttf.py fontes/ --precisa 'éíúóáñÑ¿—’' # TrueType
+python3 scripts/limpar_cmap.py  fontes/    # remove entradas de glifo vazio
+python3 scripts/achatar_compostos.py fontes/  # acentos por point-matching
+# ultimo recurso, antes de trocar de tipo: doar de outro corte da familia
+python3 scripts/doar_glifos.py fontes/HelveticaNeue.ttf fontes/HelveticaNeue-Italic.ttf \
+    --chars 'Hjyíó' --inclinar 12 --saida fontes/HelveticaNeue-ItalicES.ttf
+python3 scripts/doar_glifos.py fontes/HelveticaNeue-Bold.ttf fontes/HelveticaNeue-Bold.ttf \
+    --girar '¿:?,¡:!' --saida fontes/HelveticaNeue-BoldES.ttf
 ```
+
+**A mesma família aparece em vários subconjuntos.** Um PDF de 74 páginas trazia
+6 subconjuntos de Helvetica Neue, cada um com as letras de um punhado de páginas.
+Extrair um só dá uma fonte com 38 glifos; fundir os 6 dá 73. Funda **antes** de
+medir cobertura. Subconjunto Type0/Identity-H não tem cmap: o mapa
+caractere → glifo vem do `ToUnicode` do próprio PDF (parseie `beginbfchar` e
+`beginbfrange` **em blocos separados** — um regex único casa através das linhas e
+importa lixo).
 
 PDFs de InDesign embutem apenas o **subconjunto** de glifos do idioma original.
 Um subconjunto português não tem `ñ ¿ ¡ « » —`. Os scripts montam os que faltam
@@ -234,6 +250,24 @@ em vez de trocar a fonte e alterar a tipografia do material inteiro.
 no cmap com contorno **vazio**. Medir cobertura pelo cmap dá falso positivo: a
 medida válida é «o glifo tem contorno?». Foi assim que um `¿` sumiu de um título
 que a checagem por cmap dava como coberto.
+
+Pior: o motor de HTML do pymupdf **substitui `fi`/`fl` por ligadura** por conta
+própria. Se o cmap declara `U+FB01`/`U+FB02` com contorno vazio — e declara —,
+`influencia` sai `in uencia`. `limpar_cmap.py` apaga as entradas fantasma, e o
+motor volta a compor `f`+`l`.
+
+⚠️ **Acento por *point matching*.** Alguns tipos (Playfair Display) posicionam o
+acento do glifo composto por índice de ponto, não por deslocamento x/y. Motores
+de PDF ignoram e o acento sai atravessado sobre a letra. `achatar_compostos.py`
+decompõe esses glifos — o desenho não muda, a posição passa a ser absoluta.
+
+⚠️ **Quando não há como sintetizar.** Playfair Display só trazia as letras de
+`SUMÁRIO` e `INTRODUÇÃO`; `ÍNDICE` precisa de `C D E N`, que não existem em
+lugar nenhum do arquivo e não se derivam de nada. Aí a saída é o tipo **genuíno**
+(Playfair Display é SIL OFL, disponível via `npm pack @fontsource/<familia>`, que
+o proxy libera) — e a obrigação é **conferir glifo a glifo contra o subconjunto
+embutido**: contorno e largura de avanço têm de coincidir unidade por unidade.
+Se não coincidirem, não é o mesmo tipo, e trocar mudaria a tipografia do material.
 
 ### 2. Substituir o texto
 
@@ -246,10 +280,38 @@ python3 scripts/traduzir_pdf.py material.pdf mapa.json --fontes fontes/ --saida 
 O PDF exporta **uma linha por bloco**; o script reagrupa em parágrafos pela
 **margem esquerda** — a última linha de um parágrafo justificado é curta, então
 agrupar pela margem direita quebraria o parágrafo ali. Depois remove o original
-por redação (imagens preservadas) e refluí o espanhol no mesmo retângulo com
-justificação, entrelinha e recuo de primeira linha. Se não couber, reduz
-entrelinha até 6% e corpo até 4%, **e registra o ajuste**. Transbordo vira erro,
-nunca texto cortado.
+por redação (imagens preservadas) e refluí o espanhol.
+
+O que o script resolve, e que o refluxo ingênuo erra:
+
+- **Coluna, não parágrafo isolado.** O espanhol corre 10 % a 20 % mais longo.
+  Parágrafos que correm juntos são compostos como uma **coluna**: a primeira
+  linha de base fica onde estava, os respiros entre parágrafos são os do
+  original, e a coluna cresce **para baixo** até o próximo obstáculo — parágrafo,
+  imagem ou fio desenhado. Sem isso o texto encolhe onde havia espaço livre.
+- **Linha de base calibrada.** O htmlbox posiciona a primeira linha em função da
+  entrelinha; com entrelinha fechada ela sobe vários pontos. O script compõe num
+  rascunho, mede onde a linha caiu e desloca a caixa para que coincida com a do
+  original.
+- **Título cresce para a direita, corpo não.** Título, rótulo e parágrafo de uma
+  só linha ganham largura até o próximo obstáculo, em vez de encolher de corpo.
+  Parágrafo justificado de várias linhas mantém a largura da coluna.
+- **Contorno de arte.** Parágrafo que contorna capitular, QR ou foto tem linhas
+  com medida diferente do corpo. O script detecta essas linhas (medida **igual
+  entre si** e ≥ 20 pt diferente do resto — linha só curta é ragged, não
+  contorno), desdobra em caixas reais e reparte o espanhol entre elas por busca
+  binária, com o `<b>` fechado e reaberto no corte.
+- **Display de entrelinha fechada.** Quando a entrelinha é menor que a altura do
+  desenho (`SU MÁ RIO`, 0,76 em), a caixa corta o acento da primeira linha. Esses
+  títulos são assentados **linha por linha** na linha de base de cada uma.
+- **O que não é nosso é preservado.** A redação apaga todo texto que toca o
+  retângulo. Numerais de abertura (`03.`) cruzam a caixa do título e
+  desapareciam. Agora são guardados antes e redesenhados idênticos depois.
+
+Se ainda não couber, reduz entrelinha até 8 % e corpo até 6 %, **uniformemente na
+coluna**, e registra. Só então deixa o htmlbox reduzir aquele parágrafo, e
+registra quanto. **Texto cortado nunca**: no fim, confira que o final de cada
+bloco reaparece na página certa.
 
 ### 3. Traduzir o texto que está dentro das imagens
 
@@ -259,10 +321,30 @@ python3 scripts/traduzir_arte.py material.pdf --pagina 1 --mapa capa.json --said
 ```
 
 Detecta os pixels do texto por cor, delimita as faixas por perfil de linha (para
-nunca tocar moldura ou fotografia), reconstrói o fundo por inpainting e redesenha
-em espanhol. Para o acabamento de folha metálica, preenche as letras com um
-**campo de textura** extraído dos próprios pixels dourados do original — cor
-chapada denunciaria o retoque.
+nunca tocar moldura ou fotografia), reconstrói o fundo e redesenha em espanhol.
+Para o acabamento de folha metálica, preenche as letras com um **campo de
+textura** extraído dos próprios pixels dourados do original — cor chapada
+denunciaria o retoque.
+
+Três variantes, escolhidas pelo mapa:
+
+- `"modo": "luz"` — texto claro sobre fundo escuro sem matiz (a capa em P&B).
+  A máscara por matiz não pega.
+- `"fundo": "gradiente"` — reconstrói a faixa por interpolação entre as linhas de
+  cima e de baixo. Use sempre que o texto tiver **sombra projetada**: o
+  inpainting apaga o traço e deixa a sombra, e o fantasma do português aparece
+  atrás do espanhol.
+- `"rotulos": [...]` — segundo caminho, para rótulo de infográfico: em vez de
+  detectar cor, recebe o **retângulo exato** de cada rótulo, apaga com a cor de
+  fundo local e redesenha centrado. Serve para texto escuro sobre fundo claro.
+  `"partes"` numa linha permite misturar fontes (itálica + sigla em sans).
+  `"margem"` afasta a análise da moldura; sem ela o filete entra na máscara e é
+  apagado junto.
+
+⚠️ Se a fonte do rótulo só existe como pixel (uma itálica de máquina de escrever,
+por exemplo), não há como recuperá-la: escolha a mais próxima disponível e
+**registre a troca no relatório**. É o único caso em que o material entregue
+troca de tipo.
 
 ### 4. Apontar os QR Codes para os ativos traduzidos
 
@@ -289,8 +371,19 @@ tempo.
 
 ### Verificação obrigatória
 
-Renderize original e traduzido lado a lado, página por página, antes de entregar.
-Defeito de glifo e de refluxo **só aparece no render** — nenhum log os pega.
+Quatro checagens, nesta ordem. As três primeiras são automáticas e não admitem
+achado; a quarta é olho, e é a que pega o que log nenhum pega.
+
+1. **Nada perdido** — o final de cada bloco do mapa reaparece na sua página.
+2. **Nada sobreposto** — conte pares de linhas que se cruzam, no original e no
+   traduzido: o traduzido não pode ter mais que o original em nenhuma página.
+   Compare também a caixa de texto de cada página, para pegar invasão de imagem.
+3. **Nada em português** — OCR das 74 páginas com diff contra a camada de texto
+   isola o que só existe em imagem; regex de marca portuguesa (`ã õ ç ê`) sobre o
+   que sobrou. Rode o `auditar.py` sobre a camada de texto do PDF **entregue**,
+   não sobre o rascunho.
+4. **Render lado a lado, página por página.** Defeito de glifo, acento cortado,
+   fantasma de inpainting e refluxo sobre imagem **só aparecem no render**.
 
 ## Handoff obrigatório para a revisão
 

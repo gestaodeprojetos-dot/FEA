@@ -112,14 +112,29 @@ REGRAS = [
 TERMOS_ESPERADOS = ['cigomátic','nasoyugal','retenedor','relleno','ojera',
  'grasa','capa','tejido','signo','manejo','seguimiento','posprocedimiento']
 
+# Páginas de artigo reproduzido e pranchas de atlas ficam em inglês por regra de
+# citação. Auditar essas linhas gera falso positivo em série ("Japanese" cai na
+# regra de ênclise). O guarda abaixo as reconhece e as ignora.
+ING = re.compile(r'\b(the|of|and|with|in|for|was|were|this|that|from|are|'
+                 r'patients|study|fat|filler|superficial|deep|figure|source|'
+                 r'edition|new|york|doi|et\s+al)\b', re.I)
+ES  = re.compile(r'\b(de|la|el|los|las|que|para|con|una|del|en|es|se|por|'
+                 r'como|más|ojeras|relleno)\b', re.I)
+
+def em_ingles(l):
+    ing = len(ING.findall(l)); esp = len(ES.findall(l))
+    return ing >= 2 and ing > esp
+
 def audita(texto):
     achados=[]
     linhas=texto.split('\n')
+    ingles={n for n,l in enumerate(linhas,1) if em_ingles(l)}
     for regra in REGRAS:
         sev,rot,rx,sug = regra[:4]
         flags = regra[4] if len(regra)>4 else re.I
         if rx is None: continue
         for n,l in enumerate(linhas,1):
+            if n in ingles: continue
             for m in re.finditer(rx,l,flags):
                 ini=max(0,m.start()-45); fim=min(len(l),m.end()+45)
                 achados.append(dict(sev=sev,regra=rot,linha=n,
@@ -127,6 +142,7 @@ def audita(texto):
                     encontrado=m.group(0).strip(),sugestao=sug))
     # pontuação de abertura: ? ou ! sem par de abertura na mesma frase
     for n,l in enumerate(linhas,1):
+        if n in ingles: continue
         for sinal,abre,rot in (('?','¿','falta ¿ de abertura'),('!','¡','falta ¡ de abertura')):
             if sinal in l and l.count(abre)<l.count(sinal):
                 achados.append(dict(sev='GRAVE',regra=rot,linha=n,
@@ -141,14 +157,16 @@ def indice(texto, achados):
     """Índice editorial: % de segmentos livres de achado classe B.
     Classe A fica fora do cálculo de propósito."""
     segmentos=[l for l in texto.split('\n') if len(l.strip())>2
-               and not l.strip().startswith('[SE CONSERVA')]
+               and not l.strip().startswith('[SE CONSERVA')
+               and not em_ingles(l)]
     total=len(segmentos) or 1
     # linha -> tem achado classe B?
     linhas_b={a['linha'] for a in achados if a['sev'] in ('GRAVE','MENOR')}
     # mapear nº de linha do arquivo para índice de segmento
     mapa={}; n=0
     for i,l in enumerate(texto.split('\n'),1):
-        if len(l.strip())>2 and not l.strip().startswith('[SE CONSERVA'):
+        if (len(l.strip())>2 and not l.strip().startswith('[SE CONSERVA')
+                and not em_ingles(l)):
             mapa[i]=n; n+=1
     sujos={mapa[x] for x in linhas_b if x in mapa}
     limpos=total-len(sujos)
