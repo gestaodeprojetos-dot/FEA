@@ -1,0 +1,27 @@
+AUDITORIA — texto_es_final.txt
+
+VEREDITO: LIBERADO  (índice 100.0 % ≥ 95 %)
+
+  CLASSE A — barreira clínica (tolerância zero, fora do percentual)
+    0 achado(s) BLOQUEANTE
+  CLASSE B — índice editorial
+    índice: 100.0 %   (1221 de 1221 segmentos limpos)
+    densidade: 0.00 achados por mil palavras (9893 palavras)
+    0 GRAVE · 0 MENOR
+
+COBERTURA DE TERMOS OBRIGATÓRIOS
+   cigomátic          11
+   nasoyugal          11
+   retenedor          11
+   relleno            121
+   ojera              83
+   grasa              36
+   capa               37
+   tejido             15
+   signo              2
+   manejo             6
+   seguimiento        3
+   posprocedimiento   7
+
+Limiares: LIBERADO >= 95 % · COM RESSALVAS 80–95 % · RETIDO < 80 %
+Classe A bloqueia sempre, qualquer que seja o índice.
