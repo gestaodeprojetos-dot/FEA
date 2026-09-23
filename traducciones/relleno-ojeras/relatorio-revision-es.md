@@ -27,7 +27,43 @@ der o PDF em português, fecho as camadas 2 e 3 em cerca de uma hora.
 
 ---
 
-## VEREDITO: LIBERADO (com a ressalva de cobertura acima)
+## SITUAÇÃO EM 23/09/2026 — achados aplicados
+
+Os achados [1] a [7] e a questão [Q1] **foram aplicados no PDF entregue**
+(`produccion/correcciones_revision.py`, onze trocas). O que segue abaixo é o
+registro da revisão como ela foi feita; a coluna de estado diz o que já
+está resolvido no arquivo.
+
+| # | Achado | Estado |
+|---|---|---|
+| [1] | pág. 12, falta `al` | ✅ aplicado |
+| [2] | cinco nomes para o rebordo orbitário (p17, 21, 22, 52) | ✅ uniformizado em `reborde orbitario` |
+| [3] | pág. 30, `craneal`/`distal` | ✅ `en sentido caudal` |
+| [4] | caixa de `metodología ARTI` | ✅ maiúscula nas 7 |
+| [5] | pág. 52, `ligamento LCC` | ✅ `soporte al LCC` |
+| [6] | pág. 20, hífen no lugar do travessão | ✅ travessão desenhado |
+| [7] | pág. 44, `mg/mL` partido entre linhas | ✅ unidade inteira |
+| [Q1] | `orbicular (ORL)` contra `orbitario (LRO)` | ✅ `orbitario (LRO)` nas duas ocorrências da p34 |
+| [Q2] | pág. 34, lista prometida que não aparece | ⏳ depende do original PT |
+| [Q4] | pág. 40, «la fuerza G» | ⏳ decisão do autor |
+| [Q5] | 2 QR para material que não está em espanhol | ⏳ decisão do autor |
+| camadas 2 e 3 | conferência contra a origem | ⏳ depende do original PT |
+
+Conferido depois de aplicar: `auditar.py` **LIBERADO, 100 %**, zero classe A;
+`conferir_fontes.py` zero glifo de recurso; camada de texto idêntica nas 64
+páginas não tocadas; zero sobreposição nova nas 10 tocadas; 74 páginas, 136
+imagens, 33 links, 8 marcadores, `/Lang` es-419 — tudo preservado. As três
+correções de parágrafo e as sete de linha foram vistas em renderização a 200
+e 300 dpi, uma por uma.
+
+O travessão da p20 é **desenho, não caractere**: a Helvetica Neue Bold
+embutida no PDF do cliente tem 82 glifos e nenhum U+2014. A barra sai da
+barra do próprio hífen do arquivo — mesma altura, mesma espessura, largura
+de um em —, o que mantém o tipo do título.
+
+---
+
+## VEREDITO DA REVISÃO (registro de 23/09/2026, antes das correções)
 
 ```
 Classe A (barreira clínica):  0 achados confirmados
@@ -227,5 +263,6 @@ para conferência humana, nunca como bloqueio.
 | 6 | [4] a [7] menores | Acabamento |
 | 7 | [Q5] 2 QR para material em português | Experiência do aluno hispano-hablante |
 
-**Itens 2 a 6 eu aplico em cerca de 20 minutos, se você mandar.** O item 1
-depende de você me dar o PDF em português.
+**Os itens 2 a 6 foram aplicados em 23/09/2026.** O item 1 — as camadas 2 e
+3 da revisão — continua dependendo do PDF em português; é o único item cujo
+risco não sei dimensionar, e a única ressalva que resta nesta entrega.
