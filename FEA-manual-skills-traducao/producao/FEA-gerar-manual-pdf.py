@@ -1,61 +1,17 @@
 # -*- coding: utf-8 -*-
 """Gera o manual da skill tradutora em PDF, identidade FEP Experience.
 
-Identidade aplicada pela regra da skill `identidades-visuais`: material sem
-produto envolvido usa a identidade do FEP Experience, sem logo, só cores e
-elementos de design. Valores aferidos pixel a pixel no manual de marca da
-pasta `3. ID FEP Experience` no Drive.
-
-Capa preta, como o key visual do evento, e miolo claro, para o documento
-continuar legivel impresso e em leitor de PDF. O gradiente entra como filete
-fino nas duas partes, que e o uso do proprio manual.
-
-Tres restricoes do motor de composicao do pymupdf que a folha de estilo
-respeita, e que quebram o resultado se alguem mexer:
-
-1. As corridas de uma linha sao alinhadas pelo TOPO da caixa, nao pela linha
-   de base. Trocar de familia no meio da frase desce a palavra. Negrito do
-   mesmo desenho nao desce, porque as metricas verticais sao as mesmas, e por
-   isso o negrito usado aqui e sempre do mesmo par de familias.
-2. Fundo de bloco e repintado em cada pagina por onde o fluxo passa, deixando
-   faixas soltas. Por isso a capa e desenhada a mao e o miolo nao usa fundo.
-3. O Story nao numera pagina nem desenha fio: rodape e filete entram depois,
-   pagina a pagina, com o pymupdf comum.
+O conteúdo vive aqui; a identidade visual e a composição vivem no
+`FEA_estilo.py`, compartilhado com os outros PDFs desta pasta.
 
 Uso, a partir de FEA-manual-skills-traducao/:
     python3 producao/FEA-gerar-manual-pdf.py
 """
 import os
-import pymupdf
 
-BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-os.chdir(BASE)
+import FEA_estilo as estilo
 
-SAIDA = 'FEA-manual-skill-tradutora.pdf'
-MIOLO = 'producao/miolo-tmp.pdf'
-FONTES = 'producao/fontes'
-
-# ---- identidade FEP Experience, aferida no manual de marca -----------------
-INDIGO = (0x47 / 255, 0x57 / 255, 0xFF / 255)
-ROXO = (0xA6 / 255, 0x41 / 255, 0xFF / 255)
-PRETO = (0x02 / 255, 0x02 / 255, 0x02 / 255)
-CINZA = (0x96 / 255, 0x9F / 255, 0xA9 / 255)
-BRANCO = (1, 1, 1)
-
-LARG, ALT = 595, 842
-MARGEM = 62
-
-
-def filete(page, x0, y, x1, espessura=3, passos=140):
-    """O gradiente da marca como filete fino, em faixas de cor interpolada."""
-    largura = (x1 - x0) / passos
-    for i in range(passos):
-        t = i / (passos - 1.0)
-        cor = tuple(INDIGO[c] + (ROXO[c] - INDIGO[c]) * t for c in range(3))
-        page.draw_rect(pymupdf.Rect(x0 + i * largura, y,
-                                    x0 + (i + 1) * largura + 0.4, y + espessura),
-                       color=None, fill=cor, width=0)
-
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 HTML = """
 <h2>O que a skill garante</h2>
@@ -301,147 +257,21 @@ tradução funciona, mas as verificações automáticas e o levantamento de arte
 QR não rodam.</p>
 """
 
-CSS = """
-@font-face { font-family: titulo; src: url(ElMessiri-SemiBold.ttf); }
-@font-face { font-family: titulo; font-weight: bold; src: url(ElMessiri-Bold.ttf); }
-@font-face { font-family: corpo; src: url(Manrope-Regular.ttf); }
-@font-face { font-family: corpo; font-weight: bold; src: url(Manrope-Bold.ttf); }
-
-* { font-family: corpo; }
-
-h2 {
-  font-family: titulo;
-  font-size: 19px;
-  color: #4757FF;
-  margin: 26px 0 9px 0;
-  line-height: 1.2;
-}
-h3 {
-  font-size: 12px;
-  color: #17172a;
-  margin: 18px 0 5px 0;
-}
-p, li, td, th {
-  font-size: 10.2px;
-  line-height: 1.62;
-  color: #2b2b3a;
-}
-p { margin: 0 0 11px 0; }
-li { margin-bottom: 5px; }
-ul, ol { margin: 0 0 11px 0; padding-left: 15px; }
-b { color: #17172a; }
-
-p.nota {
-  border-left: 3px solid #A641FF;
-  padding: 2px 0 2px 13px;
-  margin: 14px 0 16px 0;
-  color: #3a3a4d;
-}
-p.legenda { font-size: 9.2px; color: #6a6a7d; margin: 4px 0 14px 0; }
-
-table { width: 100%; border-collapse: collapse; margin: 10px 0 12px 0; }
-th {
-  font-size: 9px;
-  color: #4757FF;
-  text-align: left;
-  padding: 0 11px 6px 0;
-  border-bottom: 2px solid #A641FF;
-}
-td {
-  padding: 8px 11px 8px 0;
-  border-bottom: 1px solid #e3e3ec;
-  vertical-align: top;
-}
-"""
-
-
-def capa(doc):
-    """Capa preta, como o key visual do evento, desenhada a mao."""
-    page = doc.new_page(width=LARG, height=ALT)
-    page.draw_rect(pymupdf.Rect(0, 0, LARG, ALT), color=None, fill=PRETO, width=0)
-
-    face_t = pymupdf.Font(fontfile=os.path.join(FONTES, 'ElMessiri-SemiBold.ttf'))
-    face_c = pymupdf.Font(fontfile=os.path.join(FONTES, 'Manrope-Regular.ttf'))
-    face_m = pymupdf.Font(fontfile=os.path.join(FONTES, 'Manrope-SemiBold.ttf'))
-
-    def texto(x, y, txt, arq, tam, cor, espaco=0.0):
-        if espaco:
-            f = pymupdf.Font(fontfile=os.path.join(FONTES, arq))
-            for ch in txt:
-                page.insert_text(pymupdf.Point(x, y), ch, fontname='f' + arq[:6],
-                                 fontfile=os.path.join(FONTES, arq),
-                                 fontsize=tam, color=cor)
-                x += f.text_length(ch, tam) + espaco
-        else:
-            page.insert_text(pymupdf.Point(x, y), txt, fontname='f' + arq[:6],
-                             fontfile=os.path.join(FONTES, arq),
-                             fontsize=tam, color=cor)
-
-    texto(MARGEM, 214, 'DOCUMENTAÇÃO INTERNA', 'Manrope-SemiBold.ttf', 8.5,
-          CINZA, espaco=2.6)
-    filete(page, MARGEM, 236, MARGEM + 132, espessura=3)
-
-    texto(MARGEM, 322, 'Manual da skill', 'ElMessiri-SemiBold.ttf', 40, BRANCO)
-    texto(MARGEM, 372, 'tradutora', 'ElMessiri-SemiBold.ttf', 40, BRANCO)
-
-    sub = [
+estilo.montar(
+    saida='FEA-manual-skill-tradutora.pdf',
+    titulo=['Manual da skill', 'tradutora'],
+    subtitulo=[
         'Como o time usa a skill que traduz qualquer peça do catálogo',
         'de português para espanhol latino-americano: criativo, copy',
         'de página, mensagem de disparo, roteiro, legenda, e-mail,',
         'post, aula, apostila.',
-    ]
-    y = 424
-    for linha in sub:
-        texto(MARGEM, y, linha, 'Manrope-Regular.ttf', 11.5, (0.72, 0.72, 0.79))
-        y += 18
-
-    filete(page, MARGEM, ALT - 138, LARG - MARGEM, espessura=2, passos=200)
-    texto(MARGEM, ALT - 112, 'FEA  ·  23 de setembro de 2026',
-          'Manrope-SemiBold.ttf', 9.5, CINZA, espaco=1.0)
-    _ = (face_t, face_c, face_m)
-
-
-def miolo():
-    """Compoe o corpo do documento num PDF separado, via Story."""
-    arquivo = pymupdf.Archive(FONTES)
-    story = pymupdf.Story(html=HTML, user_css=CSS, archive=arquivo)
-    escritor = pymupdf.DocumentWriter(MIOLO)
-    caixa = pymupdf.Rect(MARGEM, MARGEM + 14, LARG - MARGEM, ALT - MARGEM - 26)
-    while True:
-        dev = escritor.begin_page(pymupdf.Rect(0, 0, LARG, ALT))
-        mais, _ = story.place(caixa)
-        story.draw(dev)
-        escritor.end_page()
-        if not mais:
-            break
-    escritor.close()
-
-
-def acabamento(doc):
-    """Filete no topo e rodape numerado em cada pagina de miolo."""
-    for i in range(1, len(doc)):
-        page = doc[i]
-        filete(page, MARGEM, MARGEM - 18, MARGEM + 46, espessura=2, passos=40)
-        page.draw_line(pymupdf.Point(MARGEM, ALT - MARGEM + 4),
-                       pymupdf.Point(LARG - MARGEM, ALT - MARGEM + 4),
-                       color=(0.89, 0.89, 0.92), width=0.6)
-        page.insert_text(
-            pymupdf.Point(MARGEM, ALT - MARGEM + 20),
-            'Manual da skill tradutora  ·  FEA  ·  %d de %d' % (i, len(doc) - 1),
-            fontname='rod', fontfile=os.path.join(FONTES, 'Manrope-Regular.ttf'),
-            fontsize=8, color=(0.52, 0.52, 0.58))
-
-
-miolo()
-doc = pymupdf.open()
-capa(doc)
-doc.insert_pdf(pymupdf.open(MIOLO))
-acabamento(doc)
-doc.set_metadata({
-    'title': 'Manual da skill tradutora PT para ES',
-    'author': 'FEA',
-    'subject': 'Como o time usa a skill fea-traduccion-es em qualquer material',
-})
-doc.save(SAIDA, deflate=True, garbage=3)
-os.remove(MIOLO)
-print('paginas', len(doc), '->', SAIDA)
+    ],
+    data='23 de setembro de 2026',
+    html=HTML,
+    rodape='Manual da skill tradutora',
+    metadados={
+        'title': 'Manual da skill tradutora PT para ES',
+        'author': 'FEA',
+        'subject': 'Como o time usa a skill fea-traduccion-es em qualquer material',
+    },
+)

@@ -2,20 +2,27 @@
 
 Duas entregas nesta pasta, geradas por script e regeneráveis:
 
-| Arquivo | O que é |
-|---------|---------|
-| `FEA-manual-skill-tradutora.pdf` | O manual em 9 páginas, para circular no time |
-| `FEA-skills-traducao-es.zip` | As duas skills prontas para instalar |
+| Arquivo | O que é | Para quem |
+|---------|---------|-----------|
+| `FEA-guia-instalacao-skills.pdf` | Passo a passo de instalação, 5 páginas, com checklist | quem vai instalar |
+| `FEA-manual-skill-tradutora.pdf` | O manual de uso, 8 páginas | quem vai usar |
+| `FEA-skills-traducao-es.zip` | As duas skills prontas para instalar | acompanha o guia |
 
-## Regenerar o PDF
+## Regenerar os PDFs
 
 ```
-python3 producao/FEA-gerar-manual-pdf.py
+PYTHONPATH=producao python3 producao/FEA-gerar-instalacao-pdf.py
+PYTHONPATH=producao python3 producao/FEA-gerar-manual-pdf.py
 ```
 
-O conteúdo vive dentro do próprio script, em HTML. Identidade FEP Experience
-por regra da skill `identidades-visuais`: material sem produto envolvido usa a
-identidade do evento, sem logo, só cores e elementos de design.
+O conteúdo de cada documento vive dentro do próprio script, em HTML. A
+identidade visual e a composição ficam em `producao/FEA_estilo.py`, comum aos
+dois: cores, capa, miolo, rodapé numerado e as três restrições do motor de
+composição do pymupdf que a folha de estilo contorna.
+
+Identidade FEP Experience por regra da skill `identidades-visuais`: material
+sem produto envolvido usa a identidade do evento, sem logo, só cores e
+elementos de design.
 
 ## Refazer o pacote das skills
 
@@ -26,9 +33,10 @@ cd .claude/skills && zip -qr ../../FEA-manual-skills-traducao/FEA-skills-traduca
 
 ## As fontes em `producao/fontes/`
 
-El Messiri e Manrope, recortes latinos, vindos do Fontsource via `npm pack` e
-convertidos de WOFF para TTF com fontTools. A Manrope entra no lugar da
-Satoshi, que não está em host permitido.
+El Messiri, Manrope e JetBrains Mono, recortes latinos, vindos do Fontsource
+via `npm pack` e convertidos de WOFF para TTF com fontTools. A Manrope entra no
+lugar da Satoshi, que não está em host permitido. A JetBrains Mono serve só aos
+blocos de comando do guia de instalação.
 
 `producao/FEA-ligaduras.py` dá a essas fontes os glifos `fi` e `fl`. Sem eles o
 motor de HTML do pymupdf, que troca esses pares pelas ligaduras U+FB01 e
