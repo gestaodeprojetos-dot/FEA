@@ -406,12 +406,18 @@ Cada linha traz categoria, nome, link para a pasta de identidade no Drive e se
 existe KV (key visual). Cobre institucional, eventos, produtos, lançamentos
 pagos, masterclasses gratuitas, ebooks e LatAm.
 
-**Divergiu do padrão do ecossistema? Perguntar, não escolher sozinho.** Vale a
-mesma regra do *Conflito não resolvido* registrado na seção de identidade
-visual: quando o kit do projeto no Drive diverge do padrão FEP Experience
-descrito acima, a decisão é da Keila. Nunca inventar paleta, tipografia ou tom
-visual, e nunca deduzir a identidade de um projeto a partir do material de
-outro.
+**Qual identidade usar (regra da skill `identidades-visuais`, set/2026):**
+
+1. A peça é de um produto ou evento específico? Usar a identidade **daquele
+   produto**, conforme a pasta dele no Drive.
+2. A peça não tem produto envolvido (documento interno, dashboard, relatório de
+   processo)? Usar a identidade do **FEP Experience, sem nenhuma logo**, só
+   cores e elementos de design.
+
+Isso resolve, para material sem produto, o *Conflito não resolvido* registrado
+na seção de identidade visual. Continua valendo para todo o resto: nunca
+inventar paleta, tipografia ou tom visual, e nunca deduzir a identidade de um
+projeto a partir do material de outro.
 
 ## Como achar a identidade de um projeto
 
@@ -447,9 +453,10 @@ outro.
 ## Kit próprio do evento FEP Experience (FEPEXP)
 
 Aferido em 23/09/2026 na pasta `3. ID FEP Experience`, amostrando os pixels do
-manual. **Estes valores são os do kit do evento, e divergem do padrão do
-ecossistema descrito na seção de identidade visual.** Antes de aplicar em
-qualquer peça, perguntar à Keila qual das duas identidades vale.
+manual. **É esta a identidade de toda peça sem produto envolvido**, por regra
+da skill `identidades-visuais`, e ela difere do padrão descrito na seção de
+identidade visual acima. Peça de produto específico usa a identidade do
+produto.
 
 | Papel | Valor |
 |-------|-------|
@@ -458,9 +465,12 @@ qualquer peça, perguntar à Keila qual das duas identidades vale.
 | Cinza de apoio | `#969FA9` |
 | Tipografia do kit | TT Firs Neue, Satoshi, El Messiri |
 
-Das três famílias, só El Messiri está no Google Fonts. O padrão do ecossistema
-pede Sora e Montserrat, ambas no Google Fonts, então em peça web o caminho sem
-atrito é o padrão do ecossistema.
+Das três famílias, só El Messiri está no Google Fonts, que é o único host de
+fontes que artefato publicado aceita. Em peça web: El Messiri nos títulos e
+Manrope no corpo, substituta da Satoshi, registrando a troca no rodapé da peça.
+
+O gradiente entra como filete fino, nunca como fundo chapado, que é o uso do
+próprio manual.
 
 ## Siglas já mapeadas na planilha
 
