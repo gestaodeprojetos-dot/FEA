@@ -14,9 +14,14 @@ Quatro correcoes sobre o PDF traduzido, todas verificaveis:
    cada glifo), a letra errada e coberta e a certa desenhada por cima.
    A letra certa e mais estreita que a fatia que a serifada ocupava, entao
    vai centrada: a sobra se divide nos dois lados e nada se desloca.
-   Resta na camada de texto o glifo antigo, oculto sob a mascara; o texto
-   extraido sai correto, que e o que importa para busca, copia e leitor de
-   tela. Some de vez na proxima passagem completa do traduzir_pdf.py.
+   A letra certa vai como CONTORNO VETORIAL, nao como texto. Se fosse
+   texto, ela entraria no fluxo depois de tudo e o extrator a devolveria
+   como caractere solto no fim da pagina — copiar a p11 dava um 'y j'
+   perdido no rodape. Como contorno, a camada de texto fica intacta: a
+   linha continua lendo 'Piel y tejido', com os caracteres certos, e so o
+   NOME da fonte registrado para esses tres segue sendo o da serifada —
+   invisivel para quem le, copia ou busca.
+   Some de vez na proxima passagem completa do traduzir_pdf.py.
 
 2. METADADOS — o arquivo saiu do InDesign sem titulo, autor nem assunto.
 
@@ -69,20 +74,63 @@ for pno in range(doc.page_count):
                     'bbox': list(s['bbox']),
                 })
 
+def contornos(caminho, ch):
+    """Contornos do glifo em unidades de fonte, ja decompostos."""
+    from fontTools.ttLib import TTFont
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
+    t = TTFont(caminho, fontNumber=0)
+    gs = t.getGlyphSet()
+    nome = t.getBestCmap()[ord(ch)]
+    rec = DecomposingRecordingPen(gs)
+    gs[nome].draw(rec)
+    return rec.value, t['head'].unitsPerEm, t['hmtx'][nome][0]
+
+
 for pno, itens in alvos.items():
     page = doc[pno]
     for it in itens:
         cobre = pymupdf.Rect(it['x0'], it['bbox'][1] - 0.4,
                              it['x1'], it['bbox'][3] + 0.4)
         page.draw_rect(cobre, color=None, fill=(1, 1, 1), width=0)
-        av = face.text_length(it['ch'], fontsize=it['tam'])
-        dx = ((it['x1'] - it['x0']) - av) / 2.0
-        page.insert_text((it['x0'] + dx, it['y']), it['ch'],
-                         fontname='hnb', fontfile=FONTE_BOLD, fontsize=it['tam'],
-                         color=pymupdf.sRGB_to_pdf(it['cor']))
+
+        val, upm, adv = contornos(FONTE_BOLD, it['ch'])
+        esc = it['tam'] / float(upm)
+        dx = ((it['x1'] - it['x0']) - adv * esc) / 2.0
+        ox, oy = it['x0'] + dx, it['y']
+        P = lambda p: pymupdf.Point(ox + p[0] * esc, oy - p[1] * esc)
+
+        sh = page.new_shape()
+        for op, args in val:
+            if op == 'moveTo':
+                ini = ant = P(args[0])
+            elif op == 'lineTo':
+                sh.draw_line(ant, P(args[0])); ant = P(args[0])
+            elif op == 'curveTo':
+                pts = [P(a) for a in args]
+                sh.draw_bezier(ant, pts[0], pts[1], pts[2]); ant = pts[2]
+            elif op == 'qCurveTo':      # TrueType: quadraticas
+                pts = [P(a) for a in args if a is not None]
+                for i in range(len(pts) - 1):
+                    ctrl = pts[i]
+                    fim = pts[i + 1] if i + 1 == len(pts) - 1 else \
+                        pymupdf.Point((pts[i].x + pts[i + 1].x) / 2,
+                                      (pts[i].y + pts[i + 1].y) / 2)
+                    c1 = pymupdf.Point(ant.x + 2.0 / 3 * (ctrl.x - ant.x),
+                                       ant.y + 2.0 / 3 * (ctrl.y - ant.y))
+                    c2 = pymupdf.Point(fim.x + 2.0 / 3 * (ctrl.x - fim.x),
+                                       fim.y + 2.0 / 3 * (ctrl.y - fim.y))
+                    sh.draw_bezier(ant, c1, c2, fim); ant = fim
+            elif op == 'closePath':
+                if ant != ini:
+                    sh.draw_line(ant, ini)
+        sh.finish(color=None, fill=pymupdf.sRGB_to_pdf(it['cor']),
+                  even_odd=False, closePath=True)
+        sh.commit()
+
         rel['glifos'].append({'pagina': pno + 1, 'letra': it['ch'],
+                              'como': 'contorno vetorial',
                               'fatia_pt': round(it['x1'] - it['x0'], 3),
-                              'avanco_pt': round(av, 3),
+                              'avanco_pt': round(adv * esc, 3),
                               'folga_lado_pt': round(dx, 3)})
 
 # ---- 2 e 3. metadados e idioma ------------------------------------------
@@ -145,6 +193,8 @@ rel['verificacao'] = {
     'paginas': v.page_count,
     'linhas_corrigidas': [t for t in ('Piel y tejido subcutáneo:', 'Almohadillas grasas:')
                           if any(t in v[i].get_text() for i in range(v.page_count))],
+    'caracteres_soltos': [l for i in (10, 11) for l in v[i].get_text().splitlines()[-3:]
+                          if len(l.strip()) == 1],
     'links': sum(len(v[i].get_links()) for i in range(v.page_count)),
     'marcadores': len(v.get_toc()),
     'Lang': v.xref_get_key(v.pdf_catalog(), 'Lang')[1],
