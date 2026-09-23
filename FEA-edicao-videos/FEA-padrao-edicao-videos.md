@@ -21,7 +21,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 | Item | Referência | Novo padrão |
 |------|-----------|-------------|
 | Fonte | sans-serif padrão do app | **Montserrat** (título ExtraBold, legenda SemiBold) |
-| Título | cerca de 95 px | **140 px**, centralizado, até 3 linhas equilibradas |
+| Título | cerca de 95 px | **140 px**, centralizado, até 3 linhas equilibradas, contorno preto grosso (5 px) |
 | Legenda | cerca de 40 px, a 78% da altura | **36 px, a 85% da altura** (menor e mais abaixo) |
 | Duração máxima | sem regra | **3 minutos**. Corta o máximo possível; se ainda passar, divide em Parte 1 e Parte 2 |
 | Divisão | não havia | Título igual com "Parte 1" (ou "Parte 2") embaixo; nos 3 s finais da Parte 1 entra "Parte 2 no perfil" no estilo do título |

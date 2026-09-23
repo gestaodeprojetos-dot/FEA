@@ -66,7 +66,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H64000000,&H78000000,0,0,0,0,100,100,0,0,1,2,4,5,80,80,0,1
+Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
 Style: Legenda,Montserrat SemiBold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H50000000,&H64000000,0,0,0,0,100,100,0,0,1,2.2,1.5,2,110,110,{H - LEGENDA_Y - 20},1
 
 [Events]
@@ -185,6 +185,8 @@ CORRECOES = [
     (r"\bsuco\b", "sulco"), (r"\blábio mentual\b", "labiomentual"),
     (r"\balurônico\b", "hialurônico"), (r"\bmanejamento\b", "planejamento"),
     (r"\bintercorrente\b", "intercorrência"), (r"(\d) %", r"\1%"), (r"\bmeio ml\b", "meio mL"),
+    (r"\bVietre\b", "Vietri"), (r"\bEvoar Contour\b", "Yvoire Contour"),
+    (r"\bSerintox\b", "Seryntox"),
     (r"\b(?:[Nn]uvia|Lúvia|[Nn]euvia) (?:Stimulate|Estimulate)\b", "Neauvia Stimulate"),
 ]
 
@@ -195,7 +197,7 @@ def corrigir(texto, extras=()):
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietre", "Rai", "Raina", "Rainá", "João", "Pithon"}
+NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
 
 
 def limpar(texto):
