@@ -1,0 +1,261 @@
+{
+ "ffmpeg": "ffmpeg",
+ "fontsdir": "fonts",
+ "videos": [
+  {
+   "entrada": "raw/IMG_5481.MOV",
+   "transcricao": "tr/raw_IMG_5481.json",
+   "saida": "out/1- Planejamento full face 4mL.mp4",
+   "titulo": "Planejamento full face 4mL",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     33.9
+    ],
+    [
+     62.833,
+     70.567
+    ],
+    [
+     101.333,
+     103.733
+    ]
+   ],
+   "remover_legenda": [
+    [
+     103.05,
+     104.5
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_5482.MOV",
+   "transcricao": "tr/raw_IMG_5482.json",
+   "saida": "out/2- Anestesia com sanep.mp4",
+   "titulo": "Anestesia com sanep",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.3,
+     25.567
+    ],
+    [
+     26.6,
+     27.867
+    ],
+    [
+     29.633,
+     55.8
+    ],
+    [
+     58.433,
+     82.9
+    ],
+    [
+     88.667,
+     129.367
+    ],
+    [
+     131.767,
+     141.033
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "raw/IMG_5483.MOV",
+   "transcricao": "tr/raw_IMG_5483.json",
+   "saida": "out/3- Preenchimento refinamento de olheiras.mp4",
+   "titulo": "Preenchimento refinamento de olheiras",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.2,
+     75.833
+    ],
+    [
+     76.933,
+     85.4
+    ],
+    [
+     90.233,
+     133.033
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "raw/IMG_5484.MOV",
+   "transcricao": "tr/raw_IMG_5484.json",
+   "saida": "out/4- Preenchimento de bigode chinês.mp4",
+   "titulo": "Preenchimento de bigode chinês",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     65.6
+    ],
+    [
+     68.4,
+     76.533
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "raw/IMG_5487.MOV",
+   "transcricao": "tr/raw_IMG_5487.json",
+   "saida": "out/5- Preenchimento de têmporas.mp4",
+   "titulo": "Preenchimento de têmporas",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.933,
+     21.667
+    ],
+    [
+     22.367,
+     32.2
+    ],
+    [
+     39.367,
+     55.8
+    ],
+    [
+     58.9,
+     89.267
+    ],
+    [
+     93.2,
+     126.667
+    ],
+    [
+     140.167,
+     145.7
+    ],
+    [
+     146.967,
+     149.233
+    ],
+    [
+     159.167,
+     166.333
+    ]
+   ],
+   "remover_legenda": [
+    [
+     165.1,
+     170
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_5486.MOV",
+   "transcricao": "tr/raw_IMG_5486.json",
+   "saida": "out/6- Pertuito labial.mp4",
+   "titulo": "Pertuito labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     18.633
+    ],
+    [
+     19.633,
+     27.967
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "raw/IMG_5489.MOV",
+   "transcricao": "tr/raw_IMG_5489.json",
+   "saida": "out/7- Preenchimento labial.mp4",
+   "titulo": "Preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.533,
+     24.5
+    ],
+    [
+     27.367,
+     29.267
+    ],
+    [
+     32.467,
+     90.2
+    ],
+    [
+     93.833,
+     95.067
+    ],
+    [
+     102.5,
+     119.933
+    ],
+    [
+     122.533,
+     125.7
+    ],
+    [
+     137.933,
+     148.767
+    ],
+    [
+     152.767,
+     155.0
+    ],
+    [
+     156.8,
+     164.533
+    ],
+    [
+     169.0,
+     181.767
+    ],
+    [
+     190.7,
+     201.4
+    ],
+    [
+     214.767,
+     217.133
+    ],
+    [
+     221.833,
+     223.733
+    ]
+   ],
+   "remover_legenda": [
+    [
+     121.5,
+     230
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_5485.MOV",
+   "transcricao": "tr/raw_IMG_5485.json",
+   "saida": "out/EXTRA- Estruturação pré-jowl e sulco nasolabial.mp4",
+   "titulo": "Estruturação pré-jowl e sulco nasolabial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     34.567
+    ]
+   ],
+   "remover_legenda": []
+  }
+ ]
+}
