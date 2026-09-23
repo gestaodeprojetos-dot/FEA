@@ -213,6 +213,8 @@ def gerar_ass(v, palavras, duracao, caminho):
             continue
         e = min(e, fim_legendas)
         texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
+        if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
+            continue
         linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 

@@ -36,7 +36,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 
 ## Pontos de atenção de compliance
 
-- Menção falada a marcas de ácido hialurônico (Neuramis Volume, Revanesse Kiss) aparece nos vídeos de bigode chinês, pré-jowl, têmporas e preenchimento labial. A edição anterior manteve; a linha vermelha FEA pede aprovação explícita.
+- Menção falada a marcas de ácido hialurônico (Neuramis Volume, Revanesse Kiss) nos vídeos de bigode chinês, pré-jowl, têmporas e preenchimento labial: mantida com aprovação da Keila em 23/09/2026.
 - Nome da paciente é falado no vídeo 1 (mantido na edição anterior).
 
 ## Fluxo técnico
