@@ -168,6 +168,19 @@ CORRECOES = [
     (r"(\d) ?ml\b", r"\1 mL"),
     (r"\b24-70\b", "24G 70 mm"),
     (r"\bboulos\b", "bolus"),
+    (r"\b[Cc]arpulli\b", "carpule"),
+    (r"\bSanep\b", "SANEP"),
+    (r"\bhidroxapatita\b", "hidroxiapatita"),
+    (r"\btessidual\b", "tecidual"),
+    (r"\bbio ?remodelador\b", "biorremodelador"),
+    (r"\bsuco naso ?labial\b", "sulco nasolabial"),
+    (r"\bsuco lábio mentual\b", "sulco labiomentual"),
+    (r"\bácido alurônico\b", "ácido hialurônico"),
+    (r"\b[Ss]?[Tt]andeltas?\b", "tan delta"),
+    (r"\b[Cc]alda\b", "cauda"),
+    (r"\bHumanidade\b", "Uma unidade"), (r"\bhumanidade\b", "uma unidade"),
+    (r"\bletibo ?molhada\b", "Letybo molhada"),
+    (r"\bletbo\b", "Letybo"),
 ]
 
 

@@ -1,0 +1,244 @@
+{
+ "ffmpeg": "ffmpeg",
+ "fontsdir": "fonts",
+ "videos": [
+  {
+   "entrada": "b2/raw/01.MOV",
+   "transcricao": "b2/tr/01.json",
+   "saida": "b2/out/1- Planejamento full face 6mL.mp4",
+   "titulo": "Planejamento full face 6mL",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     127.32
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/02.MOV",
+   "transcricao": "b2/tr/02.json",
+   "saida": "b2/out/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     160.52
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/03.MOV",
+   "transcricao": "b2/tr/03.json",
+   "saida": "b2/out/3- Como anestesiar o mentoniano com SANEP.mp4",
+   "titulo": "Como anestesiar o mentoniano com SANEP",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     49.42
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/04.MOV",
+   "transcricao": "b2/tr/04.json",
+   "saida": "b2/out/4- Preenchimento de olheiras pós lifting.mp4",
+   "titulo": "Preenchimento de olheiras pós lifting",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     122.95
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/05.MOV",
+   "transcricao": "b2/tr/05.json",
+   "saida": "b2/out/5- Preenchimento arco zigomático.mp4",
+   "titulo": "Preenchimento arco zigomático",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     88.12
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/06.MOV",
+   "transcricao": "b2/tr/06.json",
+   "saida": "b2/out/6- Preenchimento comissura labial.mp4",
+   "titulo": "Preenchimento comissura labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     122.59
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/07.MOV",
+   "transcricao": "b2/tr/07.json",
+   "saida": "b2/out/7- Preenchimento de bigode chinês e código de barras.mp4",
+   "titulo": "Preenchimento de bigode chinês e código de barras",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     109.75
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     " \\.30\\b",
+     " 0,30"
+    ]
+   ]
+  },
+  {
+   "entrada": "b2/raw/08.MOV",
+   "transcricao": "b2/tr/08.json",
+   "saida": "b2/out/8- Pertuitos labiais.mp4",
+   "titulo": "Pertuitos labiais",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     39.05
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/09.MOV",
+   "transcricao": "b2/tr/09.json",
+   "saida": "b2/out/9- Preenchimento labial.mp4",
+   "titulo": "Preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     68.0
+    ],
+    [
+     83.8,
+     117.3
+    ],
+    [
+     127.2,
+     181.5
+    ],
+    [
+     192.9,
+     203.5
+    ],
+    [
+     215.3,
+     221.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bUsei 02\\b",
+     "Usei 0,2"
+    ]
+   ]
+  },
+  {
+   "entrada": "b2/raw/10.MOV",
+   "transcricao": "b2/tr/10.json",
+   "saida": "b2/out/10- Planejamento toxina estética.mp4",
+   "titulo": "Planejamento toxina estética",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     44.03
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/11.MOV",
+   "transcricao": "b2/tr/11.json",
+   "saida": "b2/out/11- Aplicação glabela.mp4",
+   "titulo": "Aplicação glabela",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     62.08
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/12.MOV",
+   "transcricao": "b2/tr/12.json",
+   "saida": "b2/out/12- Aplicação frontal.mp4",
+   "titulo": "Aplicação frontal",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     126.75
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/13.MOV",
+   "transcricao": "b2/tr/13.json",
+   "saida": "b2/out/13- Aplicação orbiculares.mp4",
+   "titulo": "Aplicação orbiculares",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     46.39
+    ]
+   ],
+   "remover_legenda": []
+  },
+  {
+   "entrada": "b2/raw/14.MOV",
+   "transcricao": "b2/tr/14.json",
+   "saida": "b2/out/14- Aplicação nasal.mp4",
+   "titulo": "Aplicação nasal",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     143.39
+    ]
+   ],
+   "remover_legenda": []
+  }
+ ]
+}
