@@ -1,0 +1,41 @@
+{
+ "rotulos": [
+  {
+   "es": "Relleno de ojeras",
+   "rect": [
+    117,
+    35,
+    236,
+    42
+   ],
+   "cor": [
+    72,
+    72,
+    72
+   ],
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+   "grupo": "ui",
+   "ancora": "esquerda",
+   "folga": 1.35,
+   "folga_alt": 1.25
+  },
+  {
+   "es": "+ Pérdida ósea",
+   "rect": [
+    270,
+    375,
+    425,
+    393
+   ],
+   "cor": [
+    60,
+    58,
+    60
+   ],
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "grupo": "cap",
+   "folga": 1.2,
+   "folga_alt": 1.9
+  }
+ ]
+}

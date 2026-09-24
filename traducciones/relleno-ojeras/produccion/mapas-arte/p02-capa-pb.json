@@ -1,0 +1,64 @@
+{
+ "modo": "luz",
+ "margem": 0.1,
+ "centro_x": 760,
+ "faixas": [
+  [
+   186,
+   544
+  ],
+  [
+   634,
+   704
+  ]
+ ],
+ "linhas": [
+  {
+   "es": "RELLENO",
+   "x0": 243,
+   "x1": 1314,
+   "y0": 196,
+   "y1": 287,
+   "grupo": "titulo",
+   "fonte": "../fontes-completas/HelveticaNeue-BoldES.ttf"
+  },
+  {
+   "es": "TRIDIMENSIONAL",
+   "x0": 249,
+   "x1": 1303,
+   "y0": 319,
+   "y1": 409,
+   "grupo": "titulo",
+   "fonte": "../fontes-completas/HelveticaNeue-BoldES.ttf"
+  },
+  {
+   "es": "DE OJERAS",
+   "x0": 373,
+   "x1": 1187,
+   "y0": 440,
+   "y1": 530,
+   "grupo": "titulo",
+   "fonte": "../fontes-completas/HelveticaNeue-BoldES.ttf"
+  },
+  {
+   "es": "Una Guía Completa con la Metodología ARTI",
+   "x0": 229,
+   "x1": 1320,
+   "y0": 647,
+   "y1": 689,
+   "grupo": "sub",
+   "fonte": "../fontes-completas/PlayfairDisplay-BoldItal.ttf",
+   "partes": [
+    {
+     "es": "Una Guía Completa con la Metodología ",
+     "fonte": "../fontes-completas/PlayfairDisplay-BoldItal.ttf"
+    },
+    {
+     "es": "ARTI",
+     "fonte": "../fontes-completas/HelveticaNeue-MediumES.ttf"
+    }
+   ]
+  }
+ ],
+ "fundo": "gradiente"
+}

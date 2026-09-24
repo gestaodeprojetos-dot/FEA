@@ -1,0 +1,8 @@
+{
+  "_nota": "Glifos de recurso que sobraram no fluxo mas NAO aparecem: estao cobertos por mascara branca e redesenhados em Helvetica Neue Bold por cima. Conferido a olho em 600 dpi. Some de vez na proxima passagem completa do traduzir_pdf.py, com a fonte ja corrigida.",
+  "excecoes": [
+    {"pagina": 11, "texto": "y", "motivo": "coberto e redesenhado; o XObject traz o paragrafo inteiro (5 linhas), reescrever custaria mais que o defeito"},
+    {"pagina": 11, "texto": "j", "motivo": "idem"},
+    {"pagina": 12, "texto": "h", "motivo": "idem"}
+  ]
+}

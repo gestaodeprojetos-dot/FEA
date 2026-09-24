@@ -388,3 +388,119 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 3. Nunca inventar preço, data, nome de pessoa ou número de aluno, perguntar ou pedir a fonte.
 4. Se o projeto envolver ActiveCampaign ou funil de email, perguntar se já existe documento ou URL de estratégia publicado antes de recriar do zero.
 5. Se for criar ou editar tarefa no ClickUp, aplicar a regra de data de início e vencimento obrigatórios antes de qualquer outra coisa.
+
+---
+
+# ONDE FICAM AS IDENTIDADES VISUAIS (índice do Drive)
+
+Complementa a seção **Identidade visual (base FEP Experience)** acima; não a
+substitui. Aquela seção define o padrão do ecossistema, que é o que vale por
+omissão. Este índice serve para dois casos: quando o pedido é de um projeto,
+produto ou evento com kit próprio, e quando é preciso conferir um valor na
+fonte em vez de repetir de memória.
+
+**Planilha mestra de identidades visuais:**
+<https://docs.google.com/spreadsheets/d/1llysTySv6se2-qtvc4io2zbuhh6-3gj1KTYhyE5VdhE/edit>
+
+Cada linha traz categoria, nome, link para a pasta de identidade no Drive e se
+existe KV (key visual). Cobre institucional, eventos, produtos, lançamentos
+pagos, masterclasses gratuitas, ebooks e LatAm.
+
+**Qual identidade usar (regra da skill `identidades-visuais`, set/2026):**
+
+1. A peça é de um produto ou evento específico? Usar a identidade **daquele
+   produto**, conforme a pasta dele no Drive.
+2. A peça não tem produto envolvido (documento interno, dashboard, relatório de
+   processo)? Usar a identidade do **FEP Experience, sem nenhuma logo**, só
+   cores e elementos de design.
+
+Isso resolve, para material sem produto, o *Conflito não resolvido* registrado
+na seção de identidade visual. Continua valendo para todo o resto: nunca
+inventar paleta, tipografia ou tom visual, e nunca deduzir a identidade de um
+projeto a partir do material de outro.
+
+## Como achar a identidade de um projeto
+
+1. Abrir a planilha e localizar a linha pelo nome ou pela sigla.
+2. Ir à pasta ligada naquela linha. A estrutura é padronizada:
+
+   ```
+   <N>. ID <PROJETO>/
+   ├── 01 - ID VISUAL/            PNG, PDF e PSD do manual de marca
+   ├── 02 - LOGOTIPO/             SVG, PNG, PDF
+   ├── 03 - ELEMENTOS DE APOIO/   GRAFISMOS e IMAGENS
+   ├── 04 - TIPOGRAFIA/           uma pasta por família
+   ├── 05 - ENTREGÁVEIS/
+   └── 06 - MOTION/
+   ```
+
+3. As cores saem das páginas do manual em `01 - ID VISUAL`. O manual costuma
+   ser imagem, sem camada de texto: **amostrar os pixels**, não confiar em
+   memória nem em descrição.
+
+## Ferramentas que funcionam nesse Drive
+
+- `mcp__Google_Drive__search_files` com `parentId = '<id da pasta>'` para
+  navegar a árvore.
+- `mcp__Google_Drive__read_file_content` faz OCR de PNG, é barato e às vezes já
+  entrega o texto do manual. Devolve vazio quando a página não tem texto
+  reconhecível.
+- `mcp__Google_Drive__download_file_content` devolve base64. Para arquivo
+  grande o resultado é gravado em disco pelo harness: decodificar com
+  `jq -r '.content' <arquivo> | base64 -d > saida.png` e amostrar com pymupdf,
+  em vez de trazer o base64 para a conversa.
+
+## Kit próprio do evento FEP Experience (FEPEXP)
+
+Aferido em 23/09/2026 na pasta `3. ID FEP Experience`, amostrando os pixels do
+manual. **É esta a identidade de toda peça sem produto envolvido**, por regra
+da skill `identidades-visuais`, e ela difere do padrão descrito na seção de
+identidade visual acima. Peça de produto específico usa a identidade do
+produto.
+
+| Papel | Valor |
+|-------|-------|
+| Gradiente do evento | `#4757FF` a `#A641FF` (azul-índigo a roxo), como filete fino, nunca fundo chapado |
+| Preto de fundo | `#020202`, o key visual é preto-dominante |
+| Cinza de apoio | `#969FA9` |
+| Tipografia do kit | TT Firs Neue, Satoshi, El Messiri |
+
+Das três famílias, só El Messiri está no Google Fonts, que é o único host de
+fontes que artefato publicado aceita. Em peça web: El Messiri nos títulos e
+Manrope no corpo, substituta da Satoshi, registrando a troca no rodapé da peça.
+
+O gradiente entra como filete fino, nunca como fundo chapado, que é o uso do
+próprio manual.
+
+## Siglas já mapeadas na planilha
+
+| Sigla | Projeto |
+|-------|---------|
+| FEPEXP | FEP Experience (evento) |
+| FEP | Formação Especialista em Preenchimento |
+| FEB | Formação Especialista em Botox |
+| FEEL | Formação em Escultura Labial |
+| FEF | Formação Especialista em Fios |
+| ATSD | Atenda Todo Santo Dia |
+| CAC | Curso Avançado de Complicações |
+| ARTI | Protocolo ARTI (faz parte da FEP) |
+
+---
+
+# TRADUÇÃO PT PARA ES
+
+Duas skills em `.claude/skills/`, que trabalham em sequência:
+
+- `fea-traduccion-es` traduz para espanhol latino-americano com terminologia
+  travada por glossário e produz o arquivo final, inclusive remontando PDF sem
+  designer.
+- `fea-revision-es` revisa às cegas, como par especialista, e emite veredito.
+
+Tradução própria não se auto-aprova: a revisão recebe o texto em espanhol, o
+original em português e os glossários, e nenhuma justificativa do tradutor.
+
+O veredito tem dois níveis. Classe A é barreira clínica (dose, unidade, via,
+plano anatômico, lado e sentido, negação, alerta suavizado) e um único achado
+retém a entrega, qualquer que seja o índice. Classe B é índice editorial:
+`LIBERADO` a partir de 95 por cento, `LIBERADO COM RESSALVAS` entre 80 e 95, e
+`RETIDO` abaixo de 80.

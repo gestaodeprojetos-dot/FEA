@@ -1,0 +1,228 @@
+{
+ "saida": "e2.pdf",
+ "trocados": 20,
+ "mantidos": 13,
+ "erros": [],
+ "detalhe": [
+  {
+   "pagina": 14,
+   "de": "https://drive.google.com/file/d/1HwoJC-1_lPVUSta0TDL_rTCL6s-zbfPP/view",
+   "para": "https://drive.google.com/file/d/1SOxQXjYj6fsrHxQjPSAH8cFzT2VXzTae/view",
+   "rect": [
+    312.7,
+    74.6,
+    390.0,
+    151.9
+   ]
+  },
+  {
+   "pagina": 20,
+   "de": "https://drive.google.com/file/d/1zg1QC8ae2GOl4xOB5dWWArZBzKhfJHXk/view?t=30",
+   "para": "https://drive.google.com/file/d/1r1cIw7FdUsHw5DtK-9qTGJ4ibguK3mwk/view",
+   "rect": [
+    311.5,
+    201.6,
+    391.4,
+    281.3
+   ]
+  },
+  {
+   "pagina": 22,
+   "de": "https://drive.google.com/file/d/1OmShQSqAWbdBPSBzhcjjnEGw0bh_XUbT/view",
+   "para": "https://drive.google.com/file/d/1DuBCmhRqyr-gA6yIAHvO-8dFllyETXLy/view",
+   "rect": [
+    311.5,
+    276.2,
+    391.4,
+    356.2
+   ]
+  },
+  {
+   "pagina": 28,
+   "de": "https://drive.google.com/file/d/1is3EUbeHVE3KDhhZsX_LG6koR6uGZY31/view",
+   "para": "https://drive.google.com/file/d/1rIyB5DrpyDtKO_VUM1M9SXTmDoxYW8s1/view",
+   "rect": [
+    311.5,
+    74.4,
+    391.4,
+    154.3
+   ]
+  },
+  {
+   "pagina": 34,
+   "de": "https://drive.google.com/file/d/1PwikjaqDastNx9AR9pqqH-OHxGqWHM7g/view",
+   "para": "https://drive.google.com/file/d/1RrZ6ixt-6kp2YT_rwWHyt5VkbGMWygJM/view",
+   "rect": [
+    311.5,
+    372.2,
+    391.4,
+    452.2
+   ]
+  },
+  {
+   "pagina": 46,
+   "de": "https://www.youtube.com/watch?v=E6Jr5bm__Ys",
+   "para": "https://drive.google.com/file/d/1nEs2tqj_AbaOzYqcq3NEs4j3jedd_SVV/view",
+   "rect": [
+    312.5,
+    75.6,
+    390.1,
+    153.1
+   ]
+  },
+  {
+   "pagina": 49,
+   "de": "https://www.youtube.com/shorts/l05fBSo_5ws",
+   "para": "https://drive.google.com/file/d/1eXL6xfzPy71tQWDVFb0NsNLEvfYT_bGk/view",
+   "rect": [
+    320.4,
+    347.0,
+    390.7,
+    417.6
+   ]
+  },
+  {
+   "pagina": 49,
+   "de": "https://www.youtube.com/shorts/kbocfP1toT4",
+   "para": "https://drive.google.com/file/d/17G0MUfiXfkHsFrwr5ehmJcfMVLOFn2ER/view",
+   "rect": [
+    142.1,
+    506.6,
+    211.5,
+    576.3
+   ]
+  },
+  {
+   "pagina": 49,
+   "de": "https://www.youtube.com/shorts/PkKmtkkbV14",
+   "para": "https://drive.google.com/file/d/1xvA7Kchmp8BXZTBx_CUCAwTDFMbCcGRl/view",
+   "rect": [
+    141.6,
+    347.8,
+    211.7,
+    418.2
+   ]
+  },
+  {
+   "pagina": 50,
+   "de": "https://www.youtube.com/shorts/awa6wCo_Zl8",
+   "para": "https://drive.google.com/file/d/12diL2bs6D7ETpiDF3ZsGJ3sHAx8FDwvA/view",
+   "rect": [
+    250.1,
+    256.3,
+    317.8,
+    324.0
+   ]
+  },
+  {
+   "pagina": 51,
+   "de": "https://www.youtube.com/watch?v=GX9u2yyem7E",
+   "para": "https://drive.google.com/file/d/17uyjC8NOljYz9wTeAN3m4djuVwvkaq5D/view",
+   "rect": [
+    323.5,
+    451.2,
+    389.5,
+    517.4
+   ]
+  },
+  {
+   "pagina": 51,
+   "de": "https://www.youtube.com/watch?v=63nh2AQiAtA",
+   "para": "https://drive.google.com/file/d/1OjZelTi8hwBBr83gZCRpxefXjTWmLUDE/view",
+   "rect": [
+    323.3,
+    120.2,
+    389.5,
+    186.5
+   ]
+  },
+  {
+   "pagina": 52,
+   "de": "https://www.youtube.com/watch?v=FHyZ4Ee_q1E",
+   "para": "https://drive.google.com/file/d/1FwAYo9UnMcmscjhzj3p4L2OqzHI5Xk4W/view",
+   "rect": [
+    323.3,
+    258.7,
+    389.5,
+    324.7
+   ]
+  },
+  {
+   "pagina": 54,
+   "de": "https://www.youtube.com/shorts/CrQ3cQIpKpc",
+   "para": "https://drive.google.com/file/d/16L-dIlKfBrbGLuzsVxUn7M3vpMYAR55y/view",
+   "rect": [
+    235.9,
+    122.9,
+    303.8,
+    190.6
+   ]
+  },
+  {
+   "pagina": 57,
+   "de": "https://www.youtube.com/shorts/l05fBSo_5ws",
+   "para": "https://drive.google.com/file/d/1eXL6xfzPy71tQWDVFb0NsNLEvfYT_bGk/view",
+   "rect": [
+    320.4,
+    397.2,
+    390.7,
+    467.5
+   ]
+  },
+  {
+   "pagina": 57,
+   "de": "https://www.youtube.com/watch?v=63nh2AQiAtA",
+   "para": "https://drive.google.com/file/d/1OjZelTi8hwBBr83gZCRpxefXjTWmLUDE/view",
+   "rect": [
+    323.3,
+    225.1,
+    389.5,
+    291.1
+   ]
+  },
+  {
+   "pagina": 57,
+   "de": "https://www.youtube.com/shorts/_UvdKBkx3dU",
+   "para": "https://drive.google.com/file/d/1bgW8HjAzbbuUHf1ABVT0uajj3ENPL71U/view",
+   "rect": [
+    142.8,
+    398.9,
+    210.7,
+    466.6
+   ]
+  },
+  {
+   "pagina": 61,
+   "de": "https://drive.google.com/file/d/1o8GJ5chWVE3bAnvLYUbzfBo5Lqw7v95Z/view?t=94",
+   "para": "https://drive.google.com/file/d/11tDvJLY7S-Ft--Axk6RoUSafzWpuKob3/view",
+   "rect": [
+    322.8,
+    510.0,
+    390.2,
+    577.4
+   ]
+  },
+  {
+   "pagina": 61,
+   "de": "https://drive.google.com/file/d/18J0kJ0kq_OiVoL7ExuHxsQJZG_DzysLS/view?t=1100",
+   "para": "https://drive.google.com/file/d/1MwX4aI4iTPFGd6iJhqStpHZDG3L3vk2k/view",
+   "rect": [
+    322.8,
+    375.1,
+    390.2,
+    442.5
+   ]
+  },
+  {
+   "pagina": 64,
+   "de": "https://drive.google.com/file/d/1cKZXapLdvwJ-YPATGMQPOBvqyX9mrn2L/view?t=164",
+   "para": "https://drive.google.com/file/d/1sfLLMWV6tNWD5718hcfgShEPu3c1FbAs/view",
+   "rect": [
+    274.8,
+    507.6,
+    342.2,
+    575.0
+   ]
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "rotulos": [
+  {
+   "es": "Disminución almohadilla",
+   "rect": [
+    268,
+    144,
+    371,
+    153
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "región suborbitaria",
+   "rect": [
+    265,
+    158,
+    374,
+    167
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "Disminución almohadilla",
+   "rect": [
+    460,
+    144,
+    563,
+    153
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "región malar",
+   "rect": [
+    473,
+    158,
+    550,
+    167
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "Pérdida tono",
+   "rect": [
+    64,
+    338,
+    133,
+    346
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "Muscular",
+   "rect": [
+    73,
+    351,
+    124,
+    360
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "Cambio SOOF",
+   "rect": [
+    289,
+    345,
+    366,
+    354
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  },
+  {
+   "es": "+ Pérdida ósea",
+   "rect": [
+    484,
+    345,
+    567,
+    352
+   ],
+   "grupo": "cap",
+   "fonte": "/usr/share/fonts/truetype/liberation/LiberationMono-Italic.ttf",
+   "folga": 1.6
+  }
+ ]
+}
