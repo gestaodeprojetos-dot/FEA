@@ -20,8 +20,8 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 
 | Item | Referência | Novo padrão |
 |------|-----------|-------------|
-| Fonte | sans-serif padrão do app | **Montserrat** (título ExtraBold, legenda Bold) |
-| Título | cerca de 95 px | **140 px**, centralizado, até 3 linhas equilibradas, contorno preto grosso (5 px) |
+| Fonte | sans-serif padrão do app | **Montserrat Bold** (título e legenda) |
+| Título | cerca de 95 px | **Bold 120 (ASS), entrelinha 0,78**, centralizado, contorno 2,5 px + sombra; medido na referência de 24/09 |
 | Legenda | cerca de 40 px, a 78% da altura | **Montserrat Bold 56 px, contorno preto, a ~80% da altura** (ajuste de 24/09: a versão de 36 px ficou pequena) |
 | Duração máxima | sem regra | **3 minutos**. Corta o máximo possível; se ainda passar, divide em Parte 1 e Parte 2 |
 | Divisão | não havia | Título igual com "Parte 1" (ou "Parte 2") embaixo; nos 3 s finais da Parte 1 entra "Parte 2 no perfil" no estilo do título |
@@ -34,8 +34,9 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 - Trechos em que a transcrição automática "inventa" fala sobre silêncio (por exemplo, "tchau" repetido) são removidos da legenda.
 - A interjeição "ó" não entra na legenda.
 - Cânula em calibre x comprimento (22x70); G linha = G', G duas linhas = G''.
-- Entrelinha reduzida (1,05 no título, 1,08 na legenda), sem grudar as linhas.
+- Entrelinha 0,78 no título e 0,80 na legenda, medidas em pixels nas referências da Keila.
 - Vídeo nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
+- Cortar: espelho para a paciente se ver, pedido de "fecha o olho", conversa de fundo (ou silenciar) e conversa pessoal ou de histórico da paciente.
 - A Keila revisa as legendas antes de finalizar.
 
 ## Pontos de atenção de compliance

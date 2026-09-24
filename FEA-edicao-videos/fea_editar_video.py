@@ -38,15 +38,15 @@ import sys
 
 W, H = 1080, 1920
 
-TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
+TITULO_TAM = 120       # medido na referência da Keila (24/09): Montserrat Bold, ~2/3 da largura
 TITULO_DUR = 3.0
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
 MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
-ENTRELINHA_TITULO = 1.05   # altura de cada linha / tamanho da fonte (padrão da Montserrat ~1,22)
-ENTRELINHA_LEGENDA = 1.08  # ajuste 24/09: linhas mais próximas, como nas referências
+ENTRELINHA_TITULO = 0.78   # linhas bem próximas, igual à referência (medido em pixels)
+ENTRELINHA_LEGENDA = 0.80  # idem, medido na referência de legenda
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
 
 
@@ -68,7 +68,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+Style: Titulo,Montserrat Bold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H30000000,&H80000000,0,0,0,0,100,100,0,0,1,2.5,2.5,5,80,80,0,1
 Style: Legenda,Montserrat Bold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
 
 [Events]
