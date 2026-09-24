@@ -20,7 +20,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | Item | Valor |
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
-| Título | Montserrat **Bold 120** (tamanho ASS), branco, contorno 2,5 px + sombra 2,5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, **entrelinha 0,78** (linhas bem próximas). Medido em pixels na referência da Keila em 24/09/2026: a linha mais longa ocupa ~2/3 da largura. Nos **3 primeiros segundos** |
+| Título | Montserrat **ExtraBold 116** (tamanho ASS), branco, contorno preto sólido 4 px + sombra 1 px, centro exato do quadro, até 3 linhas de ~16 caracteres, **entrelinha 0,78** (linhas bem próximas). Medido em pixels na referência da Keila em 24/09/2026: a linha mais longa ocupa ~2/3 da largura. Nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 0,80 (medida na referência da Keila), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
 | Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
