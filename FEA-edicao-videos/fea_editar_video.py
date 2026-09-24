@@ -117,7 +117,19 @@ def blocos_legenda(palavras):
         atual.append(p)
     if atual:
         blocos.append(atual)
-    return blocos
+    # palavra curta sozinha ("tá", "ali") pisca na tela: junta com a frase vizinha
+    juntos = []
+    for i, b in enumerate(blocos):
+        if len(b) == 1 and len(b[0]["w"].strip(".,?!")) <= 5:
+            prox = blocos[i + 1] if i + 1 < len(blocos) else None
+            if prox and prox[0]["s"] - b[0]["e"] < 1.0:
+                prox.insert(0, b[0])
+                continue
+            if juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0:
+                juntos[-1].append(b[0])
+                continue
+        juntos.append(b)
+    return juntos
 
 
 def quebrar_linhas(texto):
