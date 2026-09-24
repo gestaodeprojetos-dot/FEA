@@ -60,6 +60,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## Correções de texto
 
+Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x comprimento** ("2270", "22 70" ou "24-70" viram `22x70`, `24x70`); "G linha" vira `G'` e "G duas linhas" vira `G''`.
+
 `CORRECOES` em `fea_editar_video.py` aplica a regra FEA (nunca "pra", sempre "para") e termos técnicos (carpule, têmpora, interfascial, hidroxiapatita, tecidual, sulco nasolabial, tan delta, mL...). Toda grafia nova confirmada pela Keila entra ali e, se for nome próprio, em `NOMES_PROPRIOS`. Conferir na tela do vídeo (caixa do produto) quando houver dúvida de marca.
 
 ## Entrega e limites conhecidos

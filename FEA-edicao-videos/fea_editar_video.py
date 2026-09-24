@@ -169,7 +169,11 @@ CORRECOES = [
     (r"\bRevanesse quisse\b", "Revanesse Kiss"),
     (r"\bNeuramis volume\b", "Neuramis Volume"),
     (r"(\d) ?ml\b", r"\1 mL"),
-    (r"\b24-70\b", "24G 70 mm"),
+    # cânula: calibre x comprimento (ex.: "2270", "22 70", "24-70" -> 22x70)
+    (r"\b(18|2[0-7])[- /]?(38|40|50|70)\b", r"\1x\2"),
+    # G linha: "G linha" -> G' ; "G duas linhas" / "G linha linha" -> G''
+    (r"\b[Gg](?:ê)?[- ]?(?:duas linhas|linha linha)\b", "G''"),
+    (r"\b[Gg](?:ê)?[- ]?linha\b", "G'"),
     (r"\bboulos\b", "bolus"),
     (r"\b[Cc]arpulli\b", "carpule"),
     (r"\bSanep\b", "SANEP"),
