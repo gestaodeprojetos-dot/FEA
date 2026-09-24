@@ -1,6 +1,6 @@
 ---
 name: fea-edicao-reels
-description: Edita vídeos verticais de procedimento da FEA (Dr. João Pithon) no padrão da equipe - cortes, título Montserrat grande e centralizado, legenda automática menor e mais abaixo, limite de 3 minutos com divisão em Parte 1/Parte 2. Usar quando a Keila pedir para editar vídeos, Reels, cortes de procedimento, legendar vídeos ou "editar a pasta" de brutos do Drive (full face, toxina, preenchimento, anestesia etc.).
+description: Edita vídeos verticais de procedimento da FEA (Dr. João Pithon) no padrão da equipe - cortes, título Montserrat grande e centralizado, legenda automática em Montserrat Bold com contorno preto, limite de 3 minutos com divisão em Parte 1/Parte 2. Usar quando a Keila pedir para editar vídeos, Reels, cortes de procedimento, legendar vídeos ou "editar a pasta" de brutos do Drive (full face, toxina, preenchimento, anestesia etc.).
 ---
 
 # FEA: edição de Reels de procedimento
@@ -21,7 +21,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
 | Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
-| Legenda | Montserrat SemiBold 36 px, branca, contorno fino, centralizada a 85% da altura, 1 a 2 linhas, começa minúscula, sem ponto final. **Só entra depois que o título sai** |
+| Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
 | Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
 
@@ -44,7 +44,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 4. **Mesmo material já editado?** Comparar quadros (miniaturas 27x48 em cinza a 5 fps, correlação normalizada). Correlação ~0,99 = mesmo material: mapear offset quadro a quadro a 30 fps e extrair os trechos `manter`. Zero correspondência = outro paciente, decidir os cortes pela transcrição.
 5. **Cortes**: ler a transcrição com tempos, escolher `manter` (segundos do bruto) cortando em pausas entre palavras. Marcar em `remover_legenda` trechos em que a transcrição inventou fala sobre silêncio.
 6. **projeto.json** (ver o docstring de `fea_editar_video.py`): `entrada`, `transcricao`, `saida`, `titulo`, `parte`, `cartela_final`, `manter`, `remover_legenda`, `correcoes` (regex extras do lote).
-7. **Prévia primeiro**: `python3 fea_editar_video.py projeto.json --previa` gera versão 720p abaixo de 30 MB. Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de mandar.
+7. **Prévia primeiro**: `python3 fea_editar_video.py projeto.json --previa` gera versão 720p abaixo de 30 MB. Com pressa, `--entrega` gera direto o final em H.264 1080p abaixo de 30 MB (dividir o lote em 2 projetos e rodar em paralelo). Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de mandar.
 8. **Revisão da Keila**: criar no Drive, dentro da pasta de destino, um Google Doc `FEA-revisao-legendas-<lote>` com as legendas de cada vídeo (`[mm:ss] texto`, extraídas dos .ass) e, no topo, os pontos para decidir. Enviar as prévias pelo `SendUserFile`.
 9. **Final**: aplicar as correções, rodar sem `--previa` (qualidade total) e subir para a pasta de destino.
 
@@ -62,7 +62,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## Entrega e limites conhecidos
 
-- `SendUserFile` aceita no máximo **30 MB** por arquivo. Para a Keila guardar no computador: HEVC 1080p abaixo de 30 MB (`libx265 -preset fast`, bitrate = 27 MB x 8 / duração, `-tag:v hvc1`).
+- `SendUserFile` aceita no máximo **30 MB** por arquivo. Para a Keila guardar no computador: **H.264** 1080p abaixo de 30 MB, em 2 passadas (`libx264 -preset medium -pass 1/2`, bitrate de vídeo = 27,5 MB x 8 / duração, menos 96 kbps do áudio AAC). **Nunca HEVC/H.265**: no computador dela o vídeo abre com tela preta e só áudio (aconteceu em 24/09/2026).
 - A conexão do Drive não sobe vídeos grandes. Caminho definitivo: conta de serviço `fea-upload-69@fea-edicao-videos.iam.gserviceaccount.com` (projeto Google Cloud FEA-edicao-videos), com Editor na pasta Setembro. **Bloqueio em 24/09/2026**: política `iam.disableServiceAccountKeyCreation` impede gerar a chave JSON; o administrador do Workspace precisa criar exceção só para o projeto. Com a chave, subir pela API do Drive (`supportsAllDrives=true`, upload resumable), guardando a chave em `.env` fora do git.
 - A máquina é temporária: vídeos só na nuvem se perdem se a sessão ficar parada. Scripts e projeto.json ficam no git.
 
