@@ -20,7 +20,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 
 | Item | Referência | Novo padrão |
 |------|-----------|-------------|
-| Fonte | sans-serif padrão do app | **Montserrat** (título ExtraBold, legenda SemiBold) |
+| Fonte | sans-serif padrão do app | **Montserrat** (título ExtraBold, legenda Bold) |
 | Título | cerca de 95 px | **140 px**, centralizado, até 3 linhas equilibradas, contorno preto grosso (5 px) |
 | Legenda | cerca de 40 px, a 78% da altura | **Montserrat Bold 56 px, contorno preto, a ~80% da altura** (ajuste de 24/09: a versão de 36 px ficou pequena) |
 | Duração máxima | sem regra | **3 minutos**. Corta o máximo possível; se ainda passar, divide em Parte 1 e Parte 2 |
