@@ -76,28 +76,24 @@
    ]
   },
   {
-   "entrada": "b3/raw/02.MOV",
-   "transcricao": "b3/tr/02.json",
-   "saida": "b3/out/2- Anestesia intra-oral superior.mp4",
-   "titulo": "Anestesia intra-oral superior",
+   "entrada": "b3/raw/03.MOV",
+   "transcricao": "b3/tr/03.json",
+   "saida": "b3/out/3- Anestesia intra-oral inferior (mentoniano).mp4",
+   "titulo": "Anestesia intra-oral inferior (mentoniano)",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     1.1,
-     17.0
+     0.0,
+     54.9
     ],
     [
-     26.9,
-     31.0
+     75.8,
+     78.3
     ],
     [
-     38.0,
-     62.5
-    ],
-    [
-     77.8,
-     84.7
+     81.5,
+     84.0
     ]
    ],
    "remover_legenda": [],
@@ -157,24 +153,316 @@
    ]
   },
   {
-   "entrada": "b3/raw/03.MOV",
-   "transcricao": "b3/tr/03.json",
-   "saida": "b3/out/3- Anestesia intra-oral inferior (mentoniano).mp4",
-   "titulo": "Anestesia intra-oral inferior (mentoniano)",
+   "entrada": "b3/raw/05.MOV",
+   "transcricao": "b3/tr/05.json",
+   "saida": "b3/out/5- Preenchimento sulconasolabial.mp4",
+   "titulo": "Preenchimento sulconasolabial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.8,
+     27.5
+    ],
+    [
+     55.2,
+     69.1
+    ],
+    [
+     85.9,
+     102.8
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintroral\\b",
+     "intraoral"
+    ],
+    [
+     "\\bpréz\\b",
+     "pré"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\bNeuromis\\b",
+     "Neuramis"
+    ],
+    [
+     "\\blabialmentoniana\\b",
+     "labiomentoniana"
+    ],
+    [
+     "\\bsulculábio mentoniano\\b",
+     "sulco labiomentoniano"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\bDal\\b",
+     "DAO"
+    ],
+    [
+     "\\bperturbitos\\b",
+     "pertuitos"
+    ],
+    [
+     "\\bterem se inferior\\b",
+     "de terço inferior"
+    ],
+    [
+     "\\bnas labial, labimental\\b",
+     "nasolabial, labiomental"
+    ],
+    [
+     "\\bhidrossecção\\b",
+     "hidrodissecção"
+    ],
+    [
+     "\\bsuco labiomentoniano\\b",
+     "sulco labiomentoniano"
+    ]
+   ]
+  },
+  {
+   "entrada": "b3/raw/IMG_3774.MOV",
+   "transcricao": "b3/tr/IMG_3774.json",
+   "saida": "b3/out/7- Toxina efeito Nefertiti.mp4",
+   "titulo": "Toxina efeito Nefertiti",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
      0.0,
-     54.9
+     68.5
     ],
     [
-     75.8,
-     78.3
+     93.1,
+     102.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintroral\\b",
+     "intraoral"
     ],
     [
-     81.5,
-     84.0
+     "\\bpréz\\b",
+     "pré"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\bNeuromis\\b",
+     "Neuramis"
+    ],
+    [
+     "\\blabialmentoniana\\b",
+     "labiomentoniana"
+    ],
+    [
+     "\\bsulculábio mentoniano\\b",
+     "sulco labiomentoniano"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\bDal\\b",
+     "DAO"
+    ],
+    [
+     "\\bperturbitos\\b",
+     "pertuitos"
+    ],
+    [
+     "\\bterem se inferior\\b",
+     "de terço inferior"
+    ],
+    [
+     "\\bnas labial, labimental\\b",
+     "nasolabial, labiomental"
+    ],
+    [
+     "\\bhidrossecção\\b",
+     "hidrodissecção"
+    ],
+    [
+     "\\bsuco labiomentoniano\\b",
+     "sulco labiomentoniano"
+    ]
+   ]
+  },
+  {
+   "entrada": "b3/raw/IMG_3777.MOV",
+   "transcricao": "b3/tr/IMG_3777.json",
+   "saida": "b3/out/9- Planejamento fios de tração.mp4",
+   "titulo": "Planejamento fios de tração",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.0,
+     48.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintroral\\b",
+     "intraoral"
+    ],
+    [
+     "\\bpréz\\b",
+     "pré"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\bNeuromis\\b",
+     "Neuramis"
+    ],
+    [
+     "\\blabialmentoniana\\b",
+     "labiomentoniana"
+    ],
+    [
+     "\\bsulculábio mentoniano\\b",
+     "sulco labiomentoniano"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\bDal\\b",
+     "DAO"
+    ],
+    [
+     "\\bperturbitos\\b",
+     "pertuitos"
+    ],
+    [
+     "\\bterem se inferior\\b",
+     "de terço inferior"
+    ],
+    [
+     "\\bnas labial, labimental\\b",
+     "nasolabial, labiomental"
+    ],
+    [
+     "\\bhidrossecção\\b",
+     "hidrodissecção"
+    ],
+    [
+     "\\bsuco labiomentoniano\\b",
+     "sulco labiomentoniano"
+    ]
+   ]
+  },
+  {
+   "entrada": "b3/raw/IMG_3781.MOV",
+   "transcricao": "b3/tr/IMG_3781.json",
+   "saida": "b3/out/11- Ancoragem fios de tração.mp4",
+   "titulo": "Ancoragem fios de tração",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     124.3
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintroral\\b",
+     "intraoral"
+    ],
+    [
+     "\\bpréz\\b",
+     "pré"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\bNeuromis\\b",
+     "Neuramis"
+    ],
+    [
+     "\\blabialmentoniana\\b",
+     "labiomentoniana"
+    ],
+    [
+     "\\bsulculábio mentoniano\\b",
+     "sulco labiomentoniano"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\bDal\\b",
+     "DAO"
+    ],
+    [
+     "\\bperturbitos\\b",
+     "pertuitos"
+    ],
+    [
+     "\\bterem se inferior\\b",
+     "de terço inferior"
+    ],
+    [
+     "\\bnas labial, labimental\\b",
+     "nasolabial, labiomental"
+    ],
+    [
+     "\\bhidrossecção\\b",
+     "hidrodissecção"
+    ],
+    [
+     "\\bsuco labiomentoniano\\b",
+     "sulco labiomentoniano"
+    ]
+   ]
+  },
+  {
+   "entrada": "b3/raw/02.MOV",
+   "transcricao": "b3/tr/02.json",
+   "saida": "b3/out/2- Anestesia intra-oral superior.mp4",
+   "titulo": "Anestesia intra-oral superior",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.1,
+     17.0
+    ],
+    [
+     26.9,
+     31.0
+    ],
+    [
+     38.0,
+     62.5
+    ],
+    [
+     77.8,
+     84.7
     ]
    ],
    "remover_legenda": [],
@@ -319,83 +607,6 @@
    ]
   },
   {
-   "entrada": "b3/raw/05.MOV",
-   "transcricao": "b3/tr/05.json",
-   "saida": "b3/out/5- Preenchimento sulconasolabial.mp4",
-   "titulo": "Preenchimento sulconasolabial",
-   "parte": null,
-   "cartela_final": null,
-   "manter": [
-    [
-     0.8,
-     27.5
-    ],
-    [
-     55.2,
-     69.1
-    ],
-    [
-     85.9,
-     102.8
-    ]
-   ],
-   "remover_legenda": [],
-   "correcoes": [
-    [
-     "\\bintroral\\b",
-     "intraoral"
-    ],
-    [
-     "\\bpréz\\b",
-     "pré"
-    ],
-    [
-     "\\b[Cc]inguiderme\\b",
-     "Singderm"
-    ],
-    [
-     "\\bNeuromis\\b",
-     "Neuramis"
-    ],
-    [
-     "\\blabialmentoniana\\b",
-     "labiomentoniana"
-    ],
-    [
-     "\\bsulculábio mentoniano\\b",
-     "sulco labiomentoniano"
-    ],
-    [
-     "\\b[Nn]efertite\\b",
-     "Nefertiti"
-    ],
-    [
-     "\\bDal\\b",
-     "DAO"
-    ],
-    [
-     "\\bperturbitos\\b",
-     "pertuitos"
-    ],
-    [
-     "\\bterem se inferior\\b",
-     "de terço inferior"
-    ],
-    [
-     "\\bnas labial, labimental\\b",
-     "nasolabial, labiomental"
-    ],
-    [
-     "\\bhidrossecção\\b",
-     "hidrodissecção"
-    ],
-    [
-     "\\bsuco labiomentoniano\\b",
-     "sulco labiomentoniano"
-    ]
-   ]
-  },
-  {
    "entrada": "b3/raw/06.MOV",
    "transcricao": "b3/tr/06.json",
    "saida": "b3/out/6- Preenchimento labial.mp4",
@@ -430,83 +641,6 @@
     [
      140.8,
      144.5
-    ],
-    [
-     151.6,
-     153.2
-    ]
-   ],
-   "remover_legenda": [],
-   "correcoes": [
-    [
-     "\\bintroral\\b",
-     "intraoral"
-    ],
-    [
-     "\\bpréz\\b",
-     "pré"
-    ],
-    [
-     "\\b[Cc]inguiderme\\b",
-     "Singderm"
-    ],
-    [
-     "\\bNeuromis\\b",
-     "Neuramis"
-    ],
-    [
-     "\\blabialmentoniana\\b",
-     "labiomentoniana"
-    ],
-    [
-     "\\bsulculábio mentoniano\\b",
-     "sulco labiomentoniano"
-    ],
-    [
-     "\\b[Nn]efertite\\b",
-     "Nefertiti"
-    ],
-    [
-     "\\bDal\\b",
-     "DAO"
-    ],
-    [
-     "\\bperturbitos\\b",
-     "pertuitos"
-    ],
-    [
-     "\\bterem se inferior\\b",
-     "de terço inferior"
-    ],
-    [
-     "\\bnas labial, labimental\\b",
-     "nasolabial, labiomental"
-    ],
-    [
-     "\\bhidrossecção\\b",
-     "hidrodissecção"
-    ],
-    [
-     "\\bsuco labiomentoniano\\b",
-     "sulco labiomentoniano"
-    ]
-   ]
-  },
-  {
-   "entrada": "b3/raw/IMG_3774.MOV",
-   "transcricao": "b3/tr/IMG_3774.json",
-   "saida": "b3/out/7- Toxina efeito Nefertiti.mp4",
-   "titulo": "Toxina efeito Nefertiti",
-   "parte": null,
-   "cartela_final": null,
-   "manter": [
-    [
-     0.0,
-     68.5
-    ],
-    [
-     93.1,
-     102.6
     ]
    ],
    "remover_legenda": [],
@@ -643,75 +777,6 @@
    ]
   },
   {
-   "entrada": "b3/raw/IMG_3777.MOV",
-   "transcricao": "b3/tr/IMG_3777.json",
-   "saida": "b3/out/9- Planejamento fios de tração.mp4",
-   "titulo": "Planejamento fios de tração",
-   "parte": null,
-   "cartela_final": null,
-   "manter": [
-    [
-     1.0,
-     48.9
-    ]
-   ],
-   "remover_legenda": [],
-   "correcoes": [
-    [
-     "\\bintroral\\b",
-     "intraoral"
-    ],
-    [
-     "\\bpréz\\b",
-     "pré"
-    ],
-    [
-     "\\b[Cc]inguiderme\\b",
-     "Singderm"
-    ],
-    [
-     "\\bNeuromis\\b",
-     "Neuramis"
-    ],
-    [
-     "\\blabialmentoniana\\b",
-     "labiomentoniana"
-    ],
-    [
-     "\\bsulculábio mentoniano\\b",
-     "sulco labiomentoniano"
-    ],
-    [
-     "\\b[Nn]efertite\\b",
-     "Nefertiti"
-    ],
-    [
-     "\\bDal\\b",
-     "DAO"
-    ],
-    [
-     "\\bperturbitos\\b",
-     "pertuitos"
-    ],
-    [
-     "\\bterem se inferior\\b",
-     "de terço inferior"
-    ],
-    [
-     "\\bnas labial, labimental\\b",
-     "nasolabial, labiomental"
-    ],
-    [
-     "\\bhidrossecção\\b",
-     "hidrodissecção"
-    ],
-    [
-     "\\bsuco labiomentoniano\\b",
-     "sulco labiomentoniano"
-    ]
-   ]
-  },
-  {
    "entrada": "b3/raw/IMG_3780.MOV",
    "transcricao": "b3/tr/IMG_3780.json",
    "saida": "b3/out/10- Técnica de fios de tração.mp4",
@@ -730,75 +795,6 @@
     [
      90.4,
      103.2
-    ]
-   ],
-   "remover_legenda": [],
-   "correcoes": [
-    [
-     "\\bintroral\\b",
-     "intraoral"
-    ],
-    [
-     "\\bpréz\\b",
-     "pré"
-    ],
-    [
-     "\\b[Cc]inguiderme\\b",
-     "Singderm"
-    ],
-    [
-     "\\bNeuromis\\b",
-     "Neuramis"
-    ],
-    [
-     "\\blabialmentoniana\\b",
-     "labiomentoniana"
-    ],
-    [
-     "\\bsulculábio mentoniano\\b",
-     "sulco labiomentoniano"
-    ],
-    [
-     "\\b[Nn]efertite\\b",
-     "Nefertiti"
-    ],
-    [
-     "\\bDal\\b",
-     "DAO"
-    ],
-    [
-     "\\bperturbitos\\b",
-     "pertuitos"
-    ],
-    [
-     "\\bterem se inferior\\b",
-     "de terço inferior"
-    ],
-    [
-     "\\bnas labial, labimental\\b",
-     "nasolabial, labiomental"
-    ],
-    [
-     "\\bhidrossecção\\b",
-     "hidrodissecção"
-    ],
-    [
-     "\\bsuco labiomentoniano\\b",
-     "sulco labiomentoniano"
-    ]
-   ]
-  },
-  {
-   "entrada": "b3/raw/IMG_3781.MOV",
-   "transcricao": "b3/tr/IMG_3781.json",
-   "saida": "b3/out/11- Ancoragem fios de tração.mp4",
-   "titulo": "Ancoragem fios de tração",
-   "parte": null,
-   "cartela_final": null,
-   "manter": [
-    [
-     0,
-     124.3
     ]
    ],
    "remover_legenda": [],

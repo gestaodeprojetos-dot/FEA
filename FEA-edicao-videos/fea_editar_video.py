@@ -286,7 +286,7 @@ def gerar_ass(v, palavras, duracao, caminho):
 
 def perfil_voz(ff, entrada, passo=0.05):
     """Volume (dB) do áudio do bruto em janelas de 50 ms e o limiar de voz:
-    12 dB acima do ruído de fundo (percentil 20), nunca abaixo de 38 dB."""
+    12 dB acima do ruído de fundo (percentil 5: em vídeo com fala contínua o percentil 20 já é voz), nunca abaixo de 38 dB."""
     import numpy as np
     pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada, "-vn", "-ac", "1", "-ar", "16000",
                           "-f", "s16le", "-"], capture_output=True, check=True).stdout
@@ -294,7 +294,7 @@ def perfil_voz(ff, entrada, passo=0.05):
     h = int(16000 * passo)
     n = len(a) // h
     db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
-    return db, max(38.0, float(np.percentile(db, 20)) + 12), passo
+    return db, max(38.0, float(np.percentile(db, 5)) + 12), passo
 
 
 def ancorar_na_voz(palavras, db, limiar, passo):
