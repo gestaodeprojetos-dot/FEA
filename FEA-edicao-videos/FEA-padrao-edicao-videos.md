@@ -45,6 +45,6 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 2. Transcrever com Whisper large-v3-turbo (palavras com tempo).
 3. Definir trechos mantidos (`manter`) por vídeo no `projeto.json`.
 4. `python3 fea_editar_video.py projeto.json --previa` para revisão (720p, abaixo de 30 MB); sem `--previa` para o final em qualidade total.
+5. Revisão da Keila, correções, render final e envio para a pasta de destino no Drive.
 
 Passo a passo completo na skill `.claude/skills/fea-edicao-reels/SKILL.md`.
-5. Revisão da Keila, correções, render final e envio para a pasta de destino no Drive.
