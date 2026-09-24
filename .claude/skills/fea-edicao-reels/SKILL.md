@@ -38,6 +38,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **"Fecha o olho/olhinho"**: cortar o pedido para a paciente fechar os olhos.
 - **Conversa de fundo** (outras pessoas, não o Dr.): cortar; se estiver no meio do procedimento e não der para cortar, silenciar o áudio daquele trecho.
 - **Conversa pessoal ou histórico da paciente** (ex.: "fez cirurgia há pouco tempo? não"), queixa de dor fora de contexto técnico, "sou ruim de agulha": cortar.
+- **Gemido ou expressão de dor da paciente**: cortar ou silenciar (`silenciar` no projeto.json). Se a cara de dor aparecer no meio do procedimento e não der para cortar, dar zoom no ponto tratado para tirar a expressão do quadro (`zoom`: `[inicio, fim, fator, cx, cy]`, cx/cy em fração do quadro). Procurar: interjeições na transcrição (ai, ui, hum), trechos com voz no áudio sem fala transcrita, e conferir o rosto nesses quadros (pedido de 24/09/2026).
 - Vídeo que já cabe e é todo clínico fica **inteiro** (respeitando as duas regras acima).
 - Se existir edição anterior **do mesmo material**, reproduzir os cortes dela por alinhamento de quadros (ver abaixo). Sempre conferir que é o mesmo paciente antes.
 
@@ -78,6 +79,7 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 ## Armadilhas
 
 - Nunca `pkill -f fea_editar_video.py`: mata o próprio shell que contém o texto. Usar o PID do processo.
+- **Palavra solta na legenda sem o Dr. falar** (pedido de 24/09/2026): o script confere cada palavra no áudio (`ancorar_na_voz`): sem voz no tempo da palavra, ela sai; palavra esticada fica só no trecho com voz; palavra de ligação sozinha na tela ("e", "o", "para") não aparece. Conferir depois medindo a voz durante cada legenda (meta: nenhuma com menos de 35% de voz).
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).

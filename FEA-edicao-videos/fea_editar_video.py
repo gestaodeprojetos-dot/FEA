@@ -262,11 +262,51 @@ def gerar_ass(v, palavras, duracao, caminho):
         if s >= e or s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
+        # palavra de ligação sozinha na tela ("e", "o", "para") não diz nada: fica fora
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
+            continue
         texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
         linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
+
+
+def perfil_voz(ff, entrada, passo=0.05):
+    """Volume (dB) do áudio do bruto em janelas de 50 ms e o limiar de voz:
+    12 dB acima do ruído de fundo (percentil 20), nunca abaixo de 38 dB."""
+    import numpy as np
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada, "-vn", "-ac", "1", "-ar", "16000",
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(float)
+    h = int(16000 * passo)
+    n = len(a) // h
+    db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
+    return db, max(38.0, float(np.percentile(db, 20)) + 12), passo
+
+
+def ancorar_na_voz(palavras, db, limiar, passo):
+    """Tira da legenda palavras sem voz no áudio (a transcrição inventa palavras soltas
+    em silêncio) e encurta a palavra "esticada" até onde a voz de fato termina."""
+    saida = []
+    for p in palavras:
+        i0, i1 = max(0, int(p["s"] / passo)), min(len(db), int(p["e"] / passo) + 1)
+        voz = [i for i in range(i0, i1) if db[i] >= limiar]
+        # precisa de voz de verdade dentro do tempo da palavra, não só um ruído vizinho
+        if not voz or len(voz) * passo < min(0.15, 0.4 * (p["e"] - p["s"])):
+            continue
+        # palavra esticada: fica só no maior trecho contínuo de voz (tolera 100 ms de respiro)
+        trechos = [[voz[0], voz[0]]]
+        for i in voz[1:]:
+            if i - trechos[-1][1] <= 3:
+                trechos[-1][1] = i
+            else:
+                trechos.append([i, i])
+        a, b = max(trechos, key=lambda r: r[1] - r[0])
+        s = max(p["s"], a * passo)
+        e = min(p["e"], (b + 1) * passo + 0.05)
+        saida.append(dict(p, s=s, e=max(e, s + 0.1)))
+    return saida
 
 
 def renderizar(cfg, v, previa=False):
@@ -281,25 +321,42 @@ def renderizar(cfg, v, previa=False):
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
                 palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), ini=(i == 0)))
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
-    for a, b in v.get("remover_legenda", []):
+    for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
     # interjeição "ó" (ex.: "aqui ó") não entra na legenda (pedido da Keila, 24/09)
     palavras = [p for p in palavras if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
+    # legenda só onde há voz no áudio (pedido da Keila, 24/09: nada de palavra solta no silêncio)
+    if "legendas" not in v:
+        palavras = ancorar_na_voz(palavras, *perfil_voz(ff, v["entrada"]))
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 
-    partes, rotulos = [], []
+    # "silenciar": [[a, b], ...] em segundos do bruto (conversa de fundo, gemido ou som de dor
+    # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
+    # (cx, cy), frações da largura/altura, para não mostrar a paciente com expressão de dor.
+    mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    zooms = v.get("zoom", [])
+    partes, vrot, arot = [], [], []
     for i, (a, b) in enumerate(v["manter"]):
-        partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS[v{i}];"
-                      f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,"
+        partes.append(f"[0:a]atrim={a}:{b}{mudo},asetpts=PTS-STARTPTS,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.02)}:d=0.02[a{i}]")
-        rotulos.append(f"[v{i}][a{i}]")
-    n = len(v["manter"])
+        arot.append(f"[a{i}]")
+        cortes = sorted({a, b} | {t for z in zooms for t in z[:2] if a < t < b})
+        for j, (x0, x1) in enumerate(zip(cortes, cortes[1:])):
+            f = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
+            z = next((z for z in zooms if z[0] <= x0 and x1 <= z[1]), None)
+            if z:
+                zw, zh = int(W / z[2]) // 2 * 2, int(H / z[2]) // 2 * 2
+                zx = min(max(0, int(z[3] * W - zw / 2)), W - zw)
+                zy = min(max(0, int(z[4] * H - zh / 2)), H - zh)
+                f += f",crop={zw}:{zh}:{zx}:{zy},scale={W}:{H}"
+            partes.append(f + f",setsar=1[v{i}_{j}]")
+            vrot.append(f"[v{i}_{j}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac];"
-              f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+    filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
+              + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
+              f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
     if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
         vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
