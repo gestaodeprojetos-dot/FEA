@@ -133,13 +133,14 @@ def quebrar_linhas(texto):
     return melhor
 
 
-def quebrar_titulo(texto, limite=16):
-    """Título em linhas equilibradas (até 3), cada uma com no máximo ~16 caracteres."""
+def quebrar_titulo(texto, limite=22):
+    """Título em linhas equilibradas: 2 linhas (como na referência) sempre que passar de 14
+    caracteres, até ~22 por linha; 3 linhas só se não couber."""
     if r"\N" in texto:
         return texto
     palavras = texto.split()
     melhor = None
-    for k in range(1, 4):
+    for k in range(1 if len(texto) <= 14 else 2, 4):
         def particoes(ps, k):
             if k == 1:
                 yield [" ".join(ps)]
