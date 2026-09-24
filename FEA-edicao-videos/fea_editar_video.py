@@ -2,7 +2,7 @@
 """FEA: edição automática de vídeos verticais (Reels) no padrão da equipe.
 
 Uso:
-    python3 fea_editar_video.py projeto.json
+    python3 fea_editar_video.py projeto.json [--previa | --entrega]
 
 O projeto.json descreve cada vídeo de saída:
 {
@@ -40,10 +40,10 @@ W, H = 1080, 1920
 
 TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
-LEGENDA_TAM = 36       # referência original: ~40 px
-LEGENDA_Y = 1640       # referência original: ~1500 (centro da legenda)
+LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
+LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
-MAX_CHARS_LINHA = 26
+MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
 
@@ -67,7 +67,7 @@ ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
-Style: Legenda,Montserrat SemiBold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H50000000,&H64000000,0,0,0,0,100,100,0,0,1,2.2,1.5,2,110,110,{H - LEGENDA_Y - 20},1
+Style: Legenda,Montserrat Bold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -269,7 +269,12 @@ def renderizar(cfg, v, previa=False):
               f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
               f"ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
-    if previa:   # cabe no limite de 30 MB para envio na conversa
+    if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
+        vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
+        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium",
+                 "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
+                 "-profile:v", "high", "-c:a", "aac", "-b:a", "96k"]
+    elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
         filtro += ";[vo]scale=720:1280[vp]"
         codec = ["-map", "[vp]", "-map", "[ac]", "-c:v", "libx264", "-preset", "fast",
@@ -288,8 +293,8 @@ def renderizar(cfg, v, previa=False):
 
 def main():
     args = sys.argv[1:]
-    previa = "--previa" in args
-    args = [a for a in args if a != "--previa"]
+    previa = "entrega" if "--entrega" in args else ("--previa" in args)
+    args = [a for a in args if a not in ("--previa", "--entrega")]
     cfg = json.load(open(args[0], encoding="utf-8"))
     so = args[1:] or None
     for v in cfg["videos"]:
