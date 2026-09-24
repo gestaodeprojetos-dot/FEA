@@ -35,7 +35,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 - A interjeição "ó" não entra na legenda.
 - Cânula em calibre x comprimento (22x70); G linha = G', G duas linhas = G''.
 - Entrelinha 0,78 no título e 0,80 na legenda, medidas em pixels nas referências da Keila.
-- Vídeo nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
+- Vídeo começa assim que o Dr. começa a falar (sem silêncio no início) e nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
 - Cortar: espelho para a paciente se ver, pedido de "fecha o olho", conversa de fundo (ou silenciar) e conversa pessoal ou de histórico da paciente.
 - A Keila revisa as legendas antes de finalizar.
 
