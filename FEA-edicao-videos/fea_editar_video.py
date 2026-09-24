@@ -309,9 +309,47 @@ def ancorar_na_voz(palavras, db, limiar, passo):
     return saida
 
 
+def encaixar_cortes(manter, db, passo, palavras):
+    """Leva cada ponto de corte para o respiro entre a última palavra mantida e a seguinte
+    (o instante mais silencioso entre as duas): o vídeo não termina com o início de outra
+    palavra nem começa com o fim de uma (pedido da Keila, 24/09: "básico bem feito")."""
+    fim_bruto = len(db) * passo
+    ps = sorted(palavras, key=lambda p: p["s"])
+
+    def silencio(t0, t1, t):
+        i0, i1 = max(0, int(t0 / passo)), min(len(db), int(t1 / passo) + 1)
+        if i1 - i0 < 1:
+            return t
+        i = min(range(i0, i1), key=lambda k: (round(db[k]), abs(k * passo - t)))
+        return round(i * passo + passo / 2, 3)
+
+    novo = []
+    for a, b in manter:
+        a2, b2 = a, b
+        if a >= 0.3:
+            dentro = [p for p in ps if (p["s"] + p["e"]) / 2 >= a]
+            antes = [p for p in ps if (p["s"] + p["e"]) / 2 < a]
+            if dentro and dentro[0]["s"] - a < 1.0:
+                ini = dentro[0]["s"]
+                lim = max(antes[-1]["e"] if antes else 0, ini - 0.4)
+                a2 = silencio(lim, ini + 0.05, a)
+        if b <= fim_bruto - 0.3:
+            dentro = [p for p in ps if (p["s"] + p["e"]) / 2 < b]
+            depois = [p for p in ps if (p["s"] + p["e"]) / 2 >= b]
+            if dentro and b - dentro[-1]["e"] < 1.0:
+                fim = dentro[-1]["e"]
+                lim = min(depois[0]["s"] if depois else fim_bruto, fim + 0.4)
+                b2 = silencio(fim - 0.05, lim, b)
+        novo.append([a2, b2] if b2 - a2 > 0.5 else [a, b])
+    return novo
+
+
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
+    db_voz = perfil_voz(ff, v["entrada"])
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
+    v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
+                                       [w for seg in trans for w in seg["words"]]))
     if "legendas" in v:          # palavras já revisadas manualmente
         palavras = v["legendas"]
     else:
@@ -327,7 +365,7 @@ def renderizar(cfg, v, previa=False):
     palavras = [p for p in palavras if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
     # legenda só onde há voz no áudio (pedido da Keila, 24/09: nada de palavra solta no silêncio)
     if "legendas" not in v:
-        palavras = ancorar_na_voz(palavras, *perfil_voz(ff, v["entrada"]))
+        palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)

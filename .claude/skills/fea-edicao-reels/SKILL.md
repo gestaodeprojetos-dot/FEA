@@ -33,11 +33,14 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - **Outro lado do rosto**: quando o Dr. João repete o procedimento do outro lado sem falar nada, cortar esse trecho e ir direto para a próxima fala (pedido de 24/09/2026). Vale para qualquer pausa longa sem fala durante a repetição.
 - **Início do vídeo**: começa assim que o Dr. começa a falar (cerca de 0,25 s antes da voz). Medir o início da voz no áudio (volume acima de ~42 dB por 0,5 s), não pelo Whisper, que erra o tempo da primeira palavra depois de silêncio (pedido de 24/09/2026).
+- **Ponto de corte exato**: o script encaixa cada corte no respiro entre a última palavra mantida e a seguinte (`encaixar_cortes`), para não pegar o início de outra palavra ("básico bem feito" do vídeo 10).
 - **Final do vídeo**: nunca terminar com frase ou palavra cortada, nem com cara de que falta algo ("vamos lá", "agora a gente vai para..." sem concluir). Se ele não conclui a frase, o vídeo acaba na última frase completa antes dela.
 - **Espelho**: cortar quando o Dr. pede o espelho ("espelhinho para ela ver") e a paciente se olha, a não ser que ele esteja explicando algo técnico.
 - **"Fecha o olho/olhinho"**: cortar o pedido para a paciente fechar os olhos.
 - **Conversa de fundo** (outras pessoas, não o Dr.): cortar; se estiver no meio do procedimento e não der para cortar, silenciar o áudio daquele trecho.
 - **Conversa pessoal ou histórico da paciente** (ex.: "fez cirurgia há pouco tempo? não"), queixa de dor fora de contexto técnico, "sou ruim de agulha": cortar.
+- **Tudo que dá "errado" sai** (pedido de 24/09/2026): sangramento visível (gota escorrendo, gaze ou cotonete com sangue), agulha que estoura, intercorrência, cara ou gemido de dor, fala ao fundo. Revisar com folha de contato (`fea_folha.sh`: 1 quadro a cada 3 s) e depois 1 quadro por segundo nos trechos suspeitos para achar início e fim. Detecção automática de vermelho não funciona (embalagens vermelhas, gota pequena).
+- **Procurando o pertuito**: o tempo em que o Dr. tenta achar o ponto de entrada sai; o vídeo vai direto para o procedimento.
 - **Gemido ou expressão de dor da paciente**: cortar ou silenciar (`silenciar` no projeto.json). Se a cara de dor aparecer no meio do procedimento e não der para cortar, dar zoom no ponto tratado para tirar a expressão do quadro (`zoom`: `[inicio, fim, fator, cx, cy]`, cx/cy em fração do quadro). Procurar: interjeições na transcrição (ai, ui, hum), trechos com voz no áudio sem fala transcrita, e conferir o rosto nesses quadros (pedido de 24/09/2026).
 - Vídeo que já cabe e é todo clínico fica **inteiro** (respeitando as duas regras acima).
 - Se existir edição anterior **do mesmo material**, reproduzir os cortes dela por alinhamento de quadros (ver abaixo). Sempre conferir que é o mesmo paciente antes.

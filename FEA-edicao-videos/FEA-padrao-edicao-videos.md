@@ -37,6 +37,8 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 - Entrelinha 0,78 no título e 0,80 na legenda, medidas em pixels nas referências da Keila.
 - Vídeo começa assim que o Dr. começa a falar (sem silêncio no início) e nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
 - Cortar: espelho para a paciente se ver, pedido de "fecha o olho", conversa de fundo (ou silenciar) e conversa pessoal ou de histórico da paciente.
+- Cortar tudo que dá errado: sangramento visível, agulha estourando, intercorrência, dor, fala ao fundo, e o tempo procurando o pertuito.
+- Corte sempre no respiro entre palavras, nunca com o começo da palavra seguinte.
 - Legenda só aparece quando há voz no áudio: nada de palavra solta no silêncio.
 - Gemido ou expressão de dor da paciente: cortar ou silenciar; no meio do procedimento, zoom no ponto tratado.
 - A Keila revisa as legendas antes de finalizar.
