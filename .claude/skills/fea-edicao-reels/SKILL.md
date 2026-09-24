@@ -20,8 +20,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | Item | Valor |
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
-| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
-| Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
+| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, entrelinha 1,05x o tamanho da fonte, nos **3 primeiros segundos** |
+| Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 1,08x o tamanho da fonte (linhas próximas, sem grudar), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
 | Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
 
@@ -31,7 +31,9 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Manter: explicação clínica, técnica, dosagens, planejamento, falas de autoridade do Dr. João, e trechos **sem fala** mostrando o procedimento.
 - Tirar: conversa fora do tema (agenda, assuntos pessoais), trechos parados sem ação ("deixa eu segurar"), repetições, final arrastado.
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
-- Vídeo que já cabe e é todo clínico fica **inteiro**.
+- **Outro lado do rosto**: quando o Dr. João repete o procedimento do outro lado sem falar nada, cortar esse trecho e ir direto para a próxima fala (pedido de 24/09/2026). Vale para qualquer pausa longa sem fala durante a repetição.
+- **Final do vídeo**: nunca terminar com frase ou palavra cortada, nem com cara de que falta algo ("vamos lá", "agora a gente vai para..." sem concluir). Se ele não conclui a frase, o vídeo acaba na última frase completa antes dela.
+- Vídeo que já cabe e é todo clínico fica **inteiro** (respeitando as duas regras acima).
 - Se existir edição anterior **do mesmo material**, reproduzir os cortes dela por alinhamento de quadros (ver abaixo). Sempre conferir que é o mesmo paciente antes.
 
 ## Fluxo

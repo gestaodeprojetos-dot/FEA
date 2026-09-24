@@ -32,6 +32,9 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 - Nunca "pra": sempre "para" (também "pro" vira "para o").
 - Correções técnicas fixas no script: carpule, têmpora, interfascial, bolus, mL, nomes de produto com grafia oficial.
 - Trechos em que a transcrição automática "inventa" fala sobre silêncio (por exemplo, "tchau" repetido) são removidos da legenda.
+- A interjeição "ó" não entra na legenda.
+- Entrelinha reduzida (1,05 no título, 1,08 na legenda), sem grudar as linhas.
+- Vídeo nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
 - A Keila revisa as legendas antes de finalizar.
 
 ## Pontos de atenção de compliance

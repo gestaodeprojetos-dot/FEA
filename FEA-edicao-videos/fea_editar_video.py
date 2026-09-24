@@ -45,6 +45,8 @@ LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
 MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
+ENTRELINHA_TITULO = 1.05   # altura de cada linha / tamanho da fonte (padrão da Montserrat ~1,22)
+ENTRELINHA_LEGENDA = 1.08  # ajuste 24/09: linhas mais próximas, como nas referências
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
 
 
@@ -211,17 +213,40 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
+def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
+    """Uma linha de texto por evento, posicionada à mão, para controlar a entrelinha."""
+    partes = texto.split(r"\N")
+    if estilo == "Titulo":
+        tams = []
+        for p in partes:
+            m = re.match(r"\{\\fs(\d+)\}", p)
+            tams.append(int(m.group(1)) if m else TITULO_TAM)
+        alturas = [t * ENTRELINHA_TITULO for t in tams]
+        y = H / 2 - sum(alturas) / 2
+        saida = []
+        for p, h in zip(partes, alturas):
+            saida.append(f"Dialogue: {camada},{ts(s)},{ts(e)},Titulo,,0,0,0,,"
+                         f"{{\\an5\\pos({W // 2},{y + h / 2:.0f}){efeito}}}{p}\n")
+            y += h
+        return saida
+    base = LEGENDA_Y + 20
+    h = LEGENDA_TAM * ENTRELINHA_LEGENDA
+    n = len(partes)
+    return [f"Dialogue: {camada},{ts(s)},{ts(e)},Legenda,,0,0,0,,"
+            f"{{\\an2\\pos({W // 2},{base - (n - 1 - i) * h:.0f})}}{p}\n" for i, p in enumerate(partes)]
+
+
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
     titulo = quebrar_titulo(v["titulo"])
     if v.get("parte"):
         titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
-    linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)}}{titulo}\n")
+    linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
         fim_legendas = ini
-        linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)}}{quebrar_titulo(v['cartela_final'])}\n")
+        linhas += dialogos_linhas(1, ini, duracao, "Titulo", quebrar_titulo(v["cartela_final"]), r"\fad(250,0)")
     blocos = blocos_legenda(palavras)
     for i, bloco in enumerate(blocos):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
@@ -235,7 +260,7 @@ def gerar_ass(v, palavras, duracao, caminho):
         texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
-        linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
+        linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
@@ -253,6 +278,8 @@ def renderizar(cfg, v, previa=False):
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
+    # interjeição "ó" (ex.: "aqui ó") não entra na legenda (pedido da Keila, 24/09)
+    palavras = [p for p in palavras if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
