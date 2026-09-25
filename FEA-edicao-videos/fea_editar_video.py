@@ -15,7 +15,7 @@ O projeto.json descreve cada vídeo de saída:
       "saida": "out/1- Planejamento full face 4mL.mp4",
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
-      "manter": [[0.0, 12.4], [15.1, 40.0]],    # trechos mantidos, em segundos do bruto
+      "manter": [[0.0, 12.4], [15.1, 40.0, "exato"]],  # trechos mantidos (s do bruto); "exato" = não encaixar
       "cartela_final": null                     # ex.: "Parte 2 no perfil"
     }
   ]
@@ -356,7 +356,11 @@ def encaixar_cortes(manter, db, passo, palavras=None):
         return vale(a)
 
     novo = []
-    for a, b in manter:
+    for trecho in manter:
+        a, b = trecho[0], trecho[1]
+        if len(trecho) > 2 and trecho[2] == "exato":   # ponto conferido à mão: não mexer
+            novo.append([a, b])
+            continue
         a2 = a if a < 0.3 or em_silencio(a) else inicio_da_fala(a)
         b2 = b if b > fim_bruto - 0.3 or em_silencio(b) else fim_da_fala(b)
         novo.append([a2, b2] if b2 - a2 > 0.5 else [a, b])
