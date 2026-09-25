@@ -33,7 +33,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - **Outro lado do rosto**: quando o Dr. João repete o procedimento do outro lado sem falar nada, cortar esse trecho e ir direto para a próxima fala (pedido de 24/09/2026). Vale para qualquer pausa longa sem fala durante a repetição.
 - **Início do vídeo**: começa assim que o Dr. começa a falar (cerca de 0,25 s antes da voz). Medir o início da voz no áudio (volume acima de ~42 dB por 0,5 s), não pelo Whisper, que erra o tempo da primeira palavra depois de silêncio (pedido de 24/09/2026).
-- **Ponto de corte exato**: o script encaixa cada corte no respiro entre a última palavra mantida e a seguinte (`encaixar_cortes`), para não pegar o início de outra palavra ("básico bem feito" do vídeo 10).
+- **Ponto de corte exato**: o script encaixa cada corte no respiro entre palavras medido no áudio (`encaixar_cortes`; o tempo das palavras da transcrição erra até 0,3 s e não é usado), para não pegar o início de outra palavra ("básico bem feito" do vídeo 10).
 - **Final do vídeo**: nunca terminar com frase ou palavra cortada, nem com cara de que falta algo ("vamos lá", "agora a gente vai para..." sem concluir). Se ele não conclui a frase, o vídeo acaba na última frase completa antes dela.
 - **Espelho**: cortar quando o Dr. pede o espelho ("espelhinho para ela ver") e a paciente se olha, a não ser que ele esteja explicando algo técnico.
 - **"Fecha o olho/olhinho"**: cortar o pedido para a paciente fechar os olhos.
@@ -57,7 +57,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 6. **projeto.json** (ver o docstring de `fea_editar_video.py`): `entrada`, `transcricao`, `saida`, `titulo`, `parte`, `cartela_final`, `manter`, `remover_legenda`, `correcoes` (regex extras do lote).
 7. **Prévia primeiro**: `python3 fea_editar_video.py projeto.json --previa` gera versão 720p abaixo de 30 MB. Com pressa, `--entrega` gera direto o final em H.264 1080p abaixo de 30 MB (dividir o lote em 2 projetos e rodar em paralelo). Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de mandar.
 8. **Revisão da Keila**: criar no Drive, dentro da pasta de destino, um Google Doc `FEA-revisao-legendas-<lote>` com as legendas de cada vídeo (`[mm:ss] texto`, extraídas dos .ass) e, no topo, os pontos para decidir. Enviar as prévias pelo `SendUserFile`.
-9. **Final**: aplicar as correções, rodar sem `--previa` (qualidade total) e subir para a pasta de destino.
+9. **Revisão obrigatória**: rodar a skill `fea-revisao-reels` (`python3 FEA-edicao-videos/fea_revisar.py projeto.json --folhas PASTA`) e olhar as folhas de contato. Só entrega com 0 ERRO e cada ATENÇÃO resolvida.
+10. **Final**: aplicar as correções, rodar sem `--previa` (qualidade total) e subir para a pasta de destino.
 
 ## Pontos para sempre levar à Keila antes de finalizar
 

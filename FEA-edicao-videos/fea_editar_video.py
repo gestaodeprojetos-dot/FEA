@@ -182,7 +182,7 @@ CORRECOES = [
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),
     (r"\bRevanesse quisse\b", "Revanesse Kiss"),
     (r"\bNeuramis volume\b", "Neuramis Volume"),
-    (r"(\d) ?ml\b", r"\1 mL"),
+    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"),
     # cânula: calibre x comprimento (ex.: "2270", "22 70", "24-70" -> 22x70)
     (r"\b(18|2[0-7])[- /]?(38|40|50|70)\b", r"\1x\2"),
     # G linha: "G linha" -> G' ; "G duas linhas" / "G linha linha" -> G''
@@ -322,37 +322,43 @@ def ancorar_na_voz(palavras, db, limiar, passo):
     return saida
 
 
-def encaixar_cortes(manter, db, passo, palavras):
-    """Leva cada ponto de corte para o respiro entre a última palavra mantida e a seguinte
-    (o instante mais silencioso entre as duas): o vídeo não termina com o início de outra
-    palavra nem começa com o fim de uma (pedido da Keila, 24/09: "básico bem feito")."""
+def encaixar_cortes(manter, db, passo, palavras=None):
+    """Leva cada ponto de corte para o respiro entre palavras, medido no áudio (o instante
+    mais silencioso logo antes ou logo depois do ponto): o vídeo não termina com o início
+    de outra palavra nem começa com o fim de uma (pedido da Keila, 24/09: "básico bem feito").
+    Não usa o tempo das palavras da transcrição, que erra em até 0,3 s."""
+    import numpy as np
     fim_bruto = len(db) * passo
-    ps = sorted(palavras, key=lambda p: p["s"])
+    limiar = max(38.0, float(np.percentile(db, 5)) + 12)
 
-    def silencio(t0, t1, t):
-        i0, i1 = max(0, int(t0 / passo)), min(len(db), int(t1 / passo) + 1)
-        if i1 - i0 < 1:
-            return t
+    def em_silencio(t):
+        i = int(t / passo)
+        return all(db[k] < limiar for k in range(max(0, i - 1), min(len(db), i + 2)))
+
+    def vale(t):
+        # fala contínua, sem silêncio perto: o ponto mais baixo a até 150 ms (entre duas palavras)
+        i0, i1 = max(0, int((t - 0.15) / passo)), min(len(db), int((t + 0.15) / passo) + 1)
         i = min(range(i0, i1), key=lambda k: (round(db[k]), abs(k * passo - t)))
         return round(i * passo + passo / 2, 3)
 
+    def fim_da_fala(b):
+        # primeiro instante de silêncio de 150 ms antes a 350 ms depois do ponto; sem silêncio, fica
+        for k in range(max(0, int((b - 0.15) / passo)), min(len(db), int((b + 0.35) / passo) + 1)):
+            if db[k] < limiar:
+                return round(k * passo + passo / 2, 3)
+        return vale(b)
+
+    def inicio_da_fala(a):
+        # último instante de silêncio de 350 ms antes a 150 ms depois do ponto; sem silêncio, fica
+        for k in range(min(len(db) - 1, int((a + 0.15) / passo)), max(-1, int((a - 0.35) / passo) - 1), -1):
+            if db[k] < limiar:
+                return round(k * passo + passo / 2, 3)
+        return vale(a)
+
     novo = []
     for a, b in manter:
-        a2, b2 = a, b
-        if a >= 0.3:
-            dentro = [p for p in ps if (p["s"] + p["e"]) / 2 >= a]
-            antes = [p for p in ps if (p["s"] + p["e"]) / 2 < a]
-            if dentro and dentro[0]["s"] - a < 1.0:
-                ini = dentro[0]["s"]
-                lim = max(antes[-1]["e"] if antes else 0, ini - 0.4)
-                a2 = silencio(lim, ini + 0.05, a)
-        if b <= fim_bruto - 0.3:
-            dentro = [p for p in ps if (p["s"] + p["e"]) / 2 < b]
-            depois = [p for p in ps if (p["s"] + p["e"]) / 2 >= b]
-            if dentro and b - dentro[-1]["e"] < 1.0:
-                fim = dentro[-1]["e"]
-                lim = min(depois[0]["s"] if depois else fim_bruto, fim + 0.4)
-                b2 = silencio(fim - 0.05, lim, b)
+        a2 = a if a < 0.3 or em_silencio(a) else inicio_da_fala(a)
+        b2 = b if b > fim_bruto - 0.3 or em_silencio(b) else fim_da_fala(b)
         novo.append([a2, b2] if b2 - a2 > 0.5 else [a, b])
     return novo
 
