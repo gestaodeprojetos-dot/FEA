@@ -176,6 +176,7 @@ CORRECOES = [
     (r"\bpra\b", "para"), (r"\bPra\b", "Para"),
     (r"\bpros\b", "para os"), (r"\bpro\b", "para o"),
     (r"\bcarpulha\b", "carpule"),
+    (r"\b[Pp]r[ée]dio\b", "pré-jowl"),     # termo do Dr. (confirmado pela Keila, 25/09)
     (r"\btempra\b", "têmpora"),
     (r"\binterfacial\b", "interfascial"),
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),
