@@ -26,6 +26,7 @@ PROIBIDO_LEGENDA = [
     (r"\b[Pp]ra\b|\b[Pp]ros?\b", "\"pra/pro\": sempre \"para\""),
     (r"(^|\s)ó(\s|$|[,.!?])", "interjeição \"ó\""),
     (r"\bpr[ée]dio\b", "\"prédio\": é pré-jowl"),
+    (r"\b[Gg]elinh", "\"gelinho\": é G'"),
     (r"\bG linha\b|\bG duas linhas\b", "G linha: escrever G' ou G''"),
     (r"\b(18|2[0-7])[ -]?(38|40|50|70)\b", "cânula sem o x (ex.: 22x70)"),
     (r"\bml\b", "unidade: mL"),
@@ -165,8 +166,17 @@ def revisar(cfg, v, folhas=None):
     ult = fe.TITULO_DUR
     for s, e in fala + [(dur, dur)]:
         if s - ult > 8:
-            aten.append(f"[{ult:5.1f}s a {s:5.1f}s] {s - ult:.0f} s sem fala: repetição do outro lado ou procurando pertuito?")
+            aten.append(f"[{ult:5.1f}s a {s:5.1f}s] {s - ult:.0f} s sem fala: conferir nos quadros se o Dr. está parado (cortar) ou fazendo a técnica (fica)")
         ult = max(ult, e)
+
+    # 6b. vídeo picotado: técnica cortada (Keila 26/09: "só corta quando o Dr. não está fazendo nada")
+    _, _, dur_bruto = sonda(ff, v["entrada"])
+    mantido = sum(b - a for a, b in manter)
+    if dur_bruto and mantido / dur_bruto < 0.6 and dur_bruto < 200:
+        aten.append(f"mantido só {mantido / dur_bruto:.0%} do bruto: conferir nos quadros cada trecho cortado (técnica não pode sair)")
+    for (a1, b1), (a2, b2) in zip(manter, manter[1:]):
+        if a2 - b1 > 6:
+            aten.append(f"corte de {a2 - b1:.0f} s no bruto ({b1:.1f}s a {a2:.1f}s): o Dr. estava parado? se fazia técnica, devolver")
 
     # 7. falas que as regras mandam cortar
     texto_mantido = [(w["s"], w["w"]) for w in palavras if any(a <= (w["s"] + w["e"]) / 2 < b for a, b in manter)]

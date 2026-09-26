@@ -32,12 +32,13 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 6 | Nada de palavra solta na legenda sem o Dr. falando | voz no áudio durante cada legenda | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
-| 9 | Grafias: pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
+| 9 | Grafias: G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
 | 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
 | 13 | Corte no respiro, sem pedaço de palavra | voz dos dois lados do ponto, no bruto | ATENÇÃO (ouvir) |
-| 14 | Cortar a repetição silenciosa do outro lado do rosto e o tempo procurando o pertuito | trecho de mais de 8 s sem fala | ATENÇÃO |
+| 14 | Só corta quando o Dr. não está fazendo nada: técnica sem fala fica | trecho de mais de 8 s sem fala (conferir se é parado ou técnica) e total cortado do bruto | ATENÇÃO |
+| 14b | Vídeo não pode ficar picotado: técnica cortada é reprovação | proporção do bruto mantida (abaixo de 60% = conferir cada corte nos quadros) | ATENÇÃO |
 | 15 | Cortar espelho, "fecha o olho", conversa pessoal e histórico da paciente, dor e medo fora de contexto técnico, falas que atacam colegas | palavras-chave nas falas mantidas | ATENÇÃO |
 | 16 | Tudo que dá errado sai: sangue escorrendo, agulha estourando, intercorrência | folha de contato (visual) | revisão visual |
 | 17 | Cara ou gemido de dor: cortar, silenciar ou dar zoom | folha de contato e som sem fala | revisão visual |
@@ -61,7 +62,8 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 
 - **Frase pela metade no final:** ler as últimas palavras e a seguinte. Se a frase terminou ("bem feito"), está certo. Se não terminou, encerrar na última frase completa.
 - **Fala contínua no corte:** o encaixe automático não achou respiro. Ouvir e, se precisar, mover o ponto manualmente para o espaço entre duas palavras.
-- **Mais de 8 s sem fala:** olhar os quadros. Se é o procedimento sendo mostrado, com cânula ou agulha trabalhando e algo novo acontecendo, fica. Se é a repetição do outro lado, ou o Dr. procurando o pertuito, sai.
+- **Mais de 8 s sem fala:** olhar os quadros. Se o Dr. está fazendo o procedimento, fica (mesmo sendo o outro lado). Só sai se ele está parado, esperando, ou procurando o pertuito sem conseguir.
+- **Cortes de trecho sem fala (revisão inversa):** para cada trecho cortado do bruto, olhar os quadros. Se o Dr. estava fazendo a técnica, o corte está errado: devolver o trecho.
 - **Palavra-chave de fala:** ler o contexto.
   - Fica: "dor" técnica ("a lidocaína ácida arde", "sem dor, certo?") e "cirurgia" técnica ("depois das cirurgias o paciente tem fibrose").
   - Sai: conversa sobre a paciente ("ela tava morrendo de medo", "fez cirurgia há pouco tempo?").
