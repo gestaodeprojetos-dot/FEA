@@ -30,7 +30,7 @@ PROIBIDO_LEGENDA = [
     (r"\bN[uú]vi[ao]\b", "\"Nuvia\": é Neauvia"),
     (r"\b[Qq]uirial|\b[Kk]irialis", "é Kirialys"),
     (r"\b[Vv]ol(i|ai)me\b|[Rr]eschilane", "é Restylane Volyme"),
-    (r"al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic", "é ácido hialurônico"),
+    (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic|(?<!ácido )\bhialurônico", "é ácido hialurônico"),
     (r"\bbolos\b|\bbólos\b", "é bolus"),
     (r"\b[Tt]ier\b|\b[Tt]irtrof", "tear trough"),
     (r"(^|\s)%|\b0 0\b", "número incompleto (ex.: \"%\" sem o 1, \"0\" sem o ,2)"),

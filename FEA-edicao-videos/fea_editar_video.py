@@ -321,13 +321,23 @@ def ancorar_na_voz(palavras, db, limiar, passo):
         voz = [i for i in range(i0, i1) if db[i] >= limiar - 6]
         ant = palavras[k - 1]["e"] if k else -9
         prox = palavras[k + 1]["s"] if k + 1 < len(palavras) else 1e9
-        isolada = p["s"] - ant > 0.4 and prox - p["e"] > 0.4
+        isolada = p["s"] - ant > 0.25 or prox - p["e"] > 0.25
         if not voz and isolada:
             continue
-        e = p["e"]
-        if voz and p["e"] - p["s"] > 0.8:        # esticada: termina onde a voz termina
-            e = min(p["e"], (voz[-1] + 1) * passo + 0.1)
-        saida.append(dict(p, e=max(e, p["s"] + 0.15)))
+        s, e = p["s"], p["e"]
+        if not voz:
+            # palavra inteira marcada no silêncio, logo antes da fala: empurra até a voz começar
+            j = next((i for i in range(i1, min(len(db), i1 + int(1.0 / passo))) if db[i] >= limiar - 6), None)
+            if j is not None:
+                d = j * passo - 0.05 - s
+                s, e = s + d, e + d
+        if voz:
+            # a transcrição costuma pôr o início da palavra ainda no silêncio antes da fala
+            # (legenda aparecia até 1 s adiantada): começa no primeiro instante com voz
+            s = max(s, voz[0] * passo - 0.05)
+            if e - s > 0.8:                        # esticada: termina onde a voz termina
+                e = min(e, (voz[-1] + 1) * passo + 0.1)
+        saida.append(dict(p, s=s, e=max(e, s + 0.15)))
     return saida
 
 
