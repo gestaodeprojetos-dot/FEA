@@ -7,8 +7,8 @@
   {
    "entrada": "raw/IMG_6518.MOV",
    "transcricao": "tr/IMG_6518.json",
-   "saida": "out/1- Já imaginou o seu último curso?.mp4",
-   "titulo": "Já imaginou o seu último curso?",
+   "saida": "out/1- Quanto você já gastou em cursos de harmonização facial.mp4",
+   "titulo": "Quanto você já gastou em cursos de harmonização facial?",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -309,8 +309,8 @@
   {
    "entrada": "raw/IMG_6545.MOV",
    "transcricao": "tr/IMG_6545.json",
-   "saida": "out/4- Uns 150 mil em cursos.mp4",
-   "titulo": "Uns 150 mil em cursos",
+   "saida": "out/4- Ele já gastou 150 mil em cursos.mp4",
+   "titulo": "Ele já gastou 150 mil em cursos",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -401,6 +401,10 @@
     [
      "\\bNisse,\\s*",
      ""
+    ],
+    [
+     "\\b150 cont[ao]s\\b",
+     "150 mil"
     ]
    ]
   },

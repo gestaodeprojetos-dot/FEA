@@ -6,13 +6,13 @@
   {
    "entrada": "raw/IMG_0662.MOV",
    "transcricao": "tr/IMG_0662.json",
-   "saida": "out/1- Faltam 7 dias.mp4",
+   "saida": "out_v2/1- Faltam 7 dias.mp4",
    "titulo": "Faltam 7 dias",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.5,
      10.8
     ]
    ],
@@ -55,13 +55,13 @@
   {
    "entrada": "raw/IMG_0663.MOV",
    "transcricao": "tr/IMG_0663.json",
-   "saida": "out/2- Faltam 6 dias.mp4",
+   "saida": "out_v2/2- Faltam 6 dias.mp4",
    "titulo": "Faltam 6 dias",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.22,
      14.73
     ]
    ],
@@ -104,13 +104,13 @@
   {
    "entrada": "raw/IMG_0664.MOV",
    "transcricao": "tr/IMG_0664.json",
-   "saida": "out/3- Faltam 4 dias.mp4",
+   "saida": "out_v2/3- Faltam 4 dias.mp4",
    "titulo": "Faltam 4 dias",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.26,
      16.3
     ]
    ],
@@ -153,13 +153,13 @@
   {
    "entrada": "raw/IMG_0665.MOV",
    "transcricao": "tr/IMG_0665.json",
-   "saida": "out/4- Faltam 3 dias.mp4",
+   "saida": "out_v2/4- Faltam 3 dias.mp4",
    "titulo": "Faltam 3 dias",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.26,
      22.6
     ],
     [
@@ -206,13 +206,13 @@
   {
    "entrada": "raw/IMG_0667.MOV",
    "transcricao": "tr/IMG_0667.json",
-   "saida": "out/5- Falta 1 dia.mp4",
+   "saida": "out_v2/5- Falta 1 dia.mp4",
    "titulo": "Falta 1 dia",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.54,
      17.4
     ]
    ],
@@ -255,13 +255,13 @@
   {
    "entrada": "raw/IMG_0670.MOV",
    "transcricao": "tr/IMG_0670.json",
-   "saida": "out/6- O seu último curso de harmonização.mp4",
+   "saida": "out_v2/6- O seu último curso de harmonização.mp4",
    "titulo": "O seu último curso de harmonização",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.16,
      24.8
     ]
    ],
@@ -304,13 +304,13 @@
   {
    "entrada": "raw/IMG_0668.MOV",
    "transcricao": "tr/IMG_0668.json",
-   "saida": "out/7- Hoje começa a Black Friday Vitalícia.mp4",
+   "saida": "out_v2/7- Hoje começa a Black Friday Vitalícia.mp4",
    "titulo": "Hoje começa a Black Friday Vitalícia",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.28,
      23.7
     ]
    ],
@@ -353,13 +353,13 @@
   {
    "entrada": "raw/IMG_0671.MOV",
    "transcricao": "tr/IMG_0671.json",
-   "saida": "out/8- Inscrições abertas.mp4",
+   "saida": "out_v2/8- Inscrições abertas.mp4",
    "titulo": "Inscrições abertas",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.18,
      18.7
     ]
    ],
@@ -402,13 +402,13 @@
   {
    "entrada": "raw/IMG_0672.MOV",
    "transcricao": "tr/IMG_0672.json",
-   "saida": "out/9- Nunca mais compre um curso de harmonização.mp4",
+   "saida": "out_v2/9- Nunca mais compre um curso de harmonização.mp4",
    "titulo": "Nunca mais compre um curso de harmonização",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.28,
      6.7
     ],
     [
@@ -455,13 +455,13 @@
   {
    "entrada": "raw/IMG_0674.MOV",
    "transcricao": "tr/IMG_0674.json",
-   "saida": "out/10- Atualizações infinitas.mp4",
+   "saida": "out_v2/10- Atualizações infinitas.mp4",
    "titulo": "Atualizações infinitas",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.3,
      21.83
     ]
    ],
@@ -504,7 +504,7 @@
   {
    "entrada": "raw/IMG_0675.MOV",
    "transcricao": "tr/IMG_0675.json",
-   "saida": "out/11- Todos os cursos até o fim da vida.mp4",
+   "saida": "out_v2/11- Todos os cursos até o fim da vida.mp4",
    "titulo": "Todos os cursos até o fim da vida",
    "parte": null,
    "cartela_final": null,
@@ -558,13 +558,13 @@
   {
    "entrada": "raw/IMG_0676.MOV",
    "transcricao": "tr/IMG_0676.json",
-   "saida": "out/12- O peixe da sua vida.mp4",
+   "saida": "out_v2/12- O peixe da sua vida.mp4",
    "titulo": "O peixe da sua vida",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.08,
      16.7
     ]
    ],
@@ -607,13 +607,13 @@
   {
    "entrada": "raw/IMG_0678.MOV",
    "transcricao": "tr/IMG_0678.json",
-   "saida": "out/13- Último dia de inscrições.mp4",
+   "saida": "out_v2/13- Último dia de inscrições.mp4",
    "titulo": "Último dia de inscrições",
    "parte": null,
    "cartela_final": null,
    "manter": [
     [
-     0,
+     0.32,
      16.06
     ]
    ],

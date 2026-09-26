@@ -147,15 +147,20 @@ def largura_titulo(linha, tam=None):
         return len(linha) * tam * 0.62
 
 
-def quebrar_titulo(texto, max_linhas=4):
-    """Título em linhas equilibradas (até 4), pela largura real da Montserrat ExtraBold:
-    usa o menor número de linhas que cabe em 140 px; nunca separa "Black Friday"."""
+def quebrar_titulo(texto, max_linhas=3, dois_pontos=True):
+    """Título em no máximo 3 linhas (regra da Keila, 26/09/2026), pela largura real da Montserrat ExtraBold:
+    usa o menor número de linhas que cabe em 140 px e, se não couber em 3, diminui a fonte;
+    nunca separa "Black Friday"."""
     if r"\N" in texto:
         return texto
-    if ": " in texto:   # "Anota essa data: 20 de outubro" quebra depois dos dois-pontos
+    if dois_pontos and ": " in texto and max_linhas > 1:   # tenta quebrar depois dos dois-pontos
         cabeca, resto = texto.split(": ", 1)
-        return cabeca + ":" + r"\N" + quebrar_titulo(resto, max_linhas - 1)
+        com_pausa = cabeca + ":" + r"\N" + quebrar_titulo(resto, max_linhas - 1)
+        sem_pausa = quebrar_titulo(texto, max_linhas, dois_pontos=False)
+        # fica com a quebra que deixa a letra maior
+        return max((sem_pausa, com_pausa), key=lambda t: tamanho_titulo(t.split(r"\N")))
     texto = re.sub(r"\b(\d{1,2}) de (\w+)", r"\1§de§\2", texto)   # datas inteiras
+    texto = re.sub(r"\b(\d+) (mil|mL)\b", r"\1§\2", texto)          # "300 mil" nunca se separa
     palavras = texto.replace("Black Friday", "Black§Friday").split()
 
     def particoes(ps, k):
@@ -210,6 +215,7 @@ CORRECOES = [
     (r"\bintercorrente\b", "intercorrência"), (r"(\d) %", r"\1%"), (r"\bmeio ml\b", "meio mL"),
     (r"\bVietre\b", "Vietri"), (r"\bEvoar Contour\b", "Yvoire Contour"),
     (r"\bSerintox\b", "Seryntox"),
+    (r"\b(?:Sabamais|Sabamai|Sadamai|Saba Mais|Sabar Mais|Saber Mais|Salva Mais)\b", "Saiba Mais"),
     (r"\b(?:[Nn]uvia|Lúvia|[Nn]euvia) (?:Stimulate|Estimulate)\b", "Neauvia Stimulate"),
 ]
 

@@ -1142,7 +1142,7 @@
    "entrada": "raw/1f3b2c57.mov",
    "transcricao": "tr/1f3b2c57.json",
    "saida": "out2/14- Anota essa data 20 de outubro.mp4",
-   "titulo": "Anota essa data: 20 de outubro",
+   "titulo": "Anota essa data:\\N20 de outubro",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
