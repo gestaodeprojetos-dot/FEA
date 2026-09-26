@@ -13,22 +13,23 @@ Padrão aprovado pela Keila em 23/09/2026 ("é assim mesmo que quero"). Detalhes
 2. **Pasta de destino** e o **nome da subpasta** a criar (ex.: dentro de "Setembro", `20- Full face 6mL e toxina`). Criar com o MCP do Drive (`create_file`, mimeType de pasta).
 3. Às vezes, pastas de referência.
 
-Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
+Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr. diz "faltam 7 dias", headline "Faltam 7 dias"). Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
 
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
-| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
+| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, **linhas juntas** (entrelinha 0,8 do tamanho da fonte, `TITULO_ENTRELINHA`; ajuste de 26/09/2026, a entrelinha padrão da Montserrat ficou aberta demais). **Máximo de 3 linhas** (regra da Keila, 26/09/2026: "não quero que quebre as linhas"; se ficar grande, diminui a fonte para caber em 3). A quebra usa a largura real da fonte, reduz até 125 px antes de criar mais uma linha, nunca separa "Black Friday", datas ("20 de outubro") nem "300 mil", e só quebra nos dois-pontos se isso deixar a letra maior. Quando um ajuste de regra visual chega, **refazer todos os lotes já entregues que não seguem a regra** (em 26/09 os da Black Amazonia ficaram com a entrelinha antiga e ela cobrou), nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
-| Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
+| CTA | padrão desde 16/09: sem CTA. Quando a pasta trouxer um vídeo "CTA" e a Keila pedir (lote Black Amazonia, 26/09/2026), colar esse vídeo no final de cada edição com o campo `cta` do projeto.json (sem título nem legenda sobre ele; o limite de 3 min conta o CTA) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
 
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos.** Cortar o máximo necessário para caber.
 - Manter: explicação clínica, técnica, dosagens, planejamento, falas de autoridade do Dr. João, e trechos **sem fala** mostrando o procedimento.
+- **Começo sem silêncio**: o vídeo começa com o Dr. já falando. Rodar `python3 FEA-edicao-videos/fea_inicio_fala.py wav/*.wav` e iniciar o primeiro trecho de `manter` 0,08 s antes do valor (a transcrição marca 0,0 s mesmo com silêncio antes). Pedido de 26/09/2026.
 - Tirar: conversa fora do tema (agenda, assuntos pessoais), trechos parados sem ação ("deixa eu segurar"), repetições, final arrastado.
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - Vídeo que já cabe e é todo clínico fica **inteiro**.
@@ -55,6 +56,27 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Recomendação comercial (ex.: distribuidora): perguntar se é parceria.
 - Nome de paciente falado ou legendado: confirmar grafia.
 - Quantidade de vídeos diferente da quantidade de títulos na imagem.
+
+Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não perguntar de novo:
+- "Harmonização facial" na fala do Dr. João está correto: ele é médico, não dentista. Manter.
+- Campanha Black Friday Vitalícia: "o último curso que você vai comprar", "nunca mais compre um curso", "a maior Black Friday da harmonização facial" e "não vai ter outra chance" (último dia) estão aprovados pelo comercial.
+- Série de contagem regressiva: headline no formato "Faltam N dias" / "Falta 1 dia", mesmo quando a fala é "Em N dias começa".
+- Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
+- Lote Black Friday Vitalícia na clínica (26/09/2026): "botox" falado fica "botox" na legenda (não trocar por toxina botulínica); vídeo de bastidor da FEP Experience é publicado, não descartar; "a última oportunidade vai ser agora" aprovado; teasers curtos também entram; headlines escritas por ela no doc valem exatamente como escritas (inclusive maiúsculas).
+
+## Headlines sem imagem de títulos
+
+Antes de renderizar, mandar à Keila um Google Doc `FEA-revisao-headlines-<lote>` com, para cada vídeo: a fala dos 3 primeiros segundos, a headline atual e 2 ou 3 opções tiradas da fala (recomendação marcada). A contagem regressiva "Faltam N dias" já está aprovada; as demais ela escolhe (em 26/09/2026 ela recusou headlines de resumo, quer o gancho do vídeo).
+
+## Selfie espelhada e ruído de fundo (pedido de 26/09/2026)
+
+- **Fundo ao contrário** (texto do banner invertido, câmera frontal): `"espelhar": true` no vídeo. Conferir no mosaico de quadros quais estão invertidos.
+- **Ruído ao fundo** (ar-condicionado, clínica): `"limpar_audio": "rnn/sh.rnnn"` no projeto (RNNoise via `arnndn` + `afftdn` leve). O `fea_preparar_ambiente.sh` baixa o modelo. Conferir que a fala continua intacta transcrevendo o áudio limpo de um vídeo.
+- Arquivos "v_daa....mp4" exportados de app costumam ser cópia de um .mov da mesma pasta: comparar transcrição e duração e editar só o original.
+
+## Legenda logo depois do título
+
+A fala dos 3 primeiros segundos fica só sob o título. O script descarta o pedaço de frase dito sob o título até a última pontuação (evita legenda começando em "vitalícia, para você...") e nunca quebra "Saiba Mais" ou "Black Friday Vitalícia" entre duas legendas (`TERMOS_JUNTOS`). Se ainda sobrar fragmento, usar `remover_legenda` no trecho.
 
 ## Correções de texto
 

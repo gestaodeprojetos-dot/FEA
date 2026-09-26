@@ -16,7 +16,10 @@ O projeto.json descreve cada vídeo de saída:
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
       "manter": [[0.0, 12.4], [15.1, 40.0]],    # trechos mantidos, em segundos do bruto
-      "cartela_final": null                     # ex.: "Parte 2 no perfil"
+      "cartela_final": null,                    # ex.: "Parte 2 no perfil"
+      "cta": null,                              # ex.: "raw/CTA.MOV", vídeo colado no final (sem legenda)
+      "espelhar": false,                        # true: desfaz o espelhamento da câmera frontal
+      "limpar_audio": null                      # modelo RNNoise (ex.: "rnn/sh.rnnn"), também aceito no projeto
     }
   ]
 }
@@ -40,6 +43,10 @@ W, H = 1080, 1920
 
 TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
+FONTSDIR = "fonts"
+TITULO_TAM_MIN = 125     # menor tamanho aceito antes de quebrar em mais uma linha
+TITULO_LARGURA_MAX = 1040  # px úteis na largura (1080 menos margens)
+TITULO_ENTRELINHA = 0.8   # distância entre linhas do título, em múltiplos do tamanho da fonte
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
@@ -131,29 +138,50 @@ def quebrar_linhas(texto):
     return melhor
 
 
-def quebrar_titulo(texto, limite=16):
-    """Título em linhas equilibradas (até 3), cada uma com no máximo ~16 caracteres."""
+def largura_titulo(linha, tam=None):
+    tam = tam or TITULO_TAM
+    try:
+        from PIL import ImageFont
+        return ImageFont.truetype(f"{FONTSDIR}/Montserrat-ExtraBold.ttf", tam).getlength(linha) + 10
+    except (ImportError, OSError):
+        return len(linha) * tam * 0.62
+
+
+def quebrar_titulo(texto, max_linhas=3, dois_pontos=True):
+    """Título em no máximo 3 linhas (regra da Keila, 26/09/2026), pela largura real da Montserrat ExtraBold:
+    usa o menor número de linhas que cabe em 140 px e, se não couber em 3, diminui a fonte;
+    nunca separa "Black Friday"."""
     if r"\N" in texto:
         return texto
-    palavras = texto.split()
+    if dois_pontos and ": " in texto and max_linhas > 1:   # tenta quebrar depois dos dois-pontos
+        cabeca, resto = texto.split(": ", 1)
+        com_pausa = cabeca + ":" + r"\N" + quebrar_titulo(resto, max_linhas - 1)
+        sem_pausa = quebrar_titulo(texto, max_linhas, dois_pontos=False)
+        # fica com a quebra que deixa a letra maior
+        return max((sem_pausa, com_pausa), key=lambda t: tamanho_titulo(t.split(r"\N")))
+    texto = re.sub(r"\b(\d{1,2}) de (\w+)", r"\1§de§\2", texto)   # datas inteiras
+    texto = re.sub(r"\b(\d+) (mil|mL)\b", r"\1§\2", texto)          # "300 mil" nunca se separa
+    palavras = texto.replace("Black Friday", "Black§Friday").split()
+
+    def particoes(ps, k):
+        if k == 1:
+            yield [" ".join(ps)]
+            return
+        for i in range(1, len(ps) - k + 2):
+            for resto in particoes(ps[i:], k - 1):
+                yield [" ".join(ps[:i])] + resto
+
+    def custo(ls):   # linha mais larga, penalizando linhas desiguais ("Em / 2026 eu fiz a")
+        ws = list(map(largura_titulo, ls))
+        return max(ws) + 0.5 * (max(ws) - min(ws))
+
     melhor = None
-    for k in range(1, 4):
-        def particoes(ps, k):
-            if k == 1:
-                yield [" ".join(ps)]
-                return
-            for i in range(1, len(ps) - k + 2):
-                for resto in particoes(ps[i:], k - 1):
-                    yield [" ".join(ps[:i])] + resto
-        if k > len(palavras):
+    for k in range(1, min(max_linhas, len(palavras)) + 1):
+        melhor = min(particoes(palavras, k), key=custo)
+        # aceita reduzir a fonte até ~125 px antes de criar mais uma linha
+        if max(map(largura_titulo, melhor)) <= TITULO_LARGURA_MAX * TITULO_TAM / TITULO_TAM_MIN:
             break
-        opcao = min(particoes(palavras, k), key=lambda ls: max(map(len, ls)))
-        if melhor is None or max(map(len, opcao)) < max(map(len, melhor)):
-            melhor = opcao
-        if max(map(len, opcao)) <= limite:
-            melhor = opcao
-            break
-    return r"\N".join(melhor)
+    return r"\N".join(melhor).replace("§", " ")
 
 
 # Correções fixas de transcrição (termos técnicos e regra de escrita FEA: nunca "pra")
@@ -187,6 +215,7 @@ CORRECOES = [
     (r"\bintercorrente\b", "intercorrência"), (r"(\d) %", r"\1%"), (r"\bmeio ml\b", "meio mL"),
     (r"\bVietre\b", "Vietri"), (r"\bEvoar Contour\b", "Yvoire Contour"),
     (r"\bSerintox\b", "Seryntox"),
+    (r"\b(?:Sabamais|Sabamai|Sadamai|Saba Mais|Sabar Mais|Saber Mais|Salva Mais)\b", "Saiba Mais"),
     (r"\b(?:[Nn]uvia|Lúvia|[Nn]euvia) (?:Stimulate|Estimulate)\b", "Neauvia Stimulate"),
 ]
 
@@ -197,7 +226,7 @@ def corrigir(texto, extras=()):
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
+NOMES_PROPRIOS = {"Black", "Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
 
 
 def limpar(texto):
@@ -211,24 +240,73 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
+# termos de mais de uma palavra que nunca podem ser quebrados entre duas legendas
+TERMOS_JUNTOS = [(r"(?i)^(saiba|saba|salva|saber|sabar)$", r"(?i)^mais\b", "Saiba Mais"),
+                 (r"^Black$", r"^Friday\b", "Black Friday"),
+                 (r"^Black Friday$", r"(?i)^vitalícia\b", "Black Friday Vitalícia")]
+
+
+def juntar_termos(palavras):
+    for re1, re2, novo in TERMOS_JUNTOS:
+        saida = []
+        for p in palavras:
+            ant = saida[-1] if saida else None
+            if ant and re.match(re1, ant["w"].strip()) and re.match(re2, p["w"].strip()):
+                resto = re.sub(re2, "", p["w"].strip())
+                saida[-1] = dict(ant, w=novo + resto, e=p["e"])
+            else:
+                saida.append(p)
+        palavras = saida
+    return palavras
+
+
+def tamanho_titulo(linhas):
+    """Tamanho da fonte do título: 140 px, reduzido só se alguma linha passar da largura."""
+    maior = max(map(largura_titulo, linhas))
+    return TITULO_TAM if maior <= TITULO_LARGURA_MAX else int(TITULO_TAM * TITULO_LARGURA_MAX / maior)
+
+
+def linhas_titulo(texto, ini, fim, efeito, parte=None):
+    """Cada linha do título em um evento próprio com \\pos: a entrelinha da Montserrat
+    é muito aberta (pedido da Keila em 26/09: headline com linhas mais próximas)."""
+    tam = tamanho_titulo(texto.split(r"\N"))
+    linhas = [(l, tam) for l in texto.split(r"\N")]
+    if parte:
+        linhas.append((f"Parte {parte}", int(TITULO_TAM * 0.62)))
+    alturas = [tam * TITULO_ENTRELINHA for _, tam in linhas]
+    y = H / 2 - sum(alturas) / 2
+    eventos = []
+    for (l, tam), alt in zip(linhas, alturas):
+        eventos.append(f"Dialogue: 1,{ts(ini)},{ts(fim)},Titulo,,0,0,0,,"
+                       f"{{\\an5\\pos({W // 2},{y + alt / 2:.0f})\\fs{tam}{efeito}}}{l}\n")
+        y += alt
+    return eventos
+
+
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
-    titulo = quebrar_titulo(v["titulo"])
-    if v.get("parte"):
-        titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
-    linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)}}{titulo}\n")
+    linhas += linhas_titulo(quebrar_titulo(v["titulo"]), 0, TITULO_DUR, "\\fad(0,250)", v.get("parte"))
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
         fim_legendas = ini
-        linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)}}{quebrar_titulo(v['cartela_final'])}\n")
+        linhas += linhas_titulo(quebrar_titulo(v["cartela_final"]), ini, duracao, "\\fad(250,0)")
     blocos = blocos_legenda(palavras)
     for i, bloco in enumerate(blocos):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
         if i + 1 < len(blocos):          # nunca duas legendas ao mesmo tempo
             e = min(e, blocos[i + 1][0]["s"])
-        # como na referência, a legenda só entra depois que o título sai
-        s = max(s, TITULO_DUR)
+        # como na referência, a legenda só entra depois que o título sai; o pedaço de
+        # frase falado ainda sob o título sai da legenda (evita começar em "vitalícia, para...")
+        if s < TITULO_DUR:
+            # corta até a última pontuação falada sob o título; sem pontuação, mostra o bloco inteiro
+            sob = [j for j, p in enumerate(bloco) if p["s"] < TITULO_DUR - 0.1 and p["w"].strip()[-1:] in ",.!?"]
+            if sob:
+                bloco = bloco[sob[-1] + 1:]
+                if len(bloco) <= 1:
+                    continue
+                s = bloco[0]["s"]
+            s = max(s, TITULO_DUR)
         if s >= e or s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
@@ -237,6 +315,17 @@ def gerar_ass(v, palavras, duracao, caminho):
             continue
         linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
+
+
+def tem_audio(ff, arquivo):
+    r = subprocess.run([ff, "-hide_banner", "-i", arquivo], capture_output=True, text=True)
+    return "Audio:" in r.stderr
+
+
+def duracao_arquivo(ff, arquivo):
+    r = subprocess.run([ff, "-hide_banner", "-i", arquivo], capture_output=True, text=True)
+    h, m, s = re.search(r"Duration: (\d+):(\d+):([\d.]+)", r.stderr).groups()
+    return int(h) * 3600 + int(m) * 60 + float(s)
 
 
 def renderizar(cfg, v, previa=False):
@@ -253,7 +342,9 @@ def renderizar(cfg, v, previa=False):
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
-    palavras, duracao = remapear_palavras(palavras, v["manter"])
+    palavras, duracao = remapear_palavras(juntar_termos(palavras), v["manter"])
+    global FONTSDIR
+    FONTSDIR = cfg["fontsdir"]
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 
@@ -265,27 +356,49 @@ def renderizar(cfg, v, previa=False):
         rotulos.append(f"[v{i}][a{i}]")
     n = len(v["manter"])
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac];"
-              f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+    # espelhar: selfie gravada com a câmera frontal (texto do fundo ao contrário)
+    espelho = "hflip," if v.get("espelhar") else ""
+    # limpar_audio: tira o ruído de fundo (ar-condicionado, clínica) e deixa só a voz
+    rnn = v.get("limpar_audio", cfg.get("limpar_audio"))
+    audio = (f"[ac0]aresample=48000,highpass=f=80,arnndn=m='{rnn}':mix=0.95,afftdn=nr=10:nf=-45[ac];"
+             if rnn else "[ac0]anull[ac];")
+    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac0];" + audio +
+              f"[vc]{espelho}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'")
+    entradas = ["-i", v["entrada"]]
+    cta = v.get("cta") or cfg.get("cta")
+    if cta:   # vídeo de CTA colado no final, sem título nem legenda
+        entradas += ["-i", cta]
+        dcta = duracao_arquivo(ff, cta)
+        audio_cta = ("[1:a]aresample=48000,aformat=channel_layouts=stereo,asetpts=PTS-STARTPTS[ca]"
+                     if tem_audio(ff, cta) else f"anullsrc=r=48000:cl=stereo,atrim=0:{dcta}[ca]")
+        filtro += (f",fps=30,format=yuv420p[vm];[ac]aresample=48000,aformat=channel_layouts=stereo[am];"
+                   f"[1:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+                   f"fps=30,format=yuv420p,setpts=PTS-STARTPTS[cv];{audio_cta};"
+                   f"[vm][am][cv][ca]concat=n=2:v=1:a=1[vo][ac2]")
+        duracao += dcta
+        amap = "[ac2]"
+    else:
+        filtro += "[vo]"
+        amap = "[ac]"
     saida = v["saida"]
     if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
         vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium",
+        codec = ["-map", "[vo]", "-map", amap, "-c:v", "libx264", "-preset", "medium",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "96k"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
         filtro += ";[vo]scale=720:1280[vp]"
-        codec = ["-map", "[vp]", "-map", "[ac]", "-c:v", "libx264", "-preset", "fast",
+        codec = ["-map", "[vp]", "-map", amap, "-c:v", "libx264", "-preset", "fast",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-c:a", "aac", "-b:a", "96k"]
         pasta, nome = saida.rsplit("/", 1)
         saida = f"{pasta}/PREVIA {nome}"
     else:
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", "[vo]", "-map", amap, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
