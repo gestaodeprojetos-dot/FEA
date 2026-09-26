@@ -326,6 +326,14 @@ def ancorar_na_voz(palavras, db, limiar, passo):
             continue
         s, e = p["s"], p["e"]
         e0 = p.get("e0", e)
+        if not voz and prox - p["e"] > 2.0:
+            # palavra que a transcrição deixou segundos antes da frase dela, no silêncio ("Pra ...
+            # gente ver melhor"): se há voz logo antes da palavra seguinte, vai para lá
+            j0, j1 = int((prox - 0.7) / passo), int(prox / passo)
+            if any(db[i] >= limiar for i in range(max(0, j0), min(len(db), j1))):
+                d = min(0.5, p["e"] - p["s"])
+                saida.append(dict(p, s=prox - 0.02 - d, e=prox - 0.02))
+                continue
         if e0 - s > 1.5:
             # palavra "esticada" pela transcrição (ex.: "Pra" de 55 s a 69 s): a fala de verdade
             # fica no fim do intervalo, logo antes da palavra seguinte
@@ -412,13 +420,6 @@ def renderizar(cfg, v, previa=False):
         palavras = []
         for seg in trans:
             ws = [dict(w) for w in seg["words"]]
-            # palavra que a transcrição deixou segundos antes da frase dela ("Pra ... gente ver
-            # melhor", "Fiz ... só um pouquinho"): vai para logo antes da palavra seguinte
-            for k in range(len(ws) - 2, -1, -1):
-                if ws[k + 1]["s"] - ws[k]["e"] > 2.0:
-                    d = min(0.5, ws[k]["e"] - ws[k]["s"])
-                    ws[k]["e"] = ws[k + 1]["s"] - 0.02
-                    ws[k]["s"] = ws[k]["e"] - d
             for i, w in enumerate(ws):
                 # pedaço sem espaço na frente (",2", "%") é continuação da palavra anterior:
                 # "0" + ",2" = "0,2" e "1" + "%" = "1%" (antes o número sumia da legenda)
