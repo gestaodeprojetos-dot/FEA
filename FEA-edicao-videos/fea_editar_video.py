@@ -182,7 +182,13 @@ CORRECOES = [
     (r"\b[Pp]r[ée]dio\b", "pré-jowl"),     # termo do Dr. (confirmado pela Keila, 25/09)
     (r"\b[Gg]elinh[oa]s?\b", "G'"),
     (r"\b[Tt]ier\b", "tear"), (r"\b[Tt]ir ?tr?of+\b", "tear trough"), (r"\b[Tt]ear ?trof+\b", "tear trough"),
-    (r"\bN[uú]vi[ao]\b", "Neauvia"), (r"\bLúvia\b", "Neauvia"),     # grafia oficial (Keila, 26/09)       # "gelinho" = G' (Keila, 26/09)
+    (r"\bN[uú]vi[ao]\b", "Neauvia"),
+    # nomes de produto conferidos na fonte oficial (Keila, 26/09: "pesquise como é escrito")
+    (r"\b[QqKk]uiri?al[iy]s\b", "Kirialys"), (r"\b[Kk]irialis\b", "Kirialys"),
+    (r"\b[Vv]ol(i|ai|y)me\b", "Volyme"), (r"\b[Rr]es(ch|t)ilane\b", "Restylane"), (r"\b[Ss]ub ?[Ss]kin\b", "Subskin"),
+    (r"\b[aá]cido (hi)?al[uo]r[oô]nico\b", "ácido hialurônico"), (r"\b[aá]cido lor[oô]nico\b", "ácido hialurônico"),
+    (r"\bacel[eê]r[oô]nico\b", "ácido hialurônico"), (r"\b(?<!hi)al[uo]r[oô]nico\b", "hialurônico"),
+    (r"\bb[oó]l[ou]s\b", "bolus"), (r"\bLúvia\b", "Neauvia"),     # grafia oficial (Keila, 26/09)       # "gelinho" = G' (Keila, 26/09)
     (r"\btempra\b", "têmpora"),
     (r"\binterfacial\b", "interfascial"),
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),

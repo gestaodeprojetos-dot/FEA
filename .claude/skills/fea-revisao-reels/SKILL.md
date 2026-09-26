@@ -35,7 +35,8 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
-| 9 | Grafias: Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
+| 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |
+| 9 | Grafias: Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
 | 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
