@@ -434,6 +434,14 @@ def renderizar(cfg, v, previa=False):
                     continue
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
                 palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0)))
+    # "mover_palavra": [[inicio_na_transcricao, inicio_certo], ...] para a palavra que a
+    # transcrição pôs no lugar errado (conferido ouvindo o áudio)
+    for s0, s1 in v.get("mover_palavra", []):
+        for p in palavras:
+            if abs(p["s"] - s0) < 0.06:
+                d = min(0.5, p["e"] - p["s"])
+                p.update(s=s1, e=s1 + d, e0=s1 + d)
+    palavras.sort(key=lambda p: p["s"])
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]

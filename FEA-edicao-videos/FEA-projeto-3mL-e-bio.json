@@ -122,6 +122,12 @@
      "\\bETIPS\\b",
      "ETIPs"
     ]
+   ],
+   "mover_palavra": [
+    [
+     8.82,
+     9.2
+    ]
    ]
   },
   {
@@ -137,7 +143,12 @@
      118.9
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     75.5,
+     76.3
+    ]
+   ],
    "correcoes": [
     [
      "\\b[Tt]ier trough\\b",

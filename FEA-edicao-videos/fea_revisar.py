@@ -188,7 +188,14 @@ def revisar(cfg, v, folhas=None):
              and not any(a <= (w["s"] + w["e"]) / 2 < b for a, b in v.get("remover_legenda", []) + v.get("silenciar", []))
              and w["w"].startswith(" ")]
     n_leg = sum(len(t.split()) for _, _, t in legendas)
-    n_dit = sum(1 for w in ditas if (w["s"] - manter[0][0]) > fe.TITULO_DUR or len(manter) > 1)
+    def t_saida(t):
+        off = 0.0
+        for a, b in manter:
+            if a <= t < b:
+                return off + t - a
+            off += b - a
+        return -1
+    n_dit = sum(1 for w in ditas if t_saida((w["s"] + w["e"]) / 2) > fe.TITULO_DUR + 0.2)
     if n_dit and n_leg / n_dit < 0.9:
         erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
 
