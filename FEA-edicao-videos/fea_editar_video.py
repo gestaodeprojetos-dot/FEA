@@ -43,6 +43,9 @@ W, H = 1080, 1920
 
 TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
+FONTSDIR = "fonts"
+TITULO_TAM_MIN = 125     # menor tamanho aceito antes de quebrar em mais uma linha
+TITULO_LARGURA_MAX = 1040  # px úteis na largura (1080 menos margens)
 TITULO_ENTRELINHA = 0.8   # distância entre linhas do título, em múltiplos do tamanho da fonte
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
@@ -135,29 +138,45 @@ def quebrar_linhas(texto):
     return melhor
 
 
-def quebrar_titulo(texto, limite=16):
-    """Título em linhas equilibradas (até 3), cada uma com no máximo ~16 caracteres."""
+def largura_titulo(linha, tam=None):
+    tam = tam or TITULO_TAM
+    try:
+        from PIL import ImageFont
+        return ImageFont.truetype(f"{FONTSDIR}/Montserrat-ExtraBold.ttf", tam).getlength(linha) + 10
+    except (ImportError, OSError):
+        return len(linha) * tam * 0.62
+
+
+def quebrar_titulo(texto, max_linhas=4):
+    """Título em linhas equilibradas (até 4), pela largura real da Montserrat ExtraBold:
+    usa o menor número de linhas que cabe em 140 px; nunca separa "Black Friday"."""
     if r"\N" in texto:
         return texto
-    palavras = texto.split()
+    if ": " in texto:   # "Anota essa data: 20 de outubro" quebra depois dos dois-pontos
+        cabeca, resto = texto.split(": ", 1)
+        return cabeca + ":" + r"\N" + quebrar_titulo(resto, max_linhas - 1)
+    texto = re.sub(r"\b(\d{1,2}) de (\w+)", r"\1§de§\2", texto)   # datas inteiras
+    palavras = texto.replace("Black Friday", "Black§Friday").split()
+
+    def particoes(ps, k):
+        if k == 1:
+            yield [" ".join(ps)]
+            return
+        for i in range(1, len(ps) - k + 2):
+            for resto in particoes(ps[i:], k - 1):
+                yield [" ".join(ps[:i])] + resto
+
+    def custo(ls):   # linha mais larga, penalizando linhas desiguais ("Em / 2026 eu fiz a")
+        ws = list(map(largura_titulo, ls))
+        return max(ws) + 0.5 * (max(ws) - min(ws))
+
     melhor = None
-    for k in range(1, 4):
-        def particoes(ps, k):
-            if k == 1:
-                yield [" ".join(ps)]
-                return
-            for i in range(1, len(ps) - k + 2):
-                for resto in particoes(ps[i:], k - 1):
-                    yield [" ".join(ps[:i])] + resto
-        if k > len(palavras):
+    for k in range(1, min(max_linhas, len(palavras)) + 1):
+        melhor = min(particoes(palavras, k), key=custo)
+        # aceita reduzir a fonte até ~125 px antes de criar mais uma linha
+        if max(map(largura_titulo, melhor)) <= TITULO_LARGURA_MAX * TITULO_TAM / TITULO_TAM_MIN:
             break
-        opcao = min(particoes(palavras, k), key=lambda ls: max(map(len, ls)))
-        if melhor is None or max(map(len, opcao)) < max(map(len, melhor)):
-            melhor = opcao
-        if max(map(len, opcao)) <= limite:
-            melhor = opcao
-            break
-    return r"\N".join(melhor)
+    return r"\N".join(melhor).replace("§", " ")
 
 
 # Correções fixas de transcrição (termos técnicos e regra de escrita FEA: nunca "pra")
@@ -235,10 +254,17 @@ def juntar_termos(palavras):
     return palavras
 
 
+def tamanho_titulo(linhas):
+    """Tamanho da fonte do título: 140 px, reduzido só se alguma linha passar da largura."""
+    maior = max(map(largura_titulo, linhas))
+    return TITULO_TAM if maior <= TITULO_LARGURA_MAX else int(TITULO_TAM * TITULO_LARGURA_MAX / maior)
+
+
 def linhas_titulo(texto, ini, fim, efeito, parte=None):
     """Cada linha do título em um evento próprio com \\pos: a entrelinha da Montserrat
     é muito aberta (pedido da Keila em 26/09: headline com linhas mais próximas)."""
-    linhas = [(l, TITULO_TAM) for l in texto.split(r"\N")]
+    tam = tamanho_titulo(texto.split(r"\N"))
+    linhas = [(l, tam) for l in texto.split(r"\N")]
     if parte:
         linhas.append((f"Parte {parte}", int(TITULO_TAM * 0.62)))
     alturas = [tam * TITULO_ENTRELINHA for _, tam in linhas]
@@ -311,6 +337,8 @@ def renderizar(cfg, v, previa=False):
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
     palavras, duracao = remapear_palavras(juntar_termos(palavras), v["manter"])
+    global FONTSDIR
+    FONTSDIR = cfg["fontsdir"]
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 

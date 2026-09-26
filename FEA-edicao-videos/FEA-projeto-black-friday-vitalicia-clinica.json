@@ -7,7 +7,7 @@
   {
    "entrada": "raw/a895a5af.mov",
    "transcricao": "tr/a895a5af.json",
-   "saida": "out/1- Faltam 7 dias.mp4",
+   "saida": "out2/1- Faltam 7 dias.mp4",
    "titulo": "Faltam 7 dias",
    "parte": null,
    "cartela_final": null,
@@ -93,7 +93,7 @@
   {
    "entrada": "raw/f3b2223d.mov",
    "transcricao": "tr/f3b2223d.json",
-   "saida": "out/2- Faltam 6 dias.mp4",
+   "saida": "out2/2- Faltam 6 dias.mp4",
    "titulo": "Faltam 6 dias",
    "parte": null,
    "cartela_final": null,
@@ -179,7 +179,7 @@
   {
    "entrada": "raw/8718e261.mov",
    "transcricao": "tr/8718e261.json",
-   "saida": "out/3- Faltam 5 dias.mp4",
+   "saida": "out2/3- Faltam 5 dias.mp4",
    "titulo": "Faltam 5 dias",
    "parte": null,
    "cartela_final": null,
@@ -265,7 +265,7 @@
   {
    "entrada": "raw/0596db52.mov",
    "transcricao": "tr/0596db52.json",
-   "saida": "out/4- Faltam 4 dias.mp4",
+   "saida": "out2/4- Faltam 4 dias.mp4",
    "titulo": "Faltam 4 dias",
    "parte": null,
    "cartela_final": null,
@@ -351,7 +351,7 @@
   {
    "entrada": "raw/v_daa73sno.mp4",
    "transcricao": "tr/v_daa73sno.json",
-   "saida": "out/5- Faltam 3 dias.mp4",
+   "saida": "out2/5- Faltam 3 dias.mp4",
    "titulo": "Faltam 3 dias",
    "parte": null,
    "cartela_final": null,
@@ -437,7 +437,7 @@
   {
    "entrada": "raw/c6e7bf31.mov",
    "transcricao": "tr/c6e7bf31.json",
-   "saida": "out/6- Faltam 2 dias.mp4",
+   "saida": "out2/6- Faltam 2 dias.mp4",
    "titulo": "Faltam 2 dias",
    "parte": null,
    "cartela_final": null,
@@ -527,7 +527,7 @@
   {
    "entrada": "raw/a05a43d3.mov",
    "transcricao": "tr/a05a43d3.json",
-   "saida": "out/7- Falta 1 dia.mp4",
+   "saida": "out2/7- Falta 1 dia.mp4",
    "titulo": "Falta 1 dia",
    "parte": null,
    "cartela_final": null,
@@ -617,7 +617,7 @@
   {
    "entrada": "raw/IMG_6593.MOV",
    "transcricao": "tr/IMG_6593.json",
-   "saida": "out/8- Começa amanhã.mp4",
+   "saida": "out2/8- Começa amanhã.mp4",
    "titulo": "Começa amanhã",
    "parte": null,
    "cartela_final": null,
@@ -703,8 +703,8 @@
   {
    "entrada": "raw/c81f5219.mov",
    "transcricao": "tr/c81f5219.json",
-   "saida": "out/9- Começa nesta terça.mp4",
-   "titulo": "Começa nesta terça",
+   "saida": "out2/9- Terça começa a Black Friday Vitalícia.mp4",
+   "titulo": "Terça começa a Black Friday Vitalícia",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -797,8 +797,8 @@
   {
    "entrada": "raw/IMG_6595.MOV",
    "transcricao": "tr/IMG_6595.json",
-   "saida": "out/10- O seu último curso de harmonização.mp4",
-   "titulo": "O seu último curso de harmonização",
+   "saida": "out2/10- O seu último curso de harmonização facial.mp4",
+   "titulo": "O seu último curso de harmonização facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -883,7 +883,7 @@
   {
    "entrada": "raw/IMG_6594.MOV",
    "transcricao": "tr/IMG_6594.json",
-   "saida": "out/11- Hoje começa a Black Friday Vitalícia.mp4",
+   "saida": "out2/11- Hoje começa a Black Friday Vitalícia.mp4",
    "titulo": "Hoje começa a Black Friday Vitalícia",
    "parte": null,
    "cartela_final": null,
@@ -969,8 +969,8 @@
   {
    "entrada": "raw/e47535f0.mov",
    "transcricao": "tr/e47535f0.json",
-   "saida": "out/12- É hoje.mp4",
-   "titulo": "É hoje",
+   "saida": "out2/12- É hoje o seu último curso de harmonização facial.mp4",
+   "titulo": "É hoje: o seu último curso de harmonização facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": true,
@@ -1055,8 +1055,8 @@
   {
    "entrada": "raw/070d509d.mov",
    "transcricao": "tr/070d509d.json",
-   "saida": "out/13- Nunca mais gaste um real em curso.mp4",
-   "titulo": "Nunca mais gaste um real em curso",
+   "saida": "out2/13- Nunca mais gaste com curso de harmonização facial.mp4",
+   "titulo": "Nunca mais gaste com curso de harmonização facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1141,8 +1141,8 @@
   {
    "entrada": "raw/1f3b2c57.mov",
    "transcricao": "tr/1f3b2c57.json",
-   "saida": "out/14- Anota essa data.mp4",
-   "titulo": "Anota essa data",
+   "saida": "out2/14- Anota essa data 20 de outubro.mp4",
+   "titulo": "Anota essa data: 20 de outubro",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1227,7 +1227,7 @@
   {
    "entrada": "raw/3e00212d.mov",
    "transcricao": "tr/3e00212d.json",
-   "saida": "out/15- Isso vai contra tudo.mp4",
+   "saida": "out2/15- Isso vai contra tudo.mp4",
    "titulo": "Isso vai contra tudo",
    "parte": null,
    "cartela_final": null,
@@ -1313,8 +1313,8 @@
   {
    "entrada": "raw/45490ed8.mov",
    "transcricao": "tr/45490ed8.json",
-   "saida": "out/16- Some tudo o que você já gastou em curso.mp4",
-   "titulo": "Some tudo o que você já gastou em curso",
+   "saida": "out2/16- Quanto você já gastou em curso de Harmonização Facial.mp4",
+   "titulo": "Quanto você já gastou em curso de Harmonização Facial?",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1399,8 +1399,8 @@
   {
    "entrada": "raw/89b9d4e5.mov",
    "transcricao": "tr/89b9d4e5.json",
-   "saida": "out/17- Novidade exclusiva para você.mp4",
-   "titulo": "Novidade exclusiva para você",
+   "saida": "out2/17- Bônus presencial para quem estiver ao vivo.mp4",
+   "titulo": "Bônus presencial para quem estiver ao vivo",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1479,14 +1479,18 @@
     [
      "\\bBlack Friday vitalícia\\b",
      "Black Friday Vitalícia"
+    ],
+    [
+     "\\batender todos os bônus",
+     "ter todos os bônus"
     ]
    ]
   },
   {
    "entrada": "raw/9f045b6b.mov",
    "transcricao": "tr/9f045b6b.json",
-   "saida": "out/18- Recado do João do Futuro.mp4",
-   "titulo": "Recado do João do Futuro",
+   "saida": "out2/18- Um recado do Doutor João do Futuro.mp4",
+   "titulo": "Um recado do Doutor João do Futuro",
    "parte": null,
    "cartela_final": null,
    "espelhar": true,
@@ -1571,8 +1575,8 @@
   {
    "entrada": "raw/ec24e270.mov",
    "transcricao": "tr/ec24e270.json",
-   "saida": "out/19- Nunca mais vendi um curso.mp4",
-   "titulo": "Nunca mais vendi um curso",
+   "saida": "out2/19- Em 2026 eu fiz a Black Friday Vitalícia.mp4",
+   "titulo": "Em 2026 eu fiz a Black Friday Vitalícia",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1657,8 +1661,8 @@
   {
    "entrada": "raw/IMG_6515.MOV",
    "transcricao": "tr/IMG_6515.json",
-   "saida": "out/20- Existe um grupo que nunca mais vai pagar.mp4",
-   "titulo": "Existe um grupo que nunca mais vai pagar",
+   "saida": "out2/20- Existe um grupo que nunca mais paga meus cursos.mp4",
+   "titulo": "Existe um grupo que nunca mais paga meus cursos",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1743,8 +1747,8 @@
   {
    "entrada": "raw/IMG_6516.MOV",
    "transcricao": "tr/IMG_6516.json",
-   "saida": "out/21- Direto da FEP Experience.mp4",
-   "titulo": "Direto da FEP Experience",
+   "saida": "out2/21- Nunca mais compre um curso meu.mp4",
+   "titulo": "Nunca mais compre um curso meu",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1829,8 +1833,8 @@
   {
    "entrada": "raw/IMG_6596.MOV",
    "transcricao": "tr/IMG_6596.json",
-   "saida": "out/22- Bastidores da FEP Experience.mp4",
-   "titulo": "Bastidores da FEP Experience",
+   "saida": "out2/22- A maior Black Friday de todos os tempos.mp4",
+   "titulo": "A maior Black Friday de todos os tempos",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -1915,8 +1919,8 @@
   {
    "entrada": "raw/v_daa6rsvo.mp4",
    "transcricao": "tr/v_daa6rsvo.json",
-   "saida": "out/23- 20 de outubro.mp4",
-   "titulo": "20 de outubro",
+   "saida": "out2/23- A maior Black Friday de Harmonização Facial.mp4",
+   "titulo": "A maior Black Friday de Harmonização Facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -2001,8 +2005,8 @@
   {
    "entrada": "raw/v_daa6rfno.mp4",
    "transcricao": "tr/v_daa6rfno.json",
-   "saida": "out/24- Só o que posso te falar.mp4",
-   "titulo": "Só o que posso te falar",
+   "saida": "out2/24- 20 de Outubro.mp4",
+   "titulo": "20 de Outubro",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
