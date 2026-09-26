@@ -147,7 +147,15 @@ def revisar(cfg, v, folhas=None):
     while k < len(db) - 10 and (db[k:k + 10] >= max(lim, 42)).mean() < 0.8:
         k += 1
     if k * ps > 0.8:
-        erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+        # segunda medida (a do fea_inicio_fala): voz 18 dB abaixo do pico; com ruído de fundo
+        # alto (praia, vento, dublagem com trilha) a régua acima confunde fundo com silêncio
+        import numpy as np
+        lim2 = float(np.percentile(db, 90)) - 18
+        k2 = next((i for i in range(len(db) - 5) if (db[i:i + 5] > lim2).sum() >= 4), len(db))
+        if k2 * ps > 0.8:
+            erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+        else:
+            aten.append(f"ruído de fundo alto: a voz começa em {k2 * ps:.1f} s pela medida relativa; ouvir o começo")
     # fim: som subindo no último instante = começo de outra palavra (o bruto às vezes acaba assim)
     if len(db) > 6 and db[-2:].max() >= lim + 6 and db[-2:].mean() > db[-6:-3].mean() + 6:
         erros.append("som subindo no último instante: começo de outra palavra no fim")
@@ -188,7 +196,14 @@ def revisar(cfg, v, folhas=None):
              and not any(a <= (w["s"] + w["e"]) / 2 < b for a, b in v.get("remover_legenda", []) + v.get("silenciar", []))
              and w["w"].startswith(" ")]
     n_leg = sum(len(t.split()) for _, _, t in legendas)
-    n_dit = sum(1 for w in ditas if (w["s"] - manter[0][0]) > fe.TITULO_DUR or len(manter) > 1)
+    def editado(t):   # segundo do bruto -> segundo do vídeo editado
+        acc = 0.0
+        for a, b in manter:
+            if a <= t < b:
+                return acc + t - a
+            acc += b - a
+        return acc
+    n_dit = sum(1 for w in ditas if editado((w["s"] + w["e"]) / 2) > fe.TITULO_DUR)
     if n_dit and n_leg / n_dit < 0.9 and not v.get("legendas_es"):   # tradução condensa: conferida no ES
         erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
 

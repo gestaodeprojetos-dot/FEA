@@ -1,0 +1,573 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "fonts",
+ "idioma": "es",
+ "titulo_tam": 140,
+ "videos": [
+  {
+   "entrada": "raw_es/IMG_5085.mp4",
+   "transcricao": "tr_es/IMG_5085.json",
+   "saida": "out/1- Faltan 5 días - IMG_5085.mp4",
+   "titulo": "Faltan 5 días",
+   "titulo_pt": "Faltam 5 dias",
+   "manter": [
+    [
+     0.44,
+     28.69
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5152.mp4",
+   "transcricao": "tr_es/IMG_5152.json",
+   "saida": "out/2- Faltan 5 días - IMG_5152.mp4",
+   "titulo": "Faltan 5 días",
+   "titulo_pt": "Faltam 5 dias",
+   "manter": [
+    [
+     2.88,
+     11.66,
+     "exato"
+    ],
+    [
+     12.83,
+     15.03,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5154.mp4",
+   "transcricao": "tr_es/IMG_5154.json",
+   "saida": "out/3- Faltan 5 días - IMG_5154.mp4",
+   "titulo": "Faltan 5 días",
+   "titulo_pt": "Faltam 5 dias",
+   "manter": [
+    [
+     2.02,
+     14.46
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/4_dias.mp4",
+   "transcricao": "tr_es/4_dias.json",
+   "saida": "out/4- Faltan 4 días - 4_dias.mp4",
+   "titulo": "Faltan 4 días",
+   "titulo_pt": "Faltam 4 dias",
+   "manter": [
+    [
+     0,
+     8.62,
+     "exato"
+    ],
+    [
+     10.28,
+     19.41,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5158.mp4",
+   "transcricao": "tr_es/IMG_5158.json",
+   "saida": "out/5- Faltan 4 días - IMG_5158.mp4",
+   "titulo": "Faltan 4 días",
+   "titulo_pt": "Faltam 4 dias",
+   "manter": [
+    [
+     0.74,
+     25.54
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/3_dias.mp4",
+   "transcricao": "tr_es/3_dias.json",
+   "saida": "out/6- Faltan 3 días - 3_dias.mp4",
+   "titulo": "Faltan 3 días",
+   "titulo_pt": "Faltam 3 dias",
+   "manter": [
+    [
+     0.26,
+     11.1,
+     "exato"
+    ],
+    [
+     12.19,
+     15.47,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5087.mp4",
+   "transcricao": "tr_es/IMG_5087.json",
+   "saida": "out/7- Faltan 3 días - IMG_5087.mp4",
+   "titulo": "Faltan 3 días",
+   "titulo_pt": "Faltam 3 dias",
+   "manter": [
+    [
+     0.44,
+     23.55
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5153.mp4",
+   "transcricao": "tr_es/IMG_5153.json",
+   "saida": "out/8- Faltan 3 días - IMG_5153.mp4",
+   "titulo": "Faltan 3 días",
+   "titulo_pt": "Faltam 3 dias",
+   "manter": [
+    [
+     5.06,
+     16.15,
+     "exato"
+    ],
+    [
+     17.14,
+     19.82,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5155.mp4",
+   "transcricao": "tr_es/IMG_5155.json",
+   "saida": "out/9- Faltan 3 días - IMG_5155.mp4",
+   "titulo": "Faltan 3 días",
+   "titulo_pt": "Faltam 3 dias",
+   "manter": [
+    [
+     2.29,
+     25.11
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5088.mp4",
+   "transcricao": "tr_es/IMG_5088.json",
+   "saida": "out/10- Faltan 2 días - IMG_5088.mp4",
+   "titulo": "Faltan 2 días",
+   "titulo_pt": "Faltam 2 dias",
+   "manter": [
+    [
+     0.64,
+     20.37
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5159.mp4",
+   "transcricao": "tr_es/IMG_5159.json",
+   "saida": "out/11- Faltan 2 días - IMG_5159.mp4",
+   "titulo": "Faltan 2 días",
+   "titulo_pt": "Faltam 2 dias",
+   "manter": [
+    [
+     2.44,
+     18.26,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/Falta_1_dia.mp4",
+   "transcricao": "tr_es/Falta_1_dia.json",
+   "saida": "out/12- Falta 1 día - Falta_1_dia.mp4",
+   "titulo": "Falta 1 día",
+   "titulo_pt": "Falta 1 dia",
+   "manter": [
+    [
+     0.42,
+     27.29
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5089.mp4",
+   "transcricao": "tr_es/IMG_5089.json",
+   "saida": "out/13- Falta 1 día - IMG_5089.mp4",
+   "titulo": "Falta 1 día",
+   "titulo_pt": "Falta 1 dia",
+   "manter": [
+    [
+     0.66,
+     25.24
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5160.mp4",
+   "transcricao": "tr_es/IMG_5160.json",
+   "saida": "out/14- Falta 1 día - IMG_5160.mp4",
+   "titulo": "Falta 1 día",
+   "titulo_pt": "Falta 1 dia",
+   "manter": [
+    [
+     5.66,
+     23.32
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5161.mp4",
+   "transcricao": "tr_es/IMG_5161.json",
+   "saida": "out/15- Falta 1 día - IMG_5161.mp4",
+   "titulo": "Falta 1 día",
+   "titulo_pt": "Falta 1 dia",
+   "manter": [
+    [
+     2.66,
+     14.83,
+     "exato"
+    ],
+    [
+     15.59,
+     18.04,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5162.mp4",
+   "transcricao": "tr_es/IMG_5162.json",
+   "saida": "out/16- Falta 1 día - IMG_5162.mp4",
+   "titulo": "Falta 1 día",
+   "titulo_pt": "Falta 1 dia",
+   "manter": [
+    [
+     2.54,
+     16.37,
+     "exato"
+    ],
+    [
+     17.24,
+     20.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5090.mp4",
+   "transcricao": "tr_es/IMG_5090.json",
+   "saida": "out/17- Hoy comienza - IMG_5090.mp4",
+   "titulo": "Hoy comienza",
+   "titulo_pt": "Hoje começa",
+   "manter": [
+    [
+     0.54,
+     22.73
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ii]nversión\\b",
+     "inmersión"
+    ],
+    [
+     "\\b[Tt]e ve allá\\b",
+     "te veo allá"
+    ],
+    [
+     "\\bsuper inmersión\\b",
+     "súper inmersión"
+    ],
+    [
+     "\\bPone ese\\b",
+     "Pon ese"
+    ]
+   ]
+  }
+ ],
+ "tuteo": true
+}

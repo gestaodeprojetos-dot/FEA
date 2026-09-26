@@ -106,6 +106,9 @@ def sem_par(textos, abre, fecha):
     return ruins
 
 
+TUTEO_APROVADO = [False]   # "tuteo": true no projeto (Keila aprovou "tú" nos anúncios dublados, 26/09/2026)
+
+
 def conferir_texto(t, onde, erros, aten):
     baixo = t.lower()
     if re.search(LETRAS_PT, t):
@@ -129,7 +132,7 @@ def conferir_texto(t, onde, erros, aten):
     for rx, motivo in FALSOS_AMIGOS:
         if re.search(rx, t, re.I):
             aten.append(f"{onde} \"{t}\": {motivo}")
-    if re.search(INFORMAL, baixo):
+    if re.search(INFORMAL, baixo) and not TUTEO_APROVADO[0]:
         aten.append(f"{onde} \"{t}\": tratamento informal; o catálogo usa \"usted\" (decisão de 20/08/2026)")
 
 
@@ -155,6 +158,7 @@ def ler_ass(caminho):
 
 def revisar(cfg, v, com_audio=True):
     erros, aten = [], []
+    TUTEO_APROVADO[0] = bool(v.get("tuteo", cfg.get("tuteo")))
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     if not os.path.exists(ass):
         return [f"legenda final não existe: {ass} (renderizar antes)"], []
@@ -191,7 +195,12 @@ def revisar(cfg, v, com_audio=True):
             elif len(linha) > LINHA_ATENCAO:
                 aten.append(f"{onde} linha \"{linha}\" com {len(linha)} caracteres: conferir na tela")
         cps = len(t) / max(e - s, 0.01)
-        if cps > CPS_ERRO:
+        if not v.get("legendas_es"):
+            # áudio em espanhol: a legenda é a própria fala, no tempo dela (mesmo padrão do PT);
+            # condensar deixaria a legenda diferente do áudio
+            if cps > CPS_ERRO + 6:
+                aten.append(f"{onde} \"{t}\": {cps:.0f} caracteres/s (fala rápida na dublagem)")
+        elif cps > CPS_ERRO:
             erros.append(f"{onde} \"{t}\": {cps:.0f} caracteres/s em {e - s:.1f} s, não dá para ler: condensar")
         elif cps > CPS_ATENCAO:
             aten.append(f"{onde} \"{t}\": {cps:.0f} caracteres/s: condensar se der sem perder conteúdo clínico")

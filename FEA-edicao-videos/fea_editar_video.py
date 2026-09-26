@@ -139,6 +139,16 @@ def blocos_legenda(palavras):
     juntos = []
     for i, b in enumerate(blocos):
         if len(b) == 1 and len(b[0]["w"].strip(".,?!")) <= 5:
+            # fim de frase ("face.") volta para a frase anterior, nunca abre a seguinte
+            if b[0]["w"].strip()[-1:] in ".?!" and juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0:
+                juntos[-1].append(b[0])
+                if len(" ".join(x["w"] for x in juntos[-1])) > MAX_CHARS_LINHA * 2 and len(juntos[-1]) > 3:
+                    # ficou longo demais para 2 linhas: parte em duas legendas equilibradas
+                    ws = juntos.pop()
+                    tam = [len(" ".join(x["w"] for x in ws[:k])) for k in range(1, len(ws))]
+                    k = min(range(1, len(ws)), key=lambda k: abs(2 * tam[k - 1] - tam[-1]))
+                    juntos += [ws[:k], ws[k:]]
+                continue
             prox = blocos[i + 1] if i + 1 < len(blocos) else None
             if prox and prox[0]["s"] - b[0]["e"] < 1.0:
                 prox.insert(0, b[0])
@@ -162,6 +172,7 @@ def quebrar_linhas(texto, limite=MAX_CHARS_LINHA, evitar=()):
         l1, l2 = " ".join(palavras[:i]), " ".join(palavras[i:])
         d = abs(len(l1) - len(l2)) + (0 if len(l1) <= len(l2) + 4 else 3)
         d += 12 if palavras[i - 1].lower() in evitar else 0   # linha terminando em "del", "la"...
+        d += 40 * (len(l1) > limite + 2) + 40 * (len(l2) > limite + 2)   # linha maior que o limite
         if d < dif:
             melhor, dif = l1 + r"\N" + l2, d
     return melhor
@@ -564,7 +575,8 @@ def duracao_arquivo(ff, arquivo):
 def preparar(cfg, v):
     """Cortes encaixados no áudio e palavras da legenda na linha do tempo editada."""
     ff = cfg["ffmpeg"]
-    v = dict(v, idioma=v.get("idioma") or cfg.get("idioma"))
+    v = dict(v, idioma=v.get("idioma") or cfg.get("idioma"),
+             correcoes=list(cfg.get("correcoes", [])) + list(v.get("correcoes", [])))   # do lote + do vídeo
     db_voz = perfil_voz(ff, v["entrada"])
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
@@ -628,6 +640,8 @@ def exportar_legendas(cfg, v, pasta):
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
     v, palavras, duracao = preparar(cfg, v)
+    import os
+    os.makedirs(os.path.dirname(v["saida"]) or ".", exist_ok=True)
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 

@@ -60,6 +60,17 @@ Processo informado pela Keila em 26/09/2026: pega os brutos em português, dubla
    - **Padrão aprovado (26/09/2026):** `outputLanguages: ["Spanish (Latin America)"]` e `brandGlossaryId: "01e042bd7f81458b9165b7895c8d7066"` (glossário "FEA" na HeyGen) em toda dublagem. Termo novo aprovado entra no glossário HeyGen (`update_brand_glossary`) e na seção 2 do glossário de vídeo. Tradução forçada entra literal, sem flexão: só termo que não muda de forma no plural.
 4. **Antes de cortar**, conferir a dublagem: número, marca e termo técnico falados em espanhol (a HeyGen erra termo clínico e marca). Erro de dublagem vai para a Keila antes de editar: se a legenda corrigir o que o áudio diz errado, o vídeo fica incoerente.
 
+**Mecânica da HeyGen que já funcionou (lote 1, contagem regressiva da imersão full face, 26/09/2026):**
+- `inputLanguage: "Portuguese (Brazil)"` (código "pt" é recusado); `mode: "precision"` em vídeo com o Dr. de frente (sincronia labial).
+- Lote: `create_video_translation_batch` com os campos em snake_case (`output_languages`, `brand_glossary_id`, `input_language`). Guardar o mapa arquivo -> `video_translation_id`.
+- Vídeo pronto em `https://resource2.heygen.ai/video_translate/<id>/original.mp4` (antes de pronto, dá AccessDenied): um laço em bash baixa cada um assim que termina, sem ficar consultando status.
+- O MP4 da HeyGen traz o **roteiro dublado como legenda embutida** (`-map 0:s:0` vira .srt). Comparar a transcrição com esse roteiro acha palavra que o Whisper ouviu errado (no lote 1: "inversión" no lugar de "inmersión"); a correção entra em `correcoes` do projeto.
+- A voz dublada **não tem respiro entre palavras**: o encaixe automático do corte puxava a palavra de volta. Corte de frase (ex.: horário) vai com `"exato"`, no meio do intervalo entre as palavras, e se confere **transcrevendo o vídeo final**.
+- A dublagem sai a 25 fps; o render converte para 30. O fundo original (praia, vento) continua no áudio: a revisora mede o começo da voz de forma relativa.
+- Falta de pausa também faz o Whisper adiantar palavra depois de silêncio: se a revisora acusar legenda adiantada, corrigir o tempo da palavra na transcrição pelo volume do áudio.
+
+Decisões da Keila no lote 1 (26/09/2026), valem para a campanha: "tú" aceito nos anúncios dublados (`"tuteo": true` no projeto); horário falado errado para o público hispano é cortado (o da imersão em espanhol é 13 e 14 de outubro, 7:00 PM hora Colômbia); data errada também é cortada; vídeo com fala errada do Dr. (ex.: "às 8 horas") é descartado; troca de lote vale para o público hispano; preço em espanhol é U$ 19,00 (1º lote): "por menos de 100 reais" se corta, ou se troca por U$ 19,00 quando der.
+
 Depois segue a edição:
 
 1. `python3 FEA-edicao-videos/fea_transcrever.py --idioma es tr/ wav/*.wav`
