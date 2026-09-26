@@ -56,6 +56,12 @@ Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr.
 - Nome de paciente falado ou legendado: confirmar grafia.
 - Quantidade de vídeos diferente da quantidade de títulos na imagem.
 
+Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não perguntar de novo:
+- "Harmonização facial" na fala do Dr. João está correto: ele é médico, não dentista. Manter.
+- Campanha Black Friday Vitalícia: "o último curso que você vai comprar", "nunca mais compre um curso", "a maior Black Friday da harmonização facial" e "não vai ter outra chance" (último dia) estão aprovados pelo comercial.
+- Série de contagem regressiva: headline no formato "Faltam N dias" / "Falta 1 dia", mesmo quando a fala é "Em N dias começa".
+- Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
+
 ## Legenda logo depois do título
 
 A fala dos 3 primeiros segundos fica só sob o título. O script descarta o pedaço de frase dito sob o título até a última pontuação (evita legenda começando em "vitalícia, para você...") e nunca quebra "Saiba Mais" ou "Black Friday Vitalícia" entre duas legendas (`TERMOS_JUNTOS`). Se ainda sobrar fragmento, usar `remover_legenda` no trecho.
