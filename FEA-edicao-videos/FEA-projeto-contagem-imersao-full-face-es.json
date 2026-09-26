@@ -32,6 +32,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -69,6 +97,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -100,6 +156,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -137,6 +221,40 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
+    ]
+   ],
+   "remover_legenda": [
+    [
+     2.45,
+     2.85
     ]
    ]
   },
@@ -168,6 +286,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -205,6 +351,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -236,6 +410,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -273,6 +475,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -304,6 +534,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -335,6 +593,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -367,6 +653,40 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
+    ]
+   ],
+   "remover_legenda": [
+    [
+     4.25,
+     4.75
     ]
    ]
   },
@@ -398,6 +718,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -429,6 +777,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -460,6 +836,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -497,6 +901,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -534,6 +966,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   },
@@ -565,6 +1025,34 @@
     [
      "\\bPone ese\\b",
      "Pon ese"
+    ],
+    [
+     "(\\d) mililitros",
+     "\\1 mL"
+    ],
+    [
+     "\\breologías\\b",
+     "reología"
+    ],
+    [
+     "\\bte veo en martes\\b",
+     "te veo el martes"
+    ],
+    [
+     "así que no,?\\s*$",
+     "así que"
+    ],
+    [
+     "\\b[Nn]o dejes para\\b",
+     "no lo dejes para"
+    ],
+    [
+     "¡?[Aa]h, imperdible",
+     "¡está imperdible"
+    ],
+    [
+     "\\b[Mm]ira, ",
+     ""
     ]
    ]
   }
