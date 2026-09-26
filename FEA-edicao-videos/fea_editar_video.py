@@ -16,7 +16,8 @@ O projeto.json descreve cada vídeo de saída:
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
       "manter": [[0.0, 12.4], [15.1, 40.0]],    # trechos mantidos, em segundos do bruto
-      "cartela_final": null                     # ex.: "Parte 2 no perfil"
+      "cartela_final": null,                    # ex.: "Parte 2 no perfil"
+      "cta": null                               # ex.: "raw/CTA.MOV", vídeo colado no final (sem legenda)
     }
   ]
 }
@@ -239,6 +240,17 @@ def gerar_ass(v, palavras, duracao, caminho):
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
+def tem_audio(ff, arquivo):
+    r = subprocess.run([ff, "-hide_banner", "-i", arquivo], capture_output=True, text=True)
+    return "Audio:" in r.stderr
+
+
+def duracao_arquivo(ff, arquivo):
+    r = subprocess.run([ff, "-hide_banner", "-i", arquivo], capture_output=True, text=True)
+    h, m, s = re.search(r"Duration: (\d+):(\d+):([\d.]+)", r.stderr).groups()
+    return int(h) * 3600 + int(m) * 60 + float(s)
+
+
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
@@ -267,25 +279,41 @@ def renderizar(cfg, v, previa=False):
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
     filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac];"
               f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'")
+    entradas = ["-i", v["entrada"]]
+    cta = v.get("cta") or cfg.get("cta")
+    if cta:   # vídeo de CTA colado no final, sem título nem legenda
+        entradas += ["-i", cta]
+        dcta = duracao_arquivo(ff, cta)
+        audio_cta = ("[1:a]aresample=48000,aformat=channel_layouts=stereo,asetpts=PTS-STARTPTS[ca]"
+                     if tem_audio(ff, cta) else f"anullsrc=r=48000:cl=stereo,atrim=0:{dcta}[ca]")
+        filtro += (f",fps=30,format=yuv420p[vm];[ac]aresample=48000,aformat=channel_layouts=stereo[am];"
+                   f"[1:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+                   f"fps=30,format=yuv420p,setpts=PTS-STARTPTS[cv];{audio_cta};"
+                   f"[vm][am][cv][ca]concat=n=2:v=1:a=1[vo][ac2]")
+        duracao += dcta
+        amap = "[ac2]"
+    else:
+        filtro += "[vo]"
+        amap = "[ac]"
     saida = v["saida"]
     if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
         vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium",
+        codec = ["-map", "[vo]", "-map", amap, "-c:v", "libx264", "-preset", "medium",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "96k"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
         filtro += ";[vo]scale=720:1280[vp]"
-        codec = ["-map", "[vp]", "-map", "[ac]", "-c:v", "libx264", "-preset", "fast",
+        codec = ["-map", "[vp]", "-map", amap, "-c:v", "libx264", "-preset", "fast",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-c:a", "aac", "-b:a", "96k"]
         pasta, nome = saida.rsplit("/", 1)
         saida = f"{pasta}/PREVIA {nome}"
     else:
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", "[vo]", "-map", amap, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao

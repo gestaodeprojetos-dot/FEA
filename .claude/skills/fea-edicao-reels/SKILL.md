@@ -13,7 +13,7 @@ Padrão aprovado pela Keila em 23/09/2026 ("é assim mesmo que quero"). Detalhes
 2. **Pasta de destino** e o **nome da subpasta** a criar (ex.: dentro de "Setembro", `20- Full face 6mL e toxina`). Criar com o MCP do Drive (`create_file`, mimeType de pasta).
 3. Às vezes, pastas de referência.
 
-Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
+Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr. diz "faltam 7 dias", headline "Faltam 7 dias"). Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
 
 ## Padrão visual (não mudar sem pedido)
 
@@ -22,7 +22,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
 | Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
-| Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
+| CTA | padrão desde 16/09: sem CTA. Quando a pasta trouxer um vídeo "CTA" e a Keila pedir (lote Black Amazonia, 26/09/2026), colar esse vídeo no final de cada edição com o campo `cta` do projeto.json (sem título nem legenda sobre ele; o limite de 3 min conta o CTA) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
 
 ## Regras de corte (critério da editora da equipe)
