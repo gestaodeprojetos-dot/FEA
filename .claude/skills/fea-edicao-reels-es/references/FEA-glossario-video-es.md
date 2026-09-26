@@ -109,6 +109,7 @@ Mesmo padrão visual do PT (Montserrat ExtraBold, até 3 linhas, 3 primeiros seg
 | 20/08/2026 | Espanhol LatAm neutro, usted | João Pithon (catálogo) |
 | 26/09/2026 | Legenda ES com o mesmo tempo da fala PT, bloco a bloco (o script trava tradução velha) | padrão da skill |
 | 26/09/2026 | Sem travessão/raya na legenda ES (regra FEA vale acima da norma do espanhol) | regra FEA |
+| 26/09/2026 | Dublagem na HeyGen em **"Spanish (Latin America)"**, com o glossário HeyGen **"FEA"** (`brandGlossaryId` `01e042bd7f81458b9165b7895c8d7066`: marcas, siglas, produtos FEA e pertuito em "não traduzir"; ácido hialurônico, bigode chinês, harmonização facial e orofacial em "tradução forçada") | Keila (ok de 26/09) |
 | 26/09/2026 | Porcentagem com espaço ("70 %"), decimal com vírgula, "mL", "G’" | glossário do catálogo |
 
 Toda decisão nova da Keila entra nesta tabela com data, e o termo novo entra na seção 2.
