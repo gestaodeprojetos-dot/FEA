@@ -17,7 +17,9 @@ O projeto.json descreve cada vídeo de saída:
       "parte": null,                            # 1, 2 ou null
       "manter": [[0.0, 12.4], [15.1, 40.0]],    # trechos mantidos, em segundos do bruto
       "cartela_final": null,                    # ex.: "Parte 2 no perfil"
-      "cta": null                               # ex.: "raw/CTA.MOV", vídeo colado no final (sem legenda)
+      "cta": null,                              # ex.: "raw/CTA.MOV", vídeo colado no final (sem legenda)
+      "espelhar": false,                        # true: desfaz o espelhamento da câmera frontal
+      "limpar_audio": null                      # modelo RNNoise (ex.: "rnn/sh.rnnn"), também aceito no projeto
     }
   ]
 }
@@ -198,7 +200,7 @@ def corrigir(texto, extras=()):
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
+NOMES_PROPRIOS = {"Black", "Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
 
 
 def limpar(texto):
@@ -213,7 +215,7 @@ def limpar(texto):
 
 
 # termos de mais de uma palavra que nunca podem ser quebrados entre duas legendas
-TERMOS_JUNTOS = [(r"(?i)^(saiba|saba|salva)$", r"(?i)^mais\b", "Saiba Mais"),
+TERMOS_JUNTOS = [(r"(?i)^(saiba|saba|salva|saber|sabar)$", r"(?i)^mais\b", "Saiba Mais"),
                  (r"^Black$", r"^Friday\b", "Black Friday"),
                  (r"^Black Friday$", r"(?i)^vitalícia\b", "Black Friday Vitalícia")]
 
@@ -306,8 +308,14 @@ def renderizar(cfg, v, previa=False):
         rotulos.append(f"[v{i}][a{i}]")
     n = len(v["manter"])
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac];"
-              f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+    # espelhar: selfie gravada com a câmera frontal (texto do fundo ao contrário)
+    espelho = "hflip," if v.get("espelhar") else ""
+    # limpar_audio: tira o ruído de fundo (ar-condicionado, clínica) e deixa só a voz
+    rnn = v.get("limpar_audio", cfg.get("limpar_audio"))
+    audio = (f"[ac0]aresample=48000,highpass=f=80,arnndn=m='{rnn}':mix=0.95,afftdn=nr=10:nf=-45[ac];"
+             if rnn else "[ac0]anull[ac];")
+    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac0];" + audio +
+              f"[vc]{espelho}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
               f"ass='{esc}':fontsdir='{cfg['fontsdir']}'")
     entradas = ["-i", v["entrada"]]
     cta = v.get("cta") or cfg.get("cta")

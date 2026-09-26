@@ -62,6 +62,12 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Série de contagem regressiva: headline no formato "Faltam N dias" / "Falta 1 dia", mesmo quando a fala é "Em N dias começa".
 - Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
 
+## Selfie espelhada e ruído de fundo (pedido de 26/09/2026)
+
+- **Fundo ao contrário** (texto do banner invertido, câmera frontal): `"espelhar": true` no vídeo. Conferir no mosaico de quadros quais estão invertidos.
+- **Ruído ao fundo** (ar-condicionado, clínica): `"limpar_audio": "rnn/sh.rnnn"` no projeto (RNNoise via `arnndn` + `afftdn` leve). O `fea_preparar_ambiente.sh` baixa o modelo. Conferir que a fala continua intacta transcrevendo o áudio limpo de um vídeo.
+- Arquivos "v_daa....mp4" exportados de app costumam ser cópia de um .mov da mesma pasta: comparar transcrição e duração e editar só o original.
+
 ## Legenda logo depois do título
 
 A fala dos 3 primeiros segundos fica só sob o título. O script descarta o pedaço de frase dito sob o título até a última pontuação (evita legenda começando em "vitalícia, para você...") e nunca quebra "Saiba Mais" ou "Black Friday Vitalícia" entre duas legendas (`TERMOS_JUNTOS`). Se ainda sobrar fragmento, usar `remover_legenda` no trecho.
