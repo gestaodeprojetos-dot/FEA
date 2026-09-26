@@ -20,7 +20,7 @@ Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr.
 | Item | Valor |
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
-| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
+| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, **linhas juntas** (entrelinha 0,8 do tamanho da fonte, `TITULO_ENTRELINHA`; ajuste de 26/09/2026, a entrelinha padrão da Montserrat ficou aberta demais), nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
 | CTA | padrão desde 16/09: sem CTA. Quando a pasta trouxer um vídeo "CTA" e a Keila pedir (lote Black Amazonia, 26/09/2026), colar esse vídeo no final de cada edição com o campo `cta` do projeto.json (sem título nem legenda sobre ele; o limite de 3 min conta o CTA) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
@@ -29,6 +29,7 @@ Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr.
 
 - **Limite: 3 minutos.** Cortar o máximo necessário para caber.
 - Manter: explicação clínica, técnica, dosagens, planejamento, falas de autoridade do Dr. João, e trechos **sem fala** mostrando o procedimento.
+- **Começo sem silêncio**: o vídeo começa com o Dr. já falando. Rodar `python3 FEA-edicao-videos/fea_inicio_fala.py wav/*.wav` e iniciar o primeiro trecho de `manter` 0,08 s antes do valor (a transcrição marca 0,0 s mesmo com silêncio antes). Pedido de 26/09/2026.
 - Tirar: conversa fora do tema (agenda, assuntos pessoais), trechos parados sem ação ("deixa eu segurar"), repetições, final arrastado.
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - Vídeo que já cabe e é todo clínico fica **inteiro**.
@@ -61,6 +62,10 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Campanha Black Friday Vitalícia: "o último curso que você vai comprar", "nunca mais compre um curso", "a maior Black Friday da harmonização facial" e "não vai ter outra chance" (último dia) estão aprovados pelo comercial.
 - Série de contagem regressiva: headline no formato "Faltam N dias" / "Falta 1 dia", mesmo quando a fala é "Em N dias começa".
 - Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
+
+## Headlines sem imagem de títulos
+
+Antes de renderizar, mandar à Keila um Google Doc `FEA-revisao-headlines-<lote>` com, para cada vídeo: a fala dos 3 primeiros segundos, a headline atual e 2 ou 3 opções tiradas da fala (recomendação marcada). A contagem regressiva "Faltam N dias" já está aprovada; as demais ela escolhe (em 26/09/2026 ela recusou headlines de resumo, quer o gancho do vídeo).
 
 ## Selfie espelhada e ruído de fundo (pedido de 26/09/2026)
 

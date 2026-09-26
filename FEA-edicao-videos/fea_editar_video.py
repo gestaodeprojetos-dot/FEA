@@ -43,6 +43,7 @@ W, H = 1080, 1920
 
 TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
+TITULO_ENTRELINHA = 0.8   # distância entre linhas do título, em múltiplos do tamanho da fonte
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
@@ -234,17 +235,30 @@ def juntar_termos(palavras):
     return palavras
 
 
+def linhas_titulo(texto, ini, fim, efeito, parte=None):
+    """Cada linha do título em um evento próprio com \\pos: a entrelinha da Montserrat
+    é muito aberta (pedido da Keila em 26/09: headline com linhas mais próximas)."""
+    linhas = [(l, TITULO_TAM) for l in texto.split(r"\N")]
+    if parte:
+        linhas.append((f"Parte {parte}", int(TITULO_TAM * 0.62)))
+    alturas = [tam * TITULO_ENTRELINHA for _, tam in linhas]
+    y = H / 2 - sum(alturas) / 2
+    eventos = []
+    for (l, tam), alt in zip(linhas, alturas):
+        eventos.append(f"Dialogue: 1,{ts(ini)},{ts(fim)},Titulo,,0,0,0,,"
+                       f"{{\\an5\\pos({W // 2},{y + alt / 2:.0f})\\fs{tam}{efeito}}}{l}\n")
+        y += alt
+    return eventos
+
+
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
-    titulo = quebrar_titulo(v["titulo"])
-    if v.get("parte"):
-        titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
-    linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)}}{titulo}\n")
+    linhas += linhas_titulo(quebrar_titulo(v["titulo"]), 0, TITULO_DUR, "\\fad(0,250)", v.get("parte"))
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
         fim_legendas = ini
-        linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)}}{quebrar_titulo(v['cartela_final'])}\n")
+        linhas += linhas_titulo(quebrar_titulo(v["cartela_final"]), ini, duracao, "\\fad(250,0)")
     blocos = blocos_legenda(palavras)
     for i, bloco in enumerate(blocos):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
