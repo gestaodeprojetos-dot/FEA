@@ -74,6 +74,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## Correções de texto
 
+Grafias fixas (Keila, 26/09/2026): **Neauvia** (nunca Nuvia), **tear trough**, **1%** e **0,2** (número inteiro na legenda, o script junta "0" + ",2"). Legenda nunca tira palavra no meio da fala (só a palavra solta inventada no silêncio), para ficar sincronizada com o áudio.
+
 Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x comprimento** ("2270", "22 70" ou "24-70" viram `22x70`, `24x70`); "G linha" vira `G'` e "G duas linhas" vira `G''`. Quando o Dr. fala "prédio" (a transcrição ouve assim), é **pré-jowl** (pedido de 25/09/2026). "Entre os prés" nas anestesias é pré-molar e fica como está.
 
 `CORRECOES` em `fea_editar_video.py` aplica a regra FEA (nunca "pra", sempre "para") e termos técnicos (carpule, têmpora, interfascial, hidroxiapatita, tecidual, sulco nasolabial, tan delta, mL...). Toda grafia nova confirmada pela Keila entra ali e, se for nome próprio, em `NOMES_PROPRIOS`. Conferir na tela do vídeo (caixa do produto) quando houver dúvida de marca.

@@ -27,6 +27,9 @@ PROIBIDO_LEGENDA = [
     (r"(^|\s)ó(\s|$|[,.!?])", "interjeição \"ó\""),
     (r"\bpr[ée]dio\b", "\"prédio\": é pré-jowl"),
     (r"\b[Gg]elinh", "\"gelinho\": é G'"),
+    (r"\bN[uú]vi[ao]\b", "\"Nuvia\": é Neauvia"),
+    (r"\b[Tt]ier\b|\b[Tt]irtrof", "tear trough"),
+    (r"(^|\s)%|\b0 0\b", "número incompleto (ex.: \"%\" sem o 1, \"0\" sem o ,2)"),
     (r"\bG linha\b|\bG duas linhas\b", "G linha: escrever G' ou G''"),
     (r"\b(18|2[0-7])[ -]?(38|40|50|70)\b", "cânula sem o x (ex.: 22x70)"),
     (r"\bml\b", "unidade: mL"),
@@ -116,6 +119,18 @@ def revisar(cfg, v, folhas=None):
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
+    # 3b. sincronia com o áudio (Keila 26/09: "as legendas não estão sincronizadas")
+    for k, (s, e, t) in enumerate(legendas):
+        if s < fe.TITULO_DUR + 0.5:      # fala coberta pelo título não conta
+            continue
+        i = int(s / ps)
+        antes = db[max(0, i - int(0.8 / ps)):i]
+        fim_ant = legendas[k - 1][1] if k else 0
+        if len(antes) and (antes >= lim - 6).mean() > 0.85 and s - fim_ant > 0.8:
+            erros.append(f"[{s:5.1f}s] \"{t}\": legenda atrasada (o Dr. já fala há quase 1 s sem legenda)")
+        depois = db[i:i + int(0.6 / ps)]
+        if len(depois) and (depois >= lim - 6).mean() < 0.1:
+            erros.append(f"[{s:5.1f}s] \"{t}\": legenda entra antes da fala (adiantada)")
     for (s1, e1, _), (s2, _, _) in zip(legendas, legendas[1:]):
         if s2 < e1 - 0.01 and s2 != s1:
             erros.append(f"[{s2:5.1f}s] duas legendas ao mesmo tempo")
@@ -160,6 +175,15 @@ def revisar(cfg, v, folhas=None):
     depois = [w for w in palavras if (w["s"] + w["e"]) / 2 >= b]
     if dentro and depois and depois[0]["s"] - dentro[-1]["e"] < 0.8 and not re.search(r"[.?!]$", dentro[-1]["w"].strip()):
         aten.append(f"final \"...{' '.join(w['w'].strip() for w in dentro[-4:])}\" seguido de \"{depois[0]['w'].strip()}\": conferir se a frase terminou")
+
+    # 5b. palavra faltando na legenda (buraco deixa a legenda fora de sincronia)
+    ditas = [w for w in palavras if any(a <= (w["s"] + w["e"]) / 2 < b for a, b in manter)
+             and not any(a <= (w["s"] + w["e"]) / 2 < b for a, b in v.get("remover_legenda", []) + v.get("silenciar", []))
+             and w["w"].startswith(" ")]
+    n_leg = sum(len(t.split()) for _, _, t in legendas)
+    n_dit = sum(1 for w in ditas if (w["s"] - manter[0][0]) > fe.TITULO_DUR or len(manter) > 1)
+    if n_dit and n_leg / n_dit < 0.9:
+        erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
 
     # 6. silêncio longo (outro lado do rosto, procurando pertuito)
     fala = [(s, e) for s, e, _ in legendas]

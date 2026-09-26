@@ -30,9 +30,12 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 4b | Título certo para o conteúdo: a imagem pode estar na ordem de postagem e não na dos arquivos | conferir a tabela arquivo -> título -> frase do Dr. | revisão manual |
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
 | 6 | Nada de palavra solta na legenda sem o Dr. falando | voz no áudio durante cada legenda | ERRO |
+| 6b | **Legenda sincronizada com o áudio** (Keila 26/09): entra quando o Dr. fala, sem atraso nem adiantamento | voz no áudio antes e depois do início de cada legenda | ERRO |
+| 6c | Nenhuma palavra falada faltando na legenda (buraco = fora de sincronia) | palavras da legenda contra palavras faladas nos trechos mantidos (mínimo 90%) | ERRO |
+| 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
-| 9 | Grafias: G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
+| 9 | Grafias: Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia" | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
 | 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
@@ -84,3 +87,8 @@ Adicionar a regra nos 3 lugares, para nenhuma ficar só na conversa:
 1. a regra de edição na skill `fea-edicao-reels`;
 2. a verificação em `fea_revisar.py` (em `PROIBIDO_LEGENDA`, `FALA_SUSPEITA` ou um teste novo);
 3. a linha na tabela do checklist acima.
+
+
+## Conferência por amostragem de sincronia
+
+Além do script, conferir em 3 pontos de cada vídeo (começo, meio e fim) se o texto na tela é o que o Dr. está falando naquele instante: extrair 1 quadro no início de 3 legendas e comparar o texto com a transcrição do mesmo segundo.

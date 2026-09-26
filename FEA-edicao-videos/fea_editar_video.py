@@ -125,6 +125,9 @@ def blocos_legenda(palavras):
             if prox and prox[0]["s"] - b[0]["e"] < 1.0:
                 prox.insert(0, b[0])
                 continue
+            # conectivo sozinho ("E", "Que", "Vou") que ficaria pendurado no fim da frase anterior: sai
+            if re.sub(r"[^\w]", "", b[0]["w"]).lower() in LIGACAO | {"vou", "é", "eu", "então"}:
+                continue
             if juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0:
                 juntos[-1].append(b[0])
                 continue
@@ -177,7 +180,9 @@ CORRECOES = [
     (r"\bpros\b", "para os"), (r"\bpro\b", "para o"),
     (r"\bcarpulha\b", "carpule"),
     (r"\b[Pp]r[ée]dio\b", "pré-jowl"),     # termo do Dr. (confirmado pela Keila, 25/09)
-    (r"\b[Gg]elinh[oa]s?\b", "G'"),       # "gelinho" = G' (Keila, 26/09)
+    (r"\b[Gg]elinh[oa]s?\b", "G'"),
+    (r"\b[Tt]ier\b", "tear"), (r"\b[Tt]ir ?tr?of+\b", "tear trough"), (r"\b[Tt]ear ?trof+\b", "tear trough"),
+    (r"\bN[uú]vi[ao]\b", "Neauvia"), (r"\bLúvia\b", "Neauvia"),     # grafia oficial (Keila, 26/09)       # "gelinho" = G' (Keila, 26/09)
     (r"\btempra\b", "têmpora"),
     (r"\binterfacial\b", "interfascial"),
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),
@@ -300,26 +305,23 @@ def perfil_voz(ff, entrada, passo=0.05):
 
 
 def ancorar_na_voz(palavras, db, limiar, passo):
-    """Tira da legenda palavras sem voz no áudio (a transcrição inventa palavras soltas
-    em silêncio) e encurta a palavra "esticada" até onde a voz de fato termina."""
+    """Tira da legenda só a palavra solta que a transcrição inventou no silêncio (sem voz e
+    isolada, a mais de 0,4 s das vizinhas) e encurta a palavra "esticada" até onde a voz
+    termina. Palavra no meio da fala nunca sai: tirar deixava a legenda com buracos e
+    fora de sincronia com o áudio (Keila, 26/09)."""
     saida = []
-    for p in palavras:
+    for k, p in enumerate(palavras):
         i0, i1 = max(0, int(p["s"] / passo)), min(len(db), int(p["e"] / passo) + 1)
-        voz = [i for i in range(i0, i1) if db[i] >= limiar]
-        # precisa de voz de verdade dentro do tempo da palavra, não só um ruído vizinho
-        if not voz or len(voz) * passo < min(0.15, 0.4 * (p["e"] - p["s"])):
+        voz = [i for i in range(i0, i1) if db[i] >= limiar - 6]
+        ant = palavras[k - 1]["e"] if k else -9
+        prox = palavras[k + 1]["s"] if k + 1 < len(palavras) else 1e9
+        isolada = p["s"] - ant > 0.4 and prox - p["e"] > 0.4
+        if not voz and isolada:
             continue
-        # palavra esticada: fica só no maior trecho contínuo de voz (tolera 100 ms de respiro)
-        trechos = [[voz[0], voz[0]]]
-        for i in voz[1:]:
-            if i - trechos[-1][1] <= 3:
-                trechos[-1][1] = i
-            else:
-                trechos.append([i, i])
-        a, b = max(trechos, key=lambda r: r[1] - r[0])
-        s = max(p["s"], a * passo)
-        e = min(p["e"], (b + 1) * passo + 0.05)
-        saida.append(dict(p, s=s, e=max(e, s + 0.1)))
+        e = p["e"]
+        if voz and p["e"] - p["s"] > 0.8:        # esticada: termina onde a voz termina
+            e = min(p["e"], (voz[-1] + 1) * passo + 0.1)
+        saida.append(dict(p, e=max(e, p["s"] + 0.15)))
     return saida
 
 
@@ -380,6 +382,17 @@ def renderizar(cfg, v, previa=False):
         palavras = []
         for seg in trans:
             for i, w in enumerate(seg["words"]):
+                # pedaço sem espaço na frente (",2", "%") é continuação da palavra anterior:
+                # "0" + ",2" = "0,2" e "1" + "%" = "1%" (antes o número sumia da legenda)
+                if i and palavras and not w["w"].startswith(" "):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
+                # termo de duas palavras nunca se divide entre legendas ("tear trough")
+                if palavras and w["w"].strip().lower().startswith("trough") and palavras[-1]["w"].strip().lower() in ("tier", "tear"):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
                 palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), ini=(i == 0)))
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
