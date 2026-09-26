@@ -14,7 +14,7 @@ Público do vídeo em espanhol: médico e dentista hispano-falante que aplica ha
 | Caso | Como reconhecer | Legenda |
 |---|---|---|
 | **A. Áudio em português** (o Dr. fala PT) | brutos normais da FEA | tradução PT → ES bloco a bloco, no tempo exato da fala PT |
-| **B. Áudio em espanhol** (vídeo dublado, ou o Dr. falando espanhol) | pasta de dublados, vídeos do YouTube ES | transcrição direto em espanhol (`fea_transcrever.py --idioma es`) |
+| **B. Áudio em espanhol** (dublado na HeyGen, **processo padrão**, ou o Dr. falando espanhol) | brutos PT dublados pela HeyGen, pasta de dublados | transcrição direto em espanhol (`fea_transcrever.py --idioma es`) |
 
 Na dúvida, ouvir 5 segundos de um bruto antes de transcrever.
 
@@ -47,7 +47,17 @@ Termo que não está em nenhum: pesquisar o uso em literatura médica em espanho
 7. **Doc bilíngue para a Keila** (ver abaixo) e prévias pelo `SendUserFile`.
 8. **Final** com as correções dela, revisão de novo, e subida para a pasta de destino.
 
-## Fluxo (caso B, áudio em espanhol)
+## Fluxo (caso B, áudio em espanhol): o processo padrão da Keila
+
+Processo informado pela Keila em 26/09/2026: pega os brutos em português, dubla para espanhol na **HeyGen** e depois edita (cortes, legendas e headlines) no padrão de sempre.
+
+**Dublagem na HeyGen** (conector HeyGen, `https://mcp.heygen.com/mcp/v1/`, login OAuth na conta da FEA; os créditos saem do plano HeyGen da FEA):
+1. `list_video_translation_languages` para achar o nome exato da variante de espanhol que a Keila usa na HeyGen (perguntar qual, se não estiver registrado na seção 5 do glossário de vídeo).
+2. `create_video_translation` com o link do bruto (a HeyGen precisa conseguir baixar o arquivo: pasta do Drive em "Qualquer pessoa com o link: Leitor" durante a dublagem, depois voltar para Restrito) e a língua de saída. Um vídeo por bruto, em paralelo; lote grande pela tradução em lote.
+3. `get_video_translation` até ficar pronto; baixar o vídeo dublado para `raw_es/` e conferir com `file` e ouvindo 5 s.
+4. **Antes de cortar**, conferir a dublagem: número, marca e termo técnico falados em espanhol (a HeyGen erra termo clínico e marca). Erro de dublagem vai para a Keila antes de editar: se a legenda corrigir o que o áudio diz errado, o vídeo fica incoerente.
+
+Depois segue a edição:
 
 1. `python3 FEA-edicao-videos/fea_transcrever.py --idioma es tr/ wav/*.wav`
 2. `projeto.json` com `"idioma": "es"` e **sem** `legendas_es`: a legenda sai da própria transcrição, com as correções de espanhol (`CORRECCIONES_ES` em `fea_editar_video.py`).
