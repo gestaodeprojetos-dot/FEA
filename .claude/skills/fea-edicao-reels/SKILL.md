@@ -56,6 +56,10 @@ Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr.
 - Nome de paciente falado ou legendado: confirmar grafia.
 - Quantidade de vídeos diferente da quantidade de títulos na imagem.
 
+## Legenda logo depois do título
+
+A fala dos 3 primeiros segundos fica só sob o título. O script descarta o pedaço de frase dito sob o título até a última pontuação (evita legenda começando em "vitalícia, para você...") e nunca quebra "Saiba Mais" ou "Black Friday Vitalícia" entre duas legendas (`TERMOS_JUNTOS`). Se ainda sobrar fragmento, usar `remover_legenda` no trecho.
+
 ## Correções de texto
 
 `CORRECOES` em `fea_editar_video.py` aplica a regra FEA (nunca "pra", sempre "para") e termos técnicos (carpule, têmpora, interfascial, hidroxiapatita, tecidual, sulco nasolabial, tan delta, mL...). Toda grafia nova confirmada pela Keila entra ali e, se for nome próprio, em `NOMES_PROPRIOS`. Conferir na tela do vídeo (caixa do produto) quando houver dúvida de marca.

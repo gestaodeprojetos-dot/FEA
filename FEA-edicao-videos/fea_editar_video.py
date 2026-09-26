@@ -212,6 +212,26 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
+# termos de mais de uma palavra que nunca podem ser quebrados entre duas legendas
+TERMOS_JUNTOS = [(r"(?i)^(saiba|saba|salva)$", r"(?i)^mais\b", "Saiba Mais"),
+                 (r"^Black$", r"^Friday\b", "Black Friday"),
+                 (r"^Black Friday$", r"(?i)^vitalícia\b", "Black Friday Vitalícia")]
+
+
+def juntar_termos(palavras):
+    for re1, re2, novo in TERMOS_JUNTOS:
+        saida = []
+        for p in palavras:
+            ant = saida[-1] if saida else None
+            if ant and re.match(re1, ant["w"].strip()) and re.match(re2, p["w"].strip()):
+                resto = re.sub(re2, "", p["w"].strip())
+                saida[-1] = dict(ant, w=novo + resto, e=p["e"])
+            else:
+                saida.append(p)
+        palavras = saida
+    return palavras
+
+
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
     titulo = quebrar_titulo(v["titulo"])
@@ -228,8 +248,17 @@ def gerar_ass(v, palavras, duracao, caminho):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
         if i + 1 < len(blocos):          # nunca duas legendas ao mesmo tempo
             e = min(e, blocos[i + 1][0]["s"])
-        # como na referência, a legenda só entra depois que o título sai
-        s = max(s, TITULO_DUR)
+        # como na referência, a legenda só entra depois que o título sai; o pedaço de
+        # frase falado ainda sob o título sai da legenda (evita começar em "vitalícia, para...")
+        if s < TITULO_DUR:
+            # corta até a última pontuação falada sob o título; sem pontuação, mostra o bloco inteiro
+            sob = [j for j, p in enumerate(bloco) if p["s"] < TITULO_DUR - 0.1 and p["w"].strip()[-1:] in ",.!?"]
+            if sob:
+                bloco = bloco[sob[-1] + 1:]
+                if len(bloco) <= 1:
+                    continue
+                s = bloco[0]["s"]
+            s = max(s, TITULO_DUR)
         if s >= e or s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
@@ -265,7 +294,7 @@ def renderizar(cfg, v, previa=False):
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
-    palavras, duracao = remapear_palavras(palavras, v["manter"])
+    palavras, duracao = remapear_palavras(juntar_termos(palavras), v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 
