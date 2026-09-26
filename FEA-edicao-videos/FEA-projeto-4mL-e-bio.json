@@ -1,0 +1,1029 @@
+{
+ "ffmpeg": "ffmpeg",
+ "fontsdir": "fonts",
+ "videos": [
+  {
+   "entrada": "b4/raw/IMG_7051.MOV",
+   "transcricao": "b4/tr/IMG_7051.json",
+   "saida": "b4/out/1- Planejamento do preenchimento.mp4",
+   "titulo": "Planejamento do preenchimento",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     68.3
+    ],
+    [
+     70.8,
+     74.3
+    ],
+    [
+     77.7,
+     133.3
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7052.MOV",
+   "transcricao": "b4/tr/IMG_7052.json",
+   "saida": "b4/out/2- Técnica anestésica com SANEP.mp4",
+   "titulo": "Técnica anestésica com SANEP",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     24.05
+    ],
+    [
+     34.7,
+     78.15
+    ],
+    [
+     79.65,
+     122.0
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7053.MOV",
+   "transcricao": "b4/tr/IMG_7053.json",
+   "saida": "b4/out/3- Anestesia do mentoniano para lábio inferior.mp4",
+   "titulo": "Anestesia do mentoniano para lábio inferior",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     69.8
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7054.MOV",
+   "transcricao": "b4/tr/IMG_7054.json",
+   "saida": "b4/out/4- Anestesia da comissura é superficial e na pele.mp4",
+   "titulo": "Anestesia da comissura é superficial e na pele",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     32.0
+    ],
+    [
+     36.8,
+     48.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7056.MOV",
+   "transcricao": "b4/tr/IMG_7056.json",
+   "saida": "b4/out/5- Preenchimento de olheiras.mp4",
+   "titulo": "Preenchimento de olheiras",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     164.4
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7057.MOV",
+   "transcricao": "b4/tr/IMG_7057.json",
+   "saida": "b4/out/6- Preenchimento de eminência malar.mp4",
+   "titulo": "Preenchimento de eminência malar",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     29.0
+    ],
+    [
+     35.8,
+     46.0
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7058.MOV",
+   "transcricao": "b4/tr/IMG_7058.json",
+   "saida": "b4/out/7- Estruturação de comissura labial.mp4",
+   "titulo": "Estruturação de comissura labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     3.5
+    ],
+    [
+     6.9,
+     89.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7059.MOV",
+   "transcricao": "b4/tr/IMG_7059.json",
+   "saida": "b4/out/8- Agulha ou cânula para sulco nasolabial.mp4",
+   "titulo": "Agulha ou cânula para sulco nasolabial?",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.9,
+     80.95
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7062.MOV",
+   "transcricao": "b4/tr/IMG_7062.json",
+   "saida": "b4/out/9- Planejamento ideal para lábios.mp4",
+   "titulo": "Planejamento ideal para lábios",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.0,
+     58.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7063.MOV",
+   "transcricao": "b4/tr/IMG_7063.json",
+   "saida": "b4/out/10- Preenchimento labial.mp4",
+   "titulo": "Preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     66.4
+    ],
+    [
+     83.7,
+     150.95
+    ],
+    [
+     167.5,
+     170.65
+    ],
+    [
+     190.3,
+     201.0
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  },
+  {
+   "entrada": "b4/raw/IMG_7064.MOV",
+   "transcricao": "b4/tr/IMG_7064.json",
+   "saida": "b4/out/11- Bioestimulador para linhas em região de pescoço.mp4",
+   "titulo": "Bioestimulador para linhas em região de pescoço",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     51.2
+    ],
+    [
+     52.0,
+     180.45
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsolução anestésica neutra de piton\\b",
+     "solução anestésica neutra de Pithon"
+    ],
+    [
+     "\\b[Pp]iton\\b",
+     "Pithon"
+    ],
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[IiEe]voar [Cc]ontour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\breschilane e volaime no lado\\b",
+     "Restylane Volyme no lábio"
+    ],
+    [
+     "\\b[Vv]olime\\b",
+     "Volyme"
+    ],
+    [
+     "\\b[Nn](uvia|úvio|uvio) [Ii]ntense\\b",
+     "Neauvia Intense"
+    ],
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\baltíssimo gelinha\\b",
+     "altíssimo G'"
+    ],
+    [
+     "\\b(alto|baixo) gelinh[oa]\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\b280 de gelinha\\b",
+     "280 de G'"
+    ],
+    [
+     "\\bgéis de acelerônico\\b",
+     "géis de ácido hialurônico"
+    ],
+    [
+     "\\bheliprolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bsucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\bhidroxapatita quirialis\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bmandar me massagear\\b",
+     "mandar ela massagear"
+    ],
+    [
+     "\\bsuco ?naso\\b",
+     "sulco naso"
+    ]
+   ]
+  }
+ ]
+}
