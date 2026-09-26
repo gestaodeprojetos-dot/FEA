@@ -325,6 +325,20 @@ def ancorar_na_voz(palavras, db, limiar, passo):
         if not voz and isolada:
             continue
         s, e = p["s"], p["e"]
+        e0 = p.get("e0", e)
+        if e0 - s > 1.5:
+            # palavra "esticada" pela transcrição (ex.: "Pra" de 55 s a 69 s): a fala de verdade
+            # fica no fim do intervalo, logo antes da palavra seguinte
+            j1 = min(len(db), int(e0 / passo) + 1)
+            fala = [i for i in range(max(0, int(s / passo)), j1) if db[i] >= limiar]
+            if fala:
+                k = len(fala) - 1
+                while k > 0 and fala[k] - fala[k - 1] <= 3:
+                    k -= 1
+                s = max(fala[k] * passo - 0.05, e0 - 1.0)
+                e = min(e0, s + 1.0)
+                saida.append(dict(p, s=s, e=max(e, s + 0.15)))
+                continue
         if not voz:
             # palavra inteira marcada no silêncio, logo antes da fala: empurra até a voz começar
             j = next((i for i in range(i1, min(len(db), i1 + int(1.0 / passo))) if db[i] >= limiar - 6), None)
@@ -397,7 +411,15 @@ def renderizar(cfg, v, previa=False):
     else:
         palavras = []
         for seg in trans:
-            for i, w in enumerate(seg["words"]):
+            ws = [dict(w) for w in seg["words"]]
+            # palavra que a transcrição deixou segundos antes da frase dela ("Pra ... gente ver
+            # melhor", "Fiz ... só um pouquinho"): vai para logo antes da palavra seguinte
+            for k in range(len(ws) - 2, -1, -1):
+                if ws[k + 1]["s"] - ws[k]["e"] > 2.0:
+                    d = min(0.5, ws[k]["e"] - ws[k]["s"])
+                    ws[k]["e"] = ws[k + 1]["s"] - 0.02
+                    ws[k]["s"] = ws[k]["e"] - d
+            for i, w in enumerate(ws):
                 # pedaço sem espaço na frente (",2", "%") é continuação da palavra anterior:
                 # "0" + ",2" = "0,2" e "1" + "%" = "1%" (antes o número sumia da legenda)
                 if i and palavras and not w["w"].startswith(" "):
@@ -410,7 +432,7 @@ def renderizar(cfg, v, previa=False):
                     palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
                     continue
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
-                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), ini=(i == 0)))
+                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0)))
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]

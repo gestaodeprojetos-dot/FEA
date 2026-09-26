@@ -30,7 +30,7 @@ PROIBIDO_LEGENDA = [
     (r"\bN[uú]vi[ao]\b", "\"Nuvia\": é Neauvia"),
     (r"\b[Qq]uirial|\b[Kk]irialis", "é Kirialys"),
     (r"\b[Vv]ol(i|ai)me\b|[Rr]eschilane", "é Restylane Volyme"),
-    (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic|(?<!ácido )\bhialurônico", "é ácido hialurônico"),
+    (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic", "é ácido hialurônico"),
     (r"\bbolos\b|\bbólos\b", "é bolus"),
     (r"\b[Tt]ier\b|\b[Tt]irtrof", "tear trough"),
     (r"(^|\s)%|\b0 0\b", "número incompleto (ex.: \"%\" sem o 1, \"0\" sem o ,2)"),
@@ -130,11 +130,14 @@ def revisar(cfg, v, folhas=None):
         i = int(s / ps)
         antes = db[max(0, i - int(0.8 / ps)):i]
         fim_ant = legendas[k - 1][1] if k else 0
-        if len(antes) and (antes >= lim - 6).mean() > 0.85 and s - fim_ant > 0.8:
+        if len(antes) and (antes >= lim).mean() > 0.85 and s - fim_ant > 0.8:
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda atrasada (o Dr. já fala há quase 1 s sem legenda)")
         depois = db[i:i + int(0.6 / ps)]
         if len(depois) and (depois >= lim - 6).mean() < 0.1:
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda entra antes da fala (adiantada)")
+    texto_todo = " ".join(t for _, _, t in legendas)
+    if re.search(r"(?<!ácido )\bhialurônico", texto_todo):
+        erros.append("\"hialurônico\" sem \"ácido\" na frente: é ácido hialurônico")
     for (s1, e1, _), (s2, _, _) in zip(legendas, legendas[1:]):
         if s2 < e1 - 0.01 and s2 != s1:
             erros.append(f"[{s2:5.1f}s] duas legendas ao mesmo tempo")
