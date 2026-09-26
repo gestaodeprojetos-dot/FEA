@@ -27,6 +27,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 2 | 1080x1920, abaixo de 30 MB | resolução e tamanho | ERRO |
 | 3 | Máximo 3 min, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil" | duração e cartela | ERRO |
 | 4 | Título exatamente o da imagem, nos 3 primeiros segundos, Montserrat ExtraBold 116 | texto do .ass contra o projeto | ERRO |
+| 4b | Título certo para o conteúdo: a imagem pode estar na ordem de postagem e não na dos arquivos | conferir a tabela arquivo -> título -> frase do Dr. | revisão manual |
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
 | 6 | Nada de palavra solta na legenda sem o Dr. falando | voz no áudio durante cada legenda | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
