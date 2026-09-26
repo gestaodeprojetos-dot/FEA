@@ -1,0 +1,506 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "cta": "../raw/CTA.MOV",
+ "limpar_audio": "../rnn/sh.rnnn",
+ "videos": [
+  {
+   "entrada": "raw/IMG_6518.MOV",
+   "transcricao": "tr/IMG_6518.json",
+   "saida": "out/1- Já imaginou o seu último curso?.mp4",
+   "titulo": "Já imaginou o seu último curso?",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.06,
+     48.09
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\b(?:a gente )?sabe a mais\\b",
+     "aqui em Saiba Mais"
+    ],
+    [
+     "\\bIncas Paris MWC Monaco\\b",
+     "IMCAS Paris, AMWC Mônaco"
+    ],
+    [
+     "\\bNisse,\\s*",
+     ""
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6538.MOV",
+   "transcricao": "tr/IMG_6538.json",
+   "saida": "out/2- Mais de 300 mil em cursos.mp4",
+   "titulo": "Mais de 300 mil em cursos",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0,
+     60.07
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\b(?:a gente )?sabe a mais\\b",
+     "aqui em Saiba Mais"
+    ],
+    [
+     "\\bIncas Paris MWC Monaco\\b",
+     "IMCAS Paris, AMWC Mônaco"
+    ],
+    [
+     "\\bNisse,\\s*",
+     ""
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6543.MOV",
+   "transcricao": "tr/IMG_6543.json",
+   "saida": "out/3- Nunca mais gaste um centavo em curso.mp4",
+   "titulo": "Nunca mais gaste um centavo em curso",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0,
+     9.65
+    ],
+    [
+     10.45,
+     14.1
+    ],
+    [
+     14.85,
+     52.79
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\b(?:a gente )?sabe a mais\\b",
+     "aqui em Saiba Mais"
+    ],
+    [
+     "\\bIncas Paris MWC Monaco\\b",
+     "IMCAS Paris, AMWC Mônaco"
+    ],
+    [
+     "\\bNisse,\\s*",
+     ""
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6545.MOV",
+   "transcricao": "tr/IMG_6545.json",
+   "saida": "out/4- Uns 150 mil em cursos.mp4",
+   "titulo": "Uns 150 mil em cursos",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.62,
+     47.85
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\b(?:a gente )?sabe a mais\\b",
+     "aqui em Saiba Mais"
+    ],
+    [
+     "\\bIncas Paris MWC Monaco\\b",
+     "IMCAS Paris, AMWC Mônaco"
+    ],
+    [
+     "\\bNisse,\\s*",
+     ""
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6547.MOV",
+   "transcricao": "tr/IMG_6547.json",
+   "saida": "out/5- 250 a 300 mil em cursos.mp4",
+   "titulo": "250 a 300 mil em cursos",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0,
+     53.75
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\b(?:a gente )?sabe a mais\\b",
+     "aqui em Saiba Mais"
+    ],
+    [
+     "\\bIncas Paris MWC Monaco\\b",
+     "IMCAS Paris, AMWC Mônaco"
+    ],
+    [
+     "\\bNisse,\\s*",
+     ""
+    ]
+   ]
+  }
+ ]
+}
