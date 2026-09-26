@@ -57,3 +57,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 5. Revisão da Keila, correções, render final e envio para a pasta de destino no Drive.
 
 Passo a passo completo na skill `.claude/skills/fea-edicao-reels/SKILL.md`.
+
+## Versão em espanhol
+
+Legenda e headline em espanhol latino-americano no mesmo padrão visual e de cortes: skill `.claude/skills/fea-edicao-reels-es/SKILL.md` (tradução bloco a bloco no tempo da fala, glossário clínico travado) e revisora `.claude/skills/fea-revisao-reels-es/SKILL.md` (`fea_revisar_es.py` + revisão cega).

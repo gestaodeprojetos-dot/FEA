@@ -82,6 +82,9 @@ def ler_ass(caminho):
 
 def revisar(cfg, v, folhas=None):
     ff, erros, aten = cfg["ffmpeg"], [], []
+    # vídeo em espanhol: as regras de texto PT não valem na legenda; o texto ES é conferido
+    # por fea_revisar_es.py (skill fea-revisao-reels-es). Formato, tempo e cortes valem igual.
+    espanhol = (v.get("idioma") or cfg.get("idioma")) == "es"
     mp4, ass = v["saida"], v["saida"].rsplit(".", 1)[0] + ".ass"
     if not os.path.exists(mp4):
         return [f"arquivo final não existe: {mp4}"], []
@@ -112,7 +115,7 @@ def revisar(cfg, v, folhas=None):
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
     for s, e, t in legendas:
-        for rx, motivo in PROIBIDO_LEGENDA:
+        for rx, motivo in ([] if espanhol else PROIBIDO_LEGENDA):
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
         if s < fe.TITULO_DUR - 0.01:
@@ -186,7 +189,7 @@ def revisar(cfg, v, folhas=None):
              and w["w"].startswith(" ")]
     n_leg = sum(len(t.split()) for _, _, t in legendas)
     n_dit = sum(1 for w in ditas if (w["s"] - manter[0][0]) > fe.TITULO_DUR or len(manter) > 1)
-    if n_dit and n_leg / n_dit < 0.9:
+    if n_dit and n_leg / n_dit < 0.9 and not v.get("legendas_es"):   # tradução condensa: conferida no ES
         erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
 
     # 6. silêncio longo (outro lado do rosto, procurando pertuito)

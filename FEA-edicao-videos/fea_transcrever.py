@@ -3,6 +3,7 @@
 
 Uso:
     python3 fea_transcrever.py PASTA_SAIDA audio1.wav audio2.wav ...
+    python3 fea_transcrever.py --idioma es PASTA_SAIDA audio1.wav ...   # áudio em espanhol (dublado)
 
 Gera PASTA_SAIDA/<nome>.json com segmentos e palavras ({s, e, w}).
 O filtro de voz (VAD) pula silêncio e evita que o modelo "invente" fala
@@ -19,12 +20,21 @@ PROMPT = ("Harmonização orofacial, preenchimento com ácido hialurônico, full
           "sulco nasolabial, SANEP, anestesia, mentoniano, bolus, retroinjeção, cânula, agulha, mL, "
           "toxina botulínica, glabela, frontal, orbiculares, nasal, lifting, bioestimulador.")
 
-saida = sys.argv[1]
+PROMPT_ES = ("Armonización facial, relleno con ácido hialurónico, full face, ojeras, surco nasogeniano, "
+             "sienes, pertuito, comisura labial, pre-jowl, anestesia, bolo, retroinyección, cánula, aguja, mL, "
+             "toxina botulínica, glabela, músculo frontal, orbicular, bioestimulador, plano supraperióstico.")
+
+args = sys.argv[1:]
+lingua = "pt"
+if args[:1] == ["--idioma"]:
+    lingua, args = args[1], args[2:]
+saida = args[0]
 os.makedirs(saida, exist_ok=True)
 modelo = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8",
                       download_root=os.environ.get("FEA_MODELOS", "models"), cpu_threads=os.cpu_count())
-for wav in sys.argv[2:]:
-    segs, _ = modelo.transcribe(wav, language="pt", word_timestamps=True, initial_prompt=PROMPT,
+for wav in args[1:]:
+    segs, _ = modelo.transcribe(wav, language=lingua, word_timestamps=True,
+                                initial_prompt=PROMPT_ES if lingua == "es" else PROMPT,
                                 vad_filter=True, condition_on_previous_text=False)
     out = [{"start": s.start, "end": s.end, "text": s.text,
             "words": [{"s": x.start, "e": x.end, "w": x.word} for x in s.words]} for s in segs]

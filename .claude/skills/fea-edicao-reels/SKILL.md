@@ -7,6 +7,8 @@ description: Edita vídeos verticais de procedimento da FEA (Dr. João Pithon) n
 
 Padrão aprovado pela Keila em 23/09/2026 ("é assim mesmo que quero"). Detalhes visuais e histórico em `FEA-edicao-videos/FEA-padrao-edicao-videos.md`. Scripts em `FEA-edicao-videos/`.
 
+**Versão em espanhol** (legenda e headline em espanhol, mesmo padrão): skill `fea-edicao-reels-es`, com o campo `"idioma": "es"` no projeto.json.
+
 ## Entrada que a Keila manda
 
 1. **Link da pasta de brutos** no Drive (vídeos .MOV do iPhone + uma **imagem com os títulos**).

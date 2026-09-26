@@ -3,6 +3,12 @@
 
 Uso:
     python3 fea_editar_video.py projeto.json [--previa | --entrega]
+    python3 fea_editar_video.py projeto.json --exportar-legendas PASTA   # legendas PT com tempo, para traduzir
+
+Espanhol (skill fea-edicao-reels-es): "idioma": "es" no projeto ou no vídeo. Com
+"legendas_es" (arquivo gerado por --exportar-legendas e traduzido), a legenda de cada
+bloco sai em espanhol no mesmo tempo da fala em português; sem "legendas_es", o áudio
+já é em espanhol e a legenda vem da própria transcrição (com CORRECCIONES_ES).
 
 O projeto.json descreve cada vídeo de saída:
 {
@@ -20,7 +26,9 @@ O projeto.json descreve cada vídeo de saída:
       "cartela_final": null,                    # ex.: "Parte 2 no perfil"
       "cta": null,                              # ex.: "raw/CTA.MOV", vídeo colado no final (sem legenda)
       "espelhar": false,                        # true: desfaz o espelhamento da câmera frontal
-      "limpar_audio": null                      # modelo RNNoise (ex.: "rnn/sh.rnnn"), também aceito no projeto
+      "limpar_audio": null,                     # modelo RNNoise (ex.: "rnn/sh.rnnn"), também aceito no projeto
+      "idioma": "pt",                           # "es": legenda e título em espanhol (também aceito no projeto)
+      "legendas_es": null                       # ex.: "es/1- Planificación.json" (tradução bloco a bloco)
     }
   ]
 }
@@ -56,6 +64,8 @@ MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
 ENTRELINHA_LEGENDA = 0.80  # medido na referência de legenda
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
+MAX_CHARS_LINHA_ES = 24  # o espanhol corre 10% a 20% mais longo: 2 linhas de até 24 (26 no limite)
+FIXO = "\u00a7"        # marca provisória de espaço que não quebra ("70 %", "0,2 mL", "Dr. João")
 
 
 def ts(t):
@@ -143,17 +153,29 @@ def blocos_legenda(palavras):
     return juntos
 
 
-def quebrar_linhas(texto):
-    if len(texto) <= MAX_CHARS_LINHA:
+def quebrar_linhas(texto, limite=MAX_CHARS_LINHA, evitar=()):
+    if len(texto) <= limite:
         return texto
-    palavras = texto.split()
+    palavras = texto.split(" ")
     melhor, dif = texto, 10 ** 9
     for i in range(1, len(palavras)):
         l1, l2 = " ".join(palavras[:i]), " ".join(palavras[i:])
         d = abs(len(l1) - len(l2)) + (0 if len(l1) <= len(l2) + 4 else 3)
+        d += 12 if palavras[i - 1].lower() in evitar else 0   # linha terminando em "del", "la"...
         if d < dif:
             melhor, dif = l1 + r"\N" + l2, d
     return melhor
+
+
+def quebrar_linhas_es(texto):
+    """Legenda em espanhol: número e unidade, "Dr. João" e marca de duas palavras nunca
+    ficam em linhas diferentes; a linha não termina em artigo ou preposição."""
+    t = re.sub(r"(\d) (%|mL|U|G|mm|cm|ml)\b", rf"\1{FIXO}\2", texto)
+    t = re.sub(r"(\d) (%)", rf"\1{FIXO}\2", t)
+    t = re.sub(r"\b(Dr\.|Dra\.) (\w+)", rf"\1{FIXO}\2", t)
+    for termo in MARCAS_DUAS_PALAVRAS:
+        t = t.replace(termo, termo.replace(" ", FIXO))
+    return quebrar_linhas(t, MAX_CHARS_LINHA_ES, LIGACAO_ES).replace(FIXO, "\u00a0")
 
 
 def largura_titulo(linha, tam=None):
@@ -272,6 +294,47 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
+# Espanhol (skill fea-edicao-reels-es): grafia e convenções do glossário FEA ES
+LIGACAO_ES = {"de", "del", "la", "el", "las", "los", "a", "al", "y", "e", "en", "con", "para",
+              "por", "que", "un", "una", "se", "lo", "su", "sus", "o", "u", "sin"}
+MARCAS_DUAS_PALAVRAS = ["Neuramis Volume", "Revanesse Kiss", "Neauvia Stimulate", "Neauvia Intense",
+                        "Yvoire Contour", "Restylane Volyme", "Restylane Lift", "Perfectha Subskin",
+                        "Black Friday", "João Pithon", "full face", "tear trough"]
+CORRECCIONES_ES = [
+    (r"(\d)\.(\d{1,2})(?!\d)", r"\1,\2"),         # decimal con coma: 0,2 (1.000 fica: milhar com ponto)
+    (r"(\d)\s*%", r"\1 %"),                        # RAE: 70 %
+    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"),
+    (r"\bG ?(''|’’)", "G’’"), (r"\bG ?'(?!')", "G’"),   # apóstrofo curvo (decisão do catálogo ES)
+    (r"\b(18|2[0-7]) ?[xX] ?(38|40|50|70)\b", r"\1x\2"),              # cánula 22x70
+    (r"\s*[—–]\s*", ", "),                         # FEA: nunca raya/travessão
+    (r"\bhialur[oô]nico\b", "hialurónico"),
+    (r"\bzigom[aá]tic", "cigomátic"), (r"\blacrimal\b", "lagrimal"), (r"\bnasojugal\b", "nasoyugal"),
+    (r"\bNeuramis volume\b", "Neuramis Volume"), (r"\bRevanesse kiss\b", "Revanesse Kiss"),
+    (r"\bN[uú]vi[ao]\b", "Neauvia"),
+]
+
+
+def corregir_es(texto, extras=()):
+    for padrao, novo in list(CORRECCIONES_ES) + [tuple(x) for x in extras]:
+        texto = re.sub(padrao, novo, texto)
+    return texto.strip(" ,")
+
+
+def limpiar_es(texto):
+    """Mesmo padrão visual da legenda PT: começa minúscula (salvo nome próprio ou sigla),
+    sem ponto final; "¿" e "¡" ficam, e a letra depois deles também desce."""
+    texto = texto.replace("{", "(").replace("}", ")").strip().rstrip(".,;")
+    abre = re.match(r"^[¿¡]*", texto).group(0)
+    resto = texto[len(abre):]
+    primeira = resto.split(" ", 1)[0].strip(",.?!")
+    if primeira in NOMES_PROPRIOS | NOMBRES_ES or (len(primeira) > 1 and primeira.isupper()):
+        return texto
+    return abre + resto[:1].lower() + resto[1:]
+
+
+NOMBRES_ES = {"Dr", "Dr.", "Dra.", "FEA", "Restylane", "Kirialys", "Perfectha", "Juvederm", "Botox", "Pithon"}
+
+
 def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
     """Legenda: uma linha de texto por evento, posicionada à mão, para controlar a entrelinha."""
     partes = texto.split(r"\N")
@@ -325,14 +388,10 @@ def linhas_titulo(texto, ini, fim, efeito, parte=None):
     return eventos
 
 
-def gerar_ass(v, palavras, duracao, caminho):
-    linhas = [ass_header()]
-    linhas += linhas_titulo(quebrar_titulo(v["titulo"]), 0, TITULO_DUR, "\\fad(0,250)", v.get("parte"))
-    fim_legendas = duracao
-    if v.get("cartela_final"):
-        ini = duracao - CARTELA_DUR
-        fim_legendas = ini
-        linhas += linhas_titulo(quebrar_titulo(v["cartela_final"]), ini, duracao, "\\fad(250,0)")
+def eventos_legenda(v, palavras, fim_legendas):
+    """Blocos de legenda finais (s, e, texto) na linha do tempo editada, antes da quebra de linha."""
+    es_audio = idioma(v) == "es" and not v.get("legendas_es")   # áudio já em espanhol
+    eventos = []
     blocos = blocos_legenda(palavras)
     for i, bloco in enumerate(blocos):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
@@ -353,11 +412,61 @@ def gerar_ass(v, palavras, duracao, caminho):
             continue
         e = min(e, fim_legendas)
         # palavra de ligação sozinha na tela ("e", "o", "para") não diz nada: fica fora
-        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | LIGACAO_ES | {"é", "eu"}:
             continue
-        texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
+        bruto = " ".join(p["w"] for p in bloco)
+        if es_audio:
+            texto = limpiar_es(corregir_es(bruto, v.get("correcoes", ())))
+        else:
+            texto = limpar(corrigir(bruto, v.get("correcoes", ())))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
+        eventos.append((round(s, 3), round(e, 3), texto))
+    return eventos
+
+
+def idioma(v):
+    return v.get("idioma") or "pt"
+
+
+def ler_legendas_es(v, eventos):
+    """Troca o texto PT de cada bloco pela tradução revisada. O arquivo guarda o PT de
+    origem: se os cortes mudaram depois da tradução, o bloco não confere e o render para
+    (legenda em espanhol fora de sincronia é pior que nenhuma)."""
+    dados = json.load(open(v["legendas_es"], encoding="utf-8"))
+    blocos = dados["legendas"] if isinstance(dados, dict) else dados
+    if len(blocos) != len(eventos):
+        raise SystemExit(f"{v['legendas_es']}: {len(blocos)} blocos traduzidos para {len(eventos)} "
+                         "legendas no vídeo. Os cortes mudaram: exportar de novo e traduzir os blocos novos.")
+    saida = []
+    for b, (s, e, pt) in zip(blocos, eventos):
+        if b["pt"] != pt:
+            raise SystemExit(f"{v['legendas_es']} bloco {b.get('id')}: PT mudou (\"{b['pt']}\" -> \"{pt}\"). Retraduzir.")
+        es = (b.get("es") or "").strip()
+        if not es:
+            raise SystemExit(f"{v['legendas_es']} bloco {b.get('id')}: sem tradução.")
+        if es == "-":        # bloco deliberadamente sem legenda (ex.: só "né?")
+            continue
+        saida.append((s, e, limpiar_es(corregir_es(es, v.get("correcciones_es", ())))))
+    return saida
+
+
+def gerar_ass(v, palavras, duracao, caminho):
+    linhas = [ass_header()]
+    linhas += linhas_titulo(quebrar_titulo(v["titulo"]), 0, TITULO_DUR, "\\fad(0,250)", v.get("parte"))
+    fim_legendas = duracao
+    if v.get("cartela_final"):
+        ini = duracao - CARTELA_DUR
+        fim_legendas = ini
+        linhas += linhas_titulo(quebrar_titulo(v["cartela_final"]), ini, duracao, "\\fad(250,0)")
+    eventos = eventos_legenda(v, palavras, fim_legendas)
+    if idioma(v) == "es":
+        if v.get("legendas_es"):
+            eventos = ler_legendas_es(v, eventos)
+        eventos = [(s, e, quebrar_linhas_es(t)) for s, e, t in eventos]
+    else:
+        eventos = [(s, e, quebrar_linhas(t)) for s, e, t in eventos]
+    for s, e, texto in eventos:
         linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
@@ -452,8 +561,10 @@ def duracao_arquivo(ff, arquivo):
     return int(h) * 3600 + int(m) * 60 + float(s)
 
 
-def renderizar(cfg, v, previa=False):
+def preparar(cfg, v):
+    """Cortes encaixados no áudio e palavras da legenda na linha do tempo editada."""
     ff = cfg["ffmpeg"]
+    v = dict(v, idioma=v.get("idioma") or cfg.get("idioma"))
     db_voz = perfil_voz(ff, v["entrada"])
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
@@ -489,6 +600,34 @@ def renderizar(cfg, v, previa=False):
     global FONTSDIR, TITULO_TAM
     FONTSDIR = cfg["fontsdir"]
     TITULO_TAM = v.get("titulo_tam") or cfg.get("titulo_tam") or TITULO_TAM_PADRAO
+    return v, palavras, duracao
+
+
+def exportar_legendas(cfg, v, pasta):
+    """Legendas PT finais, bloco a bloco e com tempo, para a tradução ao espanhol.
+    O tradutor preenche "es"; o render confere o "pt" para não aplicar tradução velha."""
+    import os
+    v, palavras, duracao = preparar(cfg, v)
+    fim = duracao - (CARTELA_DUR if v.get("cartela_final") else 0)
+    v_pt = dict(v, idioma="pt", legendas_es=None)
+    eventos = eventos_legenda(v_pt, palavras, fim)
+    os.makedirs(pasta, exist_ok=True)
+    nome = os.path.basename(v["saida"]).rsplit(".", 1)[0]
+    destino = os.path.join(pasta, f"{nome}.json")
+    antigos = {}
+    if os.path.exists(destino):      # reaproveita a tradução dos blocos que não mudaram
+        for b in json.load(open(destino, encoding="utf-8")).get("legendas", []):
+            antigos.setdefault(b["pt"], b.get("es", ""))
+    dados = {"video": v["saida"], "titulo_pt": v.get("titulo_pt", ""), "titulo_es": v["titulo"],
+             "legendas": [{"id": i + 1, "s": s, "e": e, "seg": round(e - s, 2), "pt": t,
+                           "es": antigos.get(t, "")} for i, (s, e, t) in enumerate(eventos)]}
+    json.dump(dados, open(destino, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    return destino, len(eventos)
+
+
+def renderizar(cfg, v, previa=False):
+    ff = cfg["ffmpeg"]
+    v, palavras, duracao = preparar(cfg, v)
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 
@@ -566,10 +705,19 @@ def main():
     args = sys.argv[1:]
     previa = "entrega" if "--entrega" in args else ("--previa" in args)
     args = [a for a in args if a not in ("--previa", "--entrega")]
+    exportar = None
+    if "--exportar-legendas" in args:
+        i = args.index("--exportar-legendas")
+        exportar = args[i + 1]
+        args = args[:i] + args[i + 2:]
     cfg = json.load(open(args[0], encoding="utf-8"))
     so = args[1:] or None
     for v in cfg["videos"]:
         if so and not any(x in v["saida"] for x in so):
+            continue
+        if exportar:
+            destino, n = exportar_legendas(cfg, v, exportar)
+            print(f"{destino}: {n} blocos", flush=True)
             continue
         d = renderizar(cfg, v, previa)
         print(f"{v['saida']}: {d:.1f}s", flush=True)
