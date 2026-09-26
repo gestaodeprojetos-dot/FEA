@@ -114,6 +114,11 @@ def revisar(cfg, v, folhas=None):
 
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
+    cta = v.get("cta") or cfg.get("cta")
+    if cta:   # o vídeo de CTA (trilha, sem fala) fica fora da medida de voz e do fim do vídeo
+        import numpy as np
+        db = db[:max(1, int((dur - fe.duracao_arquivo(ff, cta)) / ps))]
+        lim = max(38.0, float(np.percentile(db, 5)) + 12)
     for s, e, t in legendas:
         for rx, motivo in ([] if espanhol else PROIBIDO_LEGENDA):
             if re.search(rx, t):

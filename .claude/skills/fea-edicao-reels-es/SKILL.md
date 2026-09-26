@@ -71,6 +71,8 @@ Processo informado pela Keila em 26/09/2026: pega os brutos em português, dubla
 
 Decisões da Keila no lote 1 (26/09/2026), valem para a campanha: "tú" aceito nos anúncios dublados (`"tuteo": true` no projeto); horário falado errado para o público hispano é cortado (o da imersão em espanhol é 13 e 14 de outubro, 7:00 PM hora Colômbia); data errada também é cortada; vídeo com fala errada do Dr. (ex.: "às 8 horas") é descartado; troca de lote vale para o público hispano; preço em espanhol é U$ 19,00 (1º lote): "por menos de 100 reais" se corta, ou se troca por U$ 19,00 quando der.
 
+CTA da campanha em espanhol (lote 1): vídeo "Toque aprender más" com a marca "Inmersión avanzada en relleno Full Face", colado no final de todos com `"cta"` no projeto. Perguntar pelo CTA no começo do lote; sem ele, o lote sai incompleto.
+
 Depois segue a edição:
 
 1. `python3 FEA-edicao-videos/fea_transcrever.py --idioma es tr/ wav/*.wav`
