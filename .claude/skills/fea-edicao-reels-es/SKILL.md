@@ -73,6 +73,10 @@ Decisões da Keila no lote 1 (26/09/2026), valem para a campanha: "tú" aceito n
 
 CTA da campanha em espanhol (lote 1): vídeo "Toque aprender más" com a marca "Inmersión avanzada en relleno Full Face", colado no final de todos com `"cta"` no projeto. Perguntar pelo CTA no começo do lote; sem ele, o lote sai incompleto.
 
+**Trocar uma fala da dublagem (ex.: preço em reais para "19 dólares"), lote 2, 27/09/2026:** baixar o roteiro dublado (`srt_caption_url` do `get_video_translation`), editar só a frase (número por extenso: "solo diecinueve dólares"), subir o .srt como texto na pasta de brutos (link aberto) e redublar com `srt` = esse arquivo e `srtRole: "output"`. A HeyGen fala exatamente o roteiro, com voz e boca sincronizadas. Testar em 1 vídeo antes do lote (custa crédito de nova dublagem). Conferir o resultado transcrevendo: a redublagem pode engolir palavra curta ("el menor valor" saiu "el valor"); se a frase ficar errada, cortar.
+
+Preço em espanhol (Keila, 26 e 27/09/2026): 1º lote U$ 19,00, falado "solo diecinueve dólares" no lugar de "menos de 100 reais" / "menos de R$ 70". HeyGen dubla "reales" se não for corrigido.
+
 Depois segue a edição:
 
 1. `python3 FEA-edicao-videos/fea_transcrever.py --idioma es tr/ wav/*.wav`
