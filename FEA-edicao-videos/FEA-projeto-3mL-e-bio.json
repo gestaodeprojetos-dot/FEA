@@ -1,0 +1,594 @@
+{
+ "ffmpeg": "ffmpeg",
+ "fontsdir": "fonts",
+ "videos": [
+  {
+   "entrada": "b5/raw/IMG_6326.MOV",
+   "transcricao": "b5/tr/IMG_6326.json",
+   "saida": "b5/out/1- Planejamento estratégico.mp4",
+   "titulo": "Planejamento estratégico",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.8,
+     97.3
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6327.MOV",
+   "transcricao": "b5/tr/IMG_6327.json",
+   "saida": "b5/out/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     23.0
+    ],
+    [
+     27.3,
+     94.2
+    ],
+    [
+     100.2,
+     119.27
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6328.MOV",
+   "transcricao": "b5/tr/IMG_6328.json",
+   "saida": "b5/out/3- Preenchimento de olheiras, onde fazer.mp4",
+   "titulo": "Preenchimento de olheiras, onde fazer?",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.8,
+     118.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6329.MOV",
+   "transcricao": "b5/tr/IMG_6329.json",
+   "saida": "b5/out/4- Não foque em preencher linha de acordeão - Parte 1.mp4",
+   "titulo": "Não foque em preencher linha de acordeão",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     1.0,
+     8.3
+    ],
+    [
+     16.4,
+     164.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6329.MOV",
+   "transcricao": "b5/tr/IMG_6329.json",
+   "saida": "b5/out/4- Não foque em preencher linha de acordeão - Parte 2.mp4",
+   "titulo": "Não foque em preencher linha de acordeão",
+   "parte": 2,
+   "cartela_final": null,
+   "manter": [
+    [
+     164.8,
+     232.51
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6330.MOV",
+   "transcricao": "b5/tr/IMG_6330.json",
+   "saida": "b5/out/5- Bigode chinês pode ou não preencher.mp4",
+   "titulo": "Bigode chinês: pode ou não preencher?",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     45.73
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6331.MOV",
+   "transcricao": "b5/tr/IMG_6331.json",
+   "saida": "b5/out/6- Rugas de acordeão qual o limite do preenchedor.mp4",
+   "titulo": "Rugas de acordeão: qual o limite do preenchedor?",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.5,
+     52.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6332.MOV",
+   "transcricao": "b5/tr/IMG_6332.json",
+   "saida": "b5/out/7- Preenchimento de Mento.mp4",
+   "titulo": "Preenchimento de Mento",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.4,
+     52.65,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6333.MOV",
+   "transcricao": "b5/tr/IMG_6333.json",
+   "saida": "b5/out/8- Planejamento bioestimulador.mp4",
+   "titulo": "Planejamento bioestimulador",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0,
+     40.1
+    ]
+   ],
+   "remover_legenda": [
+    [
+     25.75,
+     26.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  },
+  {
+   "entrada": "b5/raw/IMG_6334.MOV",
+   "transcricao": "b5/tr/IMG_6334.json",
+   "saida": "b5/out/9- Bioestimulador em linhas de acordeão.mp4",
+   "titulo": "Bioestimulador em linhas de acordeão",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.5,
+     67.7
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Tt]ier trough\\b",
+     "tear trough"
+    ],
+    [
+     "\\b[Tt]irtroff\\b",
+     "tear trough"
+    ],
+    [
+     "\\bsubsisão\\b",
+     "subcisão"
+    ],
+    [
+     "\\bhipertoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\b[Qq]uirialis\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bperióste\\b",
+     "periósteo"
+    ],
+    [
+     "\\busou 02\\b",
+     "usou 0,2"
+    ],
+    [
+     "\\b(menor|maior) [Gg]elinha\\b",
+     "\\1 G'"
+    ],
+    [
+     "\\bpor que eu vou\\b",
+     "porque eu vou"
+    ],
+    [
+     "\\bETIPS\\b",
+     "ETIPs"
+    ]
+   ]
+  }
+ ]
+}

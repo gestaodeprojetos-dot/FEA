@@ -1,0 +1,121 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "fonts",
+ "idioma": "es",
+ "titulo_tam": 140,
+ "tuteo": true,
+ "cta": "raw/CTA.mov",
+ "correcoes": [
+  [
+   "\\b[Ii]nversión\\b",
+   "inmersión"
+  ],
+  [
+   "\\bdos vías\\b",
+   "dos días"
+  ],
+  [
+   "\\bcaiga el lote\\b",
+   "cambie el lote"
+  ],
+  [
+   "\\b[Ee]stos clínicos\\b",
+   "casos clínicos"
+  ],
+  [
+   "\\bsaber\\.?$",
+   "saber más"
+  ],
+  [
+   "^[Mm]ás, ",
+   ""
+  ],
+  [
+   "\\bmañana cambie el lote\\b",
+   "mañana cambia el lote"
+  ],
+  [
+   "(\\d) mililitros",
+   "\\1 mL"
+  ],
+  [
+   "\\bsuper\\b",
+   "súper"
+  ]
+ ],
+ "videos": [
+  {
+   "entrada": "raw_es/IMG_5077_19usd.mp4",
+   "transcricao": "tr_es/IMG_5077_19usd.json",
+   "saida": "out/1- Últimas entradas del primer lote - IMG_5077.mp4",
+   "titulo": "Últimas entradas del primer lote",
+   "titulo_pt": "Últimos ingressos do primeiro lote",
+   "manter": [
+    [
+     0.96,
+     27.57
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5078_19usd.mp4",
+   "transcricao": "tr_es/IMG_5078_19usd.json",
+   "saida": "out/2- El lote va a cambiar - IMG_5078.mp4",
+   "titulo": "El lote va a cambiar",
+   "titulo_pt": "O lote vai virar",
+   "manter": [
+    [
+     1.0,
+     6.15,
+     "exato"
+    ],
+    [
+     7.98,
+     26.74,
+     "exato"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5081_19usd.mp4",
+   "transcricao": "tr_es/IMG_5081_19usd.json",
+   "saida": "out/3- Mañana cambia el lote - IMG_5081.mp4",
+   "titulo": "Mañana cambia el lote",
+   "titulo_pt": "O lote vira amanhã",
+   "manter": [
+    [
+     1.44,
+     23.56,
+     "exato"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5082_19usd.mp4",
+   "transcricao": "tr_es/IMG_5082_19usd.json",
+   "saida": "out/4- Hoy cambia el lote - IMG_5082.mp4",
+   "titulo": "Hoy cambia el lote",
+   "titulo_pt": "Hoje tem virada de lote",
+   "manter": [
+    [
+     1.02,
+     24.67
+    ]
+   ]
+  },
+  {
+   "entrada": "raw_es/IMG_5083.mp4",
+   "transcricao": "tr_es/IMG_5083.json",
+   "saida": "out/5- Última oportunidad - IMG_5083.mp4",
+   "titulo": "Última oportunidad",
+   "titulo_pt": "Última chance",
+   "manter": [
+    [
+     0.84,
+     30.43,
+     "exato"
+    ]
+   ]
+  }
+ ]
+}
