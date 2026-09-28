@@ -42,6 +42,7 @@ TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
+LEGENDA_GAP = 80       # espaçamento vertical entre linhas de legenda (px entre centros)
 CARTELA_DUR = 3.0
 MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
@@ -235,7 +236,14 @@ def gerar_ass(v, palavras, duracao, caminho):
         texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
-        linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
+        if r"\N" in texto:
+            l1, l2 = texto.split(r"\N", 1)
+            y1 = LEGENDA_Y - LEGENDA_GAP // 2
+            y2 = LEGENDA_Y + LEGENDA_GAP // 2
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{y1})}}{l1}\n")
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{y2})}}{l2}\n")
+        else:
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{LEGENDA_Y})}}{texto}\n")
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
