@@ -21,7 +21,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4885.json",
    "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/3- Preenchimento de refinamento das olheiras.mp4",
    "titulo": "Preenchimento de refinamento\ndas olheiras",
-   "manter": [[0.7, 180.7]]
+   "manter": [[0.7, 180.4]]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4886.MOV",
@@ -66,7 +66,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4891.json",
    "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/9- Fios filler em pálpebra inferior.mp4",
    "titulo": "Fios filler em\npálpebra inferior",
-   "manter": [[0.0, 72.0]]
+   "manter": [[6.5, 72.0]]
   }
  ]
 }

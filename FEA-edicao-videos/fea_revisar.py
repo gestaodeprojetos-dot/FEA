@@ -38,7 +38,7 @@ PROIBIDO_LEGENDA = [
     (r"\b(18|2[0-7])[ -]?(38|40|50|70)\b", "cânula sem o x (ex.: 22x70)"),
     (r"\bml\b", "unidade: mL"),
     (r"\bid[ée]ia\b".replace("[ée]", "é"), "grafia antiga \"idéia\""),
-    (r"\bsubi?mento\b", "\"subimento\": é submento"),
+    (r"\bsubimento\b", "\"subimento\": é submento"),
     (r"\b[Nn]euramiz\b", "\"Neuramiz\": é Neuramis"),
     (r"\b[Ee] ?voar\b", "\"Evoar\": é Yvoire"),
     (r"\bmeomodular\b", "\"meomodular\": é miomodular"),
@@ -105,7 +105,7 @@ def revisar(cfg, v, folhas=None):
     # 2. título: exatamente o da imagem, nos 3 primeiros segundos
     titulo, legendas = ler_ass(ass)
     txt_tit = " ".join(t for s, e, t in titulo if s < 1)
-    esperado = v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else "")
+    esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
     if re.sub(r"\s+", " ", txt_tit) != esperado:
         erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
     if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:
