@@ -497,10 +497,11 @@ def renderizar(cfg, v, previa=False):
     # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
     # (cx, cy), frações da largura/altura, para não mostrar a paciente com expressão de dor.
     mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    ganho = f",volume={v['volume_db']}dB" if v.get("volume_db") else ""
     zooms = v.get("zoom", [])
     partes, vrot, arot = [], [], []
     for i, (a, b) in enumerate(v["manter"]):
-        partes.append(f"[0:a]atrim={a}:{b}{mudo},asetpts=PTS-STARTPTS,"
+        partes.append(f"[0:a]atrim={a}:{b}{mudo}{ganho},asetpts=PTS-STARTPTS,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.02)}:d=0.02[a{i}]")
         arot.append(f"[a{i}]")
         cortes = sorted({a, b} | {t for z in zooms for t in z[:2] if a < t < b})
