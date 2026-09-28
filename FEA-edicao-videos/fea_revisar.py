@@ -42,6 +42,8 @@ PROIBIDO_LEGENDA = [
     (r"\b[Nn]euramiz\b", "\"Neuramiz\": é Neuramis"),
     (r"\b[Ee] ?voar\b", "\"Evoar\": é Yvoire"),
     (r"\bmeomodular\b", "\"meomodular\": é miomodular"),
+    (r"\blado inferior\b", "\"lado inferior\": é lábio inferior"),
+    (r"\blado superior\b", "\"lado superior\": é lábio superior"),
 ]
 
 # falas que as regras mandam cortar: se aparecem no trecho mantido, conferir

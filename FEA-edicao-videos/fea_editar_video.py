@@ -225,12 +225,27 @@ CORRECOES = [
     (r"\b[Nn]euramiz\b", "Neuramis"),
     (r"\b[Ee] ?voar\b", "Yvoire"), (r"\bcom ?o? ?tour\b", "Contour"),
     (r"\bmeomodular\b", "miomodular"),
+    # Whisper confunde "lábio" com "lado" em contexto labial (sons parecidos em fala rápida)
+    (r"\blado inferior\b", "lábio inferior"), (r"\blado superior\b", "lábio superior"),
 ]
 
 
 def corrigir(texto, extras=()):
     for padrao, novo in list(CORRECOES) + [tuple(x) for x in extras]:
         texto = re.sub(padrao, novo, texto)
+    return texto
+
+
+def pontuar(texto):
+    """Insere vírgulas em posições comuns do português falado onde o Whisper omite."""
+    # antes de conjunções adversativas e explicativas (só se não há pontuação antes)
+    texto = re.sub(r"(\w) (mas|porém|portanto|entretanto) ", r"\1, \2 ", texto)
+    # antes de "porque", "pois", "então", "aí" quando precedidos de palavra (não no início)
+    texto = re.sub(r"(\w) (porque|pois|então|aí) ", r"\1, \2 ", texto)
+    # antes de "né", "tá", "viu" (marcadores discursivos)
+    texto = re.sub(r"(\w) (né|tá|viu)([.,?!\s]|$)", r"\1, \2\3", texto)
+    # evitar vírgula duplicada
+    texto = re.sub(r",\s*,", ",", texto)
     return texto
 
 
@@ -295,7 +310,7 @@ def gerar_ass(v, palavras, duracao, caminho):
         # palavra de ligação sozinha na tela ("e", "o", "para") não diz nada: fica fora
         if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
             continue
-        texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
+        texto = quebrar_linhas(limpar(pontuar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ())))))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
         linhas += dialogos_linhas(0, s, e, "Legenda", texto)
