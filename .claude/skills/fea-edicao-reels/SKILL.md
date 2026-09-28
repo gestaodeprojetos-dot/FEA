@@ -64,6 +64,8 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
 - Lote Black Friday Vitalícia na clínica (26/09/2026): "botox" falado fica "botox" na legenda (não trocar por toxina botulínica); vídeo de bastidor da FEP Experience é publicado, não descartar; "a última oportunidade vai ser agora" aprovado; teasers curtos também entram; headlines escritas por ela no doc valem exatamente como escritas (inclusive maiúsculas).
 
+- Lote Yap 28/09 (falas motivacionais do Dr. João, 28/09/2026): pode passar de 3 minutos, não cortar nem dividir; sem CTA.
+
 ## Headlines sem imagem de títulos
 
 Antes de renderizar, mandar à Keila um Google Doc `FEA-revisao-headlines-<lote>` com, para cada vídeo: a fala dos 3 primeiros segundos, a headline atual e 2 ou 3 opções tiradas da fala (recomendação marcada). A contagem regressiva "Faltam N dias" já está aprovada; as demais ela escolhe (em 26/09/2026 ela recusou headlines de resumo, quer o gancho do vídeo).
