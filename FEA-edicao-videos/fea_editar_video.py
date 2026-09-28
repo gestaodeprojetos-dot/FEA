@@ -42,6 +42,8 @@ TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
 TITULO_DUR = 3.0
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
+LEGENDA_GAP = 64       # espaçamento vertical entre linhas de legenda (px entre centros)
+TITULO_GAP = 148       # espaçamento vertical entre linhas de título (px entre centros)
 CARTELA_DUR = 3.0
 MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
@@ -214,14 +216,35 @@ def limpar(texto):
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
     titulo = quebrar_titulo(v["titulo"])
-    if v.get("parte"):
-        titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
-    linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)}}{titulo}\n")
+    parte_texto = rf"{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}" if v.get("parte") else None
+    titulo_linhas = titulo.split(r"\N")
+    n_linhas = len(titulo_linhas) + (1 if parte_texto else 0)
+    cy = H // 2
+    if n_linhas == 1:
+        linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)\\an5\\pos({W // 2},{cy})}}{titulo_linhas[0]}\n")
+    else:
+        total_h = (n_linhas - 1) * TITULO_GAP
+        y0 = cy - total_h // 2
+        for j, tl in enumerate(titulo_linhas):
+            y = y0 + j * TITULO_GAP
+            linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)\\an5\\pos({W // 2},{y})}}{tl}\n")
+        if parte_texto:
+            y = y0 + len(titulo_linhas) * TITULO_GAP
+            linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)\\an5\\pos({W // 2},{y})}}{parte_texto}\n")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
         fim_legendas = ini
-        linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)}}{quebrar_titulo(v['cartela_final'])}\n")
+        cart = quebrar_titulo(v["cartela_final"]).split(r"\N")
+        nc = len(cart)
+        if nc == 1:
+            linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)\\an5\\pos({W // 2},{cy})}}{cart[0]}\n")
+        else:
+            th = (nc - 1) * TITULO_GAP
+            y0c = cy - th // 2
+            for j, cl in enumerate(cart):
+                yc = y0c + j * TITULO_GAP
+                linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)\\an5\\pos({W // 2},{yc})}}{cl}\n")
     blocos = blocos_legenda(palavras)
     for i, bloco in enumerate(blocos):
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
@@ -235,7 +258,14 @@ def gerar_ass(v, palavras, duracao, caminho):
         texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
         if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
             continue
-        linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
+        if r"\N" in texto:
+            l1, l2 = texto.split(r"\N", 1)
+            y1 = LEGENDA_Y - LEGENDA_GAP // 2
+            y2 = LEGENDA_Y + LEGENDA_GAP // 2
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{y1})}}{l1}\n")
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{y2})}}{l2}\n")
+        else:
+            linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{{\\an5\\pos({W // 2},{LEGENDA_Y})}}{texto}\n")
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 

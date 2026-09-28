@@ -1,0 +1,132 @@
+{
+  "ffmpeg": "/usr/bin/ffmpeg",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/fonts",
+  "videos": [
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7104.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7104.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/1- Seja julgado para ser valorizado.mp4",
+      "titulo": "Seja julgado para ser valorizado",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          7.83,
+          139.5
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7106.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7106.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/2- Voce ja despertou.mp4",
+      "titulo": "Você já despertou?",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          2.01,
+          229.5
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7107.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7107.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/3- Todo mundo ta torcendo por voce.mp4",
+      "titulo": "Todo mundo tá torcendo por você",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          1.05,
+          142.0
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7108.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7108.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/4- Ser rico nao e ter dinheiro.mp4",
+      "titulo": "Ser rico não é ter dinheiro",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          1.91,
+          172.5
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7109.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7109.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/5- Fuja de quem pensa pequeno.mp4",
+      "titulo": "Fuja de quem pensa pequeno",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          1.69,
+          163.0
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7110.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7110.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/6- Cuide de voce primeiro.mp4",
+      "titulo": "Cuide de você primeiro",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          0.12,
+          72.3
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7113.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7113.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/7- Nao queime a sua casa pelo outro.mp4",
+      "titulo": "Não queime a sua casa pelo outro",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          4.31,
+          132.5
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7114.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7114.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/8- Ninguem vai fazer por voce.mp4",
+      "titulo": "Ninguém vai fazer por você",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          5.88,
+          68.5
+        ]
+      ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/videos/IMG_7115.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/tr/IMG_7115.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/a90e7112-ff12-500b-8082-08a5bd2b1401/scratchpad/out/9- Faltam 3 meses.mp4",
+      "titulo": "Faltam 3 meses",
+      "parte": null,
+      "cartela_final": null,
+      "manter": [
+        [
+          4.86,
+          46.5
+        ]
+      ]
+    }
+  ]
+}
