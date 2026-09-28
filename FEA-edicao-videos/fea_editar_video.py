@@ -298,20 +298,23 @@ def gerar_ass(v, palavras, duracao, caminho):
         fim_legendas = ini
         linhas += dialogos_linhas(1, ini, duracao, "Titulo", quebrar_titulo(v["cartela_final"]), r"\fad(250,0)")
     blocos = blocos_legenda(palavras)
+    carry = []
     for i, bloco in enumerate(blocos):
+        if carry:
+            bloco = carry + bloco
+            carry = []
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
-        if i + 1 < len(blocos):          # nunca duas legendas ao mesmo tempo
+        if i + 1 < len(blocos):
             e = min(e, blocos[i + 1][0]["s"])
-        # como na referência, a legenda só entra depois que o título sai
         s = max(s, TITULO_DUR)
         if s >= e or s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
-        # palavra de ligação sozinha na tela ("e", "o", "para") não diz nada: fica fora
         if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
             continue
         texto = quebrar_linhas(limpar(pontuar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ())))))
-        if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
+        if e - s < max(0.2, 0.02 * len(texto)):
+            carry = [p for p in bloco if p["s"] >= TITULO_DUR - 0.3]
             continue
         linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
@@ -374,11 +377,23 @@ def ancorar_na_voz(palavras, db, limiar, passo):
                 d = j * passo - 0.05 - s
                 s, e = s + d, e + d
         if voz:
-            # a transcrição costuma pôr o início da palavra ainda no silêncio antes da fala
-            # (legenda aparecia até 1 s adiantada): começa no primeiro instante com voz
-            s = max(s, voz[0] * passo - 0.05)
-            if e - s > 0.8:                        # esticada: termina onde a voz termina
+            inicio = voz[0]
+            for vi in range(len(voz) - 1):
+                if voz[vi + 1] - voz[vi] <= 1:
+                    inicio = voz[vi]
+                    break
+            s = max(s, inicio * passo - 0.05)
+            if e - s > 0.8:
                 e = min(e, (voz[-1] + 1) * passo + 0.1)
+        gap = p["s"] - ant
+        if gap > 0.6:
+            look = max(0, int((p["s"] - min(gap, 1.0)) / passo))
+            vb = [i for i in range(look, i0) if db[i] >= limiar]
+            if len(vb) >= 3:
+                for vi in range(len(vb) - 1):
+                    if vb[vi + 1] - vb[vi] <= 1:
+                        s = min(s, vb[vi] * passo - 0.05)
+                        break
         saida.append(dict(p, s=s, e=max(e, s + 0.15)))
     return saida
 
