@@ -217,9 +217,14 @@ CORRECOES = [
     (r"\bsuco\b", "sulco"), (r"\blábio mentual\b", "labiomentual"),
     (r"\balurônico\b", "hialurônico"), (r"\bmanejamento\b", "planejamento"),
     (r"\bintercorrente\b", "intercorrência"), (r"(\d) %", r"\1%"), (r"\bmeio ml\b", "meio mL"),
-    (r"\bVietre\b", "Vietri"), (r"\bEvoar Contour\b", "Yvoire Contour"),
+    (r"\bVietre\b", "Vietri"), (r"\b[Ee]voar Contour\b", "Yvoire Contour"),
     (r"\bSerintox\b", "Seryntox"),
     (r"\b(?:[Nn]uvia|Lúvia|[Nn]euvia) (?:Stimulate|Estimulate)\b", "Neauvia Stimulate"),
+    (r"\b[Ss]w[ea]l+ing ?f[aá]ct?or\b", "swelling factor"),
+    (r"\bsubi?mento\b", "submento"),
+    (r"\b[Nn]euramiz\b", "Neuramis"),
+    (r"\b[Ee] ?voar\b", "Yvoire"), (r"\bcom ?o? ?tour\b", "Contour"),
+    (r"\bmeomodular\b", "miomodular"),
 ]
 
 
@@ -427,8 +432,12 @@ def renderizar(cfg, v, previa=False):
                     palavras[-1]["w"] += w["w"]
                     palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
                     continue
-                # termo de duas palavras nunca se divide entre legendas ("tear trough")
+                # termo de duas palavras nunca se divide entre legendas ("tear trough", "swelling factor")
                 if palavras and w["w"].strip().lower().startswith("trough") and palavras[-1]["w"].strip().lower() in ("tier", "tear"):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
+                if palavras and w["w"].strip().lower().startswith("factor") and palavras[-1]["w"].strip().lower().endswith("swelling"):
                     palavras[-1]["w"] += w["w"]
                     palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
                     continue

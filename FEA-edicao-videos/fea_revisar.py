@@ -38,6 +38,10 @@ PROIBIDO_LEGENDA = [
     (r"\b(18|2[0-7])[ -]?(38|40|50|70)\b", "cânula sem o x (ex.: 22x70)"),
     (r"\bml\b", "unidade: mL"),
     (r"\bid[ée]ia\b".replace("[ée]", "é"), "grafia antiga \"idéia\""),
+    (r"\bsubi?mento\b", "\"subimento\": é submento"),
+    (r"\b[Nn]euramiz\b", "\"Neuramiz\": é Neuramis"),
+    (r"\b[Ee] ?voar\b", "\"Evoar\": é Yvoire"),
+    (r"\bmeomodular\b", "\"meomodular\": é miomodular"),
 ]
 
 # falas que as regras mandam cortar: se aparecem no trecho mantido, conferir
