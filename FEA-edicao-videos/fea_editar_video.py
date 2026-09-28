@@ -175,12 +175,17 @@ def quebrar_titulo(texto, max_linhas=3, dois_pontos=True):
         ws = list(map(largura_titulo, ls))
         return max(ws) + 0.5 * (max(ws) - min(ws))
 
-    melhor = None
+    opcoes = []
     for k in range(1, min(max_linhas, len(palavras)) + 1):
         melhor = min(particoes(palavras, k), key=custo)
         # aceita reduzir a fonte até ~125 px antes de criar mais uma linha
         if max(map(largura_titulo, melhor)) <= TITULO_LARGURA_MAX * TITULO_TAM / TITULO_TAM_MIN:
             break
+        opcoes.append(melhor)
+    else:
+        # nada coube: fica com a opção de letra maior e, no empate, com menos linhas
+        # ("Autorresponsabilidade / muda tudo", não "... / muda / tudo")
+        melhor = max(opcoes, key=lambda ls: (tamanho_titulo([l.replace("§", " ") for l in ls]), -len(ls)))
     return r"\N".join(melhor).replace("§", " ")
 
 

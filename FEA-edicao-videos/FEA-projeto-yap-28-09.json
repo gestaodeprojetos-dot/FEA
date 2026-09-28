@@ -91,8 +91,8 @@
   {
    "entrada": "raw/IMG_7106.MOV",
    "transcricao": "tr/IMG_7106.json",
-   "saida": "out/2- É fácil identificar quem despertou.mp4",
-   "titulo": "É fácil identificar quem despertou",
+   "saida": "out/2- Autorresponsabilidade muda tudo.mp4",
+   "titulo": "Autorresponsabilidade muda tudo",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -349,8 +349,8 @@
   {
    "entrada": "raw/IMG_7109.MOV",
    "transcricao": "tr/IMG_7109.json",
-   "saida": "out/5- Fuja de gente que pensa pequeno.mp4",
-   "titulo": "Fuja de gente que pensa pequeno",
+   "saida": "out/5- Quem está ao seu lado muda tudo.mp4",
+   "titulo": "Quem está ao seu lado muda tudo",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -435,8 +435,8 @@
   {
    "entrada": "raw/IMG_7110.MOV",
    "transcricao": "tr/IMG_7110.json",
-   "saida": "out/6- Se você não treina não prospera.mp4",
-   "titulo": "Se você não treina, não prospera",
+   "saida": "out/6- Você é o exemplo do seu paciente.mp4",
+   "titulo": "Você é o exemplo do seu paciente",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -515,6 +515,14 @@
     [
      "\\bBlack Friday vitalícia\\b",
      "Black Friday Vitalícia"
+    ],
+    [
+     "própria state, que no seu próprio",
+     "própria estética, no seu próprio"
+    ],
+    [
+     "\\bstate\\b",
+     "estética"
     ]
    ]
   },
