@@ -1,0 +1,49 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7101.MOV",
+   "transcricao": "tr/IMG_7101.json",
+   "saida": "out/1- Como foi a minha experiência na Amazônia.mp4",
+   "titulo": "Como foi a minha experiência na Amazônia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.52,
+     351.0
+    ]
+   ],
+   "remover_legenda": [
+    [
+     2.75,
+     3.55
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Tt]eco [Tt]eco\\b",
+     "teco-teco"
+    ],
+    [
+     "\\bDesde meu pai eu fui\\b",
+     "Com meu pai, eu fui"
+    ],
+    [
+     "\\bRio Cuiuni\\b",
+     "rio Cuiuni"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ]
+   ]
+  }
+ ]
+}
