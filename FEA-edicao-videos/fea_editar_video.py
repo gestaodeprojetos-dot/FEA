@@ -320,12 +320,16 @@ def gerar_ass(v, palavras, duracao, caminho):
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
-def perfil_voz(ff, entrada, passo=0.05):
+def perfil_voz(ff, entrada, passo=0.05, ganho_db=0):
     """Volume (dB) do áudio do bruto em janelas de 50 ms e o limiar de voz:
-    12 dB acima do ruído de fundo (percentil 5: em vídeo com fala contínua o percentil 20 já é voz), nunca abaixo de 38 dB."""
+    12 dB acima do ruído de fundo (percentil 5: em vídeo com fala contínua o percentil 20 já é voz), nunca abaixo de 38 dB.
+    ganho_db aplica boost antes da análise (para vídeos com volume_db no projeto)."""
     import numpy as np
-    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada, "-vn", "-ac", "1", "-ar", "16000",
-                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    af = ["-vn", "-ac", "1", "-ar", "16000"]
+    if ganho_db:
+        af = ["-af", f"volume={ganho_db}dB"] + af
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada] + af +
+                          ["-f", "s16le", "-"], capture_output=True, check=True).stdout
     a = np.frombuffer(pcm, np.int16).astype(float)
     h = int(16000 * passo)
     n = len(a) // h
@@ -445,7 +449,8 @@ def encaixar_cortes(manter, db, passo, palavras=None):
 
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
-    db_voz = perfil_voz(ff, v["entrada"])
+    ganho = v.get("volume_db", 0)
+    db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
                                        [w for seg in trans for w in seg["words"]]))
