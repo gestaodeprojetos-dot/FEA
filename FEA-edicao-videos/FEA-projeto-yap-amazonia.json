@@ -5,8 +5,8 @@
   {
    "entrada": "raw/IMG_7101.MOV",
    "transcricao": "tr/IMG_7101.json",
-   "saida": "out/1- Como foi a minha experiência na Amazônia.mp4",
-   "titulo": "Como foi a minha experiência na Amazônia",
+   "saida": "out/1- Minha experiência na Amazônia.mp4",
+   "titulo": "Minha experiência na Amazônia",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -42,6 +42,10 @@
     [
      "\\btô\\b",
      "estou"
+    ],
+    [
+     "\\bAmazon Tucuna Amazon Boat\\b",
+     "Tucuna Amazon Boat"
     ]
    ]
   }
