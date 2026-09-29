@@ -47,6 +47,122 @@
      "\\bAmazon Tucuna Amazon Boat\\b",
      "Tucuna Amazon Boat"
     ]
+   ],
+   "inserts": [
+    {
+     "arquivo": "ins/p_IMG_0358.MOV",
+     "ini": 31.58,
+     "fim": 35.08,
+     "de": 0
+    },
+    {
+     "arquivo": "ins/r_IMG_0284.MOV",
+     "ini": 37.88,
+     "fim": 44.18,
+     "de": 2
+    },
+    {
+     "arquivo": "ins/p_IMG_0513.MOV",
+     "ini": 44.38,
+     "fim": 47.08,
+     "de": 2
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0368.jpg",
+     "ini": 47.08,
+     "fim": 49.78
+    },
+    {
+     "arquivo": "ins/r_IMG_0289.MOV",
+     "ini": 55.48,
+     "fim": 59.88,
+     "de": 8
+    },
+    {
+     "arquivo": "ins/jpg/r_IMG_3794.jpg",
+     "ini": 67.98,
+     "fim": 71.88
+    },
+    {
+     "arquivo": "ins/jpg/r_IMG_0325.jpg",
+     "ini": 78.58,
+     "fim": 82.18
+    },
+    {
+     "arquivo": "ins/p_IMG_0514.MOV",
+     "ini": 85.28,
+     "fim": 89.28,
+     "de": 1
+    },
+    {
+     "arquivo": "ins/p_IMG_0506.MOV",
+     "ini": 91.08,
+     "fim": 95.78,
+     "de": 2
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0508.jpg",
+     "ini": 95.78,
+     "fim": 99.28
+    },
+    {
+     "arquivo": "ins/jpg/r_IMG_0290.jpg",
+     "ini": 117.88,
+     "fim": 123.98
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0388.jpg",
+     "ini": 129.78,
+     "fim": 133.48
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0381.jpg",
+     "ini": 133.48,
+     "fim": 136.98
+    },
+    {
+     "arquivo": "ins/p_IMG_0481.MOV",
+     "ini": 151.28,
+     "fim": 155.88,
+     "de": 1
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0390.jpg",
+     "ini": 207.08,
+     "fim": 209.78
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0395.jpg",
+     "ini": 209.78,
+     "fim": 212.48
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0464.jpg",
+     "ini": 213.48,
+     "fim": 216.98
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0484.jpg",
+     "ini": 221.98,
+     "fim": 225.98
+    },
+    {
+     "arquivo": "ins/jpg/p_IMG_0492.jpg",
+     "ini": 235.98,
+     "fim": 238.98
+    },
+    {
+     "arquivo": "ins/p_IMG_0522.MOV",
+     "ini": 238.98,
+     "fim": 241.48,
+     "de": 1
+    },
+    {
+     "arquivo": "ins/p_IMG_0512.MOV",
+     "ini": 277.78,
+     "fim": 281.98,
+     "de": 1
+    }
    ]
   }
  ]

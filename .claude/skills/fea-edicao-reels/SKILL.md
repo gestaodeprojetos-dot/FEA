@@ -97,3 +97,10 @@ A fala dos 3 primeiros segundos fica só sob o título. O script descarta o peda
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Inserts (fotos e vídeos de apoio), pedido de 29/09/2026
+
+Campo `inserts` no vídeo do projeto.json: `{"arquivo", "ini", "fim", "de"}` com tempos do vídeo editado (segundos do bruto menos o início do `manter`). Foto entra em tela cheia com zoom lento (deitada: inteira no meio, fundo desfocado); vídeo entra sem som, a partir de `de`. A voz do Dr. continua e a legenda fica por cima. Fade de 0,25 s; inserts seguidos emendam direto, sem piscar o Dr.
+- **Todo insert precisa ter contexto** (regra da Keila): só entra quando a fala descreve o que a imagem mostra (avião no "teco-teco", peixe na régua em "medição na régua"). Sem relação clara, não entra.
+- Nunca durante a headline (3 s iniciais). Evitar foto com texto de story por cima e não identificar pessoas que a fala não nomeia.
+- HEIC: converter com `pillow-heif` (`pip install pillow-heif`) aplicando `ImageOps.exif_transpose`.

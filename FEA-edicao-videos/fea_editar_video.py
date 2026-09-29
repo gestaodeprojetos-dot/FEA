@@ -38,6 +38,7 @@ import json
 import re
 import subprocess
 import sys
+from PIL import Image
 
 W, H = 1080, 1920
 
@@ -367,11 +368,42 @@ def renderizar(cfg, v, previa=False):
     rnn = v.get("limpar_audio", cfg.get("limpar_audio"))
     audio = (f"[ac0]aresample=48000,highpass=f=80,arnndn=m='{rnn}':mix=0.95,afftdn=nr=10:nf=-45[ac];"
              if rnn else "[ac0]anull[ac];")
-    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac0];" + audio +
-              f"[vc]{espelho}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'")
     entradas = ["-i", v["entrada"]]
     cta = v.get("cta") or cfg.get("cta")
+    # inserts: fotos ou vídeos de apoio em tela cheia sobre a imagem do Dr. (a voz dele continua);
+    # tempos em segundos do vídeo editado, a legenda fica por cima
+    base = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac0];" + audio +
+            f"[vc]{espelho}scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+            f"fps=30,format=yuv420p")
+    prim = 2 if cta else 1
+    ins = v.get("inserts", [])
+    for k, it in enumerate(ins):
+        j, a, b = prim + k, it["ini"], it["fim"]
+        # insert seguido de outro: fica 0,25 s a mais por baixo, o próximo entra por cima (sem piscar o Dr.)
+        emenda = k + 1 < len(ins) and abs(ins[k + 1]["ini"] - b) < 0.05
+        if emenda:
+            b += 0.25
+        d = round(b - a, 3)
+        saida_fade = "" if emenda else f"fade=out:st={d - 0.25}:d=0.25:alpha=1,"
+        if it["arquivo"].lower().endswith((".jpg", ".jpeg", ".png")):
+            entradas += ["-i", it["arquivo"]]
+            iw, ih = Image.open(it["arquivo"]).size
+            nf = int(d * 30) + 1
+            zoom = f"zoompan=z='1+0.06*on/{nf}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={nf}:s={W}x{H}:fps=30"
+            if iw > ih:   # foto deitada: inteira no meio, fundo com a própria foto desfocada
+                img = (f"[{j}:v]split[f{k}][g{k}];[g{k}]scale={W}:{H}:force_original_aspect_ratio=increase,"
+                       f"crop={W}:{H},boxblur=30:3,setsar=1[gb{k}];[f{k}]scale={W}:-2,setsar=1[fs{k}];"
+                       f"[gb{k}][fs{k}]overlay=(W-w)/2:(H-h)/2,scale={W*11//10}:{H*11//10},{zoom}")
+            else:
+                img = (f"[{j}:v]scale={W*11//10}:{H*11//10}:force_original_aspect_ratio=increase,"
+                       f"crop={W*11//10}:{H*11//10},setsar=1,{zoom}")
+        else:
+            entradas += ["-ss", str(it.get("de", 0)), "-t", str(d + 0.1), "-i", it["arquivo"]]
+            img = (f"[{j}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps=30")
+        base += f"[b{k}];" + img + (f",trim=duration={d},format=yuva420p,fade=in:st=0:d=0.25:alpha=1,"
+                                    f"{saida_fade}setpts=PTS-STARTPTS+{a}/TB[i{k}];"
+                                    f"[b{k}][i{k}]overlay=eof_action=pass:enable='between(t,{a},{b})'")
+    filtro = base + f",format=yuv420p,ass='{esc}':fontsdir='{cfg['fontsdir']}'"
     if cta:   # vídeo de CTA colado no final, sem título nem legenda
         entradas += ["-i", cta]
         dcta = duracao_arquivo(ff, cta)
