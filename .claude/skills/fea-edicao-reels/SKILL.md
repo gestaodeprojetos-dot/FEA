@@ -104,3 +104,7 @@ Campo `inserts` no vídeo do projeto.json: `{"arquivo", "ini", "fim", "de"}` com
 - **Todo insert precisa ter contexto** (regra da Keila): só entra quando a fala descreve o que a imagem mostra (avião no "teco-teco", peixe na régua em "medição na régua"). Sem relação clara, não entra.
 - Nunca durante a headline (3 s iniciais). Evitar foto com texto de story por cima e não identificar pessoas que a fala não nomeia.
 - HEIC: converter com `pillow-heif` (`pip install pillow-heif`) aplicando `ImageOps.exif_transpose`.
+
+## Upload em qualidade total para o Drive (29/09/2026)
+
+A entrega pela conversa tem limite de 30 MB, e em vídeo longo isso derruba a qualidade: 5min50s fica com cerca de 0,5 Mbps, e o lote Yap ficou entre 0,9 e 2 Mbps. Quando as variáveis `FEA_GDRIVE_CLIENT_ID`, `FEA_GDRIVE_CLIENT_SECRET` e `FEA_GDRIVE_REFRESH_TOKEN` existirem no ambiente, renderizar **sem** `--entrega` (CRF 18, qualidade total) e subir com `python3 FEA-edicao-videos/fea_subir_drive.py ID_DA_PASTA out/*.mp4`. O script substitui o arquivo de mesmo nome. A conversa fica só para as prévias.
