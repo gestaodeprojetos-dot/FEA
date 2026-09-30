@@ -7,7 +7,7 @@
    "entrada": "raw/IMG_7203.MOV",
    "transcricao": "tr/IMG_7203.json",
    "saida": "out/Ads 092 - BFV.mp4",
-   "titulo": "20 de outubro: live de abertura",
+   "titulo": "Nunca mais compre nenhum curso de harmonização",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -17,7 +17,12 @@
      20.04
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.9,
+     5.45
+    ]
+   ],
    "correcoes": [
     [
      "\\b[Ss]aiba [Mm]ais\\b",
@@ -29,7 +34,7 @@
    "entrada": "raw/IMG_7205.MOV",
    "transcricao": "tr/IMG_7205.json",
    "saida": "out/Ads 093 - BFV.mp4",
-   "titulo": "Já pensou em nunca mais comprar um curso?",
+   "titulo": "Nunca mais compre um curso de harmonização facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -39,7 +44,12 @@
      21.71
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.9,
+     5.1
+    ]
+   ],
    "correcoes": [
     [
      "\\b[Ss]aiba [Mm]ais\\b",
@@ -51,7 +61,7 @@
    "entrada": "raw/IMG_7206.MOV",
    "transcricao": "tr/IMG_7206.json",
    "saida": "out/Ads 094 - BFV.mp4",
-   "titulo": "Eu mudei de vida graças ao estudo",
+   "titulo": "Estude comigo para sempre",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -61,7 +71,12 @@
      25.61
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.9,
+     3.8
+    ]
+   ],
    "correcoes": [
     [
      "\\b[Ss]aiba [Mm]ais\\b",
@@ -73,7 +88,7 @@
    "entrada": "raw/IMG_7207.MOV",
    "transcricao": "tr/IMG_7207.json",
    "saida": "out/Ads 095 - BFV.mp4",
-   "titulo": "E se eu te contasse?",
+   "titulo": "O seu último curso de harmonização facial",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -83,7 +98,12 @@
      27.34
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.9,
+     5.4
+    ]
+   ],
    "correcoes": [
     [
      "\\b[Ss]aiba [Mm]ais\\b",

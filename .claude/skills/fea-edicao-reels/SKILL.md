@@ -65,6 +65,8 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Lote Black Friday Vitalícia na clínica (26/09/2026): "botox" falado fica "botox" na legenda (não trocar por toxina botulínica); vídeo de bastidor da FEP Experience é publicado, não descartar; "a última oportunidade vai ser agora" aprovado; teasers curtos também entram; headlines escritas por ela no doc valem exatamente como escritas (inclusive maiúsculas).
 
 - Lote Yap 28/09 (falas motivacionais do Dr. João, 28/09/2026): pode passar de 3 minutos, não cortar nem dividir; sem CTA.
+- Pasta de destino "1. CAPTAÇÃO" (criativos BFV): nome `Ads NNN - BFV.mp4`, continuando depois do último número; números vagos (vídeos apagados) não são reaproveitados, para não misturar (Keila, 30/09/2026). Pasta com vídeo "CTA BLACK": colar no final quando ela pedir.
+- Headline escrita pela Keila com "pra": trocar por "para" (regra fixa FEA) e avisar.
 - Série Yap (qualquer pasta "Yap ...", inclusive Yap Amazonia de 29/09/2026, vlog de pescaria): mesmas regras, vídeo inteiro, sem CTA. Grafias confirmadas: Tucuna Amazon Boat (barco hotel), isca Conoflete, rio Cuiuni, Barcelos, Jorge (amigo).
 
 ## Headlines sem imagem de títulos
