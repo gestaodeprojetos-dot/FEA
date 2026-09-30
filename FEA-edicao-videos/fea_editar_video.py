@@ -227,6 +227,9 @@ CORRECOES = [
     (r"\bmeomodular\b", "miomodular"),
     # Whisper confunde "lábio" com "lado" em contexto labial (sons parecidos em fala rápida)
     (r"\blado inferior\b", "lábio inferior"), (r"\blado superior\b", "lábio superior"),
+    (r"\bpoli[- ]?[lL][- ]?l[aá]tico\b", "poli-L-lático"),
+    (r"\bpoli ?l[aá]tico\b", "poli-L-lático"),
+    (r"\bpolil[aá]tico\b", "poli-L-lático"),
 ]
 
 
