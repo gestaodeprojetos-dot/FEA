@@ -1,0 +1,95 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "cta": "raw/CTA_BLACK.MOV",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7203.MOV",
+   "transcricao": "tr/IMG_7203.json",
+   "saida": "out/Ads 092 - BFV.mp4",
+   "titulo": "20 de outubro: live de abertura",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.32,
+     20.04
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7205.MOV",
+   "transcricao": "tr/IMG_7205.json",
+   "saida": "out/Ads 093 - BFV.mp4",
+   "titulo": "Já pensou em nunca mais comprar um curso?",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.74,
+     21.71
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7206.MOV",
+   "transcricao": "tr/IMG_7206.json",
+   "saida": "out/Ads 094 - BFV.mp4",
+   "titulo": "Eu mudei de vida graças ao estudo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.3,
+     25.61
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7207.MOV",
+   "transcricao": "tr/IMG_7207.json",
+   "saida": "out/Ads 095 - BFV.mp4",
+   "titulo": "E se eu te contasse?",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.26,
+     27.34
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ]
+  }
+ ]
+}
