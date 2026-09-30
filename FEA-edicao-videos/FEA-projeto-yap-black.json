@@ -1,0 +1,196 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "cta": "raw/CTA_VITALICIO.MOV",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7226.MOV",
+   "transcricao": "tr/IMG_7226.json",
+   "saida": "out/1- Vou te dar um conselho estude.mp4",
+   "titulo": "Vou te dar um conselho: estude",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.24,
+     83.85
+    ]
+   ],
+   "remover_legenda": [
+    [
+     2.9,
+     4.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\bSui mais\\b",
+     "Sue mais"
+    ],
+    [
+     "\\bMunda dos fazedores\\b",
+     "O mundo é dos fazedores"
+    ],
+    [
+     "\\ba cara tapa\\b",
+     "a cara a tapa"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\besse um conselho é estude\\b",
+     "e esse conselho é: estude"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7227.MOV",
+   "transcricao": "tr/IMG_7227.json",
+   "saida": "out/2- Nunca mais compre um curso de harmonização facial.mp4",
+   "titulo": "Nunca mais compre um curso de harmonização facial",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.16,
+     68.62
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\bSui mais\\b",
+     "Sue mais"
+    ],
+    [
+     "\\bMunda dos fazedores\\b",
+     "O mundo é dos fazedores"
+    ],
+    [
+     "\\ba cara tapa\\b",
+     "a cara a tapa"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\besse um conselho é estude\\b",
+     "e esse conselho é: estude"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7228.MOV",
+   "transcricao": "tr/IMG_7228.json",
+   "saida": "out/3- Mais transpiração e menos inspiração.mp4",
+   "titulo": "Mais transpiração e menos inspiração",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.18,
+     72.08
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\bSui mais\\b",
+     "Sue mais"
+    ],
+    [
+     "\\bMunda dos fazedores\\b",
+     "O mundo é dos fazedores"
+    ],
+    [
+     "\\ba cara tapa\\b",
+     "a cara a tapa"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\besse um conselho é estude\\b",
+     "e esse conselho é: estude"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7229.MOV",
+   "transcricao": "tr/IMG_7229.json",
+   "saida": "out/4- Saiba se proteger.mp4",
+   "titulo": "Saiba se proteger",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.4,
+     101.79
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\bSui mais\\b",
+     "Sue mais"
+    ],
+    [
+     "\\bMunda dos fazedores\\b",
+     "O mundo é dos fazedores"
+    ],
+    [
+     "\\ba cara tapa\\b",
+     "a cara a tapa"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\besse um conselho é estude\\b",
+     "e esse conselho é: estude"
+    ]
+   ]
+  }
+ ]
+}
