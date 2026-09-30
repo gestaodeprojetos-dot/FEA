@@ -162,7 +162,7 @@ def quebrar_titulo(texto, max_linhas=3, dois_pontos=True):
         return max((sem_pausa, com_pausa), key=lambda t: tamanho_titulo(t.split(r"\N")))
     texto = re.sub(r"\b(\d{1,2}) de (\w+)", r"\1§de§\2", texto)   # datas inteiras
     texto = re.sub(r"\b(\d+) (mil|mL)\b", r"\1§\2", texto)          # "300 mil" nunca se separa
-    palavras = texto.replace("Black Friday", "Black§Friday").split()
+    palavras = re.sub(r"\b(Black|São) (Friday|Paulo)\b", r"\1§\2", texto).split()   # nomes que não se separam
 
     def particoes(ps, k):
         if k == 1:
@@ -232,7 +232,7 @@ def corrigir(texto, extras=()):
     return texto
 
 
-NOMES_PROPRIOS = {"Black", "Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
+NOMES_PROPRIOS = {"Black", "Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon", "Elite"}
 
 
 def limpar(texto):

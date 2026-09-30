@@ -68,6 +68,7 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Pasta de destino "1. CAPTAÇÃO" (criativos BFV): nome `Ads NNN - BFV.mp4`, continuando depois do último número; números vagos (vídeos apagados) não são reaproveitados, para não misturar (Keila, 30/09/2026). Pasta com vídeo "CTA BLACK": colar no final quando ela pedir.
 - Headline escrita pela Keila com "pra": trocar por "para" (regra fixa FEA) e avisar.
 - Lote Yap Black (30/09/2026): CTA VITALÍCIO nos vídeos da campanha; vídeo sem ligação com a Black Friday (ex.: "Saiba se proteger") fica sem CTA. Para isso, `cta` vai por vídeo no projeto.json, não no topo. Falas de faturamento do Dr. ("80 a 180 mil por dia") foram aprovadas por ela.
+- Elite Injectors Congress (EIC, 01 e 02/11/2026, São Paulo), lote de 30/09/2026: lembretes vão para a pasta LEMBRETE como `Ads 01 - Faltam 5 dias - EIC.mp4` ... `Ads 05 - Falta 1 dia - EIC`, `Ads 06 - É hoje - EIC` (numeração do maior para o menor prazo); o que não é lembrete vai para CAPTAÇÃO como `Ads NN - EIC`, continuando a sequência. CTA ELITE em todos. "Principal congresso de harmonização facial do Brasil" e "última chance" aprovados. "Elite" e "São Paulo" nunca se separam (NOMES_PROPRIOS e quebra do título).
 - Série Yap (qualquer pasta "Yap ...", inclusive Yap Amazonia de 29/09/2026, vlog de pescaria): mesmas regras, vídeo inteiro, sem CTA. Grafias confirmadas: Tucuna Amazon Boat (barco hotel), isca Conoflete, rio Cuiuni, Barcelos, Jorge (amigo).
 
 ## Headlines sem imagem de títulos

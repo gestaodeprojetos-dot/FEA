@@ -37,6 +37,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -76,6 +80,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -115,6 +123,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -133,7 +145,12 @@
      17.27
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.9,
+     3.7
+    ]
+   ],
    "correcoes": [
     [
      "\\btá\\b",
@@ -154,6 +171,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -193,6 +214,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -232,6 +257,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
@@ -250,7 +279,12 @@
      27.51
     ]
    ],
-   "remover_legenda": [],
+   "remover_legenda": [
+    [
+     2.8,
+     5.6
+    ]
+   ],
    "correcoes": [
     [
      "\\btá\\b",
@@ -271,6 +305,10 @@
     [
      "\\bÉ hoje galera\\b",
      "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
     ]
    ],
    "cta": "raw/CTA_ELITE.MOV"
