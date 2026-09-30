@@ -67,6 +67,7 @@ Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não pergunt
 - Lote Yap 28/09 (falas motivacionais do Dr. João, 28/09/2026): pode passar de 3 minutos, não cortar nem dividir; sem CTA.
 - Pasta de destino "1. CAPTAÇÃO" (criativos BFV): nome `Ads NNN - BFV.mp4`, continuando depois do último número; números vagos (vídeos apagados) não são reaproveitados, para não misturar (Keila, 30/09/2026). Pasta com vídeo "CTA BLACK": colar no final quando ela pedir.
 - Headline escrita pela Keila com "pra": trocar por "para" (regra fixa FEA) e avisar.
+- Lote Yap Black (30/09/2026): CTA VITALÍCIO nos vídeos da campanha; vídeo sem ligação com a Black Friday (ex.: "Saiba se proteger") fica sem CTA. Para isso, `cta` vai por vídeo no projeto.json, não no topo. Falas de faturamento do Dr. ("80 a 180 mil por dia") foram aprovadas por ela.
 - Série Yap (qualquer pasta "Yap ...", inclusive Yap Amazonia de 29/09/2026, vlog de pescaria): mesmas regras, vídeo inteiro, sem CTA. Grafias confirmadas: Tucuna Amazon Boat (barco hotel), isca Conoflete, rio Cuiuni, Barcelos, Jorge (amigo).
 
 ## Headlines sem imagem de títulos

@@ -1,13 +1,12 @@
 {
  "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
  "fontsdir": "../fonts",
- "cta": "raw/CTA_VITALICIO.MOV",
  "videos": [
   {
    "entrada": "raw/IMG_7226.MOV",
    "transcricao": "tr/IMG_7226.json",
-   "saida": "out/1- Vou te dar um conselho estude.mp4",
-   "titulo": "Vou te dar um conselho: estude",
+   "saida": "out/1- Ainda não chegou onde sonha Assista esse vídeo.mp4",
+   "titulo": "Ainda não chegou onde sonha? Assista esse vídeo",
    "parte": null,
    "cartela_final": null,
    "espelhar": false,
@@ -52,7 +51,8 @@
      "\\besse um conselho é estude\\b",
      "e esse conselho é: estude"
     ]
-   ]
+   ],
+   "cta": "raw/CTA_VITALICIO.MOV"
   },
   {
    "entrada": "raw/IMG_7227.MOV",
@@ -97,8 +97,13 @@
     [
      "\\besse um conselho é estude\\b",
      "e esse conselho é: estude"
+    ],
+    [
+     "\\b[Dd]eixo de você, 20 de outubro",
+     "20 de outubro"
     ]
-   ]
+   ],
+   "cta": "raw/CTA_VITALICIO.MOV"
   },
   {
    "entrada": "raw/IMG_7228.MOV",
@@ -144,7 +149,8 @@
      "\\besse um conselho é estude\\b",
      "e esse conselho é: estude"
     ]
-   ]
+   ],
+   "cta": "raw/CTA_VITALICIO.MOV"
   },
   {
    "entrada": "raw/IMG_7229.MOV",
