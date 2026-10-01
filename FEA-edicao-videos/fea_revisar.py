@@ -21,16 +21,32 @@ import fea_editar_video as fe  # noqa: E402
 LIMITE_MB = 30
 LIMITE_S = 180
 
+# nomes de produto e termos técnicos com todas as variantes que o Whisper inventa;
+# cada tupla: (regex de erro, nome correto, motivo curto para o relatório)
+PRODUTOS_CONHECIDOS = [
+    (r"\b[Ee] ?voar\b|\b[Ee]voá\b|\b[Ii]voar\b|\b[Ii]vo[aá]r?\b", "Yvoire", "é Yvoire"),
+    (r"\bcom ?o? ?tour\b|\b[Cc]ontur\b|\b[Cc]onto[uw]r\b(?! )", "Contour", "é Contour"),
+    (r"\bN[uú]vi[ao]\b|\bLúvia\b|\b[Nn]euvia\b(?! )", "Neauvia", "é Neauvia"),
+    (r"\b[Nn]euramiz\b|\b[Nn]euramise?\b|\b[Nn]uramis\b", "Neuramis", "é Neuramis"),
+    (r"\b[Qq]uiri?al[iy]s\b|\b[Kk]irialis\b|\b[Kk]iriális\b|\b[Cc]urial[iy]s\b", "Kirialys", "é Kirialys"),
+    (r"\b[Vv]ol(i|ai|y)me\b(?!.*Volyme)", "Volyme", "é Restylane Volyme"),
+    (r"\b[Rr]es(ch|t)ilane\b|\b[Rr]echiline\b", "Restylane", "é Restylane"),
+    (r"\b[Ss]ub ?[Ss]kin\b|\b[Ss]abskin\b", "Subskin", "é Perfectha Subskin"),
+    (r"\b[Rr]evan[ea]ss?e? [Qq]uiss?e?\b", "Revanesse Kiss", "é Revanesse Kiss"),
+    (r"\b[Rr]evan[ea]ss?e?\b(?! Kiss)", "Revanesse", "é Revanesse"),
+    (r"\b[Ll]et[iy]?bo\b|\bletbo\b|\b[Ll]etibol\b", "Letybo", "é Letybo"),
+    (r"\b[Ss]erint?ox\b|\b[Ss]erin?tox\b", "Seryntox", "é Seryntox"),
+    (r"\b[Vv]ietr[ei]\b|\b[Vv]ietry\b", "Vietri", "é Vietri"),
+    (r"\b[Pp]erfecta\b|\b[Pp]erfect?h?a\b(?! Subskin)", "Perfectha", "é Perfectha"),
+    (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic", "hialurônico", "é ácido hialurônico"),
+]
+
 # texto que nunca pode aparecer na legenda (regra -> motivo)
 PROIBIDO_LEGENDA = [
     (r"\b[Pp]ra\b|\b[Pp]ros?\b", "\"pra/pro\": sempre \"para\""),
     (r"(^|\s)ó(\s|$|[,.!?])", "interjeição \"ó\""),
     (r"\bpr[ée]dio\b", "\"prédio\": é pré-jowl"),
     (r"\b[Gg]elinh", "\"gelinho\": é G'"),
-    (r"\bN[uú]vi[ao]\b", "\"Nuvia\": é Neauvia"),
-    (r"\b[Qq]uirial|\b[Kk]irialis", "é Kirialys"),
-    (r"\b[Vv]ol(i|ai)me\b|[Rr]eschilane", "é Restylane Volyme"),
-    (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic", "é ácido hialurônico"),
     (r"\bbolos\b|\bbólos\b", "é bolus"),
     (r"\b[Tt]ier\b|\b[Tt]irtrof", "tear trough"),
     (r"(^|\s)%|\b0 0\b", "número incompleto (ex.: \"%\" sem o 1, \"0\" sem o ,2)"),
@@ -39,11 +55,17 @@ PROIBIDO_LEGENDA = [
     (r"\bml\b", "unidade: mL"),
     (r"\bid[ée]ia\b".replace("[ée]", "é"), "grafia antiga \"idéia\""),
     (r"\bsubimento\b", "\"subimento\": é submento"),
-    (r"\b[Nn]euramiz\b", "\"Neuramiz\": é Neuramis"),
-    (r"\b[Ee] ?voar\b", "\"Evoar\": é Yvoire"),
     (r"\bmeomodular\b", "\"meomodular\": é miomodular"),
     (r"\blado inferior\b", "\"lado inferior\": é lábio inferior"),
     (r"\blado superior\b", "\"lado superior\": é lábio superior"),
+    (r"\bhidroxapatita\b", "é hidroxiapatita"),
+    (r"\btessidual\b", "é tecidual"),
+    (r"\binterfacial\b", "é interfascial"),
+    (r"\bcarpulha\b|\b[Cc]arpulli\b", "é carpule"),
+    (r"\btempra\b", "é têmpora"),
+    (r"\bsubi?mento\b", "é submento"),
+    (r"\bmanejamento\b", "é planejamento"),
+    (r"\bintercorrente\b", "é intercorrência"),
 ]
 
 # falas que as regras mandam cortar: se aparecem no trecho mantido, conferir
@@ -58,6 +80,50 @@ FALA_SUSPEITA = [
     (r"sangr|sangue|escorr", "menção a sangue (conferir se escorre na imagem)"),
     (r"estour|quebr\w* a agulha", "agulha estourando"),
 ]
+
+
+MARGEM_TITULO_PX = 80   # margem mínima de cada lado (80 px = ~7,4% de 1080)
+LARGURA_SEGURA = fe.W - 2 * MARGEM_TITULO_PX   # área útil para o título (920 px)
+MAX_CHARS_TITULO_LINHA = 22   # acima disso, enxugar
+
+_font_titulo = None
+FATOR_ASS_PIL = 0.543   # libass renderiza menor que PIL no mesmo size; calibrado na referência
+
+
+def _carregar_fonte():
+    global _font_titulo
+    if _font_titulo is not None:
+        return _font_titulo
+    try:
+        from PIL import ImageFont
+        tam_pil = int(fe.TITULO_TAM * FATOR_ASS_PIL)
+        for base in [os.path.dirname(os.path.abspath(__file__)),
+                     os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts"),
+                     "/tmp/claude-0"]:
+            for root, _, files in os.walk(base):
+                for f in files:
+                    if "Montserrat" in f and "ExtraBold" in f and f.endswith(".ttf"):
+                        _font_titulo = ImageFont.truetype(os.path.join(root, f), tam_pil)
+                        return _font_titulo
+    except ImportError:
+        pass
+    return None
+
+
+def medir_titulo_px(texto):
+    """Largura em pixels da linha mais larga do título (Montserrat ExtraBold no tamanho ASS).
+    Retorna (largura_max, n_linhas). Se não conseguir medir com a fonte, estima por caracteres."""
+    linhas = texto.replace(r"\N", "\n").split("\n")
+    linhas = [re.sub(r"\{[^}]*\}", "", l).strip() for l in linhas]
+    font = _carregar_fonte()
+    if font:
+        from PIL import ImageDraw, Image
+        img = Image.new("L", (fe.W * 2, 200))
+        draw = ImageDraw.Draw(img)
+        larguras = [draw.textlength(l, font=font) for l in linhas]
+    else:
+        larguras = [len(l) * fe.TITULO_TAM * 0.55 for l in linhas]
+    return max(larguras) if larguras else 0, len(linhas), linhas
 
 
 def sonda(ff, arq):
@@ -115,9 +181,32 @@ def revisar(cfg, v, folhas=None):
     if v.get("parte") == 1 and not any(s > 1 and "Parte 2" in t for s, e, t in titulo):
         erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
 
+    # 2b. headline: margem e comprimento
+    titulo_formatado = fe.quebrar_titulo(v["titulo"])
+    if v.get("parte"):
+        titulo_formatado += rf"\N{{\fs{int(fe.TITULO_TAM * 0.62)}}}Parte {v['parte']}"
+    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
+    if larg_px > LARGURA_SEGURA:
+        erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
+    elif larg_px > LARGURA_SEGURA * 0.92:
+        aten.append(f"headline quase encostando na margem ({larg_px:.0f} px / {LARGURA_SEGURA} px): considerar enxugar")
+    for li in linhas_txt:
+        if len(li) > MAX_CHARS_TITULO_LINHA + 4:
+            erros.append(f"linha de headline com {len(li)} chars (\"{li}\"): máximo ~{MAX_CHARS_TITULO_LINHA}, enxugar o título")
+    if n_linhas > 2 and not v.get("parte"):
+        aten.append(f"headline com {n_linhas} linhas: título longo, considerar enxugar")
+
+    # 2c. nomes de produto no título (Whisper pode errar o título se veio da transcrição)
+    for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
+        if re.search(rx, v["titulo"]):
+            erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
+
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
     for s, e, t in legendas:
+        for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
+            if re.search(rx, t):
+                erros.append(f"[{s:5.1f}s] \"{t}\": {motivo} (nome de produto errado na legenda)")
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
@@ -129,18 +218,25 @@ def revisar(cfg, v, folhas=None):
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
-    # 3b. sincronia com o áudio (Keila 26/09: "as legendas não estão sincronizadas")
+    # 3b. sincronia com o áudio (Keila 26/09 e 01/10: "legendas não estão sincronizadas")
     for k, (s, e, t) in enumerate(legendas):
-        if s < fe.TITULO_DUR + 0.5:      # fala coberta pelo título não conta
+        if s < fe.TITULO_DUR + 0.5:
             continue
         i = int(s / ps)
-        antes = db[max(0, i - int(0.8 / ps)):i]
+        # atrasada: o Dr. já fala antes da legenda aparecer
+        antes = db[max(0, i - int(0.6 / ps)):i]
         fim_ant = legendas[k - 1][1] if k else 0
-        if len(antes) and (antes >= lim).mean() > 0.85 and s - fim_ant > 0.8:
-            erros.append(f"[{s:5.1f}s] \"{t}\": legenda atrasada (o Dr. já fala há quase 1 s sem legenda)")
-        depois = db[i:i + int(0.6 / ps)]
+        if len(antes) and (antes >= lim).mean() > 0.7 and s - fim_ant > 0.5:
+            erros.append(f"[{s:5.1f}s] \"{t}\": legenda atrasada (o Dr. já fala antes da legenda)")
+        # adiantada: legenda entra e ainda não tem voz
+        depois = db[i:i + int(0.5 / ps)]
         if len(depois) and (depois >= lim - 6).mean() < 0.1:
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda entra antes da fala (adiantada)")
+        # legenda termina muito depois da fala (Dr. parou, legenda ainda na tela)
+        j = int(e / ps)
+        antes_fim = db[max(0, j - int(0.8 / ps)):j]
+        if e - s > 1.5 and len(antes_fim) and (antes_fim >= lim - 6).mean() < 0.15:
+            aten.append(f"[{s:5.1f}s] \"{t}\": legenda fica na tela {e - s:.1f} s depois da fala acabar")
     texto_todo = " ".join(t for _, _, t in legendas)
     if re.search(r"(?<!ácido )\bhialurônico", texto_todo):
         erros.append("\"hialurônico\" sem \"ácido\" na frente: é ácido hialurônico")

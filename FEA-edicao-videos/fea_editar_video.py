@@ -148,6 +148,50 @@ def quebrar_linhas(texto):
     return melhor
 
 
+ABREVIACOES_TITULO = [
+    (r"\bPreenchimento\b", "Preench."),
+    (r"\bAplicação\b", "Aplic."),
+    (r"\bReavaliação\b", "Reaval."),
+    (r"\bComplicação\b", "Complic."),
+    (r"\bPlanejamento\b", "Planej."),
+    (r"\bBioestimulador\b", "Bioestim."),
+    (r"\bRinomodelação\b", "Rinomod."),
+    (r"\bHarmonização\b", "Harmon."),
+    (r"\bResultado\b", "Result."),
+    (r"\bTécnica\b", "Técn."),
+    (r" e resultado\b", " e result."),
+    (r" avançad[ao]\b", " avanç."),
+    (r" de toxina botulínica\b", " de toxina"),
+    (r" botulínica\b", " botulín."),
+    (r" do efeito ", " efeito "),
+    (r" em região de ", " em "),
+    (r" para não deixar ", " sem "),
+    (r" sem perder ", " mantendo "),
+    (r"Como fica o resultado da? ", "Result. "),
+]
+
+
+def condensar_titulo(texto, limite_chars=22):
+    """Encurta títulos longos por abreviação progressiva, sem perder o sentido clínico.
+    Retorna o título condensado e True se houve mudança."""
+    if r"\N" in texto:
+        linhas = texto.split(r"\N")
+        if all(len(l) <= limite_chars for l in linhas):
+            return texto, False
+    elif len(texto) <= limite_chars * 2:
+        return texto, False
+
+    original = texto
+    for rx, sub in ABREVIACOES_TITULO:
+        texto = re.sub(rx, sub, texto)
+        palavras = texto.split()
+        quebrado = quebrar_titulo(texto, limite_chars)
+        linhas = quebrado.split(r"\N")
+        if all(len(l.strip()) <= limite_chars for l in linhas) and len(linhas) <= 2:
+            break
+    return texto, texto != original
+
+
 def quebrar_titulo(texto, limite=22):
     """Título em linhas equilibradas: 2 linhas (como na referência) sempre que passar de 14
     caracteres, até ~22 por linha; 3 linhas só se não couber."""
@@ -291,7 +335,11 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
 
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
-    titulo = quebrar_titulo(v["titulo"])
+    titulo_txt = v["titulo"]
+    titulo_condensado, mudou = condensar_titulo(titulo_txt)
+    if mudou:
+        print(f"  Headline condensada: \"{titulo_txt}\" → \"{titulo_condensado}\"")
+    titulo = quebrar_titulo(titulo_condensado)
     if v.get("parte"):
         titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
