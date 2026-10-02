@@ -86,16 +86,18 @@ def cmd_append(args):
         args.obs or ""
     ]
     if args.link_brutos:
-        row[1] = f'=HYPERLINK("{args.link_brutos}","{args.doc or "Brutos"}")'
+        row[1] = f'=HYPERLINK("{args.link_brutos}";"{args.doc or "Brutos"}")'
     if args.link_editados:
-        row[5] = f'=HYPERLINK("{args.link_editados}","{args.salvar}")'
+        row[5] = f'=HYPERLINK("{args.link_editados}";"{args.salvar}")'
 
-    range_str = urllib.parse.quote(f"{SHEET_NAME}!A:H")
-    body = {"values": [row]}
-    result = sheets_request("POST",
-        f"values/{range_str}:append?valueInputOption=USER_ENTERED&insertDataOption=INSERT_ROWS",
-        body)
-    print(f"OK: linha adicionada em {result.get('updates', {}).get('updatedRange', '?')}")
+    # a aba tem linhas modelo só com "A fazer" no status e linhas vazias de separação no meio:
+    # gravar logo depois da última linha com A:F preenchido (o append da API grava depois
+    # das linhas modelo)
+    linhas = sheets_request("GET", "values/" + urllib.parse.quote(f"{SHEET_NAME}!A:H")).get("values", [])
+    livre = 1 + max((i + 1 for i, r in enumerate(linhas) if any(c.strip() for c in r[:6])), default=1)
+    range_str = urllib.parse.quote(f"{SHEET_NAME}!A{livre}:H{livre}")
+    result = sheets_request("PUT", f"values/{range_str}?valueInputOption=USER_ENTERED", {"values": [row]})
+    print(f"OK: linha gravada em {result.get('updatedRange', '?')}")
 
 def cmd_delete_row(args):
     sheet_id = None

@@ -1,0 +1,109 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "descricao": "Ads 097 e 098 - BFV (pasta Play na black). Headlines escolhidas pela Keila no doc FEA-revisao-headlines-black-ads-097-098 (02/10/2026): 097 opção A, 098 opção B. O 098 junta IMG_0775 (0 a 18,72 s) e IMG_0776 (a partir de 0,30 s), sem repetir 'com acesso vitalício'. CTA BLACK colado no final. Destino: 1. CAPTAÇÃO.",
+ "render": "Renderizado em 02/10/2026 com fea_editar_video.py da branch claude/tender-meitner-ek03p4 (campo cta por vídeo, título 140 px dos Ads BFV), qualidade total CRF 18. Revisão fea_revisar.py: 0 erro.",
+ "juncao_098": {
+  "origem": [
+   "raw/IMG_0775.MOV",
+   "raw/IMG_0776.MOV"
+  ],
+  "IMG_0775": [
+   0.0,
+   18.72
+  ],
+  "IMG_0776_inicio": 0.3,
+  "saida": "raw/IMG_0775_0776.mov"
+ },
+ "ajustes_transcricao": [
+  "IMG_7197: 'ini': true em 'até' (54,47 s) e em 'e' (58,97 s), para a legenda não deixar 'vida' e 'pagar' sozinhas piscando",
+  "IMG_0775_0776: 'vitalício,' termina em 3,39 s e 'então' começa em 3,88 s (medido no áudio; o Whisper atrasou 0,8 s e a legenda entrava depois da fala)"
+ ],
+ "drive": {
+  "brutos": "1EwYjBNN78CVU1qWf-wUOg9HsbaRcUqEM",
+  "destino_1_captacao": "1kHzS9TDYNTj_-YUGf4zsU78Pmkfr16g_",
+  "cta_black": "1UrXDt-YJjgefMSKVunSRKKG_ziAfmxvG",
+  "Ads 097 - BFV.mp4": "1Z2flgyOx5zq6ZSknu_Xui4o-h83i1ThH",
+  "Ads 098 - BFV.mp4": "1IcW_W11os6PH4GVh-qs0a3o6zmby_oFm"
+ },
+ "videos": [
+  {
+   "entrada": "raw/IMG_7197.MOV",
+   "transcricao": "tr/IMG_7197.json",
+   "saida": "out/Ads 097 - BFV.mp4",
+   "titulo": "Chegou a hora de se tornar meu aluno vitalício",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.6,
+     68.2
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\banezinho\\b",
+     "bonezinho"
+    ],
+    [
+     "\\bincluído\\b",
+     "incluída"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ],
+   "cta": "../b6/raw/CTA_BLACK.MOV"
+  },
+  {
+   "entrada": "raw/IMG_0775_0776.mov",
+   "transcricao": "tr/IMG_0775_0776.json",
+   "saida": "out/Ads 098 - BFV.mp4",
+   "titulo": "Todos os cursos, para o resto da vida",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.54,
+     57.8
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\banezinho\\b",
+     "bonezinho"
+    ],
+    [
+     "\\bincluído\\b",
+     "incluída"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ],
+   "cta": "../b6/raw/CTA_BLACK.MOV"
+  }
+ ]
+}

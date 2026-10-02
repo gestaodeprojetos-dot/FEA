@@ -81,6 +81,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Nome de paciente falado ou legendado: confirmar grafia.
 - Quantidade de vídeos diferente da quantidade de títulos na imagem.
 
+**Nunca questionar o que o Dr. João afirma no vídeo** (Keila, 02/10/2026, Ads 097 e 098 - BFV: "nunca duvide do que o dr está falando, se ele ta falando que é, é"). Oferta, bônus ("pós-graduação incluída") e frases como "quem se inscreveu nas anteriores não se arrependeu" ficam como ele fala, sem levar como ponto de dúvida.
+
 ## Correções de texto
 
 **Nome de produto: sempre pesquisar a grafia oficial** (site do fabricante ou distribuidor) antes de legendar, e adicionar em `CORRECOES`. Confirmados: Kirialys (Pharmaesthetics), Restylane Volyme (Galderma), Perfectha Subskin, Neauvia Intense e Stimulate, Yvoire Contour, Neuramis, Revanesse, Letybo, Seryntox. Termos: ácido hialurônico, bolus.
@@ -115,7 +117,7 @@ Planilha `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ`, aba EDIÇÕES. Atualiza
 - Quantidade de vídeos e nome da pasta
 - Se uma pasta de destino for excluída e deixar buraco na numeração (ex.: 1, 2, 4), renumerar ao criar a próxima pasta para ficar sequencial
 
-Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (mesmas chaves do Drive, escopo `spreadsheets`). Links sempre clicáveis: a planilha vai para quem posta nas redes.
+Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (grava logo depois da última linha preenchida, antes das linhas modelo "A fazer"; a planilha está em pt-BR, então fórmula usa `;`: `=HYPERLINK("url";"texto")`, com `,` dá #ERROR!) (mesmas chaves do Drive, escopo `spreadsheets`). Links sempre clicáveis: a planilha vai para quem posta nas redes.
 
 ## Armadilhas
 
