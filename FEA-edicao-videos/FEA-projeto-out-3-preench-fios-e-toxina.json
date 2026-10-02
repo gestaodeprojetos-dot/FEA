@@ -82,6 +82,12 @@
      "Volumax"
     ]
    ],
+   "remover_legenda": [
+    [
+     86.0,
+     86.4
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6954.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6954.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/4- Mento feminino.mp4"
@@ -211,6 +217,12 @@
      117.95
     ]
    ],
+   "remover_legenda": [
+    [
+     72.1,
+     72.4
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6966.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6966.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/10- Fios lisos em fronte.mp4",
@@ -283,6 +295,12 @@
     [
      "\\bunidade perfeita\\b",
      "unidade, perfeito"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     62.0,
+     68.4
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6971.MOV",
