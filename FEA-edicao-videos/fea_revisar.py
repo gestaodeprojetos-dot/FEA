@@ -228,6 +228,17 @@ def revisar(cfg, v, folhas=None):
 
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
+    # "fala_paciente": [[a, b], ...] em segundos do bruto: resposta baixa do paciente, conferida no
+    # áudio, que fica na legenda (Keila 02/10) mesmo sem passar na régua de volume do Dr.
+    _m = fe.encaixar_cortes(v["manter"], *fe.perfil_voz(ff, v["entrada"])[::2]) if v.get("fala_paciente") else []
+    def _ts(t):
+        off = 0.0
+        for a, b in _m:
+            if a <= t < b:
+                return off + t - a
+            off += b - a
+        return -1
+    pac_saida = [(_ts(a) - 0.3, _ts(b) + 0.3) for a, b in v.get("fala_paciente", []) if _ts(a) >= 0]
     def grafia_errada(rx, nome_certo, texto):
         # a regex pega variantes; a grafia oficial em si ("Letybo", "Neuramis") não é erro
         certos = {nome_certo, *nome_certo.split()}
@@ -241,9 +252,10 @@ def revisar(cfg, v, folhas=None):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
         if s < fe.TITULO_DUR - 0.01:
             erros.append(f"[{s:5.1f}s] legenda junto com o título")
+        paciente = any(a <= s <= b for a, b in pac_saida)   # fala baixa do paciente, conferida no áudio
         seg = db[int(s / ps):int(e / ps) + 1]
         # régua: 6 dB acima do ruído de fundo (lim = ruído + 12); o Dr. às vezes fala baixo
-        if len(seg) and (seg >= lim - 6).mean() < 0.35:
+        if len(seg) and (seg >= lim - 6).mean() < 0.35 and not paciente:
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")

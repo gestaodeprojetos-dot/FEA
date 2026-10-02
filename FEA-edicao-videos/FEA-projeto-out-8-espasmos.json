@@ -6,7 +6,7 @@
    "titulo": "Relato de caso: espasmos faciais",
    "manter": [
     [
-     11.75,
+     12.05,
      45.17
     ]
    ],
@@ -14,6 +14,12 @@
     [
      "\\bprotrangedor\\b",
      "constrangedor"
+    ]
+   ],
+   "fala_paciente": [
+    [
+     23.1,
+     24.2
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7256.MOV",
@@ -49,6 +55,12 @@
      119.03
     ]
    ],
+   "mover_palavra": [
+    [
+     102.02,
+     102.85
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7259.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7259.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/2- Planejamento para espasmos.mp4",
@@ -65,6 +77,14 @@
     ],
     [
      7.2,
+     29.45
+    ],
+    [
+     31.5,
+     37.1
+    ],
+    [
+     41.1,
      51.3
     ],
     [
@@ -89,6 +109,10 @@
     ],
     [
      205.33,
+     221.55
+    ],
+    [
+     224.15,
      227.1,
      "exato"
     ]
@@ -99,12 +123,8 @@
      6.1
     ],
     [
-     29.5,
-     31.4
-    ],
-    [
-     37.2,
-     41.0
+     13.3,
+     15.1
     ],
     [
      107.1,
@@ -113,10 +133,6 @@
     [
      177.2,
      178.2
-    ],
-    [
-     221.6,
-     223.95
     ]
    ],
    "correcoes": [
