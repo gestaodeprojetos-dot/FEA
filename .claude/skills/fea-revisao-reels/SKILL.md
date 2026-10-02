@@ -11,6 +11,8 @@ Nenhum vídeo vai para a Keila sem passar por esta revisão. A revisão tem 2 pa
 
 Um vídeo com qualquer ERRO volta para a edição. Cada ATENÇÃO precisa ser resolvida: corrigir, ou registrar por que está certa.
 
+**Rigor absoluto (Keila, 02/10/2026):** esses vídeos são publicados no perfil do Dr. João Pithon nas redes sociais, vistos por milhares de profissionais. Legenda errada diminui a autoridade do Dr. como médico. Não pode passar: grafia errada de termo técnico, palavra faltando na legenda, fala do paciente sem legenda, número cortado de enumeração, vídeo acima de 3 minutos. A revisão precisa pegar tudo isso antes da entrega.
+
 ## Como rodar
 
 ```
@@ -25,7 +27,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 |---|---|---|---|
 | 1 | H.264, nunca HEVC (tela preta no computador dela) | codec do arquivo | ERRO |
 | 2 | 1080x1920, abaixo de 30 MB | resolução e tamanho | ERRO |
-| 3 | Máximo 3 min, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil" | duração e cartela | ERRO |
+| 3 | **Máximo 3 min no total (conteúdo + CTA concatenado)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
 | 4 | Título exatamente o da imagem, nos 3 primeiros segundos, Montserrat ExtraBold 116 | texto do .ass contra o projeto | ERRO |
 | 4b | Título certo para o conteúdo: a imagem pode estar na ordem de postagem e não na dos arquivos | conferir a tabela arquivo -> título -> frase do Dr. | revisão manual |
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
@@ -36,7 +38,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
 | 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |
-| 9 | Grafias: Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial) | texto da legenda | ERRO |
+| 9 | Grafias: Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial), **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia"), **desse mento** (nunca "descimento" junto) | texto da legenda | ERRO |
 | 9c | Pontuação: vírgulas antes de conjunções (mas, porém, porque, pois, então) e marcadores (né, tá, viu) | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
@@ -48,6 +50,10 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 16 | Tudo que dá errado sai: sangue escorrendo, agulha estourando, intercorrência | folha de contato (visual) | revisão visual |
 | 17 | Cara ou gemido de dor: cortar, silenciar ou dar zoom | folha de contato e som sem fala | revisão visual |
 | 18 | Conversa de fundo: cortar ou silenciar | voz sem fala transcrita | revisão visual e de áudio |
+| 19 | **Fala do paciente legendada** (Keila, 02/10): quando o Dr. pergunta e o paciente responde, a resposta precisa aparecer na legenda | conferir trechos de diálogo na transcrição | ERRO |
+| 20 | **Título sem nome de produto** quando inventado (sem imagem de títulos). Ex.: "mento feminino" sim, "mento feminino com Volumax" não. Se o título veio da imagem, manter como está | conferir título contra lista de produtos | ERRO |
+| 21 | **Enumeração completa**: se o Dr. enumera (ex.: "pertuito 1, 2, 3, 4, 5, 6"), todos os números devem aparecer na legenda, não parar na metade | conferir sequências numéricas na transcrição vs legenda | ERRO |
+| 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos | duração do .mp4 final | ERRO |
 
 ## Revisão visual (obrigatória, não pular)
 

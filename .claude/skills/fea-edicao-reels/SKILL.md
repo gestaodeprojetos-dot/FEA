@@ -15,6 +15,8 @@ Padrão aprovado pela Keila em 23/09/2026 ("é assim mesmo que quero"). Detalhes
 
 Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
 
+**Títulos inventados (quando não há imagem de títulos):** nunca colocar nome de produto na headline (ex.: "mento feminino com Volumax" errado; "mento feminino" certo). Exceção: se a headline já veio pronta na imagem de títulos, manter como está (pedido da Keila, 02/10/2026).
+
 **Atenção à ordem (pedido da Keila, 26/09/2026):** a imagem de títulos às vezes está na **ordem de postagem**, e não na ordem dos arquivos. Nunca casar título e vídeo só pela posição. Para cada vídeo, ler a transcrição (o que o Dr. fala e faz) e escolher o título que descreve aquele conteúdo. Montar uma tabela `arquivo -> título -> motivo (frase do Dr. que confirma)` e conferir que cada título foi usado uma vez só. A numeração da saída (`1-`, `2-`...) segue a ordem da imagem, a de postagem. Vídeos sem título correspondente, ou títulos sem vídeo, vão para a Keila decidir antes de renderizar.
 
 ## Padrão visual (não mudar sem pedido)
@@ -23,13 +25,14 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
 | Título | Montserrat **ExtraBold 116** (tamanho ASS), branco, contorno preto sólido 4 px + sombra 1 px, centro exato do quadro, **2 linhas equilibradas** sempre que passar de 14 caracteres (até ~22 por linha; 3 linhas só se não couber), **entrelinha 0,78** (linhas bem próximas). Medido em pixels na referência da Keila em 24/09/2026: a linha mais longa ocupa ~2/3 da largura. Nos **3 primeiros segundos** |
-| Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 0,80 (medida na referência da Keila), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
-| Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
-| Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
+| Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 0,80 (medida na referência da Keila), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais. **Legendar toda fala audível, incluindo a do paciente** quando o Dr. pergunta e o paciente responde (ex.: "como ficou a anestesia?", paciente: "não senti nada"). Não pular a resposta do paciente (Keila, 02/10/2026) |
+| Sem CTA autoral | não colocar chamada de imersão criada pela edição (padrão desde 16/09). Quando houver CTA de campanha (ex.: `blackfriday_cta.mp4`), ele é concatenado ao final pelo `render_com_cta.py` |
+| **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
+| Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
 ## Regras de corte (critério da editora da equipe)
 
-- **Limite: 3 minutos.** Cortar o máximo necessário para caber.
+- **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).
 - Manter: explicação clínica, técnica, dosagens, planejamento, falas de autoridade do Dr. João, e trechos **sem fala** mostrando o procedimento.
 - Tirar: conversa fora do tema (agenda, assuntos pessoais), trechos parados sem ação ("deixa eu segurar"), repetições, final arrastado.
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
@@ -63,6 +66,12 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 8. **Revisão da Keila**: criar no Drive, dentro da pasta de destino, um Google Doc `FEA-revisao-legendas-<lote>` com as legendas de cada vídeo (`[mm:ss] texto`, extraídas dos .ass) e, no topo, os pontos para decidir. Enviar as prévias pelo `SendUserFile`.
 9. **Revisão obrigatória**: rodar a skill `fea-revisao-reels` (`python3 FEA-edicao-videos/fea_revisar.py projeto.json --folhas PASTA`) e olhar as folhas de contato. Só entrega com 0 ERRO e cada ATENÇÃO resolvida.
 10. **Final**: aplicar as correções, rodar sem `--previa` (qualidade total) e subir para a pasta de destino.
+11. **Planilha de controle de edições** (obrigatório, Keila 02/10/2026): atualizar a planilha `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ` na aba EDIÇÕES com:
+    - **Link da pasta de brutos** (não só o nome, o link clicável `https://drive.google.com/drive/folders/ID`)
+    - **Link da pasta do vídeo editado** (link clicável da pasta de destino)
+    - Quantidade de vídeos e nome da pasta
+    - A planilha vai para quem posta nas redes sociais: sem link, a pessoa não acha os vídeos
+    - Se a numeração de pastas ficou com buraco (ex.: 1, 2, 4 sem o 3), renomear para ficar sequencial ao criar a próxima pasta, ou criar a pasta com o número faltante
 
 ## Pontos para sempre levar à Keila antes de finalizar
 
@@ -78,6 +87,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 Grafias fixas (Keila, 26/09/2026): **Neauvia** (nunca Nuvia), **tear trough**, **1%** e **0,2** (número inteiro na legenda, o script junta "0" + ",2"). Legenda nunca tira palavra no meio da fala (só a palavra solta inventada no silêncio), para ficar sincronizada com o áudio.
 
+Grafias fixas (Keila, 02/10/2026): **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia" quando o contexto é anestesia; Whisper confunde), **desse mento** (duas palavras, nunca "descimento" junto). Quando o Dr. enumera algo (ex.: "pertuito 1, 2, 3, 4, 5, 6"), legendar **todos os números**, não parar na metade.
+
 Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x comprimento** ("2270", "22 70" ou "24-70" viram `22x70`, `24x70`); "G linha" vira `G'` e "G duas linhas" vira `G''`. Quando o Dr. fala "prédio" (a transcrição ouve assim), é **pré-jowl** (pedido de 25/09/2026). "Entre os prés" nas anestesias é pré-molar e fica como está.
 
 `CORRECOES` em `fea_editar_video.py` aplica a regra FEA (nunca "pra", sempre "para") e termos técnicos (carpule, têmpora, interfascial, hidroxiapatita, tecidual, sulco nasolabial, tan delta, mL...). Toda grafia nova confirmada pela Keila entra ali e, se for nome próprio, em `NOMES_PROPRIOS`. Conferir na tela do vídeo (caixa do produto) quando houver dúvida de marca.
@@ -87,6 +98,20 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 - `SendUserFile` aceita no máximo **30 MB** por arquivo. Para a Keila guardar no computador: **H.264** 1080p abaixo de 30 MB, em 2 passadas (`libx264 -preset medium -pass 1/2`, bitrate de vídeo = 27,5 MB x 8 / duração, menos 96 kbps do áudio AAC). **Nunca HEVC/H.265**: no computador dela o vídeo abre com tela preta e só áudio (aconteceu em 24/09/2026).
 - A conexão do Drive não sobe vídeos grandes. Caminho definitivo: conta de serviço `fea-upload-69@fea-edicao-videos.iam.gserviceaccount.com` (projeto Google Cloud FEA-edicao-videos), com Editor na pasta Setembro. **Bloqueio em 24/09/2026**: política `iam.disableServiceAccountKeyCreation` impede gerar a chave JSON; o administrador do Workspace precisa criar exceção só para o projeto. Com a chave, subir pela API do Drive (`supportsAllDrives=true`, upload resumable), guardando a chave em `.env` fora do git.
 - A máquina é temporária: vídeos só na nuvem se perdem se a sessão ficar parada. Scripts e projeto.json ficam no git.
+
+## Autonomia total no Drive (Keila, 02/10/2026)
+
+Autorização total para mexer no Drive sem perguntar: criar pasta, baixar vídeo, subir vídeo, renomear pasta. Não perguntar nada. Executar direto. A Keila não vai aceitar perguntas sobre permissão de Drive.
+
+## Planilha de controle de edições
+
+Planilha `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ`, aba EDIÇÕES. Atualizar após cada caso clínico com:
+- **Link da pasta de brutos** (clicável: `https://drive.google.com/drive/folders/ID_DA_PASTA`)
+- **Link da pasta do vídeo editado** (clicável)
+- Quantidade de vídeos e nome da pasta
+- Se uma pasta de destino for excluída e deixar buraco na numeração (ex.: 1, 2, 4), renumerar ao criar a próxima pasta para ficar sequencial
+
+**Limitação conhecida:** o escopo OAuth `drive.file` não permite editar planilhas criadas por outra conta. Usar a API do Google Sheets diretamente ou pedir que a planilha tenha permissão de edição para a conta do app.
 
 ## Armadilhas
 

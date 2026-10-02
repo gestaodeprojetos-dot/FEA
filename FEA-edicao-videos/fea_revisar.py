@@ -66,6 +66,10 @@ PROIBIDO_LEGENDA = [
     (r"\bsubi?mento\b", "é submento"),
     (r"\bmanejamento\b", "é planejamento"),
     (r"\bintercorrente\b", "é intercorrência"),
+    (r"\bhipertuitos?\b", "\"hipertuito\": é pertuito"),
+    (r"\bpicadinho\b", "\"picadinho\": é picadinha"),
+    (r"\b[Pp]arestesia\b", "\"parestesia\": é anestesia"),
+    (r"\bdescimento\b", "\"descimento\": é desse mento (duas palavras)"),
 ]
 
 # falas que as regras mandam cortar: se aparecem no trecho mantido, conferir

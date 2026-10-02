@@ -274,6 +274,13 @@ CORRECOES = [
     (r"\bpoli[- ]?[lL][- ]?l[aá]tico\b", "poli-L-lático"),
     (r"\bpoli ?l[aá]tico\b", "poli-L-lático"),
     (r"\bpolil[aá]tico\b", "poli-L-lático"),
+    # Keila 02/10: pertuito (nunca "hipertuito"), picadinha (nunca "picadinho"),
+    # parestesia→anestesia (Whisper confunde), descimento→desse mento
+    (r"\bhipertuitos?\b", "pertuitos"),
+    (r"\bhipertuito\b", "pertuito"),
+    (r"\bpicadinho\b", "picadinha"),
+    (r"\b[Pp]arestesia\b", "anestesia"),
+    (r"\bdescimento\b", "desse mento"),
 ]
 
 
