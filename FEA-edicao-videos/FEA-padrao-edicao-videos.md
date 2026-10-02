@@ -21,7 +21,7 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 | Item | Referência | Novo padrão |
 |------|-----------|-------------|
 | Fonte | sans-serif padrão do app | **Montserrat** (título ExtraBold, legenda Bold) |
-| Título | cerca de 95 px | **140 px**, centralizado, até 3 linhas equilibradas, contorno preto grosso (5 px) |
+| Título | cerca de 95 px | **ExtraBold 116 (ASS), entrelinha 0,78**, centralizado, 2 linhas equilibradas acima de 14 caracteres (até ~22 por linha), contorno preto sólido 4 px; medido na referência de 24/09 |
 | Legenda | cerca de 40 px, a 78% da altura | **Montserrat Bold 56 px, contorno preto, a ~80% da altura** (ajuste de 24/09: a versão de 36 px ficou pequena) |
 | Duração máxima | sem regra | **3 minutos**. Corta o máximo possível; se ainda passar, divide em Parte 1 e Parte 2 |
 | Divisão | não havia | Título igual com "Parte 1" (ou "Parte 2") embaixo; nos 3 s finais da Parte 1 entra "Parte 2 no perfil" no estilo do título |
@@ -32,6 +32,15 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 - Nunca "pra": sempre "para" (também "pro" vira "para o").
 - Correções técnicas fixas no script: carpule, têmpora, interfascial, bolus, mL, nomes de produto com grafia oficial.
 - Trechos em que a transcrição automática "inventa" fala sobre silêncio (por exemplo, "tchau" repetido) são removidos da legenda.
+- A interjeição "ó" não entra na legenda.
+- Cânula em calibre x comprimento (22x70); G linha = G', G duas linhas = G''.
+- Entrelinha 0,78 no título e 0,80 na legenda, medidas em pixels nas referências da Keila.
+- Vídeo começa assim que o Dr. começa a falar (sem silêncio no início) e nunca termina com frase cortada; trecho silencioso repetindo o procedimento do outro lado é cortado.
+- Cortar: espelho para a paciente se ver, pedido de "fecha o olho", conversa de fundo (ou silenciar) e conversa pessoal ou de histórico da paciente.
+- Cortar tudo que dá errado: sangramento visível, agulha estourando, intercorrência, dor, fala ao fundo, e o tempo procurando o pertuito.
+- Corte sempre no respiro entre palavras, nunca com o começo da palavra seguinte.
+- Legenda só aparece quando há voz no áudio: nada de palavra solta no silêncio.
+- Gemido ou expressão de dor da paciente: cortar ou silenciar; no meio do procedimento, zoom no ponto tratado.
 - A Keila revisa as legendas antes de finalizar.
 
 ## Pontos de atenção de compliance

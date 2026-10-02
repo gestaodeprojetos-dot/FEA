@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Google_Drive",
+      "mcp__Claude_Code_Remote__read_documentation",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_drive.py:*)",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_atualizar_planilha.py:*)",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_render_com_cta.py:*)",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_editar_video.py:*)",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_revisar.py:*)",
+      "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_transcrever.py:*)",
+      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_setup_google_oauth.sh:*)",
+      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_preparar_ambiente.sh:*)",
+      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_folha.sh:*)"
+    ]
+  }
+}

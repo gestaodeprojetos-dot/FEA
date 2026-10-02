@@ -1,0 +1,72 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4883.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4883.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/1- Planejamento full face 2mL e Fios.mp4",
+   "titulo": "Planejamento full face\n2mL e Fios",
+   "manter": [[0.3, 173.0]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4884.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4884.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/2- Técnica anestésica com SANEP.mp4",
+   "titulo": "Técnica anestésica\ncom SANEP",
+   "manter": [[28.0, 140.4]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4885.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4885.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/3- Preenchimento de refinamento das olheiras.mp4",
+   "titulo": "Preenchimento de refinamento\ndas olheiras",
+   "manter": [[0.7, 180.4]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4886.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4886.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/4- Pertuito nos lábios.mp4",
+   "titulo": "Pertuito nos lábios",
+   "manter": [[1.0, 61.0]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4888.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4888.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/5- Preenchimento labial Parte 1.mp4",
+   "titulo": "Preenchimento labial",
+   "parte": 1,
+   "manter": [[0.4, 105.0]],
+   "cartela_final": "Parte 2 no perfil"
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4888.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4888.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/6- Preenchimento labial Parte 2.mp4",
+   "titulo": "Preenchimento labial",
+   "parte": 2,
+   "manter": [[114.5, 280.0]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4889.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4889.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/7- Preenchimento perioral.mp4",
+   "titulo": "Preenchimento perioral",
+   "manter": [[1.1, 102.0]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4890.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4890.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/8- Fios PLA PCL em submento.mp4",
+   "titulo": "Fios PLA PCL\nem submento",
+   "manter": [[0.6, 92.0]]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/IMG_4891.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/tr/IMG_4891.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/91393a18-c58e-5d19-a755-da98632293f9/scratchpad/b6/out/9- Fios filler em pálpebra inferior.mp4",
+   "titulo": "Fios filler em\npálpebra inferior",
+   "manter": [[6.5, 72.0]]
+  }
+ ]
+}

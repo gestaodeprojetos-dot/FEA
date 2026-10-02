@@ -15,7 +15,7 @@ O projeto.json descreve cada vídeo de saída:
       "saida": "out/1- Planejamento full face 4mL.mp4",
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
-      "manter": [[0.0, 12.4], [15.1, 40.0]],    # trechos mantidos, em segundos do bruto
+      "manter": [[0.0, 12.4], [15.1, 40.0, "exato"]],  # trechos mantidos (s do bruto); "exato" = não encaixar
       "cartela_final": null                     # ex.: "Parte 2 no perfil"
     }
   ]
@@ -38,13 +38,15 @@ import sys
 
 W, H = 1080, 1920
 
-TITULO_TAM = 140       # referência original: ~95 px (pedido: título maior)
+TITULO_TAM = 116       # medido na referência da Keila (24/09): ExtraBold, ~2/3 da largura
 TITULO_DUR = 3.0
 LEGENDA_TAM = 56       # ajuste 24/09: legenda maior, igual à referência da Keila
 LEGENDA_Y = 1540       # centro da legenda (~80% da altura)
 CARTELA_DUR = 3.0
 MAX_CHARS_LINHA = 22
 MAX_PALAVRAS_BLOCO = 10
+ENTRELINHA_TITULO = 0.78   # linhas bem próximas, igual à referência (medido em pixels)
+ENTRELINHA_LEGENDA = 0.80  # idem, medido na referência de legenda
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
 
 
@@ -66,7 +68,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H00000000,&H60000000,0,0,0,0,100,100,0,0,1,4,1,5,80,80,0,1
 Style: Legenda,Montserrat Bold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
 
 [Events]
@@ -115,7 +117,22 @@ def blocos_legenda(palavras):
         atual.append(p)
     if atual:
         blocos.append(atual)
-    return blocos
+    # palavra curta sozinha ("tá", "ali") pisca na tela: junta com a frase vizinha
+    juntos = []
+    for i, b in enumerate(blocos):
+        if len(b) == 1 and len(b[0]["w"].strip(".,?!")) <= 5:
+            prox = blocos[i + 1] if i + 1 < len(blocos) else None
+            if prox and prox[0]["s"] - b[0]["e"] < 1.0:
+                prox.insert(0, b[0])
+                continue
+            # conectivo sozinho ("E", "Que", "Vou") que ficaria pendurado no fim da frase anterior: sai
+            if re.sub(r"[^\w]", "", b[0]["w"]).lower() in LIGACAO | {"vou", "é", "eu", "então"}:
+                continue
+            if juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0:
+                juntos[-1].append(b[0])
+                continue
+        juntos.append(b)
+    return juntos
 
 
 def quebrar_linhas(texto):
@@ -131,13 +148,58 @@ def quebrar_linhas(texto):
     return melhor
 
 
-def quebrar_titulo(texto, limite=16):
-    """Título em linhas equilibradas (até 3), cada uma com no máximo ~16 caracteres."""
+ABREVIACOES_TITULO = [
+    (r"\bPreenchimento\b", "Preench."),
+    (r"\bAplicação\b", "Aplic."),
+    (r"\bReavaliação\b", "Reaval."),
+    (r"\bComplicação\b", "Complic."),
+    (r"\bPlanejamento\b", "Planej."),
+    (r"\bBioestimulador\b", "Bioestim."),
+    (r"\bRinomodelação\b", "Rinomod."),
+    (r"\bHarmonização\b", "Harmon."),
+    (r"\bResultado\b", "Result."),
+    (r"\bTécnica\b", "Técn."),
+    (r" e resultado\b", " e result."),
+    (r" avançad[ao]\b", " avanç."),
+    (r" de toxina botulínica\b", " de toxina"),
+    (r" botulínica\b", " botulín."),
+    (r" do efeito ", " efeito "),
+    (r" em região de ", " em "),
+    (r" para não deixar ", " sem "),
+    (r" sem perder ", " mantendo "),
+    (r"Como fica o resultado da? ", "Result. "),
+]
+
+
+def condensar_titulo(texto, limite_chars=22):
+    """Encurta títulos longos por abreviação progressiva, sem perder o sentido clínico.
+    Retorna o título condensado e True se houve mudança."""
+    if r"\N" in texto:
+        linhas = texto.split(r"\N")
+        if all(len(l) <= limite_chars for l in linhas):
+            return texto, False
+    elif len(texto) <= limite_chars * 2:
+        return texto, False
+
+    original = texto
+    for rx, sub in ABREVIACOES_TITULO:
+        texto = re.sub(rx, sub, texto)
+        palavras = texto.split()
+        quebrado = quebrar_titulo(texto, limite_chars)
+        linhas = quebrado.split(r"\N")
+        if all(len(l.strip()) <= limite_chars for l in linhas) and len(linhas) <= 2:
+            break
+    return texto, texto != original
+
+
+def quebrar_titulo(texto, limite=22):
+    """Título em linhas equilibradas: 2 linhas (como na referência) sempre que passar de 14
+    caracteres, até ~22 por linha; 3 linhas só se não couber."""
     if r"\N" in texto:
         return texto
     palavras = texto.split()
     melhor = None
-    for k in range(1, 4):
+    for k in range(1 if len(texto) <= 14 else 2, 4):
         def particoes(ps, k):
             if k == 1:
                 yield [" ".join(ps)]
@@ -161,13 +223,27 @@ CORRECOES = [
     (r"\bpra\b", "para"), (r"\bPra\b", "Para"),
     (r"\bpros\b", "para os"), (r"\bpro\b", "para o"),
     (r"\bcarpulha\b", "carpule"),
+    (r"\b[Pp]r[ée]dio\b", "pré-jowl"),     # termo do Dr. (confirmado pela Keila, 25/09)
+    (r"\b[Gg]elinh[oa]s?\b", "G'"),
+    (r"\b[Tt]ier\b", "tear"), (r"\b[Tt]ir ?tr?of+\b", "tear trough"), (r"\b[Tt]ear ?trof+\b", "tear trough"),
+    (r"\bN[uú]vi[ao]\b", "Neauvia"),
+    # nomes de produto conferidos na fonte oficial (Keila, 26/09: "pesquise como é escrito")
+    (r"\b[QqKk]uiri?al[iy]s\b", "Kirialys"), (r"\b[Kk]irialis\b", "Kirialys"),
+    (r"\b[Vv]ol(i|ai|y)me\b", "Volyme"), (r"\b[Rr]es(ch|t)ilane\b", "Restylane"), (r"\b[Ss]ub ?[Ss]kin\b", "Subskin"),
+    (r"\b[aá]cido (hi)?al[uo]r[oô]nico\b", "ácido hialurônico"), (r"\b[aá]cido lor[oô]nico\b", "ácido hialurônico"),
+    (r"\bacel[eê]r[oô]nico\b", "ácido hialurônico"), (r"\b(?<!hi)al[uo]r[oô]nico\b", "hialurônico"),
+    (r"\bb[oó]l[ou]s\b", "bolus"), (r"\bLúvia\b", "Neauvia"),     # grafia oficial (Keila, 26/09)       # "gelinho" = G' (Keila, 26/09)
     (r"\btempra\b", "têmpora"),
     (r"\binterfacial\b", "interfascial"),
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),
     (r"\bRevanesse quisse\b", "Revanesse Kiss"),
     (r"\bNeuramis volume\b", "Neuramis Volume"),
-    (r"(\d) ?ml\b", r"\1 mL"),
-    (r"\b24-70\b", "24G 70 mm"),
+    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"),
+    # cânula: calibre x comprimento (ex.: "2270", "22 70", "24-70" -> 22x70)
+    (r"\b(18|2[0-7])[- /]?(38|40|50|70)\b", r"\1x\2"),
+    # G linha: "G linha" -> G' ; "G duas linhas" / "G linha linha" -> G''
+    (r"\b[Gg](?:ê)?[- ]?(?:duas linhas|linha linha)\b", "G''"),
+    (r"\b[Gg](?:ê)?[- ]?linha\b", "G'"),
     (r"\bboulos\b", "bolus"),
     (r"\b[Cc]arpulli\b", "carpule"),
     (r"\bSanep\b", "SANEP"),
@@ -185,15 +261,45 @@ CORRECOES = [
     (r"\bsuco\b", "sulco"), (r"\blábio mentual\b", "labiomentual"),
     (r"\balurônico\b", "hialurônico"), (r"\bmanejamento\b", "planejamento"),
     (r"\bintercorrente\b", "intercorrência"), (r"(\d) %", r"\1%"), (r"\bmeio ml\b", "meio mL"),
-    (r"\bVietre\b", "Vietri"), (r"\bEvoar Contour\b", "Yvoire Contour"),
+    (r"\bVietre\b", "Vietri"), (r"\b[Ee]voar Contour\b", "Yvoire Contour"),
     (r"\bSerintox\b", "Seryntox"),
     (r"\b(?:[Nn]uvia|Lúvia|[Nn]euvia) (?:Stimulate|Estimulate)\b", "Neauvia Stimulate"),
+    (r"\b[Ss]w[ea]l+ing ?f[aá]ct?or\b", "swelling factor"),
+    (r"\bsubi?mento\b", "submento"),
+    (r"\b[Nn]euramiz\b", "Neuramis"),
+    (r"\b[Ee] ?voar\b", "Yvoire"), (r"\bcom ?o? ?tour\b", "Contour"),
+    (r"\bmeomodular\b", "miomodular"),
+    # Whisper confunde "lábio" com "lado" em contexto labial (sons parecidos em fala rápida)
+    (r"\blado inferior\b", "lábio inferior"), (r"\blado superior\b", "lábio superior"),
+    (r"\bpoli[- ]?[lL][- ]?l[aá]tico\b", "poli-L-lático"),
+    (r"\bpoli ?l[aá]tico\b", "poli-L-lático"),
+    (r"\bpolil[aá]tico\b", "poli-L-lático"),
+    # Keila 02/10: pertuito (nunca "hipertuito"), picadinha (nunca "picadinho"),
+    # parestesia→anestesia (Whisper confunde), descimento→desse mento
+    (r"\bhipertuitos?\b", "pertuitos"),
+    (r"\bhipertuito\b", "pertuito"),
+    (r"\bpicadinho\b", "picadinha"),
+    (r"\b[Pp]arestesia\b", "anestesia"),
+    (r"\bdescimento\b", "desse mento"),
 ]
 
 
 def corrigir(texto, extras=()):
     for padrao, novo in list(CORRECOES) + [tuple(x) for x in extras]:
         texto = re.sub(padrao, novo, texto)
+    return texto
+
+
+def pontuar(texto):
+    """Insere vírgulas em posições comuns do português falado onde o Whisper omite."""
+    # antes de conjunções adversativas e explicativas (só se não há pontuação antes)
+    texto = re.sub(r"(\w) (mas|porém|portanto|entretanto) ", r"\1, \2 ", texto)
+    # antes de "porque", "pois", "então", "aí" quando precedidos de palavra (não no início)
+    texto = re.sub(r"(\w) (porque|pois|então|aí) ", r"\1, \2 ", texto)
+    # antes de "né", "tá", "viu" (marcadores discursivos)
+    texto = re.sub(r"(\w) (né|tá|viu)([.,?!\s]|$)", r"\1, \2\3", texto)
+    # evitar vírgula duplicada
+    texto = re.sub(r",\s*,", ",", texto)
     return texto
 
 
@@ -211,69 +317,275 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
+def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
+    """Uma linha de texto por evento, posicionada à mão, para controlar a entrelinha."""
+    partes = texto.split(r"\N")
+    if estilo == "Titulo":
+        tams = []
+        for p in partes:
+            m = re.match(r"\{\\fs(\d+)\}", p)
+            tams.append(int(m.group(1)) if m else TITULO_TAM)
+        alturas = [t * ENTRELINHA_TITULO for t in tams]
+        y = H / 2 - sum(alturas) / 2
+        saida = []
+        for p, h in zip(partes, alturas):
+            saida.append(f"Dialogue: {camada},{ts(s)},{ts(e)},Titulo,,0,0,0,,"
+                         f"{{\\an5\\pos({W // 2},{y + h / 2:.0f}){efeito}}}{p}\n")
+            y += h
+        return saida
+    base = LEGENDA_Y + 20
+    h = LEGENDA_TAM * ENTRELINHA_LEGENDA
+    n = len(partes)
+    return [f"Dialogue: {camada},{ts(s)},{ts(e)},Legenda,,0,0,0,,"
+            f"{{\\an2\\pos({W // 2},{base - (n - 1 - i) * h:.0f})}}{p}\n" for i, p in enumerate(partes)]
+
+
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
-    titulo = quebrar_titulo(v["titulo"])
+    titulo_txt = v["titulo"]
+    titulo_condensado, mudou = condensar_titulo(titulo_txt)
+    if mudou:
+        print(f"  Headline condensada: \"{titulo_txt}\" → \"{titulo_condensado}\"")
+    titulo = quebrar_titulo(titulo_condensado)
     if v.get("parte"):
         titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
-    linhas.append(f"Dialogue: 1,{ts(0)},{ts(TITULO_DUR)},Titulo,,0,0,0,,{{\\fad(0,250)}}{titulo}\n")
+    linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
         fim_legendas = ini
-        linhas.append(f"Dialogue: 1,{ts(ini)},{ts(duracao)},Titulo,,0,0,0,,{{\\fad(250,0)}}{quebrar_titulo(v['cartela_final'])}\n")
+        linhas += dialogos_linhas(1, ini, duracao, "Titulo", quebrar_titulo(v["cartela_final"]), r"\fad(250,0)")
     blocos = blocos_legenda(palavras)
+    carry = []
     for i, bloco in enumerate(blocos):
+        if carry:
+            bloco = carry + bloco
+            carry = []
         s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
-        if i + 1 < len(blocos):          # nunca duas legendas ao mesmo tempo
+        if i + 1 < len(blocos):
             e = min(e, blocos[i + 1][0]["s"])
-        # como na referência, a legenda só entra depois que o título sai
         s = max(s, TITULO_DUR)
         if s >= e or s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
-        texto = quebrar_linhas(limpar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ()))))
-        if e - s < max(0.2, 0.02 * len(texto)):   # rápido demais para ler (ex.: cortado pelo título)
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
             continue
-        linhas.append(f"Dialogue: 0,{ts(s)},{ts(e)},Legenda,,0,0,0,,{texto}\n")
+        texto = quebrar_linhas(limpar(pontuar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ())))))
+        if e - s < max(0.2, 0.02 * len(texto)):
+            carry = [p for p in bloco if p["s"] >= TITULO_DUR - 0.3]
+            continue
+        linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
+
+
+def perfil_voz(ff, entrada, passo=0.05, ganho_db=0):
+    """Volume (dB) do áudio do bruto em janelas de 50 ms e o limiar de voz:
+    12 dB acima do ruído de fundo (percentil 5: em vídeo com fala contínua o percentil 20 já é voz), nunca abaixo de 38 dB.
+    ganho_db aplica boost antes da análise (para vídeos com volume_db no projeto)."""
+    import numpy as np
+    af = ["-vn", "-ac", "1", "-ar", "16000"]
+    if ganho_db:
+        af = ["-af", f"volume={ganho_db}dB"] + af
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada] + af +
+                          ["-f", "s16le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(float)
+    h = int(16000 * passo)
+    n = len(a) // h
+    db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
+    return db, max(38.0, float(np.percentile(db, 5)) + 12), passo
+
+
+def ancorar_na_voz(palavras, db, limiar, passo):
+    """Tira da legenda só a palavra solta que a transcrição inventou no silêncio (sem voz e
+    isolada, a mais de 0,4 s das vizinhas) e encurta a palavra "esticada" até onde a voz
+    termina. Palavra no meio da fala nunca sai: tirar deixava a legenda com buracos e
+    fora de sincronia com o áudio (Keila, 26/09)."""
+    saida = []
+    for k, p in enumerate(palavras):
+        i0, i1 = max(0, int(p["s"] / passo)), min(len(db), int(p["e"] / passo) + 1)
+        voz = [i for i in range(i0, i1) if db[i] >= limiar - 6]
+        ant = palavras[k - 1]["e"] if k else -9
+        prox = palavras[k + 1]["s"] if k + 1 < len(palavras) else 1e9
+        isolada = p["s"] - ant > 0.25 or prox - p["e"] > 0.25
+        if not voz and isolada:
+            continue
+        s, e = p["s"], p["e"]
+        e0 = p.get("e0", e)
+        if not voz and prox - p["e"] > 2.0:
+            # palavra que a transcrição deixou segundos antes da frase dela, no silêncio ("Pra ...
+            # gente ver melhor"): se há voz logo antes da palavra seguinte, vai para lá
+            j0, j1 = int((prox - 0.7) / passo), int(prox / passo)
+            if any(db[i] >= limiar for i in range(max(0, j0), min(len(db), j1))):
+                d = min(0.5, p["e"] - p["s"])
+                saida.append(dict(p, s=prox - 0.02 - d, e=prox - 0.02))
+                continue
+        if e0 - s > 1.5:
+            # palavra "esticada" pela transcrição (ex.: "Pra" de 55 s a 69 s): a fala de verdade
+            # fica no fim do intervalo, logo antes da palavra seguinte
+            j1 = min(len(db), int(e0 / passo) + 1)
+            fala = [i for i in range(max(0, int(s / passo)), j1) if db[i] >= limiar]
+            if fala:
+                k = len(fala) - 1
+                while k > 0 and fala[k] - fala[k - 1] <= 3:
+                    k -= 1
+                s = max(fala[k] * passo - 0.05, e0 - 1.0)
+                e = min(e0, s + 1.0)
+                saida.append(dict(p, s=s, e=max(e, s + 0.15)))
+                continue
+        if not voz:
+            # palavra inteira marcada no silêncio, logo antes da fala: empurra até a voz começar
+            j = next((i for i in range(i1, min(len(db), i1 + int(1.0 / passo))) if db[i] >= limiar - 6), None)
+            if j is not None:
+                d = j * passo - 0.05 - s
+                s, e = s + d, e + d
+        if voz:
+            inicio = voz[0]
+            for vi in range(len(voz) - 1):
+                if voz[vi + 1] - voz[vi] <= 1:
+                    inicio = voz[vi]
+                    break
+            s = max(s, inicio * passo - 0.05)
+            if e - s > 0.8:
+                e = min(e, (voz[-1] + 1) * passo + 0.1)
+        gap = p["s"] - ant
+        if gap > 0.6:
+            look = max(0, int((p["s"] - min(gap, 1.0)) / passo))
+            vb = [i for i in range(look, i0) if db[i] >= limiar]
+            if len(vb) >= 3:
+                for vi in range(len(vb) - 1):
+                    if vb[vi + 1] - vb[vi] <= 1:
+                        s = min(s, vb[vi] * passo - 0.05)
+                        break
+        saida.append(dict(p, s=s, e=max(e, s + 0.15)))
+    return saida
+
+
+def encaixar_cortes(manter, db, passo, palavras=None):
+    """Leva cada ponto de corte para o respiro entre palavras, medido no áudio (o instante
+    mais silencioso logo antes ou logo depois do ponto): o vídeo não termina com o início
+    de outra palavra nem começa com o fim de uma (pedido da Keila, 24/09: "básico bem feito").
+    Não usa o tempo das palavras da transcrição, que erra em até 0,3 s."""
+    import numpy as np
+    fim_bruto = len(db) * passo
+    limiar = max(38.0, float(np.percentile(db, 5)) + 12)
+
+    def em_silencio(t):
+        i = int(t / passo)
+        return all(db[k] < limiar for k in range(max(0, i - 1), min(len(db), i + 2)))
+
+    def vale(t):
+        # fala contínua, sem silêncio perto: o ponto mais baixo a até 150 ms (entre duas palavras)
+        i0, i1 = max(0, int((t - 0.15) / passo)), min(len(db), int((t + 0.15) / passo) + 1)
+        i = min(range(i0, i1), key=lambda k: (round(db[k]), abs(k * passo - t)))
+        return round(i * passo + passo / 2, 3)
+
+    def fim_da_fala(b):
+        # primeiro instante de silêncio de 150 ms antes a 350 ms depois do ponto; sem silêncio, fica
+        for k in range(max(0, int((b - 0.15) / passo)), min(len(db), int((b + 0.35) / passo) + 1)):
+            if db[k] < limiar:
+                return round(k * passo + passo / 2, 3)
+        return vale(b)
+
+    def inicio_da_fala(a):
+        # último instante de silêncio de 350 ms antes a 150 ms depois do ponto; sem silêncio, fica
+        for k in range(min(len(db) - 1, int((a + 0.15) / passo)), max(-1, int((a - 0.35) / passo) - 1), -1):
+            if db[k] < limiar:
+                return round(k * passo + passo / 2, 3)
+        return vale(a)
+
+    novo = []
+    for trecho in manter:
+        a, b = trecho[0], trecho[1]
+        if len(trecho) > 2 and trecho[2] == "exato":   # ponto conferido à mão: não mexer
+            novo.append([a, b])
+            continue
+        a2 = a if a < 0.3 or em_silencio(a) else inicio_da_fala(a)
+        b2 = b if b > fim_bruto - 0.3 or em_silencio(b) else fim_da_fala(b)
+        novo.append([a2, b2] if b2 - a2 > 0.5 else [a, b])
+    return novo
 
 
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
+    ganho = v.get("volume_db", 0)
+    db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
+    v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
+                                       [w for seg in trans for w in seg["words"]]))
     if "legendas" in v:          # palavras já revisadas manualmente
         palavras = v["legendas"]
     else:
         palavras = []
         for seg in trans:
-            for i, w in enumerate(seg["words"]):
+            ws = [dict(w) for w in seg["words"]]
+            for i, w in enumerate(ws):
+                # pedaço sem espaço na frente (",2", "%") é continuação da palavra anterior:
+                # "0" + ",2" = "0,2" e "1" + "%" = "1%" (antes o número sumia da legenda)
+                if i and palavras and not w["w"].startswith(" "):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
+                # termo de duas palavras nunca se divide entre legendas ("tear trough", "swelling factor")
+                if palavras and w["w"].strip().lower().startswith("trough") and palavras[-1]["w"].strip().lower() in ("tier", "tear"):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
+                if palavras and w["w"].strip().lower().startswith("factor") and palavras[-1]["w"].strip().lower().endswith("swelling"):
+                    palavras[-1]["w"] += w["w"]
+                    palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                    continue
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
-                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), ini=(i == 0)))
+                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0)))
+    # "mover_palavra": [[inicio_na_transcricao, inicio_certo], ...] para a palavra que a
+    # transcrição pôs no lugar errado (conferido ouvindo o áudio)
+    for s0, s1 in v.get("mover_palavra", []):
+        for p in palavras:
+            if abs(p["s"] - s0) < 0.06:
+                d = min(0.5, p["e"] - p["s"])
+                p.update(s=s1, e=s1 + d, e0=s1 + d)
+    palavras.sort(key=lambda p: p["s"])
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
-    for a, b in v.get("remover_legenda", []):
+    for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
+    # interjeição "ó" (ex.: "aqui ó") não entra na legenda (pedido da Keila, 24/09)
+    palavras = [p for p in palavras if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
+    # legenda só onde há voz no áudio (pedido da Keila, 24/09: nada de palavra solta no silêncio)
+    if "legendas" not in v:
+        palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
 
-    partes, rotulos = [], []
+    # "silenciar": [[a, b], ...] em segundos do bruto (conversa de fundo, gemido ou som de dor
+    # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
+    # (cx, cy), frações da largura/altura, para não mostrar a paciente com expressão de dor.
+    mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    ganho = f",volume={v['volume_db']}dB" if v.get("volume_db") else ""
+    zooms = v.get("zoom", [])
+    partes, vrot, arot = [], [], []
     for i, (a, b) in enumerate(v["manter"]):
-        partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS[v{i}];"
-                      f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,"
+        partes.append(f"[0:a]atrim={a}:{b}{mudo}{ganho},asetpts=PTS-STARTPTS,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.02)}:d=0.02[a{i}]")
-        rotulos.append(f"[v{i}][a{i}]")
-    n = len(v["manter"])
+        arot.append(f"[a{i}]")
+        cortes = sorted({a, b} | {t for z in zooms for t in z[:2] if a < t < b})
+        for j, (x0, x1) in enumerate(zip(cortes, cortes[1:])):
+            f = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
+            z = next((z for z in zooms if z[0] <= x0 and x1 <= z[1]), None)
+            if z:
+                zw, zh = int(W / z[2]) // 2 * 2, int(H / z[2]) // 2 * 2
+                zx = min(max(0, int(z[3] * W - zw / 2)), W - zw)
+                zy = min(max(0, int(z[4] * H - zh / 2)), H - zh)
+                f += f",crop={zw}:{zh}:{zx}:{zy},scale={W}:{H}"
+            partes.append(f + f",setsar=1[v{i}_{j}]")
+            vrot.append(f"[v{i}_{j}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    filtro = (";".join(partes) + ";" + "".join(rotulos) + f"concat=n={n}:v=1:a=1[vc][ac];"
-              f"[vc]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
-              f"ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+    filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
+              + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
+              f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
-    if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
-        vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium",
-                 "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
-                 "-profile:v", "high", "-c:a", "aac", "-b:a", "96k"]
+    if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
+        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+                 "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
         filtro += ";[vo]scale=720:1280[vp]"
