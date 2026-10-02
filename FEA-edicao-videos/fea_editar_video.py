@@ -583,11 +583,9 @@ def renderizar(cfg, v, previa=False):
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
               f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
-    if previa == "entrega":   # 1080p H.264 abaixo de 30 MB (nunca HEVC: abre com tela preta)
-        vb = int(min(8000, 26.5 * 8 * 1024 * 1024 / 1000 / duracao - 96))
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium",
-                 "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
-                 "-profile:v", "high", "-c:a", "aac", "-b:a", "96k"]
+    if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
+        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+                 "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
         filtro += ";[vo]scale=720:1280[vp]"

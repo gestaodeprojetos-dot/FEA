@@ -26,7 +26,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
 | Título | Montserrat **ExtraBold 116** (tamanho ASS), branco, contorno preto sólido 4 px + sombra 1 px, centro exato do quadro, **2 linhas equilibradas** sempre que passar de 14 caracteres (até ~22 por linha; 3 linhas só se não couber), **entrelinha 0,78** (linhas bem próximas). Medido em pixels na referência da Keila em 24/09/2026: a linha mais longa ocupa ~2/3 da largura. Nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 0,80 (medida na referência da Keila), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais. **Legendar toda fala audível, incluindo a do paciente** quando o Dr. pergunta e o paciente responde (ex.: "como ficou a anestesia?", paciente: "não senti nada"). Não pular a resposta do paciente (Keila, 02/10/2026) |
-| Sem CTA autoral | não colocar chamada de imersão criada pela edição (padrão desde 16/09). Quando houver CTA de campanha (ex.: `blackfriday_cta.mp4`), ele é concatenado ao final pelo `render_com_cta.py` |
+| Sem CTA autoral | não colocar chamada de imersão criada pela edição (padrão desde 16/09). Quando houver CTA de campanha (ex.: `blackfriday_cta.mp4`), ele é concatenado ao final pelo `fea_render_com_cta.py` |
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
@@ -62,10 +62,10 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 4. **Mesmo material já editado?** Comparar quadros (miniaturas 27x48 em cinza a 5 fps, correlação normalizada). Correlação ~0,99 = mesmo material: mapear offset quadro a quadro a 30 fps e extrair os trechos `manter`. Zero correspondência = outro paciente, decidir os cortes pela transcrição.
 5. **Cortes**: ler a transcrição com tempos, escolher `manter` (segundos do bruto) cortando em pausas entre palavras. Marcar em `remover_legenda` trechos em que a transcrição inventou fala sobre silêncio.
 6. **projeto.json** (ver o docstring de `fea_editar_video.py`): `entrada`, `transcricao`, `saida`, `titulo`, `parte`, `cartela_final`, `manter`, `remover_legenda`, `correcoes` (regex extras do lote).
-7. **Prévia primeiro**: `python3 fea_editar_video.py projeto.json --previa` gera versão 720p abaixo de 30 MB. Com pressa, `--entrega` gera direto o final em H.264 1080p abaixo de 30 MB (dividir o lote em 2 projetos e rodar em paralelo). Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de mandar.
-8. **Revisão da Keila**: criar no Drive, dentro da pasta de destino, um Google Doc `FEA-revisao-legendas-<lote>` com as legendas de cada vídeo (`[mm:ss] texto`, extraídas dos .ass) e, no topo, os pontos para decidir. Enviar as prévias pelo `SendUserFile`.
+7. **Render final**: `python3 fea_render_com_cta.py projeto.json CTA.mp4` (H.264 1080p qualidade total + CTA). Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de subir.
+8. **Revisão da Keila**: ela revisa direto na pasta de destino do Drive. Pontos para ela decidir vão no resumo final da conversa, sem travar a entrega.
 9. **Revisão obrigatória**: rodar a skill `fea-revisao-reels` (`python3 FEA-edicao-videos/fea_revisar.py projeto.json --folhas PASTA`) e olhar as folhas de contato. Só entrega com 0 ERRO e cada ATENÇÃO resolvida.
-10. **Final**: aplicar as correções, rodar sem `--previa` (qualidade total) e subir para a pasta de destino.
+10. **Final**: aplicar as correções, rodar `fea_render_com_cta.py` (qualidade total) e subir com `fea_drive.py upload` para a pasta de destino.
 11. **Planilha de controle de edições** (obrigatório, Keila 02/10/2026): atualizar a planilha `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ` na aba EDIÇÕES com:
     - **Link da pasta de brutos** (não só o nome, o link clicável `https://drive.google.com/drive/folders/ID`)
     - **Link da pasta do vídeo editado** (link clicável da pasta de destino)
@@ -95,8 +95,12 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 
 ## Entrega e limites conhecidos
 
-- `SendUserFile` aceita no máximo **30 MB** por arquivo. Para a Keila guardar no computador: **H.264** 1080p abaixo de 30 MB, em 2 passadas (`libx264 -preset medium -pass 1/2`, bitrate de vídeo = 27,5 MB x 8 / duração, menos 96 kbps do áudio AAC). **Nunca HEVC/H.265**: no computador dela o vídeo abre com tela preta e só áudio (aconteceu em 24/09/2026).
-- A conexão do Drive não sobe vídeos grandes. Caminho definitivo: conta de serviço `fea-upload-69@fea-edicao-videos.iam.gserviceaccount.com` (projeto Google Cloud FEA-edicao-videos), com Editor na pasta Setembro. **Bloqueio em 24/09/2026**: política `iam.disableServiceAccountKeyCreation` impede gerar a chave JSON; o administrador do Workspace precisa criar exceção só para o projeto. Com a chave, subir pela API do Drive (`supportsAllDrives=true`, upload resumable), guardando a chave em `.env` fora do git.
+- **Qualidade total, sem limite de tamanho** (Keila, 02/10/2026: "não é para limitar, quero qualidade"). `--entrega` gera H.264 CRF 18, áudio AAC 192k 48 kHz, e o CTA entra por stream copy, sem recompressão. Nunca voltar a mirar 30 MB nem 2 passadas por bitrate. **Nunca HEVC/H.265**: no computador dela o vídeo abre com tela preta e só áudio (24/09/2026).
+- **Nunca entregar vídeo pelo chat** (`SendUserFile`): a entrega é sempre direto na pasta de destino do Drive.
+- **CTA Black Friday** (válido até 09/10/2026): todo vídeo editado termina com o CTA (`1FKH9yu_5Dyz31hmeSKIgyu-WzHcR2Nn8` no Drive, ~60 s). Renderizar com `python3 FEA-edicao-videos/fea_render_com_cta.py projeto.json CTA.mp4`.
+- **Limite de 3 min é do vídeo final, com o CTA** (Keila, 02/10/2026). Com CTA de ~60 s, o conteúdo fica em até ~120 s. O script acusa ERRO se passar.
+- **Upload, pasta e renomear**: `python3 FEA-edicao-videos/fea_drive.py upload PASTA_ID arquivos... [--substituir]`, `pasta PAI_ID "nome"`, `renomear ID "OK. nome"`, `testar`. Chaves só nas variáveis do ambiente (`FEA_GDRIVE_CLIENT_ID`, `FEA_GDRIVE_CLIENT_SECRET`, `FEA_GDRIVE_REFRESH_TOKEN`), nunca no código nem no git. Se `testar` falhar ou não mostrar Drive inteiro e Sheets, rodar `bash FEA-edicao-videos/fea_setup_google_oauth.sh` (link para a Keila autorizar uma vez).
+- Permissões do Drive e dos scripts ficam em `.claude/settings.json` (no git), então valem em toda conversa nova sem pedir confirmação.
 - A máquina é temporária: vídeos só na nuvem se perdem se a sessão ficar parada. Scripts e projeto.json ficam no git.
 
 ## Autonomia total no Drive (Keila, 02/10/2026)
@@ -111,7 +115,7 @@ Planilha `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ`, aba EDIÇÕES. Atualiza
 - Quantidade de vídeos e nome da pasta
 - Se uma pasta de destino for excluída e deixar buraco na numeração (ex.: 1, 2, 4), renumerar ao criar a próxima pasta para ficar sequencial
 
-**Limitação conhecida:** o escopo OAuth `drive.file` não permite editar planilhas criadas por outra conta. Usar a API do Google Sheets diretamente ou pedir que a planilha tenha permissão de edição para a conta do app.
+Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (mesmas chaves do Drive, escopo `spreadsheets`). Links sempre clicáveis: a planilha vai para quem posta nas redes.
 
 ## Armadilhas
 

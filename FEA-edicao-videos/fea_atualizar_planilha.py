@@ -17,8 +17,8 @@ Uso:
 
     python3 fea_atualizar_planilha.py delete-row --row 126
 
-Requer REFRESH_TOKEN_SHEETS no ambiente ou no .env com escopo spreadsheets.
-Se não houver, tenta o REFRESH_TOKEN padrão (drive.file) e avisa se não funcionar.
+Usa FEA_GDRIVE_CLIENT_ID, FEA_GDRIVE_CLIENT_SECRET e FEA_GDRIVE_REFRESH_TOKEN das variáveis
+do ambiente (o mesmo acesso do Drive, com escopo spreadsheets: fea_setup_google_oauth.sh).
 """
 import argparse, json, os, sys, urllib.request, urllib.parse, urllib.error
 
@@ -37,15 +37,12 @@ def load_env():
 
 def get_token():
     load_env()
-    rt = os.environ.get("REFRESH_TOKEN_SHEETS") or os.environ.get("REFRESH_TOKEN")
-    client_id = os.environ.get("GOOGLE_CLIENT_ID", "")
-    client_secret = os.environ.get("GOOGLE_CLIENT_SECRET", "")
-    if not rt:
-        print("ERRO: sem REFRESH_TOKEN_SHEETS nem REFRESH_TOKEN no ambiente.", file=sys.stderr)
-        print("Rode: bash fea_setup_sheets_oauth.sh", file=sys.stderr)
-        sys.exit(1)
-    if not client_id or not client_secret:
-        print("ERRO: GOOGLE_CLIENT_ID e GOOGLE_CLIENT_SECRET devem estar no .env", file=sys.stderr)
+    rt = os.environ.get("FEA_GDRIVE_REFRESH_TOKEN", "")
+    client_id = os.environ.get("FEA_GDRIVE_CLIENT_ID", "")
+    client_secret = os.environ.get("FEA_GDRIVE_CLIENT_SECRET", "")
+    if not (rt and client_id and client_secret):
+        print("ERRO: faltam FEA_GDRIVE_CLIENT_ID, FEA_GDRIVE_CLIENT_SECRET ou FEA_GDRIVE_REFRESH_TOKEN "
+              "nas variáveis do ambiente. Rode: bash fea_setup_google_oauth.sh", file=sys.stderr)
         sys.exit(1)
     data = urllib.parse.urlencode({
         "client_id": client_id, "client_secret": client_secret,
@@ -66,11 +63,9 @@ def sheets_request(method, path, body=None):
             return json.load(resp)
     except urllib.error.HTTPError as e:
         err = e.read().decode()
-        if e.code == 404 and "drive.file" in (os.environ.get("REFRESH_TOKEN_SHEETS") or ""):
-            print("ERRO 404: o token não tem acesso à planilha.", file=sys.stderr)
-            print("Rode: bash fea_setup_sheets_oauth.sh para gerar token com escopo spreadsheets.", file=sys.stderr)
-        else:
-            print(f"ERRO {e.code}: {err}", file=sys.stderr)
+        print(f"ERRO {e.code}: {err}", file=sys.stderr)
+        if e.code in (403, 404):
+            print("O acesso não inclui Sheets. Rode: bash fea_setup_google_oauth.sh", file=sys.stderr)
         sys.exit(1)
 
 def cmd_read(args):

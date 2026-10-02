@@ -18,7 +18,6 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fea_editar_video as fe  # noqa: E402
 
-LIMITE_MB = 30
 LIMITE_S = 180
 
 # nomes de produto e termos técnicos com todas as variantes que o Whisper inventa;
@@ -164,13 +163,10 @@ def revisar(cfg, v, folhas=None):
 
     # 1. formato de entrega
     codec, res, dur = sonda(ff, mp4)
-    mb = os.path.getsize(mp4) / 1024 / 1024
     if codec != "h264":
         erros.append(f"codec {codec}: tem que ser H.264 (HEVC abre com tela preta)")
     if res != (1080, 1920):
         erros.append(f"resolução {res}: tem que ser 1080x1920")
-    if mb >= LIMITE_MB:
-        erros.append(f"{mb:.1f} MB: acima de {LIMITE_MB} MB")
     if dur > LIMITE_S and not v.get("parte"):
         erros.append(f"{dur:.0f} s: passa de 3 min sem divisão em Parte 1/2")
 
