@@ -143,6 +143,8 @@ def quebrar_linhas(texto):
     for i in range(1, len(palavras)):
         l1, l2 = " ".join(palavras[:i]), " ".join(palavras[i:])
         d = abs(len(l1) - len(l2)) + (0 if len(l1) <= len(l2) + 4 else 3)
+        if (palavras[i - 1], palavras[i].strip(",.?!")) in (("Black", "Friday"), ("São", "Paulo")):
+            d += 50   # nomes que não se separam entre as linhas ("da Black / Friday Vitalícia")
         if d < dif:
             melhor, dif = l1 + r"\N" + l2, d
     return melhor
@@ -535,7 +537,7 @@ def renderizar(cfg, v, previa=False):
                     palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
                     continue
                 # palavra "esticada" sobre silêncio não fica mais de 1,2 s na tela
-                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0)))
+                palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0 or w.get("ini", False))))
     # "mover_palavra": [[inicio_na_transcricao, inicio_certo], ...] para a palavra que a
     # transcrição pôs no lugar errado (conferido ouvindo o áudio)
     for s0, s1 in v.get("mover_palavra", []):
