@@ -1,0 +1,272 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Planejamento 2mL",
+   "manter": [
+    [
+     0.0,
+     59.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bem voar com um tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\bum Yvoire Contour\\b",
+     "um Yvoire Contour"
+    ],
+    [
+     "\\bterço médico\\b",
+     "terço médio"
+    ],
+    [
+     "\\bbiogelizolumax\\b",
+     "Biogelis Volumax"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6951.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6951.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/1- Planejamento 2mL.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Técnica anestésica para o mento e comissura labial",
+   "manter": [
+    [
+     0.0,
+     70.0
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6952.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6952.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/2- Técnica anestésica para o mento e comissura labial.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Qual lado eu começo meu preenchimento de olheiras?",
+   "manter": [
+    [
+     0.0,
+     93.5
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6953.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6953.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/3- Qual lado eu começo meu preenchimento de olheiras.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Mento feminino",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     32.15
+    ],
+    [
+     75.4,
+     95.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Bb]iogelis [Vv]olumax\\b",
+     "Biogelis Volumax"
+    ],
+    [
+     "\\bvolumax\\b",
+     "Volumax"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6954.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6954.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/4- Mento feminino.mp4"
+  },
+  {
+   "titulo": "Técnica anestésica supraorbitário e supratroclear",
+   "manter": [
+    [
+     0.0,
+     78.25
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6955.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6955.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/5- Técnica anestésica supraorbitário e supratroclear.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Planejamento 60 fios lisos em face",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.0,
+     108.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6956.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6956.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/6- Planejamento 60 fios lisos em face Parte 1.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Planejamento 60 fios lisos em face",
+   "parte": 2,
+   "manter": [
+    [
+     111.3,
+     193.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6956.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6956.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/6- Planejamento 60 fios lisos em face Parte 2.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Fios lisos em região de bochechas",
+   "manter": [
+    [
+     0.0,
+     101.4
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6957.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6957.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/7- Fios lisos em região de bochechas.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Fios lisos em comissura labial",
+   "manter": [
+    [
+     0.9,
+     75.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6960.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6960.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/8- Fios lisos em comissura labial.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Fios lisos para glabela: miomodulação e sinal de 11",
+   "manter": [
+    [
+     0.0,
+     98.5
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6965.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6965.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/9- Fios lisos para glabela miomodulação e sinal de 11.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Fios lisos em fronte",
+   "manter": [
+    [
+     0.0,
+     11.55
+    ],
+    [
+     16.4,
+     117.95
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6966.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6966.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/10- Fios lisos em fronte.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Fios em submento",
+   "manter": [
+    [
+     0.0,
+     102.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6968.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6968.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/11- Fios em submento.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Planejamento padrão ouro toxina estética",
+   "manter": [
+    [
+     0.0,
+     93.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Mm][- ]pupilar\\b",
+     "médio-pupilar"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6969.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6969.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/12- Planejamento padrão ouro toxina estética.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação em glabela",
+   "manter": [
+    [
+     0.4,
+     50.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6970.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6970.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/13- Aplicação em glabela.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação em fronte",
+   "manter": [
+    [
+     4.3,
+     74.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6971.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6971.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/14- Aplicação em fronte.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação em orbiculares",
+   "manter": [
+    [
+     0.7,
+     49.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6972.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6972.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/15- Aplicação em orbiculares.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação nasal",
+   "manter": [
+    [
+     0.0,
+     71.9
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6973.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6973.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/16- Aplicação nasal.mp4",
+   "titulo_origem": "imagem"
+  }
+ ]
+}

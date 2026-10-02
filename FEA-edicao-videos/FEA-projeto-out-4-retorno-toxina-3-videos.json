@@ -1,0 +1,69 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Como fica o resultado da toxina para não deixar a ruga do Wi-Fi sem perder arqueamento?",
+   "manter": [
+    [
+     0.0,
+     104.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhackeado\\b",
+     "arqueado"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6945.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6945.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/1- Como fica o resultado da toxina para não deixar a ruga do Wi-Fi sem perder arqueamento.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Técnica avançada de mesobotox em orbiculares dos olhos",
+   "manter": [
+    [
+     0.0,
+     95.3
+    ]
+   ],
+   "remover_legenda": [
+    [
+     50.3,
+     50.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6946.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6946.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/2- Técnica avançada de mesobotox em orbiculares dos olhos.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Reavaliação e resultado do efeito Nefertiti",
+   "manter": [
+    [
+     0.0,
+     119.35
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6947.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6947.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti.mp4",
+   "titulo_origem": "imagem"
+  }
+ ]
+}

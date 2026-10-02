@@ -2,7 +2,9 @@
 """FEA: edição automática de vídeos verticais (Reels) no padrão da equipe.
 
 Uso:
-    python3 fea_editar_video.py projeto.json [--previa | --entrega]
+    python3 fea_editar_video.py projeto.json [--previa | --entrega | --so-legenda] [trecho_do_nome ...]
+
+--so-legenda gera só o .ass (rápido), para ler e conferir o texto antes do render.
 
 O projeto.json descreve cada vídeo de saída:
 {
@@ -122,6 +124,17 @@ def blocos_legenda(palavras):
     for i, b in enumerate(blocos):
         if len(b) == 1 and len(b[0]["w"].strip(".,?!")) <= 5:
             prox = blocos[i + 1] if i + 1 < len(blocos) else None
+            # fim de frase ("pura.", "fez?") volta para a frase dele, não vai para a próxima
+            # (antes saía "fez? Bem diferente", juntando a pergunta do Dr. com a resposta da paciente)
+            if b[0]["w"].strip()[-1:] in ".?!" and juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0 \
+                    and not b[0].get("ini"):
+                juntos[-1].append(b[0])
+                continue
+            # fala inteira de uma palavra ("Doeu?", a resposta "Não." da paciente) fica sozinha na
+            # tela: juntar misturava a fala do Dr. com a do paciente (Keila, 02/10/2026)
+            if b[0].get("ini") and b[0]["w"].strip()[-1:] in ".?!":
+                juntos.append(b)
+                continue
             if prox and prox[0]["s"] - b[0]["e"] < 1.0:
                 prox.insert(0, b[0])
                 continue
@@ -179,6 +192,11 @@ def condensar_titulo(texto, limite_chars=22):
         if all(len(l) <= limite_chars for l in linhas):
             return texto, False
     elif len(texto) <= limite_chars * 2:
+        return texto, False
+    # título da imagem tem que sair exato: só abrevia se nem em 3 linhas couber
+    # ("Técnica anestésica para o mento e comissura labial" saía "Técn. anestésica...")
+    if all(len(l) <= limite_chars + 3 for l in quebrar_titulo(texto, limite_chars).split(r"\N")) \
+            and quebrar_titulo(texto, limite_chars).count(r"\N") <= 2:
         return texto, False
 
     original = texto
@@ -238,7 +256,7 @@ CORRECOES = [
     (r"\bplanosinho\b", "planozinho"), (r"\bPlanosinho\b", "Planozinho"),
     (r"\bRevanesse quisse\b", "Revanesse Kiss"),
     (r"\bNeuramis volume\b", "Neuramis Volume"),
-    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"),
+    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"), (r"(\d) ?mg\b", r"\1 mg"),
     # cânula: calibre x comprimento (ex.: "2270", "22 70", "24-70" -> 22x70)
     (r"\b(18|2[0-7])[- /]?(38|40|50|70)\b", r"\1x\2"),
     # G linha: "G linha" -> G' ; "G duas linhas" / "G linha linha" -> G''
@@ -276,12 +294,60 @@ CORRECOES = [
     (r"\bpolil[aá]tico\b", "poli-L-lático"),
     # Keila 02/10: pertuito (nunca "hipertuito"), picadinha (nunca "picadinho"),
     # parestesia→anestesia (Whisper confunde), descimento→desse mento
-    (r"\bhipertuitos?\b", "pertuitos"),
-    (r"\bhipertuito\b", "pertuito"),
-    (r"\bpicadinho\b", "picadinha"),
-    (r"\b[Pp]arestesia\b", "anestesia"),
+    # lote de outubro (02/10/2026): variantes que o Whisper inventou nos casos de toxina e preenchimento
+    (r"\b[Ll]etibona\b", "Letybo na"), (r"\b[Ll]et[ií]b?(?:ol|ô|on|o)\b", "Letybo"), (r"\b[Ll]etipo\b", "Letybo"),
+    (r"\b[Cc]orrogador(es)?\b", r"corrugador\1"),
+    (r"\b[Pp]r[eé][- ]?jo(?:w|y|u)l?\b", "pré-jowl"), (r"\b(?<!pré-)jaw\b", "jowl"),
+    (r"\b[Bb]odoguinho\b", "buldoguinho"),
+    (r"\b[Aa]fecta\b", "Perfectha"), (r"\b[Pp]erfecta\b", "Perfectha"),
+    (r"\b[Ii]vo[aá]r\b", "Yvoire"),
+    (r"\bauto ?gelinh[ao]\b", "alto G'"),
+    (r"\b[aá]cido (?:hi)?(?:acil|acel|al|l)[uoeé]r[oô]nico\b", "ácido hialurônico"),
+    (r"\b(?:acil|acel)[uoeé]r[oô]nico\b", "ácido hialurônico"),
+    (r"\b[Ww]i-?[Ff]i(zinho)?\b", r"Wi-Fi\1"), (r"\b[Nn]efertit[ei]\b", "Nefertiti"),
+    (r"\b[Ll]etbo\b", "Letybo"),
+    (r"\b(?:[Hh]ip|[Pp]i)tose\b", "ptose"), (r"\b[Hh]iptose\b", "ptose"),
+    (r"\bFicadinha\b", "Picadinha"), (r"\bficadinha\b", "picadinha"),
+    # (antes "hipertuitos?" virava sempre "pertuitos": o singular saía no plural)
+    (r"\b[Hh]iper ?tu[ií]to(s?)\b", r"pertuito\1"), (r"\bpertu[ií]to(s?)\b", r"pertuito\1"),
+    (r"\bpicadinho(s?)\b", r"picadinha\1"), (r"\bPicadinho(s?)\b", r"Picadinha\1"),
+    # "parestesia" NÃO vira anestesia sempre: "sem nenhum paciente com parestesia" é o termo certo
+    # (complicação neural). Só quando o contexto é a anestesia em si ("como foi a parestesia?"),
+    # caso a caso, em "correcoes" do vídeo (Keila pediu em 02/10; conferir o contexto).
+    (r"\b([Cc]omo (?:foi|ficou|está|tá) a) parestesia\b", r"\1 anestesia"),
     (r"\bdescimento\b", "desse mento"),
 ]
+
+
+NUMEROS = {"um": "1", "dois": "2", "três": "3", "tres": "3", "quatro": "4", "cinco": "5", "seis": "6",
+           "sete": "7", "oito": "8", "nove": "9", "dez": "10", "onze": "11", "doze": "12"}
+
+
+def numerar_enumeracao(palavras):
+    """Enumeração com número por extenso misturado a algarismo ("1, 2, 3, quatro, cinco, seis":
+    a 2ª passada da transcrição devolve por extenso) vira toda em algarismo, para a legenda
+    mostrar todos os números iguais (Keila, 02/10/2026: pertuito 1 a 6)."""
+    def chave(w):
+        return re.sub(r"[^\w]", "", w).lower()
+
+    def eh_num(w):
+        return chave(w).isdigit()
+    mudou = True
+    while mudou:
+        mudou = False
+        for i, p in enumerate(palavras):
+            k = chave(p["w"])
+            if k not in NUMEROS:
+                continue
+            ant = palavras[i - 1] if i and p["s"] - palavras[i - 1]["e"] < 4.0 else None
+            prox = palavras[i + 1] if i + 1 < len(palavras) and palavras[i + 1]["s"] - p["e"] < 4.0 else None
+            # só dentro da lista: "3, quatro" ou "quatro, 5" (nunca "seis. Um paciente...")
+            if (ant and eh_num(ant["w"]) and ant["w"].strip().endswith(",")) or \
+                    (prox and eh_num(prox["w"]) and p["w"].strip().endswith(",")):
+                m = re.match(r"^(\s*)(\w+)(.*)$", p["w"])
+                p["w"] = m.group(1) + NUMEROS[k] + m.group(3)
+                mudou = True
+    return palavras
 
 
 def corrigir(texto, extras=()):
@@ -295,9 +361,13 @@ def pontuar(texto):
     # antes de conjunções adversativas e explicativas (só se não há pontuação antes)
     texto = re.sub(r"(\w) (mas|porém|portanto|entretanto) ", r"\1, \2 ", texto)
     # antes de "porque", "pois", "então", "aí" quando precedidos de palavra (não no início)
-    texto = re.sub(r"(\w) (porque|pois|então|aí) ", r"\1, \2 ", texto)
-    # antes de "né", "tá", "viu" (marcadores discursivos)
-    texto = re.sub(r"(\w) (né|tá|viu)([.,?!\s]|$)", r"\1, \2\3", texto)
+    # (nunca depois de palavra de ligação: "acho que aí eu vou", "e então", "é porque")
+    texto = re.sub(r"\b(?!(?i:que|e|é|de|do|da|o|a|os|as|por|para|se|mas|só|até|ou|nem|tipo)\b)(\w+) "
+                   r"(porque|pois|então|aí) ", r"\1, \2 ", texto)
+    # antes de "né" (marcador) e de "tá"/"viu" só no fim da frase ("..., tá?"): no meio, "tá" é o
+    # verbo ("a minha agulha tá de cima para baixo" ficava "agulha, tá de cima")
+    texto = re.sub(r"(\w) (né)([.,?!\s]|$)", r"\1, \2\3", texto)
+    texto = re.sub(r"(\w) (tá|viu)([.,?!]|$)", r"\1, \2\3", texto)
     # evitar vírgula duplicada
     texto = re.sub(r",\s*,", ",", texto)
     return texto
@@ -340,40 +410,92 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
             f"{{\\an2\\pos({W // 2},{base - (n - 1 - i) * h:.0f})}}{p}\n" for i, p in enumerate(partes)]
 
 
-def gerar_ass(v, palavras, duracao, caminho):
-    linhas = [ass_header()]
-    titulo_txt = v["titulo"]
-    titulo_condensado, mudou = condensar_titulo(titulo_txt)
-    if mudou:
-        print(f"  Headline condensada: \"{titulo_txt}\" → \"{titulo_condensado}\"")
-    titulo = quebrar_titulo(titulo_condensado)
+def juntar_texto(bloco):
+    """Texto do bloco. Começo de frase no meio do bloco ganha vírgula antes e minúscula
+    ("mesma coisa do outro lado Vocês veem" -> "mesma coisa do outro lado, vocês veem")."""
+    partes = []
+    for k, p in enumerate(bloco):
+        w = p["w"].strip()
+        if k and p.get("ini") and partes and partes[-1][-1:] not in ".?!" \
+                and re.sub(r"[^\w]", "", partes[-1]).lower() not in LIGACAO:
+            if partes[-1][-1:] not in ",;:":
+                partes[-1] += ","
+            chave = re.sub(r"[^\w]", "", w)
+            if w[:1].isupper() and chave not in NOMES_PROPRIOS and not (len(chave) > 1 and chave.isupper()):
+                w = w[:1].lower() + w[1:]
+        partes.append(w)
+    return " ".join(partes)
+
+
+TITULO_TAM_LONGO = 100   # título da imagem que não cabe em 3 linhas: 4 linhas um pouco menores
+
+
+def formatar_titulo(v):
+    """Texto ASS do título. Título que veio da imagem sai EXATO (nunca abrevia): se não couber em
+    3 linhas de ~22 caracteres, vai em 4 linhas com fonte 100 (Keila: título exato da imagem)."""
+    texto = v["titulo"]
+    if v.get("titulo_origem", "imagem") != "imagem":
+        texto, mudou = condensar_titulo(texto)
+        if mudou:
+            print(f"  Headline condensada: \"{v['titulo']}\" → \"{texto}\"")
+    titulo = quebrar_titulo(texto)
+    linhas = titulo.split(r"\N")
+    if len(linhas) > 3 or max(map(len, linhas)) > MAX_CHARS_LINHA + 3:
+        ps = texto.split()
+        def particoes(ps, k):
+            if k == 1:
+                yield [" ".join(ps)]
+                return
+            for i in range(1, len(ps) - k + 2):
+                for resto in particoes(ps[i:], k - 1):
+                    yield [" ".join(ps[:i])] + resto
+        linhas = min(particoes(ps, 4), key=lambda ls: max(map(len, ls)))
+        titulo = r"\N".join(rf"{{\fs{TITULO_TAM_LONGO}}}{l}" for l in linhas)
     if v.get("parte"):
         titulo += rf"\N{{\fs{int(TITULO_TAM * 0.62)}}}Parte {v['parte']}"
+    return titulo
+
+
+def gerar_ass(v, palavras, duracao, caminho):
+    linhas = [ass_header()]
+    titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
-        fim_legendas = ini
+        # a legenda continua por baixo da cartela (posições diferentes na tela): a fala dos
+        # 3 s finais da Parte 1 ficava sem legenda (Keila, 02/10/2026: toda fala legendada)
         linhas += dialogos_linhas(1, ini, duracao, "Titulo", quebrar_titulo(v["cartela_final"]), r"\fad(250,0)")
     blocos = blocos_legenda(palavras)
     carry = []
+    livre = 0.0     # a legenda anterior pegou tempo emprestado: esta só entra depois
     for i, bloco in enumerate(blocos):
         if carry:
             bloco = carry + bloco
             carry = []
-        s, e = bloco[0]["s"], bloco[-1]["e"] + 0.15
-        if i + 1 < len(blocos):
-            e = min(e, blocos[i + 1][0]["s"])
-        s = max(s, TITULO_DUR)
-        if s >= e or s >= fim_legendas:
+        if bloco[-1]["e"] <= TITULO_DUR:       # fala debaixo do título (padrão: sem legenda)
+            continue
+        s, e = max(bloco[0]["s"], TITULO_DUR, livre), bloco[-1]["e"] + 0.15
+        prox = blocos[i + 1] if i + 1 < len(blocos) else None
+        if prox:
+            e = min(e, prox[0]["s"])
+        if s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
         if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
             continue
-        texto = quebrar_linhas(limpar(pontuar(corrigir(" ".join(p["w"] for p in bloco), v.get("correcoes", ())))))
-        if e - s < max(0.2, 0.02 * len(texto)):
-            carry = [p for p in bloco if p["s"] >= TITULO_DUR - 0.3]
-            continue
+        texto = quebrar_linhas(limpar(pontuar(corrigir(juntar_texto(bloco), v.get("correcoes", ())))))
+        minimo = max(0.2, 0.02 * len(texto), 0.45 if len(bloco) == 1 else 0)
+        if e - s < minimo:
+            # curta demais: vai junto com a próxima, se couber em 2 linhas; senão fica na tela o
+            # mínimo para ler e a próxima entra um pouco depois (antes a palavra sumia ou o bloco
+            # juntado estourava as 2 linhas: "por isso que a gente está escolhendo aqui um produto...")
+            fala_inteira = len(bloco) == 1 and bloco[0].get("ini") and bloco[0]["w"].strip()[-1:] in ".?!"
+            if prox and not fala_inteira and len(texto) + len(juntar_texto(prox)) + 1 <= MAX_CHARS_LINHA * 2:
+                carry = [p for p in bloco if p["s"] >= TITULO_DUR - 0.3]
+                continue
+            e = min(s + minimo, fim_legendas)
+            livre = e
         linhas += dialogos_linhas(0, s, e, "Legenda", texto)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
@@ -544,6 +666,7 @@ def renderizar(cfg, v, previa=False):
                 d = min(0.5, p["e"] - p["s"])
                 p.update(s=s1, e=s1 + d, e0=s1 + d)
     palavras.sort(key=lambda p: p["s"])
+    palavras = numerar_enumeracao(palavras)
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
@@ -555,6 +678,8 @@ def renderizar(cfg, v, previa=False):
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
+    if previa == "legenda":   # só o .ass, para revisar o texto antes de renderizar
+        return duracao
 
     # "silenciar": [[a, b], ...] em segundos do bruto (conversa de fundo, gemido ou som de dor
     # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
@@ -605,8 +730,9 @@ def renderizar(cfg, v, previa=False):
 
 def main():
     args = sys.argv[1:]
-    previa = "entrega" if "--entrega" in args else ("--previa" in args)
-    args = [a for a in args if a not in ("--previa", "--entrega")]
+    previa = ("entrega" if "--entrega" in args else "legenda" if "--so-legenda" in args
+              else ("--previa" in args))
+    args = [a for a in args if a not in ("--previa", "--entrega", "--so-legenda")]
     cfg = json.load(open(args[0], encoding="utf-8"))
     so = args[1:] or None
     for v in cfg["videos"]:

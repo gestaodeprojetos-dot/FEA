@@ -1,0 +1,201 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Planejamento estratégico",
+   "manter": [
+    [
+     0.0,
+     106.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7174.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7174.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/1- Planejamento estratégico.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Anestesia não é perda de tempo, é conforto",
+   "manter": [
+    [
+     0.0,
+     77.15
+    ],
+    [
+     92.2,
+     104.25
+    ],
+    [
+     132.85,
+     148.4,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     132.6,
+     133.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7176.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7176.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/2- Anestesia não é perda de tempo, é conforto.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Anestesia no mentoniano para procedimento estético não é tudo igual",
+   "manter": [
+    [
+     0.0,
+     62.5
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7177.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7177.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/3- Anestesia no mentoniano para procedimento estético não é tudo igual.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Comissura sem dor",
+   "manter": [
+    [
+     0.6,
+     43.5
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7178.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7178.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/4- Comissura sem dor.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Olheiras com Subskin",
+   "manter": [
+    [
+     0.0,
+     20.3
+    ],
+    [
+     25.0,
+     42.9
+    ],
+    [
+     50.1,
+     77.6
+    ],
+    [
+     91.6,
+     142.95
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7179.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7179.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/5- Olheiras com subskin.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Pré-jowl, conectando as estruturas",
+   "manter": [
+    [
+     0.0,
+     69.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7182.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7182.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/7- Pré jowl, conectando as estruturas.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Reologia para comissura",
+   "manter": [
+    [
+     4.0,
+     69.4
+    ]
+   ],
+   "remover_legenda": [
+    [
+     50.9,
+     51.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7183.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7183.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/8- Reologia para comissura.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Planejamento toxina estética",
+   "manter": [
+    [
+     0.0,
+     119.5
+    ]
+   ],
+   "remover_legenda": [
+    [
+     90.0,
+     91.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7175.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7175.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/9- Planejamento toxina estética.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Orbiculares com Letybo",
+   "manter": [
+    [
+     0.0,
+     76.9
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7184.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7184.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/10- Orbiculares com Letybo.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Arqueamento do olhar com toxina",
+   "manter": [
+    [
+     0.0,
+     118.45
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7185.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7185.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/11- Arqueamento do olhar com toxina.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Espero marcar para iniciar meu botox?",
+   "manter": [
+    [
+     0.2,
+     77.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7186.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7186.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/12- Espero marcar para iniciar meu botox.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação no nasal",
+   "manter": [
+    [
+     0.4,
+     53.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7187.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7187.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/13- Aplicação no nasal.mp4",
+   "titulo_origem": "imagem"
+  }
+ ]
+}

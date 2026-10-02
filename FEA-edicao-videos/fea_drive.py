@@ -9,6 +9,8 @@ Uso:
     python3 fea_drive.py pasta PASTA_PAI_ID "9- Espasmos"      # imprime o ID (reaproveita se já existe)
     python3 fea_drive.py renomear ARQUIVO_ID "OK. Espasmos"
     python3 fea_drive.py testar                                 # confere chave e escopos
+    python3 fea_drive.py baixar PASTA_OU_ARQUIVO_ID DESTINO     # baixa a pasta inteira (ou 1 arquivo)
+    python3 fea_drive.py listar PASTA_ID                        # id | nome | MB | duração
 
 --substituir manda para a lixeira o arquivo de mesmo nome na pasta antes de subir.
 """
@@ -119,6 +121,68 @@ def cmd_renomear(args):
     print(f"OK: {nome}")
 
 
+def filhos(tk, pasta):
+    url = API + "?" + urllib.parse.urlencode({
+        "q": f"'{pasta}' in parents and trashed = false", "pageSize": "1000", "orderBy": "name",
+        "fields": "files(id,name,mimeType,size,videoMediaMetadata)", "supportsAllDrives": "true",
+        "includeItemsFromAllDrives": "true"})
+    return json.load(chamar(tk, "GET", url))["files"]
+
+
+def cmd_listar(args):
+    tk, _ = token()
+    for f in filhos(tk, args[0]):
+        d = int(f.get("videoMediaMetadata", {}).get("durationMillis", 0)) / 1000
+        print(f"{f['id']} | {f['name']} | {int(f.get('size', 0)) / 1e6:.0f} MB | {d:.1f} s")
+
+
+def baixar_arquivo(tk, fid, destino, tamanho=None, tentativas=5):
+    """Baixa em blocos (vídeo grande), retomando de onde parou se a conexão cair, e só renomeia
+    no fim: arquivo pela metade nunca fica com o nome final (a conexão às vezes fecha sem erro
+    e o .MOV ficava truncado, "moov atom not found")."""
+    tmp = destino + ".parcial"
+    open(tmp, "wb").close()
+    for _ in range(tentativas):
+        feito = os.path.getsize(tmp)
+        h = {"Range": f"bytes={feito}-"} if feito else {}
+        try:
+            with chamar(tk, "GET", f"{API}/{fid}?alt=media&supportsAllDrives=true", cabecalhos=h) as r, \
+                    open(tmp, "ab") as f:
+                while True:
+                    bloco = r.read(1024 * 1024)
+                    if not bloco:
+                        break
+                    f.write(bloco)
+        except (urllib.error.URLError, ConnectionError, TimeoutError, OSError) as e:
+            print(f"  conexão caiu ({e}), retomando...", flush=True)
+        if tamanho is None or os.path.getsize(tmp) >= tamanho:
+            break
+    if tamanho is not None and os.path.getsize(tmp) != tamanho:
+        raise RuntimeError(f"download incompleto: {destino} ({os.path.getsize(tmp)} de {tamanho} bytes)")
+    os.replace(tmp, destino)
+
+
+def cmd_baixar(args):
+    from concurrent.futures import ThreadPoolExecutor
+    alvo, destino = args
+    tk, _ = token()
+    os.makedirs(destino, exist_ok=True)
+    meta = json.load(chamar(tk, "GET", f"{API}/{alvo}?supportsAllDrives=true&fields=id,name,mimeType,size"))
+    itens = filhos(tk, alvo) if meta["mimeType"] == PASTA_MIME else [meta]
+    itens = [f for f in itens if f["mimeType"] != PASTA_MIME]
+
+    def um(f):
+        caminho = os.path.join(destino, f["name"])
+        if os.path.exists(caminho) and os.path.getsize(caminho) == int(f.get("size", -1)):
+            return f"já existe: {f['name']}"
+        baixar_arquivo(tk, f["id"], caminho, int(f["size"]) if "size" in f else None)
+        return f"OK: {f['name']} ({os.path.getsize(caminho) / 1e6:.0f} MB)"
+
+    with ThreadPoolExecutor(4) as ex:
+        for msg in ex.map(um, itens):
+            print(msg, flush=True)
+
+
 def cmd_testar(_):
     _, escopos = token()
     print("acesso OK. escopos:", escopos)
@@ -127,7 +191,8 @@ def cmd_testar(_):
 
 
 if __name__ == "__main__":
-    cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "testar": cmd_testar}
+    cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "testar": cmd_testar,
+            "baixar": cmd_baixar, "listar": cmd_listar}
     if len(sys.argv) < 2 or sys.argv[1] not in cmds:
         sys.exit(__doc__)
     cmds[sys.argv[1]](sys.argv[2:])
