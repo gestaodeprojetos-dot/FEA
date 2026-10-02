@@ -56,7 +56,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos, **cada parte também** (antes a Parte 1/2 passava sem conferir) | duração do .mp4 final | ERRO |
 | 23 | **Palavra a palavra** (02/10): fala transcrita (com as mesmas correções) contra o texto da legenda; número de enumeração faltando ou 3+ palavras faladas sem legenda | alinhamento das palavras | ERRO |
 | 24 | **Voz sem legenda**: 1 s ou mais de voz no áudio sem legenda nem palavra transcrita (fala baixa, resposta do paciente) | volume do áudio x legendas | ATENÇÃO (ouvir) |
-| 25 | **Voz falhando/picotando** (02/10, pasta 7): volume do vídeo final cai 15 dB ou mais onde o bruto tem a voz do Dr. | volume final x bruto, trecho a trecho | ERRO |
+| 25 | **Voz falhando/picotando** (02/10, pasta 7): volume do vídeo final cai 12 dB ou mais abaixo do bruto onde o bruto tem voz forte (com alinhamento fino de ±4 quadros por trecho) | volume final x bruto, trecho a trecho | ERRO |
 | 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
 | 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |

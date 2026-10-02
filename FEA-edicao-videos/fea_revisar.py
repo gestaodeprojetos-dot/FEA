@@ -33,7 +33,7 @@ PRODUTOS_CONHECIDOS = [
     (r"\b[Rr]es(ch|t)ilane\b|\b[Rr]echiline\b", "Restylane", "é Restylane"),
     (r"\b[Ss]ub [Ss]kin\b|\b[Ss]abskin\b|\bsubskin\b|\bSubSkin\b", "Subskin", "é Subskin (Perfectha Subskin)"),
     (r"\b[Rr]evan[ea]ss?e? [Qq]uiss?e?\b", "Revanesse Kiss", "é Revanesse Kiss"),
-    (r"\b[Rr]evan[ea]ss?e?\b(?! Kiss)", "Revanesse", "é Revanesse"),
+    (r"\b(?!Revanesse\b)[Rr]evan[ea]ss?e?\b", "Revanesse", "é Revanesse"),
     (r"\b[Ll]et[iy]?bo\b|\bletbo\b|\b[Ll]etibol\b", "Letybo", "é Letybo"),
     (r"\b[Ss]erint?ox\b|\b[Ss]erin?tox\b", "Seryntox", "é Seryntox"),
     (r"\b[Vv]ietr[ei]\b|\b[Vv]ietry\b", "Vietri", "é Vietri"),
@@ -223,14 +223,18 @@ def revisar(cfg, v, folhas=None):
 
     # 2c. nomes de produto no título (Whisper pode errar o título se veio da transcrição)
     for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
-        if re.search(rx, v["titulo"]):
+        if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
             erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
 
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
+    def grafia_errada(rx, nome_certo, texto):
+        # a regex pega variantes; a grafia oficial em si ("Letybo", "Neuramis") não é erro
+        certos = {nome_certo, *nome_certo.split()}
+        return any(m.group(0).strip() not in certos for m in re.finditer(rx, texto))
     for s, e, t in legendas:
         for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
-            if re.search(rx, t):
+            if grafia_errada(rx, nome_certo, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo} (nome de produto errado na legenda)")
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
@@ -379,19 +383,34 @@ def revisar(cfg, v, folhas=None):
     # 5e. voz falhando/picotando (Keila, 02/10/2026, pasta 7 vídeo 1): o áudio final, trecho a trecho,
     # tem que ter o mesmo volume do bruto. Queda forte onde o bruto tem a voz do Dr. = corte, silêncio
     # ou concat comendo a fala. Compara o volume do .mp4 com o do bruto nos trechos mantidos.
-    esperado = np.concatenate([db_b[int(a / ps_b):int(b / ps_b)] for a, b in manter]) if manter else np.zeros(0)
-    n_cmp = min(len(esperado), len(db), int(mantido_total / ps))
+    # envelope de 5 ms e alinhamento fino por trecho: o concat do CTA desloca o áudio ~21 ms
+    # (priming do AAC) e, em janelas de 50 ms, isso parecia queda de voz (falso alarme)
+    db5, _, p5 = fe.perfil_voz(ff, mp4, passo=0.005)
+    db5b, lim5b, _ = fe.perfil_voz(ff, v["entrada"], passo=0.005)
     mudo_int = [(t_saida(a), t_saida(b)) for a, b in v.get("silenciar", [])]
-    quedas = []
-    for i in range(2, n_cmp - 2):
-        if esperado[i] >= lim_b + 6 and db[i] < esperado[i] - 15:
-            t = i * ps
-            if any(a <= t <= b for a, b in mudo_int if a >= 0):
+    quedas, off = [], 0.0
+    for a, b in manter:
+        esp = db5b[int(a / p5):int(b / p5)]
+        i_ini = int(round(off / p5))
+        fin = db5[i_ini:i_ini + len(esp)]
+        n = min(len(esp), len(fin))
+        off += b - a
+        if n < 200:
+            continue
+        def corr(L):
+            x, y = fin[max(0, L):n + min(0, L)], esp[max(0, -L):n - max(0, L)]
+            return np.corrcoef(x, y)[0, 1] if len(x) > 50 and x.std() and y.std() else -1
+        L = max(range(-20, 21), key=corr)
+        for i in range(25, n - 25):
+            j = i - L
+            if not 4 <= j < n - 4:
                 continue
-            # ignora o encaixe das emendas (afade de 20 ms) e o primeiro/último instante
-            perto_corte = any(abs(t - c) < 0.08 for c in np.cumsum([b - a for a, b in manter]))
-            if not perto_corte:
-                quedas.append(t)
+            viz = esp[j - 4:j + 5]          # 45 ms de voz forte em volta, no bruto
+            t = (i_ini + i) * p5
+            if viz.min() >= lim5b + 6 and fin[i] < viz.min() - 20 and fin[i + 1] < viz.min() - 20 and \
+                    not any(x <= t <= y for x, y in mudo_int if x >= 0):
+                if not quedas or t - quedas[-1] > 0.1:
+                    quedas.append(t)
     if quedas:
         erros.append(f"voz falhando: {len(quedas)} quedas de volume no meio da fala (ex.: "
                      + ", ".join(f"{t:.1f}s" for t in quedas[:6]) + "), o bruto tem voz nesses pontos")

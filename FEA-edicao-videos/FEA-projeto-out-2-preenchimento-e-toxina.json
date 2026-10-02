@@ -89,6 +89,12 @@
      142.95
     ]
    ],
+   "mover_palavra": [
+    [
+     102.78,
+     103.8
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7179.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7179.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/5- Olheiras com subskin.mp4",
@@ -227,6 +233,12 @@
     [
      0.4,
      53.6
+    ]
+   ],
+   "mover_palavra": [
+    [
+     47.87,
+     46.3
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7187.MOV",
