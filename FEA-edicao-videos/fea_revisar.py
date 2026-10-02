@@ -31,7 +31,7 @@ PRODUTOS_CONHECIDOS = [
     (r"\b[Qq]uiri?al[iy]s\b|\b[Kk]irialis\b|\b[Kk]iriális\b|\b[Cc]urial[iy]s\b", "Kirialys", "é Kirialys"),
     (r"\b[Vv]ol(i|ai|y)me\b(?!.*Volyme)", "Volyme", "é Restylane Volyme"),
     (r"\b[Rr]es(ch|t)ilane\b|\b[Rr]echiline\b", "Restylane", "é Restylane"),
-    (r"\b[Ss]ub ?[Ss]kin\b|\b[Ss]abskin\b", "Subskin", "é Perfectha Subskin"),
+    (r"\b[Ss]ub [Ss]kin\b|\b[Ss]abskin\b|\bsubskin\b|\bSubSkin\b", "Subskin", "é Subskin (Perfectha Subskin)"),
     (r"\b[Rr]evan[ea]ss?e? [Qq]uiss?e?\b", "Revanesse Kiss", "é Revanesse Kiss"),
     (r"\b[Rr]evan[ea]ss?e?\b(?! Kiss)", "Revanesse", "é Revanesse"),
     (r"\b[Ll]et[iy]?bo\b|\bletbo\b|\b[Ll]etibol\b", "Letybo", "é Letybo"),

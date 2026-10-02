@@ -50,6 +50,12 @@
      43.3
     ]
    ],
+   "correcoes": [
+    [
+     "\\bmesobotópolis ?",
+     ""
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p6/IMG_7146.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p6/IMG_7146.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e6/4- Mesobotox para linhas finas na pálpebra.mp4"
@@ -65,8 +71,8 @@
    ],
    "correcoes": [
     [
-     "\\bde imunidade\\b",
-     "de uma unidade"
+     "\\b(de )?imunidade\\b",
+     "\\1uma unidade"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p6/IMG_7147.MOV",

@@ -138,8 +138,11 @@ def blocos_legenda(palavras):
             if prox and prox[0]["s"] - b[0]["e"] < 1.0:
                 prox.insert(0, b[0])
                 continue
-            # conectivo sozinho ("E", "Que", "Vou") que ficaria pendurado no fim da frase anterior: sai
+            # conectivo sozinho ("E", "Que", "Uma"): vai para a frase seguinte se ela vem logo
+            # ("vou usar o que? uma unidade" saía só "unidade"); senão, sai
             if re.sub(r"[^\w]", "", b[0]["w"]).lower() in LIGACAO | {"vou", "é", "eu", "então"}:
+                if prox and prox[0]["s"] - b[0]["e"] < 3.0:
+                    prox.insert(0, b[0])
                 continue
             if juntos and b[0]["s"] - juntos[-1][-1]["e"] < 1.0:
                 juntos[-1].append(b[0])
@@ -295,7 +298,8 @@ CORRECOES = [
     # Keila 02/10: pertuito (nunca "hipertuito"), picadinha (nunca "picadinho"),
     # parestesia→anestesia (Whisper confunde), descimento→desse mento
     # lote de outubro (02/10/2026): variantes que o Whisper inventou nos casos de toxina e preenchimento
-    (r"\b[Ll]etibona\b", "Letybo na"), (r"\b[Ll]et[ií]b?(?:ol|ô|on|o)\b", "Letybo"), (r"\b[Ll]etipo\b", "Letybo"),
+    (r"\b[Ll]etibona\b", "Letybo na"), (r"\b[Ll]et[ií]?b(?:ol|ô|on|o)\b", "Letybo"), (r"\b[Ll]et[ií]bo\b", "Letybo"),
+    (r"\b[Pp]r[óo]s?cero\b", "prócero"), (r"\b[Ll]etipo\b", "Letybo"),
     (r"\b[Cc]orrogador(es)?\b", r"corrugador\1"),
     (r"\b[Pp]r[eé][- ]?jo(?:w|y|u)l?\b", "pré-jowl"), (r"\b(?<!pré-)jaw\b", "jowl"),
     (r"\b[Bb]odoguinho\b", "buldoguinho"),
@@ -307,6 +311,7 @@ CORRECOES = [
     (r"\b[Ww]i-?[Ff]i(zinho)?\b", r"Wi-Fi\1"), (r"\b[Nn]efertit[ei]\b", "Nefertiti"),
     (r"\b[Ll]etbo\b", "Letybo"),
     (r"\b(?:[Hh]ip|[Pp]i)tose\b", "ptose"), (r"\b[Hh]iptose\b", "ptose"),
+    (r"\bintroral\b", "intraoral"), (r"\bintroorais\b", "intraorais"),
     (r"\bFicadinha\b", "Picadinha"), (r"\bficadinha\b", "picadinha"),
     # (antes "hipertuitos?" virava sempre "pertuitos": o singular saía no plural)
     (r"\b[Hh]iper ?tu[ií]to(s?)\b", r"pertuito\1"), (r"\bpertu[ií]to(s?)\b", r"pertuito\1"),
@@ -342,8 +347,12 @@ def numerar_enumeracao(palavras):
             ant = palavras[i - 1] if i and p["s"] - palavras[i - 1]["e"] < 4.0 else None
             prox = palavras[i + 1] if i + 1 < len(palavras) and palavras[i + 1]["s"] - p["e"] < 4.0 else None
             # só dentro da lista: "3, quatro" ou "quatro, 5" (nunca "seis. Um paciente...")
+            def em_lista(x):   # vizinho que é número (algarismo ou por extenso) separado por vírgula
+                return x and (eh_num(x["w"]) or chave(x["w"]) in NUMEROS)
             if (ant and eh_num(ant["w"]) and ant["w"].strip().endswith(",")) or \
-                    (prox and eh_num(prox["w"]) and p["w"].strip().endswith(",")):
+                    (prox and eh_num(prox["w"]) and p["w"].strip().endswith(",")) or \
+                    (em_lista(ant) and ant["w"].strip().endswith(",") and em_lista(prox)
+                     and p["w"].strip().endswith(",")):
                 m = re.match(r"^(\s*)(\w+)(.*)$", p["w"])
                 p["w"] = m.group(1) + NUMEROS[k] + m.group(3)
                 mudou = True
@@ -363,17 +372,19 @@ def pontuar(texto):
     # antes de "porque", "pois", "então", "aí" quando precedidos de palavra (não no início)
     # (nunca depois de palavra de ligação: "acho que aí eu vou", "e então", "é porque")
     texto = re.sub(r"\b(?!(?i:que|e|é|de|do|da|o|a|os|as|por|para|se|mas|só|até|ou|nem|tipo)\b)(\w+) "
-                   r"(porque|pois|então|aí) ", r"\1, \2 ", texto)
+                   r"(porque|pois|então) ", r"\1, \2 ", texto)   # "aí" saiu: "vem aí com bônus" ganhava vírgula
     # antes de "né" (marcador) e de "tá"/"viu" só no fim da frase ("..., tá?"): no meio, "tá" é o
     # verbo ("a minha agulha tá de cima para baixo" ficava "agulha, tá de cima")
     texto = re.sub(r"(\w) (né)([.,?!\s]|$)", r"\1, \2\3", texto)
-    texto = re.sub(r"(\w) (tá|viu)([.,?!]|$)", r"\1, \2\3", texto)
+    texto = re.sub(r"(\w) (tá|viu)([.,?!])", r"\1, \2\3", texto)   # sem "$": "a gente ainda tá / começando"
     # evitar vírgula duplicada
     texto = re.sub(r",\s*,", ",", texto)
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon"}
+NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
+                  "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
+                  "Kirialys", "Restylane", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
 
 def limpar(texto):
@@ -382,7 +393,7 @@ def limpar(texto):
     texto = re.sub(r"(\d) ,(\d)", r"\1,\2", texto)     # "1 ,2 mL" -> "1,2 mL"
     texto = texto.rstrip(".,;")
     primeira = texto.split(" ", 1)[0].strip(",.?!")
-    if primeira in NOMES_PROPRIOS or (len(primeira) > 1 and primeira.isupper()):
+    if primeira in NOMES_PROPRIOS or primeira.split("-")[0] in NOMES_PROPRIOS or (len(primeira) > 1 and primeira.isupper()):
         return texto
     return texto[:1].lower() + texto[1:]
 
@@ -524,7 +535,9 @@ def ancorar_na_voz(palavras, db, limiar, passo):
     fora de sincronia com o áudio (Keila, 26/09)."""
     saida = []
     for k, p in enumerate(palavras):
-        i0, i1 = max(0, int(p["s"] / passo)), min(len(db), int(p["e"] / passo) + 1)
+        # palavra esticada: procura a voz no intervalo inteiro da transcrição (e0), não só no
+        # pedaço de 1,2 s: o 2º "duas" de "duas unidades, duas unidades" sumia da legenda
+        i0, i1 = max(0, int(p["s"] / passo)), min(len(db), int(max(p["e"], p.get("e0", p["e"])) / passo) + 1)
         voz = [i for i in range(i0, i1) if db[i] >= limiar - 6]
         ant = palavras[k - 1]["e"] if k else -9
         prox = palavras[k + 1]["s"] if k + 1 < len(palavras) else 1e9
@@ -547,10 +560,21 @@ def ancorar_na_voz(palavras, db, limiar, passo):
             j1 = min(len(db), int(e0 / passo) + 1)
             fala = [i for i in range(max(0, int(s / passo)), j1) if db[i] >= limiar]
             if fala:
-                k = len(fala) - 1
-                while k > 0 and fala[k] - fala[k - 1] <= 3:
-                    k -= 1
-                s = max(fala[k] * passo - 0.05, e0 - 1.0)
+                i_s = int(s / passo)
+                if fala[0] - i_s <= 3 and sum(1 for i in fala if i < i_s + 6) >= 4 and k and \
+                        p["s"] - palavras[k - 1]["e"] < 0.15:
+                    # fala corrida: a palavra está no começo do intervalo, colada na anterior
+                    # ("de solução anestésica": "solução" entrava 2 s atrasada)
+                    j = 0
+                    while j + 1 < len(fala) and fala[j + 1] - fala[j] <= 2:
+                        j += 1
+                    e = min(e0, (fala[j] + 1) * passo + 0.05, s + 1.5)
+                    saida.append(dict(p, s=s, e=max(e, s + 0.15)))
+                    continue
+                k2 = len(fala) - 1
+                while k2 > 0 and fala[k2] - fala[k2 - 1] <= 3:
+                    k2 -= 1
+                s = max(fala[k2] * passo - 0.05, e0 - 1.0)
                 e = min(e0, s + 1.0)
                 saida.append(dict(p, s=s, e=max(e, s + 0.15)))
                 continue

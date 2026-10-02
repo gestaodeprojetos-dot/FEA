@@ -95,6 +95,25 @@
    "titulo_origem": "imagem"
   },
   {
+   "titulo": "Revanesse para sulco nasolabial",
+   "manter": [
+    [
+     0.0,
+     84.75
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bvocês vêm pela\\b",
+     "vocês veem pela"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7181.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7181.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/6- Revanesse para sulco nasolabial.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
    "titulo": "Pré-jowl, conectando as estruturas",
    "manter": [
     [
@@ -119,6 +138,18 @@
     [
      50.9,
      51.6
+    ]
+   ],
+   "mover_palavra": [
+    [
+     59.44,
+     64.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\baqui ao lado\\b",
+     "aqui ao lábio"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7183.MOV",
@@ -177,6 +208,12 @@
     [
      0.2,
      77.2
+    ]
+   ],
+   "remover_legenda": [
+    [
+     45.0,
+     46.2
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7186.MOV",

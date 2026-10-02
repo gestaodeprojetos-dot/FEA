@@ -91,7 +91,7 @@
    "manter": [
     [
      0.0,
-     78.25
+     83.4
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6955.MOV",
@@ -106,7 +106,7 @@
    "manter": [
     [
      0.0,
-     108.6
+     111.3
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6956.MOV",
@@ -121,6 +121,18 @@
     [
      111.3,
      193.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bdow\\b",
+     "DAO"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     119.0,
+     119.7
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6956.MOV",
@@ -147,6 +159,26 @@
     [
      0.9,
      75.7
+    ]
+   ],
+   "remover_legenda": [
+    [
+     19.95,
+     20.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "(?i)\\bperfeito, um\\b",
+     "Perfeito, 1"
+    ],
+    [
+     "^[Dd]ois\\.?$",
+     "2"
+    ],
+    [
+     "(?i)\\btrês, e vem\\b",
+     "3, e venho"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6960.MOV",
@@ -209,6 +241,10 @@
     [
      "\\b[Mm][- ]pupilar\\b",
      "médio-pupilar"
+    ],
+    [
+     "\\b[Pp]róspero\\b",
+     "prócero"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6969.MOV",
@@ -224,6 +260,12 @@
      50.1
     ]
    ],
+   "mover_palavra": [
+    [
+     41.42,
+     48.65
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6970.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p3/IMG_6970.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e3/13- Aplicação em glabela.mp4",
@@ -235,6 +277,12 @@
     [
      4.3,
      74.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bunidade perfeita\\b",
+     "unidade, perfeito"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p3/IMG_6971.MOV",

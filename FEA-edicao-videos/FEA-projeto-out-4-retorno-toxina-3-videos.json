@@ -14,6 +14,10 @@
     [
      "\\bhackeado\\b",
      "arqueado"
+    ],
+    [
+     "^[Tt]anto, o que acontece",
+     "Então, o que acontece"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6945.MOV",
@@ -39,6 +43,14 @@
     [
      "\\b[Dd]ispor\\b",
      "Dysport"
+    ],
+    [
+     "(?i)\\bcomunidade Sorri\\b",
+     "uma unidade. Sorri"
+    ],
+    [
+     "(?i)\\bcomunidade\\b",
+     "uma unidade"
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6946.MOV",
