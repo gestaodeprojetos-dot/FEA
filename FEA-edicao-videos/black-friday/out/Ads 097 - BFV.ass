@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Titulo,Montserrat ExtraBold,140,&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+Style: Legenda,Montserrat Bold,56,&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,360,1
+Style: CTA,Montserrat ExtraBold,119,&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:03.00,Titulo,,0,0,0,,{\fad(0,250)}Chegou a hora de se tornar\Nmeu aluno vitalício
+Dialogue: 0,0:00:03.00,0:00:04.80,Legenda,,0,0,0,,por isso eu vou até\Ncolocar o bonezinho
+Dialogue: 0,0:00:04.80,0:00:07.50,Legenda,,0,0,0,,para te lembrar que dia\N20 de outubro teremos
+Dialogue: 0,0:00:07.50,0:00:09.50,Legenda,,0,0,0,,a abertura\Ndas inscrições
+Dialogue: 0,0:00:09.50,0:00:11.00,Legenda,,0,0,0,,da Black Friday\NVitalícia
+Dialogue: 0,0:00:11.20,0:00:13.00,Legenda,,0,0,0,,teu último curso de\Nharmonização facial para o
+Dialogue: 0,0:00:13.00,0:00:14.20,Legenda,,0,0,0,,resto da sua vida
+Dialogue: 0,0:00:14.50,0:00:15.10,Legenda,,0,0,0,,o que vai acontecer?
+Dialogue: 0,0:00:15.20,0:00:16.50,Legenda,,0,0,0,,dia 20 de outubro eu\Nvou fazer uma live
+Dialogue: 0,0:00:16.50,0:00:17.00,Legenda,,0,0,0,,de abertura
+Dialogue: 0,0:00:17.00,0:00:20.00,Legenda,,0,0,0,,onde você vai ter acesso\Ne vai entender como
+Dialogue: 0,0:00:20.00,0:00:21.50,Legenda,,0,0,0,,que vai funcionar\Na Black Friday
+Dialogue: 0,0:00:21.50,0:00:23.50,Legenda,,0,0,0,,a gente vai ter\Nmuitos bônus
+Dialogue: 0,0:00:23.50,0:00:25.50,Legenda,,0,0,0,,inclusive bônus\Npresenciais
+Dialogue: 0,0:00:25.50,0:00:26.50,Legenda,,0,0,0,,pós-graduação incluída
+Dialogue: 0,0:00:26.50,0:00:27.50,Legenda,,0,0,0,,então assim, loucura
+Dialogue: 0,0:00:27.50,0:00:29.50,Legenda,,0,0,0,,isso aqui é\Ncoisa de doido
+Dialogue: 0,0:00:29.50,0:00:31.00,Legenda,,0,0,0,,não perca essa\Noportunidade
+Dialogue: 0,0:00:31.00,0:00:33.00,Legenda,,0,0,0,,então esteja comigo\Ndia 20 de outubro
+Dialogue: 0,0:00:33.00,0:00:36.00,Legenda,,0,0,0,,participe da nossa\Nabertura de inscrições
+Dialogue: 0,0:00:36.00,0:00:38.50,Legenda,,0,0,0,,esteja ao vivo para\Nvocê poder ter acesso
+Dialogue: 0,0:00:38.50,0:00:40.50,Legenda,,0,0,0,,a todos os\Nbônus especiais
+Dialogue: 0,0:00:40.50,0:00:42.00,Legenda,,0,0,0,,e compre o seu último\Ncurso de harmonização
+Dialogue: 0,0:00:42.00,0:00:43.50,Legenda,,0,0,0,,facial da vida
+Dialogue: 0,0:00:43.50,0:00:45.00,Legenda,,0,0,0,,aqui você vai\Nter acesso
+Dialogue: 0,0:00:45.00,0:00:47.00,Legenda,,0,0,0,,a todos os\Ncursos de toxina
+Dialogue: 0,0:00:47.00,0:00:49.00,Legenda,,0,0,0,,preenchedores,\Nbioestimuladores
+Dialogue: 0,0:00:49.00,0:00:51.00,Legenda,,0,0,0,,fios, anatomia,\Nintercorrências
+Dialogue: 0,0:00:51.00,0:00:53.00,Legenda,,0,0,0,,procedimentos\Ncorporais
+Dialogue: 0,0:00:53.00,0:00:55.50,Legenda,,0,0,0,,todas as atualizações,\Ntodas as novidades
+Dialogue: 0,0:00:55.50,0:00:57.50,Legenda,,0,0,0,,tudo que eu for estudar\Naté o fim da minha
+Dialogue: 0,0:00:57.50,0:00:58.00,Legenda,,0,0,0,,vida
+Dialogue: 0,0:00:58.00,0:01:00.50,Legenda,,0,0,0,,você vai ter acesso\Nse inscrevendo
+Dialogue: 0,0:01:00.50,0:01:02.50,Legenda,,0,0,0,,dia 20 de outubro e\Nnunca mais precisando
+Dialogue: 0,0:01:02.50,0:01:03.00,Legenda,,0,0,0,,pagar
+Dialogue: 0,0:01:03.00,0:01:03.22,Legenda,,0,0,0,,um real a mais por\Nisso, então não perca
+Dialogue: 1,0:01:03.22,0:01:08.22,CTA,,0,0,0,,{\fad(250,0)}Toque em\NSaiba Mais

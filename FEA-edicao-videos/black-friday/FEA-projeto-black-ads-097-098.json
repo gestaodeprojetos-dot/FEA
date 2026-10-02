@@ -1,0 +1,32 @@
+{
+ "ffmpeg": "ffmpeg",
+ "fontsdir": "../fonts",
+ "descricao": "Ads 097 e 098 - Black Friday Vitalícia (BFV). Headline + legendas + CTA.",
+ "ads": [
+  {
+   "id": "097",
+   "entrada": "raw/IMG_7197.MOV",
+   "saida": "out/Ads 097 - BFV.mp4",
+   "titulo": "Chegou a hora de se tornar\nmeu aluno vitalício",
+   "headline_opcao": "A",
+   "cta": "Toque em Saiba Mais",
+   "titulo_dur": 3.0,
+   "cta_dur": 5.0
+  },
+  {
+   "id": "098",
+   "entrada": "raw/ADS098_joined.mp4",
+   "entrada_origem": ["raw/IMG_0775.MOV", "raw/IMG_0776.MOV"],
+   "juncao": {
+    "corte_0776_inicio": 1.85,
+    "motivo": "remover repetição 'com acesso vitalício' na emenda"
+   },
+   "saida": "out/Ads 098 - BFV.mp4",
+   "titulo": "Todos os cursos,\npara o resto da vida",
+   "headline_opcao": "B",
+   "cta": "Toque em Saiba Mais",
+   "titulo_dur": 3.0,
+   "cta_dur": 5.0
+  }
+ ]
+}
