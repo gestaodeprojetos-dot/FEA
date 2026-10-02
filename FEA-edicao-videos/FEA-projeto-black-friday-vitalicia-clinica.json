@@ -1,0 +1,2097 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "cta": "../raw/CTA.MOV",
+ "limpar_audio": "../rnn/sh.rnnn",
+ "videos": [
+  {
+   "entrada": "raw/a895a5af.mov",
+   "transcricao": "tr/a895a5af.json",
+   "saida": "out2/1- Faltam 7 dias.mp4",
+   "titulo": "Faltam 7 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.84,
+     23.78
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/f3b2223d.mov",
+   "transcricao": "tr/f3b2223d.json",
+   "saida": "out2/2- Faltam 6 dias.mp4",
+   "titulo": "Faltam 6 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": true,
+   "manter": [
+    [
+     0.12,
+     24.78
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/8718e261.mov",
+   "transcricao": "tr/8718e261.json",
+   "saida": "out2/3- Faltam 5 dias.mp4",
+   "titulo": "Faltam 5 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.34,
+     25.21
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/0596db52.mov",
+   "transcricao": "tr/0596db52.json",
+   "saida": "out2/4- Faltam 4 dias.mp4",
+   "titulo": "Faltam 4 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": true,
+   "manter": [
+    [
+     0.2,
+     24.51
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/v_daa73sno.mp4",
+   "transcricao": "tr/v_daa73sno.json",
+   "saida": "out2/5- Faltam 3 dias.mp4",
+   "titulo": "Faltam 3 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.2,
+     40.11
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/c6e7bf31.mov",
+   "transcricao": "tr/c6e7bf31.json",
+   "saida": "out2/6- Faltam 2 dias.mp4",
+   "titulo": "Faltam 2 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": true,
+   "manter": [
+    [
+     0.04,
+     30.93
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "(?i)(novidade), está\\?",
+     "\\1, tá?"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/a05a43d3.mov",
+   "transcricao": "tr/a05a43d3.json",
+   "saida": "out2/7- Falta 1 dia.mp4",
+   "titulo": "Falta 1 dia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.64,
+     12.7
+    ],
+    [
+     15.3,
+     25.19
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6593.MOV",
+   "transcricao": "tr/IMG_6593.json",
+   "saida": "out2/8- Começa amanhã.mp4",
+   "titulo": "Começa amanhã",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.26,
+     23.75
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/c81f5219.mov",
+   "transcricao": "tr/c81f5219.json",
+   "saida": "out2/9- Terça começa a Black Friday Vitalícia.mp4",
+   "titulo": "Terça começa a Black Friday Vitalícia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.44,
+     12.4
+    ],
+    [
+     24.6,
+     42.37
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "vitalícias quem estiver ao vivo",
+     "vitalícias, para quem estiver ao vivo"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6595.MOV",
+   "transcricao": "tr/IMG_6595.json",
+   "saida": "out2/10- O seu último curso de harmonização facial.mp4",
+   "titulo": "O seu último curso de harmonização facial",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.36,
+     28.85
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6594.MOV",
+   "transcricao": "tr/IMG_6594.json",
+   "saida": "out2/11- Hoje começa a Black Friday Vitalícia.mp4",
+   "titulo": "Hoje começa a Black Friday Vitalícia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.44,
+     23.78
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/e47535f0.mov",
+   "transcricao": "tr/e47535f0.json",
+   "saida": "out2/12- É hoje o seu último curso de harmonização facial.mp4",
+   "titulo": "É hoje: o seu último curso de harmonização facial",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": true,
+   "manter": [
+    [
+     0.04,
+     30.7
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/070d509d.mov",
+   "transcricao": "tr/070d509d.json",
+   "saida": "out2/13- Nunca mais gaste com curso de harmonização facial.mp4",
+   "titulo": "Nunca mais gaste com curso de harmonização facial",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.08,
+     28.22
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/1f3b2c57.mov",
+   "transcricao": "tr/1f3b2c57.json",
+   "saida": "out2/14- Anota essa data 20 de outubro.mp4",
+   "titulo": "Anota essa data:\\N20 de outubro",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.7,
+     27.29
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/3e00212d.mov",
+   "transcricao": "tr/3e00212d.json",
+   "saida": "out2/15- Isso vai contra tudo.mp4",
+   "titulo": "Isso vai contra tudo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.54,
+     40.54
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/45490ed8.mov",
+   "transcricao": "tr/45490ed8.json",
+   "saida": "out2/16- Quanto você já gastou em curso de Harmonização Facial.mp4",
+   "titulo": "Quanto você já gastou em curso de Harmonização Facial?",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.64,
+     32.61
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/89b9d4e5.mov",
+   "transcricao": "tr/89b9d4e5.json",
+   "saida": "out2/17- Bônus presencial para quem estiver ao vivo.mp4",
+   "titulo": "Bônus presencial para quem estiver ao vivo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.38,
+     24.97
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "\\batender todos os bônus",
+     "ter todos os bônus"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/9f045b6b.mov",
+   "transcricao": "tr/9f045b6b.json",
+   "saida": "out2/18- Um recado do Doutor João do Futuro.mp4",
+   "titulo": "Um recado do Doutor João do Futuro",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": true,
+   "manter": [
+    [
+     0.14,
+     38.91
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/ec24e270.mov",
+   "transcricao": "tr/ec24e270.json",
+   "saida": "out2/19- Em 2026 eu fiz a Black Friday Vitalícia.mp4",
+   "titulo": "Em 2026 eu fiz a Black Friday Vitalícia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.26,
+     37.87
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6515.MOV",
+   "transcricao": "tr/IMG_6515.json",
+   "saida": "out2/20- Existe um grupo que nunca mais paga meus cursos.mp4",
+   "titulo": "Existe um grupo que nunca mais paga meus cursos",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.72,
+     35.22
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6516.MOV",
+   "transcricao": "tr/IMG_6516.json",
+   "saida": "out2/21- Nunca mais compre um curso meu.mp4",
+   "titulo": "Nunca mais compre um curso meu",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.46,
+     36.29
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_6596.MOV",
+   "transcricao": "tr/IMG_6596.json",
+   "saida": "out2/22- A maior Black Friday de todos os tempos.mp4",
+   "titulo": "A maior Black Friday de todos os tempos",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.12,
+     24.91
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/v_daa6rsvo.mp4",
+   "transcricao": "tr/v_daa6rsvo.json",
+   "saida": "out2/23- A maior Black Friday de Harmonização Facial.mp4",
+   "titulo": "A maior Black Friday de Harmonização Facial",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.7,
+     4.59
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/v_daa6rfno.mp4",
+   "transcricao": "tr/v_daa6rfno.json",
+   "saida": "out2/24- 20 de Outubro.mp4",
+   "titulo": "20 de Outubro",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.54,
+     4.27
+    ]
+   ],
+   "remover_legenda": [
+    [
+     0,
+     10
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  }
+ ]
+}

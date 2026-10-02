@@ -1,0 +1,875 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7104.MOV",
+   "transcricao": "tr/IMG_7104.json",
+   "saida": "out/1- Você tem medo de ser julgado.mp4",
+   "titulo": "Você tem medo de ser julgado?",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     7.1,
+     138.95
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7106.MOV",
+   "transcricao": "tr/IMG_7106.json",
+   "saida": "out/2- Autorresponsabilidade muda tudo.mp4",
+   "titulo": "Autorresponsabilidade muda tudo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     2.46,
+     228.73
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7107.MOV",
+   "transcricao": "tr/IMG_7107.json",
+   "saida": "out/3- Todo mundo está torcendo por você.mp4",
+   "titulo": "Todo mundo está torcendo por você",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     1.5,
+     141.61
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7108.MOV",
+   "transcricao": "tr/IMG_7108.json",
+   "saida": "out/4- Riqueza não tem nada a ver com grana.mp4",
+   "titulo": "Riqueza não tem nada a ver com grana",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     2.36,
+     172.31
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7109.MOV",
+   "transcricao": "tr/IMG_7109.json",
+   "saida": "out/5- Quem está ao seu lado muda tudo.mp4",
+   "titulo": "Quem está ao seu lado muda tudo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     2.16,
+     162.61
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7110.MOV",
+   "transcricao": "tr/IMG_7110.json",
+   "saida": "out/6- Você é o exemplo do seu paciente.mp4",
+   "titulo": "Você é o exemplo do seu paciente",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.58,
+     72.26
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "própria state, que no seu próprio",
+     "própria estética, no seu próprio"
+    ],
+    [
+     "\\bstate\\b",
+     "estética"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7113.MOV",
+   "transcricao": "tr/IMG_7113.json",
+   "saida": "out/7- Se não é problema meu nem problema é.mp4",
+   "titulo": "Se não é problema meu, nem problema é",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     4.76,
+     131.99
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7114.MOV",
+   "transcricao": "tr/IMG_7114.json",
+   "saida": "out/8- Não espere apoio para o seu sonho.mp4",
+   "titulo": "Não espere apoio para o seu sonho",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     6.28,
+     68.12
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7115.MOV",
+   "transcricao": "tr/IMG_7115.json",
+   "saida": "out/9- Faltam 3 meses para o fim do ano.mp4",
+   "titulo": "Faltam 3 meses para o fim do ano",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     5.28,
+     46.26
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ]
+  },
+  {
+   "entrada": "raw/IMG_7123.MOV",
+   "transcricao": "tr/IMG_7123.json",
+   "saida": "out/10- A ânsia de ter e o tédio de possuir.mp4",
+   "titulo": "A ânsia de ter e o tédio de possuir",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.44,
+     104.05
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Aa]mortização\\b",
+     "harmonização"
+    ],
+    [
+     "\\b(?:Sabamais|Sadamai|Saba Mais|Sabar Mais|Saber Mais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bVitalic[eí]o?\\b|\\bVitalício\\b",
+     "Vitalícia"
+    ],
+    [
+     "\\bFAP Experience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bbichimuladores\\b",
+     "bioestimuladores"
+    ],
+    [
+     "R ?\\$ ?1 ?,00",
+     "um real"
+    ],
+    [
+     "\\btamo junto\\b",
+     "estamos juntos"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bTô\\b",
+     "Estou"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btão pegando\\b",
+     "estão pegando"
+    ],
+    [
+     "\\bFalta só dois\\b",
+     "Faltam só dois"
+    ],
+    [
+     "\\bSe você tiver ao vivo\\b|\\bse você tiver ao vivo\\b",
+     "se você estiver ao vivo"
+    ],
+    [
+     "\\bQuem tiver\\b",
+     "Quem estiver"
+    ],
+    [
+     "\\bquem tiver\\b",
+     "quem estiver"
+    ],
+    [
+     "\\bBlack Friday vitalícia\\b",
+     "Black Friday Vitalícia"
+    ]
+   ],
+   "limpar_audio": "../rnn/sh.rnnn"
+  }
+ ]
+}

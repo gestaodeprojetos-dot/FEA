@@ -1,0 +1,89 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7197.MOV",
+   "transcricao": "tr/IMG_7197.json",
+   "saida": "out/Ads 097 - BFV.mp4",
+   "titulo": "Chegou a hora de se tornar meu aluno vitalício",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.6,
+     68.22
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\banezinho\\b",
+     "bonezinho"
+    ],
+    [
+     "\\bincluído\\b",
+     "incluída"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ],
+   "cta": "../b6/raw/CTA_BLACK.MOV"
+  },
+  {
+   "entrada": "raw/IMG_0775_0776.mp4",
+   "transcricao": "tr/IMG_0775_0776.json",
+   "saida": "out/Ads 098 - BFV.mp4",
+   "titulo": "Chegou a hora de virar meu aluno vitalício",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.0,
+     57.03
+    ]
+   ],
+   "remover_legenda": [
+    [
+     56.7,
+     57.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\banezinho\\b",
+     "bonezinho"
+    ],
+    [
+     "\\bincluído\\b",
+     "incluída"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ]
+   ],
+   "cta": "../b6/raw/CTA_BLACK.MOV"
+  }
+ ]
+}

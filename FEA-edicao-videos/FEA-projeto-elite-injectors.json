@@ -1,0 +1,317 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "../fonts",
+ "videos": [
+  {
+   "entrada": "raw/IMG_7211.MOV",
+   "transcricao": "tr/IMG_7211.json",
+   "saida": "out/lembrete/Ads 01 - Faltam 5 dias - EIC.mp4",
+   "titulo": "Faltam 5 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.14,
+     13.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7212.MOV",
+   "transcricao": "tr/IMG_7212.json",
+   "saida": "out/lembrete/Ads 02 - Faltam 4 dias - EIC.mp4",
+   "titulo": "Faltam 4 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.24,
+     14.6
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7213.MOV",
+   "transcricao": "tr/IMG_7213.json",
+   "saida": "out/lembrete/Ads 03 - Faltam 3 dias - EIC.mp4",
+   "titulo": "Faltam 3 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.18,
+     18.37
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7214.MOV",
+   "transcricao": "tr/IMG_7214.json",
+   "saida": "out/lembrete/Ads 04 - Faltam 2 dias - EIC.mp4",
+   "titulo": "Faltam 2 dias",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.12,
+     17.27
+    ]
+   ],
+   "remover_legenda": [
+    [
+     2.9,
+     3.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7215.MOV",
+   "transcricao": "tr/IMG_7215.json",
+   "saida": "out/lembrete/Ads 05 - Falta 1 dia - EIC.mp4",
+   "titulo": "Falta 1 dia",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.36,
+     14.27
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7216.MOV",
+   "transcricao": "tr/IMG_7216.json",
+   "saida": "out/lembrete/Ads 06 - É hoje - EIC.mp4",
+   "titulo": "É hoje",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.26,
+     15.7
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  },
+  {
+   "entrada": "raw/IMG_7209.MOV",
+   "transcricao": "tr/IMG_7209.json",
+   "saida": "out/captacao/Ads 29 - EIC.mp4",
+   "titulo": "Um final de semana em São Paulo comigo",
+   "parte": null,
+   "cartela_final": null,
+   "espelhar": false,
+   "manter": [
+    [
+     0.26,
+     27.51
+    ]
+   ],
+   "remover_legenda": [
+    [
+     2.8,
+     5.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\b(?:Seba Mais|[Ss]aber mais|Sabamais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\bÉ hoje galera\\b",
+     "É hoje, galera"
+    ],
+    [
+     "\\bElite [Ii]njectors\\b",
+     "Elite Injectors"
+    ]
+   ],
+   "cta": "raw/CTA_ELITE.MOV"
+  }
+ ]
+}

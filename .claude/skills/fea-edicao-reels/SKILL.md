@@ -13,22 +13,23 @@ Padrão aprovado pela Keila em 23/09/2026 ("é assim mesmo que quero"). Detalhes
 2. **Pasta de destino** e o **nome da subpasta** a criar (ex.: dentro de "Setembro", `20- Full face 6mL e toxina`). Criar com o MCP do Drive (`create_file`, mimeType de pasta).
 3. Às vezes, pastas de referência.
 
-Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
+Sem imagem de títulos, a headline é o ponto-chave falado no vídeo (ex.: o Dr. diz "faltam 7 dias", headline "Faltam 7 dias"). Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Drive, que faz OCR). Às vezes o nome de cada arquivo já é o título. Numerar `1- Título`, `2- Título`... na ordem da imagem, contínuo mesmo se a imagem reiniciar a numeração.
 
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
 |---|---|
 | Formato | 1080x1920, 30 fps, H.264, áudio original (sem trilha, sem normalizar) |
-| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, nos **3 primeiros segundos** |
+| Título | Montserrat ExtraBold 140 px, branco, contorno preto 5 px, centro exato do quadro, até 3 linhas de ~16 caracteres, **linhas juntas** (entrelinha 0,8 do tamanho da fonte, `TITULO_ENTRELINHA`; ajuste de 26/09/2026, a entrelinha padrão da Montserrat ficou aberta demais). **Máximo de 3 linhas** (regra da Keila, 26/09/2026: "não quero que quebre as linhas"; se ficar grande, diminui a fonte para caber em 3). A quebra usa a largura real da fonte, reduz até 125 px antes de criar mais uma linha, nunca separa "Black Friday", datas ("20 de outubro") nem "300 mil", e só quebra nos dois-pontos se isso deixar a letra maior. Quando um ajuste de regra visual chega, **refazer todos os lotes já entregues que não seguem a regra** (em 26/09 os da Black Amazonia ficaram com a entrelinha antiga e ela cobrou), nos **3 primeiros segundos** |
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), começa minúscula, sem ponto final. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais |
-| Sem CTA | não colocar chamada de imersão no final (padrão desde 16/09) |
+| CTA | padrão desde 16/09: sem CTA. Quando a pasta trouxer um vídeo "CTA" e a Keila pedir (lote Black Amazonia, 26/09/2026), colar esse vídeo no final de cada edição com o campo `cta` do projeto.json (sem título nem legenda sobre ele; o limite de 3 min conta o CTA) |
 | Parte 1/2 | se, depois de cortar, passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json) |
 
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos.** Cortar o máximo necessário para caber.
 - Manter: explicação clínica, técnica, dosagens, planejamento, falas de autoridade do Dr. João, e trechos **sem fala** mostrando o procedimento.
+- **Começo sem silêncio**: o vídeo começa com o Dr. já falando. Rodar `python3 FEA-edicao-videos/fea_inicio_fala.py wav/*.wav` e iniciar o primeiro trecho de `manter` 0,08 s antes do valor (a transcrição marca 0,0 s mesmo com silêncio antes). Pedido de 26/09/2026.
 - Tirar: conversa fora do tema (agenda, assuntos pessoais), trechos parados sem ação ("deixa eu segurar"), repetições, final arrastado.
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - Vídeo que já cabe e é todo clínico fica **inteiro**.
@@ -56,6 +57,34 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Nome de paciente falado ou legendado: confirmar grafia.
 - Quantidade de vídeos diferente da quantidade de títulos na imagem.
 
+Decisões já tomadas pela Keila (lote Black Amazonia, 26/09/2026), não perguntar de novo:
+- "Harmonização facial" na fala do Dr. João está correto: ele é médico, não dentista. Manter.
+- Campanha Black Friday Vitalícia: "o último curso que você vai comprar", "nunca mais compre um curso", "a maior Black Friday da harmonização facial" e "não vai ter outra chance" (último dia) estão aprovados pelo comercial.
+- Série de contagem regressiva: headline no formato "Faltam N dias" / "Falta 1 dia", mesmo quando a fala é "Em N dias começa".
+- Linguagem falada na legenda: "tamo junto" vira "estamos juntos", "tá" vira "está".
+- Lote Black Friday Vitalícia na clínica (26/09/2026): "botox" falado fica "botox" na legenda (não trocar por toxina botulínica); vídeo de bastidor da FEP Experience é publicado, não descartar; "a última oportunidade vai ser agora" aprovado; teasers curtos também entram; headlines escritas por ela no doc valem exatamente como escritas (inclusive maiúsculas).
+
+- Lote Yap 28/09 (falas motivacionais do Dr. João, 28/09/2026): pode passar de 3 minutos, não cortar nem dividir; sem CTA.
+- Pasta de destino "1. CAPTAÇÃO" (criativos BFV): nome `Ads NNN - BFV.mp4`, continuando depois do último número; números vagos (vídeos apagados) não são reaproveitados, para não misturar (Keila, 30/09/2026). Pasta com vídeo "CTA BLACK": colar no final quando ela pedir.
+- Headline escrita pela Keila com "pra": trocar por "para" (regra fixa FEA) e avisar.
+- Lote Yap Black (30/09/2026): CTA VITALÍCIO nos vídeos da campanha; vídeo sem ligação com a Black Friday (ex.: "Saiba se proteger") fica sem CTA. Para isso, `cta` vai por vídeo no projeto.json, não no topo. Falas de faturamento do Dr. ("80 a 180 mil por dia") foram aprovadas por ela.
+- Elite Injectors Congress (EIC, 01 e 02/11/2026, São Paulo), lote de 30/09/2026: lembretes vão para a pasta LEMBRETE como `Ads 01 - Faltam 5 dias - EIC.mp4` ... `Ads 05 - Falta 1 dia - EIC`, `Ads 06 - É hoje - EIC` (numeração do maior para o menor prazo); o que não é lembrete vai para CAPTAÇÃO como `Ads NN - EIC`, continuando a sequência. CTA ELITE em todos. "Principal congresso de harmonização facial do Brasil" e "última chance" aprovados. "Elite" e "São Paulo" nunca se separam (NOMES_PROPRIOS e quebra do título).
+- Série Yap (qualquer pasta "Yap ...", inclusive Yap Amazonia de 29/09/2026, vlog de pescaria): mesmas regras, vídeo inteiro, sem CTA. Grafias confirmadas: Tucuna Amazon Boat (barco hotel), isca Conoflete, rio Cuiuni, Barcelos, Jorge (amigo).
+
+## Headlines sem imagem de títulos
+
+Antes de renderizar, mandar à Keila um Google Doc `FEA-revisao-headlines-<lote>` com, para cada vídeo: a fala dos 3 primeiros segundos, a headline atual e 2 ou 3 opções tiradas da fala (recomendação marcada). A contagem regressiva "Faltam N dias" já está aprovada; as demais ela escolhe (em 26/09/2026 ela recusou headlines de resumo, quer o gancho do vídeo).
+
+## Selfie espelhada e ruído de fundo (pedido de 26/09/2026)
+
+- **Fundo ao contrário** (texto do banner invertido, câmera frontal): `"espelhar": true` no vídeo. Conferir no mosaico de quadros quais estão invertidos.
+- **Ruído ao fundo** (ar-condicionado, clínica): `"limpar_audio": "rnn/sh.rnnn"` no projeto (RNNoise via `arnndn` + `afftdn` leve). O `fea_preparar_ambiente.sh` baixa o modelo. Conferir que a fala continua intacta transcrevendo o áudio limpo de um vídeo.
+- Arquivos "v_daa....mp4" exportados de app costumam ser cópia de um .mov da mesma pasta: comparar transcrição e duração e editar só o original.
+
+## Legenda logo depois do título
+
+A fala dos 3 primeiros segundos fica só sob o título. O script descarta o pedaço de frase dito sob o título até a última pontuação (evita legenda começando em "vitalícia, para você...") e nunca quebra "Saiba Mais" ou "Black Friday Vitalícia" entre duas legendas (`TERMOS_JUNTOS`). Se ainda sobrar fragmento, usar `remover_legenda` no trecho.
+
 ## Correções de texto
 
 `CORRECOES` em `fea_editar_video.py` aplica a regra FEA (nunca "pra", sempre "para") e termos técnicos (carpule, têmpora, interfascial, hidroxiapatita, tecidual, sulco nasolabial, tan delta, mL...). Toda grafia nova confirmada pela Keila entra ali e, se for nome próprio, em `NOMES_PROPRIOS`. Conferir na tela do vídeo (caixa do produto) quando houver dúvida de marca.
@@ -72,3 +101,18 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Inserts (fotos e vídeos de apoio), pedido de 29/09/2026
+
+Campo `inserts` no vídeo do projeto.json: `{"arquivo", "ini", "fim", "de"}` com tempos do vídeo editado (segundos do bruto menos o início do `manter`). Foto entra em tela cheia com zoom lento (deitada: inteira no meio, fundo desfocado); vídeo entra sem som, a partir de `de`. A voz do Dr. continua e a legenda fica por cima. Fade de 0,25 s; inserts seguidos emendam direto, sem piscar o Dr.
+- **Todo insert precisa ter contexto** (regra da Keila): só entra quando a fala descreve o que a imagem mostra (avião no "teco-teco", peixe na régua em "medição na régua"). Sem relação clara, não entra.
+- Nunca durante a headline (3 s iniciais). Evitar foto com texto de story por cima e não identificar pessoas que a fala não nomeia.
+- HEIC: converter com `pillow-heif` (`pip install pillow-heif`) aplicando `ImageOps.exif_transpose`.
+
+## Upload em qualidade total para o Drive (29/09/2026)
+
+A entrega pela conversa tem limite de 30 MB, e em vídeo longo isso derruba a qualidade: 5min50s fica com cerca de 0,5 Mbps, e o lote Yap ficou entre 0,9 e 2 Mbps. Quando as variáveis `FEA_GDRIVE_CLIENT_ID`, `FEA_GDRIVE_CLIENT_SECRET` e `FEA_GDRIVE_REFRESH_TOKEN` existirem no ambiente, renderizar **sem** `--entrega` (CRF 18, qualidade total) e subir com `python3 FEA-edicao-videos/fea_subir_drive.py ID_DA_PASTA out/*.mp4`. O script substitui o arquivo de mesmo nome. A conversa fica só para as prévias. Pendência opcional (Keila adiou em 30/09/2026, não cobrar a cada entrega): trocar o client_secret do cliente OAuth "FEA Upload" (projeto FEA-upload-drive), que apareceu num print; risco baixo porque o app é Interno e o refresh token nunca foi exposto. Testado em 29/09/2026: lote Yap 28/09 (10 vídeos, 31 a 184 MB, cerca de 6,3 Mbps) na pasta "26- Yap Session 28/09", com o tamanho conferido arquivo a arquivo. Com dois renders em paralelo, a qualidade total leva cerca de 2 min por minuto de vídeo; o upload pode rodar em loop enquanto o render segue.
+
+## Trocar o CTA de um vídeo já editado pela equipe (30/09/2026, Ads 076 - BFV)
+
+Vídeo pronto, com legenda gravada na imagem: não passa pelo `fea_editar_video.py`. Transcrever com tempos de palavra, achar o quadro em que a legenda muda (diferença de pixels na faixa da legenda) e cortar a fala "toque/clica em Saiba Mais" entre essas trocas, para não sobrar legenda do corte. Achar o início do CTA antigo pela troca de cena (`select='gt(scene,0.3)'`), manter a vinheta que vem antes e colar o CTA novo com concat (fps=30 e `-r 30`, H.264 CRF 18). **Nunca substituir o arquivo original** (Keila, 30/09/2026: "não era para substituir, preciso de um a mais"): subir a versão nova como arquivo **novo**, com o próximo número da sequência da pasta (o Ads 076 com CTA novo virou `Ads 096 - BFV.mp4`). Para a Black Friday Vitalícia, o CTA "Comente 'Vitalício'" é o `CTA VITALÍCIO.mov` da pasta Yap black.
