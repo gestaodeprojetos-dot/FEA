@@ -197,7 +197,7 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 - Ago: FEP Experience 10 (29 e 30/08) · Captação Toxina (03 a 12/08), Masterclass Toxina (11 e 12/08), Vendas FEB (11 a 13/08) · Captação IFF10 (17/08 a 16/09)
 - Set: Imersão IFF10 (15 e 16/09), Vendas FEP (16 a 24/09) · Captação Black Friday (29/09 a 21/10)
 - Out: FEP Experience 11 (17 e 18/10) · Congresso Elite Injectors (10 e 11/10) · **Vendas Black Friday (20/10 a 20/11), Black Friday Vitalícia (20/10)**
-- Nov: FEP Experience 12 (28 e 29/11) · Congresso Elite Injectors (07 e 08/11) · Captação Masterclass Toxina (23/11 a 02/12)
+- Nov: FEP Experience 12 (28 e 29/11) · Elite Injectors Congress (01 e 02/11, WTC Sheraton São Paulo, confirmado pela Keila em 03/10/2026) · Captação Masterclass Toxina (23/11 a 02/12)
 - **Dez: Masterclass Toxina (01 e 02/12), Vendas FEB (01 a 03/12) · Captação Masterclass Anatomia (07 a 16/12), Masterclass Anatomia (15 e 16/12), Vendas FEA (15 a 17/12)**
 
 O FEA (curso de Anatomia) tem 2 grandes lançamentos por ano, início de junho e meio de dezembro. A estratégia de nutrição contínua (email e WhatsApp) existe para preencher o vazio entre eles. Datas mudam ano a ano, sempre pedir o planejamento anual atualizado antes de montar peça com data.
