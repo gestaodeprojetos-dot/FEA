@@ -72,6 +72,12 @@
      "Nefertiti"
     ]
    ],
+   "mover_palavra": [
+    [
+     55.69,
+     56.6
+    ]
+   ],
    "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6947.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6947.json",
    "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti.mp4",
