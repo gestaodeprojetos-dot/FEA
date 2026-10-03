@@ -14,7 +14,9 @@ for p in ExtraBold Bold SemiBold Medium; do
     "https://raw.githubusercontent.com/JulietaUla/Montserrat/master/fonts/ttf/Montserrat-$p.ttf"
 done
 file "$TRAB"/fonts/*.ttf | grep -q "TrueType" || { echo "ERRO: fontes não baixaram"; exit 1; }
-"$FF" -hide_banner -filters 2>/dev/null | grep -q " ass " || { echo "ERRO: FFmpeg sem libass"; exit 1; }
+# grep -q fecha o pipe cedo e, com pipefail, o SIGPIPE do FFmpeg virava falso "sem libass"
+FILTROS=$("$FF" -hide_banner -filters 2>/dev/null || true)
+grep -q " ass " <<< "$FILTROS" || { echo "ERRO: FFmpeg sem libass"; exit 1; }
 FEA_MODELOS="$TRAB/models" python3 -c "
 from faster_whisper import WhisperModel
 WhisperModel('large-v3-turbo', device='cpu', compute_type='int8', download_root='$TRAB/models')" 2>&1 | grep -v Warning || true

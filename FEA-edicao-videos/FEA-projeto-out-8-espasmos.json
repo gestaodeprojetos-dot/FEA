@@ -1,0 +1,233 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Relato de caso: espasmos faciais",
+   "manter": [
+    [
+     12.05,
+     45.17
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bprotrangedor\\b",
+     "constrangedor"
+    ]
+   ],
+   "fala_paciente": [
+    [
+     23.1,
+     24.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7256.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7256.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/1- Relato de caso espasmos faciais.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Planejamento para espasmos",
+   "manter": [
+    [
+     0.0,
+     26.13
+    ],
+    [
+     30.33,
+     32.13
+    ],
+    [
+     42.63,
+     80.0
+    ],
+    [
+     80.5,
+     100.7
+    ],
+    [
+     102.2,
+     105.1
+    ],
+    [
+     106.83,
+     119.03
+    ]
+   ],
+   "mover_palavra": [
+    [
+     102.02,
+     102.85
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7259.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7259.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/2- Planejamento para espasmos.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação toxina de espasmos",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.2,
+     5.33
+    ],
+    [
+     7.2,
+     29.45
+    ],
+    [
+     31.5,
+     37.1
+    ],
+    [
+     41.1,
+     51.3
+    ],
+    [
+     102.9,
+     108.43
+    ],
+    [
+     108.73,
+     110.0
+    ],
+    [
+     138.13,
+     141.83
+    ],
+    [
+     142.1,
+     160.8
+    ],
+    [
+     174.77,
+     193.13
+    ],
+    [
+     205.33,
+     221.55
+    ],
+    [
+     224.15,
+     227.1,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     5.3,
+     6.1
+    ],
+    [
+     13.3,
+     15.1
+    ],
+    [
+     107.1,
+     107.5
+    ],
+    [
+     177.2,
+     178.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bcesório\\b",
+     "risório"
+    ],
+    [
+     "\\biguamáticos\\b",
+     "zigomáticos"
+    ],
+    [
+     "\\bentoniano\\b",
+     "mentoniano"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7260.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7260.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/3- Aplicação toxina de espasmos Parte 1.mp4",
+   "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Aplicação toxina de espasmos",
+   "parte": 2,
+   "manter": [
+    [
+     249.1,
+     250.83
+    ],
+    [
+     251.0,
+     253.0
+    ],
+    [
+     290.0,
+     307.67
+    ],
+    [
+     321.13,
+     325.73
+    ],
+    [
+     361.53,
+     392.37
+    ],
+    [
+     393.8,
+     396.97
+    ],
+    [
+     424.03,
+     439.73
+    ],
+    [
+     453.53,
+     454.93
+    ],
+    [
+     463.97,
+     477.33
+    ],
+    [
+     550.03,
+     568.27
+    ],
+    [
+     587.03,
+     588.57
+    ],
+    [
+     609.77,
+     615.72,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     366.0,
+     367.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bbaixo\\. tirar\\b",
+     "baixo. Tirar"
+    ],
+    [
+     "(?i)^tudo, estamos\\b",
+     "tudo bem? Estamos"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7260.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7260.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/4- Aplicação toxina de espasmos Parte 2.mp4",
+   "titulo_origem": "imagem"
+  }
+ ]
+}

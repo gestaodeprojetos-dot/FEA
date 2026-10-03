@@ -38,7 +38,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
 | 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |
-| 9 | Grafias: Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial), **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia"), **desse mento** (nunca "descimento" junto) | texto da legenda | ERRO |
+| 9 | Grafias (lista completa em `fea-edicao-reels`, inclusive o lote de outubro: Letybo, pré-jowl, Perfectha, Biogelis Volumax, ptose, Dysport, DAO): Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial), **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia"), **desse mento** (nunca "descimento" junto) | texto da legenda | ERRO |
 | 9c | Pontuação: vírgulas antes de conjunções (mas, porém, porque, pois, então) e marcadores (né, tá, viu) | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
@@ -53,7 +53,13 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 19 | **Fala do paciente legendada** (Keila, 02/10): quando o Dr. pergunta e o paciente responde, a resposta precisa aparecer na legenda | conferir trechos de diálogo na transcrição | ERRO |
 | 20 | **Título sem nome de produto** quando inventado (sem imagem de títulos). Ex.: "mento feminino" sim, "mento feminino com Volumax" não. Se o título veio da imagem, manter como está | conferir título contra lista de produtos | ERRO |
 | 21 | **Enumeração completa**: se o Dr. enumera (ex.: "pertuito 1, 2, 3, 4, 5, 6"), todos os números devem aparecer na legenda, não parar na metade | conferir sequências numéricas na transcrição vs legenda | ERRO |
-| 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos | duração do .mp4 final | ERRO |
+| 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos, **cada parte também** (antes a Parte 1/2 passava sem conferir) | duração do .mp4 final | ERRO |
+| 23 | **Palavra a palavra** (02/10): fala transcrita (com as mesmas correções) contra o texto da legenda; número de enumeração faltando ou 3+ palavras faladas sem legenda | alinhamento das palavras | ERRO |
+| 24 | **Voz sem legenda**: 1 s ou mais de voz no áudio sem legenda nem palavra transcrita (fala baixa, resposta do paciente) | volume do áudio x legendas | ATENÇÃO (ouvir) |
+| 25 | **Voz falhando/picotando** (02/10, pasta 7): volume do vídeo final cai 12 dB ou mais abaixo do bruto onde o bruto tem voz forte (com alinhamento fino de ±4 quadros por trecho) | volume final x bruto, trecho a trecho | ERRO |
+| 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
+| 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
+| 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |
 
 ## Revisão visual (obrigatória, não pular)
 

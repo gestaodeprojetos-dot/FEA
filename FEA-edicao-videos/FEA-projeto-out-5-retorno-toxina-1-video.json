@@ -1,0 +1,25 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Como fica o resultado da toxina para não deixar a ruga do Wi-Fi sem perder arqueamento?",
+   "manter": [
+    [
+     0.0,
+     81.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bcara de bravo\\b",
+     "cara de brava"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rt/IMG_6942.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rt/IMG_6942.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e5/1- Como fica o resultado da toxina para não deixar a ruga do Wi-Fi sem perder arqueamento.mp4",
+   "titulo_origem": "imagem"
+  }
+ ]
+}

@@ -11,6 +11,7 @@ para a revisão visual de sangue, dor, luva tapando e erro de procedimento.
 """
 import json
 import os
+import numpy as np
 import re
 import subprocess
 import sys
@@ -30,9 +31,9 @@ PRODUTOS_CONHECIDOS = [
     (r"\b[Qq]uiri?al[iy]s\b|\b[Kk]irialis\b|\b[Kk]iriális\b|\b[Cc]urial[iy]s\b", "Kirialys", "é Kirialys"),
     (r"\b[Vv]ol(i|ai|y)me\b(?!.*Volyme)", "Volyme", "é Restylane Volyme"),
     (r"\b[Rr]es(ch|t)ilane\b|\b[Rr]echiline\b", "Restylane", "é Restylane"),
-    (r"\b[Ss]ub ?[Ss]kin\b|\b[Ss]abskin\b", "Subskin", "é Perfectha Subskin"),
+    (r"\b[Ss]ub [Ss]kin\b|\b[Ss]abskin\b|\bsubskin\b|\bSubSkin\b", "Subskin", "é Subskin (Perfectha Subskin)"),
     (r"\b[Rr]evan[ea]ss?e? [Qq]uiss?e?\b", "Revanesse Kiss", "é Revanesse Kiss"),
-    (r"\b[Rr]evan[ea]ss?e?\b(?! Kiss)", "Revanesse", "é Revanesse"),
+    (r"\b(?!Revanesse\b)[Rr]evan[ea]ss?e?\b", "Revanesse", "é Revanesse"),
     (r"\b[Ll]et[iy]?bo\b|\bletbo\b|\b[Ll]etibol\b", "Letybo", "é Letybo"),
     (r"\b[Ss]erint?ox\b|\b[Ss]erin?tox\b", "Seryntox", "é Seryntox"),
     (r"\b[Vv]ietr[ei]\b|\b[Vv]ietry\b", "Vietri", "é Vietri"),
@@ -65,14 +66,16 @@ PROIBIDO_LEGENDA = [
     (r"\bsubi?mento\b", "é submento"),
     (r"\bmanejamento\b", "é planejamento"),
     (r"\bintercorrente\b", "é intercorrência"),
-    (r"\bhipertuitos?\b", "\"hipertuito\": é pertuito"),
-    (r"\bpicadinho\b", "\"picadinho\": é picadinha"),
-    (r"\b[Pp]arestesia\b", "\"parestesia\": é anestesia"),
+    (r"\b[Hh]iper ?tu[ií]tos?\b|\bpertuíto", "\"hipertuito\": é pertuito"),
+    (r"\b[Pp]icadinhos?\b", "\"picadinho\": é picadinha"),
+    (r"\b(?:[Cc]omo (?:foi|ficou|está|tá)|[Ff]azer|[Dd]a|[Nn]a|[Ee]ssa|[Aa] cada) (?:a )?parestesia\b", "\"parestesia\" no lugar de anestesia (Whisper confunde)"),
     (r"\bdescimento\b", "\"descimento\": é desse mento (duas palavras)"),
 ]
 
 # falas que as regras mandam cortar: se aparecem no trecho mantido, conferir
 FALA_SUSPEITA = [
+    (r"parestesia", "\"parestesia\": conferir no áudio se é parestesia (complicação, termo certo) ou anestesia (Whisper confunde)"),
+    (r"nenhum\w* (tipo de )?(intercorr|necrose|trauma)|zero (intercorr|necrose)", "afirmação absoluta de segurança: compliance CFM, levar para a Keila"),
     (r"espelh", "espelho para a paciente se ver"),
     (r"fech\w* (o |os )?olh", "pedido de \"fecha o olho\""),
     (r"cirurgi", "histórico da paciente (cirurgia)"),
@@ -83,6 +86,19 @@ FALA_SUSPEITA = [
     (r"sangr|sangue|escorr", "menção a sangue (conferir se escorre na imagem)"),
     (r"estour|quebr\w* a agulha", "agulha estourando"),
 ]
+
+
+# marcas que nunca entram em título inventado ("Mento feminino com Volumax" -> "Mento feminino")
+MARCAS_TITULO = ["Volumax", "Voluma", "Volux", "Volbella", "Juvederm", "Restylane", "Volyme", "Kirialys",
+                 "Neauvia", "Neuramis", "Revanesse", "Yvoire", "Perfectha", "Subskin", "Letybo", "Seryntox",
+                 "Botox", "Dysport", "Xeomin", "Botulift", "Nabota", "Radiesse", "Sculptra", "Ellansé",
+                 "Rennova", "Elleva", "Saypha", "Belotero", "Stylage", "Teosyal", "Princess", "Biofils", "Vietri"]
+
+PALAVRA_NUMERO = re.compile(r"^\d+$")
+
+
+def _tok(texto):
+    return [re.sub(r"[^\w]", "", w).lower() for w in texto.split() if re.sub(r"[^\w]", "", w)]
 
 
 MARGEM_TITULO_PX = 80   # margem mínima de cada lado (80 px = ~7,4% de 1080)
@@ -116,16 +132,17 @@ def _carregar_fonte():
 def medir_titulo_px(texto):
     """Largura em pixels da linha mais larga do título (Montserrat ExtraBold no tamanho ASS).
     Retorna (largura_max, n_linhas). Se não conseguir medir com a fonte, estima por caracteres."""
-    linhas = texto.replace(r"\N", "\n").split("\n")
-    linhas = [re.sub(r"\{[^}]*\}", "", l).strip() for l in linhas]
+    brutas = texto.replace(r"\N", "\n").split("\n")
+    escalas = [int(m.group(1)) / fe.TITULO_TAM if (m := re.search(r"\\fs(\d+)", l)) else 1.0 for l in brutas]
+    linhas = [re.sub(r"\{[^}]*\}", "", l).strip() for l in brutas]
     font = _carregar_fonte()
     if font:
         from PIL import ImageDraw, Image
         img = Image.new("L", (fe.W * 2, 200))
         draw = ImageDraw.Draw(img)
-        larguras = [draw.textlength(l, font=font) for l in linhas]
+        larguras = [draw.textlength(l, font=font) * k for l, k in zip(linhas, escalas)]
     else:
-        larguras = [len(l) * fe.TITULO_TAM * 0.55 for l in linhas]
+        larguras = [len(l) * fe.TITULO_TAM * 0.55 * k for l, k in zip(linhas, escalas)]
     return max(larguras) if larguras else 0, len(linhas), linhas
 
 
@@ -167,8 +184,10 @@ def revisar(cfg, v, folhas=None):
         erros.append(f"codec {codec}: tem que ser H.264 (HEVC abre com tela preta)")
     if res != (1080, 1920):
         erros.append(f"resolução {res}: tem que ser 1080x1920")
-    if dur > LIMITE_S and not v.get("parte"):
-        erros.append(f"{dur:.0f} s: passa de 3 min sem divisão em Parte 1/2")
+    # limite vale para cada parte também (antes a Parte 1/2 passava sem conferir)
+    if dur > LIMITE_S + 0.05:
+        erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
+                     ", cortar o que é parado ou dividir em Parte 1/2"))
 
     # 2. título: exatamente o da imagem, nos 3 primeiros segundos
     titulo, legendas = ler_ass(ass)
@@ -182,39 +201,61 @@ def revisar(cfg, v, folhas=None):
         erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
 
     # 2b. headline: margem e comprimento
-    titulo_formatado = fe.quebrar_titulo(v["titulo"])
-    if v.get("parte"):
-        titulo_formatado += rf"\N{{\fs{int(fe.TITULO_TAM * 0.62)}}}Parte {v['parte']}"
+    titulo_formatado = fe.formatar_titulo(v)
     larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
     if larg_px > LARGURA_SEGURA:
         erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
     elif larg_px > LARGURA_SEGURA * 0.92:
         aten.append(f"headline quase encostando na margem ({larg_px:.0f} px / {LARGURA_SEGURA} px): considerar enxugar")
     for li in linhas_txt:
-        if len(li) > MAX_CHARS_TITULO_LINHA + 4:
+        if len(li) > MAX_CHARS_TITULO_LINHA + 4 and not li.startswith("Parte "):
             erros.append(f"linha de headline com {len(li)} chars (\"{li}\"): máximo ~{MAX_CHARS_TITULO_LINHA}, enxugar o título")
-    if n_linhas > 2 and not v.get("parte"):
+    if n_linhas > 3 + (1 if v.get("parte") else 0) and fe.TITULO_TAM_LONGO not in [0]:
+        aten.append(f"headline com {n_linhas} linhas (fonte {fe.TITULO_TAM_LONGO}): título longo da imagem, conferir na tela")
+    elif n_linhas > 2 and not v.get("parte"):
         aten.append(f"headline com {n_linhas} linhas: título longo, considerar enxugar")
+
+    # 2b'. título inventado (sem imagem de títulos) nunca leva nome de produto (Keila, 02/10/2026)
+    if v.get("titulo_origem") != "imagem":
+        for marca in MARCAS_TITULO:
+            if re.search(rf"\b{marca}\b", v["titulo"], re.I):
+                erros.append(f"título \"{v['titulo']}\" com nome de produto ({marca}): sem imagem de títulos, tirar o produto")
 
     # 2c. nomes de produto no título (Whisper pode errar o título se veio da transcrição)
     for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
-        if re.search(rx, v["titulo"]):
+        if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
             erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
 
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
+    # "fala_paciente": [[a, b], ...] em segundos do bruto: resposta baixa do paciente, conferida no
+    # áudio, que fica na legenda (Keila 02/10) mesmo sem passar na régua de volume do Dr.
+    _m = fe.encaixar_cortes(v["manter"], *fe.perfil_voz(ff, v["entrada"])[::2]) if v.get("fala_paciente") else []
+    def _ts(t):
+        off = 0.0
+        for a, b in _m:
+            if a <= t < b:
+                return off + t - a
+            off += b - a
+        return -1
+    pac_saida = [(_ts(a) - 0.3, _ts(b) + 0.3) for a, b in v.get("fala_paciente", []) if _ts(a) >= 0]
+    def grafia_errada(rx, nome_certo, texto):
+        # a regex pega variantes; a grafia oficial em si ("Letybo", "Neuramis") não é erro
+        certos = {nome_certo, *nome_certo.split()}
+        return any(m.group(0).strip() not in certos for m in re.finditer(rx, texto))
     for s, e, t in legendas:
         for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
-            if re.search(rx, t):
+            if grafia_errada(rx, nome_certo, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo} (nome de produto errado na legenda)")
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
         if s < fe.TITULO_DUR - 0.01:
             erros.append(f"[{s:5.1f}s] legenda junto com o título")
+        paciente = any(a <= s <= b for a, b in pac_saida)   # fala baixa do paciente, conferida no áudio
         seg = db[int(s / ps):int(e / ps) + 1]
         # régua: 6 dB acima do ruído de fundo (lim = ruído + 12); o Dr. às vezes fala baixo
-        if len(seg) and (seg >= lim - 6).mean() < 0.35:
+        if len(seg) and (seg >= lim - 6).mean() < 0.35 and not paciente:
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
@@ -246,7 +287,7 @@ def revisar(cfg, v, folhas=None):
 
     # 4. começo e fim na fala
     k = 0
-    while k < len(db) - 10 and (db[k:k + 10] >= max(lim, 42)).mean() < 0.8:
+    while k < len(db) - 10 and (db[k:k + 10] >= max(lim - 4, 42)).mean() < 0.8:   # sala com ruído alto: voz baixa fica só ~8 dB acima
         k += 1
     if k * ps > 0.8:
         erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
@@ -297,9 +338,94 @@ def revisar(cfg, v, folhas=None):
                 return off + t - a
             off += b - a
         return -1
+    mantido_total = sum(b - a for a, b in manter)
     n_dit = sum(1 for w in ditas if t_saida((w["s"] + w["e"]) / 2) > fe.TITULO_DUR + 0.2)
     if n_dit and n_leg / n_dit < 0.9:
         erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
+
+    # 5c. palavra a palavra (Keila, 02/10/2026): enumeração completa ("pertuito 1, 2, 3, 4, 5, 6") e
+    # nenhum trecho falado sem legenda (inclusive a resposta do paciente). Compara a fala transcrita
+    # (com as mesmas correções da legenda) com o texto da legenda.
+    import difflib
+    mut = []
+    for w in palavras:   # mesmo agrupamento da legenda: "0" + ",2" = "0,2", "1" + "%" = "1%"
+        if mut and not w["w"].startswith(" "):
+            mut[-1]["w"] += w["w"]
+        else:
+            mut.append(dict(w))
+    fe.numerar_enumeracao(mut)
+    falado = []
+    for w in mut:
+        m = (w["s"] + w["e"]) / 2
+        if any(a <= m < b for a, b in v.get("remover_legenda", []) + v.get("silenciar", [])):
+            continue
+        ts_ = t_saida(m)
+        if ts_ > fe.TITULO_DUR + 0.3 and ts_ < mantido_total - 0.3:
+            falado += [(t, ts_) for t in _tok(fe.corrigir(w["w"], v.get("correcoes", ())))]
+    leg = [t for _, _, txt in legendas for t in _tok(txt)]
+    sm = difflib.SequenceMatcher(None, [t for t, _ in falado], leg, autojunk=False)
+    for op, i1, i2, j1, j2 in sm.get_opcodes():
+        if op not in ("delete", "replace"):
+            continue
+        faltam = falado[i1:i2]
+        nums = [t for t, _ in faltam if PALAVRA_NUMERO.match(t)]
+        if nums and op == "delete":
+            erros.append(f"[{faltam[0][1]:5.1f}s] número falado fora da legenda ({', '.join(nums)}): enumeração incompleta")
+        if op == "delete" and len(faltam) >= 3:
+            erros.append(f"[{faltam[0][1]:5.1f}s] fala sem legenda: \"{' '.join(t for t, _ in faltam)}\" (fala do paciente ou palavra cortada?)")
+
+    # 5d. voz no áudio sem legenda nem palavra transcrita (fala baixa que a transcrição pulou,
+    # ex.: resposta da paciente): conferir ouvindo
+    no_ar = np.zeros(len(db), bool)
+    for s_, e_, _ in legendas:
+        no_ar[int(s_ / ps):int(e_ / ps) + 1] = True
+    voz = db >= lim
+    k, ini_v = int((fe.TITULO_DUR + 0.5) / ps), None
+    fim_conteudo = int((mantido_total - 0.3) / ps)
+    while k < min(fim_conteudo, len(db)):
+        if voz[k] and not no_ar[k]:
+            j = k
+            while j < fim_conteudo and not no_ar[j] and (voz[j] or voz[j:j + 4].any()):
+                j += 1
+            if (voz[k:j].sum()) * ps >= 1.0:
+                aten.append(f"[{k * ps:5.1f}s a {j * ps:5.1f}s] voz no áudio sem legenda: ouvir (fala do paciente? fala baixa?)")
+            k = j
+        k += 1
+
+    # 5e. voz falhando/picotando (Keila, 02/10/2026, pasta 7 vídeo 1): o áudio final, trecho a trecho,
+    # tem que ter o mesmo volume do bruto. Queda forte onde o bruto tem a voz do Dr. = corte, silêncio
+    # ou concat comendo a fala. Compara o volume do .mp4 com o do bruto nos trechos mantidos.
+    # envelope de 5 ms e alinhamento fino por trecho: o concat do CTA desloca o áudio ~21 ms
+    # (priming do AAC) e, em janelas de 50 ms, isso parecia queda de voz (falso alarme)
+    db5, _, p5 = fe.perfil_voz(ff, mp4, passo=0.005)
+    db5b, lim5b, _ = fe.perfil_voz(ff, v["entrada"], passo=0.005)
+    mudo_int = [(t_saida(a), t_saida(b)) for a, b in v.get("silenciar", [])]
+    quedas, off = [], 0.0
+    for a, b in manter:
+        esp = db5b[int(a / p5):int(b / p5)]
+        i_ini = int(round(off / p5))
+        fin = db5[i_ini:i_ini + len(esp)]
+        n = min(len(esp), len(fin))
+        off += b - a
+        if n < 200:
+            continue
+        def corr(L):
+            x, y = fin[max(0, L):n + min(0, L)], esp[max(0, -L):n - max(0, L)]
+            return np.corrcoef(x, y)[0, 1] if len(x) > 50 and x.std() and y.std() else -1
+        L = max(range(-20, 21), key=corr)
+        for i in range(25, n - 25):
+            j = i - L
+            if not 4 <= j < n - 4:
+                continue
+            viz = esp[j - 4:j + 5]          # 45 ms de voz forte em volta, no bruto
+            t = (i_ini + i) * p5
+            if viz.min() >= lim5b + 6 and fin[i] < viz.min() - 20 and fin[i + 1] < viz.min() - 20 and \
+                    not any(x <= t <= y for x, y in mudo_int if x >= 0):
+                if not quedas or t - quedas[-1] > 0.1:
+                    quedas.append(t)
+    if quedas:
+        erros.append(f"voz falhando: {len(quedas)} quedas de volume no meio da fala (ex.: "
+                     + ", ".join(f"{t:.1f}s" for t in quedas[:6]) + "), o bruto tem voz nesses pontos")
 
     # 6. silêncio longo (outro lado do rosto, procurando pertuito)
     fala = [(s, e) for s, e, _ in legendas]

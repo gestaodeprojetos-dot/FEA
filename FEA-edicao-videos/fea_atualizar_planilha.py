@@ -86,9 +86,9 @@ def cmd_append(args):
         args.obs or ""
     ]
     if args.link_brutos:
-        row[1] = f'=HYPERLINK("{args.link_brutos}","{args.doc or "Brutos"}")'
+        row[1] = f'=HYPERLINK("{args.link_brutos}";"{args.doc or "Brutos"}")'   # planilha em pt-BR: separador ";"
     if args.link_editados:
-        row[5] = f'=HYPERLINK("{args.link_editados}","{args.salvar}")'
+        row[5] = f'=HYPERLINK("{args.link_editados}";"{args.salvar}")'
 
     range_str = urllib.parse.quote(f"{SHEET_NAME}!A:H")
     body = {"values": [row]}
