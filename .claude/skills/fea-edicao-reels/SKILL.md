@@ -64,6 +64,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
    - **Parte 1/Parte 2**: mesmo número no nome (`6- Título Parte 1.mp4`, `6- Título Parte 2.mp4`), para não renumerar o resto da pasta nem descasar da imagem de títulos. A legenda continua por baixo da cartela "Parte 2 no perfil".
 6. **projeto.json** (ver o docstring de `fea_editar_video.py`): `entrada`, `transcricao`, `saida`, `titulo`, `titulo_origem` (`"imagem"` = veio da imagem de títulos e sai exato; `"inventado"` = sem imagem, nunca com nome de produto), `parte`, `cartela_final`, `manter`, `remover_legenda`, `correcoes` (regex extras do lote). Antes do render, `python3 fea_editar_video.py projeto.json --so-legenda` gera só o .ass para ler todas as legendas (rápido).
    - **Título da imagem sai exato**, inclusive com "?" e ":" (nunca "Técn." ou "Result."); se não couber em 3 linhas de ~22 caracteres, vai em 4 linhas com fonte 100.
+   - **Headline longa demais** (mais de ~45 caracteres, 4 linhas na tela) incomoda a Keila (03/10/2026: "a headline está muito grande"). Não abreviar por conta própria: levar a ela uma versão curta para aprovar. Exemplo aprovado: "Como fica o resultado da toxina para não deixar a ruga do Wi-Fi sem perder arqueamento?" virou "Toxina para ruga do Wi-Fi sem perder o arqueamento".
 7. **Render final**: `python3 fea_render_com_cta.py projeto.json CTA.mp4` (H.264 1080p qualidade total + CTA). Conferir visualmente um mosaico de quadros (título aos 1,5 s e legenda aos ~12 s de cada vídeo) antes de subir.
 8. **Revisão da Keila**: ela revisa direto na pasta de destino do Drive. Pontos para ela decidir vão no resumo final da conversa, sem travar a entrega.
 9. **Revisão obrigatória**: rodar a skill `fea-revisao-reels` (`python3 FEA-edicao-videos/fea_revisar.py projeto.json --folhas PASTA`) e olhar as folhas de contato. Só entrega com 0 ERRO e cada ATENÇÃO resolvida.
@@ -85,7 +86,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## Correções de texto
 
-**Nome de produto: sempre pesquisar a grafia oficial** (site do fabricante ou distribuidor) antes de legendar, e adicionar em `CORRECOES`. Confirmados: Kirialys (Pharmaesthetics), Restylane Volyme (Galderma), Perfectha Subskin, Neauvia Intense e Stimulate, Yvoire Contour, Neuramis, Revanesse, Letybo, Seryntox. Termos: ácido hialurônico, bolus.
+**Nome de produto: sempre pesquisar a grafia oficial** (site do fabricante ou distribuidor) antes de legendar, e adicionar em `CORRECOES`. Confirmados: Biofils (fios), Kirialys (Pharmaesthetics), Restylane Volyme (Galderma), Perfectha Subskin, Neauvia Intense e Stimulate, Yvoire Contour, Neuramis, Revanesse, Letybo, Seryntox. Termos: ácido hialurônico, bolus.
 
 Grafias fixas (Keila, 26/09/2026): **Neauvia** (nunca Nuvia), **tear trough**, **1%** e **0,2** (número inteiro na legenda, o script junta "0" + ",2"). Legenda nunca tira palavra no meio da fala (só a palavra solta inventada no silêncio), para ficar sincronizada com o áudio.
 
@@ -94,6 +95,8 @@ Grafias fixas (Keila, 02/10/2026): **pertuito** (nunca "hipertuito"), **picadinh
 **Atenção, parestesia:** "sem nenhum paciente com parestesia" é o termo médico certo (complicação neural). A troca automática para "anestesia" deixava a frase sem sentido, então ela só vale no contexto "como foi/ficou a parestesia"; nos outros casos, conferir no áudio e levar para a Keila.
 
 Grafias do lote de outubro (02/10/2026): Letybo (nunca Letibol/Letibô/Letipo/Letibon; "letibona" = "Letybo na"), corrugador, pré-jowl e jowl (nunca "pre-joy", "jaw"), buldoguinho, Perfectha Subskin (nunca "Afecta"), Yvoire (nunca "Ivoar"), Biogelis Volumax (Pharmaesthetics), alto G' (nunca "autogelinha"), ácido hialurônico (nunca "acilurônico"/"acelerônico"), 20 mg (com espaço), Wi-Fi, Nefertiti, ptose (nunca "hiptose"/"pitose"), Dysport (nunca "dispor"), DAO (nunca "dow"), médio-pupilar (nunca "M-pupilar"), "fica arqueado" (o Whisper ouve "hackeado").
+
+Marca de fios (Keila, 03/10/2026): **Biofils** (nunca "biofios", "bio fios" ou "biofil"; o Whisper ouve "biofios").
 
 **Legenda e diálogo** (02/10/2026): pergunta do Dr. e resposta do paciente nunca no mesmo bloco ("doeu?" / "não, nem um pouquinho"); fala de uma palavra que é a frase inteira ("Não.", "Ótimo.") fica sozinha na tela. Começo de frase no meio de um bloco ganha vírgula e minúscula. Vírgula antes de "tá"/"viu" só no fim da frase ("a minha agulha tá de cima" não leva vírgula), e nunca depois de palavra de ligação ("acho que aí eu vou").
 
