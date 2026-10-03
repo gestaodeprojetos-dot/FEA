@@ -287,7 +287,7 @@ def revisar(cfg, v, folhas=None):
 
     # 4. começo e fim na fala
     k = 0
-    while k < len(db) - 10 and (db[k:k + 10] >= max(lim, 42)).mean() < 0.8:
+    while k < len(db) - 10 and (db[k:k + 10] >= max(lim - 4, 42)).mean() < 0.8:   # sala com ruído alto: voz baixa fica só ~8 dB acima
         k += 1
     if k * ps > 0.8:
         erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
