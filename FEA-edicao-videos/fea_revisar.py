@@ -39,6 +39,7 @@ PRODUTOS_CONHECIDOS = [
     (r"\b[Vv]ietr[ei]\b|\b[Vv]ietry\b", "Vietri", "é Vietri"),
     (r"\b[Pp]erfecta\b|\b[Pp]erfect?h?a\b(?! Subskin)", "Perfectha", "é Perfectha"),
     (r"(?<!hi)al[uo]r[oô]nic|lor[oô]nic|acel[eê]r[oô]nic", "hialurônico", "é ácido hialurônico"),
+    (r"\b[Bb]io ?f[ií]os\b|\b[Bb]io ?fil\b|\bbiofils\b|\bBio [Ff]ils\b", "Biofils", "é Biofils"),
 ]
 
 # texto que nunca pode aparecer na legenda (regra -> motivo)
