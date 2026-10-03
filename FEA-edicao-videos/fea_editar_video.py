@@ -384,7 +384,7 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA", "Elite", "WTC", "Sheraton", "Formação"}
 
 
 def limpar(texto):
