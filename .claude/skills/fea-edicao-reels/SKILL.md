@@ -85,7 +85,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## Correções de texto
 
-**Nome de produto: sempre pesquisar a grafia oficial** (site do fabricante ou distribuidor) antes de legendar, e adicionar em `CORRECOES`. Confirmados: Kirialys (Pharmaesthetics), Restylane Volyme (Galderma), Perfectha Subskin, Neauvia Intense e Stimulate, Yvoire Contour, Neuramis, Revanesse, Letybo, Seryntox. Termos: ácido hialurônico, bolus.
+**Nome de produto: sempre pesquisar a grafia oficial** (site do fabricante ou distribuidor) antes de legendar, e adicionar em `CORRECOES`. Confirmados: Biofils (fios), Kirialys (Pharmaesthetics), Restylane Volyme (Galderma), Perfectha Subskin, Neauvia Intense e Stimulate, Yvoire Contour, Neuramis, Revanesse, Letybo, Seryntox. Termos: ácido hialurônico, bolus.
 
 Grafias fixas (Keila, 26/09/2026): **Neauvia** (nunca Nuvia), **tear trough**, **1%** e **0,2** (número inteiro na legenda, o script junta "0" + ",2"). Legenda nunca tira palavra no meio da fala (só a palavra solta inventada no silêncio), para ficar sincronizada com o áudio.
 
@@ -94,6 +94,8 @@ Grafias fixas (Keila, 02/10/2026): **pertuito** (nunca "hipertuito"), **picadinh
 **Atenção, parestesia:** "sem nenhum paciente com parestesia" é o termo médico certo (complicação neural). A troca automática para "anestesia" deixava a frase sem sentido, então ela só vale no contexto "como foi/ficou a parestesia"; nos outros casos, conferir no áudio e levar para a Keila.
 
 Grafias do lote de outubro (02/10/2026): Letybo (nunca Letibol/Letibô/Letipo/Letibon; "letibona" = "Letybo na"), corrugador, pré-jowl e jowl (nunca "pre-joy", "jaw"), buldoguinho, Perfectha Subskin (nunca "Afecta"), Yvoire (nunca "Ivoar"), Biogelis Volumax (Pharmaesthetics), alto G' (nunca "autogelinha"), ácido hialurônico (nunca "acilurônico"/"acelerônico"), 20 mg (com espaço), Wi-Fi, Nefertiti, ptose (nunca "hiptose"/"pitose"), Dysport (nunca "dispor"), DAO (nunca "dow"), médio-pupilar (nunca "M-pupilar"), "fica arqueado" (o Whisper ouve "hackeado").
+
+Marca de fios (Keila, 03/10/2026): **Biofils** (nunca "biofios", "bio fios" ou "biofil"; o Whisper ouve "biofios").
 
 **Legenda e diálogo** (02/10/2026): pergunta do Dr. e resposta do paciente nunca no mesmo bloco ("doeu?" / "não, nem um pouquinho"); fala de uma palavra que é a frase inteira ("Não.", "Ótimo.") fica sozinha na tela. Começo de frase no meio de um bloco ganha vírgula e minúscula. Vírgula antes de "tá"/"viu" só no fim da frase ("a minha agulha tá de cima" não leva vírgula), e nunca depois de palavra de ligação ("acho que aí eu vou").
 

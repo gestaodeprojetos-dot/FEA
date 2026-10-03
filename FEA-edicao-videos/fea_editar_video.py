@@ -311,6 +311,8 @@ CORRECOES = [
     (r"\b[Ww]i-?[Ff]i(zinho)?\b", r"Wi-Fi\1"), (r"\b[Nn]efertit[ei]\b", "Nefertiti"),
     (r"\b[Ll]etbo\b", "Letybo"),
     (r"\b(?:[Hh]ip|[Pp]i)tose\b", "ptose"), (r"\b[Hh]iptose\b", "ptose"),
+    # Biofils: marca de fios (Keila, 03/10/2026); o Whisper ouve "biofios"
+    (r"\b[Bb]io ?f[ií](?:l|o)s\b", "Biofils"), (r"\b[Bb]io ?fil\b", "Biofils"),
     (r"\bintroral\b", "intraoral"), (r"\bintroorais\b", "intraorais"),
     (r"\bFicadinha\b", "Picadinha"), (r"\bficadinha\b", "picadinha"),
     # (antes "hipertuitos?" virava sempre "pertuitos": o singular saía no plural)
@@ -384,7 +386,7 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
 
 def limpar(texto):
