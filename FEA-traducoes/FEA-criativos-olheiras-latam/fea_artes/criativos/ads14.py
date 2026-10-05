@@ -54,7 +54,7 @@ def selo(im):
                             'Montserrat_600SemiBold', ang_lim=(-175, -5))
     # CÓPIAS -> COPIAS: apaga só o acento (componente pequeno acima do O)
     acento = (874, 337, 881, 342)  # pixels escuros do acento agudo, acima do O
-    im = apagar(im, acento, lambda r, g, b: (r + g + b) < 540, 0, 2)
+    im = apagar(im, acento, lambda r, g, b: (0.299 * r + 0.587 * g + 0.114 * b) < 180, 1, 3)
     return im, info, acento
 
 
