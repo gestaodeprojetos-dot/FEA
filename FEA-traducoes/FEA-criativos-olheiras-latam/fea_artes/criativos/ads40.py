@@ -73,7 +73,6 @@ def preco(im, dy):
         fi = F(SERIF_BOLD, fi.size - 1)
     x = cx - total / 2
     if moeda:
-        L = mascara_texto(im.size, [(x - f_r.getbbox(moeda)[0], topo_r - f_r.getbbox('R')[1])], f_r, 0) if False else None
         L = Image.new('L', im.size, 0)
         ImageDraw.Draw(L).text((x - f_r.getbbox(moeda)[0], topo_r - f_r.getbbox('R')[1]), moeda, font=f_r, fill=255)
         im = pintar_mascara(im, L, campo=c_r, caixa_campo=L.getbbox())
