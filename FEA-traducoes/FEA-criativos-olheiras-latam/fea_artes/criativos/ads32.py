@@ -93,13 +93,7 @@ def gerar(fmt):
     seta = im.crop((s0, yy0, s1, yy1))
     claro = lambda r, g, b: (r + g + b) > 160
     im = apagar_col(im, (tx0 - 20, yy0, s1 + 5, yy1), claro, 4)
-    im = apagar_col(im, (s0 - 5, yy0, s1 + 5, yy1), lambda r, g, b: (r + g + b) > 0, 0) if False else im
     # a seta (círculo translúcido + chevron) é recolocada inteira, deslocada
-    fundo = np.array(im)[yy0:yy1, s0:s1]
-    im2 = np.array(im)
-    a_seta = np.array(seta).astype(float)
-    im2[yy0:yy1, s0:s1] = fundo
-    im = Image.fromarray(im2)
     im = apagar_seta(im, (s0, yy0, s1, yy1))
     im.paste(seta, (s0 - desl, yy0))
     desenhar(im, es_c, tc, base, x_esq=tx0 + desl, tracking=CTA_TR * tc)
