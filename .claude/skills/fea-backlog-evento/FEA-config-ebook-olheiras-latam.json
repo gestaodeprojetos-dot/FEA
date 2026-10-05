@@ -1,0 +1,76 @@
+{
+  "evento": "Ebook Olheiras LATAM",
+  "links": [
+    {"secao": "GERAL", "linhas": [
+      ["Pasta do Drive do evento", "https://drive.google.com/drive/folders/1n2cSn7QoPj8rxcp7MvZTNAuZOzVpY4kc", "https://drive.google.com/drive/folders/1KZMvq-qP5lCxzBldIT1O8Hz2P_1dTvBS", "ok"],
+      ["Backlog no ClickUp", "https://app.clickup.com/9013080622/v/f/901319449714/901314001225", "https://app.clickup.com/9013080622/v/f/901313587427/90130517360", "ok"],
+      ["Briefing do lançamento", "https://drive.google.com/file/d/1R1J3XcgNaBvSbxZTfdErDvk5NnmMK3CR/view", "", "pendente: modelo vazio, preencher"],
+      ["Pasta 0. PLANEJAMENTO", "https://drive.google.com/drive/folders/1M4OEW8rnJlNtADlhKByQUM8dQJ3t3EjV", "", "ok"],
+      ["Doc de automação (captação)", "https://drive.google.com/file/d/15rahJldgX0oTUM4aJxxKdIKf1JhFJJ7s/view", "", "ok"],
+      ["Ebook em espanhol (PDF)", "https://drive.google.com/file/d/1xZR8Y-3gtfZX9pnFUskn27V0O4kUw9al/view", "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view", "ok"],
+      ["Ficha de entrega (ES)", "https://drive.google.com/file/d/1EdN5ACOI3XWZVC5qGsSoiUxYLA6BEg61/view", "", "ok"],
+      ["Aulas traduzidas", "https://drive.google.com/drive/folders/1lJlpRTaLmGc0PGEau01jTusnW8uV5t91", "https://drive.google.com/drive/folders/10zk9Icg6pYe0ewsNlCjcsNWaGW6nCK4L", "ok"],
+      ["Inventário QR dos vídeos", "https://drive.google.com/file/d/1TQCXah72zTGVg_3mjS_ITvsJe1e6kaTv/view", "", "ok"],
+      ["Planilha de links anterior (xlsx)", "https://drive.google.com/file/d/1k5oRh_piNK9PMZ4qn2V7XeFlb4YxBFer/view", "https://docs.google.com/spreadsheets/d/1Z7czDdGeZBd36vVEpCRHN2Ck83rKeL8aP7t7gLD0OYY/edit", "substituída por esta"]
+    ]},
+    {"secao": "COPY", "linhas": [
+      ["Pasta 1. COPY", "https://drive.google.com/drive/folders/1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr", "https://drive.google.com/drive/folders/12rbce6ezahPCeDcjX3e5v_CyaCkyJaua", "ok"],
+      ["Página de vendas (ES)", "https://docs.google.com/document/d/1xerpF_grMrLo_G--QAcBY83garqeMXcHtDfuE1XxhC8/edit", "https://docs.google.com/document/d/1Wzgl5qNOVhIUMCD0V_rK9zYJCu-nn3_Z41HQqh7QueA/edit", "a escrever"],
+      ["Página de obrigado e pesquisa (ES)", "https://docs.google.com/document/d/1pVQU-7JYRP7IlPWCobx1Q4ttXypN3HQqPUARELt3A6A/edit", "https://drive.google.com/file/d/1B2RD_U5ePP9zxf65wFb3vHbNs89sWAYi/view", "a escrever"],
+      ["Checkout personalizado (ES)", "https://docs.google.com/document/d/17VPX4lKlrW0xSHGzXqJCLCnzEvCU_e4E-o1PIBAAW40/edit", "https://docs.google.com/document/d/1u_0_vDASJHKOzoKHsgfyk4WGGH5vKpHnsGnzrcO_Vkk/edit", "a escrever"],
+      ["Criativos de vendas (ES)", "https://docs.google.com/document/d/1FoI64JnXBha9-pCb_XO9pXabUejM4a_sxoINmB1LCto/edit", "https://docs.google.com/document/d/1ze5LsHFmPXwcrs5E8gTYG3y2MFnCWucXs5RhBc_NxtM/edit", "a escrever"],
+      ["Criativos de remarketing (ES)", "https://docs.google.com/document/d/18T-XhwX8Laa8j4VDQBntp-iaKcYBpaD2j_AgUnoVh7c/edit", "https://docs.google.com/document/d/1ze5LsHFmPXwcrs5E8gTYG3y2MFnCWucXs5RhBc_NxtM/edit", "a escrever"],
+      ["Legendas dos criativos (ES)", "https://docs.google.com/document/d/1HQHP1x4WXR4O_KPZgv012sAjIB-N7gMD3YxRz3y2x5I/edit", "https://docs.google.com/document/d/1PxsbyqQyibELlt9JYPT9WtnbuSUsI3t866cWhrBkRZQ/edit", "a escrever"],
+      ["Listboss API WhatsApp (ES)", "https://docs.google.com/document/d/1UwN3-s589txd0eSoafrJBpzgHLGcorOfwnkcLIv0CnI/edit", "https://docs.google.com/document/d/1KuVKVJy0lyl_S5Yt7caEEFbZ8xaejTtbC5eOh01kvvU/edit", "a escrever"],
+      ["Listboss E-mail (ES)", "https://docs.google.com/document/d/1wrzVBIyR8gu1LUns_lhTGkcnjYcN1lky2Yt2QAzaLUI/edit", "https://docs.google.com/document/d/1mben7QxAO0MX990Iusuf_GZOZZo6B1gBSkONM0kDHEs/edit", "a escrever"],
+      ["Onboarding API + descrição do grupo + grupo cheio (ES)", "https://docs.google.com/document/d/1LUg-USf7gafBtFieshqUQ3H2T6rAghaCk9338K2QN4c/edit", "https://docs.google.com/document/d/18GzP8H_vbZ78ognaq6Nu8ynrvpBCWHDJW2NAOrhAcmY/edit", "a escrever"],
+      ["Mensagem com pesquisa e presente + API de pesquisa (ES)", "https://docs.google.com/document/d/1fSPGH0xAOHqDk80BJyI17KEFF7bZkxDYDQRoZg207w4/edit", "", "a escrever"],
+      ["Comunicações (ES)", "https://docs.google.com/document/d/1Tf7TeS_qmppjSUwGQxJP0WMBIf_mUd72u6y4ILZnF2c/edit", "", "a escrever"]
+    ]},
+    {"secao": "ARTES", "linhas": [
+      ["Pasta 2. ARTES", "https://drive.google.com/drive/folders/1Q4UHzgdjlUx8_ewd1sBNWemyJ9JZT1ui", "https://drive.google.com/drive/folders/1dFXyCh8KmI0DGxic6hWwC9VsJ5e7XnwD", "ok"],
+      ["Briefing de design", "https://docs.google.com/document/d/1Ny4GyN4QwKLBIQiuiXxHsqiRvz1XiGQwrsOm0A16IaM/edit", "", "ok"],
+      ["Banner checkout", "https://drive.google.com/drive/folders/1q5eyS55FaIDXOrsULKTYK2dAhL_jPlMq", "https://drive.google.com/drive/folders/1vSMhK2Q3E-HhCBc8WOg-Hw5kpVvvHF22", "a produzir"],
+      ["Capas plataforma (área de membros)", "https://drive.google.com/drive/folders/1kTog5A7UsfdX-uj5alq37Zqn5lZ1kaRz", "https://drive.google.com/drive/folders/1UALdEH-NtZKHAps6R-Vj4WTEZ09zzZGL", "a produzir"],
+      ["Capas grupo e formulários", "https://drive.google.com/drive/folders/1ar8bBDc_TqFNULr1eawmTSgkfVFDQUrH", "", "a produzir"],
+      ["Referências", "https://drive.google.com/drive/folders/1sr_spykONoYaO2pgwIoxRTFvDCm52iOQ", "https://drive.google.com/drive/folders/1sPJTIsljbEwKHeUAZUAeH6qB1cocqrqX", "ok"],
+      ["Logo", "https://drive.google.com/drive/folders/1SNsyj8xq-LdMXNkmI53NdVPOQmwwjupi", "https://drive.google.com/drive/folders/1KLZwJCDQhKBJlpd2r9uzKNW9pPkq1t8N", "pendente: pasta vazia"],
+      ["Editável (InDesign)", "https://drive.google.com/drive/folders/1FhLiZzbG_yGDTFN4bRHwB7wlKCk29BdZ", "https://drive.google.com/drive/folders/1VNSgVGKb23w50SasjsQN5RDtguhQejwZ", "pendente: subir editável ES"]
+    ]},
+    {"secao": "TRÁFEGO", "linhas": [
+      ["Pasta 4. TRÁFEGO", "https://drive.google.com/drive/folders/1dsNl_SZq_LFbuqeI94ChQ7Mv1P8Jrt44", "https://drive.google.com/drive/folders/1yAACDJRegeOnRlYXTSazyAZnKqzyZIgr", "ok"],
+      ["Planilha de criativos para tráfego", "https://docs.google.com/spreadsheets/d/1NLOQJmBiVp_1stvvz2KaF7XHIBLSfcK2xLM6MRIfcGw/edit", "https://drive.google.com/file/d/1iWdHQoTP6K0S507-DO3SnxldWlWT5Szq/view", "ok"],
+      ["Briefing criativos e edição de vídeo", "https://docs.google.com/document/d/1SxAJCxfIiz_uqRXV0BuXKzhYxv-cDeL8NyhQVhSYAlU/edit", "https://docs.google.com/document/d/14vSswpBtfcazgKI3ow2nYDMd-PjfEWUzU3hNRkW9Gz8/edit", "ok"],
+      ["Brutos", "https://drive.google.com/drive/folders/1ApyywEa_Jy-9gnndhAIW0fNC19gCjlh_", "", "ok"],
+      ["Criativos prontos / Vendas", "https://drive.google.com/drive/folders/13a8R1Ix4ELvDoAexshdsoCNxZgocVcSj", "", "ok"],
+      ["Criativos prontos / Remarketing", "https://drive.google.com/drive/folders/1TSTSLEg7JjrxB_L9IwsiO0UR5HHp3_Dr", "", "ok"],
+      ["UTMs (vendas, página, checkout)", "pendente", "", "pendente: Matheus Saar"],
+      ["UTM checkout suporte", "pendente", "", "pendente: Matheus Saar"],
+      ["UTM checkout comercial", "pendente", "", "pendente: Matheus Saar"]
+    ]},
+    {"secao": "LINKS DO AR (preencher quando publicar)", "linhas": [
+      ["Domínio LATAM", "pendente", "", "pendente: tarefa Registrar novo domínio"],
+      ["Página de vendas", "pendente", "https://eb.joaopithon.com.br/ebook-pto-a", "pendente: André Vivas"],
+      ["Página de obrigado / check-in", "pendente", "https://eb.joaopithon.com.br/ebook-pto-obrigado/", "pendente: André Vivas"],
+      ["Checkout Hotmart (USD)", "pendente", "https://pay.hotmart.com/S97800165C?off=1lg7jeno", "pendente: oferta em dólar"],
+      ["Checkout personalizado comercial", "pendente", "", "pendente: Keila"],
+      ["Checkout personalizado suporte", "pendente", "", "pendente: Keila"],
+      ["Área de membros", "pendente", "https://hotmart.com/pt-br/club/formacao-especialista/products/5021699", "pendente: Suporte Caroline"],
+      ["Grupo de alunos WhatsApp", "pendente", "https://chat.whatsapp.com/KKra8iK6Yz41B40mR8qKJZ", "pendente: Equipe IAutomate"],
+      ["Planilha de respostas da pesquisa", "pendente", "https://drive.google.com/file/d/1B2RD_U5ePP9zxf65wFb3vHbNs89sWAYi/view", "pendente: Equipe IAutomate"]
+    ]}
+  ],
+  "trafego": {
+    "campanha": "Ebook Olheiras LATAM",
+    "meio": "Meta Ads",
+    "link_cta": "pendente (página de vendas LATAM)",
+    "grupos": [
+      {"fase": "Vendas", "prefixo": "Ads", "sufixo": "PTO-LATAM", "qtd": 10,
+       "legenda": "https://docs.google.com/document/d/1HQHP1x4WXR4O_KPZgv012sAjIB-N7gMD3YxRz3y2x5I/edit",
+       "pasta": "https://drive.google.com/drive/folders/13a8R1Ix4ELvDoAexshdsoCNxZgocVcSj"},
+      {"fase": "Remarketing", "prefixo": "Ads RMKT", "sufixo": "PTO-LATAM", "qtd": 5,
+       "legenda": "https://docs.google.com/document/d/1HQHP1x4WXR4O_KPZgv012sAjIB-N7gMD3YxRz3y2x5I/edit",
+       "pasta": "https://drive.google.com/drive/folders/1TSTSLEg7JjrxB_L9IwsiO0UR5HHp3_Dr"}
+    ]
+  }
+}
