@@ -33,9 +33,9 @@ def ads37(arq, P):
     hl, sub, its = ls[:3], ls[3], ls[4:]
     cor_hl = cor_texto(im, (hl[2][2], hl[2][0], hl[2][3], hl[2][1]), ESC)
     cx = (hl[2][2] + hl[2][3]) / 2
-    caixa = (P['texto'][0], hl[0][0] - 10, P['texto'][2], hl[2][1] + 10)
-    im, _ = titulo_linhas(im, hl, HL_PT, HL_ES, SERIF_SEMI, 2, cor_hl, cx, P['lim_hl'],
-                          apagar_cond=ESC_APAGAR, caixa_apagar=caixa, rotulo=arq)
+    for l in hl:  # apaga só a área de cada linha original (não encosta no selo do canto)
+        im = apagar(im, (l[2] - 14, l[0] - 10, l[3] + 14, l[1] + 10), ESC_APAGAR, 4)
+    im, _ = titulo_linhas(im, hl, HL_PT, HL_ES, SERIF_SEMI, 2, cor_hl, cx, P['lim_hl'], rotulo=arq)
     # subtítulo
     fs = calibrar_larg(SANS_REG, SUB_PT, sub[3] - sub[2] + 1)
     cor = cor_texto(im, (sub[2], sub[0], sub[3], sub[1]), ESC)
@@ -60,7 +60,7 @@ def ads37(arq, P):
     return im
 
 
-FEED = dict(texto=(250, 150, 1760, 1050), lim_hl=[(150, 1735), (150, 1715), (150, 1760)],
+FEED = dict(texto=(250, 150, 1845, 1050), lim_hl=[(150, 1735), (150, 1715), (150, 1760)],
             cta=(543, 2098, 1630, 2270), seta=1476, selo=(1415, 1215, 1530, 1245),
             acento_desfocado=(1997, 235, 2015, 249))
 STORY = dict(texto=(150, 600, 1990, 1600), lim_hl=[(120, 1800), (120, 2040), (120, 2040)],

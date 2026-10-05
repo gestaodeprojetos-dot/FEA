@@ -148,6 +148,14 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
             tt = np.clip(tt, 0, 1)[None, :, None]
             col = c0 + (c1 - c0) * tt
             col = np.broadcast_to(col, (H, W, 3))
+        elif cor[0] == 'perfil':
+            ys, xs = np.where(al[..., 0] > 0)
+            xa, xb = xs.min(), xs.max()
+            tt = np.clip((np.arange(W) - xa) / max(1, xb - xa), 0, 1)
+            pts = np.array([q[0] for q in cor[1]], float)
+            cs = np.array([q[1] for q in cor[1]], float)
+            col = np.stack([np.interp(tt, pts, cs[:, c]) for c in range(3)], -1)[None]
+            col = np.broadcast_to(col, (H, W, 3))
         else:
             col = np.array(cor, float)[None, None, :]
         a = a * (1 - al) + col * al
@@ -231,3 +239,39 @@ def caber(runs_es, tam, largura_max, tracking=0.0, red_max=0.15):
             return t, 1 - t / tam
         t -= 0.25
     return t, 1 - t / tam
+
+
+def perfil_cor(im, caixa, cond, n=12, claro=True):
+    """Degradê horizontal da tinta: ('perfil', [(t, cor)]) com t de 0 a 1 ao longo da tinta."""
+    x0, y0, x1, y1 = caixa
+    a = np.array(im)[y0:y1, x0:x1].astype(int)
+    m = cond(a[..., 0], a[..., 1], a[..., 2])
+    ys, xs = np.where(m)
+    L = a[ys, xs].sum(1)
+    xa, xb = xs.min(), xs.max()
+    pts = []
+    for i in range(n):
+        lo, hi = xa + (xb - xa) * i / n, xa + (xb - xa) * (i + 1) / n
+        sel = (xs >= lo) & (xs <= hi)
+        if sel.sum() < 10:
+            continue
+        Ls = L[sel]
+        core = (Ls >= np.percentile(Ls, 70)) if claro else (Ls <= np.percentile(Ls, 30))
+        c = np.median(a[ys[sel][core], xs[sel][core]], 0)
+        pts.append(((i + 0.5) / n, tuple(int(v) for v in c)))
+    pts = [(0.0, pts[0][1])] + pts + [(1.0, pts[-1][1])]
+    return ('perfil', pts)
+
+
+def mover_icone(orig, im, caixa, dx, cond, dil=4, suav=5):
+    """Cola o ícone (pixels de 'cond' na caixa do ORIGINAL) deslocado dx, com borda suave,
+    sobre a imagem atual (fundo já limpo)."""
+    x0, y0, x1, y1 = caixa
+    o = np.array(orig)[y0:y1, x0:x1].astype(float)
+    m = cond(o[..., 0], o[..., 1], o[..., 2]).astype(np.uint8)
+    m = cv2.dilate(m, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8)).astype(float)
+    m = cv2.GaussianBlur(m, (2 * suav + 1, 2 * suav + 1), 0)[..., None]
+    a = np.array(im).astype(float)
+    dst = a[y0:y1, x0 + dx:x1 + dx]
+    a[y0:y1, x0 + dx:x1 + dx] = dst * (1 - m) + o * m
+    return Image.fromarray(a.round().astype(np.uint8))

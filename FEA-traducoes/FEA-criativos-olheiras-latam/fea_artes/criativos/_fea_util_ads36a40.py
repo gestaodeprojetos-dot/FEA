@@ -165,6 +165,8 @@ def trocar_cta(im, botao, cond_letra, cond_apagar, seta_x0, caminho_fonte, pt, e
     a fonte (máx. 15 %)."""
     bx0, by0, bx1, by1 = botao
     cs = [c for c in componentes(im, (bx0 + 10, by0 + 10, seta_x0 - 2, by1 - 10), cond_letra) if c[4] > area_min]
+    mt, mh = np.median([c[1] for c in cs]), np.median([c[3] - c[1] for c in cs])
+    cs = [c for c in cs if abs(c[1] - mt) <= 0.3 * mh and abs((c[3] - c[1]) - mh) <= 0.35 * mh]  # só letras da linha
     xs0, xs1 = min(c[0] for c in cs), max(c[2] for c in cs)
     topo = int(np.median([c[1] for c in cs]))
     alt = int(np.median([c[3] - c[1] for c in cs]))
@@ -217,3 +219,12 @@ def titulo_linhas(im, linhas_med, pts, ess, caminho_fonte, ref_idx, cor, cx, lim
         d.text((cx - largura(fn, e) / 2 - fn.getbbox(e)[0], y), e, font=fn, fill=cor)
     print(rotulo, 'título fonte', round(f.size, 2), '->', round(fn.size, 2))
     return im, fn
+
+
+def apagar_area(im, caixa, raio=5):
+    """Inpainting da caixa inteira (para acento desfocado que se funde à letra de baixo)."""
+    a = np.array(im)
+    M = np.zeros(a.shape[:2], np.uint8)
+    M[caixa[1]:caixa[3], caixa[0]:caixa[2]] = 255
+    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), M, raio, cv2.INPAINT_TELEA)
+    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))

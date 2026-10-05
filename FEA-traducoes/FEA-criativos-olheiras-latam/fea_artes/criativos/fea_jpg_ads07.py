@@ -39,7 +39,11 @@ def recompor(orig, saida, tdx, tdy, cdx, cdy, bdy):
           ('aprenda anatomía', SBI), ('aplicada sin suposiciones', SBI), ('y sin riesgos innecesarios.', SBI)]
     x0 = 404 + tdx
     for (t, n), b in zip(es, bases):
-        desenhar(im, [(t, n, verde, False)], tam_r if n == SR else tam_b, b, x0, alinh='esquerda')
+        # alinhamento pela origem da linha (como no layout original); compensa só a tinta de 'E'/'a'/'u'
+        ref = 'E' if n == SR else 'a'
+        pena = x0 - F(n, tam_r).getbbox(ref, anchor='ls')[0]
+        xi = pena + F(n, tam_r).getbbox(t[0], anchor='ls')[0]
+        desenhar(im, [(t, n, verde, False)], tam_r if n == SR else tam_b, b, xi, alinh='esquerda')
         assert x0 + larg(t, n, tam_r) < im.width - LIM
 
     # ---------- corpo (Open Sans / Noto Sans SemiBold); 'Ebook' dourado mantido ----------
@@ -78,9 +82,20 @@ def recompor(orig, saida, tdx, tdy, cdx, cdy, bdy):
     tam_c = tamanho_por_largura('GARANTA JÁ O SEU', NB, 656 - 421 + 1, tr)
     bc = base_de(1208 + bdy, 'GARANTA O SEU', NB, tam_c)
     cta_es = 'ASEGURE EL SUYO AHORA'
-    l, r = tinta([(cta_es, NB, 0, False)], tam_c, tr)
-    nova = caixa_esticada(im, (395, 1177 + bdy, 686, 1250 + bdy), (r - l) + 2 * 26, PRETO)
-    desenhar(im, [(cta_es, NB, (0, 0, 0), False)], tam_c, bc, nova[0], nova[2], tracking=tr)
+    # o ES é mais longo: a caixa cresce para a esquerda (à direita está o crânio, limite x=690),
+    # espaçamento entre letras 1,0 e fonte reduzida no máximo 15 %
+    tr, pad, dir_max, esq_min = 1.0, 22, 690, 372
+    tam_es = tam_c
+    while True:
+        l, r = tinta([(cta_es, NB, 0, False)], tam_es, tr)
+        if (r - l) + 2 * pad <= dir_max - esq_min or tam_es <= tam_c * 0.85:
+            break
+        tam_es -= 0.25
+    larg_cx = max(686 - 395, (r - l) + 2 * pad)
+    nova = caixa_esticada(im, (395, 1177 + bdy, 686, 1250 + bdy), larg_cx, PRETO, x0_novo=min(395, dir_max - larg_cx))
+    bc_es = base_de(1208 + bdy, 'GARANTA O SEU', NB, tam_c) + (F(NB, tam_c).getbbox('H', anchor='ls')[1] - F(NB, tam_es).getbbox('H', anchor='ls')[1]) / 2
+    desenhar(im, [(cta_es, NB, (0, 0, 0), False)], tam_es, bc_es, nova[0], nova[2], tracking=tr)
+    tam_c = (tam_c, tam_es)
     print(saida, 'titulo', tam_r, 'corpo', tam_o, tam_s, 'assinatura', tam_a, 'cta', tam_c, nova)
     print(salvar(im, saida))
 

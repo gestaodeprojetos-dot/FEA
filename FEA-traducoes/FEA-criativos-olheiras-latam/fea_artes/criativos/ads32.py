@@ -50,7 +50,7 @@ def gerar(fmt):
     # ---- título 3 linhas
     (t1, a0, a1), (t2, g0, g1), (t3, c0, c1) = p['tit']
     verde = cor_run(im, (c0, t3, c1, t3 + 110), VERDE, claro=False)
-    ouro = cor_run(im, (g0, t2 + 5, g1, t2 + 85), OURO)
+    ouro = cor_run(im, (g0, t2 + 5, g1, t2 + 85), OURO, claro=False)
     tam = calibrar_runs([(PT[2], SERIF, verde)], c1 - c0 + 1)
     bases = [base_de([(PT[i], SERIF, verde)], tam, t) for i, t in enumerate((t1, t2, t3))]
     cx = (c0 + c1) / 2

@@ -21,13 +21,12 @@ def larg(f, s, tr=0.0):
 
 def ajustar(caminho, texto, alt, largura):
     """Tamanho pela altura medida da linha (topo a base da tinta) e tracking pela largura."""
-    melhor = None
-    for t in np.arange(8, 300, 0.25):
-        f = ImageFont.truetype(caminho, float(t))
-        _, a, _, b = f.getbbox(texto)
-        if melhor is None or abs((b - a) - alt) < abs(melhor[1] - alt):
-            melhor = (float(t), b - a)
-    f = ImageFont.truetype(caminho, melhor[0])
+    lo, hi = 4.0, 600.0
+    while hi - lo > 0.1:  # altura cresce com o corpo: bisseção
+        t = (lo + hi) / 2
+        _, a, _, b = ImageFont.truetype(caminho, t).getbbox(texto)
+        lo, hi = (t, hi) if (b - a) < alt else (lo, t)
+    f = ImageFont.truetype(caminho, round((lo + hi) / 2 * 4) / 4)
     tr = (largura - larg(f, texto)) / max(1, len(texto) - 1)
     return f, tr
 

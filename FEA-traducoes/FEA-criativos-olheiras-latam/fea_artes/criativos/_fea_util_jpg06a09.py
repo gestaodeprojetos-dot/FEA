@@ -249,7 +249,7 @@ def selo_es(im, cx, cy, r0, r1, acento, **kw):
     return info
 
 
-def caixa_esticada(im, caixa, largura_nova, cond_texto, borda=24, dil=2):
+def caixa_esticada(im, caixa, largura_nova, cond_texto, borda=24, dil=2, x0_novo=None):
     """Botão com borda/degradê (não chapado): apaga o texto por inpainting dentro da caixa
     e, se precisar de mais largura, estica só o miolo (bordas laterais preservadas),
     mantendo o centro. Retorna a nova caixa."""
@@ -263,7 +263,7 @@ def caixa_esticada(im, caixa, largura_nova, cond_texto, borda=24, dil=2):
     bx = im.crop(caixa)
     esq, dir_ = bx.crop((0, 0, borda, y1 - y0)), bx.crop((w - borda, 0, w, y1 - y0))
     meio = bx.crop((borda, 0, w - borda, y1 - y0)).resize((largura_nova - 2 * borda, y1 - y0), Image.BICUBIC)
-    nx0 = int(round((x0 + x1) / 2 - largura_nova / 2))
+    nx0 = int(round((x0 + x1) / 2 - largura_nova / 2)) if x0_novo is None else int(x0_novo)
     im.paste(esq, (nx0, y0))
     im.paste(meio, (nx0 + borda, y0))
     im.paste(dir_, (nx0 + largura_nova - borda, y0))
