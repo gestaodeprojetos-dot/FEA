@@ -30,3 +30,5 @@ for k,a,b in R:
 for k,v in m.items():
     if 'complaciente' in v: print('complaciente resta',k)
 json.dump(m,open(f,'w'),ensure_ascii=False,indent=1); sys.exit(er)
+# Rodada 2 (revisão do delta, 05/10/2026): aplicados direto em mapa-es.json
+# p7_02 «ya que guía» -> «y permite guiar» · p49_02 «con mejoría con» -> «mejora con» · p50_13 «mapear el área y la extensión»

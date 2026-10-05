@@ -13,7 +13,7 @@ HTML = """
 <p><b>Veredicto: LIBERADO.</b> El archivo
 «Intercurrencias_en_el_Relleno_con_Acido_Hialuronico_ES.pdf» (221 páginas,
 español latinoamericano, trato de usted) está listo para circular.</p>
-<p>Revisión ciega en 6 partes: cero hallazgos de clase A (barrera clínica).
+<p>Revisión ciega en 6 partes y segunda ronda sobre los 75 segmentos modificados: cero hallazgos de clase A (barrera clínica).
 Índice editorial entre 97,3 % y 99,6 % en cinco partes; la parte 1 subió de
 88,1 % a la franja LIBERADO al corregirse los marcadores de lista.</p>
 </div>
@@ -40,13 +40,13 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <tr><td>24, 33, 40 a 53, 59, 61, 68 a 75</td><td>Listas con marcador: cada ítem vuelve a su propio párrafo, con su marcador.</td></tr>
 </table>
 
-<h2>Códigos QR</h2>
+<h2>Códigos QR: 23 leídos por escaneo, todos con el destino correcto</h2>
 <ul>
-<li><b>5 QR rotos del original corregidos en la versión ES</b> (págs. 18, 23, 61, 64 y 68), con destino confirmado y leídos de vuelta por detector.</li>
-<li><b>QR de artículo científico:</b> mismo enlace, el artículo queda en inglés (regla del glosario).</li>
-<li><b>11 QR de clase en video:</b> en esta versión abren la clase en portugués. Se regeneran en cerca de 2 h cuando existan los enlaces de las clases dobladas.</li>
-<li><b>Pág. 36:</b> el artículo citado («Consensus Guidelines for the Management of HA Filler-Induced Vascular Occlusion») no está en el Drive; el QR sigue roto hasta que se suba el archivo.</li>
-<li><b>Págs. 13, 21, 26, 30, 33 y 40:</b> artículo con acceso restringido; basta liberar el compartido de 3 archivos, sin tocar el arte.</li>
+<li><b>11 QR de clase:</b> abren la clase doblada al español en YouTube (no listada).</li>
+<li><b>5 QR rotos del original corregidos</b> (págs. 18, 23, 61, 64 y 68), con destino confirmado.</li>
+<li><b>QR de artículo científico:</b> el artículo queda en inglés (regla del glosario).</li>
+<li><b>Pendiente, compartido de los artículos:</b> solo el de las págs. 23 y 61 abre para cualquier persona. Los de las págs. 13, 18, 21, 26, 30, 33, 40, 64 y 68 exigen «Cualquier persona con el enlace: lector» en el Drive.</li>
+<li><b>Pendiente, pág. 36:</b> el archivo del QR ya no existe. El recuadro describe el «Consensus Guidelines for the Management of HA Filler-Induced Vascular Occlusion», que no está en el Drive (el DeLorenzi 2014 del Drive es otro artículo).</li>
 </ul>
 
 <h2 class="brk">Reservas abiertas: decisiones del autor</h2>
@@ -59,7 +59,7 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <li><b>Ventana de la retina:</b> cuatro cifras distintas a lo largo del libro (30 min, 90 min, 4 h, 12 h).</li>
 </ul>
 <h3>Línea roja 7: imágenes generadas por IA</h3>
-<p>Las figuras 37, 39, 41, 52, 53, 61 y 62 declaran imagen creada o adaptada por IA; la 53 además cita «búsqueda en internet» (derecho de uso). Requiere decisión editorial antes de publicar en PT y ES.</p>
+<p>Nueve figuras declaran imagen creada o adaptada por IA: 13, 14, 37, 39, 41, 52, 53, 61 y 62 (esta última en las págs. 192 y 194). La 53 además cita «búsqueda en internet» (derecho de uso) y la 14 y la 52 adaptan obras publicadas. Requiere decisión editorial antes de publicar en PT y ES.</p>
 <h3>Títulos y conceptos</h3>
 <ul>
 <li>Títulos de figura repetidos o que no corresponden: 5, 27, 31, 36, 43 (repetido en 44 y 45) y 62.</li>
@@ -72,6 +72,7 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <li>Cero glifos de fuente sustituta en las 221 páginas.</li>
 <li>OCR de todas las páginas: sin portugués residual, incluidas portada, aperturas, contraportada y las figuras con texto en arte (págs. 20, 39, 54 y 122).</li>
 <li>Control de superposición de líneas contra el original y revisión visual página por página.</li>
+<li>Capa de texto sin portugués residual (se retiró el encabezado oculto de las 5 aperturas de capítulo).</li>
 </ul>
 <p class="foot">Informes de la revisión: «FEA-traducao-intercorrencias/revisao/parte1 a parte6-relatorio.md».
 Planilla de clases y QR: «FEA-Traducao-ES-Intercorrencias-Aulas-e-QR».</p>

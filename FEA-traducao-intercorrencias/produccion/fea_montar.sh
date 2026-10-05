@@ -11,9 +11,12 @@ python3 produccion/fea_rotulos.py produccion/etapa3.pdf produccion/etapa4.pdf
 # QR de artigo quebrados no original: destinos confirmados (págs. 23, 61, 64, 68 e, só na 18, o HDPH)
 python3 $S/atualizar_qr.py produccion/etapa4.pdf produccion/FEA-links-qr-corrigidos.json --paginas 23,61,64,68 --saida produccion/etapa5.pdf > produccion/log-qr.json
 python3 $S/atualizar_qr.py produccion/etapa5.pdf produccion/FEA-links-qr-pag18.json --paginas 18 --saida produccion/etapa6.pdf >> produccion/log-qr.json
+# QR das 11 aulas: aula dublada em espanhol no YouTube (não listada). A pág. 18 fica fora: lá o QR já é o artigo HDPH
+python3 $S/atualizar_qr.py produccion/etapa6.pdf produccion/FEA-links-qr-aulas-es.json --paginas 15,29,32,35,37,43,45,63,74,79,80 --saida produccion/etapa7.pdf >> produccion/log-qr.json
+python3 produccion/fea_limpa_aberturas.py produccion/etapa7.pdf produccion/etapa8.pdf
 python3 - "$OUT" <<'PY'
 import pymupdf, sys
-d = pymupdf.open('produccion/etapa6.pdf'); d.subset_fonts()
+d = pymupdf.open('produccion/etapa8.pdf'); d.subset_fonts()
 d.set_metadata({**d.metadata, 'title': 'Intercurrencias en el relleno con ácido hialurónico', 'author': 'Dr. João Pithon'})
 d.ez_save(sys.argv[1])
 PY

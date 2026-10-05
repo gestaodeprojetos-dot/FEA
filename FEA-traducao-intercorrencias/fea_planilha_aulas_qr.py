@@ -59,7 +59,7 @@ HDPH_NEW, DEL14_NEW = DR % "13rcR4MVX0frvJp3wgtFD1ko9IWQFiyco", DR % "1g2G9VADj6
 ATENCAO = ("ATENÇÃO: artigo com acesso restrito", "Abrir o arquivo no Drive > Compartilhar > Acesso geral: «Qualquer pessoa com o link», leitor. "
            "Não mexe na arte, vale para PT e ES.", "Keila (dona do arquivo)")
 ARTIGO_ES = "Não traduz (artigo científico fica em inglês, link igual)"
-VIDEO_ES = "Regerar QR para a aula dublada quando o link ES existir"
+VIDEO_ES = "FEITO: QR regerado para a aula dublada no YouTube (não listada), conferido por escaneamento"
 
 QRS = [
     # pág, tipo, conteúdo, link atual, situação no original, ação no original, quem, link proposto, ação na versão ES
@@ -111,16 +111,15 @@ QRS = [
 ]
 
 DECISOES = [
-    ("Aulas dubladas", "Confirmar se as 11 aulas serão dubladas e publicadas no YouTube como não listadas, como no ebook "
-     "de olheiras (18 aulas). A produção das aulas é da FEA, fora do escopo da skill.", "Keila", "Não trava o PDF"),
     ("Corrigir os 6 QR com ERRO no PT", "Recomendação: corrigir o original PT (André) e eu aplico os mesmos destinos "
      "na versão ES. Os links propostos estão na aba «QR para ajustar».", "Keila + equipe médica", "Não trava o PDF"),
-    ("Artigo da pág. 36", "Subir o PDF do «Consensus Guidelines for the Management of Hyaluronic Acid Filler-Induced Vascular Occlusion» citado no box. Não existe no Drive.", "Keila / equipe médica", "Só o QR da pág. 36"),
     ("Numeração dos vídeos", "Só os 3 últimos boxes têm número (Vídeo 9, 10 e 11). Padronizar no ES: todos numerados "
      "ou nenhum. Recomendação: numerar todos de 1 a 11.", "Keila", "Não trava o PDF"),
     ("Título do livro em espanhol", "Proposta: «Intercurrencias en el relleno con ácido hialurónico: diagnóstico y "
      "conductas clínicas ante complicaciones estéticas» (mantém «Intercurrencias», como na sigla ARTI do ebook de olheiras).",
      "Keila", "Não trava o PDF"),
+    ("Compartilhamento dos artigos (conferido em 05/10)", "Só o artigo das págs. 23 e 61 abre para qualquer pessoa. Precisam de «Qualquer pessoa com o link: leitor» (Drive > Compartilhar > Acesso geral): Soares/Molecules (págs. 13, 30, 40) 1tHj3C58l9NhqokvQBIisp-RO25MrDGfp · HDPH DeLorenzi (pág. 18) 13rcR4MVX0frvJp3wgtFD1ko9IWQFiyco · Patterns (págs. 21, 26) 1F8aLFw8VV62JQngjfkHLNpHn2lr8jmjj · Hialuronidase (pág. 33) 19A8eYYAofI8Eiq4fIyk0kv-kJZf8aAvM · Kim JKMS (págs. 64, 68) 1DLM3QIm8ui-37tXlv33AazCSiK57hIgP.", "Keila", "Trava os QR de artigo (PT e ES)"),
+    ("Artigo da pág. 36", "O QR aponta para um arquivo que não existe mais. O box descreve o «Consensus Guidelines for the Management of HA Filler-Induced Vascular Occlusion»; o arquivo «2. ARTIGO delorenzi2014.pdf» do Drive é outro artigo (DeLorenzi, «Complications of Injectable Fillers, Part 2: Vascular Complications»). Ou sobe o Consensus, ou a equipe médica reescreve o box para o DeLorenzi 2014.", "Equipe médica (Francine)", "Trava o QR da pág. 36"),
     ("Autor · tempo de reperfusão capilar (pág. 27)", "O PT diz «redução do tempo de reperfusão capilar» como sinal de isquemia; o correto é aumento (lentificação), como na pág. 14. O ES espelhou o original.", "Dr. João / equipe médica", "Prioridade clínica"),
     ("Autor · dose da hialuronidase (págs. 31, 41, 50)", "«Injetar 1.000 UTR/mL» informa a concentração, não a dose nem o volume.", "Dr. João / equipe médica", "Prioridade clínica"),
     ("Autor · piperacilina", "4,5 g num capítulo e 3,375 g em outro.", "Equipe médica", "Prioridade clínica"),
@@ -138,6 +137,7 @@ LIVRO = "«Intercurrencias en el relleno con ácido hialurónico» (Dr. João Pi
 def descricao(pag):
     return (f"Clase complementaria del libro {LIVRO}, pág. {pag}. Versión doblada al español. "
             "Contenido técnico dirigido exclusivamente a profesionales de la salud habilitados.")
+YT_ES = {'15': 'GSVU8n6kMvg', '29': '4GTcp9kH6jU', '32': 'Tne_VzQ_WY4', '35': 'iQxScbOixq4', '37': 'sm7YdLUbpiM', '43': 'TI_NnU0IFrA', '45': '3VF4IdIZOPM', '63': 'xgXV0QI0FWY', '74': 'kzvlkCbikmE', '79': '0GK_Kpvh2JY', '80': 'acY8ePTK3fs'}
 UPLOAD = [
     # pág, título no YouTube, título do arquivo no HeyGen, duração, ID da tradução no HeyGen, restrição de idade
     ("15", "Introducción al razonamiento clínico de las complicaciones agudas isquémicas",
@@ -236,7 +236,7 @@ def main(saida):
     quebra(ws, 5)
 
     wy = wb.create_sheet("Subir no YouTube", 1)
-    wy.append(["Subir as 11 aulas dubladas no YouTube do Dr. João como NÃO LISTADO · traduções prontas no HeyGen (05/10/2026)"])
+    wy.append(["11 aulas dubladas no YouTube do Dr. João como NÃO LISTADO · concluído em 05/10/2026 · QR do livro ES atualizados"])
     wy["A1"].font = Font(bold=True, size=13, color=ROXO)
     for passo in PASSOS:
         wy.append([passo])
@@ -247,7 +247,7 @@ def main(saida):
               [5, 12, 46, 46, 9, 30, 60, 16, 34, 14])
     ini = wy.max_row + 1
     for i, (pag, tit, arq, dur, vid, idade) in enumerate(UPLOAD, 1):
-        wy.append([i, pag, tit, arq, dur, vid, descricao(pag), idade, "", "a subir"])
+        wy.append([i, pag, tit, arq, dur, vid, descricao(pag), idade, "https://youtu.be/" + YT_ES[pag], "QR atualizado"])
     quebra(wy, ini)
     for r in range(ini, ini + len(UPLOAD)):
         for col in "IJ":
@@ -262,7 +262,7 @@ def main(saida):
                    "Link atual (PT)", "Link ES (preencher)", "Marcador de tempo", "Status"],
               [5, 14, 42, 42, 40, 44, 34, 18, 16])
     for i, (pag, pt, es, cat, link) in enumerate(AULAS, 1):
-        wa.append([i, pag, pt, es, cat, link, "ver aba «Subir no YouTube»", "", "pronto"])
+        wa.append([i, pag, pt, es, cat, link, "https://youtu.be/" + YT_ES[pag.split(" ")[0]], "", "QR atualizado"])
     quebra(wa, 2)
 
     wq = wb.create_sheet("QR para ajustar")
