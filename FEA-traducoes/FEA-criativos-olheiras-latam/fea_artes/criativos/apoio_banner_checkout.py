@@ -46,15 +46,22 @@ assert x < 680, x
 linha(im, [('de la armonización facial.', c_esc)], f_c, tr_c, 270, 'da harmonização facial.', x0=56)
 
 # ---- pílula cinza (texto centralizado na pílula 55..317)
-im = apagar(im, (62, 311, 312, 335), lambda r, g, b: r < 185, dil=2, raio=4)
-CP = fonte('PlusJakartaSans_400Regular')
-f_p, tr_p = ajustar_x(CP, 'Preencha os campos abaixo', altura_x(a0, (62, 311, 312, 335), lambda r, g, b: r < 150)[0], 307 - 69 + 1)
+def apagar_dentro(im, caixa, cond, dil=2, raio=4):
+    # inpainting restrito ao miolo da pílula: o fundo de fora não contamina
+    sub = apagar(im.crop(caixa), (0, 0, caixa[2] - caixa[0], caixa[3] - caixa[1]), cond, dil, raio)
+    im.paste(sub, caixa[:2])
+    return im
+
+
+im = apagar_dentro(im, (60, 311, 314, 335), lambda r, g, b: r < 185)
+CP = fonte('PlusJakartaSans_300Light')
+f_p, tr_p = ajustar(CP, 'Preencha os campos abaixo', 331 - 314 + 1, 307 - 69 + 1)
 linha(im, [('Complete sus datos abajo', c_cinza)], f_p, tr_p, 314, 'Preencha os campos abaixo', x0=55, x1=318, alinh='centro')
 
 # ---- pílula dourada: texto, depois encurta a pílula (só o miolo é comprimido, cadeado e ponta intactos)
-im = apagar(im, (372, 311, 552, 336), lambda r, g, b: (r < 150), dil=3, raio=4)
+im = apagar_dentro(im, (368, 311, 556, 335), lambda r, g, b: (r < 150), dil=2)
 PG = fonte('PlusJakartaSans_700Bold')
-f_g, tr_g = ajustar_x(PG, 'Pagamento seguro', altura_x(a0, (372, 311, 552, 336), lambda r, g, b: r < 90)[0], 542 - 376 + 1)
+f_g, tr_g = ajustar(PG, 'Pagamento seguro', 332 - 315 + 1, 542 - 376 + 1)
 w = larg(f_g, 'Pago seguro', tr_g)
 PX0, PX1, PY0, PY1 = 336, 562, 305, 341        # pílula 336..561 x 309..336 (com margem)
 fim_novo = int(round(376 + w + (561 - 542)))
@@ -83,5 +90,6 @@ c_gig = cor_texto(a0, (37, 385, 660, 400), VERDE)
 im = apagar(im, (30, 372, 672, 400), VERDE, dil=3, raio=8)
 desenhar(ImageDraw.Draw(im), 20, 382 - topo_rel, 'OJERAS', f_G, c_gig, TR_G)
 
+print('pilulas', f_p.size, tr_p, f_g.size, tr_g)
 print(salvar(im, 'FEA-Banner Checkout - LATAM.png'), im.size)
 previa(im, T + 'banner-checkout-es-prev.jpg', 1000)

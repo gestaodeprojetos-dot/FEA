@@ -132,9 +132,11 @@ def componentes(im, caixa, cond):
              int(st[i][1] + st[i][3] + caixa[1]), int(st[i][4])) for i in range(1, n)]
 
 
-def tirar_acento_selo(im, caixa, cond, fator=0.3, dil=2):
+def tirar_acento_selo(im, caixa, cond, fator=0.3, folga=3):
     """Apaga o acento agudo de 'CÓPIAS' no selo: o menor componente escuro e mais alto
-    da caixa. Inpainting só nos pixels desse componente (dilatados), sem tocar as letras vizinhas."""
+    da caixa. A área do acento (até a linha logo acima do topo do O) é refeita por
+    interpolação horizontal entre as colunas de fundo dos dois lados (fundo do selo é
+    degradê suave), sem tocar o O."""
     x0, y0, x1, y1 = caixa
     m = mascara(im, caixa, cond).astype(np.uint8)
     n, lab, st, _ = cv2.connectedComponentsWithStats(m, 8)
@@ -144,81 +146,20 @@ def tirar_acento_selo(im, caixa, cond, fator=0.3, dil=2):
     if not ac:
         raise SystemExit(f'acento do selo não achado em {caixa}')
     i = min(ac, key=lambda k: st[k][1])
-    alvo = (lab == i).astype(np.uint8)
-    alvo = cv2.dilate(alvo, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8))
-    outros = cv2.dilate(((lab > 0) & (lab != i)).astype(np.uint8), np.ones((3, 3), np.uint8))
-    alvo[outros > 0] = 0
-    a = np.array(im)
-    M = np.zeros(a.shape[:2], np.uint8)
-    M[y0:y1, x0:x1] = alvo * 255
-    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), M, 3, cv2.INPAINT_TELEA)
-    c = st[i]
-    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB)), [(int(c[0] + x0), int(c[1] + y0), int(c[2]), int(c[3]))]
-
-
-def trocar_cta(im, botao, cond_letra, cond_apagar, seta_x0, caminho_fonte, pt, es, folga_seta=None,
-               folga_esq_min=70, area_min=150, rotulo=''):
-    """CTA em caixa alta com espaçamento, dentro de um botão (fundo liso ou degradê).
-    Mede as letras originais (componentes à esquerda da seta), calibra fonte pela altura
-    da maiúscula e o tracking pela largura, apaga por inpainting e escreve o ES centrado
-    no mesmo centro; se passar da seta, encosta à esquerda e, se faltar folga, reduz
-    a fonte (máx. 15 %)."""
-    bx0, by0, bx1, by1 = botao
-    cs = [c for c in componentes(im, (bx0 + 10, by0 + 10, seta_x0 - 2, by1 - 10), cond_letra) if c[4] > area_min]
-    mt, mh = np.median([c[1] for c in cs]), np.median([c[3] - c[1] for c in cs])
-    cs = [c for c in cs if abs(c[1] - mt) <= 0.3 * mh and abs((c[3] - c[1]) - mh) <= 0.35 * mh]  # só letras da linha
-    xs0, xs1 = min(c[0] for c in cs), max(c[2] for c in cs)
-    topo = int(np.median([c[1] for c in cs]))
-    alt = int(np.median([c[3] - c[1] for c in cs]))
-    f = calibrar_altura(caminho_fonte, 'H', alt)
-    tr = track_medido(f, pt, xs1 - xs0)
-    cor = cor_texto(im, (xs0, topo, xs1, topo + alt), cond_letra)
-    im = apagar(im, (xs0 - 14, topo - 14, xs1 + 14, topo + alt + 24), cond_apagar, 4)
-    if folga_seta is None:
-        folga_seta = seta_x0 - xs1
-    limite = seta_x0 - folga_seta
-    cx = (xs0 + xs1) / 2
-    tam0 = f.size
-    while True:
-        wl = largura_track(f, es, tr)
-        xi = cx - wl / 2
-        if xi + wl > limite:
-            xi = limite - wl
-        if xi >= bx0 + folga_esq_min:
-            break
-        if f.size < tam0 * 0.85:
-            raise SystemExit(f'CTA {es} não cabe nem com -15 %')
-        f = ImageFont.truetype(caminho_fonte, f.size - 0.25)
-        tr *= 0.995
-    a_nova = f.getbbox('H')[3] - f.getbbox('H')[1]
-    escrever_track(im, es, f, xi, topo + (alt - a_nova) / 2, cor, tr)
-    print(rotulo, 'CTA', es, 'fonte', f.size, '(orig', tam0, ') x', round(xi), round(xi + wl), 'limite', limite)
-    return im
-
-
-def titulo_linhas(im, linhas_med, pts, ess, caminho_fonte, ref_idx, cor, cx, limites, escala_min=0.85, apagar_cond=None,
-                  caixa_apagar=None, rotulo=''):
-    """Título de várias linhas centrado: calibra pela linha PT ref_idx, mantém a linha de
-    base de cada linha original e, se alguma linha ES passar do limite (x_min, x_max) da
-    sua posição, reduz tudo por igual (mín. escala_min)."""
-    l = linhas_med[ref_idx]
-    f = calibrar_larg(caminho_fonte, pts[ref_idx], l[3] - l[2] + 1)
-    esc = 1.0
-    for e, (xmn, xmx) in zip(ess, limites):
-        w = largura(f, e)
-        esc = min(esc, 2 * min(cx - xmn, xmx - cx) / w)
-    if esc < escala_min:
-        raise SystemExit(f'{rotulo}: título não cabe (escala {esc:.2f})')
-    if caixa_apagar:
-        im = apagar(im, caixa_apagar, apagar_cond, 4)
-    d = ImageDraw.Draw(im)
-    fn = ImageFont.truetype(caminho_fonte, f.size * min(1, esc))
-    for (top, bot, _, _), p, e in zip(linhas_med, pts, ess):
-        base = top - f.getbbox(p)[1] + f.getmetrics()[0]   # linha de base do original
-        y = base - fn.getmetrics()[0]
-        d.text((cx - largura(fn, e) / 2 - fn.getbbox(e)[0], y), e, font=fn, fill=cor)
-    print(rotulo, 'título fonte', round(f.size, 2), '->', round(fn.size, 2))
-    return im, fn
+    ax, ay, aw, ah = (int(v) for v in st[i][:4])
+    ax += x0; ay += y0
+    a = np.array(im).astype(np.float32)
+    lum = a.sum(2)
+    xa, xb = ax - folga, ax + aw + folga
+    # topo do O: primeira linha abaixo do acento com pixel de texto, depois de pelo menos 1 linha
+    r = ay + ah
+    while r < ay + ah + 12 and not (lum[r, xa + 1:xb] < 330).any():
+        r += 1
+    for x in range(xa + 1, xb):
+        t = (x - xa) / (xb - xa)
+        for y in range(ay - folga, r):
+            a[y, x] = a[y, xa] * (1 - t) + a[y, xb] * t
+    return Image.fromarray(np.clip(a + 0.5, 0, 255).astype(np.uint8)), [(ax, ay, aw, ah, r)]
 
 
 def apagar_area(im, caixa, raio=5):

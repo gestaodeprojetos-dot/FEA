@@ -286,13 +286,23 @@ def quebrar(texto, nome, tamanho, largura):
 
 
 def legenda_depoimento(im, traducao, x0, x1, y_topo, nome='NotoSans_400Regular', nome_it='NotoSans_400Regular_Italic',
-                       tamanho=21, cor=(170, 192, 180), entrelinha=1.35, alinh='esquerda'):
+                       tamanho=21, cor=(170, 192, 180), entrelinha=1.35, alinh='esquerda', continuo=False):
     """Regra 4: print original em PT + legenda pequena em ES abaixo.
     'Testimonio original en portugués:' (regular) e a tradução entre «» (itálico)."""
     f = F(nome, tamanho)
     asc = -f.getbbox('Tt', anchor='ls')[1]
     base = y_topo + asc
     passo = tamanho * entrelinha
+    if continuo:  # pouco espaço (feed): rótulo e tradução no mesmo parágrafo
+        rot = 'Testimonio original en portugués:'
+        for i, l in enumerate(quebrar(rot + ' «' + traducao + '»', nome, tamanho, x1 - x0)):
+            if i == 0 and l.startswith(rot):
+                segs = [(rot, nome, cor, False)] + ([(l[len(rot):], nome_it, cor, False)] if len(l) > len(rot) else [])
+            else:
+                segs = [(l, nome_it, cor, False)]
+            desenhar(im, segs, tamanho, base, x0, x1, alinh=alinh)
+            base += passo
+        return base - passo
     for l in quebrar('Testimonio original en portugués:', nome, tamanho, x1 - x0):
         desenhar(im, [(l, nome, cor, False)], tamanho, base, x0, x1, alinh=alinh)
         base += passo
