@@ -10,7 +10,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.0,
+     0.6,
      123.6
     ]
    ],
@@ -40,5 +40,7 @@
   "1- Visita técnica Elite Injectors.mp4 (com CTA)",
   "1- Visita técnica Elite Injectors (sem CTA).mp4"
  ],
- "ajuste_transcricao": "tempos de 'gigantesca', 'vocês', 'não', 'imaginam' corrigidos pelo áudio (108,16 a 110,4 s)"
+ "ajuste_transcricao": "tempos de 'gigantesca', 'vocês', 'não', 'imaginam' corrigidos pelo áudio (108,16 a 110,4 s)",
+ "trilha": "HeyGen 93a98c35d9654029be397d8d27a06da0 (instrumental corporativa, 60 s), repetida com crossfade de 3 s, -23 dB (cerca de 16 dB abaixo da voz), fade in 1 s e fade out 2,5 s; mixada depois da legenda, antes do CTA",
+ "ajuste_05_10": "início em 0,6 s (voz entra em 0,85 s); trilha de fundo; take IMG_7426 não estava no vídeo"
 }
