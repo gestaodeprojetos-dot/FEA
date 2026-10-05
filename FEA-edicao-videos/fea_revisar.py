@@ -3,6 +3,7 @@
 
 Uso:
     python3 fea_revisar.py projeto.json [projeto2.json ...] [--folhas PASTA]
+    python3 fea_revisar.py projeto.json ... --so-legenda   # sem render: só número e unidade no .ass
 
 Para cada vídeo do projeto confere o arquivo final (.mp4 + .ass) contra todas as regras
 pedidas pela Keila e imprime um relatório com ERRO (reprovado, refazer) e ATENÇÃO (conferir
@@ -173,6 +174,70 @@ def ler_ass(caminho):
     return titulo, legendas
 
 
+def checar_numero_unidade(legendas):
+    """Número e unidade nunca em blocos diferentes; bloco nunca começa com a unidade sozinha
+    (Keila, 05/10/2026, pasta 2 vídeo 2: o "2" entrava antes de o Dr. falar e depois só "mL").
+    Vale para algarismo e por extenso ("dois mL", "meio mL", "1,5 mL", "1 e meio mL")."""
+    erros, aten = [], []
+    # o .ass tem um evento por linha: as linhas do mesmo bloco (mesmo início e fim) viram um bloco só
+    blocos = []
+    for s, e, t in legendas:
+        if blocos and (blocos[-1][0], blocos[-1][1]) == (s, e):
+            blocos[-1] = (s, e, blocos[-1][2] + " " + t)
+        else:
+            blocos.append((s, e, t))
+    legendas = blocos
+    for k, (s, e, t) in enumerate(legendas):
+        ps = t.split()
+        if not ps:
+            continue
+        ant = legendas[k - 1][2].split() if k else []
+        num_antes = bool(ant) and (fe.eh_numero(ant[-1]) or (ant[-1].lower().strip(",") in ("e", "vírgula")
+                                                              and len(ant) > 1 and fe.eh_numero(ant[-2])))
+        primeira = ps[0]
+        if fe.eh_unidade(primeira):
+            sozinha = re.sub(r"[^\w%]", "", primeira).lower().startswith(("unidade", "seringa", "ampola"))
+            if num_antes:
+                erros.append(f"[{s:5.1f}s] \"{ant[-1]}\" | \"{t}\": número e unidade em blocos diferentes "
+                             "(o número aparece antes da fala e a unidade fica sozinha)")
+            elif not sozinha:
+                erros.append(f"[{s:5.1f}s] \"{t}\": bloco começa com a unidade sozinha, sem o número")
+            else:
+                aten.append(f"[{s:5.1f}s] \"{t}\": bloco começa com \"{primeira}\": conferir se o número ficou no bloco anterior")
+        elif num_antes and primeira.lower() in ("e", "vírgula", "meio", "meia") and len(ps) > 1 and \
+                (fe.eh_unidade(ps[1]) or fe.eh_numero(ps[1])):
+            erros.append(f"[{s:5.1f}s] \"{ant[-1]}\" | \"{t}\": quantidade partida entre dois blocos")
+        # quantidade quebrada entre as 2 linhas do mesmo bloco também não pode
+    return erros, aten
+
+
+def checar_linhas_quantidade(caminho_ass):
+    """Linha da legenda que termina com número e a linha seguinte (mesmo bloco) começa com a unidade."""
+    erros, aten, blocos = [], [], {}
+    for linha in open(caminho_ass, encoding="utf-8"):
+        if linha.startswith("Dialogue:") and ",Legenda," in linha:
+            p = linha.rstrip("\n").split(",", 9)
+            blocos.setdefault((p[1], p[2]), []).append(re.sub(r"\{[^}]*\}", "", p[9]).strip())
+    for (s, _), ls in blocos.items():
+        for l1, l2 in zip(ls, ls[1:]):
+            if l1.split() and l2.split() and fe.eh_numero(l1.split()[-1]) and fe.eh_unidade(l2.split()[0]):
+                # unidade de medida (mL, mg, %, U) é ERRO; contagem ("uma / seringa") só ATENÇÃO
+                contagem = re.sub(r"[^\w]", "", l2.split()[0]).lower().startswith(("seringa", "ampola", "unidade"))
+                (aten if contagem else erros).append(
+                    f"[{ts(s):5.1f}s] \"{l1} / {l2}\": número e unidade em linhas diferentes")
+    return erros, aten
+
+
+def revisar_so_legenda(cfg, v):
+    """Sem renderizar: gera o .ass com o fea_editar_video e confere número e unidade nos blocos."""
+    fe.renderizar(cfg, v, "legenda")
+    ass = v["saida"].rsplit(".", 1)[0] + ".ass"
+    _, legendas = ler_ass(ass)
+    erros, aten = checar_numero_unidade(legendas)
+    e_l, a_l = checar_linhas_quantidade(ass)
+    return erros + e_l, aten + a_l
+
+
 def revisar(cfg, v, folhas=None):
     ff, erros, aten = cfg["ffmpeg"], [], []
     mp4, ass = v["saida"], v["saida"].rsplit(".", 1)[0] + ".ass"
@@ -279,6 +344,11 @@ def revisar(cfg, v, folhas=None):
         antes_fim = db[max(0, j - int(0.8 / ps)):j]
         if e - s > 1.5 and len(antes_fim) and (antes_fim >= lim - 6).mean() < 0.15:
             aten.append(f"[{s:5.1f}s] \"{t}\": legenda fica na tela {e - s:.1f} s depois da fala acabar")
+    # 3c. número e unidade juntos (Keila, 05/10/2026)
+    e_q, a_q = checar_numero_unidade(legendas)
+    e_l, a_l = checar_linhas_quantidade(ass)
+    erros += e_q + e_l
+    aten += a_q + a_l
     texto_todo = " ".join(t for _, _, t in legendas)
     if re.search(r"(?<!ácido )\bhialurônico", texto_todo):
         erros.append("\"hialurônico\" sem \"ácido\" na frente: é ácido hialurônico")
@@ -393,6 +463,24 @@ def revisar(cfg, v, folhas=None):
             k = j
         k += 1
 
+    # 5d'. fala curta e solta sem legenda (Keila 05/10, "duas, duas, duas" contando unidades: a
+    # transcrição esticava uma palavra por cima das outras e 3 das 6 ficavam sem legenda). Rajada de
+    # voz de 0,35 s ou mais, com silêncio dos dois lados, sem legenda nenhuma no ar: ouvir.
+    k = int((fe.TITULO_DUR + 0.3) / ps)
+    while k < min(fim_conteudo, len(db)):
+        if voz[k]:
+            j, ult = k, k
+            while j < len(db) and (j - ult) * ps < 0.5:
+                if voz[j]:
+                    ult = j
+                j += 1
+            antes_ok = not voz[max(0, k - int(0.5 / ps)):k].any()
+            if antes_ok and (ult - k + 1) * ps >= 0.35 and not no_ar[k:ult + 1].any():
+                aten.append(f"[{k * ps:5.1f}s a {(ult + 1) * ps:5.1f}s] fala curta solta sem legenda: ouvir "
+                            "(palavra que a transcrição pulou? repetição como \"duas, duas\"?)")
+            k = j
+        k += 1
+
     # 5e. voz falhando/picotando (Keila, 02/10/2026, pasta 7 vídeo 1): o áudio final, trecho a trecho,
     # tem que ter o mesmo volume do bruto. Queda forte onde o bruto tem a voz do Dr. = corte, silêncio
     # ou concat comendo a fala. Compara o volume do .mp4 com o do bruto nos trechos mantidos.
@@ -470,11 +558,13 @@ def main():
         i = args.index("--folhas")
         folhas = args[i + 1]
         args = args[:i] + args[i + 2:]
+    so_legenda = "--so-legenda" in args
+    args = [a for a in args if a != "--so-legenda"]
     total_err = 0
     for proj in args:
         cfg = json.load(open(proj, encoding="utf-8"))
         for v in cfg["videos"]:
-            erros, aten = revisar(cfg, v, folhas)
+            erros, aten = revisar_so_legenda(cfg, v) if so_legenda else revisar(cfg, v, folhas)
             total_err += len(erros)
             status = "REPROVADO" if erros else "OK"
             print(f"\n## {os.path.basename(v['saida'])}: {status}")

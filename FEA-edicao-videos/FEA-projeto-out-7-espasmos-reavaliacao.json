@@ -1,6 +1,6 @@
 {
  "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/fonts",
  "videos": [
   {
    "titulo": "Avaliação da toxina pré-espasmo facial",
@@ -11,9 +11,9 @@
      44.7
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p7/IMG_7162.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p7/IMG_7162.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e7/1- Avaliação da toxina pré-espasmo facial.mp4"
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p7/IMG_7162.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p7/IMG_7162.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e7/1- Avaliação da toxina pré-espasmo facial.mp4"
   },
   {
    "titulo": "Reavaliação completa do espasmo facial",
@@ -32,9 +32,9 @@
      54.2
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p7/IMG_7163.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p7/IMG_7163.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e7/2- Reavaliação completa do espasmo facial Parte 1.mp4"
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p7/IMG_7163.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p7/IMG_7163.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e7/2- Reavaliação completa do espasmo facial Parte 1.mp4"
   },
   {
    "titulo": "Reavaliação completa do espasmo facial",
@@ -56,9 +56,9 @@
      "pequena assimetria"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p7/IMG_7163.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p7/IMG_7163.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e7/3- Reavaliação completa do espasmo facial Parte 2.mp4"
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p7/IMG_7163.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p7/IMG_7163.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e7/3- Reavaliação completa do espasmo facial Parte 2.mp4"
   }
  ]
 }

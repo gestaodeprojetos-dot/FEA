@@ -38,6 +38,12 @@ def main(projeto, cta, so):
         if so and not any(x in v["saida"] for x in so):
             continue
         base = os.path.join(pasta, v["saida"])
+        if v.get("sem_cta"):   # versão sem o CTA de campanha (ex.: a do CTA da FEB falado pelo Dr.)
+            d = duracao(ff, base)
+            print(f"{'OK' if d <= LIMITE_TOTAL_S else 'ACIMA DE 3 MIN'} (sem CTA): {v['saida']} | {d:.1f}s", flush=True)
+            if d > LIMITE_TOTAL_S:
+                acima.append(v["saida"])
+            continue
         with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, dir=pasta) as lista:
             lista.write(f"file '{base}'\nfile '{cta}'\n")
         final = base + ".final.mp4"
