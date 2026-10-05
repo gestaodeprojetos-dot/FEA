@@ -133,6 +133,46 @@ DECISOES = [
 ]
 
 
+
+LIVRO = "«Intercurrencias en el relleno con ácido hialurónico» (Dr. João Pithon)"
+def descricao(pag):
+    return (f"Clase complementaria del libro {LIVRO}, pág. {pag}. Versión doblada al español. "
+            "Contenido técnico dirigido exclusivamente a profesionales de la salud habilitados.")
+UPLOAD = [
+    # pág, título no YouTube, título do arquivo no HeyGen, duração, ID da tradução no HeyGen, restrição de idade
+    ("15", "Introducción al razonamiento clínico de las complicaciones agudas isquémicas",
+     "Introducción al razonamiento clínico de complicaciones agudas isquémicas-Spanish", "24 min", "42d9570604e04b26a5c18c76e870e752-es", "Não"),
+    ("29", "Revisión anatómica global de la cara: vascularización",
+     "Revisión anatómica global de la cara - Vascularización-Spanish", "8 min", "03157b737e2e45ba86d5e666477f8ca6-es", "SIM (o original tem)"),
+    ("32", "Hialuronidasa", "Hialuronidasa-Spanish", "33 min", "2d367ed2ac5a4d10bfb057cf2aae161e-es", "Não"),
+    ("35", "Rinomodelación: protocolo y manejo de las complicaciones",
+     "Rinomodelación - Protocolo y manejo de las complicaciones-Spanish", "18 min", "0e6164337eb241569e406756c4160473-es", "Não"),
+    ("37", "Mecanismos de seguridad con cánulas", "Mecanismos de seguridad con cánulas-Spanish", "13 min",
+     "a43ff9f20cbe4820941374cd40e5565e-es", "Não"),
+    ("43", "Rinomodelación: ¿aguja o cánula?", "Rinomodelación - ¿Aguja o cánula?-Spanish", "8 min",
+     "1c83fc523f364de69e4982b244ba8f5a-es", "Não"),
+    ("45", "Relleno full face guiado por ecografía, en vivo", "Relleno full face guiado por ultrasonido en vivo-Spanish",
+     "54 min", "f5844178d1284bc0954a19dd5a33869e-es", "Não"),
+    ("63", "Amaurosis: protocolo de manejo de las complicaciones",
+     "Amaurosis - Protocolo de manejo de las complicaciones-Spanish", "13 min", "0b84b17b226a46f9a2a7c4af575e44e7-es", "Não"),
+    ("74", "Complejo vascular nasoglabelar", "Complejo vascular nasoglabelar-Spanish", "11 min",
+     "a309a29b82db4e82a96550ac5783a21d-es", "SIM (o original tem)"),
+    ("79", "Complicaciones agudas no isquémicas (parte 1)", "Complicaciones agudas no isquémicas - Parte 1-Spanish",
+     "6 min", "77452f298fb044e59a615c505cb5b71d-es", "Não"),
+    ("80", "Complicaciones agudas no isquémicas (parte 2)", "Complicaciones agudas no isquémicas - Parte 2-Spanish",
+     "6 min", "d8499de7f6284f4b80a5d5557dc4625e-es", "Não"),
+]
+PASSOS = [
+    "1. Entrar no HeyGen > Video Translate e baixar o vídeo pelo «Arquivo no HeyGen» (coluna D). Conferir pelo ID (coluna F) se houver dois com o mesmo nome: use sempre o que está «Completed».",
+    "2. Abrir studio.youtube.com no canal do Dr. João > Criar > Enviar vídeos > escolher o arquivo.",
+    "3. Título: copiar a coluna C. Descrição: copiar a coluna G.",
+    "4. Público: «Não, não é conteúdo para crianças». Em «Restrição de idade», marcar +18 só onde a coluna H diz SIM.",
+    "5. Visibilidade: NÃO LISTADO (nunca Público). Salvar.",
+    "6. Copiar o link do vídeo (youtu.be/...) e colar na coluna I. Mudar o status (coluna J) para «subido».",
+    "7. Quando os 11 links estiverem preenchidos, avisar a Keila: os QR do livro são regerados com esses links.",
+]
+
+
 def cabecalho(ws, colunas, larguras):
     ws.append(colunas)
     for i, w in enumerate(larguras, 1):
@@ -195,12 +235,34 @@ def main(saida):
         ws.append(list(linha))
     quebra(ws, 5)
 
+    wy = wb.create_sheet("Subir no YouTube", 1)
+    wy.append(["Subir as 11 aulas dubladas no YouTube do Dr. João como NÃO LISTADO · traduções prontas no HeyGen (05/10/2026)"])
+    wy["A1"].font = Font(bold=True, size=13, color=ROXO)
+    for passo in PASSOS:
+        wy.append([passo])
+    wy.append([])
+    cabecalho(wy, ["Nº", "Página do livro", "Título no YouTube (copiar)", "Arquivo no HeyGen (baixar)", "Duração",
+                   "ID da tradução no HeyGen", "Descrição no YouTube (copiar)", "Restrição de idade +18",
+                   "Link do YouTube (colar aqui)", "Status"],
+              [5, 12, 46, 46, 9, 30, 60, 16, 34, 14])
+    ini = wy.max_row + 1
+    for i, (pag, tit, arq, dur, vid, idade) in enumerate(UPLOAD, 1):
+        wy.append([i, pag, tit, arq, dur, vid, descricao(pag), idade, "", "a subir"])
+    quebra(wy, ini)
+    for r in range(ini, ini + len(UPLOAD)):
+        for col in "IJ":
+            wy[f"{col}{r}"].fill = PatternFill("solid", fgColor=AMARELO)
+        if wy[f"H{r}"].value.startswith("SIM"):
+            wy[f"H{r}"].font = Font(bold=True, color=VERMELHO)
+    st = DataValidation(type="list", formula1='"a subir,subido,QR atualizado"')
+    wy.add_data_validation(st); st.add(f"J{ini}:J{ini + len(UPLOAD) - 1}")
+
     wa = wb.create_sheet("Aulas para traduzir")
     cabecalho(wa, ["Nº", "Página(s)", "Rótulo PT (box «Na prática»)", "Rótulo ES proposto", "Aula no catálogo",
                    "Link atual (PT)", "Link ES (preencher)", "Marcador de tempo", "Status"],
               [5, 14, 42, 42, 40, 44, 34, 18, 16])
     for i, (pag, pt, es, cat, link) in enumerate(AULAS, 1):
-        wa.append([i, pag, pt, es, cat, link, "", "", "pendente (aula dublada)"])
+        wa.append([i, pag, pt, es, cat, link, "ver aba «Subir no YouTube»", "", "pronto"])
     quebra(wa, 2)
 
     wq = wb.create_sheet("QR para ajustar")
@@ -218,7 +280,7 @@ def main(saida):
         wd.append(list(d) + [""])
     quebra(wd, 2)
 
-    for w, col, n, opcoes in ((wa, "I", len(AULAS), "pendente,em produção,pronto"),
+    for w, col, n, opcoes in ((wa, "I", len(AULAS), "pendente,em produção,pronto,QR atualizado"),
                               (wq, "J", len(QRS), "pendente,em correção,corrigido e testado,ok")):
         status = DataValidation(type="list", formula1=f'"{opcoes}"')
         w.add_data_validation(status)
