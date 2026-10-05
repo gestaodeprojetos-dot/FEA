@@ -1,0 +1,46 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/9815f7fc-3fb1-55fb-a08f-5ef7c1880f51/scratchpad/trab/fonts",
+ "idioma": "es",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/9815f7fc-3fb1-55fb-a08f-5ef7c1880f51/scratchpad/ads/es_IMG_6947.mp4",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/9815f7fc-3fb1-55fb-a08f-5ef7c1880f51/scratchpad/ads/tr/es_IMG_6947.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/9815f7fc-3fb1-55fb-a08f-5ef7c1880f51/scratchpad/ads/out/Ads 77 - MTB LATAM.mp4",
+   "titulo": "Reevaluación del lifting Nefertiti",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     99.6
+    ]
+   ],
+   "silenciar": [
+    [
+     78.6,
+     78.95
+    ]
+   ],
+   "correcoes": [
+    [
+     "^(relájate),? Capi$",
+     "\\1"
+    ],
+    [
+     ",? Capi\\b",
+     ""
+    ],
+    [
+     "\\bFEF\\b",
+     "FEB"
+    ],
+    [
+     "\\bnefertiti\\b",
+     "Nefertiti"
+    ]
+   ]
+  }
+ ]
+}

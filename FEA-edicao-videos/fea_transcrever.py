@@ -4,6 +4,7 @@
 Uso:
     python3 fea_transcrever.py PASTA_SAIDA audio1.wav audio2.wav ...
     python3 fea_transcrever.py --complementar PASTA_SAIDA audio1.wav ...   # só a 2ª passada
+    python3 fea_transcrever.py --idioma es PASTA_SAIDA audio.wav             # vídeo traduzido (LATAM)
 
 Gera PASTA_SAIDA/<nome>.json com segmentos e palavras ({s, e, w}).
 O filtro de voz (VAD) pula silêncio e evita que o modelo "invente" fala
@@ -28,9 +29,14 @@ PROMPT = ("Harmonização orofacial, preenchimento com ácido hialurônico, full
           "sulco nasolabial, SANEP, anestesia, mentoniano, bolus, retroinjeção, cânula, agulha, mL, "
           "toxina botulínica, glabela, frontal, orbiculares, nasal, lifting, bioestimulador.")
 
+# vídeo traduzido para o espanhol (anúncios LATAM): --idioma es
+PROMPT_ES = ("Armonización facial, relleno con ácido hialurónico, full face, ojeras, surco nasolabial, "
+             "mentón, mandíbula, cuello, toxina botulínica, platisma, bandas platismales, cánula, aguja, mL.")
+IDIOMA = "pt"
+
 # o que o Whisper inventa em trecho sem fala (não entra no complemento)
 ALUCINACAO = re.compile(r"obrigad|tchau|legenda|inscreva|amara|transcri|música|aplausos|risos|"
-                        r"\bvaleu\b|até a próxima|até mais", re.I)
+                        r"\bvaleu\b|até a próxima|até mais|gracias|suscr[ií]b|subt[ií]tul", re.I)
 PASSO = 0.05
 
 
@@ -102,9 +108,9 @@ def refinar(modelo, segs, a, limite=15.0):
         novos = []
         for ini_t, fim_t in pedacos:
             ini_t, fim_t = max(0.0, ini_t - 0.1), min(len(a) / 16000, fim_t + 0.1)
-            tr, _ = modelo.transcribe(a[int(ini_t * 16000):int(fim_t * 16000)], language="pt",
+            tr, _ = modelo.transcribe(a[int(ini_t * 16000):int(fim_t * 16000)], language=IDIOMA,
                                       word_timestamps=True, vad_filter=False,
-                                      condition_on_previous_text=False, initial_prompt=PROMPT)
+                                      condition_on_previous_text=False, initial_prompt=PROMPT_ES if IDIOMA == "es" else PROMPT)
             for x in tr:
                 if ALUCINACAO.search(x.text) or x.no_speech_prob > 0.6 or x.avg_logprob < -1.0:
                     continue
@@ -125,7 +131,7 @@ def complementar(modelo, segs, a):
     novos = []
     for e0, s1, antes, depois in buracos_com_voz(segs, db, limiar, dur):
         ini, fim = max(0.0, e0 - 0.3), min(dur, s1 + 0.3)
-        trecho, _ = modelo.transcribe(a[int(ini * 16000):int(fim * 16000)], language="pt",
+        trecho, _ = modelo.transcribe(a[int(ini * 16000):int(fim * 16000)], language=IDIOMA,
                                       word_timestamps=True, vad_filter=False,
                                       condition_on_previous_text=False)
         for s in trecho:
@@ -158,6 +164,11 @@ def main():
     args = sys.argv[1:]
     so_complemento = "--complementar" in args
     args = [x for x in args if x != "--complementar"]
+    global IDIOMA
+    if "--idioma" in args:
+        i = args.index("--idioma")
+        IDIOMA = args[i + 1]
+        del args[i:i + 2]
     saida = args[0]
     os.makedirs(saida, exist_ok=True)
     modelo = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8",
@@ -168,7 +179,7 @@ def main():
         if so_complemento:
             out = [s for s in json.load(open(destino, encoding="utf-8")) if not s.get("complemento")]
         else:
-            segs, _ = modelo.transcribe(wav, language="pt", word_timestamps=True, initial_prompt=PROMPT,
+            segs, _ = modelo.transcribe(wav, language=IDIOMA, word_timestamps=True, initial_prompt=PROMPT_ES if IDIOMA == "es" else PROMPT,
                                         vad_filter=True, condition_on_previous_text=False)
             out = [{"start": s.start, "end": s.end, "text": s.text,
                     "words": [{"s": x.start, "e": x.end, "w": x.word} for x in s.words]} for s in segs]
