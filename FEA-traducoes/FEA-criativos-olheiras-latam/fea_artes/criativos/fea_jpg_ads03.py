@@ -69,14 +69,46 @@ def recompor(orig, saida):
     # ---------- pílulas de preço sobre o terno ----------
     Y0, Y1 = 1139, 1201
     velhas = [(536, Y0, 706, Y1), (762, Y0, 1052, Y1)]
+    # repõe o terno sob as pílulas antigas copiando um trecho do próprio terno; o deslocamento é escolhido
+    # pelo menor desajuste na borda (anel de 6 px em volta da área), para a costura não aparecer
+    im = apagar(im, (712, 1156, 762, 1186), lambda r, g, b: (r + g + b) > 330, 2, 4)   # seta antiga (traço fino)
     a = np.array(im)
-    m = np.zeros(a.shape[:2], bool)
-    for c in velhas:
-        m |= np.array(mascara_pilula(im.size, (c[0] - 3, c[1] - 3, c[2] + 3, c[3] + 3))) > 0
-    m[Y0 - 4:Y1 + 5, 700:770] = True                       # seta antiga
-    desl = (Y1 - Y0) + 14
-    ys, xs = np.where(m)
-    a[ys, xs] = a[ys - desl, xs]
+    ai = a.astype(int)
+    blocos = [np.array(mascara_pilula(im.size, (c[0] - 3, c[1] - 3, c[2] + 3, c[3] + 3))) > 0 for c in velhas]
+    for m in blocos:
+        anel = (cv2.dilate(m.astype(np.uint8), np.ones((13, 13), np.uint8)) > 0) & ~m
+        ys, xs = np.where(anel)
+        ys_m, xs_m = np.where(m)
+        lisa = cv2.GaussianBlur(a, (0, 0), 6).astype(float)
+        anel_med = lisa[ys, xs].mean(0)
+        melhor = None
+        for dy in list(range(-150, -63, 6)) + list(range(66, 120, 6)):
+            for dx in range(-90, 91, 15):
+                yy, xx = ys + dy, xs + dx
+                if yy.min() < 0 or yy.max() >= a.shape[0] or xx.min() < 0 or xx.max() >= a.shape[1]:
+                    continue
+                src = ai[yy, xx]
+                if (src.sum(1) > 330).mean() > 0.02:      # evita fonte com pílula, texto ou fundo verde claro
+                    continue
+                yi, xi = ys_m + dy, xs_m + dx
+                if yi.min() < 0 or yi.max() >= a.shape[0] or xi.min() < 0 or xi.max() >= a.shape[1]:
+                    continue
+                miolo = lisa[yi, xi]
+                # desajuste na borda + diferença de tom do miolo + manchas grandes no miolo
+                err = np.abs(src - ai[ys, xs]).mean() + 2 * np.abs(miolo.mean(0) - anel_med).sum() + miolo.std(0).sum()
+                if melhor is None or err < melhor[0]:
+                    melhor = (err, dy, dx)
+        _, dy, dx = melhor
+        # cópia do terno deslocado + correção de tom: a diferença de cor medida na borda é interpolada
+        # para dentro (inpainting clássico do campo de diferença, suave); nenhum pixel inventado
+        src = np.roll(np.roll(a, -dy, 0), -dx, 1).astype(float)
+        dif = np.clip(cv2.GaussianBlur(a.astype(float) - src, (0, 0), 2) + 128, 0, 255).astype(np.uint8)
+        mk = cv2.dilate((m * 255).astype(np.uint8), np.ones((3, 3), np.uint8))
+        dif = cv2.inpaint(dif, mk, 9, cv2.INPAINT_TELEA).astype(float) - 128
+        dif = cv2.GaussianBlur(dif, (0, 0), 4)
+        a2 = np.clip(src + dif, 0, 255).astype(np.uint8)
+        a[m] = a2[m]
+        ai = a.astype(int)
     im = Image.fromarray(a)
     t = 1.0
     while True:

@@ -34,12 +34,12 @@ def ads37(arq, P):
     cor_hl = cor_texto(im, (hl[2][2], hl[2][0], hl[2][3], hl[2][1]), ESC)
     cx = (hl[2][2] + hl[2][3]) / 2
     for l in hl:  # apaga só a área de cada linha original (não encosta no selo do canto)
-        im = apagar(im, (l[2] - 14, l[0] - 10, l[3] + 14, l[1] + 10), ESC_APAGAR, 4)
+        im = apagar_liso(im, (l[2] - 14, l[0] - 10, l[3] + 14, l[1] + 10), ESC_APAGAR, 4)
     im, _ = titulo_linhas(im, hl, HL_PT, HL_ES, SERIF_SEMI, 2, cor_hl, cx, P['lim_hl'], rotulo=arq)
     # subtítulo
     fs = calibrar_larg(SANS_REG, SUB_PT, sub[3] - sub[2] + 1)
     cor = cor_texto(im, (sub[2], sub[0], sub[3], sub[1]), ESC)
-    im = apagar(im, (sub[2] - 10, sub[0] - 10, sub[3] + 10, sub[1] + 10), ESC_APAGAR, 3)
+    im = apagar_liso(im, (sub[2] - 10, sub[0] - 10, sub[3] + 10, sub[1] + 10), ESC_APAGAR, 3)
     d = ImageDraw.Draw(im)
     cxs = (sub[2] + sub[3]) / 2
     d.text((cxs - largura(fs, SUB_ES) / 2 - fs.getbbox(SUB_ES)[0], sub[0] - fs.getbbox(SUB_PT)[1]), SUB_ES, font=fs, fill=cor)
@@ -47,7 +47,7 @@ def ads37(arq, P):
     fi = calibrar_larg(SANS_REG, IT_PT[0], its[0][3] - its[0][2] + 1)
     xe = min(l[2] for l in its)
     for l, p, e in zip(its, IT_PT, IT_ES):
-        im = apagar(im, (l[2] - 10, l[0] - 10, l[3] + 12, l[1] + 10), ESC_APAGAR, 3)
+        im = apagar_liso(im, (l[2] - 10, l[0] - 10, l[3] + 12, l[1] + 10), ESC_APAGAR, 3)
         d = ImageDraw.Draw(im)
         assert xe + largura(fi, e) < W - 80
         d.text((xe - fi.getbbox(e)[0], l[0] - fi.getbbox(p)[1]), e, font=fi, fill=cor)
@@ -56,16 +56,16 @@ def ads37(arq, P):
                     'APRENDA LO QUE ELLAS HACEN', rotulo=arq)
     # selos: CÓPIAS -> COPIAS (selo nítido do centro e selo grande desfocado do canto)
     im, _ = tirar_acento_selo(im, P['selo'], ESC_SELO)
-    im = apagar(im, P['acento_desfocado'], ACENTO_DESFOCADO, 2, 5)
+    im = tirar_acento_desfocado(im, *P['acento_desfocado'])
     return im
 
 
 FEED = dict(texto=(250, 150, 1845, 1050), lim_hl=[(150, 1735), (150, 1715), (150, 1760)],
             cta=(543, 2098, 1630, 2270), seta=1476, selo=(1415, 1215, 1530, 1245),
-            acento_desfocado=(1997, 235, 2015, 249))
+            acento_desfocado=(1994, 2021, 233, 249, 275, False))
 STORY = dict(texto=(150, 600, 1990, 1600), lim_hl=[(120, 1800), (120, 2040), (120, 2040)],
              cta=(530, 2634, 1630, 2806), seta=None, selo=(1405, 1797, 1510, 1820),
-             acento_desfocado=(1951, 356, 1973, 374))
+             acento_desfocado=(1940, 1992, 352, 376, 416, True))
 
 if __name__ == '__main__':
     import numpy as _np

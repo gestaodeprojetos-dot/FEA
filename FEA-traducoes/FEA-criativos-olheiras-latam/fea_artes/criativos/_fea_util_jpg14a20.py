@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fea_arte_lib import *  # noqa
 
 _cache = {}
+FEAT = ['lnum']  # algarismos alinhados (Gelasio usa algarismos de texto por padrão)
 
 
 def F(nome, tam):
@@ -78,20 +79,20 @@ def _cor_em(grad, t):
 def larg_seg(t, f, tr):
     if not t:
         return 0.0
-    return sum(f.getlength(c) for c in t) + tr * (len(t) - 1) if tr else f.getlength(t)
+    return sum(f.getlength(c, features=FEAT) for c in t) + tr * (len(t) - 1) if tr else f.getlength(t, features=FEAT)
 
 
 def tinta_segs(segs, tr=0.0):
     """(esq, dir) da tinta em relação à origem. segs: [(texto, nome_fonte, tam, cor)]."""
     f0 = F(segs[0][1], segs[0][2])
-    l = f0.getbbox(segs[0][0][0], anchor='ls')[0]
+    l = f0.getbbox(segs[0][0][0], anchor='ls', features=FEAT)[0]
     x = 0.0
     for i, s in enumerate(segs):
         f = F(s[1], s[2])
         x += larg_seg(s[0], f, tr) + (tr if i < len(segs) - 1 else 0)
     fl = F(segs[-1][1], segs[-1][2])
     ch = segs[-1][0][-1]
-    r = x - fl.getlength(ch) + fl.getbbox(ch, anchor='ls')[2]
+    r = x - fl.getlength(ch, features=FEAT) + fl.getbbox(ch, anchor='ls', features=FEAT)[2]
     return l, r
 
 
@@ -108,10 +109,10 @@ def _mascara_seg(W, H, t, f, nome, tam, cx, base, tr, peso):
         if tr:
             xx = cx
             for c in t:
-                d.text((xx, base), c, font=f, fill=255, anchor='ls')
-                xx += f.getlength(c) + tr
+                d.text((xx, base), c, font=f, fill=255, anchor='ls', features=FEAT)
+                xx += f.getlength(c, features=FEAT) + tr
         else:
-            d.text((cx, base), t, font=f, fill=255, anchor='ls')
+            d.text((cx, base), t, font=f, fill=255, anchor='ls', features=FEAT)
         return L
     from PIL import ImageFilter
     S = 4
@@ -123,10 +124,10 @@ def _mascara_seg(W, H, t, f, nome, tam, cx, base, tr, peso):
     if tr:
         xx = (cx - x0) * S
         for c in t:
-            d.text((xx, (base - y0) * S), c, font=f4, fill=255, anchor='ls')
-            xx += f4.getlength(c) + tr * S
+            d.text((xx, (base - y0) * S), c, font=f4, fill=255, anchor='ls', features=FEAT)
+            xx += f4.getlength(c, features=FEAT) + tr * S
     else:
-        d.text(((cx - x0) * S, (base - y0) * S), t, font=f4, fill=255, anchor='ls')
+        d.text(((cx - x0) * S, (base - y0) * S), t, font=f4, fill=255, anchor='ls', features=FEAT)
     k = int(round(peso * S)) * 2 + 1
     if k > 1:
         L4 = L4.filter(ImageFilter.MaxFilter(k))

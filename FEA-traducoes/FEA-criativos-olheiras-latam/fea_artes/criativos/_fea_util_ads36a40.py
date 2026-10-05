@@ -228,3 +228,52 @@ def apagar_area(im, caixa, raio=5):
     M[caixa[1]:caixa[3], caixa[0]:caixa[2]] = 255
     out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), M, raio, cv2.INPAINT_TELEA)
     return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+
+
+def tirar_acento_desfocado(im, xa, xb, y_ini, y_topo_O, y_base_O, desvio=True):
+    """Acento agudo desfocado colado no topo do O (selo grande desfocado do canto).
+    O 'O' é simétrico na vertical: a metade de cima (onde o acento se funde) é
+    reconstruída espelhando a metade de baixo da própria letra; acima do O, o fundo
+    é interpolado na horizontal entre as colunas xa e xb (fora do acento). Só usa
+    pixels do próprio original, nada é gerado."""
+    a = np.array(im).astype(np.float32)
+    yc2 = y_topo_O + y_base_O          # 2 x centro vertical do O
+    ym = (y_topo_O + y_base_O) // 2
+    for x in range(xa + 1, xb):
+        t = (x - xa) / (xb - xa)
+        for y in range(y_ini, y_topo_O - 1):
+            a[y, x] = a[y, xa] * (1 - t) + a[y, xb] * t
+        for y in range(y_topo_O - 1, ym):
+            ys = yc2 - y   # espelho; transfere só o desvio em relação ao fundo da linha (fundo tem degradê)
+            fundo_src = a[ys, xa] * (1 - t) + a[ys, xb] * t
+            fundo_dst = a[y, xa] * (1 - t) + a[y, xb] * t
+            a[y, x] = fundo_dst + (a[ys, x] - fundo_src) if desvio else a[ys, x]
+    return Image.fromarray(np.clip(a + 0.5, 0, 255).astype(np.uint8))
+
+
+def apagar_liso(im, caixa, cond, dil=4, sigma=12):
+    """Para fundo liso/degradê suave: troca os pixels de texto (dilatados) pela média
+    ponderada dos pixels de fundo vizinhos (convolução normalizada). Evita o 'fantasma'
+    que o Telea às vezes deixa em degradê claro."""
+    a = np.array(im).astype(np.float32)
+    x0, y0, x1, y1 = caixa
+    m = np.zeros(a.shape[:2], np.uint8)
+    m[y0:y1, x0:x1] = mascara(im, caixa, cond).astype(np.uint8)
+    m = cv2.dilate(m, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8)).astype(np.float32)
+    p = int(4 * sigma)
+    X0, Y0, X1, Y1 = max(0, x0 - p), max(0, y0 - p), min(a.shape[1], x1 + p), min(a.shape[0], y1 + p)
+    sub, ms = a[Y0:Y1, X0:X1], m[Y0:Y1, X0:X1]
+    outros = cv2.dilate(mascara(im, (X0, Y0, X1, Y1), cond).astype(np.uint8),
+                        np.ones((2 * dil + 1, 2 * dil + 1), np.uint8)).astype(np.float32)
+    fundo = (1 - ms) * (1 - outros)   # texto vizinho fora da caixa não entra na média
+    for _ in range(3):  # repete para preencher miolos grandes
+        num = cv2.GaussianBlur(sub * fundo[..., None], (0, 0), sigma)
+        den = cv2.GaussianBlur(fundo, (0, 0), sigma)[..., None]
+        est = num / np.maximum(den, 1e-4)
+        ok = den[..., 0] > 1e-3
+        sub = np.where((ms[..., None] > 0) & ok[..., None], est, sub)
+        if ok[ms > 0].all():
+            break
+        sigma *= 2
+    a[Y0:Y1, X0:X1] = sub
+    return Image.fromarray(np.clip(a + 0.5, 0, 255).astype(np.uint8))

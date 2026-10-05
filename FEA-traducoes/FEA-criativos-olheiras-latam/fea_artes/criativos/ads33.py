@@ -30,10 +30,10 @@ M = {
                  tit=[(1380, 662, 1528), (1530, 237, 1919)], larg_max=1880,
                  sub=(1705, 424, 1730),
                  # linhas do checklist: (topo, [(ícone x0, x1)], [(texto x0, x1, pt, es)])
-                 chk=[(1836, [(443, 476), (1159, 1192)],
+                 chk=[(1836, [(417, 502), (1133, 1218)],
                        [(545, 1098, 'Edema e efeito Tyndall', 'Edema y efecto Tyndall'),
                         (1261, 1656, 'Regiões de risco', 'Zonas de riesgo')]),
-                      (1966, [(443, 476), (986, 1018)],
+                      (1966, [(417, 502), (960, 1044)],
                        [(542, 923, 'Irregularidades', 'Irregularidades'),
                         (1088, 1737, 'Bolsas pós preenchimento', 'Bolsas tras el relleno')])],
                  btn=(560, 2105, 1600, 2290), btn_txt=(689, 1382, 2177), btn_seta=1405),

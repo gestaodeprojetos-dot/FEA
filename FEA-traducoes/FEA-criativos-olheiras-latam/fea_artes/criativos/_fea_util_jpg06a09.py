@@ -268,3 +268,58 @@ def caixa_esticada(im, caixa, largura_nova, cond_texto, borda=24, dil=2, x0_novo
     im.paste(meio, (nx0 + borda, y0))
     im.paste(dir_, (nx0 + largura_nova - borda, y0))
     return (nx0, y0, nx0 + largura_nova, y1)
+
+
+def quebrar(texto, nome, tamanho, largura):
+    """Quebra o texto em linhas que caibam na largura (por palavra)."""
+    linhas, atual = [], ''
+    for p in texto.split():
+        t = (atual + ' ' + p).strip()
+        if atual and larg(t, nome, tamanho) > largura:
+            linhas.append(atual)
+            atual = p
+        else:
+            atual = t
+    if atual:
+        linhas.append(atual)
+    return linhas
+
+
+def legenda_depoimento(im, traducao, x0, x1, y_topo, nome='NotoSans_400Regular', nome_it='NotoSans_400Regular_Italic',
+                       tamanho=21, cor=(170, 192, 180), entrelinha=1.35, alinh='esquerda'):
+    """Regra 4: print original em PT + legenda pequena em ES abaixo.
+    'Testimonio original en portugués:' (regular) e a tradução entre «» (itálico)."""
+    f = F(nome, tamanho)
+    asc = -f.getbbox('Tt', anchor='ls')[1]
+    base = y_topo + asc
+    passo = tamanho * entrelinha
+    for l in quebrar('Testimonio original en portugués:', nome, tamanho, x1 - x0):
+        desenhar(im, [(l, nome, cor, False)], tamanho, base, x0, x1, alinh=alinh)
+        base += passo
+    for l in quebrar('«' + traducao + '»', nome_it, tamanho, x1 - x0):
+        desenhar(im, [(l, nome_it, cor, False)], tamanho, base, x0, x1, alinh=alinh)
+        base += passo
+    return base - passo
+
+
+def faixa(im, caixa, segs_pt, segs_es, ytop, x0t, x1t, nome_cor=None):
+    """Caixa chapada com uma linha de texto (faixa amarela, CTA). Alarga a caixa se precisar."""
+    from fea_arte_lib import cor_fundo, cor_texto, preencher, ESCURO
+    cor_cx = cor_fundo(im, (caixa[0] + 3, caixa[1] + 3, caixa[2] - 3, caixa[1] + 8))
+    cor_tx = cor_texto(im, (x0t, ytop, x1t, caixa[3] - 3), ESCURO)
+    tam = tamanho_segs(segs_pt[0], x1t - x0t + 1, segs_pt[1])
+    tr = segs_pt[1]
+    pad = x0t - caixa[0]
+    segs = [(t, n, cor_tx, s) for t, n, _, s in segs_es]
+    while True:
+        l, r = tinta(segs, tam, tr)
+        if (r - l) + 2 * pad <= im.width - 2 * 16 or tam < 10:
+            break
+        tam -= 0.25
+    base = base_de(ytop, segs_pt[0][0][0] + segs_pt[0][-1][0], segs_pt[0][0][1], tam)
+    preencher(im, caixa, cor_cx)
+    cx = (caixa[0] + caixa[2]) / 2
+    w = max(caixa[2] - caixa[0], (r - l) + 2 * pad)
+    preencher(im, (int(round(cx - w / 2)), caixa[1], int(round(cx + w / 2)), caixa[3]), cor_cx)
+    desenhar(im, segs, tam, base, caixa[0], caixa[2], 'centro', tr)
+    return tam

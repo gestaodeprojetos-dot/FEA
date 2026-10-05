@@ -31,13 +31,33 @@ def ajustar(caminho, texto, alt, largura):
     return f, tr
 
 
-def desenhar(d, x, y, s, f, cor, tr=0.0):
-    """Escreve s com origem (x, y) do Pillow e tracking tr; devolve o x final (avanço)."""
+def desenhar(d, x, y, s, f, cor, tr=0.0, ss=4):
+    """Escreve s com origem (x, y) do Pillow e tracking tr; devolve o x final (avanço).
+    Com tracking, cada letra é posicionada em supersample (ss x) para não acumular
+    arredondamento de pixel entre letras."""
     if abs(tr) < 0.05:
         d.text((x, y), s, font=f, fill=cor)
         return x + f.getlength(s)
+    img = d._image
+    F = ImageFont.truetype(f.path, f.size * ss)
+    W = int(np.ceil(f.getlength(s) + abs(tr) * len(s) + f.size * 2 + 4)) * ss
+    H = int(np.ceil(f.size * 3 + 4)) * ss
+    cam = Image.new('L', (W, H), 0)
+    dc = ImageDraw.Draw(cam)
+    O = int(np.ceil(f.size))
+    ox, oy = O * ss, O * ss
     for i, ch in enumerate(s):
-        d.text((x + f.getlength(s[:i]) + tr * i, y), ch, font=f, fill=cor)
+        dc.text((ox + F.getlength(s[:i]) + tr * ss * i, oy), ch, font=F, fill=255)
+    # desloca a camada para que a origem caia na posição fracionária exata
+    fx, fy = x - int(np.floor(x)), y - int(np.floor(y))
+    cam = cam.transform(cam.size, Image.AFFINE, (1, 0, -fx * ss, 0, 1, -fy * ss), resample=Image.BILINEAR)
+    small = cam.resize((W // ss, H // ss), Image.LANCZOS)
+    px, py = int(np.floor(x)) - O, int(np.floor(y)) - O
+    if img.mode == 'L':
+        alvo = Image.new('L', small.size, cor if isinstance(cor, int) else cor[0])
+    else:
+        alvo = Image.new(img.mode, small.size, cor)
+    img.paste(alvo, (int(px), int(py)), small)
     return x + f.getlength(s) + tr * len(s)
 
 
@@ -79,3 +99,59 @@ def colar_textura(im, mascara_L, textura, caixa):
     camada.paste(textura, (x0, y0))
     im.paste(camada, (0, 0), mascara_L)
     return im
+
+
+def faixas(f, s, tr, h):
+    """Colunas com tinta na faixa superior de altura h (palavra gigante cortada pela borda).
+    Devolve (segmentos x relativos à origem, topo da tinta relativo à origem)."""
+    c = Image.new('L', (int(f.getlength(s) + abs(tr) * len(s) + 400), int(f.size * 2) + 200), 0)
+    desenhar(ImageDraw.Draw(c), 100, 100, s, f, 255, tr)
+    a = np.array(c) > 128
+    top = np.where(a.any(1))[0].min()
+    a = a[top:top + h]
+    out, ini = [], None
+    for i, v in enumerate(list(a.any(0)) + [False]):
+        if v and ini is None:
+            ini = i
+        if not v and ini is not None:
+            out.append((ini - 100, i - 1 - 100))
+            ini = None
+    return out, top - 100
+
+
+def ajustar_gigante(caminho, texto, segs_orig, h, tamanhos, trs):
+    """Corpo e tracking que reproduzem as colunas da faixa visível do original."""
+    melhor = None
+    for t in tamanhos:
+        f = ImageFont.truetype(caminho, float(t))
+        for tr in trs:
+            s, _ = faixas(f, texto, tr, h)
+            n = min(len(s), len(segs_orig))
+            x0 = segs_orig[0][0] - s[0][0]
+            custo = sum(abs(s[i][0] + x0 - segs_orig[i][0]) + abs(s[i][1] + x0 - segs_orig[i][1]) for i in range(n))
+            custo += 200 * max(0, len(segs_orig) - len(s))
+            if melhor is None or custo < melhor[0]:
+                melhor = (custo, float(t), float(tr), x0)
+    return melhor
+
+
+def altura_x(im, caixa, cond):
+    """Altura-x medida: da linha onde a tinta das minúsculas começa (topo do x) até a base,
+    pelas transições do histograma de linhas."""
+    m = mascara(im, caixa, cond)
+    cont = m.sum(1)
+    lim = 0.45 * cont.max()
+    ys = np.where(cont >= lim)[0]
+    return ys.max() - ys.min() + 1, ys.min() + caixa[1], ys.max() + caixa[1]
+
+
+def ajustar_x(caminho, texto, xh, largura, ref='xuvwz'):
+    """Corpo pela altura-x medida e tracking pela largura total da linha."""
+    lo, hi = 4.0, 600.0
+    while hi - lo > 0.1:
+        t = (lo + hi) / 2
+        _, a, _, b = ImageFont.truetype(caminho, t).getbbox(ref)
+        lo, hi = (t, hi) if (b - a) < xh else (lo, t)
+    f = ImageFont.truetype(caminho, round((lo + hi) / 2 * 4) / 4)
+    tr = (largura - larg(f, texto)) / max(1, len(texto) - 1)
+    return f, tr

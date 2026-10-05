@@ -114,13 +114,15 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
         f = F(nome, tam)
         chars = []
         if tracking:
-            for ch in t:
+            xr = x
+            for i, ch in enumerate(t):
+                x = xr + f.getlength(t[:i]) + tracking * i   # avanço com kerning + tracking
                 chars.append((x, ch))
                 if ch.strip():
                     l, tp, r, bt = f.getbbox(ch, anchor='ls')
                     tx0, tx1 = min(tx0, x + l), max(tx1, x + r)
                     ty0, ty1 = min(ty0, base + tp), max(ty1, base + bt)
-                x += f.getlength(ch) + tracking
+            x = xr + f.getlength(t) + tracking * len(t)
         else:
             chars.append((x, t))
             if t.strip():
