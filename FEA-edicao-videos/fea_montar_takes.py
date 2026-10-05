@@ -12,9 +12,9 @@ TAKES = [
  (16.9,21.0, "IMG_7397", 7.0),   # confraternização com os palestrantes
  (28.0,31.0, "IMG_7385", 6.0),   # nossa parte, Formação Especialista Academy
  (39.2,44.0, "IMG_7383", 7.0),   # corredores dos patrocinadores
- (49.1,54.2, "IMG_7332", 6.0),   # aquário gigante, dois LEDs enormes
+(49.1,56.0, "IMG_7332", 6.0),   # aquário gigante, dois LEDs enormes
  (56.0,61.0, "IMG_7366", 0.5),   # primeiras fileiras VIP, depois Elite
- (71.7,75.7, "IMG_7331", 8.0),   # monumental, mais de mil pessoas
+(71.7,76.1, "IMG_7331", 8.0),   # monumental, mais de mil pessoas
  (76.1,79.9, "IMG_7369", 1.0),   # entrega incrível para todo mundo
  (96.6,100.9,"IMG_7388", 40.5),  # palestrantes, pré-aula
  (107.4,110.4,"IMG_7366", 19.0), # estrutura gigantesca
