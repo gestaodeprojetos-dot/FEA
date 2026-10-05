@@ -134,11 +134,20 @@ def base_de(topo_medido, runs, tam, track):
     return topo_medido - t
 
 
-def apagar_mascara(im, m, dil=3, raio=7):
-    a = np.array(im)
-    m = cv2.dilate(m.astype(np.uint8) * 255, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8))
-    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), m, raio, cv2.INPAINT_TELEA)
-    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+def apagar_mascara(im, m, dil=4, sigma=18):
+    """Fundo liso (degradê escuro): preenche a área do texto com a média ponderada dos
+    pixels de fundo vizinhos (convolução normalizada, filtro clássico, sem IA) e
+    funde a borda para não deixar costura."""
+    a = np.array(im).astype(np.float32)
+    m = cv2.dilate(m.astype(np.uint8), np.ones((2 * dil + 1, 2 * dil + 1), np.uint8)).astype(np.float32)
+    w = 1 - m
+    num = cv2.GaussianBlur(a * w[..., None], (0, 0), sigma)
+    den = cv2.GaussianBlur(w, (0, 0), sigma)[..., None]
+    fundo = num / np.maximum(den, 1e-4)
+    alfa = cv2.GaussianBlur(m, (0, 0), 1.5)[..., None]
+    alfa = np.maximum(alfa, m[..., None])
+    out = a * (1 - alfa) + fundo * alfa
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
 
 
 def mascara_caixa(im, caixa, cond):
@@ -150,7 +159,7 @@ def mascara_caixa(im, caixa, cond):
     return m
 
 
-TEXTO_CLARO = lambda r, g, b: (r + g + b) > 260  # branco e amarelo sobre o fundo preto
+TEXTO_CLARO = lambda r, g, b: (r + g + b) > 115  # branco e amarelo sobre o fundo preto
 TEXTO_ESCURO = lambda r, g, b: (r + g + b) < 420  # texto escuro sobre a caixa amarela
 
 
@@ -225,7 +234,7 @@ def compor(sp):
     cor_y = cor_mediana(im, sp['cor_amarelo'], AMARELO)
     cor_logo = cor_mediana(im, (sp['logo']['xs'][1][0], sp['logo']['tops'][1], sp['logo']['xs'][1][1], sp['logo']['tops'][1] + 20), AMARELO)
     cor_corpo = cor_mediana(im, sp['cor_corpo'], BRANCO)
-    im = apagar_mascara(im, m, dil=3, raio=7)
+    im = apagar_mascara(im, m)
 
     # ---------- logo (Arimo Bold, centrado)
     lg = sp['logo']
@@ -247,7 +256,9 @@ def compor(sp):
         bs = _bases(bl['pt'], bl['tops'], t, tr, p)
         passo = (bs[-1] - bs[0]) / (len(bs) - 1)
         medidas.append((t, bs, passo))
-    limite = sp['limite_fluxo']
+    ult = medidas[-1][1][-1]
+    limite = ult + sp.get('folga_fluxo', 0.5) * (sp['preco']['caixa'][1] - ult)
+    rel['base_ult_orig'] = round(ult)
     larg = sp['x_dir'] - sp['x_col']
     for k in range(0, 16):
         s = 1 - k / 100

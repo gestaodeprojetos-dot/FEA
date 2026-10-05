@@ -53,8 +53,8 @@ def selo(im):
     info = trocar_arco_selo(im, 931.5, 327.5, 91, 103, 'O PRIMEIRO E MAIS VENDIDO', 'MÉTODO EXCLUSIVO DEL',
                             'Montserrat_600SemiBold', ang_lim=(-175, -5))
     # CÓPIAS -> COPIAS: apaga só o acento (componente pequeno acima do O)
-    acento = (874, 337, 881, 342)  # pixels escuros do acento agudo, acima do O
-    im = apagar(im, acento, lambda r, g, b: (0.299 * r + 0.587 * g + 0.114 * b) < 180, 1, 3)
+    acento = (874, 336, 882, 341)  # pixels escuros do acento agudo, acima do O
+    im = apagar(im, acento, lambda r, g, b: (0.299 * r + 0.587 * g + 0.114 * b) < 185, 0, 3)
     return im, info, acento
 
 
