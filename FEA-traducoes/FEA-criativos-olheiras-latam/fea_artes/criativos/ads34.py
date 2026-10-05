@@ -32,12 +32,12 @@ ESC = lambda r, g, b: (r + g + b) < 330
 
 M = {
     'feed': dict(arq='trabalho/loteI-ads34-feed.png', saida='FEA-Ads 34 Feed - PTO-LATAM.png',
-                 acento=(1462, 1556, 1471, 1562),
-                 pilula=(680, 235, 1480, 400), ponto=(763, 780), selo_txt=(809, 1393, 302),
+                 acento=(1461, 1555, 1472, 1562),
+                 pilula=(560, 160, 1600, 425), ponto=(763, 780), selo_txt=(809, 1393, 302),
                  t1=(432, 454, 1285, 1331, 1705), t2=(618, 401, 1753),
                  s1=(785, 468, 1002, 1074, 1693), s2=(905, 572, 848, 1586),
                  corpo=[(1036, 514, 1644), (1110, 555, 1605)],
-                 btn=(380, 2110, 1780, 2345), btn_txt=(503, 1559, 2195), btn_seta=1595),
+                 btn=(300, 2095, 1860, 2420), btn_txt=(503, 1559, 2195), btn_seta=1595),
 }
 
 
@@ -46,7 +46,7 @@ def gerar(fmt):
     orig = abrir(p['arq'])
     im = orig.copy()
     W, H = im.size
-    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 480, 0)
+    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 530, 1)
 
     # ---- pílula de contorno '• ACESSO VITALÍCIO'
     qx0, qy0, qx1, qy1 = p['pilula']
@@ -70,7 +70,7 @@ def gerar(fmt):
     t1, a0, a1, g0, g1 = p['t1']
     t2, b0, b1 = p['t2']
     creme = cor_run(im, (b0, t2, b1, t2 + 150), TXT)
-    ouro = perfil_cor(im, (g0, t1, g1, t1 + 115), TXT)
+    ouro = yperfil_cor(im, (g0, t1, g1, t1 + 115), TXT, 12)  # degradê vertical dourado -> creme
     pt1 = [('O problema ', SERIF_T, creme), ('não é', SERIF_T, ouro)]
     tt = calibrar_runs([('preencher olheiras', SERIF_T, creme)], b1 - b0 + 1)
     bt1 = base_de(pt1, tt, t1)
@@ -126,7 +126,7 @@ def gerar(fmt):
     extra = int(np.ceil(lw - (tx1 - tx0)))
     if extra > 0:
         im = esticar_horizontal(im, (bx0, by0, bx1, by1), bx0 - extra // 2, bx1 + (extra - extra // 2),
-                                tx0 - 20, p['btn_seta'] - 15)
+                                tx0 - 20, p['btn_seta'] - 15, suave=45)
         tx0n = tx0 - extra // 2
     else:
         tx0n = tx0 + (tx1 - tx0 - lw) / 2

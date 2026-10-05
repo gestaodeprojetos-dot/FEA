@@ -14,9 +14,9 @@ from PIL import Image, ImageDraw, ImageFont
 T = 'trabalho/apoio-'
 
 
-def larg(f, s, tr=0.0):
+def larg(f, s, tr=0.0, esp=0.0):
     l, _, r, _ = f.getbbox(s)
-    return (r - l) + tr * (len(s) - 1)
+    return (r - l) + tr * (len(s) - 1) + esp * s.count(' ')
 
 
 def ajustar(caminho, texto, alt, largura):
@@ -31,11 +31,11 @@ def ajustar(caminho, texto, alt, largura):
     return f, tr
 
 
-def desenhar(d, x, y, s, f, cor, tr=0.0, ss=4):
+def desenhar(d, x, y, s, f, cor, tr=0.0, ss=4, esp=0.0):
     """Escreve s com origem (x, y) do Pillow e tracking tr; devolve o x final (avanço).
     Com tracking, cada letra é posicionada em supersample (ss x) para não acumular
     arredondamento de pixel entre letras."""
-    if abs(tr) < 0.05:
+    if abs(tr) < 0.05 and not esp:
         d.text((x, y), s, font=f, fill=cor)
         return x + f.getlength(s)
     img = d._image
@@ -47,7 +47,7 @@ def desenhar(d, x, y, s, f, cor, tr=0.0, ss=4):
     O = int(np.ceil(f.size))
     ox, oy = O * ss, O * ss
     for i, ch in enumerate(s):
-        dc.text((ox + F.getlength(s[:i]) + tr * ss * i, oy), ch, font=F, fill=255)
+        dc.text((ox + F.getlength(s[:i]) + tr * ss * i + esp * ss * s[:i].count(' '), oy), ch, font=F, fill=255)
     # desloca a camada para que a origem caia na posição fracionária exata
     fx, fy = x - int(np.floor(x)), y - int(np.floor(y))
     cam = cam.transform(cam.size, Image.AFFINE, (1, 0, -fx * ss, 0, 1, -fy * ss), resample=Image.BILINEAR)
@@ -58,16 +58,16 @@ def desenhar(d, x, y, s, f, cor, tr=0.0, ss=4):
     else:
         alvo = Image.new(img.mode, small.size, cor)
     img.paste(alvo, (int(px), int(py)), small)
-    return x + f.getlength(s) + tr * len(s)
+    return x + f.getlength(s) + tr * len(s) + esp * s.count(' ')
 
 
-def linha(im, segs, f, tr, y_topo, ref, x0=None, x1=None, alinh='esquerda', mascara_out=None):
+def linha(im, segs, f, tr, y_topo, ref, x0=None, x1=None, alinh='esquerda', mascara_out=None, esp=0.0):
     """segs = [(texto, cor)] numa linha. y_topo = topo medido da linha original cujo texto é ref
     (mantém a linha de base). Alinhamento à esquerda em x0, centro entre x0 e x1 ou direita em x1."""
     d = ImageDraw.Draw(im if mascara_out is None else mascara_out)
     s = ''.join(t for t, _ in segs)
     y = y_topo - f.getbbox(ref)[1]
-    w = larg(f, s, tr)
+    w = larg(f, s, tr, esp)
     l = f.getbbox(s)[0]
     if alinh == 'esquerda':
         x = x0 - l
@@ -76,7 +76,7 @@ def linha(im, segs, f, tr, y_topo, ref, x0=None, x1=None, alinh='esquerda', masc
     else:
         x = (x0 + x1) / 2 - w / 2 - l
     for t, cor in segs:
-        x = desenhar(d, x, y, t, f, cor, tr)
+        x = desenhar(d, x, y, t, f, cor, tr, esp=esp)
     return w
 
 

@@ -92,9 +92,13 @@ def gerar():
     CTA = 'NotoSerif_600SemiBold'
     tc = tam_por_largura(lambda s: [('TOQUE EM SAIBA MAIS', CTA, s, branco_c)], 841 - 345)
     seg = lambda s: [('TOQUE EN ', CTA, s, branco_c), ('MÁS INFORMACIÓN', CTA, s, ('grad', grad_c, 1232, 1264))]
-    LIM = 872 - 328
+    X0, X1 = 340, 872  # entre o ícone da mão e a borda direita do botão
+    LIM = X1 - X0
     tc2 = caber(seg, tc, LIM, 0.15)
-    linha(im, seg(tc2), 1264, (328 + 872) / 2, 'centro')
+    tr = 0.0
+    while largura_segs(seg(tc2), tr) > LIM and tr > -2.0:  # aperta levemente o espaçamento se ainda não couber
+        tr -= 0.1
+    linha(im, seg(tc2), 1264, (X0 + X1) / 2, 'centro', tr=tr)
 
     p = salvar(im, SAIDA_NOME)
     print('ok', p, im.size, 'preco k %.2f' % k_preco, 'CTA reducao %.0f%%' % ((1 - tc2 / tc) * 100))

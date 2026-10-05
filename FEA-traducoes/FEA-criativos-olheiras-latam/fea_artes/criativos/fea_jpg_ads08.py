@@ -23,7 +23,7 @@ CLARO_TX = lambda r, g, b: (r + g + b) > 420
 
 def recompor(orig, saida, P):
     im = abrir(orig)
-    print(saida, 'selo', selo_es(im, *P['selo'], ang_fixo=(-140, -22)))
+    print(saida, 'selo', selo_es(im, *P['selo'], ang_fixo=(-140, -22), ajuste_ang=-3))
     L = P['linhas']
     ouro = cor_texto(im, (50, L[0], 434, L[0] + 47), lambda r, g, b: (r > 150) & (b < 150) & (r - b > 50))
     branco = cor_texto(im, (50, L[2], 536, L[2] + 25), CLARO_TX)
@@ -49,10 +49,10 @@ def recompor(orig, saida, P):
     pt_c = [('TOQUE EM SAIBA MAIS E GARANTA O SEU', NB, 0, False)]
     es_c = [('TOQUE EN MÁS INFORMACIÓN Y ASEGURE EL SUYO', NB, 0, False)]
     y0 = P['cta_y']
-    print('  cta', faixa(im, (241, y0, 839, y0 + 70), (pt_c, 1.5), es_c, y0 + 29, 277, 802))
+    print('  cta', faixa(im, (241, y0, 839, y0 + P['cta_alt']), (pt_c, 1.5), es_c, y0 + 29, 277, 802, reduzir_antes=P['cta_reduzir']))
     # legendas dos depoimentos (regra 4), uma sob cada print, no verde livre abaixo do CTA
     kw = P['legenda']
-    y = y0 + 70 + kw.pop('folga')
+    y = y0 + P['cta_alt'] + kw.pop('folga')
     legenda_depoimento(im, 'Comparto este caso de ojeras + labios siguiendo las enseñanzas del profesor. Muy feliz con el resultado.',
                        *P['col1'], y, **kw)
     legenda_depoimento(im, 'Solo quería mostrarle el relleno de ojeras que acabo de realizar en mi consultorio.',
@@ -61,10 +61,10 @@ def recompor(orig, saida, P):
 
 
 FEED = dict(selo=(1022, 261, 60, 65, (986, 272, 993, 276)),
-            linhas=[216, 280, 357, 402, 493, 542, 591, 640], cta_y=1196,
-            col1=(336, 712), col2=(742, 1068), legenda=dict(folga=9, tamanho=16, continuo=True, entrelinha=1.3))
+            linhas=[216, 280, 357, 402, 493, 542, 591, 640], cta_y=1196, cta_alt=71, cta_reduzir=True,
+            col1=(324, 724), col2=(744, 1070), legenda=dict(folga=8, tamanho=15.5, continuo=True, entrelinha=1.3))
 STORY = dict(selo=(1076, 304, 75, 82, (1032, 310, 1038, 313)),
-             linhas=[269, 333, 410, 455, 530, 579, 628, 677], cta_y=1366,
+             linhas=[269, 333, 410, 455, 530, 579, 628, 677], cta_y=1366, cta_alt=70, cta_reduzir=False,
              col1=(336, 712), col2=(742, 1068), legenda=dict(folga=30, tamanho=20))
 
 

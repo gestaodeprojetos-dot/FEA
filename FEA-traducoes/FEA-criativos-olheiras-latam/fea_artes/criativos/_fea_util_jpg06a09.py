@@ -51,7 +51,9 @@ def desenhar(im, segs, tamanho, base, x0, x1=None, alinh='centro', tracking=0.0,
     como borda da tinta, direita usa x1. Retorna (x_tinta_ini, x_tinta_fim)."""
     d = ImageDraw.Draw(im)
     l, r = tinta(segs, tamanho, tracking)
-    if alinh == 'esquerda':
+    if alinh == 'origem':
+        x = x0
+    elif alinh == 'esquerda':
         x = x0 - l
     elif alinh == 'direita':
         x = x1 - r
@@ -128,36 +130,40 @@ def comparar(im, caixa, cond, texto, nomes, tracking=0.0):
 
 
 def texto_arco(im, texto, nome, tamanho, cor, centro, raio, ang_centro=-90.0, tracking=0.0,
-               por_fora=True, sombra=None):
-    """Texto ao longo de um arco. raio = raio da linha de base. ang_centro em graus (−90 = topo).
+               por_fora=True, sombra=None, escala=4):
+    """Texto ao longo de um arco. raio = raio da linha de base. ang_centro em graus (-90 = topo).
     por_fora=True: letras de pé, lidas no sentido horário (arco superior).
-    por_fora=False: arco inferior, lido da esquerda para a direita, letras com o pé para fora."""
-    f = F(nome, tamanho)
-    larguras = [f.getlength(ch) for ch in texto]
-    total = sum(larguras) + tracking * (len(texto) - 1)
+    por_fora=False: arco inferior, lido da esquerda para a direita.
+    Desenhado em supersampling (escala x) numa camada e reduzido: posições subpixel exatas,
+    kerning do par incluído (avanços medidos por prefixo)."""
+    S = escala
+    f = F(nome, tamanho * S)
     cx, cy = centro
-    s = -total / 2
-    for ch, w in zip(texto, larguras):
-        meio = s + w / 2
-        if por_fora:
-            ang = ang_centro + math.degrees(meio / raio)
-        else:
-            ang = ang_centro - math.degrees(meio / raio)
+    lado = int(2 * (raio + tamanho * 2))
+    ox, oy = cx - lado / 2, cy - lado / 2          # canto da camada na arte
+    cam = Image.new('RGBA', (lado * S, lado * S), (0, 0, 0, 0))
+    ini = [f.getlength(texto[:k]) / S + tracking * k for k in range(len(texto) + 1)]
+    larguras = [f.getlength(texto[:k + 1]) / S - f.getlength(texto[:k]) / S for k in range(len(texto))]
+    total = ini[-1] - tracking
+    for k, ch in enumerate(texto):
+        if not ch.strip():
+            continue
+        meio = ini[k] + larguras[k] / 2 - total / 2
+        ang = ang_centro + math.degrees(meio / raio) * (1 if por_fora else -1)
         rad = math.radians(ang)
-        px, py = cx + raio * math.cos(rad), cy + raio * math.sin(rad)
-        if ch.strip():
-            tam = int(tamanho * 3)
-            ix, iy = math.floor(px - tam / 2), math.floor(py - tam / 2)
-            ox, oy = px - ix, py - iy  # posição subpixel dentro da camada
-            cam = Image.new('RGBA', (tam, tam), (0, 0, 0, 0))
-            dc = ImageDraw.Draw(cam)
-            if sombra:
-                dc.text((ox + sombra[1][0], oy + sombra[1][1]), ch, font=f, fill=tuple(sombra[0]) + (255,), anchor='ms')
-            dc.text((ox, oy), ch, font=f, fill=tuple(cor) + (255,), anchor='ms')
-            rot = ang + 90 if por_fora else ang - 90
-            r = cam.rotate(-rot, resample=Image.BICUBIC, center=(ox, oy))
-            im.paste(r, (ix, iy), r)
-        s += w + tracking
+        px, py = (cx - ox + raio * math.cos(rad)) * S, (cy - oy + raio * math.sin(rad)) * S
+        t = int(tamanho * 3 * S)
+        g = Image.new('RGBA', (t, t), (0, 0, 0, 0))
+        dg = ImageDraw.Draw(g)
+        if sombra:
+            dg.text((t / 2 + sombra[1][0] * S, t / 2 + sombra[1][1] * S), ch, font=f, fill=tuple(sombra[0]) + (255,), anchor='ms')
+        dg.text((t / 2, t / 2), ch, font=f, fill=tuple(cor) + (255,), anchor='ms')
+        rot = ang + 90 if por_fora else ang - 90
+        g = g.rotate(-rot, resample=Image.BICUBIC, center=(t / 2, t / 2))
+        cam.alpha_composite(g, (int(round(px - t / 2)), int(round(py - t / 2))))
+    cam = cam.resize((lado, lado), Image.LANCZOS)
+    x0, y0 = int(round(ox)), int(round(oy))
+    im.paste(cam, (x0, y0), cam)
     return im
 
 
@@ -300,36 +306,68 @@ def legenda_depoimento(im, traducao, x0, x1, y_topo, nome='NotoSans_400Regular',
                 segs = [(rot, nome, cor, False)] + ([(l[len(rot):], nome_it, cor, False)] if len(l) > len(rot) else [])
             else:
                 segs = [(l, nome_it, cor, False)]
-            desenhar(im, segs, tamanho, base, x0, x1, alinh=alinh)
+            desenhar_ss(im, segs, tamanho, base, x0, x1, alinh=alinh)
             base += passo
         return base - passo
     for l in quebrar('Testimonio original en portugués:', nome, tamanho, x1 - x0):
-        desenhar(im, [(l, nome, cor, False)], tamanho, base, x0, x1, alinh=alinh)
+        desenhar_ss(im, [(l, nome, cor, False)], tamanho, base, x0, x1, alinh=alinh)
         base += passo
     for l in quebrar('«' + traducao + '»', nome_it, tamanho, x1 - x0):
-        desenhar(im, [(l, nome_it, cor, False)], tamanho, base, x0, x1, alinh=alinh)
+        desenhar_ss(im, [(l, nome_it, cor, False)], tamanho, base, x0, x1, alinh=alinh)
         base += passo
     return base - passo
 
 
-def faixa(im, caixa, segs_pt, segs_es, ytop, x0t, x1t, nome_cor=None):
-    """Caixa chapada com uma linha de texto (faixa amarela, CTA). Alarga a caixa se precisar."""
+def faixa(im, caixa, segs_pt, segs_es, ytop, x0t, x1t, nome_cor=None, reduzir_antes=False):
+    """Caixa chapada com uma linha de texto (faixa amarela, CTA). Alarga a caixa se precisar.
+    reduzir_antes=True: primeiro reduz a fonte (no máximo 15 %) para caber na largura original
+    (quando alargar cobriria foto ou print), e só alarga o que faltar."""
     from fea_arte_lib import cor_fundo, cor_texto, preencher, ESCURO
     cor_cx = cor_fundo(im, (caixa[0] + 3, caixa[1] + 3, caixa[2] - 3, caixa[1] + 8))
     cor_tx = cor_texto(im, (x0t, ytop, x1t, caixa[3] - 3), ESCURO)
-    tam = tamanho_segs(segs_pt[0], x1t - x0t + 1, segs_pt[1])
+    tam0 = tam = tamanho_segs(segs_pt[0], x1t - x0t + 1, segs_pt[1])
     tr = segs_pt[1]
     pad = x0t - caixa[0]
     segs = [(t, n, cor_tx, s) for t, n, _, s in segs_es]
+    limite = (caixa[2] - caixa[0]) if reduzir_antes else im.width - 2 * 16
     while True:
         l, r = tinta(segs, tam, tr)
-        if (r - l) + 2 * pad <= im.width - 2 * 16 or tam < 10:
+        if (r - l) + 2 * pad <= limite or tam <= tam0 * 0.85 or tam < 10:
             break
         tam -= 0.25
-    base = base_de(ytop, segs_pt[0][0][0] + segs_pt[0][-1][0], segs_pt[0][0][1], tam)
+    while (r - l) + 2 * pad > im.width - 2 * 16 and tam > 10:
+        tam -= 0.25
+        l, r = tinta(segs, tam, tr)
+    nome0 = segs_pt[0][0][1]
+    texto_pt = ''.join(t for t, _, _, _ in segs_pt[0])
+    base = base_de(ytop, texto_pt, nome0, tam0)
+    if tam != tam0:  # mantém o texto centrado na vertical
+        cap = lambda t: -F(nome0, t).getbbox('H', anchor='ls')[1]
+        base -= (cap(tam0) - cap(tam)) / 2
     preencher(im, caixa, cor_cx)
     cx = (caixa[0] + caixa[2]) / 2
     w = max(caixa[2] - caixa[0], (r - l) + 2 * pad)
     preencher(im, (int(round(cx - w / 2)), caixa[1], int(round(cx + w / 2)), caixa[3]), cor_cx)
     desenhar(im, segs, tam, base, caixa[0], caixa[2], 'centro', tr)
     return tam
+
+
+def desenhar_ss(im, segs, tamanho, base, x0, x1=None, alinh='centro', tracking=0.0, S=4):
+    """Como desenhar(), mas em supersampling (S x) e reduzido: evita o espaçamento irregular
+    do hinting em texto pequeno (legendas)."""
+    l, r = tinta(segs, tamanho, tracking)
+    if alinh == 'esquerda':
+        xo = x0 - l
+    elif alinh == 'direita':
+        xo = x1 - r
+    else:
+        xo = (x0 + x1) / 2 - (r + l) / 2
+    asc = tamanho * 1.6
+    W = int(r - min(l, 0) + tamanho * 2)
+    H = int(tamanho * 2.6)
+    X, Y = math.floor(xo + min(l, 0) - tamanho), math.floor(base - asc)
+    cam = Image.new('RGBA', (W * S, H * S), (0, 0, 0, 0))
+    segs_s = [(t, n, tuple(c) + (255,), s) for t, n, c, s in segs]
+    desenhar(cam, segs_s, tamanho * S, (base - Y) * S, (xo - X) * S, alinh='origem', tracking=tracking * S)
+    cam = cam.resize((W, H), Image.LANCZOS)
+    im.paste(cam, (X, Y), cam)

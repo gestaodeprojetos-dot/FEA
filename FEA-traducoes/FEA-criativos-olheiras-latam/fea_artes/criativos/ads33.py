@@ -26,7 +26,7 @@ ESC = lambda r, g, b: (r + g + b) < 330
 
 M = {
     'feed': dict(arq='trabalho/loteI-ads33-feed.png', saida='FEA-Ads 33 Feed - PTO-LATAM.png',
-                 acento=(1815, 1100, 1823, 1104),
+                 acento=(1814, 1099, 1824, 1104),
                  tit=[(1380, 662, 1528), (1530, 237, 1919)], larg_max=1880,
                  sub=(1705, 424, 1730),
                  # linhas do checklist: (topo, [(ícone x0, x1)], [(texto x0, x1, pt, es)])
@@ -73,7 +73,7 @@ def gerar(fmt):
     orig = abrir(p['arq'])
     im = orig.copy()
     W, H = im.size
-    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 480, 0)
+    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 530, 1)
 
     # ---- título
     (t1, a0, a1), (t2, c0, c1) = p['tit']

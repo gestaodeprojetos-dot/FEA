@@ -45,7 +45,7 @@ def gerar(fmt):
     W, H = im.size
 
     # selo: tira só o acento agudo do Ó (CÓPIAS -> COPIAS)
-    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 420, 1)
+    im = apagar_col(im, p['acento'], lambda r, g, b: (r + g + b) < 530, 1)
 
     # ---- título 3 linhas
     (t1, a0, a1), (t2, g0, g1), (t3, c0, c1) = p['tit']

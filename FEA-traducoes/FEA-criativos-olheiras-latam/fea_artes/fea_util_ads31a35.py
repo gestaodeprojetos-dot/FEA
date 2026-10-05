@@ -43,7 +43,7 @@ def apagar_col(im, caixa, cond, dil=4):
             continue
         ys = np.arange(y0, y1)
         ok = ~col
-        if ok.sum() < 2:
+        if ok.sum() == 0:
             continue
         for c in range(3):
             a[y0:y1, x, c][col] = np.interp(ys[col], ys[ok], a[y0:y1, x, c][ok])
@@ -61,7 +61,7 @@ def apagar_lin(im, caixa, cond, dil=4):
             continue
         xs = np.arange(x0, x1)
         ok = ~lin
-        if ok.sum() < 2:
+        if ok.sum() == 0:
             continue
         for c in range(3):
             a[y, x0:x1, c][lin] = np.interp(xs[lin], xs[ok], a[y, x0:x1, c][ok])
@@ -150,6 +150,11 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
             tt = np.clip(tt, 0, 1)[None, :, None]
             col = c0 + (c1 - c0) * tt
             col = np.broadcast_to(col, (H, W, 3))
+        elif cor[0] == 'yperfil':
+            ysA = np.array([q[0] for q in cor[1]], float)
+            cs = np.array([q[1] for q in cor[1]], float)
+            col = np.stack([np.interp(np.arange(H), ysA, cs[:, c]) for c in range(3)], -1)[:, None]
+            col = np.broadcast_to(col, (H, W, 3))
         elif cor[0] == 'perfil':
             ys, xs = np.where(al[..., 0] > 0)
             xa, xb = xs.min(), xs.max()
@@ -193,10 +198,11 @@ def cor_mediana(im, caixa, cond, pct=None):
     return tuple(int(v) for v in np.median(px, 0))
 
 
-def esticar_horizontal(im, caixa, novo_x0, novo_x1, x_corte_esq, x_corte_dir):
+def esticar_horizontal(im, caixa, novo_x0, novo_x1, x_corte_esq, x_corte_dir, suave=0):
     """Alarga uma pílula/botão (caixa = x0,y0,x1,y1) para [novo_x0, novo_x1]: as pontas
     [x0, x_corte_esq) e [x_corte_dir, x1) são copiadas intactas e o miolo é reamostrado
-    horizontalmente (mantém o degradê e o brilho central). Só pixels do botão."""
+    horizontalmente (mantém o degradê e o brilho central). suave > 0: a faixa nova se funde
+    com o fundo original numa borda de 'suave' px (some com emenda de sombra/brilho)."""
     x0, y0, x1, y1 = caixa
     a = np.array(im)
     esq = a[y0:y1, x0:x_corte_esq]
@@ -204,9 +210,16 @@ def esticar_horizontal(im, caixa, novo_x0, novo_x1, x_corte_esq, x_corte_dir):
     meio = a[y0:y1, x_corte_esq:x_corte_dir]
     w_meio = (novo_x1 - novo_x0) - esq.shape[1] - dir_.shape[1]
     meio2 = cv2.resize(meio, (w_meio, meio.shape[0]), interpolation=cv2.INTER_CUBIC)
-    nova = np.concatenate([esq, meio2, dir_], 1)
+    nova = np.concatenate([esq, meio2, dir_], 1).astype(float)
     a = a.copy()
-    a[y0:y1, novo_x0:novo_x1] = nova
+    if suave:
+        h, w = nova.shape[:2]
+        ry = np.clip(np.minimum(np.arange(h), h - 1 - np.arange(h)) / suave, 0, 1)
+        rx = np.clip(np.minimum(np.arange(w), w - 1 - np.arange(w)) / suave, 0, 1)
+        al = (ry[:, None] * rx[None, :])[..., None]
+        velho = a[y0:y1, novo_x0:novo_x1].astype(float)
+        nova = nova * al + velho * (1 - al)
+    a[y0:y1, novo_x0:novo_x1] = np.clip(nova.round(), 0, 255).astype(np.uint8)
     return Image.fromarray(a)
 
 
@@ -277,3 +290,19 @@ def mover_icone(orig, im, caixa, dx, cond, dil=4, suav=5):
     dst = a[y0:y1, x0 + dx:x1 + dx]
     a[y0:y1, x0 + dx:x1 + dx] = dst * (1 - m) + o * m
     return Image.fromarray(a.round().astype(np.uint8))
+
+
+def yperfil_cor(im, caixa, cond, passo=8, claro=True):
+    """Degradê vertical da tinta: ('yperfil', [(y_absoluto, cor)])."""
+    x0, y0, x1, y1 = caixa
+    a = np.array(im)[y0:y1, x0:x1].astype(int)
+    m = cond(a[..., 0], a[..., 1], a[..., 2])
+    pts = []
+    for y in range(0, y1 - y0, passo):
+        sub = a[y:y + passo][m[y:y + passo]]
+        if len(sub) < 15:
+            continue
+        L = sub.sum(1)
+        core = (L >= np.percentile(L, 60)) if claro else (L <= np.percentile(L, 40))
+        pts.append((y0 + y + passo / 2, tuple(int(v) for v in np.median(sub[core], 0))))
+    return ('yperfil', pts)
