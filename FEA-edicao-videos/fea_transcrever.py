@@ -144,7 +144,7 @@ def separar_esparsa(modelo, segs, a):
     (Keila, 05/10/2026, pasta 3 "Aplicação nasal")."""
     db, limiar = perfil(a)
     dur = len(a) / 16000
-    rs = rajadas(db, limiar, 0, len(db), silencio=0.8)
+    rs = [r for r in rajadas(db, limiar, 0, len(db), silencio=0.8) if r[1] - r[0] >= 0.15]   # estalo não é fala
     curtas = [(s, e) for s, e in rs if e - s <= 1.5]
     # sequências de rajadas curtas consecutivas (na lista completa)
     grupos, atual = [], []
@@ -164,23 +164,40 @@ def separar_esparsa(modelo, segs, a):
         esticadas = [w for w in velhas if w["e"] - w["s"] > 1.0]
         if not esticadas:
             continue
+        # cada palavra esticada é a fala da ÚLTIMA rajada que ela cobre (o começo é silêncio ou o
+        # rabo da palavra anterior): o texto vem da transcrição completa, que tem contexto; a rajada
+        # sozinha só é transcrita quando nenhuma palavra cobre ela (fala que estava escondida).
+        # (sozinho, um "duas" curto virava "vamos lá" ou "dois")
+        dono = {}
+        for w in esticadas:
+            cob = [k for k, (s_, e_) in enumerate(g) if e_ > w["s"] + 0.3 and s_ < w["e"]]
+            if cob:
+                dono.setdefault(cob[-1], []).append(w)
         novas, ok = [], True
-        for s_, e_ in g:
+        for k, (s_, e_) in enumerate(g):
             # rajada que já tem palavras certas (não esticadas, no tempo dela) fica como está
             boas = [w for w in velhas if w["e"] - w["s"] <= 1.0 and s_ - 0.2 <= (w["s"] + w["e"]) / 2 < e_ + 0.2]
             if boas:
                 novas.append([dict(w) for w in boas])
+                continue
+            if k in dono:
+                ws_ = sorted(dono[k], key=lambda w: w["s"])
+                passo = (e_ - s_ + 0.1) / len(ws_)
+                novas.append([dict(w, s=s_ - 0.05 + i * passo, e=s_ - 0.05 + (i + 1) * passo) for i, w in enumerate(ws_)])
                 continue
             a0, a1 = max(0.0, s_ - 0.15), min(dur, e_ + 0.15)
             tr, _ = modelo.transcribe(a[int(a0 * 16000):int(a1 * 16000)], language="pt", word_timestamps=True,
                                       vad_filter=False, condition_on_previous_text=False, initial_prompt=PROMPT)
             ws = [{"s": max(s_ - 0.05, x.start + a0), "e": min(e_ + 0.05, x.end + a0), "w": x.word}
                   for t in tr if not (ALUCINACAO.search(t.text) or t.no_speech_prob > 0.6 or t.avg_logprob < -1.0)
-                  for x in t.words]
+                  for x in t.words if x.end - x.start > 0.05]
             if not ws:
                 ok = False      # alguma rajada sem palavra: mantém a transcrição antiga
                 break
             novas.append(ws)
+        usadas = {id(w) for ws in dono.values() for w in ws}
+        if any(id(w) not in usadas for w in esticadas):
+            continue     # palavra esticada sem rajada própria: não mexe no trecho
         if not ok or sum(len(x) for x in novas) < 0.8 * len(velhas):
             continue
         ids = {id(w) for w in velhas}
@@ -210,6 +227,8 @@ def complementar(modelo, segs, a):
             ws = []
             for x in s.words:
                 ws_, we_ = x.start + ini, x.end + ini
+                if we_ - ws_ <= 0.02:
+                    continue
                 # palavra esticada por cima do silêncio: a fala dela é a última rajada de voz do
                 # intervalo (o começo costuma ser o rabo da palavra anterior)
                 if we_ - ws_ > 1.0:
@@ -223,7 +242,13 @@ def complementar(modelo, segs, a):
                 j0, j1 = max(0, int((ws_ - 0.2) / PASSO)), min(len(db), int((we_ + 0.2) / PASSO) + 1)
                 if not (db[j0:j1] >= limiar).any():
                     continue
-                ws.append({"s": max(ws_, e0), "e": min(we_, s1), "w": x.word})
+                # palavra longa sem nenhuma voz dentro dela é invenção do Whisper no silêncio
+                # (o "do" de 7,1 s a 8,2 s antes de "duas" na aplicação em orbiculares)
+                # (conferido já recortado no buraco: a voz depois dele é da palavra seguinte)
+                ws_, we_ = max(ws_, e0), min(we_, s1)
+                if we_ - ws_ > 0.5 and (db[int(ws_ / PASSO):int(we_ / PASSO)] >= limiar - 3).sum() < 2:
+                    continue
+                ws.append({"s": ws_, "e": we_, "w": x.word})
             # a palavra da borda que repete a vizinha já transcrita é a mesma fala (ex.: "três"), mas só
             # se está colada nela: longe no tempo, com voz própria, é repetição de verdade (Keila 05/10:
             # "duas, duas, duas" na aplicação nasal, o 5º e o 6º "duas" sumiam da legenda)
