@@ -133,7 +133,7 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 Pasta de criativos MTB LATAM: `19tGHEnoBC9-8DGSbvjE7GJTFCBiRHCsn`, nome `Ads NN - MTB LATAM` (próximo número livre).
 1. Traduzir o bruto no HeyGen (upload do arquivo como asset; link do YouTube com restrição de idade falha) em **Spanish (Latin America)**, o mesmo dos criativos LATAM anteriores. O resultado sai a 25 fps em `https://resource2.heygen.ai/video_translate/{id}/original.mp4`.
 2. Transcrever com `fea_transcrever.py --idioma es` e pôr `"idioma": "es"` no projeto.json (desliga as correções do português, que estragam o espanhol).
-3. Cortar a chamada final em português para a FEB/comentário: o CTA do anúncio é o vídeo da Masterclass (ex.: `Ads 76 - MTB LATAM`, 26 s), convertido para H.264 30 fps AAC 48 kHz antes do `fea_render_com_cta.py`.
+3. Cortar a chamada final em português para a FEB/comentário. O CTA é **só a cartela final** de um criativo da Masterclass (tela escura "MASTERCLASS em Toxina Botulínica" + "Toque aprender más", ~5 s; no `Ads 76 - MTB LATAM` começa em 21,0 s, achar pelo corte de cena). **Nunca o vídeo do Dr. falando** (Keila, 05/10/2026). Extrair com `-ss`, converter para H.264 30 fps AAC 48 kHz e usar no `fea_render_com_cta.py`.
 4. Headline em espanhol, sem nome de produto. A HeyGen às vezes inventa palavra (ex.: "Relájate, Capi"): tirar da legenda em `correcoes` e silenciar no `silenciar` (a revisora acusa "voz falhando" nesse ponto, é esperado).
 
 ## Armadilhas
