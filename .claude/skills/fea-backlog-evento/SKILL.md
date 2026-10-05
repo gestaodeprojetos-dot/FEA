@@ -1,13 +1,13 @@
 ---
 name: fea-backlog-evento
-description: Recebe o Briefing Reverso FEA (ou os links de modelo e destino) e monta a estrutura operacional de um novo evento ou produto FEA (Dr. João Pithon) a partir de um evento modelo - pastas no Drive, documentos padrão de copy/design/tráfego, planilha de links úteis preenchida, planilha de criativos para tráfego, backlog no ClickUp com responsável (sem datas e sem comentários soltos) e um comentário em cada tarefa com o link da pasta para salvar e o link da copy para desenvolver. Usar quando a Keila pedir para "criar o backlog do próximo evento", "modelar pelo lançamento anterior", "replicar a estrutura de X para Y", "montar pastas, planilhas e ClickUp" de um ebook, perpétuo, masterclass, imersão ou versão LATAM.
+description: Recebe o Briefing Reverso FEA (ou os links de modelo e destino) e monta a estrutura operacional de um novo evento ou produto FEA (Dr. João Pithon) a partir de um evento modelo - pastas no Drive, documentos padrão de copy/design/tráfego, planilha de links úteis preenchida, planilha de criativos para tráfego, backlog no ClickUp com responsável, sem datas e sem comentários, com o link da pasta para salvar e o link da copy para desenvolver na DESCRIÇÃO de cada tarefa. Usar quando a Keila pedir para "criar o backlog do próximo evento", "modelar pelo lançamento anterior", "replicar a estrutura de X para Y", "montar pastas, planilhas e ClickUp" de um ebook, perpétuo, masterclass, imersão ou versão LATAM.
 ---
 
 # FEA: backlog completo de novo evento
 
 Replica a operação de um evento modelo (Drive + ClickUp) para um evento novo, deixando cada pessoa do time com tarefa, pasta e copy no lugar certo. Primeira execução: Ebook Olheiras LATAM (05/10/2026), modelado no Ebook Olheiras [Perpétuo] Brasil. Exemplo completo de configuração em `FEA-config-ebook-olheiras-latam.json`.
 
-Critério de sucesso (conferir item por item antes de entregar): toda subpasta do modelo existe no destino; todo documento de copy citado no backlog existe e está linkado; as duas planilhas estão no Drive; toda tarefa folha do ClickUp tem responsável (ou está listada como pendente de decisão), não tem data e tem exatamente 1 comentário com pasta + copy.
+Critério de sucesso (conferir item por item antes de entregar): toda subpasta do modelo existe no destino; todo documento de copy citado no backlog existe e está linkado; as duas planilhas estão no Drive; toda tarefa folha do ClickUp tem responsável (ou está listada como pendente de decisão), não tem data, não tem comentário e tem na descrição a pasta + a copy.
 
 ## Entrada principal: o briefing reverso
 
@@ -30,7 +30,7 @@ Workspace FEA no ClickUp: `9013080622` (há outro workspace na conta, sempre pas
 ## Regras fixas
 
 - **Sem datas** no backlog (pedido explícito da Keila para este fluxo; é a exceção registrada à regra de ouro do ClickUp). Datas entram depois, no sprint.
-- **Sem comentários** além do comentário padrão de 2 linhas. Formato exato:
+- **Sem comentários.** Pasta e copy vão na **descrição** da tarefa (pedido da Keila em 05/10/2026), já na criação (`markdown_description` no `clickup_create_task`), o que economiza 1 chamada por tarefa. Formato exato da descrição:
   ```
   📁 **Pasta para salvar:** [nome da pasta](url)
   📝 **Copy para desenvolver a demanda:** [nome do doc](url)
@@ -76,7 +76,7 @@ Atenção: o Drive MCP não edita o conteúdo de um doc depois de criado. Montar
 
 ### 5. ClickUp
 1. Criar as demandas que faltam como subtarefa do pai certo (`clickup_create_task` com `parent`), só nome e `assignees`, sem data.
-2. Comentar cada tarefa folha (`clickup_create_task_comment`) no formato fixo. Mapa padrão:
+2. Preencher a descrição de cada tarefa folha no formato fixo: na criação via `markdown_description`; em tarefa que já existe, `clickup_update_task` com `markdown_description` (no mesmo call, ajustar `assignees` se precisar). Mapa padrão:
 
 | Tipo de tarefa | Pasta para salvar | Copy / referência |
 |---|---|---|
@@ -94,14 +94,14 @@ Atenção: o Drive MCP não edita o conteúdo de um doc depois de criado. Montar
 | Pesquisa de mercado | 3. PESQUISA | briefing |
 | Estratégia, oferta, configurações | 0. PLANEJAMENTO | briefing |
 
-Não comentar tarefas-pai que só agrupam (Copy, Design, Webdesigner, Gestão, Automação, Estratégia, Operação) nem tarefas já concluídas.
+Não preencher descrição de tarefas-pai que só agrupam (Copy, Design, Webdesigner, Gestão, Automação, Estratégia, Operação) nem tarefas já concluídas.
 
 ### 6. Relatório para a Keila
 Português, tabela com o que foi criado (links), lista de pendências que só ela decide (tarefas sem responsável, duplicadas, fora de escopo, links que dependem de publicação) e o veredito do critério de sucesso.
 
 ## Limite do ClickUp (planejar antes de começar)
 
-O conector do ClickUp aceita **100 chamadas por dia** (erro `RATE_LIMIT_EXCEEDED`, renova 24h depois da primeira chamada). Um backlog de 90 tarefas com comentário em cada uma passa disso. Ordem de prioridade: (1) criar tarefas que faltam, (2) comentários nas tarefas de copy e design, (3) demais comentários. Ao bater o limite: registrar o que falta em `FEA-pendencias-<evento>.md` neste diretório e agendar a retomada com `send_later` para depois da renovação. Economizar leitura: `clickup_filter_tasks` traz o folder inteiro em 1 chamada; evitar `get_task` tarefa por tarefa.
+O conector do ClickUp aceita **100 chamadas por dia** (erro `RATE_LIMIT_EXCEEDED`, renova 24h depois da primeira chamada). Cada tarefa custa 1 chamada (criação já com descrição e responsável). Um backlog de 90 tarefas existentes custa 90 atualizações. Ordem de prioridade: (1) criar tarefas que faltam, (2) descrições das tarefas de copy e design, (3) demais descrições. Ao bater o limite: registrar o que falta em `FEA-plano-clickup-<evento>.json` (lista de chamadas prontas) neste diretório e agendar a retomada com `send_later` para depois da renovação. Economizar leitura: `clickup_filter_tasks` traz o folder inteiro em 1 chamada; evitar `get_task` tarefa por tarefa.
 
 ## Erros comuns
 
