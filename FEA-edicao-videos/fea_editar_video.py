@@ -590,7 +590,9 @@ def gerar_ass(v, palavras, duracao, caminho):
         if s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
-        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
+        # conectivo solto não aparece, mas "Uma." falado sozinho é contagem (uma unidade), fica
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"} \
+                and not (bloco[0]["w"].strip()[-1:] in ".?!" and eh_numero(bloco[0]["w"])):
             continue
         texto = quebrar_linhas(limpar(pontuar(corrigir(juntar_texto(bloco), v.get("correcoes", ())))))
         minimo = max(0.2, 0.02 * len(texto), 0.45 if len(bloco) == 1 else 0)
