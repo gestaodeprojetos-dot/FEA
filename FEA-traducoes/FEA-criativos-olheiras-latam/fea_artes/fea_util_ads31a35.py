@@ -113,18 +113,21 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
     for t, nome, cor in runs:
         f = F(nome, tam)
         chars = []
-        for ch in t:
-            chars.append((x, ch))
-            if ch.strip():
-                l, tp, r, bt = f.getbbox(ch, anchor='ls')
+        if tracking:
+            for ch in t:
+                chars.append((x, ch))
+                if ch.strip():
+                    l, tp, r, bt = f.getbbox(ch, anchor='ls')
+                    tx0, tx1 = min(tx0, x + l), max(tx1, x + r)
+                    ty0, ty1 = min(ty0, base + tp), max(ty1, base + bt)
+                x += f.getlength(ch) + tracking
+        else:
+            chars.append((x, t))
+            if t.strip():
+                l, tp, r, bt = f.getbbox(t, anchor='ls')
                 tx0, tx1 = min(tx0, x + l), max(tx1, x + r)
                 ty0, ty1 = min(ty0, base + tp), max(ty1, base + bt)
-            x += f.getlength(ch) + tracking if tracking else 0
-        if not tracking:
-            # sem tracking: usa kerning do texto inteiro
-            x0r = chars[0][0] if chars else x
-            l, tp, r, bt = f.getbbox(t, anchor='ls') if t.strip() else (0, 0, 0, 0)
-            x = x0r + f.getlength(t)
+            x += f.getlength(t)
         pos.append((t, f, cor, chars))
     dx = (cx - (tx0 + tx1) / 2) if cx is not None else (x_esq - tx0)
     bbox = (tx0 + dx, ty0, tx1 + dx, ty1)
@@ -134,13 +137,10 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
     for t, f, cor, chars in pos:
         lay = Image.new('L', (W, H), 0)
         d = ImageDraw.Draw(lay)
-        if tracking:
-            for x, ch in chars:
-                d.text((x + dx, base), ch, font=f, fill=255, anchor='ls')
-        elif chars:
-            d.text((chars[0][0] + dx, base), t, font=f, fill=255, anchor='ls')
+        for x, ch in chars:
+            d.text((x + dx, base), ch, font=f, fill=255, anchor='ls')
         al = np.array(lay).astype(float)[..., None] / 255.0
-        if isinstance(cor, tuple) and len(cor) == 3 and cor[0] == 'grad':
+        if cor[0] == 'grad':
             ys, xs = np.where(al[..., 0] > 0)
             c0, c1 = np.array(cor[1], float), np.array(cor[2], float)
             xa, xb = xs.min(), xs.max()
@@ -155,16 +155,19 @@ def desenhar(im, runs, tam, base, cx=None, x_esq=None, tracking=0.0, so_medir=Fa
     return bbox
 
 
-def calibrar_runs(runs, largura, tracking=0.0, ini=8, fim=260):
-    """Tamanho em que os runs PT ocupam a largura de tinta medida."""
-    melhor = None
+def calibrar_runs(runs, largura, tracking=0.0, ini=8, fim=300):
+    """Tamanho (passo 0,25) em que os runs PT ocupam a largura de tinta medida.
+    tracking em fração do tamanho (em)."""
     dummy = Image.new('RGB', (10, 10))
-    for t in np.arange(ini, fim, 0.25):
-        b = desenhar(dummy, runs, t, 0, x_esq=0, tracking=tracking * t if tracking else 0, so_medir=True)
-        w = b[2] - b[0]
-        if melhor is None or abs(w - largura) < abs(melhor[1] - largura):
-            melhor = (float(t), w)
-    return melhor[0]
+    w = lambda t: (lambda b: b[2] - b[0])(desenhar(dummy, runs, t, 0, x_esq=0, tracking=tracking * t, so_medir=True))
+    lo, hi = ini, fim
+    while hi - lo > 0.25:
+        mid = (lo + hi) / 2
+        if w(mid) < largura:
+            lo = mid
+        else:
+            hi = mid
+    return min((round(lo * 4) / 4, round(hi * 4) / 4), key=lambda t: abs(w(t) - largura))
 
 
 def base_de(runs, tam, y_topo, tracking=0.0):
@@ -195,3 +198,36 @@ def esticar_horizontal(im, caixa, novo_x0, novo_x1, x_corte_esq, x_corte_dir):
     a = a.copy()
     a[y0:y1, novo_x0:novo_x1] = nova
     return Image.fromarray(a)
+
+
+def cor_run(im, caixa, cond, claro=True, lim=22):
+    """Cor do texto num trecho: sólida, ou ('grad', esq, dir) se a tinta muda ao longo do x.
+    Usa só o miolo dos traços (metade mais clara se claro=True, mais escura se False)."""
+    x0, y0, x1, y1 = caixa
+    a = np.array(im)[y0:y1, x0:x1].astype(int)
+    m = cond(a[..., 0], a[..., 1], a[..., 2])
+    lum = a.sum(2)
+    ys, xs = np.where(m)
+    L = lum[ys, xs]
+    core = (L >= np.percentile(L, 50)) if claro else (L <= np.percentile(L, 50))
+    ys, xs = ys[core], xs[core]
+    px = a[ys, xs]
+    xa, xb = xs.min(), xs.max()
+    w = xb - xa
+    esq = np.median(px[xs <= xa + w * 0.15], 0)
+    dir_ = np.median(px[xs >= xb - w * 0.15], 0)
+    if np.abs(esq - dir_).max() > lim:
+        return ('grad', tuple(int(v) for v in esq), tuple(int(v) for v in dir_))
+    return tuple(int(v) for v in np.median(px, 0))
+
+
+def caber(runs_es, tam, largura_max, tracking=0.0, red_max=0.15):
+    """Reduz o tamanho (até red_max) para a linha caber em largura_max. Retorna (tam, reducao)."""
+    dummy = Image.new('RGB', (10, 10))
+    t = tam
+    while t > tam * (1 - red_max):
+        b = desenhar(dummy, runs_es, t, 0, x_esq=0, tracking=tracking * t, so_medir=True)
+        if b[2] - b[0] <= largura_max:
+            return t, 1 - t / tam
+        t -= 0.25
+    return t, 1 - t / tam

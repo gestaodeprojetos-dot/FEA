@@ -1,10 +1,11 @@
-"""Complemento da fea_arte_lib para o lote [FEED]/[STORIES] ADS 06 a 09 (jpg).
+"""Módulo de apoio (não gera arte sozinho). Complemento da fea_arte_lib para o lote [FEED]/[STORIES] ADS 06 a 09 (jpg).
 
 Texto rico numa linha (trechos com fonte, cor e sublinhado diferentes, como
 'Com um ebook que mostra **o raciocínio clínico**'), espaçamento entre letras
 (tracking) e texto em arco (selo dourado). Tudo desenhado com Pillow, sem IA.
 """
-import math
+import math, os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from fea_arte_lib import fonte, mascara
@@ -146,13 +147,103 @@ def texto_arco(im, texto, nome, tamanho, cor, centro, raio, ang_centro=-90.0, tr
         px, py = cx + raio * math.cos(rad), cy + raio * math.sin(rad)
         if ch.strip():
             tam = int(tamanho * 3)
+            ix, iy = math.floor(px - tam / 2), math.floor(py - tam / 2)
+            ox, oy = px - ix, py - iy  # posição subpixel dentro da camada
             cam = Image.new('RGBA', (tam, tam), (0, 0, 0, 0))
             dc = ImageDraw.Draw(cam)
             if sombra:
-                dc.text((tam / 2 + sombra[1][0], tam / 2 + sombra[1][1]), ch, font=f, fill=tuple(sombra[0]) + (255,), anchor='ms')
-            dc.text((tam / 2, tam / 2), ch, font=f, fill=tuple(cor) + (255,), anchor='ms')
+                dc.text((ox + sombra[1][0], oy + sombra[1][1]), ch, font=f, fill=tuple(sombra[0]) + (255,), anchor='ms')
+            dc.text((ox, oy), ch, font=f, fill=tuple(cor) + (255,), anchor='ms')
             rot = ang + 90 if por_fora else ang - 90
-            r = cam.rotate(-rot, resample=Image.BICUBIC, center=(tam / 2, tam / 2))
-            im.paste(r, (int(round(px - tam / 2)), int(round(py - tam / 2))), r)
+            r = cam.rotate(-rot, resample=Image.BICUBIC, center=(ox, oy))
+            im.paste(r, (ix, iy), r)
         s += w + tracking
     return im
+
+
+def _marrom(a):
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    return (r > g) & (g > b) & (r < 165) & (r - b > 25)
+
+
+def trocar_selo(im, cx, cy, r0, r1, texto_pt, texto_es, nome_fonte='Montserrat_700Bold',
+                ang_lim=(-178, -2), dil=2, ajuste_ang=0.0, inpaint=None, escala=0.88, dr=0.0, ang_fixo=None):
+    """Troca o texto do arco superior do selo dourado (letras marrons de pé sobre o arco).
+    (cx, cy) centro do selo; r0..r1 faixa radial das letras (r0 = linha de base).
+    Mede extensão angular, cor e tamanho do texto PT e escreve o ES no mesmo raio,
+    mesmo tamanho, mesmo espaçamento e mesmo eixo central. inpaint: função
+    (im, mascara_uint8) -> im; padrão OpenCV Telea."""
+    import cv2
+    a = np.array(im)
+    H, W = a.shape[:2]
+    yy, xx = np.mgrid[0:H, 0:W]
+    dd = np.hypot(xx - cx, yy - cy)
+    ang = np.degrees(np.arctan2(yy - cy, xx - cx))
+    sel = _marrom(a.astype(int)) & (dd >= r0 - 1) & (dd <= r1 + 1) & (ang > ang_lim[0]) & (ang < ang_lim[1])
+    h, e = np.histogram(ang[sel], bins=np.arange(-180, 181, 1))
+    on = np.where(h >= 3)[0]
+    # maior bloco contínuo de graus com tinta (lacunas < 9°)
+    blocos, ini = [], 0
+    for i in range(1, len(on) + 1):
+        if i == len(on) or on[i] - on[i - 1] > 9:
+            blocos.append((e[on[ini]], e[on[i - 1] + 1], h[on[ini]:on[i - 1] + 1].sum()))
+            ini = i
+    a0, a1, _ = max(blocos, key=lambda b: b[2])
+    if ang_fixo:  # selo cortado pela borda da arte: extensão conhecida dos outros selos
+        a0, a1 = ang_fixo
+    meio = (a0 + a1) / 2 + ajuste_ang
+    sel &= (ang >= a0 - 1) & (ang <= a1 + 1)
+    px = a[sel].astype(int)
+    lum = px.sum(1)
+    cor = tuple(int(v) for v in np.median(px[lum <= np.percentile(lum, 35)], 0))
+    # apagar
+    m = sel.astype(np.uint8) * 255
+    m = cv2.dilate(m, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8))
+    m[(dd < r0 - 4) | (dd > r1 + 4)] = 0
+    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), m, 5, cv2.INPAINT_TELEA)
+    novo = Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+    im.paste(novo)
+    # tamanho pela altura de maiúscula, tracking pela extensão angular do PT
+    f1 = F(nome_fonte, 100)
+    cap = -f1.getbbox('H', anchor='ls')[1] / 100
+    tam = (r1 - r0 + 1) / cap * escala
+    arco = np.radians(a1 - a0) * (r0 + (r1 - r0) * 0.35)
+    tr = (arco - larg(texto_pt, nome_fonte, tam)) / (len(texto_pt) - 1)
+    texto_arco(im, texto_es, nome_fonte, tam, cor, (cx, cy), r0 + dr, ang_centro=meio, tracking=tr)
+    return dict(ang=(round(float(a0), 1), round(float(a1), 1)), cor=cor, tam=round(tam, 2), tracking=round(float(tr), 2))
+
+
+def apagar_mascara(im, m, raio=4):
+    import cv2
+    a = np.array(im)
+    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), m, raio, cv2.INPAINT_TELEA)
+    im.paste(Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB)))
+    return im
+
+
+def tirar_acento(im, caixa):
+    """Apaga só os pixels escuros do acento dentro da caixa (ex.: CÓPIAS -> COPIAS no selo).
+    A caixa deve parar logo acima da letra. Os pixels do acento recebem a cor do fundo
+    dourado ao redor (mediana), com borda suavizada."""
+    import cv2
+    a = np.array(im)
+    x0, y0, x1, y1 = caixa
+    sub = a[y0:y1, x0:x1].astype(int)
+    lum = sub.sum(2)
+    m = (lum < np.median(lum) - 40).astype(np.uint8)
+    m = cv2.dilate(m, np.ones((3, 3), np.uint8))
+    fundo = np.median(sub[m == 0], 0) if (m == 0).any() else np.median(a[y0 - 3:y0, x0:x1].reshape(-1, 3), 0)
+    peso = cv2.GaussianBlur(m.astype(float), (3, 3), 0.6)
+    peso = np.maximum(peso, m)[..., None]
+    sub = sub * (1 - peso) + fundo * peso
+    a[y0:y1, x0:x1] = np.clip(sub, 0, 255).astype(np.uint8)
+    im.paste(Image.fromarray(a))
+    return im
+
+
+def selo_es(im, cx, cy, r0, r1, acento, **kw):
+    """Selo dourado: 'O PRIMEIRO & MAIS VENDIDO' -> 'MÉTODO EXCLUSIVO DEL' (arco superior;
+    o arco inferior 'DR. JOÃO PITHON' já completa a frase) e CÓPIAS -> COPIAS."""
+    info = trocar_selo(im, cx, cy, r0, r1, 'O PRIMEIRO & MAIS VENDIDO', 'MÉTODO EXCLUSIVO DEL', **kw)
+    tirar_acento(im, acento)
+    return info

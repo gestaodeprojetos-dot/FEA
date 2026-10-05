@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """FEA · Ads 09 (Feed e Story) em espanhol LATAM. Troca só a copy.
 
-Originais em trabalho/ads09-feed.png e trabalho/ads09-story.png (Drive Brasil).
+Originais em trabalho/C-ads09-feed.png e trabalho/C-ads09-story.png (Drive Brasil).
 Preço lido de precos.json (PRECOS['de_200'] riscado, PRECOS['preco'] em vermelho).
 Rodar a partir de fea_artes/:  python3 criativos/ads09.py
 """
@@ -116,10 +116,10 @@ def caixa_preco(im, dx, dy):
     else:
         red_f = 1.0
     tmp = tmp.resize((max(1, round(wl * escala * red_f)), max(1, round(hl * red_f))), Image.LANCZOS)
-    # linha de base mantida; centro na caixa
+    # centro na caixa; se reduzido, mantém o centro vertical do preço original
     larg_ink = (bp[2] - bp[0]) * escala * red_f
     ox = cx_box - larg_ink / 2 - 10 * escala * red_f
-    oy = p_base - base_tmp * red_f
+    oy = p_base - p_cap * (1 - red_f) / 2 - base_tmp * red_f  # mantém o centro óptico da linha
     camada.alpha_composite(tmp, (int(round(ox)), int(round(oy))))
 
     camada = camada.rotate(-ang, center=C, resample=Image.BICUBIC)
@@ -130,7 +130,7 @@ def caixa_preco(im, dx, dy):
 
 def ads09(nome, dx, dy):
     global cor
-    im = abrir(os.path.join('trabalho', nome))
+    im = abrir(os.path.join('trabalho', 'C-' + nome))
     S = lambda c: (c[0] + dx, c[1] + dy, c[2] + dx, c[3] + dy)
     M = lambda ms: [(y + dy, x0 + dx, x1 + dx) for y, x0, x1 in ms]
     # caixa escura semitransparente
@@ -164,5 +164,5 @@ def ads09(nome, dx, dy):
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     for saida, (orig, dx, dy) in {'FEA-Ads 09 - PTO-LATAM - Feed.png': ('ads09-feed.png', 0, 0),
-                                  'FEA-Ads 09 - PTO-LATAM - Story.png': ('ads09-story.png', -9, 412)}.items():
+                                  'FEA-Ads 09 - PTO-LATAM - Story.png': ('ads09-story.png', -9, 414)}.items():
         print('ok', salvar(ads09(orig, dx, dy), saida))
