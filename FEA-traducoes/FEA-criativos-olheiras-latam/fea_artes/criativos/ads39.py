@@ -81,11 +81,11 @@ def ads39(arq, P):
                     'VER EL PROTOCOLO COMPLETO', rotulo=arq)
     # ---------- marca d'água 'olheiras' -> 'ojeras' ----------
     if P['marca']['tam']:
-        im = marca_dagua(im, P['marca'], P.get('marca_excluir'))
+        im = marca_dagua(im, P['marca'])
     return im
 
 
-def marca_dagua(im, M, excluir=None):
+def marca_dagua(im, M):
     """'olheiras' gigante, desfocado e quase transparente (mais claro que o fundo cinza).
     1) fundo estimado por abertura morfológica (remove estruturas claras finas) + desfoque;
     2) marca = imagem - fundo, só onde o modelo do 'olheiras' original (fonte, tamanho,
@@ -113,12 +113,19 @@ def marca_dagua(im, M, excluir=None):
         return cv2.GaussianBlur(np.array(L).astype(np.float32) / 255, (0, 0), M['desfoque'])
 
     velho = render('olheiras', M['x'])
-    num, den = (marca * velho).sum(1), (velho * velho).sum(1)
-    A = np.where(den > 1, num / np.maximum(den, 1e-6), np.nan)
+    A = np.full(h, np.nan)
+    for yy in range(h):  # intensidade da marca por linha: percentil 75 dentro das letras do modelo
+        sel = (velho[yy] > 0.6) & ~ign[yy]
+        if sel.sum() > 20:
+            A[yy] = np.percentile(marca[yy][sel], 75) / np.percentile(velho[yy][sel], 75)
     ok = ~np.isnan(A)
     A = np.interp(np.arange(h), np.where(ok)[0], A[ok])
     A = cv2.GaussianBlur(A.reshape(-1, 1).astype(np.float32), (0, 0), 12).ravel()
-    zona = np.clip(cv2.GaussianBlur(velho, (0, 0), M['desfoque']) / 0.05, 0, 1)
+    yb = int(M['base'] - y0)
+    if 0 < yb < h:  # abaixo da linha de base o original não tem letra: usa a intensidade logo acima
+        A[yb:] = A[max(0, yb - 30)]
+    A = np.clip(A, 0, np.percentile(A[ok], 90))
+    zona = np.clip(cv2.GaussianBlur(velho, (0, 0), 3 * M['desfoque']) / 0.02, 0, 1)  # folga larga: modelo ~ original
     zona[ign] = 0
     reg -= (marca * zona)[..., None]
     t = 'ojeras'
@@ -135,14 +142,13 @@ FEED = dict(hl=[(222, 341, 265, 1889), (352, 444, 344, 1813)], ouro_x=(1063, 178
             itens=[(1783, 1827, 561, 898), (1783, 1827, 1135, 1723), (1930, 1987, 733, 1565)],
             itens_xmax=[975, 2000, 2000],
             cta=(464, 2066, 1694, 2260), seta=1514,
-            marca=dict(caixa=(0, 2262, 2160, 2700), kernel=None, suave=None, tam=None, base=None, desfoque=None, intens=None))
+            marca=dict(caixa=(0, 2262, 2160, 2700), fonte='NotoSerif_700Bold', tam=568, base=2718, x=-92, desfoque=16))  # ajustados por correlação com o original
 STORY = dict(hl=[(698, 817, 265, 1889), (828, 920, 344, 1813)], ouro_x=(1063, 1787), larg_max=1840,
              sub=(300, 2140, 1900, 2240),
              itens=[(2334, 2386, 468, 867), (2334, 2386, 1146, 1842), (2507, 2575, 671, 1654)],
              itens_xmax=[960, 2050, 2050],
              cta=(355, 2670, 1806, 2899), seta=1594,
-             marca=dict(caixa=(0, 2640, 2160, 3330), kernel=None, suave=None, tam=None, base=None, desfoque=None, intens=None),
-             marca_excluir=(330, 2650, 1830, 2930))
+             marca=dict(caixa=(0, 2640, 2160, 3330), fonte='NotoSerif_700Bold', tam=566, base=3152, x=-80, desfoque=16))
 
 if __name__ == '__main__':
     for arq, P, nome in [('Jads39-feed.png', FEED, 'FEA-Ads 39 Feed - PTO-LATAM.png'),
