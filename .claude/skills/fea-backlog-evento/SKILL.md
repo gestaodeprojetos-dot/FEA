@@ -1,6 +1,6 @@
 ---
 name: fea-backlog-evento
-description: Monta a estrutura operacional de um novo evento ou produto FEA (Dr. João Pithon) a partir de um evento modelo - pastas no Drive, documentos padrão de copy/design/tráfego, planilha de links úteis preenchida, planilha de criativos para tráfego, backlog no ClickUp com responsável (sem datas e sem comentários soltos) e um comentário em cada tarefa com o link da pasta para salvar e o link da copy para desenvolver. Usar quando a Keila pedir para "criar o backlog do próximo evento", "modelar pelo lançamento anterior", "replicar a estrutura de X para Y", "montar pastas, planilhas e ClickUp" de um ebook, perpétuo, masterclass, imersão ou versão LATAM.
+description: Recebe o Briefing Reverso FEA (ou os links de modelo e destino) e monta a estrutura operacional de um novo evento ou produto FEA (Dr. João Pithon) a partir de um evento modelo - pastas no Drive, documentos padrão de copy/design/tráfego, planilha de links úteis preenchida, planilha de criativos para tráfego, backlog no ClickUp com responsável (sem datas e sem comentários soltos) e um comentário em cada tarefa com o link da pasta para salvar e o link da copy para desenvolver. Usar quando a Keila pedir para "criar o backlog do próximo evento", "modelar pelo lançamento anterior", "replicar a estrutura de X para Y", "montar pastas, planilhas e ClickUp" de um ebook, perpétuo, masterclass, imersão ou versão LATAM.
 ---
 
 # FEA: backlog completo de novo evento
@@ -9,7 +9,13 @@ Replica a operação de um evento modelo (Drive + ClickUp) para um evento novo, 
 
 Critério de sucesso (conferir item por item antes de entregar): toda subpasta do modelo existe no destino; todo documento de copy citado no backlog existe e está linkado; as duas planilhas estão no Drive; toda tarefa folha do ClickUp tem responsável (ou está listada como pendente de decisão), não tem data e tem exatamente 1 comentário com pasta + copy.
 
-## Entradas (pedir só o que faltar)
+## Entrada principal: o briefing reverso
+
+A Keila entrega um único documento, o **Briefing Reverso** (modelo em branco: https://docs.google.com/document/d/1kOmYZ4m4VnO0KxXcbYL07JfljNOv6dz1bqybNZMkZwg/edit · cópia dos campos em `FEA-briefing-reverso-campos.md`). Ler o doc com `read_file_content`, conferir os campos ★ e executar tudo. Campo ○ vazio vira célula `pendente: <responsável>` ou tarefa, nunca valor inventado. Ao terminar, criar a versão preenchida do briefing do projeto em `0. PLANEJAMENTO` (exemplo: Ebook Olheiras LATAM, https://docs.google.com/document/d/1EfDIyPQqWMK41_sL5AHsEBl6W5bXzXAUnE2ALu2nnO0/edit).
+
+Se não houver briefing, as entradas mínimas são as da tabela abaixo.
+
+## Entradas mínimas (pedir só o que faltar)
 
 | Entrada | Exemplo |
 |---|---|
@@ -93,6 +99,10 @@ Não comentar tarefas-pai que só agrupam (Copy, Design, Webdesigner, Gestão, A
 ### 6. Relatório para a Keila
 Português, tabela com o que foi criado (links), lista de pendências que só ela decide (tarefas sem responsável, duplicadas, fora de escopo, links que dependem de publicação) e o veredito do critério de sucesso.
 
+## Limite do ClickUp (planejar antes de começar)
+
+O conector do ClickUp aceita **100 chamadas por dia** (erro `RATE_LIMIT_EXCEEDED`, renova 24h depois da primeira chamada). Um backlog de 90 tarefas com comentário em cada uma passa disso. Ordem de prioridade: (1) criar tarefas que faltam, (2) comentários nas tarefas de copy e design, (3) demais comentários. Ao bater o limite: registrar o que falta em `FEA-pendencias-<evento>.md` neste diretório e agendar a retomada com `send_later` para depois da renovação. Economizar leitura: `clickup_filter_tasks` traz o folder inteiro em 1 chamada; evitar `get_task` tarefa por tarefa.
+
 ## Erros comuns
 
 | Erro | Como evitar |
@@ -101,4 +111,5 @@ Português, tabela com o que foi criado (links), lista de pendências que só el
 | Base64 inválido ao subir xlsx | xlsx pequeno ou CSV; gerar e copiar direto da saída do `base64 -w0` |
 | Link placeholder dentro de doc | doc não é editável pelo MCP: criar na ordem de dependência (copys antes dos briefings) |
 | Planilha de links do modelo vem sem URL no `read_file_content` (só rótulo) | usar a planilha Google "Links úteis \| Perpétuo", que expõe as URLs; xlsx perde hyperlink na leitura |
+| Planilha ou doc precisa de linha nova depois de criado | sem conector Google Sheets/Docs o arquivo não é editável: pedir para ativar o conector, não recriar o arquivo |
 | Backlog destino já criado a partir de template de webinário | não apagar; listar no relatório tarefas de Hotwebinar e afins para a Keila decidir |
