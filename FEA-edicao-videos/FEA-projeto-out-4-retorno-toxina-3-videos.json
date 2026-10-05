@@ -63,7 +63,7 @@
    "manter": [
     [
      0.0,
-     119.35
+     95.45
     ]
    ],
    "correcoes": [
@@ -82,6 +82,32 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/rb/IMG_6947.json",
    "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti.mp4",
    "titulo_origem": "imagem"
+  },
+  {
+   "titulo": "Reavaliação e resultado do efeito Nefertiti",
+   "manter": [
+    [
+     0.0,
+     119.35
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     55.69,
+     56.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/rb/IMG_6947.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/rb/IMG_6947.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti (versão FEB).mp4",
+   "titulo_origem": "imagem",
+   "sem_cta": true
   }
  ]
 }

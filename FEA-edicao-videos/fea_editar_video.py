@@ -564,7 +564,29 @@ def formatar_titulo(v):
     return titulo
 
 
-def gerar_ass(v, palavras, duracao, caminho):
+ANTECIPA = 0.15   # legenda entra um pouco antes da voz: entrar no instante exato já parece atrasado
+
+
+def gerar_ass(v, palavras, duracao, caminho, voz=None):
+    """voz = (db, limiar, passo) do áudio na linha do tempo editada: o início de cada bloco vai
+    para o começo real da voz (a transcrição às vezes marca a 1ª palavra até 0,5 s depois) e a
+    legenda entra ANTECIPA s antes (Keila, 05/10/2026: "legendas um pouco atrasadas")."""
+    anterior = {}
+    for k, p in enumerate(palavras):
+        anterior[id(p)] = palavras[k - 1]["e"] if k else 0.0
+
+    def inicio(bloco):
+        s0 = bloco[0]["s"]
+        if voz is not None:
+            db, lim, ps = voz
+            i = k = min(len(db) - 1, int(s0 / ps))
+            while k > 0 and (i - k) * ps < 0.6 and any(db[j] >= lim - 3 for j in range(max(0, k - 3), k)):
+                k -= 1
+            if k * ps < s0 - 0.1 and k * ps >= anterior.get(id(bloco[0]), 0.0):
+                s0 = k * ps
+        # antecipa, mas sem tirar da tela a fala anterior antes de ela terminar
+        return max(s0 - ANTECIPA, min(s0, anterior.get(id(bloco[0]), 0.0)))
+
     linhas = [ass_header()]
     titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
@@ -583,10 +605,10 @@ def gerar_ass(v, palavras, duracao, caminho):
             carry = []
         if bloco[-1]["e"] <= TITULO_DUR:       # fala debaixo do título (padrão: sem legenda)
             continue
-        s, e = max(bloco[0]["s"], TITULO_DUR, livre), bloco[-1]["e"] + 0.15
+        s, e = max(inicio(bloco), TITULO_DUR, livre), bloco[-1]["e"] + 0.15
         prox = blocos[i + 1] if i + 1 < len(blocos) else None
         if prox:
-            e = min(e, prox[0]["s"])
+            e = min(e, inicio(prox))
         if s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
@@ -804,7 +826,9 @@ def renderizar(cfg, v, previa=False):
         palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
-    gerar_ass(v, palavras, duracao, ass)
+    import numpy as np
+    db_ed = np.concatenate([db_voz[0][int(a / db_voz[2]):int(b / db_voz[2])] for a, b in v["manter"]])
+    gerar_ass(v, palavras, duracao, ass, voz=(db_ed, db_voz[1], db_voz[2]))
     if previa == "legenda":   # só o .ass, para revisar o texto antes de renderizar
         return duracao
 

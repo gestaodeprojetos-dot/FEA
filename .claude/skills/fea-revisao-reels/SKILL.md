@@ -37,6 +37,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
 | 6 | Nada de palavra solta na legenda sem o Dr. falando | voz no áudio durante cada legenda | ERRO |
 | 6b | **Legenda sincronizada com o áudio** (Keila 26/09): entra quando o Dr. fala, sem atraso nem adiantamento | voz no áudio antes e depois do início de cada legenda | ERRO |
+| 6b' | **Legenda nunca atrasada** (Keila 05/10): o bloco entra ~0,15 s antes da voz; conferir com `lag` (início do bloco x começo da voz no áudio), nenhum bloco depois do começo da fala | tempos do .ass x voz | ERRO |
 | 6c | Nenhuma palavra falada faltando na legenda (buraco = fora de sincronia) | palavras da legenda contra palavras faladas nos trechos mantidos (mínimo 90%) | ERRO |
 | 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
 | 6e | **Número e unidade juntos** (Keila 05/10, pasta 2 vídeo 2): "0,3 mL", "1,5 mL", "dois mL", "meio mL", "1 e meio mL", "duas unidades", "20 mg" nunca em blocos diferentes nem em linhas diferentes do mesmo bloco; bloco nunca começa com a unidade sozinha ("mL de lido"); o número entra junto com a fala, nunca antes | blocos e linhas do .ass (`checar_numero_unidade`); sincronia ouvindo cada quantidade | ERRO |
