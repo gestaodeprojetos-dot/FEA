@@ -33,6 +33,9 @@ rediscutir a mesma escolha a cada material traduzido.
 | Saiba mais | **Más información** | Nome do botão no Meta Ads em espanhol |
 | preço em reais | **[PRECIO] / [PRECIO ANTERIOR] / [X] %** | Oferta LATAM sem preço; nunca converter real para dólar por conta própria |
 | hidrofílico | **hidrofílico** (alt.: hidrófilo) | Uso corrente em reologia de AH |
+| preço em reais (revisado) | **valor do Brasil + [PRECIO EN MONEDA LOCAL: CONFIRMAR, el original dice …]** | Padrão já usado nas traduções LATAM de Olheiras (Keila, 05/10/2026) |
+| prova social com referência ao Brasil | **universalizar**: sem citar país; +30 mil copias vendidas; más de 30.000 alumnos; selo "Método exclusivo del Dr. João Pithon" | Copy global (Keila, 05/10/2026) |
+| urgência e frases do original ("48 horas", "SÓ HOJE", "OFERTA LIMITADA", "não é uma técnica difícil") | **traduzir e manter** | Decisão da gestão em 05/10/2026 para os criativos de olheiras |
 
 ## Pendências que precisam de decisão do autor
 | Item | Situação |
@@ -147,3 +150,7 @@ em HelveticaNeue-Bold, que tem 2.080 glifos e cobre tudo.
 |---|---|
 | Ignorar linhas em inglês no `auditar.py` | artigo reproduzido e prancha de atlas geram falso positivo em série (`Japanese` cai na regra de ênclise) |
 | Rodar o auditor sobre a camada de texto do **PDF entregue** | é o único texto que o leitor vai ver; auditar o rascunho não prova nada |
+
+### Depoimentos em print (05/10/2026)
+
+Sem depoimento de aluno hispanohablante disponível. Print de depoimento real nunca é traduzido dentro da imagem (adulteraria a mensagem de uma pessoa real). Regra: manter o print original em português e incluir abaixo dele a legenda em espanhol com a tradução, rotulada "Testimonio original en portugués". Quando houver depoimento de aluno LATAM com autorização, substituir.
