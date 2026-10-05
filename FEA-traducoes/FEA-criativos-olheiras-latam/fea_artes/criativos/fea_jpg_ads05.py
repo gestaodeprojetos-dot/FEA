@@ -13,7 +13,7 @@ from fea_jpg_util import *  # noqa
 
 DEP1 = 'Comparto este caso de ojeras + labios siguiendo las enseñanzas del profesor. Muy feliz con el resultado.'
 DEP2 = 'Solo quería mostrarle el relleno de ojeras que acabo de realizar en mi consultorio.'
-CLARO2 = lambda r, g, b: (r + g + b) > 330
+CLARO2 = lambda r, g, b: (r + g + b) > 230
 
 
 def pilula(im, dy):
@@ -73,7 +73,7 @@ def pilula(im, dy):
 def recompor(orig, dy, saida, story=False):
     im = abrir(orig)
     # ---------- título central (Noto Serif 47.75, branco + dourado) ----------
-    im = apagar(im, (160, 765 + dy, 900, 1020 + dy), CLARO2, 3)
+    im = apagar_textura(im, (160, 765 + dy, 900, 1020 + dy), CLARO2, 6)
     f = F('NotoSerif_400Regular', 47.75)
     b = base_de(f, 'O preenchimento de olheiras', 777 + dy)
     passo = (971 - 777) / 3

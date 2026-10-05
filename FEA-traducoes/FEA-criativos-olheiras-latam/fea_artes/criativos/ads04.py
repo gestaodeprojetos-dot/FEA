@@ -50,14 +50,14 @@ STORY = dict(
     cta=((154, 1738, 926, 1803), CTA_PT, BRANCO_TXT))
 
 
-def ads04(origem, saida, L, passo_b4):
+def ads04(origem, saida, L, passo_b4, linhas_b4=None):
     im = abrir(origem)
     print(saida)
     for k in ['b1', 'b2', 'b3', 'b4']:
         caixa, pt, cond = L[k]
         # b4: entrelinha um pouco maior, senão o 'g' de "guía" encosta no "A" de ARTI e parece acento
         paragrafo(im, caixa, pt, ES[k], SERIF, cond, fator_larg=1.06, verbose='  ' + k,
-                  passo_fator=passo_b4 if k == 'b4' else 1.0)
+                  passo_fator=passo_b4 if k == 'b4' else 1.0, linhas_es=linhas_b4 if k == 'b4' else None)
     caixa, pt, cond = L['cta']
     paragrafo(im, caixa, pt, None, SERIF, cond, linhas_es=[ES['cta']], fator_larg=1.06, verbose='  cta')
     return salvar(im, saida)
@@ -65,5 +65,9 @@ def ads04(origem, saida, L, passo_b4):
 
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    ads04('trabalho/ads04-feed.png', 'FEA-Ads 04 - PTO-LATAM - Feed.png', FEED, 1.10)
+    ads04('trabalho/ads04-feed.png', 'FEA-Ads 04 - PTO-LATAM - Feed.png', FEED, 1.0,
+          # quebra manual no Feed: na quebra automática o 'g' de "guía" ficava sobre o "A" de ARTI (parecia acento)
+          ['Esta guía muestra cómo aplicar la metodología ARTI', '(Anatomía, Reología, Técnica e Intercurrencias)',
+           'en el relleno de ojeras, la región más delicada', 'del rostro, para obtener resultados superiores',
+           'donde la mayoría falla.'])
     ads04('trabalho/ads04-story.png', 'FEA-Ads 04 - PTO-LATAM - Story.png', STORY, 1.06)

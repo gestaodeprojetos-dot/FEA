@@ -221,26 +221,35 @@ def transplantar(dst, src, limpo, caixa_src, x_dst, y_dst):
 
 
 # ---------- selo ----------
-def texto_arco(im, texto, nome, tamanho, cor, centro, raio, ang_centro=-90.0, tracking=0.0, por_fora=True):
-    """Texto ao longo de um arco (raio = linha de base). ang_centro em graus (-90 = topo)."""
-    f = F(nome, tamanho)
+def texto_arco(im, texto, nome, tamanho, cor, centro, raio, ang_centro=-90.0, tracking=0.0, por_fora=True, S=4):
+    """Texto ao longo de um arco (raio = linha de base). ang_centro em graus (-90 = topo).
+    Desenhado em superamostragem S para não acumular arredondamento de posição em letras pequenas."""
+    f = F(nome, tamanho * S)
     larguras = [f.getlength(ch) for ch in texto]
-    total = sum(larguras) + tracking * (len(texto) - 1)
+    total = sum(larguras) + tracking * S * (len(texto) - 1)
     cx, cy = centro
+    R = raio + tamanho * 3
+    ox, oy = int(cx - R), int(cy - R)
+    lado = int(2 * R) + 2
+    camada = Image.new('RGBA', (lado * S, lado * S), (0, 0, 0, 0))
+    ccx, ccy = (cx - ox) * S, (cy - oy) * S
+    rS = raio * S
     s = -total / 2
     for ch, w in zip(texto, larguras):
         meio = s + w / 2
-        ang = ang_centro + math.degrees(meio / raio) if por_fora else ang_centro - math.degrees(meio / raio)
+        ang = ang_centro + math.degrees(meio / rS) if por_fora else ang_centro - math.degrees(meio / rS)
         rad = math.radians(ang)
-        px, py = cx + raio * math.cos(rad), cy + raio * math.sin(rad)
+        px, py = ccx + rS * math.cos(rad), ccy + rS * math.sin(rad)
         if ch.strip():
-            tam = int(tamanho * 3)
+            tam = int(tamanho * S * 3)
             cam = Image.new('RGBA', (tam, tam), (0, 0, 0, 0))
             ImageDraw.Draw(cam).text((tam / 2, tam / 2), ch, font=f, fill=tuple(int(v) for v in cor) + (255,), anchor='ms')
             rot = ang + 90 if por_fora else ang - 90
             r = cam.rotate(-rot, resample=Image.BICUBIC, center=(tam / 2, tam / 2))
-            im.paste(r, (int(round(px - tam / 2)), int(round(py - tam / 2))), r)
-        s += w + tracking
+            camada.alpha_composite(r, (int(round(px - tam / 2)), int(round(py - tam / 2))))
+        s += w + tracking * S
+    camada = camada.resize((lado, lado), Image.LANCZOS)
+    im.paste(camada, (ox, oy), camada)
     return im
 
 
@@ -249,7 +258,7 @@ def marrom(r, g, b):
 
 
 def trocar_arco_selo(im, cx, cy, r0, r1, texto_pt, texto_es, nome_fonte, ang_lim=(-178, -2),
-                     dil=2, escala=0.88, cond=marrom, ajuste_ang=0.0, dr=0.0):
+                     dil=2, escala=0.88, cond=marrom, ajuste_ang=0.0, dr=0.0, ang_fixo=None, pct_cor=35):
     """Troca o texto do arco superior do selo (letras de pé, lidas em sentido horário).
     (cx, cy) centro; r0..r1 faixa radial das letras (r0 = linha de base). Mede extensão angular,
     cor e tamanho do PT; escreve o ES no mesmo raio, mesmo tamanho e mesmo eixo central."""
@@ -262,10 +271,13 @@ def trocar_arco_selo(im, cx, cy, r0, r1, texto_pt, texto_es, nome_fonte, ang_lim
     sel = cond(ai[..., 0], ai[..., 1], ai[..., 2]) & (dd >= r0 - 1) & (dd <= r1 + 1) & (ang > ang_lim[0]) & (ang < ang_lim[1])
     angs = ang[sel]
     a0, a1 = np.percentile(angs, 0.5), np.percentile(angs, 99.5)
+    if ang_fixo:  # extensão angular medida à mão (quando estrelas/aro contaminam a medição)
+        a0, a1 = ang_fixo
+        sel &= (ang >= a0 - 3) & (ang <= a1 + 3)
     meio = (a0 + a1) / 2 + ajuste_ang
     px = a[sel].astype(int)
     lum = px.sum(1)
-    cor = tuple(int(v) for v in np.median(px[lum <= np.percentile(lum, 35)], 0))
+    cor = tuple(int(v) for v in np.median(px[lum <= np.percentile(lum, pct_cor)], 0))
     m = sel.astype(np.uint8) * 255
     m = cv2.dilate(m, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8))
     m[(dd < r0 - 4) | (dd > r1 + 4)] = 0

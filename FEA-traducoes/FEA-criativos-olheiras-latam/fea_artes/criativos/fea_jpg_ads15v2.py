@@ -13,6 +13,8 @@ SAIDA_NOME = 'FEA-[FEED] ADS 15_V2 - LATAM.jpg'
 BRANCO = lambda r, g, b: (r > 110) & (g > 110) & (b > 100) & (abs(r - g) < 40)
 VERDE_CL = lambda r, g, b: (g > r + 25) & (g > 70)
 OURO = lambda r, g, b: (r > 110) & (r - b > 45)
+Y_TOPO_PILULA, Y_BASE_PILULA = 846, 865
+MENTA = lambda r, g, b: (g > 110) & (g > r + 20)  # texto da pílula
 LETRA_SELO = lambda r, g, b: ((r + g + b) < 330) & (r > b + 15)
 TIT = 'LibreCaslonText_700Bold'
 ITAL = 'Gelasio_500Medium_Italic'
@@ -45,11 +47,14 @@ def gerar():
     linha(im, [('Una guía completa con la metodología ARTI', ITAL, tam, cor_s)], base_de(ITAL, tam, pt, 766), 123)
 
     # pílula: 'ESSE EBOOK É PRA VOCÊ QUE:' -> 'ESTE EBOOK ES PARA USTED SI:'
-    cor_p = cor_nucleo(im0, (130, 845, 510, 866), BRANCO, 40, escuro=False)
-    im = apagar(im, (128, 838, 600, 870), BRANCO, 2, 5)
-    tam = tam_por_cap(SANS, 863 - 847, 'E')
-    tr = track_para('ESSE EBOOK É PRA VOCÊ QUE:', SANS, tam, 505 - 136)
-    x0, x1 = linha(im, [('ESTE EBOOK ES PARA USTED SI:', SANS, tam, cor_p)], 863, 136, tr=tr)
+    cor_p = cor_nucleo(im0, (130, 845, 510, 866), MENTA, 40, escuro=False)
+    im = apagar(im, (128, 836, 600, 872), lambda r, g, b: (g > 80) & (g > r + 18), 3, 5)
+    tam = tam_por_cap(SANS, Y_BASE_PILULA - Y_TOPO_PILULA, 'E')
+    tr = track_para('ESSE EBOOK É PRA VOCÊ QUE:', SANS, tam, 588 - 135)
+    es = 'ESTE EBOOK ES PARA USTED SI:'
+    if largura_segs([(es, SANS, tam, cor_p)], tr) > 588 - 135:  # não passar da borda da pílula
+        tr = track_para(es, SANS, tam, 588 - 135)
+    x0, x1 = linha(im, [('ESTE EBOOK ES PARA USTED SI:', SANS, tam, cor_p)], Y_BASE_PILULA, 135, tr=tr)
 
     # lista
     cor_l = cor_nucleo(im0, (180, 906, 600, 932), BRANCO, 50, escuro=False)
@@ -86,23 +91,25 @@ def gerar():
     t1 = tam_por_cap(CAPS, 1264 - 1240, 'T')
     tr1 = track_para('TOQUE EM SAIBA MAIS', CAPS, t1, 771 - 329)
     seg1 = lambda t: [('TOQUE EN ', CAPS, t, cor_c), ('MÁS INFORMACIÓN', CAPS, t, cor_g)]
-    LIM = 708 - 329
+    LIM = 762 - 329  # a seta curva começa em x~780
     tr1b = tr1
-    while largura_segs(seg1(t1), tr1b) > LIM and tr1b > tr1 * 0.4:
+    while largura_segs(seg1(t1), tr1b) > LIM and tr1b > tr1 * 0.5:
         tr1b -= 0.05
     t1b = caber(seg1, t1, LIM, 0.15, tr1b)
-    while largura_segs(seg1(t1b), tr1b) > LIM and tr1b > 0:
-        tr1b -= 0.05
     k = t1b / t1
     base1 = 1264
     linha(im, seg1(t1b), base1, 329, tr=tr1b)
     t2 = tam_por_cap(CAPS, 1288 - 1272, 'E') * k
-    tr2 = track_para('E GARANTA O SEU.', CAPS, t2 / k, 587 - 331) * k * (tr1b / tr1)
+    tr2 = track_para('E GARANTA O SEU.', CAPS, t2 / k, 587 - 331) * k * max(0.5, tr1b / tr1)
     linha(im, [('Y ASEGURE EL SUYO.', CAPS, t2, cor_c)], 1288, 331, tr=tr2)
 
     # selo: arco superior e acento de CÓPIAS
-    info = trocar_arco_selo(im, 916.5, 205.5, 63, 76, 'O PRIMEIRO E MAIS VENDIDO', 'MÉTODO EXCLUSIVO DEL',
-                            'Montserrat_600SemiBold', ang_lim=(-165, 5), cond=LETRA_SELO)
+    info = trocar_arco_selo(im, 913.7, 204.6, 67, 77, 'O PRIMEIRO E MAIS VENDIDO', 'MÉTODO EXCLUSIVO DEL',
+                            'Montserrat_700Bold', ang_lim=(-145, 2), cond=LETRA_SELO, ang_fixo=(-130, -11), escala=0.68, pct_cor=12)
+
+    # CÓPIAS -> COPIAS: só os pixels escuros do acento, acima do O
+    acento = (873, 203, 879, 207)
+    im = apagar(im, acento, lambda r, g, b: (0.299 * r + 0.587 * g + 0.114 * b) < 168, 0, 3)
 
     p = salvar(im, SAIDA_NOME)
     print('ok', p, im.size, 'selo', info, 'CTA reducao %.0f%% tracking %.2f->%.2f' % ((1 - k) * 100, tr1, tr1b), 'preco k %.2f' % k_preco)

@@ -224,3 +224,20 @@ def trocar_texto_arco(im, cx, cy, R, texto, nome_fonte='Montserrat_700Bold', S=3
     a2 = a.copy()
     a2[sel] = out[sel]
     return Image.fromarray(a2), dict(cor=cor, tam=f.size, cap=cap)
+
+
+def apagar_textura(im, caixa, cond, dil=3, raio=6, seed=7):
+    """apagar() + granulação: devolve à área apagada o ruído medido do fundo vizinho (fundos com textura fina),
+    para não sobrar 'mancha lisa' do inpainting."""
+    m = mascara_texto(im, caixa, cond, dil)
+    out = np.array(apagar_mascara(im, m, raio)).astype(float)
+    x0, y0, x1, y1 = caixa
+    a = np.array(im).astype(float)[y0:y1, x0:x1]
+    fundo = (m[y0:y1, x0:x1] == 0)
+    hp = a - cv2.GaussianBlur(a, (0, 0), 2)
+    sd = hp[fundo].std(0)
+    rng = np.random.default_rng(seed)
+    ruido = rng.normal(0, 1, out.shape[:2])[..., None] * sd[None, None, :]
+    mk = cv2.GaussianBlur(m.astype(np.float32) / 255, (0, 0), 1)[..., None]
+    out = out + ruido * mk
+    return Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))

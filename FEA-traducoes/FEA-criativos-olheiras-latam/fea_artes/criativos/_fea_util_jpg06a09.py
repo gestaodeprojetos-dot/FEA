@@ -247,3 +247,24 @@ def selo_es(im, cx, cy, r0, r1, acento, **kw):
     info = trocar_selo(im, cx, cy, r0, r1, 'O PRIMEIRO & MAIS VENDIDO', 'MÉTODO EXCLUSIVO DEL', **kw)
     tirar_acento(im, acento)
     return info
+
+
+def caixa_esticada(im, caixa, largura_nova, cond_texto, borda=24, dil=2):
+    """Botão com borda/degradê (não chapado): apaga o texto por inpainting dentro da caixa
+    e, se precisar de mais largura, estica só o miolo (bordas laterais preservadas),
+    mantendo o centro. Retorna a nova caixa."""
+    from fea_arte_lib import apagar
+    x0, y0, x1, y1 = caixa
+    im.paste(apagar(im, (x0 + 4, y0 + 4, x1 - 4, y1 - 4), cond_texto, dil))
+    w = x1 - x0
+    if largura_nova <= w:
+        return caixa
+    largura_nova = int(round(largura_nova))
+    bx = im.crop(caixa)
+    esq, dir_ = bx.crop((0, 0, borda, y1 - y0)), bx.crop((w - borda, 0, w, y1 - y0))
+    meio = bx.crop((borda, 0, w - borda, y1 - y0)).resize((largura_nova - 2 * borda, y1 - y0), Image.BICUBIC)
+    nx0 = int(round((x0 + x1) / 2 - largura_nova / 2))
+    im.paste(esq, (nx0, y0))
+    im.paste(meio, (nx0 + borda, y0))
+    im.paste(dir_, (nx0 + largura_nova - borda, y0))
+    return (nx0, y0, nx0 + largura_nova, y1)
