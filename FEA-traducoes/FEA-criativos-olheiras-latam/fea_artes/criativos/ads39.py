@@ -87,37 +87,46 @@ def ads39(arq, P):
 
 def marca_dagua(im, M, excluir=None):
     """'olheiras' gigante, desfocado e quase transparente (mais claro que o fundo cinza).
-    Fundo estimado por abertura morfológica (remove estruturas claras finas) + desfoque;
-    o 'olheiras' é subtraído e 'ojeras' é escrito com a mesma fonte, tamanho, linha de
-    base, desfoque e intensidade medidos no original. Só operações clássicas."""
+    1) fundo estimado por abertura morfológica (remove estruturas claras finas) + desfoque;
+    2) marca = imagem - fundo, só onde o modelo do 'olheiras' original (fonte, tamanho,
+       base e desfoque ajustados ao original) tem letra; intensidade medida linha a linha;
+    3) a marca é subtraída e 'ojeras' entra com a mesma fonte, tamanho, linha de base,
+       desfoque e intensidade, centrado. Botão escuro do CTA fica fora (está na frente).
+    Só operações clássicas sobre os pixels do próprio original."""
     x0, y0, x1, y1 = M['caixa']
     a = np.array(im).astype(np.float32)
     reg = a[y0:y1, x0:x1].copy()
     lum = reg.mean(2)
-    ign = np.zeros(lum.shape, bool)
-    if excluir:  # botão escuro (CTA) e sua sombra: fora da estimativa
-        ex0, ey0, ex1, ey1 = excluir
-        ign[max(0, ey0 - y0):max(0, ey1 - y0), max(0, ex0 - x0):max(0, ex1 - x0)] = True
+    h, w = lum.shape
+    ign = cv2.dilate((lum < 120).astype(np.uint8), np.ones((15, 15), np.uint8)) > 0
     lum_f = lum.copy()
     lum_f[ign] = 255
-    k = M['kernel']
-    ker = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (k, k))
-    fundo = cv2.dilate(cv2.erode(lum_f, ker), ker)
-    fundo = cv2.GaussianBlur(fundo, (0, 0), M['suave'])
+    ker = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (201, 201))
+    fundo = cv2.GaussianBlur(cv2.dilate(cv2.erode(lum_f, ker), ker), (0, 0), 25)
     marca = np.clip(lum - fundo, 0, None)
     marca[ign] = 0
-    # remove o 'olheiras' (por canal, mesma quantidade nos 3: é branco translúcido)
-    reg -= marca[..., None]
-    # novo texto: mesma fonte/tamanho/base, centrado, mesmo desfoque e intensidade
-    f = F(SERIF_SEMI, M['tam'])
-    L = Image.new('L', (x1 - x0, y1 - y0), 0)
+    f = F(fonte(M['fonte']), M['tam'])
+
+    def render(t, x):
+        L = Image.new('L', (w, h), 0)
+        ImageDraw.Draw(L).text((x, M['base'] - y0), t, font=f, fill=255, anchor='ls')
+        return cv2.GaussianBlur(np.array(L).astype(np.float32) / 255, (0, 0), M['desfoque'])
+
+    velho = render('olheiras', M['x'])
+    num, den = (marca * velho).sum(1), (velho * velho).sum(1)
+    A = np.where(den > 1, num / np.maximum(den, 1e-6), np.nan)
+    ok = ~np.isnan(A)
+    A = np.interp(np.arange(h), np.where(ok)[0], A[ok])
+    A = cv2.GaussianBlur(A.reshape(-1, 1).astype(np.float32), (0, 0), 12).ravel()
+    zona = np.clip(cv2.GaussianBlur(velho, (0, 0), M['desfoque']) / 0.05, 0, 1)
+    zona[ign] = 0
+    reg -= (marca * zona)[..., None]
     t = 'ojeras'
-    ImageDraw.Draw(L).text(((x1 - x0) / 2 - largura(f, t) / 2 - f.getbbox(t)[0], M['base'] - y0), t, font=f, fill=255, anchor='ls')
-    m = cv2.GaussianBlur(np.array(L).astype(np.float32) / 255, (0, 0), M['desfoque'])
-    nova = m * M['intens']
-    nova[ign] = 0
-    reg += nova[..., None]
+    novo = render(t, w / 2 - largura(f, t) / 2 - f.getbbox(t)[0]) * A[:, None]
+    novo[ign] = 0
+    reg += novo[..., None]
     a[y0:y1, x0:x1] = reg
+    print('marca d\'água: intensidade média %.1f' % float(np.median(A[ok])) if ok.any() else '')
     return Image.fromarray(np.clip(a + 0.5, 0, 255).astype(np.uint8))
 
 
