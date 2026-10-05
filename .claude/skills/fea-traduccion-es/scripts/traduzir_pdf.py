@@ -72,7 +72,11 @@ def agrupa(page):
                        and abs(atual['tam'] - tam) < 1.0 and atual['cor'] == cor)
         if mesmoEstilo and tipo in ('corpo', 'legenda', 'titulo_capitulo',
                                     'titulo_display', 'titulo_secao', 'cabecalho'):
-            salto = l['y0'] - atual['linhas'][-1]['y0']
+            # o salto e a entrelinha se medem entre linhas de TEXTO: o marcador
+            # na mesma altura do item daria salto ~0 e entrelinha zero
+            _txt = [x for x in atual['linhas'] if x['texto'].strip() not in ('•', '–')]
+            salto = l['y0'] - (_txt or atual['linhas'])[-1]['y0']
+            if l['texto'].strip() in ('•', '–'): salto = max(salto, 0.1)
             # continuação = linha na margem; recuada abre novo parágrafo.
             # A última linha de um parágrafo justificado é curta: comparar a
             # margem DIREITA quebraria o parágrafo ali.
@@ -99,7 +103,8 @@ def agrupa(page):
             if tipo == 'corpo' and abre_item(l): continua = False
             if 0 < salto <= limSalto and continua:
                 atual['linhas'].append(l)
-                if atual['entrelinha'] is None: atual['entrelinha'] = round(salto, 1)
+                if atual['entrelinha'] is None and salto > atual['tam'] * 0.5:
+                    atual['entrelinha'] = round(salto, 1)
                 continue
         atual = dict(tipo=tipo, tam=tam, cor=cor, fontes=fontes, linhas=[l], entrelinha=None)
         paras.append(atual)
@@ -632,6 +637,11 @@ def isola_marcadores(paras, mapa):
             soltos.append((p['linhas'].pop(), None))
         while len(p['linhas']) > 1 and _so_marcador(p['linhas'][0]):
             soltos.append((p['linhas'].pop(0), None))
+        # marcador no MEIO (o texto do item ordenou antes do seu marcador):
+        # ficava como linha do parágrafo e virava recuo falso de 18 pt
+        meio = [l for l in p['linhas'][1:-1] if _so_marcador(l)]
+        for l in meio:
+            p['linhas'].remove(l); soltos.append((l, None))
         _recalcula(p)
     for l, dono in soltos:
         alvo = None
@@ -756,6 +766,15 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
                 p['centro'] = (cx0, cx1)
     paras = isola_marcadores(paras, mapa)
     paras = funde_linhas_de_coluna(paras, mapa)
+    # item com mais caracteres em negrito que em regular: a fonte dominante sai
+    # Bold e o trecho SEM <b> também ficaria negrito. Se o texto marca o negrito
+    # com <b>, a base volta para a irmã regular.
+    for p in paras:
+        f = p.get('fonte', '')
+        if 'Bold' in f and '<b>' in (mapa.get(p['id']) or ''):
+            for cand in (f.replace('-Bold', '-Regular'), f.replace('-Bold', ''), f.replace('Bold', '')):
+                if cand in reg or cand + 'ES' in reg:
+                    p['fonte'] = cand; break
     for p in paras:
         if (p['tipo'] in ('corpo', 'corpo_caixa') or len(p['linhas']) > 2) and mapa.get(p['id']):
             mapa[p['id']] = hifeniza(mapa[p['id']])

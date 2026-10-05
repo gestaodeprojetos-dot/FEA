@@ -64,8 +64,11 @@ def completa(alvo, doador):
                     top.CharStrings.charStrings[nome] = len(top.CharStrings.charStringsIndex) - 1
                 else:
                     top.CharStrings.charStrings[nome] = cs
-                top.charset.append(nome)
-                t.setGlyphOrder(t.getGlyphOrder() + [nome])
+                # charset e glyphOrder costumam ser a MESMA lista: acrescentar
+                # nos dois duplicava o nome e deslocava o cmap em um glifo
+                if nome not in top.charset: top.charset.append(nome)
+                if nome not in t.getGlyphOrder():
+                    t.setGlyphOrder(t.getGlyphOrder() + [nome])
         else:
             pen = TTGlyphPen(None)
             rec = DecomposingRecordingPen(gsd); gsd[gd].draw(rec); rec.replay(TransformPen(pen, (k, 0, 0, k, 0, 0)))

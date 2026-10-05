@@ -13,7 +13,7 @@ R=[
 ('p194_12','un pequeño acúmulo','una pequeña acumulación'),
 ('p188_11','amarronada','parduzca'),
 ('p106_04','de los casos: necesidad de observación hospitalaria','de los casos, lo que hace necesaria la observación hospitalaria'),
-('p97_09','EN LABIO SUPERIOR POSHIALURONIDASA','EN EL LABIO SUPERIOR TRAS LA APLICACIÓN DE HIALURONIDASA'),
+('p97_09','EN LABIO SUPERIOR POSHIALURONIDASA','EN EL LABIO SUPERIOR TRAS HIALURONIDASA'),
 ('p58_02','en el plano intraocular','a nivel intraocular'),
 ('p59_04','CONTRIBUYENTES:','QUE CONTRIBUYEN:'),
 ('p67_04','suele tener antecedentes previos','suele referir antecedentes'),
