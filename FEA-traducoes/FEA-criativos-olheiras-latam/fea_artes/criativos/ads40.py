@@ -106,10 +106,14 @@ def ads40(arq, dy):
         im = apagar(im, (l[2] - 12, l[0] - 10, l[3] + 12, l[1] + 10), CLARO_APAGAR, 4)
     cx = (CARTAO_X[0] + CARTAO_X[1]) / 2
     d = ImageDraw.Draw(im)
+    maxw = CARTAO_X[1] - CARTAO_X[0] - 2 * 95
+    esc = min(1, min(maxw / largura(f, e) for e in HL_ES))
+    assert esc >= 0.85, esc
+    fn = F(SERIF_SEMI, f.size * esc)
+    print(arq, 'título escala %.3f' % esc)
     for l, p, e in zip(hl, HL_PT, HL_ES):
         base = l[0] - f.getbbox(p)[1] + f.getmetrics()[0]
-        assert largura(f, e) < CARTAO_X[1] - CARTAO_X[0] - 160, e
-        d.text((cx - largura(f, e) / 2 - f.getbbox(e)[0], base - f.getmetrics()[0]), e, font=f, fill=cor)
+        d.text((cx - largura(fn, e) / 2 - fn.getbbox(e)[0], base - fn.getmetrics()[0]), e, font=fn, fill=cor)
     # ---------- preço ----------
     im = preco(im, dy)
     # ---------- corpo ----------
