@@ -1,8 +1,8 @@
 {
- "_nota": "Formato LATAM em dólar (como nos criativos IFF5 LATAM: US$19,00). Valores ainda não definidos pela gestão: trocar aqui e rodar de novo os scripts (python3 fea_artes/rodar_todos.py).",
- "preco": "US$ [PRECIO]",
- "preco_inteiro": "US$ [PRECIO]",
- "de_200": "US$ [PRECIO ANTERIOR]",
- "de_297": "US$ [PRECIO ANTERIOR]",
- "pct_desconto": "[X] %"
+ "_nota": "Preços LATAM definidos pela gestão em 05/10/2026: de US$47 por US$19 (formato dos criativos IFF5 LATAM). Desconto (47-19)/47 = 59,6 %, arredondado para 60 %. Depois de mudar, rodar python3 rodar_todos.py.",
+ "preco": "US$19",
+ "preco_inteiro": "US$19",
+ "de_200": "US$47",
+ "de_297": "US$47",
+ "pct_desconto": "60 %"
 }
