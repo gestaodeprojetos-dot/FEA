@@ -21,6 +21,10 @@ python3 FEA-edicao-videos/fea_revisar.py projeto1.json [projeto2.json ...] --fol
 
 O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saída). Ele imprime, por vídeo, `OK` ou `REPROVADO`, com a lista de ERRO e ATENÇÃO. Com `--folhas`, gera uma folha de contato de cada vídeo final, com 1 quadro a cada 2 segundos.
 
+Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos de uma vez): `python3 FEA-edicao-videos/fea_revisar.py FEA-projeto-*.json --so-legenda`. Gera o .ass de cada vídeo e acusa número e unidade separados.
+
+**Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.
+
 ## Checklist completo (o que cada regra exige)
 
 | # | Regra da Keila | Como é conferida | Nível |
@@ -35,6 +39,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 6b | **Legenda sincronizada com o áudio** (Keila 26/09): entra quando o Dr. fala, sem atraso nem adiantamento | voz no áudio antes e depois do início de cada legenda | ERRO |
 | 6c | Nenhuma palavra falada faltando na legenda (buraco = fora de sincronia) | palavras da legenda contra palavras faladas nos trechos mantidos (mínimo 90%) | ERRO |
 | 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
+| 6e | **Número e unidade juntos** (Keila 05/10, pasta 2 vídeo 2): "0,3 mL", "1,5 mL", "dois mL", "meio mL", "1 e meio mL", "duas unidades", "20 mg" nunca em blocos diferentes nem em linhas diferentes do mesmo bloco; bloco nunca começa com a unidade sozinha ("mL de lido"); o número entra junto com a fala, nunca antes | blocos e linhas do .ass (`checar_numero_unidade`); sincronia ouvindo cada quantidade | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
 | 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |

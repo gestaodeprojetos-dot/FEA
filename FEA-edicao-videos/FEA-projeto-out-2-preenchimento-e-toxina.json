@@ -1,6 +1,6 @@
 {
  "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/fonts",
  "videos": [
   {
    "titulo": "Planejamento estratégico",
@@ -10,9 +10,9 @@
      106.2
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7174.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7174.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/1- Planejamento estratégico.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7174.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7174.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/1- Planejamento estratégico.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -38,9 +38,9 @@
      133.1
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7176.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7176.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/2- Anestesia não é perda de tempo, é conforto.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7176.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7176.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/2- Anestesia não é perda de tempo, é conforto.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -51,9 +51,9 @@
      62.5
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7177.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7177.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/3- Anestesia no mentoniano para procedimento estético não é tudo igual.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7177.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7177.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/3- Anestesia no mentoniano para procedimento estético não é tudo igual.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -64,9 +64,9 @@
      43.5
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7178.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7178.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/4- Comissura sem dor.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7178.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7178.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/4- Comissura sem dor.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -95,9 +95,9 @@
      103.8
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7179.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7179.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/5- Olheiras com subskin.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7179.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7179.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/5- Olheiras com subskin.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -114,9 +114,9 @@
      "vocês veem pela"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7181.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7181.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/6- Revanesse para sulco nasolabial.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7181.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7181.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/6- Revanesse para sulco nasolabial.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -127,9 +127,9 @@
      69.7
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7182.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7182.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/7- Pré jowl, conectando as estruturas.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7182.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7182.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/7- Pré jowl, conectando as estruturas.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -158,9 +158,9 @@
      "aqui ao lábio"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7183.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7183.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/8- Reologia para comissura.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7183.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7183.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/8- Reologia para comissura.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -183,9 +183,9 @@
      90.1
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7175.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7175.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/9- Planejamento toxina estética.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7175.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7175.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/9- Planejamento toxina estética.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -196,9 +196,9 @@
      76.9
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7184.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7184.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/10- Orbiculares com Letybo.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7184.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7184.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/10- Orbiculares com Letybo.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -209,9 +209,9 @@
      118.45
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7185.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7185.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/11- Arqueamento do olhar com toxina.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7185.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7185.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/11- Arqueamento do olhar com toxina.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -228,9 +228,9 @@
      46.2
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7186.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7186.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/12- Espero marcar para iniciar meu botox.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7186.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7186.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/12- Espero marcar para iniciar meu botox.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -247,9 +247,9 @@
      46.3
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p2/IMG_7187.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p2/IMG_7187.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e2/13- Aplicação no nasal.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p2/IMG_7187.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p2/IMG_7187.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e2/13- Aplicação no nasal.mp4",
    "titulo_origem": "imagem"
   }
  ]

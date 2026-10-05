@@ -1,6 +1,6 @@
 {
  "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/fonts",
  "videos": [
   {
    "titulo": "Toxina para ruga do Wi-Fi sem perder o arqueamento",
@@ -20,9 +20,9 @@
      "Então, o que acontece"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6945.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6945.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/1- Toxina para ruga do Wi-Fi sem perder o arqueamento.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/rb/IMG_6945.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/rb/IMG_6945.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e4/1- Toxina para ruga do Wi-Fi sem perder o arqueamento.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -53,9 +53,9 @@
      "uma unidade"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6946.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6946.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/2- Técnica avançada de mesobotox em orbiculares dos olhos.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/rb/IMG_6946.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/rb/IMG_6946.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e4/2- Técnica avançada de mesobotox em orbiculares dos olhos.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -78,9 +78,9 @@
      56.6
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/rb/IMG_6947.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/rb/IMG_6947.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/rb/IMG_6947.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/rb/IMG_6947.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e4/3- Reavaliação e resultado do efeito Nefertiti.mp4",
    "titulo_origem": "imagem"
   }
  ]
