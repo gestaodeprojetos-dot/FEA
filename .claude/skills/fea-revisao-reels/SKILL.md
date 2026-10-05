@@ -61,6 +61,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos, **cada parte também** (antes a Parte 1/2 passava sem conferir) | duração do .mp4 final | ERRO |
 | 23 | **Palavra a palavra** (02/10): fala transcrita (com as mesmas correções) contra o texto da legenda; número de enumeração faltando ou 3+ palavras faladas sem legenda | alinhamento das palavras | ERRO |
 | 24 | **Voz sem legenda**: 1 s ou mais de voz no áudio sem legenda nem palavra transcrita (fala baixa, resposta do paciente) | volume do áudio x legendas | ATENÇÃO (ouvir) |
+| 24b | **Fala curta solta sem legenda** (Keila 05/10, "duas, duas, duas" na aplicação nasal): rajada de voz de 0,35 s ou mais, com silêncio antes, sem legenda no ar. Contagem repetida ("duas... duas...") tem que ter uma legenda por fala, cada uma na hora da voz | volume do áudio x legendas | ATENÇÃO (ouvir; se for fala do Dr., é ERRO) |
 | 25 | **Voz falhando/picotando** (02/10, pasta 7): volume do vídeo final cai 12 dB ou mais abaixo do bruto onde o bruto tem voz forte (com alinhamento fino de ±4 quadros por trecho) | volume final x bruto, trecho a trecho | ERRO |
 | 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |

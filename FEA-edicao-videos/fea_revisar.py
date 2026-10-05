@@ -463,6 +463,24 @@ def revisar(cfg, v, folhas=None):
             k = j
         k += 1
 
+    # 5d'. fala curta e solta sem legenda (Keila 05/10, "duas, duas, duas" contando unidades: a
+    # transcrição esticava uma palavra por cima das outras e 3 das 6 ficavam sem legenda). Rajada de
+    # voz de 0,35 s ou mais, com silêncio dos dois lados, sem legenda nenhuma no ar: ouvir.
+    k = int((fe.TITULO_DUR + 0.3) / ps)
+    while k < min(fim_conteudo, len(db)):
+        if voz[k]:
+            j, ult = k, k
+            while j < len(db) and (j - ult) * ps < 0.5:
+                if voz[j]:
+                    ult = j
+                j += 1
+            antes_ok = not voz[max(0, k - int(0.5 / ps)):k].any()
+            if antes_ok and (ult - k + 1) * ps >= 0.35 and not no_ar[k:ult + 1].any():
+                aten.append(f"[{k * ps:5.1f}s a {(ult + 1) * ps:5.1f}s] fala curta solta sem legenda: ouvir "
+                            "(palavra que a transcrição pulou? repetição como \"duas, duas\"?)")
+            k = j
+        k += 1
+
     # 5e. voz falhando/picotando (Keila, 02/10/2026, pasta 7 vídeo 1): o áudio final, trecho a trecho,
     # tem que ter o mesmo volume do bruto. Queda forte onde o bruto tem a voz do Dr. = corte, silêncio
     # ou concat comendo a fala. Compara o volume do .mp4 com o do bruto nos trechos mantidos.

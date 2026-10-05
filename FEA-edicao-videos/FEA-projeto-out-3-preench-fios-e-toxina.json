@@ -332,7 +332,23 @@
    "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p3/IMG_6973.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p3/IMG_6973.json",
    "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e3/16- Aplicação nasal.mp4",
-   "titulo_origem": "imagem"
+   "titulo_origem": "imagem",
+   "correcoes": [
+    [
+     "^Dois\\b",
+     "duas"
+    ],
+    [
+     "^dois\\b",
+     "duas"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     20.04,
+     20.4
+    ]
+   ]
   }
  ]
 }
