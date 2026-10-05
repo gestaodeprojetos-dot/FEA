@@ -8,4 +8,5 @@ for s in sorted(glob.glob(os.path.join(aqui, 'criativos', '*.py'))):
     print(('ok   ' if r.returncode == 0 else 'ERRO ') + os.path.basename(s))
     if r.returncode:
         falhas.append(s); print(r.stderr[-800:])
+subprocess.run([sys.executable, os.path.join(aqui, "fea_mockup_capa_es.py")], cwd=aqui)
 sys.exit(1 if falhas else 0)
