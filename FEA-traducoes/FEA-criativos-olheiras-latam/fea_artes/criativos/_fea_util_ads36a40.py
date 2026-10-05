@@ -89,13 +89,14 @@ def largura(f, t):
 
 def calibrar_altura(caminho, ref, altura):
     """Tamanho em que o glifo 'ref' (ex.: 'H') tem a altura medida."""
-    melhor = None
-    for t in np.arange(8, 400, 0.25):
-        f = ImageFont.truetype(caminho, float(t))
-        _, a, _, b = f.getbbox(ref)
-        if melhor is None or abs((b - a) - altura) < abs(melhor[1] - altura):
-            melhor = (float(t), b - a)
-    return ImageFont.truetype(caminho, melhor[0])
+    _, a, _, b = ImageFont.truetype(caminho, 400).getbbox(ref)
+    return ImageFont.truetype(caminho, round(400 * altura / (b - a) * 4) / 4)
+
+
+def calibrar_larg(caminho, texto, larg):
+    """Como calibrar() da lib, mas por proporção (rápido)."""
+    l, _, r, _ = ImageFont.truetype(caminho, 400).getbbox(texto)
+    return ImageFont.truetype(caminho, round(400 * larg / (r - l) * 4) / 4)
 
 
 def largura_track(f, t, track):

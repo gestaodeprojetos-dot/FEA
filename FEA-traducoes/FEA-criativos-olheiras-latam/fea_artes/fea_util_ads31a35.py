@@ -209,7 +209,7 @@ def cor_run(im, caixa, cond, claro=True, lim=22):
     lum = a.sum(2)
     ys, xs = np.where(m)
     L = lum[ys, xs]
-    core = (L >= np.percentile(L, 50)) if claro else (L <= np.percentile(L, 50))
+    core = (L >= np.percentile(L, 70)) if claro else (L <= np.percentile(L, 30))
     ys, xs = ys[core], xs[core]
     px = a[ys, xs]
     xa, xb = xs.min(), xs.max()

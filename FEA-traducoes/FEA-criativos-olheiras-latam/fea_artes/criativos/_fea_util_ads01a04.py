@@ -149,11 +149,33 @@ def linhas_texto(im, caixa, cond, frac_min=0.45):
             if prox:
                 alvo = min(prox, key=lambda b: b[0])
                 alvo[2] = min(alvo[2], l[2]); alvo[3] = max(alvo[3], l[3])
-    return [tuple(b) for b in bons]
+    # linhas grudadas (descendente tocando ascendente): divide na linha de menor densidade
+    alt = sorted(b[1] - b[0] for b in bons)
+    med_h = alt[len(alt) // 2]
+    m = mascara(im, caixa, cond)
+    out = []
+    for b in bons:
+        h = b[1] - b[0]
+        if h > 1.6 * med_h and len(bons) > 1:
+            n = round((h + 1) / (med_h + 1 + 2)) or 1
+            n = max(2, round(h / med_h * 0.95)) if n < 2 else n
+            cortes, ini = [], b[0]
+            for k in range(1, n):
+                alvo = b[0] + k * (h / n)
+                janela = range(int(alvo - med_h * 0.3), int(alvo + med_h * 0.3))
+                dens = [m[y - caixa[1]].sum() for y in janela]
+                cortes.append(janela[int(np.argmin(dens))])
+            for c in cortes + [b[1] + 1]:
+                cols = np.where(m[ini - caixa[1]:c - caixa[1]].any(0))[0]
+                out.append((ini, c - 1, cols.min() + caixa[0], cols.max() + caixa[0]))
+                ini = c
+        else:
+            out.append(tuple(b))
+    return out
 
 
 def paragrafo(im, caixa, linhas_pt, texto_es, caminho, cond_txt, fundo_ext=None, larg_max=None, n_max=None,
-              linhas_es=None, reducao_max=0.15, cor_caixa=None, cor_txt=None, inset=3, verbose=''):
+              linhas_es=None, reducao_max=0.15, cor_caixa=None, cor_txt=None, inset=3, verbose='', fator_larg=1.0):
     """Troca o texto de uma caixa chapada (estilo destaque do Instagram).
 
     caixa: (x0, y0, x1, y1) exclusivos da caixa chapada original.
@@ -176,10 +198,13 @@ def paragrafo(im, caixa, linhas_pt, texto_es, caminho, cond_txt, fundo_ext=None,
     pad_x = min(m[2] for m in med) - x0
     larg_pt = max(m[3] - m[2] + 1 for m in med)
     if larg_max is None:
-        larg_max = larg_pt
+        larg_max = larg_pt * fator_larg
     t = Tipo(caminho, f.size)
     if linhas_es is None:
         f2, ls = ajustar(texto_es, t, larg_max, n_max or len(linhas_pt), reducao_max)
+        if fundo_ext is None and len(ls) < len(linhas_pt):
+            # caixa sobre foto não encolhe: mantém o mesmo número de linhas do original, equilibradas
+            ls = quebrar_equilibrado(texto_es, f2, larg_max, len(linhas_pt))
     else:
         ls = linhas_es
         fator = 1.0

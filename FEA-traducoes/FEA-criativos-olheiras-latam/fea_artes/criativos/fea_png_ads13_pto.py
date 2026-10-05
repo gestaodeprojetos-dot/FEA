@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ads 13 (Feed e Story) em espanhol. Rodar a partir de fea_artes/: python3 criativos/ads13.py
+"""Ads 13 (Feed e Story) em espanhol. Rodar a partir de fea_artes/: python3 criativos/fea_png_ads13_pto.py
 Originais em trabalho/pto13-feed.png e trabalho/pto13-story.png (Drive Brasil).
 Capa do ebook no mockup fica em português (fase 2)."""
 import os, sys
@@ -48,7 +48,7 @@ STORY = dict(
              xs=[(70, 484), (70, 494), (70, 329), (70, 350), (70, 464), (70, 460), (69, 412), (69, 500)]),
     ],
     preco=dict(caixa=(0, 1202, 516, 1394), estilo='amarelo', cor_txt=COR_TXT_CAIXA, so_hoje=True,
-               tops=[1221, 1277, 1326], xs=[(72, 352), (72, 496), (68, 256)], x_max_esticar=575, folga_dir=20, x_corte=330),
+               tops=[1221, 1277, 1326], xs=[(72, 352), (72, 496), (68, 256)], x_max_esticar=565, folga_dir=20, x_corte=330),
     cta=dict(pt=CTA_PT, es=CTA_ES, tops=[1443, 1481], xs=[(69, 348), (69, 330)]),
 )
 

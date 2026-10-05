@@ -140,7 +140,7 @@ def apagar_mascara(im, m, dil=4, sigma=18):
     funde a borda para não deixar costura."""
     a = np.array(im).astype(np.float32)
     m = cv2.dilate(m.astype(np.uint8), np.ones((2 * dil + 1, 2 * dil + 1), np.uint8)).astype(np.float32)
-    w = 1 - m
+    w = (1 - m) * (a.sum(2) < 150)  # só fundo escuro entra na média (nada da caixa ou do livro)
     num = cv2.GaussianBlur(a * w[..., None], (0, 0), sigma)
     den = cv2.GaussianBlur(w, (0, 0), sigma)[..., None]
     fundo = num / np.maximum(den, 1e-4)
@@ -302,10 +302,13 @@ def compor(sp):
     x = pr['xs'][0][0]
     lim_txt = pr['x_max_esticar'] - pr['folga_dir']
     s = 1.0
-    while max(largura_runs(r, tam * s, TRACK_CORPO) for r in es) > lim_txt - x and s > 0.85:
+    # até 15 % de redução; com o placeholder '[PRECIO ANTERIOR]' (texto provisório, bem mais longo
+    # que um valor real) aceita até 25 % para não invadir o livro
+    piso = 0.75 if '[' in PRECOS['de_200'] else 0.85
+    while max(largura_runs(r, tam * s, TRACK_CORPO) for r in es) > lim_txt - x and s > piso:
         s -= 0.01
     precisa = x + max(largura_runs(r, tam * s, TRACK_CORPO) for r in es) + pr['folga_dir']
-    dx = int(np.ceil(precisa - pr['caixa'][2]))
+    dx = int(np.ceil(min(precisa, pr['x_max_esticar']) - pr['caixa'][2]))
     if dx > 0:
         im = _esticar(im, pr['caixa'], dx, pr['x_corte'], sp['x_lim'])
     rel['preco'] = {'escala': s, 'caixa_alargada_px': max(dx, 0)}

@@ -65,7 +65,7 @@ def lista_b(im, rect, tops, larg_ref, cx):
 
 def feed():
     im = abrir('trabalho/C-ads11-feed.png')
-    im, extra, t = caixa_preco(im, (541, 553), 1.5, (295, 508, 788, 627), [519, 574], 767 - 311 + 1, 30, 18)
+    im, extra, t = caixa_preco(im, (541, 553), 1.5, (295, 508, 788, 627), [519, 574], 767 - 311 + 1, 32, 18)
     im = bloco(im, (150, 660, 935, 755), TIT_PT2, TIT_ES2, [670, 714], 917 - 167 + 1, 542, TIT_PT2[1])
     im = lista_b(im, (280, 780, 800, 905), [788, 829, 868], 778 - 303 + 1, 540.5)
     im = bloco(im, (340, 940, 745, 1020), CTA_PT, CTA_ES, [944, 984], 719 - 364 + 1, 541.5, CTA_PT[0])
@@ -75,7 +75,7 @@ def feed():
 
 def story():
     im = abrir('trabalho/C-ads11-story.png')
-    im, extra, t = caixa_preco(im, (541, 982), 1.51, (190, 913, 892, 1083), [929, 1005], 868 - 212 + 1, 42, 22)
+    im, extra, t = caixa_preco(im, (541, 982), 1.51, (190, 913, 892, 1083), [929, 1005], 868 - 212 + 1, 34, 22)
     im = bloco(im, (150, 1132, 935, 1323), TIT_PT3, TIT_ES3, [1142, 1205, 1268], 910 - 173 + 1, 542, TIT_PT3[0])
     im = lista_b(im, (180, 1361, 900, 1538), [1371, 1429, 1485], 878 - 201 + 1, 539.5)
     im = bloco(im, (260, 1584, 820, 1694), CTA_PT, CTA_ES, [1594, 1651], 794 - 286 + 1, 540, CTA_PT[0])

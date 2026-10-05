@@ -147,3 +147,78 @@ def legenda_depoimento(im, traducao, cx, y_topo, largura_max, f, cor, entrelinha
     for i, l in enumerate(ls):
         linha(im, cx, base + passo * i, [(l, f, cor)], 'centro')
     return len(ls), base + passo * (len(ls) - 1)
+
+
+def _mapa_polar(cx, cy, r0, r1, a0, a1, rm, S):
+    nr = int(round((r1 - r0) * S))
+    na = int(round(np.radians(a1 - a0) * rm * S))
+    rr = np.linspace(r1, r0, nr)[:, None]
+    aa = np.radians(np.linspace(a0, a1, na))[None, :]
+    mx = (cx + rr * np.sin(aa)).astype(np.float32)
+    my = (cy - rr * np.cos(aa)).astype(np.float32)
+    return mx, my, nr, na
+
+
+def trocar_texto_arco(im, cx, cy, R, texto, nome_fonte='Montserrat_700Bold', S=3, a0=-100, a1=100, r0=55, debug=None):
+    """Troca o texto curvo do topo do selo dourado (anel). Desenrola o anel em coordenadas polares,
+    apaga as letras por inpainting clássico, escreve o novo texto reto e enrola de volta só na faixa do texto.
+    Centro e raio do selo vêm de HoughCircles (medidos no script)."""
+    a = np.array(im)
+    r1 = R + 3
+    rm = R * 0.86
+    mx, my, nr, na = _mapa_polar(cx, cy, r0, r1, a0, a1, rm, S)
+    u = cv2.remap(a, mx, my, cv2.INTER_CUBIC)
+    ui = u.astype(int)
+    lum = ui.sum(2)
+    marrom = ((lum < 470) & (ui[..., 0] - ui[..., 2] > 50) & (ui[..., 0] < 210)).astype(np.uint8)
+    # letras: componentes altos (os pontilhados laterais são baixos)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(marrom, 8)
+    hs = [st[i][3] for i in range(1, n) if st[i][4] > 15 * S]
+    hmax = max(hs)
+    letras = [i for i in range(1, n) if st[i][3] > 0.6 * hmax and st[i][1] < nr * 0.6]
+    cols0 = min(st[i][0] for i in letras); cols1 = max(st[i][0] + st[i][2] for i in letras)
+    rows0 = min(st[i][1] for i in letras); rows1 = max(st[i][1] + st[i][3] for i in letras)
+    alturas = sorted(st[i][3] for i in letras)
+    cap = alturas[len(alturas) // 2]
+    base_row = int(np.median([st[i][1] + st[i][3] for i in letras]))
+    escuro = ui[(marrom > 0) & (lum < np.percentile(lum[marrom > 0], 30))]
+    cor = tuple(int(v) for v in np.median(escuro, 0))
+    m = np.zeros(marrom.shape, np.uint8)
+    m[rows0 - 3:rows1 + 3, cols0 - 6:cols1 + 6] = marrom[rows0 - 3:rows1 + 3, cols0 - 6:cols1 + 6] * 255
+    m = cv2.dilate(m, np.ones((5, 5), np.uint8))
+    ue = cv2.inpaint(cv2.cvtColor(u, cv2.COLOR_RGB2BGR), m, 5, cv2.INPAINT_TELEA)
+    ue = cv2.cvtColor(ue, cv2.COLOR_BGR2RGB)
+    # fonte calibrada pela altura de caixa-alta
+    melhor = None
+    for t in np.arange(6, 120, 0.25):
+        f = ImageFont.truetype(fonte(nome_fonte), float(t))
+        bb = f.getbbox('MPRDEV', anchor='ls')
+        if melhor is None or abs(-bb[1] - cap) < abs(melhor[1] - cap):
+            melhor = (t, -bb[1])
+    f = ImageFont.truetype(fonte(nome_fonte), float(melhor[0]))
+    larg_ant = cols1 - cols0
+    while f.getlength(texto) > larg_ant * 1.15 and f.size > melhor[0] * 0.85:
+        f = ImageFont.truetype(fonte(nome_fonte), f.size - 0.25)
+    camada = Image.new('RGBA', (na, nr), (0, 0, 0, 0))
+    ImageDraw.Draw(camada).text(((cols0 + cols1) / 2, base_row), texto, font=f, fill=cor + (255,), anchor='ms')
+    camada = camada.filter(ImageFilter.GaussianBlur(0.5 * S / 2))
+    base_img = Image.fromarray(ue).convert('RGBA')
+    base_img.alpha_composite(camada)
+    ue = np.array(base_img.convert('RGB'))
+    nw = f.getlength(texto)
+    c_ini = int(min(cols0, (cols0 + cols1) / 2 - nw / 2) - 8)
+    c_fim = int(max(cols1, (cols0 + cols1) / 2 + nw / 2) + 8)
+    if debug:
+        Image.fromarray(np.vstack([u, ue])).save(debug)
+    # enrola de volta só na faixa alterada
+    H, W = a.shape[:2]
+    yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+    d = np.hypot(xx - cx, yy - cy)
+    ang = np.degrees(np.arctan2(xx - cx, -(yy - cy)))
+    row = (r1 - d) * S * (nr - 1) / ((r1 - r0) * S)
+    col = (ang - a0) / (a1 - a0) * (na - 1)
+    sel = (row >= rows0 - 4) & (row <= rows1 + 4) & (col >= c_ini) & (col <= c_fim)
+    out = cv2.remap(ue, col.astype(np.float32), row.astype(np.float32), cv2.INTER_CUBIC)
+    a2 = a.copy()
+    a2[sel] = out[sel]
+    return Image.fromarray(a2), dict(cor=cor, tam=f.size, cap=cap)

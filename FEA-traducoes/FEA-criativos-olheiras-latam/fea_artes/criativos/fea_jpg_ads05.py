@@ -21,27 +21,27 @@ def pilula(im, dy):
     X0, Y0, X1, Y1 = 268, 1067 + dy, 813, 1130 + dy
     a = np.array(im).astype(float)
     bg = np.array(cor_fundo(im, (60, Y0, 200, Y1)), float)
-    # 1) apaga o texto dentro da pílula (inpainting clássico)
-    m = mascara_texto(im, (285, Y0 + 5, 800, Y1 - 5), lambda r, g, b: ((r + g + b) > 330) | ((g > 150) & (r < 150)), 3)
-    im = apagar_mascara(im, m)
-    a = np.array(im).astype(float)
-    # 2) desfaz a translucidez dentro do contorno antigo (S = (P - a*255)/(1-a)), linha a linha
+    # perfil de opacidade do original (branco translúcido), linha a linha, medido numa coluna sem texto
     alfas = {}
     for y in range(Y0 + 3, Y1 - 2):
         ref = a[y, 276:284].mean(0)
-        al = float(np.clip(((ref - bg) / (255 - bg)).mean(), 0, 0.5))
-        alfas[y - Y0] = al
-    inn = np.array(mascara_pilula(im.size, (X0 + 2, Y0 + 2, X1 - 2, Y1 - 2))) / 255.0
-    for y in range(Y0, Y1 + 1):
-        al = alfas.get(y - Y0, alfas[min(alfas, key=lambda k: abs(k - (y - Y0)))])
-        w = inn[y][:, None] * al
-        a[y] = np.clip((a[y] - w * 255) / (1 - w), 0, 255)
+        alfas[y - Y0] = float(np.clip(((ref - bg) / (255 - bg)).mean(), 0, 0.5))
+    # 1) remove a pílula antiga inteira repondo a textura do fundo verde da mesma linha
+    #    (cópia de pixels do próprio fundo, ao lado da pílula; nada gerado)
+    m = np.array(mascara_pilula(im.size, (X0 - 3, Y0 - 3, X1 + 3, Y1 + 3))) > 0
+    larg_l, larg_r = X0 - 3 - 45, 1035 - (X1 + 3)
+    for y in range(Y0 - 4, Y1 + 5):
+        for x in np.where(m[y])[0]:
+            if x < 540:
+                xs = x
+                while xs >= X0 - 3:
+                    xs -= larg_l
+            else:
+                xs = x
+                while xs <= X1 + 3:
+                    xs += larg_r
+            a[y, x] = a[y, xs]
     im = Image.fromarray(a.astype(np.uint8))
-    # 3) apaga a borda antiga (anel de 2-3 px) por inpainting
-    ext = np.array(mascara_pilula(im.size, (X0 - 1, Y0 - 1, X1 + 1, Y1 + 1)))
-    inn2 = np.array(mascara_pilula(im.size, (X0 + 3, Y0 + 3, X1 - 3, Y1 - 3)))
-    anel = ((ext > 20) & (inn2 < 235)).astype(np.uint8) * 255
-    im = apagar_mascara(im, cv2.dilate(anel, np.ones((3, 3), np.uint8)), 4)
     # 4) texto ES e nova largura
     fr, fb = F('OpenSans_400Regular', 30.0), F('OpenSans_700Bold', 37.5)
     segs = [('Acceso completo por solo ', fr, (255, 255, 255)), (PRECOS['preco'], fb, (36, 255, 75))]

@@ -13,9 +13,6 @@ Originais (Drive Brasil): trabalho/G-ads11-feed.jpg ([FEED] ADS 11.jpg 14fLmZdyz
 trabalho/G-ads11-story.jpg ([STORIES] ADS 11.jpg 1k4Ir1JiONGuGxmJcMz4rVS_8fkDaPqYH).
 """
 import os, sys
-import cv2
-import numpy as np
-from PIL import Image
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _fea_util_ads10a13 import *  # noqa
 from fea_arte_lib import abrir, salvar, preencher, PRECOS
@@ -44,28 +41,6 @@ CTA_ES = ('TOQUE EN MÁS INFORMACIÓN Y ', 'ASEGURE EL SUYO')
 def pena_x(f, texto, x_tinta):
     """Origem horizontal da linha (pena) a partir da tinta medida do texto PT."""
     return x_tinta - f.getbbox(texto, anchor='ls')[0]
-
-
-def logo_linha(im, campo, texto_es, f, tr, base, centro):
-    """Desenha uma linha do logo usando o campo de textura dourada como cor."""
-    camada = Image.new('L', im.size, 0)
-    desenhar_spans(camada, [(texto_es, f, 255, None, tr)], base, centro=centro)
-    im.paste(campo, (0, 0), camada)
-
-
-def campo_dourado(im, caixa):
-    """Campo de cor do logo: pixels dourados conhecidos, o resto preenchido por inpainting
-    (Telea). Mantém degradê vertical e granulação do original."""
-    a = np.array(im)
-    x0, y0, x1, y1 = caixa
-    sub = a[y0:y1, x0:x1]
-    s = sub.astype(int)
-    conhecido = (s.sum(2) > 330) & (s[..., 0] > s[..., 2] + 60)  # núcleo das letras douradas
-    desconhecido = (~conhecido).astype(np.uint8) * 255
-    campo = cv2.inpaint(cv2.cvtColor(sub, cv2.COLOR_RGB2BGR), desconhecido, 9, cv2.INPAINT_TELEA)
-    out = Image.new('RGB', im.size, (0, 0, 0))
-    out.paste(Image.fromarray(cv2.cvtColor(campo, cv2.COLOR_BGR2RGB)), (x0, y0))
-    return out
 
 
 def gerar(fmt, dy, arq, saida):
@@ -117,14 +92,7 @@ def gerar(fmt, dy, arq, saida):
     desenhar_spans(im, spans, Y(1051 + 1), centro=(195 + 882) / 2)
 
     # 4. logo do título: linhas 1 e 3 trocadas, linha 2 (TRIDIMENSIONAL) intacta
-    caixa_logo = (380, Y(1145), 700, Y(1252))
-    campo = campo_dourado(im, caixa_logo)
-    fg = por_altura_maiuscula(LOGO, 24)                       # altura do 'P' (1156 a 1179)
-    tg = entreletra(fg, 'PREENCHIMENTO', 676 - 398 + 1)
-    preencher(im, (380, Y(1150), 700, Y(1184)), PRETO)        # linha 1
-    preencher(im, (380, Y(1214), 700, Y(1249)), PRETO)        # linha 3 (o fio dourado fica em 1258)
-    logo_linha(im, campo, 'RELLENO', fg, tg, Y(1179 + 1), (398 + 676) / 2)
-    logo_linha(im, campo, 'DE OJERAS', fg, tg, Y(1242 + 1), (432 + 643) / 2)
+    im = logo_es(im, 0, dy)
 
     print('ok', salvar(im, saida), im.size)
     return im

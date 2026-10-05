@@ -320,3 +320,28 @@ def zoom(im, caixa, caminho, fator=2):
     c = im.crop(caixa)
     c.resize((c.width * fator, c.height * fator), Image.LANCZOS).save(caminho)
     return caminho
+
+
+def colocar(im, im0, limpo, glifos, seq, x, y_lin, gaps, m=3):
+    """Transplanta a sequência de glifos (chaves de 'glifos': (x0, x1, (y0, y1))) a partir de x,
+    com o topo da caixa de recorte em y_lin. gaps: espaço entre tintas, um por glifo. Retorna x final."""
+    for k, gap in zip(seq, gaps):
+        x0, x1, (y0, y1) = glifos[k]
+        transplantar(im, im0, limpo, (x0 - m, y0, x1 + m + 1, y1), x - m, y_lin)
+        x = x + (x1 - x0) + 1 + gap
+    return x
+
+
+def track_para(texto, nome, tam, largura):
+    """Tracking que faz 'texto' ocupar 'largura' de tinta."""
+    w0 = largura_segs([(texto, nome, tam, (0, 0, 0))], 1e-9)
+    return (largura - w0) / (len(texto) - 1)
+
+
+def cor_nucleo(im, caixa, cond, pct=30, escuro=True):
+    """Cor do miolo das letras: mediana dos pixels mais escuros (ou mais claros) que passam em cond."""
+    a = np.array(im)[caixa[1]:caixa[3], caixa[0]:caixa[2]].astype(int)
+    px = a[cond(a[..., 0], a[..., 1], a[..., 2])]
+    lum = px.sum(1)
+    sel = px[lum <= np.percentile(lum, pct)] if escuro else px[lum >= np.percentile(lum, 100 - pct)]
+    return tuple(int(v) for v in np.median(sel, 0))

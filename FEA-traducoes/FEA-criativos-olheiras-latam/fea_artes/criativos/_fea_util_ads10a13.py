@@ -104,3 +104,44 @@ def desenhar_spans(im, spans, base, centro=None, x_esq=None, cap_risco=0.5):
             ym = base - cap * cap_risco
             d.line([(bx0 - 1, ym), (bx1 + 1, ym)], fill=risco, width=max(2, round(f.size / 16)))
     return caixa_spans(spans, x, base)
+
+
+# ---- logo dourado "PREENCHIMENTO / TRIDIMENSIONAL / DE OLHEIRAS" (ADS 11, 12 e 13) ----
+# Medidas no [FEED] ADS 11 (dy=0): linha 1 'PREENCHIMENTO' tinta x 398-676, topo 1156, base 1180;
+# linha 2 'TRIDIMENSIONAL' 1187-1211 (fica intacta); linha 3 'DE OLHEIRAS' x 432-643, topo 1219, base 1243.
+# Outras artes: mesmo logo deslocado (dx, dy).
+
+def campo_dourado(im, caixa):
+    """Campo de cor do logo: pixels dourados conhecidos e o resto preenchido por inpainting
+    clássico (Telea), mantendo o degradê e a granulação do original. Sem IA generativa."""
+    import cv2
+    import numpy as np
+    from PIL import Image
+    a = np.array(im)
+    x0, y0, x1, y1 = caixa
+    sub = a[y0:y1, x0:x1]
+    s = sub.astype(int)
+    conhecido = (s.sum(2) > 330) & (s[..., 0] > s[..., 2] + 60)
+    campo = cv2.inpaint(cv2.cvtColor(sub, cv2.COLOR_RGB2BGR), (~conhecido).astype(np.uint8) * 255, 9, cv2.INPAINT_TELEA)
+    out = Image.new('RGB', im.size, (0, 0, 0))
+    out.paste(Image.fromarray(cv2.cvtColor(campo, cv2.COLOR_BGR2RGB)), (x0, y0))
+    return out
+
+
+def logo_es(im, dx=0, dy=0, apagar_linha=None):
+    """Troca as linhas 1 e 3 do logo por 'RELLENO' e 'DE OJERAS' (linha 2 é igual em ES).
+    apagar_linha(im, caixa) apaga o texto PT; padrão: repinta de preto (fundo chapado)."""
+    from PIL import Image, ImageDraw
+    campo = campo_dourado(im, (380 + dx, 1145 + dy, 700 + dx, 1252 + dy))
+    fg = por_altura_maiuscula('Arimo_700Bold', 24)
+    tg = entreletra(fg, 'PREENCHIMENTO', 676 - 398 + 1)
+    for caixa in [(385 + dx, 1150 + dy, 690 + dx, 1184 + dy), (420 + dx, 1214 + dy, 655 + dx, 1249 + dy)]:
+        if apagar_linha:
+            im = apagar_linha(im, caixa)
+        else:
+            ImageDraw.Draw(im).rectangle([caixa[0], caixa[1], caixa[2] - 1, caixa[3] - 1], fill=(0, 0, 0))
+    for texto, base, centro in [('RELLENO', 1180, (398 + 676) / 2), ('DE OJERAS', 1243, (432 + 643) / 2)]:
+        camada = Image.new('L', im.size, 0)
+        desenhar_spans(camada, [(texto, fg, 255, None, tg)], base + dy, centro=centro + dx)
+        im.paste(campo, (0, 0), camada)
+    return im

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """[FEED] ADS 14 (jpg) em espanhol LATAM. Troca só a copy; foto, livro (mockup, fase 2) e layout intactos.
-Rodar de fea_artes/:  python3 criativos/ads14.py
+Rodar de fea_artes/:  python3 criativos/fea_jpg_ads14.py
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from _fea_util_ads14a20 import *  # noqa
+from _fea_util_jpg14a20 import *  # noqa
 
 ORIG = 'trabalho/ads14-feed.jpg'
 SAIDA_NOME = 'FEA-[FEED] ADS 14 - LATAM.jpg'
