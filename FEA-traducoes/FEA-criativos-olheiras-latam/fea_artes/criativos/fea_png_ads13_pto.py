@@ -15,7 +15,7 @@ COR_TXT_CAIXA = (24, 22, 20)
 
 FEED = dict(
     origem='trabalho/pto13-feed.png', saida='FEA-Ads 13 - PTO-LATAM - Feed.png',
-    x_col=76, x_dir=640, x_lim=655,
+    x_col=76, x_dir=640, x_lim=690, livro_esq=((693, 217), (667, 876)),
     cor_branco_tit=(70, 290, 470, 325), cor_amarelo=(70, 245, 400, 280), cor_corpo=(70, 489, 560, 545),
     logo=dict(tops=[116, 143, 169], xs=[(79, 313), (80, 311), (107, 286)], sublinhado=202),
     fluxo=[
@@ -34,7 +34,7 @@ FEED = dict(
 
 STORY = dict(
     origem='trabalho/pto13-story.png', saida='FEA-Ads 13 - PTO-LATAM - Story.png',
-    x_col=70, x_dir=585, x_lim=592,
+    x_col=70, x_dir=585, x_lim=630, livro_esq=((626, 610), (594, 1379)),
     cor_branco_tit=(70, 589, 540, 630), cor_amarelo=(68, 537, 420, 577), cor_corpo=(70, 873, 490, 938),
     logo=dict(tops=[368, 399, 431], xs=[(73, 348), (74, 345), (106, 315)], sublinhado=469),
     fluxo=[

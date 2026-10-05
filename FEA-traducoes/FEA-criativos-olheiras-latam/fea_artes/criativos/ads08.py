@@ -2,8 +2,8 @@
 """FEA · Ads 08 (Ebook Olheiras) em espanhol LATAM, Feed e Story.
 
 Texto sobre a área escura da foto, alinhado à esquerda: apagado com inpainting
-clássico (apagar), sem IA generativa. Fontes identificadas: título Arimo Bold
-(laranja), parágrafos e CTA Montserrat (SemiBold e Regular), preço Arimo Regular.
+clássico (apagar), sem IA generativa. Fontes identificadas: título Roboto Bold
+(laranja, as 3 linhas reescritas para o bloco ficar uniforme), parágrafos e CTA Montserrat (SemiBold e Regular), preço Arimo Regular.
 Caixa de preço laranja com caixa preta interna: refeita do tamanho do texto ES
 (PRECOS['de_200'] riscado + PRECOS['preco']), limitada para não invadir o rosto.
 Copy oficial ES troca os travessões do PT por parênteses.
@@ -15,7 +15,7 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fea_arte_lib import *
 
-TIT = fonte('Arimo_700Bold')
+TIT = fonte('Roboto_700Bold')
 NEG = fonte('Montserrat_600SemiBold')
 REG = fonte('Montserrat_400Regular')
 PRECO = fonte('Arimo_400Regular')
@@ -23,6 +23,7 @@ LARANJA = (253, 184, 84)
 ESCURO = (11, 11, 11)
 TXT = lambda r, g, b: ((r + g + b) > 330) | ((r > 150) & (r - b > 60))
 LAR = lambda r, g, b: (r > 150) & (r - b > 60)
+LAR_HALO = lambda r, g, b: (r > 45) & (r - b > 18)  # inclui a borda antisserrilhada
 
 NEG_PT = ['Domine o procedimento mais', 'desafiador da harmonização', 'facial — o preenchimento de',
           'olheiras — com a metodologia', 'ARTI, e alcance resultados', 'naturais, seguros e duradouros.']
@@ -39,6 +40,15 @@ REG_ES = ['Esta guía muestra cómo aplicar la', 'metodología ARTI (Anatomía,'
 CTA_PT = ['Toque em SAIBA MAIS', 'e garanta o seu desconto']
 
 
+def apagar_area(im, caixa, raio=7):
+    """Inpainting da área inteira (fundo liso): remove texto e o halo/brilho em volta dele."""
+    a = np.array(im)
+    m = np.zeros(a.shape[:2], np.uint8)
+    m[caixa[1]:caixa[3], caixa[0]:caixa[2]] = 255
+    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), m, raio, cv2.INPAINT_TELEA)
+    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB))
+
+
 def origens(f, pts, tops):
     """Origem y de cada linha (mesma linha de base do PT), suavizada por ajuste linear do entrelinhas."""
     ys = np.array([t - f.getbbox(p)[1] for p, t in zip(pts, tops)], float)
@@ -50,14 +60,14 @@ def origens(f, pts, tops):
 def ads08(arq, M):
     im = abrir(arq)
     s = M['escala']
-    # 1) título: linhas 1 e 3 (TRIDIMENSIONAL fica intacta), centradas no eixo do bloco
+    # 1) título: as 3 linhas reescritas na mesma fonte, centradas no eixo do bloco
     t1, t2, t3 = M['tit']
     cor_t = cor_texto(im, (t2[2], t2[0], t2[3] + 1, t2[1] + 1), LAR)
     f = calibrar(TIT, 'TRIDIMENSIONAL', t2[3] - t2[2])
     cx = (t2[2] + t2[3]) / 2
     d = ImageDraw.Draw(im)
-    for (yt, yb, x0, x1), pt, es in [(t1, 'PREENCHIMENTO', 'RELLENO'), (t3, 'DE OLHEIRAS', 'DE OJERAS')]:
-        im = apagar(im, (x0 - 6, yt - 5, x1 + 7, yb + 6), LAR, 2)
+    im = apagar_area(im, (min(t[2] for t in M['tit']) - 14, t1[0] - 10, max(t[3] for t in M['tit']) + 15, t3[1] + 8))
+    for (yt, yb, x0, x1), pt, es in [(t1, 'PREENCHIMENTO', 'RELLENO'), (t2, 'TRIDIMENSIONAL', 'TRIDIMENSIONAL'), (t3, 'DE OLHEIRAS', 'DE OJERAS')]:
         l, _, r, _ = f.getbbox(es)
         ImageDraw.Draw(im).text((cx - (r - l) / 2 - l, yt - f.getbbox(pt)[1]), es, font=f, fill=cor_t)
 
@@ -137,10 +147,18 @@ def ads08(arq, M):
     im = apagar(im, (M['x'] - 8, c1[0] - 8, max(c1[3], c2[3]) + 10, c2[1] + 10), TXT, 3)
     d = ImageDraw.Draw(im)
     y1 = c1[0] - fcr.getbbox(CTA_PT[0])[1]
+    y2 = c2[0] - fcr.getbbox(CTA_PT[1])[1]
     x = M['x'] - fcr.getbbox('Toque')[0]
-    d.text((x, y1), 'Toque en ', font=fcr, fill=cor_c)
-    d.text((x + fcr.getlength('Toque en '), y1), 'MÁS INFORMACIÓN', font=fcb, fill=cor_cl)
-    d.text((M['x'] - fcr.getbbox('y')[0], c2[0] - fcr.getbbox(CTA_PT[1])[1]), 'y asegure su descuento', font=fcr, fill=cor_c)
+    if M.get('cta_3_linhas'):
+        # Story: "Toque en MÁS INFORMACIÓN" invadiria o relógio da foto; quebra em 3 linhas
+        passo = y2 - y1
+        d.text((x, y1), 'Toque en', font=fcr, fill=cor_c)
+        d.text((M['x'] - fcb.getbbox('M')[0], y1 + passo), 'MÁS INFORMACIÓN', font=fcb, fill=cor_cl)
+        d.text((M['x'] - fcr.getbbox('y')[0], y1 + 2 * passo), 'y asegure su descuento', font=fcr, fill=cor_c)
+    else:
+        d.text((x, y1), 'Toque en ', font=fcr, fill=cor_c)
+        d.text((x + fcr.getlength('Toque en '), y1), 'MÁS INFORMACIÓN', font=fcb, fill=cor_cl)
+        d.text((M['x'] - fcr.getbbox('y')[0], y2), 'y asegure su descuento', font=fcr, fill=cor_c)
     return im
 
 
@@ -157,7 +175,7 @@ STORY = dict(escala=1.167, x=75,
              txt_preco=(419, 661, 563, 697), base_caixa=692, base_preco=693, limite_x=650,
              neg=[763, 808, 855, 902, 949, 997], neg_ref=510, x1_neg=690,
              reg=[1086, 1124, 1162, 1199, 1238, 1276, 1312], reg_ref=466, x1_reg=630,
-             cta=[(1403, 1431, 75, 453), (1443, 1472, 75, 491)])
+             cta=[(1403, 1431, 75, 453), (1443, 1472, 75, 491)], cta_3_linhas=True)
 
 if __name__ == '__main__':
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

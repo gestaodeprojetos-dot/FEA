@@ -173,9 +173,10 @@ def trocar_texto_arco(im, cx, cy, R, texto, nome_fonte='Montserrat_700Bold', S=3
     marrom = ((lum < 470) & (ui[..., 0] - ui[..., 2] > 50) & (ui[..., 0] < 210)).astype(np.uint8)
     # letras: componentes altos (os pontilhados laterais são baixos)
     n, lab, st, _ = cv2.connectedComponentsWithStats(marrom, 8)
-    hs = [st[i][3] for i in range(1, n) if st[i][4] > 15 * S]
-    hmax = max(hs)
-    letras = [i for i in range(1, n) if st[i][3] > 0.6 * hmax and st[i][1] < nr * 0.6]
+    ok = lambda i: 0.10 * nr < st[i][3] < 0.35 * nr and st[i][2] < 3 * st[i][3] and st[i][1] < nr * 0.6
+    hs = [st[i][3] for i in range(1, n) if ok(i)]
+    hmax = sorted(hs)[int(len(hs) * 0.8)]
+    letras = [i for i in range(1, n) if ok(i) and st[i][3] > 0.6 * hmax]
     cols0 = min(st[i][0] for i in letras); cols1 = max(st[i][0] + st[i][2] for i in letras)
     rows0 = min(st[i][1] for i in letras); rows1 = max(st[i][1] + st[i][3] for i in letras)
     alturas = sorted(st[i][3] for i in letras)
@@ -208,6 +209,7 @@ def trocar_texto_arco(im, cx, cy, R, texto, nome_fonte='Montserrat_700Bold', S=3
     nw = f.getlength(texto)
     c_ini = int(min(cols0, (cols0 + cols1) / 2 - nw / 2) - 8)
     c_fim = int(max(cols1, (cols0 + cols1) / 2 + nw / 2) + 8)
+    c_ini, c_fim = max(c_ini, 0), min(c_fim, na - 1)
     if debug:
         Image.fromarray(np.vstack([u, ue])).save(debug)
     # enrola de volta só na faixa alterada

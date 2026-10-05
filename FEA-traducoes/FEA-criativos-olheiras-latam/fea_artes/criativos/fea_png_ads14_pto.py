@@ -14,13 +14,13 @@ CTA_ES = [[('Toque en ', REG, 'W'), ('MÁS INFORMACIÓN', BOLD, 'Y')], [('y aseg
 
 FEED = dict(
     origem='trabalho/pto14-feed.png', saida='FEA-Ads 14 - PTO-LATAM - Feed.png',
-    x_col=63, x_dir=645, x_lim=658,
+    x_col=63, x_dir=645, x_lim=692, livro_esq=((696, 220), (668, 886)),
     cor_branco_tit=(60, 414, 610, 452), cor_amarelo=(60, 265, 510, 296), cor_corpo=(60, 508, 610, 534),
     logo=dict(tops=[116, 145, 175], xs=[(66, 327), (68, 325), (98, 297)], sublinhado=212),
     fluxo=[
         dict(tipo='titulo', fonte=BOLD, track=TRACK_TIT, es=TIT_ES,
              pt=['Tem medo de realizar o', 'procedimento mais desafiador', 'da harmonização facial: o', 'preenchimento de olheiras?'],
-             tops=[265, 315, 363, 414], xs=[(62, 505), (64, 639), (63, 548), (64, 605)]),
+             tops=[265, 315, 363, 414], xs=[(62, 505), (64, 664), (63, 548), (64, 605)]),
         dict(tipo='corpo', fonte=REG, track=TRACK_CORPO, es=CORPO_ES,
              pt=['Este guia foi criado justamente para evitar', 'isso: Domine o procedimento mais',
                  'desafiador da harmonização facial — com a', 'metodologia ARTI — e alcance resultados', 'naturais, seguros e duradouros.'],
@@ -33,7 +33,7 @@ FEED = dict(
 
 STORY = dict(
     origem='trabalho/pto14-story.png', saida='FEA-Ads 14 - PTO-LATAM - Story.png',
-    x_col=86, x_dir=590, x_lim=605,
+    x_col=86, x_dir=590, x_lim=660, livro_esq=((657, 572), (625, 1341)),
     cor_branco_tit=(80, 784, 570, 880), cor_amarelo=(80, 545, 590, 582), cor_corpo=(80, 940, 570, 971),
     logo=dict(tops=[365, 401, 437], xs=[(90, 404), (92, 401), (129, 367)], sublinhado=481),
     fluxo=[

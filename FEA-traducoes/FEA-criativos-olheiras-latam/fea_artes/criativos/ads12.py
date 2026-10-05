@@ -52,8 +52,8 @@ def quebrar(f, texto, n, larg_max):
 
 def corpo(im, pt, tops, larg_ref, larg_max, cx):
     f0 = calibrar(PJS_REG, pt[0], larg_ref)
-    base1 = tops[0] - f0.getbbox(pt[0])[1]
-    baseN = tops[-1] - f0.getbbox(pt[-1])[1]
+    base1 = tops[0] - f0.getbbox(pt[0], anchor='ls')[1]
+    baseN = tops[-1] - f0.getbbox(pt[-1], anchor='ls')[1]
     passo = (baseN - base1) / (len(pt) - 1)
     f = f0
     while True:

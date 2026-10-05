@@ -51,8 +51,8 @@ def ads36(arq, P):
     campo_bco = campo_cor(im, (x_ini_de, l2[0], x1b + 1, l2[1] + 1), CLARO_HL)
     y1 = l1[0] - f.getbbox('Preenchimento')[1]
     y2 = l2[0] - f.getbbox('tridimensional de olheiras.')[1]
-    im = apagar(im, (c1[0], l1[0] - 6, c1[2], l1[1] + 8), CLARO_HL, 4)
-    im = apagar(im, (c2[0], l2[0] - 6, c2[2], l2[1] + 8), CLARO_HL, 4)
+    im = apagar(im, (c1[0], max(c1[1], l1[0] - 6), c1[2], l1[1] + 8), CLARO_HL, 4)
+    im = apagar(im, (c2[0], max(c2[1], l2[0] - 6), c2[2], l2[1] + 8), CLARO_HL, 4)
     t = 'Relleno'
     im = escrever_campo(im, t, f, cx - largura(f, t) / 2 - f.getbbox(t)[0], y1, campo_ouro1)
     t = 'tridimensional de ojeras.'
@@ -98,8 +98,8 @@ def ads36(arq, P):
     cs_ = componentes(im, ct, ESC_CTA)
     letras = [c for c in cs_ if c[4] > 150]
     xs0 = min(c[0] for c in letras)
-    seta_x0 = max(c[0] for c in letras)                     # o '>' é o componente mais à direita
-    letras = [c for c in letras if c[0] < seta_x0]
+    seta_x0 = P['seta']                                     # início do '>' (medido: gaps do texto escuro)
+    letras = [c for c in letras if c[2] < seta_x0]
     xs1 = max(c[2] for c in letras)
     topo = int(np.median([c[1] for c in letras]))
     alt = int(np.median([c[3] - c[1] for c in letras]))
@@ -107,7 +107,7 @@ def ads36(arq, P):
     tr = track_medido(fct, CTA_PT, xs1 - xs0)
     cor_cta = cor_texto(im, (xs0, topo, xs1, topo + alt), ESC_CTA)
     im = apagar(im, (xs0 - 12, topo - 12, xs1 + 12, topo + alt + 22), ESC_CTA_APAGAR, 4)
-    limite = seta_x0 - 40                                    # não encostar no círculo da seta
+    limite = seta_x0 - 53                                    # não encostar no círculo da seta
     cxc = (xs0 + xs1) / 2
     while True:
         wl = largura_track(fct, CTA_ES, tr)
@@ -128,9 +128,9 @@ def ads36(arq, P):
     return im
 
 
-FEED = dict(hl1=(250, 380, 1600, 530), hl2=(200, 528, 1950, 660), sub=(250, 660, 1950, 830),
+FEED = dict(seta=1583, hl1=(250, 390, 1560, 530), hl2=(200, 528, 1950, 660), sub=(250, 660, 1950, 830),
             chk=(1320, 930, 2150, 1740), cta=(430, 2140, 1740, 2300), selo=(1690, 370, 1810, 405))
-STORY = dict(hl1=(150, 520, 1600, 680), hl2=(150, 680, 1950, 810), sub=(150, 840, 2000, 1030),
+STORY = dict(seta=1583, hl1=(150, 520, 1575, 680), hl2=(150, 680, 1950, 810), sub=(150, 840, 2000, 1030),
              chk=(1380, 1080, 2150, 2020), cta=(430, 2680, 1740, 2840), selo=(1690, 508, 1810, 543))
 
 if __name__ == '__main__':

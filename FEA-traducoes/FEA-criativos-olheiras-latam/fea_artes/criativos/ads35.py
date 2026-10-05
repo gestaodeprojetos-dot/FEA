@@ -2,7 +2,7 @@
 """FEA · Ads 35 (Feed e Story, png) · Ebook Olheiras LATAM.
 
 Troca só a copy. Fontes do original: Noto Serif Medium (título), Noto Serif SemiBold (rótulos
-dos cards), Open Sans Regular/Italic (bullets e linha do protocolo), Noto Sans ExtraBold com
+dos cards), Open Sans Medium (bullets), Open Sans Regular/Italic (linha do protocolo), Noto Sans ExtraBold com
 tracking (CTA). Texto apagado por interpolação de fundo (sem IA generativa).
 
 O título ES ("3 errores que hacen que su relleno de ojeras se vea artificial") não cabe em
@@ -19,6 +19,7 @@ SERIF = 'NotoSerif_500Medium'
 SERIF_CARD = 'NotoSerif_600SemiBold'
 SANS = 'OpenSans_400Regular'
 SANS_IT = 'OpenSans_400Regular_Italic'
+BUL = 'OpenSans_500Medium'
 CTA = 'NotoSans_800ExtraBold'
 CTA_TR = 0.03
 TXT = lambda r, g, b: (r > 120) & (g > 100)
@@ -43,13 +44,16 @@ def cards(im, dy):
     # card 1: 'Produto muito' -> 'Producto muy' (2a linha 'hidrofílico' igual em ES)
     # card 2: 'Plano superficial' igual em ES
     # card 3: 'Excesso de' / 'projeção' -> 'Exceso de' / 'proyección'
+    # cor por linha tirada do card do meio (intacto): 1a linha creme, 2a linha dourada
+    cor_l = {1009: cor_run(im, (990, 1009 + dy, 1170, 1056 + dy), TXT),
+             1079: cor_run(im, (920, 1079 + dy, 1240, 1140 + dy), TXT)}
     out = []
     for pt, es, top, x0, x1 in [('Produto muito', 'Producto muy', 1009, 260, 672),
                                 ('Excesso de', 'Exceso de', 1009, 1539, 1842),
                                 ('projeção', 'proyección', 1079, 1567, 1812)]:
+        cor = cor_l[top]
         top += dy
         caixa = (x0 - 20, top - 6, x1 + 20, top + 66)
-        cor = cor_run(im, caixa, TXT)
         tam = calibrar_runs([(pt, SERIF_CARD, cor)], x1 - x0 + 1)
         base = base_de([(pt, SERIF_CARD, cor)], tam, top)
         out.append((caixa, es, cor, tam, base, (x0 + x1) / 2))
@@ -96,10 +100,10 @@ def gerar(fmt):
                              (p['bul3'], 'Excesso de projeção', 'Exceso de proyección')]:
         caixa = (x0 - 8, bt - 8, x1 + 10, bt + 60)
         cor = cor_run(im, caixa, TXT)
-        tb = calibrar_runs([(pt, SANS, cor)], x1 - x0 + 1)
-        base = base_de([(pt, SANS, cor)], tb, bt)
+        tb = calibrar_runs([(pt, BUL, cor)], x1 - x0 + 1)
+        base = base_de([(pt, BUL, cor)], tb, bt)
         im = apagar_col(im, caixa, TXT, 3)
-        bb = desenhar(im, [(es, SANS, cor)], tb, base, x_esq=x0)
+        bb = desenhar(im, [(es, BUL, cor)], tb, base, x_esq=x0)
         assert bb[2] < W - 60, bb
 
     # ---- 'O protocolo tridimensional resolve os 3'

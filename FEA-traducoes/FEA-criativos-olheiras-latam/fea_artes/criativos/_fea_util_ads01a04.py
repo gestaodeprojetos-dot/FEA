@@ -175,7 +175,7 @@ def linhas_texto(im, caixa, cond, frac_min=0.45):
 
 
 def paragrafo(im, caixa, linhas_pt, texto_es, caminho, cond_txt, fundo_ext=None, larg_max=None, n_max=None,
-              linhas_es=None, reducao_max=0.15, cor_caixa=None, cor_txt=None, inset=3, verbose='', fator_larg=1.0):
+              linhas_es=None, reducao_max=0.15, cor_caixa=None, cor_txt=None, inset=3, verbose='', fator_larg=1.0, passo_fator=1.0):
     """Troca o texto de uma caixa chapada (estilo destaque do Instagram).
 
     caixa: (x0, y0, x1, y1) exclusivos da caixa chapada original.
@@ -212,7 +212,7 @@ def paragrafo(im, caixa, linhas_pt, texto_es, caminho, cond_txt, fundo_ext=None,
             fator -= 0.005
         f2 = t.escala(fator)
     s = f2.size / t.size
-    passo2 = passo * s if passo else f2.size * 1.2
+    passo2 = (passo * s if passo else f2.size * 1.2) * passo_fator
     meio = (bases[0] + bases[-1]) / 2
     b1 = meio - passo2 * (len(ls) - 1) / 2
     bn = b1 + passo2 * (len(ls) - 1)

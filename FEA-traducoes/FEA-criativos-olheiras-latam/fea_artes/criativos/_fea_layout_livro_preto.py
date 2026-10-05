@@ -189,7 +189,7 @@ def _calib(linhas_pt, xs, p, track):
     return ajustar([[(l, p, 0, False)] for l in linhas_pt], [b - a for a, b in xs], track)
 
 
-def _caixa_preco(im, caixa, estilo):
+def _caixa_preco(im, caixa, estilo, x_txt_max=None):
     """Repinta o miolo da caixa de preço (cinza chapada ou amarela em degradê horizontal)."""
     a = np.array(im)
     x0, y0, x1, y1 = caixa
@@ -204,7 +204,12 @@ def _caixa_preco(im, caixa, estilo):
         if not len(idx):
             continue
         dir_ = x0 + idx.max() - 3
-        a[y, x0:dir_] = ref[x0:dir_]
+        if x_txt_max is not None:
+            dir_ = min(dir_, x_txt_max)
+        if estilo == 'cinza':
+            a[y, x0:dir_] = alvo
+        else:
+            a[y, x0:dir_] = ref[x0:dir_]
     return Image.fromarray(a)
 
 
@@ -227,9 +232,15 @@ def compor(sp):
     # ---------- apagar texto sobre o fundo preto (fora da caixa de preço)
     cx0, cy0, cx1, cy1 = sp['preco']['caixa']
     m = mascara_caixa(im, (40, sp['logo']['tops'][0] - 8, sp['x_lim'], cy0 - 1), TEXTO_CLARO)
+    (lx0, ly0), (lx1, ly1) = sp['livro_esq']
+    H, W_ = m.shape
+    yy = np.arange(H)[:, None]
+    borda = lx0 + (lx1 - lx0) * (yy - ly0) / (ly1 - ly0) - 8
+    livro = np.arange(W_)[None, :] >= np.where((yy >= ly0 - 10) & (yy <= ly1 + 40), borda, 10 ** 6)
     uy = sp['logo']['sublinhado']
     m[uy - 3:uy + 4, :] = False
     m |= mascara_caixa(im, (40, cy1 + 2, sp['x_lim'], sp['cta']['tops'][-1] + 60), TEXTO_CLARO)
+    m &= ~livro
     cor_tit_b = cor_mediana(im, sp['cor_branco_tit'], BRANCO)
     cor_y = cor_mediana(im, sp['cor_amarelo'], AMARELO)
     cor_logo = cor_mediana(im, (sp['logo']['xs'][1][0], sp['logo']['tops'][1], sp['logo']['xs'][1][1], sp['logo']['tops'][1] + 20), AMARELO)
@@ -287,7 +298,7 @@ def compor(sp):
 
     # ---------- caixa de preço
     pr = sp['preco']
-    im = _caixa_preco(im, pr['caixa'], pr['estilo'])
+    im = _caixa_preco(im, pr['caixa'], pr['estilo'], max(b for _, b in pr['xs']) + 14)
     cor_txt = pr['cor_txt'] if pr['estilo'] == 'amarelo' else cor_corpo
     cor_val = pr['cor_txt'] if pr['estilo'] == 'amarelo' else cor_y
     pt_runs = [[('Por apenas ', REG, 0, 0), ('R$ 97,00', SEMI, 0, 0)]]
@@ -310,7 +321,7 @@ def compor(sp):
     precisa = x + max(largura_runs(r, tam * s, TRACK_CORPO) for r in es) + pr['folga_dir']
     dx = int(np.ceil(min(precisa, pr['x_max_esticar']) - pr['caixa'][2]))
     if dx > 0:
-        im = _esticar(im, pr['caixa'], dx, pr['x_corte'], sp['x_lim'])
+        im = _esticar(im, pr['caixa'], dx, pr['x_corte'], pr['x_max_esticar'] + 15)
     rel['preco'] = {'escala': s, 'caixa_alargada_px': max(dx, 0)}
     for b, r in zip(bases, es):
         desenhar_runs(im, x, b, r, tam * s, TRACK_CORPO)

@@ -14,7 +14,7 @@ CTA_ES = [[('Toque en ', REG, 'W'), ('MÁS INFORMACIÓN', BOLD, 'Y')], [('y aseg
 
 FEED = dict(
     origem='trabalho/pto15-feed.png', saida='FEA-Ads 15 - PTO-LATAM - Feed.png',
-    x_col=74, x_dir=640, x_lim=652,
+    x_col=74, x_dir=640, x_lim=686, livro_esq=((689, 216), (662, 863)),
     cor_branco_tit=(70, 451, 500, 522), cor_amarelo=(70, 229, 510, 265), cor_corpo=(70, 568, 515, 586),
     logo=dict(tops=[104, 131, 157], xs=[(78, 308), (79, 305), (106, 281)], sublinhado=189),
     fluxo=[
@@ -33,7 +33,7 @@ FEED = dict(
 
 STORY = dict(
     origem='trabalho/pto15-story.png', saida='FEA-Ads 15 - PTO-LATAM - Story.png',
-    x_col=86, x_dir=590, x_lim=600,
+    x_col=86, x_dir=590, x_lim=630, livro_esq=((626, 610), (594, 1379)),
     cor_branco_tit=(80, 911, 560, 1011), cor_amarelo=(80, 434, 560, 483), cor_corpo=(80, 1059, 450, 1084),
     logo=dict(tops=[245, 281, 317], xs=[(90, 404), (92, 401), (129, 367)], sublinhado=361),
     fluxo=[

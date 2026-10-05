@@ -16,15 +16,65 @@ PRETO = (11, 11, 11)
 BRILHO = lambda r, g, b: (r > 170) & (g > 140)
 
 
+# Plus Jakarta Sans tem muito respiro lateral em pontuação; no original ("dominar:") ela vem
+# colada à palavra. Aproximação óptica em fração do corpo da fonte.
+KERN_ANTES = {':': -0.10, '.': -0.10, '!': -0.06, ',': -0.06, '”': -0.06}
+KERN_DEPOIS = {'“': -0.06}
+
+
+def _runs(texto):
+    """Divide em trechos [(texto, ajuste_px_em)] aplicando a aproximação de pontuação."""
+    out, cur, aj = [], '', 0.0
+    for i, ch in enumerate(texto):
+        k = KERN_ANTES.get(ch, 0) if i else 0
+        if i and texto[i - 1] in KERN_DEPOIS:
+            k += KERN_DEPOIS[texto[i - 1]]
+        if k:
+            out.append((cur, aj))
+            cur, aj = ch, k
+        else:
+            cur += ch
+    out.append((cur, aj))
+    return out
+
+
+def largura_kern(f, texto):
+    """(esquerda_tinta, direita_tinta) do texto desenhado com a aproximação de pontuação."""
+    x, l0, r0 = 0.0, None, 0
+    for t, aj in _runs(texto):
+        x += aj * f.size
+        if t:
+            l, _, r, _ = f.getbbox(t)
+            l0 = x + l if l0 is None else l0
+            r0 = x + r
+        x += f.getlength(t)
+    return l0 or 0, r0
+
+
 def linha_cores(im, segs, f, cx, y_origem):
     """Escreve uma linha com trechos de cores diferentes, centrada (pela tinta) em cx."""
     d = ImageDraw.Draw(im)
     txt = ''.join(t for t, _ in segs)
-    l, _, r, _ = f.getbbox(txt)
+    l, r = largura_kern(f, txt)
     x = cx - (r - l) / 2 - l
+    pos = 0
     for t, c in segs:
-        d.text((x, y_origem), t, font=f, fill=c)
-        x += f.getlength(t)
+        for run, aj in _runs(txt[pos:pos + len(t)]) if pos == 0 else _runs_contexto(txt, pos, len(t)):
+            x += aj * f.size
+            d.text((x, y_origem), run, font=f, fill=c)
+            x += f.getlength(run)
+        pos += len(t)
+
+
+def _runs_contexto(txt, pos, n):
+    """Como _runs, mas respeitando o caractere anterior ao trecho (pontuação entre cores)."""
+    runs = _runs(txt[pos - 1:pos + n])
+    t0, aj0 = runs[0]
+    runs[0] = (t0[1:], aj0) if t0 else (t0, aj0)
+    if runs[0][0] == '' and len(runs) > 1:
+        # o primeiro char do trecho abriu um novo run com ajuste próprio
+        return runs[1:] if runs[0][1] == 0 else runs
+    return runs
 
 
 def bloco_cores(im, pt, es_segs, tops, f, cx):

@@ -132,16 +132,25 @@ def componentes(im, caixa, cond):
              int(st[i][1] + st[i][3] + caixa[1]), int(st[i][4])) for i in range(1, n)]
 
 
-def tirar_acento_selo(im, caixa, cond, fator=0.3, folga=3):
-    """Apaga o acento agudo de 'CÓPIAS' no selo: o menor componente escuro da caixa
-    (área bem menor que a das letras). Inpainting só nesses pixels."""
-    cs = componentes(im, caixa, cond)
-    grandes = [c for c in cs if c[4] >= 4]
-    med = np.median([c[4] for c in grandes])
-    ac = [c for c in grandes if c[4] < fator * med]
+def tirar_acento_selo(im, caixa, cond, fator=0.3, dil=2):
+    """Apaga o acento agudo de 'CÓPIAS' no selo: o menor componente escuro e mais alto
+    da caixa. Inpainting só nos pixels desse componente (dilatados), sem tocar as letras vizinhas."""
+    x0, y0, x1, y1 = caixa
+    m = mascara(im, caixa, cond).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(m, 8)
+    ids = [i for i in range(1, n) if st[i][4] >= 4]
+    med = np.median([st[i][4] for i in ids])
+    ac = [i for i in ids if st[i][4] < fator * med]
     if not ac:
         raise SystemExit(f'acento do selo não achado em {caixa}')
-    ac = [min(ac, key=lambda c: c[1])]  # o mais alto: acima do O (o resto são pontas da linha de baixo)
-    for c in ac:
-        im = apagar(im, (c[0] - folga, c[1] - folga, c[2] + folga, c[3] + folga), cond, 2, 4)
-    return im, ac
+    i = min(ac, key=lambda k: st[k][1])
+    alvo = (lab == i).astype(np.uint8)
+    alvo = cv2.dilate(alvo, np.ones((2 * dil + 1, 2 * dil + 1), np.uint8))
+    outros = cv2.dilate(((lab > 0) & (lab != i)).astype(np.uint8), np.ones((3, 3), np.uint8))
+    alvo[outros > 0] = 0
+    a = np.array(im)
+    M = np.zeros(a.shape[:2], np.uint8)
+    M[y0:y1, x0:x1] = alvo * 255
+    out = cv2.inpaint(cv2.cvtColor(a, cv2.COLOR_RGB2BGR), M, 3, cv2.INPAINT_TELEA)
+    c = st[i]
+    return Image.fromarray(cv2.cvtColor(out, cv2.COLOR_BGR2RGB)), [(int(c[0] + x0), int(c[1] + y0), int(c[2]), int(c[3]))]
