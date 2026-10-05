@@ -38549,17 +38549,17 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": -0.0,
+   "recuo": 18.0,
    "base_y": 329.7,
-   "base_y_fim": 350.7,
+   "base_y_fim": 392.7,
    "rect": [
-    74.5,
+    56.5,
     316.5,
     396.5,
-    353.7
+    395.7
    ],
    "negrito": [],
-   "pt": "Carbapenêmicos (meropenem 1 g 8/8 horas) em infecções extensas ou multirresistentes."
+   "pt": "Carbapenêmicos (meropenem 1 g 8/8 horas) em infecções extensas ou multirresistentes. Abscessos definidos: •"
   },
   {
    "id": "p149_14",
@@ -38567,56 +38567,20 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 371.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    56.5,
-    358.5,
-    176.2,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "Abscessos definidos: •"
-  },
-  {
-   "id": "p149_15",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
+   "recuo": 18.0,
    "base_y": 392.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    74.5,
-    379.5,
-    345.4,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "Drenagem cirúrgica ou aspiração guiada por imagem."
-  },
-  {
-   "id": "p149_16",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 413.7,
    "base_y_fim": 434.7,
    "rect": [
     56.5,
-    400.5,
-    177.5,
+    379.5,
+    345.4,
     437.7
    ],
    "negrito": [],
-   "pt": "Suspeita de biofilme: •"
+   "pt": "Drenagem cirúrgica ou aspiração guiada por imagem. Suspeita de biofilme: •"
   },
   {
-   "id": "p149_17",
+   "id": "p149_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38634,7 +38598,7 @@
    "pt": "Uso prolongado de antibióticos. •"
   },
   {
-   "id": "p149_18",
+   "id": "p149_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38652,7 +38616,7 @@
    "pt": "Associar hialuronidase para degradação do preenchedor e ruptura da matriz de suporte bacteriana. •"
   },
   {
-   "id": "p149_19",
+   "id": "p149_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38670,7 +38634,7 @@
    "pt": "Suporte hospitalar em pacientes imunossuprimidos ou com sinais sistêmicos."
   },
   {
-   "id": "p149_20",
+   "id": "p149_18",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -38690,7 +38654,7 @@
    "pt": "COMPLICAÇÕES ASSOCIADAS"
   },
   {
-   "id": "p149_21",
+   "id": "p149_19",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38708,7 +38672,7 @@
    "pt": "•"
   },
   {
-   "id": "p149_22",
+   "id": "p149_20",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38726,7 +38690,7 @@
    "pt": "Formação de abscesso bacteriano de difícil resolução."
   },
   {
-   "id": "p149_23",
+   "id": "p149_21",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -39328,39 +39292,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 455.7,
-   "base_y_fim": 455.7,
-   "rect": [
-    74.5,
-    442.5,
-    397.5,
-    458.7
-   ],
-   "negrito": [],
-   "pt": "Encapsulamento por tecido de granulação abscesso organizado."
-  },
-  {
-   "id": "p151_10",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 476.7,
+   "recuo": 18.0,
+   "base_y": 455.7,
    "base_y_fim": 497.7,
    "rect": [
     56.5,
-    463.5,
-    240.7,
+    442.5,
+    397.5,
     500.7
    ],
    "negrito": [],
-   "pt": "Os principais agentes envolvidos: •"
+   "pt": "Encapsulamento por tecido de granulação abscesso organizado. Os principais agentes envolvidos: •"
   },
   {
-   "id": "p151_11",
+   "id": "p151_10",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39378,7 +39324,7 @@
    "pt": "Staphylococcus aureus (inclusive MRSA). •"
   },
   {
-   "id": "p151_12",
+   "id": "p151_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39396,7 +39342,7 @@
    "pt": "Streptococcus pyogenes. •"
   },
   {
-   "id": "p151_13",
+   "id": "p151_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39414,7 +39360,7 @@
    "pt": "Anaeróbios orais (quando há comunicação com mucosa labial/oral). •"
   },
   {
-   "id": "p151_14",
+   "id": "p151_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39432,7 +39378,7 @@
    "pt": "Flora mista em biofilmes aderidos ao preenchedor."
   },
   {
-   "id": "p151_15",
+   "id": "p151_14",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -42537,39 +42483,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 140.7,
-   "base_y_fim": 140.7,
-   "rect": [
-    74.7,
-    127.5,
-    311.9,
-    143.7
-   ],
-   "negrito": [],
-   "pt": "Encapsulamento fibroso em torno do material."
-  },
-  {
-   "id": "p161_06",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 161.7,
+   "recuo": 18.0,
+   "base_y": 140.7,
    "base_y_fim": 182.7,
    "rect": [
     56.7,
-    148.5,
-    187.7,
+    127.5,
+    311.9,
     185.7
    ],
    "negrito": [],
-   "pt": "Pode estar associado a: •"
+   "pt": "Encapsulamento fibroso em torno do material. Pode estar associado a: •"
   },
   {
-   "id": "p161_07",
+   "id": "p161_06",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42587,7 +42515,7 @@
    "pt": "Produtos de baixa pureza ou contaminados. •"
   },
   {
-   "id": "p161_08",
+   "id": "p161_07",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42605,7 +42533,7 @@
    "pt": "Injeções repetidas no mesmo local. •"
   },
   {
-   "id": "p161_09",
+   "id": "p161_08",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42623,7 +42551,7 @@
    "pt": "Presença de biofilme bacteriano latente. •"
   },
   {
-   "id": "p161_10",
+   "id": "p161_09",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42641,7 +42569,7 @@
    "pt": "Predisposição individual a reações de hipersensibilidade."
   },
   {
-   "id": "p161_11",
+   "id": "p161_10",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -42661,7 +42589,7 @@
    "pt": "ÁREAS DE MAIOR RISCO"
   },
   {
-   "id": "p161_12",
+   "id": "p161_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42679,7 +42607,7 @@
    "pt": "•"
   },
   {
-   "id": "p161_13",
+   "id": "p161_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42697,7 +42625,7 @@
    "pt": "Lábios: devido à mobilidade constante e risco de biofilme. •"
   },
   {
-   "id": "p161_14",
+   "id": "p161_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42715,7 +42643,7 @@
    "pt": "Sulco nasolabial e malar: locais de alto volume de preenchimento. •"
   },
   {
-   "id": "p161_15",
+   "id": "p161_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42733,7 +42661,7 @@
    "pt": "Região periorbitária: risco estético relevante por pele fina. •"
   },
   {
-   "id": "p161_16",
+   "id": "p161_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42751,7 +42679,7 @@
    "pt": "Têmporas e mandíbula: áreas de sobreposição de aplicações em retoques."
   },
   {
-   "id": "p161_17",
+   "id": "p161_16",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -42771,7 +42699,7 @@
    "pt": "DIAGNÓSTICO CLÍNICO"
   },
   {
-   "id": "p161_18",
+   "id": "p161_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42789,7 +42717,7 @@
    "pt": "•"
   },
   {
-   "id": "p161_19",
+   "id": "p161_18",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42807,7 +42735,7 @@
    "pt": "Nódulo endurecido e persistente, palpável sob a pele. •"
   },
   {
-   "id": "p161_20",
+   "id": "p161_19",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42825,7 +42753,7 @@
    "pt": "Pouca ou nenhuma dor, podendo ser sensível em fases inflamatórias. •"
   },
   {
-   "id": "p161_21",
+   "id": "p161_20",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42843,7 +42771,7 @@
    "pt": "Eritema ou edema associado em surtos inflamatórios. •"
   },
   {
-   "id": "p161_22",
+   "id": "p161_21",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42861,7 +42789,7 @@
    "pt": "Consistência firme ou elástica, diferente do edema ou abscesso. •"
   },
   {
-   "id": "p161_23",
+   "id": "p161_22",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42879,7 +42807,7 @@
    "pt": "Evolução crônica: semanas a meses após o procedimento."
   },
   {
-   "id": "p161_24",
+   "id": "p161_23",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",

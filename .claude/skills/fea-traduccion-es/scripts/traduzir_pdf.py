@@ -19,6 +19,7 @@ Como funciona:
      a entrelinha e depois o corpo, em passos pequenos, e REGISTRA o ajuste.
      Nada é cortado: transbordo vira erro, não texto perdido.
 """
+from collections import Counter
 import sys, os, json, argparse, re
 import pymupdf
 
@@ -39,6 +40,15 @@ def classifica(fontes, tam, cor):
     if 'Bold' in f and tam >= 10:             return 'titulo_secao'
     if 'Medium' in f and tam <= 9.5:          return 'legenda'
     return 'outro'
+
+ITEM_NUM = re.compile(r'\s*(\d{1,2}[.)]|[a-z][.)])\s*\t')
+
+def _todo_negrito(l):
+    sp = [x for x in l['spans'] if x['text'].strip()]
+    return bool(sp) and all('Bold' in x['font'] for x in sp)
+
+def _rotulo(l):
+    return _todo_negrito(l) and l['texto'].strip().endswith(':')
 
 def agrupa(page):
     """Reagrupa as linhas exportadas linha-a-linha em parágrafos."""
@@ -101,6 +111,34 @@ def agrupa(page):
             limSalto = (atual['entrelinha'] * 1.6 + 2 if atual['entrelinha']
                         else atual['tam'] * 2.0)
             if tipo == 'corpo' and abre_item(l): continua = False
+            # lista numerada com o número NA linha ('2.\t Suspeita...'): o item
+            # novo começa na margem, a continuação vem recuada (deslocamento
+            # pendente). Sem isto a continuação recuada abria parágrafo e o
+            # item seguinte colava nela (págs. 31 e 41 do livro de Intercorrências)
+            if tipo == 'corpo' and ITEM_NUM.match(l['texto']): continua = False
+            elif (tipo == 'corpo' and not abre_item(l)
+                    and ITEM_NUM.match(_txt[-1]['texto'] if _txt else '')
+                    and 5 < l['x0'] - prev['x0'] < 30):
+                continua = True
+            # subtítulo em negrito terminado em ':' dentro de lista ('Dor
+            # moderada persistente:') fica na margem dos itens e era colado no
+            # item anterior (pág. 88). Ele e a linha seguinte abrem parágrafo.
+            if tipo == 'corpo' and l['texto'].strip() not in ('•', '–') and _txt:
+                ant = _txt[-1]
+                # subtítulo = linha inteira em negrito (com ou sem ':'), como
+                # 'Estímulos desencadeantes' (pág. 107)
+                # (só linha curta: autor em negrito numa referência ocupa a linha toda)
+                curta = lambda x: x['bbox'][2] - x['bbox'][0] < 260
+                if _todo_negrito(l) and curta(l) and not _todo_negrito(ant): continua = False
+                elif (_todo_negrito(ant) and curta(ant) and not _todo_negrito(l)
+                        and (len(_txt) < 2 or not _todo_negrito(_txt[-2]))):
+                    continua = False
+                # rótulo sem negrito ('Abscessos definidos:', pág. 149): linha
+                # curta terminada em ':' logo depois de uma frase encerrada
+                if (l['texto'].strip().endswith(':') and curta(l)
+                        and ant['texto'].rstrip().endswith(('.', ')'))): continua = False
+                # subitem com hífen ('- Adrenalina 1:1000', pág. 105)
+                if re.match(r'\s*[-–]\s+\S', l['texto']): continua = False
             if 0 < salto <= limSalto and continua:
                 atual['linhas'].append(l)
                 if atual['entrelinha'] is None and salto > atual['tam'] * 0.5:
@@ -117,6 +155,13 @@ def agrupa(page):
         bruto = re.sub(r'(\w)-\s+(\w)', r'\1\2', bruto)      # desfaz hifenização de fim de linha
         p['texto'] = re.sub(r'\s+', ' ', bruto).strip()
         p['recuo'] = round(p['linhas'][0]['bbox'][0] - min(xs0[1:]) if len(xs0) > 1 else 0, 1)
+        p['pendente'] = bool(ITEM_NUM.match(p['linhas'][0]['texto'])) and p['recuo'] < -3
+        if ITEM_NUM.match(p['linhas'][0]['texto']) and len(p['linhas']) == 1:
+            # item numerado de uma linha: o recuo pendente vem da posição do
+            # texto depois da tabulação, para o espanhol que quebrar em 2 linhas
+            l0 = p['linhas'][0]; sp = [x for x in l0['spans'] if x['text'].strip()]
+            if len(sp) > 1 and 8 < sp[1]['bbox'][0] - l0['bbox'][0] < 30:
+                p['recuo'] = -round(sp[1]['bbox'][0] - l0['bbox'][0], 1); p['pendente'] = True
         p['negrito'] = [s['text'].strip() for l in p['linhas'] for s in l['spans']
                         if 'Bold' in s['font'] and s['text'].strip()]
         # linha de base da primeira linha: é ela que a tradução tem de repetir
@@ -166,9 +211,14 @@ def css_de(p, reg, familia=None):
              % (familia, reg[irmaoBold])]
     return '\n'.join(faces) + """
 p {font-family: %s; font-size: %.2fpx; line-height: %.4f; text-align: %s;
-   margin: 0; text-indent: %.1fpx; color: rgb(%d,%d,%d);}
+   margin: 0 0 0 %.1fpx; text-indent: %.1fpx; color: rgb(%d,%d,%d);}
 b {font-weight: bold;}
-""" % (familia, tam, el/tam, align, max(p['recuo'], 0), r*255, g*255, b*255)
+""" % (familia, tam, el/tam, align,
+       # recuo negativo = deslocamento pendente (lista numerada): a 1ª linha
+       # fica na margem e as seguintes alinham depois do número
+       max(-p['recuo'], 0) if p.get('pendente') else 0,
+       -max(-p['recuo'], 0) if p.get('pendente') else max(p['recuo'], 0),
+       r*255, g*255, b*255)
 
 def html_de(es, negritos):
     """Reaplica o negrito do original. Se o mapa já traz <b>, respeita o mapa."""
@@ -180,7 +230,27 @@ def html_de(es, negritos):
     return '<p>%s</p>' % txt
 
 FLUXO = ('corpo', 'titulo_secao', 'titulo_capitulo', 'titulo_display')
-MARGEM_INF = 12.0      # respiro mínimo até o pé da página
+MARGEM_INF = 12.0      # respiro mínimo até o pé da página (fallback)
+# Mancha de texto do ORIGINAL (área onde o designer pôs texto), medida em
+# main(). O espanhol nunca pode sair dela: antes os itens de uma linha cresciam
+# até a borda da folha e o texto descia até o fólio (erro da pág. 23 e de dezenas
+# de listas no livro de Intercorrências).
+MANCHA = {'x1': None, 'y1': None}
+
+def mede_mancha(doc):
+    xs, ys = [], []
+    for page in doc:
+        h = page.rect.height
+        for b in page.get_text('dict')['blocks']:
+            for l in b.get('lines', []):
+                t = ''.join(s['text'] for s in l['spans']).strip()
+                if not t or t.isdigit(): continue
+                if l['bbox'][1] < 0.07 * h or l['bbox'][1] > 0.94 * h: continue   # cabeçalho/fólio
+                xs.append(l['bbox'][2]); ys.append(l['bbox'][3])
+    if not xs: return
+    xs.sort(); ys.sort()
+    MANCHA['x1'] = xs[int(len(xs) * 0.999)] + 0.5
+    MANCHA['y1'] = ys[int(len(ys) * 0.995)] + 6.0   # capas e contracapas ficam fora do percentil
 
 def mede(page, rect, html, css, arch, baixo=1):
     """Compõe num rascunho e devolve (1ª linha de base, última, transbordou, escala)."""
@@ -227,8 +297,13 @@ def cresce_dir(p):
     """Quem pode ganhar largura: títulos, rótulos e parágrafos de uma só linha
     (nesses a caixa original abraça o texto português, e o espanhol é maior).
     Parágrafo justificado de várias linhas mantém a largura da coluna."""
-    if p['tipo'] == 'corpo_caixa': return False
-    return p['tipo'] != 'corpo' or len(p['linhas']) == 1
+    # Texto de quadro (cabecalho/legenda) com várias linhas é justificado na
+    # medida do quadro: deixar crescer para a direita fazia o espanhol vazar
+    # a borda do quadro e invadir a margem (pág. 23 do livro de Intercorrências).
+    # Pedaço de contorno (texto ao lado de QR/imagem) tem a medida da arte.
+    if p['tipo'] == 'corpo_caixa' or p.get('ancora_fixa'): return False
+    if len(p['linhas']) == 1: return True
+    return p['tipo'] not in ('corpo', 'cabecalho', 'legenda')
 
 def obstaculos(page, paras):
     """Tudo que a tradução não pode invadir: parágrafos, imagens e os fios
@@ -246,7 +321,7 @@ def obstaculos(page, paras):
 
 def limite_abaixo(page, base, paras, ignora=()):
     """Até onde este bloco pode crescer sem invadir o que vem abaixo dele."""
-    lim = page.rect.y1 - MARGEM_INF
+    lim = MANCHA['y1'] or page.rect.y1 - MARGEM_INF
     ids = {x['id'] for x in ignora}
     for o in paras:
         if o['id'] == base['id'] or o['id'] in ids: continue
@@ -259,7 +334,7 @@ def limite_abaixo(page, base, paras, ignora=()):
 def limite_direita(page, base, obs, ignora=()):
     """Títulos e rótulos não são justificados: em espanhol eles crescem para a
     direita até o próximo obstáculo, em vez de encolher de corpo."""
-    lim = page.rect.x1 - MARGEM_INF
+    lim = MANCHA['x1'] or page.rect.x1 - MARGEM_INF
     ids = {x['id'] for x in ignora}
     for o in obs:
         if o['id'] == base['id'] or o['id'] in ids: continue
@@ -267,11 +342,27 @@ def limite_direita(page, base, obs, ignora=()):
         alt = min(base['rect'].height, o['rect'].height) or 1
         if ov / alt > 0.3 and o['rect'].x0 > base['rect'].x1 - 1:
             lim = min(lim, o['rect'].x0 - 3)
+    # dentro de um quadro (fundo preenchido), o texto não passa da borda: a
+    # margem direita interna repete a margem esquerda interna
+    for r in quadros(page):
+        if r.contains(base['rect'].tl + (1, 1)) and r.x1 > base['rect'].x0:
+            lim = min(lim, r.x1 - max(base['rect'].x0 - r.x0, 4))
     return max(lim, base['rect'].x1 + 2)
+
+_QUADROS = {}
+def quadros(page):
+    """Retângulos de fundo preenchido grandes o bastante para serem quadros
+    (SAIBA MAIS, NA PRÁTICA, tabelas com fundo)."""
+    k = (id(page.parent), page.number)
+    if k not in _QUADROS:
+        _QUADROS[k] = [dr['rect'] for dr in page.get_drawings()
+                       if dr.get('fill') is not None and dr['rect'].width > 80
+                       and dr['rect'].height > 30 and dr['rect'].width < page.rect.width - 20]
+    return _QUADROS[k]
 
 def limite_da_coluna(page, col, obs):
     """Até onde a coluna pode crescer sem invadir nada."""
-    lim = page.rect.y1 - MARGEM_INF
+    lim = MANCHA['y1'] or page.rect.y1 - MARGEM_INF
     base = col[-1]
     ids = {p['id'] for p in col}
     for o in obs:
@@ -307,7 +398,10 @@ def compoe_coluna(page, col, mapa, arch, reg, lim, limDir, redEl, redPt, tol=Fal
                 saida.append((p, rect, html, css, 0.0)); continue
 
         dy = alvo - b0
-        fundo = max(lim, p['rect'].y1 + max(dy, 0) + 3)
+        # o fundo é o limite da mancha (ou o pé do próprio original, se ele já
+        # estava mais baixo). Somar o deslocamento dy deixava o último item
+        # descer além da mancha até o fólio.
+        fundo = max(lim, p['rect'].y1 + 3)
         rect = pymupdf.Rect(rect.x0, rect.y0 + dy, rect.x1, fundo)
         baixo = 1 if esc >= 0.999 else 0
         b0, b1, estourou, esc = mede(page, rect, html, css, arch, baixo=baixo)
@@ -330,7 +424,12 @@ def preserva(page, paras, mapa, red, reg, dirFontes, log):
     guarda = []
     for p in paras:
         if p['id'] in mapa: continue
+        # marcador de lista já foi entregue ao item e é redesenhado com ele;
+        # guardá-lo aqui o redesenhava na posição do português, e o item ficava
+        # com dois marcadores deslocados ('⁝', págs. 89, 109, 139, 154...)
+        if p['tipo'] == 'marcador': continue
         for l in p['linhas']:
+            if _so_marcador(l): continue
             r = pymupdf.Rect(l['bbox'])
             if not any((r & q).is_valid and (r & q).get_area() > 0 for q in red): continue
             for s in l['spans']:
@@ -487,7 +586,12 @@ def preserva(page, paras, mapa, red, reg, dirFontes, log):
     guarda = []
     for p in paras:
         if p['id'] in mapa: continue
+        # marcador de lista já foi entregue ao item e é redesenhado com ele;
+        # guardá-lo aqui o redesenhava na posição do português, e o item ficava
+        # com dois marcadores deslocados ('⁝', págs. 89, 109, 139, 154...)
+        if p['tipo'] == 'marcador': continue
         for l in p['linhas']:
+            if _so_marcador(l): continue
             r = pymupdf.Rect(l['bbox'])
             if not any((r & q).is_valid and (r & q).get_area() > 0 for q in red): continue
             for s in l['spans']:
@@ -668,8 +772,12 @@ def funde_linhas_de_coluna(paras, mapa):
     coluna e o agrupamento devolve cada linha como parágrafo próprio. Traduzido
     linha a linha, o espanhol transbordava ou encolhia. Aqui as linhas de uma
     mesma coluna viram um parágrafo só, com o espanhol emendado."""
-    cand = [p for p in paras if p['tipo'] in ('cabecalho', 'legenda') and len(p['linhas']) == 1
-            and p['id'] in mapa and mapa[p['id']]]
+    # aceita parágrafos de mais de uma linha desde que todas as linhas estejam
+    # na mesma margem: com as colunas intercaladas, o agrupamento às vezes junta
+    # duas linhas seguidas de uma coluna, e o quadro quebrava ao meio (pág. 29)
+    cand = [p for p in paras if p['tipo'] in ('cabecalho', 'legenda') and p['id'] in mapa
+            and mapa[p['id']] and max(l['bbox'][0] for l in p['linhas'])
+            - min(l['bbox'][0] for l in p['linhas']) < 2.5]
     cand.sort(key=lambda p: (round(p['rect'].x0), p['rect'].y0))
     grupos, atual = [], []
     for p in cand:
@@ -683,8 +791,16 @@ def funde_linhas_de_coluna(paras, mapa):
         atual = [p]
     if atual: grupos.append(atual)
     fora = set()
+    def faixa(g): return (g[0]['rect'].y0, g[-1]['rect'].y1, g[0]['rect'].x0)
+    def paralelo(g):
+        # só é quadro de duas colunas se houver OUTRA coluna de linhas soltas
+        # na mesma faixa de altura; legenda ao lado de foto não tem
+        y0, y1, x0 = faixa(g)
+        return any(h is not g and abs(faixa(h)[2] - x0) > 50
+                   and min(y1, faixa(h)[1]) - max(y0, faixa(h)[0]) > 8 for h in grupos)
     for g in grupos:
-        if len(g) < 3: continue
+        if len(g) < 2 or sum(len(q['linhas']) for q in g) < 3: continue
+        if any(len(q['linhas']) > 1 for q in g) and not paralelo(g): continue
         cab = g[0]
         txt = ''
         for q in g:
@@ -702,6 +818,33 @@ def funde_linhas_de_coluna(paras, mapa):
         mapa[cab['id']] = txt
         for q in g[1:]:
             fora.add(q['id']); mapa.pop(q['id'], None)
+    return [p for p in paras if p['id'] not in fora]
+
+def funde_fragmentos(paras, mapa):
+    """Linha justificada com vão largo sai do PDF em dois pedaços; o pedaço da
+    direita ('conforme') abre um parágrafo que começa DENTRO da altura do
+    anterior. Desenhados em separado, os dois se sobrepunham no espanhol
+    (legendas das Figuras 17 e 18). O fragmento volta para o parágrafo de cima."""
+    fora = set()
+    for i, a in enumerate(paras):
+        if a['id'] in fora or a['tipo'] not in ('cabecalho', 'legenda', 'corpo'): continue
+        for b in paras[i + 1:]:
+            if b['id'] in fora or b['tipo'] != a['tipo'] or abs(b['tam'] - a['tam']) > 0.6: continue
+            l0 = b['linhas'][0]; ul = a['linhas'][-1]
+            meio_de_linha = (a['rect'].y0 + 1 < l0['y0'] < a['rect'].y1 - 1
+                             and l0['bbox'][0] > a['rect'].x0 + 20 and l0['bbox'][2] <= a['rect'].x1 + 3)
+            # legenda partida porque outra coisa (rótulos 'dia 17'...) entrou no
+            # meio da leitura: mesma margem, começa exatamente uma entrelinha abaixo
+            emenda = (a['tipo'] in ('cabecalho', 'legenda') and b.get('marcador') is None
+                      and abs(l0['bbox'][0] - ul['bbox'][0]) < 1.5
+                      and abs((l0['y0'] - ul['y0']) - a['entrelinha']) < 1.5)
+            if not (meio_de_linha or emenda): continue
+            if not (mapa.get(a['id']) and mapa.get(b['id'])): continue
+            a['linhas'] = sorted(a['linhas'] + b['linhas'], key=lambda l: (round(l['y0'], 1), l['x0']))
+            a['negrito'] = a['negrito'] + b['negrito']
+            _recalcula(a); a['recuo'] = 0
+            mapa[a['id']] = mapa[a['id']].rstrip() + ' ' + mapa.pop(b['id']).lstrip()
+            fora.add(b['id'])
     return [p for p in paras if p['id'] not in fora]
 
 _HIF = None
@@ -764,8 +907,15 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
             cs = [(l['bbox'][0] + l['bbox'][2]) / 2 for l in p['linhas']]
             if all(abs(c - meio) < 4 for c in cs):
                 p['centro'] = (cx0, cx1)
+    # linha que o InDesign compôs em Arial Unicode só por causa de um símbolo
+    # (a seta '→' da pág. 102) é texto corrido: volta à fonte e ao tipo do corpo
+    fc = Counter(p['fonte'] for p in paras if p['tipo'] == 'corpo')
+    for p in paras:
+        if p['tipo'] == 'outro' and p.get('fonte', '').startswith('ArialUnicode') and p['tam'] >= 10 and fc:
+            p['tipo'] = 'corpo'; p['fonte'] = fc.most_common(1)[0][0]
     paras = isola_marcadores(paras, mapa)
     paras = funde_linhas_de_coluna(paras, mapa)
+    paras = funde_fragmentos(paras, mapa)
     # item com mais caracteres em negrito que em regular: a fonte dominante sai
     # Bold e o trecho SEM <b> também ficaria negrito. Se o texto marca o negrito
     # com <b>, a base volta para a irmã regular.
@@ -783,6 +933,10 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
     red = []
     for p in paras:
         if p['tipo'] == 'numero_pagina': continue
+        if p['tipo'] == 'marcador':
+            for l in p['linhas']:
+                r = pymupdf.Rect(l['bbox']); red.append(r); page.add_redact_annot(r)
+            continue
         if p['id'] not in mapa: continue
         for l in p['linhas']:
             r = pymupdf.Rect(l['bbox'])
@@ -872,7 +1026,9 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
             for redPt in (0, 0.02, 0.04, 0.06, MAX_RED_PT):
                 q = dict(p); q['entrelinha'] = p['entrelinha']*(1-redEl); q['tam'] = p['tam']*(1-redPt)
                 css = css_de(q, reg)
-                limP = limite_abaixo(page, p, paras)
+                # obs = parágrafos + imagens + fios: a legenda ao lado da foto não
+                # pode atravessar o fio que fecha a figura (págs. 62 e 73)
+                limP = limite_abaixo(page, p, obs)
                 limD = (limite_direita(page, p, obs) if cresce_dir(p)
                         else p['rect'].x1 + 2)
                 rect = pymupdf.Rect(p['rect'].x0 - 1, p['rect'].y0 - 2, limD, limP)
@@ -885,22 +1041,25 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
                 if p['tipo'] == 'titulo_display':
                     rect = pymupdf.Rect(rect.x0, rect.y0, rect.x1,
                                         max(rect.y1, p['rect'].y1 + 4))
-                sobra, real = page.insert_htmlbox(rect, html, css=css, archive=arch,
-                                                  scale_low=1)
-                if sobra >= 0:
+                # mede num rascunho ANTES de desenhar. A versão anterior
+                # desenhava, e quando não cabia apagava o retângulo com uma
+                # redação, que levava junto o texto do vizinho de cima (a legenda
+                # da Figura 18 perdeu uma linha inteira assim)
+                _b0, _b1, estourou, _e = mede(page, rect, html, css, arch, baixo=1)
+                if _b0 is not None and not estourou:
+                    page.insert_htmlbox(rect, html, css=css, archive=arch, scale_low=1)
                     poe_marcador(page, p, rect, css, arch)
                     if redEl or redPt:
                         log.append(dict(pagina=page.number+1, id=p['id'],
                                         ajuste='entrelinha -%d%% corpo -%d%%' % (redEl*100, redPt*100)))
                     ok = True; break
-                page.add_redact_annot(rect); page.apply_redactions(
-                    images=pymupdf.PDF_REDACT_IMAGE_NONE,
-                    graphics=pymupdf.PDF_REDACT_LINE_ART_NONE)
             if ok: break
         if not ok:
+            # último recurso: corpo reduzido pelo htmlbox na área livre até o
+            # vizinho de baixo (nunca só a caixa do português, que corta texto)
             css = css_de(p, reg)
             rect = pymupdf.Rect(p['rect'].x0 - 1, p['rect'].y0 - 2,
-                                p['rect'].x1 + 2, p['rect'].y1 + 2)
+                                p['rect'].x1 + 2, max(limite_abaixo(page, p, obs), p['rect'].y1 + 2))
             _, esc = page.insert_htmlbox(rect, html, css=css, archive=arch, scale_low=0)
             log.append(dict(pagina=page.number+1, id=p['id'],
                             erro='reduzido pelo htmlbox para %.0f%% do corpo' % (esc*100)))
@@ -932,6 +1091,7 @@ def main():
         print(json.dumps(out, ensure_ascii=False, indent=1)); return
 
     mapa = json.load(open(a.mapa, encoding='utf-8'))
+    mede_mancha(doc)
     arch, reg = prepara_fontes(a.fontes)
     log = []
     for n in alvo:

@@ -13257,41 +13257,23 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 497.7,
-   "base_y_fim": 497.7,
-   "rect": [
-    75.0,
-    484.5,
-    393.1,
-    500.7
-   ],
-   "negrito": [],
-   "pt": "Pode gerar perda visual parcial, escotomas ou visão em “cortina”."
-  },
-  {
-   "id": "p65_10",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 518.7,
+   "recuo": 18.0,
+   "base_y": 497.7,
    "base_y_fim": 539.7,
    "rect": [
     57.0,
-    505.6,
-    278.4,
+    484.5,
+    393.1,
     542.7
    ],
    "negrito": [
     "Neuropatia óptica isquêmica anterior (NOIA)"
    ],
-   "pt": "Neuropatia óptica isquêmica anterior (NOIA) •"
+   "pt": "Pode gerar perda visual parcial, escotomas ou visão em “cortina”. Neuropatia óptica isquêmica anterior (NOIA) •"
   },
   {
-   "id": "p65_11",
+   "id": "p65_10",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -13309,7 +13291,7 @@
    "pt": "Geralmente associada a fatores vasculares (hipertensão, diabetes, arterite de células gigantes). •"
   },
   {
-   "id": "p65_12",
+   "id": "p65_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -13327,7 +13309,7 @@
    "pt": "Instalação não é tão imediata quanto após injeção."
   },
   {
-   "id": "p65_13",
+   "id": "p65_12",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -24133,39 +24115,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
+   "entrelinha": 21.0,
+   "recuo": 4.0,
    "base_y": 560.7,
-   "base_y_fim": 560.7,
-   "rect": [
-    74.7,
-    547.5,
-    368.8,
-    563.7
-   ],
-   "negrito": [],
-   "pt": "Adrenalina intramuscular (músculo vasto lateral da coxa):"
-  },
-  {
-   "id": "p103_19",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 581.7,
    "base_y_fim": 581.7,
    "rect": [
     70.7,
-    568.5,
-    324.4,
+    547.5,
+    368.8,
     584.7
    ],
    "negrito": [],
-   "pt": "- Dose: 0,3–0,5 mg (0,3–0,5 mL da solução 1:1000)."
+   "pt": "Adrenalina intramuscular (músculo vasto lateral da coxa): - Dose: 0,3–0,5 mg (0,3–0,5 mL da solução 1:1000)."
   },
   {
-   "id": "p103_20",
+   "id": "p103_19",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -24727,111 +24691,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 350.7,
-   "base_y_fim": 350.7,
-   "rect": [
-    74.7,
-    337.5,
-    335.3,
-    353.7
-   ],
-   "negrito": [],
-   "pt": "Manter kit de emergência completo no consultório:"
-  },
-  {
-   "id": "p105_13",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 371.7,
-   "base_y_fim": 371.7,
-   "rect": [
-    70.7,
-    358.5,
-    315.7,
-    374.7
-   ],
-   "negrito": [],
-   "pt": "- Adrenalina 1:1000 (ampolas ou auto-injetores)."
-  },
-  {
-   "id": "p105_14",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 392.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    70.7,
-    379.5,
-    207.1,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "- Anti-histamínicos EV/VO."
-  },
-  {
-   "id": "p105_15",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 413.7,
-   "base_y_fim": 413.7,
-   "rect": [
-    70.7,
-    400.5,
-    173.7,
-    416.7
-   ],
-   "negrito": [],
-   "pt": "- Corticoides EV/VO."
-  },
-  {
-   "id": "p105_16",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 434.7,
-   "base_y_fim": 434.7,
-   "rect": [
-    70.7,
-    421.5,
-    216.9,
-    437.7
-   ],
-   "negrito": [],
-   "pt": "- Material de oxigenoterapia."
-  },
-  {
-   "id": "p105_17",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 455.7,
+   "recuo": 18.0,
+   "base_y": 350.7,
    "base_y_fim": 476.7,
    "rect": [
     56.7,
-    442.5,
-    263.3,
+    337.5,
+    335.3,
     479.7
    ],
    "negrito": [],
-   "pt": "- Material para intubação orotraqueal. •"
+   "pt": "Manter kit de emergência completo no consultório: - Adrenalina 1:1000 (ampolas ou auto-injetores). - Anti-histamínicos EV/VO. - Corticoides EV/VO. - Material de oxigenoterapia. - Material para intubação orotraqueal. •"
   },
   {
-   "id": "p105_18",
+   "id": "p105_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -24849,7 +24723,7 @@
    "pt": "Treinar a equipe periodicamente para reconhecer e agir diante da anafilaxia."
   },
   {
-   "id": "p105_19",
+   "id": "p105_14",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -24869,7 +24743,7 @@
    "pt": "PROGNÓSTICO"
   },
   {
-   "id": "p105_20",
+   "id": "p105_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -24887,7 +24761,7 @@
    "pt": "•"
   },
   {
-   "id": "p105_21",
+   "id": "p105_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -24905,7 +24779,7 @@
    "pt": "Tratamento imediato com adrenalina: alta taxa de reversão e sobrevida."
   },
   {
-   "id": "p105_22",
+   "id": "p105_17",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -25257,41 +25131,23 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 371.7,
-   "base_y_fim": 371.7,
-   "rect": [
-    75.0,
-    358.5,
-    367.7,
-    374.7
-   ],
-   "negrito": [],
-   "pt": "Hipoperfusão cerebral transitória síncope ou pré-síncope."
-  },
-  {
-   "id": "p107_09",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 392.7,
+   "recuo": 18.0,
+   "base_y": 371.7,
    "base_y_fim": 413.7,
    "rect": [
     57.0,
-    379.6,
-    208.9,
+    358.5,
+    367.7,
     416.7
    ],
    "negrito": [
     "Estímulos desencadeantes"
    ],
-   "pt": "Estímulos desencadeantes •"
+   "pt": "Hipoperfusão cerebral transitória síncope ou pré-síncope. Estímulos desencadeantes •"
   },
   {
-   "id": "p107_10",
+   "id": "p107_09",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -25309,7 +25165,7 @@
    "pt": "Estresse emocional, medo, ansiedade. •"
   },
   {
-   "id": "p107_11",
+   "id": "p107_10",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -25327,45 +25183,27 @@
    "pt": "Estímulo doloroso intenso (ex.: punção, infiltração). •"
   },
   {
-   "id": "p107_12",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 455.7,
-   "base_y_fim": 455.7,
-   "rect": [
-    75.0,
-    442.5,
-    322.3,
-    458.7
-   ],
-   "negrito": [],
-   "pt": "Hipotensão ortostática em pacientes suscetíveis."
-  },
-  {
-   "id": "p107_13",
+   "id": "p107_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 476.7,
+   "recuo": 18.0,
+   "base_y": 455.7,
    "base_y_fim": 497.7,
    "rect": [
     57.0,
-    463.6,
-    258.6,
+    442.5,
+    322.3,
     500.7
    ],
    "negrito": [
     "Áreas/Procedimentos de maior risco"
    ],
-   "pt": "Áreas/Procedimentos de maior risco •"
+   "pt": "Hipotensão ortostática em pacientes suscetíveis. Áreas/Procedimentos de maior risco •"
   },
   {
-   "id": "p107_14",
+   "id": "p107_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -25383,7 +25221,7 @@
    "pt": "Procedimentos em regiões sensíveis (nariz, lábios, região periocular). •"
   },
   {
-   "id": "p107_15",
+   "id": "p107_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -25401,7 +25239,7 @@
    "pt": "Pacientes ansiosos, fóbicos de agulha ou sangue. •"
   },
   {
-   "id": "p107_16",
+   "id": "p107_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -25419,7 +25257,7 @@
    "pt": "Procedimentos realizados em ambiente quente, abafado ou com jejum prolongado."
   },
   {
-   "id": "p107_17",
+   "id": "p107_15",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -26693,40 +26531,22 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
+   "recuo": 18.0,
    "base_y": 203.7,
-   "base_y_fim": 224.7,
-   "rect": [
-    74.7,
-    190.5,
-    396.8,
-    227.7
-   ],
-   "negrito": [],
-   "pt": "Histórico de epilepsia não controlada, desencadeada pelo estresse ou dor do procedimento."
-  },
-  {
-   "id": "p111_08",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 245.7,
    "base_y_fim": 266.7,
    "rect": [
     56.7,
-    232.6,
-    244.4,
+    190.5,
+    396.8,
     269.7
    ],
    "negrito": [
     "Áreas/Procedimentos de maior risco"
    ],
-   "pt": "Áreas/Procedimentos de maior risco •"
+   "pt": "Histórico de epilepsia não controlada, desencadeada pelo estresse ou dor do procedimento. Áreas/Procedimentos de maior risco •"
   },
   {
-   "id": "p111_09",
+   "id": "p111_08",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26744,7 +26564,7 @@
    "pt": "Procedimentos dolorosos ou prolongados, sem analgesia adequada. •"
   },
   {
-   "id": "p111_10",
+   "id": "p111_09",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26762,7 +26582,7 @@
    "pt": "Pacientes ansiosos, com baixa tolerância à dor ou histórico de crises. •"
   },
   {
-   "id": "p111_11",
+   "id": "p111_10",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26780,7 +26600,7 @@
    "pt": "Bloqueios anestésicos em grandes volumes, especialmente em áreas ricas em vascularização (infraorbitário, mentoniano)."
   },
   {
-   "id": "p111_12",
+   "id": "p111_11",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -26800,7 +26620,7 @@
    "pt": "DIAGNÓSTICO CLÍNICO"
   },
   {
-   "id": "p111_13",
+   "id": "p111_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26820,7 +26640,7 @@
    "pt": "Manifesta-se de forma aguda, podendo incluir: •"
   },
   {
-   "id": "p111_14",
+   "id": "p111_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26838,7 +26658,7 @@
    "pt": "Fase tônica: rigidez muscular generalizada, apneia inicial, olhar fixo. •"
   },
   {
-   "id": "p111_15",
+   "id": "p111_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26856,7 +26676,7 @@
    "pt": "Fase clônica: movimentos repetitivos de contração-relaxamento, mordedura de língua, salivação excessiva. •"
   },
   {
-   "id": "p111_16",
+   "id": "p111_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26874,7 +26694,7 @@
    "pt": "Alteração da consciência: perda completa ou parcial. •"
   },
   {
-   "id": "p111_17",
+   "id": "p111_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26892,7 +26712,7 @@
    "pt": "Pós-ictal: confusão mental, sonolência, cefaleia, amnésia do episódio. •"
   },
   {
-   "id": "p111_18",
+   "id": "p111_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26910,7 +26730,7 @@
    "pt": "Duração média: 1–2 minutos, autolimitada na maioria dos casos. •"
   },
   {
-   "id": "p111_19",
+   "id": "p111_18",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -26928,7 +26748,7 @@
    "pt": "Diagnóstico diferencial"
   },
   {
-   "id": "p111_20",
+   "id": "p111_19",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -29488,40 +29308,22 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
+   "recuo": 18.0,
    "base_y": 224.7,
-   "base_y_fim": 245.7,
-   "rect": [
-    74.7,
-    211.5,
-    396.9,
-    248.7
-   ],
-   "negrito": [],
-   "pt": "Fatores externos: cafeína, nicotina, uso recente de descongestionantes ou estimulantes."
-  },
-  {
-   "id": "p119_06",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 266.7,
    "base_y_fim": 287.7,
    "rect": [
     56.7,
-    253.6,
-    244.4,
+    211.5,
+    396.9,
     290.7
    ],
    "negrito": [
     "Áreas/Procedimentos de maior risco"
    ],
-   "pt": "Áreas/Procedimentos de maior risco •"
+   "pt": "Fatores externos: cafeína, nicotina, uso recente de descongestionantes ou estimulantes. Áreas/Procedimentos de maior risco •"
   },
   {
-   "id": "p119_07",
+   "id": "p119_06",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29539,7 +29341,7 @@
    "pt": "Procedimentos dolorosos em regiões sensíveis (lábios, nariz, periocular). •"
   },
   {
-   "id": "p119_08",
+   "id": "p119_07",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29557,7 +29359,7 @@
    "pt": "Uso de solução anestésica com vasoconstritor em grandes volumes. •"
   },
   {
-   "id": "p119_09",
+   "id": "p119_08",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29575,7 +29377,7 @@
    "pt": "Pacientes hipertensos não tratados ou mal controlados. •"
   },
   {
-   "id": "p119_10",
+   "id": "p119_09",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29593,7 +29395,7 @@
    "pt": "Pacientes ansiosos, em jejum prolongado ou sob estresse emocional intenso."
   },
   {
-   "id": "p119_11",
+   "id": "p119_10",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -29613,7 +29415,7 @@
    "pt": "DIAGNÓSTICO CLÍNICO"
   },
   {
-   "id": "p119_12",
+   "id": "p119_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29633,7 +29435,7 @@
    "pt": "Os sinais e sintomas típicos incluem: •"
   },
   {
-   "id": "p119_13",
+   "id": "p119_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29651,7 +29453,7 @@
    "pt": "Elevação súbita da pressão arterial (≥ 180/110 mmHg em muitos casos). •"
   },
   {
-   "id": "p119_14",
+   "id": "p119_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29669,7 +29471,7 @@
    "pt": "Cefaleia intensa. •"
   },
   {
-   "id": "p119_15",
+   "id": "p119_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29687,7 +29489,7 @@
    "pt": "Tontura, zumbido, visão turva. •"
   },
   {
-   "id": "p119_16",
+   "id": "p119_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29705,7 +29507,7 @@
    "pt": "Palpitações e ansiedade exacerbada. •"
   },
   {
-   "id": "p119_17",
+   "id": "p119_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -29723,7 +29525,7 @@
    "pt": "Sudorese fria, rubor facial."
   },
   {
-   "id": "p119_18",
+   "id": "p119_17",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -36420,40 +36222,22 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
+   "recuo": 18.0,
    "base_y": 287.7,
-   "base_y_fim": 308.7,
-   "rect": [
-    74.5,
-    274.5,
-    399.1,
-    311.7
-   ],
-   "negrito": [],
-   "pt": "Antissépticos apenas em fase inicial, quando há suspeita de contaminação."
-  },
-  {
-   "id": "p141_12",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 329.7,
    "base_y_fim": 350.7,
    "rect": [
     56.5,
-    316.6,
-    148.1,
+    274.5,
+    399.1,
     353.7
    ],
    "negrito": [
     "2. Desbridamento"
    ],
-   "pt": "2. Desbridamento •"
+   "pt": "Antissépticos apenas em fase inicial, quando há suspeita de contaminação. 2. Desbridamento •"
   },
   {
-   "id": "p141_13",
+   "id": "p141_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36471,7 +36255,7 @@
    "pt": "Enzimático: colagenase, papaína, hidrogéis bioativos. •"
   },
   {
-   "id": "p141_14",
+   "id": "p141_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36489,45 +36273,27 @@
    "pt": "Autolítico: curativos oclusivos (hidrogel, hidrocoloide). •"
   },
   {
-   "id": "p141_15",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 392.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    74.5,
-    379.5,
-    311.6,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "Cirúrgico: em necroses espessas e delimitadas."
-  },
-  {
-   "id": "p141_16",
+   "id": "p141_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 413.7,
+   "recuo": 18.0,
+   "base_y": 392.7,
    "base_y_fim": 434.7,
    "rect": [
     56.5,
-    400.6,
-    174.0,
+    379.5,
+    311.6,
     437.7
    ],
    "negrito": [
     "3. Controle da infecção"
    ],
-   "pt": "3. Controle da infecção •"
+   "pt": "Cirúrgico: em necroses espessas e delimitadas. 3. Controle da infecção •"
   },
   {
-   "id": "p141_17",
+   "id": "p141_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36545,7 +36311,7 @@
    "pt": "Antibiótico profilático oral (amoxicilina/clavulanato com possível associação do metronidazol para cobertura de anaeróbios). •"
   },
   {
-   "id": "p141_18",
+   "id": "p141_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36563,45 +36329,27 @@
    "pt": "Antibióticos tópicos em áreas colonizadas. •"
   },
   {
-   "id": "p141_19",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 497.7,
-   "base_y_fim": 497.7,
-   "rect": [
-    74.5,
-    484.5,
-    320.1,
-    500.7
-   ],
-   "negrito": [],
-   "pt": "Coleta de cultura em casos de ferida persistente."
-  },
-  {
-   "id": "p141_20",
+   "id": "p141_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 0.0,
-   "base_y": 518.7,
+   "recuo": 18.0,
+   "base_y": 497.7,
    "base_y_fim": 539.7,
    "rect": [
     56.5,
-    505.6,
-    217.0,
+    484.5,
+    320.1,
     542.7
    ],
    "negrito": [
     "4. Controle de inflamação e dor"
    ],
-   "pt": "4. Controle de inflamação e dor •"
+   "pt": "Coleta de cultura em casos de ferida persistente. 4. Controle de inflamação e dor •"
   },
   {
-   "id": "p141_21",
+   "id": "p141_18",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36619,7 +36367,7 @@
    "pt": "AINEs para analgesia e modulação inflamatória. •"
   },
   {
-   "id": "p141_22",
+   "id": "p141_19",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -36637,7 +36385,7 @@
    "pt": "Evitar corticoides sistêmicos nesta fase."
   },
   {
-   "id": "p141_23",
+   "id": "p141_20",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -38549,17 +38297,17 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": -0.0,
+   "recuo": 18.0,
    "base_y": 329.7,
-   "base_y_fim": 350.7,
+   "base_y_fim": 392.7,
    "rect": [
-    74.5,
+    56.5,
     316.5,
     396.5,
-    353.7
+    395.7
    ],
    "negrito": [],
-   "pt": "Carbapenêmicos (meropenem 1 g 8/8 horas) em infecções extensas ou multirresistentes."
+   "pt": "Carbapenêmicos (meropenem 1 g 8/8 horas) em infecções extensas ou multirresistentes. Abscessos definidos: •"
   },
   {
    "id": "p149_14",
@@ -38567,56 +38315,20 @@
    "tam": 11.0,
    "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 371.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    56.5,
-    358.5,
-    176.2,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "Abscessos definidos: •"
-  },
-  {
-   "id": "p149_15",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
+   "recuo": 18.0,
    "base_y": 392.7,
-   "base_y_fim": 392.7,
-   "rect": [
-    74.5,
-    379.5,
-    345.4,
-    395.7
-   ],
-   "negrito": [],
-   "pt": "Drenagem cirúrgica ou aspiração guiada por imagem."
-  },
-  {
-   "id": "p149_16",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
-   "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 413.7,
    "base_y_fim": 434.7,
    "rect": [
     56.5,
-    400.5,
-    177.5,
+    379.5,
+    345.4,
     437.7
    ],
    "negrito": [],
-   "pt": "Suspeita de biofilme: •"
+   "pt": "Drenagem cirúrgica ou aspiração guiada por imagem. Suspeita de biofilme: •"
   },
   {
-   "id": "p149_17",
+   "id": "p149_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38634,7 +38346,7 @@
    "pt": "Uso prolongado de antibióticos. •"
   },
   {
-   "id": "p149_18",
+   "id": "p149_16",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38652,7 +38364,7 @@
    "pt": "Associar hialuronidase para degradação do preenchedor e ruptura da matriz de suporte bacteriana. •"
   },
   {
-   "id": "p149_19",
+   "id": "p149_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38670,7 +38382,7 @@
    "pt": "Suporte hospitalar em pacientes imunossuprimidos ou com sinais sistêmicos."
   },
   {
-   "id": "p149_20",
+   "id": "p149_18",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -38690,7 +38402,7 @@
    "pt": "COMPLICAÇÕES ASSOCIADAS"
   },
   {
-   "id": "p149_21",
+   "id": "p149_19",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38708,7 +38420,7 @@
    "pt": "•"
   },
   {
-   "id": "p149_22",
+   "id": "p149_20",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -38726,7 +38438,7 @@
    "pt": "Formação de abscesso bacteriano de difícil resolução."
   },
   {
-   "id": "p149_23",
+   "id": "p149_21",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -39328,39 +39040,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 455.7,
-   "base_y_fim": 455.7,
-   "rect": [
-    74.5,
-    442.5,
-    397.5,
-    458.7
-   ],
-   "negrito": [],
-   "pt": "Encapsulamento por tecido de granulação abscesso organizado."
-  },
-  {
-   "id": "p151_10",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 476.7,
+   "recuo": 18.0,
+   "base_y": 455.7,
    "base_y_fim": 497.7,
    "rect": [
     56.5,
-    463.5,
-    240.7,
+    442.5,
+    397.5,
     500.7
    ],
    "negrito": [],
-   "pt": "Os principais agentes envolvidos: •"
+   "pt": "Encapsulamento por tecido de granulação abscesso organizado. Os principais agentes envolvidos: •"
   },
   {
-   "id": "p151_11",
+   "id": "p151_10",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39378,7 +39072,7 @@
    "pt": "Staphylococcus aureus (inclusive MRSA). •"
   },
   {
-   "id": "p151_12",
+   "id": "p151_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39396,7 +39090,7 @@
    "pt": "Streptococcus pyogenes. •"
   },
   {
-   "id": "p151_13",
+   "id": "p151_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39414,7 +39108,7 @@
    "pt": "Anaeróbios orais (quando há comunicação com mucosa labial/oral). •"
   },
   {
-   "id": "p151_14",
+   "id": "p151_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -39432,7 +39126,7 @@
    "pt": "Flora mista em biofilmes aderidos ao preenchedor."
   },
   {
-   "id": "p151_15",
+   "id": "p151_14",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",
@@ -42537,39 +42231,21 @@
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
-   "entrelinha": 14.9,
-   "recuo": 0,
-   "base_y": 140.7,
-   "base_y_fim": 140.7,
-   "rect": [
-    74.7,
-    127.5,
-    311.9,
-    143.7
-   ],
-   "negrito": [],
-   "pt": "Encapsulamento fibroso em torno do material."
-  },
-  {
-   "id": "p161_06",
-   "tipo": "corpo",
-   "tam": 11.0,
-   "cor": "0x0",
    "entrelinha": 21.0,
-   "recuo": 14.0,
-   "base_y": 161.7,
+   "recuo": 18.0,
+   "base_y": 140.7,
    "base_y_fim": 182.7,
    "rect": [
     56.7,
-    148.5,
-    187.7,
+    127.5,
+    311.9,
     185.7
    ],
    "negrito": [],
-   "pt": "Pode estar associado a: •"
+   "pt": "Encapsulamento fibroso em torno do material. Pode estar associado a: •"
   },
   {
-   "id": "p161_07",
+   "id": "p161_06",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42587,7 +42263,7 @@
    "pt": "Produtos de baixa pureza ou contaminados. •"
   },
   {
-   "id": "p161_08",
+   "id": "p161_07",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42605,7 +42281,7 @@
    "pt": "Injeções repetidas no mesmo local. •"
   },
   {
-   "id": "p161_09",
+   "id": "p161_08",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42623,7 +42299,7 @@
    "pt": "Presença de biofilme bacteriano latente. •"
   },
   {
-   "id": "p161_10",
+   "id": "p161_09",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42641,7 +42317,7 @@
    "pt": "Predisposição individual a reações de hipersensibilidade."
   },
   {
-   "id": "p161_11",
+   "id": "p161_10",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -42661,7 +42337,7 @@
    "pt": "ÁREAS DE MAIOR RISCO"
   },
   {
-   "id": "p161_12",
+   "id": "p161_11",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42679,7 +42355,7 @@
    "pt": "•"
   },
   {
-   "id": "p161_13",
+   "id": "p161_12",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42697,7 +42373,7 @@
    "pt": "Lábios: devido à mobilidade constante e risco de biofilme. •"
   },
   {
-   "id": "p161_14",
+   "id": "p161_13",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42715,7 +42391,7 @@
    "pt": "Sulco nasolabial e malar: locais de alto volume de preenchimento. •"
   },
   {
-   "id": "p161_15",
+   "id": "p161_14",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42733,7 +42409,7 @@
    "pt": "Região periorbitária: risco estético relevante por pele fina. •"
   },
   {
-   "id": "p161_16",
+   "id": "p161_15",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42751,7 +42427,7 @@
    "pt": "Têmporas e mandíbula: áreas de sobreposição de aplicações em retoques."
   },
   {
-   "id": "p161_17",
+   "id": "p161_16",
    "tipo": "titulo_secao",
    "tam": 10.0,
    "cor": "0x196ba6",
@@ -42771,7 +42447,7 @@
    "pt": "DIAGNÓSTICO CLÍNICO"
   },
   {
-   "id": "p161_18",
+   "id": "p161_17",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42789,7 +42465,7 @@
    "pt": "•"
   },
   {
-   "id": "p161_19",
+   "id": "p161_18",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42807,7 +42483,7 @@
    "pt": "Nódulo endurecido e persistente, palpável sob a pele. •"
   },
   {
-   "id": "p161_20",
+   "id": "p161_19",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42825,7 +42501,7 @@
    "pt": "Pouca ou nenhuma dor, podendo ser sensível em fases inflamatórias. •"
   },
   {
-   "id": "p161_21",
+   "id": "p161_20",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42843,7 +42519,7 @@
    "pt": "Eritema ou edema associado em surtos inflamatórios. •"
   },
   {
-   "id": "p161_22",
+   "id": "p161_21",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42861,7 +42537,7 @@
    "pt": "Consistência firme ou elástica, diferente do edema ou abscesso. •"
   },
   {
-   "id": "p161_23",
+   "id": "p161_22",
    "tipo": "corpo",
    "tam": 11.0,
    "cor": "0x0",
@@ -42879,7 +42555,7 @@
    "pt": "Evolução crônica: semanas a meses após o procedimento."
   },
   {
-   "id": "p161_24",
+   "id": "p161_23",
    "tipo": "outro",
    "tam": 9.0,
    "cor": "0x0",

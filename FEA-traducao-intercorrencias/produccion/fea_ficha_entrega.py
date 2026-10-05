@@ -72,6 +72,7 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <li>Cero glifos de fuente sustituta en las 221 páginas.</li>
 <li>OCR de todas las páginas: sin portugués residual, incluidas portada, aperturas, contraportada y las figuras con texto en arte (págs. 20, 39, 54 y 122).</li>
 <li>Control de superposición de líneas contra el original y revisión visual página por página.</li>
+<li>Control de diagramación en el PDF entregado: cero palabras perdidas, cero líneas fuera de la mancha de texto, de recuadros o sobre imágenes, cero marcadores duplicados (revisión de diagramación del 5/10).</li>
 <li>Capa de texto sin portugués residual (se retiró el encabezado oculto de las 5 aperturas de capítulo).</li>
 </ul>
 <p class="foot">Informes de la revisión: «FEA-traducao-intercorrencias/revisao/parte1 a parte6-relatorio.md».

@@ -100,6 +100,36 @@ Verifique também:
 - **ativos únicos vs QR a regerar** estão contados separadamente;
 - QR de **artigo científico** não foi alterado.
 
+### Camada 3c — Diagramação do PDF entregue (quando a entrega é PDF)
+
+A revisão de texto não vê a página. Um ebook pode sair com a tradução perfeita e
+a diagramação quebrada: texto vazando o quadro, linha sumida, lista embaralhada.
+Por isso, quando o entregável é PDF, o revisor **abre o PDF final** e roda:
+
+```
+python3 ../fea-traduccion-es/scripts/conferir_perda.py mapa-es.json entregue.pdf
+python3 ../fea-traduccion-es/scripts/conferir_sobreposicao.py original.pdf entregue.pdf
+python3 ../fea-traduccion-es/scripts/conferir_limites.py original.pdf entregue.pdf
+python3 ../fea-traduccion-es/scripts/conferir_fontes.py entregue.pdf
+```
+
+Depois, **olho em todas as páginas**, original ao lado do traduzido (folhas de
+contato de 12 páginas e zoom no que destoar). Procure, em especial:
+- texto passando da borda de quadro ou da margem, ou descendo até o fólio;
+- linha ou trecho que existe no português e sumiu no espanhol;
+- lista: item colado no anterior, marcador sumido ou duplicado («⁝»), número de
+  lista numerada fora do lugar, subtítulo em negrito grudado num item;
+- quadro de duas colunas com a frase partida ou fora de ordem;
+- legenda sobreposta a si mesma ou ao fio que fecha a figura;
+- corpo visivelmente menor que o das páginas vizinhas (redução acima de 8 %);
+- glifo trocado (letra errada em título) ou caixa «☐» no lugar de símbolo.
+
+Classificação: **texto perdido é classe A** (é omissão, igual a omitir uma
+frase na tradução). Vazamento de quadro ou margem, sobreposição, lista
+embaralhada e glifo trocado são **GRAVE**: o PDF não é liberado com eles, mesmo
+com índice editorial acima de 95 %. A lista de erros que já aconteceram está em
+`../fea-traduccion-es/SKILL.md`, seção «Erros de diagramação que já aconteceram».
+
 ### Camada 4 — Voz nativa
 
 Leia como leitor final, sem o original ao lado. Pergunte em cada parágrafo:

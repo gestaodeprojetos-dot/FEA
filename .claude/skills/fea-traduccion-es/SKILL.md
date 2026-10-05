@@ -371,19 +371,63 @@ tempo.
 
 ### Verificação obrigatória
 
-Quatro checagens, nesta ordem. As três primeiras são automáticas e não admitem
-achado; a quarta é olho, e é a que pega o que log nenhum pega.
+Oito checagens, nesta ordem, sempre sobre o PDF **entregue** (o final, depois de
+arte, QR e compressão), nunca sobre um rascunho. As sete primeiras são automáticas
+e não admitem achado: exit diferente de zero é PDF que **não sai**. A oitava é
+olho, e é a que pega o que script nenhum pega.
 
-1. **Nada perdido** — o final de cada bloco do mapa reaparece na sua página.
-2. **Nada sobreposto** — conte pares de linhas que se cruzam, no original e no
-   traduzido: o traduzido não pode ter mais que o original em nenhuma página.
-   Compare também a caixa de texto de cada página, para pegar invasão de imagem.
-3. **Nada em português** — OCR das 74 páginas com diff contra a camada de texto
-   isola o que só existe em imagem; regex de marca portuguesa (`ã õ ç ê`) sobre o
-   que sobrou. Rode o `auditar.py` sobre a camada de texto do PDF **entregue**,
-   não sobre o rascunho.
-4. **Render lado a lado, página por página.** Defeito de glifo, acento cortado,
-   fantasma de inpainting e refluxo sobre imagem **só aparecem no render**.
+```
+python3 scripts/conferir_perda.py mapa-es.json entregue.pdf          # 1
+python3 scripts/conferir_sobreposicao.py original.pdf entregue.pdf   # 2
+python3 scripts/conferir_limites.py original.pdf entregue.pdf        # 3, 5 e 6
+python3 scripts/conferir_fontes.py entregue.pdf                      # 4
+```
+
+1. **Nada perdido** — toda palavra do mapa id → ES está na camada de texto da
+   sua página. (Antes só se conferia o FINAL de cada bloco, e uma linha inteira
+   do MEIO da legenda da Fig. 18 sumiu sem aviso: o refluxo apagava com redação
+   o retângulo de uma tentativa que não coube, levando o texto do vizinho.)
+2. **Nada sobreposto** — pares de linhas que se cruzam e texto atravessando fio,
+   no original e no traduzido: o traduzido não pode ter mais que o original.
+3. **Nada fora da mancha** — nenhuma linha além da margem direita/esquerda do
+   texto original, nenhuma linha vazando a borda de um quadro (SAIBA MAIS, NA
+   PRÁTICA), nenhuma sobre imagem/QR que no original não tinha texto, nenhuma
+   abaixo da última linha do original (o fólio é intocável).
+4. **Nada em fonte reserva** — zero glifo caindo em fonte substituta; e confira
+   o cmap de toda fonte CFF completada (glifo trocado: «MAYOR» saía «MA[OR»).
+5. **Um marcador por item** — dois «•» no mesmo item aparecem como «⁝».
+6. **Corpo dentro do limite** — redução máxima de 8 % no corpo e 16 % na
+   entrelinha; o que passar disso é refluxo a refazer, não a aceitar.
+7. **Nada em português** — OCR das páginas com diff contra a camada de texto
+   (regex `ã õ ç ê`) e o `auditar.py` sobre a camada de texto do PDF entregue.
+8. **Render lado a lado, página por página, TODAS as páginas**, original ao
+   lado do traduzido. Folhas de contato de 12 páginas para varrer e zoom em
+   tudo que destoar. É aqui que aparecem: lista numerada com itens embaralhados,
+   subtítulo em negrito colado no item anterior, quadro de duas colunas com
+   texto partido, palavra partida entre páginas espremida no pé.
+
+#### Erros de diagramação que já aconteceram (não podem voltar)
+
+Registro do livro de Intercorrências (out/2026). Todos já têm correção no
+`traduzir_pdf.py` e checagem acima; se um deles reaparecer, a correção regrediu.
+
+| Erro | Causa | Onde fica a correção |
+|---|---|---|
+| Texto de quadro vazando a borda (pág. 23) | parágrafo de quadro com várias linhas podia crescer para a direita | `cresce_dir` + limite pela borda do fundo do quadro (`quadros`) |
+| Itens de lista de uma linha indo até a borda da folha | crescimento limitado pela folha, não pela mancha | `MANCHA` medida do original em `mede_mancha` |
+| Último item descendo até o fólio | fundo da coluna somava o deslocamento | `compoe_coluna`: fundo = mancha |
+| Itens encavalados, entrelinha zero | marcador «•» na mesma altura do item entrava na conta da entrelinha | `agrupa`: salto medido entre linhas de texto |
+| Dois itens num parágrafo, marcador sumido | texto do item ordenado antes do seu marcador | `abre_item` + marcador no meio do parágrafo em `isola_marcadores` |
+| Lista numerada embaralhada (págs. 31 e 41) | continuação recuada abria parágrafo | `ITEM_NUM` + recuo pendente (`pendente`) |
+| Subtítulo em negrito colado no item (págs. 88, 107) | rótulo na margem dos itens | `_todo_negrito` / rótulo curto terminado em «:» |
+| Subitem com hífen fundido (pág. 105) | «- Adrenalina» na margem da continuação | regra do hífen em `agrupa` |
+| Legenda partida em dois blocos sobrepostos (Figs. 17 e 18) | linha justificada em dois pedaços / rótulos no meio da leitura | `funde_fragmentos` |
+| Quadro de duas colunas com texto partido (pág. 29) | duas linhas seguidas de uma coluna viravam um parágrafo | `funde_linhas_de_coluna` aceita parágrafo de várias linhas com coluna paralela |
+| Linha da legenda apagada (Fig. 18) | redação da tentativa que não coube | medir em rascunho (`mede`) antes de desenhar; nunca redigir de novo |
+| «⁝» no primeiro item da lista | marcador original guardado e redesenhado na posição do português | `preserva` ignora marcador |
+| «•☐» na pág. 102 | linha composta em Arial Unicode por causa de «→» | linha volta à fonte do corpo |
+| Glifos trocados em títulos e negrito | `fea_completar_reserva` duplicava o nome no charset da fonte CFF | charset/glyphOrder sem duplicar |
+| Palavra inteira no pé onde o português partia («significa-») | mapa com a palavra completa na página de cima | partir a palavra no mapa como no original |
 
 ## Handoff obrigatório para a revisão
 
