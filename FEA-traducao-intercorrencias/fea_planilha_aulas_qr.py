@@ -56,7 +56,7 @@ ISQ_OLD, OFT_OLD = DR % "1WPpBXXtYISZ68Pf8ak2V2kKkPcLS_GuK", DR % "1k9pgxv8gf8-m
 ISQ_NEW, OFT_NEW = DR % "1IQ-osnYyMdlCR511_SwOqVRdPjxqD3AI", DR % "1DLM3QIm8ui-37tXlv33AazCSiK57hIgP"
 HDPH_NEW, DEL14_NEW = DR % "13rcR4MVX0frvJp3wgtFD1ko9IWQFiyco", DR % "1g2G9VADj6u5qsG5G1Zwqv_0kcow2-Zgb"
 
-ATENCAO = ("ATENÇÃO: artigo com acesso restrito", "Mudar o compartilhamento para «Qualquer pessoa com o link: leitor». "
+ATENCAO = ("ATENÇÃO: artigo com acesso restrito", "Abrir o arquivo no Drive > Compartilhar > Acesso geral: «Qualquer pessoa com o link», leitor. "
            "Não mexe na arte, vale para PT e ES.", "Keila (dona do arquivo)")
 ARTIGO_ES = "Não traduz (artigo científico fica em inglês, link igual)"
 VIDEO_ES = "Regerar QR para a aula dublada quando o link ES existir"
@@ -69,11 +69,11 @@ QRS = [
     ("18", "Artigo (QR aponta para vídeo)", "DeLorenzi, protocolo HDPH (hialuronidase pulsada em alta dose)",
      YT + "2Qoh7fWG5w4", "ERRO: o box promete o artigo HDPH e o QR abre o vídeo de vascularização da pág. 29",
      "Gerar QR novo para o artigo HDPH e substituir na arte", "André Vivas (arte) · equipe médica confirma o artigo",
-     "proposto " + HDPH_NEW + " («ARTIGO 1 DELORENZI HIALU .pdf»)", "Corrigir junto, já com o link do artigo; não traduz"),
+     HDPH_NEW + " (CONFIRMADO: DeLorenzi, High Dose Pulsed Hyaluronidase · QR pronto: FEA-QR-pag18-HDPH-DeLorenzi)", "Corrigir junto, já com o link do artigo; não traduz"),
     ("21", "Artigo", "«Patterns of Filler-Induced Facial Skin Ischemia» (FOEM, 243 casos)", PAT, *ATENCAO, PAT, ARTIGO_ES),
     ("23", "Artigo", "«Ischemic Complications of Dermal Fillers» (Plast Aesthet Res)", ISQ_OLD,
      "ERRO: arquivo não existe mais (mesmo link da pág. 61)", "Gerar QR novo e substituir na arte",
-     "André Vivas (arte)", "proposto " + ISQ_NEW, "Corrigir junto; não traduz"),
+     "André Vivas (arte)", ISQ_NEW + " (CONFIRMADO: Mehta et al. 2022 · QR pronto: FEA-QR-pag23-e-61)", "Corrigir junto; não traduz"),
     ("26", "Artigo", "«Patterns of Filler-Induced Facial Skin Ischemia» (2ª citação)", PAT, *ATENCAO, PAT, ARTIGO_ES),
     ("29", "Vídeo", "Revisão anatômica global da face: vascularização", YT + "2Qoh7fWG5w4",
      "OK", "Nenhuma", "", "", VIDEO_ES),
@@ -84,7 +84,7 @@ QRS = [
      "OK", "Nenhuma", "", "", VIDEO_ES),
     ("36", "Artigo", "DeLorenzi 2014, consenso para oclusão vascular por AH (rinomodelação)", "a decodificar do PDF",
      "ERRO: arquivo não existe mais", "Gerar QR novo e substituir na arte", "André Vivas (arte)",
-     "proposto " + DEL14_NEW + " («2. ARTIGO delorenzi2014.pdf»)", "Corrigir junto; não traduz"),
+     "FALTA O ARQUIVO: o box cita «Consensus Guidelines for the Management of HA Filler-Induced Vascular Occlusion», que não está no Drive (o delorenzi2014 é outro artigo). Subir o PDF na pasta de artigos.", "Corrigir junto; não traduz"),
     ("37", "Vídeo", "Mecanismos de segurança com cânulas", YT + "_yWZEknxYqo", "OK", "Nenhuma", "", "", VIDEO_ES),
     ("40", "Artigo", "Soares, Molecules 2022 (fisiopatologia e manejo)", MOL, *ATENCAO, MOL, ARTIGO_ES),
     ("43", "Vídeo", "Rinomodelação: agulha ou cânula?", YT + "NCHkXFLKZds", "OK", "Nenhuma", "", "", VIDEO_ES),
@@ -92,17 +92,17 @@ QRS = [
      "OK", "Nenhuma", "", "", VIDEO_ES),
     ("61", "Artigo", "«Ischemic Complications of Dermal Fillers»", ISQ_OLD,
      "ERRO: arquivo não existe mais (mesmo link da pág. 23)", "Gerar QR novo e substituir na arte",
-     "André Vivas (arte)", "proposto " + ISQ_NEW, "Corrigir junto; não traduz"),
+     "André Vivas (arte)", ISQ_NEW + " (CONFIRMADO · QR pronto: FEA-QR-pag23-e-61)", "Corrigir junto; não traduz"),
     ("63", "Vídeo", "Amaurose: protocolo de manejo das complicações", YT + "GnGMUiPcoC0",
      "OK", "Nenhuma", "", "", VIDEO_ES),
     ("64", "Artigo", "Oclusão arterial oftálmica e retiniana (achados angiográficos)", OFT_OLD,
      "ERRO: arquivo não existe mais (mesmo link da pág. 68)", "Gerar QR novo e substituir na arte",
-     "André Vivas (arte) · equipe médica confirma o artigo", "proposto " + OFT_NEW + " (Kim et al., J Korean Med Sci 2015)",
+     "André Vivas (arte) · equipe médica confirma o artigo", OFT_NEW + " (CONFIRMADO: Kim et al., J Korean Med Sci 2015 · QR pronto: FEA-QR-pag64-e-68)",
      "Corrigir junto; não traduz"),
     ("68", "Artigo", "Achados angiográficos cerebrais na oclusão da artéria oftálmica", OFT_OLD,
      "ERRO: arquivo não existe mais (mesmo link da pág. 64)", "Gerar QR novo e substituir na arte",
-     "André Vivas (arte) · equipe médica confirma se é o mesmo artigo da pág. 64",
-     "proposto " + OFT_NEW, "Corrigir junto; não traduz"),
+     "André Vivas (arte)",
+     OFT_NEW + " (CONFIRMADO: mesmo artigo da pág. 64 · QR pronto: FEA-QR-pag64-e-68)", "Corrigir junto; não traduz"),
     ("~74", "Vídeo", "Vídeo 9: complexo vascular nasoglabelar", "a decodificar do PDF", "OK", "Nenhuma", "", "", VIDEO_ES),
     ("79", "Vídeo", "Vídeo 10: complicações agudas não isquêmicas (parte 1)", "a decodificar do PDF",
      "OK", "Nenhuma", "", "", VIDEO_ES),
@@ -118,8 +118,7 @@ DECISOES = [
      "de olheiras (18 aulas). A produção das aulas é da FEA, fora do escopo da skill.", "Keila", "Não trava o PDF"),
     ("Corrigir os 6 QR com ERRO no PT", "Recomendação: corrigir o original PT (André) e eu aplico os mesmos destinos "
      "na versão ES. Os links propostos estão na aba «QR para ajustar».", "Keila + equipe médica", "Não trava o PDF"),
-    ("Págs. 64 e 68", "Usam o mesmo QR, mas os textos descrevem estudos diferentes (oftálmico vs. cerebral). "
-     "Confirmar se é o mesmo artigo.", "Equipe médica (Francine)", "Não trava o PDF"),
+    ("Artigo da pág. 36", "Subir o PDF do «Consensus Guidelines for the Management of Hyaluronic Acid Filler-Induced Vascular Occlusion» citado no box. Não existe no Drive.", "Keila / equipe médica", "Só o QR da pág. 36"),
     ("Numeração dos vídeos", "Só os 3 últimos boxes têm número (Vídeo 9, 10 e 11). Padronizar no ES: todos numerados "
      "ou nenhum. Recomendação: numerar todos de 1 a 11.", "Keila", "Não trava o PDF"),
     ("Título do livro em espanhol", "Proposta: «Intercurrencias en el relleno con ácido hialurónico: diagnóstico y "
