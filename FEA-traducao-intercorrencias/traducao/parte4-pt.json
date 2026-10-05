@@ -1,0 +1,3982 @@
+[
+{
+"id": "p112_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p112_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p112_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p112_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Síncope vasovagal: pode cursar com movimentos mioclônicos breves, mas a recuperação é rápida e sem fase pós-ictal prolongada. •"
+},
+{
+"id": "p112_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Crise de pânico: tremores, hiperventilação e ansiedade, sem perda de consciência completa. •"
+},
+{
+"id": "p112_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Distúrbios de movimento não epilépticos: mioclonias isoladas, sem padrão de crise generalizada. •"
+},
+{
+"id": "p112_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hipoglicemia grave: confusão mental, tremores, sudorese, mas geralmente sem atividade clínica típica."
+},
+{
+"id": "p112_07",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p112_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p112_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Interromper imediatamente o procedimento. •"
+},
+{
+"id": "p112_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Proteger o paciente contra traumas: afastar objetos, posicionar em superfície segura. •"
+},
+{
+"id": "p112_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Não conter os movimentos, apenas proteger a cabeça. •"
+},
+{
+"id": "p112_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Não colocar objetos na boca. •"
+},
+{
+"id": "p112_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Posição lateral de segurança após a crise, para evitar aspiração. •"
+},
+{
+"id": "p112_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Avaliar vias aéreas, respiração e circulação. •"
+},
+{
+"id": "p112_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oxigenoterapia suplementar. •"
+},
+{
+"id": "p112_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aguardar término da crise: a maioria cessa espontaneamente em até 2 minutos."
+},
+{
+"id": "p112_17",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p112_18",
+"tipo": "corpo",
+"negrito": [
+"Se a crise durar mais de 5 minutos ou ocorrerem crises repetidas",
+"(status epilepticus):"
+],
+"pt": "Se a crise durar mais de 5 minutos ou ocorrerem crises repetidas (status epilepticus): •"
+},
+{
+"id": "p112_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Benzodiazepínicos EV (diazepam 10 mg ou midazolam 5 mg)."
+},
+{
+"id": "p112_20",
+"tipo": "outro",
+"negrito": [
+"112"
+],
+"pt": "112"
+},
+{
+"id": "p113_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p113_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p113_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p113_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Repetir após 5–10 minutos, se necessário. •"
+},
+{
+"id": "p113_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Verificar glicemia capilar: corrigir hipoglicemia com glicose EV. •"
+},
+{
+"id": "p113_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Encaminhamento hospitalar para investigação e suporte avançado. •"
+},
+{
+"id": "p113_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Monitorização cardíaca e respiratória."
+},
+{
+"id": "p113_07",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p113_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p113_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Traumatismos (queda da maca, mordedura de língua). •"
+},
+{
+"id": "p113_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aspiração de secreções ou conteúdo gástrico. •"
+},
+{
+"id": "p113_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evolução para status epilepticus. •"
+},
+{
+"id": "p113_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hipóxia cerebral com risco de lesão neurológica."
+},
+{
+"id": "p113_13",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p113_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p113_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anamnese detalhada sobre histórico de epilepsia ou convulsões prévias. •"
+},
+{
+"id": "p113_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Orientar jejum adequado e evitar hipoglicemia antes do procedimento. •"
+},
+{
+"id": "p113_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso criterioso de anestésicos locais (respeitar doses máximas, aspirar antes de infiltrar). •"
+},
+{
+"id": "p113_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ambiente tranquilo, com redução de estímulos de ansiedade. •"
+},
+{
+"id": "p113_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Equipe preparada com kit de emergência contendo benzodiazepínicos."
+},
+{
+"id": "p113_20",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p113_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p113_22",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Crises isoladas e autolimitadas: prognóstico favorável, sem sequelas."
+},
+{
+"id": "p113_23",
+"tipo": "outro",
+"negrito": [
+"113"
+],
+"pt": "113"
+},
+{
+"id": "p114_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p114_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p114_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p114_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Status epilepticus ou crises prolongadas: risco de lesão neurológica e óbito se não tratadas. •"
+},
+{
+"id": "p114_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Paciente com epilepsia prévia: deve ser orientado a manter tratamento anticonvulsivante regular."
+},
+{
+"id": "p114_05",
+"tipo": "titulo_secao",
+"negrito": [
+"2.8 SÍNDROME DO PÂNICO / CRISE DE ANSIEDADE"
+],
+"pt": "2.8 SÍNDROME DO PÂNICO / CRISE DE ANSIEDADE"
+},
+{
+"id": "p114_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As crises de ansiedade e síndrome do pânico podem ocorrer antes, durante ou após procedimentos estéticos, sendo mais comuns em pacientes ansiosos, fóbicos de agulha ou com histórico prévio de transtornos psiquiátricos. Embora não representem risco direto de morte, podem simular intercorrências graves (como anafilaxia ou síncope vasovagal), gerar grande desconforto e até interromper o procedimento."
+},
+{
+"id": "p114_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reconhecer rapidamente os sinais e saber diferenciar uma crise psicogênica de uma intercorrência orgânica é fundamental para oferecer segurança ao paciente e evitar condutas desnecessárias."
+},
+{
+"id": "p114_08",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p114_09",
+"tipo": "corpo",
+"negrito": [
+"A crise de ansiedade ou ataque de pânico envolve uma descarga",
+"exagerada do sistema nervoso simpático, com liberação de adren-",
+"alina e noradrenalina. Isso resulta em:"
+],
+"pt": "A crise de ansiedade ou ataque de pânico envolve uma descarga exagerada do sistema nervoso simpático, com liberação de adrenalina e noradrenalina. Isso resulta em: •"
+},
+{
+"id": "p114_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Taquicardia e palpitações. •"
+},
+{
+"id": "p114_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hiperventilação → alcalose respiratória → parestesias e sensação de falta de ar. •"
+},
+{
+"id": "p114_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Tensão muscular, sudorese fria, tremores."
+},
+{
+"id": "p114_13",
+"tipo": "outro",
+"negrito": [
+"114"
+],
+"pt": "114"
+},
+{
+"id": "p115_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p115_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p115_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p115_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas cognitivos: sensação de morte iminente, desrealização, medo de perder o controle. •"
+},
+{
+"id": "p115_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O ciclo se retroalimenta: os sintomas físicos aumentam a ansiedade, que por sua vez intensifica os sintomas físicos. •"
+},
+{
+"id": "p115_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Áreas/Procedimentos de Maior Risco •"
+},
+{
+"id": "p115_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pacientes submetidos a procedimentos dolorosos ou demorados (ex.: preenchimento labial, rinomodelação). •"
+},
+{
+"id": "p115_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ambientes de estresse, como primeira experiência estética. •"
+},
+{
+"id": "p115_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pacientes com histórico prévio de ansiedade generalizada, síndrome do pânico ou fobia de agulha."
+},
+{
+"id": "p115_09",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p115_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p115_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Início súbito de sintomas durante ou logo após o procedimento. •"
+},
+{
+"id": "p115_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas autonômicos: taquicardia, palpitações, sudorese, tremores, rubor. •"
+},
+{
+"id": "p115_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas respiratórios: hiperventilação, sensação de falta de ar, aperto torácico. •"
+},
+{
+"id": "p115_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas neurológicos: tontura, parestesias em extremidades ou ao redor da boca. •"
+},
+{
+"id": "p115_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas psicológicos: medo de morrer, sensação de catástrofe iminente. •"
+},
+{
+"id": "p115_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ausência de sinais objetivos de choque, broncoespasmo, infecção ou isquemia."
+},
+{
+"id": "p115_17",
+"tipo": "outro",
+"negrito": [
+"115"
+],
+"pt": "115"
+},
+{
+"id": "p116_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p116_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p116_02",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p116_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p116_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anafilaxia: presença de urticária, edema, broncoespasmo e hipotensão (não presentes na crise de ansiedade isolada). •"
+},
+{
+"id": "p116_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Síndrome vasovagal: cursa com bradicardia e hipotensão, enquanto a crise de ansiedade geralmente apresenta taquicardia e hipertensão leve. •"
+},
+{
+"id": "p116_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Convulsão: perda de consciência com movimentos clônicos, seguida de fase pós-ictal, o que não ocorre em crises de ansiedade. •"
+},
+{
+"id": "p116_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hipoglicemia: pode simular ansiedade (sudorese, tremores), mas confirmada com glicemia capilar baixa."
+},
+{
+"id": "p116_08",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p116_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p116_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Interromper o procedimento e transmitir calma e segurança. •"
+},
+{
+"id": "p116_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Colocar o paciente em ambiente tranquilo, ventilado, sentado ou em posição confortável. •"
+},
+{
+"id": "p116_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Orientar respiração controlada (respirar pelo nariz, soltar pela boca, usar técnicas de contagem). •"
+},
+{
+"id": "p116_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Contato verbal tranquilizador: explicar que é uma reação comum e autolimitada. •"
+},
+{
+"id": "p116_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Monitorar sinais vitais para descartar intercorrência orgânica."
+},
+{
+"id": "p116_15",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p116_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p116_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ansiolíticos benzodiazepínicos: em crises intensas ou recorrentes (diazepam 5–10 mg VO ou midazolam 3–5 mg VO/SL)."
+},
+{
+"id": "p116_18",
+"tipo": "outro",
+"negrito": [
+"116"
+],
+"pt": "116"
+},
+{
+"id": "p117_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p117_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p117_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p117_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oxigenoterapia leve: pode auxiliar em pacientes com hiperventilação persistente. •"
+},
+{
+"id": "p117_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Encaminhamento para avaliação psicológica/psiquiátrica em casos de recorrência. •"
+},
+{
+"id": "p117_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar uso desnecessário de fármacos se a crise responder bem a medidas não farmacológicas."
+},
+{
+"id": "p117_06",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p117_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p117_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Interrupção ou falha do procedimento. •"
+},
+{
+"id": "p117_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Recorrência em atendimentos futuros (condicionamento psicológico negativo). •"
+},
+{
+"id": "p117_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Diagnóstico incorreto de anafilaxia, levando a tratamentos invasivos desnecessários. •"
+},
+{
+"id": "p117_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Impacto emocional duradouro (medo de novas crises ou fobia do ambiente clínico)."
+},
+{
+"id": "p117_12",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p117_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p117_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anamnese psiquiátrica prévia: questionar histórico de ansiedade, pânico ou uso de psicotrópicos. •"
+},
+{
+"id": "p117_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Preparação psicológica: explicar etapas do procedimento para reduzir insegurança. •"
+},
+{
+"id": "p117_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ambiente calmo: reduzir estímulos estressores (barulhos, excesso de pessoas). •"
+},
+{
+"id": "p117_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Acompanhamento de pessoa de confiança em pacientes muito ansiosos."
+},
+{
+"id": "p117_18",
+"tipo": "outro",
+"negrito": [
+"117"
+],
+"pt": "117"
+},
+{
+"id": "p118_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p118_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p118_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p118_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Técnicas de respiração e mindfulness antes e durante o procedimento."
+},
+{
+"id": "p118_04",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p118_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p118_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Na maioria dos casos: autolimitado e benigno, com resolução em minutos a poucas horas. •"
+},
+{
+"id": "p118_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Em pacientes predispostos: pode haver recorrência, mas com orientação adequada é possível controlar e prevenir. •"
+},
+{
+"id": "p118_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Prognóstico estético e funcional preservado, salvo quando a crise leva à interrupção precoce do procedimento."
+},
+{
+"id": "p118_09",
+"tipo": "titulo_secao",
+"negrito": [
+"2.9 SÍNDROME HIPERTENSIVA"
+],
+"pt": "2.9 SÍNDROME HIPERTENSIVA"
+},
+{
+"id": "p118_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A síndrome hipertensiva durante procedimentos estéticos é caracterizada por elevação súbita e significativa da pressão arterial, podendo ocorrer em pacientes com ou sem diagnóstico prévio de hipertensão. Frequentemente está relacionada ao estresse do procedimento, dor, ansiedade ou uso de anestésicos com vasoconstritores."
+},
+{
+"id": "p118_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Embora muitas vezes autolimitada, pode evoluir para complicações cardiovasculares e neurológicas graves se não reconhecida e manejada adequadamente."
+},
+{
+"id": "p118_12",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p118_13",
+"tipo": "corpo",
+"negrito": [
+"O aumento da pressão arterial pode ter múltiplos mecanismos:"
+],
+"pt": "O aumento da pressão arterial pode ter múltiplos mecanismos: •"
+},
+{
+"id": "p118_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ativação simpática aguda: ansiedade, dor e estresse levam à lib-"
+},
+{
+"id": "p118_15",
+"tipo": "outro",
+"negrito": [
+"118"
+],
+"pt": "118"
+},
+{
+"id": "p119_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p119_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p119_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "eração de catecolaminas (adrenalina e noradrenalina). •"
+},
+{
+"id": "p119_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Efeito farmacológico: anestésicos locais com adrenalina (lidocaína + epinefrina) podem desencadear elevação pressórica transitória. •"
+},
+{
+"id": "p119_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hipertensão arterial sistêmica (HAS) não controlada: pacientes sem acompanhamento adequado podem apresentar picos hipertensivos com estímulos mínimos. •"
+},
+{
+"id": "p119_05",
+"tipo": "corpo",
+"negrito": [
+"Áreas/Procedimentos de maior risco"
+],
+"pt": "Fatores externos: cafeína, nicotina, uso recente de descongestionantes ou estimulantes. Áreas/Procedimentos de maior risco •"
+},
+{
+"id": "p119_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Procedimentos dolorosos em regiões sensíveis (lábios, nariz, periocular). •"
+},
+{
+"id": "p119_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de solução anestésica com vasoconstritor em grandes volumes. •"
+},
+{
+"id": "p119_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pacientes hipertensos não tratados ou mal controlados. •"
+},
+{
+"id": "p119_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pacientes ansiosos, em jejum prolongado ou sob estresse emocional intenso."
+},
+{
+"id": "p119_10",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p119_11",
+"tipo": "corpo",
+"negrito": [
+"Os sinais e sintomas típicos incluem:"
+],
+"pt": "Os sinais e sintomas típicos incluem: •"
+},
+{
+"id": "p119_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Elevação súbita da pressão arterial (≥ 180/110 mmHg em muitos casos). •"
+},
+{
+"id": "p119_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cefaleia intensa. •"
+},
+{
+"id": "p119_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Tontura, zumbido, visão turva. •"
+},
+{
+"id": "p119_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Palpitações e ansiedade exacerbada. •"
+},
+{
+"id": "p119_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sudorese fria, rubor facial."
+},
+{
+"id": "p119_17",
+"tipo": "outro",
+"negrito": [
+"119"
+],
+"pt": "119"
+},
+{
+"id": "p120_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p120_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p120_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p120_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Em casos graves: dor torácica, dispneia, déficit neurológico focal (sinais de AVC)."
+},
+{
+"id": "p120_04",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p120_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p120_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Crise de ansiedade: pode simular hipertensão, mas geralmente sem níveis pressóricos tão elevados. •"
+},
+{
+"id": "p120_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anafilaxia: associada a hipotensão, broncoespasmo e urticária, não a hipertensão. •"
+},
+{
+"id": "p120_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hipoglicemia: cursa com tremores, sudorese e ansiedade, mas não com pressão elevada. •"
+},
+{
+"id": "p120_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Feocromocitoma não diagnosticado: picos hipertensivos recorrentes, não restritos ao procedimento."
+},
+{
+"id": "p120_10",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p120_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p120_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Interromper o procedimento e acalmar o paciente. •"
+},
+{
+"id": "p120_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Posicionar em ambiente confortável, sentado ou semi-recumbente. •"
+},
+{
+"id": "p120_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Monitorar pressão arterial e frequência cardíaca. •"
+},
+{
+"id": "p120_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oxigenoterapia leve em casos de dispneia ou ansiedade intensa. •"
+},
+{
+"id": "p120_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Acalmar verbalmente e controlar respiração. •"
+},
+{
+"id": "p120_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Analgesia, se a dor for o fator desencadeante."
+},
+{
+"id": "p120_18",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p120_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p120_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Antihipertensivos de ação rápida (VO ou SL): •"
+},
+{
+"id": "p120_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Captopril 25 mg VO/SL. •"
+},
+{
+"id": "p120_22",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Clonidina 0,1–0,2 mg VO."
+},
+{
+"id": "p120_23",
+"tipo": "outro",
+"negrito": [
+"120"
+],
+"pt": "120"
+},
+{
+"id": "p121_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p121_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p121_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p121_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar nifedipina sublingual pelo risco de hipotensão abrupta e isquemia. •"
+},
+{
+"id": "p121_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Se dor torácica ou sintomas neurológicos: encaminhamento imediato a pronto-socorro. •"
+},
+{
+"id": "p121_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pacientes com crise hipertensiva verdadeira (>180/120 mmHg com sintomas-alvo): suporte hospitalar com medicação EV (nitroprussiato, labetalol)."
+},
+{
+"id": "p121_06",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p121_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p121_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Acidente vascular cerebral (isquêmico ou hemorrágico). •"
+},
+{
+"id": "p121_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infarto agudo do miocárdio. •"
+},
+{
+"id": "p121_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dissecção aórtica. •"
+},
+{
+"id": "p121_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Insuficiência renal aguda. •"
+},
+{
+"id": "p121_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ansiedade residual e medo de novos procedimentos."
+},
+{
+"id": "p121_13",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p121_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p121_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anamnese detalhada: investigar histórico de hipertensão, uso de medicamentos e adesão ao tratamento. •"
+},
+{
+"id": "p121_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Controle da dor e ansiedade: técnicas anestésicas adequadas, ambiente calmo e explicação prévia ao paciente. •"
+},
+{
+"id": "p121_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Monitorização periódica da pressão arterial durante procedimentos em pacientes hipertensos. •"
+},
+{
+"id": "p121_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar grandes volumes de anestésicos com epinefrina. •"
+},
+{
+"id": "p121_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Encaminhar pacientes com hipertensão não controlada para avaliação clínica antes de realizar procedimentos."
+},
+{
+"id": "p121_20",
+"tipo": "outro",
+"negrito": [
+"121"
+],
+"pt": "121"
+},
+{
+"id": "p122_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p122_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p122_02",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p122_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p122_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Casos leves e transitórios: geralmente benignos, resolvendo-se com repouso, ansiolíticos ou anti hipertensivos orais. •"
+},
+{
+"id": "p122_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Casos graves: dependem da rapidez no reconhecimento e manejo. Se tratados adequadamente, podem ter bom prognóstico sem sequelas. •"
+},
+{
+"id": "p122_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O prognóstico estético e funcional é preservado quando a crise é controlada antes de complicações cardiovasculares ou neurológicas."
+},
+{
+"id": "p122_07",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 40. INTERPRETAÇÃO DA MEDIDA DE",
+"PRESSÃO ARTERIAL EM ADULTOS"
+],
+"pt": "FIGURA 40. INTERPRETAÇÃO DA MEDIDA DE PRESSÃO ARTERIAL EM ADULTOS"
+},
+{
+"id": "p122_08",
+"tipo": "cabecalho",
+"negrito": [
+"Fig. 40:",
+"Fonte:"
+],
+"pt": "Fig. 40: Tabela da interpretação clínica da medida de pressão arterial em adultos, com orientação para classificação imediata, necessidade de confirmação diagnóstica e identificação de elevações transitórias, como as associadas à ansiedade. Fonte: Tabela adaptada das Diretrizes da Sociedade Brasileira de Cardiologia."
+},
+{
+"id": "p122_09",
+"tipo": "titulo_secao",
+"negrito": [
+"2.10 TRAUMA ARTERIAL"
+],
+"pt": "2.10 TRAUMA ARTERIAL"
+},
+{
+"id": "p122_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O trauma arterial durante procedimentos estéticos injetáveis é uma intercorrência rara, mas de alto impacto clínico. Diferente da"
+},
+{
+"id": "p122_11",
+"tipo": "outro",
+"negrito": [
+"122"
+],
+"pt": "122"
+},
+{
+"id": "p123_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p123_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p123_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "oclusão vascular por preenchedor, aqui a lesão é direta sobre a parede do vaso, podendo gerar sangramento imediato, hematomas de grande porte, pseudoaneurismas ou, em casos graves, dissecção e trombose secundária. O manejo rápido é essencial para evitar complicações estéticas, funcionais e vasculares permanentes."
+},
+{
+"id": "p123_03",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p123_04",
+"tipo": "corpo",
+"negrito": [
+"A lesão arterial pode ocorrer por diferentes mecanismos:"
+],
+"pt": "A lesão arterial pode ocorrer por diferentes mecanismos: •"
+},
+{
+"id": "p123_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Perfuração direta da parede arterial por agulha ou cânula. •"
+},
+{
+"id": "p123_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dissecção da íntima vascular, com formação de trombo intraluminal. •"
+},
+{
+"id": "p123_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Lesão parcial da parede extravasamento sanguíneo hematoma pulsátil. •"
+},
+{
+"id": "p123_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Lesão completa do vaso sangramento ativo de difícil contenção."
+},
+{
+"id": "p123_09",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 41. FORMAÇÃO DE HEMATOMA E EDEMA",
+"PÓS-PERFURAÇÃO CUTÂNEA"
+],
+"pt": "FIGURA 41. FORMAÇÃO DE HEMATOMA E EDEMA PÓS-PERFURAÇÃO CUTÂNEA"
+},
+{
+"id": "p123_10",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 41.",
+"Fonte:"
+],
+"pt": "Figura 41. Imagem ilustrativa de ruptura vascular dérmica induzida por agulha, com extravasamento sanguíneo, formação de hematoma e edema local. Fonte: Imagem criada com IA."
+},
+{
+"id": "p123_11",
+"tipo": "outro",
+"negrito": [
+"123"
+],
+"pt": "123"
+},
+{
+"id": "p124_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p124_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p124_02",
+"tipo": "titulo_secao",
+"negrito": [
+"CONSEQUÊNCIAS FISIOPATOLÓGICAS:"
+],
+"pt": "CONSEQUÊNCIAS FISIOPATOLÓGICAS:"
+},
+{
+"id": "p124_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p124_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hemorragia aguda hematoma local, aumento da pressão tecidual e risco de síndrome compartimental em áreas fechadas. •"
+},
+{
+"id": "p124_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Trombose secundária isquemia distal. •"
+},
+{
+"id": "p124_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pseudoaneurisma extravasamento contido, risco de ruptura futura."
+},
+{
+"id": "p124_07",
+"tipo": "titulo_secao",
+"negrito": [
+"ÁREAS DE MAIOR RISCO"
+],
+"pt": "ÁREAS DE MAIOR RISCO"
+},
+{
+"id": "p124_08",
+"tipo": "corpo",
+"negrito": [
+"O risco é maior em regiões com vasos calibrosos e superficiais:"
+],
+"pt": "O risco é maior em regiões com vasos calibrosos e superficiais: •"
+},
+{
+"id": "p124_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Artéria facial (trajeto ao longo do sulco nasolabial). •"
+},
+{
+"id": "p124_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Artéria angular (canto medial do olho). •"
+},
+{
+"id": "p124_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Artérias labiais (superior e inferior). •"
+},
+{
+"id": "p124_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Artéria temporal superficial (em regiões temporais). •"
+},
+{
+"id": "p124_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ramos nasais (especialmente a nasal lateral e dorsal)."
+},
+{
+"id": "p124_14",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p124_15",
+"tipo": "corpo",
+"negrito": [
+"Os sinais clínicos podem variar conforme o tipo e a gravidade da lesão:"
+],
+"pt": "Os sinais clínicos podem variar conforme o tipo e a gravidade da lesão: •"
+},
+{
+"id": "p124_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sangramento ativo e pulsátil imediatamente após a punção. •"
+},
+{
+"id": "p124_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hematoma expansivo de rápido crescimento. •"
+},
+{
+"id": "p124_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hematoma pulsátil (sugere pseudoaneurisma). •"
+},
+{
+"id": "p124_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dor intensa desproporcional ao esperado. •"
+},
+{
+"id": "p124_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sinais de isquemia distal em casos de trombose ou compressão (palidez, livedo, ausência de reperfusão capilar)."
+},
+{
+"id": "p124_21",
+"tipo": "outro",
+"negrito": [
+"124"
+],
+"pt": "124"
+},
+{
+"id": "p125_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p125_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p125_02",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p125_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p125_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hematoma venoso simples: sangramento menos intenso, coloração arroxeada sem pulsatilidade. •"
+},
+{
+"id": "p125_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia por preenchedor: dor súbita, palidez e livedo, sem sangramento ativo. •"
+},
+{
+"id": "p125_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção aguda: eritema, calor, secreção, mas evolução mais tardia."
+},
+{
+"id": "p125_07",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p125_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p125_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Interromper imediatamente o procedimento. •"
+},
+{
+"id": "p125_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Compressão manual direta e sustentada sobre o local da lesão. •"
+},
+{
+"id": "p125_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aplicar gelo local para vasoconstrição. •"
+},
+{
+"id": "p125_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reavaliar perfusão distal após contenção do sangramento. •"
+},
+{
+"id": "p125_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Não manipular excessivamente para evitar maior dissecção ou aumento do hematoma."
+},
+{
+"id": "p125_14",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p125_15",
+"tipo": "corpo",
+"negrito": [
+"Hemorragia persistente:"
+],
+"pt": "Hemorragia persistente: •"
+},
+{
+"id": "p125_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Compressão contínua prolongada (10–15 minutos). •"
+},
+{
+"id": "p125_17",
+"tipo": "corpo",
+"negrito": [
+"Hematomas volumosos ou pulsáteis:"
+],
+"pt": "Curativo compressivo estéril. Hematomas volumosos ou pulsáteis: •"
+},
+{
+"id": "p125_18",
+"tipo": "corpo",
+"negrito": [
+"Pseudoaneurisma confirmado:"
+],
+"pt": "Avaliação com ultrassom Doppler para descartar pseudoaneurisma. Pseudoaneurisma confirmado: •"
+},
+{
+"id": "p125_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Encaminhamento para avaliação vascular. •"
+},
+{
+"id": "p125_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Opções incluem embolização endovascular ou ligadura cirúrgica."
+},
+{
+"id": "p125_21",
+"tipo": "outro",
+"negrito": [
+"125"
+],
+"pt": "125"
+},
+{
+"id": "p126_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p126_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p126_02",
+"tipo": "corpo",
+"negrito": [
+"Isquemia distal associada:"
+],
+"pt": "Isquemia distal associada: •"
+},
+{
+"id": "p126_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de hialuronidase, se houver preenchedor na região. •"
+},
+{
+"id": "p126_04",
+"tipo": "corpo",
+"negrito": [
+"Antibioticoprofilaxia:"
+],
+"pt": "Terapia adjuvante: AAS 300 mg/dia, sildenafil 50 mg, corticoide sistêmico (prednisona 40 mg/dia). Antibioticoprofilaxia: •"
+},
+{
+"id": "p126_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Indicada em hematomas volumosos ou com necrose associada."
+},
+{
+"id": "p126_06",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p126_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p126_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hematomas extensos com fibrose residual. •"
+},
+{
+"id": "p126_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pseudoaneurismas tardios (dias a semanas). •"
+},
+{
+"id": "p126_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Trombose e necrose distal. •"
+},
+{
+"id": "p126_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção secundária em hematomas não drenados. •"
+},
+{
+"id": "p126_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sequelas estéticas (assimetria, cicatrizes, irregularidades de contorno)."
+},
+{
+"id": "p126_13",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p126_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p126_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Domínio da anatomia vascular e uso de técnicas seguras. •"
+},
+{
+"id": "p126_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Preferência por cânulas rombas em áreas de risco. •"
+},
+{
+"id": "p126_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aspiração antes da aplicação, mesmo com cânula. •"
+},
+{
+"id": "p126_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar pressões de injeção excessivas. •"
+},
+{
+"id": "p126_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Treinar a equipe para manejo rápido de sangramentos."
+},
+{
+"id": "p126_20",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p126_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p126_22",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Lesões arteriais leves: geralmente têm bom prognóstico com compressão imediata e cuidados locais."
+},
+{
+"id": "p126_23",
+"tipo": "outro",
+"negrito": [
+"126"
+],
+"pt": "126"
+},
+{
+"id": "p127_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p127_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p127_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p127_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pseudoaneurismas ou hematomas extensos: exigem acompanhamento especializado, mas podem ser resolvidos sem sequelas se tratados precocemente. •"
+},
+{
+"id": "p127_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia associada: piora o prognóstico, podendo evoluir para necrose."
+},
+{
+"id": "p127_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As intercorrências agudas não isquêmicas, embora geralmente benignas e autolimitadas, representam um dos principais pontos de atenção na prática clínica diária, justamente por sua alta frequência e pela capacidade de gerar desconforto imediato e insegurança no paciente. Diferentemente das complicações isquêmicas, que exigem intervenção emergencial, essas manifestações demandam principalmente um bom julgamento clínico para diferenciar respostas fisiológicas esperadas de sinais iniciais de quadros potencialmente mais graves."
+},
+{
+"id": "p127_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A correta interpretação de sintomas como dor, edema, eritema e reações sistêmicas é essencial para evitar tanto a subvalorização quanto o excesso de intervenção. Muitos desses eventos fazem parte da resposta normal ao trauma do procedimento, mas, quando mal interpretados, podem levar a condutas inadequadas ou atrasar o reconhecimento de complicações relevantes. Por isso, a experiência clínica e a capacidade de correlação entre sinais, tempo de evolução e contexto do procedimento são determinantes."
+},
+{
+"id": "p127_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Por fim, o manejo adequado dessas intercorrências vai além do tratamento em si e envolve comunicação clara com o paciente,"
+},
+{
+"id": "p127_08",
+"tipo": "outro",
+"negrito": [
+"127"
+],
+"pt": "127"
+},
+{
+"id": "p128_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p128_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p128_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "preparo prévio da equipe e padronização de condutas. Quando bem conduzidas, essas situações não comprometem o resultado final e, muitas vezes, fortalecem a confiança do paciente no profissional, reforçando a importância de uma abordagem segura, previsível e bem estruturada."
+},
+{
+"id": "p128_03",
+"tipo": "outro",
+"negrito": [
+"128"
+],
+"pt": "128"
+},
+{
+"id": "p129_00",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p129_01",
+"tipo": "cabecalho",
+"negrito": [
+"JOÃO PITHON"
+],
+"pt": "JOÃO PITHON"
+},
+{
+"id": "p129_02",
+"tipo": "outro",
+"negrito": [
+"129"
+],
+"pt": "129"
+},
+{
+"id": "p130_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p130_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p130_02",
+"tipo": "titulo_display",
+"negrito": [
+"A"
+],
+"pt": "A"
+},
+{
+"id": "p130_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "s intercorrências tardias isquêmicas representam um grupo de complicações menos frequentes, porém potencialmente graves, associadas à redução progressiva ou sustentada do fluxo sanguíneo em tecidos previamente manipulados. Diferentemente das intercorrências agudas, que se manifestam de forma imediata e exigem intervenção emergencial, essas condições podem surgir dias após o procedimento, muitas vezes de maneira insidiosa, dificultando o reconhecimento precoce e o diagnóstico diferencial."
+},
+{
+"id": "p130_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Nesse contexto, a isquemia não decorre necessariamente de uma obstrução intravascular imediata, mas pode estar relacionada a fatores como compressão extrínseca, alterações inflamatórias locais, edema persistente ou reorganização tecidual. A compreensão desses mecanismos é fundamental para identificar sinais iniciais, evitar progressão para necrose e orientar condutas adequadas. Neste capítulo, serão abordadas a isquemia extrínseca compressiva, a necrose tardia e a ulceração cutânea, destacando seus aspectos clínicos, fisiopatológicos e estratégias de manejo."
+},
+{
+"id": "p130_05",
+"tipo": "titulo_secao",
+"negrito": [
+"3.1 ISQUEMIA EXTRÍNSECA COMPRESSIVA",
+"(INTERCORRÊNCIA TARDIA ISQUÊMICA)"
+],
+"pt": "3.1 ISQUEMIA EXTRÍNSECA COMPRESSIVA (INTERCORRÊNCIA TARDIA ISQUÊMICA)"
+},
+{
+"id": "p130_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A isquemia compressiva é uma intercorrência tardia e progressiva causada por pressão extrínseca sobre vasos sanguíneos, geralmente resultado de hematomas organizados, edema severo, fibrose ou acúmulo de preenchedor em áreas de pouco espaço anatômico."
+},
+{
+"id": "p130_07",
+"tipo": "outro",
+"negrito": [
+"130"
+],
+"pt": "130"
+},
+{
+"id": "p131_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p131_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p131_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ao contrário da oclusão intravascular, trata-se de uma interrupção do fluxo por compressão externa, que pode evoluir para necrose tecidual se não identificada e tratada precocemente."
+},
+{
+"id": "p131_03",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p131_04",
+"tipo": "corpo",
+"negrito": [
+"Ocorre quando há:"
+],
+"pt": "Ocorre quando há: •"
+},
+{
+"id": "p131_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aumento da pressão tecidual externa (por edema, fibrose ou preenchedor excessivo). •"
+},
+{
+"id": "p131_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Compressão de vasos arteriais ou venosos superficiais, levando à redução do fluxo sanguíneo. •"
+},
+{
+"id": "p131_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia progressiva, geralmente subaguda ou insidiosa, em comparação à oclusão vascular imediata. •"
+},
+{
+"id": "p131_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pode ser favorecida por alterações inflamatórias e edema em áreas com menor complacência (como ponta nasal, glabela ou fronte)."
+},
+{
+"id": "p131_09",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 42. APRESENTAÇÃO CLÍNICA INICIAL DE POSSÍVEL",
+"COMPRESSÃO PÓS PREENCHIMENTO E IMAGEM DE ULTRASSOM",
+"DOPPLER COLORIDO"
+],
+"pt": "FIGURA 42. APRESENTAÇÃO CLÍNICA INICIAL DE POSSÍVEL COMPRESSÃO PÓS PREENCHIMENTO E IMAGEM DE ULTRASSOM DOPPLER COLORIDO"
+},
+{
+"id": "p131_10",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p131_11",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p131_12",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 42:",
+"Fonte:"
+],
+"pt": "Figura 42: Representação clínica de isquemia extrínseca compressiva pós preenchimento. (A) Imagem clínica mostrando placas eritemato-violáceas e pústulas no nariz. (B) Imagem transversal de ultrassom Doppler colorido mostrando uma estrutura tubular não compressível na artéria nasal dorsal (seta), compatível com compressão arterial. Fonte: Adaptada de Lee W. Ultrasound-Guided Hyaluronidase Injections for the Management of Filler-Induced Arterial Ischemia: A Pictorial Case Series and Systematic Review of Literature. Journal of Cosmetic Dermatology. 2023. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/ PMC12586333/"
+},
+{
+"id": "p131_13",
+"tipo": "outro",
+"negrito": [
+"131"
+],
+"pt": "131"
+},
+{
+"id": "p132_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p132_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p132_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A fisiopatologia pode ser comparada à de uma síndrome compartimental facial, onde o excesso de pressão leva à redução do aporte de oxigênio tecidual."
+},
+{
+"id": "p132_03",
+"tipo": "titulo_secao",
+"negrito": [
+"ÁREAS DE MAIOR RISCO"
+],
+"pt": "ÁREAS DE MAIOR RISCO"
+},
+{
+"id": "p132_04",
+"tipo": "corpo",
+"negrito": [
+"As regiões anatômicas com menor mobilidade de tecidos e maior",
+"risco de compressão são:"
+],
+"pt": "As regiões anatômicas com menor mobilidade de tecidos e maior risco de compressão são: •"
+},
+{
+"id": "p132_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ponta nasal (pressão contra a cartilagem alar e vasos colaterais). •"
+},
+{
+"id": "p132_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Glabela (pele densa e menos complacente). •"
+},
+{
+"id": "p132_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Fronte e têmporas (quando há preenchimento profundo ou edema). •"
+},
+{
+"id": "p132_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sulco nasolabial denso, com acúmulo de produto ou hematomas profundos."
+},
+{
+"id": "p132_09",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p132_10",
+"tipo": "corpo",
+"negrito": [
+"A isquemia compressiva geralmente se manifesta de forma mais",
+"lenta que a oclusão vascular aguda. Os sinais incluem:"
+],
+"pt": "A isquemia compressiva geralmente se manifesta de forma mais lenta que a oclusão vascular aguda. Os sinais incluem: •"
+},
+{
+"id": "p132_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Desconforto ou dor persistente na região, dias após o procedimento. •"
+},
+{
+"id": "p132_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Palidez localizada ou livedo leve. •"
+},
+{
+"id": "p132_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Redução da perfusão capilar em áreas distais. •"
+},
+{
+"id": "p132_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Endurecimento da região (fibrose ou acúmulo denso de preenchedor). •"
+},
+{
+"id": "p132_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Temperatura reduzida da pele em relação ao lado contralateral. •"
+},
+{
+"id": "p132_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Lesões ulceradas ou necrosadas nos casos mais tardios."
+},
+{
+"id": "p132_17",
+"tipo": "outro",
+"negrito": [
+"132"
+],
+"pt": "132"
+},
+{
+"id": "p132_18",
+"tipo": "outro",
+"negrito": [
+"132"
+],
+"pt": "132"
+},
+{
+"id": "p133_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p133_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p133_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Diferencia-se da oclusão aguda pela ausência de dor súbita e livedo reticular progressivo, ao invés de imediato."
+},
+{
+"id": "p133_03",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p133_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p133_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oclusão intravascular por preenchedor (dor súbita, livedo intenso, rápida evolução para necrose). •"
+},
+{
+"id": "p133_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção local (eritema, calor, secreção). •"
+},
+{
+"id": "p133_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reação inflamatória estéril ou nódulo (massa local sem sinais isquêmicos). •"
+},
+{
+"id": "p133_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "ETIP (edema recorrente, inflamação tardia sem isquemia)."
+},
+{
+"id": "p133_09",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p133_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p133_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Avaliação clínica minuciosa da perfusão e integridade cutânea. •"
+},
+{
+"id": "p133_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aplicação de calor local suave, para vasodilatação. •"
+},
+{
+"id": "p133_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Massagem delicada para mobilização do produto e redução da compressão. •"
+},
+{
+"id": "p133_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de hialuronidase em áreas com suspeita de compressão por ácido hialurônico: •"
+},
+{
+"id": "p133_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "1000 UTR/mL, em múltiplos pontos da área afetada. •"
+},
+{
+"id": "p133_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pode ser repetido em 12–24 horas, se necessário. •"
+},
+{
+"id": "p133_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Elevação da cabeça e orientações para evitar pressão externa local. •"
+},
+{
+"id": "p133_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "AAS 300 mg/dia por 7 dias, se houver risco de isquemia associada."
+},
+{
+"id": "p133_19",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p133_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p133_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ultrassom com Doppler colorido para avaliar fluxo vascular e"
+},
+{
+"id": "p133_22",
+"tipo": "outro",
+"negrito": [
+"133"
+],
+"pt": "133"
+},
+{
+"id": "p134_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p134_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p134_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "presença de coleções ou compressões. •"
+},
+{
+"id": "p134_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sildenafil 50 mg/dia para aumento da perfusão. •"
+},
+{
+"id": "p134_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Corticóides sistêmicos em caso de edema compressivo severo: •"
+},
+{
+"id": "p134_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Prednisona 40 mg/dia por 3–5 dias. •"
+},
+{
+"id": "p134_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Drenagem de hematomas organizados com compressão evidente. •"
+},
+{
+"id": "p134_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Encaminhamento para centro especializado caso haja risco de necrose iminente ou necessidade de intervenção cirúrgica."
+},
+{
+"id": "p134_08",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p134_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p134_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Necrose cutânea tardia. •"
+},
+{
+"id": "p134_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Fibrose e irregularidade de contorno. •"
+},
+{
+"id": "p134_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cicatriz atrófica ou hipertrófica. •"
+},
+{
+"id": "p134_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hiperpigmentação pós-inflamatória. •"
+},
+{
+"id": "p134_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Insatisfação estética significativa."
+},
+{
+"id": "p134_15",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p134_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p134_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de volumes menores por ponto de aplicação. •"
+},
+{
+"id": "p134_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar infiltração excessiva em áreas densas ou de risco. •"
+},
+{
+"id": "p134_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Técnica em camadas corretas, respeitando a anatomia. •"
+},
+{
+"id": "p134_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar compressões externas no pós-operatório imediato. •"
+},
+{
+"id": "p134_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Orientar pacientes a não massagear ou dormir sobre a área tratada nos primeiros dias."
+},
+{
+"id": "p134_22",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p134_23",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Quando detectada precocemente, a isquemia compressiva tem"
+},
+{
+"id": "p134_24",
+"tipo": "outro",
+"negrito": [
+"134"
+],
+"pt": "134"
+},
+{
+"id": "p135_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p135_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p135_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "prognóstico favorável, com resolução completa dos sintomas. Casos negligenciados ou com necrose estabelecida exigem abordagem multidisciplinar, com possíveis correções cirúrgicas."
+},
+{
+"id": "p135_03",
+"tipo": "titulo_secao",
+"negrito": [
+"3.2 NECROSE TECIDUAL TARDIA"
+],
+"pt": "3.2 NECROSE TECIDUAL TARDIA"
+},
+{
+"id": "p135_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A necrose tecidual tardia é uma complicação decorrente da progressão não reconhecida ou não tratada de um quadro isquêmico subclínico (como uma isquemia compressiva não resolvida), ou ainda de necroses parciais que evoluem lentamente após o procedimento. Diferente da necrose aguda, aqui os sinais aparecem dias após a aplicação, tornando o diagnóstico mais desafiador e muitas vezes confundido com infecção ou reação inflamatória persistente."
+},
+{
+"id": "p135_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Embora menos dramática que a necrose aguda, pode deixar sequelas estéticas relevantes, incluindo cicatrizes atróficas, hiperpigmentação pós-inflamatória e irregularidades de contorno."
+},
+{
+"id": "p135_06",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO",
+"PERIORAL APÓS PREENCHIMENTO LABIAL"
+],
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL"
+},
+{
+"id": "p135_07",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 43.",
+"Fonte:"
+],
+"pt": "Figura 43. Imagem clínica demonstrando fase inicial de comprometimento isquêmico em região perioral, com acentuada coloração violácea do lábio inferior, alterações cutâneas e presença de pústulas. O quadro sugere sofrimento vascular local, possivelmente relacionado a evento isquêmico secundário, com evolução progressiva e risco de necrose tecidual. Observa-se comprometimento da perfusão em fase precoce, ainda sem delimitação de necrose estabelecida, porém com potencial de progressão para perda tecidual e sequelas estéticas significativas. Fonte: Arquivo pessoal / banco de imagens dos autores."
+},
+{
+"id": "p135_08",
+"tipo": "outro",
+"negrito": [
+"135"
+],
+"pt": "135"
+},
+{
+"id": "p136_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p136_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p136_02",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p136_03",
+"tipo": "corpo",
+"negrito": [
+"A necrose tardia ocorre por mecanismos como:"
+],
+"pt": "A necrose tardia ocorre por mecanismos como: •"
+},
+{
+"id": "p136_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia compressiva crônica acúmulo de preenchedor ou fibrose causando pressão sobre vasos. •"
+},
+{
+"id": "p136_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Trombose progressiva em artérias de pequeno calibre, secundária a microtrauma endotelial. •"
+},
+{
+"id": "p136_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecções subclínicas que agravam o processo inflamatório local e comprometem a perfusão. •"
+},
+{
+"id": "p136_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reparação tecidual inadequada após microisquemias não reconhecidas."
+},
+{
+"id": "p136_08",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO",
+"PERIORAL APÓS PREENCHIMENTO LABIAL"
+],
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL"
+},
+{
+"id": "p136_09",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 44.",
+"Fonte:"
+],
+"pt": "Figura 44. Imagens clínicas demonstrando alteração de coloração em nariz e região perinasal, com áreas de palidez focal, compatíveis com redução significativa da perfusão sanguínea local. O padrão observado sugere comprometimento vascular com possível diminuição ou interrupção do fluxo arterial, caracterizando fase inicial de sofrimento isquêmico tecidual. O quadro apresenta distribuição heterogênea da coloração cutânea, podendo estar associado a evento obstrutivo ou compressivo de origem vascular, com potencial risco de progressão para necrose se não houver restabelecimento adequado da circulação. Fonte: Arquivo pessoal / banco de imagens dos autores."
+},
+{
+"id": "p136_10",
+"tipo": "outro",
+"negrito": [
+"136"
+],
+"pt": "136"
+},
+{
+"id": "p137_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p137_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p137_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Do ponto de vista celular: há necrose por hipóxia mantida, inflamação crônica e substituição por tecido cicatricial fibrótico."
+},
+{
+"id": "p137_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A progressão clínica da necrose tardia tende a seguir um padrão evolutivo, no qual sinais inicialmente discretos podem avançar para comprometimento mais evidente da pele e dos tecidos subjacentes. Esse comportamento reforça a importância do reconhecimento precoce e da compreensão das áreas anatômicas mais vulneráveis, onde pequenas alterações de perfusão podem resultar em lesões desproporcionais."
+},
+{
+"id": "p137_04",
+"tipo": "titulo_secao",
+"negrito": [
+"ÁREAS DE MAIOR RISCO"
+],
+"pt": "ÁREAS DE MAIOR RISCO"
+},
+{
+"id": "p137_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p137_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Ponta nasal e asas nasais: regiões com pouca colateralização. •"
+},
+{
+"id": "p137_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Glabela: pele espessa, pouco complacente e de difícil revascularização. •"
+},
+{
+"id": "p137_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Lábios: susceptíveis por trauma repetido e alta demanda metabólica. •"
+},
+{
+"id": "p137_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Periorbitária: risco de ulceração e sequelas estéticas evidentes."
+},
+{
+"id": "p137_10",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p137_11",
+"tipo": "corpo",
+"negrito": [
+"Manifesta-se dias a semanas após o procedimento:"
+],
+"pt": "Manifesta-se dias a semanas após o procedimento: •"
+},
+{
+"id": "p137_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dor persistente ou desconforto tardio. •"
+},
+{
+"id": "p137_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Eritema crônico que não melhora com medidas simples. •"
+},
+{
+"id": "p137_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Áreas de pele escurecida ou ulcerada em evolução lenta. •"
+},
+{
+"id": "p137_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Crosta necrótica em formação, muitas vezes confundida com “ferida traumática”."
+},
+{
+"id": "p137_16",
+"tipo": "outro",
+"negrito": [
+"137"
+],
+"pt": "137"
+},
+{
+"id": "p138_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p138_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p138_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p138_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Mau odor ou secreção em casos de necrose infectada."
+},
+{
+"id": "p138_04",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p138_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p138_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção bacteriana: presença de febre, secreção purulenta e calor intenso. •"
+},
+{
+"id": "p138_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reação inflamatória estéril (ETIP, nódulos): edema recorrente sem necrose. •"
+},
+{
+"id": "p138_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hematoma ou equimose residual: coloração arroxeada que clareia com o tempo, não escurece progressivamente. •"
+},
+{
+"id": "p138_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Úlcera traumática: limites regulares, geralmente em áreas de atrito."
+},
+{
+"id": "p138_10",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p138_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p138_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Avaliação clínica da extensão da lesão. •"
+},
+{
+"id": "p138_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Assepsia local rigorosa. •"
+},
+{
+"id": "p138_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Curativos úmidos e cicatrizantes (hidrogel, hidrocoloide, pomadas com dexpantenol ou AGE). •"
+},
+{
+"id": "p138_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Analgésicos simples (dipirona, paracetamol) ou AINEs em casos selecionados. •"
+},
+{
+"id": "p138_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar traumas adicionais na região afetada."
+},
+{
+"id": "p138_17",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA AVANÇADA"
+],
+"pt": "CONDUTA AVANÇADA"
+},
+{
+"id": "p138_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p138_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hialuronidase: indicada se houver suspeita de compressão tardia por excesso de ácido hialurônico. •"
+},
+{
+"id": "p138_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Antibioticoterapia: •"
+},
+{
+"id": "p138_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Amoxicilina/clavulanato 875/125 mg 12/12h por 7–10 dias."
+},
+{
+"id": "p138_22",
+"tipo": "outro",
+"negrito": [
+"138"
+],
+"pt": "138"
+},
+{
+"id": "p139_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p139_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p139_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p139_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Associar metronidazol em casos de suspeita de anaeróbios. •"
+},
+{
+"id": "p139_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Corticoides sistêmicos: prednisona 20–40 mg/dia por curto período, em casos de edema inflamatório associado. •"
+},
+{
+"id": "p139_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oxigenoterapia hiperbárica: pode auxiliar na cicatrização e oxigenação tecidual. •"
+},
+{
+"id": "p139_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Debridamento enzimático ou cirúrgico: quando houver tecido necrosado delimitado. •"
+},
+{
+"id": "p139_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Terapias regenerativas (PRP, fatores de crescimento tópicos, laser fracionado) em fase de cicatrização, para melhorar o reparo tecidual. •"
+},
+{
+"id": "p139_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cirurgia reconstrutiva ou enxertos em necroses extensas."
+},
+{
+"id": "p139_09",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p139_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p139_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cicatrizes atróficas ou hipertróficas. •"
+},
+{
+"id": "p139_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Irregularidades de contorno. •"
+},
+{
+"id": "p139_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hiperpigmentação pós-inflamatória. •"
+},
+{
+"id": "p139_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção secundária de difícil controle. •"
+},
+{
+"id": "p139_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Impacto psicológico significativo."
+},
+{
+"id": "p139_16",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p139_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p139_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Reconhecimento precoce da isquemia aguda e tratamento imediato. •"
+},
+{
+"id": "p139_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de volumes adequados e técnica em camadas seguras. •"
+},
+{
+"id": "p139_20",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar sobrecorreção em áreas de menor complacência. •"
+},
+{
+"id": "p139_21",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Acompanhamento próximo nas primeiras semanas após o procedimento."
+},
+{
+"id": "p139_22",
+"tipo": "outro",
+"negrito": [
+"139"
+],
+"pt": "139"
+},
+{
+"id": "p140_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p140_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p140_02",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p140_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p140_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Casos leves: evolução favorável com medidas conservadoras, cicatrização sem grandes sequelas. •"
+},
+{
+"id": "p140_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Casos moderados a graves: risco elevado de cicatrizes permanentes e necessidade de procedimentos reparadores. •"
+},
+{
+"id": "p140_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O prognóstico final depende da precocidade da intervenção e do manejo correto da fase cicatricial."
+},
+{
+"id": "p140_07",
+"tipo": "titulo_secao",
+"negrito": [
+"3.3 ULCERAÇÃO CUTÂNEA"
+],
+"pt": "3.3 ULCERAÇÃO CUTÂNEA"
+},
+{
+"id": "p140_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Quando a necrose tecidual já está estabelecida, a prioridade do tratamento deixa de ser a reperfusão, pois o tecido desvitalizado não pode mais ser recuperado. O foco então passa a ser o manejo da ferida, com medidas que favoreçam a cicatrização, previnam infecção e minimizem sequelas estéticas e funcionais."
+},
+{
+"id": "p140_09",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO",
+"PERIORAL APÓS PREENCHIMENTO LABIAL"
+],
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL"
+},
+{
+"id": "p140_10",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p140_11",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p140_12",
+"tipo": "outro",
+"negrito": [],
+"pt": "C"
+},
+{
+"id": "p140_13",
+"tipo": "outro",
+"negrito": [],
+"pt": "D"
+},
+{
+"id": "p140_14",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 45",
+"Fonte:"
+],
+"pt": "Figura 45. Imagem de sequência clínica de evolução e resolução de necrose tardia após rinomodelação com ácido hialurônico, em seguimento de 26 dias. Nas imagens A–D observa-se inicialmente necrose cutânea estabelecida com comprometimento tecidual e presença de ulceração em região nasal, seguida por regressiva progressiva das lesões com melhora do aspecto inflamatório e da integridade cutânea ao longo do tempo. Ao final do seguimento, observa-se formação de cicatriz residual, com resultado estético aceitável após evolução do processo de reparação tecidual. Fonte: Adaptado de Lee W, et al. Management of ischemic complications after nonsurgical rhinoplasty with hyaluronic acid. Case report/review. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC12978417/"
+},
+{
+"id": "p140_15",
+"tipo": "outro",
+"negrito": [
+"140"
+],
+"pt": "140"
+},
+{
+"id": "p141_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p141_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p141_02",
+"tipo": "titulo_secao",
+"negrito": [
+"AVALIAÇÃO INICIAL"
+],
+"pt": "AVALIAÇÃO INICIAL"
+},
+{
+"id": "p141_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p141_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Extensão e profundidade da necrose. •"
+},
+{
+"id": "p141_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Presença de infecção (odor, secreção, dor exacerbada). •"
+},
+{
+"id": "p141_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Estado geral do paciente (comorbidades, imunidade). •"
+},
+{
+"id": "p141_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Local anatômico (áreas de pele fina ou de alta mobilidade tendem a cicatrizar com retrações)."
+},
+{
+"id": "p141_08",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTAS GERAIS"
+],
+"pt": "CONDUTAS GERAIS"
+},
+{
+"id": "p141_09",
+"tipo": "corpo",
+"negrito": [
+"1. Limpeza da ferida"
+],
+"pt": "1. Limpeza da ferida •"
+},
+{
+"id": "p141_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Solução salina isotônica. •"
+},
+{
+"id": "p141_11",
+"tipo": "corpo",
+"negrito": [
+"2. Desbridamento"
+],
+"pt": "Antissépticos apenas em fase inicial, quando há suspeita de contaminação. 2. Desbridamento •"
+},
+{
+"id": "p141_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Enzimático: colagenase, papaína, hidrogéis bioativos. •"
+},
+{
+"id": "p141_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Autolítico: curativos oclusivos (hidrogel, hidrocoloide). •"
+},
+{
+"id": "p141_14",
+"tipo": "corpo",
+"negrito": [
+"3. Controle da infecção"
+],
+"pt": "Cirúrgico: em necroses espessas e delimitadas. 3. Controle da infecção •"
+},
+{
+"id": "p141_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Antibiótico profilático oral (amoxicilina/clavulanato com possível associação do metronidazol para cobertura de anaeróbios). •"
+},
+{
+"id": "p141_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Antibióticos tópicos em áreas colonizadas. •"
+},
+{
+"id": "p141_17",
+"tipo": "corpo",
+"negrito": [
+"4. Controle de inflamação e dor"
+],
+"pt": "Coleta de cultura em casos de ferida persistente. 4. Controle de inflamação e dor •"
+},
+{
+"id": "p141_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "AINEs para analgesia e modulação inflamatória. •"
+},
+{
+"id": "p141_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar corticoides sistêmicos nesta fase."
+},
+{
+"id": "p141_20",
+"tipo": "outro",
+"negrito": [
+"141"
+],
+"pt": "141"
+},
+{
+"id": "p142_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p142_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p142_02",
+"tipo": "titulo_secao",
+"negrito": [
+"ESTÍMULO À CICATRIZAÇÃO"
+],
+"pt": "ESTÍMULO À CICATRIZAÇÃO"
+},
+{
+"id": "p142_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p142_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Curativos bioativos: hidrogel, hidrocoloide, AGE, membranas com prata. •"
+},
+{
+"id": "p142_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Terapias regenerativas: PRP, fatores de crescimento tópicos, laser fracionado em fase tardia. •"
+},
+{
+"id": "p142_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Oxigenoterapia hiperbárica: indicada em necroses extensas ou cicatrizações lentas."
+},
+{
+"id": "p142_07",
+"tipo": "titulo_secao",
+"negrito": [
+"OZONIOTERAPIA COMO ADJUVANTE"
+],
+"pt": "OZONIOTERAPIA COMO ADJUVANTE"
+},
+{
+"id": "p142_08",
+"tipo": "corpo",
+"negrito": [
+"A ozonioterapia tem sido estudada como opção complementar no",
+"tratamento de feridas crônicas e necroses, com potenciais benefícios:"
+],
+"pt": "A ozonioterapia tem sido estudada como opção complementar no tratamento de feridas crônicas e necroses, com potenciais benefícios: •"
+},
+{
+"id": "p142_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Antimicrobiano: reduz a carga bacteriana, incluindo anaeróbios. •"
+},
+{
+"id": "p142_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Bioestimulador: pode favorecer angiogênese em bordas viáveis. •"
+},
+{
+"id": "p142_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Anti-inflamatório: relatos de melhora em dor e edema local."
+},
+{
+"id": "p142_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Entretanto, a evidência ainda é limitada e heterogênea, sem consenso internacional em estética. Seu uso deve ser considerado apenas como adjuvante, sem substituir curativos bioativos, antibióticos e terapias consagradas. É mais indicado em necroses de difícil cicatrização ou feridas extensas, sempre documentando em prontuário o caráter complementar e experimental."
+},
+{
+"id": "p142_13",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO DE SEQUELAS"
+],
+"pt": "PREVENÇÃO DE SEQUELAS"
+},
+{
+"id": "p142_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p142_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Prevenção de retrações: massagem, silicone gel, curativos compressivos."
+},
+{
+"id": "p142_16",
+"tipo": "outro",
+"negrito": [
+"142"
+],
+"pt": "142"
+},
+{
+"id": "p143_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p143_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p143_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p143_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Controle de pigmentação: fotoproteção + clareadores tópicos. •"
+},
+{
+"id": "p143_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Correções tardias: preenchimentos, subcisão, enxertos ou cirurgia reparadora após 6 meses."
+},
+{
+"id": "p143_05",
+"tipo": "titulo_secao",
+"negrito": [
+"PROGNÓSTICO"
+],
+"pt": "PROGNÓSTICO"
+},
+{
+"id": "p143_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p143_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Pequenas necroses: cicatrização em 2–4 semanas, geralmente com hiperpigmentação residual. •"
+},
+{
+"id": "p143_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Necroses moderadas: risco de cicatrizes atróficas ou retrações. •"
+},
+{
+"id": "p143_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Necroses extensas: maior chance de deformidades permanentes, podendo exigir cirurgia reconstrutiva."
+},
+{
+"id": "p143_10",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 46. CICATRIZ EM PONTA NASAL PÓS RESOLUÇÃO DE",
+"NECROSE CAUSADA POR PREENCHEDOR DÉRMICO"
+],
+"pt": "FIGURA 46. CICATRIZ EM PONTA NASAL PÓS RESOLUÇÃO DE NECROSE CAUSADA POR PREENCHEDOR DÉRMICO"
+},
+{
+"id": "p143_11",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 46:",
+"Fonte:"
+],
+"pt": "Figura 46: Cicatriz em região de ponta nasal após resolução de necrose cutânea secundária à injeção de preenchedor dérmico em rinomodelação, evidenciando sequela tecidual pós-isquemia com perda parcial de contorno e irregularidade da superfície cutânea. Fonte: Adaptado de GRUNEBAUM, Lisa Danielle; ALLEMANN, Inja Bogdan; DAYAN, Steven; MANDY, Stephen; BAUMANN, Leslie. The risk of alar necrosis associated with dermal filler injection. Dermatologic Surgery, v. 35, n. Suppl 2, p. 1635-1640, 2009. https:// doi.org/10.1111/j.1524-4725.2009.01315.x"
+},
+{
+"id": "p143_12",
+"tipo": "outro",
+"negrito": [
+"143"
+],
+"pt": "143"
+},
+{
+"id": "p144_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p144_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p144_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As intercorrências tardias isquêmicas exigem um olhar clínico atento e, sobretudo, uma mudança de raciocínio em relação às complicações agudas. Aqui, o tempo deixa de ser um aliado evidente e passa a ser um fator de confusão, já que os sinais surgem de forma progressiva, muitas vezes discretos no início, o que pode atrasar o diagnóstico e permitir a evolução do dano tecidual."
+},
+{
+"id": "p144_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A compreensão dos mecanismos envolvidos, especialmente aqueles relacionados à compressão extrínseca, hipóxia sustentada e reparação tecidual inadequada, é fundamental para interromper a progressão do quadro antes que haja perda irreversível de tecido. Diferentemente das oclusões agudas, o manejo dessas intercorrências depende mais da capacidade de reconhecimento precoce e da condução contínua do que de uma intervenção única e imediata."
+},
+{
+"id": "p144_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Por fim, o desfecho dessas complicações está diretamente relacionado à precocidade da intervenção e à qualidade do acompanhamento nas semanas subsequentes ao procedimento. O profissional deve estar preparado não apenas para tratar, mas para orientar, monitorar e, quando necessário, conduzir estratégias de reparação estética, reduzindo o impacto funcional e emocional dessas intercorrências no paciente."
+},
+{
+"id": "p144_05",
+"tipo": "outro",
+"negrito": [
+"144"
+],
+"pt": "144"
+},
+{
+"id": "p145_00",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p145_01",
+"tipo": "cabecalho",
+"negrito": [
+"JOÃO PITHON"
+],
+"pt": "JOÃO PITHON"
+},
+{
+"id": "p145_02",
+"tipo": "outro",
+"negrito": [
+"145"
+],
+"pt": "145"
+},
+{
+"id": "p146_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p146_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p146_02",
+"tipo": "titulo_display",
+"negrito": [
+"A"
+],
+"pt": "A"
+},
+{
+"id": "p146_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "s intercorrências tardias infecciosas e inflamatórias podem surgir dias ou semanas após os procedimentos com preenchedores, estando geralmente relacionadas à introdução de microrganismos no momento da aplicação ou à ativação de processos inflamatórios locais. Diferentemente das intercorrências agudas, esses quadros apresentam evolução mais lenta e, muitas vezes, inicial discreta, o que pode dificultar o reconhecimento precoce e atrasar a instituição do tratamento adequado."
+},
+{
+"id": "p146_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Nesse contexto, manifestações clínicas como infecção bacteriana, formação de abscessos e reações inflamatórias persistentes compartilham sinais semelhantes, como dor, edema, eritema e alteração do relevo cutâneo, exigindo uma avaliação criteriosa para diferenciação diagnóstica. A compreensão desses processos é fundamental para direcionar a conduta, evitar recorrências e minimizar sequelas estéticas decorrentes da evolução prolongada do quadro."
+},
+{
+"id": "p146_05",
+"tipo": "titulo_secao",
+"negrito": [
+"4.1 INFECÇÃO BACTERIANA"
+],
+"pt": "4.1 INFECÇÃO BACTERIANA"
+},
+{
+"id": "p146_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A infecção bacteriana é uma intercorrência tardia relativamente rara, mas de alto impacto nos procedimentos estéticos injetáveis. Pode se manifestar de forma localizada, como celulite ou abscesso, ou de forma difusa, comprometendo áreas maiores. Geralmente surgem dias a semanas após o procedimento, e seu reconhecimento precoce é crucial para evitar complicações graves como necrose, abscessos de difícil resolução ou infecções sistêmicas."
+},
+{
+"id": "p146_07",
+"tipo": "outro",
+"negrito": [
+"146"
+],
+"pt": "146"
+},
+{
+"id": "p147_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p147_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p147_02",
+"tipo": "titulo_secao",
+"negrito": [
+"FISIOPATOLOGIA"
+],
+"pt": "FISIOPATOLOGIA"
+},
+{
+"id": "p147_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As infecções bacterianas podem ocorrer por: •"
+},
+{
+"id": "p147_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Falha de assepsia durante o procedimento (pele, materiais, campo). •"
+},
+{
+"id": "p147_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Contaminação secundária após manipulação pelo paciente. •"
+},
+{
+"id": "p147_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Inoculação de bactérias da flora cutânea, principalmente Staphylococcus aureus e Streptococcus pyogenes. •"
+},
+{
+"id": "p147_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Biofilme bacteriano aderido ao ácido hialurônico ou outros preenchedores, com resistência aumentada à resposta imune e aos antibióticos. •"
+},
+{
+"id": "p147_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia prévia ou necrose parcial favorecendo colonização."
+},
+{
+"id": "p147_09",
+"tipo": "titulo_secao",
+"negrito": [
+"ÁREAS DE MAIOR RISCO"
+],
+"pt": "ÁREAS DE MAIOR RISCO"
+},
+{
+"id": "p147_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p147_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Região perioral e labial: maior exposição à flora oral. •"
+},
+{
+"id": "p147_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Nariz e glabela: risco elevado devido à drenagem venosa para o seio cavernoso. •"
+},
+{
+"id": "p147_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Periorbitária: risco de complicações orbitárias e intracranianas. •"
+},
+{
+"id": "p147_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Zonas de hematoma ou necrose prévia: ambientes propícios para colonização bacteriana."
+},
+{
+"id": "p147_15",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p147_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Os sinais clássicos de infecção bacteriana incluem: •"
+},
+{
+"id": "p147_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dor progressiva (diferente da dor súbita da isquemia). •"
+},
+{
+"id": "p147_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Eritema e calor local. •"
+},
+{
+"id": "p147_19",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Edema de evolução tardia."
+},
+{
+"id": "p147_20",
+"tipo": "outro",
+"negrito": [
+"147"
+],
+"pt": "147"
+},
+{
+"id": "p148_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p148_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p148_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p148_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Secreção purulenta em casos avançados. •"
+},
+{
+"id": "p148_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Febre, mal-estar e linfadenopatia regional em casos sistêmicos. •"
+},
+{
+"id": "p148_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Flutuação palpável: sugestiva de abscesso."
+},
+{
+"id": "p148_06",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 47. INFECÇÃO BACTERIANA EM REGIÃO PERIORBITÁRIA",
+"APÓS PREENCHIMENTO FACIAL"
+],
+"pt": "FIGURA 47. INFECÇÃO BACTERIANA EM REGIÃO PERIORBITÁRIA APÓS PREENCHIMENTO FACIAL"
+},
+{
+"id": "p148_07",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 47.",
+"Fonte:"
+],
+"pt": "Figura 47. Imagem clínica demonstrando processo infeccioso em região periorbitária, caracterizado por eritema localizado, edema e ponto central sugestivo de coleção purulenta em formação. O quadro é compatível com infecção bacteriana tardia, possivelmente associada à inoculação de microrganismos durante o procedimento ou à contaminação secundária, com risco de progressão para abscesso se não tratado precocemente. Fonte: Arquivo pessoal / banco de imagens dos autores."
+},
+{
+"id": "p148_08",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p148_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p148_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Isquemia tardia: palidez e necrose sem secreção purulenta. •"
+},
+{
+"id": "p148_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Abscesso estéril: reação inflamatória sem crescimento bacteriano. •"
+},
+{
+"id": "p148_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "ETIP (edema tardio intermitente persistente): edema recorrente, mas sem sinais infecciosos clássicos. •"
+},
+{
+"id": "p148_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Granuloma de corpo estranho: inflamação crônica endurecida, sem calor ou secreção."
+},
+{
+"id": "p148_14",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p148_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p148_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Avaliar extensão e gravidade (localizada x difusa, superficial x profunda)."
+},
+{
+"id": "p148_17",
+"tipo": "outro",
+"negrito": [
+"148"
+],
+"pt": "148"
+},
+{
+"id": "p148_18",
+"tipo": "outro",
+"negrito": [
+"148"
+],
+"pt": "148"
+}
+]

@@ -23,8 +23,8 @@ import sys, os, json, argparse, re
 import pymupdf
 
 TOL_Y      = 3.0     # tolerância para considerar linhas na mesma coluna
-MAX_RED_EL = 0.08    # redução máxima da entrelinha (8%)
-MAX_RED_PT = 0.06    # redução máxima do corpo (6%)
+MAX_RED_EL = 0.16    # redução máxima da entrelinha (o corpo deste livro tem entrelinha 1,9: folgada)
+MAX_RED_PT = 0.08    # redução máxima do corpo (8%)
 
 def cor_rgb(i):
     return ((i >> 16 & 255)/255, (i >> 8 & 255)/255, (i & 255)/255)
@@ -53,6 +53,14 @@ def agrupa(page):
             linhas.append(dict(bbox=list(l['bbox']), spans=spans, texto=txt,
                                x0=round(l['bbox'][0], 1), y0=l['bbox'][1], y1=l['bbox'][3]))
     linhas.sort(key=lambda l: (round(l['y0'], 1), l['x0']))
+    # marcadores de lista ('•' exportado como linha própria): a linha de texto
+    # na mesma altura, à direita de um marcador, SEMPRE abre item novo. Sem
+    # isto, quando o texto do item ordena antes do seu marcador, o item é
+    # colado no anterior (mesma margem) e dois itens viram um parágrafo só.
+    marcas = [l for l in linhas if l['texto'].strip() in ('•', '–')]
+    def abre_item(l):
+        return any(abs(m['y0'] - l['y0']) < 3 and m['bbox'][2] <= l['bbox'][0] + 1
+                   and l['bbox'][0] - m['bbox'][2] < 30 for m in marcas if m is not l)
 
     paras, atual = [], None
     for l in linhas:
@@ -74,6 +82,9 @@ def agrupa(page):
             # e não uma margem global da página, é o que faz isto funcionar em
             # páginas com caixas laterais e legendas.
             prev = atual['linhas'][-1]
+            # o marcador colado no fim do item não é margem de referência
+            for _l in reversed(atual['linhas']):
+                if _l['texto'].strip() not in ('•', '–'): prev = _l; break
             # legendas e rótulos lado a lado, em colunas diferentes, não podem
             # ser fundidos: exige sobreposição horizontal real entre as linhas
             ov = min(l['bbox'][2], prev['bbox'][2]) - max(l['bbox'][0], prev['bbox'][0])
@@ -85,6 +96,7 @@ def agrupa(page):
             # rótulos distantes na mesma coluna acabariam no mesmo parágrafo
             limSalto = (atual['entrelinha'] * 1.6 + 2 if atual['entrelinha']
                         else atual['tam'] * 2.0)
+            if tipo == 'corpo' and abre_item(l): continua = False
             if 0 < salto <= limSalto and continua:
                 atual['linhas'].append(l)
                 if atual['entrelinha'] is None: atual['entrelinha'] = round(salto, 1)
@@ -128,7 +140,9 @@ def prepara_fontes(dirFontes):
 
 def css_de(p, reg, familia=None):
     tam = p['tam']; el = p['entrelinha']
-    align = 'justify' if p['tipo'] == 'corpo' else 'left'
+    if p.get('centro'): align = 'center'
+    else: align = ('justify' if p['tipo'] in ('corpo', 'corpo_caixa')
+             or (p['tipo'] in ('legenda', 'cabecalho') and len(p.get('linhas', [])) > 2) else 'left')
     r, g, b = cor_rgb(p['cor'])
     base = p.get('fonte', 'HelveticaNeue')
     # prefere a variante completada com os glifos do espanhol
@@ -174,8 +188,16 @@ def mede(page, rect, html, css, arch, baixo=1):
     if not bases: return None, None, True, esc
     return min(bases), max(bases), sobra < 0, esc
 
-def colunas(paras, mapa):
-    """Agrupa em colunas de texto os parágrafos que correm juntos."""
+def _fios(page):
+    return [d['rect'] for d in page.get_drawings()
+            if d['rect'].width > 80 and d['rect'].height < 3]
+
+def colunas(paras, mapa, page=None):
+    """Agrupa em colunas de texto os parágrafos que correm juntos. Um fio
+    horizontal entre dois parágrafos encerra a coluna (o título de figura que
+    vem depois do fio não pode ser empurrado para cima da imagem), e título
+    centralizado nunca entra em coluna."""
+    fios = _fios(page) if page is not None else []
     fluxo = [p for p in paras if p['tipo'] in FLUXO and p['id'] in mapa and mapa[p['id']]]
     fluxo.sort(key=lambda p: p['rect'].y0)
     cols = []
@@ -187,8 +209,10 @@ def colunas(paras, mapa):
             larg = min(p['rect'].width, u['rect'].width) or 1
             salto = p['base_y'] - u['base_y_fim']
             razao = max(p['tam'], u['tam']) / max(min(p['tam'], u['tam']), 0.1)
+            fio = any(f.y0 > u['rect'].y1 - 1 and f.y1 < p['rect'].y0 + 1
+                      and f.x1 > p['rect'].x0 and f.x0 < p['rect'].x1 for f in fios)
             if (ov / larg > 0.4 and 0 < salto < (u['entrelinha'] or 12) * 1.9
-                    and razao <= 1.6):
+                    and razao <= 1.6 and not fio and not p.get('centro') and not u.get('centro')):
                 c.append(p); posto = True; break
         if posto: continue
         cols.append([p])
@@ -198,6 +222,7 @@ def cresce_dir(p):
     """Quem pode ganhar largura: títulos, rótulos e parágrafos de uma só linha
     (nesses a caixa original abraça o texto português, e o espanhol é maior).
     Parágrafo justificado de várias linhas mantém a largura da coluna."""
+    if p['tipo'] == 'corpo_caixa': return False
     return p['tipo'] != 'corpo' or len(p['linhas']) == 1
 
 def obstaculos(page, paras):
@@ -385,7 +410,7 @@ def grupos_de_contorno(p):
     tem uma ou mais linhas com medida diferente do corpo do parágrafo. Devolve
     a lista de fatias de linhas (uma por medida), ou None se for um parágrafo
     retangular comum. A última linha, sempre curta, nunca conta."""
-    if p['tipo'] != 'corpo' or len(p['linhas']) < 3: return None
+    if p['tipo'] not in ('corpo', 'cabecalho', 'legenda') or len(p['linhas']) < 3: return None
     L = [(l['bbox'][0], l['bbox'][2]) for l in p['linhas']]
     mn0 = min(x for x, _ in L); mx1 = max(y for _, y in L)
 
@@ -423,10 +448,15 @@ def desdobra_contornos(page, paras, mapa, arch, reg):
             ls = p['linhas'][i:j]
             q = dict(p); q['linhas'] = ls; q['id'] = p['id'] + 'abcd'[k]
             q['rect'] = pymupdf.Rect(min(l['bbox'][0] for l in ls), ls[0]['bbox'][1],
-                                     max(l['bbox'][2] for l in ls), ls[-1]['bbox'][3])
+                                     max(l['bbox'][2] for l in ls),
+                                     max(ls[-1]['bbox'][3], ls[-1]['bbox'][1] + p['entrelinha']))
             q['base_y'] = ls[0]['spans'][0]['origin'][1]
             q['base_y_fim'] = ls[-1]['spans'][0]['origin'][1]
-            q['recuo'] = p['recuo'] if k == 0 else 0
+            # recuo medido dentro da própria caixa: ao lado de uma capitular a
+            # caixa já começa depois da letra, e herdar o recuo do parágrafo
+            # inteiro empurrava a primeira linha uma segunda vez
+            xs = [l['bbox'][0] for l in ls]
+            q['recuo'] = round(xs[0] - min(xs[1:]), 1) if k == 0 and len(xs) > 1 else 0
             # cada pedaço tem posição ditada pela arte: não pode ser empurrado
             q['ancora_fixa'] = True
             pecas.append(q)
@@ -541,7 +571,8 @@ def desdobra_capitulares(page, paras, mapa, arch, reg):
         def monta(ls, suf):
             q = dict(p); q['linhas'] = ls; q['id'] = p['id'] + suf
             q['rect'] = pymupdf.Rect(min(l['bbox'][0] for l in ls), ls[0]['bbox'][1],
-                                     max(l['bbox'][2] for l in ls), ls[-1]['bbox'][3])
+                                     max(l['bbox'][2] for l in ls),
+                                     max(ls[-1]['bbox'][3], ls[-1]['bbox'][1] + p['entrelinha']))
             q['base_y'] = ls[0]['spans'][0]['origin'][1]
             q['base_y_fim'] = ls[-1]['spans'][0]['origin'][1]
             q['recuo'] = 0
@@ -573,7 +604,161 @@ def assenta_display(page, p, es, reg, dirFontes):
                          color=cor_rgb(p['cor']))
     return True
 
+def _so_marcador(l):
+    return l['texto'].strip() in ('•', '•\t', '–', '-')
+
+def _recalcula(p):
+    xs0 = [l['bbox'][0] for l in p['linhas']]; xs1 = [l['bbox'][2] for l in p['linhas']]
+    p['rect'] = pymupdf.Rect(min(xs0), p['linhas'][0]['bbox'][1],
+                             max(xs1), p['linhas'][-1]['bbox'][3])
+    p['recuo'] = round(xs0[0] - min(xs0[1:]), 1) if len(xs0) > 1 else 0
+    p['base_y'] = p['linhas'][0]['spans'][0]['origin'][1]
+    p['base_y_fim'] = p['linhas'][-1]['spans'][0]['origin'][1]
+
+def isola_marcadores(paras, mapa):
+    """Listas com marcador: o InDesign exporta o '•' como uma linha própria, à
+    esquerda do item. O agrupamento por geometria cola o marcador do item
+    SEGUINTE no fim do item anterior ('... lenta. •'), e o parágrafo ganha um
+    recuo falso. Em espanhol o item cresce, os itens se encavalavam e o
+    marcador ficava parado na posição do português. Aqui o marcador sai do
+    parágrafo, é preso ao item que começa na mesma altura e é redesenhado
+    junto com ele, onde quer que o item vá parar."""
+    soltos = []
+    for p in paras:
+        if p['tipo'] not in ('corpo', 'legenda', 'outro', 'cabecalho'): continue
+        if len(p['linhas']) == 1 and _so_marcador(p['linhas'][0]):
+            soltos.append((p['linhas'][0], p)); continue
+        while len(p['linhas']) > 1 and _so_marcador(p['linhas'][-1]):
+            soltos.append((p['linhas'].pop(), None))
+        while len(p['linhas']) > 1 and _so_marcador(p['linhas'][0]):
+            soltos.append((p['linhas'].pop(0), None))
+        _recalcula(p)
+    for l, dono in soltos:
+        alvo = None
+        for q in paras:
+            if q is dono or q['id'] not in mapa or not mapa[q['id']]: continue
+            if q.get('marcador') is not None: continue
+            f = q['linhas'][0]
+            if abs(f['y0'] - l['y0']) < 3 and f['bbox'][0] > l['bbox'][2]:
+                alvo = q; break
+        if alvo is None:
+            if dono is None:   # sem item para acompanhar: fica onde estava
+                continue
+            continue
+        alvo['marcador'] = pymupdf.Rect(l['bbox'])
+        if dono is not None:
+            dono['tipo'] = 'marcador'
+    for k, v in list(mapa.items()):
+        if v and '•' in v:
+            mapa[k] = re.sub(r'\s*•\s*', ' ', v).strip()
+    return paras
+
+def funde_linhas_de_coluna(paras, mapa):
+    """Quadros em duas colunas (NA PRÁTICA, SAIBA MAIS): as linhas alternam de
+    coluna e o agrupamento devolve cada linha como parágrafo próprio. Traduzido
+    linha a linha, o espanhol transbordava ou encolhia. Aqui as linhas de uma
+    mesma coluna viram um parágrafo só, com o espanhol emendado."""
+    cand = [p for p in paras if p['tipo'] in ('cabecalho', 'legenda') and len(p['linhas']) == 1
+            and p['id'] in mapa and mapa[p['id']]]
+    cand.sort(key=lambda p: (round(p['rect'].x0), p['rect'].y0))
+    grupos, atual = [], []
+    for p in cand:
+        if atual:
+            u = atual[-1]
+            passo = p['linhas'][0]['y0'] - u['linhas'][-1]['y0']
+            if (abs(p['rect'].x0 - u['rect'].x0) < 2.5 and abs(p['tam'] - u['tam']) < 0.3
+                    and 0 < passo <= u['entrelinha'] * 1.35 + 1):
+                atual.append(p); continue
+            grupos.append(atual)
+        atual = [p]
+    if atual: grupos.append(atual)
+    fora = set()
+    for g in grupos:
+        if len(g) < 3: continue
+        cab = g[0]
+        txt = ''
+        for q in g:
+            v = mapa[q['id']].strip()
+            if txt.endswith('-') and not txt.endswith(' -'):
+                txt = txt[:-1] + v
+            else:
+                txt = (txt + ' ' + v).strip()
+        cab['linhas'] = [l for q in g for l in q['linhas']]
+        passos = [b['linhas'][0]['y0'] - a['linhas'][0]['y0'] for a, b in zip(g, g[1:])]
+        cab['entrelinha'] = round(sorted(passos)[len(passos)//2], 1)
+        cab['tipo'] = 'corpo_caixa'
+        cab['negrito'] = [n for q in g for n in q['negrito']]
+        _recalcula(cab); cab['recuo'] = 0
+        mapa[cab['id']] = txt
+        for q in g[1:]:
+            fora.add(q['id']); mapa.pop(q['id'], None)
+    return [p for p in paras if p['id'] not in fora]
+
+_HIF = None
+def hifeniza(txt):
+    """Hifenização silenciosa (U+00AD) nas palavras longas. Sem ela o espanhol,
+    mais longo, abre buracos nas linhas justificadas que o original não tinha
+    (o InDesign hifeniza o português)."""
+    global _HIF
+    try:
+        import pyphen
+    except ImportError:
+        return txt
+    if _HIF is None: _HIF = pyphen.Pyphen(lang='es')
+    partes = re.split(r'(<[^>]+>)', txt)
+    for i, pt in enumerate(partes):
+        if pt.startswith('<'): continue
+        partes[i] = re.sub(r'[A-Za-zÁÉÍÓÚÑÜáéíóúñü]{8,}',
+                           lambda m: m.group(0) if m.group(0).isupper() else _HIF.inserted(m.group(0), '\u00ad'), pt)
+    return ''.join(partes)
+
+def alarga_pilulas(page, paras, mapa, reg, arch):
+    """Rótulos dentro de pílula colorida (NA PRÁTICA, SAIBA MAIS): o espanhol é
+    mais longo e saía da pílula. A pílula é redesenhada na largura do texto."""
+    desenhos = [d for d in page.get_drawings() if d.get('fill') and d['rect'].width < 170
+                and d['rect'].height < 26]
+    for p in paras:
+        if p['tipo'] != 'titulo_secao' or not mapa.get(p['id']): continue
+        pil = next((d for d in desenhos if d['rect'].contains(p['rect'] + (-1, -1, 1, 1))), None)
+        if pil is None: continue
+        tmp = pymupdf.open(); pg = tmp.new_page(width=page.rect.width, height=page.rect.height)
+        pg.insert_htmlbox(pymupdf.Rect(p['rect'].x0, p['rect'].y0 - 2, page.rect.x1, p['rect'].y1 + 20),
+                          html_de(mapa[p['id']], p['negrito']), css=css_de(p, reg), archive=arch)
+        x1 = max((s['bbox'][2] for b in pg.get_text('dict')['blocks'] if not b['type']
+                  for l in b['lines'] for s in l['spans'] if s['text'].strip()), default=0)
+        tmp.close()
+        folga = pil['rect'].x1 - p['rect'].x1
+        if x1 + folga > pil['rect'].x1:
+            r = pymupdf.Rect(pil['rect'].x0, pil['rect'].y0, x1 + folga, pil['rect'].y1)
+            page.draw_rect(r, color=None, fill=pil['fill'], radius=min(0.5, r.height / r.width), overlay=True)
+
+def poe_marcador(page, p, rect, css_p, arch):
+    m = p.get('marcador')
+    if m is None: return
+    caixa = pymupdf.Rect(m.x0 - 1, rect.y0, max(rect.x0, m.x1 + 4), rect.y0 + p['entrelinha'] * 2.2)
+    css = re.sub(r'text-indent: [-\d.]+px', 'text-indent: 0px', css_p).replace('text-align: justify', 'text-align: left')
+    if caixa.width < 10: caixa.x1 = caixa.x0 + 10
+    try:
+        page.insert_htmlbox(caixa, '<p>•</p>', css=css, archive=arch, scale_low=1)
+    except Exception:
+        pass
+
 def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
+    mapa = dict(mapa)
+    corpo = [p for p in paras if p['tipo'] == 'corpo' and len(p['linhas']) > 2]
+    cx0 = min((p['rect'].x0 for p in corpo), default=56.7)
+    cx1 = max((p['rect'].x1 for p in corpo), default=page.rect.x1 - 54)
+    meio = (cx0 + cx1) / 2
+    for p in paras:
+        if p['tipo'] in ('titulo_secao', 'legenda', 'outro') and p['rect'].x0 > cx0 + 8:
+            cs = [(l['bbox'][0] + l['bbox'][2]) / 2 for l in p['linhas']]
+            if all(abs(c - meio) < 4 for c in cs):
+                p['centro'] = (cx0, cx1)
+    paras = isola_marcadores(paras, mapa)
+    paras = funde_linhas_de_coluna(paras, mapa)
+    for p in paras:
+        if (p['tipo'] in ('corpo', 'corpo_caixa') or len(p['linhas']) > 2) and mapa.get(p['id']):
+            mapa[p['id']] = hifeniza(mapa[p['id']])
     paras, mapa, contornos = desdobra_contornos(page, paras, mapa, arch, reg)
     # 1) remove o texto original, preservando imagens
     red = []
@@ -584,10 +769,13 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
             r = pymupdf.Rect(l['bbox'])
             red.append(r)
             page.add_redact_annot(r)
+        if p.get('marcador') is not None:
+            red.append(p['marcador']); page.add_redact_annot(p['marcador'])
     guarda = preserva(page, paras, mapa, red, reg, dirFontes, log)
     page.apply_redactions(images=pymupdf.PDF_REDACT_IMAGE_NONE,
                           graphics=pymupdf.PDF_REDACT_LINE_ART_NONE)
     redesenha(page, guarda, log)
+    alarga_pilulas(page, paras, mapa, reg, arch)
 
     # títulos de display com entrelinha fechada: assentados linha por linha
     for p in paras:
@@ -599,7 +787,7 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
                                 ajuste='display assentado linha por linha (entrelinha fechada)'))
 
     obs = obstaculos(page, paras)
-    cols = colunas(paras, mapa)
+    cols = colunas(paras, mapa, page)
     emFluxo = {p['id'] for c in cols for p in c}
 
     # 2) colunas de texto: o espanhol corre mais longo, então a coluna cresce
@@ -618,8 +806,8 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
                                  arch, reg, redEl, redPt))
             return m
         pronto = None
-        for redEl in (0, 0.02, 0.04, 0.06, MAX_RED_EL):
-            for redPt in (0, 0.02, 0.04, MAX_RED_PT):
+        for redEl in (0, 0.02, 0.04, 0.06, 0.09, 0.12, MAX_RED_EL):
+            for redPt in (0, 0.02, 0.04, 0.06, MAX_RED_PT):
                 mp2 = mapaDe(redEl, redPt)
                 pronto = compoe_coluna(page, col, mp2, arch, reg, lim, limDir, redEl, redPt)
                 if pronto:
@@ -648,6 +836,7 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
             # texto. Qualquer redução real fica registrada abaixo.
             sobra, real = page.insert_htmlbox(rect, html, css=css, archive=arch,
                                               scale_low=0)
+            poe_marcador(page, p, rect, css, arch)
             if real < 0.999:
                 log.append(dict(pagina=page.number+1, id=p['id'],
                                 erro='reduzido pelo htmlbox para %.0f%% do corpo' % (real*100)))
@@ -660,14 +849,16 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
         if p['id'] in emFluxo or p['id'] not in mapa or not mapa[p['id']]: continue
         html = html_de(mapa[p['id']], p['negrito'])
         ok = False
-        for redEl in (0, 0.02, 0.04, 0.06, MAX_RED_EL):
-            for redPt in (0, 0.02, 0.04, MAX_RED_PT):
+        for redEl in (0, 0.02, 0.04, 0.06, 0.09, 0.12, MAX_RED_EL):
+            for redPt in (0, 0.02, 0.04, 0.06, MAX_RED_PT):
                 q = dict(p); q['entrelinha'] = p['entrelinha']*(1-redEl); q['tam'] = p['tam']*(1-redPt)
                 css = css_de(q, reg)
                 limP = limite_abaixo(page, p, paras)
                 limD = (limite_direita(page, p, obs) if cresce_dir(p)
                         else p['rect'].x1 + 2)
                 rect = pymupdf.Rect(p['rect'].x0 - 1, p['rect'].y0 - 2, limD, limP)
+                if p.get('centro'):
+                    rect = pymupdf.Rect(p['centro'][0], p['rect'].y0 - 2, p['centro'][1], limP)
                 b0, _b1, estourou, _esc = mede(page, rect, html, css, arch)
                 if b0 is not None:
                     dy = p['base_y'] - b0
@@ -678,6 +869,7 @@ def aplica(page, paras, mapa, arch, reg, log, dirFontes='fontes'):
                 sobra, real = page.insert_htmlbox(rect, html, css=css, archive=arch,
                                                   scale_low=1)
                 if sobra >= 0:
+                    poe_marcador(page, p, rect, css, arch)
                     if redEl or redPt:
                         log.append(dict(pagina=page.number+1, id=p['id'],
                                         ajuste='entrelinha -%d%% corpo -%d%%' % (redEl*100, redPt*100)))
