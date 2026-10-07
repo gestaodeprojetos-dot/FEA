@@ -30,3 +30,42 @@ Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film g
 2. Trocar o áudio do Dr. João pela voz clonada no HeyGen ("FEA Dr João Pithon (Black 2026)") e refazer a sincronia de boca (lipsync em modo precision; o áudio precisa ter duração até 15% diferente da cena).
 3. Montar com `fea_montar_episodio.py` (legenda amarela, `acabamento_filme`, card oficial).
 4. Se a qualidade bater com os vídeos publicados: o episódio inteiro tem 9 cenas, cerca de 180 créditos no Fast.
+
+## Cenas restantes (2, 3, 4, 5, 6, 7 e 9)
+
+Consistência de rosto: na primeira aparição do promotor (cena 2) e do juiz (cena 1), tirar um print do rosto e usar como "ingrediente" nas cenas seguintes deles. Custo estimado: cerca de 140 créditos no Fast.
+
+### Cena 2 · Promotor acusa (Ingredientes: fotos 4, 6 e 7 do Dr. João)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain, realistic skin texture. Old courtroom with dark wood paneling, warm daylight through tall arched windows, dust in the air. The man from the reference images, wearing a plain black dress shirt, sits still at the defendant's bench, silent, mouth closed. A Brazilian prosecutor, around 50, charcoal grey suit, burgundy tie, walks into frame and points at him, saying in Brazilian Portuguese with an indignant voice: "Meritíssimo, ele vai vender todos os cursos por um preço só!" The audience reacts with surprise. Only the prosecutor speaks. No subtitles, no music.
+```
+
+### Cena 3 · Testemunha 1 (Texto para vídeo)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain, realistic skin texture. Old courtroom with dark wood paneling, warm daylight through tall arched windows. A Brazilian woman around 30, brown hair tied back, beige blazer, sits on the witness stand, slightly embarrassed but sincere. She says in Brazilian Portuguese: "Eu fiz curso de fim de semana. Saí com certificado e sem saber em que camada estava a minha cânula." Medium close-up. No subtitles, no music.
+```
+
+### Cena 4 · Testemunha 2 (Texto para vídeo)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain, realistic skin texture. Old courtroom with dark wood paneling, warm daylight through tall arched windows. A Brazilian woman around 35, short black hair, crisp white shirt, firm and confident, on the witness stand. She says in Brazilian Portuguese: "Com ele, eu aprendi anatomia em cadáver fresco. Hoje eu planejo antes de injetar." Medium close-up. No subtitles, no music.
+```
+
+### Cena 5 · Promotor, pós-graduação (Ingredientes: print do promotor)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain. The prosecutor from the reference image walks in front of the judge's bench in the same old courtroom, gesturing with indignation, and says in Brazilian Portuguese: "E não para aí, Meritíssimo. Ele vai incluir a pós-graduação!" In the background, the judge takes off his glasses, surprised. No subtitles, no music.
+```
+
+### Cena 6 · Promotor, cursos futuros (Ingredientes: print do promotor)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain. Close-up of the prosecutor from the reference image turning toward the audience in the same old courtroom, voice rising, saying in Brazilian Portuguese: "E os cursos que ele ainda nem gravou!" The audience stirs, someone stands up in the shadows. No subtitles, no music.
+```
+
+### Cena 7 · Juiz pergunta (Ingredientes: print do juiz da cena 1)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain. Low-angle shot of the judge from the reference image at the bench in the same old courtroom, serious. He says in Brazilian Portuguese: "O réu tem algo a declarar?" Then total silence, dust floating in the warm light. No subtitles, no music.
+```
+
+### Cena 9 · Sentença (Ingredientes: print do juiz da cena 1)
+```
+Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain. The judge from the reference image looks toward the defendant, pauses, and says in Brazilian Portuguese: "Sentença: vinte de outubro." He strikes the wooden gavel. Final close-up of the gavel in slow motion as the warm light fades to black. No subtitles, no music.
+```
