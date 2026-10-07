@@ -48,7 +48,7 @@ def fonte(nome, tam):
     return ImageFont.truetype(os.path.join(FONTES, arq), int(round(tam)))
 
 
-def mascaras(roi):
+def mascaras(roi, limiar=205):
     """claro: pixel claro; lc: claro encostado em escuro (letra branca com contorno);
     le: escuro encostado em claro (letra preta em caixa branca); br: branco neutro (letra branca)."""
     g = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
@@ -58,13 +58,15 @@ def mascaras(roi):
     escuro = (g <= 70).astype(np.uint8)
     lc = claro & cv2.dilate(escuro, K7)
     le = escuro & cv2.dilate(claro, K7)
-    br = ((g >= 205) & (sat <= 45)).astype(np.uint8)
+    br = ((g >= limiar) & (sat <= 45)).astype(np.uint8)
     return claro, lc, le, br
 
 
 def tinta(tipo, lc, le, br, zona):
     if tipo == "caixa":
         return le
+    if tipo == "caixa_escura":
+        return br & zona
     if tipo == "branco":
         return br & zona
     return lc
@@ -143,9 +145,21 @@ def classificar(bl, ref_roi, roi_xy, claro, lc, le, br):
         if cont.max() > 0:
             ax, ay, aw, ah, area_c = st[int(cont.argmax()), :5]
             encosta = ax <= 1 or ay <= 1 or ax + aw >= claro.shape[1] - 1 or ay + ah >= claro.shape[0] - 1
-            if not encosta and area_c >= 0.5 * area and aw <= (bx1 - bx0) + 3 * lh and ah <= (by1 - by0) + 3 * lh:
+            if not encosta and area_c >= 0.5 * area and aw <= (bx1 - bx0) + 6 * lh and ah <= (by1 - by0) + 4 * lh:
                 bl["_caixa_antiga"] = [int(ax + x0r), int(ay + y0r), int(ax + aw + x0r), int(ay + ah + y0r)]
                 return "caixa"
+        # caixa sem borda visível (caixa branca grudada em fundo branco): decide pela polaridade da letra.
+        # Letra branca com contorno tem "ilhas" brancas (miolo da letra) cercadas de preto; letra preta em
+        # fundo branco só tem os miolos pequenos (o, a, e).
+        esc = (cv2.cvtColor(ref_roi, cv2.COLOR_BGR2GRAY) <= 70).astype(np.uint8) & zona
+        n, lab, st, _ = cv2.connectedComponentsWithStats(claro, 8)
+        h_, w_ = claro.shape
+        borda_ok = (st[:, 0] > 0) & (st[:, 1] > 0) & (st[:, 0] + st[:, 2] < w_) & (st[:, 1] + st[:, 3] < h_)
+        ilha = borda_ok & (st[:, 4] < 0.02 * h_ * w_)
+        ilha[0] = False
+        ilhas = (ilha[lab] & zona.astype(bool)).sum()
+        if esc.sum() > 50 and ilhas < 0.35 * esc.sum():
+            return "caixa"
     wz = (br & zona).astype(bool)
     if wz.sum() < 30:
         return "contorno"
@@ -163,7 +177,7 @@ def classificar(bl, ref_roi, roi_xy, claro, lc, le, br):
 def preparar(bl, ref_roi, roi_xy):
     """Mede tipo, fonte, cor e posição do bloco no quadro de referência; desenha o ES (RGBA)."""
     x0r, y0r = roi_xy
-    claro, lc, le, br = mascaras(ref_roi)
+    claro, lc, le, br = mascaras(ref_roi, bl.get("limiar", 205))
     tipo = bl.get("tipo") or classificar(bl, ref_roi, roi_xy, claro, lc, le, br)
     bl["tipo"] = tipo
     zona = zona_linhas(bl, roi_xy, claro.shape)
@@ -172,12 +186,12 @@ def preparar(bl, ref_roi, roi_xy):
     bl["_ref"] = t.copy()
     g = cv2.cvtColor(ref_roi, cv2.COLOR_BGR2GRAY)
     nucleo = cv2.erode(t, K3).astype(bool)
-    if tipo != "caixa" and nucleo.sum() > 30:
+    if tipo not in ("caixa", "caixa_escura") and nucleo.sum() > 30:
         bl["_cor"] = tuple(int(c) for c in np.median(ref_roi[nucleo], axis=0)[::-1])
     else:
         bl["_cor"] = (255, 255, 255)
     fundo = cv2.dilate(t, el(31)).astype(bool) & ~cv2.dilate(t, el(15)).astype(bool)
-    bl["_chapado"] = bool(tipo != "caixa" and fundo.sum() > 50 and g[fundo].std() < 6)
+    bl["_chapado"] = bool(tipo not in ("caixa", "caixa_escura") and fundo.sum() > 50 and g[fundo].std() < 6)
     if bl["_chapado"]:
         bl["_cor_fundo"] = np.median(ref_roi[fundo], axis=0).astype(np.uint8)
 
@@ -224,25 +238,54 @@ def preparar(bl, ref_roi, roi_xy):
     larg = max(largura(l, f) for l in linhas)
     asc, desc = f.getmetrics()
     alt = passo * (len(linhas) - 1) + asc + desc
-    if tipo == "caixa":
-        old = bl.get("_caixa_antiga") or [bx0 - 10, by0 - 10, bx1 + 10, by1 + 10]
+    if tipo in ("caixa", "caixa_escura"):
+        escura = tipo == "caixa_escura"
+        if escura:
+            bl["_cor_caixa"] = tuple(int(c) for c in np.median(ref_roi[(g <= 45)], axis=0)[::-1]) if (g <= 45).any() else (0, 0, 0)
+        lh = (by1 - by0) / max(1, len(bl["linhas"]))
+        # caixa forçada (fundo branco grudado na caixa): folga típica da caixa de story
+        old = bl.get("_caixa_antiga") or [bx0 - 0.45 * lh, by0 - 0.35 * lh, bx1 + 0.45 * lh, by1 + 0.35 * lh]
         pad = tam * 0.38
         bw = max(larg + 2 * pad, old[2] - old[0] + 6)
         bh = max(alt + 2 * pad * 0.8, old[3] - old[1] + 6)
         ccx = (old[0] + old[2]) / 2 if not esquerda else old[0] - 3 + bw / 2
         ccy = (old[1] + old[3]) / 2
+        if (esquerda or escura) and x0s:
+            pad = tam * 0.28
+            # estilo story: uma caixa por linha, alinhada à esquerda, cada uma cobrindo a linha PT antiga
+            larg_old = [b_ - a_ for a_, b_ in zip(x0s, x1s)]
+            ws = [max(largura(l, f), larg_old[k] if k < len(larg_old) else 0) + 2 * pad for k, l in enumerate(linhas)]
+            alt_l = asc + desc + 1.2 * pad
+            bw, bh = max(ws), passo * (len(linhas) - 1) + alt_l
+            img = Image.new("RGBA", (int(bw) + 4, int(bh) + 4), (0, 0, 0, 0))
+            d = ImageDraw.Draw(img)
+            cor_caixa = bl.get("_cor_caixa", (0, 0, 0)) if escura else (255, 255, 255)
+            cor_txt = tuple(bl.get("cor_texto", (255, 255, 255) if escura else (0, 0, 0)))
+            for k, l in enumerate(linhas):
+                y = k * passo
+                d.rounded_rectangle([0, y, ws[k], y + alt_l + (passo - alt_l if k < len(linhas) - 1 and passo > alt_l else 0)],
+                                    radius=tam * 0.25, fill=cor_caixa + (255,))
+            for k, l in enumerate(linhas):
+                d.text((pad, k * passo + 0.6 * pad), l, font=f, fill=cor_txt + (255,))
+            bl["_img"] = np.array(img)
+            bl["_pos"] = (int(round(min(x0s) - pad)), int(round(centros[0] - (asc + desc) / 2 - 0.6 * pad)))
+            bl["_tam"] = round(tam, 1)
+            bl["_fonte"] = nome
+            return
         img = Image.new("RGBA", (int(bw) + 4, int(bh) + 4), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
-        d.rounded_rectangle([0, 0, bw, bh], radius=tam * 0.32, fill=(255, 255, 255, 255))
+        cor_caixa = bl.get("_cor_caixa", (0, 0, 0)) if escura else (255, 255, 255)
+        cor_txt = tuple(bl.get("cor_texto", (255, 255, 255) if escura else (0, 0, 0)))
+        d.rounded_rectangle([0, 0, bw, bh], radius=tam * 0.32, fill=cor_caixa + (255,))
         y = (bh - alt) / 2
         for l in linhas:
             x = pad if esquerda else (bw - largura(l, f)) / 2
-            d.text((x, y), l, font=f, fill=(0, 0, 0, 255))
+            d.text((x, y), l, font=f, fill=cor_txt + (255,))
             y += passo
         bl["_img"] = np.array(img)
         bl["_pos"] = (int(round(ccx - bw / 2)), int(round(ccy - bh / 2)))
     else:
-        borda = max(2, int(round(tam * bl.get("contorno", 0.10)))) if tipo == "contorno" else 0
+        borda = max(2, int(round(tam * bl.get("contorno", 0.10)))) if tipo == "contorno" and not bl["_chapado"] else 0
         m = max(2 * borda, int(tam * 0.15)) + 2
         img = Image.new("RGBA", (int(larg + 2 * m), int(alt + 2 * m)), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
@@ -310,7 +353,7 @@ def main():
             if b["_f0"] <= i <= b["_f1"]:
                 x0, y0, x1, y1 = b["_roi"]
                 roi = q[y0:y1, x0:x1]
-                _, lc, le, br = mascaras(roi)
+                _, lc, le, br = mascaras(roi, b.get("limiar", 205))
                 b["_tintas"][i] = (np.packbits(lc), np.packbits(le), np.packbits(br))
                 if b["t0"] * FPS <= i <= (b["t1"] - 0.2) * FPS and i % 3 == 0:
                     z = zona_linhas(b, (x0, y0), lc.shape)
@@ -351,8 +394,9 @@ def main():
                     unidos[-1][1] = c
                 else:
                     unidos.append([a, c])
-            tr = min(unidos, key=lambda t: 0 if t[0] <= fi <= t[1] else min(abs(t[0] - fi), abs(t[1] - fi)))
-            b["_d0"], b["_d1"] = tr
+            # o bloco vem de um único texto contínuo do OCR: vale do primeiro ao último quadro em que aparece
+            # (texto branco sobre fundo que clareia some da detecção por alguns quadros e volta)
+            b["_d0"], b["_d1"] = unidos[0][0], unidos[-1][1]
         else:
             b["_d0"], b["_d1"] = int(b["t0"] * FPS), int(b["t1"] * FPS)
         b["_mref"] = cv2.dilate(b["_ref"], el(31) if b.get("_chapado") else el(21))
@@ -363,7 +407,7 @@ def main():
     # no mesmo lugar, o bloco anterior sai quando o próximo entra (nunca 2 legendas sobrepostas)
     for k, a in enumerate(prontos):
         for b in prontos[k + 1:]:
-            if b["_d0"] > a["_d0"] and sobrepoe(a, b) and b["_d0"] <= a["_d1"]:
+            if b["_img"] is not None and b["_d0"] > a["_d0"] and sobrepoe(a, b) and b["_d0"] <= a["_d1"]:
                 a["_d1"] = b["_d0"] - 1
 
     # passada 2: apaga PT e desenha ES
@@ -379,7 +423,7 @@ def main():
         q = q.copy()
         ativos = [b for b in prontos if b["_f0"] <= i <= b["_f1"]]
         for b in ativos:
-            if b["tipo"] == "caixa":
+            if b["tipo"] in ("caixa", "caixa_escura"):
                 continue
             perto = b["_d0"] - 10 <= i <= b["_d1"] + 10      # cobre entrada e saída com fade
             if b["_presenca"].get(i, 0) < 0.05 and not perto:
@@ -389,7 +433,7 @@ def main():
             if b.get("_chapado"):
                 roi[b["_mref"].astype(bool)] = b["_cor_fundo"]
                 continue
-            _, lc, le, br = mascaras(roi)
+            _, lc, le, br = mascaras(roi, b.get("limiar", 205))
             m = cv2.dilate(tinta(b["tipo"], lc, le, br, b["_zona"]), K13)
             if perto:
                 m = m | b["_mref7"]
