@@ -1,0 +1,1010 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+208,
+1168,
+858,
+1219
+],
+"txt": "O que fazer para os pacientes"
+},
+{
+"bbox": [
+354,
+1220,
+725,
+1263
+],
+"txt": "escolherem vocée"
+}
+],
+"t0": 0.0,
+"t1": 2.666,
+"bbox": [
+208,
+1168,
+858,
+1263
+],
+"pt": "O que fazer para os pacientes / escolherem vocée",
+"n": 8,
+"id": 0,
+"es": "Qué hacer para que los pacientes te elijan"
+},
+{
+"linhas": [
+{
+"bbox": [
+252,
+1189,
+822,
+1241
+],
+"txt": "para fazer preenchimento."
+}
+],
+"t0": 2.667,
+"t1": 3.666,
+"bbox": [
+252,
+1189,
+822,
+1241
+],
+"pt": "para fazer preenchimento.",
+"n": 3,
+"id": 1,
+"es": "para hacerse un relleno."
+},
+{
+"linhas": [
+{
+"bbox": [
+277,
+1190,
+802,
+1238
+],
+"txt": "Pra vocé ser o escolhido"
+}
+],
+"t0": 4.333,
+"t1": 5.666,
+"bbox": [
+277,
+1190,
+802,
+1238
+],
+"pt": "Pra vocé ser o escolhido",
+"n": 4,
+"id": 2,
+"es": "Para ser el elegido,"
+},
+{
+"linhas": [
+{
+"bbox": [
+234,
+1192,
+845,
+1243
+],
+"txt": "voce precisa,ser autoridade."
+}
+],
+"t0": 5.667,
+"t1": 7.0,
+"bbox": [
+234,
+1192,
+845,
+1243
+],
+"pt": "voce precisa,ser autoridade.",
+"n": 4,
+"id": 3,
+"es": "necesitas ser autoridad."
+},
+{
+"linhas": [
+{
+"bbox": [
+380,
+1040,
+703,
+1096
+],
+"txt": "AUTORIDADE"
+}
+],
+"t0": 6.333,
+"t1": 7.666,
+"bbox": [
+380,
+1040,
+703,
+1096
+],
+"pt": "AUTORIDADE",
+"n": 4,
+"id": 4,
+"es": "AUTORIDAD"
+},
+{
+"linhas": [
+{
+"bbox": [
+317,
+1170,
+762,
+1213
+],
+"txt": "A autoridade so vem"
+},
+{
+"bbox": [
+324,
+1218,
+755,
+1266
+],
+"txt": "com conhecimento,"
+}
+],
+"t0": 7.333,
+"t1": 9.666,
+"bbox": [
+317,
+1170,
+762,
+1266
+],
+"pt": "A autoridade so vem / com conhecimento,",
+"n": 7,
+"id": 5,
+"es": "La autoridad solo viene con conocimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+341,
+1045,
+740,
+1092
+],
+"txt": "CONHECIMENTO"
+}
+],
+"t0": 8.667,
+"t1": 9.666,
+"bbox": [
+341,
+1045,
+740,
+1092
+],
+"pt": "CONHECIMENTO",
+"n": 3,
+"id": 6,
+"es": "CONOCIMIENTO"
+},
+{
+"linhas": [
+{
+"bbox": [
+232,
+1196,
+847,
+1238
+],
+"txt": "com fluidez de comunicacao"
+}
+],
+"t0": 10.0,
+"t1": 11.666,
+"bbox": [
+232,
+1196,
+847,
+1238
+],
+"pt": "com fluidez de comunicacao",
+"n": 5,
+"id": 7,
+"es": "con fluidez de comunicación,"
+},
+{
+"linhas": [
+{
+"bbox": [
+287,
+1193,
+793,
+1238
+],
+"txt": "onde vocésabe de fato"
+}
+],
+"t0": 11.667,
+"t1": 13.333,
+"bbox": [
+287,
+1193,
+793,
+1238
+],
+"pt": "onde vocésabe de fato",
+"n": 5,
+"id": 8,
+"es": "donde sabes de verdad"
+},
+{
+"linhas": [
+{
+"bbox": [
+345,
+1170,
+736,
+1215
+],
+"txt": "o que vocé quer e"
+},
+{
+"bbox": [
+316,
+1220,
+763,
+1263
+],
+"txt": "como voce vai fazer."
+}
+],
+"t0": 13.333,
+"t1": 15.666,
+"bbox": [
+316,
+1170,
+763,
+1263
+],
+"pt": "o que vocé quer e / como voce vai fazer.",
+"n": 7,
+"id": 9,
+"es": "lo que quieres y cómo lo vas a hacer."
+},
+{
+"linhas": [
+{
+"bbox": [
+408,
+1192,
+674,
+1238
+],
+"txt": "Essa clareza"
+}
+],
+"t0": 15.667,
+"t1": 16.666,
+"bbox": [
+408,
+1192,
+674,
+1238
+],
+"pt": "Essa clareza",
+"n": 3,
+"id": 10,
+"es": "Esa claridad"
+},
+{
+"linhas": [
+{
+"bbox": [
+285,
+1171,
+797,
+1213
+],
+"txt": "vai fazer com que o seu"
+},
+{
+"bbox": [
+277,
+1217,
+805,
+1266
+],
+"txt": "paciente se sinta seguro"
+}
+],
+"t0": 16.667,
+"t1": 19.0,
+"bbox": [
+277,
+1171,
+805,
+1266
+],
+"pt": "vai fazer com que o seu / paciente se sinta seguro",
+"n": 7,
+"id": 11,
+"es": "hará que tu paciente se sienta seguro"
+},
+{
+"linhas": [
+{
+"bbox": [
+435,
+1041,
+641,
+1096
+],
+"txt": "SEGURO"
+}
+],
+"t0": 18.333,
+"t1": 19.333,
+"bbox": [
+435,
+1041,
+641,
+1096
+],
+"pt": "SEGURO",
+"n": 3,
+"id": 12,
+"es": "SEGURO"
+},
+{
+"linhas": [
+{
+"bbox": [
+230,
+1171,
+848,
+1211
+],
+"txt": "e realmente'com vontade de"
+},
+{
+"bbox": [
+310,
+1219,
+768,
+1265
+],
+"txt": "ser tratado por voce."
+}
+],
+"t0": 19.0,
+"t1": 22.0,
+"bbox": [
+230,
+1171,
+848,
+1265
+],
+"pt": "e realmente'com vontade de / ser tratado por voce.",
+"n": 9,
+"id": 13,
+"es": "y con ganas de verdad de ser tratado por ti."
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1043,
+800,
+1103
+],
+"txt": "TRATADOPORVOCE"
+}
+],
+"t0": 21.0,
+"t1": 22.0,
+"bbox": [
+286,
+1043,
+800,
+1103
+],
+"pt": "TRATADOPORVOCE",
+"n": 3,
+"id": 14,
+"es": "TRATADO POR TI"
+},
+{
+"linhas": [
+{
+"bbox": [
+200,
+1171,
+877,
+1217
+],
+"txt": "A FEP, a Formacao Especialista"
+},
+{
+"bbox": [
+333,
+1220,
+745,
+1263
+],
+"txt": "em Preenchimento"
+}
+],
+"t0": 22.0,
+"t1": 24.666,
+"bbox": [
+200,
+1171,
+877,
+1263
+],
+"pt": "A FEP, a Formacao Especialista / em Preenchimento",
+"n": 8,
+"id": 15,
+"es": "La FEP, la Formación Especialista en Relleno,"
+},
+{
+"linhas": [
+{
+"bbox": [
+102,
+1193,
+980,
+1243
+],
+"txt": "é onde voce vai conseguir se aprofundar"
+}
+],
+"t0": 25.0,
+"t1": 27.0,
+"bbox": [
+102,
+1193,
+980,
+1243
+],
+"pt": "é onde voce vai conseguir se aprofundar",
+"n": 6,
+"id": 16,
+"es": "es donde vas a lograr profundizar"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1196,
+786,
+1240
+],
+"txt": "nas principais tecnicas"
+}
+],
+"t0": 27.0,
+"t1": 28.333,
+"bbox": [
+294,
+1196,
+786,
+1240
+],
+"pt": "nas principais tecnicas",
+"n": 4,
+"id": 17,
+"es": "en las principales técnicas"
+},
+{
+"linhas": [
+{
+"bbox": [
+264,
+1047,
+820,
+1100
+],
+"txt": "PRINCIPAISTECNICAS"
+}
+],
+"t0": 27.667,
+"t1": 28.333,
+"bbox": [
+264,
+1047,
+820,
+1100
+],
+"pt": "PRINCIPAISTECNICAS",
+"n": 2,
+"id": 18,
+"es": "PRINCIPALES TÉCNICAS"
+},
+{
+"linhas": [
+{
+"bbox": [
+211,
+1194,
+868,
+1240
+],
+"txt": "que entregam'muito resultado"
+}
+],
+"t0": 28.333,
+"t1": 29.666,
+"bbox": [
+211,
+1194,
+868,
+1240
+],
+"pt": "que entregam'muito resultado",
+"n": 4,
+"id": 19,
+"es": "que dan mucho resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+305,
+1044,
+785,
+1093
+],
+"txt": "MUITORESULTADO"
+}
+],
+"t0": 29.0,
+"t1": 30.0,
+"bbox": [
+305,
+1044,
+785,
+1093
+],
+"pt": "MUITORESULTADO",
+"n": 3,
+"id": 20,
+"es": "MUCHO RESULTADO"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1196,
+792,
+1239
+],
+"txt": "usando pouco material."
+}
+],
+"t0": 30.0,
+"t1": 31.333,
+"bbox": [
+286,
+1196,
+792,
+1239
+],
+"pt": "usando pouco material.",
+"n": 4,
+"id": 21,
+"es": "usando poco material."
+},
+{
+"linhas": [
+{
+"bbox": [
+318,
+1043,
+764,
+1093
+],
+"txt": "POUCO MATERIAL"
+}
+],
+"t0": 30.333,
+"t1": 31.333,
+"bbox": [
+318,
+1043,
+764,
+1093
+],
+"pt": "POUCO MATERIAL",
+"n": 3,
+"id": 22,
+"es": "POCO MATERIAL"
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1172,
+830,
+1211
+],
+"txt": "Ali vocé vai ter um dominio"
+},
+{
+"bbox": [
+112,
+1220,
+971,
+1264
+],
+"txt": "aprofundado de reologia dos materiais,"
+}
+],
+"t0": 31.667,
+"t1": 35.333,
+"bbox": [
+112,
+1172,
+971,
+1264
+],
+"pt": "Ali vocé vai ter um dominio / aprofundado de reologia dos materiais,",
+"n": 11,
+"id": 23,
+"es": "Ahí vas a tener un dominio profundo de la reología de los materiales,"
+},
+{
+"linhas": [
+{
+"bbox": [
+410,
+1042,
+667,
+1095
+],
+"txt": "REOLOGIA"
+}
+],
+"t0": 34.333,
+"t1": 35.333,
+"bbox": [
+410,
+1042,
+667,
+1095
+],
+"pt": "REOLOGIA",
+"n": 3,
+"id": 24,
+"es": "REOLOGÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+402,
+1042,
+674,
+1094
+],
+"txt": "ANATOMIA"
+}
+],
+"t0": 35.333,
+"t1": 36.333,
+"bbox": [
+402,
+1042,
+674,
+1094
+],
+"pt": "ANATOMIA",
+"n": 3,
+"id": 25,
+"es": "ANATOMÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+429,
+1195,
+649,
+1240
+],
+"txt": "anatomia,"
+}
+],
+"t0": 35.333,
+"t1": 36.0,
+"bbox": [
+429,
+1195,
+649,
+1240
+],
+"pt": "anatomia,",
+"n": 2,
+"id": 26,
+"es": "anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+1194,
+859,
+1240
+],
+"txt": "fisiologia do envelhecimento,"
+}
+],
+"t0": 36.0,
+"t1": 37.333,
+"bbox": [
+221,
+1194,
+859,
+1240
+],
+"pt": "fisiologia do envelhecimento,",
+"n": 4,
+"id": 27,
+"es": "fisiología del envejecimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+121,
+1044,
+958,
+1093
+],
+"txt": "FISIOLOGIADO ENVELHECIMENTD"
+}
+],
+"t0": 36.333,
+"t1": 37.0,
+"bbox": [
+121,
+1044,
+958,
+1093
+],
+"pt": "FISIOLOGIADO ENVELHECIMENTD",
+"n": 2,
+"id": 28,
+"es": "FISIOLOGÍA DEL ENVEJECIMIENTO"
+},
+{
+"linhas": [
+{
+"bbox": [
+122,
+1044,
+956,
+1093
+],
+"txt": "FISIOLOGIA DO ENVELHECIMENTO"
+}
+],
+"t0": 37.333,
+"t1": 37.666,
+"bbox": [
+122,
+1044,
+956,
+1093
+],
+"pt": "FISIOLOGIA DO ENVELHECIMENTO",
+"n": 1,
+"id": 29,
+"es": "FISIOLOGÍA DEL ENVEJECIMIENTO"
+},
+{
+"linhas": [
+{
+"bbox": [
+191,
+1195,
+888,
+1238
+],
+"txt": "com mais de 160 aulas gravadas"
+}
+],
+"t0": 37.667,
+"t1": 39.666,
+"bbox": [
+191,
+1195,
+888,
+1238
+],
+"pt": "com mais de 160 aulas gravadas",
+"n": 6,
+"id": 30,
+"es": "con más de 160 clases grabadas"
+},
+{
+"linhas": [
+{
+"bbox": [
+378,
+1040,
+693,
+1097
+],
+"txt": "￥16DAULAS"
+}
+],
+"t0": 38.0,
+"t1": 39.666,
+"bbox": [
+378,
+1040,
+693,
+1097
+],
+"pt": "￥16DAULAS",
+"n": 5,
+"id": 31,
+"es": "+160 CLASES"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1167,
+782,
+1219
+],
+"txt": "pra que voce possa se"
+},
+{
+"bbox": [
+255,
+1218,
+825,
+1265
+],
+"txt": "aprofundar nesse assunto."
+}
+],
+"t0": 39.667,
+"t1": 42.333,
+"bbox": [
+255,
+1167,
+825,
+1265
+],
+"pt": "pra que voce possa se / aprofundar nesse assunto.",
+"n": 8,
+"id": 32,
+"es": "para que puedas profundizar en este tema."
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1170,
+784,
+1216
+],
+"txt": "Se voce quer se tornar"
+},
+{
+"bbox": [
+338,
+1219,
+742,
+1263
+],
+"txt": "um Injetor de Elite"
+}
+],
+"t0": 42.333,
+"t1": 44.333,
+"bbox": [
+296,
+1170,
+784,
+1263
+],
+"pt": "Se voce quer se tornar / um Injetor de Elite",
+"n": 6,
+"id": 33,
+"es": "Si quieres convertirte en un Inyector de Élite,"
+},
+{
+"linhas": [
+{
+"bbox": [
+317,
+1041,
+774,
+1096
+],
+"txt": "INJETOR DEELITE"
+}
+],
+"t0": 43.0,
+"t1": 44.333,
+"bbox": [
+317,
+1041,
+774,
+1096
+],
+"pt": "INJETOR DEELITE",
+"n": 4,
+"id": 34,
+"es": "INYECTOR DE ÉLITE"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1195,
+784,
+1240
+],
+"txt": "toque em 'Saiba Mais'!"
+}
+],
+"t0": 44.333,
+"t1": 45.333,
+"bbox": [
+297,
+1195,
+784,
+1240
+],
+"pt": "toque em 'Saiba Mais'!",
+"n": 3,
+"id": 35,
+"es": "¡toca en «Más información»!"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1147,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 47.0,
+"t1": 49.333,
+"bbox": [
+299,
+1147,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 7,
+"id": 36,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

@@ -1,0 +1,1231 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+332,
+1016,
+739,
+1064
+],
+"txt": "Voce nunca.vai ter"
+},
+{
+"bbox": [
+230,
+1068,
+852,
+1113
+],
+"txt": "confianca no'preenchimento"
+}
+],
+"t0": 0.333,
+"t1": 2.666,
+"bbox": [
+230,
+1016,
+852,
+1113
+],
+"pt": "Voce nunca.vai ter / confianca no'preenchimento",
+"n": 7,
+"id": 0,
+"es": "Nunca vas a tener confianza en el relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+251,
+1042,
+825,
+1087
+],
+"txt": "se voce nao.entender isso."
+}
+],
+"t0": 2.667,
+"t1": 4.333,
+"bbox": [
+251,
+1042,
+825,
+1087
+],
+"pt": "se voce nao.entender isso.",
+"n": 5,
+"id": 1,
+"es": "si no entiendes esto."
+},
+{
+"linhas": [
+{
+"bbox": [
+260,
+1019,
+821,
+1062
+],
+"txt": "O preenchimento full face"
+},
+{
+"bbox": [
+247,
+1066,
+836,
+1111
+],
+"txt": "é um tratamento.complexo"
+}
+],
+"t0": 4.667,
+"t1": 7.0,
+"bbox": [
+247,
+1019,
+836,
+1111
+],
+"pt": "O preenchimento full face / é um tratamento.complexo",
+"n": 7,
+"id": 2,
+"es": "El relleno full face es un tratamiento complejo"
+},
+{
+"linhas": [
+{
+"bbox": [
+422,
+881,
+642,
+944
+],
+"txt": "OMPL"
+}
+],
+"t0": 5.667,
+"t1": 6.0,
+"bbox": [
+422,
+881,
+642,
+944
+],
+"pt": "OMPL",
+"n": 1,
+"id": 3,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+401,
+886,
+679,
+938
+],
+"txt": "COMPLEXO"
+}
+],
+"t0": 6.0,
+"t1": 7.0,
+"bbox": [
+401,
+886,
+679,
+938
+],
+"pt": "COMPLEXO",
+"n": 3,
+"id": 4,
+"es": "COMPLEJO"
+},
+{
+"linhas": [
+{
+"bbox": [
+340,
+1018,
+740,
+1063
+],
+"txt": "que precisa de um"
+},
+{
+"bbox": [
+298,
+1067,
+784,
+1109
+],
+"txt": "conhecimento afinado"
+}
+],
+"t0": 7.333,
+"t1": 9.666,
+"bbox": [
+298,
+1018,
+784,
+1109
+],
+"pt": "que precisa de um / conhecimento afinado",
+"n": 7,
+"id": 5,
+"es": "que requiere un conocimiento afinado"
+},
+{
+"linhas": [
+{
+"bbox": [
+363,
+1019,
+706,
+1064
+],
+"txt": "quando a gente"
+},
+{
+"bbox": [
+319,
+1071,
+759,
+1112
+],
+"txt": "pensa em anatomia,"
+}
+],
+"t0": 9.667,
+"t1": 11.333,
+"bbox": [
+319,
+1019,
+759,
+1112
+],
+"pt": "quando a gente / pensa em anatomia,",
+"n": 5,
+"id": 6,
+"es": "cuando pensamos en anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+457,
+883,
+694,
+940
+],
+"txt": "IAOMIA"
+}
+],
+"t0": 10.0,
+"t1": 10.333,
+"bbox": [
+457,
+883,
+694,
+940
+],
+"pt": "IAOMIA",
+"n": 1,
+"id": 7,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+406,
+885,
+673,
+937
+],
+"txt": "ANATOMIA"
+}
+],
+"t0": 10.333,
+"t1": 11.333,
+"bbox": [
+406,
+885,
+673,
+937
+],
+"pt": "ANATOMIA",
+"n": 3,
+"id": 8,
+"es": "ANATOMÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+218,
+1041,
+858,
+1087
+],
+"txt": "fisiologia do envelhecimento,"
+}
+],
+"t0": 11.333,
+"t1": 12.666,
+"bbox": [
+218,
+1041,
+858,
+1087
+],
+"pt": "fisiologia do envelhecimento,",
+"n": 4,
+"id": 9,
+"es": "fisiología del envejecimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+401,
+887,
+678,
+938
+],
+"txt": "FISIOLOGIA"
+}
+],
+"t0": 11.667,
+"t1": 12.666,
+"bbox": [
+401,
+887,
+678,
+938
+],
+"pt": "FISIOLOGIA",
+"n": 3,
+"id": 10,
+"es": "FISIOLOGÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+416,
+886,
+664,
+937
+],
+"txt": "REOLOGIA"
+}
+],
+"t0": 13.0,
+"t1": 15.0,
+"bbox": [
+416,
+886,
+664,
+937
+],
+"pt": "REOLOGIA",
+"n": 6,
+"id": 11,
+"es": "REOLOGÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1045,
+780,
+1085
+],
+"txt": "reologia dos materiais"
+}
+],
+"t0": 13.0,
+"t1": 14.0,
+"bbox": [
+301,
+1045,
+780,
+1085
+],
+"pt": "reologia dos materiais",
+"n": 3,
+"id": 12,
+"es": "reología de los materiales"
+},
+{
+"linhas": [
+{
+"bbox": [
+289,
+1011,
+791,
+1066
+],
+"txt": "para escolher o melhor"
+},
+{
+"bbox": [
+287,
+1068,
+795,
+1110
+],
+"txt": "produto para cada uma"
+}
+],
+"t0": 14.0,
+"t1": 15.666,
+"bbox": [
+287,
+1011,
+795,
+1110
+],
+"pt": "para escolher o melhor / produto para cada uma",
+"n": 5,
+"id": 13,
+"es": "para elegir el mejor producto para cada una"
+},
+{
+"linhas": [
+{
+"bbox": [
+409,
+1036,
+672,
+1092
+],
+"txt": "das regioes,"
+}
+],
+"t0": 15.667,
+"t1": 16.666,
+"bbox": [
+409,
+1036,
+672,
+1092
+],
+"pt": "das regioes,",
+"n": 3,
+"id": 14,
+"es": "de las regiones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+310,
+1017,
+770,
+1064
+],
+"txt": "diagnostico e manejo"
+},
+{
+"bbox": [
+340,
+1065,
+739,
+1114
+],
+"txt": "das complicacoes."
+}
+],
+"t0": 17.0,
+"t1": 18.666,
+"bbox": [
+310,
+1017,
+770,
+1114
+],
+"pt": "diagnostico e manejo / das complicacoes.",
+"n": 5,
+"id": 15,
+"es": "diagnóstico y manejo de las complicaciones."
+},
+{
+"linhas": [
+{
+"bbox": [
+303,
+885,
+776,
+944
+],
+"txt": "INTERCORRENCIAS"
+}
+],
+"t0": 17.667,
+"t1": 18.666,
+"bbox": [
+303,
+885,
+776,
+944
+],
+"pt": "INTERCORRENCIAS",
+"n": 3,
+"id": 16,
+"es": "COMPLICACIONES"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1013,
+784,
+1061
+],
+"txt": "Preciso saber escolher"
+},
+{
+"bbox": [
+358,
+1067,
+720,
+1109
+],
+"txt": "a melhor técnica"
+}
+],
+"t0": 19.0,
+"t1": 21.0,
+"bbox": [
+297,
+1013,
+784,
+1109
+],
+"pt": "Preciso saber escolher / a melhor técnica",
+"n": 6,
+"id": 17,
+"es": "Necesito saber elegir la mejor técnica"
+},
+{
+"linhas": [
+{
+"bbox": [
+429,
+883,
+652,
+948
+],
+"txt": "TECNICA"
+}
+],
+"t0": 19.333,
+"t1": 21.333,
+"bbox": [
+429,
+883,
+652,
+948
+],
+"pt": "TECNICA",
+"n": 6,
+"id": 18,
+"es": "TÉCNICA"
+},
+{
+"linhas": [
+{
+"bbox": [
+339,
+1038,
+739,
+1090
+],
+"txt": "pra cada paciente."
+}
+],
+"t0": 21.0,
+"t1": 22.333,
+"bbox": [
+339,
+1038,
+739,
+1090
+],
+"pt": "pra cada paciente.",
+"n": 4,
+"id": 19,
+"es": "para cada paciente."
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1018,
+831,
+1063
+],
+"txt": "Isso era uma.das principais"
+},
+{
+"bbox": [
+293,
+1068,
+791,
+1111
+],
+"txt": "dores dos meus alunos"
+}
+],
+"t0": 22.667,
+"t1": 25.0,
+"bbox": [
+249,
+1018,
+831,
+1111
+],
+"pt": "Isso era uma.das principais / dores dos meus alunos",
+"n": 7,
+"id": 20,
+"es": "Este era uno de los principales dolores de mis alumnos"
+},
+{
+"linhas": [
+{
+"bbox": [
+255,
+1040,
+820,
+1085
+],
+"txt": "antes de entrarem na FEP."
+}
+],
+"t0": 25.0,
+"t1": 26.0,
+"bbox": [
+255,
+1040,
+820,
+1085
+],
+"pt": "antes de entrarem na FEP.",
+"n": 3,
+"id": 21,
+"es": "antes de entrar en la FEP."
+},
+{
+"linhas": [
+{
+"bbox": [
+207,
+1036,
+873,
+1087
+],
+"txt": "E hoje com esse conhecimento"
+}
+],
+"t0": 26.333,
+"t1": 28.333,
+"bbox": [
+207,
+1036,
+873,
+1087
+],
+"pt": "E hoje com esse conhecimento",
+"n": 6,
+"id": 22,
+"es": "Y hoy, con este conocimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+268,
+1019,
+812,
+1064
+],
+"txt": "eles conseguem entregar"
+},
+{
+"bbox": [
+359,
+1069,
+719,
+1110
+],
+"txt": "esses resultados"
+}
+],
+"t0": 28.333,
+"t1": 30.333,
+"bbox": [
+268,
+1019,
+812,
+1110
+],
+"pt": "eles conseguem entregar / esses resultados",
+"n": 6,
+"id": 23,
+"es": "logran entregar estos resultados."
+},
+{
+"linhas": [
+{
+"bbox": [
+746,
+1008,
+826,
+1032
+],
+"txt": "myat e"
+}
+],
+"t0": 35.667,
+"t1": 36.333,
+"bbox": [
+746,
+1008,
+826,
+1032
+],
+"pt": "myat e",
+"n": 2,
+"id": 24,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+245,
+1043,
+840,
+1086
+],
+"txt": "Uma formacao 100% online"
+}
+],
+"t0": 37.667,
+"t1": 39.333,
+"bbox": [
+245,
+1043,
+840,
+1086
+],
+"pt": "Uma formacao 100% online",
+"n": 5,
+"id": 25,
+"es": "Una formación 100% online"
+},
+{
+"linhas": [
+{
+"bbox": [
+370,
+912,
+713,
+966
+],
+"txt": "100%0NLINE"
+}
+],
+"t0": 38.667,
+"t1": 40.0,
+"bbox": [
+370,
+912,
+713,
+966
+],
+"pt": "100%0NLINE",
+"n": 4,
+"id": 26,
+"es": "100% ONLINE"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1019,
+799,
+1061
+],
+"txt": "onde vocé se,aprofunda"
+},
+{
+"bbox": [
+314,
+1065,
+764,
+1115
+],
+"txt": "nas minhas tecnicas,"
+}
+],
+"t0": 39.333,
+"t1": 42.0,
+"bbox": [
+281,
+1019,
+799,
+1115
+],
+"pt": "onde vocé se,aprofunda / nas minhas tecnicas,",
+"n": 8,
+"id": 27,
+"es": "donde profundizas en mis técnicas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+359,
+914,
+720,
+964
+],
+"txt": "METODOLOGIA"
+}
+],
+"t0": 42.0,
+"t1": 43.333,
+"bbox": [
+359,
+914,
+720,
+964
+],
+"pt": "METODOLOGIA",
+"n": 4,
+"id": 28,
+"es": "METODOLOGÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1041,
+788,
+1088
+],
+"txt": "na minha metodologia,"
+}
+],
+"t0": 42.0,
+"t1": 43.333,
+"bbox": [
+290,
+1041,
+788,
+1088
+],
+"pt": "na minha metodologia,",
+"n": 4,
+"id": 29,
+"es": "en mi metodología,"
+},
+{
+"linhas": [
+{
+"bbox": [
+209,
+1036,
+869,
+1089
+],
+"txt": "num tripe baseado em ciencia,"
+}
+],
+"t0": 43.667,
+"t1": 45.333,
+"bbox": [
+209,
+1036,
+869,
+1089
+],
+"pt": "num tripe baseado em ciencia,",
+"n": 5,
+"id": 30,
+"es": "en un trípode basado en ciencia,"
+},
+{
+"linhas": [
+{
+"bbox": [
+435,
+911,
+662,
+975
+],
+"txt": "CIENCIA"
+}
+],
+"t0": 44.333,
+"t1": 45.333,
+"bbox": [
+435,
+911,
+662,
+975
+],
+"pt": "CIENCIA",
+"n": 3,
+"id": 31,
+"es": "CIENCIA"
+},
+{
+"linhas": [
+{
+"bbox": [
+359,
+910,
+653,
+975
+],
+"txt": "PRATICA"
+}
+],
+"t0": 45.333,
+"t1": 46.0,
+"bbox": [
+359,
+910,
+653,
+975
+],
+"pt": "PRATICA",
+"n": 2,
+"id": 32,
+"es": "PRÁCTICA"
+},
+{
+"linhas": [
+{
+"bbox": [
+236,
+1037,
+846,
+1090
+],
+"txt": "pratica e gestao da carreira."
+}
+],
+"t0": 45.333,
+"t1": 47.0,
+"bbox": [
+236,
+1037,
+846,
+1090
+],
+"pt": "pratica e gestao da carreira.",
+"n": 5,
+"id": 33,
+"es": "práctica y gestión de carrera."
+},
+{
+"linhas": [
+{
+"bbox": [
+259,
+911,
+817,
+972
+],
+"txt": "GESTAO DE CARREIRA"
+}
+],
+"t0": 46.0,
+"t1": 47.333,
+"bbox": [
+259,
+911,
+817,
+972
+],
+"pt": "GESTAO DE CARREIRA",
+"n": 4,
+"id": 34,
+"es": "GESTIÓN DE CARRERA"
+},
+{
+"linhas": [
+{
+"bbox": [
+223,
+1017,
+858,
+1067
+],
+"txt": "Vou ajudar voces a pensarem"
+},
+{
+"bbox": [
+253,
+1070,
+827,
+1110
+],
+"txt": "como injetores de sucesso"
+}
+],
+"t0": 47.333,
+"t1": 50.0,
+"bbox": [
+223,
+1017,
+858,
+1110
+],
+"pt": "Vou ajudar voces a pensarem / como injetores de sucesso",
+"n": 8,
+"id": 35,
+"es": "Voy a ayudarlos a pensar como inyectores de éxito"
+},
+{
+"linhas": [
+{
+"bbox": [
+349,
+1021,
+732,
+1062
+],
+"txt": "pra que a carreira"
+},
+{
+"bbox": [
+349,
+1067,
+732,
+1109
+],
+"txt": "de voces tambem"
+}
+],
+"t0": 50.667,
+"t1": 52.0,
+"bbox": [
+349,
+1021,
+732,
+1109
+],
+"pt": "pra que a carreira / de voces tambem",
+"n": 4,
+"id": 36,
+"es": "para que su carrera también"
+},
+{
+"linhas": [
+{
+"bbox": [
+427,
+910,
+654,
+966
+],
+"txt": "ACELERE"
+}
+],
+"t0": 52.333,
+"t1": 53.333,
+"bbox": [
+427,
+910,
+654,
+966
+],
+"pt": "ACELERE",
+"n": 3,
+"id": 37,
+"es": "ACELERE"
+},
+{
+"linhas": [
+{
+"bbox": [
+197,
+1043,
+880,
+1085
+],
+"txt": "acelere o processo de evolucao."
+}
+],
+"t0": 52.333,
+"t1": 54.0,
+"bbox": [
+197,
+1043,
+880,
+1085
+],
+"pt": "acelere o processo de evolucao.",
+"n": 5,
+"id": 38,
+"es": "acelere el proceso de evolución."
+},
+{
+"linhas": [
+{
+"bbox": [
+318,
+1014,
+762,
+1067
+],
+"txt": "Se voce quer ser um"
+},
+{
+"bbox": [
+289,
+1067,
+792,
+1112
+],
+"txt": "injetor full face de elite"
+}
+],
+"t0": 54.333,
+"t1": 57.0,
+"bbox": [
+289,
+1014,
+792,
+1112
+],
+"pt": "Se voce quer ser um / injetor full face de elite",
+"n": 8,
+"id": 39,
+"es": "Si quieres ser un inyector full face de élite,"
+},
+{
+"linhas": [
+{
+"bbox": [
+317,
+909,
+763,
+964
+],
+"txt": "INJETOR DE ELITE"
+}
+],
+"t0": 56.0,
+"t1": 57.333,
+"bbox": [
+317,
+909,
+763,
+964
+],
+"pt": "INJETOR DE ELITE",
+"n": 4,
+"id": 40,
+"es": "INYECTOR DE ÉLITE"
+},
+{
+"linhas": [
+{
+"bbox": [
+342,
+1017,
+741,
+1063
+],
+"txt": "toque 'Saiba Mais'"
+},
+{
+"bbox": [
+302,
+1068,
+776,
+1113
+],
+"txt": "que eu te vejo na FEP."
+}
+],
+"t0": 57.0,
+"t1": 59.0,
+"bbox": [
+302,
+1017,
+776,
+1113
+],
+"pt": "toque 'Saiba Mais' / que eu te vejo na FEP.",
+"n": 6,
+"id": 41,
+"es": "toca en «Más información» y nos vemos en la FEP."
+},
+{
+"linhas": [
+{
+"bbox": [
+388,
+910,
+690,
+967
+],
+"txt": "SAIBAIAIS"
+}
+],
+"t0": 57.333,
+"t1": 58.666,
+"bbox": [
+388,
+910,
+690,
+967
+],
+"pt": "SAIBAIAIS",
+"n": 4,
+"id": 42,
+"es": "MÁS INFORMACIÓN",
+"largura": 1.8
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 60.333,
+"t1": 63.0,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 43,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

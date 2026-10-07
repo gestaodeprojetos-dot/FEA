@@ -1,0 +1,572 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+103,
+302,
+660,
+370
+],
+"txt": "Técnicas seguras e"
+},
+{
+"bbox": [
+98,
+383,
+628,
+448
+],
+"txt": "replicaveis da FEP"
+}
+],
+"t0": 0.0,
+"t1": 19.0,
+"bbox": [
+98,
+302,
+660,
+448
+],
+"pt": "Técnicas seguras e / replicaveis da FEP",
+"n": 57,
+"id": 0,
+"es": "Técnicas seguras y replicables de la FEP"
+},
+{
+"linhas": [
+{
+"bbox": [
+225,
+1311,
+773,
+1401
+],
+"txt": "@drjoaopithon"
+}
+],
+"t0": 0.0,
+"t1": 19.0,
+"bbox": [
+225,
+1311,
+773,
+1401
+],
+"pt": "@drjoaopithon",
+"n": 57,
+"id": 1,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+334,
+1435,
+686,
+1478
+],
+"txt": "Muitomuito muito"
+}
+],
+"t0": 0.0,
+"t1": 4.666,
+"bbox": [
+334,
+1435,
+686,
+1478
+],
+"pt": "Muitomuito muito",
+"n": 14,
+"id": 2,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+375,
+1485,
+517,
+1524
+],
+"txt": "natural"
+}
+],
+"t0": 0.0,
+"t1": 3.0,
+"bbox": [
+375,
+1485,
+517,
+1524
+],
+"pt": "natural",
+"n": 9,
+"id": 3,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+125,
+1629,
+959,
+1674
+],
+"txt": "Agora foca nesse preenchimento labial!"
+}
+],
+"t0": 0.333,
+"t1": 2.666,
+"bbox": [
+125,
+1629,
+959,
+1674
+],
+"pt": "Agora foca nesse preenchimento labial!",
+"n": 7,
+"id": 4,
+"es": "¡Ahora fíjate en este relleno de labios!"
+},
+{
+"linhas": [
+{
+"bbox": [
+376,
+1486,
+510,
+1523
+],
+"txt": "palural"
+}
+],
+"t0": 3.0,
+"t1": 3.666,
+"bbox": [
+376,
+1486,
+510,
+1523
+],
+"pt": "palural",
+"n": 2,
+"id": 5,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+373,
+1477,
+643,
+1527
+],
+"txt": "natural@+p"
+}
+],
+"t0": 4.333,
+"t1": 9.666,
+"bbox": [
+373,
+1477,
+643,
+1527
+],
+"pt": "natural@+p",
+"n": 16,
+"id": 6,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+337,
+1436,
+685,
+1477
+],
+"txt": "Mluito muirummn"
+}
+],
+"t0": 4.667,
+"t1": 5.0,
+"bbox": [
+337,
+1436,
+685,
+1477
+],
+"pt": "Mluito muirummn",
+"n": 1,
+"id": 7,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+336,
+1434,
+693,
+1478
+],
+"txt": "Vhuitomuito muito"
+}
+],
+"t0": 5.0,
+"t1": 19.0,
+"bbox": [
+336,
+1434,
+693,
+1478
+],
+"pt": "Vhuitomuito muito",
+"n": 42,
+"id": 8,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+342,
+1629,
+738,
+1671
+],
+"txt": "Menos de um mes."
+}
+],
+"t0": 6.0,
+"t1": 7.0,
+"bbox": [
+342,
+1629,
+738,
+1671
+],
+"pt": "Menos de um mes.",
+"n": 3,
+"id": 9,
+"es": "Menos de un mes."
+},
+{
+"linhas": [
+{
+"bbox": [
+318,
+1628,
+761,
+1679
+],
+"txt": "Sem palavras, gente."
+}
+],
+"t0": 9.333,
+"t1": 10.333,
+"bbox": [
+318,
+1628,
+761,
+1679
+],
+"pt": "Sem palavras, gente.",
+"n": 3,
+"id": 10,
+"es": "Sin palabras, gente."
+},
+{
+"linhas": [
+{
+"bbox": [
+245,
+1629,
+833,
+1676
+],
+"txt": "Muito, muito, muito natural."
+}
+],
+"t0": 10.333,
+"t1": 11.333,
+"bbox": [
+245,
+1629,
+833,
+1676
+],
+"pt": "Muito, muito, muito natural.",
+"n": 3,
+"id": 11,
+"es": "Muy, muy, muy natural."
+},
+{
+"linhas": [
+{
+"bbox": [
+375,
+1486,
+507,
+1523
+],
+"txt": "natural"
+}
+],
+"t0": 10.667,
+"t1": 12.0,
+"bbox": [
+375,
+1486,
+507,
+1523
+],
+"pt": "natural",
+"n": 4,
+"id": 12,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+115,
+1602,
+953,
+1650
+],
+"txt": "Sb faco o dr. Joao, porque justamente é"
+},
+{
+"bbox": [
+390,
+1657,
+691,
+1697
+],
+"txt": "muito natural."
+}
+],
+"t0": 11.667,
+"t1": 15.0,
+"bbox": [
+115,
+1602,
+953,
+1697
+],
+"pt": "Sb faco o dr. Joao, porque justamente é / muito natural.",
+"n": 10,
+"id": 13,
+"es": "Solo me atiendo con el Dr. João, justamente porque es muy natural."
+},
+{
+"linhas": [
+{
+"bbox": [
+377,
+1489,
+506,
+1519
+],
+"txt": "naturil"
+}
+],
+"t0": 12.333,
+"t1": 12.666,
+"bbox": [
+377,
+1489,
+506,
+1519
+],
+"pt": "naturil",
+"n": 1,
+"id": 14,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+375,
+1484,
+508,
+1526
+],
+"txt": "Datural"
+}
+],
+"t0": 12.667,
+"t1": 13.0,
+"bbox": [
+375,
+1484,
+508,
+1526
+],
+"pt": "Datural",
+"n": 1,
+"id": 15,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+375,
+1480,
+603,
+1526
+],
+"txt": "natural@.t"
+}
+],
+"t0": 13.0,
+"t1": 18.0,
+"bbox": [
+375,
+1480,
+603,
+1526
+],
+"pt": "natural@.t",
+"n": 15,
+"id": 16,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+253,
+1629,
+827,
+1674
+],
+"txt": "Muito, muito, muito, muito."
+}
+],
+"t0": 15.0,
+"t1": 16.666,
+"bbox": [
+253,
+1629,
+827,
+1674
+],
+"pt": "Muito, muito, muito, muito.",
+"n": 5,
+"id": 17,
+"es": "Muy, muy, muy, muy."
+},
+{
+"linhas": [
+{
+"bbox": [
+348,
+1629,
+730,
+1675
+],
+"txt": "Eu to apaixonada."
+}
+],
+"t0": 16.667,
+"t1": 18.0,
+"bbox": [
+348,
+1629,
+730,
+1675
+],
+"pt": "Eu to apaixonada.",
+"n": 4,
+"id": 18,
+"es": "Estoy enamorada."
+},
+{
+"linhas": [
+{
+"bbox": [
+350,
+1628,
+741,
+1674
+],
+"txt": "E super hidratado."
+}
+],
+"t0": 18.0,
+"t1": 19.0,
+"bbox": [
+350,
+1628,
+741,
+1674
+],
+"pt": "E super hidratado.",
+"n": 3,
+"id": 19,
+"es": "Y súper hidratado."
+},
+{
+"linhas": [
+{
+"bbox": [
+375,
+1486,
+507,
+1523
+],
+"txt": "natucal"
+}
+],
+"t0": 18.333,
+"t1": 19.0,
+"bbox": [
+375,
+1486,
+507,
+1523
+],
+"pt": "natucal",
+"n": 2,
+"id": 20,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 20.333,
+"t1": 23.0,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 21,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

@@ -1,0 +1,2664 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+761,
+456,
+981,
+566
+],
+"txt": "PES"
+},
+{
+"bbox": [
+732,
+588,
+969,
+638
+],
+"txt": "GRADA"
+}
+],
+"t0": 0.0,
+"t1": 1.666,
+"bbox": [
+732,
+456,
+981,
+638
+],
+"pt": "PES / GRADA",
+"n": 5,
+"id": 0,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+78,
+1013,
+158,
+1050
+],
+"txt": "OMidea"
+}
+],
+"t0": 1.667,
+"t1": 3.333,
+"bbox": [
+78,
+1013,
+158,
+1050
+],
+"pt": "OMidea",
+"n": 5,
+"id": 1,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+300,
+1238,
+790,
+1274
+],
+"txt": "Ola, meu nome é Katia Farias"
+}
+],
+"t0": 3.667,
+"t1": 5.0,
+"bbox": [
+300,
+1238,
+790,
+1274
+],
+"pt": "Ola, meu nome é Katia Farias",
+"n": 4,
+"id": 2,
+"es": "Hola, mi nombre es Kátia Farias"
+},
+{
+"linhas": [
+{
+"bbox": [
+274,
+1472,
+808,
+1524
+],
+"txt": "Ola meu nome é Wanessa,"
+}
+],
+"t0": 5.667,
+"t1": 6.666,
+"bbox": [
+274,
+1472,
+808,
+1524
+],
+"pt": "Ola meu nome é Wanessa,",
+"n": 3,
+"id": 3,
+"es": "Hola, mi nombre es Wanessa,"
+},
+{
+"linhas": [
+{
+"bbox": [
+184,
+1454,
+955,
+1540
+],
+"txt": "ola eu sou Adriana Viduedo53"
+}
+],
+"t0": 7.333,
+"t1": 9.0,
+"bbox": [
+184,
+1454,
+955,
+1540
+],
+"pt": "ola eu sou Adriana Viduedo53",
+"n": 5,
+"id": 4,
+"es": "Hola, soy Adriana Viduedo"
+},
+{
+"linhas": [
+{
+"bbox": [
+754,
+457,
+982,
+567
+],
+"txt": "PES"
+},
+{
+"bbox": [
+731,
+589,
+970,
+638
+],
+"txt": "GRADA"
+}
+],
+"t0": 9.333,
+"t1": 15.333,
+"bbox": [
+731,
+457,
+982,
+638
+],
+"pt": "PES / GRADA",
+"n": 18,
+"id": 5,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+215,
+1371,
+881,
+1470
+],
+"txt": "NAN ME SENTIA SEGURA"
+}
+],
+"t0": 11.333,
+"t1": 14.333,
+"bbox": [
+215,
+1371,
+881,
+1470
+],
+"pt": "NAN ME SENTIA SEGURA",
+"n": 9,
+"id": 6,
+"es": "NO ME SENTÍA SEGURA"
+},
+{
+"linhas": [
+{
+"bbox": [
+747,
+455,
+983,
+569
+],
+"txt": "PES"
+},
+{
+"bbox": [
+749,
+586,
+969,
+639
+],
+"txt": "GRADA"
+}
+],
+"t0": 15.0,
+"t1": 16.333,
+"bbox": [
+747,
+455,
+983,
+639
+],
+"pt": "PES / GRADA",
+"n": 4,
+"id": 7,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+121,
+1433,
+960,
+1486
+],
+"txt": "REALIZO TODOS PROCEDIMENTOS"
+}
+],
+"t0": 17.667,
+"t1": 20.666,
+"bbox": [
+121,
+1433,
+960,
+1486
+],
+"pt": "REALIZO TODOS PROCEDIMENTOS",
+"n": 9,
+"id": 8,
+"es": "REALIZO TODOS LOS PROCEDIMIENTOS"
+},
+{
+"linhas": [
+{
+"bbox": [
+223,
+993,
+300,
+1010
+],
+"txt": "DE2CVIbVCK"
+}
+],
+"t0": 22.0,
+"t1": 22.333,
+"bbox": [
+223,
+993,
+300,
+1010
+],
+"pt": "DE2CVIbVCK",
+"n": 1,
+"id": 9,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+989,
+300,
+1011
+],
+"txt": "DAA2G"
+}
+],
+"t0": 23.333,
+"t1": 23.666,
+"bbox": [
+220,
+989,
+300,
+1011
+],
+"pt": "DAA2G",
+"n": 1,
+"id": 10,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+277,
+1436,
+703,
+1485
+],
+"txt": "ANCAR MAIS PAO"
+}
+],
+"t0": 23.667,
+"t1": 24.0,
+"bbox": [
+277,
+1436,
+703,
+1485
+],
+"pt": "ANCAR MAIS PAO",
+"n": 1,
+"id": 11,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1419,
+902,
+1495
+],
+"txt": "ALCANCAR MAIS PACIENTES"
+}
+],
+"t0": 24.0,
+"t1": 26.666,
+"bbox": [
+178,
+1419,
+902,
+1495
+],
+"pt": "ALCANCAR MAIS PACIENTES",
+"n": 8,
+"id": 12,
+"es": "ALCANZAR MÁS PACIENTES"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+990,
+301,
+1012
+],
+"txt": "DE2CVIVCK"
+}
+],
+"t0": 24.667,
+"t1": 25.0,
+"bbox": [
+221,
+990,
+301,
+1012
+],
+"pt": "DE2CVIVCK",
+"n": 1,
+"id": 13,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+990,
+301,
+1012
+],
+"txt": "DE2CVVCK"
+}
+],
+"t0": 25.667,
+"t1": 26.0,
+"bbox": [
+221,
+990,
+301,
+1012
+],
+"pt": "DE2CVVCK",
+"n": 1,
+"id": 14,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+990,
+301,
+1012
+],
+"txt": "XDAA230"
+}
+],
+"t0": 28.333,
+"t1": 28.666,
+"bbox": [
+220,
+990,
+301,
+1012
+],
+"pt": "XDAA230",
+"n": 1,
+"id": 15,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+989,
+301,
+1012
+],
+"txt": "DARAD30"
+}
+],
+"t0": 31.0,
+"t1": 32.0,
+"bbox": [
+221,
+989,
+301,
+1012
+],
+"pt": "DARAD30",
+"n": 3,
+"id": 16,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+991,
+301,
+1011
+],
+"txt": "DE2CVIVCK"
+}
+],
+"t0": 32.667,
+"t1": 33.333,
+"bbox": [
+221,
+991,
+301,
+1011
+],
+"pt": "DE2CVIVCK",
+"n": 2,
+"id": 17,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+991,
+301,
+1011
+],
+"txt": "DE2CVIVCK"
+}
+],
+"t0": 36.333,
+"t1": 36.666,
+"bbox": [
+220,
+991,
+301,
+1011
+],
+"pt": "DE2CVIVCK",
+"n": 1,
+"id": 18,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+990,
+301,
+1012
+],
+"txt": "XDARAO230"
+}
+],
+"t0": 36.667,
+"t1": 37.0,
+"bbox": [
+220,
+990,
+301,
+1012
+],
+"pt": "XDARAO230",
+"n": 1,
+"id": 19,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+567,
+195,
+635
+],
+"txt": "M-15163"
+}
+],
+"t0": 46.333,
+"t1": 57.666,
+"bbox": [
+0,
+567,
+195,
+635
+],
+"pt": "M-15163",
+"n": 34,
+"id": 20,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+121,
+1257,
+958,
+1313
+],
+"txt": "eu nao tinha muita seguranca"
+}
+],
+"t0": 46.333,
+"t1": 47.666,
+"bbox": [
+121,
+1257,
+958,
+1313
+],
+"pt": "eu nao tinha muita seguranca",
+"n": 4,
+"id": 21,
+"es": "no tenía mucha seguridad",
+"tipo": "branco",
+"limiar": 246,
+"fonte": "Medium"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1383,
+83,
+1433
+],
+"txt": "SAUDE"
+}
+],
+"t0": 46.333,
+"t1": 47.0,
+"bbox": [
+0,
+1383,
+83,
+1433
+],
+"pt": "SAUDE",
+"n": 2,
+"id": 22,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1405,
+81,
+1447
+],
+"txt": "SAUDE"
+}
+],
+"t0": 47.333,
+"t1": 47.666,
+"bbox": [
+0,
+1405,
+81,
+1447
+],
+"pt": "SAUDE",
+"n": 1,
+"id": 23,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+202,
+1226,
+879,
+1282
+],
+"txt": "apesar de tantos cursos"
+},
+{
+"bbox": [
+258,
+1287,
+820,
+1347
+],
+"txt": "que eu ja tinha feito"
+}
+],
+"t0": 47.667,
+"t1": 50.0,
+"bbox": [
+202,
+1226,
+879,
+1347
+],
+"pt": "apesar de tantos cursos / que eu ja tinha feito",
+"n": 7,
+"id": 24,
+"es": "a pesar de tantos cursos que ya había hecho,",
+"tipo": "branco",
+"limiar": 246,
+"fonte": "Medium"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1385,
+89,
+1425
+],
+"txt": "ESAUDE"
+}
+],
+"t0": 47.667,
+"t1": 48.0,
+"bbox": [
+0,
+1385,
+89,
+1425
+],
+"pt": "ESAUDE",
+"n": 1,
+"id": 25,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+3,
+1366,
+91,
+1403
+],
+"txt": "E SAUDE"
+}
+],
+"t0": 48.0,
+"t1": 48.333,
+"bbox": [
+3,
+1366,
+91,
+1403
+],
+"pt": "E SAUDE",
+"n": 1,
+"id": 26,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+766,
+1520,
+833,
+1568
+],
+"txt": "med"
+}
+],
+"t0": 48.0,
+"t1": 48.333,
+"bbox": [
+766,
+1520,
+833,
+1568
+],
+"pt": "med",
+"n": 1,
+"id": 27,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1383,
+87,
+1422
+],
+"txt": "ESAUDE"
+}
+],
+"t0": 48.333,
+"t1": 48.666,
+"bbox": [
+0,
+1383,
+87,
+1422
+],
+"pt": "ESAUDE",
+"n": 1,
+"id": 28,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1397,
+83,
+1443
+],
+"txt": "SAUDE"
+}
+],
+"t0": 48.667,
+"t1": 49.333,
+"bbox": [
+0,
+1397,
+83,
+1443
+],
+"pt": "SAUDE",
+"n": 2,
+"id": 29,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+198,
+1230,
+865,
+1275
+],
+"txt": "eu tinha muito medo de"
+},
+{
+"bbox": [
+121,
+1290,
+958,
+1346
+],
+"txt": "trabalharcompreenchimento"
+}
+],
+"t0": 50.333,
+"t1": 52.666,
+"bbox": [
+121,
+1230,
+958,
+1346
+],
+"pt": "eu tinha muito medo de / trabalharcompreenchimento",
+"n": 7,
+"id": 30,
+"es": "tenía mucho miedo de trabajar con relleno",
+"tipo": "branco",
+"limiar": 246,
+"fonte": "Medium"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1378,
+94,
+1427
+],
+"txt": "ESAUDE"
+}
+],
+"t0": 50.667,
+"t1": 52.333,
+"bbox": [
+0,
+1378,
+94,
+1427
+],
+"pt": "ESAUDE",
+"n": 5,
+"id": 31,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+769,
+1534,
+836,
+1578
+],
+"txt": "umed"
+}
+],
+"t0": 52.333,
+"t1": 52.666,
+"bbox": [
+769,
+1534,
+836,
+1578
+],
+"pt": "umed",
+"n": 1,
+"id": 32,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1227,
+883,
+1278
+],
+"txt": "eo cursodo doutorJoao"
+},
+{
+"bbox": [
+158,
+1293,
+923,
+1341
+],
+"txt": "realmentevirou uma chave"
+}
+],
+"t0": 53.0,
+"t1": 56.666,
+"bbox": [
+158,
+1227,
+923,
+1341
+],
+"pt": "eo cursodo doutorJoao / realmentevirou uma chave",
+"n": 11,
+"id": 33,
+"es": "y el curso del doctor João realmente me hizo clic",
+"tipo": "branco",
+"limiar": 246,
+"fonte": "Medium"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1385,
+94,
+1455
+],
+"txt": "ESAUDE"
+}
+],
+"t0": 53.0,
+"t1": 55.333,
+"bbox": [
+0,
+1385,
+94,
+1455
+],
+"pt": "ESAUDE",
+"n": 7,
+"id": 34,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+343,
+1257,
+736,
+1312
+],
+"txt": "na minha vida"
+}
+],
+"t0": 56.667,
+"t1": 57.666,
+"bbox": [
+343,
+1257,
+736,
+1312
+],
+"pt": "na minha vida",
+"n": 3,
+"id": 35,
+"es": "en mi vida.",
+"tipo": "branco",
+"limiar": 246,
+"fonte": "Medium"
+},
+{
+"linhas": [
+{
+"bbox": [
+16,
+1409,
+107,
+1452
+],
+"txt": "ESAUDE"
+}
+],
+"t0": 57.0,
+"t1": 57.333,
+"bbox": [
+16,
+1409,
+107,
+1452
+],
+"pt": "ESAUDE",
+"n": 1,
+"id": 36,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1453,
+844,
+1492
+],
+"txt": "entao eu sempre tive alguns"
+},
+{
+"bbox": [
+260,
+1500,
+820,
+1544
+],
+"txt": "problemas em consultorio"
+}
+],
+"t0": 58.0,
+"t1": 60.666,
+"bbox": [
+239,
+1453,
+844,
+1544
+],
+"pt": "entao eu sempre tive alguns / problemas em consultorio",
+"n": 8,
+"id": 37,
+"es": "Siempre tuve algunos problemas en el consultorio"
+},
+{
+"linhas": [
+{
+"bbox": [
+254,
+1478,
+826,
+1514
+],
+"txt": "com outros preenchedores"
+}
+],
+"t0": 60.667,
+"t1": 61.666,
+"bbox": [
+254,
+1478,
+826,
+1514
+],
+"pt": "com outros preenchedores",
+"n": 3,
+"id": 38,
+"es": "con otros rellenos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1470,
+935,
+1520
+],
+"txt": "por exemplo nodulacoes em labios e"
+}
+],
+"t0": 61.667,
+"t1": 64.333,
+"bbox": [
+147,
+1470,
+935,
+1520
+],
+"pt": "por exemplo nodulacoes em labios e",
+"n": 8,
+"id": 39,
+"es": "por ejemplo, nodulaciones en labios y"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+1473,
+856,
+1518
+],
+"txt": "em preenchimento de olheira"
+}
+],
+"t0": 65.333,
+"t1": 66.666,
+"bbox": [
+221,
+1473,
+856,
+1518
+],
+"pt": "em preenchimento de olheira",
+"n": 4,
+"id": 40,
+"es": "en relleno de ojeras,"
+},
+{
+"linhas": [
+{
+"bbox": [
+159,
+1475,
+919,
+1518
+],
+"txt": "alguns preenchimentos superficiais"
+}
+],
+"t0": 67.0,
+"t1": 68.333,
+"bbox": [
+159,
+1475,
+919,
+1518
+],
+"pt": "alguns preenchimentos superficiais",
+"n": 4,
+"id": 41,
+"es": "algunos rellenos superficiales,"
+},
+{
+"linhas": [
+{
+"bbox": [
+215,
+1484,
+864,
+1518
+],
+"txt": "mesmo usando a tecnica certa"
+}
+],
+"t0": 68.667,
+"t1": 70.0,
+"bbox": [
+215,
+1484,
+864,
+1518
+],
+"pt": "mesmo usando a tecnica certa",
+"n": 4,
+"id": 42,
+"es": "incluso usando la técnica correcta."
+},
+{
+"linhas": [
+{
+"bbox": [
+271,
+1451,
+811,
+1493
+],
+"txt": "nao entendia porque que"
+},
+{
+"bbox": [
+327,
+1505,
+754,
+1541
+],
+"txt": "aconteciam aguelas"
+}
+],
+"t0": 70.0,
+"t1": 72.0,
+"bbox": [
+271,
+1451,
+811,
+1541
+],
+"pt": "nao entendia porque que / aconteciam aguelas",
+"n": 6,
+"id": 43,
+"es": "No entendía por qué ocurrían esas"
+},
+{
+"linhas": [
+{
+"bbox": [
+381,
+1482,
+702,
+1517
+],
+"txt": "intercorrencias"
+}
+],
+"t0": 72.0,
+"t1": 73.0,
+"bbox": [
+381,
+1482,
+702,
+1517
+],
+"pt": "intercorrencias",
+"n": 3,
+"id": 44,
+"es": "complicaciones."
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+108,
+228,
+193
+],
+"txt": "1730018"
+}
+],
+"t0": 73.667,
+"t1": 74.333,
+"bbox": [
+147,
+108,
+228,
+193
+],
+"pt": "1730018",
+"n": 2,
+"id": 45,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+204,
+1463,
+860,
+1534
+],
+"txt": "realizei tres pertuitos"
+}
+],
+"t0": 73.667,
+"t1": 75.0,
+"bbox": [
+204,
+1463,
+860,
+1534
+],
+"pt": "realizei tres pertuitos",
+"n": 4,
+"id": 46,
+"es": "Realicé tres puntos de entrada"
+},
+{
+"linhas": [
+{
+"bbox": [
+198,
+1430,
+864,
+1501
+],
+"txt": "para uma abordagem"
+},
+{
+"bbox": [
+320,
+1502,
+757,
+1559
+],
+"txt": "tridimensional"
+}
+],
+"t0": 75.0,
+"t1": 76.666,
+"bbox": [
+198,
+1430,
+864,
+1559
+],
+"pt": "para uma abordagem / tridimensional",
+"n": 5,
+"id": 47,
+"es": "para un abordaje tridimensional"
+},
+{
+"linhas": [
+{
+"bbox": [
+263,
+1428,
+800,
+1504
+],
+"txt": "preconizada pelo"
+},
+{
+"bbox": [
+383,
+1498,
+696,
+1564
+],
+"txt": "Dr. Pithon"
+}
+],
+"t0": 76.667,
+"t1": 78.0,
+"bbox": [
+263,
+1428,
+800,
+1564
+],
+"pt": "preconizada pelo / Dr. Pithon",
+"n": 4,
+"id": 48,
+"es": "preconizado por el Dr. Pithon,"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+109,
+265,
+192
+],
+"txt": "CONTOURS"
+}
+],
+"t0": 80.0,
+"t1": 80.666,
+"bbox": [
+220,
+109,
+265,
+192
+],
+"pt": "CONTOURS",
+"n": 2,
+"id": 49,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+135,
+276,
+216
+],
+"txt": "BURGANCS"
+}
+],
+"t0": 80.667,
+"t1": 81.0,
+"bbox": [
+247,
+135,
+276,
+216
+],
+"pt": "BURGANCS",
+"n": 1,
+"id": 50,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+242,
+163,
+267,
+242
+],
+"txt": "CONTOURE"
+}
+],
+"t0": 81.0,
+"t1": 81.333,
+"bbox": [
+242,
+163,
+267,
+242
+],
+"pt": "CONTOURE",
+"n": 1,
+"id": 51,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+356,
+78,
+390,
+178
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 81.667,
+"t1": 82.333,
+"bbox": [
+356,
+78,
+390,
+178
+],
+"pt": "YVOIRE",
+"n": 2,
+"id": 52,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+300,
+89,
+324,
+170
+],
+"txt": "BONTOURE"
+}
+],
+"t0": 81.667,
+"t1": 82.0,
+"bbox": [
+300,
+89,
+324,
+170
+],
+"pt": "BONTOURE",
+"n": 1,
+"id": 53,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+15,
+102,
+102,
+145
+],
+"txt": "DIOO"
+}
+],
+"t0": 81.667,
+"t1": 82.0,
+"bbox": [
+15,
+102,
+102,
+145
+],
+"pt": "DIOO",
+"n": 1,
+"id": 54,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+14,
+102,
+103,
+145
+],
+"txt": "DIOC"
+}
+],
+"t0": 82.0,
+"t1": 82.333,
+"bbox": [
+14,
+102,
+103,
+145
+],
+"pt": "DIOC",
+"n": 1,
+"id": 55,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+108,
+1433,
+953,
+1500
+],
+"txt": "e em seguida passei para a"
+},
+{
+"bbox": [
+757,
+1442,
+953,
+1494
+],
+"txt": "para a"
+},
+{
+"bbox": [
+136,
+1499,
+944,
+1568
+],
+"txt": "regiao do sulco nasolabial"
+}
+],
+"t0": 82.333,
+"t1": 84.666,
+"bbox": [
+108,
+1433,
+953,
+1568
+],
+"pt": "e em seguida passei para a / para a / regiao do sulco nasolabial",
+"n": 7,
+"id": 56,
+"es": "y luego pasé a la región del surco nasolabial,"
+},
+{
+"linhas": [
+{
+"bbox": [
+532,
+1435,
+745,
+1498
+],
+"txt": "passei"
+}
+],
+"t0": 84.0,
+"t1": 84.333,
+"bbox": [
+532,
+1435,
+745,
+1498
+],
+"pt": "passei",
+"n": 1,
+"id": 57,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+568,
+1432,
+958,
+1495
+],
+"txt": "hidratacao e"
+},
+{
+"bbox": [
+105,
+1435,
+562,
+1491
+],
+"txt": "causando uma"
+},
+{
+"bbox": [
+151,
+1498,
+930,
+1570
+],
+"txt": "preenchimento da regiao"
+}
+],
+"t0": 85.333,
+"t1": 87.333,
+"bbox": [
+105,
+1432,
+958,
+1570
+],
+"pt": "hidratacao e / causando uma / preenchimento da regiao",
+"n": 6,
+"id": 58,
+"es": "logrando hidratación y relleno de la región."
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+37,
+371,
+160
+],
+"txt": "BIOGELIS"
+}
+],
+"t0": 88.667,
+"t1": 89.333,
+"bbox": [
+286,
+37,
+371,
+160
+],
+"pt": "BIOGELIS",
+"n": 2,
+"id": 59,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+357,
+1463,
+718,
+1539
+],
+"txt": "em seguida"
+}
+],
+"t0": 88.667,
+"t1": 89.333,
+"bbox": [
+357,
+1463,
+718,
+1539
+],
+"pt": "em seguida",
+"n": 2,
+"id": 60,
+"es": "Luego,"
+},
+{
+"linhas": [
+{
+"bbox": [
+205,
+1477,
+878,
+1514
+],
+"txt": "entao ta me ajudando a crescer"
+}
+],
+"t0": 89.333,
+"t1": 90.666,
+"bbox": [
+205,
+1477,
+878,
+1514
+],
+"pt": "entao ta me ajudando a crescer",
+"n": 4,
+"id": 61,
+"es": "entonces me está ayudando a crecer,"
+},
+{
+"linhas": [
+{
+"bbox": [
+282,
+1484,
+798,
+1518
+],
+"txt": "alavancarcada vez mais"
+}
+],
+"t0": 90.667,
+"t1": 92.333,
+"bbox": [
+282,
+1484,
+798,
+1518
+],
+"pt": "alavancarcada vez mais",
+"n": 5,
+"id": 62,
+"es": "a impulsarme cada vez más,"
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+1457,
+838,
+1495
+],
+"txt": "me ajudando a deixar meus"
+},
+{
+"bbox": [
+399,
+1505,
+680,
+1545
+],
+"txt": "clientes cada"
+}
+],
+"t0": 92.667,
+"t1": 94.666,
+"bbox": [
+247,
+1457,
+838,
+1545
+],
+"pt": "me ajudando a deixar meus / clientes cada",
+"n": 6,
+"id": 63,
+"es": "me está ayudando a dejar a mis clientes cada"
+},
+{
+"linhas": [
+{
+"bbox": [
+331,
+1483,
+747,
+1518
+],
+"txt": "vezmais satisfeitos"
+}
+],
+"t0": 94.667,
+"t1": 95.666,
+"bbox": [
+331,
+1483,
+747,
+1518
+],
+"pt": "vezmais satisfeitos",
+"n": 3,
+"id": 64,
+"es": "vez más satisfechos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+193,
+1457,
+874,
+1495
+],
+"txt": "e sempre com aguele intuito de"
+},
+{
+"bbox": [
+302,
+1509,
+780,
+1543
+],
+"txt": "embelezarsemmudar"
+}
+],
+"t0": 96.0,
+"t1": 99.666,
+"bbox": [
+193,
+1457,
+874,
+1543
+],
+"pt": "e sempre com aguele intuito de / embelezarsemmudar",
+"n": 11,
+"id": 65,
+"es": "y siempre con ese propósito de embellecer sin cambiar."
+},
+{
+"linhas": [
+{
+"bbox": [
+73,
+1013,
+159,
+1051
+],
+"txt": "Midea"
+}
+],
+"t0": 100.0,
+"t1": 107.333,
+"bbox": [
+73,
+1013,
+159,
+1051
+],
+"pt": "Midea",
+"n": 22,
+"id": 66,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+78,
+1013,
+158,
+1050
+],
+"txt": "Quidea"
+}
+],
+"t0": 107.333,
+"t1": 107.666,
+"bbox": [
+78,
+1013,
+158,
+1050
+],
+"pt": "Quidea",
+"n": 1,
+"id": 67,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+104,
+1434,
+979,
+1486
+],
+"txt": "SEGURANCA NOS PROCEDIMENTOS"
+}
+],
+"t0": 107.333,
+"t1": 109.666,
+"bbox": [
+104,
+1434,
+979,
+1486
+],
+"pt": "SEGURANCA NOS PROCEDIMENTOS",
+"n": 7,
+"id": 68,
+"es": "SEGURIDAD EN LOS PROCEDIMIENTOS"
+},
+{
+"linhas": [
+{
+"bbox": [
+79,
+1014,
+158,
+1050
+],
+"txt": "Midea"
+}
+],
+"t0": 107.667,
+"t1": 110.0,
+"bbox": [
+79,
+1014,
+158,
+1050
+],
+"pt": "Midea",
+"n": 7,
+"id": 69,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+264,
+321,
+818,
+362
+],
+"txt": "Resultados dos alunos:"
+}
+],
+"t0": 110.0,
+"t1": 125.333,
+"bbox": [
+264,
+321,
+818,
+362
+],
+"pt": "Resultados dos alunos:",
+"n": 46,
+"id": 70,
+"es": "Resultados de los alumnos:",
+"tipo": "caixa",
+"cor_texto": [
+40,
+60,
+140
+]
+},
+{
+"linhas": [
+{
+"bbox": [
+78,
+1013,
+159,
+1051
+],
+"txt": "Midea"
+}
+],
+"t0": 125.333,
+"t1": 126.0,
+"bbox": [
+78,
+1013,
+159,
+1051
+],
+"pt": "Midea",
+"n": 2,
+"id": 71,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+364,
+1761,
+497,
+1840
+],
+"txt": "mamel"
+},
+{
+"bbox": [
+216,
+1785,
+405,
+1916
+],
+"txt": "inghe"
+}
+],
+"t0": 129.333,
+"t1": 129.666,
+"bbox": [
+216,
+1761,
+497,
+1916
+],
+"pt": "mamel / inghe",
+"n": 1,
+"id": 72,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+372,
+1756,
+495,
+1833
+],
+"txt": "momenl"
+}
+],
+"t0": 129.667,
+"t1": 130.333,
+"bbox": [
+372,
+1756,
+495,
+1833
+],
+"pt": "momenl",
+"n": 2,
+"id": 73,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+736,
+1386,
+980,
+1415
+],
+"txt": "PIC·COLLAGE"
+}
+],
+"t0": 131.667,
+"t1": 135.0,
+"bbox": [
+736,
+1386,
+980,
+1415
+],
+"pt": "PIC·COLLAGE",
+"n": 10,
+"id": 74,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+79,
+1013,
+160,
+1051
+],
+"txt": "Midea"
+}
+],
+"t0": 135.0,
+"t1": 138.0,
+"bbox": [
+79,
+1013,
+160,
+1051
+],
+"pt": "Midea",
+"n": 9,
+"id": 75,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+871,
+536,
+1071,
+599
+],
+"txt": "GRAL"
+}
+],
+"t0": 138.0,
+"t1": 138.333,
+"bbox": [
+871,
+536,
+1071,
+599
+],
+"pt": "GRAL",
+"n": 1,
+"id": 76,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+867,
+538,
+1074,
+598
+],
+"txt": "GRAD"
+}
+],
+"t0": 138.333,
+"t1": 139.0,
+"bbox": [
+867,
+538,
+1074,
+598
+],
+"pt": "GRAD",
+"n": 2,
+"id": 77,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+858,
+539,
+1070,
+596
+],
+"txt": "DGRAL"
+}
+],
+"t0": 139.0,
+"t1": 139.333,
+"bbox": [
+858,
+539,
+1070,
+596
+],
+"pt": "DGRAL",
+"n": 1,
+"id": 78,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+869,
+539,
+1073,
+596
+],
+"txt": "GRAD"
+}
+],
+"t0": 139.333,
+"t1": 139.666,
+"bbox": [
+869,
+539,
+1073,
+596
+],
+"pt": "GRAD",
+"n": 1,
+"id": 79,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+833,
+395,
+975,
+492
+],
+"txt": "DP"
+},
+{
+"bbox": [
+867,
+538,
+1073,
+597
+],
+"txt": "GRAL"
+}
+],
+"t0": 139.667,
+"t1": 140.0,
+"bbox": [
+833,
+395,
+1073,
+597
+],
+"pt": "DP / GRAL",
+"n": 1,
+"id": 80,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+875,
+541,
+1069,
+595
+],
+"txt": "GRAD"
+}
+],
+"t0": 140.0,
+"t1": 140.333,
+"bbox": [
+875,
+541,
+1069,
+595
+],
+"pt": "GRAD",
+"n": 1,
+"id": 81,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+870,
+538,
+1071,
+598
+],
+"txt": "GRAL"
+}
+],
+"t0": 140.333,
+"t1": 141.666,
+"bbox": [
+870,
+538,
+1071,
+598
+],
+"pt": "GRAL",
+"n": 4,
+"id": 82,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+863,
+539,
+1073,
+599
+],
+"txt": "GRAD"
+}
+],
+"t0": 141.667,
+"t1": 143.666,
+"bbox": [
+863,
+539,
+1073,
+599
+],
+"pt": "GRAD",
+"n": 6,
+"id": 83,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+817,
+388,
+975,
+496
+],
+"txt": "OP"
+}
+],
+"t0": 143.333,
+"t1": 143.666,
+"bbox": [
+817,
+388,
+975,
+496
+],
+"pt": "OP",
+"n": 1,
+"id": 84,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+602,
+1430,
+791,
+1476
+],
+"txt": "ELUCA"
+}
+],
+"t0": 143.333,
+"t1": 143.666,
+"bbox": [
+602,
+1430,
+791,
+1476
+],
+"pt": "ELUCA",
+"n": 1,
+"id": 85,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+869,
+541,
+1069,
+595
+],
+"txt": "GRAL"
+}
+],
+"t0": 143.667,
+"t1": 144.0,
+"bbox": [
+869,
+541,
+1069,
+595
+],
+"pt": "GRAL",
+"n": 1,
+"id": 86,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+274,
+1430,
+808,
+1492
+],
+"txt": "+RS10.000 DE LUCR0"
+}
+],
+"t0": 143.667,
+"t1": 146.0,
+"bbox": [
+274,
+1430,
+808,
+1492
+],
+"pt": "+RS10.000 DE LUCR0",
+"n": 7,
+"id": 87,
+"es": "+R$10.000 DE GANANCIA"
+},
+{
+"linhas": [
+{
+"bbox": [
+872,
+542,
+1069,
+595
+],
+"txt": "GRAE"
+}
+],
+"t0": 144.0,
+"t1": 144.333,
+"bbox": [
+872,
+542,
+1069,
+595
+],
+"pt": "GRAE",
+"n": 1,
+"id": 88,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+875,
+542,
+1070,
+596
+],
+"txt": "GRAD"
+}
+],
+"t0": 144.333,
+"t1": 144.666,
+"bbox": [
+875,
+542,
+1070,
+596
+],
+"pt": "GRAD",
+"n": 1,
+"id": 89,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+867,
+540,
+1072,
+597
+],
+"txt": "GRAL"
+}
+],
+"t0": 144.667,
+"t1": 145.333,
+"bbox": [
+867,
+540,
+1072,
+597
+],
+"pt": "GRAL",
+"n": 2,
+"id": 90,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+866,
+540,
+1070,
+596
+],
+"txt": "GRAI"
+}
+],
+"t0": 145.333,
+"t1": 145.666,
+"bbox": [
+866,
+540,
+1070,
+596
+],
+"pt": "GRAI",
+"n": 1,
+"id": 91,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+830,
+392,
+979,
+494
+],
+"txt": "DP"
+},
+{
+"bbox": [
+862,
+538,
+1071,
+596
+],
+"txt": "GRAL"
+}
+],
+"t0": 145.667,
+"t1": 146.0,
+"bbox": [
+830,
+392,
+1071,
+596
+],
+"pt": "DP / GRAL",
+"n": 1,
+"id": 92,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+857,
+379,
+1066,
+501
+],
+"txt": "OPE"
+},
+{
+"bbox": [
+865,
+538,
+1074,
+597
+],
+"txt": "GRAD"
+}
+],
+"t0": 146.0,
+"t1": 146.666,
+"bbox": [
+857,
+379,
+1074,
+597
+],
+"pt": "OPE / GRAD",
+"n": 2,
+"id": 93,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+837,
+384,
+1064,
+500
+],
+"txt": "DPE"
+},
+{
+"bbox": [
+866,
+538,
+1074,
+597
+],
+"txt": "GRAL"
+}
+],
+"t0": 146.667,
+"t1": 147.333,
+"bbox": [
+837,
+384,
+1074,
+597
+],
+"pt": "DPE / GRAL",
+"n": 2,
+"id": 94,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+871,
+538,
+1074,
+598
+],
+"txt": "GRAD"
+}
+],
+"t0": 147.333,
+"t1": 147.666,
+"bbox": [
+871,
+538,
+1074,
+598
+],
+"pt": "GRAD",
+"n": 1,
+"id": 95,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1145,
+389,
+1197
+],
+"txt": "Toql"
+}
+],
+"t0": 149.0,
+"t1": 149.333,
+"bbox": [
+297,
+1145,
+389,
+1197
+],
+"pt": "Toql",
+"n": 1,
+"id": 96,
+"es": "Toca"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 149.333,
+"t1": 151.666,
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 7,
+"id": 97,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}
