@@ -47,10 +47,12 @@ def run(cmd):
 FILME = ",eq=saturation=0.86:contrast=1.04:gamma=0.98,noise=alls=7:allf=t,vignette=PI/5"
 
 
-def normalizar(entrada, saida, inicio=0.0, fim=None, filme=False):
+def normalizar(entrada, saida, inicio=0.0, fim=None, filme=False, recorte=None):
+    # recorte "L:A:X:Y" tira tarja preta (o Flow às vezes entrega 9:16 com faixa em cima e embaixo)
     corte = ["-ss", str(inicio)] + (["-to", str(fim)] if fim else [])
     run(["ffmpeg", "-v", "error", "-y", *corte, "-i", entrada,
-         "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1"
+         "-vf", (f"crop={recorte}," if recorte else "")
+         + "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1"
          + (FILME if filme else ""),
          "-af", "aresample=48000,aformat=channel_layouts=stereo",
          "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
@@ -124,7 +126,8 @@ def main():
         partes = []
         for i, c in enumerate(proj["cenas"]):
             p = os.path.join(tmp, f"c{i:02d}.mp4")
-            normalizar(caminho(c["arquivo"]), p, c.get("inicio", 0), c.get("fim"), proj.get("acabamento_filme"))
+            normalizar(caminho(c["arquivo"]), p, c.get("inicio", 0), c.get("fim"), proj.get("acabamento_filme"),
+                       c.get("recorte"))
             partes.append(p)
         historia = os.path.join(tmp, "historia.mp4")
         concatenar(partes, historia, tmp)
