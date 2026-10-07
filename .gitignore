@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .env
 FEA-novo-acesso-google*.txt
+
+# FEA: áudios de teste da voz clonada do Dr. João ficam só local, não vão para o GitHub
+FEA-black-vitalicia-2026/FEA-testes-voz/
