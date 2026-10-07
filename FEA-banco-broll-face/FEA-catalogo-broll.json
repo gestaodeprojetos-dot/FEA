@@ -41,7 +41,7 @@
   "formato": "4K horizontal",
   "duracao": "1:05",
   "uso": "Clipe longo, rende vários cortes de autoavaliação diante do espelho.",
-  "conferido": false
+  "conferido": true
  },
  {
   "id": "7299472",
@@ -52,7 +52,7 @@
   "formato": "Vertical 9:16",
   "duracao": "13s",
   "uso": "Já vem vertical: serve também em tela cheia, sem divisão. Representa o público masculino.",
-  "conferido": false
+  "conferido": true
  },
  {
   "id": "7299474",
@@ -63,7 +63,7 @@
   "formato": "Vertical",
   "duracao": "curto",
   "uso": "Região periorbital masculina, pálpebra e pés de galinha.",
-  "conferido": false
+  "conferido": true
  },
  {
   "id": "7299468",
@@ -74,7 +74,7 @@
   "formato": "Vertical",
   "duracao": "curto",
   "uso": "Perfil é o melhor ângulo para mostrar contorno mandibular e flacidez de terço inferior.",
-  "conferido": false
+  "conferido": true
  },
  {
   "id": "8165110",
@@ -85,18 +85,7 @@
   "formato": "Full HD horizontal",
   "duracao": "10s",
   "uso": "Textura periorbital forte. Carga emocional alta, usar com moderação para não soar dramático.",
-  "conferido": false
- },
- {
-  "id": "6654154",
-  "fonte": "Pexels",
-  "slug": "woman-looking-at-her-eye-bags-in-the-mirror-6654154",
-  "titulo": "Mulher examinando bolsas sob os olhos no espelho",
-  "categoria": "espelho",
-  "formato": "Horizontal",
-  "duracao": "curto",
-  "uso": "Região palpebral inferior. Conferir a idade da modelo antes de usar em pauta de face envelhecida.",
-  "conferido": false
+  "conferido": true
  },
  {
   "id": "4515",
