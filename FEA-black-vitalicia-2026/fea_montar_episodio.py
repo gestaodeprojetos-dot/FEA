@@ -12,7 +12,8 @@ projeto.json:
   "cenas": [{"arquivo": "c1.mp4", "inicio": 0, "fim": 7.6}, ...],
   "correcoes": [["\\\\bpra\\\\b", "para"]],          # regex aplicadas na legenda
   "ass_manual": "legenda-revisada.ass",             # opcional: usa esta legenda em vez de transcrever
-  "textos": [{"texto": "POV: ...", "inicio": 0, "fim": 3}]   # opcional: textos de tela do roteiro
+  "textos": [{"texto": "POV: ...", "inicio": 0, "fim": 3}],  # opcional: textos de tela do roteiro
+  "acabamento_filme": true                          # opcional: grão, cor e vinheta de cinema nas cenas
 }
 
 A legenda gerada é salva ao lado da saída (.ass) para revisão; corrigida, volta pelo "ass_manual".
@@ -41,10 +42,16 @@ def run(cmd):
     subprocess.run(cmd, check=True)
 
 
-def normalizar(entrada, saida, inicio=0.0, fim=None):
+# Acabamento de cinema (Keila, 07/10: "está muito com cara de IA"): cor menos saturada,
+# grão de filme e vinheta leve tiram o brilho liso típico de vídeo gerado.
+FILME = ",eq=saturation=0.86:contrast=1.04:gamma=0.98,noise=alls=7:allf=t,vignette=PI/5"
+
+
+def normalizar(entrada, saida, inicio=0.0, fim=None, filme=False):
     corte = ["-ss", str(inicio)] + (["-to", str(fim)] if fim else [])
     run(["ffmpeg", "-v", "error", "-y", *corte, "-i", entrada,
-         "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1",
+         "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,setsar=1"
+         + (FILME if filme else ""),
          "-af", "aresample=48000,aformat=channel_layouts=stereo",
          "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
          "-c:a", "aac", "-b:a", "192k", saida])
@@ -117,7 +124,7 @@ def main():
         partes = []
         for i, c in enumerate(proj["cenas"]):
             p = os.path.join(tmp, f"c{i:02d}.mp4")
-            normalizar(caminho(c["arquivo"]), p, c.get("inicio", 0), c.get("fim"))
+            normalizar(caminho(c["arquivo"]), p, c.get("inicio", 0), c.get("fim"), proj.get("acabamento_filme"))
             partes.append(p)
         historia = os.path.join(tmp, "historia.mp4")
         concatenar(partes, historia, tmp)
