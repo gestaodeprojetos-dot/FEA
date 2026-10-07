@@ -8,7 +8,7 @@
    "manter": [
     [
      0.0,
-     85.3
+     85.55
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7237.MOV",
@@ -21,7 +21,7 @@
    "manter": [
     [
      1.0,
-     68.2
+     68.1
     ]
    ],
    "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7238.MOV",
@@ -149,7 +149,17 @@
    "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7232.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7232.json",
    "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/5- Anestesia para preenchimento labial Parte 2.mp4",
-   "parte": 2
+   "parte": 2,
+   "mover_palavra": [
+    [
+     162.03,
+     162.6
+    ],
+    [
+     162.97,
+     163.4
+    ]
+   ]
   },
   {
    "titulo": "Use os Pertuitos a seu favor",
