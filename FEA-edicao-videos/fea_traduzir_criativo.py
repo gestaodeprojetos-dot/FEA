@@ -399,6 +399,9 @@ def main():
             b["_d0"], b["_d1"] = unidos[0][0], unidos[-1][1]
         else:
             b["_d0"], b["_d1"] = int(b["t0"] * FPS), int(b["t1"] * FPS)
+        # nunca menos que o intervalo em que o OCR viu o texto (letreiro longo que atravessa corte de cena)
+        b["_d0"] = min(b["_d0"], int(round(b["t0"] * FPS)))
+        b["_d1"] = max(b["_d1"], int(round((b["t1"] - 1 / 3) * FPS)))
         b["_mref"] = cv2.dilate(b["_ref"], el(31) if b.get("_chapado") else el(21))
         b["_mref7"] = cv2.dilate(b["_ref"], K13)
     for b in blocos:

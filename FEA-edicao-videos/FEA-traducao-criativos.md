@@ -21,6 +21,22 @@ Pedido da Keila em 07/10/2026: pasta de anúncios FEP (`Ads 1 FEP` a `Ads 25 FEP
 8. Conferir folha de contato e, nos pontos de letreiro, quadro em resolução cheia lado a lado (original x traduzido).
 9. Subir na subpasta de entrega com `fea_drive.py upload`.
 
+## Ajustes por bloco (`_ajustes` no es/N.json)
+
+| Ajuste | Quando usar | Exemplo do lote |
+|---|---|---|
+| `"tipo": "caixa"` | texto preto em caixa branca colada em fundo branco (parede, blusa) | Ads 12 título, Ads 16 e 19 caixinhas do Instagram |
+| `"tipo": "caixa_escura"` | painel preto com texto branco, estilo story (uma caixa por linha) | Ads 15 "Em breve na FEP" |
+| `"tipo": "branco"` + `"limiar": 246` | legenda branca fina, sem contorno, sobre roupa branca | Ads 14 (depoimento de jaleco) |
+| `"largura": 1.8` | letreiro que não pode quebrar em 2 linhas | "MÁS INFORMACIÓN" nos Ads 5, 6, 7 |
+| `"fonte": "Medium"` | texto original mais fino que Bold | Ads 16 |
+| `"cor_texto": [r, g, b]` | texto colorido em caixa | Ads 14 "Resultados de los alumnos" (azul) |
+| `"t1": 44.67` | OCR partiu a mesma linha em dois pedaços de tempo | Ads 16 |
+
+Título de duas caixas com cores alternadas (branca em cima, preta embaixo, Ads 22 a 25): dividir o bloco em dois (um `caixa`, outro `caixa_escura`).
+
+Ads 15 (câmera passando por mesa cheia de caixas de produto): o OCR lê todos os rótulos e mistura com a legenda; o cfg foi montado à mão, só com a faixa da legenda e os painéis.
+
 ## Como a remoção funciona (e limites)
 
 - O quadro de referência de cada bloco é o de texto completo (cobre texto que aparece digitando).
