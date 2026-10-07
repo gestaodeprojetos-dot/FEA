@@ -81,7 +81,7 @@ def ler_quadros(ff, video, ini=None, dur=None):
     cmd = [ff, "-nostdin", "-v", "error"]
     if ini is not None:
         cmd += ["-ss", str(ini), "-t", str(dur)]
-    cmd += ["-i", video, "-f", "rawvideo", "-pix_fmt", "bgr24", "-"]
+    cmd += ["-i", video, "-vf", f"scale={W}:{H}", "-f", "rawvideo", "-pix_fmt", "bgr24", "-"]
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, bufsize=W * H * 3 * 2)
     i = int(round((ini or 0) * FPS))
     while True:
@@ -422,11 +422,15 @@ def main():
             "-crf", "18", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
             "-movflags", "+faststart", "-shortest", saida]
     enc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    for i, q in ler_quadros(ff, video, ini, dur):
+    # FEA_MODO=limpo: apaga o PT e não escreve legenda (só as caixas), versão que vai para a dublagem do HeyGen
+    # FEA_MODO=texto: lê os quadros do vídeo dublado (FEA_VIDEO2) e só escreve o ES por cima, sem apagar nada
+    modo = os.environ.get("FEA_MODO", "")
+    fonte_quadros = os.environ["FEA_VIDEO2"] if modo == "texto" else video
+    for i, q in ler_quadros(ff, fonte_quadros, ini, dur):
         q = q.copy()
         ativos = [b for b in prontos if b["_f0"] <= i <= b["_f1"]]
         for b in ativos:
-            if b["tipo"] in ("caixa", "caixa_escura"):
+            if modo == "texto" or b["tipo"] in ("caixa", "caixa_escura"):
                 continue
             perto = b["_d0"] - 10 <= i <= b["_d1"] + 10      # cobre entrada e saída com fade
             if b["_presenca"].get(i, 0) < 0.05 and not perto:
@@ -444,6 +448,8 @@ def main():
             if m.any():
                 q[y0:y1, x0:x1] = cv2.inpaint(roi, m * 255, 7, cv2.INPAINT_TELEA)
         for b in ativos:
+            if modo == "limpo" and b["tipo"] not in ("caixa", "caixa_escura"):
+                continue
             if b["_d0"] <= i <= b["_d1"] and b["_img"] is not None:
                 colar(q, b["_img"], b["_pos"])
         enc.stdin.write(q.tobytes())
