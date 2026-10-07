@@ -67,3 +67,15 @@ Nomes de produto e de pessoa ficam como no original (Up Contour, Biogelis Volume
 - Ads 22 a 25 (dissecção em cadáver): manter como estão.
 - Valores (R$) e marcas (Up Contour, Biogelis Volume, Ilikia): manter como no original.
 - Não existem projetos de edição sem legenda: a remoção por inpainting é o padrão para esse tipo de pedido.
+
+## Dublagem no HeyGen (voz em espanhol, pedido da Keila em 07/10/2026)
+
+Conta HeyGen da FEA (lucayhi@gmail.com). Voz clonada de todos que falam (Dr. João, alunos e pacientes), autorizado pela Keila.
+
+1. **Vídeo limpo**: `FEA_MODO=limpo python3 fea_traduzir_criativo.py ...` apaga o PT e não escreve legenda (só as caixas). Mandar o vídeo já legendado não funciona: o HeyGen "esvazia" a letra queimada (sobra só o contorno).
+2. **Texto da dublagem (SRT)**: a legenda ES com os tempos medidos no render (`saida/N.mp4.relatorio.json`), sem letreiros, caixas e cartela. **Conferir a fala sem legenda**: transcrever o áudio original (Whisper) e acrescentar a tradução de todo trecho falado que não tinha legenda na tela. O HeyGen só dubla o que está no SRT, e o resto fica mudo (13 dos 24 vídeos tinham trechos assim; o Ads 14 tinha 81 s). Os tempos não podem se sobrepor nem por 1 ms (o HeyGen recusa).
+3. **HeyGen**: `create_video_translation_batch` com `srt_role: output`, `mode: precision`, `enable_dynamic_duration: false` (mantém a duração e a fala alinhada com a legenda), `keep_the_same_format: true`, idioma `Spanish (Latin America)`. Custo medido: cerca de 10 créditos por minuto.
+4. **Legenda por cima**: `FEA_MODO=texto FEA_VIDEO2=dublado.mp4 python3 fea_traduzir_criativo.py FFMPEG mid/N.mp4 cfg/N.json dublado.mp4 final/N.mp4` grava a legenda ES sobre o vídeo dublado, com o áudio dele.
+5. **Conferência**: transcrever o final e comparar com o áudio original (nenhuma fala faltando, idioma detectado = es).
+
+Os SRTs usados estão em `FEA-traducao-ads-fep/srt-dublagem/`. O Ads 11 não tem fala, então não passa pelo HeyGen.
