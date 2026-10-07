@@ -317,6 +317,9 @@ CORRECOES = [
     (r"\b(?:acil|acel)[uoeé]r[oô]nico\b", "ácido hialurônico"),
     (r"\b[Ww]i-?[Ff]i(zinho)?\b", r"Wi-Fi\1"), (r"\b[Nn]efertit[ei]\b", "Nefertiti"),
     (r"\b[Ll]etbo\b", "Letybo"),
+    # lote 07/10/2026 ("4 unidades de letboa", "dilete boa")
+    (r"\b[Ll]etboa\b", "Letybo"), (r"\bdilete ?boa\b", "de Letybo"),
+    (r"\b[Ff]ace do (músculo )?frontal\b", r"fáscia do \1frontal"),
     (r"\b(?:[Hh]ip|[Pp]i)tose\b", "ptose"), (r"\b[Hh]iptose\b", "ptose"),
     # Biofils: marca de fios (Keila, 03/10/2026); o Whisper ouve "biofios"
     (r"\b[Bb]io ?f[ií](?:l|o)s\b", "Biofils"), (r"\b[Bb]io ?fil\b", "Biofils"),
@@ -411,7 +414,14 @@ def juntar_quantidades(palavras, db=None, limiar=None, passo=0.05):
                 and eh_numero(palavras[j + 2]["w"]) and palavras[j + 2]["s"] - palavras[j]["e"] < 1.0:
             j += 2
         u = j + 1
-        if u >= len(palavras) or not eh_unidade(palavras[u]["w"]) or palavras[u]["s"] - palavras[j]["e"] > 2.5:
+        # número sem voz no próprio tempo (Whisper adiantou ou esticou: "3" em 45,3 s e "unidades" em
+        # 49,4 s, fala real "3 unidades" em 49,2 s; lote de 07/10/2026) aceita a unidade até 6 s depois
+        folga = 2.5
+        if db is not None and u < len(palavras):
+            k0, k1 = int(p["s"] / passo), max(int(p["s"] / passo) + 1, int(palavras[j]["e"] / passo))
+            if k1 <= len(db) and sum(db[x] >= limiar for x in range(k0, k1)) < 0.3 * (k1 - k0):
+                folga = 6.0
+        if u >= len(palavras) or not eh_unidade(palavras[u]["w"]) or palavras[u]["s"] - palavras[j]["e"] > folga:
             saida.append(p)
             i += 1
             continue

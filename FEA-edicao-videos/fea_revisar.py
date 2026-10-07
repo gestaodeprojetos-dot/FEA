@@ -433,7 +433,10 @@ def revisar(cfg, v, folhas=None):
         ts_ = t_saida(m)
         if ts_ > fe.TITULO_DUR + 0.3 and ts_ < mantido_total - 0.3:
             falado += [(t, ts_) for t in _tok(fe.corrigir(w["w"], v.get("correcoes", ())))]
-    leg = [t for _, _, txt in legendas for t in _tok(txt)]
+    # trechos fora da ordem do bruto (ex.: reação do paciente primeiro, Keila 07/10/2026): a fala
+    # segue a ordem do vídeo final, não a do bruto
+    falado.sort(key=lambda x: x[1])
+    leg =[t for _, _, txt in legendas for t in _tok(txt)]
     sm = difflib.SequenceMatcher(None, [t for t, _ in falado], leg, autojunk=False)
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op not in ("delete", "replace"):

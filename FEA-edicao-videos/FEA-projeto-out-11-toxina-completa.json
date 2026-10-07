@@ -1,0 +1,112 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Planejamento completo de toxina",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     57.4
+    ],
+    [
+     67.7,
+     124.15
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7126.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7126.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/1- Planejamento completo de toxina.mp4",
+   "correcoes": [
+    [
+     "\\bcom a nariz\\b",
+     "com o nariz"
+    ]
+   ]
+  },
+  {
+   "titulo": "Toxina na glabela não é tudo igual",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     85.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7128.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7128.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/2- Toxina na glabela não é tudo igual.mp4"
+  },
+  {
+   "titulo": "Toxina nos orbiculares dos olhos",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.8,
+     83.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7129.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7129.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/3- Toxina nos orbiculares dos olhos.mp4",
+   "remover_legenda": [
+    [
+     58.0,
+     58.4
+    ]
+   ]
+  },
+  {
+   "titulo": "Porção palpebral e orbital do orbicular",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.24,
+     75.4
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7130.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7130.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/4- Porção palpebral e orbital do orbicular.mp4",
+   "correcoes": [
+    [
+     "\\bHee Jin Kim\\b",
+     "Hee-Jin Kim"
+    ]
+   ]
+  },
+  {
+   "titulo": "Técnica da coroa no frontal",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     84.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7131.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7131.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/5- Técnica da coroa no frontal.mp4",
+   "remover_legenda": [
+    [
+     84.6,
+     84.9
+    ]
+   ]
+  },
+  {
+   "titulo": "Toxina no nasal sem travar o sorriso",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     54.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c9/IMG_7132.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c9/IMG_7132.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e11/6- Toxina no nasal sem travar o sorriso.mp4"
+  }
+ ]
+}
