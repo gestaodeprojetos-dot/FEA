@@ -1,6 +1,6 @@
 # FEA · Roteiros criativos Black Friday Vitalícia 2026
 
-Base: briefing de lançamento BF Vitalícia, 2 vídeos publicados (Dd6Qk82BkXn, DeJ1LoVRJ4r) e referência de formato Mari & Gisele (Craft). Versão 1, 07/10/2026.
+Base: briefing de lançamento BF Vitalícia, 2 vídeos publicados (Dd6Qk82BkXn, DeJ1LoVRJ4r) e referência de formato Mari & Gisele (Craft). Versão 2, 07/10/2026 (decisões da Keila aplicadas).
 
 Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicados (o interrogatório e a viagem no tempo). Todos usam 20 de outubro como data da live, o CTA "Comenta VITALÍCIO" na captação e o link na bio na fase de vendas.
 
@@ -21,12 +21,12 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 11 | O Loop | Repetição temporal (sem diálogo) | Captação | Consciente da dor | 45 a 60 s | Média |
 | 12 | Unboxing Vitalício | Unboxing ASMR, corte curto para anúncio | Captação e Vendas | Consciente da solução | 20 a 30 s | Baixa |
 
-## Pendências antes de gravar
+## Decisões e regras de produção
 
-- **Data da live:** O briefing diz "abrir as inscrições no dia 19/10 na Live de Abertura", mas o evento está como 20/10 e os 2 vídeos publicados dizem 20 de outubro. 19/10 parece ser só a live de alunos FEP (Zoom). Todos os roteiros usam 20/10.
-- **O que entra no pacote:** O vídeo do interrogatório diz que a Pós-Graduação e o curso presencial entram. A lista de cursos do briefing não inclui nenhum dos dois. Os roteiros citam só os cursos da lista até o comercial confirmar.
-- **Produção com IA:** Os 2 vídeos publicados parecem produzidos com IA generativa. A regra FEA proíbe IA em imagem clínica ou médica no entregável final. Nestes roteiros nenhuma cena exige procedimento, paciente ou cadáver; se a produção usar IA, que seja só nas cenas cinematográficas, como nos vídeos já aprovados.
-- **Termos de uso de imagem:** Plantão, Reação Real e Leilão usam alunos ou plateia real: termo assinado antes de publicar.
+- **Decidido em 07/10:** Live em 20/10. Pós-Graduação e curso presencial entram no pacote. Produção 100% em IA.
+- **Exceção à produção em IA:** A Reação Real só funciona gravada de verdade na FEP Experience 11. Se não der para gravar, a peça sai do plano: recriar a reação de alunos em IA seria depoimento fabricado.
+- **Personagens em IA:** Nenhum personagem gerado pode ser apresentado como aluno real, com nome ou profissão, nem falar de resultado de curso. Nenhuma cena mostra procedimento, paciente ou cadáver.
+- **Texto dentro da imagem:** Nomes de cursos, datas, bula, receita e documento do cartório entram como arte na pós-produção. IA de vídeo costuma deformar letras.
 
 ## 1. Dr. João & Zigo, Ep. 01: Para sempre
 
@@ -43,8 +43,8 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 0 a 3 s | Fachada do prédio à noite, chuva leve. Cartela de abertura estilo sitcom. | Trilha de abertura curta (3 notas). | Dr. João & Zigo · Ep. 01: Para sempre |
 | 3 a 10 s | Dr. João entra no laboratório olhando o celular. Zigo no suporte, de óculos, segurando a caneca. | DR. JOÃO: Zigo, preciso de uma ideia para anunciar a Black Friday. |  |
 | 10 a 16 s | Close no Zigo. Mandíbula se mexe devagar. | ZIGO: Black Friday? Você? Vai dar dez por cento num curso? |  |
-| 16 a 24 s | Dr. João puxa um banco e senta de frente para o esqueleto. | DR. JOÃO: Não. Vou abrir todos os meus cursos. Preenchimento, toxina, fios, complicações. Para sempre. | Todos os cursos. Para sempre. |
-| 24 a 30 s | A caneca para no ar. Silêncio de 1 segundo. | ZIGO: Para sempre é muito tempo, João. Eu que o diga. |  |
+| 16 a 24 s | Dr. João puxa um banco e senta de frente para o esqueleto. | DR. JOÃO: Não. Vou abrir todos os meus cursos. Preenchimento, toxina, fios, complicações. A Pós-Graduação. O curso presencial. Para sempre. | Todos os cursos + Pós + presencial. Para sempre. |
+| 24 a 30 s | A caneca para no ar. Silêncio de 1 segundo. | ZIGO: A Pós também? O presencial também? Para sempre é muito tempo, João. Eu que o diga. |  |
 | 30 a 40 s | Plano aberto dos dois. | DR. JOÃO: E todo curso novo que eu lançar também entra.<br>ZIGO: Vinte anos pendurado aqui ouvindo aula de anatomia, e ninguém nunca me ofereceu isso. | + todos os cursos que ainda vou lançar |
 | 40 a 48 s | Dr. João levanta, ajeita o jaleco no braço do Zigo. | DR. JOÃO: Você é estrutura de apoio, Zigo.<br>ZIGO: E quando é?<br>DR. JOÃO: Vinte de outubro. Ao vivo. | 20 de outubro |
 | 48 a 55 s | Dr. João apaga a luz e sai. Só a luminária acesa no Zigo. | ZIGO (para a câmera): Eu vou estar aqui. Não tenho mesmo para onde ir. |  |
@@ -52,9 +52,9 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Zigo é um esqueleto anatômico real do laboratório, animado com rig de mandíbula em pós (ou boneco articulado com fio). A voz pode ser de alguém do time. Manter o mesmo enquadramento e a mesma trilha em todos os episódios: a repetição é o que transforma em série.
+**Produção:** Produção 100% IA, no mesmo pipeline dos 2 vídeos já publicados. Zigo precisa de uma folha de personagem fixa (mesmo esqueleto, mesmos óculos, mesma caneca) para não mudar de cara entre episódios. Voz do Zigo também por IA, sempre a mesma. Manter o mesmo enquadramento e a mesma trilha em todos os episódios: a repetição é o que transforma em série.
 
-**Compliance:** Esqueleto de modelo anatômico, não é cadáver nem paciente: sem necessidade de disclaimer de mídia de cadáver.
+**Compliance:** Zigo é um modelo anatômico de laboratório, estilizado: não pode parecer cadáver real nem peça de dissecção. Assim não exige disclaimer de mídia de cadáver.
 
 ## 2. Dr. João & Zigo, Ep. 02: O plantão de dúvidas
 
@@ -69,18 +69,19 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 3 s | Cartela de abertura igual ao Ep. 01. | Trilha de abertura. | Dr. João & Zigo · Ep. 02: O plantão de dúvidas |
-| 3 a 10 s | Zigo segura o celular com dificuldade, dedo de osso tentando rolar a tela. | ZIGO: Novecentos comentários. Ninguém comentou isso quando eu dava plantão de anatomia. | Print real de comentário (com autorização) na tela |
+| 3 a 10 s | Zigo segura o celular com dificuldade, dedo de osso tentando rolar a tela. | ZIGO: Novecentos comentários. Ninguém comentou isso quando eu dava plantão de anatomia. | Comentário recriado como arte, sem @ de ninguém |
 | 10 a 20 s | Close no Zigo lendo. | ZIGO (lendo): "É vitalício mesmo ou é vitalício de doze meses?" Vitalício, minha filha. Vitalício de verdade. Olha para mim. | Acesso vitalício |
 | 20 a 32 s | Zigo rola a tela. | ZIGO (lendo): "Se ele lançar curso novo, eu pago de novo?" Não. Entra junto. Ele me contou ontem, eu não dormi. Não que eu durma. | Cursos futuros incluídos |
-| 32 a 44 s | Zigo ajeita os óculos. | ZIGO (lendo): "Tem cupom?" Não tem cupom. Tem live. Quem estiver na live do dia 20 entra no Lote Especial. | Sem cupom · Lote Especial só para quem estiver na live |
-| 44 a 54 s | Dr. João aparece na porta, braços cruzados. | DR. JOÃO: Zigo, você está respondendo comentário?<br>ZIGO: Alguém precisa fazer o trabalho de base aqui. |  |
-| 54 a 65 s | Cartela final. | Locução do CTA. | 20/10 · Comenta VITALÍCIO |
+| 32 a 38 s | Zigo arregala as órbitas. | ZIGO (lendo): "A Pós entra?" Entra. O presencial também. Eu perguntei três vezes. | Pós-Graduação e curso presencial incluídos |
+| 38 a 46 s | Zigo ajeita os óculos. | ZIGO (lendo): "Tem cupom?" Não tem cupom. Tem live. Quem estiver na live do dia 20 entra no Lote Especial. | Sem cupom · Lote Especial só para quem estiver na live |
+| 46 a 56 s | Dr. João aparece na porta, braços cruzados. | DR. JOÃO: Zigo, você está respondendo comentário?<br>ZIGO: Alguém precisa fazer o trabalho de base aqui. |  |
+| 56 a 66 s | Cartela final. | Locução do CTA. | 20/10 · Comenta VITALÍCIO |
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Usar comentários reais dos dois vídeos já publicados (pedir ao social media o print). Se a pergunta real for diferente, trocar a fala mantendo a estrutura pergunta lida + resposta seca + piada curta.
+**Produção:** Usar perguntas que aparecem de verdade nos comentários dos dois vídeos já publicados (pedir ao social media o levantamento). Na tela, o comentário é recriado como arte, sem @ e sem foto de perfil de ninguém. Se a pergunta real for diferente, trocar a fala mantendo a estrutura pergunta lida + resposta seca + piada curta.
 
-**Compliance:** Confirmar com o comercial, antes de gravar, que o Lote Especial é exclusivo para quem estiver na live (consta no briefing) e que não haverá cupom.
+**Compliance:** Confirmar com o comercial, antes de produzir, que o Lote Especial é exclusivo para quem estiver na live (consta no briefing) e que não haverá cupom.
 
 ## 3. Dr. João & Zigo, Ep. 03: O carrinho aberto
 
@@ -102,7 +103,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **CTA:** Link na bio. Acesso vitalício a todos os cursos, um único investimento.
 
-**Produção:** Gravar junto com Ep. 01 e Ep. 02 (mesma diária) para economizar set. A fala "ela não tem" é sobre o prazo real de vendas, não inventar escassez de vaga.
+**Produção:** Produzir junto com Ep. 01 e Ep. 02, reaproveitando a mesma folha de personagem e o mesmo cenário. A fala "ela não tem" é sobre o prazo real de vendas, não inventar escassez de vaga.
 
 **Compliance:** Só usar referência a prazo de encerramento que esteja confirmado pelo comercial (calendário indica vendas até 20/11).
 
@@ -121,7 +122,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 0 a 3 s | Close na caixa girando em fundo branco. Som de comprimido caindo no vidro. | LOCUTOR: Cansado de comprar curso todo ano? | Black Friday Vitalícia |
 | 3 a 10 s | Mão desdobra a bula. Câmera passeia pelo texto. | LOCUTOR: Black Friday Vitalícia. Indicação: profissionais habilitados em harmonização que querem parar de comprar curso avulso. | INDICAÇÃO |
 | 10 a 17 s | Close no trecho "posologia". | LOCUTOR: Posologia: dose única, no dia 20 de outubro, durante a live. | POSOLOGIA: dose única · 20/10 |
-| 17 a 25 s | Close em "mecanismo de ação". | LOCUTOR: Mecanismo de ação: acesso a todos os cursos do Dr. João Pithon, inclusive os que ainda serão lançados. Duração do efeito: vitalícia. | DURAÇÃO DO EFEITO: vitalícia |
+| 17 a 25 s | Close em "mecanismo de ação". | LOCUTOR: Mecanismo de ação: acesso a todos os cursos do Dr. João Pithon, incluindo a Pós-Graduação, o curso presencial e os cursos que ainda serão lançados. Duração do efeito: vitalícia. | DURAÇÃO DO EFEITO: vitalícia |
 | 25 a 32 s | Close em "reações adversas". | LOCUTOR: Reações adversas comuns: fila de aulas para assistir e raciocínio clínico mais criterioso. | REAÇÕES ADVERSAS |
 | 32 a 38 s | Close em "contraindicações", em vermelho. | LOCUTOR: Contraindicado para leigos. Não interage com cupom de desconto, porque não existe cupom. | CONTRAINDICAÇÃO: leigos |
 | 38 a 44 s | Corte seco para o Dr. João de jaleco, olhando para a câmera. | DR. JOÃO: Ao persistirem as dúvidas, comente VITALÍCIO. | Comenta VITALÍCIO |
@@ -139,7 +140,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 **Referência:** Trend de POV em primeira pessoa; ancorado na aula de Anamnese, a mais vista da base  
 **Fase:** Captação · **Estágio de consciência:** Consciente da dor · **Duração:** 50 a 60 s · **Produção:** Baixa  
 **Elenco:** Dr. João (falando direto para a lente)  
-**Locação:** Consultório real, câmera na altura dos olhos de quem está sentado na cadeira do paciente
+**Locação:** Consultório (cenário em IA), câmera na altura dos olhos de quem está sentado na cadeira do paciente
 
 **A ideia.** O Dr. João faz a anamnese do espectador e chega a um diagnóstico: Síndrome do Acesso Expirado. É o tema que ele mais ensina, usado para falar da dor real de quem compra curso com prazo.
 
@@ -149,12 +150,12 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 3 a 12 s | Ele anota. | DR. JOÃO: Queixa principal? Deixa eu adivinhar: comprou um curso, assistiu metade, e o acesso venceu. | Queixa principal |
 | 12 a 22 s | Ele levanta os olhos da prancheta. | DR. JOÃO: Quantos cursos você comprou nos últimos três anos? E quantos deixaram você seguro para manejar uma intercorrência vascular sozinho? | História da doença atual |
 | 22 a 32 s | Ele vira a prancheta: está escrito o diagnóstico. | DR. JOÃO: Diagnóstico: Síndrome do Acesso Expirado. Muito comum. Muito tratável. | Hipótese diagnóstica: Síndrome do Acesso Expirado |
-| 32 a 45 s | Ele escreve uma receita e entrega para a lente. | DR. JOÃO: Conduta: dose única. Acesso a todos os meus cursos, e a todos os que eu ainda lançar, para sempre. Dia 20 de outubro, ao vivo. | Conduta: dose única, efeito vitalício |
+| 32 a 45 s | Ele escreve uma receita e entrega para a lente. | DR. JOÃO: Conduta: dose única. Acesso a todos os meus cursos, à Pós-Graduação, ao curso presencial, e a tudo que eu ainda lançar, para sempre. Dia 20 de outubro, ao vivo. | Conduta: dose única, efeito vitalício |
 | 45 a 55 s | Close na receita, carimbo do Dr. João. | DR. JOÃO: Retorno? Não precisa. É vitalício. | Comenta VITALÍCIO |
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Gravação de uma diária curta, 1 câmera. A receita pode ser arte gráfica impressa com a identidade BF. Não usar papel timbrado de receita médica real nem número de CRM legível.
+**Produção:** Produção em IA com o Dr. João no mesmo visual dos vídeos publicados. A receita é arte gráfica com a identidade BF, inserida na pós-produção para o texto sair legível. Não usar papel timbrado de receita médica real nem número de CRM legível.
 
 **Compliance:** A "síndrome" é metáfora sobre formação, sem relação com doença de paciente. Ancorado em segurança ("manejar intercorrência vascular"), sem prometer resultado.
 
@@ -163,15 +164,15 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 **Modelo:** Filme de assalto (heist)  
 **Referência:** La Casa de Papel, Onze Homens e um Segredo: planta na mesa, equipe de preto, reviravolta do mentor  
 **Fase:** Captação · **Estágio de consciência:** Consciente da solução · **Duração:** 70 a 90 s · **Produção:** Alta  
-**Elenco:** 4 a 5 pessoas da equipe FEA de preto (com autorização de imagem) · Dr. João como o mentor revelado no fim  
-**Locação:** Galpão escuro (pode ser o mesmo do vídeo do interrogatório, para dar sensação de universo), mesa com planta impressa da "plataforma"
+**Elenco:** 4 a 5 personagens de preto, gerados em IA · Dr. João como o mentor revelado no fim  
+**Locação:** Galpão escuro, o mesmo do vídeo do interrogatório (cenário em IA), para criar um universo, mesa com planta impressa da "plataforma"
 
 **A ideia.** Uma equipe planeja o maior assalto da harmonização: levar todos os cursos de uma vez. Na reviravolta, quem abriu o cofre foi o próprio Dr. João.
 
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 4 s | Mão bate uma planta impressa na mesa. Luz pendular balançando. | LÍDER: Ninguém nunca levou tudo de uma vez. | Black Friday Vitalícia |
-| 4 a 18 s | Câmera passeia pelos rostos. Cada um aponta uma sala na planta. | MEMBRO 1: Sala um, Preenchimento.<br>MEMBRO 2: Sala dois, Toxina.<br>MEMBRO 3: Fios, Corporal, Complicações.<br>MEMBRO 4: E as gravações das imersões. | Nomes dos cursos aparecem sobre a planta |
+| 4 a 18 s | Câmera passeia pelos rostos. Cada um aponta uma sala na planta. | MEMBRO 1: Sala um, Preenchimento.<br>MEMBRO 2: Sala dois, Toxina.<br>MEMBRO 3: Fios, Corporal, Complicações.<br>MEMBRO 4: As gravações das imersões. A Pós-Graduação.<br>MEMBRO 1: E o curso presencial. O cofre mais protegido. | Nomes dos cursos aparecem sobre a planta |
 | 18 a 26 s | Close na líder. | LÍDER: E os cursos que ele ainda nem lançou.<br>MEMBRO 2: Como a gente leva o que ainda não existe?<br>LÍDER: Vitaliciamente. |  |
 | 26 a 34 s | Alguém pergunta, tenso. | MEMBRO 3: E a rota de fuga?<br>LÍDER: Não tem fuga. A gente fica com tudo. Para sempre. |  |
 | 34 a 48 s | Porta range. Silhueta no fundo. Luz acende: é o Dr. João. | DR. JOÃO: Vocês esqueceram um detalhe.<br>LÍDER: Qual?<br>DR. JOÃO: O cofre fui eu que abri. |  |
@@ -180,7 +181,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** É o roteiro mais caro da lista. Se a produção usar o mesmo galpão do interrogatório, a campanha ganha um "universo cinematográfico" de 3 vídeos. Dá para cortar uma versão de 30 s só com a reviravolta para anúncio.
+**Produção:** É o roteiro com mais cenas e personagens. Usando o mesmo galpão do interrogatório, a campanha ganha um "universo cinematográfico" de 3 vídeos. Dá para cortar uma versão de 30 s só com a reviravolta para anúncio.
 
 **Compliance:** A metáfora de crime é sobre o acesso, nunca sobre pirataria ou conteúdo de terceiros. Evitar arma, máscara realista ou qualquer imagem violenta.
 
@@ -189,7 +190,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 **Modelo:** Cena cotidiana absurda, com som ASMR de carimbo  
 **Referência:** Esquetes de comédia de situação de um plano só, em ambiente burocrático  
 **Fase:** Captação · **Estágio de consciência:** Consciente da solução · **Duração:** 45 a 60 s · **Produção:** Média  
-**Elenco:** Dr. João · ator no papel de tabelião (sério, óculos na ponta do nariz)  
+**Elenco:** Dr. João · tabelião (personagem em IA (sério, óculos na ponta do nariz)  
 **Locação:** Cartório ou escritório com balcão de madeira, pilha de livros de registro
 
 **A ideia.** Para tornar "vitalício" algo concreto, o Dr. João vai ao cartório registrar a doação do acesso. O tabelião lê as cláusulas e não acredita.
@@ -197,7 +198,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 3 s | Close num carimbo batendo. Som alto e seco. | Som do carimbo. | VITALÍCIO |
-| 3 a 12 s | Tabelião lendo o documento, sem levantar os olhos. | TABELIÃO: Escritura de concessão de acesso. Cedente: Dr. João Pithon. Objeto: todos os cursos. |  |
+| 3 a 12 s | Tabelião lendo o documento, sem levantar os olhos. | TABELIÃO: Escritura de concessão de acesso. Cedente: Dr. João Pithon. Objeto: todos os cursos, a Pós-Graduação e o curso presencial. |  |
 | 12 a 20 s | Ele levanta os olhos por cima dos óculos. | TABELIÃO: Todos?<br>DR. JOÃO: Todos.<br>TABELIÃO: Prazo?<br>DR. JOÃO: Vitalício. |  |
 | 20 a 30 s | Tabelião folheia, confuso. | TABELIÃO: Aqui diz "inclusive os cursos que ainda não existem". Eu não posso registrar uma coisa que não existe.<br>DR. JOÃO: Pode registrar o compromisso. | + cursos futuros |
 | 30 a 38 s | Silêncio. Tabelião pega o carimbo. | TABELIÃO: Trinta anos de cartório. Nunca carimbei isso. |  |
@@ -206,7 +207,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** O som do carimbo é o gancho de abertura e de fechamento, gravar com microfone dedicado. Documento de cena com arte gráfica própria (não usar papel de cartório real).
+**Produção:** O som do carimbo é o gancho de abertura e de fechamento: usar efeito sonoro forte e seco, mixado acima da trilha. Documento de cena com arte gráfica própria (não usar papel de cartório real).
 
 **Compliance:** Não citar valor no documento de cena. Não simular selo ou brasão oficial de cartório.
 
@@ -215,7 +216,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 **Modelo:** Leilão com virada de plateia  
 **Referência:** Leilão de arte com plaquinha numerada e martelo  
 **Fase:** Captação · **Estágio de consciência:** Comparando opções · **Duração:** 50 a 65 s · **Produção:** Alta  
-**Elenco:** Leiloeiro (ator) · 6 a 10 pessoas na plateia com plaquinha · uma profissional (persona dentista ou biomédica) · Dr. João  
+**Elenco:** Leiloeiro · 6 a 10 pessoas na plateia com plaquinha · uma profissional (persona dentista ou biomédica) · Dr. João  
 **Locação:** Auditório pequeno ou sala da sede com cadeiras em fileira, púlpito
 
 **A ideia.** Um leiloeiro vende os cursos um a um, em lotes. Uma profissional levanta a placa e pede tudo, para sempre. A palavra "lote" faz a ponte com o Lote Especial da live.
@@ -223,7 +224,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 4 s | Martelo batendo no púlpito. | LEILOEIRO: Lote um. Formação Especialista em Preenchimento. |  |
-| 4 a 14 s | Placas levantando. Corte rápido. | LEILOEIRO: Lote dois, Botox. Lote três, Fios. Lote quatro, Complicações. Vendido, vendido, vendido. | Cada lote aparece na tela |
+| 4 a 14 s | Placas levantando. Corte rápido. | LEILOEIRO: Lote dois, Botox. Lote três, Fios. Lote quatro, Complicações. Lote cinco, a Pós-Graduação. Vendido, vendido, vendido. | Cada lote aparece na tela |
 | 14 a 24 s | No fundo, uma profissional levanta a placa e se levanta. | PROFISSIONAL: Eu quero todos os lotes. E os próximos também.<br>LEILOEIRO: Senhora, isso não existe. |  |
 | 24 a 34 s | Dr. João, sentado na primeira fila, vira para trás. | DR. JOÃO: A partir do dia 20 de outubro, existe. | 20/10 |
 | 34 a 44 s | Leiloeiro olha para o martelo, sem saber o que fazer. | LEILOEIRO: E o lance?<br>DR. JOÃO: Só ao vivo. Quem estiver na live entra no Lote Especial. | Lote Especial só para quem estiver na live |
@@ -231,7 +232,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Pode ser filmado em evento da própria FEA aproveitando plateia real. Escolher uma atriz que represente uma das 5 personas (dentista em HOF é a mais simples de identificar pelo figurino).
+**Produção:** Todos os personagens em IA. A profissional que levanta a placa precisa representar uma das 5 personas (dentista em HOF é a mais simples de identificar pelo figurino).
 
 **Compliance:** Não mostrar valores de lance para não conflitar com a tabela de lotes oficial.
 
@@ -240,25 +241,25 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 **Modelo:** Telejornal de última hora  
 **Referência:** Vinheta de plantão de TV, âncora na bancada, repórter na rua, "povo fala"  
 **Fase:** Captação ou Vendas · **Estágio de consciência:** Inconsciente para consciente da solução · **Duração:** 60 a 75 s · **Produção:** Média  
-**Elenco:** Âncora · repórter · 3 alunos reais em "povo fala" (com termo de uso de imagem) · Dr. João em entrevista  
+**Elenco:** Âncora · repórter · 3 profissionais em "povo fala" · Dr. João em entrevista (todos em IA)  
 **Locação:** Bancada simulada (fundo escuro com tela), porta da clínica ou da sede
 
-**A ideia.** A notícia da Black Friday Vitalícia é tratada como fato extraordinário, com cobertura jornalística. O "povo fala" usa alunos reais, que entregam a prova social.
+**A ideia.** A notícia da Black Friday Vitalícia é tratada como fato extraordinário, com cobertura jornalística. O "povo fala" mostra a reação de colegas de profissão à notícia.
 
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 4 s | Vinheta original de plantão (não copiar vinheta de emissora). | Trilha tensa de plantão. | PLANTÃO · URGENTE |
 | 4 a 14 s | Âncora na bancada. | ÂNCORA: Interrompemos a programação para uma notícia que está mexendo com o mercado de injetáveis. O Dr. João Pithon confirmou que vai liberar todos os seus cursos. Para sempre. | Dr. João confirma acesso vitalício |
 | 14 a 24 s | Repórter na porta da sede. | REPÓRTER: Estou aqui na sede da formação. A equipe confirmou: a abertura acontece numa live no dia 20 de outubro. | AO VIVO · 20/10 |
-| 24 a 42 s | Povo fala, três alunos, cada um 5 segundos. | ALUNO 1: Eu não acreditei.<br>ALUNA 2: Eu já fiz a FEP, eu quero os outros.<br>ALUNO 3: Para sempre? Até os que ele nem gravou ainda? | Nome e profissão de cada aluno |
+| 24 a 42 s | Povo fala, três alunos, cada um 5 segundos. | PROFISSIONAL 1: Eu não acreditei.<br>PROFISSIONAL 2: A Pós também? E o presencial?<br>PROFISSIONAL 3: Para sempre? Até os que ele nem gravou ainda? |  |
 | 42 a 55 s | Repórter estende o microfone para o Dr. João, que passa andando. | REPÓRTER: Doutor, uma palavra?<br>DR. JOÃO: Uma? Vitalício. |  |
 | 55 a 65 s | Âncora fecha. | ÂNCORA: Voltaremos com mais informações dia 20, ao vivo. Boa noite. | Comenta VITALÍCIO |
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Os depoimentos dos alunos são espontâneos: gravar a reação real, não entregar fala decorada. Se não der para gravar alunos a tempo, trocar por membros da equipe identificados como tal.
+**Produção:** Vinheta e grafismos de plantão originais, sem imitar emissora real. Por ser tudo IA, o povo fala é só reação à notícia, nunca depoimento sobre curso.
 
-**Compliance:** Termo de uso de imagem assinado por cada aluno. Cartela com nome e profissão real, sem inventar cargo.
+**Compliance:** Personagens em IA não podem aparecer como alunos reais: sem nome, profissão ou cartela de identificação, e sem falar de resultado de curso (seria depoimento fabricado).
 
 ## 10. A Reação Real (FEP Experience 11)
 
@@ -273,7 +274,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 3 s | Plano fechado em rostos da plateia, antes do anúncio. | Som ambiente. | Eu contei para os meus alunos antes de contar para você |
-| 3 a 15 s | Dr. João no palco, plano aberto. | DR. JOÃO: Dia 20 eu vou abrir todos os meus cursos. Todos. Para sempre. E todo curso novo entra junto. |  |
+| 3 a 15 s | Dr. João no palco, plano aberto. | DR. JOÃO: Dia 20 eu vou abrir todos os meus cursos. Todos. A Pós-Graduação, o curso presencial. Para sempre. E todo curso novo entra junto. |  |
 | 15 a 35 s | Montagem de reações reais: risos, mãos na boca, alguém pergunta "inclusive os que vierem?". | Áudio real da sala. | Legenda das falas espontâneas |
 | 35 a 45 s | Dr. João olha para a câmera do fundo da sala. | DR. JOÃO: Agora você também sabe. Dia 20, ao vivo. | 20/10 · ao vivo |
 | 45 a 50 s | Cartela final. | Locução do CTA. | Comenta VITALÍCIO |
@@ -282,7 +283,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 
 **Produção:** Dupla câmera: uma no palco, outra virada para a plateia (essa é a principal). Publicar em 18 ou 19/10, no máximo 24 h depois da gravação. Combinar antes com o CS para que o anúncio não atrapalhe a programação científica do evento.
 
-**Compliance:** Termo de uso de imagem para todos os alunos que aparecem. Nenhuma cena de procedimento ou de cadáver nesse corte.
+**Compliance:** Única peça que não pode ser IA: o valor dela é a reação real. Gravar de verdade no evento, com termo de uso de imagem para todos os alunos que aparecem. Nenhuma cena de procedimento ou de cadáver nesse corte.
 
 ## 11. O Loop
 
@@ -300,7 +301,7 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 3 a 12 s | Ela no notebook: tela de "compra aprovada", depois a mesma tela com "seu acesso expirou". | Som de clique e de erro. | Acesso expirado |
 | 12 a 20 s | Despertador de novo. Mesmos planos, mais rápidos. Ela parece mais cansada. | Mesmo som, mais rápido. | 2024 |
 | 20 a 27 s | Despertador de novo, ainda mais rápido. | Mesmo som, mais rápido. | 2025 |
-| 27 a 37 s | Despertador. Desta vez o rádio relógio liga sozinho. | VOZ DO DR. JOÃO NO RÁDIO: Dia 20 de outubro eu vou abrir todos os meus cursos. Para sempre. | 20 de outubro de 2026 |
+| 27 a 37 s | Despertador. Desta vez o rádio relógio liga sozinho. | VOZ DO DR. JOÃO NO RÁDIO: Dia 20 de outubro eu vou abrir todos os meus cursos, a Pós-Graduação e o curso presencial. Para sempre. | 20 de outubro de 2026 |
 | 37 a 45 s | Ela para, olha para o rádio, sorri. Fecha o notebook. | Silêncio e trilha suave. | Fim do loop |
 | 45 a 52 s | Cartela final. | Locução do CTA. | Comenta VITALÍCIO |
 
@@ -323,23 +324,23 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | Tempo | Visual | Fala e som | Texto na tela |
 |---|---|---|---|
 | 0 a 3 s | Mãos abrem a tampa da caixa. Som de papel de seda. | ASMR. |  |
-| 3 a 15 s | Cartões saem um a um e são alinhados na mesa: Preenchimento, Botox, Fios, Corporal, Complicações, Rinomodelação, Olheiras... | ASMR de cartão deslizando, sem trilha. | Nome de cada curso no cartão |
+| 3 a 15 s | Cartões saem um a um e são alinhados na mesa: Preenchimento, Botox, Fios, Corporal, Complicações, Rinomodelação, Olheiras... Os dois últimos cartões são maiores, dourados: Pós-Graduação e Curso Presencial. | ASMR de cartão deslizando, sem trilha. | Nome de cada curso no cartão |
 | 15 a 20 s | Caixa parece vazia. A mão sacode e cai um último cartão, em branco, escrito à mão. | ASMR. | Cursos que ainda vou lançar |
 | 20 a 26 s | Tampa fecha. Na tampa: Black Friday Vitalícia · 20/10. | VOZ DO DR. JOÃO: Abre uma vez. Usa para sempre. | 20/10 · Comenta VITALÍCIO |
 
 **CTA:** Comenta VITALÍCIO que eu te mando os detalhes. 20 de outubro, ao vivo.
 
-**Produção:** Excelente para teste A/B de anúncio porque não depende de fala. Usar exatamente os nomes de cursos da lista do briefing.
+**Produção:** Excelente para teste A/B (duas versões rodando ao mesmo tempo para ver qual converte mais) porque não depende de fala. Usar exatamente os nomes de cursos da lista do briefing.
 
-**Compliance:** Só listar cursos confirmados no briefing. Pós-graduação e curso presencial só entram depois da confirmação do comercial (ver pendências).
+**Compliance:** Só listar cursos confirmados no briefing, mais a Pós-Graduação e o curso presencial (confirmados pela Keila em 07/10). Nome dos cursos inserido em pós-produção, para não sair texto deformado pela IA.
 
 ## Cronograma sugerido
 
 | Data | Ação |
 |---|---|
-| 08 a 10/10 | Gravar A Anamnese, A Bula e Unboxing (1 diária curta, mesmo estúdio) |
+| 08 a 10/10 | Produzir A Anamnese, A Bula e Unboxing em IA (as três mais simples) |
 | 10/10 | Publicar A Anamnese |
-| 11 a 12/10 | Gravar os 3 episódios de Dr. João & Zigo (1 diária no laboratório) |
+| 08 a 12/10 | Criar a folha de personagem do Zigo e produzir os 3 episódios |
 | 12/10 | Publicar Zigo Ep. 01 · subir Unboxing e A Bula como anúncio |
 | 14/10 | Publicar A Bula orgânico |
 | 15/10 | Publicar Zigo Ep. 02 (com comentários reais do Ep. 01) |
@@ -347,4 +348,4 @@ Doze roteiros em dez modelos narrativos diferentes dos dois vídeos já publicad
 | 18/10 | Publicar O Loop ou O Cartório (o que ficar pronto) |
 | 19/10 | Publicar A Reação Real |
 | 20/10 | Live. Depois da live, Zigo Ep. 03 e A Bula versão vendas |
-| 21/10 a 20/11 | Fase de vendas: O Assalto, O Leilão e Plantão Vitalício (produção maior, CTA trocado para o link) |
+| 21/10 a 20/11 | Fase de vendas: O Assalto, O Leilão e Plantão Vitalício (mais cenas e personagens, CTA trocado para o link) |
