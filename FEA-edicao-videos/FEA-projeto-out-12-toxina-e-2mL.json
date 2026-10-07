@@ -1,0 +1,321 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Toxina nos orbiculares",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     85.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7237.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7237.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/1- Toxina nos orbiculares.mp4"
+  },
+  {
+   "titulo": "Nove pontos na glabela",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     1.0,
+     68.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7238.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7238.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/2- Nove pontos na glabela.mp4",
+   "remover_legenda": [
+    [
+     43.1,
+     43.4
+    ],
+    [
+     58.9,
+     59.3
+    ]
+   ]
+  },
+  {
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.2,
+     95.4
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7239.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7239.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/3- Técnica da coroa.mp4",
+   "correcoes": [
+    [
+     "\\b[Vv]ou marquear\\b",
+     "Vou arquear"
+    ],
+    [
+     "\\b[Mm]arquear\\b",
+     "arquear"
+    ],
+    [
+     "\\batira a parte\\b",
+     "tira a parte"
+    ],
+    [
+     "\\b([Uu]ma)[.,]? (?=[Tt]udo mais)",
+     "\\1, "
+    ],
+    [
+     "\\bTudo mais ou\\b",
+     "tudo mais ou"
+    ]
+   ]
+  },
+  {
+   "titulo": "Músculo nasal",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     43.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7240.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7240.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/4- Músculo nasal.mp4",
+   "remover_legenda": [
+    [
+     9.2,
+     10.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bDois\\b",
+     "duas"
+    ]
+   ]
+  },
+  {
+   "titulo": "Anestesia para preenchimento labial",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     74.4
+    ],
+    [
+     78.2,
+     123.55
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7232.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7232.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/5- Anestesia para preenchimento labial Parte 1.mp4",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "correcoes": [
+    [
+     "\\binfra -orbitário\\b",
+     "infraorbitário"
+    ],
+    [
+     "\\b[Nn]a anotologia\\b",
+     "Na odontologia"
+    ],
+    [
+     "\\binfra-orbitário\\b",
+     "infraorbitário"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     122.95,
+     124.3
+    ]
+   ]
+  },
+  {
+   "titulo": "Anestesia para preenchimento labial",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     124.3,
+     194.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7232.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7232.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/5- Anestesia para preenchimento labial Parte 2.mp4",
+   "parte": 2
+  },
+  {
+   "titulo": "Use os Pertuitos a seu favor",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.37,
+     77.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7233.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7233.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/6- Use os Pertuitos a seu favor Parte 1.mp4",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "correcoes": [
+    [
+     "\\bcâmeras\\b",
+     "câmaras"
+    ],
+    [
+     "\\b01 mL\\b",
+     "0,1 mL"
+    ],
+    [
+     "\\bmicro bolos\\b",
+     "microbolus"
+    ],
+    [
+     "\\bperdoito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bmicro bolus\\b",
+     "microbolus"
+    ]
+   ]
+  },
+  {
+   "titulo": "Use os Pertuitos a seu favor",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     78.3,
+     140.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7233.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7233.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/6- Use os Pertuitos a seu favor Parte 2.mp4",
+   "parte": 2
+  },
+  {
+   "titulo": "Pertuito dos lábios",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     33.7
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7234.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7234.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/7- Pertuito dos lábios.mp4"
+  },
+  {
+   "titulo": "Preenchimento labial",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     68.85
+    ],
+    [
+     98.6,
+     138.55
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7235.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7235.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/8- Preenchimento labial Parte 1.mp4",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "correcoes": [
+    [
+     "\\bRevaneskiss\\b",
+     "Revanesse Kiss"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     98.64,
+     108.7
+    ]
+   ],
+   "remover_legenda": [
+    [
+     99.5,
+     99.6
+    ]
+   ]
+  },
+  {
+   "titulo": "Preenchimento labial",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     138.6,
+     186.8
+    ],
+    [
+     214.9,
+     225.85
+    ],
+    [
+     232.55,
+     265.0
+    ],
+    [
+     272.8,
+     275.0
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7235.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7235.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/8- Preenchimento labial Parte 2.mp4",
+   "parte": 2,
+   "remover_legenda": [
+    [
+     244.2,
+     245.5
+    ],
+    [
+     256.8,
+     258.2
+    ]
+   ],
+   "mover_palavra": [
+    [
+     272.34,
+     272.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bEmbrando\\b",
+     "lembrando"
+    ],
+    [
+     "\\bOlha que\\b",
+     "olha que"
+    ]
+   ]
+  },
+  {
+   "titulo": "Use a ciência para escolher seu produto",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     40.9
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c10/IMG_7236.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c10/IMG_7236.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e12/9- Use a ciência para escolher seu produto.mp4"
+  }
+ ]
+}
