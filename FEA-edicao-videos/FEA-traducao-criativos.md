@@ -60,3 +60,10 @@ Ads 15 (câmera passando por mesa cheia de caixas de produto): o OCR lê todos o
 | aula | clase |
 
 Nomes de produto e de pessoa ficam como no original (Up Contour, Biogelis Volume, Dr. João, @perfis).
+
+## Decisões da Keila (07/10/2026, lote Ads FEP ES)
+
+- Ads 19 (evento "começa nessa segunda-feira, ao vivo no YouTube"): entregar como está, sem cortar.
+- Ads 22 a 25 (dissecção em cadáver): manter como estão.
+- Valores (R$) e marcas (Up Contour, Biogelis Volume, Ilikia): manter como no original.
+- Não existem projetos de edição sem legenda: a remoção por inpainting é o padrão para esse tipo de pedido.
