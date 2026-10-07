@@ -32,3 +32,6 @@ for k,v in m.items():
 json.dump(m,open(f,'w'),ensure_ascii=False,indent=1); sys.exit(er)
 # Rodada 2 (revisão do delta, 05/10/2026): aplicados direto em mapa-es.json
 # p7_02 «ya que guía» -> «y permite guiar» · p49_02 «con mejoría con» -> «mejora con» · p50_13 «mapear el área y la extensión»
+# Retorno do autor (07/10/2026), aplicado direto em mapa-es.json:
+# p27_03 «tiempo de reperfusión» -> «velocidad de perfusión» · p31_11 exemplo de diluição 3.000 UTR em 3 mL
+# piperacilina/tazobactam padronizada 4,5 g IV cada 6 h (p34_04, antes 3,375 g; p149_12; p154_05)

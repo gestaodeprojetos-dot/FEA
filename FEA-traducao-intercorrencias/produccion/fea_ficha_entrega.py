@@ -7,7 +7,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 HTML = """
 <h1>Intercurrencias en el relleno con ácido hialurónico: edición en español</h1>
-<p class="sub">Estado de la entrega · 5 de octubre de 2026 · uso interno FEA</p>
+<p class="sub">Estado de la entrega · 7 de octubre de 2026 · uso interno FEA</p>
 
 <div class="box">
 <p><b>Veredicto: LIBERADO.</b> El archivo
@@ -51,11 +51,15 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 
 <h2 class="brk">Reservas abiertas: decisiones del autor</h2>
 <p>No impiden circular. El español reproduce fielmente el original; se corrigen en PT y ES juntos.</p>
-<h3>Prioridad clínica</h3>
+<h3>Resuelto por el autor (07/10/2026)</h3>
 <ul>
-<li><b>Pág. 27:</b> «reducción del tiempo de reperfusión capilar» como signo de isquemia. Lo correcto es el aumento (enlentecimiento), como dice la pág. 14.</li>
-<li><b>Págs. 31, 41, 50:</b> «inyectar 1.000 UTR/mL» informa la concentración, no la dosis ni el volumen.</li>
-<li><b>Piperacilina:</b> 4,5 g en un capítulo y 3,375 g en otro.</li>
+<li><b>Pág. 27:</b> «velocidad de perfusión capilar» (en la isquemia disminuye la perfusión; reperfusión es el restablecimiento del flujo).</li>
+<li><b>Pág. 31:</b> hialuronidasa a 1.000 UTR/mL con el ejemplo de dilución explícito: frasco de 3.000 UTR completado hasta 3 mL de volumen final.</li>
+<li><b>Piperacilina/tazobactam:</b> estandarizada en 4,5 g IV cada 6 h en todo el libro (pág. 34 decía 3,375 g).</li>
+</ul>
+<p>Las mismas correcciones deben aplicarse al original en portugués.</p>
+<h3>Prioridad clínica, todavía abierta</h3>
+<ul>
 <li><b>Ventana de la retina:</b> cuatro cifras distintas a lo largo del libro (30 min, 90 min, 4 h, 12 h).</li>
 </ul>
 <h3>Línea roja 7: imágenes generadas por IA</h3>
