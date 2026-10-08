@@ -1,0 +1,1007 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+246,
+1075,
+836,
+1124
+],
+"txt": "Como fazer preenchimento"
+},
+{
+"bbox": [
+314,
+1129,
+765,
+1169
+],
+"txt": "full face em 2'meses."
+}
+],
+"t0": 0.0,
+"t1": 2.666,
+"bbox": [
+246,
+1075,
+836,
+1169
+],
+"pt": "Como fazer preenchimento / full face em 2'meses.",
+"n": 8,
+"id": 0,
+"es": "Cómo hacer relleno full face en 2 meses."
+},
+{
+"linhas": [
+{
+"bbox": [
+341,
+1073,
+740,
+1126
+],
+"txt": "O que bloqueia os"
+},
+{
+"bbox": [
+296,
+1126,
+786,
+1176
+],
+"txt": "injetores muitas vezes"
+}
+],
+"t0": 3.0,
+"t1": 5.0,
+"bbox": [
+296,
+1073,
+786,
+1176
+],
+"pt": "O que bloqueia os / injetores muitas vezes",
+"n": 6,
+"id": 1,
+"es": "Lo que frena a los inyectores muchas veces"
+},
+{
+"linhas": [
+{
+"bbox": [
+302,
+1078,
+778,
+1126
+],
+"txt": "é a falta de seguranca"
+},
+{
+"bbox": [
+292,
+1128,
+786,
+1171
+],
+"txt": "na hora de abordar um"
+}
+],
+"t0": 5.0,
+"t1": 7.333,
+"bbox": [
+292,
+1078,
+786,
+1171
+],
+"pt": "é a falta de seguranca / na hora de abordar um",
+"n": 7,
+"id": 2,
+"es": "es la falta de seguridad al abordar un"
+},
+{
+"linhas": [
+{
+"bbox": [
+278,
+1101,
+804,
+1148
+],
+"txt": "preenchimento full face."
+}
+],
+"t0": 7.333,
+"t1": 8.333,
+"bbox": [
+278,
+1101,
+804,
+1148
+],
+"pt": "preenchimento full face.",
+"n": 3,
+"id": 3,
+"es": "relleno full face."
+},
+{
+"linhas": [
+{
+"bbox": [
+381,
+1075,
+700,
+1125
+],
+"txt": "Ou até,mesmo"
+},
+{
+"bbox": [
+283,
+1126,
+800,
+1173
+],
+"txt": "procedimentos isolados"
+}
+],
+"t0": 8.667,
+"t1": 10.666,
+"bbox": [
+283,
+1075,
+800,
+1173
+],
+"pt": "Ou até,mesmo / procedimentos isolados",
+"n": 6,
+"id": 4,
+"es": "O incluso procedimientos aislados"
+},
+{
+"linhas": [
+{
+"bbox": [
+201,
+1100,
+877,
+1148
+],
+"txt": "mas que sejam mais avancados"
+}
+],
+"t0": 10.667,
+"t1": 12.0,
+"bbox": [
+201,
+1100,
+877,
+1148
+],
+"pt": "mas que sejam mais avancados",
+"n": 4,
+"id": 5,
+"es": "pero más avanzados,"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1099,
+834,
+1151
+],
+"txt": "como uma rinomodelacao,"
+}
+],
+"t0": 12.0,
+"t1": 13.333,
+"bbox": [
+249,
+1099,
+834,
+1151
+],
+"pt": "como uma rinomodelacao,",
+"n": 4,
+"id": 6,
+"es": "como una rinomodelación,"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1103,
+893,
+1148
+],
+"txt": "um preenchimento de temporas."
+}
+],
+"t0": 13.667,
+"t1": 14.666,
+"bbox": [
+188,
+1103,
+893,
+1148
+],
+"pt": "um preenchimento de temporas.",
+"n": 3,
+"id": 7,
+"es": "un relleno de sienes."
+},
+{
+"linhas": [
+{
+"bbox": [
+242,
+1078,
+876,
+1122
+],
+"txt": "A falta de conhecimento de"
+},
+{
+"bbox": [
+185,
+1127,
+895,
+1172
+],
+"txt": "como escolher o melhor material"
+}
+],
+"t0": 15.0,
+"t1": 18.0,
+"bbox": [
+185,
+1078,
+895,
+1172
+],
+"pt": "A falta de conhecimento de / como escolher o melhor material",
+"n": 9,
+"id": 8,
+"es": "La falta de conocimiento sobre cómo elegir el mejor material"
+},
+{
+"linhas": [
+{
+"bbox": [
+119,
+983,
+167,
+1012
+],
+"txt": "DESLOH"
+}
+],
+"t0": 15.333,
+"t1": 15.666,
+"bbox": [
+119,
+983,
+167,
+1012
+],
+"pt": "DESLOH",
+"n": 1,
+"id": 9,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+252,
+1099,
+822,
+1153
+],
+"txt": "(pra cada uma das regioes,"
+}
+],
+"t0": 18.0,
+"t1": 19.666,
+"bbox": [
+252,
+1099,
+822,
+1153
+],
+"pt": "(pra cada uma das regioes,",
+"n": 5,
+"id": 10,
+"es": "para cada una de las regiones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+337,
+1077,
+743,
+1122
+],
+"txt": "como diagnosticar"
+},
+{
+"bbox": [
+252,
+1126,
+825,
+1173
+],
+"txt": "e tratar as intercorrencias,"
+}
+],
+"t0": 19.667,
+"t1": 21.333,
+"bbox": [
+252,
+1077,
+825,
+1173
+],
+"pt": "como diagnosticar / e tratar as intercorrencias,",
+"n": 5,
+"id": 11,
+"es": "cómo diagnosticar y tratar las complicaciones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+287,
+1078,
+791,
+1123
+],
+"txt": "faz com que vocé fique"
+},
+{
+"bbox": [
+186,
+1123,
+894,
+1175
+],
+"txt": "perdido e nao se sinta confiante."
+}
+],
+"t0": 21.667,
+"t1": 24.333,
+"bbox": [
+186,
+1078,
+894,
+1175
+],
+"pt": "faz com que vocé fique / perdido e nao se sinta confiante.",
+"n": 8,
+"id": 12,
+"es": "hace que te sientas perdido y sin confianza."
+},
+{
+"linhas": [
+{
+"bbox": [
+354,
+1080,
+725,
+1123
+],
+"txt": "Aqui a gente tem"
+},
+{
+"bbox": [
+263,
+1129,
+817,
+1172
+],
+"txt": "um exemplo da Wanessa."
+}
+],
+"t0": 24.667,
+"t1": 27.0,
+"bbox": [
+263,
+1080,
+817,
+1172
+],
+"pt": "Aqui a gente tem / um exemplo da Wanessa.",
+"n": 7,
+"id": 13,
+"es": "Aquí tenemos el ejemplo de Wanessa."
+},
+{
+"linhas": [
+{
+"bbox": [
+274,
+1474,
+808,
+1525
+],
+"txt": "Ola meu nome é Wanessa,"
+}
+],
+"t0": 26.333,
+"t1": 27.333,
+"bbox": [
+274,
+1474,
+808,
+1525
+],
+"pt": "Ola meu nome é Wanessa,",
+"n": 3,
+"id": 14,
+"es": "Hola, mi nombre es Wanessa,"
+},
+{
+"linhas": [
+{
+"bbox": [
+217,
+1102,
+862,
+1150
+],
+"txt": "A Vanessa tambem era assim,"
+}
+],
+"t0": 27.0,
+"t1": 28.666,
+"bbox": [
+217,
+1102,
+862,
+1150
+],
+"pt": "A Vanessa tambem era assim,",
+"n": 5,
+"id": 15,
+"es": "Wanessa también era así,"
+},
+{
+"linhas": [
+{
+"bbox": [
+359,
+1478,
+714,
+1519
+],
+"txt": "sou aluna da FEP,"
+}
+],
+"t0": 27.667,
+"t1": 28.666,
+"bbox": [
+359,
+1478,
+714,
+1519
+],
+"pt": "sou aluna da FEP,",
+"n": 3,
+"id": 16,
+"es": "soy alumna de la FEP,"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1079,
+795,
+1124
+],
+"txt": "nao se sentia segura de"
+},
+{
+"bbox": [
+267,
+1129,
+811,
+1174
+],
+"txt": "fazer um preenchimento."
+}
+],
+"t0": 29.0,
+"t1": 31.333,
+"bbox": [
+267,
+1079,
+811,
+1174
+],
+"pt": "nao se sentia segura de / fazer um preenchimento.",
+"n": 7,
+"id": 17,
+"es": "no se sentía segura para hacer un relleno."
+},
+{
+"linhas": [
+{
+"bbox": [
+217,
+1080,
+868,
+1121
+],
+"txt": "Fazia procedimentos isolados"
+},
+{
+"bbox": [
+274,
+1127,
+806,
+1173
+],
+"txt": "como um bigode chines,"
+}
+],
+"t0": 31.333,
+"t1": 33.666,
+"bbox": [
+217,
+1080,
+868,
+1173
+],
+"pt": "Fazia procedimentos isolados / como um bigode chines,",
+"n": 7,
+"id": 18,
+"es": "Hacía procedimientos aislados, como el surco nasogeniano,"
+},
+{
+"linhas": [
+{
+"bbox": [
+325,
+868,
+763,
+921
+],
+"txt": "PROCEDIMENTUS"
+},
+{
+"bbox": [
+417,
+948,
+666,
+1007
+],
+"txt": "ISOLADOS"
+}
+],
+"t0": 31.667,
+"t1": 34.666,
+"bbox": [
+325,
+868,
+763,
+1007
+],
+"pt": "PROCEDIMENTUS / ISOLADOS",
+"n": 9,
+"id": 19,
+"es": "PROCEDIMIENTOS AISLADOS"
+},
+{
+"linhas": [
+{
+"bbox": [
+371,
+1104,
+706,
+1146
+],
+"txt": "como um labio."
+}
+],
+"t0": 33.667,
+"t1": 34.666,
+"bbox": [
+371,
+1104,
+706,
+1146
+],
+"pt": "como um labio.",
+"n": 3,
+"id": 20,
+"es": "como un labio."
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1079,
+840,
+1121
+],
+"txt": "Mas ela nao tinha o dominio"
+},
+{
+"bbox": [
+279,
+1128,
+801,
+1174
+],
+"txt": "do que ela tava fazendo"
+}
+],
+"t0": 35.0,
+"t1": 37.333,
+"bbox": [
+239,
+1079,
+840,
+1174
+],
+"pt": "Mas ela nao tinha o dominio / do que ela tava fazendo",
+"n": 7,
+"id": 21,
+"es": "Pero no tenía dominio de lo que estaba haciendo"
+},
+{
+"linhas": [
+{
+"bbox": [
+350,
+1072,
+732,
+1125
+],
+"txt": "e por isso ela nao"
+},
+{
+"bbox": [
+279,
+1128,
+803,
+1173
+],
+"txt": "deslanchava na carreira."
+}
+],
+"t0": 37.667,
+"t1": 39.666,
+"bbox": [
+279,
+1072,
+803,
+1173
+],
+"pt": "e por isso ela nao / deslanchava na carreira.",
+"n": 6,
+"id": 22,
+"es": "y por eso no despegaba en su carrera."
+},
+{
+"linhas": [
+{
+"bbox": [
+204,
+1079,
+876,
+1127
+],
+"txt": "Hoje a gente percebe que apos"
+},
+{
+"bbox": [
+205,
+1129,
+873,
+1171
+],
+"txt": "2 meses dela ta inscrita na FEP"
+}
+],
+"t0": 40.0,
+"t1": 43.666,
+"bbox": [
+204,
+1079,
+876,
+1171
+],
+"pt": "Hoje a gente percebe que apos / 2 meses dela ta inscrita na FEP",
+"n": 11,
+"id": 23,
+"es": "Hoy vemos que, tras 2 meses inscrita en la FEP,"
+},
+{
+"linhas": [
+{
+"bbox": [
+323,
+912,
+757,
+964
+],
+"txt": "APENAS2.MESES"
+}
+],
+"t0": 40.667,
+"t1": 43.666,
+"bbox": [
+323,
+912,
+757,
+964
+],
+"pt": "APENAS2.MESES",
+"n": 9,
+"id": 24,
+"es": "SOLO 2 MESES"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1077,
+814,
+1123
+],
+"txt": "ela comecou a realmente"
+},
+{
+"bbox": [
+187,
+1130,
+906,
+1171
+],
+"txt": "entender o que ela tava fazendo."
+}
+],
+"t0": 44.0,
+"t1": 46.666,
+"bbox": [
+187,
+1077,
+906,
+1171
+],
+"pt": "ela comecou a realmente / entender o que ela tava fazendo.",
+"n": 8,
+"id": 25,
+"es": "empezó a entender de verdad lo que estaba haciendo."
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+1077,
+832,
+1123
+],
+"txt": "Ela domina as técnicas que"
+},
+{
+"bbox": [
+255,
+1130,
+826,
+1173
+],
+"txt": "entregam muito resultado"
+}
+],
+"t0": 47.0,
+"t1": 49.333,
+"bbox": [
+247,
+1077,
+832,
+1173
+],
+"pt": "Ela domina as técnicas que / entregam muito resultado",
+"n": 7,
+"id": 26,
+"es": "Domina las técnicas que dan mucho resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+302,
+921,
+778,
+974
+],
+"txt": "MUITO RESULTADO"
+}
+],
+"t0": 48.667,
+"t1": 49.666,
+"bbox": [
+302,
+921,
+778,
+974
+],
+"pt": "MUITO RESULTADO",
+"n": 3,
+"id": 27,
+"es": "MUCHO RESULTADO"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1104,
+793,
+1147
+],
+"txt": "usando pouco material."
+}
+],
+"t0": 49.333,
+"t1": 50.333,
+"bbox": [
+286,
+1104,
+793,
+1147
+],
+"pt": "usando pouco material.",
+"n": 3,
+"id": 28,
+"es": "usando poco material."
+},
+{
+"linhas": [
+{
+"bbox": [
+317,
+923,
+763,
+973
+],
+"txt": "POUCOMATERIAL"
+}
+],
+"t0": 49.667,
+"t1": 50.333,
+"bbox": [
+317,
+923,
+763,
+973
+],
+"pt": "POUCOMATERIAL",
+"n": 2,
+"id": 29,
+"es": "POCO MATERIAL"
+},
+{
+"linhas": [
+{
+"bbox": [
+198,
+1103,
+882,
+1149
+],
+"txt": "Hoje ela é uma lnjetora de Elite,"
+}
+],
+"t0": 50.667,
+"t1": 52.666,
+"bbox": [
+198,
+1103,
+882,
+1149
+],
+"pt": "Hoje ela é uma lnjetora de Elite,",
+"n": 6,
+"id": 30,
+"es": "Hoy es una Inyectora de Élite,"
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+919,
+782,
+974
+],
+"txt": "INJETORADE ELITE"
+}
+],
+"t0": 51.667,
+"t1": 53.333,
+"bbox": [
+298,
+919,
+782,
+974
+],
+"pt": "INJETORADE ELITE",
+"n": 5,
+"id": 31,
+"es": "INYECTORA DE ÉLITE"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1078,
+794,
+1122
+],
+"txt": "ela sabe como entregar"
+},
+{
+"bbox": [
+289,
+1131,
+792,
+1168
+],
+"txt": "resultados como esses."
+}
+],
+"t0": 53.0,
+"t1": 54.666,
+"bbox": [
+286,
+1078,
+794,
+1168
+],
+"pt": "ela sabe como entregar / resultados como esses.",
+"n": 5,
+"id": 32,
+"es": "sabe cómo lograr resultados como estos."
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1145,
+780,
+1197
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 61.0,
+"t1": 63.666,
+"bbox": [
+297,
+1145,
+780,
+1197
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 33,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

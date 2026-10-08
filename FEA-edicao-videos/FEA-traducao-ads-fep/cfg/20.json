@@ -1,0 +1,565 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+304,
+1154,
+777,
+1195
+],
+"txt": "Eu escolhi fazer a FEP"
+}
+],
+"t0": 0.0,
+"t1": 1.666,
+"bbox": [
+304,
+1154,
+777,
+1195
+],
+"pt": "Eu escolhi fazer a FEP",
+"n": 5,
+"id": 0,
+"es": "Elegí hacer la FEP"
+},
+{
+"linhas": [
+{
+"bbox": [
+358,
+1128,
+720,
+1170
+],
+"txt": "e foi o divisor de"
+},
+{
+"bbox": [
+315,
+1177,
+766,
+1226
+],
+"txt": "aguas da minha vida"
+}
+],
+"t0": 1.667,
+"t1": 3.333,
+"bbox": [
+315,
+1128,
+766,
+1226
+],
+"pt": "e foi o divisor de / aguas da minha vida",
+"n": 5,
+"id": 1,
+"es": "y fue un antes y un después en mi vida,"
+},
+{
+"linhas": [
+{
+"bbox": [
+246,
+1126,
+837,
+1178
+],
+"txt": "porque eu pude aprender a"
+},
+{
+"bbox": [
+314,
+1178,
+765,
+1227
+],
+"txt": "fundo sobre reologia"
+}
+],
+"t0": 3.333,
+"t1": 5.333,
+"bbox": [
+246,
+1126,
+837,
+1227
+],
+"pt": "porque eu pude aprender a / fundo sobre reologia",
+"n": 6,
+"id": 2,
+"es": "porque pude aprender a fondo sobre la reología"
+},
+{
+"linhas": [
+{
+"bbox": [
+315,
+1152,
+765,
+1197
+],
+"txt": "do acido hialuronico."
+}
+],
+"t0": 5.667,
+"t1": 6.333,
+"bbox": [
+315,
+1152,
+765,
+1197
+],
+"pt": "do acido hialuronico.",
+"n": 2,
+"id": 3,
+"es": "del ácido hialurónico."
+},
+{
+"linhas": [
+{
+"bbox": [
+181,
+1149,
+899,
+1201
+],
+"txt": "Isso pra mim é muito importante"
+}
+],
+"t0": 6.667,
+"t1": 7.666,
+"bbox": [
+181,
+1149,
+899,
+1201
+],
+"pt": "Isso pra mim é muito importante",
+"n": 3,
+"id": 4,
+"es": "Eso para mí es muy importante,"
+},
+{
+"linhas": [
+{
+"bbox": [
+231,
+1125,
+839,
+1180
+],
+"txt": "porque eu parei de comprar"
+},
+{
+"bbox": [
+293,
+1178,
+789,
+1227
+],
+"txt": "pela marca do produto"
+}
+],
+"t0": 7.667,
+"t1": 9.333,
+"bbox": [
+231,
+1125,
+839,
+1227
+],
+"pt": "porque eu parei de comprar / pela marca do produto",
+"n": 5,
+"id": 5,
+"es": "porque dejé de comprar por la marca del producto"
+},
+{
+"linhas": [
+{
+"bbox": [
+268,
+1128,
+813,
+1176
+],
+"txt": "e sim pelo que o produto"
+},
+{
+"bbox": [
+315,
+1180,
+765,
+1224
+],
+"txt": "entrega de resultado"
+}
+],
+"t0": 9.333,
+"t1": 11.0,
+"bbox": [
+268,
+1128,
+813,
+1224
+],
+"pt": "e sim pelo que o produto / entrega de resultado",
+"n": 5,
+"id": 6,
+"es": "y empecé a comprar por el resultado que entrega"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1150,
+780,
+1202
+],
+"txt": "e o que tem la dentro,"
+}
+],
+"t0": 11.333,
+"t1": 12.0,
+"bbox": [
+299,
+1150,
+780,
+1202
+],
+"pt": "e o que tem la dentro,",
+"n": 2,
+"id": 7,
+"es": "y por lo que tiene adentro,"
+},
+{
+"linhas": [
+{
+"bbox": [
+177,
+1148,
+902,
+1202
+],
+"txt": "o seu g prime ou sua coesividade."
+}
+],
+"t0": 12.0,
+"t1": 13.666,
+"bbox": [
+177,
+1148,
+902,
+1202
+],
+"pt": "o seu g prime ou sua coesividade.",
+"n": 5,
+"id": 8,
+"es": "su G prima o su cohesividad."
+},
+{
+"linhas": [
+{
+"bbox": [
+334,
+1177,
+745,
+1226
+],
+"txt": "me explicou muito"
+}
+],
+"t0": 13.667,
+"t1": 15.666,
+"bbox": [
+334,
+1177,
+745,
+1226
+],
+"pt": "me explicou muito",
+"n": 6,
+"id": 9,
+"es": "me lo explicó muy"
+},
+{
+"linhas": [
+{
+"bbox": [
+205,
+1130,
+874,
+1171
+],
+"txt": "Tudo isso o doutor Joao Pithon"
+}
+],
+"t0": 14.0,
+"t1": 14.333,
+"bbox": [
+205,
+1130,
+874,
+1171
+],
+"pt": "Tudo isso o doutor Joao Pithon",
+"n": 1,
+"id": 10,
+"es": "Todo eso el doctor João Pithon"
+},
+{
+"linhas": [
+{
+"bbox": [
+205,
+1130,
+875,
+1171
+],
+"txt": "Tudo isso o doutor Joao Pithon"
+}
+],
+"t0": 14.667,
+"t1": 15.666,
+"bbox": [
+205,
+1130,
+875,
+1171
+],
+"pt": "Tudo isso o doutor Joao Pithon",
+"n": 3,
+"id": 11,
+"es": "Todo eso el doctor João Pithon"
+},
+{
+"linhas": [
+{
+"bbox": [
+413,
+1153,
+670,
+1197
+],
+"txt": "bem na FEP"
+}
+],
+"t0": 15.667,
+"t1": 16.0,
+"bbox": [
+413,
+1153,
+670,
+1197
+],
+"pt": "bem na FEP",
+"n": 1,
+"id": 12,
+"es": "bien en la FEP,"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1150,
+813,
+1202
+],
+"txt": "e hoje eu saio capacitada"
+}
+],
+"t0": 16.0,
+"t1": 17.333,
+"bbox": [
+267,
+1150,
+813,
+1202
+],
+"pt": "e hoje eu saio capacitada",
+"n": 4,
+"id": 13,
+"es": "y hoy salgo capacitada"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1146,
+791,
+1205
+],
+"txt": "pra realizar os full face"
+}
+],
+"t0": 17.667,
+"t1": 18.333,
+"bbox": [
+294,
+1146,
+791,
+1205
+],
+"pt": "pra realizar os full face",
+"n": 2,
+"id": 14,
+"es": "para realizar full face"
+},
+{
+"linhas": [
+{
+"bbox": [
+162,
+1150,
+915,
+1201
+],
+"txt": "com uma quantidade menor de ml"
+}
+],
+"t0": 18.333,
+"t1": 19.666,
+"bbox": [
+162,
+1150,
+915,
+1201
+],
+"pt": "com uma quantidade menor de ml",
+"n": 4,
+"id": 15,
+"es": "con una menor cantidad de ml"
+},
+{
+"linhas": [
+{
+"bbox": [
+449,
+1149,
+633,
+1204
+],
+"txt": "[possive]"
+}
+],
+"t0": 20.0,
+"t1": 20.333,
+"bbox": [
+449,
+1149,
+633,
+1204
+],
+"pt": "[possive]",
+"n": 1,
+"id": 16,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+277,
+1152,
+803,
+1201
+],
+"txt": "e entregar um resultado"
+}
+],
+"t0": 20.333,
+"t1": 21.333,
+"bbox": [
+277,
+1152,
+803,
+1201
+],
+"pt": "e entregar um resultado",
+"n": 3,
+"id": 17,
+"es": "y entregar un resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+164,
+1153,
+917,
+1199
+],
+"txt": "com naturalidade e com qualidade"
+}
+],
+"t0": 21.333,
+"t1": 22.666,
+"bbox": [
+164,
+1153,
+917,
+1199
+],
+"pt": "com naturalidade e com qualidade",
+"n": 4,
+"id": 18,
+"es": "con naturalidad y con calidad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1147,
+891,
+1204
+],
+"txt": "que é o que eu priorizo tambem."
+}
+],
+"t0": 23.0,
+"t1": 23.666,
+"bbox": [
+188,
+1147,
+891,
+1204
+],
+"pt": "que é o que eu priorizo tambem.",
+"n": 2,
+"id": 19,
+"es": "que es lo que también priorizo."
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+779,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 25.0,
+"t1": 27.666,
+"bbox": [
+298,
+1148,
+779,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 20,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

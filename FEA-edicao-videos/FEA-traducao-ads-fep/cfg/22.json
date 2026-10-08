@@ -1,0 +1,567 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+321,
+1113,
+758,
+1166
+],
+"txt": "novos casos de"
+}
+],
+"t0": 0.0,
+"t1": 3.333,
+"bbox": [
+321,
+1113,
+758,
+1166
+],
+"pt": "novos casos de",
+"n": 10,
+"id": 0,
+"es": "nuevos casos de",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+211,
+1190,
+875,
+1259
+],
+"txt": "disseccoes anatomicas"
+}
+],
+"t0": 0.0,
+"t1": 3.333,
+"bbox": [
+211,
+1190,
+875,
+1259
+],
+"pt": "disseccoes anatomicas",
+"n": 10,
+"id": 1000,
+"es": "disecciones anatómicas",
+"tipo": "caixa_escura"
+},
+{
+"linhas": [
+{
+"bbox": [
+322,
+1171,
+755,
+1212
+],
+"txt": "Uma aula de revisao"
+},
+{
+"bbox": [
+302,
+1221,
+773,
+1268
+],
+"txt": "de anatomia pra voce,"
+}
+],
+"t0": 3.333,
+"t1": 6.0,
+"bbox": [
+302,
+1171,
+773,
+1268
+],
+"pt": "Uma aula de revisao / de anatomia pra voce,",
+"n": 8,
+"id": 1,
+"es": "Una clase de repaso de anatomía para ti,"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1169,
+817,
+1216
+],
+"txt": "tudo isso sendo preparado"
+},
+{
+"bbox": [
+393,
+1225,
+689,
+1264
+],
+"txt": "mensalmente"
+}
+],
+"t0": 6.333,
+"t1": 8.666,
+"bbox": [
+249,
+1169,
+817,
+1264
+],
+"pt": "tudo isso sendo preparado / mensalmente",
+"n": 7,
+"id": 2,
+"es": "todo esto preparado mensualmente"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+1197,
+857,
+1243
+],
+"txt": "nesse projeto que tenho feito,"
+}
+],
+"t0": 8.667,
+"t1": 10.0,
+"bbox": [
+220,
+1197,
+857,
+1243
+],
+"pt": "nesse projeto que tenho feito,",
+"n": 4,
+"id": 3,
+"es": "en este proyecto que he hecho"
+},
+{
+"linhas": [
+{
+"bbox": [
+41,
+733,
+203,
+808
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 10.0,
+"t1": 10.666,
+"bbox": [
+41,
+733,
+203,
+808
+],
+"pt": "FCPEXP",
+"n": 2,
+"id": 4,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1193,
+835,
+1244
+],
+"txt": "das disseccoes anatomicas,"
+}
+],
+"t0": 10.333,
+"t1": 11.666,
+"bbox": [
+249,
+1193,
+835,
+1244
+],
+"pt": "das disseccoes anatomicas,",
+"n": 4,
+"id": 5,
+"es": "de las disecciones anatómicas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+283,
+1199,
+801,
+1244
+],
+"txt": "onde preparo uma pega,"
+}
+],
+"t0": 12.0,
+"t1": 13.333,
+"bbox": [
+283,
+1199,
+801,
+1244
+],
+"pt": "onde preparo uma pega,",
+"n": 4,
+"id": 6,
+"es": "donde preparo una pieza,"
+},
+{
+"linhas": [
+{
+"bbox": [
+163,
+1196,
+916,
+1243
+],
+"txt": "voces podem observar a qualidade,"
+}
+],
+"t0": 13.333,
+"t1": 15.666,
+"bbox": [
+163,
+1196,
+916,
+1243
+],
+"pt": "voces podem observar a qualidade,",
+"n": 7,
+"id": 7,
+"es": "pueden observar la calidad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+259,
+1194,
+818,
+1242
+],
+"txt": "a vivacidade, como é viva,"
+}
+],
+"t0": 15.667,
+"t1": 17.333,
+"bbox": [
+259,
+1194,
+818,
+1242
+],
+"pt": "a vivacidade, como é viva,",
+"n": 5,
+"id": 8,
+"es": "la vivacidad, lo viva que está,"
+},
+{
+"linhas": [
+{
+"bbox": [
+229,
+1193,
+855,
+1247
+],
+"txt": "a gordura esta bem amarela,"
+}
+],
+"t0": 17.333,
+"t1": 20.0,
+"bbox": [
+229,
+1193,
+855,
+1247
+],
+"pt": "a gordura esta bem amarela,",
+"n": 8,
+"id": 9,
+"es": "la grasa está bien amarilla,"
+},
+{
+"linhas": [
+{
+"bbox": [
+201,
+1191,
+880,
+1244
+],
+"txt": "a vascularizacao bem evidente,"
+}
+],
+"t0": 20.333,
+"t1": 22.0,
+"bbox": [
+201,
+1191,
+880,
+1244
+],
+"pt": "a vascularizacao bem evidente,",
+"n": 5,
+"id": 10,
+"es": "la vascularización bien evidente,"
+},
+{
+"linhas": [
+{
+"bbox": [
+25,
+681,
+114,
+731
+],
+"txt": "FEPEXP"
+}
+],
+"t0": 22.333,
+"t1": 23.0,
+"bbox": [
+25,
+681,
+114,
+731
+],
+"pt": "FEPEXP",
+"n": 2,
+"id": 11,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1171,
+797,
+1213
+],
+"txt": "tudo isso vai trazer uma"
+},
+{
+"bbox": [
+288,
+1222,
+788,
+1268
+],
+"txt": "seguranca muito maior"
+}
+],
+"t0": 22.667,
+"t1": 24.333,
+"bbox": [
+281,
+1171,
+797,
+1268
+],
+"pt": "tudo isso vai trazer uma / seguranca muito maior",
+"n": 5,
+"id": 12,
+"es": "todo esto va a traer mucha más seguridad"
+},
+{
+"linhas": [
+{
+"bbox": [
+69,
+665,
+134,
+717
+],
+"txt": "EREXP"
+}
+],
+"t0": 23.333,
+"t1": 23.666,
+"bbox": [
+69,
+665,
+134,
+717
+],
+"pt": "EREXP",
+"n": 1,
+"id": 13,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+293,
+1167,
+791,
+1218
+],
+"txt": "para os procedimentos"
+},
+{
+"bbox": [
+286,
+1221,
+796,
+1268
+],
+"txt": "de harmonizacao facial."
+}
+],
+"t0": 24.667,
+"t1": 26.333,
+"bbox": [
+286,
+1167,
+796,
+1268
+],
+"pt": "para os procedimentos / de harmonizacao facial.",
+"n": 5,
+"id": 14,
+"es": "para los procedimientos de armonización facial."
+},
+{
+"linhas": [
+{
+"bbox": [
+280,
+1196,
+800,
+1241
+],
+"txt": "Se voce quer saber mais"
+}
+],
+"t0": 26.667,
+"t1": 27.666,
+"bbox": [
+280,
+1196,
+800,
+1241
+],
+"pt": "Se voce quer saber mais",
+"n": 3,
+"id": 15,
+"es": "Si quieres saber más"
+},
+{
+"linhas": [
+{
+"bbox": [
+164,
+1194,
+916,
+1242
+],
+"txt": "e realmente ser um injetor de elite,"
+}
+],
+"t0": 28.0,
+"t1": 29.666,
+"bbox": [
+164,
+1194,
+916,
+1242
+],
+"pt": "e realmente ser um injetor de elite,",
+"n": 5,
+"id": 16,
+"es": "y realmente ser un inyector de élite,"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1198,
+779,
+1241
+],
+"txt": "toque em SAIBA MAIS,"
+}
+],
+"t0": 29.667,
+"t1": 30.666,
+"bbox": [
+299,
+1198,
+779,
+1241
+],
+"pt": "toque em SAIBA MAIS,",
+"n": 3,
+"id": 17,
+"es": "toca en MÁS INFORMACIÓN,"
+},
+{
+"linhas": [
+{
+"bbox": [
+418,
+1197,
+663,
+1240
+],
+"txt": "se inscreve,"
+}
+],
+"t0": 31.0,
+"t1": 31.333,
+"bbox": [
+418,
+1197,
+663,
+1240
+],
+"pt": "se inscreve,",
+"n": 1,
+"id": 18,
+"es": "inscríbete,"
+},
+{
+"linhas": [
+{
+"bbox": [
+358,
+1198,
+722,
+1242
+],
+"txt": "que eu te vejo la!"
+}
+],
+"t0": 31.333,
+"t1": 32.0,
+"bbox": [
+358,
+1198,
+722,
+1242
+],
+"pt": "que eu te vejo la!",
+"n": 2,
+"id": 19,
+"es": "¡y nos vemos allá!"
+}
+]
+}

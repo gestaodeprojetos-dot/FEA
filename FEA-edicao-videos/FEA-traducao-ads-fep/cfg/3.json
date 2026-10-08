@@ -1,0 +1,1028 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+278,
+1007,
+802,
+1053
+],
+"txt": "Voce'nunca vai se sentir"
+},
+{
+"bbox": [
+235,
+1058,
+845,
+1103
+],
+"txt": "confiante no preenchimento"
+}
+],
+"t0": 0.333,
+"t1": 2.666,
+"bbox": [
+235,
+1007,
+845,
+1103
+],
+"pt": "Voce'nunca vai se sentir / confiante no preenchimento",
+"n": 7,
+"id": 0,
+"es": "Nunca te vas a sentir seguro en el relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+252,
+1033,
+826,
+1078
+],
+"txt": "se voce nao.entender isso."
+}
+],
+"t0": 2.667,
+"t1": 4.0,
+"bbox": [
+252,
+1033,
+826,
+1078
+],
+"pt": "se voce nao.entender isso.",
+"n": 4,
+"id": 1,
+"es": "si no entiendes esto."
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1029,
+831,
+1081
+],
+"txt": "O conhecimento reologico,"
+}
+],
+"t0": 4.333,
+"t1": 6.0,
+"bbox": [
+249,
+1029,
+831,
+1081
+],
+"pt": "O conhecimento reologico,",
+"n": 5,
+"id": 2,
+"es": "El conocimiento reológico,"
+},
+{
+"linhas": [
+{
+"bbox": [
+403,
+891,
+676,
+948
+],
+"txt": "REOLOGIA"
+}
+],
+"t0": 5.0,
+"t1": 6.0,
+"bbox": [
+403,
+891,
+676,
+948
+],
+"pt": "REOLOGIA",
+"n": 3,
+"id": 3,
+"es": "REOLOGÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+219,
+1027,
+863,
+1080
+],
+"txt": "o conhecimento de anatomia,"
+}
+],
+"t0": 6.0,
+"t1": 7.666,
+"bbox": [
+219,
+1027,
+863,
+1080
+],
+"pt": "o conhecimento de anatomia,",
+"n": 5,
+"id": 4,
+"es": "el conocimiento de anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+391,
+880,
+693,
+948
+],
+"txt": "ANAYOMIA"
+}
+],
+"t0": 6.333,
+"t1": 7.666,
+"bbox": [
+391,
+880,
+693,
+948
+],
+"pt": "ANAYOMIA",
+"n": 4,
+"id": 5,
+"es": "ANATOMÍA"
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1008,
+791,
+1054
+],
+"txt": "o diagnostico e manejo"
+},
+{
+"bbox": [
+339,
+1057,
+737,
+1104
+],
+"txt": "das complicacoes,"
+}
+],
+"t0": 7.667,
+"t1": 9.666,
+"bbox": [
+290,
+1008,
+791,
+1104
+],
+"pt": "o diagnostico e manejo / das complicacoes,",
+"n": 6,
+"id": 6,
+"es": "el diagnóstico y manejo de las complicaciones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+280,
+866,
+801,
+931
+],
+"txt": "INTERCORRENCIAS"
+}
+],
+"t0": 8.0,
+"t1": 9.666,
+"bbox": [
+280,
+866,
+801,
+931
+],
+"pt": "INTERCORRENCIAS",
+"n": 5,
+"id": 7,
+"es": "COMPLICACIONES"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1031,
+786,
+1078
+],
+"txt": "entender de fato quais"
+}
+],
+"t0": 10.0,
+"t1": 11.333,
+"bbox": [
+294,
+1031,
+786,
+1078
+],
+"pt": "entender de fato quais",
+"n": 4,
+"id": 8,
+"es": "entender de verdad cuáles"
+},
+{
+"linhas": [
+{
+"bbox": [
+270,
+1008,
+808,
+1051
+],
+"txt": "sao as melhores tecnicas"
+},
+{
+"bbox": [
+332,
+1057,
+749,
+1105
+],
+"txt": "para cada paciente"
+}
+],
+"t0": 11.667,
+"t1": 14.0,
+"bbox": [
+270,
+1008,
+808,
+1105
+],
+"pt": "sao as melhores tecnicas / para cada paciente",
+"n": 7,
+"id": 9,
+"es": "son las mejores técnicas para cada paciente"
+},
+{
+"linhas": [
+{
+"bbox": [
+401,
+865,
+679,
+933
+],
+"txt": "TECNICAS"
+}
+],
+"t0": 12.0,
+"t1": 13.666,
+"bbox": [
+401,
+865,
+679,
+933
+],
+"pt": "TECNICAS",
+"n": 5,
+"id": 10,
+"es": "TÉCNICAS"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1034,
+795,
+1078
+],
+"txt": "vai te trazer seguranca."
+}
+],
+"t0": 14.333,
+"t1": 15.666,
+"bbox": [
+286,
+1034,
+795,
+1078
+],
+"pt": "vai te trazer seguranca.",
+"n": 4,
+"id": 11,
+"es": "te va a dar seguridad."
+},
+{
+"linhas": [
+{
+"bbox": [
+329,
+1032,
+750,
+1079
+],
+"txt": "Essa era a principal"
+}
+],
+"t0": 15.667,
+"t1": 16.666,
+"bbox": [
+329,
+1032,
+750,
+1079
+],
+"pt": "Essa era a principal",
+"n": 3,
+"id": 12,
+"es": "Esa era la principal"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1027,
+803,
+1082
+],
+"txt": "queixa dos meus alunos"
+}
+],
+"t0": 17.0,
+"t1": 18.0,
+"bbox": [
+281,
+1027,
+803,
+1082
+],
+"pt": "queixa dos meus alunos",
+"n": 3,
+"id": 13,
+"es": "queja de mis alumnos"
+},
+{
+"linhas": [
+{
+"bbox": [
+253,
+1006,
+817,
+1054
+],
+"txt": "quando eles pensavam no"
+},
+{
+"bbox": [
+275,
+1055,
+805,
+1104
+],
+"txt": "preenchimento full face."
+}
+],
+"t0": 18.0,
+"t1": 20.333,
+"bbox": [
+253,
+1006,
+817,
+1104
+],
+"pt": "quando eles pensavam no / preenchimento full face.",
+"n": 7,
+"id": 14,
+"es": "cuando pensaban en el relleno full face."
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1008,
+793,
+1056
+],
+"txt": "E hoje apos 2 meses de"
+},
+{
+"bbox": [
+357,
+1057,
+722,
+1105
+],
+"txt": "entrarem na FEP"
+}
+],
+"t0": 20.667,
+"t1": 23.333,
+"bbox": [
+290,
+1008,
+793,
+1105
+],
+"pt": "E hoje apos 2 meses de / entrarem na FEP",
+"n": 8,
+"id": 15,
+"es": "Y hoy, tras 2 meses de entrar en la FEP,"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+867,
+781,
+923
+],
+"txt": "APENAS2MESES"
+}
+],
+"t0": 21.333,
+"t1": 23.0,
+"bbox": [
+301,
+867,
+781,
+923
+],
+"pt": "APENAS2MESES",
+"n": 5,
+"id": 16,
+"es": "SOLO 2 MESES"
+},
+{
+"linhas": [
+{
+"bbox": [
+323,
+1009,
+760,
+1053
+],
+"txt": "eles sabem entregar"
+},
+{
+"bbox": [
+366,
+1057,
+712,
+1099
+],
+"txt": "muito resultado"
+}
+],
+"t0": 23.667,
+"t1": 25.666,
+"bbox": [
+323,
+1009,
+760,
+1099
+],
+"pt": "eles sabem entregar / muito resultado",
+"n": 6,
+"id": 17,
+"es": "saben lograr mucho resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+280,
+867,
+799,
+923
+],
+"txt": "MUITO RESULTADO"
+}
+],
+"t0": 24.667,
+"t1": 25.666,
+"bbox": [
+280,
+867,
+799,
+923
+],
+"pt": "MUITO RESULTADO",
+"n": 3,
+"id": 18,
+"es": "MUCHO RESULTADO"
+},
+{
+"linhas": [
+{
+"bbox": [
+295,
+865,
+785,
+924
+],
+"txt": "POUCO MATERIAL"
+}
+],
+"t0": 25.667,
+"t1": 26.666,
+"bbox": [
+295,
+865,
+785,
+924
+],
+"pt": "POUCO MATERIAL",
+"n": 3,
+"id": 19,
+"es": "POCO MATERIAL"
+},
+{
+"linhas": [
+{
+"bbox": [
+313,
+1033,
+763,
+1079
+],
+"txt": "com menos material."
+}
+],
+"t0": 25.667,
+"t1": 26.666,
+"bbox": [
+313,
+1033,
+763,
+1079
+],
+"pt": "com menos material.",
+"n": 3,
+"id": 20,
+"es": "con menos material."
+},
+{
+"linhas": [
+{
+"bbox": [
+276,
+1008,
+804,
+1051
+],
+"txt": "Eles de fato.entenderam"
+},
+{
+"bbox": [
+318,
+1058,
+762,
+1101
+],
+"txt": "como diagnosticar e"
+}
+],
+"t0": 27.0,
+"t1": 29.333,
+"bbox": [
+276,
+1008,
+804,
+1101
+],
+"pt": "Eles de fato.entenderam / como diagnosticar e",
+"n": 7,
+"id": 21,
+"es": "De verdad entendieron cómo diagnosticar y"
+},
+{
+"linhas": [
+{
+"bbox": [
+183,
+1033,
+897,
+1079
+],
+"txt": "tratar as principais complicacoes"
+}
+],
+"t0": 29.333,
+"t1": 31.0,
+"bbox": [
+183,
+1033,
+897,
+1079
+],
+"pt": "tratar as principais complicacoes",
+"n": 5,
+"id": 22,
+"es": "tratar las principales complicaciones"
+},
+{
+"linhas": [
+{
+"bbox": [
+261,
+1009,
+816,
+1054
+],
+"txt": "e se sentiram'seguros pra"
+},
+{
+"bbox": [
+337,
+1058,
+743,
+1103
+],
+"txt": "colocar em pratica"
+}
+],
+"t0": 31.333,
+"t1": 33.666,
+"bbox": [
+261,
+1009,
+816,
+1103
+],
+"pt": "e se sentiram'seguros pra / colocar em pratica",
+"n": 7,
+"id": 23,
+"es": "y se sintieron seguros para poner en práctica"
+},
+{
+"linhas": [
+{
+"bbox": [
+370,
+863,
+712,
+927
+],
+"txt": "SEGURANCA"
+}
+],
+"t0": 32.0,
+"t1": 33.666,
+"bbox": [
+370,
+863,
+712,
+927
+],
+"pt": "SEGURANCA",
+"n": 5,
+"id": 24,
+"es": "SEGURIDAD"
+},
+{
+"linhas": [
+{
+"bbox": [
+291,
+1008,
+788,
+1053
+],
+"txt": "o que eles aprenderam"
+},
+{
+"bbox": [
+298,
+1058,
+776,
+1100
+],
+"txt": "no nosso treinamento"
+}
+],
+"t0": 33.667,
+"t1": 35.333,
+"bbox": [
+291,
+1008,
+788,
+1100
+],
+"pt": "o que eles aprenderam / no nosso treinamento",
+"n": 5,
+"id": 25,
+"es": "lo que aprendieron en nuestro entrenamiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+248,
+1005,
+819,
+1055
+],
+"txt": "Formacao Especialista em"
+},
+{
+"bbox": [
+240,
+1059,
+843,
+1100
+],
+"txt": "Preenchimento 100% online"
+}
+],
+"t0": 35.667,
+"t1": 38.666,
+"bbox": [
+240,
+1005,
+843,
+1100
+],
+"pt": "Formacao Especialista em / Preenchimento 100% online",
+"n": 9,
+"id": 26,
+"es": "la Formación Especialista en Relleno, 100% online,"
+},
+{
+"linhas": [
+{
+"bbox": [
+352,
+865,
+731,
+928
+],
+"txt": "100%0NLINE"
+}
+],
+"t0": 37.0,
+"t1": 38.333,
+"bbox": [
+352,
+865,
+731,
+928
+],
+"pt": "100%0NLINE",
+"n": 4,
+"id": 27,
+"es": "100% ONLINE"
+},
+{
+"linhas": [
+{
+"bbox": [
+344,
+1033,
+736,
+1076
+],
+"txt": "onde voce de fato"
+}
+],
+"t0": 38.667,
+"t1": 40.0,
+"bbox": [
+344,
+1033,
+736,
+1076
+],
+"pt": "onde voce de fato",
+"n": 4,
+"id": 28,
+"es": "donde de verdad"
+},
+{
+"linhas": [
+{
+"bbox": [
+353,
+1035,
+725,
+1078
+],
+"txt": "consegue ganhar"
+}
+],
+"t0": 40.333,
+"t1": 41.333,
+"bbox": [
+353,
+1035,
+725,
+1078
+],
+"pt": "consegue ganhar",
+"n": 3,
+"id": 29,
+"es": "logras ganar"
+},
+{
+"linhas": [
+{
+"bbox": [
+349,
+1032,
+729,
+1078
+],
+"txt": "tempo de seringa"
+}
+],
+"t0": 41.333,
+"t1": 42.666,
+"bbox": [
+349,
+1032,
+729,
+1078
+],
+"pt": "tempo de seringa",
+"n": 4,
+"id": 30,
+"es": "tiempo de jeringa"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+866,
+811,
+926
+],
+"txt": "TEMPO DE SERINGA"
+}
+],
+"t0": 41.667,
+"t1": 43.0,
+"bbox": [
+267,
+866,
+811,
+926
+],
+"pt": "TEMPO DE SERINGA",
+"n": 4,
+"id": 31,
+"es": "TIEMPO DE JERINGA"
+},
+{
+"linhas": [
+{
+"bbox": [
+194,
+1035,
+886,
+1075
+],
+"txt": "e amadurecimento de raciocinio"
+}
+],
+"t0": 42.667,
+"t1": 44.666,
+"bbox": [
+194,
+1035,
+886,
+1075
+],
+"pt": "e amadurecimento de raciocinio",
+"n": 6,
+"id": 32,
+"es": "y madurez de razonamiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+254,
+860,
+824,
+935
+],
+"txt": "RACIOCINIO CLINICO"
+}
+],
+"t0": 43.667,
+"t1": 45.333,
+"bbox": [
+254,
+860,
+824,
+935
+],
+"pt": "RACIOCINIO CLINICO",
+"n": 5,
+"id": 33,
+"es": "RAZONAMIENTO CLÍNICO"
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1032,
+900,
+1080
+],
+"txt": "pra conseguir colocar em pratica."
+}
+],
+"t0": 44.667,
+"t1": 46.333,
+"bbox": [
+178,
+1032,
+900,
+1080
+],
+"pt": "pra conseguir colocar em pratica.",
+"n": 5,
+"id": 34,
+"es": "para poder ponerlo en práctica."
+},
+{
+"linhas": [
+{
+"bbox": [
+237,
+1007,
+846,
+1054
+],
+"txt": "Assim como.os meus alunos"
+},
+{
+"bbox": [
+214,
+1053,
+866,
+1105
+],
+"txt": "que tem hoje resultados belos"
+}
+],
+"t0": 46.333,
+"t1": 49.333,
+"bbox": [
+214,
+1007,
+866,
+1105
+],
+"pt": "Assim como.os meus alunos / que tem hoje resultados belos",
+"n": 9,
+"id": 35,
+"es": "Así como mis alumnos, que hoy tienen resultados hermosos"
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 65.333,
+"t1": 68.0,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 36,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}
