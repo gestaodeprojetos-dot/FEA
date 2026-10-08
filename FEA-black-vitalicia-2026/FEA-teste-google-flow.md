@@ -69,3 +69,15 @@ Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film g
 ```
 Vertical 9:16. Live-action cinematic footage, shot on ARRI Alexa, natural film grain. The judge from the reference image looks toward the defendant, pauses, and says in Brazilian Portuguese: "Sentença: vinte de outubro." He strikes the wooden gavel. Final close-up of the gavel in slow motion as the warm light fades to black. No subtitles, no music.
 ```
+
+## Regras aprendidas no Ep. 01 (valem para os próximos episódios)
+
+Aprovado pela Keila em 07/10/2026 (versão v8 do Julgamento).
+
+1. **Rosto do Dr. João só em close e de frente.** Em toda cena em que outro personagem fala, o Dr. João fica de costas (plano por cima do ombro) ou fora de quadro. Quando ele aparece sentado ou ao fundo, o Veo deforma olho e expressão.
+2. **Voz do Dr. João:** sempre trocada pela voz clonada no HeyGen, com lipsync em modo precision. O áudio novo é montado com 8s exatos, com a fala encaixada no ponto em que a boca dele se mexe.
+3. **Juiz:** mesma voz nas 3 cenas (HeyGen "Pedro Lima - Serious" envelhecida no ffmpeg: `asetrate=44100*0.87,aresample=48000,atempo=1.06,vibrato=f=5:d=0.05,highpass=f=80,lowpass=f=6500,acompressor=threshold=-18dB:ratio=3`). Nome escrito "Piton" no texto da fala para não sair com ênfase no sobrenome.
+4. **Sons de cena** (martelo, plateia): quando o áudio é trocado, recuperar os trechos sem fala do áudio original do Flow e mixar de volta.
+5. **Tarja preta:** algumas cenas do Flow vêm com faixa em cima e embaixo; usar `"recorte"` na montagem (conferir com `cropdetect`).
+6. **Promotor e testemunhas:** manter a voz do próprio Veo, que sai natural. Conferir a fala transcrita, porque o Veo às vezes repete ou corta palavras.
+7. **Personagens recorrentes:** usar um print do rosto da primeira aparição como "ingrediente" nas cenas seguintes.
