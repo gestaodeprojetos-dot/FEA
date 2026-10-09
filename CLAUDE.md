@@ -313,7 +313,7 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 - Sistema de conteúdo retroalimentado nos grupos de aluno ("Jornal Diário da Equipe Médica").
 - Apresentação executiva enxuta (só fatos auditados) para reunião com o time de automação.
 - Tradução e adaptação de campanha para mercado internacional (LATAM, espanhol) quando aplicável.
-- **Tradução de depoimento em vídeo** (09/10/2026): idioma padrão é **espanhol** (não perguntar). Transcrever com Whisper, traduzir, gravar a legenda no vídeo em Montserrat Bold branca com contorno preto (padrão da skill `fea-edicao-reels`) e subir direto na pasta do Drive que a Keila indicar. Pasta de depoimentos em espanhol já usada: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`.
+- **Tradução de vídeo (depoimento, aula)** (09/10/2026): idioma padrão é **espanhol** (não perguntar) e "traduzir" significa **dublar, sem legenda**. Usar o HeyGen (`create_video_translation`, idioma "Spanish", modo `precision`, `speakerNum` quando houver mais de uma voz), que clona a voz original e sincroniza a boca. Subir o vídeo pronto direto na pasta do Drive indicada, com o nome no padrão da pasta: `Nome original FEP-Spanish.mp4`. Pasta de depoimentos em espanhol: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`. Legenda gravada só se a Keila pedir legenda.
 
 ## Antes de produzir qualquer peça FEA
 
