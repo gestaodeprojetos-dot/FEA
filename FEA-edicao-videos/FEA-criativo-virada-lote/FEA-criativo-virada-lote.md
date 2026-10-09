@@ -1,39 +1,64 @@
-# FEA: criativo de virada de lote (Elite Injectors Congress)
+# FEA: criativos de virada de lote (Elite Injectors Congress)
 
-Teste de 09/10/2026: vídeo IMG_7584 ("Faltam 4 dias"), pasta de brutos `1Q4ladeqsLvecjVwZ2_weQrytd7-fG98J`.
-Saída no Drive: subpasta `FEA-editados-TESTE` da mesma pasta. Referência de estilo: Reel enviado pela Keila
-(talking head alternando com telas cheias animadas, legenda palavra a palavra com destaque).
+Lote de 09/10/2026: 8 vídeos do Dr. João (pasta de brutos `1Q4ladeqsLvecjVwZ2_weQrytd7-fG98J`), um para cada dia
+até a virada do 1º lote (quarta, 14/10). Teste aprovado pela Keila ("amei, pode seguir"), com trilha de fundo baixa
+pedida depois. Entrega na pasta `1D8P1wSqZcKqbWRAePG3fwYln7_fZCg_j`. O teste original (`FEA-editados-TESTE`) fica
+como está, não apagar.
 
-## Identidade
-
-Visual da página de vendas do congresso (escolhido por continuidade anúncio → página):
-fundo `#050C0F` com brilho `#7FB3C6`, dourado do botão (`#E9D68E` → `#D4B760` → `#A58036`),
-vermelho só no "valor sobe" e no ponto de "restam poucas vagas". Serifada Fraunces (no lugar da Canela Deck,
-que é paga) e Montserrat (no lugar da Galano Grotesque). Logo: `ELITE-3D_imagotipo-copiar.webp` do site.
-
-## Roteiro do teste (tempos do bruto)
-
-| Trecho | Fala | Gráfico |
+| Bruto | Fala de abertura | Arquivo entregue |
 |---|---|---|
-| 0 a 2,5 s | "Faltam 4 dias para virada de lote" | cartão com número flip 5 → 4 "dias para a virada de lote" |
-| 2,5 a 4,3 | "do Elite Injectors Congress" | tela cheia: logo com brilho, "Tendências Globais. Evidências Reais." |
-| 4,4 a 7,2 | "o maior congresso..." | zoom no rosto |
-| 7,3 a 10,8 | "1 e 2 de novembro, aqui em São Paulo" | celular com a página real rolando, contador correndo, chips de data e local |
-| 10,8 a 15 | "primeiro lote, lote mais barato" | barra do 1º lote enchendo até 87% (dado da página) |
-| 15 a 16,6 | "clicar aqui em Saiba Mais" | seta + botão "Saiba Mais" com toque |
-| 16,6 a 19,6 | "em 4 dias vira o lote, vai ficar mais caro" | calendário 10 → 14 (quarta), ingresso 1º lote vira para 2º lote, carimbo "valor sobe" |
-| 19,7 a 22,7 | "sold out, encerramos as inscrições" | "restam poucas vagas no lote atual", 87%, pulso vermelho |
-| 22,7 a 26 | "espero vocês lá" | cartela final: logo, 01 e 02/11, WTC Sheraton, "preço do 1º lote até 14/10", botão |
+| IMG_7584 | Faltam 4 dias | FEA-Elite-virada-de-lote-4-dias-A.mp4 |
+| IMG_7586 | Em 4 dias | FEA-Elite-virada-de-lote-4-dias-B.mp4 |
+| IMG_7587 | Em três dias | FEA-Elite-virada-de-lote-3-dias.mp4 |
+| IMG_7588 | Dois dias para ficar mais caro | FEA-Elite-virada-de-lote-2-dias-A.mp4 |
+| IMG_7589 | Dois dias, tendências científicas | FEA-Elite-virada-de-lote-2-dias-B.mp4 |
+| IMG_7590 | Dois dias, sold out | FEA-Elite-virada-de-lote-2-dias-C.mp4 |
+| IMG_7591 | Amanhã | FEA-Elite-virada-de-lote-amanha.mp4 |
+| IMG_7593 | Hoje | FEA-Elite-virada-de-lote-hoje.mp4 |
 
-Todo número na tela vem da página de vendas (14/10, 87%, 01 e 02/11, WTC Sheraton). Nada inventado.
+## Estilo
 
-## Como refazer para outro vídeo
+Referência: Reel enviado pela Keila (doutor falando alternado com telas cheias animadas, legenda palavra a palavra
+com a palavra da vez em dourado). Visual da página de vendas, por continuidade anúncio → página:
+fundo `#050C0F` com brilho `#7FB3C6`, dourado do botão (`#E9D68E` → `#D4B760` → `#A58036`), vermelho só em
+"valor sobe", "última chance" e "restam poucas vagas". Fraunces no lugar da Canela Deck (paga) e Montserrat no lugar
+da Galano Grotesque. Logo e cards dos palestrantes baixados do próprio site.
 
-1. Transcrever (`fea_transcrever.py`) e montar `legendas.json` agrupando por frase ("pra" vira "para").
-2. Capturar a página: `node fea_capturar_pagina.js PASTA` (gera `full.png`; recortar o topo em `pagina.jpg`).
-3. Ajustar os tempos das cenas em `FEA-composicao-virada-lote.html` (função `render(t)`) e no `fea_sfx.py`.
-   Para "3 dias", "amanhã" e "hoje", trocar o número do flip e os dias do calendário.
-4. `node fea_render_quadros.js PASTA_COMP PASTA_QUADROS "all:DURACAO"` (cerca de 3 min para 26 s).
-5. `python3 fea_sfx.py sfx.wav DURACAO` e `bash fea_montar.sh BRUTO QUADROS sfx.wav SAIDA.mp4 DURACAO "ZOOM"`.
+Todo número na tela vem da página de vendas: 14/10 ("Dia 14/10 o valor sobe"), 87% das vagas, 01 e 02/11,
+WTC Sheraton. A cartela final diz "O 1º lote vira em 14/10" (e não "preço até 14/10", porque no dia 14 já é o
+valor novo).
 
-A pasta de composição precisa de `logo.png`, `pagina.jpg` e da pasta `../fonts` (Montserrat + Fraunces).
+## Cenas disponíveis (`fea_configs.py`)
+
+| Tipo | O que mostra |
+|---|---|
+| `gancho` | cartão no topo: número virando (5 → 4 dias) ou calendário (13 → 14 "amanhã", 14 pulsando "hoje") |
+| `logo` | tela cheia com o logo Elite, brilho passando e "Tendências Globais. Evidências Reais." |
+| `celular` | a página de vendas real num celular, rolando, com contador e selos (data, local, menor valor) |
+| `palestrantes` | 6 cards de palestrantes da página + itens com check sincronizados com a fala |
+| `lote` | barra do 1º lote até 87% (`barato`) ou "restam poucas vagas" pulsando em vermelho (`poucas`) |
+| `saiba` | seta e botão "Saiba Mais" com toque, quando ele fala "clica em Saiba Mais" |
+| `virada` | calendário virando as folhas até 14 (quarta), ingresso "1º lote" vira "2º lote", carimbo |
+| `final` | cartela com logo, data, local, "o 1º lote vira em 14/10", botão e "Toque em Saiba Mais" |
+
+`zoom` são os trechos com zoom no rosto do doutor (contraste de ritmo). Legendas: agrupadas por frase, sem
+quebrar "Elite Injectors Congress", "São Paulo", "sold out", "te vejo lá"; "pra" vira "para", "Sabamais" vira
+"Saiba Mais", "mediano" vira "mediando", "ó" sai.
+
+## Áudio (`fea_audio.py`)
+
+Efeitos discretos (whoosh nas telas cheias, tique nas folhas do calendário, impacto no carimbo, pop nos selos) e
+trilha sintetizada no próprio script (sem banco de música, sem risco de direito autoral): pulso grave tipo batida de
+coração, relógio, pad em lá menor e ostinato, com subida e impacto na virada do lote e na cartela final. Na montagem a
+trilha entra a 20% e abaixa sozinha quando o doutor fala (`sidechaincompress`).
+
+## Como rodar
+
+1. Transcrever (`../fea_transcrever.py`) e capturar a página (`node fea_capturar_pagina.js PASTA`, recortar o topo
+   de `full.png` em `pagina.jpg`).
+2. Ajustar os tempos em `fea_configs.py` e gerar os JSON: `python3 fea_configs.py PASTA_TR PASTA_TRABALHO/cfg`.
+3. `bash fea_lote.sh PASTA_TRABALHO IMG_7584 ...` (quadros, áudio e montagem; uns 4 min por vídeo, rodar em 3
+   processos paralelos).
+
+A pasta `comp/` precisa de `FEA-composicao-virada-lote.html`, `logo.png`, `pagina.jpg`, `card-*.png` e `../fonts`
+(Montserrat + Fraunces).
