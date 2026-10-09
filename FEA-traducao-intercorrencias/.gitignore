@@ -1,0 +1,13 @@
+*.pdf
+__pycache__/
+# fontes extraídas do PDF (licença comercial) e artefatos de produção
+fontes/
+produccion/fontes-*/
+produccion/*.bak
+produccion/arte/
+produccion/ocr/
+produccion/ocr2/
+produccion/*.log
+produccion/*.err
+produccion/log-*.json
+produccion/*-backup.json

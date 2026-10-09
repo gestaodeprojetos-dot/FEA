@@ -1,0 +1,2545 @@
+[
+{
+"id": "p2_00",
+"tipo": "titulo_display",
+"negrito": [
+"SU",
+"MÁ",
+"RIO"
+],
+"pt": "SU MÁ RIO"
+},
+{
+"id": "p3_00",
+"tipo": "titulo_secao",
+"negrito": [
+"5"
+],
+"pt": "5"
+},
+{
+"id": "p3_01",
+"tipo": "outro",
+"negrito": [
+"INTRODUÇÃO"
+],
+"pt": "INTRODUÇÃO"
+},
+{
+"id": "p3_02",
+"tipo": "titulo_secao",
+"negrito": [
+"10"
+],
+"pt": "10"
+},
+{
+"id": "p3_03",
+"tipo": "outro",
+"negrito": [
+"CAPÍTULO 1 - INTERCORRÊNCIAS AGUDAS ISQUÊMICAS"
+],
+"pt": "CAPÍTULO 1 - INTERCORRÊNCIAS AGUDAS ISQUÊMICAS"
+},
+{
+"id": "p3_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "1.1 Oclusão vascular aguda 1.2 Necrose tecidual aguda e cicatrização precoce 1.3 Amaurose aguda (cegueira súbita)"
+},
+{
+"id": "p3_05",
+"tipo": "titulo_secao",
+"negrito": [
+"78"
+],
+"pt": "78"
+},
+{
+"id": "p3_06",
+"tipo": "outro",
+"negrito": [
+"CAPÍTULO 2 - INTERCORRÊNCIAS AGUDAS NÃO ISQUÊMICAS"
+],
+"pt": "CAPÍTULO 2 - INTERCORRÊNCIAS AGUDAS NÃO ISQUÊMICAS"
+},
+{
+"id": "p3_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "2.1 Hematomas 2.2 Dor 2.3 Edema agudo leve a moderado 2.4 Eritema 2.5 Anafilaxia 2.6 Síndrome vasovagal 2.7 Convulsão 2.8 Síndrome do pânico / crise de ansiedade 2.9 Síndrome hipertensiva 2.10 Trauma arterial"
+},
+{
+"id": "p3_08",
+"tipo": "titulo_secao",
+"negrito": [
+"129"
+],
+"pt": "129"
+},
+{
+"id": "p3_09",
+"tipo": "outro",
+"negrito": [
+"CAPÍTULO 3 - INTERCORRÊNCIAS TARDIAS ISQUÊMICAS"
+],
+"pt": "CAPÍTULO 3 - INTERCORRÊNCIAS TARDIAS ISQUÊMICAS"
+},
+{
+"id": "p3_10",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "3.1 Isquemia extrínseca compressiva 3.2 Necrose tecidual tardia 3.3 Ulceração cutânea"
+},
+{
+"id": "p3_11",
+"tipo": "titulo_secao",
+"negrito": [
+"145"
+],
+"pt": "145"
+},
+{
+"id": "p3_12",
+"tipo": "outro",
+"negrito": [
+"CAPÍTULO 4 - INTERCORRÊNCIAS TARDIAS INFECCIOSAS E INFLAMATÓRIAS"
+],
+"pt": "CAPÍTULO 4 - INTERCORRÊNCIAS TARDIAS INFECCIOSAS E INFLAMATÓRIAS"
+},
+{
+"id": "p3_13",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "4.1 Infecção bacteriana 4.2 Abscesso bacteriano 4.3 Abscesso estéril 4.4 Granuloma inflamatório 4.5 ETIP (Edema Tardio Intermitente Persistente) 4.6 Surto herpético"
+},
+{
+"id": "p3_14",
+"tipo": "outro",
+"negrito": [
+"CAPÍTULO 5 - INTERCORRÊNCIAS TARDIAS NÃO INFECCIOSAS"
+],
+"pt": "CAPÍTULO 5 - INTERCORRÊNCIAS TARDIAS NÃO INFECCIOSAS"
+},
+{
+"id": "p3_15",
+"tipo": "titulo_secao",
+"negrito": [
+"172"
+],
+"pt": "172"
+},
+{
+"id": "p3_16",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "5.1 Migração do ácido hialurônico 5.2 Nódulos ou irregularidades 5.3 Edema persistente 5.4 Hiperpigmentação 5.5 Neovascularização 5.6 Efeito Tyndall 5.7 Insatisfação"
+},
+{
+"id": "p3_17",
+"tipo": "titulo_secao",
+"negrito": [
+"203"
+],
+"pt": "203"
+},
+{
+"id": "p3_18",
+"tipo": "outro",
+"negrito": [
+"CONCLUSÃO"
+],
+"pt": "CONCLUSÃO"
+},
+{
+"id": "p3_19",
+"tipo": "titulo_secao",
+"negrito": [
+"207"
+],
+"pt": "207"
+},
+{
+"id": "p3_20",
+"tipo": "outro",
+"negrito": [
+"REFERÊNCIAS"
+],
+"pt": "REFERÊNCIAS"
+},
+{
+"id": "p4_00",
+"tipo": "titulo_display",
+"negrito": [
+"IN",
+"TRO",
+"DU",
+"˜",
+"ÇAO"
+],
+"pt": "IN TRO DU ˜ ÇAO"
+},
+{
+"id": "p5_00",
+"tipo": "corpo",
+"negrito": [
+"O"
+],
+"pt": "O"
+},
+{
+"id": "p5_01",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p5_02",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p5_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "uso de preenchedores dérmicos à base de ácido hialurônico (AH) consolidou-se como uma das principais ferramentas da estética facial contemporânea em razão de seu perfil de segurança, previsibilidade e reversibilidade. Ao longo das últimas décadas, o avanço das técnicas de preenchimento facial, aliado ao desenvolvimento de novos produtos, ampliou significativamente as possibilidades terapêuticas e estéticas dessa abordagem."
+},
+{
+"id": "p5_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Entretanto, o aumento da demanda por procedimentos injetáveis, aliado à ampliação do número e do perfil de profissionais que os executam, contribuiu para elevação do número de complicações relatadas. Em muitos dos casos apresentados, o fator determinante predominante não é a qualidade do produto devidamente regulamentado, mas sim variáveis técnicas, como conhecimento anatômico insuficiente, escolha inadequada do plano de aplicação, pressão excessiva de injeção e falhas na avaliação de risco individual."
+},
+{
+"id": "p5_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O ácido hialurônico se destaca por suas propriedades reológicas semelhantes às da matriz extracelular, o que explica sua ampla aceitação clínica. Inicialmente aprovado para correção de rítides e sulcos, seu uso expandiu-se para volumização labial, tratamento de olheiras, remodelação do contorno facial, rejuvenescimento cutâneo, correção de cicatrizes atróficas e restauração de volume em decorrência do envelhecimento ou de perdas traumáticas. Entretanto, certas áreas anatômicas permanecem críticas, como a glabela, a asa nasal e a região periorbital, devido à presença de"
+},
+{
+"id": "p5_06",
+"tipo": "outro",
+"negrito": [
+"5"
+],
+"pt": "5"
+},
+{
+"id": "p6_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p6_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p6_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "extensas anastomoses arteriais, incluindo conexões com a circulação oftálmica, o que aumenta significativamente o risco de necrose tecidual e complicações vasculares."
+},
+{
+"id": "p6_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A literatura recente também chama atenção para o papel da técnica na segurança do procedimento. A velocidade e a pressão de injeção, o tipo de instrumento utilizado (agulhas versus cânulas), a profundidade escolhida e o volume aplicado são determinantes no risco de intercorrências. Técnicas cuidadosas, com injeções lentas e depósitos fracionados em múltiplos pontos, estão associadas a uma redução significativa das complicações. A aspiração prévia pode ser utilizada como recurso adicional, porém não deve ser considerada um método de segurança isolado, uma vez que sua precisão é limitada na prática clínica. Do mesmo modo, a seleção adequada do produto é essencial: géis mais densos e com alto “swelling factor” tendem a atrair maior volume de água e prolongar edemas em determinadas áreas, enquanto formulações com grau de reticulação elevado podem aumentar a incidência de reações inflamatórias tardias, nódulos e granulomas."
+},
+{
+"id": "p6_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O perfil do paciente também deve ser considerado, visto que tabagismo, uso de anticoagulantes e antiagregantes, doenças autoimunes, imunodeficiências e predisposição à hiperpigmentação pós-inflamatória aumentam o risco de complicações ou dificultam a recuperação. Nesse contexto, a anamnese detalhada e o consentimento informado não são apenas práticas de rotina, mas passos essenciais para garantir segurança médico-legal e alinhar expectativas."
+},
+{
+"id": "p6_05",
+"tipo": "outro",
+"negrito": [
+"6"
+],
+"pt": "6"
+},
+{
+"id": "p7_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p7_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p7_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Nos últimos anos, o desenvolvimento e a padronização de protocolos de manejo emergencial consolidaram a conduta frente a eventos graves. O uso precoce e em doses adequadas de hialuronidase continua sendo a principal estratégia para dissolver o produto em situações de oclusão vascular ou compressão tecidual. Estudos recentes também destacam a utilidade do ultrassom Doppler na detecção precoce de áreas comprometidas, guiando de maneira mais precisa a infiltração da enzima. Condutas adjuvantes, como oxigenoterapia hiperbárica, terapias de luz e antibioticoterapia profilática em casos de infecção associada, também têm se mostrado relevantes em determinados contextos."
+},
+{
+"id": "p7_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Apesar de toda a evolução técnica e científica, o fator humano permanece determinante. Revisões contemporâneas reforçam que a experiência do profissional está diretamente associada à redução do risco de complicações, enquanto a negligência na avaliação anatômica e na execução técnica ainda figura entre as principais causas de intercorrências graves. Por isso, a educação continuada, a adesão a guias de boas práticas e a manutenção de kits de emergência devidamente equipados — com hialuronidase, adrenalina, anti-histamínicos e corticoides — são medidas indispensáveis para qualquer profissional que trabalhe com preenchimento facial."
+},
+{
+"id": "p7_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Assim, embora os preenchedores de ácido hialurônico mantenham o título de biomateriais de eleição pela previsibilidade, segurança e reversibilidade, sua utilização demanda mais do que domínio técnico: exige conhecimento anatômico profundo, preparação"
+},
+{
+"id": "p7_05",
+"tipo": "outro",
+"negrito": [
+"7"
+],
+"pt": "7"
+},
+{
+"id": "p8_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p8_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p8_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "para o manejo imediato das complicações e compromisso ético com a transparência e a segurança do paciente."
+},
+{
+"id": "p8_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Este livro apresenta uma revisão ampla dos efeitos adversos associados ao uso de preenchedores dérmicos à base de ácido hialurônico (AH), integrando a literatura científica mais recente, até 2025, com a experiência clínica dos autores."
+},
+{
+"id": "p8_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A obra está organizada em cinco capítulos, estruturados de forma progressiva, com o objetivo de facilitar o raciocínio clínico e a tomada de decisão frente às diferentes intercorrências associadas ao preenchimento facial com ácido hialurônico."
+},
+{
+"id": "p8_05",
+"tipo": "corpo",
+"negrito": [
+"Capítulo 1"
+],
+"pt": "O Capítulo 1 aborda as intercorrências agudas de origem isquêmica, contemplando eventos de maior gravidade e potencial risco funcional, como a oclusão vascular, a necrose tecidual aguda e a amaurose. Neste capítulo, são discutidos os mecanismos envolvidos, as manifestações clínicas iniciais e as condutas imediatas necessárias para a redução de danos."
+},
+{
+"id": "p8_06",
+"tipo": "corpo",
+"negrito": [
+"Capítulo 2"
+],
+"pt": "O Capítulo 2 é dedicado às intercorrências agudas não isquêmicas, englobando manifestações inflamatórias, infecciosas e traumáticas que podem ocorrer durante ou logo após o procedimento. Seu objetivo é auxiliar o profissional na diferenciação entre reações transitórias esperadas e complicações que demandam intervenção específica."
+},
+{
+"id": "p8_07",
+"tipo": "corpo",
+"negrito": [
+"Capítulo 3"
+],
+"pt": "No Capítulo 3, são apresentadas as intercorrências tardias de natureza isquêmica, incluindo situações em que o comprometimento vascular ocorre de forma indireta ou retardada, como nos casos de"
+},
+{
+"id": "p8_08",
+"tipo": "outro",
+"negrito": [
+"8"
+],
+"pt": "8"
+},
+{
+"id": "p9_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p9_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p9_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "compressão extrínseca, necrose tardia e ulceração cutânea, com ênfase nos desafios diagnósticos e nas estratégias de manejo."
+},
+{
+"id": "p9_03",
+"tipo": "corpo",
+"negrito": [
+"Capítulo 4"
+],
+"pt": "O Capítulo 4 contempla as intercorrências tardias infecciosas e inflamatórias, incluindo infecção bacteriana, abscesso bacteriano, abscesso estéril, granuloma inflamatório, ETIP (edema tardio intermitente persistente) e surto herpético, destacando a importância do diagnóstico diferencial e da individualização da conduta."
+},
+{
+"id": "p9_04",
+"tipo": "corpo",
+"negrito": [
+"Capítulo 5"
+],
+"pt": "O Capítulo 5 reúne as intercorrências tardias não infecciosas, como migração do ácido hialurônico, nódulos ou irregularidades, edema persistente, hiperpigmentação, neovascularização, efeito Tyndall e insatisfação estética, enfatizando o impacto dessas alterações no resultado final e na percepção do paciente."
+},
+{
+"id": "p9_05",
+"tipo": "outro",
+"negrito": [
+"9"
+],
+"pt": "9"
+},
+{
+"id": "p10_00",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p10_01",
+"tipo": "cabecalho",
+"negrito": [
+"JOÃO PITHON"
+],
+"pt": "JOÃO PITHON"
+},
+{
+"id": "p10_02",
+"tipo": "outro",
+"negrito": [
+"10"
+],
+"pt": "10"
+},
+{
+"id": "p11_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p11_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p11_02",
+"tipo": "titulo_display",
+"negrito": [
+"A"
+],
+"pt": "A"
+},
+{
+"id": "p11_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "s intercorrências agudas isquêmicas associadas ao preenchimento facial com ácido hialurônico constituem um grupo de alta relevância clínica, pois podem evoluir rapidamente para comprometimento tecidual extenso, com risco de necrose e sequelas funcionais. Embora sejam eventos raros, sua gravidade exige do profissional preparo técnico, reconhecimento precoce e conduta imediata, uma vez que o tempo de resposta é determinante para o prognóstico."
+},
+{
+"id": "p11_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Neste capítulo, são abordadas as principais intercorrências agudas isquêmicas relacionadas ao preenchimento, com ênfase nos mecanismos envolvidos, nas manifestações iniciais e nos princípios de manejo. A organização do conteúdo segue uma progressão clínica. Iniciando pela oclusão vascular aguda, avançando para a necrose tecidual e cicatrização precoce e, por fim, contemplando a amaurose, dada sua criticidade e impacto funcional. Ao final, espera-se que o leitor esteja apto a reconhecer sinais precoces de isquemia e a compreender as condutas descritas, integrando conhecimento anatômico, avaliação clínica e resposta terapêutica segura."
+},
+{
+"id": "p11_05",
+"tipo": "titulo_secao",
+"negrito": [
+"1.1 OCLUSÃO VASCULAR AGUDA"
+],
+"pt": "1.1 OCLUSÃO VASCULAR AGUDA"
+},
+{
+"id": "p11_06",
+"tipo": "corpo",
+"negrito": [
+"oclusão vascular"
+],
+"pt": "A isquemia aguda em procedimentos estéticos com preenchedores é definida como a interrupção súbita — ou a redução significativa — do fluxo sanguíneo em um território cutâneo, resultando em hipoperfusão tecidual. No contexto do preenchimento facial, esse quadro está frequentemente associado à oclusão vascular, o que a"
+},
+{
+"id": "p11_07",
+"tipo": "outro",
+"negrito": [
+"11"
+],
+"pt": "11"
+},
+{
+"id": "p12_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p12_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p12_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "torna uma das complicações mais críticas da harmonização facial, pois pode evoluir rapidamente para hipóxia celular, necrose irreversível e sequelas permanentes, como cicatrizes e deformidades, além de potenciais complicações devastadoras, como a amaurose."
+},
+{
+"id": "p12_03",
+"tipo": "corpo",
+"negrito": [
+"(1)",
+"(2)",
+"(3)",
+"(4)"
+],
+"pt": "A ocorrência está geralmente relacionada a quatro mecanismos principais: (1) injeção intravascular direta do preenchedor, com obstrução mecânica do lúmen arterial; (2) compressão extrínseca dos vasos, quando um grande volume é depositado em compartimentos fechados; (3) espasmo vascular reflexo, desencadeado pelo trauma da cânula ou agulha; e (4) embolização retrógrada, quando o material migra contra o fluxo sanguíneo, alcançando vasos maiores e até a artéria oftálmica."
+},
+{
+"id": "p12_04",
+"tipo": "titulo_secao",
+"negrito": [
+"SEQUÊNCIA DE EVENTOS QUE LEVAM À",
+"OCLUSÃO VASCULAR INDUZIDA POR PREENCHEDOR"
+],
+"pt": "SEQUÊNCIA DE EVENTOS QUE LEVAM À OCLUSÃO VASCULAR INDUZIDA POR PREENCHEDOR"
+},
+{
+"id": "p12_05",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 1."
+],
+"pt": "Figura 1. Representação esquemática da progressão dos eventos envolvidos na oclusão vascular"
+},
+{
+"id": "p12_06",
+"tipo": "outro",
+"negrito": [],
+"pt": "5"
+},
+{
+"id": "p12_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "induzida por preenchedores"
+},
+{
+"id": "p12_08",
+"tipo": "outro",
+"negrito": [],
+"pt": "1"
+},
+{
+"id": "p12_09",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "dérmicos: (1) canulação vascular, (2) inoculação intravascular do material, (3) disseminação no lúmen do vaso, (4) oclusão do fluxo sanguíneo e (5) lesão isquêmica tecidual."
+},
+{
+"id": "p12_10",
+"tipo": "outro",
+"negrito": [],
+"pt": "4"
+},
+{
+"id": "p12_11",
+"tipo": "outro",
+"negrito": [],
+"pt": "2"
+},
+{
+"id": "p12_12",
+"tipo": "outro",
+"negrito": [],
+"pt": "3"
+},
+{
+"id": "p12_13",
+"tipo": "outro",
+"negrito": [
+"12"
+],
+"pt": "12"
+},
+{
+"id": "p13_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p13_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p13_02",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p13_03",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR code direciona para um artigo científico que aprofunda a compreensão sobre a oclusão vascular induzida por preenchedores de ácido hialurônico."
+},
+{
+"id": "p13_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Neste artigo, Danny J. Soares aborda o chamado “Problema Centenário” da oclusão vascular induzida por preenchedores de ácido hialurônico (HA), apresentando uma análise da fisiopatologia e dos mecanismos moleculares envolvidos nessa complicação. O autor descreve os eventos multifatoriais que levam à oclusão vascular, incluindo os padrões de disseminação e obstrução em diferentes redes vasculares."
+},
+{
+"id": "p13_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Com foco nas implicações terapêuticas, o artigo discute as estratégias atuais de tratamento, como o uso de hialuronidase e terapias trombolíticas, além de reforçar a importância do reconhecimento precoce para um manejo eficaz. Trata-se de uma referência relevante para profissionais da área estética e pesquisadores, ao sistematizar os principais aspectos relacionados à prevenção e ao tratamento das complicações associadas aos preenchedores de HA."
+},
+{
+"id": "p13_06",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Para acessar o conteúdo completo, escaneie o QR code utilizando a câmera do seu celular ou um aplicativo leitor de QR code."
+},
+{
+"id": "p13_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "O diagnóstico da isquemia aguda em procedimentos estéticos deve ser imediato, uma vez que o tempo de evolução é determinante para o desfecho clínico. Nas primeiras horas, ainda existe uma janela de reversibilidade do quadro. Em até sessenta a noventa minutos, é possível reverter a hipoperfusão tecidual, caracterizando a fase de isquemia funcional. Entre quatro e seis horas, o risco de necrose irreversível aumenta de forma exponencial e, após vinte e quatro horas, a necrose costuma estar consolidada, com baixa possibilidade de recuperação do tecido afetado. Ressalta-se que esses intervalos podem variar conforme a região anatômica e a presença de circulação colateral."
+},
+{
+"id": "p13_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Os sinais precoces mais característicos incluem dor aguda e desproporcional ao procedimento, palidez súbita da pele, aparecimento"
+},
+{
+"id": "p13_09",
+"tipo": "outro",
+"negrito": [
+"13"
+],
+"pt": "13"
+},
+{
+"id": "p13_10",
+"tipo": "outro",
+"negrito": [
+"13"
+],
+"pt": "13"
+},
+{
+"id": "p14_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p14_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p14_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "de livedo reticular e lentificação do tempo de preenchimento capilar. Quando não reconhecidos e tratados de forma adequada, esses sinais iniciais evoluem para manifestações tardias, como cianose, formação de bolhas hemorrágicas e ulceração cutânea, culminando em necrose."
+},
+{
+"id": "p14_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As áreas de maior risco para o desenvolvimento de isquemia incluem a glabela e a região periocular, irrigadas por ramos das artérias supratrocleares, supraorbitárias e dorsal nasal; o nariz e suas asas, supridos pela artéria angular e por ramos dorsais; o sulco nasolabial, dependente da artéria facial e de ramos labiais; além da fronte e das têmporas, que apresentam comunicação direta com a artéria oftálmica e a artéria temporal superficial."
+},
+{
+"id": "p14_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As regiões frontal, temporal e nasal são consideradas áreas de alto risco para complicações vasculares em procedimentos estéticos devido a uma combinação de fatores anatômicos. Em algumas dessas áreas, especialmente no nariz, há predomínio de ramos arteriais terminais, o que pode limitar a capacidade de reperfusão em casos de obstrução vascular. Além disso, esses territórios apresentam vasos de pequeno calibre e, em determinadas regiões, como glabela e dorso nasal, há menor complacência tecidual, favorecendo a compressão extrínseca e a isquemia. Outro aspecto relevante é a presença de extensas anastomoses com a circulação da artéria oftálmica, o que aumenta o risco de eventos embólicos, como a oclusão arterial retiniana. Somado a isso, em áreas com menor proteção de tecidos moles, os vasos tornam-se mais suscetíveis a trauma e à injeção intravascular inadvertida. Dessa"
+},
+{
+"id": "p14_05",
+"tipo": "outro",
+"negrito": [
+"14"
+],
+"pt": "14"
+},
+{
+"id": "p15_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p15_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p15_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "forma, a associação desses fatores torna essas regiões particularmente vulneráveis a complicações isquêmicas e embólicas."
+},
+{
+"id": "p15_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A relevância clínica da isquemia aguda não se restringe apenas ao risco físico ao paciente, mas também à necessidade de preparo técnico e psicológico do profissional injetor. Trata-se de uma intercorrência que distingue o profissional experiente, pois exige ação imediata, sem margem para hesitação. O sucesso do tratamento depende, na maioria das vezes, da rapidez no reconhecimento dos sinais precoces e da aplicação correta dos protocolos de reversão, que envolvem o uso de hialuronidase em altas doses, vasodilatadores, anticoagulantes, oxigenoterapia e medidas adjuvantes avançadas."
+},
+{
+"id": "p15_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Em síntese, a isquemia aguda configura-se como um evento emergencial no contexto da harmonização facial. O desfecho entre uma"
+},
+{
+"id": "p15_05",
+"tipo": "titulo_secao",
+"negrito": [
+"NA PRÁTICA"
+],
+"pt": "NA PRÁTICA"
+},
+{
+"id": "p15_06",
+"tipo": "cabecalho",
+"negrito": [
+"INTRODUÇÃO AO RACIOCÍNIO",
+"CLÍNICO DE COMPLICAÇÕES",
+"AGUDAS ISQUÊMICAS"
+],
+"pt": "INTRODUÇÃO AO RACIOCÍNIO CLÍNICO DE COMPLICAÇÕES AGUDAS ISQUÊMICAS"
+},
+{
+"id": "p15_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Neste vídeo, o Dr. João Pithon apresenta os fundamentos do raciocínio clínico aplicado às complicações isquêmicas agudas relacionadas a preenchedores. São abordados os critérios para reconhecimento precoce da isquemia, a interpretação dos sinais clínicos iniciais e os princípios que orientam a tomada de decisão em situações de risco vascular. O conteúdo complementa o capítulo ao integrar os conceitos teóricos à prática clínica, com foco na condução segura e no manejo imediato desses eventos."
+},
+{
+"id": "p15_08",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Para acessar o vídeo, utilize a câmera do seu dispositivo móvel ou um aplicativo leitor de QR Code e aponte para o código abaixo."
+},
+{
+"id": "p15_09",
+"tipo": "outro",
+"negrito": [
+"15"
+],
+"pt": "15"
+},
+{
+"id": "p16_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p16_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p16_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "recuperação completa e o desenvolvimento de sequelas permanentes está intimamente ligado à capacidade do médico de identificar precocemente o problema e instituir o tratamento de forma imediata, estruturada e baseada em protocolos bem estabelecidos."
+},
+{
+"id": "p16_03",
+"tipo": "titulo_secao",
+"negrito": [
+"1.1.1 FISIOPATOLOGIA"
+],
+"pt": "1.1.1 FISIOPATOLOGIA"
+},
+{
+"id": "p16_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Do ponto de vista fisiopatológico, a oclusão vascular associada aos preenchedores dérmicos pode ocorrer por diferentes mecanismos, que variam conforme a técnica empregada, a pressão de injeção, o volume utilizado e a relação anatômica entre o ponto de aplicação e a rede vascular local. A compreensão desses mecanismos é fundamental para o reconhecimento precoce da intercorrência e para a adoção de condutas adequadas. Os principais mecanismos envolvidos incluem a injeção intravascular direta, na qual o preenchedor atua como um êmbolo, obstruindo total ou parcialmente o lúmen do vaso; a compressão extrínseca, decorrente da deposição de grandes volumes de produto em compartimentos com baixa complacência; o espasmo vascular, induzido pelo trauma mecânico causado pela agulha ou cânula; e a embolização retrógrada, quando o material é injetado sob alta pressão e reflui contra o fluxo sanguíneo normal, podendo alcançar ramos arteriais proximais."
+},
+{
+"id": "p16_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A embolização retrógrada reveste-se de especial gravidade quando envolve a circulação oftálmica, uma vez que pode comprometer a artéria central da retina, levando à amaurose súbita, especialmente após injeções em áreas como glabela, dorso nasal, fronte e têmporas."
+},
+{
+"id": "p16_06",
+"tipo": "outro",
+"negrito": [
+"16"
+],
+"pt": "16"
+},
+{
+"id": "p17_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p17_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p17_02",
+"tipo": "titulo_secao",
+"negrito": [
+"TESTE CLÍNICO DE REPERFUSÃO CAPILAR",
+"NA AVALIAÇÃO DE ISQUEMIA CUTÂNEA FACIAL"
+],
+"pt": "TESTE CLÍNICO DE REPERFUSÃO CAPILAR NA AVALIAÇÃO DE ISQUEMIA CUTÂNEA FACIAL"
+},
+{
+"id": "p17_03",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 2."
+],
+"pt": "Figura 2. Ilustração do teste de reperfusão capilar utilizado na avaliação da perfusão cutânea após procedimentos com preenchedores. A compressão mecânica temporária da pele permite observar o tempo e o padrão de retorno da coloração normal, auxiliando na identificação de áreas com hipoperfusão ou perfusão comprometida. A comparação deve ser realizada entre a região suspeita e áreas adjacentes ou contralaterais, permitindo diferenciar padrões fisiológicos de alterações sugestivas de isquemia vascular."
+},
+{
+"id": "p17_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A avaliação clínica da perfusão cutânea é um dos primeiros passos no reconhecimento precoce da oclusão vascular. O teste de reperfusão capilar, ilustrado na Figura 2, permite identificar alterações no fluxo sanguíneo por meio da compressão temporária da pele e da observação do tempo e do padrão de retorno da coloração. Regiões com reperfusão lenta, incompleta ou assimétrica em relação às áreas adjacentes ou contralaterais devem ser interpretadas como sinais de hipoperfusão e exigem intervenção imediata."
+},
+{
+"id": "p17_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uma vez identificada a área isquêmica, o próximo passo consiste na adoção de estratégias terapêuticas capazes de restaurar o fluxo sanguíneo, destacando-se o uso da hialuronidase em doses adequadas."
+},
+{
+"id": "p17_06",
+"tipo": "outro",
+"negrito": [
+"17"
+],
+"pt": "17"
+},
+{
+"id": "p18_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p18_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p18_02",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p18_03",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para um artigo científico que apresenta o Protocolo de Alta Dose de Hialuronidase Pulsada (High Dose Pulsed Hyaluronidase – HDPH) para o tratamento de eventos adversos vasculares agudos induzidos por preenchedores de ácido hialurônico."
+},
+{
+"id": "p18_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este artigo descreve o protocolo de Alta Dose de Hialuronidase Pulsada (HDPH), desenvolvido por Claudio DeLorenzi, MD, FRCS, para o tratamento de eventos adversos vasculares agudos causados por preenchimentos de ácido hialurônico. O protocolo enfatiza a administração repetida de altas doses de hialuronidase, baseadas no volume de tecido isquêmico, com o objetivo de dissolver a obstrução e restaurar o fluxo sanguíneo."
+},
+{
+"id": "p18_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Para acessar o artigo completo, utilize a câmera do seu dispositivo móvel ou um aplicativo leitor de QR Code."
+},
+{
+"id": "p18_06",
+"tipo": "corpo",
+"negrito": [
+"injeção intravascular direta"
+],
+"pt": "A oclusão vascular associada ao uso de preenchedores dérmicos pode ocorrer por diferentes mecanismos fisiopatológicos. Entre eles, destaca-se a injeção intravascular direta, situação na qual o preenchedor atua como um êmbolo, promovendo a obstrução total ou parcial do lúmen do vaso."
+},
+{
+"id": "p18_07",
+"tipo": "corpo",
+"negrito": [
+"compressão extrínseca"
+],
+"pt": "Outro mecanismo relevante é a compressão extrínseca, decorrente da injeção de grande volume de produto no espaço perivascular. Nesses casos, a pressão exercida pelo material sobre a parede do vaso resulta em diminuição do fluxo sanguíneo local."
+},
+{
+"id": "p18_08",
+"tipo": "corpo",
+"negrito": [
+"espasmo vascular,"
+],
+"pt": "O espasmo vascular, contração súbita do vaso sanguíneo, também pode contribuir para o quadro isquêmico. O trauma mecânico provocado pela agulha ou pela cânula pode induzir vasoespasmo transitório, agravando a hipoperfusão tecidual, especialmente quando associado a outros fatores obstrutivos."
+},
+{
+"id": "p18_09",
+"tipo": "outro",
+"negrito": [
+"18"
+],
+"pt": "18"
+},
+{
+"id": "p19_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p19_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p19_02",
+"tipo": "corpo",
+"negrito": [
+"microembolização retrógrada",
+"amaurose súbi-",
+"ta"
+],
+"pt": "Por fim, a microembolização retrógrada representa um dos mecanismos mais graves. Em situações de alta pressão durante a injeção, o preenchedor pode refluir contra o fluxo sanguíneo fisiológico, alcançar ramos arteriais proximais e comprometer territórios distantes. Esse mecanismo explica eventos como a amaurose súbita, quando o material atinge a artéria central da retina, principalmente após injeções realizadas em áreas de alto risco, como glabela, dorso nasal, fronte e têmporas."
+},
+{
+"id": "p19_03",
+"tipo": "titulo_secao",
+"negrito": [
+"EVOLUÇÃO CLÍNICA DA NECROSE CUTÂNEA APÓS EVENTO ISQUÊMICO"
+],
+"pt": "EVOLUÇÃO CLÍNICA DA NECROSE CUTÂNEA APÓS EVENTO ISQUÊMICO"
+},
+{
+"id": "p19_04",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p19_05",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p19_06",
+"tipo": "outro",
+"negrito": [],
+"pt": "C"
+},
+{
+"id": "p19_07",
+"tipo": "outro",
+"negrito": [],
+"pt": "D"
+},
+{
+"id": "p19_08",
+"tipo": "outro",
+"negrito": [],
+"pt": "E"
+},
+{
+"id": "p19_09",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 3."
+],
+"pt": "Figura 3. Sequência de imagens ilustrando a progressão clínica da necrose cutânea decorrente de evento isquêmico associado ao preenchimento facial: (A) fases iniciais com alteração da coloração cutânea, apresentando áreas de palidez e livedo; (B) evolução para sinais de sofrimento tecidual; (C) Evolução da necrose tecidual, com morte celular e proliferação bacteriana, evidente nas vesículas e pústulas, sinais clínicos claros de sofrimento vascular agudo; D) Reversão da isquemia e preservação dos tecidos devido ao Protocolo de Diagnóstico de Reperfusão Rápida. (E) Reperfusão sem sequelas teciduais após evento isquêmico agudo, mostrando como é possível reverter o processo de isquemia mesmo após a oclusão vascular."
+},
+{
+"id": "p19_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A análise epidemiológica dos casos de isquemia cutânea facial induzida por preenchedores permite identificar padrões anatômicos recorrentes e territórios vasculares mais vulneráveis. O reconhecimento dessas áreas críticas é fundamental para o planeja-"
+},
+{
+"id": "p19_11",
+"tipo": "outro",
+"negrito": [
+"19"
+],
+"pt": "19"
+},
+{
+"id": "p20_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p20_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p20_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "mento seguro da aplicação e para a estratificação do risco de complicações isquêmicas e neuro-oftalmológicas. A distribuição dos casos documentados demonstra que determinadas regiões da face concentram maior incidência de eventos adversos, especialmente quando associadas a angiossomas com comunicação direta com a circulação oftálmica."
+},
+{
+"id": "p20_03",
+"tipo": "titulo_secao",
+"negrito": [
+"DISTRIBUIÇÃO ANATÔMICA DAS ÁREAS TRATADAS",
+"ASSOCIADAS A ISQUEMIA CUTÂNEA E COMPLICAÇÕESOCULARES"
+],
+"pt": "DISTRIBUIÇÃO ANATÔMICA DAS ÁREAS TRATADAS ASSOCIADAS A ISQUEMIA CUTÂNEA E COMPLICAÇÕESOCULARES"
+},
+{
+"id": "p20_04",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 4."
+],
+"pt": "Figura 4. Representação gráfica da distribuição das áreas faciais tratadas que evoluíram com isquemia cutânea, eventos isquêmicos graves e comprometimento visual. Observa-se maior concentração de casos em regiões como sulco nasolabial, dorso nasal e glabela, com destaque para a participação dos angiossomas relacionados à artéria facial e à artéria oftálmica. A presença de envolvimento do território oftálmico associa-se a maior risco de complicações neurooftalmológicas, incluindo perda visual e eventos cerebrovasculares, reforçando a necessidade de cautela em áreas com anastomoses vasculares críticas."
+},
+{
+"id": "p20_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Fonte: Adaptado de estudo clínico sobre isquemia cutânea facial induzida por preenchedores."
+},
+{
+"id": "p20_06",
+"tipo": "outro",
+"negrito": [
+"20"
+],
+"pt": "20"
+},
+{
+"id": "p21_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p21_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p21_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Os dados apresentados evidenciam que a compreensão da anatomia vascular e da distribuição dos angiossomas não é apenas um conhecimento teórico, mas um elemento determinante na prevenção de desfechos graves. Estudos clínicos de maior escala reforçam a associação entre determinadas regiões faciais e o risco aumentado de complicações isquêmicas e oculares. Para aprofundar essa análise estatística e compreender os achados detalhados do estudo que fundamenta esses percentuais, recomenda-se a leitura do artigo disponibilizado a seguir no box “Saiba Mais”."
+},
+{
+"id": "p21_03",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p21_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para um artigo científico que analisa a distribuição anatômica das áreas faciais acometidas por isquemia cutânea induzida por preenchedores."
+},
+{
+"id": "p21_05",
+"tipo": "cabecalho",
+"negrito": [
+"243 casos clínicos"
+],
+"pt": "O estudo, intitulado Patterns of Filler-Induced Facial Skin Ischemia: A Systematic Review of 243 Cases and Introduction of the FOEM Scoring System and Grading Scale, reúne a análise de 243 casos clínicos de isquemia cutânea facial associada a preenchedores."
+},
+{
+"id": "p21_06",
+"tipo": "cabecalho",
+"negrito": [
+"artéria facial (58%)",
+"artéria",
+"oftálmica (48%)",
+"frontonasal e angulonasal",
+"perda visual (39% vs.",
+"0,8%)",
+"acidente vascular cerebral (8% vs. 0,8%)"
+],
+"pt": "Os resultados demonstram que a artéria facial (58%) e a artéria oftálmica (48%) foram os angiossomas mais frequentemente envolvidos, sendo os segmentos frontonasal e angulonasal as regiões cutâneas mais acometidas. O envolvimento do território oftálmico esteve significativamente associado a complicações neuro-oftalmológicas graves, incluindo perda visual (39% vs. 0,8%) e acidente vascular cerebral (8% vs. 0,8%), reforçando a necessidade de cautela nas áreas de alto risco anatômico."
+},
+{
+"id": "p21_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O estudo também introduz o sistema de pontuação e classificação FOEM, contribuindo para a padronização da avaliação da gravidade dos casos de isquemia facial induzida por preenchedores."
+},
+{
+"id": "p21_08",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Para acessar o artigo completo, utilize a câmera do seu dispositivo móvel ou um aplicativo leitor de QR Code."
+},
+{
+"id": "p21_09",
+"tipo": "outro",
+"negrito": [
+"21"
+],
+"pt": "21"
+},
+{
+"id": "p22_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p22_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p22_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Quando a isquemia não é revertida de forma rápida e eficaz, o sofrimento tecidual evolui progressivamente para necrose cutânea. As manifestações clínicas tornam-se mais evidentes nas horas e dias subsequentes ao evento vascular, com alterações de coloração, edema persistente e formação de áreas necróticas. A documentação fotográfica desses casos é fundamental para compreensão da evolução temporal da lesão e para o acompanhamento da resposta terapêutica."
+},
+{
+"id": "p22_03",
+"tipo": "titulo_secao",
+"negrito": [
+"TESTE CLÍNICO DE REPERFUSÃO CAPILAR",
+"NA AVALIAÇÃO DE ISQUEMIA CUTÂNEA FACIAL"
+],
+"pt": "TESTE CLÍNICO DE REPERFUSÃO CAPILAR NA AVALIAÇÃO DE ISQUEMIA CUTÂNEA FACIAL"
+},
+{
+"id": "p22_04",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p22_05",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p22_06",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 5."
+],
+"pt": "Figura 5. Sequência de imagens demonstrando a progressão da lesão isquêmica na região malar e perinasal após aplicação de preenchedor: (A) aspecto de livedo cutâneo observado na manhã seguinte à injeção, estendendo-se da pálpebra inferior ao lábio superior e parte do nariz, sugerindo comprometimento da artéria infraorbital; (B) evolução após 3 dias, com formação de pústulas na região nasal e defeito cutâneo em espessura total próximo ao sulco nasolabial, associado ao comprometimento da artéria facial."
+},
+{
+"id": "p22_07",
+"tipo": "outro",
+"negrito": [
+"22"
+],
+"pt": "22"
+},
+{
+"id": "p23_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p23_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p23_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Casos como o ilustrado reforçam que a necrose cutânea representa o desfecho final de uma sequência fisiopatológica iniciada pela obstrução vascular. A literatura científica destaca que a prevenção e o manejo precoce são determinantes para evitar a progressão do dano tecidual. Além disso, a escolha do tipo de preenchedor e sua potencial reversibilidade influenciam diretamente o prognóstico. Para aprofundar a compreensão sobre as complicações isquêmicas associadas aos diferentes materiais e sobre as estratégias atuais de prevenção e tratamento, recomenda-se a leitura do artigo disponibilizado no box “Saiba Mais” a seguir."
+},
+{
+"id": "p23_03",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p23_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para um artigo científico que aborda de forma abrangente as complicações isquêmicas associadas ao uso de preenchedores dérmicos."
+},
+{
+"id": "p23_05",
+"tipo": "cabecalho",
+"negrito": [
+"complicações",
+"isquêmicas decorrentes de preenchedores dérmicos",
+"prevenção e no manejo precoce dessas intercorrên-",
+"cias",
+"reversibilidade dos preenchedores",
+"cálcio hidroxiapatita",
+"gordura autóloga"
+],
+"pt": "O artigo Ischemic Complications of Dermal Fillers, publicado na revista Plastic and Aesthetic Research, analisa as complicações isquêmicas decorrentes de preenchedores dérmicos, com ênfase na prevenção e no manejo precoce dessas intercorrências. O texto destaca que a reversibilidade dos preenchedores é um fator determinante no prognóstico clínico. Preenchedores à base de ácido hialurônico (AH) são, em geral, reversíveis com hialuronidase; contudo, o artigo ressalta que alguns novos produtos de AH apresentam maior resistência à degradação. Já preenchedores não baseados em AH, como o cálcio hidroxiapatita e a gordura autóloga, são considerados irreversíveis."
+},
+{
+"id": "p23_06",
+"tipo": "cabecalho",
+"negrito": [
+"tratamento",
+"precoce das complicações isquêmicas é fundamental",
+"hialuronidase"
+],
+"pt": "Em relação ao manejo clínico, o estudo reforça que o tratamento precoce das complicações isquêmicas é fundamental. Nos casos de oclusão vascular por AH, a hialuronidase permanece como principal ferramenta terapêutica, devendo ser administrada o mais rapidamente possível — idealmente entre 60 e 90 minutos nos casos com comprometimento visual. Medidas adjuvantes incluem massagem ocular, compressas mornas, vasodilatadores (como ácido acetilsalicílico), corticosteroides para controle do edema e, em situações específicas, oxigenoterapia hiperbárica para suporte em casos de necrose cutânea. Nos quadros de perda visual grave, recomenda-se a ativação imediata de protocolo de acidente vascular cerebral. Para acessar o artigo completo, utilize a câmera do seu dispositivo móvel ou um aplicativo leitor de QR Code."
+},
+{
+"id": "p23_07",
+"tipo": "outro",
+"negrito": [
+"23"
+],
+"pt": "23"
+},
+{
+"id": "p24_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p24_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p24_02",
+"tipo": "titulo_secao",
+"negrito": [
+"ÁREAS DE MAIOR RISCO"
+],
+"pt": "ÁREAS DE MAIOR RISCO"
+},
+{
+"id": "p24_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A complexa rede anastomótica da face aumenta o risco de complicações. As artérias mais críticas são:"
+},
+{
+"id": "p24_04",
+"tipo": "corpo",
+"negrito": [
+"Artéria Facial:",
+"•"
+],
+"pt": "Artéria Facial: irriga a região perioral; sua obstrução pode com- •"
+},
+{
+"id": "p24_05",
+"tipo": "corpo",
+"negrito": [
+"Artérias Labiais (superior e inferior):",
+"•"
+],
+"pt": "prometer lábios e região paranasal. Artérias Labiais (superior e inferior): irriga os lábios; pode cau- •"
+},
+{
+"id": "p24_06",
+"tipo": "corpo",
+"negrito": [
+"Artéria Columelar:",
+"•"
+],
+"pt": "sar palidez, dor, risco de ulceração e evolução para necrose. Artéria Columelar: pode causar necrose da columela e ponta •"
+},
+{
+"id": "p24_07",
+"tipo": "corpo",
+"negrito": [
+"Artéria Angular:",
+"•"
+],
+"pt": "nasal. Artéria Angular: corre próximo ao canto medial do olho e comu- •"
+},
+{
+"id": "p24_08",
+"tipo": "corpo",
+"negrito": [
+"•"
+],
+"pt": "nica-se com a oftálmica, podendo causar amaurose. Além disso, por suas variações anatômicas, considera-se uma via crítica para necrose nasal. •"
+},
+{
+"id": "p24_09",
+"tipo": "corpo",
+"negrito": [
+"Artérias Nasais (alar inferior, subalar, nasal lateral e nasal dor-",
+"sal):",
+"Artérias Supratroclear e Supraorbitária:",
+"•"
+],
+"pt": "Artérias Nasais (alar inferior, subalar, nasal lateral e nasal dorsal): risco elevado de necrose nasal e, dado a proximidade com a circulação oftálmica, complicações oculares. Artérias Supratroclear e Supraorbitária: irrigam fronte e gla- •"
+},
+{
+"id": "p24_10",
+"tipo": "corpo",
+"negrito": [
+"Artéria Temporal Superficial:",
+"•"
+],
+"pt": "bela; obstrução pode levar a necrose cutânea e amaurose. Artéria Temporal Superficial: irriga a região temporal, couro ca- •"
+},
+{
+"id": "p24_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "beludo e arco superciliar; oclusão gera dor intensa e necrose da região temporal e possível alopecia."
+},
+{
+"id": "p24_12",
+"tipo": "outro",
+"negrito": [
+"24"
+],
+"pt": "24"
+},
+{
+"id": "p25_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p25_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p25_02",
+"tipo": "titulo_secao",
+"negrito": [
+"ERITEMA GENGIVAL ASSOCIADO À ISQUEMIA POR",
+"COMPROMETIMENTO DA ARTÉRIA INFRAORBITÁRIA"
+],
+"pt": "ERITEMA GENGIVAL ASSOCIADO À ISQUEMIA POR COMPROMETIMENTO DA ARTÉRIA INFRAORBITÁRIA"
+},
+{
+"id": "p25_03",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 6"
+],
+"pt": "Figura 6. Imagem clínica demonstrando hiperemia e alteração de coloração em mucosa gengival superior, compatível com comprometimento vascular do território infraorbitário após preenchimento facial. A manifestação intraoral pode representar um sinal indireto de oclusão arterial e deve ser interpretada como alerta para possível extensão do evento isquêmico além do território cutâneo visível."
+},
+{
+"id": "p25_04",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Adaptado de Mehta P. et al. Ischemic complications of dermal fillers. Plast Aesthet Res. 2022;9:57. DOI: 10.20517/2347-9264.2022.19."
+},
+{
+"id": "p25_05",
+"tipo": "titulo_secao",
+"negrito": [
+"SISTEMA DE ESCORE FOEM PARA CLASSIFICAÇÃO",
+"DE ISQUEMIA CUTÂNEA FACIAL"
+],
+"pt": "SISTEMA DE ESCORE FOEM PARA CLASSIFICAÇÃO DE ISQUEMIA CUTÂNEA FACIAL"
+},
+{
+"id": "p25_06",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 7."
+],
+"pt": "Figura 7. Representação esquemática do sistema FOEM (Facial, Ophthalmic, External Carotid – distal e Maxillary domains), utilizado para classificar e graduar a extensão da isquemia cutânea secundária à oclusão vascular por preenchedores. O modelo organiza a face em domínios angiossomais específicos e subdivide cada território em segmentos mucocutâneos, permitindo pontuação bilateral padronizada para avaliação da gravidade do comprometimento vascular."
+},
+{
+"id": "p25_07",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Adaptado de Soares DJ et al. Patterns of Filler-Induced Facial Skin Ischemia: A Systematic Review of 243 Cases and Introduction of the FOEM Scoring System and Grading Scale. Plast Reconstr Surg. 2023."
+},
+{
+"id": "p25_08",
+"tipo": "outro",
+"negrito": [
+"25"
+],
+"pt": "25"
+},
+{
+"id": "p26_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p26_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p26_02",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p26_03",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para um artigo científico que analisa os padrões de isquemia cutânea facial induzida por preenchedores e identifica as regiões anatômicas de maior risco."
+},
+{
+"id": "p26_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O estudo Patterns of Filler-Induced Facial Skin Ischemia: A Systematic Review of 243 Cases and Introduction of the FOEM Scoring System and Grading Scale apresenta uma revisão sistemática de 243 casos documentados de isquemia facial relacionada à oclusão vascular. Os autores descrevem os territórios angiossomais mais frequentemente acometidos, destacando a predominância da artéria facial e da artéria oftálmica, além dos segmentos frontonasal e angulonasal como áreas mais vulneráveis."
+},
+{
+"id": "p26_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O artigo também introduz o sistema de escore FOEM, que propõe uma classificação estruturada da gravidade da isquemia cutânea, contribuindo para padronização diagnóstica, avaliação de risco e documentação clínica."
+},
+{
+"id": "p26_06",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Escaneie o QR code para acessar o artigo completo e aprofundar o entendimento sobre as regiões faciais de maior risco em procedimentos com preenchedores."
+},
+{
+"id": "p26_07",
+"tipo": "titulo_secao",
+"negrito": [
+"DIAGNÓSTICO CLÍNICO"
+],
+"pt": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p26_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "As intercorrências agudas isquêmicas, como a oclusão vascular, devem ser diagnosticadas rapidamente, uma vez que a primeira manifestação clínica é a hipoperfusão do tecido adjacente à aplicação. Isso ocorre devido a um trauma arterial, levando à isquemia em regiões específicas com suprimento vascular comprometido."
+},
+{
+"id": "p26_09",
+"tipo": "titulo_secao",
+"negrito": [
+"OS SINAIS CLÁSSICOS INCLUEM:"
+],
+"pt": "OS SINAIS CLÁSSICOS INCLUEM:"
+},
+{
+"id": "p26_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p26_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Dor súbita e intensa no local da aplicação. •"
+},
+{
+"id": "p26_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Palidez imediata ou livedo reticular. •"
+},
+{
+"id": "p26_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cianose progressiva. •"
+},
+{
+"id": "p26_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Área fria ao toque."
+},
+{
+"id": "p26_15",
+"tipo": "outro",
+"negrito": [
+"26"
+],
+"pt": "26"
+},
+{
+"id": "p27_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p27_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p27_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p27_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Redução ou ausência do tempo de reperfusão capilar. •"
+},
+{
+"id": "p27_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sintomas oculares (escotomas, visão turva, ptose palpebral, dor ocular, redução da acuidade visual, amaurose) em casos de embolização retrógrada."
+},
+{
+"id": "p27_05",
+"tipo": "titulo_secao",
+"negrito": [
+"MECANISMOS DE INOCULAÇÃO VASCULAR",
+"ASSOCIADOS AO PREENCHEDOR"
+],
+"pt": "MECANISMOS DE INOCULAÇÃO VASCULAR ASSOCIADOS AO PREENCHEDOR"
+},
+{
+"id": "p27_06",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 8."
+],
+"pt": "Figura 8. Esquema ilustrativo dos dois principais mecanismos envolvidos na oclusão vascular induzida por ácido hialurônico: (A) injeção intraluminal direta, na qual o material é depositado dentro do vaso, atuando como êmbolo e interrompendo o fluxo sanguíneo; e (B) inoculação extraluminal indireta após perfuração transarterial, permitindo a migração do preenchedor para o interior do vaso. Esses processos levam à redução ou bloqueio completo da perfusão tecidual, podendo evoluir rapidamente para isquemia e necrose se não houver intervenção imediata."
+},
+{
+"id": "p27_07",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Adaptado de Soares et al., Bridging a Century-Old Problem: The Pathophysiology and Molecular Mechanisms of HA Filler-Induced Vascular Occlusion (FIVO), Molecules, 2022."
+},
+{
+"id": "p27_08",
+"tipo": "titulo_secao",
+"negrito": [
+"ANATOMIA ARTERIAL DA REGIÃO PERIORAL E MENTONIANA"
+],
+"pt": "ANATOMIA ARTERIAL DA REGIÃO PERIORAL E MENTONIANA"
+},
+{
+"id": "p27_09",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 9."
+],
+"pt": "Figura 9. Representação esquemática das principais artérias da porção inferior da face, incluindo os ramos labiais superior e inferior, artéria facial, mentual e suas variações anatômicas. A figura evidencia a complexidade da rede vascular perioral e a proximidade desses vasos com planos frequentemente abordados em procedimentos injetáveis, reforçando a necessidade de conhecimento anatômico preciso para reduzir o risco de eventos isquêmicos."
+},
+{
+"id": "p27_10",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Imagem adaptada de publicação científica (Tansatit et al.), conforme artigo referenciado."
+},
+{
+"id": "p27_11",
+"tipo": "outro",
+"negrito": [
+"27"
+],
+"pt": "27"
+},
+{
+"id": "p28_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p28_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p28_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A compreensão detalhada da anatomia arterial da face é fundamental para a prevenção de eventos adversos relacionados aos preenchedores. Entretanto, quando ocorre a injeção intravascular ou a embolização do material, o fenômeno deixa de ser apenas anatômico e passa a ser microscópico e fisiopatológico. A seguir, observam-se os achados histológicos que evidenciam como o preenchedor pode ocupar o lúmen vascular e comprometer a microcirculação, culminando no processo isquêmico tecidual."
+},
+{
+"id": "p28_03",
+"tipo": "titulo_secao",
+"negrito": [
+"ACHADOS HISTOLÓGICOS NA OCLUSÃO",
+"VASCULAR INDUZIDA POR PREENCHEDOR"
+],
+"pt": "ACHADOS HISTOLÓGICOS NA OCLUSÃO VASCULAR INDUZIDA POR PREENCHEDOR"
+},
+{
+"id": "p28_04",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 10."
+],
+"pt": "Figura 10. Esquema ilustrativo dos"
+},
+{
+"id": "p28_05",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p28_06",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "dois principais mecanismos envolvidos na oclusão vascular induzida por ácido hialuHistologia de oclusão vascular induzida por preenchedor: (A) preenchedor dérmico de ácido hialurônico (AH) evidente como um tampão intraluminal na artéria auricular central em modelo de orelha de coelho, no primeiro dia após a injeção, com coloração por hematoxilina e eosina; (B) secção histológica da conjuntiva bulbar de paciente com perda visual induzida por preenchedor, demonstrando oclusão da microcirculação distal (capilares e arteríolas) por partículas de preenchedor (círculos vermelhos)."
+},
+{
+"id": "p28_07",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p28_08",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Imagens reproduzidas de estudo científico previamente publicado, conforme artigo referenciado."
+},
+{
+"id": "p28_09",
+"tipo": "outro",
+"negrito": [
+"28"
+],
+"pt": "28"
+},
+{
+"id": "p29_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p29_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p29_02",
+"tipo": "titulo_secao",
+"negrito": [
+"NA PRÁTICA"
+],
+"pt": "NA PRÁTICA"
+},
+{
+"id": "p29_03",
+"tipo": "cabecalho",
+"negrito": [
+"VÍDEO: REVISÃO ANATÔMICA GLOBAL DA FACE – VASCULARIZAÇÃO"
+],
+"pt": "VÍDEO: REVISÃO ANATÔMICA GLOBAL DA FACE – VASCULARIZAÇÃO"
+},
+{
+"id": "p29_04",
+"tipo": "cabecalho",
+"negrito": [
+"“Revisão anatômica global da face –"
+],
+"pt": "Na aula “Revisão anatômica global da face –"
+},
+{
+"id": "p29_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "o trajeto vascular é essencial para reduzir ris-"
+},
+{
+"id": "p29_06",
+"tipo": "cabecalho",
+"negrito": [
+"vascularização”"
+],
+"pt": "vascularização”, é apresentada a dissecação"
+},
+{
+"id": "p29_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "cos, planejar pontos de aplicação com segurança e prevenir intercorrências isquêmicas."
+},
+{
+"id": "p29_08",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "das principais estruturas arteriais da face, com identificação dos planos anatômicos e das va-"
+},
+{
+"id": "p29_09",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Escaneie o QR Code e aprofunde sua visão"
+},
+{
+"id": "p29_10",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "riações vasculares mais relevantes para a prá-"
+},
+{
+"id": "p29_11",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "anatômica diretamente com o autor."
+},
+{
+"id": "p29_12",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "tica clínica. Compreender tridimensionalmente"
+},
+{
+"id": "p29_13",
+"tipo": "titulo_secao",
+"negrito": [
+"SINAIS CLÍNICOS"
+],
+"pt": "SINAIS CLÍNICOS"
+},
+{
+"id": "p29_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A identificação precoce é crucial, pois as artérias mais comumente envolvidas apresentam sinais clínicos específicos. Na oclusão da artéria labial inferior, observa-se uma coloração isquêmica, arroxeada ou pálida, com parestesia e dor. Na oclusão da artéria labial superior, há isquemia na porção superior do lábio e possível envolvimento da região columelar e nasal. A oclusão da artéria angular pode progredir para isquemia na região nasal e ocular, podendo levar à amaurose se atingir a artéria retiniana."
+},
+{
+"id": "p29_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Além disso, a oclusão das artérias supratroclear e supraorbitária pode resultar em isquemia na região da glabela, couro cabeludo e fronte, levando a palidez, livedo reticular e necrose tecidual. A oclusão da artéria temporal superficial também pode"
+},
+{
+"id": "p29_16",
+"tipo": "outro",
+"negrito": [
+"29"
+],
+"pt": "29"
+},
+{
+"id": "p30_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p30_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p30_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "contribuir para isquemia do couro cabeludo e da região temporal, causando dor intensa e possível necrose."
+},
+{
+"id": "p30_03",
+"tipo": "titulo_secao",
+"negrito": [
+"1.1.2  DIAGNÓSTICO DIFERENCIAL"
+],
+"pt": "1.1.2 DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p30_04",
+"tipo": "corpo",
+"negrito": [
+"Hematoma:"
+],
+"pt": "Hematoma: coloração violácea que evolui para esverdeada/amarelada, sem palidez persistente."
+},
+{
+"id": "p30_05",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p30_06",
+"tipo": "cabecalho",
+"negrito": [
+"MECANISMOS MOLECULARES DA OCLUSÃO",
+"VASCULAR INDUZIDA POR ÁCIDO HIALURÔNICO"
+],
+"pt": "MECANISMOS MOLECULARES DA OCLUSÃO VASCULAR INDUZIDA POR ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p30_07",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para um artigo científico que aprofunda os mecanismos fisiopatológicos e moleculares envolvidos na oclusão vascular induzida por preenchedores de ácido hialurônico."
+},
+{
+"id": "p30_08",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O artigo “Bridging a Century-Old Problem: The Pathophysiology and Molecular Mechanisms of HA Filler-Induced Vascular Occlusion (FIVO) — Implications for Therapeutic Interventions” revisa os processos que vão além da obstrução mecânica inicial, incluindo disfunção endotelial, ativação plaquetária, formação de trombo secundário e comprometimento progressivo da microcirculação. O estudo também discute as implicações terapêuticas desses mecanismos, fornecendo base científica para intervenções precoces e estratégias de prevenção."
+},
+{
+"id": "p30_09",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Escaneie o QR Code para acessar o artigo completo."
+},
+{
+"id": "p30_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Os mecanismos descritos no artigo ajudam a compreender que a oclusão vascular não é apenas um evento mecânico isolado, mas um processo dinâmico que pode evoluir rapidamente para sofrimento tecidual. Clinicamente, essa progressão pode manifestar-se de maneira precoce e, em determinadas situações, estar associada a fatores adicionais, como o uso de anestésicos com vasoconstritores. A seguir, apresenta-se um caso clínico ilustrativo de isquemia em ponta nasal após procedimento estético."
+},
+{
+"id": "p30_11",
+"tipo": "outro",
+"negrito": [
+"30"
+],
+"pt": "30"
+},
+{
+"id": "p31_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p31_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p31_02",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 11 – ISQUEMIA EM PONTA NASAL ASSOCIADA",
+"AO USO DE ANESTÉSICO COM VASOCONSTRITOR"
+],
+"pt": "FIGURA 11 – ISQUEMIA EM PONTA NASAL ASSOCIADA AO USO DE ANESTÉSICO COM VASOCONSTRITOR"
+},
+{
+"id": "p31_03",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 11."
+],
+"pt": "Figura 11. Imagens clínicas demonstrando alteração de coloração e sinais de hipoperfusão na região da ponta nasal após anestesia local contendo epinefrina, realizada previamente à rinomodelação. O quadro evidencia palidez e comprometimento vascular focal, compatíveis com redução transitória ou sustentada do fluxo sanguíneo local. A associação entre vasoconstrição farmacológica e anatomia vascular terminal da região nasal pode potencializar o risco de isquemia em áreas de suprimento arterial limitado."
+},
+{
+"id": "p31_04",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Acervo clínico autorizado para publicação no livro."
+},
+{
+"id": "p31_05",
+"tipo": "titulo_secao",
+"negrito": [
+"INFLAMAÇÃO LOCAL: CALOR, RUBOR E EDEMA, SEM PALIDEZ."
+],
+"pt": "INFLAMAÇÃO LOCAL: CALOR, RUBOR E EDEMA, SEM PALIDEZ."
+},
+{
+"id": "p31_06",
+"tipo": "corpo",
+"negrito": [
+"Infecção:",
+"Reação alérgica:",
+"Necrose cutânea:"
+],
+"pt": "Infecção: dor progressiva, calor local, secreção, hiperemia e aumento volumétrico da região. Reação alérgica: urticária, prurido e edema difuso. Necrose cutânea: evolução tardia da isquemia, com escurecimento progressivo da pele."
+},
+{
+"id": "p31_07",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTA IMEDIATA"
+],
+"pt": "CONDUTA IMEDIATA"
+},
+{
+"id": "p31_08",
+"tipo": "corpo",
+"negrito": [
+"1.",
+"Interromper a aplicação imediatamente.",
+"2.",
+"Massagem vigorosa",
+"3.",
+"Compressas mornas",
+"4.",
+"Hialuronidase:",
+"1000 UTR/mL na região afetada"
+],
+"pt": "1. Interromper a aplicação imediatamente. 2. Massagem vigorosa da área comprometida. 3. Compressas mornas para vasodilatação. 4. Hialuronidase: injetar 1000 UTR/mL na região afetada,"
+},
+{
+"id": "p31_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "repetir a cada 15–30 min conforme necessário."
+},
+{
+"id": "p31_10",
+"tipo": "outro",
+"negrito": [
+"31"
+],
+"pt": "31"
+},
+{
+"id": "p32_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p32_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p32_02",
+"tipo": "titulo_secao",
+"negrito": [
+"NA PRÁTICA"
+],
+"pt": "NA PRÁTICA"
+},
+{
+"id": "p32_03",
+"tipo": "cabecalho",
+"negrito": [
+"VÍDEO: HIALURONIDASE"
+],
+"pt": "VÍDEO: HIALURONIDASE"
+},
+{
+"id": "p32_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Este QR Code direciona para uma aula prática ministrada pelo Dr. João Pithon sobre o uso clínico da hialuronidase no manejo das complicações associadas aos preenchedores de ácido hialurônico. Na aula, são discutidos os princípios de indicação, preparo, diluição e aplicação da hialuronidase, com ênfase na conduta em casos de oclusão vascular e risco de isquemia. O conteúdo aborda ainda estratégias de dosagem, repetição da aplicação e integração com outras medidas terapêuticas. A compreensão adequada da hialuronidase é essencial para intervenção precoce e redução do dano tecidual em eventos isquêmicos. Escaneie o QR Code para acessar a aula completa."
+},
+{
+"id": "p32_05",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A aplicação clínica da hialuronidase exige não apenas domínio técnico, mas também embasamento científico sólido. Compreender seus mecanismos de ação, indicações formais, limites terapêuticos e evidências disponíveis na literatura permite estruturar protocolos mais seguros e eficazes. Para aprofundar essa fundamentação teórica e consolidar a conduta baseada em evidências, recomenda-se a leitura do artigo científico apresentado a seguir."
+},
+{
+"id": "p32_06",
+"tipo": "outro",
+"negrito": [
+"32"
+],
+"pt": "32"
+},
+{
+"id": "p33_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p33_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p33_02",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p33_03",
+"tipo": "cabecalho",
+"negrito": [
+"O PAPEL DA HIALURONIDASE NO TRATAMENTO",
+"DE COMPLICAÇÕES POR PREENCHEDORES",
+"DE ÁCIDO HIALURÔNICO"
+],
+"pt": "O PAPEL DA HIALURONIDASE NO TRATAMENTO DE COMPLICAÇÕES POR PREENCHEDORES DE ÁCIDO HIALURÔNICO O artigo The Role of Hyaluronidase in the Treatment of Complications From Hyaluronic Acid Dermal Fillers revisa de forma aprofundada a utilização da hialuronidase como principal agente terapêutico nas intercorrências relacionadas aos preenchedores de AH."
+},
+{
+"id": "p33_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Os autores discutem mecanismo de ação, indicações, doses recomendadas, vias de aplicação e evidências clínicas disponíveis, reforçando que a intervenção precoce com hialuronidase é determinante para reduzir necrose cutânea e minimizar sequelas funcionais. Além disso, o artigo aborda aspectos práticos importantes, como a variabilidade entre formulações comerciais, possíveis reações adversas e a necessidade de protocolos bem estabelecidos para manejo de oclusões vasculares."
+},
+{
+"id": "p33_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Trata-se de leitura essencial para o profissional que realiza preenchimentos com AH e deseja estruturar um protocolo seguro e baseado em evidências para manejo de complicações."
+},
+{
+"id": "p33_06",
+"tipo": "titulo_secao",
+"negrito": [
+"TERAPIA ADJUVANTE:"
+],
+"pt": "TERAPIA ADJUVANTE:"
+},
+{
+"id": "p33_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p33_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "AAS 300 mg/dia. •"
+},
+{
+"id": "p33_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Sildenafil 50 mg (vasodilatação). •"
+},
+{
+"id": "p33_10",
+"tipo": "corpo",
+"negrito": [
+"prednisona 40 mg",
+"vo",
+"diprospan IM"
+],
+"pt": "Corticoides sistêmicos (preferência por prednisona 40 mg vo; em casos graves, diprospan IM)."
+},
+{
+"id": "p33_11",
+"tipo": "titulo_secao",
+"negrito": [
+"CONDUTAS AVANÇADAS:"
+],
+"pt": "CONDUTAS AVANÇADAS:"
+},
+{
+"id": "p33_12",
+"tipo": "corpo",
+"negrito": [
+"Ultrassom com Doppler:",
+"•"
+],
+"pt": "Ultrassom com Doppler: para localizar obstruções e guiar •"
+},
+{
+"id": "p33_13",
+"tipo": "corpo",
+"negrito": [
+"Oxigenoterapia hiperbárica:",
+"•"
+],
+"pt": "aplicação da hialuronidase. Oxigenoterapia hiperbárica: 5-10 sessões em dias seguidos, •"
+},
+{
+"id": "p33_14",
+"tipo": "corpo",
+"negrito": [
+"•"
+],
+"pt": "melhora a oxigenação tecidual e cicatrização. •"
+},
+{
+"id": "p33_15",
+"tipo": "corpo",
+"negrito": [
+"Antibióticos profiláticos (após 6h):"
+],
+"pt": "Antibióticos profiláticos (após 6h):"
+},
+{
+"id": "p33_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p33_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Amoxicilina + clavulanato 875/125 mg 12/12h."
+},
+{
+"id": "p33_18",
+"tipo": "outro",
+"negrito": [
+"33"
+],
+"pt": "33"
+},
+{
+"id": "p34_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p34_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p34_02",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p34_03",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Associar metronidazol 400mg 8/8h, para cobertura anaeróbica. •"
+},
+{
+"id": "p34_04",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Em casos graves: ceftriaxona 1–2 g/dia, piperacilina/tazobactam 3,375 g 6/6h ou carbapenêmicos (meropenem 1 g 8/8h)."
+},
+{
+"id": "p34_05",
+"tipo": "titulo_secao",
+"negrito": [
+"FIGURA 12 – OCLUSÃO DA ARTÉRIA LABIAL SUPERIOR E ARTÉRIA",
+"COLUMELAR COM EVOLUÇÃO PARA NECROSE"
+],
+"pt": "FIGURA 12 – OCLUSÃO DA ARTÉRIA LABIAL SUPERIOR E ARTÉRIA COLUMELAR COM EVOLUÇÃO PARA NECROSE"
+},
+{
+"id": "p34_06",
+"tipo": "cabecalho",
+"negrito": [
+"Figura 12."
+],
+"pt": "Figura 12. Paciente com quadro de oclusão vascular"
+},
+{
+"id": "p34_07",
+"tipo": "outro",
+"negrito": [],
+"pt": "B"
+},
+{
+"id": "p34_08",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "envolvendo a artéria labial superior e a artéria columelar, apresentando sinais clínicos compatíveis com hipoperfusão tecidual e progressão para necrose na região nasal e perioral. Observam-se alterações cutâneas sugestivas de comprometimento arterial, com áreas de palidez inicial evoluindo para eritema e sofrimento tecidual. Caso autorizado para publicação, com preservação da identidade da paciente."
+},
+{
+"id": "p34_09",
+"tipo": "cabecalho",
+"negrito": [
+"Fonte:"
+],
+"pt": "Fonte: Acervo clínico dos autores. Caso autorizado para uso acadêmico e científico."
+},
+{
+"id": "p34_10",
+"tipo": "outro",
+"negrito": [],
+"pt": "A"
+},
+{
+"id": "p34_11",
+"tipo": "outro",
+"negrito": [],
+"pt": "C"
+},
+{
+"id": "p34_12",
+"tipo": "titulo_secao",
+"negrito": [
+"COMPLICAÇÕES ASSOCIADAS"
+],
+"pt": "COMPLICAÇÕES ASSOCIADAS"
+},
+{
+"id": "p34_13",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p34_14",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Necrose cutânea. •"
+},
+{
+"id": "p34_15",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Infecção bacteriana secundária. •"
+},
+{
+"id": "p34_16",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Cicatrização inadequada. •"
+},
+{
+"id": "p34_17",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Hiperpigmentação pós-inflamatória. •"
+},
+{
+"id": "p34_18",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Amaurose permanente."
+},
+{
+"id": "p34_19",
+"tipo": "outro",
+"negrito": [
+"34"
+],
+"pt": "34"
+},
+{
+"id": "p35_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p35_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p35_02",
+"tipo": "titulo_secao",
+"negrito": [
+"NA PRÁTICA"
+],
+"pt": "NA PRÁTICA"
+},
+{
+"id": "p35_03",
+"tipo": "cabecalho",
+"negrito": [
+"VÍDEO: RINOMODELAÇÃO – PROTOCOLO E MANEJO DE COMPLICAÇÕES"
+],
+"pt": "VÍDEO: RINOMODELAÇÃO – PROTOCOLO E MANEJO DE COMPLICAÇÕES"
+},
+{
+"id": "p35_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "A rinomodelação é um dos procedimentos com maior risco vascular da face, especialmente pela proximidade com a artéria dorsal nasal, angular e columelar. Nesta aula, você revisará os pontos críticos de segurança, incluindo análise anatômica prévia, definição de planos seguros de aplicação e escolha adequada do produto. São abordados ainda os protocolos imediatos diante de sinais precoces de complicação, com foco na identificação rápida da isquemia, uso adequado da hialuronidase, medidas adjuvantes e organização do atendimento emergencial. Acesse a aula completa pelo QR Code."
+},
+{
+"id": "p35_05",
+"tipo": "outro",
+"negrito": [
+"35"
+],
+"pt": "35"
+},
+{
+"id": "p36_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p36_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p36_02",
+"tipo": "titulo_secao",
+"negrito": [
+"SAIBA MAIS"
+],
+"pt": "SAIBA MAIS"
+},
+{
+"id": "p36_03",
+"tipo": "cabecalho",
+"negrito": [
+"MANEJO DAS COMPLICAÇÕES VASCULARES NA",
+"RINOMODELAÇÃO COM ÁCIDO HIALURÔNICO"
+],
+"pt": "MANEJO DAS COMPLICAÇÕES VASCULARES NA RINOMODELAÇÃO COM ÁCIDO HIALURÔNICO O artigo Consensus Guidelines for the Management of Hyaluronic Acid Filler–Induced Vascular Occlusion estabelece diretrizes fundamentais para o reconhecimento e tratamento das complicações vasculares associadas aos preenchedores de ácido hialurônico, sendo amplamente aplicado em áreas de alto risco, como a rinomodelação."
+},
+{
+"id": "p36_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O autor descreve de forma detalhada a fisiopatologia da oclusão vascular, enfatizando o risco de eventos graves decorrentes da injeção intravascular ou compressão arterial, incluindo necrose cutânea e comprometimento ocular. O guideline destaca a importância do diagnóstico precoce, baseado em sinais clínicos como dor intensa, palidez e livedo, fundamentais para a intervenção imediata. Além disso, o artigo define a hialuronidase como principal agente terapêutico, recomendando seu uso em doses elevadas e repetidas, com abordagem ampla da área isquêmica, e não restrita ao ponto de injeção. São também abordadas medidas complementares, como massagem local, calor, uso de antiagregantes plaquetários e monitoramento rigoroso da evolução clínica."
+},
+{
+"id": "p36_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Trata-se de uma referência essencial para o manejo de intercorrências na rinomodelação, uma vez que fornece um protocolo estruturado e amplamente aceito para tratamento de complicações vasculares, contribuindo para redução de necrose tecidual e melhora do prognóstico dos pacientes."
+},
+{
+"id": "p36_06",
+"tipo": "titulo_secao",
+"negrito": [
+"PREVENÇÃO"
+],
+"pt": "PREVENÇÃO"
+},
+{
+"id": "p36_07",
+"tipo": "corpo",
+"negrito": [],
+"pt": "•"
+},
+{
+"id": "p36_08",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Conhecimento anatômico detalhado. •"
+},
+{
+"id": "p36_09",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Uso de cânulas rombas em áreas críticas. •"
+},
+{
+"id": "p36_10",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Aspiração lenta antes de injetar com agulha. •"
+},
+{
+"id": "p36_11",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Injeções com baixo volume e pressão controlada. •"
+},
+{
+"id": "p36_12",
+"tipo": "corpo",
+"negrito": [],
+"pt": "Evitar áreas de risco em retroinjeções em bolus."
+},
+{
+"id": "p36_13",
+"tipo": "outro",
+"negrito": [
+"36"
+],
+"pt": "36"
+},
+{
+"id": "p37_00",
+"tipo": "legenda",
+"negrito": [],
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO"
+},
+{
+"id": "p37_01",
+"tipo": "outro",
+"negrito": [
+"JOÃO P I T HO N"
+],
+"pt": "JOÃO P I T HO N"
+},
+{
+"id": "p37_02",
+"tipo": "titulo_secao",
+"negrito": [
+"NA PRÁTICA"
+],
+"pt": "NA PRÁTICA"
+},
+{
+"id": "p37_03",
+"tipo": "cabecalho",
+"negrito": [
+"VÍDEO: MECANISMOS DE SEGURANÇA COM CÂNULAS"
+],
+"pt": "VÍDEO: MECANISMOS DE SEGURANÇA COM CÂNULAS"
+},
+{
+"id": "p37_04",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "Nesta aula, são abordados os princípios técnicos que fundamentam o uso seguro das cânulas em procedimentos com preenchedores, incluindo escolha do calibre, plano anatômico adequado e compreensão do trajeto vascular nas principais áreas de risco."
+},
+{
+"id": "p37_05",
+"tipo": "cabecalho",
+"negrito": [],
+"pt": "O conteúdo destaca as diferenças entre agulha e cânula sob a perspectiva de segurança, os limites do conceito de “técnica segura” e as estratégias para reduzir o risco de perfuração arterial e embolização inadvertida. Acesse a aula completa pelo QR Code."
+},
+{
+"id": "p37_06",
+"tipo": "corpo",
+"negrito": [],
+"pt": "A compreensão dos mecanismos de segurança com cânulas deve sempre ser acompanhada da análise crítica da técnica em campo. A seguir, observa-se exemplo prático de aplicação em região nasal, destacando posicionamento do instrumento, plano de inserção e área anatômica de risco, reforçando a importância da execução precisa e do conhecimento vascular detalhado."
+},
+{
+"id": "p37_07",
+"tipo": "outro",
+"negrito": [
+"37"
+],
+"pt": "37"
+}
+]
