@@ -53,6 +53,12 @@ def aplicar(arte, H):
     area = cv2.contourArea(cant)
     if area < 60 * 80 or not cv2.isContourConvex(cant.astype(np.int32)):
         return arte, 0
+    # só aceita quadrilátero com proporção de capa (alt/larg ~1,44); logo ou título soltos não passam
+    c4 = cant.reshape(-1, 2)
+    larg = (np.linalg.norm(c4[1] - c4[0]) + np.linalg.norm(c4[2] - c4[3])) / 2
+    alt = (np.linalg.norm(c4[3] - c4[0]) + np.linalg.norm(c4[2] - c4[1])) / 2
+    if not (1.1 < alt / max(larg, 1) < 1.8):
+        return arte, 0
     # reduzir a capa antes do warp evita serrilhado (amostragem em escala parecida)
     lado = np.sqrt(area / (BR.shape[0] * BR.shape[1]))
     k = max(lado, 0.05)

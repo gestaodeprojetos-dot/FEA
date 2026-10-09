@@ -79,6 +79,21 @@ def aplicar(orig, arte, Q):
     mask = np.zeros((h * 4, w * 4), np.uint8)
     cv2.fillConvexPoly(mask, np.int32(np.round(Q * 4)), 255)
     mask = cv2.resize(mask, (w, h), interpolation=cv2.INTER_AREA).astype(np.float32) / 255
+    # oclusão: caixa cinza chapada (preço) que passa na frente do livro. Só conta o que é
+    # cinza-escuro liso e também existe fora da face; a etiqueta escura da capa fica toda dentro.
+    gg = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    dv = np.sqrt(np.clip(cv2.blur(gg * gg, (5, 5)) - cv2.blur(gg, (5, 5)) ** 2, 0, None))
+    sat = cv2.cvtColor(orig, cv2.COLOR_BGR2HSV)[..., 1]
+    liso = ((gg > 20) & (gg < 70) & (dv < 2.5) & (sat < 25)).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(liso, 4)
+    dentro = mask > 0.5
+    frente = np.zeros_like(dentro)
+    for i in range(1, n):
+        comp = lab == i
+        fora = (comp & ~dentro).sum()
+        if st[i][4] > 400 and fora > 200 and (comp & dentro).sum() > 0:
+            frente |= comp
+    mask[frente] = 0
     # luz do papel original (só pixels brancos), suavizada
     g = cv2.cvtColor(orig, cv2.COLOR_BGR2GRAY).astype(np.float32)
     hsv = cv2.cvtColor(orig, cv2.COLOR_BGR2HSV)
@@ -106,7 +121,7 @@ def aplicar(orig, arte, Q):
     lomb = (cv2.dilate(lomb, np.ones((3, 3))) > 0) & ~faixa & (xx > xa - 2) & (xx < xa + 70)
     # borda de baixo do livro (espessura das folhas sob a face): mesmo tratamento
     yb = Q[3][1] + (xx - Q[3][0]) * (Q[2][1] - Q[3][1]) / (Q[2][0] - Q[3][0])
-    base = (yy > yb - 2) & (yy < yb + 10) & (xx > Q[3][0] - 2) & (xx < xa + 70) & (neutro & (g > 150) | ouro) & ~faixa
+    base = (yy > yb - 2) & (yy < yb + 10) & (xx > Q[3][0] - 3) & (xx < xa + 70) & ((g > 60) | ouro) & ~faixa & ~frente
     lomb = lomb | base
     if lomb.any():
         verde = np.median(ES[:, 40:90].reshape(-1, 3), 0).astype(np.float32)
