@@ -122,7 +122,8 @@
      "Curso presencial",
      "Curso presencial"
     ]
-   ]
+   ],
+   "destaques_dub": []
   },
   {
    "id": "d2",
@@ -308,6 +309,24 @@
      79.64,
      82.0,
      "Muito seguro",
+     "Muy seguros"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "un antes y un después",
+     "Antes y después"
+    ],
+    [
+     "la calidad de los videos",
+     "Calidad de los videos"
+    ],
+    [
+     "volver a ver las clases",
+     "Volver a ver las clases"
+    ],
+    [
+     "muy seguros",
      "Muy seguros"
     ]
    ]
@@ -496,6 +515,28 @@
      "Muito segura",
      "Muy segura"
     ]
+   ],
+   "destaques_dub": [
+    [
+     "técnico científica",
+     "Técnico-científica"
+    ],
+    [
+     "un curso completo",
+     "Curso completo"
+    ],
+    [
+     "disección",
+     "Disección"
+    ],
+    [
+     "no tuve dudas",
+     "Sin dudas"
+    ],
+    [
+     "muy segura",
+     "Muy segura"
+    ]
    ]
   },
   {
@@ -618,6 +659,20 @@
      "Vale muito a pena",
      "Vale la pena"
     ]
+   ],
+   "destaques_dub": [
+    [
+     "resolver muchas dudas",
+     "Resolver dudas"
+    ],
+    [
+     "siempre está ahí",
+     "Siempre ahí"
+    ],
+    [
+     "vale mucho la pena",
+     "Vale la pena"
+    ]
    ]
   },
   {
@@ -729,6 +784,16 @@
      33.18,
      "Refinar a sua técnica",
      "Refinar tu técnica"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "despejar sus dudas",
+     "Despejar sus dudas"
+    ],
+    [
+     "refinen su técnica",
+     "Refinar su técnica"
     ]
    ]
   },
@@ -864,6 +929,20 @@
      45.2,
      46.42,
      "Vale muito a pena",
+     "Vale la pena"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "mi técnica",
+     "Mi técnica"
+    ],
+    [
+     "elegir el horario",
+     "Elegir el horario"
+    ],
+    [
+     "vale mucho la pena",
      "Vale la pena"
     ]
    ]

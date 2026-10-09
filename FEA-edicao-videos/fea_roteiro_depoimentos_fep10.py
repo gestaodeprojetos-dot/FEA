@@ -38,7 +38,7 @@ V = [
              [12.90, 17.50, "Rinomodelação", "Rinomodelación"],
              [31.90, 35.12, "Curso presencial", "Curso presencial"],
          ]),
-    dict(id="d2", n=27, crop=dict(cx=1950, h=1440),
+    dict(id="d2", destaques_dub=[["un antes y un después", "Antes y después"], ["la calidad de los videos", "Calidad de los videos"], ["volver a ver las clases", "Volver a ver las clases"], ["muy seguros", "Muy seguros"]], n=27, crop=dict(cx=1950, h=1440),
          trechos=[[0.0, 8.45], [9.62, 12.40], [14.26, 18.98], [36.86, 55.70],
                   [60.26, 62.95], [66.64, 71.55], [72.00, 73.90], [74.82, 82.05]],
          legendas=[
@@ -73,7 +73,7 @@ V = [
              [53.26, 55.60, "Revisitar as aulas", "Volver a ver las clases"],
              [79.64, 82.00, "Muito seguro", "Muy seguros"],
          ]),
-    dict(id="d3", n=28, crop=dict(cx=2050, h=1600),
+    dict(id="d3", destaques_dub=[["técnico científica", "Técnico-científica"], ["un curso completo", "Curso completo"], ["disección", "Disección"], ["no tuve dudas", "Sin dudas"], ["muy segura", "Muy segura"]], n=28, crop=dict(cx=2050, h=1600),
          trechos=[[0.0, 2.85], [14.10, 17.98], [18.16, 27.08], [27.08, 35.80], [71.02, 75.86],
                   [112.10, 118.12], [125.40, 130.34], [131.62, 136.70], [144.32, 147.70]],
          legendas=[
@@ -108,7 +108,7 @@ V = [
              [126.02, 127.72, "Sem dúvidas", "Sin dudas"],
              [145.90, 147.56, "Muito segura", "Muy segura"],
          ]),
-    dict(id="d4", n=29, crop=dict(cx=2010, h=1440),
+    dict(id="d4", destaques_dub=[["resolver muchas dudas", "Resolver dudas"], ["siempre está ahí", "Siempre ahí"], ["vale mucho la pena", "Vale la pena"]], n=29, crop=dict(cx=2010, h=1440),
          trechos=[[0.0, 9.10], [10.14, 37.40]],
          legendas=[
              [0.00, 1.86, "Oi, eu sou a Dra. Mariana,", "Hola, soy la doctora Mariana,"],
@@ -135,7 +135,7 @@ V = [
              [22.86, 25.70, "Sempre lá", "Siempre ahí"],
              [36.20, 37.26, "Vale muito a pena", "Vale la pena"],
          ]),
-    dict(id="d5", n=30, crop=dict(cx=1985, h=1540),
+    dict(id="d5", destaques_dub=[["despejar sus dudas", "Despejar sus dudas"], ["refinen su técnica", "Refinar su técnica"]], n=30, crop=dict(cx=1985, h=1540),
          trechos=[[0.0, 33.40]],
          legendas=[
              [0.00, 1.86, "Olá, eu sou a Dra. Gabriela,", "Hola, soy la doctora Gabriela,"],
@@ -160,7 +160,7 @@ V = [
              [10.90, 13.42, "Tirar suas dúvidas", "Resolver tus dudas"],
              [31.98, 33.18, "Refinar a sua técnica", "Refinar tu técnica"],
          ]),
-    dict(id="d6", n=31, crop=dict(cx=2050, h=1420),
+    dict(id="d6", destaques_dub=[["mi técnica", "Mi técnica"], ["elegir el horario", "Elegir el horario"], ["vale mucho la pena", "Vale la pena"]], n=31, crop=dict(cx=2050, h=1420),
          trechos=[[0.0, 7.45], [8.72, 19.30], [19.40, 25.10], [34.40, 46.60]],
          legendas=[
              [0.00, 1.52, "Olá, meu nome é Mariana,", "Hola, mi nombre es Mariana,"],
@@ -242,7 +242,8 @@ for v in V:
         "id": v["id"], "entrada": f"{T}/brutos/{BRUTO[v['id']]}",
         "nome": {"pt": f"Ads {v['n']} FEP.mp4", "es": f"Ads {v['n']} FEP ES.mp4"},
         "crop": v["crop"], "trechos": encaixar(v["id"], v["trechos"]),
-        "legendas": esticar(v["legendas"]), "destaques": v["destaques"]})
+        "legendas": esticar(v["legendas"]), "destaques": v["destaques"],
+        "destaques_dub": v.get("destaques_dub", [])})
 dest = os.path.join(os.path.dirname(os.path.abspath(__file__)), "FEA-projeto-depoimentos-fep10.json")
 json.dump(proj, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(dest)

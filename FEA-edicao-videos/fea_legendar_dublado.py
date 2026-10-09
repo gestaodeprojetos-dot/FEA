@@ -25,7 +25,10 @@ CORRECOES = [
     (r"\b(FEB|Fep|fep|feb|FEV|Fev)\b", "FEP"),
     (r"\bFEP online\b", "FEP Online"),
     (r"\b(Piton|Pitón|Pitton)\b", "Pithon"),
-    (r"\bJuan Pithon\b", "João Pithon"),
+    (r"\bJuan\b", "João"),
+    (r"\bFEPE\b", "FEP"),
+    (r"\b(Shania|Yania|Jania|Yânia)\b", "Jânia"),
+    (r" -(\w)", r"-\1"),
 ]
 
 
@@ -53,25 +56,38 @@ def transcrever(mp4, modelos, tmp):
     return [{"s": x.start, "e": x.end, "w": x.word.strip()} for s in segs for x in s.words]
 
 
-def blocos(pal):
-    out, cur = [], []
+def blocos(pal, maxc=42):
+    """Oração por oração (pontuação ou pausa); oração longa vira pedaços equilibrados."""
+    oracoes, cur = [], []
     for i, p in enumerate(pal):
         cur.append(p)
-        txt = " ".join(x["w"] for x in cur)
         prox = pal[i + 1] if i + 1 < len(pal) else None
-        fim_frase = p["w"][-1] in ".?!"
+        tit = re.fullmatch(r"(Dr|Dra|Sr|Sra)\.", p["w"])
+        pont = p["w"][-1] in ".?!,;:" and not tit
         pausa = prox is not None and prox["s"] - p["e"] > 0.45
-        virgula = p["w"][-1] in ",;:" and len(txt) >= 18
-        longo = prox is not None and len(txt) + 1 + len(prox["w"]) > 46
-        if prox is None or fim_frase or pausa or virgula or longo:
-            out.append([cur[0]["s"], p["e"], corrigir(txt)])
+        if prox is None or pont or pausa:
+            oracoes.append(cur)
             cur = []
-    for i, b in enumerate(out):
-        if i + 1 < len(out) and out[i + 1][0] - b[1] < 0.7:
-            b[1] = out[i + 1][0]
+    out = []
+    for o in oracoes:
+        txt = " ".join(x["w"] for x in o)
+        n = -(-len(txt) // maxc)
+        alvo = len(txt) / n
+        parte, acc = [], 0
+        for x in o:
+            if parte and acc + len(x["w"]) / 2 > alvo:
+                out.append(parte)
+                parte, acc = [], 0
+            parte.append(x)
+            acc += len(x["w"]) + 1
+        out.append(parte)
+    res = [[b[0]["s"], b[-1]["e"], corrigir(" ".join(x["w"] for x in b))] for b in out if b]
+    for i, b in enumerate(res):
+        if i + 1 < len(res) and res[i + 1][0] - b[1] < 0.7:
+            b[1] = res[i + 1][0]
         else:
             b[1] += 0.25
-    return out
+    return res
 
 
 def achar(pal, frase):
@@ -89,8 +105,12 @@ def main():
     proj = json.load(open(proj_p, encoding="utf-8"))
     v = next(x for x in proj["videos"] if x["id"] == vid)
     tmp = os.path.join(os.path.dirname(saida), f"{vid}_dub")
-    pal = transcrever(dub, modelos, tmp)
-    json.dump(pal, open(tmp + ".json", "w"), ensure_ascii=False)
+    cache = tmp + ".json"
+    if os.path.exists(cache) and os.path.getmtime(cache) > os.path.getmtime(dub):
+        pal = json.load(open(cache))
+    else:
+        pal = transcrever(dub, modelos, tmp)
+        json.dump(pal, open(cache, "w"), ensure_ascii=False)
     legs = blocos(pal)
     cab = [
         "[Script Info]", "ScriptType: v4.00+", f"PlayResX: {W}", "PlayResY: 1920",
@@ -106,12 +126,13 @@ def main():
     for a, b, t in legs:
         t = t[0].upper() + t[1:]
         cab.append(f"Dialogue: 0,{ts(a)},{ts(b)},Leg,,0,0,0,,{{\\pos({W // 2},{LEG_Y})}}{quebrar(t)}")
-    for d in v.get("destaques", []):
-        r = achar(pal, d[3])
-        print(f"  destaque {d[3]!r}: {'%.1f-%.1f' % r if r else 'NÃO ACHADO'}")
+    # destaques da dublagem: [trecho falado no áudio dublado, texto do destaque]
+    for falado, texto in v.get("destaques_dub", []):
+        r = achar(pal, falado)
+        print(f"  destaque {texto!r}: {'%.1f-%.1f' % r if r else 'NÃO ACHADO'}")
         if r:
             cab.append(f"Dialogue: 1,{ts(r[0])},{ts(r[1])},Dest,,0,0,0,,{{\\pos({W // 2},{DEST_Y})"
-                       f"\\fad(120,80)}}{quebrar(d[3].upper(), 16)}")
+                       f"\\fad(120,80)}}{quebrar(texto.upper(), 16)}")
     ass = tmp + ".ass"
     open(ass, "w", encoding="utf-8").write("\n".join(cab) + "\n")
     for a, b, t in legs:
