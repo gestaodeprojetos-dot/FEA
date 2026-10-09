@@ -143,7 +143,7 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 ## Linha vermelha (nunca fazer)
 
 1. Nunca prometer resultado estético garantido (regulatório CFM/CFO/CFBM).
-2. Nunca usar imagem de paciente sem autorização (TCLE robusto).
+2. Nunca usar imagem de paciente sem autorização (TCLE robusto). **Vídeos e imagens que a Keila envia já têm autorização de imagem** (Keila, 09/10/2026): não alertar sobre TCLE nesses arquivos.
 3. Nunca mencionar marca específica de ácido hialurônico ou toxina sem aprovação.
 4. Nunca minimizar risco de procedimento ("é fácil", "qualquer um faz").
 5. Nunca direcionar conteúdo técnico-cirúrgico para leigo (risco de auto-aplicação).
@@ -313,6 +313,7 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 - Sistema de conteúdo retroalimentado nos grupos de aluno ("Jornal Diário da Equipe Médica").
 - Apresentação executiva enxuta (só fatos auditados) para reunião com o time de automação.
 - Tradução e adaptação de campanha para mercado internacional (LATAM, espanhol) quando aplicável.
+- **Tradução de vídeo (depoimento, aula)** (09/10/2026): idioma padrão é **espanhol** (não perguntar) e "traduzir" significa **dublar, sem legenda**. Usar o HeyGen (`create_video_translation`, idioma "Spanish", modo `precision`, `speakerNum` quando houver mais de uma voz), que clona a voz original e sincroniza a boca. Subir o vídeo pronto direto na pasta do Drive indicada, com o nome no padrão da pasta: `Nome original FEP-Spanish.mp4`. Pasta de depoimentos em espanhol: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`. O MP4 do HeyGen vem com faixa de legenda embutida: remover antes de subir (`ffmpeg -i in.mp4 -map 0:v -map 0:a -c copy -sn out.mp4`). Legenda gravada só se a Keila pedir legenda.
 
 ## Antes de produzir qualquer peça FEA
 
