@@ -1,0 +1,107 @@
+{
+ "pagina": "Página de Upsell - CPX",
+ "slug": "pagina-upsell-cpx",
+ "produto": "CPX, Curso de Relleno Express (upsell do Ebook Ojeras)",
+ "mercado": "LATAM",
+ "idioma": "es-419",
+ "tratamento": "usted",
+ "fonte_copy": "https://docs.google.com/document/d/1aSJo7XbjbAOpMuFhbrYG1a_5BKd6y5jxzyvhUjdApgg/edit",
+ "identidade_visual": "Identidade do CPX: https://joaopithon.com.br/cpx/",
+ "paleta_padrao_html": {
+  "roxo": "#5B4599",
+  "azul_violeta": "#3846BB",
+  "lavanda": "#D0D1E9",
+  "alerta": "#BB3838",
+  "fundo": "#F9F9F9",
+  "borda": "#E9E9E9"
+ },
+ "tipografia": {
+  "titulos": "Sora 600-800",
+  "corpo": "Montserrat 400-500"
+ },
+ "pendencias": [
+  "Preço do CPX em dólar.",
+  "Link de checkout do upsell em USD.",
+  "Nome do produto em espanhol.",
+  "WhatsApp de atendimento em espanhol."
+ ],
+ "secoes": [
+  {
+   "id": "tarja",
+   "nome": "Tarja vermelha",
+   "tipo": "alert_bar",
+   "texto": [
+    "Atención, no cierre ni actualice esta página."
+   ]
+  },
+  {
+   "id": "progresso",
+   "nome": "Barra de progresso",
+   "tipo": "progress_bar",
+   "texto": [
+    "Procesando su compra"
+   ],
+   "valor": 90
+  },
+  {
+   "id": "video",
+   "nome": "Vídeo",
+   "tipo": "video",
+   "titulo": "Tengo una oportunidad todavía mejor para usted.",
+   "subtitulo": "Vea el video a continuación para descubrirla:",
+   "midia": [
+    {
+     "tipo": "video",
+     "descricao": "Vídeo de vendas do CPX (o mesmo da página de vendas). Versão ES traduzida no HeyGen, se houver."
+    }
+   ]
+  },
+  {
+   "id": "oferta",
+   "nome": "Bônus + compra",
+   "tipo": "offer",
+   "eyebrow": "Bono exclusivo:",
+   "titulo": "Relleno Full Face guiado por ultrasonido en vivo",
+   "preco_de": "US$ [PRECIO ANTERIOR]",
+   "prefixo_preco": "Por",
+   "preco": "US$ [PRECIO]",
+   "cta": {
+    "texto": "COMPRAR AHORA",
+    "acao": "[CHECKOUT UPSELL USD: CONFIRMAR]"
+   },
+   "selos": [
+    "Hotmart",
+    "Garantía de 7 días"
+   ],
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Imagem do bônus (doc original)"
+    }
+   ],
+   "nota_designer": "Preço do CPX em dólar pendente. No Brasil: de R$ 497 por 12 x R$ 30,72; confirmar se haverá parcelamento no LATAM."
+  },
+  {
+   "id": "duvidas",
+   "nome": "Dúvidas",
+   "tipo": "contact",
+   "titulo": "¿LE QUEDÓ ALGUNA DUDA?",
+   "texto": [
+    "Si le quedó cualquier duda sobre la compra del Curso de Relleno Express [CONFIRMAR NOMBRE DEL PRODUCTO EN ESPAÑOL], hable con mi equipo por WhatsApp."
+   ],
+   "cta": {
+    "texto": "¡Quiero hablar con el equipo!",
+    "acao": "[WHATSAPP ES: CONFIRMAR]"
+   },
+   "nota_designer": "Botão abre o WhatsApp de atendimento em espanhol (número pendente)."
+  },
+  {
+   "id": "rodape",
+   "nome": "Rodapé",
+   "tipo": "footer",
+   "texto": [
+    "Formação Especialista Academy · © 2026 · Todos los derechos reservados"
+   ]
+  }
+ ]
+}

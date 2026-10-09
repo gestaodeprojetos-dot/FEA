@@ -1,0 +1,224 @@
+{
+ "pre_requisito": "Pasta Brasil 1. Vendas (1UoFid4S3Fdb2VsZq49k_TZGHpf9clCNF) ou os 15 vídeos com acesso 'Qualquer pessoa com o link - Leitor'. Voltar para Restrito ao terminar.",
+ "heygen_folder_id": "dd0cd0d21e4a49fca52cabb1da44374b",
+ "destino_drive": "VÍDEOS 1ZKGD-pQ0iA8FHqx6Ekc8HvIWYeqkfPS3 (LATAM 4. TRÁFEGO / CRIATIVOS PRONTOS / 1. VENDAS / VÍDEOS)",
+ "entregas": [
+  "1 Google Doc por vídeo com a transcrição em espanhol (legenda gerada pelo HeyGen)",
+  "FEA-Links dos vídeos traduzidos (planilha com link de download de cada vídeo)"
+ ],
+ "create_video_translation_batch": {
+  "title": "FEA Ebook Olheiras LATAM - Ads 16 a 30",
+  "videoTranslations": [
+   {
+    "title": "Ads 16 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=11rpcytGMIqX5kG3QS7GeONU1lFwil7_l&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 17 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1SoJEDv7hkUu2D4XGP5NdFVeADzyk8zIb&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 18 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=10mTDrlQQ1wDdChSp_sdWnXLRK1fc8Lze&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 19 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1VY8P2RbQOkvlEfo148x7gjBwqBWpkUNh&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 20 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1LFw6td1cQGJZpPvCrs-YrNDlG6UDwD-X&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 21 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1AvSKHifec46BsWe1pwUZfrxAKrsAq80X&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 22 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1bsk_ie-egJdlJPyH7wtLW7Y6yQeNOC0j&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 23 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=10sZUrX3waNbqfdL4u2Ca85r1SIUpX5oh&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 24 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1UCMzPnKK29VDVmz3zkekHiEhKmKoE216&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 25 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1cYjLF-AxMYf6F9dQth_W1NjmwPKP_EGD&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 26 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1J2MupmT7oGbmFDChDm7GM9d-_vwRE7oE&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 27 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1PtjQkSjQpxZWrZhuZF6vzByBnYLcW4ad&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 28 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1iza-ggQFdRPRKmE-WFHDpgQTBMLPWNQb&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 29 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1J5NrGtb2lveHNd1eWgS6cPtlWcR3FDlC&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   },
+   {
+    "title": "Ads 30 PTO-LATAM",
+    "video": {
+     "type": "url",
+     "url": "https://drive.usercontent.google.com/download?id=1FgPZ5w5Qo_q2h4WeEtUvVxtrF2UQhvey&export=download&confirm=t"
+    },
+    "output_languages": [
+     "Spanish (Latin America)"
+    ],
+    "input_language": "pt",
+    "mode": "precision",
+    "speaker_num": 1,
+    "folder_id": "dd0cd0d21e4a49fca52cabb1da44374b"
+   }
+  ]
+ }
+}
