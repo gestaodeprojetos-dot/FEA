@@ -1,0 +1,313 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Mont;src:url(../fonts/Montserrat-Medium.ttf);font-weight:500}
+@font-face{font-family:Mont;src:url(../fonts/Montserrat-SemiBold.ttf);font-weight:600}
+@font-face{font-family:Mont;src:url(../fonts/Montserrat-Bold.ttf);font-weight:700}
+@font-face{font-family:Mont;src:url(../fonts/Montserrat-ExtraBold.ttf);font-weight:800}
+@font-face{font-family:Serif;src:url(../fonts/Fraunces.ttf);font-weight:100 900}
+:root{--bg:#050C0F;--teal:#7FB3C6;--teal2:#33A7B5;--gold1:#E9D68E;--gold2:#D4B760;--gold3:#A58036;--alert:#C8463F;--ice:#EBF2F5}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:Mont,sans-serif;color:#fff}
+.abs{position:absolute}
+.full{position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 35%,#0d2a33 0%,#071419 45%,#050C0F 75%);overflow:hidden}
+.glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(127,179,198,.35),rgba(127,179,198,0) 65%);filter:blur(10px)}
+.goldtxt{background:linear-gradient(180deg,#F4E7B0 0%,#E9D68E 35%,#C9A24F 70%,#A58036 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.card{position:absolute;left:90px;width:900px;border-radius:28px;background:rgba(5,12,15,.86);border:2px solid rgba(212,183,96,.55);box-shadow:0 20px 60px rgba(0,0,0,.45),0 0 40px rgba(127,179,198,.18) inset;backdrop-filter:blur(6px)}
+.lbl{font-weight:700;letter-spacing:.18em;font-size:30px;color:var(--teal)}
+/* captions */
+#cap{position:absolute;left:40px;right:40px;top:1290px;text-align:center;font-weight:800;font-size:70px;line-height:1.05;letter-spacing:.01em}
+#cap span{display:inline-block;margin:0 9px;color:#fff;-webkit-text-stroke:0;text-shadow:0 0 2px #000,0 4px 0 rgba(0,0,0,.85),3px 3px 0 #000,-3px 3px 0 #000,3px -3px 0 #000,-3px -3px 0 #000,0 6px 24px rgba(0,0,0,.6)}
+#cap span.on{color:#F1DC8E}
+/* flip */
+.flip{position:relative;width:250px;height:300px;perspective:1400px}
+.half{position:absolute;left:0;width:250px;height:150px;overflow:hidden;background:linear-gradient(180deg,#14262d,#0b171c);border-radius:22px 22px 0 0}
+.half.bot{top:150px;border-radius:0 0 22px 22px;background:linear-gradient(180deg,#0b171c,#091216)}
+.half .n{position:absolute;left:0;width:250px;height:300px;text-align:center;font-family:Serif;font-weight:700;font-size:270px;line-height:300px}
+.half.bot .n{top:-150px}
+.flap{position:absolute;left:0;top:0;width:250px;height:150px;transform-origin:50% 100%;transform-style:preserve-3d}
+.flap .half{top:0;backface-visibility:hidden}
+.flap .half.back{transform:rotateX(180deg);border-radius:0 0 22px 22px;background:linear-gradient(180deg,#0b171c,#091216)}
+.flap .half.back .n{top:-150px}
+.hinge{position:absolute;left:0;top:148px;width:250px;height:4px;background:#000;opacity:.8}
+/* phone */
+#phone{position:absolute;left:290px;top:150px;width:500px;height:1060px;border-radius:70px;background:#0a0a0a;box-shadow:0 0 0 4px #2b3a40,0 0 0 9px #0d1417,0 40px 90px rgba(0,0,0,.7),0 0 120px rgba(127,179,198,.25)}
+#screen{position:absolute;left:16px;top:16px;width:468px;height:1028px;border-radius:56px;overflow:hidden;background:#000}
+#pg{position:absolute;left:0;top:124px;width:468px}
+#hdr{position:absolute;left:0;top:0;width:468px;height:124px;background:#0b1418;text-align:center;padding-top:62px;z-index:2;box-shadow:0 2px 10px rgba(0,0,0,.6)}
+#hdr .l1{font-size:14.5px;font-weight:500;color:#dfe8ec}
+#hdr .l1 b{color:var(--teal);font-weight:700}
+#hdr .cd{font-size:20px;font-weight:600;letter-spacing:.04em;margin-left:8px;color:#fff}
+#hdr .l2{font-size:13px;color:#cfd8dc;margin-top:4px}
+.notch{position:absolute;left:184px;top:28px;width:132px;height:36px;border-radius:20px;background:#000;z-index:3}
+.chip{position:absolute;display:flex;align-items:center;gap:20px;padding:24px 38px;border-radius:999px;background:linear-gradient(180deg,rgba(20,38,45,.96),rgba(7,16,20,.96));border:2px solid var(--gold2);font-weight:700;font-size:46px;box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 30px rgba(212,183,96,.25);white-space:nowrap}
+.btn{border-radius:28px;background:radial-gradient(120% 160% at 50% 0%,#F2E3A2 0%,#E9D68E 25%,#D4B760 55%,#A58036 100%);color:#0b0b0b;font-weight:800;text-align:center;box-shadow:0 0 50px rgba(233,214,142,.45),0 14px 30px rgba(0,0,0,.5);position:absolute;overflow:hidden}
+.shine{position:absolute;top:-20%;width:120px;height:140%;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0));transform:skewX(-20deg)}
+.bar{position:relative;height:34px;border-radius:999px;border:2px solid rgba(127,179,198,.6);background:rgba(255,255,255,.04);overflow:hidden}
+.bar i{position:absolute;left:4px;top:4px;bottom:4px;border-radius:999px;background:linear-gradient(90deg,#33A7B5,#7FB3C6 55%,#E9D68E)}
+.bar i:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.55),rgba(255,255,255,0));background-size:200px 100%;background-repeat:no-repeat;background-position:var(--sx,-200px) 0}
+/* ticket */
+.tk{position:absolute;left:0;top:0;width:780px;height:420px;border-radius:34px;backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.tk.front{background:radial-gradient(130% 160% at 50% 0%,#F2E3A2 0%,#E1C978 35%,#C29B4B 70%,#8f6a26 100%);color:#16110a;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(233,214,142,.35)}
+.tk.back{transform:rotateX(180deg);background:linear-gradient(180deg,#1b2b31,#0d171b);border:3px solid #7FB3C6;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(127,179,198,.3)}
+.tk .a{font-weight:700;letter-spacing:.3em;font-size:28px;opacity:.85}
+.tk .b{font-family:Serif;font-weight:700;font-size:150px;line-height:1.05}
+.tk .c{font-weight:600;letter-spacing:.12em;font-size:26px;opacity:.8}
+.tk:before,.tk:after{content:"";position:absolute;top:186px;width:48px;height:48px;border-radius:50%;background:#071419}
+.tk:before{left:-24px}.tk:after{right:-24px}
+.cal{position:absolute;width:300px;height:330px;perspective:1200px}
+.calp{position:absolute;left:0;top:0;width:300px;height:330px;border-radius:26px;background:#f4f1ea;overflow:hidden;transform-origin:50% 0%;box-shadow:0 14px 34px rgba(0,0,0,.5);backface-visibility:hidden}
+.calp .m{height:84px;background:linear-gradient(180deg,#C9A24F,#A58036);color:#16110a;font-weight:800;font-size:34px;letter-spacing:.2em;text-align:center;line-height:84px}
+.calp .d{font-family:Serif;font-weight:700;font-size:170px;line-height:190px;text-align:center;color:#0b171c}
+.calp .w{font-weight:700;font-size:28px;letter-spacing:.2em;text-align:center;color:#5a6a70;margin-top:-18px}
+.stamp{position:absolute;padding:18px 44px;border:7px solid var(--alert);color:var(--alert);font-weight:800;font-size:76px;letter-spacing:.06em;border-radius:18px;background:rgba(10,4,4,.55);white-space:nowrap}
+.dot{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--alert);margin-right:16px;vertical-align:middle;box-shadow:0 0 0 0 rgba(200,70,63,.6)}
+</style></head>
+<body>
+
+<!-- A: hook card -->
+<div id="A" class="card" style="top:120px;height:380px;padding:40px 50px"><div style="display:flex;align-items:center;gap:50px;height:300px">
+  <div class="flip" id="flipA">
+    <div class="half top"><div class="n goldtxt" id="fa_top">4</div></div>
+    <div class="half bot"><div class="n goldtxt" id="fa_bot">5</div></div>
+    <div class="flap" id="fa_flap">
+      <div class="half"><div class="n goldtxt" id="fa_ff">5</div></div>
+      <div class="half back"><div class="n goldtxt" id="fa_fb">4</div></div>
+    </div>
+    <div class="hinge"></div>
+  </div>
+  <div>
+    <div class="lbl">FALTAM</div>
+    <div style="font-family:Serif;font-weight:700;font-size:118px;line-height:1">dias</div>
+    <div style="font-weight:700;font-size:44px;margin-top:14px;line-height:1.2">para a virada<br>de <span class="goldtxt" style="font-weight:800">lote</span></div>
+  </div>
+</div></div>
+
+<!-- B: logo -->
+<div id="B" class="full">
+  <div class="glow" id="B_glow" style="left:90px;top:360px"></div>
+  <div id="B_logo" class="abs" style="left:150px;top:560px;width:780px;height:228px">
+    <img src="logo.png" style="width:780px;height:228px;display:block">
+    <div id="B_sh" class="abs" style="inset:0;-webkit-mask:url(logo.png) center/100% 100%;mask:url(logo.png) center/100% 100%;background:linear-gradient(100deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.95) 50%,rgba(255,255,255,0) 60%);background-size:300% 100%"></div>
+  </div>
+  <div id="B_tag" class="abs" style="left:0;right:0;top:880px;text-align:center;font-size:40px;font-weight:500;color:#e6eef1">Tendências Globais. <b style="color:var(--teal)">Evidências Reais.</b></div>
+  <div id="B_line" class="abs" style="left:340px;top:960px;width:400px;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)"></div>
+</div>
+
+<!-- D: phone with sales page -->
+<div id="D" class="full">
+  <div class="glow" style="left:90px;top:200px"></div>
+  <div id="phone">
+    <div id="screen">
+      <div id="hdr"><div class="l1">O <b>1º lote</b> encerra em: <span class="cd" id="cd">04 : 01 : 58 : 46</span></div><div class="l2">Dia 14/10 o valor sobe. Garanta o preço atual.</div></div>
+      <img id="pg" src="pagina.jpg">
+      <div id="hl" class="abs" style="left:60px;width:350px;height:44px;border:3px solid var(--gold1);border-radius:14px;box-shadow:0 0 18px rgba(233,214,142,.7)"></div>
+    </div>
+    <div class="notch"></div>
+  </div>
+  <div id="chip1" class="chip" style="left:60px;top:430px">
+    <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E9D68E" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+    <span>01 e 02 de <span class="goldtxt">novembro</span></span></div>
+  <div id="chip2" class="chip" style="left:150px;top:640px">
+    <svg width="50" height="54" viewBox="0 0 24 26" fill="none" stroke="#7FB3C6" stroke-width="2"><path d="M12 24s8-7.5 8-14a8 8 0 1 0-16 0c0 6.5 8 14 8 14z"/><circle cx="12" cy="10" r="3"/></svg>
+    <span>WTC Sheraton · <span style="color:var(--teal)">São Paulo</span></span></div>
+</div>
+
+<!-- E/H: lote progress card -->
+<div id="E" class="card" style="top:120px;height:330px;padding:40px 54px">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div id="E_t1" style="font-weight:800;font-size:44px;letter-spacing:.04em"><span class="goldtxt">1º LOTE</span> <span style="color:var(--teal);font-weight:700;font-size:32px;letter-spacing:.14em" id="E_t1b">◆ INGRESSOS LIMITADOS</span></div>
+  </div>
+  <div id="E_sub" style="font-family:Serif;font-weight:700;font-size:64px;margin:14px 0 22px;line-height:1">o lote mais barato</div>
+  <div class="bar"><i id="E_fill" style="width:0"></i></div>
+  <div style="display:flex;justify-content:space-between;margin-top:16px;font-size:30px;font-weight:600;color:#dfe8ec">
+    <span id="E_txt"><span class="dot" id="E_dot"></span><span id="E_lbl">vagas já garantidas</span></span><span id="E_pct" class="goldtxt" style="font-weight:800;font-size:38px">0%</span>
+  </div>
+</div>
+
+<!-- F: Saiba Mais arrow -->
+<div id="F" class="abs" style="left:0;top:0;width:1080px;height:1920px">
+  <div id="F_pill" class="btn" style="left:300px;top:1560px;width:480px;height:110px;line-height:110px;font-size:46px;letter-spacing:.04em">SAIBA MAIS<div class="shine" id="F_sh"></div></div>
+  <svg id="F_arrow" class="abs" style="left:490px;top:1460px" width="100" height="90" viewBox="0 0 100 90"><path d="M50 84 L10 36 H34 V4 H66 V36 H90 Z" fill="#E9D68E" stroke="#000" stroke-width="4"/></svg>
+  <div id="F_rip" class="abs" style="left:540px;top:1615px;width:10px;height:10px;border-radius:50%;border:5px solid #fff"></div>
+</div>
+
+<!-- G: lot flip -->
+<div id="G" class="full">
+  <div class="glow" style="left:90px;top:300px"></div>
+  <div id="G_cal" class="cal" style="left:390px;top:150px">
+    <div class="calp" id="cal_base"><div class="m">OUTUBRO</div><div class="d" id="cal_bd">14</div><div class="w" id="cal_bw">QUARTA</div></div>
+    <div class="calp" id="cal_top"><div class="m">OUTUBRO</div><div class="d" id="cal_td">10</div><div class="w" id="cal_tw">SÁBADO</div></div>
+  </div>
+  <div id="G_tkwrap" class="abs" style="left:150px;top:620px;width:780px;height:420px;perspective:1800px">
+    <div id="G_tk" class="abs" style="left:0;top:0;width:780px;height:420px;transform-style:preserve-3d">
+      <div class="tk front"><div class="a">ELITE INJECTORS CONGRESS</div><div class="b">1º lote</div><div class="c">PREÇO ATUAL</div></div>
+      <div class="tk back"><div class="a" style="color:var(--teal)">ELITE INJECTORS CONGRESS</div><div class="b">2º lote</div><div class="c">A PARTIR DE 14/10</div></div>
+    </div>
+  </div>
+  <div id="G_stamp" class="stamp" style="left:250px;top:1020px">
+    <svg width="64" height="64" viewBox="0 0 24 24" style="vertical-align:-8px;margin-right:10px"><path d="M12 3 L21 13 H15 V21 H9 V13 H3 Z" fill="#C8463F"/></svg>VALOR SOBE</div>
+</div>
+
+<!-- I: end card -->
+<div id="I" class="full">
+  <div class="glow" style="left:90px;top:120px"></div>
+  <img id="I_logo" src="logo.png" class="abs" style="left:215px;top:200px;width:650px;height:190px">
+  <div id="I_info" class="abs" style="left:0;right:0;top:450px;text-align:center;font-size:40px;font-weight:600;line-height:1.6;color:#e6eef1">01 e 02 de Novembro<br><span style="color:var(--teal)">WTC Sheraton · São Paulo</span></div>
+  <div id="I_lote" class="abs" style="left:0;right:0;top:640px;text-align:center">
+    <div class="lbl" style="color:#cfd8dc">PREÇO DO 1º LOTE ATÉ</div>
+    <div class="goldtxt" style="font-family:Serif;font-weight:700;font-size:200px;line-height:1.05">14/10</div>
+  </div>
+  <div id="I_btn" class="btn" style="left:130px;top:1000px;width:820px;height:140px;line-height:140px;font-size:50px">GARANTIR MINHA VAGA<div class="shine" id="I_sh"></div></div>
+  <div id="I_cta" class="abs" style="left:0;right:0;top:1480px;text-align:center;font-size:44px;font-weight:700">Toque em <span class="goldtxt" style="font-weight:800">Saiba Mais</span>
+    <svg width="60" height="60" viewBox="0 0 100 90" style="vertical-align:-14px;margin-left:10px"><path d="M50 84 L10 36 H34 V4 H66 V36 H90 Z" fill="#E9D68E"/></svg></div>
+</div>
+
+<div id="cap"></div>
+
+<script>
+const LEG = __LEGENDAS__;
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const p=(t,a,b)=>cl((t-a)/(b-a));
+const oc=x=>1-Math.pow(1-x,3);
+const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const show=(el,on)=>{el.style.display=on?'':'none'};
+function circ(el,t,a,b,c,d,cx='50%',cy='45%'){ // circle wipe in a..b, out c..d
+  const r=t<c? oc(p(t,a,b))*150 : (1-io(p(t,c,d)))*150;
+  el.style.clipPath=`circle(${r}% at ${cx} ${cy})`;
+}
+window.render=function(t){
+  // A hook card 0 - 2.5
+  const A=$('A'); show(A,t<2.62);
+  if(t<2.62){
+    const k=ob(p(t,0,.35)), o=1-p(t,2.35,2.6);
+    A.style.transform=`translateY(${(1-k)*-260 - (1-o)*120}px) scale(${.9+.1*k})`; A.style.opacity=Math.min(p(t,0,.15)*1+.0,1)*o;
+    const f=io(p(t,.62,.95)); // 5 -> 4 flip
+    const ang=-180*f; $('fa_flap').style.transform=`rotateX(${ang}deg)`;
+    $('fa_flap').style.display=f>=1?'none':'';
+    $('fa_bot').textContent=f>=.5?'4':'5'; $('fa_top').textContent='4';
+    if(f>=1){$('fa_bot').textContent='4';}
+    // pulse after flip
+    const pu=p(t,.95,1.35); $('flipA').style.transform=`scale(${1+.08*Math.sin(pu*Math.PI)})`;
+  }
+  // B logo 2.45 - 4.35
+  const B=$('B'); show(B,t>=2.45&&t<4.4);
+  if(t>=2.45&&t<4.4){
+    circ(B,t,2.45,2.8,4.12,4.38);
+    const k=oc(p(t,2.55,3.2));
+    $('B_logo').style.transform=`scale(${1.18-.18*k})`; $('B_logo').style.filter=`blur(${(1-k)*18}px)`; $('B_logo').style.opacity=k;
+    $('B_sh').style.backgroundPosition=`${100-130*io(p(t,3.05,3.85))}% 0`;
+    const g=p(t,3.25,3.6); $('B_tag').style.opacity=g; $('B_tag').style.transform=`translateY(${(1-oc(g))*30}px)`;
+    $('B_line').style.transform=`scaleX(${oc(p(t,3.3,3.8))})`;
+    $('B_glow').style.transform=`translate(${Math.sin(t*1.5)*40}px,${Math.cos(t*1.2)*30}px)`;
+  }
+  // D phone 7.25 - 10.8
+  const D=$('D'); show(D,t>=7.22&&t<10.82);
+  if(t>=7.22&&t<10.82){
+    const slideIn=oc(p(t,7.22,7.6)), out=io(p(t,10.6,10.82));
+    D.style.clipPath=`inset(${(1-slideIn)*100}% 0 0 0)`;
+    D.style.opacity=1-out;
+    $('phone').style.transform=`translateY(${(1-slideIn)*500 + out*80}px) rotate(${(1-slideIn)*-6}deg) scale(${1-out*.08})`;
+    const sc=468/780; // page image px -> screen px
+    const y=io(p(t,7.6,10.5))*170; $('pg').style.transform=`translateY(${-y}px)`;
+    // highlight date line (page y 367 css -> img 734px)
+    const dateY=124+ (367*2)*sc - y - 12;
+    $('hl').style.top=dateY+'px'; $('hl').style.opacity=p(t,8.0,8.2)*(1-p(t,9.6,9.8));
+    $('hl').style.left='60px'; $('hl').style.width='350px';
+    if(t>9.7){ const locY=124+(367*2+56*2)*sc - y - 14; $('hl').style.top=locY+'px'; $('hl').style.opacity=p(t,9.7,9.9);}
+    // countdown ticking from 04:01:58:46
+    let sec=46-Math.floor(t-7.22); let s=((sec%60)+60)%60; let m=58-(sec<0?1:0);
+    $('cd').textContent=`04 : 01 : ${String(m).padStart(2,'0')} : ${String(s).padStart(2,'0')}`;
+    const c1=ob(p(t,8.0,8.35)), c2=ob(p(t,9.72,10.05));
+    $('chip1').style.opacity=p(t,8.0,8.12); $('chip1').style.transform=`translateX(${(1-c1)*-200}px) scale(${.6+.4*c1})`;
+    $('chip2').style.opacity=p(t,9.72,9.84); $('chip2').style.transform=`translateX(${(1-c2)*200}px) scale(${.6+.4*c2})`;
+  }
+  // E card 10.8 - 15.0  and H 19.7 - 22.7
+  const E=$('E'); const inE=t>=10.8&&t<15.05, inH=t>=19.7&&t<22.72; show(E,inE||inH);
+  if(inE||inH){
+    const a=inE?10.8:19.7, b=inE?15.05:22.72;
+    const k=ob(p(t,a,a+.35)), o=1-p(t,b-.22,b);
+    E.style.transform=`translateY(${(1-k)*-260-(1-o)*100}px) scale(${.92+.08*k})`; E.style.opacity=p(t,a,a+.12)*o;
+    if(inE){
+      $('E_t1b').style.display='';
+      $('E_sub').textContent='o lote mais barato';
+      $('E_sub').style.opacity=.25+.75*p(t,13.82,14.05);
+      $('E_sub').style.color=t>=13.82?'#fff':'#9fb2b9';
+      const f=io(p(t,11.2,13.4)); $('E_fill').style.width=`calc(${87*f}% - 8px)`;
+      $('E_pct').textContent=Math.round(87*f)+'%'; $('E_lbl').textContent='das vagas já garantidas';
+      $('E_dot').style.display='none';
+      E.style.borderColor='rgba(212,183,96,.55)';
+    } else {
+      $('E_t1b').style.display='';
+      $('E_sub').textContent='restam poucas vagas'; $('E_sub').style.opacity=1; $('E_sub').style.color='#fff';
+      $('E_fill').style.width='calc(87% - 8px)'; $('E_pct').textContent='87%'; $('E_lbl').textContent='no lote atual';
+      $('E_dot').style.display='inline-block';
+      const ph=(t-a)*2.2; const pulse=(Math.sin(ph*Math.PI*2)+1)/2;
+      $('E_dot').style.boxShadow=`0 0 0 ${pulse*14}px rgba(200,70,63,${.55*(1-pulse)})`;
+      E.style.borderColor=`rgba(200,70,63,${.45+.45*pulse})`;
+      E.style.boxShadow=`0 20px 60px rgba(0,0,0,.45),0 0 ${30+30*pulse}px rgba(200,70,63,${.25+.3*pulse})`;
+    }
+    $('E_fill').style.setProperty('--sx', (((t*1.1)%1)*900-200)+'px');
+  }
+  // F Saiba mais 15.0 - 16.6
+  const F=$('F'); show(F,t>=15.0&&t<16.62);
+  if(t>=15.0&&t<16.62){
+    const k=ob(p(t,15.0,15.35)), o=1-p(t,16.42,16.62);
+    $('F_pill').style.transform=`translateY(${(1-k)*200}px) scale(${1+.06*Math.max(0,Math.sin((t-15.84)*Math.PI/0.3))*(t>15.84&&t<16.14?1:0)})`;
+    $('F_pill').style.opacity=k*o;
+    const bounce=Math.abs(Math.sin((t-15)*Math.PI*2.2))*26;
+    $('F_arrow').style.transform=`translateY(${bounce}px)`; $('F_arrow').style.opacity=p(t,15.15,15.3)*o;
+    $('F_sh').style.left=(-200+1000*p(t,15.4,16.0))+'px';
+    const r=p(t,15.84,16.3); const rs=10+r*260; const R=$('F_rip');
+    R.style.width=R.style.height=rs+'px'; R.style.left=(540-rs/2)+'px'; R.style.top=(1615-rs/2)+'px'; R.style.opacity=(r>0&&r<1)?(1-r):0;
+  }
+  // G lot flip 16.6 - 19.62
+  const G=$('G'); show(G,t>=16.58&&t<19.66);
+  if(t>=16.58&&t<19.66){
+    // page-turn style entry: diagonal wipe
+    const w=oc(p(t,16.58,16.9)), out=io(p(t,19.45,19.66));
+    G.style.clipPath=`polygon(0 0, ${w*220}% 0, ${w*220-100}% 100%, 0 100%)`;
+    G.style.opacity=1-out;
+    // calendar 10 -> 14 flips (17.3 - 17.95)
+    const days=[['10','SÁBADO'],['11','DOMINGO'],['12','SEGUNDA'],['13','TERÇA'],['14','QUARTA']];
+    const ft=p(t,17.28,17.98)*4; const idx=Math.min(3,Math.floor(ft)); const fr=ft>=4?1:ft-idx;
+    $('cal_td').textContent=days[ft>=4?4:idx][0]; $('cal_tw').textContent=days[ft>=4?4:idx][1];
+    $('cal_bd').textContent=days[Math.min(4,idx+1)][0]; $('cal_bw').textContent=days[Math.min(4,idx+1)][1];
+    $('cal_top').style.transform= ft>=4?'none':`rotateX(${io(fr)*-110}deg)`;
+    $('cal_top').style.opacity= ft>=4?1:(fr>.75?0:1);
+    const ck=ob(p(t,16.7,17.05)); $('G_cal').style.transform=`translateY(${(1-ck)*-120}px) scale(${.8+.2*ck})`; $('G_cal').style.opacity=p(t,16.7,16.85);
+    const pu=p(t,17.98,18.3); $('G_cal').style.filter=`drop-shadow(0 0 ${30*Math.sin(pu*Math.PI)}px rgba(233,214,142,.9))`;
+    // ticket
+    const tk=ob(p(t,16.75,17.15)); $('G_tkwrap').style.opacity=p(t,16.75,16.9); $('G_tkwrap').style.transform=`translateY(${(1-tk)*160}px)`;
+    const fl=io(p(t,17.95,18.5)); $('G_tk').style.transform=`rotateX(${fl*180}deg) scale(${1-.08*Math.sin(fl*Math.PI)})`;
+    const st=p(t,18.5,18.75); const se=ob(st);
+    $('G_stamp').style.opacity=st>0?1:0; $('G_stamp').style.transform=`rotate(-6deg) scale(${2.4-1.4*se})`;
+    const sh=t>18.75&&t<18.95?Math.sin((t-18.75)*80)*6:0; $('G_tkwrap').style.marginLeft=sh+'px';
+  }
+  // I end card 22.68 -> end
+  const I=$('I'); show(I,t>=22.68);
+  if(t>=22.68){
+    circ(I,t,22.68,23.05,99,100,'50%','55%');
+    const l=oc(p(t,22.8,23.3)); $('I_logo').style.opacity=l; $('I_logo').style.transform=`scale(${1.1-.1*l})`; $('I_logo').style.filter=`blur(${(1-l)*12}px)`;
+    const i=p(t,23.0,23.35); $('I_info').style.opacity=i; $('I_info').style.transform=`translateY(${(1-oc(i))*30}px)`;
+    const lo=ob(p(t,23.2,23.6)); $('I_lote').style.opacity=p(t,23.2,23.3); $('I_lote').style.transform=`scale(${.7+.3*lo})`;
+    const bt=ob(p(t,23.5,23.85)); $('I_btn').style.opacity=p(t,23.5,23.6);
+    const breath=t>24?1+.03*Math.sin((t-24)*Math.PI*1.6):1;
+    $('I_btn').style.transform=`translateY(${(1-bt)*80}px) scale(${breath})`;
+    $('I_sh').style.left=(-200+1200*(((t-23.9)/1.6)%1))+'px';
+    const ct=p(t,23.8,24.1); $('I_cta').style.opacity=ct; $('I_cta').style.transform=`translateY(${Math.abs(Math.sin((t-23.8)*Math.PI*1.5))*-14}px)`;
+  }
+  // captions
+  const cap=$('cap'); const g=LEG.find(g=>t>=g.s&&t<g.e);
+  if(!g){cap.innerHTML='';} else {
+    const k=ob(p(t,g.s,g.s+.14));
+    let cur=-1; g.w.forEach((w,j)=>{if(t>=w.s)cur=j});
+    cap.innerHTML=g.w.map((w,j)=>`<span class="${j===cur?'on':''}" style="transform:scale(${t>=w.s&&t<w.s+.18?1.08:1})">${w.t}</span>`).join(' ');
+    cap.style.transform=`scale(${.85+.15*k})`; cap.style.opacity=k;
+    cap.style.top = (t>=22.68)?'1300px':'1290px';
+  }
+};
+</script>
+</body></html>
