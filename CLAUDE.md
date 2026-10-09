@@ -143,7 +143,7 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 ## Linha vermelha (nunca fazer)
 
 1. Nunca prometer resultado estético garantido (regulatório CFM/CFO/CFBM).
-2. Nunca usar imagem de paciente sem autorização (TCLE robusto).
+2. Nunca usar imagem de paciente sem autorização (TCLE robusto). **Vídeos e imagens que a Keila envia já têm autorização de imagem** (Keila, 09/10/2026): não alertar sobre TCLE nesses arquivos.
 3. Nunca mencionar marca específica de ácido hialurônico ou toxina sem aprovação.
 4. Nunca minimizar risco de procedimento ("é fácil", "qualquer um faz").
 5. Nunca direcionar conteúdo técnico-cirúrgico para leigo (risco de auto-aplicação).
@@ -313,6 +313,7 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 - Sistema de conteúdo retroalimentado nos grupos de aluno ("Jornal Diário da Equipe Médica").
 - Apresentação executiva enxuta (só fatos auditados) para reunião com o time de automação.
 - Tradução e adaptação de campanha para mercado internacional (LATAM, espanhol) quando aplicável.
+- **Tradução de depoimento em vídeo** (09/10/2026): idioma padrão é **espanhol** (não perguntar). Transcrever com Whisper, traduzir, gravar a legenda no vídeo em Montserrat Bold branca com contorno preto (padrão da skill `fea-edicao-reels`) e subir direto na pasta do Drive que a Keila indicar. Pasta de depoimentos em espanhol já usada: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`.
 
 ## Antes de produzir qualquer peça FEA
 
