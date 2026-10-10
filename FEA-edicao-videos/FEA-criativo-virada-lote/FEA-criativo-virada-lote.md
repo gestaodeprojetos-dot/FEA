@@ -35,7 +35,7 @@ valor novo).
 | `gancho` | cartão no topo: número virando (5 → 4 dias) ou calendário (13 → 14 "amanhã", 14 pulsando "hoje") |
 | `logo` | tela cheia com o logo Elite, brilho passando e "Tendências Globais. Evidências Reais." |
 | `celular` | a página de vendas real num celular, rolando, com contador e selos (data, local, menor valor) |
-| `palestrantes` | 6 cards de palestrantes da página + itens com check sincronizados com a fala |
+| `palestrantes` | os 11 palestrantes da página (grade 4, 3 e 4, Dr. João no centro, nome no card) + itens com check sincronizados com a fala |
 | `lote` | barra do 1º lote até 87% (`barato`) ou "restam poucas vagas" pulsando em vermelho (`poucas`) |
 | `saiba` | seta e botão "Saiba Mais" com toque, quando ele fala "clica em Saiba Mais" |
 | `virada` | calendário virando as folhas até 14 (quarta), ingresso "1º lote" vira "2º lote", carimbo |

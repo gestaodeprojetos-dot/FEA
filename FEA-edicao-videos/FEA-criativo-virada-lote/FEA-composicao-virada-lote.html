@@ -57,8 +57,9 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 .calp .w{font-weight:700;font-size:28px;letter-spacing:.2em;text-align:center;color:#5a6a70;margin-top:-18px}
 .stamp{position:absolute;padding:18px 44px;border:7px solid var(--alert);color:var(--alert);font-weight:800;font-size:76px;letter-spacing:.06em;border-radius:18px;background:rgba(10,4,4,.55);white-space:nowrap}
 .dot{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--alert);margin-right:16px;vertical-align:middle}
-.sp{position:absolute;width:300px;height:307px;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.55);border:2px solid rgba(127,179,198,.35)}
+.sp{position:absolute;width:236px;height:242px;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.55);border:2px solid rgba(127,179,198,.35)}
 .sp img{width:100%;height:100%;display:block}
+.sp .nm{position:absolute;left:0;right:0;bottom:0;padding:26px 6px 10px;text-align:center;font-weight:700;font-size:18.5px;white-space:nowrap;letter-spacing:-.01em;background:linear-gradient(180deg,rgba(5,12,15,0),rgba(5,12,15,.92) 55%)}
 .it{position:absolute;left:110px;display:flex;align-items:center;gap:24px;font-weight:700;font-size:48px;white-space:nowrap;opacity:0}
 .it svg{flex:none}
 </style></head>
@@ -113,13 +114,18 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 <!-- destaques: palestrantes -->
 <div id="P" class="full">
   <div class="glow" style="left:90px;top:100px"></div>
-  <div id="P_grid" class="abs" style="left:0;top:0;width:1080px;height:900px;-webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 92%);mask-image:linear-gradient(180deg,#000 62%,transparent 92%)">
-    <div class="sp" style="left:60px;top:150px"><img src="card-alexia.png"></div>
-    <div class="sp" style="left:390px;top:120px"><img src="card-Joao-2.png"></div>
-    <div class="sp" style="left:720px;top:150px"><img src="card-karlla.png"></div>
-    <div class="sp" style="left:60px;top:490px"><img src="card-marcelo.png"></div>
-    <div class="sp" style="left:390px;top:460px"><img src="card-vanessa.png"></div>
-    <div class="sp" style="left:720px;top:490px"><img src="card-vitor.png"></div>
+  <div id="P_grid" class="abs" style="left:0;top:0;width:1080px;height:900px">
+    <div class="sp" style="left:38px;top:100px"><img src="card-alexia.png"><div class="nm">Dra. Aléxia Duarte</div></div>
+    <div class="sp" style="left:294px;top:100px"><img src="card-marcelo.png"><div class="nm">Dr. Marcelo Germani</div></div>
+    <div class="sp" style="left:550px;top:100px"><img src="card-karlla.png"><div class="nm">Dra. Karlla Sales</div></div>
+    <div class="sp" style="left:806px;top:100px"><img src="card-larissa-leme.png"><div class="nm">Dra. Larissa Leme</div></div>
+    <div class="sp" style="left:166px;top:360px"><img src="card-vanessa.png"><div class="nm" style="font-size:16px">Dra. Vanessa Defelícibus</div></div>
+    <div class="sp" style="left:422px;top:360px"><img src="card-Joao-2.png"><div class="nm">Dr. João Pithon</div></div>
+    <div class="sp" style="left:678px;top:360px"><img src="card-vitor.png"><div class="nm">Dr. Vitor Natal</div></div>
+    <div class="sp" style="left:38px;top:620px"><img src="card-tereza.png"><div class="nm">Dra. Tereza Scardua</div></div>
+    <div class="sp" style="left:294px;top:620px"><img src="card-Juliana.png"><div class="nm" style="font-size:17px">Dra. Juliana Vinciarelli</div></div>
+    <div class="sp" style="left:550px;top:620px"><img src="card-BEL.png"><div class="nm">Dra. Bel Guerra</div></div>
+    <div class="sp" style="left:806px;top:620px"><img src="card-Jessica.png"><div class="nm">Dra. Patrícia Andrade</div></div>
   </div>
   <div id="P_items"></div>
 </div>
@@ -200,7 +206,7 @@ sc.filter(c=>c.tipo==='celular').forEach((c,k)=>{
     d.style.left=(j%2?150:60)+'px'; d.style.top=(430+j*210)+'px'; d.innerHTML=(ICONS[ch.icone]||'')+`<span>${ch.html}</span>`; $('chips').appendChild(d); ch.el=d;});
 });
 sc.filter(c=>c.tipo==='palestrantes').forEach((c,k)=>{
-  c.itens.forEach((it,j)=>{const d=document.createElement('div'); d.className='it'; d.style.top=(880+j*110)+'px';
+  c.itens.forEach((it,j)=>{const d=document.createElement('div'); d.className='it'; d.style.top=(910+j*104)+'px';
     d.innerHTML=ICON_OK+`<span>${it.html}</span>`; $('P_items').appendChild(d); it.el=d;});
 });
 
@@ -250,8 +256,8 @@ function palestrantes(c,t){
   const P=$('P'); vis(P,true);
   const w=oc(p(t,c.s,c.s+.35)), out=io(p(t,c.e-.22,c.e));
   P.style.clipPath=`inset(0 0 ${(1-w)*100}% 0)`; P.style.opacity=1-out;
-  [...$('P_grid').children].forEach((e,j)=>{const k=ob(p(t,c.s+.1+j*.08,c.s+.5+j*.08));
-    e.style.opacity=p(t,c.s+.1+j*.08,c.s+.25+j*.08); e.style.transform=`translateY(${(1-k)*120}px) scale(${.85+.15*k})`;});
+  [...$('P_grid').children].forEach((e,j)=>{const k=ob(p(t,c.s+.08+j*.05,c.s+.48+j*.05));
+    e.style.opacity=p(t,c.s+.08+j*.05,c.s+.23+j*.05); e.style.transform=`translateY(${(1-k)*120}px) scale(${.85+.15*k})`;});
   $('P_grid').style.transform=`translateY(${-p(t,c.s,c.e)*40}px) scale(${1+p(t,c.s,c.e)*.04})`;
   document.querySelectorAll('.it').forEach(e=>e.style.opacity=0);
   c.itens.forEach(it=>{const k=ob(p(t,it.t,it.t+.35)); it.el.style.opacity=p(t,it.t,it.t+.12); it.el.style.transform=`translateX(${(1-k)*-160}px)`;});
