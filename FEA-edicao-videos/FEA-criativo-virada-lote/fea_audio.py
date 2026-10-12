@@ -77,35 +77,44 @@ for c in cfg['cenas']:
 salvar(fx, sys.argv[2])
 
 # ---------- trilha ----------
-BPM = 120; beat = 60 / BPM; bar = 4 * beat
+URG = cfg.get('trilha') == 'urgencia'      # "mais cunho de urgência" (Keila, 12/10/2026)
+BPM = 140 if URG else 120; beat = 60 / BPM; bar = 4 * beat
 fim = cfg['fim_fala'] + .3
 raizes = [55.0, 55.0, 43.65, 41.2]           # Am Am F E (lá menor harmônico)
 acordes = [[220, 261.63, 329.63], [220, 261.63, 329.63], [174.61, 220, 261.63], [164.81, 207.65, 246.94]]
 mus = np.zeros(N)
 idx = np.minimum((T / bar).astype(int) % 4, 3)
-# pad de saw desafinado, filtrado
 pad = np.zeros(N)
 for v in range(3):
     f = np.array([acordes[i][v] for i in range(4)])[idx]
     for det in (-.0025, .0025):
         ph = np.cumsum(f * (1 + det)) / SR; pad += 2 * (ph % 1) - 1
-pad = lp(lp(pad, 900), 900) * .22
+pad = lp(lp(pad, 900), 900) * (.16 if URG else .22)
 sub = np.sin(2 * np.pi * np.cumsum(np.array(raizes)[idx]) / SR) * .35
-# ostinato em colcheias
-ost = np.zeros(N); t8 = beat / 2; padrao = [1, 1, 1.189, 1, 1.498, 1, 1.335, 1.189]
-for k in range(int(DUR / t8)):
-    t0 = k * t8; b = int(t0 / bar) % 4; f = raizes[b] * 4 * padrao[k % 8]
-    n = int(.2 * SR); tt = np.arange(n) / SR
-    ph = np.cumsum(np.full(n, f)) / SR; s = (2 * (ph % 1) - 1) * np.exp(-tt * 16)
-    add(ost, s, t0, .16 + .1 * min(1, t0 / max(1, fim)))
-ost = lp(ost, 1800)
-# pulso de coração (grave duplo) e relógio
+ost = np.zeros(N); passo = beat / 4 if URG else beat / 2
+padrao = [1, 1, 1.189, 1, 1.498, 1, 1.335, 1.189]
+for k in range(int(DUR / passo)):
+    t0 = k * passo; b_ = int(t0 / bar) % 4; f = raizes[b_] * 4 * padrao[k % 8]
+    n = int((.12 if URG else .2) * SR); tt = np.arange(n) / SR
+    ph = np.cumsum(np.full(n, f)) / SR; s_ = (2 * (ph % 1) - 1) * np.exp(-tt * (26 if URG else 16))
+    add(ost, s_, t0, (.13 if URG else .16) + .12 * min(1, t0 / max(1, fim)))
+ost = lp(ost, 2600 if URG else 1800)
 pul = np.zeros(N); rel = np.zeros(N)
 for k in range(int(DUR / beat)):
     t0 = k * beat
-    if k % 2 == 0: add(pul, boom(.35, 70, 40, 12), t0, .7); add(pul, boom(.3, 65, 40, 14), t0 + .17, .45)
+    if URG or k % 2 == 0: add(pul, boom(.35, 70, 40, 12), t0, .7); add(pul, boom(.3, 65, 40, 14), t0 + .17, .45)
     add(rel, tick(2600 if k % 2 else 1900, .03), t0, .25)
+    if URG: add(rel, tick(3400, .02), t0 + beat / 2, .14)      # relógio em colcheias: sensação de tempo correndo
 mus = pad + sub + ost + pul + rel
+if URG:
+    # alarme discreto (duas notas alternando) e subida a cada 4 compassos
+    alarme = np.zeros(N)
+    for k in range(int(DUR / (beat / 2))):
+        t0 = k * beat / 2; f = 880 if k % 2 else 698.5; n = int(beat / 2 * SR); tt = np.arange(n) / SR
+        add(alarme, np.sin(2 * np.pi * f * tt) * np.exp(-tt * 9), t0, .05)
+    mus += lp(alarme, 3000)
+    for k in range(1, int(DUR / (4 * bar)) + 1):
+        add(mus, riser(1.2), k * 4 * bar - 1.2, .25); add(mus, boom(1.2), k * 4 * bar, .5)
 # impactos nas telas cheias e na virada; subida antes da virada e do final
 for c in cfg['cenas']:
     if c['tipo'] in ('logo', 'celular', 'palestrantes', 'cursos', 'live'): add(mus, boom(), c['s'], .5)

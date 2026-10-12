@@ -81,6 +81,13 @@ body.bf{--teal:#E9C77B}
 /* live */
 .livebadge{display:inline-flex;align-items:center;gap:16px;padding:16px 34px;border-radius:14px;background:#C8463F;font-weight:800;font-size:46px;letter-spacing:.08em}
 .livebadge i{width:24px;height:24px;border-radius:50%;background:#fff;display:inline-block}
+
+/* conta (quadro de custos) e datas (19 alunos x 20 geral) */
+#CT .row{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:38px;padding:5px 0;border-bottom:1px solid rgba(233,199,123,.25);opacity:0}
+#CT .row b{font-weight:800}
+#CT .tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:800;font-size:46px;padding-top:10px;opacity:0}
+.dt{position:absolute;width:420px;text-align:center}
+.dt .lb{font-weight:800;font-size:36px;letter-spacing:.12em;margin-top:22px}
 </style></head>
 <body>
 
@@ -230,6 +237,19 @@ body.bf{--teal:#E9C77B}
   <div id="L_t" class="abs" style="left:60px;right:60px;top:880px;text-align:center;font-weight:700;font-size:46px;line-height:1.25"></div>
 </div>
 
+<!-- conta -->
+<div id="CT" class="card" style="top:800px;padding:26px 46px"><div class="lbl" id="CT_top"></div><div id="CT_rows" style="margin-top:10px"></div>
+  <div class="tot" id="CT_tot"><span id="CT_tl"></span><span class="goldtxt" id="CT_tv"></span></div>
+  <div id="CT_st" class="abs" style="left:0;right:0;top:40%;text-align:center;opacity:0"><span style="display:inline-block;padding:16px 34px;border:6px solid #E9C77B;border-radius:16px;background:rgba(8,6,3,.92);font-weight:800;font-size:54px;color:#E9C77B;transform:rotate(-5deg)" id="CT_stt"></span></div></div>
+
+<!-- datas: abertura geral x alunos -->
+<div id="DT" class="full">
+  <div class="glow" style="left:90px;top:160px"></div>
+  <div class="dt" id="DT_a" style="left:70px;top:330px"><div class="cal" style="position:relative;left:60px"><div class="calp" style="opacity:.55"><div class="m">OUTUBRO</div><div class="d">20</div><div class="w">TERÇA</div></div></div><div class="lb" style="color:#cfc6b2">ABERTURA GERAL</div></div>
+  <div class="dt" id="DT_b" style="left:590px;top:300px"><div class="cal" style="position:relative;left:60px"><div class="calp"><div class="m">OUTUBRO</div><div class="d">19</div><div class="w">SEGUNDA</div></div></div><div class="lb goldtxt">SÓ PARA ALUNOS</div></div>
+  <div id="DT_t" class="abs" style="left:60px;right:60px;top:880px;text-align:center;font-weight:800;font-size:58px;line-height:1.15">Alunos entram <span class="goldtxt">um dia antes</span></div>
+</div>
+
 <div id="cap"></div>
 
 <script>
@@ -241,7 +261,7 @@ const p=(t,a,b)=>cl((t-a)/(b-a));
 const oc=x=>1-Math.pow(1-x,3);
 const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
 const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
-const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA',20:'TERÇA'};
+const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA',19:'SEGUNDA',20:'TERÇA'};
 const ICON_CAL='<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E9D68E" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
 const ICON_PIN='<svg width="50" height="54" viewBox="0 0 24 26" fill="none" stroke="#7FB3C6" stroke-width="2"><path d="M12 24s8-7.5 8-14a8 8 0 1 0-16 0c0 6.5 8 14 8 14z"/><circle cx="12" cy="10" r="3"/></svg>';
 const ICON_OK='<svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#7FB3C6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';
@@ -387,6 +407,7 @@ const ICONES={
  aluno:'<svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg>',
  inf:'<svg width="110" height="70" viewBox="0 0 48 24" fill="none" stroke="#E9C77B" stroke-width="3" stroke-linecap="round"><path id="infp" pathLength="100" d="M24 12c-4-6-8-8-12-8a8 8 0 0 0 0 16c4 0 8-2 12-8s8-8 12-8a8 8 0 0 1 0 16c-4 0-8-2-12-8z"/></svg>',
  presente:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-7-4-6-1s6 1 6 1zm0 0c2-4 7-4 6-1s-6 1-6 1z"/></svg>',
+ aulas:'<svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M10 8l5 2.5-5 2.5z" fill="#E9C77B"/><path d="M8 21h8M12 17v4"/></svg>',
  valor:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>'};
 sc.filter(c=>c.tipo==='cartao').forEach((c,k)=>{ (c.chips||[]).forEach((ch,j)=>{const d=document.createElement('span'); d.className='chipk'; d.innerHTML=ch.html; $('K_chips').appendChild(d); ch.el=d;}); });
 if(sc.some(c=>c.tipo==='cursos')){
@@ -448,10 +469,40 @@ function live(c,t){
   const hk=ob(p(t,c.tHora||c.s+.4,(c.tHora||c.s+.4)+.35)); $('L_h').style.opacity=p(t,c.tHora||c.s+.4,(c.tHora||c.s+.4)+.1); $('L_h').style.transform=`scale(${.6+.4*hk})`;
   const bk=ob(p(t,c.tVivo||c.s+.6,(c.tVivo||c.s+.6)+.3)); $('L_b').style.opacity=p(t,c.tVivo||c.s+.6,(c.tVivo||c.s+.6)+.1); $('L_b').style.transform=`scale(${.5+.5*bk})`;
   const pu=(Math.sin((t-c.s)*Math.PI*2*1.4)+1)/2; $('L_dot').style.opacity=.3+.7*pu;
+  $('L_d').textContent=c.dia||20; $('L_w').textContent=DIAS[c.dia||20];
+  vis($('L_h'),c.hora!==null); if(c.hora) $('L_h').textContent=c.hora;
+  $('L_b').querySelector('.livebadge').lastChild.textContent=c.selo||'AO VIVO';
+  if(c.hora===null){ $('L_b').style.top='560px'; $('L_t').style.top='700px'; } else { $('L_b').style.top='730px'; $('L_t').style.top='880px'; }
   $('L_t').innerHTML=c.texto||''; const tt=p(t,c.tTexto||c.s+.9,(c.tTexto||c.s+.9)+.3); $('L_t').style.opacity=tt; $('L_t').style.transform=`translateY(${(1-oc(tt))*30}px)`;
 }
-const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live};
-const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L'];
+
+function conta(c,t){
+  const K=$('CT'); vis(K,true);
+  const k=ob(p(t,c.s,c.s+.35)), o=1-p(t,c.e-.22,c.e);
+  K.style.transform=`translateY(${(1-k)*300}px)`; K.style.opacity=p(t,c.s,c.s+.12)*o;
+  $('CT_top').innerHTML=c.topo||'CONTA RÁPIDA';
+  if(!c._m){ c._m=1; $('CT_rows').innerHTML=c.itens.map((it,j)=>`<div class="row" id="ctr${j}"><span>${it.nome}</span><b class="goldtxt" id="ctv${j}"></b></div>`).join(''); }
+  if(K.dataset.cena!==String(c.s)){ K.dataset.cena=c.s; $('CT_rows').innerHTML=c.itens.map((it,j)=>`<div class="row" id="ctr${j}"><span>${it.nome}</span><b class="goldtxt" id="ctv${j}"></b></div>`).join(''); }
+  let soma=0;
+  c.itens.forEach((it,j)=>{const r=$('ctr'+j); const q=oc(p(t,it.t,it.t+.3)); r.style.opacity=q; r.style.transform=`translateX(${(1-q)*-60}px)`;
+    if(it.valor!=null){ const vq=p(t,it.tv,it.tv+.4); $('ctv'+j).textContent=vq>0?`R$ ${Math.round(it.valor*oc(vq))} mil`:''; if(t>=it.tv) soma+=it.valor*oc(vq);} });
+  const tt=p(t,c.tTotal||999,(c.tTotal||999)+.3); $('CT_tot').style.opacity=tt;
+  $('CT_tl').textContent=c.rotulo||'TOTAL'; $('CT_tv').textContent=c.total?`R$ ${Math.round(soma)} mil`:(c.totalTexto||'');
+  const st=p(t,c.tCarimbo||999,(c.tCarimbo||999)+.25); $('CT_st').style.opacity=st>0?1:0; $('CT_stt').innerHTML=c.carimbo||'';
+  $('CT_st').style.transform=`scale(${2.2-1.2*ob(st)})`;
+}
+function datas(c,t){
+  const X=$('DT'); vis(X,true);
+  const w=oc(p(t,c.s,c.s+.32)), out=io(p(t,c.e-.22,c.e));
+  X.style.clipPath=`inset(0 0 0 ${(1-w)*100}%)`; X.style.opacity=1-out;
+  const a=ob(p(t,c.t20,c.t20+.35)), b=ob(p(t,c.t19,c.t19+.35));
+  $('DT_a').style.opacity=p(t,c.t20,c.t20+.1); $('DT_a').style.transform=`scale(${.6+.4*a})`;
+  $('DT_b').style.opacity=p(t,c.t19,c.t19+.1); $('DT_b').style.transform=`scale(${(.6+.5*b)})`;
+  const pu=(Math.sin((t-c.s)*Math.PI*2*1.2)+1)/2; $('DT_b').style.filter=t>=c.t19?`drop-shadow(0 0 ${15+25*pu}px rgba(233,199,123,.9))`:'none';
+  const tt=p(t,c.t19+.4,c.t19+.7); $('DT_t').style.opacity=tt; $('DT_t').style.transform=`translateY(${(1-oc(tt))*30}px)`;
+}
+const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas};
+const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT'];
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});

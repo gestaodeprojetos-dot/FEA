@@ -11,6 +11,9 @@ const fs = require('fs');
   const run = `${dir}/_run_${nome}.html`; fs.writeFileSync(run, html);
   const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await pg.goto('file://' + run); await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(500);
+  // captura direta pelo CDP: 2x mais rápida que page.screenshot e mantém o fundo transparente
+  const cdp = await pg.context().newCDPSession(pg);
+  await cdp.send('Emulation.setDefaultBackgroundColorOverride', { color: { r: 0, g: 0, b: 0, a: 0 } });
   fs.mkdirSync(outdir, { recursive: true });
   const stills = mode.startsWith('stills:');
   const times = stills ? mode.slice(7).split(',').map(Number) : [...Array(Math.round(dur * 30)).keys()].map(i => i / 30);
@@ -18,7 +21,8 @@ const fs = require('fs');
   for (const t of times) {
     await pg.evaluate(t => window.render(t), t);
     const name = stills ? `${nome}_${t.toFixed(2)}.png` : `f_${String(i).padStart(5, '0')}.png`;
-    await pg.screenshot({ path: outdir + '/' + name, omitBackground: true }); i++;
+    const r = await cdp.send('Page.captureScreenshot', { format: 'png', optimizeForSpeed: true });
+    fs.writeFileSync(outdir + '/' + name, Buffer.from(r.data, 'base64')); i++;
   }
   await b.close();
 })();
