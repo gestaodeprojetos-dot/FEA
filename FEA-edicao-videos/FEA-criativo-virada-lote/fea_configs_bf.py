@@ -48,6 +48,19 @@ VIDEOS = {
     SAIBA(27.85, 29.25, 28.3),
     LIVE(29.25, 34.4, 19, f'Abertura oficial das inscrições<br>{G}no Instagram do Dr. João Pithon{GF}', tData=30.5, tVivo=29.95, tTexto=31.5),
  ]),
+ # Ads 113 versão final (Keila, 12/10/2026): bruto "alunos" inteiro, sem cortes; a data é 20/10 mesmo e o CTA é o de 20 de outubro.
+ 'alunos20': dict(inicio=.12, fim=35.9, publico='alunos', cta='cta.mp4', trilha='urgencia', vol_trilha=.28,
+   zoom=[(9.7, 11.7), (26.0, 27.85), (34.4, 35.9)], tremor=[(.3, 2.05)], sem_legenda=[(.12, 2.05)], cenas=[
+    dict(tipo='alerta', s=.12, e=2.05, tA=.35, tB=1.25),
+    K(2.1, 4.2, 'aluno', 'EXCLUSIVO', 'Para os meus alunos', 'uma oferta especial na Black Friday Vitalícia'),
+    LOGO_(4.2, 5.75),
+    K(5.8, 9.65, 'inf', VITAL, 'Acesso vitalício', 'todos os cursos, para sempre, por um único preço'),
+    K(11.7, 15.7, 'presente', 'NA ABERTURA DAS INSCRIÇÕES', 'Bônus exclusivos', chips=[(11.8, 'Bônus presenciais'), (13.8, 'Pós-graduação incluída')]),
+    CURSOS_(15.75, 20.75, [(15.8, 'Todos os cursos que já criei'), (17.4, f'E os que {G}ainda vou lançar{GF}'), (19.3, 'Atualizações vitalícias')]),
+    K(20.8, 25.95, 'valor', 'UM ÚNICO VALOR', 'Nenhum real a mais', 'nem para atualizações, nem para extras'),
+    SAIBA(27.85, 29.25, 28.3),
+    LIVE(29.25, 34.4, 20, f'Abertura oficial das inscrições<br>{G}no Instagram do Dr. João Pithon{GF}', tData=29.4, tVivo=29.95, tTexto=31.5),
+ ]),
  # Ads 113 refeito (Keila, 12/10/2026): o final do alunos dizia "ao vivo dia 20/10" e "abertura oficial no Instagram".
  # Bruto montado: alunos até "clique em Saiba Mais" (29,0 s) + final do IMG_0869 "então esteja comigo ao vivo 19 do 10,
  # te espero lá" (19,6 a 22,9 s). A cena da live cobre a emenda.
@@ -312,7 +325,7 @@ if __name__ == '__main__':
         for a, b in cortes: manter.append((t0, a)); t0 = b
         manter.append((t0, v['fim']))
         cfg = dict(nome=nome, tema='bf', logo=LOGO, cursos=CURSOS, publico=v['publico'],
-                   cta='cta19.mp4' if v['publico'] == 'alunos' else 'cta.mp4',
+                   cta=v.get('cta') or ('cta19.mp4' if v['publico'] == 'alunos' else 'cta.mp4'),
                    trilha=v.get('trilha'), vol_trilha=v.get('vol_trilha', .2), inicio=ini, manter=manter,
                    dur=round(dur, 2), fim_fala=round(dur - .2, 2),
                    zoom=[(f(a), f(b)) for a, b in v['zoom']], tremor=[(f(a), f(b)) for a, b in v.get('tremor', [])],
