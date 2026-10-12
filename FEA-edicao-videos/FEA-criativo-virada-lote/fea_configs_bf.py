@@ -25,6 +25,9 @@ def LIVE(s, e, dia, texto, tData=None, tVivo=None, tTexto=None, selo='AO VIVO'):
 def CONTA(s, e, itens, tTotal=None, total=True, totalTexto='', carimbo='', tCarimbo=None, topo='CONTA RÁPIDA'):
     return dict(tipo='conta', s=s, e=e, topo=topo, itens=[dict(t=t, nome=n, valor=v, tv=tv) for t, n, v, tv in itens],
                 tTotal=tTotal, total=total, totalTexto=totalTexto, carimbo=carimbo, tCarimbo=tCarimbo, rotulo='TOTAL')
+def FEP(s, e, tLogo, texto, topo='CONVITE EXCLUSIVO'):
+    # logo da FEP (pasta enviada pela Keila em 12/10/2026) quando ele fala "meu aluno da FEP"
+    return dict(tipo='marca', s=s, e=e, tLogo=tLogo, logo='fep-logo.png', sub='fep-texto.png', topo=topo, texto=texto)
 def DATAS(s, e, t20, t19): return dict(tipo='datas', s=s, e=e, t20=t20, t19=t19)
 G = '<span class="goldtxt">'; GF = '</span>'
 VITAL = 'BLACK FRIDAY VITALÍCIA'
@@ -47,7 +50,7 @@ VIDEOS = {
  ]),
  'IMG_0867': dict(fim=44.38, publico='alunos',   # termina em "Black Friday Vitalícia": a frase seguinte fica sem concluir (Keila, 12/10/2026)
    zoom=[(14.1, 18.0), (30.7, 37.2)], cenas=[
-    K(0, 4.6, 'aluno', 'CONVITE EXCLUSIVO', 'Para os meus alunos da FEP'),
+    FEP(0, 4.9, 1.2, f'Um convite {G}especial e exclusivo{GF}'),
     LOGO_(5.0, 6.6),
     K(6.6, 14.0, 'presente', 'PARA ALUNOS', 'Um dia especial de abertura', chips=[(11.3, 'Valores especiais'), (12.7, 'Condições especiais')]),
     K(18.0, 23.2, 'aluno', 'ALUNOS PRIMEIRO', 'Um dia antes', 'da abertura para quem ainda não é aluno'),
@@ -57,21 +60,21 @@ VIDEOS = {
     LOGO_(42.6, 44.38),
  ]),
  'IMG_0868': dict(fim=31.8, publico='alunos', zoom=[(21.3, 27.0)], cenas=[
-    K(0, 4.6, 'aluno', 'CONVITE EXCLUSIVO', 'Para os meus alunos da FEP'),
+    FEP(0, 4.6, 1.2, f'Um convite {G}muito especial{GF}'),
     LOGO_(4.7, 6.8),
     LIVE(6.8, 12.6, 19, f'Um dia antes da abertura geral<br>{G}somente para alunos da FEP{GF}', tData=8.0, tVivo=10.4, tTexto=10.6, selo='SÓ PARA ALUNOS'),
     K(12.7, 21.2, 'presente', 'SÓ PARA ALUNOS DA FEP', 'Um dia de antecipação', chips=[(15.0, 'Valores especiais'), (16.8, 'Condições especiais')]),
     K(27.1, 31.8, 'aluno', 'DIA 19/10', 'Abertura em formato exclusivo', 'te espero lá'),
  ]),
  'IMG_0869': dict(fim=23.1, publico='alunos', zoom=[(19.6, 23.1)], cenas=[
-    K(0, 3.7, 'aluno', 'PARA ALUNOS DA FEP', 'Condição especial'),
+    FEP(0, 3.75, 1.2, f'Uma {G}condição especial{GF}', topo='PARA OS MEUS ALUNOS'),
     LOGO_(3.8, 6.9),
     DATAS(7.0, 14.6, 9.6, 12.0),
     K(14.6, 19.5, 'presente', 'DIA DE INSCRIÇÕES ESPECIAL', 'Só para alunos', chips=[(15.3, 'Valores especiais'), (16.8, 'Tudo de mais especial')]),
     LIVE(19.6, 23.1, 19, f'{G}Te espero lá{GF}', tData=21.1, tVivo=20.8, tTexto=22.0),
  ]),
  'IMG_0871': dict(fim=31.5, publico='alunos', zoom=[(14.6, 16.6)], cenas=[
-    K(0.1, 5.6, 'aluno', 'PARA ALUNOS DA FEP', 'Condições especiais', chips=[(2.8, 'Condições especiais'), (4.4, 'Valores especiais')]),
+    FEP(0.1, 5.6, 1.2, f'Condições e {G}valores especiais{GF}', topo='PARA OS MEUS ALUNOS'),
     LOGO_(5.7, 7.4),
     DATAS(7.5, 14.6, 9.6, 12.1),
     K(16.6, 22.8, 'valor', 'PARA VOCÊ PARTICIPAR', 'Pagando menos', chips=[(16.8, 'Bônus especiais'), (18.7, 'Valores especiais'), (20.2, 'Tudo de mais especial')]),

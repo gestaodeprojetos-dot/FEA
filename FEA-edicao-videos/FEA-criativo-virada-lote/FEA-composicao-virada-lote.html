@@ -250,6 +250,17 @@ body.bf{--teal:#E9C77B}
   <div id="DT_t" class="abs" style="left:60px;right:60px;top:880px;text-align:center;font-weight:800;font-size:58px;line-height:1.15">Alunos entram <span class="goldtxt">um dia antes</span></div>
 </div>
 
+<!-- marca (ex.: logo FEP quando ele fala "meu aluno da FEP") -->
+<div id="MK" class="card" style="top:110px;padding:34px 40px 30px;text-align:center">
+  <div class="lbl" id="MK_top" style="color:#E9C77B"></div>
+  <div id="MK_lw" style="position:relative;display:inline-block;margin-top:18px">
+    <img id="MK_logo" style="display:block;height:190px">
+    <div id="MK_sh" class="abs" style="inset:0;background:linear-gradient(100deg,rgba(255,255,255,0) 40%,rgba(255,255,255,.95) 50%,rgba(255,255,255,0) 60%);background-size:300% 100%"></div>
+  </div>
+  <img id="MK_sub" style="display:block;margin:18px auto 0;height:62px">
+  <div id="MK_txt" style="font-weight:800;font-size:46px;margin-top:16px"></div>
+</div>
+
 <div id="cap"></div>
 
 <script>
@@ -501,8 +512,23 @@ function datas(c,t){
   const pu=(Math.sin((t-c.s)*Math.PI*2*1.2)+1)/2; $('DT_b').style.filter=t>=c.t19?`drop-shadow(0 0 ${15+25*pu}px rgba(233,199,123,.9))`:'none';
   const tt=p(t,c.t19+.4,c.t19+.7); $('DT_t').style.opacity=tt; $('DT_t').style.transform=`translateY(${(1-oc(tt))*30}px)`;
 }
-const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas};
-const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT'];
+
+function marca(c,t){
+  const M=$('MK'); vis(M,true);
+  const k=ob(p(t,c.s,c.s+.35)), o=1-p(t,c.e-.22,c.e);
+  M.style.transform=`translateY(${(1-k)*-280-(1-o)*100}px) scale(${.92+.08*k})`; M.style.opacity=p(t,c.s,c.s+.12)*o;
+  $('MK_top').innerHTML=c.topo||''; $('MK_txt').innerHTML=c.texto||'';
+  if($('MK_logo').getAttribute('src')!==c.logo){ $('MK_logo').src=c.logo; $('MK_sh').style.webkitMask=`url(${c.logo}) center/100% 100%`; $('MK_sh').style.mask=`url(${c.logo}) center/100% 100%`; }
+  if(c.sub){ $('MK_sub').src=c.sub; vis($('MK_sub'),true); } else vis($('MK_sub'),false);
+  // o logo "explode" na hora em que ele fala o nome
+  const l=oc(p(t,c.tLogo,c.tLogo+.45));
+  $('MK_lw').style.opacity=p(t,c.tLogo,c.tLogo+.12); $('MK_lw').style.transform=`scale(${1.6-.6*l})`; $('MK_lw').style.filter=`blur(${(1-l)*14}px) drop-shadow(0 0 ${20*Math.sin(p(t,c.tLogo+.3,c.tLogo+1.0)*Math.PI)}px rgba(150,110,255,.9))`;
+  $('MK_sh').style.backgroundPosition=`${100-130*io(p(t,c.tLogo+.4,c.tLogo+1.2))}% 0`;
+  const st=p(t,c.tLogo+.35,c.tLogo+.65); $('MK_sub').style.opacity=st; $('MK_sub').style.transform=`translateY(${(1-oc(st))*20}px)`;
+  const tx=p(t,c.tTexto||c.tLogo+.7,(c.tTexto||c.tLogo+.7)+.3); $('MK_txt').style.opacity=tx; $('MK_txt').style.transform=`translateY(${(1-oc(tx))*20}px)`;
+}
+const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
+const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});
