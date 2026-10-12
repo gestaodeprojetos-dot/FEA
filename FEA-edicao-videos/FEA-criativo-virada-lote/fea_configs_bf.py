@@ -66,14 +66,14 @@ VIDEOS = {
  'IMG_0869': dict(fim=23.1, publico='alunos', zoom=[(19.6, 23.1)], cenas=[
     K(0, 3.7, 'aluno', 'PARA ALUNOS DA FEP', 'Condição especial'),
     LOGO_(3.8, 6.9),
-    DATAS(7.0, 13.0, 9.6, 12.0),
-    K(13.1, 19.5, 'presente', 'DIA DE INSCRIÇÕES ESPECIAL', 'Só para alunos', chips=[(15.3, 'Valores especiais'), (16.8, 'Tudo de mais especial')]),
+    DATAS(7.0, 14.6, 9.6, 12.0),
+    K(14.6, 19.5, 'presente', 'DIA DE INSCRIÇÕES ESPECIAL', 'Só para alunos', chips=[(15.3, 'Valores especiais'), (16.8, 'Tudo de mais especial')]),
     LIVE(19.6, 23.1, 19, f'{G}Te espero lá{GF}', tData=21.1, tVivo=20.8, tTexto=22.0),
  ]),
- 'IMG_0871': dict(fim=31.5, publico='alunos', zoom=[(13.3, 16.6)], cenas=[
+ 'IMG_0871': dict(fim=31.5, publico='alunos', zoom=[(14.6, 16.6)], cenas=[
     K(0.1, 5.6, 'aluno', 'PARA ALUNOS DA FEP', 'Condições especiais', chips=[(2.8, 'Condições especiais'), (4.4, 'Valores especiais')]),
     LOGO_(5.7, 7.4),
-    DATAS(7.5, 13.2, 9.6, 12.1),
+    DATAS(7.5, 14.6, 9.6, 12.1),
     K(16.6, 22.8, 'valor', 'PARA VOCÊ PARTICIPAR', 'Pagando menos', chips=[(16.8, 'Bônus especiais'), (18.7, 'Valores especiais'), (20.2, 'Tudo de mais especial')]),
     SAIBA(22.9, 25.9, 25.2),
     LIVE(25.9, 31.3, 19, f'Live de abertura<br>{G}para alunos da FEP{GF}', tData=28.6, tVivo=27.3, tTexto=28.9),
