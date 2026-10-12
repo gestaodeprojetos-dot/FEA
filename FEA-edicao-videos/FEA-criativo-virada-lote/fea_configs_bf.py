@@ -186,6 +186,7 @@ VIDEOS = {
  ]),
  'F77693E7-3FD8-4499-9C64-AB2E9B74BF20': dict(fim=75.8, publico='geral', zoom=[],
    cortes=[(57.35, 60.40), (68.40, 70.60)],      # "se inscrevendo dia 20 do 11" (data errada, ele corrige) e "pronto, entrega"
+   remover=[('se', 57.0), ('pronto', 68.2)],      # palavras da legenda que o Whisper deixou na beira do corte (o áudio já está limpo)
    cenas=[
     K(0.1, 3.3, 'aulas', 'EM MENOS DE 1 MINUTO', 'Por que se inscrever?'),
     LOGO_(3.3, 4.7),
@@ -279,6 +280,8 @@ if __name__ == '__main__':
         ws = trocar_seq(ws, v.get('trocas', []) + [(['black', 'friday', 'vitalício'], ['BLACK', 'FRIDAY', 'VITALÍCIA']),
                                                    (['como', 'vitalício'], ['COMBO', 'VITALÍCIO'])])
         ws = datas_legenda(ws)
+        base = lambda w: re.sub(r'[^\wÀ-ú/]', '', w['t']).lower()
+        ws = [w for w in ws if not any(base(w) == p and abs(w['s'] - t) < .3 for p, t in v.get('remover', []))]
         ws = [w for w in ws if ini - .4 <= w['s'] < v['fim'] and not any(a - .05 <= w['s'] < b for a, b in cortes)]
         leg = agrupar(ws)
         # legenda que começa dentro da abertura sem legenda (ex.: 'ATENÇÃO ALUNOS') não reaparece no fim dela
