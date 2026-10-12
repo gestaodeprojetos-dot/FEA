@@ -61,7 +61,7 @@ VIDEOS = {
     CURSOS_(15.75, 20.75, [(15.8, 'Todos os cursos que já criei'), (17.4, f'E os que {G}ainda vou lançar{GF}'), (19.3, 'Atualizações vitalícias')]),
     K(20.8, 25.95, 'valor', 'UM ÚNICO VALOR', 'Nenhum real a mais', 'nem para atualizações, nem para extras'),
     SAIBA(27.85, 29.0, 28.3),
-    LIVE(28.95, 32.3, 19, f'Live de abertura para alunos<br>{G}te espero lá{GF}', tData=30.5, tVivo=30.2, tTexto=31.3),
+    LIVE(28.95, 32.3, 19, f'Live de abertura para alunos<br>{G}te espero lá{GF}', tData=29.1, tVivo=30.2, tTexto=31.3),
  ]),
  'IMG_0867': dict(fim=44.38, publico='alunos',   # termina em "Black Friday Vitalícia": a frase seguinte fica sem concluir (Keila, 12/10/2026)
    zoom=[(14.1, 18.0), (30.7, 37.2)], cenas=[
