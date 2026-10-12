@@ -9,7 +9,9 @@ for N in "$@"; do
   rm -rf "$W/quadros/$N"
   node "$AQUI/fea_render_quadros.js" "$W/comp" "$W/cfg/$N.json" "$W/quadros/$N" all
   python3 "$AQUI/fea_audio.py" "$W/cfg/$N.json" "$W/aud/${N}_sfx.wav" "$W/aud/${N}_trilha.wav"
-  bash "$AQUI/fea_montar.sh" "$W/brutos/$N.MOV" "$W/quadros/$N" "$W/cfg/$N.json" "$W/aud/${N}_sfx.wav" "$W/aud/${N}_trilha.wav" "$W/saida/$N.mp4"
+  BRUTO=$(ls "$W/brutos/$N".* | head -1)
+  CTA=$(python3 -c "import json; c=json.load(open('$W/cfg/$N.json')).get('cta',''); print('$W/comp/'+c if c else '')")
+  bash "$AQUI/fea_montar.sh" "$BRUTO" "$W/quadros/$N" "$W/cfg/$N.json" "$W/aud/${N}_sfx.wav" "$W/aud/${N}_trilha.wav" "$W/saida/$N.mp4" $CTA
   rm -rf "$W/quadros/$N"
   echo "--- FEITO: $N ---"
 done

@@ -52,7 +52,17 @@ def riser(d=1.2):
 fx = np.zeros(N); W, Ws = whoosh(), whoosh(.32, 500, 4000)
 for c in cfg['cenas']:
     tp = c['tipo']
-    if tp in ('logo', 'celular', 'palestrantes', 'virada', 'final'): add(fx, W, c['s'] - .07, .22)
+    if tp in ('logo', 'celular', 'palestrantes', 'virada', 'final', 'cursos', 'live'): add(fx, W, c['s'] - .07, .22)
+    if tp == 'cartao':
+        add(fx, Ws, c['s'] - .02, .12)
+        for ch in c.get('chips', []): add(fx, pop(), ch['t'], .28)
+    if tp == 'alerta':
+        add(fx, W, c['s'], .3)
+        for tt in (c['tA'], c['tB']): add(fx, boom(.5, 120, 40, 7), tt, .7); add(fx, tick(3200, .04), tt, .3)
+    if tp == 'cursos':
+        for k in range(20): add(fx, tick(1800 + k * 40, .025), c['s'] + .15 + k * .045, .12)
+        for it in c['itens']: add(fx, pop(), it['t'], .24)
+    if tp == 'live': add(fx, pop(), c.get('tData', c['s']), .3); add(fx, pop(), c.get('tVivo', c['s']), .3)
     if tp == 'lote': add(fx, Ws, c['s'] - .02, .12)
     if tp == 'gancho' and c['tFlip'] < c['e']: add(fx, tick(), c['tFlip'] + .08, .35); add(fx, tick(1600, .05), c['tFlip'] + .18, .2)
     if tp == 'virada':
@@ -98,7 +108,8 @@ for k in range(int(DUR / beat)):
 mus = pad + sub + ost + pul + rel
 # impactos nas telas cheias e na virada; subida antes da virada e do final
 for c in cfg['cenas']:
-    if c['tipo'] in ('logo', 'celular', 'palestrantes'): add(mus, boom(), c['s'], .5)
+    if c['tipo'] in ('logo', 'celular', 'palestrantes', 'cursos', 'live'): add(mus, boom(), c['s'], .5)
+    if c['tipo'] == 'alerta': add(mus, boom(2.0), c['tB'], 1.0)
     if c['tipo'] == 'virada': add(mus, riser(1.0), c['tFlip'] - 1.0, .35); add(mus, boom(1.8), c['tFlip'] + .02, 1.0)
     if c['tipo'] == 'final': add(mus, riser(.9), c['s'] - .9, .3); add(mus, boom(2.2), c['s'], 1.0)
 # entra em 0,4 s e sai no fim

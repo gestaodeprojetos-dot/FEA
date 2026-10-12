@@ -62,6 +62,25 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 .sp .nm{position:absolute;left:0;right:0;bottom:0;padding:26px 6px 10px;text-align:center;font-weight:700;font-size:18.5px;white-space:nowrap;letter-spacing:-.01em;background:linear-gradient(180deg,rgba(5,12,15,0),rgba(5,12,15,.92) 55%)}
 .it{position:absolute;left:110px;display:flex;align-items:center;gap:24px;font-weight:700;font-size:48px;white-space:nowrap;opacity:0}
 .it svg{flex:none}
+
+/* ===== tema Black Friday Vitalícia (preto e dourado da página bf.joaopithon.com.br) ===== */
+body.bf{--teal:#E9C77B}
+.bf .full{background:radial-gradient(120% 70% at 50% 35%,#2b200c 0%,#120d05 45%,#050403 78%)}
+.bf .glow{background:radial-gradient(circle,rgba(233,199,123,.30),rgba(233,199,123,0) 65%)}
+.bf .card{background:rgba(8,6,3,.88);border-color:rgba(233,199,123,.7)}
+/* alerta "ATENÇÃO" */
+.fita{position:absolute;left:-300px;width:1680px;height:118px;overflow:hidden;background:linear-gradient(180deg,#F6E3A1,#D9B25E 55%,#B88A35);box-shadow:0 10px 40px rgba(0,0,0,.6);border-top:8px solid #0b0b0b;border-bottom:8px solid #0b0b0b}
+.fita .tx{position:absolute;top:0;left:0;white-space:nowrap;font-weight:800;font-size:58px;line-height:102px;color:#0b0b0b;letter-spacing:.04em}
+#AL_txt{position:absolute;left:0;right:0;text-align:center;font-weight:800;line-height:.95;color:#fff;text-shadow:0 0 30px rgba(233,199,123,.8),0 8px 0 #000,4px 4px 0 #000,-4px 4px 0 #000,4px -4px 0 #000,-4px -4px 0 #000}
+/* cartão genérico no topo */
+#K .ic{flex:none;width:150px;height:150px;border-radius:26px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 30%,#3a2c10,#0e0a04);border:2px solid rgba(233,199,123,.6)}
+#K .chipk{display:inline-block;margin:14px 12px 0 0;padding:10px 24px;border-radius:999px;border:2px solid #E9C77B;font-weight:800;font-size:34px;color:#fff;background:rgba(233,199,123,.12);opacity:0}
+/* cursos */
+.cr{position:absolute;width:140px;height:229px;border-radius:12px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.6);border:1px solid rgba(233,199,123,.45)}
+.cr img{width:100%;height:100%;display:block}
+/* live */
+.livebadge{display:inline-flex;align-items:center;gap:16px;padding:16px 34px;border-radius:14px;background:#C8463F;font-weight:800;font-size:46px;letter-spacing:.08em}
+.livebadge i{width:24px;height:24px;border-radius:50%;background:#fff;display:inline-block}
 </style></head>
 <body>
 
@@ -178,6 +197,39 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
     <svg width="60" height="60" viewBox="0 0 100 90" style="vertical-align:-14px;margin-left:10px"><path d="M50 84 L10 36 H34 V4 H66 V36 H90 Z" fill="#E9D68E"/></svg></div>
 </div>
 
+
+<!-- alerta ATENÇÃO (abertura chamativa) -->
+<div id="AL" class="abs" style="left:0;top:0;width:1080px;height:1920px;display:none">
+  <div id="AL_vig" class="abs" style="inset:0;background:radial-gradient(70% 55% at 50% 45%,rgba(0,0,0,0) 40%,rgba(120,20,10,.55) 100%)"></div>
+  <div id="AL_f1" class="fita" style="top:250px;transform:rotate(-9deg)"><div class="tx" id="AL_t1"></div></div>
+  <div id="AL_f2" class="fita" style="top:1460px;transform:rotate(7deg)"><div class="tx" id="AL_t2"></div></div>
+  <div id="AL_txt" style="top:1000px"><div id="AL_a" style="font-size:150px">ATENÇÃO,</div><div id="AL_b" class="goldtxt" style="font-size:190px;text-shadow:none;filter:drop-shadow(0 8px 0 #000) drop-shadow(0 0 30px rgba(233,199,123,.7))">ALUNOS</div></div>
+  <div id="AL_flash" class="abs" style="inset:0;background:#fff;opacity:0"></div>
+</div>
+
+<!-- cartão genérico no topo -->
+<div id="K" class="card" style="top:120px;min-height:250px;padding:40px 46px"><div style="display:flex;align-items:center;gap:40px">
+  <div class="ic" id="K_ic"></div>
+  <div style="flex:1"><div class="lbl" id="K_top"></div><div id="K_tit" style="font-weight:800;font-size:58px;line-height:1.05;margin-top:8px"></div><div id="K_sub" style="font-weight:600;font-size:34px;color:#e8e2d4;margin-top:10px"></div></div>
+</div><div id="K_chips"></div></div>
+
+<!-- cursos (cards da página) -->
+<div id="C" class="full">
+  <div class="glow" style="left:90px;top:100px"></div>
+  <div id="C_top" class="abs" style="left:0;right:0;top:110px;text-align:center"><span class="goldtxt" style="font-weight:800;font-size:120px;line-height:1" id="C_n">20</span><div style="font-weight:700;font-size:34px;letter-spacing:.14em;color:#e8e2d4;margin-top:4px">FORMAÇÕES, CURSOS, IMERSÕES E LIVROS</div></div>
+  <div id="C_grid" class="abs" style="left:0;top:0;width:1080px;height:1100px"></div>
+  <div id="C_items"></div>
+</div>
+
+<!-- live -->
+<div id="L" class="full">
+  <div class="glow" style="left:90px;top:160px"></div>
+  <div class="cal" id="L_cal" style="left:390px;top:170px"><div class="calp"><div class="m">OUTUBRO</div><div class="d" id="L_d">20</div><div class="w" id="L_w">TERÇA</div></div></div>
+  <div id="L_h" class="abs goldtxt" style="left:0;right:0;top:530px;text-align:center;font-weight:800;font-size:170px;line-height:1">20h</div>
+  <div id="L_b" class="abs" style="left:0;right:0;top:730px;text-align:center"><span class="livebadge"><i id="L_dot"></i>AO VIVO</span></div>
+  <div id="L_t" class="abs" style="left:60px;right:60px;top:880px;text-align:center;font-weight:700;font-size:46px;line-height:1.25"></div>
+</div>
+
 <div id="cap"></div>
 
 <script>
@@ -189,7 +241,7 @@ const p=(t,a,b)=>cl((t-a)/(b-a));
 const oc=x=>1-Math.pow(1-x,3);
 const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
 const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
-const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA'};
+const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA',20:'TERÇA'};
 const ICON_CAL='<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E9D68E" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
 const ICON_PIN='<svg width="50" height="54" viewBox="0 0 24 26" fill="none" stroke="#7FB3C6" stroke-width="2"><path d="M12 24s8-7.5 8-14a8 8 0 1 0-16 0c0 6.5 8 14 8 14z"/><circle cx="12" cy="10" r="3"/></svg>';
 const ICON_OK='<svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#7FB3C6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';
@@ -323,12 +375,87 @@ function final(c,t){
   $('I_sh').style.left=(-200+1200*(Math.max(0,t-c.s-1.2)/1.6%1))+'px';
   const ct=p(t,c.s+1.1,c.s+1.4); $('I_cta').style.opacity=ct; $('I_cta').style.transform=`translateY(${Math.abs(Math.sin((t-c.s-1.1)*Math.PI*1.5))*-14}px)`;
 }
-const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final};
-const ALL=['A','B','D','P','E','F','G','I'];
+
+// ===== tema, logo e cenas novas (Black Friday Vitalícia, 12/10/2026) =====
+if(CFG.tema) document.body.classList.add(CFG.tema);
+if(CFG.logo){ const L=CFG.logo; const bl=$('B_logo'); bl.style.width=L.w+'px'; bl.style.height=L.h+'px';
+  bl.style.left=(540-L.w/2)+'px'; bl.style.top=(L.top||620)+'px';
+  const im=bl.querySelector('img'); im.src=L.src; im.style.width=L.w+'px'; im.style.height=L.h+'px';
+  $('B_sh').style.webkitMask=`url(${L.src}) center/100% 100%`; $('B_sh').style.mask=`url(${L.src}) center/100% 100%`;
+  $('B_tag').innerHTML=L.tag||''; $('B_tag').style.top=((L.top||620)+L.h+60)+'px'; $('B_line').style.top=((L.top||620)+L.h+140)+'px'; }
+const ICONES={
+ aluno:'<svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/><path d="M22 9v6"/></svg>',
+ inf:'<svg width="110" height="70" viewBox="0 0 48 24" fill="none" stroke="#E9C77B" stroke-width="3" stroke-linecap="round"><path id="infp" pathLength="100" d="M24 12c-4-6-8-8-12-8a8 8 0 0 0 0 16c4 0 8-2 12-8s8-8 12-8a8 8 0 0 1 0 16c-4 0-8-2-12-8z"/></svg>',
+ presente:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-7-4-6-1s6 1 6 1zm0 0c2-4 7-4 6-1s-6 1-6 1z"/></svg>',
+ valor:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>'};
+sc.filter(c=>c.tipo==='cartao').forEach((c,k)=>{ (c.chips||[]).forEach((ch,j)=>{const d=document.createElement('span'); d.className='chipk'; d.innerHTML=ch.html; $('K_chips').appendChild(d); ch.el=d;}); });
+if(sc.some(c=>c.tipo==='cursos')){
+  const cards=CFG.cursos||[]; const cols=7, W=140, H=229, G=12, x0=(1080-(cols*W+(cols-1)*G))/2;
+  cards.forEach((f,j)=>{const r=Math.floor(j/cols), cc=j%cols; const n=Math.min(cols,cards.length-r*cols);
+    const xr=(1080-(n*W+(n-1)*G))/2; const d=document.createElement('div'); d.className='cr';
+    d.style.left=(xr+cc*(W+G))+'px'; d.style.top=(330+r*(H+14))+'px'; d.innerHTML=`<img src="${f}">`; $('C_grid').appendChild(d);});
+  sc.filter(c=>c.tipo==='cursos').forEach(c=>c.itens.forEach((it,j)=>{const d=document.createElement('div'); d.className='it'; d.style.top=(1080+j*0)+'px';
+    d.innerHTML=ICON_OK.replace(/#7FB3C6/g,'#E9C77B')+`<span>${it.html}</span>`; $('C_items').appendChild(d); it.el=d;}));
+}
+function alerta(c,t){
+  const A=$('AL'); vis(A,true);
+  const o=1-p(t,c.e-.18,c.e);
+  A.style.opacity=o;
+  const fit=(c.fita||'⚠ ATENÇÃO, ALUNOS ⚠ ACESSO VITALÍCIO ')+'';
+  $('AL_t1').textContent=fit.repeat(6); $('AL_t2').textContent=fit.repeat(6);
+  const k1=oc(p(t,c.s,c.s+.25)), k2=oc(p(t,c.s+.08,c.s+.33));
+  $('AL_f1').style.transform=`rotate(-9deg) translateX(${(1-k1)*-1400}px)`; $('AL_f2').style.transform=`rotate(7deg) translateX(${(1-k2)*1400}px)`;
+  $('AL_t1').style.transform=`translateX(${-((t-c.s)*260)%700}px)`; $('AL_t2').style.transform=`translateX(${-700+((t-c.s)*260)%700}px)`;
+  const a=p(t,c.tA,c.tA+.16), b=p(t,c.tB,c.tB+.16);
+  $('AL_a').style.opacity=a>0?1:0; $('AL_a').style.transform=`scale(${2.6-1.6*oc(a)})`; $('AL_a').style.filter=`blur(${(1-a)*10}px)`;
+  $('AL_b').style.opacity=b>0?1:0; $('AL_b').style.transform=`scale(${2.8-1.8*oc(b)}) rotate(${(1-b)*-6}deg)`;
+  const pulse=(Math.sin((t-c.s)*Math.PI*2*3)+1)/2;
+  $('AL_vig').style.opacity=.55+.45*pulse;
+  const fl=Math.max(1-p(t,c.tA,c.tA+.12),0)*(t>=c.tA?1:0)+Math.max(1-p(t,c.tB,c.tB+.12),0)*(t>=c.tB?1:0);
+  $('AL_flash').style.opacity=Math.min(.85,fl*.85);
+}
+function cartao(c,t){
+  const K=$('K'); vis(K,true);
+  const k=ob(p(t,c.s,c.s+.35)), o=1-p(t,c.e-.22,c.e);
+  K.style.transform=`translateY(${(1-k)*-260-(1-o)*100}px) scale(${.92+.08*k})`; K.style.opacity=p(t,c.s,c.s+.12)*o;
+  $('K_ic').innerHTML=ICONES[c.icone]||''; $('K_top').innerHTML=c.topo||''; $('K_tit').innerHTML=c.titulo||''; $('K_sub').innerHTML=c.sub||'';
+  const ip=document.getElementById('infp'); if(ip){ip.style.strokeDasharray=100; ip.style.strokeDashoffset=100-100*io(p(t,c.s+.2,c.s+1.2));}
+  document.querySelectorAll('.chipk').forEach(e=>e.style.display='none');
+  (c.chips||[]).forEach(ch=>{ch.el.style.display='inline-block'; const q=ob(p(t,ch.t,ch.t+.3)); ch.el.style.opacity=p(t,ch.t,ch.t+.1); ch.el.style.transform=`scale(${.5+.5*q})`;});
+  const pu=(Math.sin((t-c.s)*Math.PI*2*.9)+1)/2; K.style.boxShadow=`0 20px 60px rgba(0,0,0,.5),0 0 ${20+30*pu}px rgba(233,199,123,${.2+.25*pu})`;
+}
+function cursos(c,t){
+  const C=$('C'); vis(C,true);
+  const w=oc(p(t,c.s,c.s+.35)), out=io(p(t,c.e-.22,c.e));
+  C.style.clipPath=`circle(${w*150}% at 50% 40%)`; C.style.opacity=1-out;
+  const cs=[...$('C_grid').children];
+  cs.forEach((e,j)=>{const a=c.s+.15+j*.045; const k=ob(p(t,a,a+.4)); e.style.opacity=p(t,a,a+.12);
+    e.style.transform=`perspective(800px) rotateY(${(1-k)*70}deg) translateY(${(1-k)*80}px) scale(${.7+.3*k})`;
+    const sh=p(t,c.s+1.4+j*.03,c.s+1.8+j*.03); e.style.filter=sh>0&&sh<1?`brightness(${1+.6*Math.sin(sh*Math.PI)})`:'none';});
+  $('C_n').textContent=Math.round(20*oc(p(t,c.s+.15,c.s+.15+cs.length*.045)));
+  $('C_top').style.opacity=p(t,c.s+.1,c.s+.3);
+  $('C_grid').style.transform=`translateY(${-p(t,c.s,c.e)*20}px)`;
+  document.querySelectorAll('#C_items .it').forEach(e=>e.style.opacity=0);
+  // um item por vez, trocando no ritmo da fala
+  c.itens.forEach((it,j)=>{const fim=j+1<c.itens.length?c.itens[j+1].t:c.e; if(t>=it.t&&t<fim){const k=ob(p(t,it.t,it.t+.3));
+    it.el.style.opacity=p(t,it.t,it.t+.1); it.el.style.left='0px'; it.el.style.right='0px'; it.el.style.justifyContent='center'; it.el.style.fontSize='52px'; it.el.style.transform=`translateY(${(1-k)*40}px)`;}});
+}
+function live(c,t){
+  const L=$('L'); vis(L,true);
+  const w=oc(p(t,c.s,c.s+.32)), out=io(p(t,c.e-.22,c.e));
+  L.style.clipPath=`inset(0 ${(1-w)*100}% 0 0)`; L.style.opacity=1-out;
+  const ck=ob(p(t,c.tData||c.s+.1,(c.tData||c.s+.1)+.4)); $('L_cal').style.transform=`scale(${.6+.4*ck}) rotate(${(1-ck)*-8}deg)`; $('L_cal').style.opacity=p(t,c.tData||c.s+.1,(c.tData||c.s+.1)+.1);
+  const hk=ob(p(t,c.tHora||c.s+.4,(c.tHora||c.s+.4)+.35)); $('L_h').style.opacity=p(t,c.tHora||c.s+.4,(c.tHora||c.s+.4)+.1); $('L_h').style.transform=`scale(${.6+.4*hk})`;
+  const bk=ob(p(t,c.tVivo||c.s+.6,(c.tVivo||c.s+.6)+.3)); $('L_b').style.opacity=p(t,c.tVivo||c.s+.6,(c.tVivo||c.s+.6)+.1); $('L_b').style.transform=`scale(${.5+.5*bk})`;
+  const pu=(Math.sin((t-c.s)*Math.PI*2*1.4)+1)/2; $('L_dot').style.opacity=.3+.7*pu;
+  $('L_t').innerHTML=c.texto||''; const tt=p(t,c.tTexto||c.s+.9,(c.tTexto||c.s+.9)+.3); $('L_t').style.opacity=tt; $('L_t').style.transform=`translateY(${(1-oc(tt))*30}px)`;
+}
+const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live};
+const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L'];
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});
-  const cap=$('cap'); const g=LEG.find(g=>t>=g.s&&t<g.e);
+  const cap=$('cap'); const g=(CFG.sem_legenda||[]).some(([a,b])=>t>=a&&t<b)?null:LEG.find(g=>t>=g.s&&t<g.e);
   if(!g){cap.innerHTML='';return;}
   const k=ob(p(t,g.s,g.s+.14)); let cur=-1; g.w.forEach((w,j)=>{if(t>=w.s)cur=j});
   cap.innerHTML=g.w.map((w,j)=>`<span class="${j===cur?'on':''}" style="transform:scale(${j===cur&&t<w.s+.18?1.08:1})">${w.t}</span>`).join(' ');

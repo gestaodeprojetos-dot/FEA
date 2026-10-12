@@ -16,7 +16,10 @@ def palavras(trans):
         pont = re.search(r'[,.!?]$', w['t'])
         if base == 'ó':
             i += 1; continue
-        if base in ('saba', 'saiba') and i + 1 < len(ws) and re.sub(r'[^\wÀ-ú]', '', ws[i + 1]['t']).lower() == 'mais':
+        if w['t'].startswith('-') and out:          # "pós" + "-graduação"
+            out[-1]['t'] += re.sub(r'[,.!?]$', '', w['t']); out[-1]['e'] = w['e']; out[-1]['fim'] = bool(pont)
+            i += 1; continue
+        if base in ('saba', 'saiba', 'seba') and i + 1 < len(ws) and re.sub(r'[^\wÀ-ú]', '', ws[i + 1]['t']).lower() == 'mais':
             w['t'] = 'SAIBA MAIS'; w['e'] = ws[i + 1]['e']; pont = re.search(r'[,.!?]$', ws[i + 1]['t']); i += 1
         elif base in TROCAS:
             w['t'] = TROCAS[base]
@@ -28,7 +31,7 @@ def palavras(trans):
 
 BLOCOS = [['elite', 'injectors', 'congress'], ['elite', 'injectors'], ['injectors', 'congress'], ['são', 'paulo'], ['sold', 'out'],
           ['te', 'vejo', 'lá'], ['até', 'lá'], ['harmonização', 'facial'], ['casos', 'clínicos'], ['ao', 'vivo'],
-          ['agora', 'mesmo'], ['mais', 'caro'], ['mais', 'barato'], ['de', 'lote'], ['o', 'lote'], ['espero', 'vocês', 'lá'], ['4', 'dias'], ['três', 'dias'], ['dois', 'dias']]
+          ['agora', 'mesmo'], ['mais', 'caro'], ['mais', 'barato'], ['de', 'lote'], ['o', 'lote'], ['espero', 'vocês', 'lá'], ['4', 'dias'], ['três', 'dias'], ['dois', 'dias'], ['black', 'friday', 'vitalícia'], ['black', 'friday'], ['pósgraduação', 'incluída'], ['20', 'do', '10'], ['seu', 'último', 'curso']]
 
 def unidades(ws):
     out, i = [], 0

@@ -1,11 +1,12 @@
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 (async () => {
   const dir = process.argv[2];
+  const url = process.argv[3] || 'https://el.joaopithon.com.br/elite-injectors-congress/';
   const b = await chromium.launch();
   const ctx = await b.newContext({ viewport:{width:390,height:844}, deviceScaleFactor:2, isMobile:true, hasTouch:true,
     userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'});
   const p = await ctx.newPage();
-  await p.goto('https://el.joaopithon.com.br/elite-injectors-congress/', {waitUntil:'networkidle', timeout:60000});
+  await p.goto(url, {waitUntil:'networkidle', timeout:60000});
   const H = await p.evaluate(()=>document.body.scrollHeight);
   for (let y=0; y<H; y+=300){ await p.evaluate(v=>window.scrollTo(0,v), y); await p.waitForTimeout(120); }
   await p.evaluate(()=>window.scrollTo(0,0)); await p.waitForTimeout(1500);
