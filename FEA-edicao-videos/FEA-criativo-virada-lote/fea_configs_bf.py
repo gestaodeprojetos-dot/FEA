@@ -45,7 +45,8 @@ VIDEOS = {
     SAIBA(27.85, 29.25, 28.3),
     LIVE(29.25, 34.4, 19, f'Abertura oficial das inscrições<br>{G}no Instagram do Dr. João Pithon{GF}', tData=30.5, tVivo=29.95, tTexto=31.5),
  ]),
- 'IMG_0867': dict(fim=47.9, publico='alunos', zoom=[(14.1, 18.0), (30.7, 37.2)], cenas=[
+ 'IMG_0867': dict(fim=44.38, publico='alunos',   # termina em "Black Friday Vitalícia": a frase seguinte fica sem concluir (Keila, 12/10/2026)
+   zoom=[(14.1, 18.0), (30.7, 37.2)], cenas=[
     K(0, 4.6, 'aluno', 'CONVITE EXCLUSIVO', 'Para os meus alunos da FEP'),
     LOGO_(5.0, 6.6),
     K(6.6, 14.0, 'presente', 'PARA ALUNOS', 'Um dia especial de abertura', chips=[(11.3, 'Valores especiais'), (12.7, 'Condições especiais')]),
@@ -53,8 +54,7 @@ VIDEOS = {
     LIVE(23.2, 30.6, 19, f'Live de abertura exclusiva<br>{G}somente para alunos{GF}', tData=24.8, tVivo=26.6, tTexto=28.9),
     SAIBA(37.2, 38.5, 37.7),
     LIVE(38.5, 42.6, 19, f'Ao vivo com o Dr. João<br>{G}abertura para alunos{GF}', tData=40.5, tVivo=39.8, tTexto=41.0),
-    LOGO_(42.6, 44.4),
-    K(44.4, 47.9, 'inf', VITAL, 'Nunca mais nenhum curso', 'acesso vitalício a tudo'),
+    LOGO_(42.6, 44.38),
  ]),
  'IMG_0868': dict(fim=31.8, publico='alunos', zoom=[(21.3, 27.0)], cenas=[
     K(0, 4.6, 'aluno', 'CONVITE EXCLUSIVO', 'Para os meus alunos da FEP'),
@@ -276,7 +276,7 @@ if __name__ == '__main__':
         ws = trocar_seq(ws, v.get('trocas', []) + [(['black', 'friday', 'vitalício'], ['BLACK', 'FRIDAY', 'VITALÍCIA']),
                                                    (['como', 'vitalício'], ['COMBO', 'VITALÍCIO'])])
         ws = datas_legenda(ws)
-        ws = [w for w in ws if w['s'] >= ini - .4 and not any(a - .05 <= w['s'] < b for a, b in cortes)]
+        ws = [w for w in ws if ini - .4 <= w['s'] < v['fim'] and not any(a - .05 <= w['s'] < b for a, b in cortes)]
         leg = agrupar(ws)
         # legenda que começa dentro da abertura sem legenda (ex.: 'ATENÇÃO ALUNOS') não reaparece no fim dela
         leg = [g for g in leg if not any(a - .1 <= g['s'] < b for a, b in v.get('sem_legenda', []))]

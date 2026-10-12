@@ -73,6 +73,17 @@ e as cores no `:root` da composição, sempre tiradas da página.
 
 ## Regras que não mudam
 
+- **O vídeo termina numa frase concluída** (Keila, 12/10/2026). Se o doutor começa outra frase e não termina
+  (ex.: "Nunca mais nenhum curso com valores." no fim do bruto), cortar no fim da última frase completa,
+  medindo o fim da palavra no áudio. Conferir o fim de todo bruto antes de renderizar.
+- **Começo**: medir o início da voz no áudio. O Whisper errou em 0,65 s a primeira palavra ("Atenção" em 0,35 s,
+  marcado em 1,0 s) e o corte comeu metade da palavra. A palavra do começo sai inteira.
+- **Nome do arquivo segue o padrão da pasta de destino**: listar a pasta antes de subir e continuar a numeração
+  (Black Friday Vitalícia: `Ads NNN - BFV.mp4`, a partir do maior número existente). Nunca inventar outro padrão.
+- **Data por público**: conferir no áudio de cada vídeo para quem ele fala. Black Friday Vitalícia 2026: alunos
+  19/10 (sem horário publicado, não mostrar hora), abertura geral 20/10 às 20h. Legenda escreve a data em número
+  ("19 do 10" vira "19/10"). O CTA dos vídeos de alunos tem a data trocada (`fea_cta_data.py`).
+
 - **Todo número na tela vem da página** (prazo, %, data, local, preço). Nunca inventar % de vagas, "últimas vagas"
   ou contador falso: é escassez fabricada, proibida pela linha vermelha da FEA.
 - Fala do doutor que promete mais do que a página mostra ("vai dar sold out", "quase lotado", "o anúncio pode não
@@ -84,6 +95,13 @@ e as cores no `:root` da composição, sempre tiradas da página.
   (ex.: `card-Jessica.webp` = "Dra. Patrícia Andrade"), avisar a Keila.
 
 ## Armadilhas já resolvidas
+
+- Captura de quadro pelo CDP (`Page.captureScreenshot` com `optimizeForSpeed`) é 2x mais rápida que
+  `page.screenshot` e mantém a transparência (fundo padrão transparente via `Emulation`).
+- Cortes no meio do bruto (data errada que ele corrige, "pronto, entrega"): `cortes` no roteiro, cortando nos
+  silêncios medidos no áudio. Tempos do Whisper podem estar até 0,5 s adiantados ou atrasados.
+- CTA de terceiros com texto animado (digitação, linha subindo): achar a linha a cada quadro, apagar com inpaint
+  e redesenhar só o trecho trocado (Inter Bold na mesma altura).
 
 - PNG do Chromium sai **RGB** quando o quadro é todo opaco: o FFmpeg parava a sequência no primeiro (vídeo de 10 s).
   O `fea_montar.sh` já converte tudo para RGBA.
