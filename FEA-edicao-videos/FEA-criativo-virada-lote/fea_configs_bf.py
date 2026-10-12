@@ -278,6 +278,8 @@ if __name__ == '__main__':
         ws = datas_legenda(ws)
         ws = [w for w in ws if w['s'] >= ini - .4 and not any(a - .05 <= w['s'] < b for a, b in cortes)]
         leg = agrupar(ws)
+        # legenda que começa dentro da abertura sem legenda (ex.: 'ATENÇÃO ALUNOS') não reaparece no fim dela
+        leg = [g for g in leg if not any(a - .1 <= g['s'] < b for a, b in v.get('sem_legenda', []))]
         dur = f(v['fim'])
         manter = []; t0 = ini
         for a, b in cortes: manter.append((t0, a)); t0 = b
