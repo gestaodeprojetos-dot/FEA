@@ -220,7 +220,8 @@ VIDEOS = {
     SAIBA(72.6, 74.2, 73.4),
     K(74.2, 78.2, 'inf', 'ATUALIZAÇÕES', 'Para o resto da sua vida'),
  ]),
- 'IMG_0886': dict(inicio=3.45, fim=62.8, publico='geral', zoom=[], cenas=[
+ 'IMG_0886': dict(inicio=3.45, fim=62.1,   # voz termina em 61,8 s: sem tablet parado antes do CTA
+   publico='geral', zoom=[], cenas=[
     K(3.45, 6.9, 'aulas', VITAL, 'Veja a plataforma'),
     K(7.0, 9.6, 'aulas', 'NA PLATAFORMA', '1.200 aulas', 'de todos os temas'),
     K(9.7, 17.0, 'aulas', 'TODOS OS TEMAS', 'Cursos completos', chips=[(9.7, 'Preenchimento'), (11.2, 'Botox'), (12.5, 'Fios'), (13.6, 'Gestão de clínicas'), (15.9, 'Corporal')]),
