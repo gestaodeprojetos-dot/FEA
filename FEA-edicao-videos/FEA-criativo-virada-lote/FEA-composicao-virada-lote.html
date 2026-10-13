@@ -532,6 +532,7 @@ function marca(c,t){
 }
 const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
 const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
+if(CFG.cap_top) $('cap').style.top=CFG.cap_top+'px';   // vídeo que já tinha legenda gravada: a nova cobre a faixa apagada
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});

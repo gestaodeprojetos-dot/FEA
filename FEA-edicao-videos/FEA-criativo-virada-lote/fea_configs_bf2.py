@@ -101,7 +101,21 @@ VIDEOS = {
     K(4.1, 8.3, 'valor', 'UM ÚNICO VALOR', 'Paga uma vez', 'e nunca mais paga por atualizações'),
     CURSOS_(8.4, 12.9, [(8.46, 'Todos os cursos que já fiz'), (10.0, f'Todos que {G}ainda vou fazer{GF}'), (11.02, 'Atualizações vitalícias')]),
     SAIBA(16.65, 18.2, 17.0), LOGO_(18.2, 19.9)]),
+ # ---------------- refações de 13/10/2026 (pasta 1. VENDAS, Dr. no rio) ----------------
+ # Base = vídeo já editado por outra pessoa (o bruto não está no Drive): áudio com o vento removido (DeepFilterNet),
+ # legenda antiga gravada apagada (inpaint) e coberta pela legenda nova mais baixa (cap_top); a manchete antiga dos
+ # primeiros 2,8 s fica embaixo da abertura em tela cheia; o CTA antigo sai e entra o CTA da Black.
+ 'V08': B(inicio=0, fim=18.62, cortes=[(8.32, 9.55)], cap_top=1420, zoom=[(9.6, 11.4)],      # "8- Inscrições abertas"
+   trocas=[(['black', 'friday', 'e', 'vitalícia'], ['Black', 'Friday', 'Vitalícia'])], cenas=[
+    LOGO_(0, 2.9), K(3.45, 6.1, *ULTIMO), SAIBA(6.55, 8.3, 6.7),
+    K(11.45, 13.15, 'inf', 'INSCRIÇÕES ABERTAS', 'Black Friday Vitalícia', 'todos os cursos, para sempre, por um único preço'),
+    K(13.3, 15.95, 'inf', 'PARA O RESTO DA SUA VIDA', 'Estaremos juntos'),
+    LOGO_(16.1, 18.62)]),
+ 'V13': B(inicio=0, fim=15.85, cap_top=1420, zoom=[(3.05, 4.9), (7.6, 8.85), (10.6, 12.2)], cenas=[    # "13- Último dia de inscrições"
+    LOGO_(0, 2.9), K(4.95, 7.4, *ULTIMO), SAIBA(8.85, 10.5, 9.3),
+    K(12.25, 14.2, 'cal', VITAL, 'Último dia', 'para se inscrever'), SAIBA(14.25, 15.85, 14.95)]),
 }
+
 
 if __name__ == '__main__':
     gerar(VIDEOS, sys.argv[1], sys.argv[2], sys.argv[3:])

@@ -327,7 +327,7 @@ def gerar(videos, tr, saida, nomes=None):
         manter.append((t0, v['fim']))
         cfg = dict(nome=nome, tema='bf', logo=LOGO, cursos=CURSOS, publico=v['publico'],
                    cta=v.get('cta') or ('cta19.mp4' if v['publico'] == 'alunos' else 'cta.mp4'),
-                   trilha=v.get('trilha'), vol_trilha=v.get('vol_trilha', .2), inicio=ini, manter=manter,
+                   trilha=v.get('trilha'), vol_trilha=v.get('vol_trilha', .2), cap_top=v.get('cap_top'), inicio=ini, manter=manter,
                    dur=round(dur, 2), fim_fala=round(dur - .2, 2),
                    zoom=[(f(a), f(b)) for a, b in v['zoom']], tremor=[(f(a), f(b)) for a, b in v.get('tremor', [])],
                    sem_legenda=[(f(a), f(b)) for a, b in v.get('sem_legenda', [])],

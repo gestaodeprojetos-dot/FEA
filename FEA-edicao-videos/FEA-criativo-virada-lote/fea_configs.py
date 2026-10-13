@@ -7,7 +7,7 @@ FRACAS = {'de', 'do', 'da', 'dos', 'das', 'o', 'a', 'os', 'as', 'em', 'e', 'que'
           'se', 'um', 'uma', 'com', 'antes', 'mais', 'te', 'eu', 'vai', 'é', 'à', 'ao', 'sua', 'tua', 'esse'}
 TROCAS = {'pra': 'para', 'mediano': 'mediando', 'sabamais': 'SAIBA MAIS', 'vitalice': 'Vitalícia', 'vitalistas': 'vitalícias',
           'biostimulador': 'bioestimulador', 'teologia': 'reologia', '10ml': '10 mL', '5ml': '5 mL', 'ml': 'mL', '1200': '1.200',
-          'hormonização': 'harmonização', 'imunização': 'harmonização', 'armadilhação': 'harmonização', 'vitalista': 'Vitalícia',
+          'hormonização': 'harmonização', 'imunização': 'harmonização', 'armadilhação': 'harmonização', 'amortização': 'harmonização', 'vitalista': 'Vitalícia',
           'sabamá': 'SAIBA MAIS', 'lembretos': 'lembretes', 'pro': 'para o'}
 
 def palavras(trans):

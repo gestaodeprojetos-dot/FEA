@@ -50,6 +50,15 @@ Se ela mandar só a pasta e a página, seguir: data, prazo e escassez saem da p�
     (`fea_drive.py renomear ID "OK. nome"`), que é o padrão do Drive para "já editado".
 12. Se o doutor ainda está subindo vídeos, listar a pasta de brutos de novo antes de fechar o lote e ao final.
 
+## Vídeo que já veio editado (Keila, 13/10/2026)
+
+Quando ela manda um vídeo já editado por outra pessoa e o bruto não está no Drive: apagar a legenda antiga gravada
+com `fea_apagar_legenda.py` (inpaint quadro a quadro) e baixar a legenda nova para cima da faixa apagada
+(`cap_top` no roteiro); manchete antiga grande no começo fica embaixo de uma cena em tela cheia (`LOGO_`); cortar o
+vídeo antes do CTA antigo e montar com o CTA da campanha. **Vento ou ruído**: `fea_isolar_voz.py` (DeepFilterNet) e
+montar com o áudio limpo. Pausa longa do doutor: `cortes` no silêncio medido. Subir ao lado do original com
+`(novo modelo)` no nome, sem apagar o original.
+
 ## Cenas prontas (`FEA-composicao-virada-lote.html`)
 
 | Cena | Quando usar |
