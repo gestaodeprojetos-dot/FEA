@@ -41,6 +41,14 @@ Se ela mandar só a pasta e a página, seguir: data, prazo e escassez saem da p�
    `fea_drive.py upload DESTINO arquivo --substituir` assim que fica pronto, sem esperar o lote inteiro.
    Nome: `FEA-<Evento>-<tema>-<variação>.mp4` (ex.: `FEA-Elite-virada-de-lote-2-dias-A.mp4`).
 9. Commitar roteiros e ajustes em `FEA-edicao-videos/FEA-criativo-virada-lote/`.
+10. **Planilha de controle** (obrigatório, Keila 13/10/2026): preencher a planilha
+    `1RYzwrbbCFZCTVZ-pJosMhDpwNdSDLoFEZVHpIQjWzNQ` (aba EDIÇÕES) na primeira linha vazia "A fazer" logo depois do
+    último registro, com `python3 FEA-edicao-videos/fea_atualizar_planilha.py set-row --row N ...` (não usar append,
+    que joga a linha para o fim da aba). Projeto, nome da pasta de brutos com link, datas, quantidade, pasta de destino
+    com link, status e observação (público, datas, CTA, ajustes).
+11. **"OK" na pasta de brutos** (Keila 13/10/2026): ao terminar, renomear a pasta de brutos com o prefixo `OK. `
+    (`fea_drive.py renomear ID "OK. nome"`), que é o padrão do Drive para "já editado".
+12. Se o doutor ainda está subindo vídeos, listar a pasta de brutos de novo antes de fechar o lote e ao final.
 
 ## Cenas prontas (`FEA-composicao-virada-lote.html`)
 

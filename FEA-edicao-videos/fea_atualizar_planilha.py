@@ -97,6 +97,18 @@ def cmd_append(args):
         body)
     print(f"OK: linha adicionada em {result.get('updates', {}).get('updatedRange', '?')}")
 
+def cmd_set_row(args):
+    """Preenche uma linha existente (ex.: as linhas vazias "A fazer" depois do último registro), sem criar linha no fim."""
+    row = [args.projeto or "Instagram", args.doc or "Brutos", args.data_solicitada or "", args.data_entrega or "",
+           str(args.quantidade) if args.quantidade else "", args.salvar or "", args.status or "Entregue", args.obs or ""]
+    if args.link_brutos:
+        row[1] = f'=HYPERLINK("{args.link_brutos}";"{args.doc or "Brutos"}")'
+    if args.link_editados:
+        row[5] = f'=HYPERLINK("{args.link_editados}";"{args.salvar}")'
+    range_str = urllib.parse.quote(f"{SHEET_NAME}!A{args.row}:H{args.row}")
+    sheets_request("PUT", f"values/{range_str}?valueInputOption=USER_ENTERED", {"values": [row]})
+    print(f"OK: linha {args.row} preenchida")
+
 def cmd_delete_row(args):
     sheet_id = None
     meta = sheets_request("GET", "?fields=sheets.properties")
@@ -133,11 +145,20 @@ if __name__ == "__main__":
     p_append.add_argument("--status", default="Entregue")
     p_append.add_argument("--obs", default="")
 
+    p_set = sub.add_parser("set-row")
+    p_set.add_argument("--row", type=int, required=True)
+    for a in ("--projeto", "--doc", "--data-solicitada", "--data-entrega", "--salvar", "--link-brutos", "--link-editados"):
+        p_set.add_argument(a)
+    p_set.add_argument("--quantidade", type=int)
+    p_set.add_argument("--status", default="Entregue")
+    p_set.add_argument("--obs", default="")
+
     p_del = sub.add_parser("delete-row")
     p_del.add_argument("--row", type=int, required=True)
 
     args = parser.parse_args()
     if args.cmd == "read": cmd_read(args)
     elif args.cmd == "append": cmd_append(args)
+    elif args.cmd == "set-row": cmd_set_row(args)
     elif args.cmd == "delete-row": cmd_delete_row(args)
     else: parser.print_help()
