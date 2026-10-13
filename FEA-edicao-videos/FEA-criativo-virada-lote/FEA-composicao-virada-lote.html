@@ -5,7 +5,7 @@
 @font-face{font-family:Mont;src:url(../fonts/Montserrat-SemiBold.ttf);font-weight:600}
 @font-face{font-family:Mont;src:url(../fonts/Montserrat-Bold.ttf);font-weight:700}
 @font-face{font-family:Mont;src:url(../fonts/Montserrat-ExtraBold.ttf);font-weight:800}
-@font-face{font-family:Serif;src:url(../fonts/Fraunces.ttf);font-weight:100 900}
+@font-face{font-family:Fra;src:url(../fonts/Fraunces.ttf);font-weight:100 900}
 :root{--bg:#050C0F;--teal:#7FB3C6;--gold1:#E9D68E;--gold2:#D4B760;--gold3:#A58036;--alert:#C8463F}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font-family:Mont,sans-serif;color:#fff}
@@ -21,7 +21,7 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 .flip{position:relative;width:250px;height:300px;perspective:1400px;flex:none}
 .half{position:absolute;left:0;width:250px;height:150px;overflow:hidden;background:linear-gradient(180deg,#14262d,#0b171c);border-radius:22px 22px 0 0}
 .half.bot{top:150px;border-radius:0 0 22px 22px;background:linear-gradient(180deg,#0b171c,#091216)}
-.half .n{position:absolute;left:0;width:250px;height:300px;text-align:center;font-family:Serif;font-weight:700;font-size:270px;line-height:300px}
+.half .n{position:absolute;left:0;width:250px;height:300px;text-align:center;font-family:Fra;font-weight:700;font-size:270px;line-height:300px}
 .half.bot .n{top:-150px}
 .flap{position:absolute;left:0;top:0;width:250px;height:150px;transform-origin:50% 100%;transform-style:preserve-3d}
 .flap .half{top:0;backface-visibility:hidden}
@@ -46,14 +46,14 @@ html,body{width:1080px;height:1920px;background:transparent;overflow:hidden;font
 .tk.front{background:radial-gradient(130% 160% at 50% 0%,#F2E3A2 0%,#E1C978 35%,#C29B4B 70%,#8f6a26 100%);color:#16110a;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(233,214,142,.35)}
 .tk.back{transform:rotateX(180deg);background:linear-gradient(180deg,#1b2b31,#0d171b);border:3px solid #7FB3C6;color:#fff;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 70px rgba(127,179,198,.3)}
 .tk .a{font-weight:700;letter-spacing:.3em;font-size:28px;opacity:.85}
-.tk .b{font-family:Serif;font-weight:700;font-size:150px;line-height:1.05}
+.tk .b{font-family:Fra;font-weight:700;font-size:150px;line-height:1.05}
 .tk .c{font-weight:600;letter-spacing:.12em;font-size:26px;opacity:.8}
 .tk:before,.tk:after{content:"";position:absolute;top:186px;width:48px;height:48px;border-radius:50%;background:#071419}
 .tk:before{left:-24px}.tk:after{right:-24px}
 .cal{position:absolute;width:300px;height:330px;perspective:1200px}
 .calp{position:absolute;left:0;top:0;width:300px;height:330px;border-radius:26px;background:#f4f1ea;overflow:hidden;transform-origin:50% 0%;box-shadow:0 14px 34px rgba(0,0,0,.5);backface-visibility:hidden}
 .calp .m{height:84px;background:linear-gradient(180deg,#C9A24F,#A58036);color:#16110a;font-weight:800;font-size:34px;letter-spacing:.2em;text-align:center;line-height:84px}
-.calp .d{font-family:Serif;font-weight:700;font-size:170px;line-height:190px;text-align:center;color:#0b171c}
+.calp .d{font-family:Fra;font-weight:700;font-size:170px;line-height:190px;text-align:center;color:#0b171c}
 .calp .w{font-weight:700;font-size:28px;letter-spacing:.2em;text-align:center;color:#5a6a70;margin-top:-18px}
 .stamp{position:absolute;padding:18px 44px;border:7px solid var(--alert);color:var(--alert);font-weight:800;font-size:76px;letter-spacing:.06em;border-radius:18px;background:rgba(10,4,4,.55);white-space:nowrap}
 .dot{display:inline-block;width:22px;height:22px;border-radius:50%;background:var(--alert);margin-right:16px;vertical-align:middle}
@@ -108,7 +108,7 @@ body.bf{--teal:#E9C77B}
   </div>
   <div>
     <div class="lbl" id="A_top"></div>
-    <div id="A_big" style="font-family:Serif;font-weight:700;font-size:118px;line-height:1"></div>
+    <div id="A_big" style="font-family:Fra;font-weight:700;font-size:118px;line-height:1"></div>
     <div id="A_sub" style="font-weight:700;font-size:44px;margin-top:14px;line-height:1.2"></div>
   </div>
 </div></div>
@@ -159,7 +159,7 @@ body.bf{--teal:#E9C77B}
 <!-- lote card -->
 <div id="E" class="card" style="top:120px;height:330px;padding:40px 54px">
   <div style="font-weight:800;font-size:44px;letter-spacing:.04em"><span class="goldtxt">1º LOTE</span> <span style="color:var(--teal);font-weight:700;font-size:32px;letter-spacing:.14em">◆ INGRESSOS LIMITADOS</span></div>
-  <div id="E_sub" style="font-family:Serif;font-weight:700;font-size:64px;margin:14px 0 22px;line-height:1"></div>
+  <div id="E_sub" style="font-family:Fra;font-weight:700;font-size:64px;margin:14px 0 22px;line-height:1"></div>
   <div class="bar"><i id="E_fill" style="width:0"></i></div>
   <div style="display:flex;justify-content:space-between;margin-top:16px;font-size:30px;font-weight:600;color:#dfe8ec">
     <span><span class="dot" id="E_dot"></span><span id="E_lbl"></span></span><span id="E_pct" class="goldtxt" style="font-weight:800;font-size:38px"></span>
@@ -197,7 +197,7 @@ body.bf{--teal:#E9C77B}
   <div id="I_info" class="abs" style="left:0;right:0;top:450px;text-align:center;font-size:40px;font-weight:600;line-height:1.6;color:#e6eef1">01 e 02 de Novembro<br><span style="color:var(--teal)">WTC Sheraton · São Paulo</span></div>
   <div id="I_lote" class="abs" style="left:0;right:0;top:640px;text-align:center">
     <div class="lbl" style="color:#cfd8dc" id="I_lbl"></div>
-    <div class="goldtxt" style="font-family:Serif;font-weight:700;font-size:200px;line-height:1.05" id="I_big"></div>
+    <div class="goldtxt" style="font-family:Fra;font-weight:700;font-size:200px;line-height:1.05" id="I_big"></div>
   </div>
   <div id="I_btn" class="btn" style="left:130px;top:1000px;width:820px;height:140px;line-height:140px;font-size:50px">GARANTIR MINHA VAGA<div class="shine" id="I_sh"></div></div>
   <div id="I_cta" class="abs" style="left:0;right:0;top:1480px;text-align:center;font-size:44px;font-weight:700">Toque em <span class="goldtxt" style="font-weight:800">Saiba Mais</span>
@@ -272,7 +272,7 @@ const p=(t,a,b)=>cl((t-a)/(b-a));
 const oc=x=>1-Math.pow(1-x,3);
 const ob=x=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
 const io=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
-const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA',19:'SEGUNDA',20:'TERÇA'};
+const DIAS={10:'SÁBADO',11:'DOMINGO',12:'SEGUNDA',13:'TERÇA',14:'QUARTA',15:'QUINTA',16:'SEXTA',17:'SÁBADO',18:'DOMINGO',19:'SEGUNDA',20:'TERÇA'};
 const ICON_CAL='<svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E9D68E" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
 const ICON_PIN='<svg width="50" height="54" viewBox="0 0 24 26" fill="none" stroke="#7FB3C6" stroke-width="2"><path d="M12 24s8-7.5 8-14a8 8 0 1 0-16 0c0 6.5 8 14 8 14z"/><circle cx="12" cy="10" r="3"/></svg>';
 const ICON_OK='<svg width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#7FB3C6" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M7 12.5l3.2 3.2L17 9"/></svg>';
@@ -419,6 +419,9 @@ const ICONES={
  inf:'<svg width="110" height="70" viewBox="0 0 48 24" fill="none" stroke="#E9C77B" stroke-width="3" stroke-linecap="round"><path id="infp" pathLength="100" d="M24 12c-4-6-8-8-12-8a8 8 0 0 0 0 16c4 0 8-2 12-8s8-8 12-8a8 8 0 0 1 0 16c-4 0-8-2-12-8z"/></svg>',
  presente:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12M12 9c-2-4-7-4-6-1s6 1 6 1zm0 0c2-4 7-4 6-1s-6 1-6 1z"/></svg>',
  aulas:'<svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M10 8l5 2.5-5 2.5z" fill="#E9C77B"/><path d="M8 21h8M12 17v4"/></svg>',
+ aviao:'<svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6" stroke-linejoin="round"><path d="M21 4.5c-.8-.8-2.2-.6-3 .2L14.5 8.2 5 5.5 3.5 7l7.5 4.5-3.5 3.5H4.5L3 16.5l4 1.5 1.5 4L10 20.5v-3l3.5-3.5L18 21.5l1.5-1.5-2.7-9.5 3.5-3.5c.8-.8 1-2.2.2-3z"/></svg>',
+ sino:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20.5a2 2 0 0 0 4 0"/><path d="M12 3v2"/></svg>',
+ cal:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 14h3v3H8z" fill="#E9C77B"/></svg>',
  valor:'<svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#E9C77B" stroke-width="1.6"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg>'};
 sc.filter(c=>c.tipo==='cartao').forEach((c,k)=>{ (c.chips||[]).forEach((ch,j)=>{const d=document.createElement('span'); d.className='chipk'; d.innerHTML=ch.html; $('K_chips').appendChild(d); ch.el=d;}); });
 if(sc.some(c=>c.tipo==='cursos')){

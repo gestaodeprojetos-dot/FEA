@@ -302,18 +302,19 @@ def datas_legenda(ws):
     """'19 do 10' / '20 do 10' viram '19/10' / '20/10' (pedido da Keila, 12/10/2026)."""
     return trocar_seq(trocar_seq(ws, [(['19', 'do', '10'], ['19/10'])]), [(['20', 'do', '10'], ['20/10'])])
 
-if __name__ == '__main__':
-    tr, saida = sys.argv[1], sys.argv[2]
-    nomes = sys.argv[3:] or list(VIDEOS)
-    for nome in nomes:
-        v = VIDEOS[nome]; ini = v.get('inicio', 0); cortes = v.get('cortes', []); f = mapa(ini, cortes)
+def gerar(videos, tr, saida, nomes=None):
+    for nome in nomes or list(videos):
+        v = videos[nome]; ini = v.get('inicio', 0); cortes = v.get('cortes', []); f = mapa(ini, cortes)
         ws = palavras(json.load(open(f'{tr}/{nome}.json')))
         ws = trocar_seq(ws, v.get('trocas', []) + [(['black', 'friday', 'vitalício'], ['BLACK', 'FRIDAY', 'VITALÍCIA']),
                                                    (['como', 'vitalício'], ['COMBO', 'VITALÍCIO'])])
         ws = datas_legenda(ws)
         base = lambda w: re.sub(r'[^\wÀ-ú/]', '', w['t']).lower()
         ws = [w for w in ws if not any(base(w) == p and abs(w['s'] - t) < .3 for p, t in v.get('remover', []))]
-        ws = [w for w in ws if ini - .4 <= w['s'] < v['fim'] and not any(a <= (w['s'] + w['e']) / 2 < b for a, b in cortes)]   # pelo meio da palavra
+        for t in v.get('fins', []):     # fim de frase que o Whisper não pontuou (ex.: "por isso Por isso")
+            for w in ws:
+                if abs(w['s'] - t) < .06: w['fim'] = True
+        ws = [w for w in ws if ini - v.get('tol_inicio', .4) <= w['s'] < v['fim'] and not any(a <= (w['s'] + w['e']) / 2 < b for a, b in cortes)]   # pelo meio da palavra
         for a, b in cortes:     # a legenda quebra no corte, para não juntar frases de lados diferentes
             antes = [w for w in ws if (w['s'] + w['e']) / 2 < a]
             if antes: antes[-1]['fim'] = True
@@ -333,3 +334,6 @@ if __name__ == '__main__':
                    cenas=deslocar(v['cenas'], f), legendas=deslocar(leg, f))
         json.dump(cfg, open(f'{saida}/{nome}.json', 'w'), ensure_ascii=False, indent=1)
         print(nome, cfg['publico'], cfg['dur'], '|', ' / '.join(' '.join(w['t'] for w in g['w']) for g in cfg['legendas']))
+
+if __name__ == '__main__':
+    gerar(VIDEOS, sys.argv[1], sys.argv[2], sys.argv[3:])

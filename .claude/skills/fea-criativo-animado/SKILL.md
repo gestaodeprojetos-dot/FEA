@@ -116,6 +116,11 @@ e as cores no `:root` da composição, sempre tiradas da página.
 - `show()` com `display=''` apagava o `display:flex` do cartão: usar container interno para flex.
 - No celular, o cabeçalho com contador fica abaixo da ilha (notch), senão o texto some atrás dela.
 - Nome longo no card ("Dra. Vanessa Defelícibus") cortava: fonte menor só nesse nome.
+- Texto invisível nos primeiros quadros (rótulo e subtítulo do cartão sumiam na prévia): a fonte de um peso ainda não
+  usado só carrega quando aparece. O `fea_render_quadros.js` agora carrega todas as fontes antes de capturar.
+- `font-family:Serif` é a família genérica do navegador (Times), não a Fraunces: a família agora se chama `Fra`.
+- Whisper adiantou a primeira palavra ("4" em 0,05 s, voz em 0,80 s) e o filtro a descartou: `tol_inicio` no roteiro.
+  Frase sem pontuação ("por isso Por isso"): `fins` com o tempo da palavra que fecha a frase.
 - `sleep` longo é bloqueado: esperar render com `run_in_background` + `until grep FEITO` ou Monitor.
 
 ## Como a Keila pede

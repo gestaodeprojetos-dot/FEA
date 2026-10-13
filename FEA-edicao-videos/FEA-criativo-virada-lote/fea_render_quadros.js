@@ -11,6 +11,10 @@ const fs = require('fs');
   const run = `${dir}/_run_${nome}.html`; fs.writeFileSync(run, html);
   const b = await chromium.launch(); const pg = await b.newPage({ viewport: { width: 1080, height: 1920 } });
   await pg.goto('file://' + run); await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(500);
+  // as fontes só carregam quando algum texto as usa: carrega todas antes de capturar, senão o texto de um peso
+  // ainda não usado sai invisível nos primeiros quadros (período de bloqueio da fonte)
+  await pg.evaluate(async () => { await Promise.all([...document.fonts].map(f => f.load())); await document.fonts.ready; });
+  await pg.waitForTimeout(300);
   // captura direta pelo CDP: 2x mais rápida que page.screenshot e mantém o fundo transparente
   const cdp = await pg.context().newCDPSession(pg);
   await cdp.send('Emulation.setDefaultBackgroundColorOverride', { color: { r: 0, g: 0, b: 0, a: 0 } });

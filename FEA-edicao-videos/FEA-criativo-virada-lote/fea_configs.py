@@ -6,7 +6,9 @@ import json, re, sys
 FRACAS = {'de', 'do', 'da', 'dos', 'das', 'o', 'a', 'os', 'as', 'em', 'e', 'que', 'para', 'no', 'na', 'nos',
           'se', 'um', 'uma', 'com', 'antes', 'mais', 'te', 'eu', 'vai', 'é', 'à', 'ao', 'sua', 'tua', 'esse'}
 TROCAS = {'pra': 'para', 'mediano': 'mediando', 'sabamais': 'SAIBA MAIS', 'vitalice': 'Vitalícia', 'vitalistas': 'vitalícias',
-          'biostimulador': 'bioestimulador', 'teologia': 'reologia', '10ml': '10 mL', '5ml': '5 mL', 'ml': 'mL', '1200': '1.200'}
+          'biostimulador': 'bioestimulador', 'teologia': 'reologia', '10ml': '10 mL', '5ml': '5 mL', 'ml': 'mL', '1200': '1.200',
+          'hormonização': 'harmonização', 'imunização': 'harmonização', 'armadilhação': 'harmonização', 'vitalista': 'Vitalícia',
+          'sabamá': 'SAIBA MAIS', 'lembretos': 'lembretes', 'pro': 'para o'}
 
 def palavras(trans):
     ws = [dict(t=w['w'].strip(), s=w['s'], e=w['e']) for s in trans for w in s['words']]
@@ -23,7 +25,7 @@ def palavras(trans):
         if w['t'].startswith('-') and out:          # "pós" + "-graduação"
             out[-1]['t'] += re.sub(r'[,.!?]$', '', w['t']); out[-1]['e'] = w['e']; out[-1]['fim'] = bool(pont)
             i += 1; continue
-        if base in ('saba', 'saiba', 'seba', 'serra') and i + 1 < len(ws) and re.sub(r'[^\wÀ-ú]', '', ws[i + 1]['t']).lower() == 'mais':
+        if base in ('saba', 'saiba', 'seba', 'serra', 'saber', 'sabar') and i + 1 < len(ws) and re.sub(r'[^\wÀ-ú]', '', ws[i + 1]['t']).lower() == 'mais':
             w['t'] = 'SAIBA MAIS'; w['e'] = ws[i + 1]['e']; pont = re.search(r'[,.!?]$', ws[i + 1]['t']); i += 1
         elif base in TROCAS:
             w['t'] = TROCAS[base]
