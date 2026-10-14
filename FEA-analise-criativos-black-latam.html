@@ -1,0 +1,228 @@
+<title>Criativos Black LatAm</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* Layout: relatório de triagem, coluna única de leitura, veredito primeiro, depois candidatos, depois descarte por grupo */
+:root{
+  --roxo:#5B4599; --azul:#3846BB; --lavanda:#D0D1E9; --alerta:#BB3838;
+  --bg:#F9F9F9; --surface:#FFFFFF; --borda:#E9E9E9; --fg:#24212E; --muted:#5E5A6B;
+  --ok:#2F6B4F; --ok-bg:#E3EFE8; --warn:#8A5A00; --warn-bg:#F6EBD3; --no-bg:#F5E1E1;
+  --chip:#ECEBF6; --th-fg:#FFFFFF;
+  --f-display:"Sora",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Montserrat",ui-sans-serif,system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --roxo:#A592E0; --azul:#8E98F0; --lavanda:#3A3557; --alerta:#E27C7C;
+  --bg:#16141D; --surface:#1F1C29; --borda:#332F42; --fg:#ECEAF3; --muted:#A9A4BA;
+  --ok:#8FD1AE; --ok-bg:#1E3329; --warn:#E8C27A; --warn-bg:#352B17; --no-bg:#3A2124;
+  --chip:#2A2638; --th-fg:#16141D; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --roxo:#A592E0; --azul:#8E98F0; --lavanda:#3A3557; --alerta:#E27C7C;
+  --bg:#16141D; --surface:#1F1C29; --borda:#332F42; --fg:#ECEAF3; --muted:#A9A4BA;
+  --ok:#8FD1AE; --ok-bg:#1E3329; --warn:#E8C27A; --warn-bg:#352B17; --no-bg:#3A2124;
+  --chip:#2A2638; --th-fg:#16141D; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--f-display);color:var(--roxo);text-wrap:balance;margin:0;line-height:1.2}
+h1{font-size:clamp(28px,5vw,40px);font-weight:800}
+h2{font-size:22px;font-weight:700}
+h3{font-size:17px;font-weight:700;color:var(--fg)}
+p{margin:0;max-width:68ch}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--azul)}
+section{display:flex;flex-direction:column;gap:16px}
+.lead{font-size:17px;color:var(--fg)}
+.muted{color:var(--muted)}
+.tally{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--borda);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:4px}
+.tile b{font-family:var(--f-display);font-size:30px;font-variant-numeric:tabular-nums;line-height:1}
+.tile.ok b{color:var(--ok)} .tile.warn b{color:var(--warn)} .tile.no b{color:var(--alerta)} .tile.re b{color:var(--azul)}
+.tile span{font-size:13px;color:var(--muted)}
+.box{background:var(--lavanda);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.box.alert{background:var(--no-bg);border-left:4px solid var(--alerta)}
+.scroll{overflow-x:auto;border:1px solid var(--borda);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:14px}
+th{background:var(--roxo);color:var(--th-fg);font-family:var(--f-display);font-weight:600;text-align:left;padding:10px 12px;font-size:13px}
+td{padding:10px 12px;border-top:1px solid var(--borda);vertical-align:top}
+td.ids{font-variant-numeric:tabular-nums;color:var(--muted);font-size:13px;min-width:160px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--borda);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card .top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.pill{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.pill.ok{background:var(--ok-bg);color:var(--ok)} .pill.warn{background:var(--warn-bg);color:var(--warn)} .pill.re{background:var(--chip);color:var(--azul)}
+.kv{display:grid;grid-template-columns:92px 1fr;gap:4px 10px;font-size:14px}
+.kv dt{color:var(--muted);font-weight:500} .kv dd{margin:0;min-width:0}
+code,.tc{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;background:var(--chip);border-radius:4px;padding:1px 5px;font-variant-numeric:tabular-nums}
+ul,ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;max-width:72ch}
+.quote{font-style:italic;color:var(--muted)}
+.steps li::marker{color:var(--roxo);font-weight:700}
+footer{font-size:13px;color:var(--muted);border-top:1px solid var(--borda);padding-top:16px}
+</style>
+
+<div class="wrap">
+
+<header style="display:flex;flex-direction:column;gap:12px">
+  <span class="eyebrow">FEA · Black Friday Total LatAm · triagem de criativos</span>
+  <h1>Quais vídeos da Black Brasil servem para a Black LatAm</h1>
+  <p class="lead">Analisei os 129 vídeos da pasta de criativos (fala transcrita e imagem quadro a quadro) contra o briefing da Black Friday Total. Nenhum serve do jeito que está. Nove podem ser aproveitados com corte, e quase todos dependem de um arquivo limpo da edição.</p>
+  <p class="muted">Critério de aprovação: o trecho não pode dizer nem mostrar vitalício, para sempre, fim da vida, nunca mais pagar, datas 19/10 ou 20/10, valores em reais, cursos que não estão no Combo Total ou bônus que o briefing LatAm não prevê.</p>
+</header>
+
+<section>
+  <div class="tally">
+    <div class="tile no"><b>0</b><span>servem como estão</span></div>
+    <div class="tile ok"><b>9</b><span>aproveitáveis com corte</span></div>
+    <div class="tile warn"><b>8</b><span>condicionais, dependem de uma resposta</span></div>
+    <div class="tile re"><b>3</b><span>ideia boa, mas precisa regravar</span></div>
+    <div class="tile no"><b>109</b><span>descartar</span></div>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Por que tão poucos</span>
+  <h2>A promessa central dos vídeos é a que o briefing LatAm proíbe</h2>
+  <div class="scroll"><table>
+    <tr><th>Ponto</th><th>Black Brasil (vídeos)</th><th>Black LatAm (briefing)</th></tr>
+    <tr><td>Nome</td><td>Black Friday Vitalícia</td><td>Black Friday Total</td></tr>
+    <tr><td>Acesso</td><td>Vitalício, "até o fim da vida", "nunca mais compre um curso"</td><td>12 meses. Proibido usar vitalício, para sempre ou acesso eterno em qualquer peça</td></tr>
+    <tr><td>Produto</td><td>Todos os cursos do Dr. (20 formações, 1.200 aulas, corporal, gestão, fios, complicações)</td><td>Combo Total: 6 formações (Toxina Express, Relleno Express, Bioestimuladores, Full Face menor que 5ml, Botox, FEP Latam)</td></tr>
+    <tr><td>Datas</td><td>19/10 (alunos) e 20/10 (abertura)</td><td>Captação de 27/10 a 10/11, live em 10/11</td></tr>
+    <tr><td>Preço e prova</td><td>Alunas dizendo quanto gastaram em reais</td><td>US$ 828 em cursos avulsos contra US$ 447 a 547 no combo</td></tr>
+    <tr><td>Bônus</td><td>Bônus presencial, pós-graduação incluída, Reolo Map</td><td>Nenhum bônus definido</td></tr>
+  </table></div>
+  <div class="box alert">
+    <h3>O problema também está na imagem, não só na fala</h3>
+    <ul>
+      <li><b>Selo "Black Friday Vitalícia"</b> fixo no topo da tela em quase todos os vídeos gravados no consultório.</li>
+      <li><b>Legenda em português gravada na imagem</b> em praticamente todos. Dublado em espanhol, o vídeo ficaria com legenda em português por cima.</li>
+      <li><b>Banner, camiseta, colete ou boné</b> escritos "Vitalícia 20 de outubro" em cena (não sai com corte).</li>
+      <li><b>Cartela final</b> com "20 de outubro" ou "A maior Black Friday da história". Essa sai com corte simples.</li>
+    </ul>
+    <p>Por isso, quase todos os aproveitáveis abaixo dependem de a edição (Gabriela Costa ou Weslei Sousa) enviar a versão sem selo e sem legenda, ou o bruto.</p>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Aproveitáveis com corte · 9 vídeos</span>
+  <h2>O que dá para usar e onde cortar</h2>
+  <p class="muted">Os tempos estão em minuto:segundo do arquivo original. Os trechos dão o gancho e o conteúdo; o fechamento (CTA de 12 meses, preço, data 10/11) entra como cartela nova ou fala nova.</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="top"><h3>Ads 091 · Conselho do Futuro</h3><span class="pill ok">melhor candidato</span></div>
+      <p>Peça cinematográfica (João jovem e João mais velho). A fala não cita "vitalícia" nem data, e o vídeo não tem selo nem legenda gravada.</p>
+      <dl class="kv">
+        <dt>Manter</dt><dd><span class="tc">0:00</span> a <span class="tc">1:03</span> (termina em "E isso é ruim? Pra mim é.")</dd>
+        <dt>Cortar</dt><dd><span class="tc">1:03</span> a <span class="tc">1:23</span>: "Por quanto tempo? Esse foi o problema… ninguém mais vai precisar comprar um curso na vida" e a cartela "Vitalícia 20 de outubro"</dd>
+        <dt>Falta</dt><dd>Cartela final nova: Black Friday Total, 6 formações mais o que vier nos próximos 12 meses, live 10/11</dd>
+        <dt>Atenção</dt><dd>Mais de um personagem falando: dublar com <code>speakerNum</code> igual ao número de vozes</dd>
+      </dl>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Ads 111 · Depoimento Andréia de Moraes</h3><span class="pill ok">aproveitável</span></div>
+      <p>Aluna fala da didática do Dr. e do método de toxina, conteúdo que existe no Combo Total (Botox e Toxina Express). Sem selo no topo.</p>
+      <dl class="kv">
+        <dt>Manter</dt><dd><span class="tc">0:44</span> a <span class="tc">1:13</span> · <span class="tc">1:18</span> a <span class="tc">1:29</span> · <span class="tc">1:41</span> a <span class="tc">1:56</span></dd>
+        <dt>Cortar</dt><dd>Todo trecho com "aluna do vitalício", "curso do vitalício" e a cartela de <span class="tc">2:06</span> em diante</dd>
+        <dt>Falta</dt><dd>Versão sem a legenda gravada; nome dela em GC (o "sou Andréia" vem colado em "aluna do vitalício")</dd>
+      </dl>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Ads 039 · Relato do aluno Junior</h3><span class="pill ok">aproveitável</span></div>
+      <p>História de quem tinha medo de rinomodelação e aprendeu na FEP online. A FEP Latam está no combo.</p>
+      <dl class="kv">
+        <dt>Manter</dt><dd><span class="tc">0:00</span> a <span class="tc">0:38</span> (até "um pouquinho da história dele aqui para vocês")</dd>
+        <dt>Cortar</dt><dd><span class="tc">0:38</span> ao fim: "para o resto da sua vida… Black Friday Vitalícia"</dd>
+        <dt>Falta</dt><dd>Arquivo sem selo e sem legenda; print de WhatsApp em português precisa de versão em espanhol</dd>
+      </dl>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Ads 056 · Técnica tridimensional FEP</h3><span class="pill ok">gancho</span></div>
+      <p>Abre com caso de paciente e apresenta a FEP como formação de alunos "do Brasil e do mundo", ótimo para LatAm.</p>
+      <dl class="kv">
+        <dt>Manter</dt><dd><span class="tc">0:00</span> a <span class="tc">0:18</span> (até "todos os meus cursos")</dd>
+        <dt>Cortar</dt><dd><span class="tc">0:18</span> ao fim: "de maneira vitalícia… até o fim da vida"</dd>
+        <dt>Falta</dt><dd>Arquivo sem selo e sem legenda; fechamento novo</dd>
+      </dl>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Série "Isso ou aquilo" · 021, 045, 052, 063, 069</h3><span class="pill ok">depende de aprovação</span></div>
+      <p>Comparação técnica de preenchedores por região (arco zigomático, olheiras, rinomodelação, têmpora, lábios). Conteúdo forte para tráfego frio de injetores.</p>
+      <dl class="kv">
+        <dt>Manter</dt><dd>021 <span class="tc">0:00–1:44</span> · 045 <span class="tc">0:00–0:32</span> · 052 <span class="tc">0:00–0:23</span> · 063 <span class="tc">0:00–0:40</span> · 069 <span class="tc">0:00–0:35</span></dd>
+        <dt>Cortar</dt><dd>O chamado final de cada um ("atualizações vitalícias… Black Friday Vitalícia")</dd>
+        <dt>Bloqueio</dt><dd>Cita e mostra marcas (Rennova, Restylane, Yvoire, Belotero, Neuramis, Biogelis, Cutegel). A linha vermelha da FEA exige aprovação de marca; também vale confirmar se esses produtos são vendidos nos países da campanha</dd>
+      </dl>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">Condicionais · 8 vídeos</span>
+  <h2>Servem se a resposta for sim</h2>
+  <div class="scroll"><table>
+    <tr><th>Vídeo</th><th>Trecho aproveitável</th><th>Pergunta que destrava</th></tr>
+    <tr><td>048 · Tour na área de membros</td><td><span class="tc">0:06–0:26</span> (reologia e hialuronidase no tablet)</td><td>A plataforma LatAm é a mesma? A tela mostrada está em português e é a plataforma brasileira</td></tr>
+    <tr><td>040 e BF46 · Análise reológica</td><td><span class="tc">0:00–0:11</span> ("e os próximos que vão vir?")</td><td>O conteúdo de reologia está dentro das 6 formações do Combo Total?</td></tr>
+    <tr><td>027 e BF42 · Reologia ao vivo na FEP</td><td><span class="tc">0:00–0:10</span></td><td>Mesma pergunta acima</td></tr>
+    <tr><td>051 e 074 · Coreia, "girando em círculos"</td><td><span class="tc">0:04–0:14</span> + <span class="tc">0:24–0:31</span> + <span class="tc">0:36–0:38</span></td><td>Aceita uma montagem com três cortes? Fica funcional, porém picotada</td></tr>
+    <tr><td>073 · Apresentadora UGC</td><td><span class="tc">0:00–0:28</span> (gancho "daqui a 5 anos… sempre recomeçando")</td><td>Vale usar gancho de apresentadora brasileira, sem o Dr., para LatAm?</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <span class="eyebrow">Regravar · 3 vídeos</span>
+  <h2>A "conta rápida" é a peça mais alinhada ao briefing, mas com números do Brasil</h2>
+  <p>Os vídeos 121, 122 e 123 fazem exatamente a dor do briefing ("pare de gastar com cursos isolados"). O problema: a conta usa valores brasileiros (curso de Botox 5 mil, especialização 20 mil) e a tela mostra R$. Dublado, "5 mil" vira um preço falso para o público LatAm. Recomendo regravar a mesma estrutura com a conta do briefing: US$ 828 em cursos avulsos contra US$ 447 no lote especial da live.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Descartar · 109 vídeos</span>
+  <h2>Grupos descartados e o motivo</h2>
+  <div class="scroll"><table>
+    <tr><th>Grupo</th><th>Vídeos</th><th>Motivo principal</th></tr>
+    <tr><td>"Quanto você já gastou?" com alunas</td><td class="ids">001–003, 077–090, 098–110 (30)</td><td>Valores em reais, "último curso da vida", data 20/10, bônus presencial; banner ao fundo e colete com a marca</td></tr>
+    <tr><td>Pitch vitalício no consultório e no estúdio</td><td class="ids">018, 020, 022, 023, 025, 026, 028–033, 035, 036, 038, 041–043, 046, 047, 050, 054, 055, 057–060, 064–066, 068, 071, 072, 075, 076, BF28, BF32 (37)</td><td>A fala inteira é a promessa vitalícia ("tudo que eu fizer até o fim da vida"); vários listam cursos fora do combo (fios, corporal, gestão, complicações, skincare)</td></tr>
+    <tr><td>Banner e camiseta "Vitalícia 20 de outubro"</td><td class="ids">005–008, 011–014, 017 (9)</td><td>Data e marca em cena o vídeo todo</td></tr>
+    <tr><td>Boné "Vitalícia 20 de outubro"</td><td class="ids">004, 015, 016, 092–097 (9)</td><td>Boné na cabeça do começo ao fim, mais data falada</td></tr>
+    <tr><td>Oferta exclusiva para alunos FEP</td><td class="ids">113–120 (8)</td><td>Pré-abertura 19/10 só para alunos do Brasil, pós-graduação incluída; mecânica que não existe na LatAm</td></tr>
+    <tr><td>João do futuro e envelhecido</td><td class="ids">009, 010, 044, 049, 062, 070 (6)</td><td>O roteiro é "você vai envelhecer comigo", promessa vitalícia por definição</td></tr>
+    <tr><td>Tour da plataforma Combo Vitalício</td><td class="ids">124–129 (6)</td><td>Mostra a plataforma brasileira (1.200 aulas, 20 formações), produto diferente do Combo Total de 6 formações</td></tr>
+    <tr><td>Apresentadora UGC</td><td class="ids">024, 034 (2)</td><td>"Acesso vitalício" no centro da fala</td></tr>
+    <tr><td>Teaser e bônus brasileiros</td><td class="ids">053, 112 (2)</td><td>053 é motion "nunca mais gaste"; 112 promete o Reolo Map no grupo até 20/10</td></tr>
+  </table></div>
+  <p class="muted">Duplicados identificados na pasta: 041 = 042, 064 = BF32, 051 = 074, 027 ≈ BF42, 040 ≈ BF46, 001 ≈ 085, 086 ≈ 098, 083 ≈ 103.</p>
+</section>
+
+<section>
+  <span class="eyebrow">Rastreamento</span>
+  <h2>Como medir o que for ao ar</h2>
+  <ul>
+    <li>Hoje não existe ligação fim a fim entre o criativo e a venda na Hotmart; a leitura para no clique.</li>
+    <li>Manter o número original no nome do arquivo dublado (ex.: <code>Ads 091 - BFT-Spanish.mp4</code>) e usar esse número no <code>utm_content</code> de cada anúncio.</li>
+    <li>Passar o mesmo UTM para o checkout da Hotmart (parâmetro <code>src</code>) para saber qual criativo vendeu, não só qual teve clique.</li>
+    <li>Comparar os aproveitados contra criativos novos gravados para a LatAm na primeira semana de captação (27/10 a 03/11) e cortar o que ficar abaixo da média de CTR.</li>
+  </ul>
+  <p><b>Sem métrica, otimização é palpite.</b></p>
+</section>
+
+<section>
+  <span class="eyebrow">Recomendação</span>
+  <h2>Usar o 091 como peça principal e gravar um lote curto para a LatAm</h2>
+  <p>O material brasileiro foi construído inteiro em torno do "vitalício", que é a única coisa que a LatAm não pode dizer. O aproveitamento real fica em ganchos e conteúdo técnico, sem fechamento. Minha recomendação é usar o 091 como peça principal (é o único pronto em imagem) e os ganchos aprovados como abertura de teste. Em paralelo, gravar de 5 a 8 vídeos curtos novos com os heads do briefing ("Deja de pagar curso por curso", a conta de US$ 828 contra US$ 447, live 10/11), que podem ser gravados em português e dublados depois.</p>
+  <ol class="steps">
+    <li>Keila aprova esta lista e responde às perguntas dos condicionais.</li>
+    <li>Pedir à edição as versões sem selo e sem legenda dos vídeos 039, 056, 111 e da série "Isso ou aquilo".</li>
+    <li>Aprovação de marca para a série "Isso ou aquilo" (Dr. João ou Francine Almeida).</li>
+    <li>Corte, dublagem em espanhol (HeyGen, sem legenda) e cartela final Black Friday Total.</li>
+  </ol>
+</section>
+
+<footer>Análise de 129 vídeos da pasta de criativos BFV, transcrição automática da fala e revisão visual quadro a quadro. Os tempos de corte vêm da transcrição e podem variar meio segundo; confirmo no corte final. Outubro de 2026.</footer>
+
+</div>
