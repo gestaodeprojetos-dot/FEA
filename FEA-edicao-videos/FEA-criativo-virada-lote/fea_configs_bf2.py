@@ -124,6 +124,17 @@ VIDEOS = {
     K(13.2, 16.15, 'inf', 'PELA PRIMEIRA VEZ', 'Black Friday Vitalícia', 'todos os cursos, para sempre, por um único preço'),
     CURSOS_(16.2, 21.45, [(16.27, 'Acesso vitalício'), (17.97, 'Todos os cursos do Dr. João'), (19.31, f'Inclusive os que {G}ainda vai lançar{GF}')]),
     SAIBA(21.65, 23.5, 22.6)]),
+ # 14/10/2026, "FEA-influencer-black-edema-v2" (720p, a montagem escala). Personagem de IA com edema labial: selo
+ # discreto de cena simulada com IA no começo (a 1ª influencer se apresenta como IA; esta não). Nome gravado
+ # "Dr. João Pithon" em y≈1420 de 14,0 a 16,1 s: legenda desce nesse trecho.
+ 'INF2': B(inicio=.2, fim=21.9, cap_faixas=[(13.9, 16.25, 1560)], trocas=[(['dr', 'joão'], ['Dr.', 'João'])],
+   selo=(.2, 8.0, 'Cena simulada com inteligência artificial'),
+   zoom=[(2.2, 4.7), (8.0, 11.5)], tremor=[(4.08, 4.64)], cenas=[
+    K(5.0, 7.75, 'aulas', 'SEGURANÇA', 'Anatomia antes da técnica'),
+    LIVE(11.75, 13.9, 20, 'Abertura das inscrições', tData=12.3, tVivo=13.3, tTexto=13.5),
+    K(13.95, 16.15, 'inf', VITAL, 'Acesso vitalício', 'todos os cursos, para sempre, por um único preço'),
+    CURSOS_(16.2, 20.45, [(16.2, 'Acesso para sempre'), (17.48, 'Todos os cursos do Dr. João'), (18.76, f'Inclusive os que {G}ainda vai lançar{GF}')]),
+    SAIBA(20.5, 21.9, 21.27)]),
 }
 
 

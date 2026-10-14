@@ -215,6 +215,7 @@ body.bf{--teal:#E9C77B}
 </div>
 
 <!-- cartão genérico no topo -->
+<div id="SELO" style="position:absolute;left:50px;top:52px;padding:8px 20px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-weight:600;font-size:26px;letter-spacing:.02em;display:none"></div>
 <div id="K" class="card" style="top:120px;min-height:250px;padding:40px 46px"><div style="display:flex;align-items:center;gap:40px">
   <div class="ic" id="K_ic"></div>
   <div style="flex:1"><div class="lbl" id="K_top"></div><div id="K_tit" style="font-weight:800;font-size:58px;line-height:1.05;margin-top:8px"></div><div id="K_sub" style="font-weight:600;font-size:34px;color:#e8e2d4;margin-top:10px"></div></div>
@@ -536,6 +537,7 @@ if(CFG.cap_top) $('cap').style.top=CFG.cap_top+'px';   // vídeo que já tinha l
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});
+  const sl=CFG.selo; if(sl){ const on=t>=sl.s&&t<sl.e; vis($('SELO'),on); if(on){ $('SELO').textContent=sl.texto; $('SELO').style.opacity=Math.min(p(t,sl.s,sl.s+.3),1-p(t,sl.e-.3,sl.e)); } }
   const cap=$('cap');
   // faixas em que a legenda muda de altura (ex.: nome gravado no vídeo na altura normal da legenda)
   const fx=(CFG.cap_faixas||[]).find(([a,b])=>t>=a&&t<b); cap.style.top=(fx?fx[2]:(CFG.cap_top||1290))+'px'; const g=(CFG.sem_legenda||[]).some(([a,b])=>t>=a&&t<b)?null:LEG.find(g=>t>=g.s&&t<g.e);
