@@ -536,7 +536,9 @@ if(CFG.cap_top) $('cap').style.top=CFG.cap_top+'px';   // vídeo que já tinha l
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
   sc.forEach(c=>{const fim=c.tipo==='final'?1e9:c.e; if(t>=c.s&&t<fim) FN[c.tipo](c,t);});
-  const cap=$('cap'); const g=(CFG.sem_legenda||[]).some(([a,b])=>t>=a&&t<b)?null:LEG.find(g=>t>=g.s&&t<g.e);
+  const cap=$('cap');
+  // faixas em que a legenda muda de altura (ex.: nome gravado no vídeo na altura normal da legenda)
+  const fx=(CFG.cap_faixas||[]).find(([a,b])=>t>=a&&t<b); cap.style.top=(fx?fx[2]:(CFG.cap_top||1290))+'px'; const g=(CFG.sem_legenda||[]).some(([a,b])=>t>=a&&t<b)?null:LEG.find(g=>t>=g.s&&t<g.e);
   if(!g){cap.innerHTML='';return;}
   const k=ob(p(t,g.s,g.s+.14)); let cur=-1; g.w.forEach((w,j)=>{if(t>=w.s)cur=j});
   cap.innerHTML=g.w.map((w,j)=>`<span class="${j===cur?'on':''}" style="transform:scale(${j===cur&&t<w.s+.18?1.08:1})">${w.t}</span>`).join(' ');
