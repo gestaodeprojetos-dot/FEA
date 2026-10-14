@@ -114,6 +114,15 @@ VIDEOS = {
  'V13': B(inicio=0, fim=15.85, cap_top=1420, zoom=[(3.05, 4.9), (7.6, 8.85), (10.6, 12.2)], cenas=[    # "13- Último dia de inscrições"
     LOGO_(0, 2.9), K(4.95, 7.4, *ULTIMO), SAIBA(8.85, 10.5, 9.3),
     K(12.25, 14.2, 'cal', VITAL, 'Último dia', 'para se inscrever'), SAIBA(14.25, 15.85, 14.95)]),
+ # ---------------- influencer (14/10/2026, "FEA-influencer-black-roteiro1-v2") ----------------
+ # Ela diz "Eu sou uma inteligência artificial" 2 vezes: fica só a 2ª (Keila). O vídeo já tem o rótulo
+ # "Dr. João Pithon" gravado em y 1344 a 1421 (12,6 a 15,4 s): a legenda desce para baixo dele (cap_top).
+ 'INF1': B(inicio=2.8, fim=23.5, cap_top=1450, trocas=[(['dr', 'joão'], ['Dr.', 'João'])], zoom=[(2.8, 4.85), (5.15, 8.0), (12.4, 13.15)], cenas=[
+    K(8.0, 9.55, 'aluno', 'VOCÊ PRECISA', 'Estudar anatomia'),
+    LIVE(9.65, 12.4, 20, 'Abertura das inscrições', tData=10.45, tVivo=11.6, tTexto=11.9),
+    K(13.2, 16.15, 'inf', 'PELA PRIMEIRA VEZ', 'Black Friday Vitalícia', 'todos os cursos, para sempre, por um único preço'),
+    CURSOS_(16.2, 21.45, [(16.27, 'Acesso vitalício'), (17.97, 'Todos os cursos do Dr. João'), (19.31, f'Inclusive os que {G}ainda vai lançar{GF}')]),
+    SAIBA(21.65, 23.5, 22.6)]),
 }
 
 

@@ -37,7 +37,7 @@ def palavras(trans):
 
 BLOCOS = [['elite', 'injectors', 'congress'], ['elite', 'injectors'], ['injectors', 'congress'], ['são', 'paulo'], ['sold', 'out'],
           ['te', 'vejo', 'lá'], ['até', 'lá'], ['harmonização', 'facial'], ['casos', 'clínicos'], ['ao', 'vivo'],
-          ['agora', 'mesmo'], ['mais', 'caro'], ['mais', 'barato'], ['de', 'lote'], ['o', 'lote'], ['espero', 'vocês', 'lá'], ['4', 'dias'], ['três', 'dias'], ['dois', 'dias'], ['black', 'friday', 'vitalícia'], ['black', 'friday'], ['pósgraduação', 'incluída'], ['20', 'do', '10'], ['seu', 'último', 'curso'], ['saiba', 'mais']]
+          ['agora', 'mesmo'], ['mais', 'caro'], ['mais', 'barato'], ['de', 'lote'], ['o', 'lote'], ['espero', 'vocês', 'lá'], ['4', 'dias'], ['três', 'dias'], ['dois', 'dias'], ['black', 'friday', 'vitalícia'], ['black', 'friday'], ['pósgraduação', 'incluída'], ['20', 'do', '10'], ['seu', 'último', 'curso'], ['saiba', 'mais'], ['dr', 'joão', 'pithon'], ['dr', 'joão']]
 
 def unidades(ws):
     out, i = [], 0
