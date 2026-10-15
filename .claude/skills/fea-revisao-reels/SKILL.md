@@ -78,6 +78,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
    - luva tapando a imagem por muito tempo;
    - agulha ou cânula com problema;
    - outra pessoa falando ou aparecendo sem motivo.
+   - **tablet ou celular com foto de outro paciente** (galeria de antes e depois passando): sai com `zoom` ou corte (15/10/2026, pasta 18 de outubro).
 3. Gotinha pequena no ponto da picada **fica** (decisão da Keila em 24/09/2026). Só sai o que escorre.
 4. Achou algo: extrair 1 quadro por segundo do trecho (`-ss INICIO -t DUR -vf fps=1,scale=120:213,tile=15x2`) para achar início e fim exatos, cortar no projeto e gerar o vídeo de novo.
 5. A marcação de caneta vermelha na pele **não é sangue**: conferir antes de cortar.
