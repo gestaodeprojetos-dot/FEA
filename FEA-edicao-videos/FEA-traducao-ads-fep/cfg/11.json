@@ -1,0 +1,29 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 9.0,
+"t1": 11.666,
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 0,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

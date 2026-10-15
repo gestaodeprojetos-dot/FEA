@@ -1,0 +1,1010 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+318,
+1114,
+759,
+1167
+],
+"txt": "novos casos de"
+}
+],
+"t0": 0.0,
+"t1": 3.0,
+"bbox": [
+318,
+1114,
+759,
+1167
+],
+"pt": "novos casos de",
+"n": 9,
+"id": 0,
+"es": "nuevos casos de",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+210,
+1189,
+874,
+1260
+],
+"txt": "disseccoes anatomicas"
+}
+],
+"t0": 0.0,
+"t1": 3.0,
+"bbox": [
+210,
+1189,
+874,
+1260
+],
+"pt": "disseccoes anatomicas",
+"n": 9,
+"id": 1000,
+"es": "disecciones anatómicas",
+"tipo": "caixa_escura"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1197,
+935,
+1240
+],
+"txt": "Essas aulas que eu estou preparando"
+}
+],
+"t0": 3.0,
+"t1": 4.333,
+"bbox": [
+147,
+1197,
+935,
+1240
+],
+"pt": "Essas aulas que eu estou preparando",
+"n": 4,
+"id": 1,
+"es": "Estas clases que estoy preparando"
+},
+{
+"linhas": [
+{
+"bbox": [
+154,
+1194,
+930,
+1239
+],
+"txt": "baseado nas disseccoes anatomicas."
+}
+],
+"t0": 4.667,
+"t1": 6.666,
+"bbox": [
+154,
+1194,
+930,
+1239
+],
+"pt": "baseado nas disseccoes anatomicas.",
+"n": 6,
+"id": 2,
+"es": "basadas en las disecciones anatómicas."
+},
+{
+"linhas": [
+{
+"bbox": [
+73,
+932,
+167,
+981
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 5.667,
+"t1": 6.0,
+"bbox": [
+73,
+932,
+167,
+981
+],
+"pt": "FCPEXP",
+"n": 1,
+"id": 3,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+153,
+1167,
+923,
+1211
+],
+"txt": "Fiz um trabalho de disseccao muito"
+},
+{
+"bbox": [
+412,
+1219,
+670,
+1265
+],
+"txt": "bonito aqui."
+}
+],
+"t0": 7.0,
+"t1": 9.0,
+"bbox": [
+153,
+1167,
+923,
+1265
+],
+"pt": "Fiz um trabalho de disseccao muito / bonito aqui.",
+"n": 6,
+"id": 4,
+"es": "Hice un trabajo de disección muy bonito aquí."
+},
+{
+"linhas": [
+{
+"bbox": [
+308,
+1193,
+771,
+1239
+],
+"txt": "Se voces observarem,"
+}
+],
+"t0": 9.0,
+"t1": 10.333,
+"bbox": [
+308,
+1193,
+771,
+1239
+],
+"pt": "Se voces observarem,",
+"n": 4,
+"id": 5,
+"es": "Si observan,"
+},
+{
+"linhas": [
+{
+"bbox": [
+271,
+1194,
+806,
+1238
+],
+"txt": "olha essa vascularizacao,"
+}
+],
+"t0": 10.333,
+"t1": 11.333,
+"bbox": [
+271,
+1194,
+806,
+1238
+],
+"pt": "olha essa vascularizacao,",
+"n": 3,
+"id": 6,
+"es": "miren esta vascularización,"
+},
+{
+"linhas": [
+{
+"bbox": [
+994,
+773,
+1061,
+812
+],
+"txt": "FCPEXR"
+}
+],
+"t0": 11.0,
+"t1": 11.333,
+"bbox": [
+994,
+773,
+1061,
+812
+],
+"pt": "FCPEXR",
+"n": 1,
+"id": 7,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+323,
+1195,
+757,
+1236
+],
+"txt": "olha como esta vivo,"
+}
+],
+"t0": 12.0,
+"t1": 12.666,
+"bbox": [
+323,
+1195,
+757,
+1236
+],
+"pt": "olha como esta vivo,",
+"n": 2,
+"id": 8,
+"es": "miren lo viva que está,"
+},
+{
+"linhas": [
+{
+"bbox": [
+234,
+1196,
+852,
+1241
+],
+"txt": "olha como a gente consegue"
+}
+],
+"t0": 13.0,
+"t1": 14.0,
+"bbox": [
+234,
+1196,
+852,
+1241
+],
+"pt": "olha como a gente consegue",
+"n": 3,
+"id": 9,
+"es": "miren cómo logramos"
+},
+{
+"linhas": [
+{
+"bbox": [
+162,
+673,
+241,
+729
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 14.0,
+"t1": 14.333,
+"bbox": [
+162,
+673,
+241,
+729
+],
+"pt": "FCPEXP",
+"n": 1,
+"id": 10,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+334,
+1198,
+747,
+1234
+],
+"txt": "observar os tecidos"
+}
+],
+"t0": 14.0,
+"t1": 15.0,
+"bbox": [
+334,
+1198,
+747,
+1234
+],
+"pt": "observar os tecidos",
+"n": 3,
+"id": 11,
+"es": "observar los tejidos"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+949,
+318,
+991
+],
+"txt": "FCCEN"
+}
+],
+"t0": 14.333,
+"t1": 14.666,
+"bbox": [
+249,
+949,
+318,
+991
+],
+"pt": "FCCEN",
+"n": 1,
+"id": 12,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+202,
+665,
+277,
+724
+],
+"txt": "FCCEXR"
+}
+],
+"t0": 14.667,
+"t1": 15.0,
+"bbox": [
+202,
+665,
+277,
+724
+],
+"pt": "FCCEXR",
+"n": 1,
+"id": 13,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+923,
+322,
+964
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 15.0,
+"t1": 15.333,
+"bbox": [
+249,
+923,
+322,
+964
+],
+"pt": "FCPEXP",
+"n": 1,
+"id": 14,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1196,
+782,
+1235
+],
+"txt": "de maneira muito real."
+}
+],
+"t0": 15.0,
+"t1": 15.666,
+"bbox": [
+299,
+1196,
+782,
+1235
+],
+"pt": "de maneira muito real.",
+"n": 2,
+"id": 15,
+"es": "de manera muy real."
+},
+{
+"linhas": [
+{
+"bbox": [
+191,
+653,
+262,
+705
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 15.333,
+"t1": 15.666,
+"bbox": [
+191,
+653,
+262,
+705
+],
+"pt": "FCPEXP",
+"n": 1,
+"id": 16,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+907,
+308,
+946
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 15.333,
+"t1": 15.666,
+"bbox": [
+239,
+907,
+308,
+946
+],
+"pt": "FCPEXP",
+"n": 1,
+"id": 17,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1168,
+787,
+1211
+],
+"txt": "Tudo isso vai pra nossa"
+},
+{
+"bbox": [
+312,
+1213,
+767,
+1266
+],
+"txt": "pr6xima aula da FEP."
+}
+],
+"t0": 16.667,
+"t1": 19.0,
+"bbox": [
+294,
+1168,
+787,
+1266
+],
+"pt": "Tudo isso vai pra nossa / pr6xima aula da FEP.",
+"n": 7,
+"id": 18,
+"es": "Todo esto va para nuestra próxima clase de la FEP."
+},
+{
+"linhas": [
+{
+"bbox": [
+233,
+1171,
+835,
+1210
+],
+"txt": "A Formacao Especialista em"
+},
+{
+"bbox": [
+372,
+1221,
+704,
+1260
+],
+"txt": "Preenchimento"
+}
+],
+"t0": 19.0,
+"t1": 21.0,
+"bbox": [
+233,
+1171,
+835,
+1260
+],
+"pt": "A Formacao Especialista em / Preenchimento",
+"n": 6,
+"id": 19,
+"es": "La Formación Especialista en Relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+137,
+1194,
+947,
+1240
+],
+"txt": "é um curso onde eu mostro anatomia,"
+}
+],
+"t0": 21.0,
+"t1": 23.333,
+"bbox": [
+137,
+1194,
+947,
+1240
+],
+"pt": "é um curso onde eu mostro anatomia,",
+"n": 7,
+"id": 20,
+"es": "es un curso donde muestro anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+42,
+627,
+110,
+644
+],
+"txt": "GPEXP"
+}
+],
+"t0": 22.667,
+"t1": 24.0,
+"bbox": [
+42,
+627,
+110,
+644
+],
+"pt": "GPEXP",
+"n": 4,
+"id": 21,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+351,
+1195,
+729,
+1239
+],
+"txt": "reologia, técnicas"
+}
+],
+"t0": 23.667,
+"t1": 24.666,
+"bbox": [
+351,
+1195,
+729,
+1239
+],
+"pt": "reologia, técnicas",
+"n": 3,
+"id": 22,
+"es": "reología, técnicas"
+},
+{
+"linhas": [
+{
+"bbox": [
+326,
+1169,
+751,
+1209
+],
+"txt": "e intercorrencias no"
+},
+{
+"bbox": [
+279,
+1217,
+802,
+1266
+],
+"txt": "preenchimento full face."
+}
+],
+"t0": 24.667,
+"t1": 27.333,
+"bbox": [
+279,
+1169,
+802,
+1266
+],
+"pt": "e intercorrencias no / preenchimento full face.",
+"n": 8,
+"id": 23,
+"es": "y complicaciones en el relleno full face."
+},
+{
+"linhas": [
+{
+"bbox": [
+766,
+1120,
+820,
+1148
+],
+"txt": "Jardin"
+}
+],
+"t0": 25.667,
+"t1": 26.0,
+"bbox": [
+766,
+1120,
+820,
+1148
+],
+"pt": "Jardin",
+"n": 1,
+"id": 24,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+181,
+1194,
+898,
+1239
+],
+"txt": "Essa é a minha metodologia Arte,"
+}
+],
+"t0": 27.667,
+"t1": 29.0,
+"bbox": [
+181,
+1194,
+898,
+1239
+],
+"pt": "Essa é a minha metodologia Arte,",
+"n": 4,
+"id": 25,
+"es": "Esta es mi metodología Arte,"
+},
+{
+"linhas": [
+{
+"bbox": [
+257,
+1195,
+828,
+1240
+],
+"txt": "que vai te preparar pra ser"
+}
+],
+"t0": 29.333,
+"t1": 30.666,
+"bbox": [
+257,
+1195,
+828,
+1240
+],
+"pt": "que vai te preparar pra ser",
+"n": 4,
+"id": 26,
+"es": "que te va a preparar para ser"
+},
+{
+"linhas": [
+{
+"bbox": [
+341,
+1191,
+741,
+1240
+],
+"txt": "um injetor de elite"
+}
+],
+"t0": 30.667,
+"t1": 31.666,
+"bbox": [
+341,
+1191,
+741,
+1240
+],
+"pt": "um injetor de elite",
+"n": 3,
+"id": 27,
+"es": "un inyector de élite"
+},
+{
+"linhas": [
+{
+"bbox": [
+374,
+1200,
+705,
+1239
+],
+"txt": "com seguranca,"
+}
+],
+"t0": 31.667,
+"t1": 32.666,
+"bbox": [
+374,
+1200,
+705,
+1239
+],
+"pt": "com seguranca,",
+"n": 3,
+"id": 28,
+"es": "con seguridad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+378,
+1193,
+701,
+1237
+],
+"txt": "com seriedade,"
+}
+],
+"t0": 32.667,
+"t1": 33.333,
+"bbox": [
+378,
+1193,
+701,
+1237
+],
+"pt": "com seriedade,",
+"n": 2,
+"id": 29,
+"es": "con seriedad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+408,
+1192,
+674,
+1237
+],
+"txt": "com ciencia,"
+}
+],
+"t0": 34.0,
+"t1": 34.666,
+"bbox": [
+408,
+1192,
+674,
+1237
+],
+"pt": "com ciencia,",
+"n": 2,
+"id": 30,
+"es": "con ciencia,"
+},
+{
+"linhas": [
+{
+"bbox": [
+343,
+1167,
+732,
+1213
+],
+"txt": "com qualidade de"
+},
+{
+"bbox": [
+255,
+1219,
+824,
+1264
+],
+"txt": "imagem em casos clinicos,"
+}
+],
+"t0": 35.0,
+"t1": 37.333,
+"bbox": [
+255,
+1167,
+824,
+1264
+],
+"pt": "com qualidade de / imagem em casos clinicos,",
+"n": 7,
+"id": 31,
+"es": "con calidad de imagen en casos clínicos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+362,
+1195,
+718,
+1240
+],
+"txt": "que com certeza"
+}
+],
+"t0": 37.667,
+"t1": 38.333,
+"bbox": [
+362,
+1195,
+718,
+1240
+],
+"pt": "que com certeza",
+"n": 2,
+"id": 32,
+"es": "que sin duda"
+},
+{
+"linhas": [
+{
+"bbox": [
+273,
+1166,
+804,
+1211
+],
+"txt": "vai fazer muita diferenca"
+},
+{
+"bbox": [
+365,
+1219,
+712,
+1261
+],
+"txt": "no seu dia a dia."
+}
+],
+"t0": 38.333,
+"t1": 40.333,
+"bbox": [
+273,
+1166,
+804,
+1261
+],
+"pt": "vai fazer muita diferenca / no seu dia a dia.",
+"n": 6,
+"id": 33,
+"es": "va a marcar mucha diferencia en tu día a día."
+},
+{
+"linhas": [
+{
+"bbox": [
+359,
+1192,
+723,
+1235
+],
+"txt": "Para se inscrever"
+}
+],
+"t0": 40.667,
+"t1": 41.333,
+"bbox": [
+359,
+1192,
+723,
+1235
+],
+"pt": "Para se inscrever",
+"n": 2,
+"id": 34,
+"es": "Para inscribirte,"
+},
+{
+"linhas": [
+{
+"bbox": [
+252,
+1194,
+824,
+1235
+],
+"txt": "eé so clicar em SAIBA MAIS."
+}
+],
+"t0": 41.333,
+"t1": 42.666,
+"bbox": [
+252,
+1194,
+824,
+1235
+],
+"pt": "eé so clicar em SAIBA MAIS.",
+"n": 4,
+"id": 35,
+"es": "solo haz clic en MÁS INFORMACIÓN."
+},
+{
+"linhas": [
+{
+"bbox": [
+431,
+1191,
+651,
+1240
+],
+"txt": "Te vejo la!"
+}
+],
+"t0": 43.0,
+"t1": 43.666,
+"bbox": [
+431,
+1191,
+651,
+1240
+],
+"pt": "Te vejo la!",
+"n": 2,
+"id": 36,
+"es": "¡Nos vemos allá!"
+}
+]
+}

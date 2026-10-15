@@ -1,0 +1,694 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+240,
+1099,
+831,
+1145
+],
+"txt": "Como parar de errar no seu"
+},
+{
+"bbox": [
+244,
+1148,
+836,
+1195
+],
+"txt": "preenchimento de olheiras."
+}
+],
+"t0": 0.333,
+"t1": 2.666,
+"bbox": [
+240,
+1099,
+836,
+1195
+],
+"pt": "Como parar de errar no seu / preenchimento de olheiras.",
+"n": 7,
+"id": 0,
+"es": "Cómo dejar de equivocarte en tu relleno de ojeras."
+},
+{
+"linhas": [
+{
+"bbox": [
+124,
+1122,
+957,
+1173
+],
+"txt": "A olheira é uma regiao muito delicada,"
+}
+],
+"t0": 3.0,
+"t1": 5.0,
+"bbox": [
+124,
+1122,
+957,
+1173
+],
+"pt": "A olheira é uma regiao muito delicada,",
+"n": 6,
+"id": 1,
+"es": "La ojera es una región muy delicada,"
+},
+{
+"linhas": [
+{
+"bbox": [
+412,
+1119,
+667,
+1175
+],
+"txt": "de pele fina"
+}
+],
+"t0": 5.0,
+"t1": 6.0,
+"bbox": [
+412,
+1119,
+667,
+1175
+],
+"pt": "de pele fina",
+"n": 3,
+"id": 2,
+"es": "de piel fina,"
+},
+{
+"linhas": [
+{
+"bbox": [
+180,
+1115,
+900,
+1176
+],
+"txt": "que precisa de um conhecimento"
+}
+],
+"t0": 6.333,
+"t1": 7.666,
+"bbox": [
+180,
+1115,
+900,
+1176
+],
+"pt": "que precisa de um conhecimento",
+"n": 4,
+"id": 3,
+"es": "que requiere conocimiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+202,
+1122,
+881,
+1174
+],
+"txt": "nao so da reologia do material,"
+}
+],
+"t0": 7.667,
+"t1": 9.333,
+"bbox": [
+202,
+1122,
+881,
+1174
+],
+"pt": "nao so da reologia do material,",
+"n": 5,
+"id": 4,
+"es": "no solo de la reología del material,"
+},
+{
+"linhas": [
+{
+"bbox": [
+406,
+1126,
+674,
+1169
+],
+"txt": "da anatomia"
+}
+],
+"t0": 9.667,
+"t1": 10.333,
+"bbox": [
+406,
+1126,
+674,
+1169
+],
+"pt": "da anatomia",
+"n": 2,
+"id": 5,
+"es": "de la anatomía"
+},
+{
+"linhas": [
+{
+"bbox": [
+140,
+1125,
+904,
+1169
+],
+"txt": "e da fisiologia do envelhecimento"
+}
+],
+"t0": 10.333,
+"t1": 11.666,
+"bbox": [
+140,
+1125,
+904,
+1169
+],
+"pt": "e da fisiologia do envelhecimento",
+"n": 4,
+"id": 6,
+"es": "y de la fisiología del envejecimiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+271,
+1100,
+812,
+1147
+],
+"txt": "pra que vocé entenda de"
+},
+{
+"bbox": [
+215,
+1149,
+862,
+1196
+],
+"txt": "fato aonde colocar o produto,"
+}
+],
+"t0": 12.333,
+"t1": 15.0,
+"bbox": [
+215,
+1100,
+862,
+1196
+],
+"pt": "pra que vocé entenda de / fato aonde colocar o produto,",
+"n": 8,
+"id": 7,
+"es": "para que entiendas de verdad dónde colocar el producto,"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1120,
+785,
+1173
+],
+"txt": "qual produto escolher,"
+}
+],
+"t0": 15.333,
+"t1": 16.0,
+"bbox": [
+297,
+1120,
+785,
+1173
+],
+"pt": "qual produto escolher,",
+"n": 2,
+"id": 8,
+"es": "qué producto elegir,"
+},
+{
+"linhas": [
+{
+"bbox": [
+254,
+1121,
+826,
+1172
+],
+"txt": "qual o melhor dispositivo?"
+}
+],
+"t0": 16.333,
+"t1": 17.666,
+"bbox": [
+254,
+1121,
+826,
+1172
+],
+"pt": "qual o melhor dispositivo?",
+"n": 4,
+"id": 9,
+"es": "cuál es el mejor dispositivo."
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1100,
+841,
+1145
+],
+"txt": "A uniao dessasinformacoes"
+},
+{
+"bbox": [
+328,
+1151,
+749,
+1192
+],
+"txt": "estao todas na FEP."
+}
+],
+"t0": 18.0,
+"t1": 21.333,
+"bbox": [
+239,
+1100,
+841,
+1192
+],
+"pt": "A uniao dessasinformacoes / estao todas na FEP.",
+"n": 10,
+"id": 10,
+"es": "Toda esa información reunida está en la FEP."
+},
+{
+"linhas": [
+{
+"bbox": [
+167,
+1101,
+902,
+1145
+],
+"txt": "Hoje os meus alunos da Formacao"
+},
+{
+"bbox": [
+200,
+1152,
+879,
+1194
+],
+"txt": "Especialista em.Preenchimento"
+}
+],
+"t0": 21.333,
+"t1": 24.333,
+"bbox": [
+167,
+1101,
+902,
+1194
+],
+"pt": "Hoje os meus alunos da Formacao / Especialista em.Preenchimento",
+"n": 9,
+"id": 11,
+"es": "Hoy mis alumnos de la Formación Especialista en Relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+219,
+1103,
+853,
+1143
+],
+"txt": "estao fazendo esses casos de"
+},
+{
+"bbox": [
+375,
+1150,
+705,
+1196
+],
+"txt": "preenchimento"
+}
+],
+"t0": 24.333,
+"t1": 26.0,
+"bbox": [
+219,
+1103,
+853,
+1196
+],
+"pt": "estao fazendo esses casos de / preenchimento",
+"n": 5,
+"id": 12,
+"es": "están haciendo casos de relleno como estos"
+},
+{
+"linhas": [
+{
+"bbox": [
+295,
+1124,
+786,
+1169
+],
+"txt": "reologia dos materiais,"
+}
+],
+"t0": 33.0,
+"t1": 34.333,
+"bbox": [
+295,
+1124,
+786,
+1169
+],
+"pt": "reologia dos materiais,",
+"n": 4,
+"id": 13,
+"es": "reología de los materiales,"
+},
+{
+"linhas": [
+{
+"bbox": [
+276,
+1099,
+803,
+1144
+],
+"txt": "avaliando e aprendendo"
+},
+{
+"bbox": [
+299,
+1147,
+777,
+1196
+],
+"txt": "p0r mais de 160 aulas"
+}
+],
+"t0": 34.667,
+"t1": 37.666,
+"bbox": [
+276,
+1099,
+803,
+1196
+],
+"pt": "avaliando e aprendendo / p0r mais de 160 aulas",
+"n": 9,
+"id": 14,
+"es": "evaluando y aprendiendo en más de 160 clases,"
+},
+{
+"linhas": [
+{
+"bbox": [
+366,
+1125,
+713,
+1167
+],
+"txt": "eles se sentiram"
+}
+],
+"t0": 38.0,
+"t1": 38.666,
+"bbox": [
+366,
+1125,
+713,
+1167
+],
+"pt": "eles se sentiram",
+"n": 2,
+"id": 15,
+"es": "se sintieron"
+},
+{
+"linhas": [
+{
+"bbox": [
+307,
+1101,
+773,
+1147
+],
+"txt": "hoje seguros de fazer"
+},
+{
+"bbox": [
+278,
+1148,
+804,
+1195
+],
+"txt": "preenchimento full face."
+}
+],
+"t0": 39.0,
+"t1": 41.0,
+"bbox": [
+278,
+1101,
+804,
+1195
+],
+"pt": "hoje seguros de fazer / preenchimento full face.",
+"n": 6,
+"id": 16,
+"es": "hoy seguros para hacer relleno full face."
+},
+{
+"linhas": [
+{
+"bbox": [
+391,
+1127,
+692,
+1167
+],
+"txt": "Entao se vocé"
+}
+],
+"t0": 41.333,
+"t1": 42.0,
+"bbox": [
+391,
+1127,
+692,
+1167
+],
+"pt": "Entao se vocé",
+"n": 2,
+"id": 17,
+"es": "Entonces, si tú"
+},
+{
+"linhas": [
+{
+"bbox": [
+242,
+1103,
+837,
+1145
+],
+"txt": "tambem tem esse sonho de"
+},
+{
+"bbox": [
+234,
+1147,
+841,
+1198
+],
+"txt": "se tornar um grande injetor,"
+}
+],
+"t0": 42.0,
+"t1": 44.666,
+"bbox": [
+234,
+1103,
+841,
+1198
+],
+"pt": "tambem tem esse sonho de / se tornar um grande injetor,",
+"n": 8,
+"id": 18,
+"es": "también tienes el sueño de convertirte en un gran inyector,"
+},
+{
+"linhas": [
+{
+"bbox": [
+250,
+1124,
+830,
+1171
+],
+"txt": "um destaqjue na tua regiao"
+}
+],
+"t0": 44.667,
+"t1": 46.333,
+"bbox": [
+250,
+1124,
+830,
+1171
+],
+"pt": "um destaqjue na tua regiao",
+"n": 5,
+"id": 19,
+"es": "un referente en tu región,"
+},
+{
+"linhas": [
+{
+"bbox": [
+280,
+1104,
+801,
+1147
+],
+"txt": "essa é tua oportunidade"
+},
+{
+"bbox": [
+301,
+1149,
+783,
+1197
+],
+"txt": "de fazer parte da FEP!"
+}
+],
+"t0": 46.333,
+"t1": 49.0,
+"bbox": [
+280,
+1104,
+801,
+1197
+],
+"pt": "essa é tua oportunidade / de fazer parte da FEP!",
+"n": 8,
+"id": 20,
+"es": "¡esta es tu oportunidad de ser parte de la FEP!"
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1102,
+797,
+1147
+],
+"txt": "Se vocé quer se tornar"
+},
+{
+"bbox": [
+339,
+1150,
+741,
+1194
+],
+"txt": "um Injetor de Elite"
+}
+],
+"t0": 49.0,
+"t1": 51.0,
+"bbox": [
+296,
+1102,
+797,
+1194
+],
+"pt": "Se vocé quer se tornar / um Injetor de Elite",
+"n": 6,
+"id": 21,
+"es": "Si quieres convertirte en un Inyector de Élite,"
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1125,
+780,
+1169
+],
+"txt": "toque em 'Saiba Mais'!"
+}
+],
+"t0": 51.333,
+"t1": 52.333,
+"bbox": [
+298,
+1125,
+780,
+1169
+],
+"pt": "toque em 'Saiba Mais'!",
+"n": 3,
+"id": 22,
+"es": "¡toca en «Más información»!"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 54.0,
+"t1": 56.666,
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 23,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

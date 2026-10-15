@@ -1,0 +1,254 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+327,
+1274,
+751,
+1323
+],
+"txt": "Sao superficiais, ta?"
+}
+],
+"t0": 0.0,
+"t1": 1.333,
+"bbox": [
+327,
+1274,
+751,
+1323
+],
+"pt": "Sao superficiais, ta?",
+"n": 4,
+"id": 0,
+"es": "Son superficiales, ¿ok?"
+},
+{
+"linhas": [
+{
+"bbox": [
+236,
+1272,
+843,
+1322
+],
+"txt": "Eles eles sao intermediarios,"
+}
+],
+"t0": 1.333,
+"t1": 4.333,
+"bbox": [
+236,
+1272,
+843,
+1322
+],
+"pt": "Eles eles sao intermediarios,",
+"n": 9,
+"id": 1,
+"es": "Ellos, ellos son intermedios,"
+},
+{
+"linhas": [
+{
+"bbox": [
+148,
+1275,
+928,
+1322
+],
+"txt": "e se superficializam ainda mais aqui."
+}
+],
+"t0": 4.333,
+"t1": 6.333,
+"bbox": [
+148,
+1275,
+928,
+1322
+],
+"pt": "e se superficializam ainda mais aqui.",
+"n": 6,
+"id": 2,
+"es": "y se superficializan aún más aquí."
+},
+{
+"linhas": [
+{
+"bbox": [
+280,
+1276,
+798,
+1321
+],
+"txt": "Tem uma transicao aqui"
+}
+],
+"t0": 6.667,
+"t1": 8.0,
+"bbox": [
+280,
+1276,
+798,
+1321
+],
+"pt": "Tem uma transicao aqui",
+"n": 4,
+"id": 3,
+"es": "Hay una transición aquí"
+},
+{
+"linhas": [
+{
+"bbox": [
+210,
+1272,
+874,
+1323
+],
+"txt": "que faz com que ele realmente"
+}
+],
+"t0": 8.0,
+"t1": 9.666,
+"bbox": [
+210,
+1272,
+874,
+1323
+],
+"pt": "que faz com que ele realmente",
+"n": 5,
+"id": 4,
+"es": "que hace que realmente"
+},
+{
+"linhas": [
+{
+"bbox": [
+246,
+1272,
+836,
+1322
+],
+"txt": "vai em uma camada media,"
+}
+],
+"t0": 10.0,
+"t1": 11.0,
+"bbox": [
+246,
+1272,
+836,
+1322
+],
+"pt": "vai em uma camada media,",
+"n": 3,
+"id": 5,
+"es": "vaya a una capa media,"
+},
+{
+"linhas": [
+{
+"bbox": [
+159,
+1273,
+918,
+1324
+],
+"txt": "e ele superficializa ainda mais aqui."
+}
+],
+"t0": 11.0,
+"t1": 13.0,
+"bbox": [
+159,
+1273,
+918,
+1324
+],
+"pt": "e ele superficializa ainda mais aqui.",
+"n": 6,
+"id": 6,
+"es": "y se superficializa aún más aquí."
+},
+{
+"linhas": [
+{
+"bbox": [
+316,
+1273,
+762,
+1324
+],
+"txt": "Mas essa regiao aqui"
+}
+],
+"t0": 13.333,
+"t1": 14.666,
+"bbox": [
+316,
+1273,
+762,
+1324
+],
+"pt": "Mas essa regiao aqui",
+"n": 4,
+"id": 7,
+"es": "Pero esta región de aquí"
+},
+{
+"linhas": [
+{
+"bbox": [
+245,
+1273,
+835,
+1324
+],
+"txt": "é um pouco mais profunda."
+}
+],
+"t0": 15.0,
+"t1": 16.666,
+"bbox": [
+245,
+1273,
+835,
+1324
+],
+"pt": "é um pouco mais profunda.",
+"n": 5,
+"id": 8,
+"es": "es un poco más profunda."
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 18.333,
+"t1": 21.0,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 9,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

@@ -1,0 +1,671 @@
+{
+"blocos": [
+{
+"id": 0,
+"linhas": [
+{
+"bbox": [
+128,
+1399,
+449,
+1453
+],
+"txt": "Em breve na FEP"
+}
+],
+"t0": 0,
+"t1": 44.33,
+"pt": "Em breve na FEP",
+"es": "Próximamente en la FEP",
+"bbox": [
+128,
+1399,
+449,
+1453
+],
+"tipo": "caixa_escura"
+},
+{
+"id": 1,
+"linhas": [
+{
+"bbox": [
+128,
+1514,
+936,
+1554
+],
+"txt": "- Analise de textura e reologia de todos os"
+},
+{
+"bbox": [
+125,
+1563,
+953,
+1609
+],
+"txt": "preenchedores a base de acido hialuronico"
+}
+],
+"t0": 0,
+"t1": 44.33,
+"pt": "- Analise de textura e reologia de todos os / preenchedores a base de acido hialuronico",
+"es": "- Análisis de textura y reología de todos los\nrellenos a base de ácido hialurónico",
+"bbox": [
+125,
+1514,
+953,
+1609
+],
+"tipo": "caixa_escura"
+},
+{
+"id": 2,
+"linhas": [
+{
+"bbox": [
+134,
+1667,
+819,
+1711
+],
+"txt": "- Como cada produto responde com"
+},
+{
+"bbox": [
+129,
+1718,
+398,
+1762
+],
+"txt": "hialuronidase"
+}
+],
+"t0": 0,
+"t1": 44.33,
+"pt": "- Como cada produto responde com / hialuronidase",
+"es": "- Cómo responde cada producto\na la hialuronidasa",
+"bbox": [
+129,
+1667,
+819,
+1762
+],
+"tipo": "caixa_escura"
+},
+{
+"id": 3,
+"linhas": [
+{
+"bbox": [
+321,
+1252,
+734,
+1302
+],
+"txt": "Conteudo inedito!"
+}
+],
+"t0": 0,
+"t1": 2.0,
+"pt": "Conteudo inedito!",
+"es": "¡Contenido inédito!",
+"bbox": [
+321,
+1252,
+734,
+1302
+]
+},
+{
+"id": 4,
+"linhas": [
+{
+"bbox": [
+179,
+1230,
+891,
+1276
+],
+"txt": "Eu nunca vi todos esses produtos"
+},
+{
+"bbox": [
+437,
+1281,
+640,
+1324
+],
+"txt": "reunidos."
+}
+],
+"t0": 2.33,
+"t1": 6.0,
+"pt": "Eu nunca vi todos esses produtos / reunidos.",
+"es": "Nunca había visto todos estos productos reunidos.",
+"bbox": [
+179,
+1230,
+891,
+1324
+]
+},
+{
+"id": 5,
+"linhas": [
+{
+"bbox": [
+110,
+1229,
+957,
+1276
+],
+"txt": "Fiz um estudo especifico pros alunos da"
+},
+{
+"bbox": [
+468,
+1280,
+612,
+1325
+],
+"txt": "FEP,"
+}
+],
+"t0": 6.67,
+"t1": 9.33,
+"pt": "Fiz um estudo especifico pros alunos da / FEP,",
+"es": "Hice un estudio específico para los alumnos de la FEP,",
+"bbox": [
+110,
+1229,
+957,
+1325
+]
+},
+{
+"id": 6,
+"linhas": [
+{
+"bbox": [
+212,
+1224,
+869,
+1280
+],
+"txt": "pra gente entender mais sobre"
+},
+{
+"bbox": [
+232,
+1276,
+820,
+1329
+],
+"txt": "o gel de acido hialuronico."
+}
+],
+"t0": 9.33,
+"t1": 12.67,
+"pt": "pra gente entender mais sobre / o gel de acido hialuronico.",
+"es": "para entender mejor el gel de ácido hialurónico.",
+"bbox": [
+212,
+1224,
+869,
+1329
+]
+},
+{
+"id": 7,
+"linhas": [
+{
+"bbox": [
+177,
+1254,
+905,
+1301
+],
+"txt": "Aqui nos temos os estruturadores,"
+}
+],
+"t0": 13.33,
+"t1": 14.67,
+"pt": "Aqui nos temos os estruturadores,",
+"es": "Aquí tenemos los estructuradores,",
+"bbox": [
+177,
+1254,
+905,
+1301
+]
+},
+{
+"id": 8,
+"linhas": [
+{
+"bbox": [
+354,
+1254,
+724,
+1301
+],
+"txt": "os volunizadores,"
+}
+],
+"t0": 14.67,
+"t1": 15.67,
+"pt": "os volunizadores,",
+"es": "los voluminizadores,",
+"bbox": [
+354,
+1254,
+724,
+1301
+]
+},
+{
+"id": 9,
+"linhas": [
+{
+"bbox": [
+384,
+1258,
+692,
+1298
+],
+"txt": "os com alto G."
+}
+],
+"t0": 15.67,
+"t1": 16.67,
+"pt": "os com alto G.",
+"es": "los de alto G'.",
+"bbox": [
+384,
+1258,
+692,
+1298
+]
+},
+{
+"id": 10,
+"linhas": [
+{
+"bbox": [
+150,
+1252,
+930,
+1302
+],
+"txt": "Aqui nos temos os intermediarios,"
+}
+],
+"t0": 17.33,
+"t1": 19.33,
+"pt": "Aqui nos temos os intermediarios,",
+"es": "Aquí tenemos los intermedios,",
+"bbox": [
+150,
+1252,
+930,
+1302
+]
+},
+{
+"id": 11,
+"linhas": [
+{
+"bbox": [
+348,
+1256,
+767,
+1302
+],
+"txt": "e a minha visao,"
+}
+],
+"t0": 19.67,
+"t1": 20.33,
+"pt": "e a minha visao,",
+"es": "y mi visión:",
+"bbox": [
+348,
+1256,
+767,
+1302
+]
+},
+{
+"id": 12,
+"linhas": [
+{
+"bbox": [
+140,
+1255,
+935,
+1301
+],
+"txt": "intermediarios com menos resultado."
+}
+],
+"t0": 20.33,
+"t1": 22.33,
+"pt": "intermediarios com menos resultado.",
+"es": "intermedios con menos resultado.",
+"bbox": [
+140,
+1255,
+935,
+1301
+]
+},
+{
+"id": 13,
+"linhas": [
+{
+"bbox": [
+206,
+1249,
+900,
+1304
+],
+"txt": "Mais produto, menos resultado,"
+}
+],
+"t0": 22.67,
+"t1": 23.67,
+"pt": "Mais produto, menos resultado,",
+"es": "Más producto, menos resultado,",
+"bbox": [
+206,
+1249,
+900,
+1304
+]
+},
+{
+"id": 14,
+"linhas": [
+{
+"bbox": [
+121,
+1226,
+947,
+1276
+],
+"txt": "entao nao e o produto que eu gosto de"
+},
+{
+"bbox": [
+226,
+1281,
+852,
+1328
+],
+"txt": "usar na minha pratica clinica."
+}
+],
+"t0": 24.33,
+"t1": 27.67,
+"pt": "entao nao e o produto que eu gosto de / usar na minha pratica clinica.",
+"es": "entonces no es el producto que me gusta usar en mi práctica clínica.",
+"bbox": [
+121,
+1226,
+947,
+1328
+]
+},
+{
+"id": 15,
+"linhas": [
+{
+"bbox": [
+207,
+1256,
+867,
+1302
+],
+"txt": "E aqui os produtos para labios,"
+}
+],
+"t0": 28.33,
+"t1": 29.33,
+"pt": "E aqui os produtos para labios,",
+"es": "Y aquí, los productos para labios,",
+"bbox": [
+207,
+1256,
+867,
+1302
+]
+},
+{
+"id": 16,
+"linhas": [
+{
+"bbox": [
+319,
+1257,
+757,
+1302
+],
+"txt": "alguns que eu gosto,"
+}
+],
+"t0": 30.0,
+"t1": 31.0,
+"pt": "alguns que eu gosto,",
+"es": "algunos que me gustan,",
+"bbox": [
+319,
+1257,
+757,
+1302
+]
+},
+{
+"id": 17,
+"linhas": [
+{
+"bbox": [
+370,
+1259,
+708,
+1305
+],
+"txt": "outros que nao,"
+}
+],
+"t0": 31.33,
+"t1": 32.0,
+"pt": "outros que nao,",
+"es": "otros que no,",
+"bbox": [
+370,
+1259,
+708,
+1305
+]
+},
+{
+"id": 18,
+"linhas": [
+{
+"bbox": [
+173,
+1248,
+908,
+1304
+],
+"txt": "mas a ideia e que a gente entenda"
+}
+],
+"t0": 32.33,
+"t1": 34.0,
+"pt": "mas a ideia e que a gente entenda",
+"es": "pero la idea es que entendamos",
+"bbox": [
+173,
+1248,
+908,
+1304
+]
+},
+{
+"id": 19,
+"linhas": [
+{
+"bbox": [
+172,
+1254,
+908,
+1303
+],
+"txt": "e saiba escolher o melhor produto"
+}
+],
+"t0": 34.0,
+"t1": 36.0,
+"pt": "e saiba escolher o melhor produto",
+"es": "y sepamos elegir el mejor producto",
+"bbox": [
+172,
+1254,
+908,
+1303
+]
+},
+{
+"id": 20,
+"linhas": [
+{
+"bbox": [
+274,
+1254,
+805,
+1303
+],
+"txt": "pra cada um das regioes."
+}
+],
+"t0": 36.0,
+"t1": 37.33,
+"pt": "pra cada um das regioes.",
+"es": "para cada una de las regiones.",
+"bbox": [
+274,
+1254,
+805,
+1303
+]
+},
+{
+"id": 21,
+"linhas": [
+{
+"bbox": [
+146,
+1229,
+925,
+1278
+],
+"txt": "Depois disso eu vou fazer um estudo"
+},
+{
+"bbox": [
+333,
+1272,
+750,
+1333
+],
+"txt": "com hialurunidase."
+}
+],
+"t0": 37.67,
+"t1": 40.33,
+"pt": "Depois disso eu vou fazer um estudo / com hialurunidase.",
+"es": "Después de eso, voy a hacer un estudio con hialuronidasa.",
+"bbox": [
+146,
+1229,
+925,
+1333
+]
+},
+{
+"id": 22,
+"linhas": [
+{
+"bbox": [
+111,
+1255,
+974,
+1304
+],
+"txt": "Vou pingar hialuridases nesses materiais"
+}
+],
+"t0": 41.33,
+"t1": 42.33,
+"pt": "Vou pingar hialuridases nesses materiais",
+"es": "Voy a gotear hialuronidasa en estos materiales",
+"bbox": [
+111,
+1255,
+974,
+1304
+]
+},
+{
+"id": 23,
+"linhas": [
+{
+"bbox": [
+241,
+1259,
+833,
+1299
+],
+"txt": "e ver como eles respondem."
+}
+],
+"t0": 42.67,
+"t1": 43.67,
+"pt": "e ver como eles respondem.",
+"es": "y ver cómo responden.",
+"bbox": [
+241,
+1259,
+833,
+1299
+]
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 45.667,
+"t1": 48.333,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 24,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

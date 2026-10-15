@@ -1,0 +1,806 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+273,
+1264,
+811,
+1329
+],
+"txt": "Técnicas seguras e"
+},
+{
+"bbox": [
+268,
+1341,
+780,
+1404
+],
+"txt": "replicaveis da FEP"
+}
+],
+"t0": 0.0,
+"t1": 43.0,
+"bbox": [
+268,
+1264,
+811,
+1404
+],
+"pt": "Técnicas seguras e / replicaveis da FEP",
+"n": 129,
+"id": 0,
+"es": "Técnicas seguras y replicables de la FEP"
+},
+{
+"linhas": [
+{
+"bbox": [
+392,
+1547,
+690,
+1597
+],
+"txt": "@drjoaopithon"
+},
+{
+"bbox": [
+274,
+1602,
+809,
+1648
+],
+"txt": "Exaltando o trabalhodesse"
+},
+{
+"bbox": [
+288,
+1655,
+751,
+1700
+],
+"txt": "medico maravilhoso &"
+}
+],
+"t0": 0.0,
+"t1": 43.0,
+"bbox": [
+274,
+1547,
+809,
+1700
+],
+"pt": "@drjoaopithon / Exaltando o trabalhodesse / medico maravilhoso &",
+"n": 129,
+"id": 1,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+318,
+1475,
+765,
+1524
+],
+"txt": "Passando pra exaltar"
+}
+],
+"t0": 0.667,
+"t1": 2.666,
+"bbox": [
+318,
+1475,
+765,
+1524
+],
+"pt": "Passando pra exaltar",
+"n": 6,
+"id": 2,
+"es": "Paso para destacar"
+},
+{
+"linhas": [
+{
+"bbox": [
+276,
+1476,
+786,
+1518
+],
+"txt": "o trabalho do dr. Pithon."
+}
+],
+"t0": 2.667,
+"t1": 4.333,
+"bbox": [
+276,
+1476,
+786,
+1518
+],
+"pt": "o trabalho do dr. Pithon.",
+"n": 5,
+"id": 3,
+"es": "el trabajo del Dr. Pithon."
+},
+{
+"linhas": [
+{
+"bbox": [
+292,
+1474,
+790,
+1522
+],
+"txt": "Doctor, ai te amo, sério!"
+}
+],
+"t0": 4.333,
+"t1": 6.0,
+"bbox": [
+292,
+1474,
+790,
+1522
+],
+"pt": "Doctor, ai te amo, sério!",
+"n": 5,
+"id": 4,
+"es": "Doctor, ¡te amo, en serio!"
+},
+{
+"linhas": [
+{
+"bbox": [
+269,
+1477,
+810,
+1517
+],
+"txt": "Nao sei se voces lembram"
+}
+],
+"t0": 6.333,
+"t1": 7.333,
+"bbox": [
+269,
+1477,
+810,
+1517
+],
+"pt": "Nao sei se voces lembram",
+"n": 3,
+"id": 5,
+"es": "No sé si recuerdan"
+},
+{
+"linhas": [
+{
+"bbox": [
+249,
+1469,
+828,
+1526
+],
+"txt": "que em dezembro eu fui la,"
+}
+],
+"t0": 7.333,
+"t1": 8.333,
+"bbox": [
+249,
+1469,
+828,
+1526
+],
+"pt": "que em dezembro eu fui la,",
+"n": 3,
+"id": 6,
+"es": "que en diciembre fui allá,"
+},
+{
+"linhas": [
+{
+"bbox": [
+286,
+1471,
+795,
+1523
+],
+"txt": "fiz um full face com ele,"
+}
+],
+"t0": 8.333,
+"t1": 10.333,
+"bbox": [
+286,
+1471,
+795,
+1523
+],
+"pt": "fiz um full face com ele,",
+"n": 6,
+"id": 7,
+"es": "me hice un full face con él,"
+},
+{
+"linhas": [
+{
+"bbox": [
+322,
+1473,
+756,
+1526
+],
+"txt": "dei uma repaginada,"
+}
+],
+"t0": 10.667,
+"t1": 12.0,
+"bbox": [
+322,
+1473,
+756,
+1526
+],
+"pt": "dei uma repaginada,",
+"n": 4,
+"id": 8,
+"es": "me renové,"
+},
+{
+"linhas": [
+{
+"bbox": [
+234,
+1472,
+845,
+1525
+],
+"txt": "um upgrade no rosto inteiro."
+}
+],
+"t0": 12.333,
+"t1": 14.333,
+"bbox": [
+234,
+1472,
+845,
+1525
+],
+"pt": "um upgrade no rosto inteiro.",
+"n": 6,
+"id": 9,
+"es": "un upgrade en todo el rostro."
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1472,
+802,
+1523
+],
+"txt": "E eu confesso, dessa vez"
+}
+],
+"t0": 15.0,
+"t1": 15.666,
+"bbox": [
+281,
+1472,
+802,
+1523
+],
+"pt": "E eu confesso, dessa vez",
+"n": 2,
+"id": 10,
+"es": "Y confieso que esta vez"
+},
+{
+"linhas": [
+{
+"bbox": [
+125,
+1475,
+955,
+1526
+],
+"txt": "demorou um pouquinho pra desinchar,"
+}
+],
+"t0": 15.667,
+"t1": 17.0,
+"bbox": [
+125,
+1475,
+955,
+1526
+],
+"pt": "demorou um pouquinho pra desinchar,",
+"n": 4,
+"id": 11,
+"es": "tardó un poquito en desinflamarse,"
+},
+{
+"linhas": [
+{
+"bbox": [
+140,
+1474,
+939,
+1525
+],
+"txt": "pra chegar no resultado que eu gosto,"
+}
+],
+"t0": 17.333,
+"t1": 18.666,
+"bbox": [
+140,
+1474,
+939,
+1525
+],
+"pt": "pra chegar no resultado que eu gosto,",
+"n": 4,
+"id": 12,
+"es": "en llegar al resultado que me gusta,"
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1473,
+838,
+1524
+],
+"txt": "mas agora assim ta perfeito."
+}
+],
+"t0": 19.0,
+"t1": 21.666,
+"bbox": [
+239,
+1473,
+838,
+1524
+],
+"pt": "mas agora assim ta perfeito.",
+"n": 8,
+"id": 13,
+"es": "pero ahora sí está perfecto."
+},
+{
+"linhas": [
+{
+"bbox": [
+229,
+1475,
+853,
+1526
+],
+"txt": "Eu fiz hoje, pela primeira vez,"
+}
+],
+"t0": 22.0,
+"t1": 23.333,
+"bbox": [
+229,
+1475,
+853,
+1526
+],
+"pt": "Eu fiz hoje, pela primeira vez,",
+"n": 4,
+"id": 14,
+"es": "Hoy hice, por primera vez,"
+},
+{
+"linhas": [
+{
+"bbox": [
+333,
+1474,
+744,
+1525
+],
+"txt": "um casting caseiro."
+}
+],
+"t0": 23.333,
+"t1": 24.666,
+"bbox": [
+333,
+1474,
+744,
+1525
+],
+"pt": "um casting caseiro.",
+"n": 4,
+"id": 15,
+"es": "un casting casero."
+},
+{
+"linhas": [
+{
+"bbox": [
+349,
+1477,
+734,
+1524
+],
+"txt": "Sempre acontece,"
+}
+],
+"t0": 24.667,
+"t1": 25.333,
+"bbox": [
+349,
+1477,
+734,
+1524
+],
+"pt": "Sempre acontece,",
+"n": 2,
+"id": 16,
+"es": "Siempre pasa,"
+},
+{
+"linhas": [
+{
+"bbox": [
+186,
+1473,
+896,
+1526
+],
+"txt": "mas hoje eu fiz pela primeira vez,"
+}
+],
+"t0": 25.333,
+"t1": 27.333,
+"bbox": [
+186,
+1473,
+896,
+1526
+],
+"pt": "mas hoje eu fiz pela primeira vez,",
+"n": 6,
+"id": 17,
+"es": "pero hoy lo hice por primera vez,"
+},
+{
+"linhas": [
+{
+"bbox": [
+242,
+1474,
+841,
+1520
+],
+"txt": "eu amei demais o resultado!"
+}
+],
+"t0": 27.667,
+"t1": 29.666,
+"bbox": [
+242,
+1474,
+841,
+1520
+],
+"pt": "eu amei demais o resultado!",
+"n": 6,
+"id": 18,
+"es": "¡me encantó el resultado!"
+},
+{
+"linhas": [
+{
+"bbox": [
+250,
+1474,
+829,
+1522
+],
+"txt": "Ai, Doctor, voce é o melhor."
+}
+],
+"t0": 29.667,
+"t1": 32.0,
+"bbox": [
+250,
+1474,
+829,
+1522
+],
+"pt": "Ai, Doctor, voce é o melhor.",
+"n": 7,
+"id": 19,
+"es": "Ay, Doctor, eres el mejor."
+},
+{
+"linhas": [
+{
+"bbox": [
+389,
+1475,
+690,
+1525
+],
+"txt": "Nao tem jeito."
+}
+],
+"t0": 32.0,
+"t1": 32.666,
+"bbox": [
+389,
+1475,
+690,
+1525
+],
+"pt": "Nao tem jeito.",
+"n": 2,
+"id": 20,
+"es": "No hay duda."
+},
+{
+"linhas": [
+{
+"bbox": [
+371,
+1477,
+710,
+1519
+],
+"txt": "Olha esse rosto!"
+}
+],
+"t0": 32.667,
+"t1": 33.333,
+"bbox": [
+371,
+1477,
+710,
+1519
+],
+"pt": "Olha esse rosto!",
+"n": 2,
+"id": 21,
+"es": "¡Mira este rostro!"
+},
+{
+"linhas": [
+{
+"bbox": [
+353,
+1474,
+730,
+1520
+],
+"txt": "Todo mundo fala:"
+}
+],
+"t0": 33.333,
+"t1": 34.666,
+"bbox": [
+353,
+1474,
+730,
+1520
+],
+"pt": "Todo mundo fala:",
+"n": 4,
+"id": 22,
+"es": "Todo el mundo dice:"
+},
+{
+"linhas": [
+{
+"bbox": [
+196,
+1470,
+884,
+1526
+],
+"txt": "\"Nossa, como voce é jovem, ne?\""
+}
+],
+"t0": 34.667,
+"t1": 36.0,
+"bbox": [
+196,
+1470,
+884,
+1526
+],
+"pt": "\"Nossa, como voce é jovem, ne?\"",
+"n": 4,
+"id": 23,
+"es": "«¡Guau, qué joven eres!, ¿no?»"
+},
+{
+"linhas": [
+{
+"bbox": [
+293,
+1477,
+786,
+1523
+],
+"txt": "Porque eu vou fazer 3l."
+}
+],
+"t0": 36.0,
+"t1": 37.0,
+"bbox": [
+293,
+1477,
+786,
+1523
+],
+"pt": "Porque eu vou fazer 3l.",
+"n": 3,
+"id": 24,
+"es": "Porque voy a cumplir 31."
+},
+{
+"linhas": [
+{
+"bbox": [
+185,
+1473,
+894,
+1524
+],
+"txt": "Eu falo: \"Meu medico que é bom!\""
+}
+],
+"t0": 37.0,
+"t1": 39.0,
+"bbox": [
+185,
+1473,
+894,
+1524
+],
+"pt": "Eu falo: \"Meu medico que é bom!\"",
+"n": 6,
+"id": 25,
+"es": "Yo digo: «¡Es que mi médico es bueno!»"
+},
+{
+"linhas": [
+{
+"bbox": [
+163,
+1473,
+917,
+1525
+],
+"txt": "E eu nao minto quando eu falo isso,"
+}
+],
+"t0": 39.333,
+"t1": 40.666,
+"bbox": [
+163,
+1473,
+917,
+1525
+],
+"pt": "E eu nao minto quando eu falo isso,",
+"n": 4,
+"id": 26,
+"es": "Y no miento cuando digo eso,"
+},
+{
+"linhas": [
+{
+"bbox": [
+279,
+1474,
+800,
+1524
+],
+"txt": "ele é bom mesmo gente."
+}
+],
+"t0": 41.0,
+"t1": 41.666,
+"bbox": [
+279,
+1474,
+800,
+1524
+],
+"pt": "ele é bom mesmo gente.",
+"n": 2,
+"id": 27,
+"es": "él es bueno de verdad, gente."
+},
+{
+"linhas": [
+{
+"bbox": [
+325,
+1474,
+752,
+1520
+],
+"txt": "Recomendo demais."
+}
+],
+"t0": 41.667,
+"t1": 43.0,
+"bbox": [
+325,
+1474,
+752,
+1520
+],
+"pt": "Recomendo demais.",
+"n": 4,
+"id": 28,
+"es": "Lo recomiendo muchísimo."
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1141,
+418,
+1198
+],
+"txt": "Toqul"
+}
+],
+"t0": 44.333,
+"t1": 44.666,
+"bbox": [
+296,
+1141,
+418,
+1198
+],
+"pt": "Toqul",
+"n": 1,
+"id": 29,
+"es": "Toca"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+782,
+1193
+],
+"txt": "Toque em SAIBA MAIS"
+}
+],
+"t0": 44.667,
+"t1": 47.0,
+"bbox": [
+299,
+1149,
+782,
+1193
+],
+"pt": "Toque em SAIBA MAIS",
+"n": 7,
+"id": 30,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

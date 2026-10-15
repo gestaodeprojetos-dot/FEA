@@ -1,0 +1,1374 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+320,
+1113,
+759,
+1166
+],
+"txt": "novos casos de"
+}
+],
+"t0": 0.0,
+"t1": 4.333,
+"bbox": [
+320,
+1113,
+759,
+1166
+],
+"pt": "novos casos de",
+"n": 13,
+"id": 0,
+"es": "nuevos casos de",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+210,
+1188,
+873,
+1262
+],
+"txt": "disseccoes anatomicas"
+}
+],
+"t0": 0.0,
+"t1": 4.333,
+"bbox": [
+210,
+1188,
+873,
+1262
+],
+"pt": "disseccoes anatomicas",
+"n": 13,
+"id": 1000,
+"es": "disecciones anatómicas",
+"tipo": "caixa_escura"
+},
+{
+"linhas": [
+{
+"bbox": [
+256,
+1226,
+825,
+1269
+],
+"txt": "O curso de preenchimento"
+}
+],
+"t0": 4.333,
+"t1": 5.666,
+"bbox": [
+256,
+1226,
+825,
+1269
+],
+"pt": "O curso de preenchimento",
+"n": 4,
+"id": 1,
+"es": "El curso de relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+275,
+1225,
+800,
+1269
+],
+"txt": "mais completo do Brasil"
+}
+],
+"t0": 5.667,
+"t1": 6.666,
+"bbox": [
+275,
+1225,
+800,
+1269
+],
+"pt": "mais completo do Brasil",
+"n": 3,
+"id": 2,
+"es": "más completo de Brasil,"
+},
+{
+"linhas": [
+{
+"bbox": [
+405,
+1227,
+675,
+1265
+],
+"txt": "100% 0nline."
+}
+],
+"t0": 7.333,
+"t1": 8.333,
+"bbox": [
+405,
+1227,
+675,
+1265
+],
+"pt": "100% 0nline.",
+"n": 3,
+"id": 3,
+"es": "100% online."
+},
+{
+"linhas": [
+{
+"bbox": [
+162,
+1224,
+922,
+1269
+],
+"txt": "Hoje eu estou fazendo um trabalho"
+}
+],
+"t0": 8.667,
+"t1": 10.0,
+"bbox": [
+162,
+1224,
+922,
+1269
+],
+"pt": "Hoje eu estou fazendo um trabalho",
+"n": 4,
+"id": 4,
+"es": "Hoy estoy haciendo un trabajo"
+},
+{
+"linhas": [
+{
+"bbox": [
+349,
+1224,
+733,
+1271
+],
+"txt": "de disseccao aqui"
+}
+],
+"t0": 10.0,
+"t1": 11.0,
+"bbox": [
+349,
+1224,
+733,
+1271
+],
+"pt": "de disseccao aqui",
+"n": 3,
+"id": 5,
+"es": "de disección aquí"
+},
+{
+"linhas": [
+{
+"bbox": [
+231,
+1226,
+845,
+1270
+],
+"txt": "com os alunos do presencial,"
+}
+],
+"t0": 11.0,
+"t1": 12.333,
+"bbox": [
+231,
+1226,
+845,
+1270
+],
+"pt": "com os alunos do presencial,",
+"n": 4,
+"id": 6,
+"es": "con los alumnos del presencial,"
+},
+{
+"linhas": [
+{
+"bbox": [
+305,
+1227,
+776,
+1266
+],
+"txt": "e vocées vao ter acesso"
+}
+],
+"t0": 12.667,
+"t1": 14.0,
+"bbox": [
+305,
+1227,
+776,
+1266
+],
+"pt": "e vocées vao ter acesso",
+"n": 4,
+"id": 7,
+"es": "y ustedes van a tener acceso"
+},
+{
+"linhas": [
+{
+"bbox": [
+316,
+1227,
+762,
+1267
+],
+"txt": "a todo esse material,"
+}
+],
+"t0": 14.0,
+"t1": 15.0,
+"bbox": [
+316,
+1227,
+762,
+1267
+],
+"pt": "a todo esse material,",
+"n": 3,
+"id": 8,
+"es": "a todo este material,"
+},
+{
+"linhas": [
+{
+"bbox": [
+285,
+1223,
+791,
+1269
+],
+"txt": "as revisoes anatomicas,"
+}
+],
+"t0": 15.333,
+"t1": 17.0,
+"bbox": [
+285,
+1223,
+791,
+1269
+],
+"pt": "as revisoes anatomicas,",
+"n": 5,
+"id": 9,
+"es": "a los repasos anatómicos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+155,
+1223,
+924,
+1272
+],
+"txt": "aos preparos dos cadaveres frescos,"
+}
+],
+"t0": 17.333,
+"t1": 19.333,
+"bbox": [
+155,
+1223,
+924,
+1272
+],
+"pt": "aos preparos dos cadaveres frescos,",
+"n": 6,
+"id": 10,
+"es": "a las preparaciones de los cadáveres frescos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+261,
+1229,
+816,
+1267
+],
+"txt": "sao cadaveres que vieram"
+}
+],
+"t0": 19.333,
+"t1": 20.666,
+"bbox": [
+261,
+1229,
+816,
+1267
+],
+"pt": "sao cadaveres que vieram",
+"n": 4,
+"id": 11,
+"es": "son cadáveres que vinieron"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1222,
+894,
+1270
+],
+"txt": "diretamente dos Estados Unidos,"
+}
+],
+"t0": 20.667,
+"t1": 22.0,
+"bbox": [
+188,
+1222,
+894,
+1270
+],
+"pt": "diretamente dos Estados Unidos,",
+"n": 4,
+"id": 12,
+"es": "directamente de Estados Unidos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+237,
+1227,
+843,
+1268
+],
+"txt": "nunca foram violados antes."
+}
+],
+"t0": 22.667,
+"t1": 24.0,
+"bbox": [
+237,
+1227,
+843,
+1268
+],
+"pt": "nunca foram violados antes.",
+"n": 4,
+"id": 13,
+"es": "nunca habían sido disecados antes."
+},
+{
+"linhas": [
+{
+"bbox": [
+185,
+1223,
+899,
+1273
+],
+"txt": "Fiz a disseccao pela primeira vez,"
+}
+],
+"t0": 24.333,
+"t1": 26.0,
+"bbox": [
+185,
+1223,
+899,
+1273
+],
+"pt": "Fiz a disseccao pela primeira vez,",
+"n": 5,
+"id": 14,
+"es": "Hice la disección por primera vez,"
+},
+{
+"linhas": [
+{
+"bbox": [
+219,
+1221,
+860,
+1274
+],
+"txt": "gravei em altissima resolucao"
+}
+],
+"t0": 26.667,
+"t1": 28.333,
+"bbox": [
+219,
+1221,
+860,
+1274
+],
+"pt": "gravei em altissima resolucao",
+"n": 5,
+"id": 15,
+"es": "la grabé en altísima resolución"
+},
+{
+"linhas": [
+{
+"bbox": [
+186,
+1229,
+895,
+1267
+],
+"txt": "trazendo parametros anatomicos"
+}
+],
+"t0": 29.0,
+"t1": 30.333,
+"bbox": [
+186,
+1229,
+895,
+1267
+],
+"pt": "trazendo parametros anatomicos",
+"n": 4,
+"id": 16,
+"es": "con parámetros anatómicos"
+},
+{
+"linhas": [
+{
+"bbox": [
+275,
+1228,
+809,
+1267
+],
+"txt": "onde voces vao entender"
+}
+],
+"t0": 30.667,
+"t1": 31.666,
+"bbox": [
+275,
+1228,
+809,
+1267
+],
+"pt": "onde voces vao entender",
+"n": 3,
+"id": 17,
+"es": "donde van a entender"
+},
+{
+"linhas": [
+{
+"bbox": [
+214,
+1224,
+864,
+1270
+],
+"txt": "onde estao as vascularizacoes,"
+}
+],
+"t0": 31.667,
+"t1": 33.0,
+"bbox": [
+214,
+1224,
+864,
+1270
+],
+"pt": "onde estao as vascularizacoes,",
+"n": 4,
+"id": 18,
+"es": "dónde están las vascularizaciones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+161,
+1225,
+920,
+1270
+],
+"txt": "onde que esta o tecido subcutaneo,"
+}
+],
+"t0": 33.333,
+"t1": 35.0,
+"bbox": [
+161,
+1225,
+920,
+1270
+],
+"pt": "onde que esta o tecido subcutaneo,",
+"n": 5,
+"id": 19,
+"es": "dónde está el tejido subcutáneo,"
+},
+{
+"linhas": [
+{
+"bbox": [
+378,
+1230,
+700,
+1267
+],
+"txt": "a musculatura."
+}
+],
+"t0": 35.0,
+"t1": 36.0,
+"bbox": [
+378,
+1230,
+700,
+1267
+],
+"pt": "a musculatura.",
+"n": 3,
+"id": 20,
+"es": "la musculatura."
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+1223,
+859,
+1270
+],
+"txt": "Tudo isso traz muita vivencia,"
+}
+],
+"t0": 36.333,
+"t1": 37.666,
+"bbox": [
+221,
+1223,
+859,
+1270
+],
+"pt": "Tudo isso traz muita vivencia,",
+"n": 4,
+"id": 21,
+"es": "Todo esto da mucha experiencia,"
+},
+{
+"linhas": [
+{
+"bbox": [
+132,
+1225,
+948,
+1270
+],
+"txt": "sao poucos os profissionais no mundo"
+}
+],
+"t0": 38.0,
+"t1": 39.666,
+"bbox": [
+132,
+1225,
+948,
+1270
+],
+"pt": "sao poucos os profissionais no mundo",
+"n": 5,
+"id": 22,
+"es": "son pocos los profesionales en el mundo"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1221,
+891,
+1275
+],
+"txt": "que fazem esse tipo de trabalho,"
+}
+],
+"t0": 39.667,
+"t1": 41.0,
+"bbox": [
+188,
+1221,
+891,
+1275
+],
+"pt": "que fazem esse tipo de trabalho,",
+"n": 4,
+"id": 23,
+"es": "que hacen este tipo de trabajo,"
+},
+{
+"linhas": [
+{
+"bbox": [
+251,
+1227,
+825,
+1269
+],
+"txt": "e eu estou entregando isso"
+}
+],
+"t0": 41.333,
+"t1": 42.666,
+"bbox": [
+251,
+1227,
+825,
+1269
+],
+"pt": "e eu estou entregando isso",
+"n": 4,
+"id": 24,
+"es": "y yo les estoy entregando esto"
+},
+{
+"linhas": [
+{
+"bbox": [
+184,
+1227,
+896,
+1269
+],
+"txt": "em extrema qualidade pra voces."
+}
+],
+"t0": 42.667,
+"t1": 44.333,
+"bbox": [
+184,
+1227,
+896,
+1269
+],
+"pt": "em extrema qualidade pra voces.",
+"n": 5,
+"id": 25,
+"es": "con calidad extrema."
+},
+{
+"linhas": [
+{
+"bbox": [
+208,
+1224,
+873,
+1271
+],
+"txt": "Entao se voce quer se atualizar"
+}
+],
+"t0": 44.667,
+"t1": 46.0,
+"bbox": [
+208,
+1224,
+873,
+1271
+],
+"pt": "Entao se voce quer se atualizar",
+"n": 4,
+"id": 26,
+"es": "Entonces, si quieres actualizarte"
+},
+{
+"linhas": [
+{
+"bbox": [
+201,
+1223,
+881,
+1271
+],
+"txt": "e estar por dentro da anatomia,"
+}
+],
+"t0": 46.0,
+"t1": 47.333,
+"bbox": [
+201,
+1223,
+881,
+1271
+],
+"pt": "e estar por dentro da anatomia,",
+"n": 4,
+"id": 27,
+"es": "y estar al día en anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+63,
+775,
+119,
+796
+],
+"txt": "FCPEXG"
+}
+],
+"t0": 47.667,
+"t1": 48.0,
+"bbox": [
+63,
+775,
+119,
+796
+],
+"pt": "FCPEXG",
+"n": 1,
+"id": 28,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+128,
+1198,
+936,
+1243
+],
+"txt": "reologia e téecnicas de preenchimento"
+},
+{
+"bbox": [
+469,
+1247,
+608,
+1296
+],
+"txt": "facial,"
+}
+],
+"t0": 47.667,
+"t1": 50.333,
+"bbox": [
+128,
+1198,
+936,
+1296
+],
+"pt": "reologia e téecnicas de preenchimento / facial,",
+"n": 8,
+"id": 29,
+"es": "reología y técnicas de relleno facial,"
+},
+{
+"linhas": [
+{
+"bbox": [
+76,
+778,
+145,
+798
+],
+"txt": "FLPEG"
+}
+],
+"t0": 48.0,
+"t1": 48.666,
+"bbox": [
+76,
+778,
+145,
+798
+],
+"pt": "FLPEG",
+"n": 2,
+"id": 30,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+131,
+783,
+182,
+800
+],
+"txt": "FCPEXO"
+}
+],
+"t0": 49.0,
+"t1": 49.333,
+"bbox": [
+131,
+783,
+182,
+800
+],
+"pt": "FCPEXO",
+"n": 1,
+"id": 31,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+146,
+785,
+203,
+799
+],
+"txt": "FLPEXG"
+}
+],
+"t0": 49.333,
+"t1": 50.0,
+"bbox": [
+146,
+785,
+203,
+799
+],
+"pt": "FLPEXG",
+"n": 2,
+"id": 32,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+156,
+781,
+210,
+799
+],
+"txt": "FCPEXO"
+}
+],
+"t0": 50.333,
+"t1": 51.333,
+"bbox": [
+156,
+781,
+210,
+799
+],
+"pt": "FCPEXO",
+"n": 3,
+"id": 33,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+232,
+1200,
+831,
+1242
+],
+"txt": "a Formacao Especialista em"
+},
+{
+"bbox": [
+375,
+1252,
+704,
+1291
+],
+"txt": "Preenchimento"
+}
+],
+"t0": 50.333,
+"t1": 52.0,
+"bbox": [
+232,
+1200,
+831,
+1291
+],
+"pt": "a Formacao Especialista em / Preenchimento",
+"n": 5,
+"id": 34,
+"es": "la Formación Especialista en Relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+150,
+782,
+203,
+803
+],
+"txt": "FCPEXO"
+}
+],
+"t0": 51.333,
+"t1": 51.666,
+"bbox": [
+150,
+782,
+203,
+803
+],
+"pt": "FCPEXO",
+"n": 1,
+"id": 35,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+321,
+1224,
+758,
+1268
+],
+"txt": "é o melhor caminho,"
+}
+],
+"t0": 52.333,
+"t1": 53.0,
+"bbox": [
+321,
+1224,
+758,
+1268
+],
+"pt": "é o melhor caminho,",
+"n": 2,
+"id": 36,
+"es": "es el mejor camino,"
+},
+{
+"linhas": [
+{
+"bbox": [
+50,
+790,
+132,
+817
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 53.333,
+"t1": 54.333,
+"bbox": [
+50,
+790,
+132,
+817
+],
+"pt": "FCPEXP",
+"n": 3,
+"id": 37,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1223,
+812,
+1272
+],
+"txt": "porque voce vai aprender"
+}
+],
+"t0": 53.333,
+"t1": 54.333,
+"bbox": [
+267,
+1223,
+812,
+1272
+],
+"pt": "porque voce vai aprender",
+"n": 3,
+"id": 38,
+"es": "porque vas a aprender"
+},
+{
+"linhas": [
+{
+"bbox": [
+354,
+1222,
+725,
+1269
+],
+"txt": "isso 100% 0nline,"
+}
+],
+"t0": 54.333,
+"t1": 55.333,
+"bbox": [
+354,
+1222,
+725,
+1269
+],
+"pt": "isso 100% 0nline,",
+"n": 3,
+"id": 39,
+"es": "esto 100% online,"
+},
+{
+"linhas": [
+{
+"bbox": [
+33,
+795,
+90,
+814
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 54.667,
+"t1": 55.333,
+"bbox": [
+33,
+795,
+90,
+814
+],
+"pt": "FCPEXP",
+"n": 2,
+"id": 40,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+342,
+1224,
+740,
+1269
+],
+"txt": "direto da sua casa,"
+}
+],
+"t0": 55.667,
+"t1": 56.333,
+"bbox": [
+342,
+1224,
+740,
+1269
+],
+"pt": "direto da sua casa,",
+"n": 2,
+"id": 41,
+"es": "directo desde tu casa,"
+},
+{
+"linhas": [
+{
+"bbox": [
+455,
+1223,
+625,
+1273
+],
+"txt": "pratico,"
+}
+],
+"t0": 57.0,
+"t1": 57.666,
+"bbox": [
+455,
+1223,
+625,
+1273
+],
+"pt": "pratico,",
+"n": 2,
+"id": 42,
+"es": "práctico,"
+},
+{
+"linhas": [
+{
+"bbox": [
+194,
+1223,
+882,
+1270
+],
+"txt": "rapido com certificacao do MEc."
+}
+],
+"t0": 57.667,
+"t1": 59.333,
+"bbox": [
+194,
+1223,
+882,
+1270
+],
+"pt": "rapido com certificacao do MEc.",
+"n": 5,
+"id": 43,
+"es": "rápido, con certificación del MEC."
+},
+{
+"linhas": [
+{
+"bbox": [
+157,
+771,
+211,
+805
+],
+"txt": "FCPEXO"
+}
+],
+"t0": 59.333,
+"t1": 59.666,
+"bbox": [
+157,
+771,
+211,
+805
+],
+"pt": "FCPEXO",
+"n": 1,
+"id": 44,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+143,
+1220,
+931,
+1274
+],
+"txt": "E um curso extremamente completo,"
+}
+],
+"t0": 59.667,
+"t1": 61.0,
+"bbox": [
+143,
+1220,
+931,
+1274
+],
+"pt": "E um curso extremamente completo,",
+"n": 4,
+"id": 45,
+"es": "Es un curso extremadamente completo,"
+},
+{
+"linhas": [
+{
+"bbox": [
+228,
+768,
+282,
+801
+],
+"txt": "FCPEXG"
+}
+],
+"t0": 61.333,
+"t1": 61.666,
+"bbox": [
+228,
+768,
+282,
+801
+],
+"pt": "FCPEXG",
+"n": 1,
+"id": 46,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+292,
+1225,
+787,
+1267
+],
+"txt": "com mais de 100 aulas."
+}
+],
+"t0": 61.333,
+"t1": 62.333,
+"bbox": [
+292,
+1225,
+787,
+1267
+],
+"pt": "com mais de 100 aulas.",
+"n": 3,
+"id": 47,
+"es": "con más de 100 clases."
+},
+{
+"linhas": [
+{
+"bbox": [
+361,
+1227,
+721,
+1265
+],
+"txt": "Para se inscrever"
+}
+],
+"t0": 62.667,
+"t1": 63.333,
+"bbox": [
+361,
+1227,
+721,
+1265
+],
+"pt": "Para se inscrever",
+"n": 2,
+"id": 48,
+"es": "Para inscribirte,"
+},
+{
+"linhas": [
+{
+"bbox": [
+254,
+773,
+309,
+803
+],
+"txt": "FCPEXR"
+}
+],
+"t0": 63.0,
+"t1": 63.666,
+"bbox": [
+254,
+773,
+309,
+803
+],
+"pt": "FCPEXR",
+"n": 2,
+"id": 49,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+255,
+1225,
+824,
+1266
+],
+"txt": "é so clicar em SAIBA MAIS."
+}
+],
+"t0": 63.333,
+"t1": 64.666,
+"bbox": [
+255,
+1225,
+824,
+1266
+],
+"pt": "é so clicar em SAIBA MAIS.",
+"n": 4,
+"id": 50,
+"es": "solo haz clic en MÁS INFORMACIÓN."
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+778,
+288,
+817
+],
+"txt": "FCPEX"
+}
+],
+"t0": 64.333,
+"t1": 65.333,
+"bbox": [
+220,
+778,
+288,
+817
+],
+"pt": "FCPEX",
+"n": 3,
+"id": 51,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+430,
+1222,
+650,
+1272
+],
+"txt": "Te vejo la!"
+}
+],
+"t0": 64.667,
+"t1": 65.666,
+"bbox": [
+430,
+1222,
+650,
+1272
+],
+"pt": "Te vejo la!",
+"n": 3,
+"id": 52,
+"es": "¡Nos vemos allá!"
+}
+]
+}

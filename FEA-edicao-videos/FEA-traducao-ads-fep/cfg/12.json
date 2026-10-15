@@ -1,0 +1,924 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+165,
+1571,
+917,
+1625
+],
+"txt": "Vamos contar a historia da"
+},
+{
+"bbox": [
+115,
+1649,
+968,
+1708
+],
+"txt": "@debiboeira que ja é paciente"
+},
+{
+"bbox": [
+273,
+1725,
+806,
+1786
+],
+"txt": "ha mais de um ano"
+}
+],
+"t0": 0.0,
+"t1": 57.0,
+"bbox": [
+115,
+1571,
+968,
+1786
+],
+"pt": "Vamos contar a historia da / @debiboeira que ja é paciente / ha mais de um ano",
+"n": 171,
+"id": 0,
+"es": "Vamos a contar la historia de @debiboeira, que ya es paciente hace más de un año"
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1350,
+781,
+1392
+],
+"txt": "Dia do retorno da Debi."
+}
+],
+"t0": 0.333,
+"t1": 2.0,
+"bbox": [
+296,
+1350,
+781,
+1392
+],
+"pt": "Dia do retorno da Debi.",
+"n": 5,
+"id": 1,
+"es": "Día del control de Debi."
+},
+{
+"linhas": [
+{
+"bbox": [
+264,
+1327,
+813,
+1370
+],
+"txt": "A gente tava conversando"
+},
+{
+"bbox": [
+315,
+1376,
+760,
+1423
+],
+"txt": "um pouquinho, Debi,"
+}
+],
+"t0": 2.333,
+"t1": 4.333,
+"bbox": [
+264,
+1327,
+813,
+1423
+],
+"pt": "A gente tava conversando / um pouquinho, Debi,",
+"n": 6,
+"id": 2,
+"es": "Estábamos conversando un poquito, Debi,"
+},
+{
+"linhas": [
+{
+"bbox": [
+224,
+1349,
+855,
+1396
+],
+"txt": "sobre os seus procedimentos,"
+}
+],
+"t0": 4.333,
+"t1": 5.333,
+"bbox": [
+224,
+1349,
+855,
+1396
+],
+"pt": "sobre os seus procedimentos,",
+"n": 3,
+"id": 3,
+"es": "sobre tus procedimientos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+223,
+1324,
+855,
+1370
+],
+"txt": "um pouquinho da sua historia"
+},
+{
+"bbox": [
+292,
+1376,
+785,
+1421
+],
+"txt": "com os preenchedores,"
+}
+],
+"t0": 5.667,
+"t1": 8.666,
+"bbox": [
+223,
+1324,
+855,
+1421
+],
+"pt": "um pouquinho da sua historia / com os preenchedores,",
+"n": 9,
+"id": 4,
+"es": "un poco de tu historia con los rellenos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+259,
+1327,
+809,
+1370
+],
+"txt": "voce falou que fazia antes"
+},
+{
+"bbox": [
+146,
+1375,
+937,
+1422
+],
+"txt": "preenchimento em algumas regioes..."
+}
+],
+"t0": 8.667,
+"t1": 11.0,
+"bbox": [
+146,
+1327,
+937,
+1422
+],
+"pt": "voce falou que fazia antes / preenchimento em algumas regioes...",
+"n": 7,
+"id": 5,
+"es": "dijiste que antes te hacías relleno en algunas regiones..."
+},
+{
+"linhas": [
+{
+"bbox": [
+212,
+1326,
+872,
+1368
+],
+"txt": "Acho que ja faz mais ou menos"
+},
+{
+"bbox": [
+233,
+1376,
+846,
+1421
+],
+"txt": "um ano que tu me cuida, ne?"
+}
+],
+"t0": 11.0,
+"t1": 14.0,
+"bbox": [
+212,
+1326,
+872,
+1421
+],
+"pt": "Acho que ja faz mais ou menos / um ano que tu me cuida, ne?",
+"n": 9,
+"id": 6,
+"es": "Creo que ya hace más o menos un año que me atiendes, ¿no?"
+},
+{
+"linhas": [
+{
+"bbox": [
+305,
+1328,
+776,
+1369
+],
+"txt": "e eu tava conversando"
+},
+{
+"bbox": [
+335,
+1376,
+745,
+1419
+],
+"txt": "com o doutor Joao,"
+}
+],
+"t0": 14.667,
+"t1": 19.0,
+"bbox": [
+305,
+1328,
+776,
+1419
+],
+"pt": "e eu tava conversando / com o doutor Joao,",
+"n": 13,
+"id": 7,
+"es": "y yo estaba conversando con el doctor João,"
+},
+{
+"linhas": [
+{
+"bbox": [
+339,
+1380,
+741,
+1416
+],
+"txt": "com o doutor Joao,"
+}
+],
+"t0": 14.667,
+"t1": 15.0,
+"bbox": [
+339,
+1380,
+741,
+1416
+],
+"pt": "com o doutor Joao,",
+"n": 1,
+"id": 8,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+232,
+1345,
+859,
+1400
+],
+"txt": "que eu tinha muito problema"
+}
+],
+"t0": 19.0,
+"t1": 22.333,
+"bbox": [
+232,
+1345,
+859,
+1400
+],
+"pt": "que eu tinha muito problema",
+"n": 10,
+"id": 9,
+"es": "que tenía muchos problemas"
+},
+{
+"linhas": [
+{
+"bbox": [
+308,
+1327,
+774,
+1367
+],
+"txt": "com os dermatos e os"
+},
+{
+"bbox": [
+234,
+1375,
+849,
+1423
+],
+"txt": "profissionais que eu passava,"
+}
+],
+"t0": 22.333,
+"t1": 25.0,
+"bbox": [
+234,
+1327,
+849,
+1423
+],
+"pt": "com os dermatos e os / profissionais que eu passava,",
+"n": 8,
+"id": 10,
+"es": "con los dermatólogos y los profesionales a los que iba,"
+},
+{
+"linhas": [
+{
+"bbox": [
+165,
+1347,
+919,
+1400
+],
+"txt": "porque eu gosto de boca volumosa,"
+}
+],
+"t0": 25.0,
+"t1": 27.666,
+"bbox": [
+165,
+1347,
+919,
+1400
+],
+"pt": "porque eu gosto de boca volumosa,",
+"n": 8,
+"id": 11,
+"es": "porque me gusta la boca voluminosa,"
+},
+{
+"linhas": [
+{
+"bbox": [
+149,
+1349,
+932,
+1393
+],
+"txt": "mas todos eles faziam de uma forma"
+}
+],
+"t0": 28.0,
+"t1": 29.666,
+"bbox": [
+149,
+1349,
+932,
+1393
+],
+"pt": "mas todos eles faziam de uma forma",
+"n": 5,
+"id": 12,
+"es": "pero todos lo hacían de una forma"
+},
+{
+"linhas": [
+{
+"bbox": [
+197,
+1348,
+882,
+1397
+],
+"txt": "que eu ficava com boca de pato."
+}
+],
+"t0": 29.667,
+"t1": 31.333,
+"bbox": [
+197,
+1348,
+882,
+1397
+],
+"pt": "que eu ficava com boca de pato.",
+"n": 5,
+"id": 13,
+"es": "que me quedaba boca de pato."
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1325,
+794,
+1369
+],
+"txt": "Que me dava impressao"
+},
+{
+"bbox": [
+329,
+1373,
+753,
+1424
+],
+"txt": "que eles colocavam"
+}
+],
+"t0": 32.0,
+"t1": 33.333,
+"bbox": [
+290,
+1325,
+794,
+1424
+],
+"pt": "Que me dava impressao / que eles colocavam",
+"n": 4,
+"id": 14,
+"es": "Me daba la impresión de que ponían"
+},
+{
+"linhas": [
+{
+"bbox": [
+111,
+1350,
+968,
+1395
+],
+"txt": "alguma coisa nessa regiao aqui, nao sei.."
+}
+],
+"t0": 33.667,
+"t1": 35.666,
+"bbox": [
+111,
+1350,
+968,
+1395
+],
+"pt": "alguma coisa nessa regiao aqui, nao sei..",
+"n": 6,
+"id": 15,
+"es": "algo en esta región de aquí, no sé..."
+},
+{
+"linhas": [
+{
+"bbox": [
+170,
+1349,
+911,
+1394
+],
+"txt": "Dava um relevo e ficava tipo assim."
+}
+],
+"t0": 35.667,
+"t1": 38.333,
+"bbox": [
+170,
+1349,
+911,
+1394
+],
+"pt": "Dava um relevo e ficava tipo assim.",
+"n": 8,
+"id": 16,
+"es": "Quedaba un relieve y quedaba así."
+},
+{
+"linhas": [
+{
+"bbox": [
+232,
+1350,
+849,
+1394
+],
+"txt": "Eu saia do consultorio, sabe..."
+}
+],
+"t0": 38.333,
+"t1": 40.333,
+"bbox": [
+232,
+1350,
+849,
+1394
+],
+"pt": "Eu saia do consultorio, sabe...",
+"n": 6,
+"id": 17,
+"es": "Salía del consultorio, ¿sabes?..."
+},
+{
+"linhas": [
+{
+"bbox": [
+279,
+1350,
+798,
+1395
+],
+"txt": "Serio, com boca de pato."
+}
+],
+"t0": 41.0,
+"t1": 42.333,
+"bbox": [
+279,
+1350,
+798,
+1395
+],
+"pt": "Serio, com boca de pato.",
+"n": 4,
+"id": 18,
+"es": "En serio, con boca de pato."
+},
+{
+"linhas": [
+{
+"bbox": [
+116,
+1347,
+966,
+1397
+],
+"txt": "E assim, hoje a minha boca tem volume,"
+}
+],
+"t0": 43.0,
+"t1": 47.333,
+"bbox": [
+116,
+1347,
+966,
+1397
+],
+"pt": "E assim, hoje a minha boca tem volume,",
+"n": 13,
+"id": 19,
+"es": "Y así, hoy mi boca tiene volumen,"
+},
+{
+"linhas": [
+{
+"bbox": [
+246,
+1326,
+837,
+1371
+],
+"txt": "mas as pessoas me olham e"
+},
+{
+"bbox": [
+218,
+1376,
+861,
+1424
+],
+"txt": "nao parece que ta preenchido."
+}
+],
+"t0": 48.0,
+"t1": 51.0,
+"bbox": [
+218,
+1326,
+861,
+1424
+],
+"pt": "mas as pessoas me olham e / nao parece que ta preenchido.",
+"n": 9,
+"id": 20,
+"es": "pero la gente me mira y no parece que esté rellena."
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1325,
+779,
+1367
+],
+"txt": "Eu ja fui chamada pelo"
+},
+{
+"bbox": [
+243,
+1374,
+837,
+1421
+],
+"txt": "meu irmao de boca de pato,"
+}
+],
+"t0": 51.0,
+"t1": 53.666,
+"bbox": [
+243,
+1325,
+837,
+1421
+],
+"pt": "Eu ja fui chamada pelo / meu irmao de boca de pato,",
+"n": 8,
+"id": 21,
+"es": "Mi hermano ya me llamó boca de pato,"
+},
+{
+"linhas": [
+{
+"bbox": [
+237,
+1322,
+843,
+1372
+],
+"txt": "porque eu saia realmente do"
+},
+{
+"bbox": [
+217,
+1374,
+857,
+1420
+],
+"txt": "consultorio com boca de pato."
+}
+],
+"t0": 53.667,
+"t1": 56.666,
+"bbox": [
+217,
+1322,
+857,
+1420
+],
+"pt": "porque eu saia realmente do / consultorio com boca de pato.",
+"n": 9,
+"id": 22,
+"es": "porque realmente salía del consultorio con boca de pato."
+},
+{
+"linhas": [
+{
+"bbox": [
+192,
+1351,
+888,
+1394
+],
+"txt": "E aquilo me dava... Eu ficava mal."
+}
+],
+"t0": 56.667,
+"t1": 60.333,
+"bbox": [
+192,
+1351,
+888,
+1394
+],
+"pt": "E aquilo me dava... Eu ficava mal.",
+"n": 11,
+"id": 23,
+"es": "Y eso me hacía... Me sentía mal."
+},
+{
+"linhas": [
+{
+"bbox": [
+129,
+1550,
+955,
+1605
+],
+"txt": "Naturalidade e elegancia sao o"
+},
+{
+"bbox": [
+249,
+1626,
+834,
+1680
+],
+"txt": "foco dos tratamentos"
+},
+{
+"bbox": [
+135,
+1699,
+948,
+1760
+],
+"txt": "Nao é pra parecer que fez algo"
+}
+],
+"t0": 57.0,
+"t1": 84.333,
+"bbox": [
+129,
+1550,
+955,
+1760
+],
+"pt": "Naturalidade e elegancia sao o / foco dos tratamentos / Nao é pra parecer que fez algo",
+"n": 82,
+"id": 24,
+"es": "La naturalidad y la elegancia son el foco de los tratamientos\nNo se trata de parecer que te hiciste algo"
+},
+{
+"linhas": [
+{
+"bbox": [
+179,
+1343,
+900,
+1403
+],
+"txt": "E muito chato porque eu trabalho"
+}
+],
+"t0": 60.667,
+"t1": 63.666,
+"bbox": [
+179,
+1343,
+900,
+1403
+],
+"pt": "E muito chato porque eu trabalho",
+"n": 9,
+"id": 25,
+"es": "Es muy molesto porque trabajo"
+},
+{
+"linhas": [
+{
+"bbox": [
+135,
+1349,
+940,
+1397
+],
+"txt": "com a minha imagem, eu sou modelo."
+}
+],
+"t0": 63.667,
+"t1": 66.0,
+"bbox": [
+135,
+1349,
+940,
+1397
+],
+"pt": "com a minha imagem, eu sou modelo.",
+"n": 7,
+"id": 26,
+"es": "con mi imagen, soy modelo."
+},
+{
+"linhas": [
+{
+"bbox": [
+226,
+1326,
+857,
+1371
+],
+"txt": "Entao, gragas a Deus o doutor"
+},
+{
+"bbox": [
+253,
+1377,
+830,
+1418
+],
+"txt": "Joao entrou na minha vida!"
+}
+],
+"t0": 66.0,
+"t1": 68.0,
+"bbox": [
+226,
+1326,
+857,
+1418
+],
+"pt": "Entao, gragas a Deus o doutor / Joao entrou na minha vida!",
+"n": 6,
+"id": 27,
+"es": "¡Entonces, gracias a Dios, el doctor João llegó a mi vida!"
+},
+{
+"linhas": [
+{
+"bbox": [
+234,
+1293,
+851,
+1368
+],
+"txt": "Técnicas seguras e"
+},
+{
+"bbox": [
+228,
+1384,
+813,
+1452
+],
+"txt": "replicaveis da FEP"
+}
+],
+"t0": 69.0,
+"t1": 84.333,
+"bbox": [
+228,
+1293,
+851,
+1452
+],
+"pt": "Técnicas seguras e / replicaveis da FEP",
+"n": 46,
+"id": 28,
+"es": "Técnicas seguras y replicables de la FEP",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1141,
+418,
+1198
+],
+"txt": "Toqul"
+}
+],
+"t0": 85.667,
+"t1": 86.0,
+"bbox": [
+296,
+1141,
+418,
+1198
+],
+"pt": "Toqul",
+"n": 1,
+"id": 29,
+"es": "Toca"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+782,
+1193
+],
+"txt": "Toque em SAIBA MAIS"
+}
+],
+"t0": 86.0,
+"t1": 88.333,
+"bbox": [
+299,
+1149,
+782,
+1193
+],
+"pt": "Toque em SAIBA MAIS",
+"n": 7,
+"id": 30,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

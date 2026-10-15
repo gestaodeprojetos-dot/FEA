@@ -1,0 +1,2150 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+116,
+1172,
+797,
+1226
+],
+"txt": "Apos minha live injection no"
+}
+],
+"t0": 0.0,
+"t1": 12.333,
+"bbox": [
+116,
+1172,
+797,
+1226
+],
+"pt": "Apos minha live injection no",
+"n": 37,
+"id": 0,
+"es": "Tras mi live injection en"
+},
+{
+"linhas": [
+{
+"bbox": [
+176,
+1548,
+888,
+1613
+],
+"txt": "Nao nao hoje os medicos"
+},
+{
+"bbox": [
+422,
+1621,
+659,
+1671
+],
+"txt": "estavam"
+}
+],
+"t0": 0.0,
+"t1": 3.333,
+"bbox": [
+176,
+1548,
+888,
+1671
+],
+"pt": "Nao nao hoje os medicos / estavam",
+"n": 10,
+"id": 1,
+"es": "Hoy los médicos salieron fascinados,"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1520,
+918,
+1576
+],
+"txt": "Eles sairam da sala dizendo"
+},
+{
+"bbox": [
+125,
+1578,
+938,
+1650
+],
+"txt": "que o DOC é um genio, ele é"
+},
+{
+"bbox": [
+405,
+1646,
+675,
+1709
+],
+"txt": "um genio"
+}
+],
+"t0": 3.333,
+"t1": 4.666,
+"bbox": [
+125,
+1520,
+938,
+1709
+],
+"pt": "Eles sairam da sala dizendo / que o DOC é um genio, ele é / um genio",
+"n": 4,
+"id": 2,
+"es": "salían del salón diciendo que el doc es un genio, es un genio"
+},
+{
+"linhas": [
+{
+"bbox": [
+337,
+192,
+744,
+241
+],
+"txt": "Muchasgracias!!"
+},
+{
+"bbox": [
+396,
+251,
+684,
+303
+],
+"txt": "Thankyou!!!"
+}
+],
+"t0": 4.667,
+"t1": 8.333,
+"bbox": [
+337,
+192,
+744,
+303
+],
+"pt": "Muchasgracias!! / Thankyou!!!",
+"n": 11,
+"id": 3,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+423,
+366,
+659,
+420
+],
+"txt": "Cbaasorg"
+}
+],
+"t0": 4.667,
+"t1": 8.333,
+"bbox": [
+423,
+366,
+659,
+420
+],
+"pt": "Cbaasorg",
+"n": 11,
+"id": 4,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+355,
+1569,
+998,
+1610
+],
+"txt": "Fue un placer conocerlos a todos."
+},
+{
+"bbox": [
+366,
+1618,
+992,
+1659
+],
+"txt": "It was a pleasure to meet you all"
+}
+],
+"t0": 4.667,
+"t1": 8.333,
+"bbox": [
+355,
+1569,
+998,
+1659
+],
+"pt": "Fue un placer conocerlos a todos. / It was a pleasure to meet you all",
+"n": 11,
+"id": 5,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1551,
+916,
+1609
+],
+"txt": "Eles adoraram a tecnica e a"
+},
+{
+"bbox": [
+175,
+1612,
+901,
+1679
+],
+"txt": "paciente que voce injetou"
+}
+],
+"t0": 8.333,
+"t1": 12.333,
+"bbox": [
+147,
+1551,
+916,
+1679
+],
+"pt": "Eles adoraram a tecnica e a / paciente que voce injetou",
+"n": 12,
+"id": 6,
+"es": "La técnica les encantó, y la pacientita que inyectaste"
+},
+{
+"linhas": [
+{
+"bbox": [
+177,
+1550,
+887,
+1608
+],
+"txt": "Foi ao banheiro e saiu do"
+},
+{
+"bbox": [
+108,
+1611,
+971,
+1677
+],
+"txt": "banheiro chorando de emocao"
+}
+],
+"t0": 12.333,
+"t1": 16.666,
+"bbox": [
+108,
+1550,
+971,
+1677
+],
+"pt": "Foi ao banheiro e saiu do / banheiro chorando de emocao",
+"n": 13,
+"id": 7,
+"es": "fue al baño y salió del baño llorando de la emoción"
+},
+{
+"linhas": [
+{
+"bbox": [
+154,
+1548,
+909,
+1614
+],
+"txt": "Chorava e dizia: nao posso"
+},
+{
+"bbox": [
+230,
+1613,
+847,
+1678
+],
+"txt": "acreditar na mudanca"
+}
+],
+"t0": 17.0,
+"t1": 20.333,
+"bbox": [
+154,
+1548,
+909,
+1678
+],
+"pt": "Chorava e dizia: nao posso / acreditar na mudanca",
+"n": 10,
+"id": 8,
+"es": "Lloraba, decía: no puedo creer el cambio"
+},
+{
+"linhas": [
+{
+"bbox": [
+239,
+1551,
+824,
+1609
+],
+"txt": "Todo o meu rosto foi"
+},
+{
+"bbox": [
+399,
+1616,
+679,
+1670
+],
+"txt": "levantado"
+}
+],
+"t0": 20.333,
+"t1": 23.333,
+"bbox": [
+239,
+1551,
+824,
+1670
+],
+"pt": "Todo o meu rosto foi / levantado",
+"n": 9,
+"id": 9,
+"es": "se me levantó toda la cara"
+},
+{
+"linhas": [
+{
+"bbox": [
+125,
+1581,
+955,
+1643
+],
+"txt": "Fiquei chocado te parabenizo"
+}
+],
+"t0": 23.667,
+"t1": 25.666,
+"bbox": [
+125,
+1581,
+955,
+1643
+],
+"pt": "Fiquei chocado te parabenizo",
+"n": 6,
+"id": 10,
+"es": "Estaba impactada, te felicito"
+},
+{
+"linhas": [
+{
+"bbox": [
+185,
+1581,
+896,
+1647
+],
+"txt": "Muito obrigado parabéns"
+}
+],
+"t0": 26.0,
+"t1": 28.0,
+"bbox": [
+185,
+1581,
+896,
+1647
+],
+"pt": "Muito obrigado parabéns",
+"n": 6,
+"id": 11,
+"es": "Muchas gracias, fue muy buena"
+},
+{
+"linhas": [
+{
+"bbox": [
+513,
+236,
+946,
+292
+],
+"txt": "vejam o feedback"
+},
+{
+"bbox": [
+554,
+301,
+904,
+351
+],
+"txt": "da paciente m"
+}
+],
+"t0": 28.0,
+"t1": 76.0,
+"bbox": [
+513,
+236,
+946,
+351
+],
+"pt": "vejam o feedback / da paciente m",
+"n": 144,
+"id": 12,
+"es": "miren el feedback de la paciente",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+110,
+1550,
+972,
+1614
+],
+"txt": "Eu tenho que admitir que apos"
+},
+{
+"bbox": [
+317,
+1613,
+774,
+1677
+],
+"txt": "o procedimento"
+}
+],
+"t0": 28.0,
+"t1": 30.333,
+"bbox": [
+110,
+1550,
+972,
+1677
+],
+"pt": "Eu tenho que admitir que apos / o procedimento",
+"n": 7,
+"id": 13,
+"es": "Tengo que admitir que después del procedimiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+83,
+1635,
+136,
+1659
+],
+"txt": "Dicbisr"
+}
+],
+"t0": 28.667,
+"t1": 29.0,
+"bbox": [
+83,
+1635,
+136,
+1659
+],
+"pt": "Dicbisr",
+"n": 1,
+"id": 14,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+160,
+1642,
+212,
+1661
+],
+"txt": "Dielir"
+}
+],
+"t0": 28.667,
+"t1": 29.0,
+"bbox": [
+160,
+1642,
+212,
+1661
+],
+"pt": "Dielir",
+"n": 1,
+"id": 15,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+155,
+1740,
+238,
+1761
+],
+"txt": "LO/G"
+}
+],
+"t0": 28.667,
+"t1": 29.333,
+"bbox": [
+155,
+1740,
+238,
+1761
+],
+"pt": "LO/G",
+"n": 2,
+"id": 16,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+170,
+1549,
+892,
+1612
+],
+"txt": "Quando mevi no espelho"
+},
+{
+"bbox": [
+305,
+1614,
+779,
+1679
+],
+"txt": "chorei um pouco"
+}
+],
+"t0": 30.333,
+"t1": 31.666,
+"bbox": [
+170,
+1549,
+892,
+1679
+],
+"pt": "Quando mevi no espelho / chorei um pouco",
+"n": 4,
+"id": 17,
+"es": "cuando me vi en el espejo lloré un poquito"
+},
+{
+"linhas": [
+{
+"bbox": [
+365,
+1581,
+715,
+1645
+],
+"txt": "Ah obrigado"
+}
+],
+"t0": 31.667,
+"t1": 33.0,
+"bbox": [
+365,
+1581,
+715,
+1645
+],
+"pt": "Ah obrigado",
+"n": 4,
+"id": 18,
+"es": "Ah, gracias"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1784,
+497,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 33.0,
+"t1": 33.333,
+"bbox": [
+297,
+1784,
+497,
+1919
+],
+"pt": "YVOIRE",
+"n": 1,
+"id": 19,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1579,
+938,
+1647
+],
+"txt": "Obrigada sim me emocionei"
+}
+],
+"t0": 34.667,
+"t1": 36.333,
+"bbox": [
+147,
+1579,
+938,
+1647
+],
+"pt": "Obrigada sim me emocionei",
+"n": 5,
+"id": 20,
+"es": "Gracias, sí, me emocioné"
+},
+{
+"linhas": [
+{
+"bbox": [
+264,
+1848,
+345,
+1913
+],
+"txt": "YV"
+}
+],
+"t0": 35.667,
+"t1": 36.0,
+"bbox": [
+264,
+1848,
+345,
+1913
+],
+"pt": "YV",
+"n": 1,
+"id": 21,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+169,
+1832,
+352,
+1919
+],
+"txt": "VOIRE"
+}
+],
+"t0": 36.0,
+"t1": 36.333,
+"bbox": [
+169,
+1832,
+352,
+1919
+],
+"pt": "VOIRE",
+"n": 1,
+"id": 22,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+259,
+1881,
+345,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 36.333,
+"t1": 36.666,
+"bbox": [
+259,
+1881,
+345,
+1919
+],
+"pt": "IRE",
+"n": 1,
+"id": 23,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+171,
+1517,
+894,
+1580
+],
+"txt": "Eu estava muito animado,"
+},
+{
+"bbox": [
+120,
+1580,
+942,
+1644
+],
+"txt": "especialmente com esta area"
+},
+{
+"bbox": [
+238,
+1646,
+840,
+1705
+],
+"txt": "e a area de contorno."
+}
+],
+"t0": 36.667,
+"t1": 40.0,
+"bbox": [
+120,
+1517,
+942,
+1705
+],
+"pt": "Eu estava muito animado, / especialmente com esta area / e a area de contorno.",
+"n": 10,
+"id": 24,
+"es": "Me emocioné mucho, sobre todo por esta área y el contorno."
+},
+{
+"linhas": [
+{
+"bbox": [
+370,
+1874,
+479,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 38.667,
+"t1": 39.0,
+"bbox": [
+370,
+1874,
+479,
+1919
+],
+"pt": "IRE",
+"n": 1,
+"id": 25,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+28,
+1629,
+84,
+1646
+],
+"txt": "DICAIGA"
+}
+],
+"t0": 39.333,
+"t1": 39.666,
+"bbox": [
+28,
+1629,
+84,
+1646
+],
+"pt": "DICAIGA",
+"n": 1,
+"id": 26,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+423,
+1869,
+521,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 40.0,
+"t1": 40.666,
+"bbox": [
+423,
+1869,
+521,
+1919
+],
+"pt": "IRE",
+"n": 2,
+"id": 27,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+122,
+1548,
+942,
+1617
+],
+"txt": "Nao imaginei que a mudanga"
+},
+{
+"bbox": [
+381,
+1618,
+699,
+1670
+],
+"txt": "seria tanto."
+}
+],
+"t0": 40.333,
+"t1": 44.0,
+"bbox": [
+122,
+1548,
+942,
+1670
+],
+"pt": "Nao imaginei que a mudanga / seria tanto.",
+"n": 11,
+"id": 28,
+"es": "O sea, no me imaginé que el cambio iba a ser tanto."
+},
+{
+"linhas": [
+{
+"bbox": [
+384,
+1866,
+492,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 41.333,
+"t1": 41.666,
+"bbox": [
+384,
+1866,
+492,
+1919
+],
+"pt": "IRE",
+"n": 1,
+"id": 29,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+303,
+1832,
+552,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 41.667,
+"t1": 45.333,
+"bbox": [
+303,
+1832,
+552,
+1919
+],
+"pt": "YVOIRE",
+"n": 11,
+"id": 30,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+1550,
+62,
+1576
+],
+"txt": "Dickies"
+}
+],
+"t0": 43.0,
+"t1": 43.666,
+"bbox": [
+0,
+1550,
+62,
+1576
+],
+"pt": "Dickies",
+"n": 2,
+"id": 31,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+85,
+1540,
+150,
+1568
+],
+"txt": "Dickier"
+}
+],
+"t0": 44.0,
+"t1": 44.333,
+"bbox": [
+85,
+1540,
+150,
+1568
+],
+"pt": "Dickier",
+"n": 1,
+"id": 32,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+2,
+1549,
+67,
+1573
+],
+"txt": "Dickier"
+}
+],
+"t0": 44.0,
+"t1": 44.666,
+"bbox": [
+2,
+1549,
+67,
+1573
+],
+"pt": "Dickier",
+"n": 2,
+"id": 33,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+136,
+1551,
+927,
+1612
+],
+"txt": "Mas ao mesmo tempo ainda"
+},
+{
+"bbox": [
+441,
+1624,
+639,
+1671
+],
+"txt": "sou eu"
+}
+],
+"t0": 44.333,
+"t1": 46.333,
+"bbox": [
+136,
+1551,
+927,
+1671
+],
+"pt": "Mas ao mesmo tempo ainda / sou eu",
+"n": 6,
+"id": 34,
+"es": "Pero a la vez sigo siendo yo"
+},
+{
+"linhas": [
+{
+"bbox": [
+374,
+1866,
+483,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 45.333,
+"t1": 45.666,
+"bbox": [
+374,
+1866,
+483,
+1919
+],
+"pt": "IRE",
+"n": 1,
+"id": 35,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+374,
+1867,
+479,
+1919
+],
+"txt": "IRE"
+}
+],
+"t0": 46.0,
+"t1": 46.333,
+"bbox": [
+374,
+1867,
+479,
+1919
+],
+"pt": "IRE",
+"n": 1,
+"id": 36,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+254,
+1517,
+811,
+1581
+],
+"txt": "Quero dizer, nao ha"
+},
+{
+"bbox": [
+135,
+1584,
+927,
+1639
+],
+"txt": "transformacao do meu rosto"
+},
+{
+"bbox": [
+388,
+1649,
+692,
+1702
+],
+"txt": "ou do meu"
+}
+],
+"t0": 46.333,
+"t1": 49.666,
+"bbox": [
+135,
+1517,
+927,
+1702
+],
+"pt": "Quero dizer, nao ha / transformacao do meu rosto / ou do meu",
+"n": 10,
+"id": 37,
+"es": "o sea, no es que haya una transformación de mi rostro"
+},
+{
+"linhas": [
+{
+"bbox": [
+242,
+1550,
+821,
+1609
+],
+"txt": "E isso vai te ajudar a"
+},
+{
+"bbox": [
+228,
+1618,
+851,
+1670
+],
+"txt": "envelhecer muito bem"
+}
+],
+"t0": 49.667,
+"t1": 52.666,
+"bbox": [
+228,
+1550,
+851,
+1670
+],
+"pt": "E isso vai te ajudar a / envelhecer muito bem",
+"n": 9,
+"id": 38,
+"es": "Y eso te va a ayudar a envejecer muy bien"
+},
+{
+"linhas": [
+{
+"bbox": [
+5,
+1571,
+60,
+1589
+],
+"txt": "Diekier"
+}
+],
+"t0": 51.0,
+"t1": 51.333,
+"bbox": [
+5,
+1571,
+60,
+1589
+],
+"pt": "Diekier",
+"n": 1,
+"id": 39,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+15,
+1583,
+70,
+1602
+],
+"txt": "Dickier"
+}
+],
+"t0": 51.333,
+"t1": 51.666,
+"bbox": [
+15,
+1583,
+70,
+1602
+],
+"pt": "Dickier",
+"n": 1,
+"id": 40,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+24,
+1593,
+81,
+1613
+],
+"txt": "Dickies"
+}
+],
+"t0": 51.667,
+"t1": 52.0,
+"bbox": [
+24,
+1593,
+81,
+1613
+],
+"pt": "Dickies",
+"n": 1,
+"id": 41,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+34,
+1608,
+83,
+1622
+],
+"txt": "Diekiss"
+}
+],
+"t0": 52.0,
+"t1": 52.333,
+"bbox": [
+34,
+1608,
+83,
+1622
+],
+"pt": "Diekiss",
+"n": 1,
+"id": 42,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+37,
+1703,
+105,
+1733
+],
+"txt": "L/G/G"
+}
+],
+"t0": 52.333,
+"t1": 53.0,
+"bbox": [
+37,
+1703,
+105,
+1733
+],
+"pt": "L/G/G",
+"n": 2,
+"id": 43,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+366,
+1581,
+715,
+1645
+],
+"txt": "Mas quando"
+}
+],
+"t0": 52.667,
+"t1": 53.333,
+"bbox": [
+366,
+1581,
+715,
+1645
+],
+"pt": "Mas quando",
+"n": 2,
+"id": 44,
+"es": "Pero cuando"
+},
+{
+"linhas": [
+{
+"bbox": [
+111,
+1549,
+951,
+1614
+],
+"txt": "Quando me vi nunca imaginei"
+},
+{
+"bbox": [
+244,
+1611,
+833,
+1681
+],
+"txt": "que a mudanca seria"
+}
+],
+"t0": 53.667,
+"t1": 55.666,
+"bbox": [
+111,
+1549,
+951,
+1681
+],
+"pt": "Quando me vi nunca imaginei / que a mudanca seria",
+"n": 6,
+"id": 45,
+"es": "cuando me vi, no me imaginé que el cambio iba a ser"
+},
+{
+"linhas": [
+{
+"bbox": [
+237,
+1583,
+845,
+1639
+],
+"txt": "Tao cedo e tao visivel"
+}
+],
+"t0": 56.667,
+"t1": 58.0,
+"bbox": [
+237,
+1583,
+845,
+1639
+],
+"pt": "Tao cedo e tao visivel",
+"n": 4,
+"id": 46,
+"es": "tan pronto y tan visible"
+},
+{
+"linhas": [
+{
+"bbox": [
+235,
+1581,
+844,
+1645
+],
+"txt": "Entao muito obrigado"
+}
+],
+"t0": 58.0,
+"t1": 59.333,
+"bbox": [
+235,
+1581,
+844,
+1645
+],
+"pt": "Entao muito obrigado",
+"n": 4,
+"id": 47,
+"es": "Así que muchísimas gracias"
+},
+{
+"linhas": [
+{
+"bbox": [
+145,
+1550,
+919,
+1615
+],
+"txt": "Sim, e pode continuar a ser"
+},
+{
+"bbox": [
+385,
+1613,
+692,
+1673
+],
+"txt": "melhorado"
+}
+],
+"t0": 59.333,
+"t1": 62.0,
+"bbox": [
+145,
+1550,
+919,
+1673
+],
+"pt": "Sim, e pode continuar a ser / melhorado",
+"n": 8,
+"id": 48,
+"es": "Sí, y se puede seguir mejorando"
+},
+{
+"linhas": [
+{
+"bbox": [
+119,
+1550,
+962,
+1612
+],
+"txt": "Esta é a magia do acido hialur"
+},
+{
+"bbox": [
+458,
+1612,
+623,
+1674
+],
+"txt": "onico"
+}
+],
+"t0": 62.0,
+"t1": 65.0,
+"bbox": [
+119,
+1550,
+962,
+1674
+],
+"pt": "Esta é a magia do acido hialur / onico",
+"n": 9,
+"id": 49,
+"es": "Esta es la magia del ácido hialurónico"
+},
+{
+"linhas": [
+{
+"bbox": [
+149,
+1549,
+916,
+1612
+],
+"txt": "E dermatologia estetica é o"
+},
+{
+"bbox": [
+116,
+1610,
+966,
+1680
+],
+"txt": "que fazemos com muito amor."
+}
+],
+"t0": 65.0,
+"t1": 69.0,
+"bbox": [
+116,
+1549,
+966,
+1680
+],
+"pt": "E dermatologia estetica é o / que fazemos com muito amor.",
+"n": 12,
+"id": 50,
+"es": "y la dermatología estética es lo que hacemos con mucho amor."
+},
+{
+"linhas": [
+{
+"bbox": [
+385,
+1882,
+551,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 66.667,
+"t1": 67.0,
+"bbox": [
+385,
+1882,
+551,
+1919
+],
+"pt": "YVOIRE",
+"n": 1,
+"id": 51,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+107,
+1551,
+972,
+1611
+],
+"txt": "E estou muito feliz que foi meu"
+},
+{
+"bbox": [
+424,
+1610,
+675,
+1681
+],
+"txt": "paciente"
+}
+],
+"t0": 69.0,
+"t1": 72.0,
+"bbox": [
+107,
+1551,
+972,
+1681
+],
+"pt": "E estou muito feliz que foi meu / paciente",
+"n": 9,
+"id": 52,
+"es": "Y estoy muy contento de que fuera mi paciente"
+},
+{
+"linhas": [
+{
+"bbox": [
+397,
+1852,
+643,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 69.0,
+"t1": 69.666,
+"bbox": [
+397,
+1852,
+643,
+1919
+],
+"pt": "YVOIRE",
+"n": 2,
+"id": 53,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+386,
+1796,
+640,
+1889
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 69.667,
+"t1": 72.333,
+"bbox": [
+386,
+1796,
+640,
+1889
+],
+"pt": "YVOIRE",
+"n": 8,
+"id": 54,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+432,
+1845,
+607,
+1918
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 72.333,
+"t1": 72.666,
+"bbox": [
+432,
+1845,
+607,
+1918
+],
+"pt": "YVOIRE",
+"n": 1,
+"id": 55,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+145,
+1548,
+914,
+1615
+],
+"txt": "Foi perfeito muito obrigado"
+},
+{
+"bbox": [
+324,
+1614,
+754,
+1674
+],
+"txt": "muito obrigado"
+}
+],
+"t0": 73.0,
+"t1": 76.0,
+"bbox": [
+145,
+1548,
+914,
+1674
+],
+"pt": "Foi perfeito muito obrigado / muito obrigado",
+"n": 9,
+"id": 56,
+"es": "Fue perfecto, muchas gracias, muchas gracias"
+},
+{
+"linhas": [
+{
+"bbox": [
+714,
+1824,
+862,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 73.667,
+"t1": 74.0,
+"bbox": [
+714,
+1824,
+862,
+1919
+],
+"pt": "YVOIRE",
+"n": 1,
+"id": 57,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+171,
+736,
+283,
+784
+],
+"txt": "YVOU"
+}
+],
+"t0": 74.333,
+"t1": 74.666,
+"bbox": [
+171,
+736,
+283,
+784
+],
+"pt": "YVOU",
+"n": 1,
+"id": 58,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+666,
+1829,
+771,
+1918
+],
+"txt": "OIRE"
+}
+],
+"t0": 74.333,
+"t1": 74.666,
+"bbox": [
+666,
+1829,
+771,
+1918
+],
+"pt": "OIRE",
+"n": 1,
+"id": 59,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+585,
+1793,
+774,
+1919
+],
+"txt": "YVOIRE"
+}
+],
+"t0": 74.667,
+"t1": 75.333,
+"bbox": [
+585,
+1793,
+774,
+1919
+],
+"pt": "YVOIRE",
+"n": 2,
+"id": 60,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+204,
+730,
+331,
+776
+],
+"txt": "YVOIR"
+}
+],
+"t0": 75.333,
+"t1": 75.666,
+"bbox": [
+204,
+730,
+331,
+776
+],
+"pt": "YVOIR",
+"n": 1,
+"id": 61,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+399,
+788,
+456,
+842
+],
+"txt": "inefrina"
+}
+],
+"t0": 76.0,
+"t1": 76.333,
+"bbox": [
+399,
+788,
+456,
+842
+],
+"pt": "inefrina",
+"n": 1,
+"id": 62,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+330,
+859,
+395,
+895
+],
+"txt": "lo(20mg"
+}
+],
+"t0": 76.0,
+"t1": 76.333,
+"bbox": [
+330,
+859,
+395,
+895
+],
+"pt": "lo(20mg",
+"n": 1,
+"id": 63,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1291,
+750,
+1339
+],
+"txt": "comeca nessa"
+},
+{
+"bbox": [
+250,
+1378,
+828,
+1462
+],
+"txt": "segunda-feira"
+}
+],
+"t0": 76.0,
+"t1": 77.666,
+"bbox": [
+250,
+1291,
+828,
+1462
+],
+"pt": "comeca nessa / segunda-feira",
+"n": 5,
+"id": 64,
+"es": "Empieza este lunes"
+},
+{
+"linhas": [
+{
+"bbox": [
+228,
+780,
+300,
+832
+],
+"txt": "XYLeste"
+}
+],
+"t0": 76.333,
+"t1": 76.666,
+"bbox": [
+228,
+780,
+300,
+832
+],
+"pt": "XYLeste",
+"n": 1,
+"id": 65,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+316,
+1279,
+761,
+1321
+],
+"txt": "O nosso Protocolo de"
+},
+{
+"bbox": [
+218,
+1328,
+860,
+1377
+],
+"txt": "Seguranga no Preenchimento,"
+}
+],
+"t0": 77.667,
+"t1": 80.0,
+"bbox": [
+218,
+1279,
+860,
+1377
+],
+"pt": "O nosso Protocolo de / Seguranga no Preenchimento,",
+"n": 7,
+"id": 66,
+"es": "nuestro Protocolo de Seguridad en el Relleno,"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1305,
+888,
+1348
+],
+"txt": "o meu protocolo de quatro aulas,"
+}
+],
+"t0": 80.0,
+"t1": 81.666,
+"bbox": [
+188,
+1305,
+888,
+1348
+],
+"pt": "o meu protocolo de quatro aulas,",
+"n": 5,
+"id": 67,
+"es": "mi protocolo de cuatro clases,"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1304,
+789,
+1346
+],
+"txt": "onde eu vou te mostrar"
+}
+],
+"t0": 81.667,
+"t1": 83.0,
+"bbox": [
+294,
+1304,
+789,
+1346
+],
+"pt": "onde eu vou te mostrar",
+"n": 4,
+"id": 68,
+"es": "donde te voy a mostrar"
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1305,
+901,
+1349
+],
+"txt": "manejo de complicacoes tecnicas,"
+}
+],
+"t0": 83.0,
+"t1": 85.333,
+"bbox": [
+178,
+1305,
+901,
+1349
+],
+"pt": "manejo de complicacoes tecnicas,",
+"n": 7,
+"id": 69,
+"es": "manejo de complicaciones técnicas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+302,
+1307,
+780,
+1347
+],
+"txt": "reologia dos materiais,"
+}
+],
+"t0": 85.333,
+"t1": 86.666,
+"bbox": [
+302,
+1307,
+780,
+1347
+],
+"pt": "reologia dos materiais,",
+"n": 4,
+"id": 70,
+"es": "reología de los materiales,"
+},
+{
+"linhas": [
+{
+"bbox": [
+284,
+1279,
+795,
+1321
+],
+"txt": "como escolher o melhor"
+},
+{
+"bbox": [
+279,
+1329,
+801,
+1376
+],
+"txt": "produto pra cada regiao."
+}
+],
+"t0": 86.667,
+"t1": 88.666,
+"bbox": [
+279,
+1279,
+801,
+1376
+],
+"pt": "como escolher o melhor / produto pra cada regiao.",
+"n": 6,
+"id": 71,
+"es": "cómo elegir el mejor producto para cada región."
+},
+{
+"linhas": [
+{
+"bbox": [
+232,
+1281,
+847,
+1321
+],
+"txt": "Comeca nessa segunda-feira,"
+},
+{
+"bbox": [
+327,
+1328,
+751,
+1373
+],
+"txt": "ao vivo no YouTube."
+}
+],
+"t0": 89.0,
+"t1": 91.666,
+"bbox": [
+232,
+1281,
+847,
+1373
+],
+"pt": "Comeca nessa segunda-feira, / ao vivo no YouTube.",
+"n": 8,
+"id": 72,
+"es": "Empieza este lunes, en vivo en YouTube."
+},
+{
+"linhas": [
+{
+"bbox": [
+250,
+1278,
+828,
+1320
+],
+"txt": "Toca em Saiba Mais, ativa o"
+},
+{
+"bbox": [
+256,
+1329,
+825,
+1375
+],
+"txt": "lembrete que eu te vejo la!"
+}
+],
+"t0": 92.0,
+"t1": 94.666,
+"bbox": [
+250,
+1278,
+828,
+1375
+],
+"pt": "Toca em Saiba Mais, ativa o / lembrete que eu te vejo la!",
+"n": 8,
+"id": 73,
+"es": "Toca en «Más información», activa el recordatorio ¡y nos vemos allá!"
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 96.0,
+"t1": 98.666,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 74,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

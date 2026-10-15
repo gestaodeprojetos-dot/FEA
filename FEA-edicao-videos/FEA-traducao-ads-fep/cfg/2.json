@@ -1,0 +1,1597 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+241,
+1151,
+839,
+1204
+],
+"txt": "Pos graduacao em estética,"
+},
+{
+"bbox": [
+404,
+1204,
+677,
+1252
+],
+"txt": "vale a pena?"
+}
+],
+"t0": 0.333,
+"t1": 2.333,
+"bbox": [
+241,
+1151,
+839,
+1252
+],
+"pt": "Pos graduacao em estética, / vale a pena?",
+"n": 6,
+"id": 0,
+"es": "Posgrado en estética, ¿vale la pena?"
+},
+{
+"linhas": [
+{
+"bbox": [
+241,
+1178,
+840,
+1224
+],
+"txt": "Eu vou dar a minha opiniao."
+}
+],
+"t0": 2.333,
+"t1": 3.333,
+"bbox": [
+241,
+1178,
+840,
+1224
+],
+"pt": "Eu vou dar a minha opiniao.",
+"n": 3,
+"id": 1,
+"es": "Te voy a dar mi opinión."
+},
+{
+"linhas": [
+{
+"bbox": [
+353,
+1152,
+730,
+1202
+],
+"txt": "Eu, assim como a"
+},
+{
+"bbox": [
+348,
+1199,
+731,
+1250
+],
+"txt": "maioria de voces,"
+}
+],
+"t0": 3.667,
+"t1": 6.0,
+"bbox": [
+348,
+1152,
+731,
+1250
+],
+"pt": "Eu, assim como a / maioria de voces,",
+"n": 7,
+"id": 2,
+"es": "Yo, como la mayoría de ustedes,"
+},
+{
+"linhas": [
+{
+"bbox": [
+341,
+1177,
+742,
+1225
+],
+"txt": "quando me formei"
+}
+],
+"t0": 6.0,
+"t1": 6.666,
+"bbox": [
+341,
+1177,
+742,
+1225
+],
+"pt": "quando me formei",
+"n": 2,
+"id": 3,
+"es": "cuando me gradué"
+},
+{
+"linhas": [
+{
+"bbox": [
+233,
+1154,
+846,
+1199
+],
+"txt": "me senti inseguro e tambeém"
+},
+{
+"bbox": [
+287,
+1204,
+791,
+1246
+],
+"txt": "senti essa necessidade."
+}
+],
+"t0": 6.667,
+"t1": 9.333,
+"bbox": [
+233,
+1154,
+846,
+1246
+],
+"pt": "me senti inseguro e tambeém / senti essa necessidade.",
+"n": 8,
+"id": 4,
+"es": "me sentí inseguro y también sentí esa necesidad."
+},
+{
+"linhas": [
+{
+"bbox": [
+345,
+1179,
+735,
+1224
+],
+"txt": "O que aconteceu?"
+}
+],
+"t0": 9.667,
+"t1": 10.333,
+"bbox": [
+345,
+1179,
+735,
+1224
+],
+"pt": "O que aconteceu?",
+"n": 2,
+"id": 5,
+"es": "¿Qué pasó?"
+},
+{
+"linhas": [
+{
+"bbox": [
+302,
+1179,
+780,
+1226
+],
+"txt": "Me inscrevi numa pos."
+}
+],
+"t0": 10.333,
+"t1": 11.333,
+"bbox": [
+302,
+1179,
+780,
+1226
+],
+"pt": "Me inscrevi numa pos.",
+"n": 3,
+"id": 6,
+"es": "Me inscribí en un posgrado."
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+1153,
+834,
+1200
+],
+"txt": "Comecei porque eu achava"
+},
+{
+"bbox": [
+162,
+1198,
+918,
+1251
+],
+"txt": "que eu nao ia ter muitos pacientes."
+}
+],
+"t0": 11.333,
+"t1": 15.0,
+"bbox": [
+162,
+1153,
+918,
+1251
+],
+"pt": "Comecei porque eu achava / que eu nao ia ter muitos pacientes.",
+"n": 11,
+"id": 7,
+"es": "Empecé porque pensaba que no iba a tener muchos pacientes."
+},
+{
+"linhas": [
+{
+"bbox": [
+284,
+1155,
+794,
+1198
+],
+"txt": "So que eu me formei na"
+},
+{
+"bbox": [
+317,
+1202,
+758,
+1254
+],
+"txt": "época da pandemia."
+}
+],
+"t0": 15.667,
+"t1": 17.666,
+"bbox": [
+284,
+1155,
+794,
+1254
+],
+"pt": "So que eu me formei na / época da pandemia.",
+"n": 6,
+"id": 8,
+"es": "Pero me gradué en la época de la pandemia."
+},
+{
+"linhas": [
+{
+"bbox": [
+235,
+1152,
+836,
+1201
+],
+"txt": "Entao na hora da pandemia"
+},
+{
+"bbox": [
+387,
+1203,
+693,
+1247
+],
+"txt": "deu lockdown"
+}
+],
+"t0": 17.667,
+"t1": 19.666,
+"bbox": [
+235,
+1152,
+836,
+1247
+],
+"pt": "Entao na hora da pandemia / deu lockdown",
+"n": 6,
+"id": 9,
+"es": "Entonces, con la pandemia, llegó el confinamiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1154,
+785,
+1200
+],
+"txt": "e eu nao,dei sequencia"
+},
+{
+"bbox": [
+338,
+1203,
+740,
+1250
+],
+"txt": "na pos graduagao."
+}
+],
+"t0": 19.667,
+"t1": 22.0,
+"bbox": [
+294,
+1154,
+785,
+1250
+],
+"pt": "e eu nao,dei sequencia / na pos graduagao.",
+"n": 7,
+"id": 10,
+"es": "y no seguí con el posgrado."
+},
+{
+"linhas": [
+{
+"bbox": [
+229,
+1150,
+853,
+1201
+],
+"txt": "Mas por umanecessidade do"
+},
+{
+"bbox": [
+274,
+1200,
+805,
+1249
+],
+"txt": "mercado e do momento,"
+}
+],
+"t0": 22.333,
+"t1": 24.666,
+"bbox": [
+229,
+1150,
+853,
+1249
+],
+"pt": "Mas por umanecessidade do / mercado e do momento,",
+"n": 7,
+"id": 11,
+"es": "Pero por una necesidad del mercado y del momento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+183,
+1176,
+896,
+1225
+],
+"txt": "com minha familia toda trancada"
+}
+],
+"t0": 24.667,
+"t1": 26.333,
+"bbox": [
+183,
+1176,
+896,
+1225
+],
+"pt": "com minha familia toda trancada",
+"n": 5,
+"id": 12,
+"es": "con toda mi familia encerrada,"
+},
+{
+"linhas": [
+{
+"bbox": [
+295,
+1155,
+785,
+1199
+],
+"txt": "eu precisei ir atras dos"
+},
+{
+"bbox": [
+258,
+1201,
+823,
+1250
+],
+"txt": "meus pacientes e de fazer"
+}
+],
+"t0": 26.667,
+"t1": 30.0,
+"bbox": [
+258,
+1155,
+823,
+1250
+],
+"pt": "eu precisei ir atras dos / meus pacientes e de fazer",
+"n": 10,
+"id": 13,
+"es": "tuve que ir a buscar a mis pacientes y hacer"
+},
+{
+"linhas": [
+{
+"bbox": [
+290,
+1178,
+787,
+1223
+],
+"txt": "as coisas acontecerem."
+}
+],
+"t0": 30.0,
+"t1": 31.666,
+"bbox": [
+290,
+1178,
+787,
+1223
+],
+"pt": "as coisas acontecerem.",
+"n": 5,
+"id": 14,
+"es": "que las cosas pasaran."
+},
+{
+"linhas": [
+{
+"bbox": [
+389,
+1155,
+691,
+1198
+],
+"txt": "E foi o melhor"
+},
+{
+"bbox": [
+335,
+1204,
+745,
+1250
+],
+"txt": "que me aconteceu."
+}
+],
+"t0": 32.0,
+"t1": 33.333,
+"bbox": [
+335,
+1155,
+745,
+1250
+],
+"pt": "E foi o melhor / que me aconteceu.",
+"n": 4,
+"id": 15,
+"es": "Y fue lo mejor que me pasó."
+},
+{
+"linhas": [
+{
+"bbox": [
+352,
+1177,
+727,
+1225
+],
+"txt": "Entao eu estudei,"
+}
+],
+"t0": 33.333,
+"t1": 34.666,
+"bbox": [
+352,
+1177,
+727,
+1225
+],
+"pt": "Entao eu estudei,",
+"n": 4,
+"id": 16,
+"es": "Entonces estudié,"
+},
+{
+"linhas": [
+{
+"bbox": [
+294,
+1180,
+787,
+1222
+],
+"txt": "fiz varios cursos online"
+}
+],
+"t0": 34.667,
+"t1": 36.333,
+"bbox": [
+294,
+1180,
+787,
+1222
+],
+"pt": "fiz varios cursos online",
+"n": 5,
+"id": 17,
+"es": "hice varios cursos online"
+},
+{
+"linhas": [
+{
+"bbox": [
+325,
+1153,
+750,
+1199
+],
+"txt": "e me aprofundei no"
+},
+{
+"bbox": [
+298,
+1198,
+781,
+1250
+],
+"txt": "conhecimento focado,"
+}
+],
+"t0": 36.667,
+"t1": 39.666,
+"bbox": [
+298,
+1153,
+781,
+1250
+],
+"pt": "e me aprofundei no / conhecimento focado,",
+"n": 9,
+"id": 18,
+"es": "y profundicé en el conocimiento enfocado,"
+},
+{
+"linhas": [
+{
+"bbox": [
+311,
+1151,
+770,
+1204
+],
+"txt": "que é o que eu quero"
+},
+{
+"bbox": [
+307,
+1198,
+770,
+1254
+],
+"txt": "que voces entendam."
+}
+],
+"t0": 40.0,
+"t1": 41.333,
+"bbox": [
+307,
+1151,
+770,
+1254
+],
+"pt": "que é o que eu quero / que voces entendam.",
+"n": 4,
+"id": 19,
+"es": "que es lo que quiero que entiendan."
+},
+{
+"linhas": [
+{
+"bbox": [
+351,
+1151,
+730,
+1202
+],
+"txt": "Depois que eu de"
+},
+{
+"bbox": [
+317,
+1201,
+761,
+1247
+],
+"txt": "maneira direcionada"
+}
+],
+"t0": 41.667,
+"t1": 44.0,
+"bbox": [
+317,
+1151,
+761,
+1247
+],
+"pt": "Depois que eu de / maneira direcionada",
+"n": 7,
+"id": 20,
+"es": "Después de que, de manera dirigida,"
+},
+{
+"linhas": [
+{
+"bbox": [
+282,
+1175,
+797,
+1227
+],
+"txt": "estudei preenchimento,"
+}
+],
+"t0": 44.0,
+"t1": 45.333,
+"bbox": [
+282,
+1175,
+797,
+1227
+],
+"pt": "estudei preenchimento,",
+"n": 4,
+"id": 21,
+"es": "estudié relleno,"
+},
+{
+"linhas": [
+{
+"bbox": [
+379,
+1178,
+702,
+1225
+],
+"txt": "estudei toxina,"
+}
+],
+"t0": 45.333,
+"t1": 46.0,
+"bbox": [
+379,
+1178,
+702,
+1225
+],
+"pt": "estudei toxina,",
+"n": 2,
+"id": 22,
+"es": "estudié toxina,"
+},
+{
+"linhas": [
+{
+"bbox": [
+257,
+1173,
+823,
+1228
+],
+"txt": "estudei bioestimuladores,"
+}
+],
+"t0": 46.0,
+"t1": 47.333,
+"bbox": [
+257,
+1173,
+823,
+1228
+],
+"pt": "estudei bioestimuladores,",
+"n": 4,
+"id": 23,
+"es": "estudié bioestimuladores,"
+},
+{
+"linhas": [
+{
+"bbox": [
+291,
+1151,
+786,
+1199
+],
+"txt": "eu comecei a melhorar"
+},
+{
+"bbox": [
+333,
+1201,
+745,
+1247
+],
+"txt": "as minhas'técnicas"
+}
+],
+"t0": 47.667,
+"t1": 49.666,
+"bbox": [
+291,
+1151,
+786,
+1247
+],
+"pt": "eu comecei a melhorar / as minhas'técnicas",
+"n": 6,
+"id": 24,
+"es": "empecé a mejorar mis técnicas"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1180,
+778,
+1222
+],
+"txt": "e tive muito resultado"
+}
+],
+"t0": 49.667,
+"t1": 51.0,
+"bbox": [
+301,
+1180,
+778,
+1222
+],
+"pt": "e tive muito resultado",
+"n": 4,
+"id": 25,
+"es": "y tuve mucho resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+395,
+1181,
+686,
+1221
+],
+"txt": "muito rapido."
+}
+],
+"t0": 51.0,
+"t1": 51.666,
+"bbox": [
+395,
+1181,
+686,
+1221
+],
+"pt": "muito rapido.",
+"n": 2,
+"id": 26,
+"es": "muy rápido."
+},
+{
+"linhas": [
+{
+"bbox": [
+373,
+1154,
+706,
+1202
+],
+"txt": "O que eu quero"
+},
+{
+"bbox": [
+367,
+1200,
+712,
+1252
+],
+"txt": "que voce faca é"
+}
+],
+"t0": 52.0,
+"t1": 53.333,
+"bbox": [
+367,
+1154,
+712,
+1252
+],
+"pt": "O que eu quero / que voce faca é",
+"n": 4,
+"id": 27,
+"es": "Lo que quiero que hagas es"
+},
+{
+"linhas": [
+{
+"bbox": [
+190,
+1150,
+890,
+1204
+],
+"txt": "que voce acelere o teu processo"
+},
+{
+"bbox": [
+343,
+1201,
+736,
+1252
+],
+"txt": "de aprendizagem,"
+}
+],
+"t0": 53.333,
+"t1": 56.0,
+"bbox": [
+190,
+1150,
+890,
+1252
+],
+"pt": "que voce acelere o teu processo / de aprendizagem,",
+"n": 8,
+"id": 28,
+"es": "que aceleres tu proceso de aprendizaje,"
+},
+{
+"linhas": [
+{
+"bbox": [
+147,
+1172,
+932,
+1228
+],
+"txt": "que voce estude de maneira focada."
+}
+],
+"t0": 56.333,
+"t1": 58.333,
+"bbox": [
+147,
+1172,
+932,
+1228
+],
+"pt": "que voce estude de maneira focada.",
+"n": 6,
+"id": 29,
+"es": "que estudies de manera enfocada."
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1151,
+783,
+1202
+],
+"txt": "Quando'a gente pensa"
+},
+{
+"bbox": [
+310,
+1203,
+769,
+1251
+],
+"txt": "numa pos graduacao"
+}
+],
+"t0": 58.667,
+"t1": 60.333,
+"bbox": [
+297,
+1151,
+783,
+1251
+],
+"pt": "Quando'a gente pensa / numa pos graduacao",
+"n": 5,
+"id": 30,
+"es": "Cuando pensamos en un posgrado,"
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1176,
+905,
+1225
+],
+"txt": "eles focam em diversas questoes:"
+}
+],
+"t0": 60.333,
+"t1": 62.666,
+"bbox": [
+178,
+1176,
+905,
+1225
+],
+"pt": "eles focam em diversas questoes:",
+"n": 7,
+"id": 31,
+"es": "se enfocan en diversas cuestiones:"
+},
+{
+"linhas": [
+{
+"bbox": [
+403,
+1170,
+676,
+1229
+],
+"txt": "tecnologias,"
+}
+],
+"t0": 63.0,
+"t1": 64.0,
+"bbox": [
+403,
+1170,
+676,
+1229
+],
+"pt": "tecnologias,",
+"n": 3,
+"id": 32,
+"es": "tecnologías,"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1178,
+779,
+1226
+],
+"txt": "inducoes percutaneas"
+}
+],
+"t0": 64.333,
+"t1": 65.333,
+"bbox": [
+301,
+1178,
+779,
+1226
+],
+"pt": "inducoes percutaneas",
+"n": 3,
+"id": 33,
+"es": "inducciones percutáneas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+255,
+1178,
+826,
+1223
+],
+"txt": "entre outras muitas coisas"
+}
+],
+"t0": 65.333,
+"t1": 67.0,
+"bbox": [
+255,
+1178,
+826,
+1223
+],
+"pt": "entre outras muitas coisas",
+"n": 5,
+"id": 34,
+"es": "entre muchas otras cosas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1151,
+795,
+1198
+],
+"txt": "e nada muito focado no"
+},
+{
+"bbox": [
+234,
+1199,
+845,
+1251
+],
+"txt": "que voce realmente precisa."
+}
+],
+"t0": 67.0,
+"t1": 69.666,
+"bbox": [
+234,
+1151,
+845,
+1251
+],
+"pt": "e nada muito focado no / que voce realmente precisa.",
+"n": 8,
+"id": 35,
+"es": "y nada muy enfocado en lo que realmente necesitas"
+},
+{
+"linhas": [
+{
+"bbox": [
+203,
+1174,
+876,
+1228
+],
+"txt": "Pra se tornar um injetor senior,"
+}
+],
+"t0": 69.667,
+"t1": 71.666,
+"bbox": [
+203,
+1174,
+876,
+1228
+],
+"pt": "Pra se tornar um injetor senior,",
+"n": 6,
+"id": 36,
+"es": "para convertirte en un inyector sénior,"
+},
+{
+"linhas": [
+{
+"bbox": [
+293,
+1155,
+789,
+1202
+],
+"txt": "um injetor que entrega"
+},
+{
+"bbox": [
+368,
+1205,
+712,
+1245
+],
+"txt": "muito resultado"
+}
+],
+"t0": 71.667,
+"t1": 73.666,
+"bbox": [
+293,
+1155,
+789,
+1245
+],
+"pt": "um injetor que entrega / muito resultado",
+"n": 6,
+"id": 37,
+"es": "un inyector que logra mucho resultado"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1180,
+796,
+1222
+],
+"txt": "usando menos material."
+}
+],
+"t0": 73.667,
+"t1": 75.0,
+"bbox": [
+281,
+1180,
+796,
+1222
+],
+"pt": "usando menos material.",
+"n": 4,
+"id": 38,
+"es": "usando menos material."
+},
+{
+"linhas": [
+{
+"bbox": [
+258,
+1153,
+821,
+1201
+],
+"txt": "Por isso a minha sugestao"
+},
+{
+"bbox": [
+253,
+1202,
+823,
+1250
+],
+"txt": "é que voce venha'pra FEP,"
+}
+],
+"t0": 75.333,
+"t1": 78.0,
+"bbox": [
+253,
+1153,
+823,
+1250
+],
+"pt": "Por isso a minha sugestao / é que voce venha'pra FEP,",
+"n": 8,
+"id": 39,
+"es": "Por eso mi sugerencia es que vengas a la FEP,"
+},
+{
+"linhas": [
+{
+"bbox": [
+277,
+1156,
+801,
+1198
+],
+"txt": "a Formacao Especialista"
+},
+{
+"bbox": [
+330,
+1204,
+749,
+1247
+],
+"txt": "em Preenchimento."
+}
+],
+"t0": 78.333,
+"t1": 80.333,
+"bbox": [
+277,
+1156,
+801,
+1247
+],
+"pt": "a Formacao Especialista / em Preenchimento.",
+"n": 6,
+"id": 40,
+"es": "la Formación Especialista en Relleno."
+},
+{
+"linhas": [
+{
+"bbox": [
+332,
+1154,
+749,
+1198
+],
+"txt": "Nao existe nenhum"
+},
+{
+"bbox": [
+270,
+1194,
+810,
+1254
+],
+"txt": "profissional de destaque"
+}
+],
+"t0": 80.667,
+"t1": 82.666,
+"bbox": [
+270,
+1154,
+810,
+1254
+],
+"pt": "Nao existe nenhum / profissional de destaque",
+"n": 6,
+"id": 41,
+"es": "No existe ningún profesional destacado"
+},
+{
+"linhas": [
+{
+"bbox": [
+205,
+1153,
+863,
+1202
+],
+"txt": "que nao seja reconhecido pelo"
+},
+{
+"bbox": [
+275,
+1200,
+807,
+1252
+],
+"txt": "preenchimento full face."
+}
+],
+"t0": 83.0,
+"t1": 86.0,
+"bbox": [
+205,
+1153,
+863,
+1252
+],
+"pt": "que nao seja reconhecido pelo / preenchimento full face.",
+"n": 9,
+"id": 42,
+"es": "que no sea reconocido por el relleno full face."
+},
+{
+"linhas": [
+{
+"bbox": [
+203,
+1178,
+877,
+1224
+],
+"txt": "Nao adianta voce ser um otimo"
+}
+],
+"t0": 86.0,
+"t1": 87.666,
+"bbox": [
+203,
+1178,
+877,
+1224
+],
+"pt": "Nao adianta voce ser um otimo",
+"n": 5,
+"id": 43,
+"es": "No sirve de nada que seas un excelente"
+},
+{
+"linhas": [
+{
+"bbox": [
+270,
+1152,
+810,
+1201
+],
+"txt": "profissional que trabalha"
+},
+{
+"bbox": [
+360,
+1204,
+721,
+1248
+],
+"txt": "com tecnologias"
+}
+],
+"t0": 88.0,
+"t1": 90.333,
+"bbox": [
+270,
+1152,
+810,
+1248
+],
+"pt": "profissional que trabalha / com tecnologias",
+"n": 7,
+"id": 44,
+"es": "profesional que trabaja con tecnologías"
+},
+{
+"linhas": [
+{
+"bbox": [
+355,
+1181,
+724,
+1226
+],
+"txt": "ou com qualquer"
+}
+],
+"t0": 90.333,
+"t1": 91.0,
+"bbox": [
+355,
+1181,
+724,
+1226
+],
+"pt": "ou com qualquer",
+"n": 2,
+"id": 45,
+"es": "o con cualquier"
+},
+{
+"linhas": [
+{
+"bbox": [
+345,
+1178,
+734,
+1225
+],
+"txt": "outro tratamento,"
+}
+],
+"t0": 91.0,
+"t1": 92.0,
+"bbox": [
+345,
+1178,
+734,
+1225
+],
+"pt": "outro tratamento,",
+"n": 3,
+"id": 46,
+"es": "otro tratamiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+265,
+1153,
+815,
+1201
+],
+"txt": "mas se vocé nao fizer um"
+},
+{
+"bbox": [
+172,
+1198,
+908,
+1252
+],
+"txt": "preenchimento full face bem feito"
+}
+],
+"t0": 92.667,
+"t1": 95.333,
+"bbox": [
+172,
+1153,
+908,
+1252
+],
+"pt": "mas se vocé nao fizer um / preenchimento full face bem feito",
+"n": 8,
+"id": 47,
+"es": "si no haces un relleno full face bien hecho,"
+},
+{
+"linhas": [
+{
+"bbox": [
+287,
+1153,
+791,
+1200
+],
+"txt": "o teu caminho nao sera"
+},
+{
+"bbox": [
+211,
+1203,
+869,
+1250
+],
+"txt": "tao grandioso quanto poderia."
+}
+],
+"t0": 95.333,
+"t1": 99.0,
+"bbox": [
+211,
+1153,
+869,
+1250
+],
+"pt": "o teu caminho nao sera / tao grandioso quanto poderia.",
+"n": 11,
+"id": 48,
+"es": "tu camino no será tan grande como podría."
+},
+{
+"linhas": [
+{
+"bbox": [
+179,
+1178,
+903,
+1224
+],
+"txt": "Entao se vocée quer se aprofundar"
+}
+],
+"t0": 99.0,
+"t1": 100.666,
+"bbox": [
+179,
+1178,
+903,
+1224
+],
+"pt": "Entao se vocée quer se aprofundar",
+"n": 5,
+"id": 49,
+"es": "Entonces, si quieres profundizar"
+},
+{
+"linhas": [
+{
+"bbox": [
+201,
+1179,
+878,
+1225
+],
+"txt": "no procedimento mais rentavel"
+}
+],
+"t0": 100.667,
+"t1": 102.0,
+"bbox": [
+201,
+1179,
+878,
+1225
+],
+"pt": "no procedimento mais rentavel",
+"n": 4,
+"id": 50,
+"es": "en el procedimiento más rentable"
+},
+{
+"linhas": [
+{
+"bbox": [
+310,
+1175,
+773,
+1228
+],
+"txt": "da medicina estetica,"
+}
+],
+"t0": 102.0,
+"t1": 103.0,
+"bbox": [
+310,
+1175,
+773,
+1228
+],
+"pt": "da medicina estetica,",
+"n": 3,
+"id": 51,
+"es": "de la medicina estética,"
+},
+{
+"linhas": [
+{
+"bbox": [
+292,
+1152,
+787,
+1200
+],
+"txt": "toque em “\"Saiba Mais\""
+},
+{
+"bbox": [
+358,
+1203,
+721,
+1246
+],
+"txt": "e te vejo na FEP!"
+}
+],
+"t0": 103.333,
+"t1": 105.333,
+"bbox": [
+292,
+1152,
+787,
+1246
+],
+"pt": "toque em “\"Saiba Mais\" / e te vejo na FEP!",
+"n": 6,
+"id": 52,
+"es": "¡toca en «Más información» y nos vemos en la FEP!"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 107.0,
+"t1": 109.666,
+"bbox": [
+299,
+1149,
+780,
+1192
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 53,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

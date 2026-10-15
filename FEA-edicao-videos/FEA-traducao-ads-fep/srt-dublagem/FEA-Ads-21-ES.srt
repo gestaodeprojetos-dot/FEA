@@ -1,0 +1,35 @@
+1
+00:00:00,100 --> 00:00:00,850
+Son superficiales, ¿ok?
+
+2
+00:00:00,870 --> 00:00:03,850
+Ellos, ellos son intermedios,
+
+3
+00:00:03,870 --> 00:00:06,180
+y se superficializan aún más aquí.
+
+4
+00:00:06,200 --> 00:00:07,510
+Hay una transición aquí
+
+5
+00:00:07,530 --> 00:00:09,510
+que hace que realmente
+
+6
+00:00:09,530 --> 00:00:10,510
+vaya a una capa media,
+
+7
+00:00:10,530 --> 00:00:12,850
+y se superficializa aún más aquí.
+
+8
+00:00:12,870 --> 00:00:14,510
+Pero esta región de aquí
+
+9
+00:00:14,530 --> 00:00:16,603
+es un poco más profunda.

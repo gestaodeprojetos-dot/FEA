@@ -1,0 +1,474 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+505,
+1349,
+799,
+1385
+],
+"txt": "Faca uma pergunta"
+}
+],
+"t0": 0.0,
+"t1": 33.0,
+"bbox": [
+505,
+1349,
+799,
+1385
+],
+"pt": "Faca uma pergunta",
+"n": 99,
+"id": 0,
+"es": "Haz una pregunta"
+},
+{
+"linhas": [
+{
+"bbox": [
+323,
+1480,
+982,
+1525
+],
+"txt": "Gostaria de saber qual o produto"
+},
+{
+"bbox": [
+350,
+1535,
+956,
+1580
+],
+"txt": "que se usa para gastar menos"
+},
+{
+"bbox": [
+558,
+1587,
+746,
+1631
+],
+"txt": "material?"
+}
+],
+"t0": 0.0,
+"t1": 33.0,
+"bbox": [
+323,
+1480,
+982,
+1631
+],
+"pt": "Gostaria de saber qual o produto / que se usa para gastar menos / material?",
+"n": 99,
+"id": 1,
+"es": "Me gustaría saber qué producto se usa para gastar menos material"
+},
+{
+"linhas": [
+{
+"bbox": [
+271,
+1173,
+810,
+1218
+],
+"txt": "O produto que se usa pra"
+},
+{
+"bbox": [
+299,
+1223,
+779,
+1270
+],
+"txt": "gastar menos material"
+}
+],
+"t0": 4.333,
+"t1": 6.333,
+"bbox": [
+271,
+1173,
+810,
+1270
+],
+"pt": "O produto que se usa pra / gastar menos material",
+"n": 6,
+"id": 2,
+"es": "El producto que se usa para gastar menos material"
+},
+{
+"linhas": [
+{
+"bbox": [
+361,
+1196,
+717,
+1241
+],
+"txt": "é o seu intelecto,"
+}
+],
+"t0": 6.333,
+"t1": 7.333,
+"bbox": [
+361,
+1196,
+717,
+1241
+],
+"pt": "é o seu intelecto,",
+"n": 3,
+"id": 3,
+"es": "es tu intelecto,"
+},
+{
+"linhas": [
+{
+"bbox": [
+344,
+1195,
+734,
+1243
+],
+"txt": "é o conhecimento."
+}
+],
+"t0": 7.333,
+"t1": 8.333,
+"bbox": [
+344,
+1195,
+734,
+1243
+],
+"pt": "é o conhecimento.",
+"n": 3,
+"id": 4,
+"es": "es el conocimiento."
+},
+{
+"linhas": [
+{
+"bbox": [
+191,
+1195,
+890,
+1242
+],
+"txt": "Quando voce tiver conhecimento"
+}
+],
+"t0": 8.667,
+"t1": 10.333,
+"bbox": [
+191,
+1195,
+890,
+1242
+],
+"pt": "Quando voce tiver conhecimento",
+"n": 5,
+"id": 5,
+"es": "Cuando tengas conocimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+148,
+1197,
+931,
+1243
+],
+"txt": "voce vai saber colocar no lugar certo,"
+}
+],
+"t0": 10.333,
+"t1": 12.666,
+"bbox": [
+148,
+1197,
+931,
+1243
+],
+"pt": "voce vai saber colocar no lugar certo,",
+"n": 7,
+"id": 6,
+"es": "sabrás colocarlo en el lugar correcto,"
+},
+{
+"linhas": [
+{
+"bbox": [
+281,
+1198,
+797,
+1243
+],
+"txt": "com a quantidade certa,"
+}
+],
+"t0": 13.0,
+"t1": 14.0,
+"bbox": [
+281,
+1198,
+797,
+1243
+],
+"pt": "com a quantidade certa,",
+"n": 3,
+"id": 7,
+"es": "en la cantidad correcta,"
+},
+{
+"linhas": [
+{
+"bbox": [
+163,
+1197,
+913,
+1242
+],
+"txt": "ai voce vai entender a metodologia."
+}
+],
+"t0": 14.0,
+"t1": 15.666,
+"bbox": [
+163,
+1197,
+913,
+1242
+],
+"pt": "ai voce vai entender a metodologia.",
+"n": 5,
+"id": 8,
+"es": "y ahí entenderás la metodología."
+},
+{
+"linhas": [
+{
+"bbox": [
+229,
+1199,
+851,
+1241
+],
+"txt": "A metodologia da FEP é essa."
+}
+],
+"t0": 15.667,
+"t1": 17.333,
+"bbox": [
+229,
+1199,
+851,
+1241
+],
+"pt": "A metodologia da FEP é essa.",
+"n": 5,
+"id": 9,
+"es": "La metodología de la FEP es esta."
+},
+{
+"linhas": [
+{
+"bbox": [
+263,
+1173,
+820,
+1215
+],
+"txt": "Metodologia de realmente"
+},
+{
+"bbox": [
+348,
+1222,
+729,
+1269
+],
+"txt": "saber a anatomia,"
+}
+],
+"t0": 18.0,
+"t1": 21.333,
+"bbox": [
+263,
+1173,
+820,
+1269
+],
+"pt": "Metodologia de realmente / saber a anatomia,",
+"n": 10,
+"id": 10,
+"es": "Una metodología para conocer de verdad la anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+229,
+1196,
+851,
+1244
+],
+"txt": "fisiologia do envelhecimento,"
+}
+],
+"t0": 21.333,
+"t1": 22.666,
+"bbox": [
+229,
+1196,
+851,
+1244
+],
+"pt": "fisiologia do envelhecimento,",
+"n": 4,
+"id": 11,
+"es": "la fisiología del envejecimiento,"
+},
+{
+"linhas": [
+{
+"bbox": [
+425,
+1197,
+653,
+1247
+],
+"txt": "as regioes,"
+}
+],
+"t0": 22.667,
+"t1": 23.333,
+"bbox": [
+425,
+1197,
+653,
+1247
+],
+"pt": "as regioes,",
+"n": 2,
+"id": 12,
+"es": "las regiones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+180,
+1198,
+898,
+1240
+],
+"txt": "e dessa forma voce vai ser efetivo."
+}
+],
+"t0": 23.667,
+"t1": 26.0,
+"bbox": [
+180,
+1198,
+898,
+1240
+],
+"pt": "e dessa forma voce vai ser efetivo.",
+"n": 7,
+"id": 13,
+"es": "y de esa forma serás efectivo."
+},
+{
+"linhas": [
+{
+"bbox": [
+179,
+1169,
+890,
+1217
+],
+"txt": "Entao nao existe um produto que"
+},
+{
+"bbox": [
+161,
+1225,
+921,
+1268
+],
+"txt": "entrega mais resultado com menos,"
+}
+],
+"t0": 26.333,
+"t1": 30.666,
+"bbox": [
+161,
+1169,
+921,
+1268
+],
+"pt": "Entao nao existe um produto que / entrega mais resultado com menos,",
+"n": 13,
+"id": 14,
+"es": "Entonces, no existe un producto que dé más resultado con menos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+157,
+1195,
+921,
+1242
+],
+"txt": "mas sim uma tecnica, um raciocinio."
+}
+],
+"t0": 31.0,
+"t1": 33.0,
+"bbox": [
+157,
+1195,
+921,
+1242
+],
+"pt": "mas sim uma tecnica, um raciocinio.",
+"n": 6,
+"id": 15,
+"es": "sino una técnica, un razonamiento."
+},
+{
+"linhas": [
+{
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 34.333,
+"t1": 37.0,
+"bbox": [
+298,
+1148,
+780,
+1195
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 8,
+"id": 16,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

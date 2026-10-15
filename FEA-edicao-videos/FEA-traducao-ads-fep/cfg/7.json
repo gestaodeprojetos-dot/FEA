@@ -1,0 +1,761 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+160,
+1151,
+909,
+1199
+],
+"txt": "Como ser um injetor que transmite"
+},
+{
+"bbox": [
+234,
+1203,
+844,
+1250
+],
+"txt": "seguranca pro seu paciente."
+}
+],
+"t0": 0.0,
+"t1": 3.666,
+"bbox": [
+160,
+1151,
+909,
+1250
+],
+"pt": "Como ser um injetor que transmite / seguranca pro seu paciente.",
+"n": 11,
+"id": 0,
+"es": "Cómo ser un inyector que transmite seguridad a tu paciente."
+},
+{
+"linhas": [
+{
+"bbox": [
+212,
+1010,
+868,
+1060
+],
+"txt": "SEGURANCA AO PACIENTE"
+}
+],
+"t0": 1.667,
+"t1": 3.666,
+"bbox": [
+212,
+1010,
+868,
+1060
+],
+"pt": "SEGURANCA AO PACIENTE",
+"n": 6,
+"id": 1,
+"es": "SEGURIDAD AL PACIENTE"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1155,
+785,
+1201
+],
+"txt": "A seguranca que o seu"
+},
+{
+"bbox": [
+290,
+1200,
+792,
+1249
+],
+"txt": "paciente,sente de voce"
+}
+],
+"t0": 3.667,
+"t1": 6.0,
+"bbox": [
+290,
+1155,
+792,
+1249
+],
+"pt": "A seguranca que o seu / paciente,sente de voce",
+"n": 7,
+"id": 2,
+"es": "La seguridad que tu paciente siente en ti"
+},
+{
+"linhas": [
+{
+"bbox": [
+361,
+1152,
+718,
+1198
+],
+"txt": "vem do dominio"
+},
+{
+"bbox": [
+305,
+1200,
+775,
+1252
+],
+"txt": "que vocé tem sobre o"
+}
+],
+"t0": 6.333,
+"t1": 8.333,
+"bbox": [
+305,
+1152,
+775,
+1252
+],
+"pt": "vem do dominio / que vocé tem sobre o",
+"n": 6,
+"id": 3,
+"es": "viene del dominio que tienes sobre lo"
+},
+{
+"linhas": [
+{
+"bbox": [
+313,
+1176,
+766,
+1226
+],
+"txt": "que vocé ta fazendo."
+}
+],
+"t0": 8.333,
+"t1": 9.333,
+"bbox": [
+313,
+1176,
+766,
+1226
+],
+"pt": "que vocé ta fazendo.",
+"n": 3,
+"id": 4,
+"es": "que estás haciendo."
+},
+{
+"linhas": [
+{
+"bbox": [
+276,
+1149,
+805,
+1197
+],
+"txt": "Saber escolher o melhor"
+},
+{
+"bbox": [
+174,
+1203,
+907,
+1248
+],
+"txt": "material pra cada um das regioes,"
+}
+],
+"t0": 9.667,
+"t1": 12.666,
+"bbox": [
+174,
+1149,
+907,
+1248
+],
+"pt": "Saber escolher o melhor / material pra cada um das regioes,",
+"n": 9,
+"id": 5,
+"es": "Saber elegir el mejor material para cada una de las regiones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+307,
+1008,
+772,
+1061
+],
+"txt": "MELHORPRODUTO"
+}
+],
+"t0": 10.333,
+"t1": 12.666,
+"bbox": [
+307,
+1008,
+772,
+1061
+],
+"pt": "MELHORPRODUTO",
+"n": 7,
+"id": 6,
+"es": "MEJOR PRODUCTO"
+},
+{
+"linhas": [
+{
+"bbox": [
+222,
+1011,
+859,
+1060
+],
+"txt": "DIAGNOSTICAR E TRATAR"
+}
+],
+"t0": 13.0,
+"t1": 14.333,
+"bbox": [
+222,
+1011,
+859,
+1060
+],
+"pt": "DIAGNOSTICAR E TRATAR",
+"n": 4,
+"id": 7,
+"es": "DIAGNOSTICAR Y TRATAR"
+},
+{
+"linhas": [
+{
+"bbox": [
+317,
+1147,
+766,
+1199
+],
+"txt": "diagnosticar e tratar"
+},
+{
+"bbox": [
+252,
+1203,
+827,
+1247
+],
+"txt": "as principais intercoencias"
+}
+],
+"t0": 13.0,
+"t1": 15.333,
+"bbox": [
+252,
+1147,
+827,
+1247
+],
+"pt": "diagnosticar e tratar / as principais intercoencias",
+"n": 7,
+"id": 8,
+"es": "diagnosticar y tratar las principales complicaciones"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1009,
+776,
+1067
+],
+"txt": "INTERCORRENCIAS"
+}
+],
+"t0": 14.333,
+"t1": 15.666,
+"bbox": [
+301,
+1009,
+776,
+1067
+],
+"pt": "INTERCORRENCIAS",
+"n": 4,
+"id": 9,
+"es": "COMPLICACIONES"
+},
+{
+"linhas": [
+{
+"bbox": [
+187,
+1181,
+890,
+1223
+],
+"txt": "vai te trazer muito mais dominio"
+}
+],
+"t0": 15.667,
+"t1": 17.333,
+"bbox": [
+187,
+1181,
+890,
+1223
+],
+"pt": "vai te trazer muito mais dominio",
+"n": 5,
+"id": 10,
+"es": "te va a dar mucho más dominio"
+},
+{
+"linhas": [
+{
+"bbox": [
+419,
+995,
+665,
+1084
+],
+"txt": "DOO"
+}
+],
+"t0": 16.667,
+"t1": 17.0,
+"bbox": [
+419,
+995,
+665,
+1084
+],
+"pt": "DOO",
+"n": 1,
+"id": 11,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+429,
+1013,
+651,
+1069
+],
+"txt": "DOMINIO"
+}
+],
+"t0": 17.0,
+"t1": 18.0,
+"bbox": [
+429,
+1013,
+651,
+1069
+],
+"pt": "DOMINIO",
+"n": 3,
+"id": 12,
+"es": "DOMINIO"
+},
+{
+"linhas": [
+{
+"bbox": [
+321,
+1155,
+756,
+1198
+],
+"txt": "e seguranca na hora"
+},
+{
+"bbox": [
+268,
+1204,
+812,
+1245
+],
+"txt": "de se comunicar com ele."
+}
+],
+"t0": 17.667,
+"t1": 20.0,
+"bbox": [
+268,
+1155,
+812,
+1245
+],
+"pt": "e seguranca na hora / de se comunicar com ele.",
+"n": 7,
+"id": 13,
+"es": "y seguridad al comunicarte con él."
+},
+{
+"linhas": [
+{
+"bbox": [
+387,
+1008,
+694,
+1061
+],
+"txt": "COMUNICAR"
+}
+],
+"t0": 18.667,
+"t1": 20.0,
+"bbox": [
+387,
+1008,
+694,
+1061
+],
+"pt": "COMUNICAR",
+"n": 4,
+"id": 14,
+"es": "COMUNICAR"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1177,
+817,
+1222
+],
+"txt": "Quando voce traz clareza"
+}
+],
+"t0": 20.0,
+"t1": 21.333,
+"bbox": [
+267,
+1177,
+817,
+1222
+],
+"pt": "Quando voce traz clareza",
+"n": 4,
+"id": 15,
+"es": "Cuando das claridad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+319,
+1155,
+760,
+1198
+],
+"txt": "vocée consegue alem"
+},
+{
+"bbox": [
+307,
+1205,
+772,
+1249
+],
+"txt": "de trazer a seguranca"
+}
+],
+"t0": 21.667,
+"t1": 24.666,
+"bbox": [
+307,
+1155,
+772,
+1249
+],
+"pt": "vocée consegue alem / de trazer a seguranca",
+"n": 9,
+"id": 16,
+"es": "logras, además de transmitir seguridad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+746,
+988,
+822,
+1008
+],
+"txt": "mat t"
+}
+],
+"t0": 30.333,
+"t1": 31.0,
+"bbox": [
+746,
+988,
+822,
+1008
+],
+"pt": "mat t",
+"n": 2,
+"id": 17,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+337,
+1152,
+745,
+1200
+],
+"txt": "Essa é uma grande"
+},
+{
+"bbox": [
+292,
+1203,
+788,
+1250
+],
+"txt": "oportunidade pra voceé"
+}
+],
+"t0": 40.0,
+"t1": 42.0,
+"bbox": [
+292,
+1152,
+788,
+1250
+],
+"pt": "Essa é uma grande / oportunidade pra voceé",
+"n": 6,
+"id": 18,
+"es": "Esta es una gran oportunidad para ti"
+},
+{
+"linhas": [
+{
+"bbox": [
+346,
+1010,
+736,
+1060
+],
+"txt": "OPORTUNIDADE"
+}
+],
+"t0": 40.667,
+"t1": 42.666,
+"bbox": [
+346,
+1010,
+736,
+1060
+],
+"pt": "OPORTUNIDADE",
+"n": 6,
+"id": 19,
+"es": "OPORTUNIDAD"
+},
+{
+"linhas": [
+{
+"bbox": [
+338,
+1153,
+740,
+1202
+],
+"txt": "que quer se,tornar"
+},
+{
+"bbox": [
+335,
+1204,
+742,
+1246
+],
+"txt": "um injetor de elite."
+}
+],
+"t0": 42.0,
+"t1": 43.333,
+"bbox": [
+335,
+1153,
+742,
+1246
+],
+"pt": "que quer se,tornar / um injetor de elite.",
+"n": 4,
+"id": 20,
+"es": "que quieres convertirte en un inyector de élite."
+},
+{
+"linhas": [
+{
+"bbox": [
+318,
+1010,
+762,
+1060
+],
+"txt": "INJETOR DEELITE"
+}
+],
+"t0": 42.667,
+"t1": 43.333,
+"bbox": [
+318,
+1010,
+762,
+1060
+],
+"pt": "INJETOR DEELITE",
+"n": 2,
+"id": 21,
+"es": "INYECTOR DE ÉLITE"
+},
+{
+"linhas": [
+{
+"bbox": [
+388,
+1007,
+691,
+1063
+],
+"txt": "SAIBA MAIS"
+}
+],
+"t0": 43.667,
+"t1": 45.333,
+"bbox": [
+388,
+1007,
+691,
+1063
+],
+"pt": "SAIBA MAIS",
+"n": 5,
+"id": 22,
+"es": "MÁS INFORMACIÓN",
+"largura": 1.8
+},
+{
+"linhas": [
+{
+"bbox": [
+300,
+1180,
+780,
+1223
+],
+"txt": "Toque em 'Saiba Mais'"
+}
+],
+"t0": 43.667,
+"t1": 44.666,
+"bbox": [
+300,
+1180,
+780,
+1223
+],
+"pt": "Toque em 'Saiba Mais'",
+"n": 3,
+"id": 23,
+"es": "Toca en «Más información»"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1177,
+776,
+1225
+],
+"txt": "que eu te vejo na FEP."
+}
+],
+"t0": 44.667,
+"t1": 45.666,
+"bbox": [
+301,
+1177,
+776,
+1225
+],
+"pt": "que eu te vejo na FEP.",
+"n": 3,
+"id": 24,
+"es": "y nos vemos en la FEP."
+},
+{
+"linhas": [
+{
+"bbox": [
+296,
+1141,
+419,
+1198
+],
+"txt": "Toqul"
+}
+],
+"t0": 47.0,
+"t1": 47.333,
+"bbox": [
+296,
+1141,
+419,
+1198
+],
+"pt": "Toqul",
+"n": 1,
+"id": 25,
+"es": "Toca"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1147,
+783,
+1195
+],
+"txt": "Toque em SAIBA MAIS"
+}
+],
+"t0": 47.333,
+"t1": 49.666,
+"bbox": [
+299,
+1147,
+783,
+1195
+],
+"pt": "Toque em SAIBA MAIS",
+"n": 7,
+"id": 26,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

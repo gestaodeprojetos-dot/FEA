@@ -1,0 +1,869 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+306,
+1036,
+432,
+1095
+],
+"txt": "DESCaRBOX"
+}
+],
+"t0": 0.0,
+"t1": 1.333,
+"bbox": [
+306,
+1036,
+432,
+1095
+],
+"pt": "DESCaRBOX",
+"n": 4,
+"id": 0,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+335,
+1315,
+745,
+1358
+],
+"txt": "Isso vai dobrar sua"
+},
+{
+"bbox": [
+279,
+1366,
+801,
+1407
+],
+"txt": "conversao de pacientes."
+}
+],
+"t0": 0.333,
+"t1": 3.0,
+"bbox": [
+279,
+1315,
+801,
+1407
+],
+"pt": "Isso vai dobrar sua / conversao de pacientes.",
+"n": 8,
+"id": 1,
+"es": "Esto va a duplicar tu conversión de pacientes."
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1069,
+355,
+1107
+],
+"txt": "DESCaZRE"
+}
+],
+"t0": 1.333,
+"t1": 1.666,
+"bbox": [
+299,
+1069,
+355,
+1107
+],
+"pt": "DESCaZRE",
+"n": 1,
+"id": 2,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+187,
+1316,
+894,
+1360
+],
+"txt": "Quando eu penso em avaliacao e"
+},
+{
+"bbox": [
+194,
+1365,
+885,
+1411
+],
+"txt": "trazer clareza pro meu paciente"
+}
+],
+"t0": 3.333,
+"t1": 6.666,
+"bbox": [
+187,
+1316,
+894,
+1411
+],
+"pt": "Quando eu penso em avaliacao e / trazer clareza pro meu paciente",
+"n": 10,
+"id": 3,
+"es": "Cuando pienso en evaluar y darle claridad a mi paciente,"
+},
+{
+"linhas": [
+{
+"bbox": [
+303,
+1315,
+779,
+1361
+],
+"txt": "é o momento onde eu"
+},
+{
+"bbox": [
+279,
+1363,
+801,
+1411
+],
+"txt": "mostro pra ele o porque"
+}
+],
+"t0": 7.0,
+"t1": 9.333,
+"bbox": [
+279,
+1315,
+801,
+1411
+],
+"pt": "é o momento onde eu / mostro pra ele o porque",
+"n": 7,
+"id": 4,
+"es": "es el momento en que le muestro por qué"
+},
+{
+"linhas": [
+{
+"bbox": [
+222,
+1193,
+295,
+1238
+],
+"txt": "DESLARBOX"
+}
+],
+"t0": 9.0,
+"t1": 9.333,
+"bbox": [
+222,
+1193,
+295,
+1238
+],
+"pt": "DESLARBOX",
+"n": 1,
+"id": 5,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+199,
+1341,
+883,
+1384
+],
+"txt": "ele precisa daquele tratamento."
+}
+],
+"t0": 9.333,
+"t1": 11.0,
+"bbox": [
+199,
+1341,
+883,
+1384
+],
+"pt": "ele precisa daquele tratamento.",
+"n": 5,
+"id": 6,
+"es": "necesita ese tratamiento."
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+1342,
+835,
+1385
+],
+"txt": "Qual que é o objetivo final?"
+}
+],
+"t0": 11.333,
+"t1": 13.0,
+"bbox": [
+247,
+1342,
+835,
+1385
+],
+"pt": "Qual que é o objetivo final?",
+"n": 5,
+"id": 7,
+"es": "¿Cuál es el objetivo final?"
+},
+{
+"linhas": [
+{
+"bbox": [
+287,
+1343,
+794,
+1383
+],
+"txt": "Como que vai ser feito?"
+}
+],
+"t0": 13.0,
+"t1": 14.0,
+"bbox": [
+287,
+1343,
+794,
+1383
+],
+"pt": "Como que vai ser feito?",
+"n": 3,
+"id": 8,
+"es": "¿Cómo se va a hacer?"
+},
+{
+"linhas": [
+{
+"bbox": [
+310,
+1336,
+769,
+1385
+],
+"txt": "Por que vai ser feito?"
+}
+],
+"t0": 14.333,
+"t1": 15.0,
+"bbox": [
+310,
+1336,
+769,
+1385
+],
+"pt": "Por que vai ser feito?",
+"n": 2,
+"id": 9,
+"es": "¿Por qué se va a hacer?"
+},
+{
+"linhas": [
+{
+"bbox": [
+271,
+1340,
+810,
+1385
+],
+"txt": "Quanto tempo vai durar?"
+}
+],
+"t0": 15.0,
+"t1": 16.0,
+"bbox": [
+271,
+1340,
+810,
+1385
+],
+"pt": "Quanto tempo vai durar?",
+"n": 3,
+"id": 10,
+"es": "¿Cuánto tiempo va a durar?"
+},
+{
+"linhas": [
+{
+"bbox": [
+401,
+1339,
+672,
+1384
+],
+"txt": "Doi nao doi?"
+}
+],
+"t0": 16.667,
+"t1": 17.333,
+"bbox": [
+401,
+1339,
+672,
+1384
+],
+"pt": "Doi nao doi?",
+"n": 2,
+"id": 11,
+"es": "¿Duele o no duele?"
+},
+{
+"linhas": [
+{
+"bbox": [
+224,
+1313,
+859,
+1362
+],
+"txt": "Essa clareza é o que vai fazer"
+},
+{
+"bbox": [
+233,
+1365,
+846,
+1410
+],
+"txt": "o seu paciente sentir seguro"
+}
+],
+"t0": 17.333,
+"t1": 20.333,
+"bbox": [
+224,
+1313,
+859,
+1410
+],
+"pt": "Essa clareza é o que vai fazer / o seu paciente sentir seguro",
+"n": 9,
+"id": 12,
+"es": "Esa claridad es lo que hará que tu paciente se sienta seguro"
+},
+{
+"linhas": [
+{
+"bbox": [
+152,
+1341,
+931,
+1384
+],
+"txt": "de escolher esse tratamento ou nao."
+}
+],
+"t0": 20.333,
+"t1": 22.666,
+"bbox": [
+152,
+1341,
+931,
+1384
+],
+"pt": "de escolher esse tratamento ou nao.",
+"n": 7,
+"id": 13,
+"es": "para elegir ese tratamiento o no."
+},
+{
+"linhas": [
+{
+"bbox": [
+452,
+1338,
+627,
+1384
+],
+"txt": "Por isso"
+}
+],
+"t0": 22.667,
+"t1": 23.333,
+"bbox": [
+452,
+1338,
+627,
+1384
+],
+"pt": "Por isso",
+"n": 2,
+"id": 14,
+"es": "Por eso,"
+},
+{
+"linhas": [
+{
+"bbox": [
+264,
+1317,
+815,
+1359
+],
+"txt": "na Formacao Especialista"
+},
+{
+"bbox": [
+335,
+1365,
+745,
+1408
+],
+"txt": "em Preenchimento"
+}
+],
+"t0": 23.333,
+"t1": 25.333,
+"bbox": [
+264,
+1317,
+815,
+1408
+],
+"pt": "na Formacao Especialista / em Preenchimento",
+"n": 6,
+"id": 15,
+"es": "en la Formación Especialista en Relleno"
+},
+{
+"linhas": [
+{
+"bbox": [
+212,
+1343,
+871,
+1383
+],
+"txt": "eu mostro em aulas completas"
+}
+],
+"t0": 25.667,
+"t1": 27.333,
+"bbox": [
+212,
+1343,
+871,
+1383
+],
+"pt": "eu mostro em aulas completas",
+"n": 5,
+"id": 16,
+"es": "muestro en clases completas"
+},
+{
+"linhas": [
+{
+"bbox": [
+251,
+1314,
+832,
+1359
+],
+"txt": "como vocé deve conversar"
+},
+{
+"bbox": [
+340,
+1362,
+736,
+1412
+],
+"txt": "com seu paciente,"
+}
+],
+"t0": 27.667,
+"t1": 29.666,
+"bbox": [
+251,
+1314,
+832,
+1412
+],
+"pt": "como vocé deve conversar / com seu paciente,",
+"n": 6,
+"id": 17,
+"es": "cómo debes conversar con tu paciente,"
+},
+{
+"linhas": [
+{
+"bbox": [
+313,
+1315,
+766,
+1361
+],
+"txt": "todo o passo a passo"
+},
+{
+"bbox": [
+344,
+1362,
+735,
+1410
+],
+"txt": "de uma avaliacao,"
+}
+],
+"t0": 30.0,
+"t1": 32.0,
+"bbox": [
+313,
+1315,
+766,
+1410
+],
+"pt": "todo o passo a passo / de uma avaliacao,",
+"n": 6,
+"id": 18,
+"es": "todo el paso a paso de una evaluación,"
+},
+{
+"linhas": [
+{
+"bbox": [
+392,
+1341,
+687,
+1385
+],
+"txt": "da anamnese,"
+}
+],
+"t0": 32.333,
+"t1": 33.333,
+"bbox": [
+392,
+1341,
+687,
+1385
+],
+"pt": "da anamnese,",
+"n": 3,
+"id": 19,
+"es": "de la anamnesis,"
+},
+{
+"linhas": [
+{
+"bbox": [
+357,
+1340,
+722,
+1386
+],
+"txt": "do planejamento"
+}
+],
+"t0": 33.333,
+"t1": 34.333,
+"bbox": [
+357,
+1340,
+722,
+1386
+],
+"pt": "do planejamento",
+"n": 3,
+"id": 20,
+"es": "de la planificación,"
+},
+{
+"linhas": [
+{
+"bbox": [
+289,
+1338,
+793,
+1387
+],
+"txt": "onde voce traz clareza,"
+}
+],
+"t0": 34.333,
+"t1": 36.333,
+"bbox": [
+289,
+1338,
+793,
+1387
+],
+"pt": "onde voce traz clareza,",
+"n": 6,
+"id": 21,
+"es": "donde le das claridad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+288,
+1237,
+365,
+1283
+],
+"txt": "DESLENBOX"
+}
+],
+"t0": 34.667,
+"t1": 35.0,
+"bbox": [
+288,
+1237,
+365,
+1283
+],
+"pt": "DESLENBOX",
+"n": 1,
+"id": 22,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+250,
+1315,
+830,
+1361
+],
+"txt": "conhecimento e seguranga"
+},
+{
+"bbox": [
+352,
+1361,
+725,
+1413
+],
+"txt": "pro seu paciente."
+}
+],
+"t0": 36.333,
+"t1": 38.666,
+"bbox": [
+250,
+1315,
+830,
+1413
+],
+"pt": "conhecimento e seguranga / pro seu paciente.",
+"n": 7,
+"id": 23,
+"es": "conocimiento y seguridad a tu paciente."
+},
+{
+"linhas": [
+{
+"bbox": [
+234,
+1341,
+848,
+1382
+],
+"txt": "Dessa forma fica muito claro"
+}
+],
+"t0": 39.0,
+"t1": 41.0,
+"bbox": [
+234,
+1341,
+848,
+1382
+],
+"pt": "Dessa forma fica muito claro",
+"n": 6,
+"id": 24,
+"es": "De esta forma queda muy claro"
+},
+{
+"linhas": [
+{
+"bbox": [
+194,
+1313,
+888,
+1363
+],
+"txt": "Que ele precisa ser seu paciente"
+},
+{
+"bbox": [
+291,
+1364,
+784,
+1410
+],
+"txt": "e ser tratado por vocée."
+}
+],
+"t0": 41.0,
+"t1": 44.0,
+"bbox": [
+194,
+1313,
+888,
+1410
+],
+"pt": "Que ele precisa ser seu paciente / e ser tratado por vocée.",
+"n": 9,
+"id": 25,
+"es": "que necesita ser tu paciente y ser tratado por ti."
+},
+{
+"linhas": [
+{
+"bbox": [
+303,
+1233,
+776,
+1278
+],
+"txt": "Assim voce dobra sua"
+},
+{
+"bbox": [
+278,
+1286,
+801,
+1326
+],
+"txt": "conversao de pacientes."
+}
+],
+"t0": 44.333,
+"t1": 46.666,
+"bbox": [
+278,
+1233,
+801,
+1326
+],
+"pt": "Assim voce dobra sua / conversao de pacientes.",
+"n": 7,
+"id": 26,
+"es": "Así duplicas tu conversión de pacientes."
+},
+{
+"linhas": [
+{
+"bbox": [
+288,
+1027,
+347,
+1062
+],
+"txt": "DESCARBO"
+}
+],
+"t0": 44.667,
+"t1": 45.0,
+"bbox": [
+288,
+1027,
+347,
+1062
+],
+"pt": "DESCARBO",
+"n": 1,
+"id": 27,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+283,
+1068,
+330,
+1101
+],
+"txt": "DEStaRD"
+}
+],
+"t0": 46.667,
+"t1": 47.0,
+"bbox": [
+283,
+1068,
+330,
+1101
+],
+"pt": "DEStaRD",
+"n": 1,
+"id": 28,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+297,
+1144,
+590,
+1197
+],
+"txt": "Toque em SAl"
+}
+],
+"t0": 48.333,
+"t1": 48.666,
+"bbox": [
+297,
+1144,
+590,
+1197
+],
+"pt": "Toque em SAl",
+"n": 1,
+"id": 29,
+"es": "Toca en MÁS"
+},
+{
+"linhas": [
+{
+"bbox": [
+301,
+1153,
+780,
+1192
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 48.667,
+"t1": 51.0,
+"bbox": [
+301,
+1153,
+780,
+1192
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 7,
+"id": 30,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}

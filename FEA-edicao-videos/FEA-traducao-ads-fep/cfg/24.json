@@ -1,0 +1,1581 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+314,
+1113,
+759,
+1168
+],
+"txt": "novos casos de"
+}
+],
+"t0": 0.0,
+"t1": 4.666,
+"bbox": [
+314,
+1113,
+759,
+1168
+],
+"pt": "novos casos de",
+"n": 14,
+"id": 0,
+"es": "nuevos casos de",
+"tipo": "caixa"
+},
+{
+"linhas": [
+{
+"bbox": [
+210,
+1188,
+874,
+1261
+],
+"txt": "disseccoes anatomicas"
+}
+],
+"t0": 0.0,
+"t1": 4.666,
+"bbox": [
+210,
+1188,
+874,
+1261
+],
+"pt": "disseccoes anatomicas",
+"n": 14,
+"id": 1000,
+"es": "disecciones anatómicas",
+"tipo": "caixa_escura"
+},
+{
+"linhas": [
+{
+"bbox": [
+74,
+887,
+131,
+904
+],
+"txt": "FC2EKP"
+}
+],
+"t0": 4.333,
+"t1": 4.666,
+"bbox": [
+74,
+887,
+131,
+904
+],
+"pt": "FC2EKP",
+"n": 1,
+"id": 1,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+206,
+1225,
+871,
+1270
+],
+"txt": "Um curso certificado pelo MEC,"
+}
+],
+"t0": 4.667,
+"t1": 6.333,
+"bbox": [
+206,
+1225,
+871,
+1270
+],
+"pt": "Um curso certificado pelo MEC,",
+"n": 5,
+"id": 2,
+"es": "Un curso certificado por el MEC,"
+},
+{
+"linhas": [
+{
+"bbox": [
+7,
+886,
+68,
+914
+],
+"txt": "FEREXP"
+}
+],
+"t0": 6.333,
+"t1": 6.666,
+"bbox": [
+7,
+886,
+68,
+914
+],
+"pt": "FEREXP",
+"n": 1,
+"id": 3,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+209,
+1226,
+871,
+1268
+],
+"txt": "baseado em uma metodologia."
+}
+],
+"t0": 6.667,
+"t1": 8.0,
+"bbox": [
+209,
+1226,
+871,
+1268
+],
+"pt": "baseado em uma metodologia.",
+"n": 4,
+"id": 4,
+"es": "basado en una metodología:"
+},
+{
+"linhas": [
+{
+"bbox": [
+32,
+878,
+94,
+909
+],
+"txt": "FEREKP"
+}
+],
+"t0": 7.667,
+"t1": 8.0,
+"bbox": [
+32,
+878,
+94,
+909
+],
+"pt": "FEREKP",
+"n": 1,
+"id": 5,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+323,
+1228,
+753,
+1268
+],
+"txt": "a metodologia ARTl."
+}
+],
+"t0": 8.333,
+"t1": 9.666,
+"bbox": [
+323,
+1228,
+753,
+1268
+],
+"pt": "a metodologia ARTl.",
+"n": 4,
+"id": 6,
+"es": "la metodología ARTE."
+},
+{
+"linhas": [
+{
+"bbox": [
+333,
+1227,
+748,
+1268
+],
+"txt": "A metodologia arte"
+}
+],
+"t0": 10.0,
+"t1": 10.666,
+"bbox": [
+333,
+1227,
+748,
+1268
+],
+"pt": "A metodologia arte",
+"n": 2,
+"id": 7,
+"es": "La metodología ARTE"
+},
+{
+"linhas": [
+{
+"bbox": [
+220,
+1225,
+859,
+1269
+],
+"txt": "é uma metodologia cientifica,"
+}
+],
+"t0": 10.667,
+"t1": 12.0,
+"bbox": [
+220,
+1225,
+859,
+1269
+],
+"pt": "é uma metodologia cientifica,",
+"n": 4,
+"id": 8,
+"es": "es una metodología científica,"
+},
+{
+"linhas": [
+{
+"bbox": [
+2,
+941,
+69,
+972
+],
+"txt": "COEXP"
+}
+],
+"t0": 11.667,
+"t1": 12.0,
+"bbox": [
+2,
+941,
+69,
+972
+],
+"pt": "COEXP",
+"n": 1,
+"id": 9,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+174,
+1226,
+907,
+1271
+],
+"txt": "é uma metodologia que vai iniciar"
+}
+],
+"t0": 12.667,
+"t1": 14.666,
+"bbox": [
+174,
+1226,
+907,
+1271
+],
+"pt": "é uma metodologia que vai iniciar",
+"n": 6,
+"id": 10,
+"es": "es una metodología que va a empezar"
+},
+{
+"linhas": [
+{
+"bbox": [
+123,
+1226,
+959,
+1272
+],
+"txt": "o que nos estamos fazendo aqui agora:"
+}
+],
+"t0": 14.667,
+"t1": 15.666,
+"bbox": [
+123,
+1226,
+959,
+1272
+],
+"pt": "o que nos estamos fazendo aqui agora:",
+"n": 3,
+"id": 11,
+"es": "por lo que estamos haciendo aquí ahora:"
+},
+{
+"linhas": [
+{
+"bbox": [
+121,
+1227,
+957,
+1271
+],
+"txt": ":erobe inbe opuazey soersa sgu anb o"
+}
+],
+"t0": 15.667,
+"t1": 16.0,
+"bbox": [
+121,
+1227,
+957,
+1271
+],
+"pt": ":erobe inbe opuazey soersa sgu anb o",
+"n": 1,
+"id": 12,
+"es": ""
+},
+{
+"linhas": [
+{
+"bbox": [
+303,
+1225,
+779,
+1268
+],
+"txt": "dissecoes anatomicas."
+}
+],
+"t0": 16.333,
+"t1": 17.666,
+"bbox": [
+303,
+1225,
+779,
+1268
+],
+"pt": "dissecoes anatomicas.",
+"n": 4,
+"id": 13,
+"es": "disecciones anatómicas."
+},
+{
+"linhas": [
+{
+"bbox": [
+379,
+1217,
+705,
+1278
+],
+"txt": "A de anatomia,"
+}
+],
+"t0": 18.0,
+"t1": 19.333,
+"bbox": [
+379,
+1217,
+705,
+1278
+],
+"pt": "A de anatomia,",
+"n": 4,
+"id": 14,
+"es": "A de anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+244,
+1227,
+837,
+1269
+],
+"txt": "R de reologia dos materiais,"
+}
+],
+"t0": 19.667,
+"t1": 21.666,
+"bbox": [
+244,
+1227,
+837,
+1269
+],
+"pt": "R de reologia dos materiais,",
+"n": 6,
+"id": 15,
+"es": "R de reología de los materiales,"
+},
+{
+"linhas": [
+{
+"bbox": [
+779,
+1267,
+821,
+1281
+],
+"txt": "DESCaN"
+}
+],
+"t0": 20.667,
+"t1": 21.0,
+"bbox": [
+779,
+1267,
+821,
+1281
+],
+"pt": "DESCaN",
+"n": 1,
+"id": 16,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+351,
+1229,
+730,
+1265
+],
+"txt": "voce vai entender"
+}
+],
+"t0": 22.0,
+"t1": 22.666,
+"bbox": [
+351,
+1229,
+730,
+1265
+],
+"pt": "voce vai entender",
+"n": 2,
+"id": 17,
+"es": "vas a entender"
+},
+{
+"linhas": [
+{
+"bbox": [
+209,
+1228,
+869,
+1267
+],
+"txt": "como escolher o produto certo"
+}
+],
+"t0": 22.667,
+"t1": 23.666,
+"bbox": [
+209,
+1228,
+869,
+1267
+],
+"pt": "como escolher o produto certo",
+"n": 3,
+"id": 18,
+"es": "cómo elegir el producto correcto"
+},
+{
+"linhas": [
+{
+"bbox": [
+362,
+1227,
+717,
+1270
+],
+"txt": "para cada regiao"
+}
+],
+"t0": 23.667,
+"t1": 24.333,
+"bbox": [
+362,
+1227,
+717,
+1270
+],
+"pt": "para cada regiao",
+"n": 2,
+"id": 19,
+"es": "para cada región"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+1227,
+855,
+1267
+],
+"txt": "baseado na viscoelasticidade,"
+}
+],
+"t0": 24.667,
+"t1": 26.666,
+"bbox": [
+221,
+1227,
+855,
+1267
+],
+"pt": "baseado na viscoelasticidade,",
+"n": 6,
+"id": 20,
+"es": "basado en la viscoelasticidad,"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+659,
+153,
+729
+],
+"txt": "FLPEXP"
+}
+],
+"t0": 26.333,
+"t1": 29.333,
+"bbox": [
+0,
+659,
+153,
+729
+],
+"pt": "FLPEXP",
+"n": 9,
+"id": 21,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+262,
+1224,
+820,
+1271
+],
+"txt": "principios fisico-quimicos:"
+}
+],
+"t0": 27.0,
+"t1": 28.666,
+"bbox": [
+262,
+1224,
+820,
+1271
+],
+"pt": "principios fisico-quimicos:",
+"n": 5,
+"id": 22,
+"es": "principios fisicoquímicos."
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+962,
+140,
+1025
+],
+"txt": "FEEXP"
+}
+],
+"t0": 27.667,
+"t1": 30.0,
+"bbox": [
+0,
+962,
+140,
+1025
+],
+"pt": "FEEXP",
+"n": 7,
+"id": 23,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+332,
+1225,
+744,
+1271
+],
+"txt": "Nao tem enrolacao,"
+}
+],
+"t0": 28.667,
+"t1": 29.666,
+"bbox": [
+332,
+1225,
+744,
+1271
+],
+"pt": "Nao tem enrolacao,",
+"n": 3,
+"id": 24,
+"es": "Sin rodeos,"
+},
+{
+"linhas": [
+{
+"bbox": [
+3,
+663,
+107,
+739
+],
+"txt": "FEPEXP"
+}
+],
+"t0": 29.667,
+"t1": 30.666,
+"bbox": [
+3,
+663,
+107,
+739
+],
+"pt": "FEPEXP",
+"n": 3,
+"id": 25,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+358,
+1227,
+720,
+1269
+],
+"txt": "precisa entender"
+}
+],
+"t0": 29.667,
+"t1": 30.666,
+"bbox": [
+358,
+1227,
+720,
+1269
+],
+"pt": "precisa entender",
+"n": 3,
+"id": 26,
+"es": "necesitas entender"
+},
+{
+"linhas": [
+{
+"bbox": [
+288,
+1226,
+791,
+1269
+],
+"txt": "O produto que vocé usa"
+}
+],
+"t0": 30.667,
+"t1": 31.666,
+"bbox": [
+288,
+1226,
+791,
+1269
+],
+"pt": "O produto que vocé usa",
+"n": 3,
+"id": 27,
+"es": "el producto que usas"
+},
+{
+"linhas": [
+{
+"bbox": [
+348,
+1231,
+732,
+1270
+],
+"txt": "e por que e como."
+}
+],
+"t0": 32.0,
+"t1": 33.0,
+"bbox": [
+348,
+1231,
+732,
+1270
+],
+"pt": "e por que e como.",
+"n": 3,
+"id": 28,
+"es": "y por qué y cómo."
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+968,
+65,
+1006
+],
+"txt": "PEXP"
+}
+],
+"t0": 33.0,
+"t1": 33.666,
+"bbox": [
+0,
+968,
+65,
+1006
+],
+"pt": "PEXP",
+"n": 2,
+"id": 29,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+4,
+975,
+102,
+1010
+],
+"txt": "FREXP"
+}
+],
+"t0": 33.667,
+"t1": 34.666,
+"bbox": [
+4,
+975,
+102,
+1010
+],
+"pt": "FREXP",
+"n": 3,
+"id": 30,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+178,
+1223,
+903,
+1271
+],
+"txt": "Depois a gente vai ter as tecnicas,"
+}
+],
+"t0": 33.667,
+"t1": 35.0,
+"bbox": [
+178,
+1223,
+903,
+1271
+],
+"pt": "Depois a gente vai ter as tecnicas,",
+"n": 4,
+"id": 31,
+"es": "Después vamos a tener las técnicas,"
+},
+{
+"linhas": [
+{
+"bbox": [
+351,
+1225,
+731,
+1267
+],
+"txt": "todas as téecnicas:"
+}
+],
+"t0": 35.333,
+"t1": 36.333,
+"bbox": [
+351,
+1225,
+731,
+1267
+],
+"pt": "todas as téecnicas:",
+"n": 3,
+"id": 32,
+"es": "todas las técnicas:"
+},
+{
+"linhas": [
+{
+"bbox": [
+4,
+734,
+69,
+781
+],
+"txt": "PEX2"
+}
+],
+"t0": 36.667,
+"t1": 37.0,
+"bbox": [
+4,
+734,
+69,
+781
+],
+"pt": "PEX2",
+"n": 1,
+"id": 33,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+358,
+1225,
+720,
+1270
+],
+"txt": "fronte, temporal,"
+}
+],
+"t0": 36.667,
+"t1": 38.333,
+"bbox": [
+358,
+1225,
+720,
+1270
+],
+"pt": "fronte, temporal,",
+"n": 5,
+"id": 34,
+"es": "frente, sien,"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+745,
+86,
+799
+],
+"txt": "FCPEXP"
+}
+],
+"t0": 38.0,
+"t1": 39.666,
+"bbox": [
+0,
+745,
+86,
+799
+],
+"pt": "FCPEXP",
+"n": 5,
+"id": 35,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+428,
+1227,
+649,
+1270
+],
+"txt": "supercilio,"
+}
+],
+"t0": 38.333,
+"t1": 39.0,
+"bbox": [
+428,
+1227,
+649,
+1270
+],
+"pt": "supercilio,",
+"n": 2,
+"id": 36,
+"es": "ceja,"
+},
+{
+"linhas": [
+{
+"bbox": [
+456,
+1224,
+626,
+1271
+],
+"txt": "glabela,"
+}
+],
+"t0": 39.0,
+"t1": 40.0,
+"bbox": [
+456,
+1224,
+626,
+1271
+],
+"pt": "glabela,",
+"n": 3,
+"id": 37,
+"es": "glabela,"
+},
+{
+"linhas": [
+{
+"bbox": [
+17,
+1004,
+117,
+1042
+],
+"txt": "FEXP"
+}
+],
+"t0": 39.333,
+"t1": 41.666,
+"bbox": [
+17,
+1004,
+117,
+1042
+],
+"pt": "FEXP",
+"n": 7,
+"id": 38,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+396,
+1225,
+685,
+1268
+],
+"txt": "nariz, olheira,"
+}
+],
+"t0": 40.0,
+"t1": 40.666,
+"bbox": [
+396,
+1225,
+685,
+1268
+],
+"pt": "nariz, olheira,",
+"n": 2,
+"id": 39,
+"es": "nariz, ojera,"
+},
+{
+"linhas": [
+{
+"bbox": [
+360,
+1224,
+720,
+1273
+],
+"txt": "arco zigomatico,"
+}
+],
+"t0": 40.667,
+"t1": 42.0,
+"bbox": [
+360,
+1224,
+720,
+1273
+],
+"pt": "arco zigomatico,",
+"n": 4,
+"id": 40,
+"es": "arco cigomático,"
+},
+{
+"linhas": [
+{
+"bbox": [
+19,
+992,
+98,
+1029
+],
+"txt": "FEXP"
+}
+],
+"t0": 42.0,
+"t1": 43.333,
+"bbox": [
+19,
+992,
+98,
+1029
+],
+"pt": "FEXP",
+"n": 4,
+"id": 41,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+363,
+1225,
+719,
+1268
+],
+"txt": "sulco nasolabial,"
+}
+],
+"t0": 42.0,
+"t1": 43.0,
+"bbox": [
+363,
+1225,
+719,
+1268
+],
+"pt": "sulco nasolabial,",
+"n": 3,
+"id": 42,
+"es": "surco nasolabial,"
+},
+{
+"linhas": [
+{
+"bbox": [
+380,
+1226,
+698,
+1271
+],
+"txt": "regiao perioral,"
+}
+],
+"t0": 43.0,
+"t1": 44.0,
+"bbox": [
+380,
+1226,
+698,
+1271
+],
+"pt": "regiao perioral,",
+"n": 3,
+"id": 43,
+"es": "región perioral,"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+981,
+71,
+1019
+],
+"txt": "TEXP"
+}
+],
+"t0": 43.333,
+"t1": 44.333,
+"bbox": [
+0,
+981,
+71,
+1019
+],
+"pt": "TEXP",
+"n": 3,
+"id": 44,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+982,
+71,
+1019
+],
+"txt": "LEKP"
+}
+],
+"t0": 44.333,
+"t1": 44.666,
+"bbox": [
+0,
+982,
+71,
+1019
+],
+"pt": "LEKP",
+"n": 1,
+"id": 45,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+382,
+1225,
+695,
+1271
+],
+"txt": "labio, pré jowl,"
+}
+],
+"t0": 44.333,
+"t1": 45.333,
+"bbox": [
+382,
+1225,
+695,
+1271
+],
+"pt": "labio, pré jowl,",
+"n": 3,
+"id": 46,
+"es": "labio, pre-jowl,"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+982,
+66,
+1022
+],
+"txt": "PEKP"
+}
+],
+"t0": 44.667,
+"t1": 45.0,
+"bbox": [
+0,
+982,
+66,
+1022
+],
+"pt": "PEKP",
+"n": 1,
+"id": 47,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+339,
+1227,
+741,
+1267
+],
+"txt": "mandibula, mento,"
+}
+],
+"t0": 45.667,
+"t1": 47.0,
+"bbox": [
+339,
+1227,
+741,
+1267
+],
+"pt": "mandibula, mento,",
+"n": 4,
+"id": 48,
+"es": "mandíbula, mentón,"
+},
+{
+"linhas": [
+{
+"bbox": [
+293,
+1227,
+784,
+1269
+],
+"txt": "todas as estruturacoes."
+}
+],
+"t0": 47.333,
+"t1": 48.666,
+"bbox": [
+293,
+1227,
+784,
+1269
+],
+"pt": "todas as estruturacoes.",
+"n": 4,
+"id": 49,
+"es": "todas las estructuraciones."
+},
+{
+"linhas": [
+{
+"bbox": [
+205,
+1224,
+875,
+1269
+],
+"txt": "E por ultimo as intercorrencias,"
+}
+],
+"t0": 48.667,
+"t1": 50.0,
+"bbox": [
+205,
+1224,
+875,
+1269
+],
+"pt": "E por ultimo as intercorrencias,",
+"n": 4,
+"id": 50,
+"es": "Y por último, las complicaciones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+196,
+1221,
+881,
+1273
+],
+"txt": "que também sao fundamentais."
+}
+],
+"t0": 50.0,
+"t1": 51.666,
+"bbox": [
+196,
+1221,
+881,
+1273
+],
+"pt": "que também sao fundamentais.",
+"n": 5,
+"id": 51,
+"es": "que también son fundamentales."
+},
+{
+"linhas": [
+{
+"bbox": [
+36,
+951,
+106,
+993
+],
+"txt": "FEX2"
+}
+],
+"t0": 50.333,
+"t1": 50.666,
+"bbox": [
+36,
+951,
+106,
+993
+],
+"pt": "FEX2",
+"n": 1,
+"id": 52,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+0,
+717,
+84,
+746
+],
+"txt": "FLPEXP"
+}
+],
+"t0": 50.667,
+"t1": 51.0,
+"bbox": [
+0,
+717,
+84,
+746
+],
+"pt": "FLPEXP",
+"n": 1,
+"id": 53,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+172,
+1227,
+912,
+1270
+],
+"txt": "Quando a gente domina anatomia,"
+}
+],
+"t0": 52.0,
+"t1": 53.333,
+"bbox": [
+172,
+1227,
+912,
+1270
+],
+"pt": "Quando a gente domina anatomia,",
+"n": 4,
+"id": 54,
+"es": "Cuando dominamos la anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+171,
+1224,
+897,
+1273
+],
+"txt": "quando a gente domina téecnicas,"
+}
+],
+"t0": 53.667,
+"t1": 55.0,
+"bbox": [
+171,
+1224,
+897,
+1273
+],
+"pt": "quando a gente domina téecnicas,",
+"n": 4,
+"id": 55,
+"es": "cuando dominamos las técnicas"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1225,
+815,
+1269
+],
+"txt": "e domina intercorrencias,"
+}
+],
+"t0": 55.0,
+"t1": 56.333,
+"bbox": [
+267,
+1225,
+815,
+1269
+],
+"pt": "e domina intercorrencias,",
+"n": 4,
+"id": 56,
+"es": "y dominamos las complicaciones,"
+},
+{
+"linhas": [
+{
+"bbox": [
+151,
+1227,
+925,
+1271
+],
+"txt": "a gente consegue entregar o melhor"
+}
+],
+"t0": 56.667,
+"t1": 58.0,
+"bbox": [
+151,
+1227,
+925,
+1271
+],
+"pt": "a gente consegue entregar o melhor",
+"n": 4,
+"id": 57,
+"es": "logramos entregar lo mejor"
+},
+{
+"linhas": [
+{
+"bbox": [
+269,
+1228,
+810,
+1269
+],
+"txt": "para os nossos pacientes."
+}
+],
+"t0": 58.0,
+"t1": 59.0,
+"bbox": [
+269,
+1228,
+810,
+1269
+],
+"pt": "para os nossos pacientes.",
+"n": 3,
+"id": 58,
+"es": "a nuestros pacientes."
+},
+{
+"linhas": [
+{
+"bbox": [
+360,
+1226,
+723,
+1266
+],
+"txt": "Para se inscrever"
+}
+],
+"t0": 59.333,
+"t1": 60.0,
+"bbox": [
+360,
+1226,
+723,
+1266
+],
+"pt": "Para se inscrever",
+"n": 2,
+"id": 59,
+"es": "Para inscribirte,"
+},
+{
+"linhas": [
+{
+"bbox": [
+253,
+1224,
+823,
+1268
+],
+"txt": "é s6 clicar em SAIBA MAIS."
+}
+],
+"t0": 60.0,
+"t1": 61.333,
+"bbox": [
+253,
+1224,
+823,
+1268
+],
+"pt": "é s6 clicar em SAIBA MAIS.",
+"n": 4,
+"id": 60,
+"es": "solo haz clic en MÁS INFORMACIÓN."
+},
+{
+"linhas": [
+{
+"bbox": [
+431,
+1224,
+648,
+1270
+],
+"txt": "Te vejo la!"
+}
+],
+"t0": 61.667,
+"t1": 62.333,
+"bbox": [
+431,
+1224,
+648,
+1270
+],
+"pt": "Te vejo la!",
+"n": 2,
+"id": 61,
+"es": "¡Nos vemos allá!"
+}
+]
+}

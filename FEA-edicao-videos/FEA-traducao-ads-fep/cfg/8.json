@@ -1,0 +1,783 @@
+{
+"blocos": [
+{
+"linhas": [
+{
+"bbox": [
+271,
+1342,
+812,
+1387
+],
+"txt": "As tecnicas mais seguras"
+},
+{
+"bbox": [
+332,
+1391,
+746,
+1438
+],
+"txt": "no preenchimento."
+}
+],
+"t0": 0.333,
+"t1": 2.666,
+"bbox": [
+271,
+1342,
+812,
+1438
+],
+"pt": "As tecnicas mais seguras / no preenchimento.",
+"n": 7,
+"id": 0,
+"es": "Las técnicas más seguras en el relleno."
+},
+{
+"linhas": [
+{
+"bbox": [
+383,
+1077,
+458,
+1124
+],
+"txt": "DEStaNBX"
+}
+],
+"t0": 2.0,
+"t1": 2.333,
+"bbox": [
+383,
+1077,
+458,
+1124
+],
+"pt": "DEStaNBX",
+"n": 1,
+"id": 1,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+338,
+1065,
+419,
+1111
+],
+"txt": "DESCaRBOX"
+}
+],
+"t0": 2.667,
+"t1": 3.333,
+"bbox": [
+338,
+1065,
+419,
+1111
+],
+"pt": "DESCaRBOX",
+"n": 2,
+"id": 2,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+267,
+1366,
+813,
+1414
+],
+"txt": "As téecnicas de seguranca"
+}
+],
+"t0": 3.0,
+"t1": 4.666,
+"bbox": [
+267,
+1366,
+813,
+1414
+],
+"pt": "As téecnicas de seguranca",
+"n": 5,
+"id": 3,
+"es": "Las técnicas de seguridad"
+},
+{
+"linhas": [
+{
+"bbox": [
+335,
+1076,
+399,
+1114
+],
+"txt": "DEStaRBO"
+}
+],
+"t0": 3.667,
+"t1": 4.0,
+"bbox": [
+335,
+1076,
+399,
+1114
+],
+"pt": "DEStaRBO",
+"n": 1,
+"id": 4,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+314,
+1344,
+768,
+1384
+],
+"txt": "foram desenvolvidas"
+},
+{
+"bbox": [
+291,
+1390,
+792,
+1435
+],
+"txt": "com o intuito de trazer"
+}
+],
+"t0": 4.667,
+"t1": 7.333,
+"bbox": [
+291,
+1344,
+792,
+1435
+],
+"pt": "foram desenvolvidas / com o intuito de trazer",
+"n": 8,
+"id": 5,
+"es": "fueron desarrolladas con el objetivo de dar"
+},
+{
+"linhas": [
+{
+"bbox": [
+333,
+1095,
+394,
+1133
+],
+"txt": "DESCERBD"
+}
+],
+"t0": 5.0,
+"t1": 5.333,
+"bbox": [
+333,
+1095,
+394,
+1133
+],
+"pt": "DESCERBD",
+"n": 1,
+"id": 6,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+332,
+1092,
+405,
+1135
+],
+"txt": "DESCARBOX"
+}
+],
+"t0": 5.333,
+"t1": 5.666,
+"bbox": [
+332,
+1092,
+405,
+1135
+],
+"pt": "DESCARBOX",
+"n": 1,
+"id": 7,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+339,
+1101,
+406,
+1143
+],
+"txt": "DESCaRBX"
+}
+],
+"t0": 6.667,
+"t1": 7.333,
+"bbox": [
+339,
+1101,
+406,
+1143
+],
+"pt": "DESCaRBX",
+"n": 2,
+"id": 8,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+339,
+1102,
+408,
+1146
+],
+"txt": "DESCa60"
+}
+],
+"t0": 7.333,
+"t1": 7.666,
+"bbox": [
+339,
+1102,
+408,
+1146
+],
+"pt": "DESCa60",
+"n": 1,
+"id": 9,
+"acao": "manter"
+},
+{
+"linhas": [
+{
+"bbox": [
+373,
+1365,
+709,
+1413
+],
+"txt": "previsibilidade."
+}
+],
+"t0": 7.667,
+"t1": 8.666,
+"bbox": [
+373,
+1365,
+709,
+1413
+],
+"pt": "previsibilidade.",
+"n": 3,
+"id": 10,
+"es": "previsibilidad."
+},
+{
+"linhas": [
+{
+"bbox": [
+237,
+1364,
+845,
+1415
+],
+"txt": "O conhecimento anatomico,"
+}
+],
+"t0": 8.667,
+"t1": 10.0,
+"bbox": [
+237,
+1364,
+845,
+1415
+],
+"pt": "O conhecimento anatomico,",
+"n": 4,
+"id": 11,
+"es": "El conocimiento anatómico,"
+},
+{
+"linhas": [
+{
+"bbox": [
+221,
+1363,
+858,
+1415
+],
+"txt": "conhecimento do dispositivo,"
+}
+],
+"t0": 10.0,
+"t1": 12.0,
+"bbox": [
+221,
+1363,
+858,
+1415
+],
+"pt": "conhecimento do dispositivo,",
+"n": 6,
+"id": 12,
+"es": "el conocimiento del dispositivo,"
+},
+{
+"linhas": [
+{
+"bbox": [
+230,
+1368,
+848,
+1409
+],
+"txt": "a escolha da camada correta"
+}
+],
+"t0": 12.0,
+"t1": 14.0,
+"bbox": [
+230,
+1368,
+848,
+1409
+],
+"pt": "a escolha da camada correta",
+"n": 6,
+"id": 13,
+"es": "la elección de la capa correcta"
+},
+{
+"linhas": [
+{
+"bbox": [
+152,
+1367,
+927,
+1412
+],
+"txt": "sao os parametros que vocé precisa"
+}
+],
+"t0": 14.333,
+"t1": 16.0,
+"bbox": [
+152,
+1367,
+927,
+1412
+],
+"pt": "sao os parametros que vocé precisa",
+"n": 5,
+"id": 14,
+"es": "son los parámetros que necesitas"
+},
+{
+"linhas": [
+{
+"bbox": [
+292,
+1365,
+790,
+1415
+],
+"txt": "pra sentir essa clareza."
+}
+],
+"t0": 16.333,
+"t1": 17.666,
+"bbox": [
+292,
+1365,
+790,
+1415
+],
+"pt": "pra sentir essa clareza.",
+"n": 4,
+"id": 15,
+"es": "para sentir esa claridad."
+},
+{
+"linhas": [
+{
+"bbox": [
+262,
+1344,
+817,
+1386
+],
+"txt": "Na Formacao Especialista"
+},
+{
+"bbox": [
+328,
+1390,
+750,
+1438
+],
+"txt": "em Preenchimento,"
+}
+],
+"t0": 17.667,
+"t1": 19.666,
+"bbox": [
+262,
+1344,
+817,
+1438
+],
+"pt": "Na Formacao Especialista / em Preenchimento,",
+"n": 6,
+"id": 16,
+"es": "En la Formación Especialista en Relleno,"
+},
+{
+"linhas": [
+{
+"bbox": [
+314,
+1366,
+764,
+1413
+],
+"txt": "no meu curso online,"
+}
+],
+"t0": 19.667,
+"t1": 20.666,
+"bbox": [
+314,
+1366,
+764,
+1413
+],
+"pt": "no meu curso online,",
+"n": 3,
+"id": 17,
+"es": "mi curso online,"
+},
+{
+"linhas": [
+{
+"bbox": [
+223,
+1368,
+859,
+1409
+],
+"txt": "onde eu faco um treinamento"
+}
+],
+"t0": 20.667,
+"t1": 22.333,
+"bbox": [
+223,
+1368,
+859,
+1409
+],
+"pt": "onde eu faco um treinamento",
+"n": 5,
+"id": 18,
+"es": "donde hago un entrenamiento"
+},
+{
+"linhas": [
+{
+"bbox": [
+188,
+1367,
+893,
+1409
+],
+"txt": "extensivo com mais de 160 aulas"
+}
+],
+"t0": 22.667,
+"t1": 25.0,
+"bbox": [
+188,
+1367,
+893,
+1409
+],
+"pt": "extensivo com mais de 160 aulas",
+"n": 7,
+"id": 19,
+"es": "extenso con más de 160 clases,"
+},
+{
+"linhas": [
+{
+"bbox": [
+319,
+1343,
+761,
+1389
+],
+"txt": "eu mostro pra vocées"
+},
+{
+"bbox": [
+272,
+1393,
+807,
+1438
+],
+"txt": "todo esse passo a passo."
+}
+],
+"t0": 25.333,
+"t1": 27.333,
+"bbox": [
+272,
+1343,
+807,
+1438
+],
+"pt": "eu mostro pra vocées / todo esse passo a passo.",
+"n": 6,
+"id": 20,
+"es": "les muestro todo ese paso a paso."
+},
+{
+"linhas": [
+{
+"bbox": [
+200,
+1368,
+882,
+1408
+],
+"txt": "Como escolher a camada certa?"
+}
+],
+"t0": 27.667,
+"t1": 29.333,
+"bbox": [
+200,
+1368,
+882,
+1408
+],
+"pt": "Como escolher a camada certa?",
+"n": 5,
+"id": 21,
+"es": "¿Cómo elegir la capa correcta?"
+},
+{
+"linhas": [
+{
+"bbox": [
+367,
+1371,
+714,
+1408
+],
+"txt": "A tecnica certa?"
+}
+],
+"t0": 29.333,
+"t1": 30.666,
+"bbox": [
+367,
+1371,
+714,
+1408
+],
+"pt": "A tecnica certa?",
+"n": 4,
+"id": 22,
+"es": "¿La técnica correcta?"
+},
+{
+"linhas": [
+{
+"bbox": [
+247,
+1343,
+836,
+1386
+],
+"txt": "Entendendo os parametros"
+},
+{
+"bbox": [
+398,
+1391,
+682,
+1436
+],
+"txt": "de anatomia,"
+}
+],
+"t0": 30.667,
+"t1": 33.0,
+"bbox": [
+247,
+1343,
+836,
+1436
+],
+"pt": "Entendendo os parametros / de anatomia,",
+"n": 7,
+"id": 23,
+"es": "Entendiendo los parámetros de anatomía,"
+},
+{
+"linhas": [
+{
+"bbox": [
+293,
+1364,
+786,
+1413
+],
+"txt": "escolha de dispositivo,"
+}
+],
+"t0": 33.0,
+"t1": 34.333,
+"bbox": [
+293,
+1364,
+786,
+1413
+],
+"pt": "escolha de dispositivo,",
+"n": 4,
+"id": 24,
+"es": "elección de dispositivo,"
+},
+{
+"linhas": [
+{
+"bbox": [
+209,
+1339,
+874,
+1387
+],
+"txt": "dessa forma voce vai se tornar"
+},
+{
+"bbox": [
+278,
+1390,
+801,
+1436
+],
+"txt": "um Injetor de Alto Valor"
+}
+],
+"t0": 34.667,
+"t1": 37.333,
+"bbox": [
+209,
+1339,
+874,
+1436
+],
+"pt": "dessa forma voce vai se tornar / um Injetor de Alto Valor",
+"n": 8,
+"id": 25,
+"es": "de esta forma te convertirás en un Inyector de Alto Valor"
+},
+{
+"linhas": [
+{
+"bbox": [
+142,
+1367,
+936,
+1411
+],
+"txt": "e vai crescer na harmonizacao facial."
+}
+],
+"t0": 37.333,
+"t1": 39.333,
+"bbox": [
+142,
+1367,
+936,
+1411
+],
+"pt": "e vai crescer na harmonizacao facial.",
+"n": 6,
+"id": 26,
+"es": "y vas a crecer en la armonización facial."
+},
+{
+"linhas": [
+{
+"bbox": [
+295,
+1140,
+390,
+1198
+],
+"txt": "Toql"
+}
+],
+"t0": 40.667,
+"t1": 41.0,
+"bbox": [
+295,
+1140,
+390,
+1198
+],
+"pt": "Toql",
+"n": 1,
+"id": 27,
+"es": "Toca"
+},
+{
+"linhas": [
+{
+"bbox": [
+299,
+1147,
+780,
+1194
+],
+"txt": "Toque em SAIBA MAiS"
+}
+],
+"t0": 41.0,
+"t1": 43.333,
+"bbox": [
+299,
+1147,
+780,
+1194
+],
+"pt": "Toque em SAIBA MAiS",
+"n": 7,
+"id": 28,
+"es": "Toca en MÁS INFORMACIÓN"
+}
+]
+}
