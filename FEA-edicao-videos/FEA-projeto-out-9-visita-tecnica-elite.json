@@ -1,0 +1,98 @@
+{
+ "ffmpeg": "/usr/bin/ffmpeg",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/6b6c450f-49ad-5966-aa59-d292e41f6938/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/6b6c450f-49ad-5966-aa59-d292e41f6938/scratchpad/elite/montagem.mp4",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/6b6c450f-49ad-5966-aa59-d292e41f6938/scratchpad/elite/tr/IMG_7431_ajustado.json",
+   "titulo": "Visita técnica Elite Injectors",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.6,
+     57.15
+    ],
+    [
+     57.3,
+     60.8
+    ],
+    [
+     61.05,
+     62.8
+    ],
+    [
+     63.35,
+     70.95
+    ],
+    [
+     71.45,
+     77.2
+    ],
+    [
+     77.4,
+     89.25
+    ],
+    [
+     90.45,
+     99.8
+    ],
+    [
+     100.0,
+     101.05
+    ],
+    [
+     101.4,
+     106.05
+    ],
+    [
+     106.6,
+     107.3
+    ],
+    [
+     107.6,
+     108.45
+    ],
+    [
+     108.75,
+     113.6
+    ],
+    [
+     114.05,
+     122.35
+    ],
+    [
+     122.5,
+     123.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "(?i)\\belite injectures\\b",
+     "Elite Injectors"
+    ],
+    [
+     "(?i)\\belite injectors\\b",
+     "Elite Injectors"
+    ],
+    [
+     "(?i)\\bformação especialista academy\\b",
+     "Formação Especialista Academy"
+    ],
+    [
+     "(?i)\\bpré -aula\\b",
+     "pré-aula"
+    ]
+   ],
+   "saida": "/tmp/claude-0/-home-user-FEA/6b6c450f-49ad-5966-aa59-d292e41f6938/scratchpad/elite/out/1- Visita técnica Elite Injectors.mp4"
+  }
+ ],
+ "cta": "CTA ELITE.mov (Drive 1_vJGHp9DWsoAMY0SH7_RuG49WTxm1P9T), recodificado para H.264 antes de colar",
+ "versoes": [
+  "1- Visita técnica Elite Injectors.mp4 (com CTA)",
+  "1- Visita técnica Elite Injectors (sem CTA).mp4"
+ ],
+ "ajuste_transcricao": "tempos de 'gigantesca', 'vocês', 'não', 'imaginam' corrigidos pelo áudio (108,16 a 110,4 s)",
+ "trilha": "HeyGen 6edb4b58eb8e40979e9c5ff55127b9e1 (orquestral épica, piano emocionante que cresce para percussão), -11 dB com sidechain sob a voz (cerca de 13 dB abaixo da fala), fade in 0,8 s e out 3 s; mixada depois da legenda, antes do CTA",
+ "ajuste_05_10": "início em 0,6 s; 13 pausas acima de 0,45 s encurtadas para respiro de 0,3 s; takes 7332 e 7331 estendidos para não mostrar o Dr. de relance entre takes; trilha épica"
+}
