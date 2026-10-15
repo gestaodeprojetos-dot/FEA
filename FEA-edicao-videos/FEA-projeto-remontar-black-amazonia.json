@@ -1,0 +1,211 @@
+{
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/fonts",
+ "cta": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/cta/cta_b.mov",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0662.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0662.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 001 - Faltam 7 dias - BFV.mp4",
+   "manter": [
+    [
+     0.5,
+     10.73
+    ]
+   ],
+   "titulo": [
+    "Faltam 7 dias"
+   ],
+   "legendas": [
+    "para você ativar",
+    "o lembrete",
+    "você vai clicar aqui em Saiba Mais e você",
+    "vai participar ao vivo da abertura",
+    "das inscrições",
+    "te vejo lá!"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0663.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0663.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 002 - Faltam 6 dias - BFV.mp4",
+   "manter": [
+    [
+     0.23,
+     14.7
+    ]
+   ],
+   "titulo": [
+    "Faltam 6 dias"
+   ],
+   "legendas": [
+    "não fique de fora",
+    "para você não esquecer",
+    "você vai clicar aqui em Saiba Mais",
+    "você vai ativar o lembrete",
+    "vai colocar na sua agenda e você não vai",
+    "deixar de estar presente com a gente",
+    "te espero lá, clica aqui que eu te vejo lá"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0664.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0664.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 003 - Faltam 6 dias - BFV.mp4",
+   "manter": [
+    [
+     0.27,
+     16.27
+    ]
+   ],
+   "titulo": [
+    "Faltam 4 dias"
+   ],
+   "legendas": [
+    "para você não esquecer de colocar na sua",
+    "agenda, você vai clicar aqui em Saiba Mais",
+    "vai ativar os lembretes e vai participar",
+    "da maior Black Friday da harmonização",
+    "facial",
+    "não perca essa oportunidade",
+    "ela é vitalícia para o resto da vida",
+    "clica aqui que eu te vejo lá"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0665.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0665.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 004 - Faltam 3 dias - BFV.mp4",
+   "manter": [
+    [
+     0.27,
+     22.6
+    ],
+    [
+     24.67,
+     25.63
+    ]
+   ],
+   "titulo": [
+    "Faltam 3 dias"
+   ],
+   "legendas": [
+    "das inscrições para Black Friday Vitalícia",
+    "todos os cursos que eu já fiz",
+    "todos que eu for fazer até o fim da minha",
+    "vida, com inscrições vitalícias",
+    "com atualizações",
+    "vitalícias, você vai clicar aqui",
+    "em Saiba Mais",
+    "você vai ter bonificações presenciais",
+    "e muito mais coisas",
+    "então clica aqui e não fique de fora",
+    "te vejo lá"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0667.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0667.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 005 - Falta 1 dia - BFV.mp4",
+   "manter": [
+    [
+     0.57,
+     17.37
+    ]
+   ],
+   "titulo": [
+    "Falta 1 dia"
+   ],
+   "legendas": [
+    "onde você vai ter",
+    "acesso a todos os cursos que eu já fiz",
+    "todos que eu for fazer até o fim da vida",
+    "com atualizações vitalícias",
+    "então não perde essa oportunidade",
+    "vocês vão ganhar bônus especiais",
+    "inclusive presenciais, clica aqui",
+    "ativa o lembrete que eu te vejo lá"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0668.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0668.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/Ads 006 - É Hoje - BFV.mp4",
+   "manter": [
+    [
+     0.3,
+     23.67
+    ]
+   ],
+   "titulo": [
+    "Hoje começa",
+    "a Black Friday",
+    "Vitalícia"
+   ],
+   "legendas": [
+    "20 de outubro",
+    "hoje é o dia de você ter acesso ao último",
+    "curso de harmonização que você vai comprar",
+    "na sua vida, atualizações vitalícias",
+    "é para o resto da vida",
+    "é o último que você vai comprar",
+    "clica aqui, ativa o lembrete",
+    "coloca na sua agenda e não fique de fora",
+    "de estar ao vivo",
+    "essa é uma live muito importante para você",
+    "ter acesso a todos os bônus",
+    "inclusive coisas presenciais",
+    "te vejo lá"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0678.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0678.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/13- Último dia de inscrições.mp4",
+   "manter": [
+    [
+     0.0,
+     16.0
+    ]
+   ],
+   "titulo": [
+    "Último dia",
+    "de inscrições"
+   ],
+   "legendas": [
+    "só agora para você",
+    "último curso da sua vida, começa agora",
+    "não perde esse tempo",
+    "clica aqui em Saiba Mais",
+    "se inscreve agora",
+    "porque se você não aproveitar agora",
+    "não vai ter outra chance, é o último dia",
+    "se inscreve aqui, clica em Saiba Mais"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/brutos/IMG_0671.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/tr/IMG_0671.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a7f2514-5066-5eea-b137-2a2fe1a196c2/scratchpad/out/8- Inscrições abertas.mp4",
+   "manter": [
+    [
+     0.0,
+     18.63
+    ]
+   ],
+   "titulo": [
+    "Inscrições",
+    "abertas"
+   ],
+   "legendas": [
+    "o seu último curso de harmonização facial",
+    "da vida",
+    "clica aqui, ativa aqui",
+    "clica aqui para você se inscrever",
+    "porque as inscrições estão abertas e eu te",
+    "vejo lá para o resto da sua vida e estaremos",
+    "juntos, Black Friday Vitalícia",
+    "aproveita essa oportunidade"
+   ]
+  }
+ ]
+}

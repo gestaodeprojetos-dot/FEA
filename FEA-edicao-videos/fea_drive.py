@@ -11,6 +11,7 @@ Uso:
     python3 fea_drive.py testar                                 # confere chave e escopos
     python3 fea_drive.py baixar PASTA_OU_ARQUIVO_ID DESTINO     # baixa a pasta inteira (ou 1 arquivo)
     python3 fea_drive.py listar PASTA_ID                        # id | nome | MB | duração
+    python3 fea_drive.py trocar ARQUIVO_ID video.mp4            # novo conteúdo, mesmo ID e link
 
 --substituir manda para a lixeira o arquivo de mesmo nome na pasta antes de subir.
 """
@@ -60,12 +61,18 @@ def listar(tk, pasta, nome, mime=None):
     return json.load(chamar(tk, "GET", url))["files"]
 
 
-def subir(tk, pasta, caminho):
+def subir(tk, pasta, caminho, arquivo_id=None):
+    """Sobe um arquivo novo na pasta ou, com arquivo_id, troca o conteúdo daquele arquivo
+    (mesmo ID e mesmo link; a versão anterior fica no histórico de versões do Drive)."""
     nome = os.path.basename(caminho)
     tam = os.path.getsize(caminho)
-    r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
-               corpo={"name": nome, "parents": [pasta]},
-               cabecalhos={"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)})
+    cab = {"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)}
+    if arquivo_id:
+        r = chamar(tk, "PATCH", f"{UPLOAD}/{arquivo_id}?uploadType=resumable&supportsAllDrives=true&fields=id",
+                   corpo={}, cabecalhos=cab)
+    else:
+        r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
+                   corpo={"name": nome, "parents": [pasta]}, cabecalhos=cab)
     sessao = r.headers["Location"]
     print(f"  subindo {tam / 1024 / 1024:.1f} MB...", flush=True)
     with open(caminho, "rb") as f:
@@ -100,6 +107,14 @@ def cmd_upload(args):
                 print(f"  versão antiga na lixeira: {velho['id']}")
         fid = subir(tk, pasta, arq)
         print(f"\n  OK id={fid}", flush=True)
+
+
+def cmd_trocar(args):
+    arquivo_id, caminho = args
+    tk, _ = token()
+    print(f"trocando o conteúdo de {arquivo_id} por {os.path.basename(caminho)}", flush=True)
+    fid = subir(tk, None, caminho, arquivo_id)
+    print(f"\n  OK id={fid} (mesmo link, versão antiga no histórico do Drive)", flush=True)
 
 
 def cmd_pasta(args):
@@ -192,7 +207,7 @@ def cmd_testar(_):
 
 if __name__ == "__main__":
     cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "testar": cmd_testar,
-            "baixar": cmd_baixar, "listar": cmd_listar}
+            "baixar": cmd_baixar, "listar": cmd_listar, "trocar": cmd_trocar}
     if len(sys.argv) < 2 or sys.argv[1] not in cmds:
         sys.exit(__doc__)
     cmds[sys.argv[1]](sys.argv[2:])
