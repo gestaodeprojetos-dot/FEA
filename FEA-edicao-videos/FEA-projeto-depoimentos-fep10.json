@@ -1,0 +1,951 @@
+{
+ "fontes": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/fonts",
+ "saida": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/saida",
+ "cta": {
+  "pt": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/cta/FEA-cta-FEP.mp4",
+  "es": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/cta/FEA-cta-FEP-ES.mp4"
+ },
+ "videos": [
+  {
+   "id": "d1",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/Depoimento 1 espanhol, fep 10.mp4",
+   "nome": {
+    "pt": "Ads 26 FEP.mp4",
+    "es": "Ads 26 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 1920,
+    "h": 1700
+   },
+   "trechos": [
+    [
+     0.0,
+     37.2
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     2.36,
+     "Olá, eu sou a Dra. Estefany Mota,",
+     "Hola, soy la doctora Estefany Mota,"
+    ],
+    [
+     2.36,
+     4.9,
+     "sou especialista em medicina estética",
+     "soy especialista en medicina estética,"
+    ],
+    [
+     4.9,
+     6.3,
+     "e venho do Paraguai.",
+     "vengo desde Paraguay."
+    ],
+    [
+     6.3,
+     9.26,
+     "Conheci o Dr. João em um congresso",
+     "Conocí al doctor João en un congreso"
+    ],
+    [
+     9.26,
+     11.8,
+     "de medicina estética, há muitos anos.",
+     "de medicina estética hace muchos años."
+    ],
+    [
+     11.8,
+     15.3,
+     "Assisti a uma aula presencial de rinomodelação",
+     "Asistí a un aula presencial de rinomodelación"
+    ],
+    [
+     15.3,
+     17.74,
+     "no congresso e me apaixonei pelas técnicas dele.",
+     "en el congreso y me enamoré de sus técnicas."
+    ],
+    [
+     17.74,
+     20.6,
+     "Desde então, comprei os cursos online,",
+     "Desde entonces compré los cursos online,"
+    ],
+    [
+     20.6,
+     23.4,
+     "que me ajudaram muito durante toda a minha carreira,",
+     "que me ayudaron muchísimo durante toda mi carrera,"
+    ],
+    [
+     23.4,
+     25.96,
+     "porque ele realmente mostra",
+     "porque él realmente muestra"
+    ],
+    [
+     25.96,
+     28.38,
+     "e nos ajuda com todas as dúvidas que temos.",
+     "y nos ayuda con todas las dudas que tenemos."
+    ],
+    [
+     28.38,
+     31.9,
+     "E agora, para fechar com chave de ouro,",
+     "Y ahora, para cerrar con broche de oro,"
+    ],
+    [
+     31.9,
+     35.12,
+     "vim ao curso presencial em São Paulo",
+     "vine al curso presencial en São Paulo"
+    ],
+    [
+     35.12,
+     37.19,
+     "e estou amando a experiência.",
+     "y me está encantando la experiencia."
+    ]
+   ],
+   "destaques": [
+    [
+     12.9,
+     17.5,
+     "Rinomodelação",
+     "Rinomodelación"
+    ],
+    [
+     31.9,
+     35.12,
+     "Curso presencial",
+     "Curso presencial"
+    ]
+   ],
+   "destaques_dub": []
+  },
+  {
+   "id": "d2",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/depoimento 2 fep 10.mp4",
+   "nome": {
+    "pt": "Ads 27 FEP.mp4",
+    "es": "Ads 27 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 1950,
+    "h": 1440
+   },
+   "trechos": [
+    [
+     0.0,
+     8.45
+    ],
+    [
+     9.46,
+     12.4
+    ],
+    [
+     14.26,
+     19.16
+    ],
+    [
+     36.97,
+     55.7
+    ],
+    [
+     60.29,
+     62.95
+    ],
+    [
+     66.64,
+     71.76
+    ],
+    [
+     72.0,
+     74.02
+    ],
+    [
+     74.82,
+     82.05
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     3.11,
+     "Conheci o Dr. João através das redes sociais,",
+     "Conocí al doctor João a través de las redes sociales,"
+    ],
+    [
+     3.56,
+     6.0,
+     "faço a FEP Online,",
+     "hago la FEP Online,"
+    ],
+    [
+     6.0,
+     8.57,
+     "que foi um divisor de águas para mim.",
+     "que fue un antes y un después para mí."
+    ],
+    [
+     9.7,
+     12.53,
+     "Iniciei os meus preenchimentos de olheira",
+     "Empecé mis rellenos de ojeras"
+    ],
+    [
+     14.32,
+     17.14,
+     "assistindo às lives do Dr. João,",
+     "viendo los directos del doctor João,"
+    ],
+    [
+     17.14,
+     19.13,
+     "seguindo ele no Instagram.",
+     "siguiéndolo en Instagram."
+    ],
+    [
+     36.92,
+     41.58,
+     "A FEP Online, a qualidade dos vídeos,",
+     "La FEP Online, la calidad de los videos,"
+    ],
+    [
+     41.58,
+     44.28,
+     "os detalhes, super capacita vocês",
+     "los detalles, los capacita muchísimo"
+    ],
+    [
+     44.28,
+     47.98,
+     "a fazerem o melhor trabalho possível,",
+     "para hacer el mejor trabajo posible,"
+    ],
+    [
+     47.98,
+     51.68,
+     "de forma online, em casa, no conforto,",
+     "de forma online, en casa, con comodidad,"
+    ],
+    [
+     51.68,
+     53.04,
+     "a qualquer momento,",
+     "en cualquier momento,"
+    ],
+    [
+     53.04,
+     55.85,
+     "com essa possibilidade de revisitar as aulas,",
+     "con la posibilidad de volver a ver las clases,"
+    ],
+    [
+     60.32,
+     63.07,
+     "e isso com certeza é um diferencial.",
+     "y eso, sin duda, es un diferencial."
+    ],
+    [
+     66.72,
+     70.36,
+     "O trabalho do Dr. João dispensa comentários,",
+     "El trabajo del doctor João no necesita comentarios,"
+    ],
+    [
+     70.36,
+     72.06,
+     "ele é sensacional:",
+     "es sensacional:"
+    ],
+    [
+     72.06,
+     74.07,
+     "a didática, a forma de falar,",
+     "la didáctica, la forma de hablar,"
+    ],
+    [
+     74.88,
+     76.98,
+     "a forma de apresentar o trabalho.",
+     "la forma de presentar el trabajo."
+    ],
+    [
+     76.98,
+     79.64,
+     "Ele também deixa a gente muito confortável",
+     "Él también nos hace sentir muy cómodos"
+    ],
+    [
+     79.64,
+     82.25,
+     "e muito seguro para realizar os procedimentos.",
+     "y muy seguros para realizar los procedimientos."
+    ]
+   ],
+   "destaques": [
+    [
+     6.42,
+     8.32,
+     "Divisor de águas",
+     "Antes y después"
+    ],
+    [
+     39.6,
+     41.0,
+     "Qualidade dos vídeos",
+     "Calidad de los videos"
+    ],
+    [
+     53.26,
+     55.6,
+     "Revisitar as aulas",
+     "Volver a ver las clases"
+    ],
+    [
+     79.64,
+     82.0,
+     "Muito seguro",
+     "Muy seguros"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "un antes y un después",
+     "Antes y después"
+    ],
+    [
+     "la calidad de los videos",
+     "Calidad de los videos"
+    ],
+    [
+     "volver a ver las clases",
+     "Volver a ver las clases"
+    ],
+    [
+     "muy seguros",
+     "Muy seguros"
+    ]
+   ]
+  },
+  {
+   "id": "d3",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/depoimento 3 fep 10.mp4",
+   "nome": {
+    "pt": "Ads 28 FEP.mp4",
+    "es": "Ads 28 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 2050,
+    "h": 1600
+   },
+   "trechos": [
+    [
+     0.0,
+     3.02
+    ],
+    [
+     14.1,
+     18.08
+    ],
+    [
+     18.16,
+     27.18
+    ],
+    [
+     27.18,
+     35.8
+    ],
+    [
+     70.7,
+     75.82
+    ],
+    [
+     112.13,
+     118.27
+    ],
+    [
+     125.38,
+     130.65
+    ],
+    [
+     131.67,
+     136.84
+    ],
+    [
+     144.26,
+     147.98
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     2.95,
+     "Meu nome é Jânia, eu sou aluna da FEP Online.",
+     "Mi nombre es Jânia, soy alumna de la FEP Online."
+    ],
+    [
+     14.16,
+     18.24,
+     "O que me trouxe à FEP Online?",
+     "¿Qué me trajo a la FEP Online?"
+    ],
+    [
+     18.24,
+     20.86,
+     "Todo o embasamento técnico-científico,",
+     "Toda la base técnico-científica,"
+    ],
+    [
+     20.86,
+     24.42,
+     "para que me trouxesse, me deixasse mais segura",
+     "para que me diera, me dejara más segura"
+    ],
+    [
+     24.42,
+     27.08,
+     "e preparada para atuar aqui presencialmente.",
+     "y preparada para actuar aquí de forma presencial."
+    ],
+    [
+     27.08,
+     31.9,
+     "É um curso completo, onde aprendi muitas técnicas,",
+     "Es un curso completo, donde aprendí muchas técnicas,"
+    ],
+    [
+     31.9,
+     35.93,
+     "a teoria, material, reologia. É um curso completo.",
+     "la teoría, material, reología. Es un curso completo."
+    ],
+    [
+     71.1,
+     73.72,
+     "Tem toda a parte de anatomia,",
+     "Tiene toda la parte de anatomía,"
+    ],
+    [
+     73.72,
+     76.01,
+     "da dissecção dos cadáveres.",
+     "de la disección de cadáveres."
+    ],
+    [
+     112.18,
+     115.0,
+     "Quando eu cheguei aqui ontem, que eu encontrei o paciente,",
+     "Cuando llegué aquí ayer y encontré al paciente,"
+    ],
+    [
+     115.0,
+     118.37,
+     "a única coisa que eu queria de fato era atender,",
+     "lo único que quería de verdad era atender,"
+    ],
+    [
+     125.44,
+     127.72,
+     "mas eu não tive dúvidas",
+     "pero no tuve dudas"
+    ],
+    [
+     127.72,
+     130.49,
+     "de como eu faria o procedimento,",
+     "de cómo haría el procedimiento,"
+    ],
+    [
+     131.7,
+     134.62,
+     "pelo conhecimento agregado,",
+     "por el conocimiento sumado,"
+    ],
+    [
+     134.62,
+     136.83,
+     "conhecimento adquirido através da FEP.",
+     "conocimiento adquirido a través de la FEP."
+    ],
+    [
+     144.4,
+     145.9,
+     "Para mim, é um curso completo.",
+     "Para mí, es un curso completo."
+    ],
+    [
+     145.9,
+     147.81,
+     "Me deixou muito tranquila e muito segura.",
+     "Me dejó muy tranquila y muy segura."
+    ]
+   ],
+   "destaques": [
+    [
+     19.0,
+     22.38,
+     "Técnico-científico",
+     "Técnico-científica"
+    ],
+    [
+     27.08,
+     28.6,
+     "Curso completo",
+     "Curso completo"
+    ],
+    [
+     73.72,
+     75.76,
+     "Dissecção",
+     "Disección"
+    ],
+    [
+     126.02,
+     127.72,
+     "Sem dúvidas",
+     "Sin dudas"
+    ],
+    [
+     145.9,
+     147.56,
+     "Muito segura",
+     "Muy segura"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "técnico científica",
+     "Técnico-científica"
+    ],
+    [
+     "un curso completo",
+     "Curso completo"
+    ],
+    [
+     "disección",
+     "Disección"
+    ],
+    [
+     "no tuve dudas",
+     "Sin dudas"
+    ],
+    [
+     "muy segura",
+     "Muy segura"
+    ]
+   ]
+  },
+  {
+   "id": "d4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/DEPOIMENTO 4 fep 10.mp4",
+   "nome": {
+    "pt": "Ads 29 FEP.mp4",
+    "es": "Ads 29 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 2010,
+    "h": 1440
+   },
+   "trechos": [
+    [
+     0.0,
+     9.3
+    ],
+    [
+     10.17,
+     37.4
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     2.12,
+     "Oi, eu sou a Dra. Mariana,",
+     "Hola, soy la doctora Mariana,"
+    ],
+    [
+     2.12,
+     5.72,
+     "eu sou aluna da FEP Online, do Dr. João Pithon.",
+     "alumna de la FEP Online, del doctor João Pithon."
+    ],
+    [
+     5.72,
+     9.29,
+     "Já acompanho o doutor há muito tempo no Instagram.",
+     "Sigo al doctor desde hace mucho tiempo en Instagram."
+    ],
+    [
+     10.2,
+     14.22,
+     "E a FEP Online me ajuda a tirar muitas dúvidas",
+     "Y la FEP Online me ayuda a resolver muchas dudas"
+    ],
+    [
+     14.22,
+     17.48,
+     "que eu tenho no decorrer do dia a dia do consultório.",
+     "que tengo en el día a día del consultorio."
+    ],
+    [
+     17.48,
+     19.66,
+     "Afinal, são um monte de procedimentos",
+     "Al final, son muchos procedimientos"
+    ],
+    [
+     19.66,
+     21.66,
+     "e a gente não consegue lembrar de tudo.",
+     "y no logramos recordar todo."
+    ],
+    [
+     21.66,
+     25.88,
+     "E a FEP Online está sempre lá para socorrer a gente.",
+     "Y la FEP Online siempre está ahí para ayudarnos."
+    ],
+    [
+     25.88,
+     27.4,
+     "Eu gosto bastante.",
+     "Me gusta mucho."
+    ],
+    [
+     27.4,
+     31.06,
+     "Eu indico para todas as amigas, para todos os profissionais,",
+     "La recomiendo a todas mis amigas, a todos los profesionales,"
+    ],
+    [
+     31.06,
+     34.2,
+     "para quem está ingressando na harmonização facial.",
+     "a quienes están empezando en la armonización facial."
+    ],
+    [
+     34.2,
+     36.2,
+     "Eu acho um diferencial.",
+     "Me parece un diferencial."
+    ],
+    [
+     36.2,
+     37.51,
+     "Vale muito a pena.",
+     "Vale mucho la pena."
+    ]
+   ],
+   "destaques": [
+    [
+     12.66,
+     14.22,
+     "Tirar dúvidas",
+     "Resolver dudas"
+    ],
+    [
+     22.86,
+     25.7,
+     "Sempre lá",
+     "Siempre ahí"
+    ],
+    [
+     36.2,
+     37.26,
+     "Vale muito a pena",
+     "Vale la pena"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "resolver muchas dudas",
+     "Resolver dudas"
+    ],
+    [
+     "siempre está ahí",
+     "Siempre ahí"
+    ],
+    [
+     "vale mucho la pena",
+     "Vale la pena"
+    ]
+   ]
+  },
+  {
+   "id": "d5",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/Depoimento 5 fep 10.mp4",
+   "nome": {
+    "pt": "Ads 30 FEP.mp4",
+    "es": "Ads 30 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 1985,
+    "h": 1540
+   },
+   "trechos": [
+    [
+     0.0,
+     33.4
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     2.38,
+     "Olá, eu sou a Dra. Gabriela,",
+     "Hola, soy la doctora Gabriela,"
+    ],
+    [
+     2.38,
+     4.36,
+     "já atuo na área, já tem um tempinho.",
+     "ya trabajo en el área hace un tiempo."
+    ],
+    [
+     4.36,
+     5.68,
+     "E eu queria dizer a vocês",
+     "Y quería decirles a ustedes"
+    ],
+    [
+     5.68,
+     8.46,
+     "que ainda não fazem parte da FEP Online",
+     "que todavía no son parte de la FEP Online"
+    ],
+    [
+     8.46,
+     10.02,
+     "que é muito importante,",
+     "que es muy importante,"
+    ],
+    [
+     10.02,
+     13.54,
+     "porque você consegue tirar suas dúvidas,",
+     "porque puedes resolver tus dudas,"
+    ],
+    [
+     13.54,
+     17.24,
+     "revisar algum material que você ainda não tem tanta habilidade",
+     "repasar algún material en el que todavía no tienes tanta habilidad"
+    ],
+    [
+     17.24,
+     20.24,
+     "ou estudar para melhorar a sua técnica.",
+     "o estudiar para mejorar tu técnica."
+    ],
+    [
+     20.24,
+     21.6,
+     "Eu super recomendo.",
+     "Lo recomiendo muchísimo."
+    ],
+    [
+     21.6,
+     24.32,
+     "Para quem ainda não conhece o Dr. João Pithon,",
+     "Si todavía no conoces al doctor João Pithon,"
+    ],
+    [
+     24.32,
+     28.48,
+     "siga ele, faça parte desse grupo da FEP Online,",
+     "síguelo, forma parte de este grupo de la FEP Online,"
+    ],
+    [
+     28.48,
+     30.78,
+     "que você vai atualizar os seus conhecimentos",
+     "porque vas a actualizar tus conocimientos"
+    ],
+    [
+     30.78,
+     33.43,
+     "e vai melhorar muito e refinar a sua técnica.",
+     "y vas a mejorar mucho y refinar tu técnica."
+    ]
+   ],
+   "destaques": [
+    [
+     10.9,
+     13.42,
+     "Tirar suas dúvidas",
+     "Resolver tus dudas"
+    ],
+    [
+     31.98,
+     33.18,
+     "Refinar a sua técnica",
+     "Refinar tu técnica"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "despejar sus dudas",
+     "Despejar sus dudas"
+    ],
+    [
+     "refinen su técnica",
+     "Refinar su técnica"
+    ]
+   ]
+  },
+  {
+   "id": "d6",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e39da87d-8ab2-511c-9d47-09a2cf887f89/scratchpad/brutos/Depoimento 6 FEP 10.mp4",
+   "nome": {
+    "pt": "Ads 31 FEP.mp4",
+    "es": "Ads 31 FEP ES.mp4"
+   },
+   "crop": {
+    "cx": 2050,
+    "h": 1420
+   },
+   "trechos": [
+    [
+     0.0,
+     7.51
+    ],
+    [
+     8.72,
+     19.3
+    ],
+    [
+     19.4,
+     25.1
+    ],
+    [
+     34.4,
+     46.6
+    ]
+   ],
+   "legendas": [
+    [
+     0.0,
+     1.7,
+     "Olá, meu nome é Mariana,",
+     "Hola, mi nombre es Mariana,"
+    ],
+    [
+     1.7,
+     4.12,
+     "trabalho na área da estética já faz um tempo.",
+     "trabajo en el área de la estética hace un tiempo."
+    ],
+    [
+     4.12,
+     7.57,
+     "Conheço o Dr. João pelas redes sociais, pelo Instagram,",
+     "Conozco al doctor João por las redes sociales, por Instagram,"
+    ],
+    [
+     8.8,
+     11.14,
+     "também sou aluna da FEP Online.",
+     "y también soy alumna de la FEP Online."
+    ],
+    [
+     11.14,
+     15.82,
+     "Os vídeos do Dr. João, dos procedimentos estéticos,",
+     "Los videos del doctor João, de los procedimientos estéticos,"
+    ],
+    [
+     15.82,
+     17.88,
+     "me ajudaram muito na minha técnica,",
+     "me ayudaron mucho en mi técnica,"
+    ],
+    [
+     17.88,
+     19.46,
+     "no dia a dia do consultório.",
+     "en el día a día del consultorio."
+    ],
+    [
+     19.46,
+     22.3,
+     "E também me facilitou muito ter essa facilidade",
+     "Y también me ayudó mucho tener esa facilidad"
+    ],
+    [
+     22.3,
+     25.29,
+     "de escolher o horário para assistir às aulas.",
+     "de elegir el horario para ver las clases."
+    ],
+    [
+     34.46,
+     36.82,
+     "Para quem quer,",
+     "Para quien quiere,"
+    ],
+    [
+     36.82,
+     40.4,
+     "deseja melhorar sua técnica, refinar,",
+     "desea mejorar su técnica, refinar,"
+    ],
+    [
+     40.4,
+     42.58,
+     "ter um conhecimento mais aprofundado,",
+     "tener un conocimiento más profundo,"
+    ],
+    [
+     42.58,
+     45.2,
+     "eu indico muito o curso.",
+     "le recomiendo mucho el curso."
+    ],
+    [
+     45.2,
+     46.67,
+     "Vale muito a pena.",
+     "Vale mucho la pena."
+    ]
+   ],
+   "destaques": [
+    [
+     15.82,
+     17.7,
+     "Minha técnica",
+     "Mi técnica"
+    ],
+    [
+     22.3,
+     25.04,
+     "Escolher o horário",
+     "Elegir el horario"
+    ],
+    [
+     45.2,
+     46.42,
+     "Vale muito a pena",
+     "Vale la pena"
+    ]
+   ],
+   "destaques_dub": [
+    [
+     "mi técnica",
+     "Mi técnica"
+    ],
+    [
+     "elegir el horario",
+     "Elegir el horario"
+    ],
+    [
+     "vale mucho la pena",
+     "Vale la pena"
+    ]
+   ]
+  }
+ ]
+}
