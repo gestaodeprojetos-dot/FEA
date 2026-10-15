@@ -95,6 +95,10 @@ def remapear_palavras(palavras, manter):
 
 LIGACAO = {"de", "da", "do", "das", "dos", "a", "o", "as", "os", "e", "em", "no", "na",
            "com", "para", "pra", "que", "um", "uma", "por", "se", "ao", "à"}
+# vídeos traduzidos para o espanhol (anúncios LATAM, "idioma": "es" no projeto.json)
+LIGACAO_ES = {"el", "la", "los", "las", "lo", "y", "en", "del", "al", "un", "una", "con",
+              "de", "a", "que", "por", "para", "se", "o"}
+IDIOMA = "pt"
 
 
 def blocos_legenda(palavras):
@@ -361,8 +365,17 @@ def numerar_enumeracao(palavras):
     return palavras
 
 
+# espanhol: as correções do português ("lado inferior" -> "lábio inferior", "pro" -> "para o")
+# estragam o texto em espanhol; só ficam as de notação
+CORRECOES_ES = [
+    (r"(\d) ?ml\b", r"\1 mL"), (r"\bml\b", "mL"), (r"(\d) ?mg\b", r"\1 mg"), (r"(\d) %", r"\1%"),
+    (r"\b[aá]cido (?:hi)?al[uo]r[oó]nico\b", "ácido hialurónico"),
+]
+
+
 def corrigir(texto, extras=()):
-    for padrao, novo in list(CORRECOES) + [tuple(x) for x in extras]:
+    base = CORRECOES_ES if IDIOMA == "es" else CORRECOES
+    for padrao, novo in list(base) + [tuple(x) for x in extras]:
         texto = re.sub(padrao, novo, texto)
     return texto
 
@@ -760,6 +773,10 @@ def main():
               else ("--previa" in args))
     args = [a for a in args if a not in ("--previa", "--entrega", "--so-legenda")]
     cfg = json.load(open(args[0], encoding="utf-8"))
+    global IDIOMA
+    IDIOMA = cfg.get("idioma", "pt")
+    if IDIOMA == "es":
+        LIGACAO.update(LIGACAO_ES)
     so = args[1:] or None
     for v in cfg["videos"]:
         if so and not any(x in v["saida"] for x in so):
