@@ -157,8 +157,15 @@ def quebrar_linhas(texto):
     palavras = texto.split()
     melhor, dif = texto, 10 ** 9
     for i in range(1, len(palavras)):
+        # quantidade nunca quebra de linha no meio ("2" numa linha e "mL" na outra)
+        if eh_unidade(palavras[i]) and eh_numero(palavras[i - 1]) or \
+                palavras[i].strip(",").lower() in ("e", "vírgula", "meio", "meia") and eh_numero(palavras[i - 1]) or \
+                eh_numero(palavras[i]) and palavras[i - 1].lower() in ("e", "vírgula") and i > 1 and eh_numero(palavras[i - 2]):
+            continue
         l1, l2 = " ".join(palavras[:i]), " ".join(palavras[i:])
         d = abs(len(l1) - len(l2)) + (0 if len(l1) <= len(l2) + 4 else 3)
+        # linha não termina em preposição ou artigo ("1,2 mL de / lidocaína")
+        d += 8 if re.sub(r"[^\w]", "", palavras[i - 1]).lower() in LIGACAO else 0
         if d < dif:
             melhor, dif = l1 + r"\N" + l2, d
     return melhor
@@ -361,6 +368,94 @@ def numerar_enumeracao(palavras):
     return palavras
 
 
+# Quantidade = número + unidade ("2 mL", "meio mL", "1,5 mL", "1 e meio mL", "duas unidades", "20 mg",
+# "1%"). Nunca se separa na legenda (Keila, 05/10/2026, pasta 2 vídeo 2: o "2" entrava antes de o Dr.
+# falar, no fim do bloco anterior, e quando ele falava aparecia só "mL"). O Whisper dá ao número um
+# tempo adiantado; a unidade e a voz medida no áudio é que dizem quando a quantidade é falada.
+NUM_EXTENSO = set(NUMEROS) | {"uma", "duas", "meio", "meia", "zero", "treze", "quatorze", "catorze", "quinze",
+                              "dezesseis", "dezessete", "dezoito", "dezenove", "vinte", "trinta", "quarenta",
+                              "cinquenta", "cem", "cento", "duzentos", "duzentas"}
+UNIDADE_RX = re.compile(r"^(?:m[lL]|mL|ML|mg|mgs|U|UI|ui|%|cm|mm|mililitros?|miligramas?|unidades?|"
+                        r"centímetros?|milímetros?|seringas?|ampolas?)$")
+
+
+def _chave_qtd(w):
+    return re.sub(r"[^\w,%]", "", w).strip(",").lower() if w.strip() != "%" else "%"
+
+
+def eh_numero(w):
+    k = _chave_qtd(w)
+    return bool(re.fullmatch(r"\d+(?:[.,]\d+)?%?", k)) or k in NUM_EXTENSO
+
+
+def eh_unidade(w):
+    k = re.sub(r"[^\w%]", "", w)
+    return bool(UNIDADE_RX.match(k)) or bool(UNIDADE_RX.match(k.lower()))
+
+
+def juntar_quantidades(palavras, db=None, limiar=None, passo=0.05):
+    """Junta número e unidade num item só ("2" + "mL" = "2 mL", "1" + "e" + "meio" + "mL"), com o
+    início ancorado no tempo real da fala: quando o número vem colado na unidade na transcrição, vale
+    o tempo do número; quando vem descolado (tempo adiantado do Whisper), o início é a voz medida no
+    áudio logo antes da unidade, no máximo o tempo de falar o número."""
+    saida, i = [], 0
+    while i < len(palavras):
+        p = palavras[i]
+        if not eh_numero(p["w"]):
+            saida.append(p)
+            i += 1
+            continue
+        j = i
+        # "1 e meio", "um vírgula cinco", "0 ,2"
+        while j + 2 < len(palavras) and _chave_qtd(palavras[j + 1]["w"]) in ("e", "vírgula", "virgula") \
+                and eh_numero(palavras[j + 2]["w"]) and palavras[j + 2]["s"] - palavras[j]["e"] < 1.0:
+            j += 2
+        u = j + 1
+        if u >= len(palavras) or not eh_unidade(palavras[u]["w"]) or palavras[u]["s"] - palavras[j]["e"] > 2.5:
+            saida.append(p)
+            i += 1
+            continue
+        fim = u
+        # "2 mL e meio"
+        if fim + 2 < len(palavras) and _chave_qtd(palavras[fim + 1]["w"]) == "e" \
+                and _chave_qtd(palavras[fim + 2]["w"]) in ("meio", "meia") and palavras[fim + 2]["s"] - palavras[fim]["e"] < 0.8:
+            fim += 2
+        grupo = palavras[i:fim + 1]
+        un = palavras[u]
+        texto = " ".join(re.sub(r"[.?!]+$", "", g["w"].strip()) if k < len(grupo) - 1 else g["w"].strip()
+                         for k, g in enumerate(grupo))
+        # tempo de falar o número: "dois" ~0,4 s; "zero vírgula três" ~0,85 s
+        dur_num = 0.0
+        for g in palavras[i:u]:
+            k = _chave_qtd(g["w"])
+            dur_num += 0.15 if k in ("e", "vírgula", "virgula") else \
+                0.4 + 0.45 * len(re.findall(r"[.,]\d", k)) + 0.1 * max(0, len(re.sub(r"\D", "", k)) - 2)
+        dur_num = min(1.4, dur_num)
+        ant_e = saida[-1]["e"] if saida else -9.0
+        s = p["s"]
+        if un["s"] - palavras[j]["e"] > 0.25 or un["s"] - p["s"] > dur_num + 0.6:
+            # número descolado da unidade (tempo adiantado ou esticado pelo Whisper): o início é
+            # a voz que volta depois do último silêncio antes da unidade
+            s = un["s"] - dur_num
+            if db is not None:
+                k1 = int(un["s"] / passo)
+                k0 = max(0, int((un["s"] - dur_num - 0.3) / passo))
+                mudo = [x for x in range(k0, k1) if db[x] < limiar - 6]
+                ult = None
+                for x in mudo:
+                    if x + 1 < k1 and x - 2 >= 0 and all(db[y] < limiar - 6 for y in range(x - 2, x + 1)):
+                        ult = x
+                if ult is not None:
+                    s = (ult + 1) * passo - 0.05
+            s = max(s, ant_e)
+        novo = dict(p, w=(" " if p["w"].startswith(" ") else "") + texto, s=min(s, un["s"]),
+                    e=grupo[-1]["e"], e0=grupo[-1].get("e0", grupo[-1]["e"]), ini=p.get("ini", False),
+                    qtd=True)
+        saida.append(novo)
+        i = fim + 1
+    return saida
+
+
 def corrigir(texto, extras=()):
     for padrao, novo in list(CORRECOES) + [tuple(x) for x in extras]:
         texto = re.sub(padrao, novo, texto)
@@ -469,7 +564,29 @@ def formatar_titulo(v):
     return titulo
 
 
-def gerar_ass(v, palavras, duracao, caminho):
+ANTECIPA = 0.15   # legenda entra um pouco antes da voz: entrar no instante exato já parece atrasado
+
+
+def gerar_ass(v, palavras, duracao, caminho, voz=None):
+    """voz = (db, limiar, passo) do áudio na linha do tempo editada: o início de cada bloco vai
+    para o começo real da voz (a transcrição às vezes marca a 1ª palavra até 0,5 s depois) e a
+    legenda entra ANTECIPA s antes (Keila, 05/10/2026: "legendas um pouco atrasadas")."""
+    anterior = {}
+    for k, p in enumerate(palavras):
+        anterior[id(p)] = palavras[k - 1]["e"] if k else 0.0
+
+    def inicio(bloco):
+        s0 = bloco[0]["s"]
+        if voz is not None:
+            db, lim, ps = voz
+            i = k = min(len(db) - 1, int(s0 / ps))
+            while k > 0 and (i - k) * ps < 0.6 and any(db[j] >= lim - 3 for j in range(max(0, k - 3), k)):
+                k -= 1
+            if k * ps < s0 - 0.1 and k * ps >= anterior.get(id(bloco[0]), 0.0):
+                s0 = k * ps
+        # antecipa, mas sem tirar da tela a fala anterior antes de ela terminar
+        return max(s0 - ANTECIPA, min(s0, anterior.get(id(bloco[0]), 0.0)))
+
     linhas = [ass_header()]
     titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
@@ -488,14 +605,16 @@ def gerar_ass(v, palavras, duracao, caminho):
             carry = []
         if bloco[-1]["e"] <= TITULO_DUR:       # fala debaixo do título (padrão: sem legenda)
             continue
-        s, e = max(bloco[0]["s"], TITULO_DUR, livre), bloco[-1]["e"] + 0.15
+        s, e = max(inicio(bloco), TITULO_DUR, livre), bloco[-1]["e"] + 0.15
         prox = blocos[i + 1] if i + 1 < len(blocos) else None
         if prox:
-            e = min(e, prox[0]["s"])
+            e = min(e, inicio(prox))
         if s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
-        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
+        # conectivo solto não aparece, mas "Uma." falado sozinho é contagem (uma unidade), fica
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"} \
+                and not (bloco[0]["w"].strip()[-1:] in ".?!" and eh_numero(bloco[0]["w"])):
             continue
         texto = quebrar_linhas(limpar(pontuar(corrigir(juntar_texto(bloco), v.get("correcoes", ())))))
         minimo = max(0.2, 0.02 * len(texto), 0.45 if len(bloco) == 1 else 0)
@@ -693,6 +812,10 @@ def renderizar(cfg, v, previa=False):
                 p.update(s=s1, e=s1 + d, e0=s1 + d)
     palavras.sort(key=lambda p: p["s"])
     palavras = numerar_enumeracao(palavras)
+    # número e unidade viram um item só, antes de ancorar na voz: sozinho, o número com tempo
+    # adiantado saía no fim do bloco anterior (ou sumia no silêncio) e a unidade ficava só
+    if "legendas" not in v:
+        palavras = juntar_quantidades(palavras, *db_voz)
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
@@ -703,7 +826,9 @@ def renderizar(cfg, v, previa=False):
         palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
-    gerar_ass(v, palavras, duracao, ass)
+    import numpy as np
+    db_ed = np.concatenate([db_voz[0][int(a / db_voz[2]):int(b / db_voz[2])] for a, b in v["manter"]])
+    gerar_ass(v, palavras, duracao, ass, voz=(db_ed, db_voz[1], db_voz[2]))
     if previa == "legenda":   # só o .ass, para revisar o texto antes de renderizar
         return duracao
 
