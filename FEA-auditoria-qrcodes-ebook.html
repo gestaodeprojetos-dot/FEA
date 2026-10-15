@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria QR Codes - Ebook Intercorrências</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --roxo: #5B4599;
+  --azul-violeta: #3846BB;
+  --lavanda: #D0D1E9;
+  --vermelho: #BB3838;
+  --vermelho-bg: #FFF0F0;
+  --verde: #2E7D32;
+  --verde-bg: #F0FFF0;
+  --amarelo: #F9A825;
+  --amarelo-bg: #FFFDE7;
+  --off-white: #F9F9F9;
+  --cinza-claro: #E9E9E9;
+  --cinza-texto: #555;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--off-white);
+  color: #333;
+  line-height: 1.6;
+  padding: 16px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  color: var(--roxo);
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--cinza-texto);
+  margin-bottom: 24px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  border: 1px solid var(--cinza-claro);
+}
+
+.card-number {
+  font-family: 'Sora', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  color: var(--cinza-texto);
+  margin-top: 4px;
+}
+
+.card-ok .card-number { color: var(--verde); }
+.card-broken .card-number { color: var(--vermelho); }
+.card-pending .card-number { color: var(--amarelo); }
+.card-total .card-number { color: var(--roxo); }
+
+h2 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  color: var(--roxo);
+  font-size: 1.2rem;
+  margin: 28px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--lavanda);
+}
+
+.alert-box {
+  background: var(--vermelho-bg);
+  border-left: 4px solid var(--vermelho);
+  border-radius: 0 8px 8px 0;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.alert-box h3 {
+  font-family: 'Sora', sans-serif;
+  color: var(--vermelho);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.alert-box p {
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.alert-box code {
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  word-break: break-all;
+}
+
+.fix-suggestion {
+  background: var(--verde-bg);
+  border-left: 4px solid var(--verde);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.fix-suggestion strong { color: var(--verde); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.82rem;
+}
+
+thead th {
+  background: var(--roxo);
+  color: #fff;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  padding: 10px 8px;
+  text-align: left;
+}
+
+thead th:first-child { border-radius: 8px 0 0 0; }
+thead th:last-child { border-radius: 0 8px 0 0; }
+
+td {
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--cinza-claro);
+  vertical-align: top;
+}
+
+tr:nth-child(even) { background: #fff; }
+
+.status-ok {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.status-broken {
+  color: var(--vermelho);
+  font-weight: 600;
+}
+
+.status-pending {
+  color: var(--amarelo);
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-video { background: #E8EAF6; color: var(--azul-violeta); }
+.badge-article { background: #F3E5F5; color: var(--roxo); }
+
+.url-cell {
+  word-break: break-all;
+  font-size: 0.75rem;
+  font-family: monospace;
+}
+
+.section-note {
+  background: var(--amarelo-bg);
+  border-left: 4px solid var(--amarelo);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.section-note strong { color: #E65100; }
+
+.footer {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--cinza-texto);
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--cinza-claro);
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.3rem; }
+  .summary-cards { grid-template-columns: repeat(2, 1fr); }
+  table { font-size: 0.75rem; }
+  td, th { padding: 6px 4px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Auditoria de QR Codes</h1>
+<p class="subtitle">Ebook "Intercorrências no Preenchimento com Ácido Hialurônico" &mdash; Dr. João Pithon &mdash; 02/10/2026</p>
+
+<div class="summary-cards">
+  <div class="card card-total">
+    <div class="card-number">21</div>
+    <div class="card-label">QR Codes no ebook</div>
+  </div>
+  <div class="card card-ok">
+    <div class="card-number">5</div>
+    <div class="card-label">Verificados OK</div>
+  </div>
+  <div class="card card-broken">
+    <div class="card-number">2</div>
+    <div class="card-label">Links quebrados</div>
+  </div>
+  <div class="card card-pending">
+    <div class="card-number">14</div>
+    <div class="card-label">Pendentes de decodificação</div>
+  </div>
+</div>
+
+<h2>Links Quebrados (ação imediata)</h2>
+
+<div class="alert-box">
+  <h3>QR Code da Página 61 &mdash; Artigo sobre complicações isquêmicas</h3>
+  <p><strong>URL no QR code:</strong></p>
+  <p><code>https://drive.google.com/file/d/1WPpBXXtYISZ68Pf8ak2V2kKkPcLS_GuK/view</code></p>
+  <p><strong>Status:</strong> Arquivo deletado ou sem permissão. Retorna "Not Found" no Drive.</p>
+  <p><strong>Contexto no ebook:</strong> "Este QR code direciona para um artigo científico que revisa de forma abrangente as complicações isquêmicas associadas aos preenchedores dérmicos." Menciona o artigo "Ischemic Complications of Dermal Fillers".</p>
+  <div class="fix-suggestion">
+    <strong>Correção sugerida:</strong> Substituir pelo arquivo <code>Ischemic_complications_of_dermal_fillers.pdf</code> encontrado no Drive (ID: <code>1IQ-osnYyMdlCR511_SwOqVRdPjxqD3AI</code>). URL correta: <code>https://drive.google.com/file/d/1IQ-osnYyMdlCR511_SwOqVRdPjxqD3AI/view</code>. Confirmar com o diagramador (André Vivas) antes de regerar o QR code.
+  </div>
+</div>
+
+<div class="alert-box">
+  <h3>QR Code da Página 64 &mdash; Artigo sobre oclusão arterial oftálmica</h3>
+  <p><strong>URL no QR code:</strong></p>
+  <p><code>https://drive.google.com/file/d/1k9pgxv8gf8-mBA-jTmHvmZ7dFqFcRbQs/view</code></p>
+  <p><strong>Status:</strong> Arquivo deletado ou sem permissão. Retorna "Not Found" no Drive.</p>
+  <p><strong>Contexto no ebook:</strong> "Este QR code direciona para um artigo científico que aprofunda a compreensão sobre a oclusão arterial oftálmica e retiniana associada a preenchimentos faciais" com "achados angiográficos cerebrais e oftálmicos".</p>
+  <div class="fix-suggestion">
+    <strong>Correção sugerida:</strong> Substituir pelo arquivo <code>jkms-30-1847.pdf</code> ("Cerebral Angiographic Findings of Cosmetic Facial Filler-related Ophthalmic and Retinal Artery Occlusion", Kim et al., J Korean Med Sci 2015). ID: <code>1DLM3QIm8ui-37tXlv33AazCSiK57hIgP</code>. URL correta: <code>https://drive.google.com/file/d/1DLM3QIm8ui-37tXlv33AazCSiK57hIgP/view</code>. Confirmar com o diagramador antes de regerar o QR code.
+  </div>
+</div>
+
+<h2>QR Codes Verificados (páginas 37 a 66)</h2>
+
+<p style="font-size:0.85rem;margin-bottom:12px;">Estes QR codes foram decodificados diretamente do PDF e suas URLs verificadas uma a uma.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Pág.</th>
+  <th>Tipo</th>
+  <th>Conteúdo esperado</th>
+  <th>URL decodificada</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>37</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Mecanismos de Segurança com Cânulas</td>
+  <td class="url-cell">youtube.com/watch?v=_yWZEknxYqo</td>
+  <td class="status-ok">OK</td>
+</tr>
+<tr>
+  <td>40</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>molecules-27-05398.pdf (Bridging a Century-Old Problem)</td>
+  <td class="url-cell">drive.google.com/file/d/1tHj3C58l9NhqokvQBIisp-RO25MrDGfp/view</td>
+  <td class="status-ok">OK</td>
+</tr>
+<tr>
+  <td>43</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Rinomodelação: Agulha ou Cânula?</td>
+  <td class="url-cell">youtube.com/watch?v=NCHkXFLKZds</td>
+  <td class="status-ok">OK</td>
+</tr>
+<tr>
+  <td>45</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Preenchimento Full Face Guiado por Ultrassom ao Vivo</td>
+  <td class="url-cell">youtube.com/watch?v=QocyeCsLs9M</td>
+  <td class="status-ok">OK</td>
+</tr>
+<tr>
+  <td>61</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>Ischemic Complications of Dermal Fillers</td>
+  <td class="url-cell">drive.google.com/file/d/1WPpBXXtYISZ68Pf8ak2V2kKkPcLS_GuK/view</td>
+  <td class="status-broken">QUEBRADO</td>
+</tr>
+<tr>
+  <td>63</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Amaurose: Protocolo de Manejo das Complicações</td>
+  <td class="url-cell">youtube.com/watch?v=GnGMUiPcoC0</td>
+  <td class="status-ok">OK</td>
+</tr>
+<tr>
+  <td>64</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>Oclusão arterial oftálmica e retiniana (achados angiográficos)</td>
+  <td class="url-cell">drive.google.com/file/d/1k9pgxv8gf8-mBA-jTmHvmZ7dFqFcRbQs/view</td>
+  <td class="status-broken">QUEBRADO</td>
+</tr>
+</tbody>
+</table>
+
+<h2>QR Codes Pendentes de Decodificação (páginas 1 a 36)</h2>
+
+<div class="section-note">
+  <strong>Limitação técnica:</strong> O PDF parcial das páginas 1 a 36 tem 8,7 MB, acima do limite de transferência do conector Google Drive nesta sessão (timeout recorrente). Os QR codes dessas páginas foram mapeados pelo texto do ebook, mas os URLs exatos não puderam ser decodificados. Para completar a auditoria, é necessário abrir manualmente cada QR code no celular ou fornecer o PDF por outro canal.
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>Pág. aprox.</th>
+  <th>Tipo</th>
+  <th>Conteúdo esperado (pelo texto do ebook)</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>~13</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>"Bridging a Century-Old Problem" (Danny J. Soares) sobre oclusão vascular por AH. Provavelmente aponta para molecules-27-05398.pdf.</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~15</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Introdução ao Raciocínio Clínico de Complicações Agudas Isquêmicas (Dr. João Pithon)</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~17</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>Protocolo HDPH (High Dose Pulsed Hyaluronidase), Claudio DeLorenzi. Provavelmente aponta para "ARTIGO 1 DELORENZI HIALU .pdf" ou "dilorenzi compl (1).pdf".</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~21</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>FOEM Scoring System (243 cases). Provavelmente aponta para "Patterns_of_Filler_Induced_Facial_Skin_Ischemia__A.15.pdf".</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~23</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>"Ischemic Complications of Dermal Fillers". Provavelmente aponta para "Ischemic_complications_of_dermal_fillers.pdf". Se usar o mesmo link da pág. 61, estará quebrado.</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~26</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>FOEM Scoring System (2ª referência). Provavelmente mesmo artigo da pág. ~21.</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~29</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Revisão Anatômica Global da Face: Vascularização (Dr. João Pithon)</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~30</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>"Bridging a Century-Old Problem" (mecanismos moleculares). Provavelmente mesmo artigo da pág. ~13.</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~31</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Hialuronidase: uso clínico no manejo de complicações (Dr. João Pithon)</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~34</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Rinomodelação: Protocolo e Manejo de Complicações (Dr. João Pithon)</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~36</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>Consensus Guidelines for HA Filler Vascular Occlusion (DeLorenzi 2014). Provavelmente aponta para "delorenzi2014.pdf".</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+</tbody>
+</table>
+
+<h2>QR Codes Pendentes de Decodificação (páginas 67+)</h2>
+
+<div class="section-note">
+  <strong>Limitação técnica:</strong> Não existe PDF parcial para as páginas 67 em diante. O PDF completo tem 28 MB (acima do limite de 10 MB do conector). Mesma necessidade de verificação manual ou envio por outro canal.
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>Pág. aprox.</th>
+  <th>Tipo</th>
+  <th>Conteúdo esperado (pelo texto do ebook)</th>
+  <th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>~67</td>
+  <td><span class="badge badge-article">Artigo</span></td>
+  <td>"Cerebral Angiographic Findings" (achados angiográficos cerebrais, oclusão artéria oftálmica). Provavelmente aponta para jkms-30-1847.pdf. Se usar o mesmo link da pág. 64, estará quebrado.</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~73</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Vídeo 9: Complexo Vascular Nasoglabelar (Dr. João Pithon, dissecação anatômica)</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~79</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Vídeo 10: Complicações Agudas Não Isquêmicas, Parte 1</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+<tr>
+  <td>~80</td>
+  <td><span class="badge badge-video">Vídeo</span></td>
+  <td>Vídeo 11: Complicações Agudas Não Isquêmicas, Parte 2</td>
+  <td class="status-pending">Pendente</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Mapa de Artigos no Google Drive</h2>
+
+<p style="font-size:0.85rem;margin-bottom:12px;">Artigos encontrados na pasta de referências do ebook (ID da pasta: <code>1iL4RhOyfqvHZPfCV5Z4ot48FLd2GYYRa</code>). Todos os arquivos abaixo existem e estão acessíveis.</p>
+
+<table>
+<thead>
+<tr>
+  <th>#</th>
+  <th>Arquivo</th>
+  <th>Conteúdo</th>
+  <th>Tamanho</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>molecules-27-05398.pdf</td><td>Bridging a Century-Old Problem (Danny J. Soares)</td><td>8,2 MB</td></tr>
+<tr><td>2</td><td>ARTIGO 1 DELORENZI HIALU .pdf</td><td>DeLorenzi: HDPH Protocol (hialuronidase pulsada)</td><td>830 KB</td></tr>
+<tr><td>3</td><td>Patterns_of_Filler_Induced_Facial_Skin_Ischemia__A.15.pdf</td><td>FOEM Scoring System (243 cases)</td><td>1,7 MB</td></tr>
+<tr><td>4</td><td>Ischemic_complications_of_dermal_fillers.pdf</td><td>Ischemic Complications of Dermal Fillers (revisão)</td><td>2,7 MB</td></tr>
+<tr><td>5</td><td>jkms-30-1847.pdf</td><td>Cerebral Angiographic Findings (Kim et al., 2015)</td><td>4,5 MB</td></tr>
+<tr><td>6</td><td>delorenzi2014.pdf</td><td>DeLorenzi 2014 (consensus guidelines)</td><td>1,5 MB</td></tr>
+<tr><td>7</td><td>HIALURONIDASE REVISAO.pdf</td><td>Revisão sobre hialuronidase</td><td>666 KB</td></tr>
+<tr><td>8</td><td>ARTIGO 2015 FILLERS COMPLICATIONS.pdf</td><td>Artigo 2015 sobre complicações com fillers</td><td>2,5 MB</td></tr>
+<tr><td>9</td><td>woodward2015 FILLERS COMPLICATIONS.pdf</td><td>Woodward 2015: fillers complications</td><td>2,4 MB</td></tr>
+<tr><td>10</td><td>lafaille2010.pdf</td><td>LaFaille 2010</td><td>1,3 MB</td></tr>
+</tbody>
+</table>
+
+<h2>Recomendações</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Prioridade</th>
+  <th>Ação</th>
+  <th>Responsável sugerido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="color:var(--vermelho);font-weight:600;">URGENTE</td>
+  <td>Corrigir QR code da página 61: regerar com URL do arquivo <code>Ischemic_complications_of_dermal_fillers.pdf</code> (confirmar ID correto com a equipe). Depois, rediagramar a página e gerar novo PDF.</td>
+  <td>André Vivas (web/design) + Gabriela Costa (edição)</td>
+</tr>
+<tr>
+  <td style="color:var(--vermelho);font-weight:600;">URGENTE</td>
+  <td>Corrigir QR code da página 64: regerar com URL do arquivo <code>jkms-30-1847.pdf</code> (confirmar ID correto com a equipe). Depois, rediagramar e gerar novo PDF.</td>
+  <td>André Vivas + Gabriela Costa</td>
+</tr>
+<tr>
+  <td style="color:var(--amarelo);font-weight:600;">IMPORTANTE</td>
+  <td>Verificar manualmente (escaneando com celular) os 14 QR codes pendentes nas páginas 1 a 36 e 67+. Registrar os URLs e testar cada um. Se algum apontar para os mesmos IDs quebrados, haverá mais correções.</td>
+  <td>Keila / Livia / Gabrielle</td>
+</tr>
+<tr>
+  <td style="color:var(--amarelo);font-weight:600;">IMPORTANTE</td>
+  <td>Garantir que todos os artigos no Drive tenham permissão "qualquer pessoa com o link pode visualizar". Testar em janela anônima.</td>
+  <td>Keila</td>
+</tr>
+<tr>
+  <td style="color:var(--azul-violeta);font-weight:600;">MELHORIA</td>
+  <td>Considerar migrar os links dos QR codes para URLs encurtadas rastreáveis (por exemplo, bit.ly ou UTMs próprias). Isso permite corrigir destinos sem regerar o QR code e habilita tracking de leitura conforme o padrão de rastreamento do funil FEA.</td>
+  <td>Keila + Júlio Couto (automação)</td>
+</tr>
+<tr>
+  <td style="color:var(--azul-violeta);font-weight:600;">MELHORIA</td>
+  <td>Para a próxima edição do ebook, usar links intermediários (redirect) em vez de links diretos do Drive nos QR codes, para que correções futuras não exijam rediagramação.</td>
+  <td>André Vivas + Keila</td>
+</tr>
+</tbody>
+</table>
+
+<div class="footer">
+  Auditoria gerada em 02/10/2026 &mdash; FEA &mdash; Gestão de Projetos (Keila Quaresma)<br>
+  Ebook: "Intercorrências no Preenchimento com Ácido Hialurônico" &mdash; Dr. João Pithon
+</div>
+
+</div>
+</body>
+</html>
