@@ -1,0 +1,96 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/IMG_7437.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/tr/IMG_7437.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e18/1- Retorno paciente com espasmos.mp4",
+   "titulo": "Retorno paciente com espasmos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     36.8
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/IMG_7439.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/tr/IMG_7439.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e18/2- Relato de caso espasmos faciais.mp4",
+   "titulo": "Relato de caso espasmos faciais",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     115.4
+    ],
+    [
+     143.3,
+     150.85
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/IMG_7441.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/tr/IMG_7441.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e18/3- Planejamento de reavaliação de espasmos.mp4",
+   "titulo": "Planejamento de reavaliação de espasmos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     9.6,
+     138.8
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/IMG_7442.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b18/tr/IMG_7442.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e18/4- Aplicação para equilíbrio dos espasmos.mp4",
+   "titulo": "Aplicação para equilíbrio dos espasmos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     107.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Hh]um(?:an|ul)idade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b[Ss]igo amático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bmodíolos\\b",
+     "modíolo"
+    ],
+    [
+     "\\bGuarda no mentoniano\\b",
+     "Agora no mentoniano"
+    ],
+    [
+     "\\bguarda no mentoniano\\b",
+     "agora no mentoniano"
+    ],
+    [
+     "\\b([Ee]) e agora\\b",
+     "\\1 agora"
+    ]
+   ]
+  }
+ ]
+}

@@ -74,7 +74,7 @@
    "cartela_final": null,
    "manter": [
     [
-     165.0,
+     167.2,
      191.5
     ],
     [
@@ -163,7 +163,8 @@
    "manter": [
     [
      0.0,
-     55.75
+     55.7,
+     "exato"
     ]
    ],
    "correcoes": [
@@ -178,6 +179,12 @@
     [
      "\\b[Vv]amos Dysport nessa\\b",
      "Dysport nessa"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     40.5,
+     42.0
     ]
    ]
   },
@@ -255,14 +262,6 @@
     [
      "\\b[Cc]alda\\b",
      "cauda"
-    ],
-    [
-     "^4 30$",
-     "4"
-    ],
-    [
-     "^[Ee]ntão,? 30\\b",
-     "30"
     ]
    ]
   },
