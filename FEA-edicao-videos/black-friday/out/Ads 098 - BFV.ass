@@ -1,0 +1,44 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Titulo,Montserrat ExtraBold,140,&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+Style: Legenda,Montserrat Bold,56,&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,360,1
+Style: CTA,Montserrat ExtraBold,119,&H00FFFFFF,&H00FFFFFF,&H10000000,&H78000000,0,0,0,0,100,100,0,0,1,5,4,5,80,80,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 1,0:00:00.00,0:00:03.00,Titulo,,0,0,0,,{\fad(0,250)}Todos os cursos,\Npara o resto da vida
+Dialogue: 0,0:00:04.00,0:00:06.00,Legenda,,0,0,0,,então vou\Ncolocar aqui até
+Dialogue: 0,0:00:06.00,0:00:08.00,Legenda,,0,0,0,,o bonezinho para\Nlembrar vocês que dia 20
+Dialogue: 0,0:00:08.00,0:00:10.50,Legenda,,0,0,0,,do 10 eu vou abrir as\Ninscrições para você
+Dialogue: 0,0:00:10.50,0:00:13.00,Legenda,,0,0,0,,comprar o seu último\Ncurso de harmonização
+Dialogue: 0,0:00:13.00,0:00:14.00,Legenda,,0,0,0,,facial da vida
+Dialogue: 0,0:00:14.00,0:00:17.00,Legenda,,0,0,0,,o curso vitalício vai\Nte dar acesso a todos
+Dialogue: 0,0:00:17.00,0:00:18.50,Legenda,,0,0,0,,os cursos\Nque eu já fiz
+Dialogue: 0,0:00:18.50,0:00:20.50,Legenda,,0,0,0,,todos que eu for fazer\Ncom acesso vitalício
+Dialogue: 0,0:00:21.00,0:00:22.50,Legenda,,0,0,0,,ou seja
+Dialogue: 0,0:00:23.00,0:00:25.50,Legenda,,0,0,0,,todas as abordagens,\Ntodos os cursos
+Dialogue: 0,0:00:25.50,0:00:27.50,Legenda,,0,0,0,,todas as técnicas
+Dialogue: 0,0:00:27.50,0:00:29.00,Legenda,,0,0,0,,todas as novidades
+Dialogue: 0,0:00:29.00,0:00:31.50,Legenda,,0,0,0,,todas as atualizações\Npara o resto da vida
+Dialogue: 0,0:00:31.50,0:00:33.50,Legenda,,0,0,0,,se inscrevendo dia\N20 de outubro e nunca
+Dialogue: 0,0:00:33.50,0:00:35.50,Legenda,,0,0,0,,mais precisando\Npagar um real a mais
+Dialogue: 0,0:00:35.50,0:00:36.50,Legenda,,0,0,0,,por isso
+Dialogue: 0,0:00:36.50,0:00:38.50,Legenda,,0,0,0,,então aproveita\Nessa oportunidade
+Dialogue: 0,0:00:38.50,0:00:40.50,Legenda,,0,0,0,,dia 20 de outubro eu\Nvou fazer uma live
+Dialogue: 0,0:00:40.50,0:00:41.00,Legenda,,0,0,0,,de abertura
+Dialogue: 0,0:00:41.00,0:00:43.50,Legenda,,0,0,0,,onde você vai entender\Nmelhor todos os bônus
+Dialogue: 0,0:00:43.50,0:00:45.50,Legenda,,0,0,0,,teremos bônus\Npresenciais
+Dialogue: 0,0:00:45.50,0:00:48.50,Legenda,,0,0,0,,teremos bônus especiais\Ncomo pós-graduação
+Dialogue: 0,0:00:48.50,0:00:49.00,Legenda,,0,0,0,,incluída
+Dialogue: 0,0:00:49.00,0:00:51.50,Legenda,,0,0,0,,então assim, é muita,\Nmuita, muita coisa
+Dialogue: 0,0:00:51.50,0:00:54.00,Legenda,,0,0,0,,inclusive é até\Nassustador o que eu estou
+Dialogue: 0,0:00:54.00,0:00:54.50,Legenda,,0,0,0,,fazendo
+Dialogue: 0,0:00:54.50,0:00:54.89,Legenda,,0,0,0,,isso é loucura, não\Nperca essa oportunidade
+Dialogue: 1,0:00:54.89,0:00:59.89,CTA,,0,0,0,,{\fad(250,0)}Toque em\NSaiba Mais

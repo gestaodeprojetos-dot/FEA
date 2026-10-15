@@ -6,7 +6,7 @@
 set -euo pipefail
 TRAB="${1:?informe a pasta de trabalho}"
 mkdir -p "$TRAB/fonts"
-pip install -q imageio-ffmpeg faster-whisper pillow numpy scipy 2>&1 | grep -v WARNING || true
+pip install -q imageio-ffmpeg faster-whisper pillow numpy scipy google-auth requests 2>&1 | grep -v WARNING || true
 FF=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
 echo "F=$FF" > "$TRAB/env.sh"
 for p in ExtraBold Bold SemiBold Medium; do
