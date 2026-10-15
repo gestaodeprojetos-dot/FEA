@@ -1,0 +1,2297 @@
+[
+{
+"id": "p112_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p112_03",
+"pt": "Síncope vasovagal: pode cursar com movimentos mioclônicos breves, mas a recuperação é rápida e sem fase pós-ictal prolongada. •",
+"es": "Síncope vasovagal: puede cursar con movimientos mioclónicos breves, pero la recuperación es rápida y sin fase posictal prolongada."
+},
+{
+"id": "p112_04",
+"pt": "Crise de pânico: tremores, hiperventilação e ansiedade, sem perda de consciência completa. •",
+"es": "Crisis de pánico: temblores, hiperventilación y ansiedad, sin pérdida completa de la conciencia."
+},
+{
+"id": "p112_05",
+"pt": "Distúrbios de movimento não epilépticos: mioclonias isoladas, sem padrão de crise generalizada. •",
+"es": "Trastornos del movimiento no epilépticos: mioclonías aisladas, sin patrón de crisis generalizada."
+},
+{
+"id": "p112_06",
+"pt": "Hipoglicemia grave: confusão mental, tremores, sudorese, mas geralmente sem atividade clínica típica.",
+"es": "Hipoglucemia grave: confusión mental, temblores, sudoración, pero en general sin actividad clínica típica."
+},
+{
+"id": "p112_07",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p112_09",
+"pt": "Interromper imediatamente o procedimento. •",
+"es": "Interrumpir de inmediato el procedimiento."
+},
+{
+"id": "p112_10",
+"pt": "Proteger o paciente contra traumas: afastar objetos, posicionar em superfície segura. •",
+"es": "Proteger al paciente contra traumatismos: apartar objetos, colocarlo sobre una superficie segura."
+},
+{
+"id": "p112_11",
+"pt": "Não conter os movimentos, apenas proteger a cabeça. •",
+"es": "No sujetar los movimientos, solo proteger la cabeza."
+},
+{
+"id": "p112_12",
+"pt": "Não colocar objetos na boca. •",
+"es": "No colocar objetos en la boca."
+},
+{
+"id": "p112_13",
+"pt": "Posição lateral de segurança após a crise, para evitar aspiração. •",
+"es": "Posición lateral de seguridad tras la crisis, para evitar aspiración."
+},
+{
+"id": "p112_14",
+"pt": "Avaliar vias aéreas, respiração e circulação. •",
+"es": "Evaluar vía aérea, respiración y circulación."
+},
+{
+"id": "p112_15",
+"pt": "Oxigenoterapia suplementar. •",
+"es": "Oxigenoterapia suplementaria."
+},
+{
+"id": "p112_16",
+"pt": "Aguardar término da crise: a maioria cessa espontaneamente em até 2 minutos.",
+"es": "Esperar el fin de la crisis: la mayoría cede espontáneamente en un plazo de 2 minutos."
+},
+{
+"id": "p112_17",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p112_18",
+"pt": "Se a crise durar mais de 5 minutos ou ocorrerem crises repetidas (status epilepticus): •",
+"es": "Si la crisis dura más de 5 minutos o se producen crisis repetidas (status epilepticus):"
+},
+{
+"id": "p112_19",
+"pt": "Benzodiazepínicos EV (diazepam 10 mg ou midazolam 5 mg).",
+"es": "Benzodiacepinas IV (diazepam 10 mg o midazolam 5 mg)."
+},
+{
+"id": "p113_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p113_03",
+"pt": "Repetir após 5–10 minutos, se necessário. •",
+"es": "Repetir a los 5 a 10 minutos, si es necesario."
+},
+{
+"id": "p113_04",
+"pt": "Verificar glicemia capilar: corrigir hipoglicemia com glicose EV. •",
+"es": "Medir la glucemia capilar: corregir la hipoglucemia con glucosa IV."
+},
+{
+"id": "p113_05",
+"pt": "Encaminhamento hospitalar para investigação e suporte avançado. •",
+"es": "Derivación hospitalaria para estudio y soporte avanzado."
+},
+{
+"id": "p113_06",
+"pt": "Monitorização cardíaca e respiratória.",
+"es": "Monitorización cardíaca y respiratoria."
+},
+{
+"id": "p113_07",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p113_09",
+"pt": "Traumatismos (queda da maca, mordedura de língua). •",
+"es": "Traumatismos (caída de la camilla, mordedura de lengua)."
+},
+{
+"id": "p113_10",
+"pt": "Aspiração de secreções ou conteúdo gástrico. •",
+"es": "Aspiración de secreciones o de contenido gástrico."
+},
+{
+"id": "p113_11",
+"pt": "Evolução para status epilepticus. •",
+"es": "Evolución a status epilepticus."
+},
+{
+"id": "p113_12",
+"pt": "Hipóxia cerebral com risco de lesão neurológica.",
+"es": "Hipoxia cerebral con riesgo de lesión neurológica."
+},
+{
+"id": "p113_13",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p113_15",
+"pt": "Anamnese detalhada sobre histórico de epilepsia ou convulsões prévias. •",
+"es": "Anamnesis detallada sobre antecedentes de epilepsia o convulsiones previas."
+},
+{
+"id": "p113_16",
+"pt": "Orientar jejum adequado e evitar hipoglicemia antes do procedimento. •",
+"es": "Indicar un ayuno adecuado y evitar la hipoglucemia antes del procedimiento."
+},
+{
+"id": "p113_17",
+"pt": "Uso criterioso de anestésicos locais (respeitar doses máximas, aspirar antes de infiltrar). •",
+"es": "Uso criterioso de anestésicos locales (respetar las dosis máximas, aspirar antes de infiltrar)."
+},
+{
+"id": "p113_18",
+"pt": "Ambiente tranquilo, com redução de estímulos de ansiedade. •",
+"es": "Ambiente tranquilo, con reducción de los estímulos de ansiedad."
+},
+{
+"id": "p113_19",
+"pt": "Equipe preparada com kit de emergência contendo benzodiazepínicos.",
+"es": "Equipo preparado, con kit de emergencia que contenga benzodiacepinas."
+},
+{
+"id": "p113_20",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p113_22",
+"pt": "Crises isoladas e autolimitadas: prognóstico favorável, sem sequelas.",
+"es": "Crisis aisladas y autolimitadas: pronóstico favorable, sin secuelas."
+},
+{
+"id": "p114_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p114_03",
+"pt": "Status epilepticus ou crises prolongadas: risco de lesão neurológica e óbito se não tratadas. •",
+"es": "Status epilepticus o crisis prolongadas: riesgo de lesión neurológica y muerte si no se tratan."
+},
+{
+"id": "p114_04",
+"pt": "Paciente com epilepsia prévia: deve ser orientado a manter tratamento anticonvulsivante regular.",
+"es": "Paciente con epilepsia previa: se le debe indicar que mantenga el tratamiento anticonvulsivo regular."
+},
+{
+"id": "p114_05",
+"pt": "2.8 SÍNDROME DO PÂNICO / CRISE DE ANSIEDADE",
+"es": "2.8 CRISIS DE PÁNICO / CRISIS DE ANSIEDAD"
+},
+{
+"id": "p114_06",
+"pt": "As crises de ansiedade e síndrome do pânico podem ocorrer antes, durante ou após procedimentos estéticos, sendo mais comuns em pacientes ansiosos, fóbicos de agulha ou com histórico prévio de transtornos psiquiátricos. Embora não representem risco direto de morte, podem simular intercorrências graves (como anafilaxia ou síncope vasovagal), gerar grande desconforto e até interromper o procedimento.",
+"es": "Las crisis de ansiedad y el trastorno de pánico pueden presentarse antes, durante o después de procedimientos estéticos, y son más frecuentes en pacientes ansiosos, con fobia a las agujas o con antecedentes de trastornos psiquiátricos. Si bien no representan un riesgo directo de muerte, pueden simular intercurrencias graves (como anafilaxia o síncope vasovagal), generar gran malestar e incluso interrumpir el procedimiento."
+},
+{
+"id": "p114_07",
+"pt": "Reconhecer rapidamente os sinais e saber diferenciar uma crise psicogênica de uma intercorrência orgânica é fundamental para oferecer segurança ao paciente e evitar condutas desnecessárias.",
+"es": "Reconocer con rapidez los signos y saber diferenciar una crisis psicógena de una intercurrencia orgánica es fundamental para ofrecer seguridad al paciente y evitar conductas innecesarias."
+},
+{
+"id": "p114_08",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p114_09",
+"pt": "A crise de ansiedade ou ataque de pânico envolve uma descarga exagerada do sistema nervoso simpático, com liberação de adrenalina e noradrenalina. Isso resulta em: •",
+"es": "La crisis de ansiedad o ataque de pánico implica una descarga exagerada del sistema nervioso simpático, con liberación de adrenalina y noradrenalina. Esto produce:"
+},
+{
+"id": "p114_10",
+"pt": "Taquicardia e palpitações. •",
+"es": "Taquicardia y palpitaciones."
+},
+{
+"id": "p114_11",
+"pt": "Hiperventilação → alcalose respiratória → parestesias e sensação de falta de ar. •",
+"es": "Hiperventilación: alcalosis respiratoria y, en consecuencia, parestesias y sensación de falta de aire."
+},
+{
+"id": "p114_12",
+"pt": "Tensão muscular, sudorese fria, tremores.",
+"es": "Tensión muscular, sudoración fría, temblores."
+},
+{
+"id": "p115_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p115_03",
+"pt": "Sintomas cognitivos: sensação de morte iminente, desrealização, medo de perder o controle. •",
+"es": "Síntomas cognitivos: sensación de muerte inminente, desrealización, miedo a perder el control."
+},
+{
+"id": "p115_04",
+"pt": "O ciclo se retroalimenta: os sintomas físicos aumentam a ansiedade, que por sua vez intensifica os sintomas físicos. •",
+"es": "El ciclo se retroalimenta: los síntomas físicos aumentan la ansiedad, que a su vez intensifica los síntomas físicos."
+},
+{
+"id": "p115_05",
+"pt": "Áreas/Procedimentos de Maior Risco •",
+"es": "Áreas/procedimientos de mayor riesgo"
+},
+{
+"id": "p115_06",
+"pt": "Pacientes submetidos a procedimentos dolorosos ou demorados (ex.: preenchimento labial, rinomodelação). •",
+"es": "Pacientes sometidos a procedimientos dolorosos o prolongados (p. ej., relleno labial, rinomodelación)."
+},
+{
+"id": "p115_07",
+"pt": "Ambientes de estresse, como primeira experiência estética. •",
+"es": "Ambientes de estrés, como la primera experiencia estética."
+},
+{
+"id": "p115_08",
+"pt": "Pacientes com histórico prévio de ansiedade generalizada, síndrome do pânico ou fobia de agulha.",
+"es": "Pacientes con antecedentes de ansiedad generalizada, trastorno de pánico o fobia a las agujas."
+},
+{
+"id": "p115_09",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p115_11",
+"pt": "Início súbito de sintomas durante ou logo após o procedimento. •",
+"es": "Inicio súbito de los síntomas durante el procedimiento o poco después."
+},
+{
+"id": "p115_12",
+"pt": "Sintomas autonômicos: taquicardia, palpitações, sudorese, tremores, rubor. •",
+"es": "Síntomas autonómicos: taquicardia, palpitaciones, sudoración, temblores, rubor."
+},
+{
+"id": "p115_13",
+"pt": "Sintomas respiratórios: hiperventilação, sensação de falta de ar, aperto torácico. •",
+"es": "Síntomas respiratorios: hiperventilación, sensación de falta de aire, opresión torácica."
+},
+{
+"id": "p115_14",
+"pt": "Sintomas neurológicos: tontura, parestesias em extremidades ou ao redor da boca. •",
+"es": "Síntomas neurológicos: mareo, parestesias en las extremidades o alrededor de la boca."
+},
+{
+"id": "p115_15",
+"pt": "Sintomas psicológicos: medo de morrer, sensação de catástrofe iminente. •",
+"es": "Síntomas psicológicos: miedo a morir, sensación de catástrofe inminente."
+},
+{
+"id": "p115_16",
+"pt": "Ausência de sinais objetivos de choque, broncoespasmo, infecção ou isquemia.",
+"es": "Ausencia de signos objetivos de shock, broncoespasmo, infección o isquemia."
+},
+{
+"id": "p116_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p116_02",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p116_04",
+"pt": "Anafilaxia: presença de urticária, edema, broncoespasmo e hipotensão (não presentes na crise de ansiedade isolada). •",
+"es": "Anafilaxia: presencia de urticaria, edema, broncoespasmo e hipotensión (ausentes en la crisis de ansiedad aislada)."
+},
+{
+"id": "p116_05",
+"pt": "Síndrome vasovagal: cursa com bradicardia e hipotensão, enquanto a crise de ansiedade geralmente apresenta taquicardia e hipertensão leve. •",
+"es": "Síndrome vasovagal: cursa con bradicardia e hipotensión, mientras que la crisis de ansiedad suele presentar taquicardia e hipertensión leve."
+},
+{
+"id": "p116_06",
+"pt": "Convulsão: perda de consciência com movimentos clônicos, seguida de fase pós-ictal, o que não ocorre em crises de ansiedade. •",
+"es": "Convulsión: pérdida de conciencia con movimientos clónicos, seguida de fase posictal, lo que no ocurre en las crisis de ansiedad."
+},
+{
+"id": "p116_07",
+"pt": "Hipoglicemia: pode simular ansiedade (sudorese, tremores), mas confirmada com glicemia capilar baixa.",
+"es": "Hipoglucemia: puede simular ansiedad (sudoración, temblores), pero se confirma con glucemia capilar baja."
+},
+{
+"id": "p116_08",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p116_10",
+"pt": "Interromper o procedimento e transmitir calma e segurança. •",
+"es": "Interrumpir el procedimiento y transmitir calma y seguridad."
+},
+{
+"id": "p116_11",
+"pt": "Colocar o paciente em ambiente tranquilo, ventilado, sentado ou em posição confortável. •",
+"es": "Llevar al paciente a un ambiente tranquilo y ventilado, sentado o en posición cómoda."
+},
+{
+"id": "p116_12",
+"pt": "Orientar respiração controlada (respirar pelo nariz, soltar pela boca, usar técnicas de contagem). •",
+"es": "Indicar respiración controlada (inspirar por la nariz, espirar por la boca, usar técnicas de conteo)."
+},
+{
+"id": "p116_13",
+"pt": "Contato verbal tranquilizador: explicar que é uma reação comum e autolimitada. •",
+"es": "Contacto verbal tranquilizador: explicar que es una reacción frecuente y autolimitada."
+},
+{
+"id": "p116_14",
+"pt": "Monitorar sinais vitais para descartar intercorrência orgânica.",
+"es": "Monitorizar signos vitales para descartar intercurrencia orgánica."
+},
+{
+"id": "p116_15",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p116_17",
+"pt": "Ansiolíticos benzodiazepínicos: em crises intensas ou recorrentes (diazepam 5–10 mg VO ou midazolam 3–5 mg VO/SL).",
+"es": "Ansiolíticos benzodiacepínicos: en crisis intensas o recurrentes (diazepam 5 a 10 mg VO o midazolam 3 a 5 mg VO/SL)."
+},
+{
+"id": "p117_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p117_03",
+"pt": "Oxigenoterapia leve: pode auxiliar em pacientes com hiperventilação persistente. •",
+"es": "Oxigenoterapia leve: puede ayudar en pacientes con hiperventilación persistente."
+},
+{
+"id": "p117_04",
+"pt": "Encaminhamento para avaliação psicológica/psiquiátrica em casos de recorrência. •",
+"es": "Derivación para evaluación psicológica/psiquiátrica en casos de recurrencia."
+},
+{
+"id": "p117_05",
+"pt": "Evitar uso desnecessário de fármacos se a crise responder bem a medidas não farmacológicas.",
+"es": "Evitar el uso innecesario de fármacos si la crisis responde bien a medidas no farmacológicas."
+},
+{
+"id": "p117_06",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p117_08",
+"pt": "Interrupção ou falha do procedimento. •",
+"es": "Interrupción o fracaso del procedimiento."
+},
+{
+"id": "p117_09",
+"pt": "Recorrência em atendimentos futuros (condicionamento psicológico negativo). •",
+"es": "Recurrencia en atenciones futuras (condicionamiento psicológico negativo)."
+},
+{
+"id": "p117_10",
+"pt": "Diagnóstico incorreto de anafilaxia, levando a tratamentos invasivos desnecessários. •",
+"es": "Diagnóstico erróneo de anafilaxia, que lleva a tratamientos invasivos innecesarios."
+},
+{
+"id": "p117_11",
+"pt": "Impacto emocional duradouro (medo de novas crises ou fobia do ambiente clínico).",
+"es": "Impacto emocional duradero (miedo a nuevas crisis o fobia al ambiente clínico)."
+},
+{
+"id": "p117_12",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p117_14",
+"pt": "Anamnese psiquiátrica prévia: questionar histórico de ansiedade, pânico ou uso de psicotrópicos. •",
+"es": "Anamnesis psiquiátrica previa: preguntar por antecedentes de ansiedad, pánico o uso de psicofármacos."
+},
+{
+"id": "p117_15",
+"pt": "Preparação psicológica: explicar etapas do procedimento para reduzir insegurança. •",
+"es": "Preparación psicológica: explicar las etapas del procedimiento para reducir la inseguridad."
+},
+{
+"id": "p117_16",
+"pt": "Ambiente calmo: reduzir estímulos estressores (barulhos, excesso de pessoas). •",
+"es": "Ambiente calmo: reducir los estímulos estresores (ruidos, exceso de personas)."
+},
+{
+"id": "p117_17",
+"pt": "Acompanhamento de pessoa de confiança em pacientes muito ansiosos.",
+"es": "Presencia de una persona de confianza en pacientes muy ansiosos."
+},
+{
+"id": "p118_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p118_03",
+"pt": "Técnicas de respiração e mindfulness antes e durante o procedimento.",
+"es": "Técnicas de respiración y mindfulness antes y durante el procedimiento."
+},
+{
+"id": "p118_04",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p118_06",
+"pt": "Na maioria dos casos: autolimitado e benigno, com resolução em minutos a poucas horas. •",
+"es": "En la mayoría de los casos: autolimitado y benigno, con resolución en minutos a pocas horas."
+},
+{
+"id": "p118_07",
+"pt": "Em pacientes predispostos: pode haver recorrência, mas com orientação adequada é possível controlar e prevenir. •",
+"es": "En pacientes predispuestos: puede haber recurrencia, pero con una orientación adecuada es posible controlarla y prevenirla."
+},
+{
+"id": "p118_08",
+"pt": "Prognóstico estético e funcional preservado, salvo quando a crise leva à interrupção precoce do procedimento.",
+"es": "Pronóstico estético y funcional preservado, salvo cuando la crisis obliga a interrumpir el procedimiento de forma precoz."
+},
+{
+"id": "p118_09",
+"pt": "2.9 SÍNDROME HIPERTENSIVA",
+"es": "2.9 CRISIS HIPERTENSIVA"
+},
+{
+"id": "p118_10",
+"pt": "A síndrome hipertensiva durante procedimentos estéticos é caracterizada por elevação súbita e significativa da pressão arterial, podendo ocorrer em pacientes com ou sem diagnóstico prévio de hipertensão. Frequentemente está relacionada ao estresse do procedimento, dor, ansiedade ou uso de anestésicos com vasoconstritores.",
+"es": "La crisis hipertensiva durante procedimientos estéticos se caracteriza por una elevación súbita y significativa de la presión arterial, y puede presentarse en pacientes con o sin diagnóstico previo de hipertensión. Con frecuencia se relaciona con el estrés del procedimiento, el dolor, la ansiedad o el uso de anestésicos con vasoconstrictores."
+},
+{
+"id": "p118_11",
+"pt": "Embora muitas vezes autolimitada, pode evoluir para complicações cardiovasculares e neurológicas graves se não reconhecida e manejada adequadamente.",
+"es": "Aunque muchas veces es autolimitada, puede evolucionar a complicaciones cardiovasculares y neurológicas graves si no se reconoce y maneja adecuadamente."
+},
+{
+"id": "p118_12",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p118_13",
+"pt": "O aumento da pressão arterial pode ter múltiplos mecanismos: •",
+"es": "El aumento de la presión arterial puede tener múltiples mecanismos:"
+},
+{
+"id": "p118_14",
+"pt": "Ativação simpática aguda: ansiedade, dor e estresse levam à lib-",
+"es": "Activación simpática aguda: ansiedad, dolor y estrés llevan a la li-"
+},
+{
+"id": "p119_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p119_02",
+"pt": "eração de catecolaminas (adrenalina e noradrenalina). •",
+"es": "beración de catecolaminas (adrenalina y noradrenalina)."
+},
+{
+"id": "p119_03",
+"pt": "Efeito farmacológico: anestésicos locais com adrenalina (lidocaína + epinefrina) podem desencadear elevação pressórica transitória. •",
+"es": "Efecto farmacológico: los anestésicos locales con adrenalina (lidocaína + epinefrina) pueden desencadenar una elevación tensional transitoria."
+},
+{
+"id": "p119_04",
+"pt": "Hipertensão arterial sistêmica (HAS) não controlada: pacientes sem acompanhamento adequado podem apresentar picos hipertensivos com estímulos mínimos. •",
+"es": "Hipertensión arterial sistémica (HTA) no controlada: los pacientes sin seguimiento adecuado pueden presentar picos hipertensivos ante estímulos mínimos."
+},
+{
+"id": "p119_05",
+"pt": "Fatores externos: cafeína, nicotina, uso recente de descongestionantes ou estimulantes. Áreas/Procedimentos de maior risco •",
+"es": "Factores externos: cafeína, nicotina, uso reciente de descongestionantes o estimulantes. Áreas/procedimientos de mayor riesgo"
+},
+{
+"id": "p119_06",
+"pt": "Procedimentos dolorosos em regiões sensíveis (lábios, nariz, periocular). •",
+"es": "Procedimientos dolorosos en regiones sensibles (labios, nariz, región periocular)."
+},
+{
+"id": "p119_07",
+"pt": "Uso de solução anestésica com vasoconstritor em grandes volumes. •",
+"es": "Uso de solución anestésica con vasoconstrictor en grandes volúmenes."
+},
+{
+"id": "p119_08",
+"pt": "Pacientes hipertensos não tratados ou mal controlados. •",
+"es": "Pacientes hipertensos no tratados o mal controlados."
+},
+{
+"id": "p119_09",
+"pt": "Pacientes ansiosos, em jejum prolongado ou sob estresse emocional intenso.",
+"es": "Pacientes ansiosos, en ayuno prolongado o bajo estrés emocional intenso."
+},
+{
+"id": "p119_10",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p119_11",
+"pt": "Os sinais e sintomas típicos incluem: •",
+"es": "Los signos y síntomas típicos incluyen:"
+},
+{
+"id": "p119_12",
+"pt": "Elevação súbita da pressão arterial (≥ 180/110 mmHg em muitos casos). •",
+"es": "Elevación súbita de la presión arterial (igual o superior a 180/110 mmHg en muchos casos)."
+},
+{
+"id": "p119_13",
+"pt": "Cefaleia intensa. •",
+"es": "Cefalea intensa."
+},
+{
+"id": "p119_14",
+"pt": "Tontura, zumbido, visão turva. •",
+"es": "Mareo, acúfenos, visión borrosa."
+},
+{
+"id": "p119_15",
+"pt": "Palpitações e ansiedade exacerbada. •",
+"es": "Palpitaciones y ansiedad exacerbada."
+},
+{
+"id": "p119_16",
+"pt": "Sudorese fria, rubor facial.",
+"es": "Sudoración fría, rubor facial."
+},
+{
+"id": "p120_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p120_03",
+"pt": "Em casos graves: dor torácica, dispneia, déficit neurológico focal (sinais de AVC).",
+"es": "En casos graves: dolor torácico, disnea, déficit neurológico focal (signos de ACV)."
+},
+{
+"id": "p120_04",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p120_06",
+"pt": "Crise de ansiedade: pode simular hipertensão, mas geralmente sem níveis pressóricos tão elevados. •",
+"es": "Crisis de ansiedad: puede simular hipertensión, pero en general sin cifras tensionales tan elevadas."
+},
+{
+"id": "p120_07",
+"pt": "Anafilaxia: associada a hipotensão, broncoespasmo e urticária, não a hipertensão. •",
+"es": "Anafilaxia: asociada a hipotensión, broncoespasmo y urticaria, no a hipertensión."
+},
+{
+"id": "p120_08",
+"pt": "Hipoglicemia: cursa com tremores, sudorese e ansiedade, mas não com pressão elevada. •",
+"es": "Hipoglucemia: cursa con temblores, sudoración y ansiedad, pero no con presión elevada."
+},
+{
+"id": "p120_09",
+"pt": "Feocromocitoma não diagnosticado: picos hipertensivos recorrentes, não restritos ao procedimento.",
+"es": "Feocromocitoma no diagnosticado: picos hipertensivos recurrentes, no limitados al procedimiento."
+},
+{
+"id": "p120_10",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p120_12",
+"pt": "Interromper o procedimento e acalmar o paciente. •",
+"es": "Interrumpir el procedimiento y calmar al paciente."
+},
+{
+"id": "p120_13",
+"pt": "Posicionar em ambiente confortável, sentado ou semi-recumbente. •",
+"es": "Ubicarlo en un ambiente cómodo, sentado o semisentado."
+},
+{
+"id": "p120_14",
+"pt": "Monitorar pressão arterial e frequência cardíaca. •",
+"es": "Monitorizar presión arterial y frecuencia cardíaca."
+},
+{
+"id": "p120_15",
+"pt": "Oxigenoterapia leve em casos de dispneia ou ansiedade intensa. •",
+"es": "Oxigenoterapia leve en casos de disnea o ansiedad intensa."
+},
+{
+"id": "p120_16",
+"pt": "Acalmar verbalmente e controlar respiração. •",
+"es": "Calmar verbalmente y controlar la respiración."
+},
+{
+"id": "p120_17",
+"pt": "Analgesia, se a dor for o fator desencadeante.",
+"es": "Analgesia, si el dolor es el factor desencadenante."
+},
+{
+"id": "p120_18",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p120_20",
+"pt": "Antihipertensivos de ação rápida (VO ou SL): •",
+"es": "Antihipertensivos de acción rápida (VO o SL):"
+},
+{
+"id": "p120_21",
+"pt": "Captopril 25 mg VO/SL. •",
+"es": "Captopril 25 mg VO/SL."
+},
+{
+"id": "p120_22",
+"pt": "Clonidina 0,1–0,2 mg VO.",
+"es": "Clonidina 0,1 a 0,2 mg VO."
+},
+{
+"id": "p121_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p121_03",
+"pt": "Evitar nifedipina sublingual pelo risco de hipotensão abrupta e isquemia. •",
+"es": "Evitar la nifedipina sublingual por el riesgo de hipotensión brusca e isquemia."
+},
+{
+"id": "p121_04",
+"pt": "Se dor torácica ou sintomas neurológicos: encaminhamento imediato a pronto-socorro. •",
+"es": "Ante dolor torácico o síntomas neurológicos: derivación inmediata al servicio de urgencias."
+},
+{
+"id": "p121_05",
+"pt": "Pacientes com crise hipertensiva verdadeira (>180/120 mmHg com sintomas-alvo): suporte hospitalar com medicação EV (nitroprussiato, labetalol).",
+"es": "Pacientes con crisis hipertensiva verdadera (>180/120 mmHg con síntomas de órgano blanco): soporte hospitalario con medicación IV (nitroprusiato, labetalol)."
+},
+{
+"id": "p121_06",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p121_08",
+"pt": "Acidente vascular cerebral (isquêmico ou hemorrágico). •",
+"es": "Accidente cerebrovascular (isquémico o hemorrágico)."
+},
+{
+"id": "p121_09",
+"pt": "Infarto agudo do miocárdio. •",
+"es": "Infarto agudo de miocardio."
+},
+{
+"id": "p121_10",
+"pt": "Dissecção aórtica. •",
+"es": "Disección aórtica."
+},
+{
+"id": "p121_11",
+"pt": "Insuficiência renal aguda. •",
+"es": "Insuficiencia renal aguda."
+},
+{
+"id": "p121_12",
+"pt": "Ansiedade residual e medo de novos procedimentos.",
+"es": "Ansiedad residual y miedo a nuevos procedimientos."
+},
+{
+"id": "p121_13",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p121_15",
+"pt": "Anamnese detalhada: investigar histórico de hipertensão, uso de medicamentos e adesão ao tratamento. •",
+"es": "Anamnesis detallada: indagar antecedentes de hipertensión, uso de medicamentos y adherencia al tratamiento."
+},
+{
+"id": "p121_16",
+"pt": "Controle da dor e ansiedade: técnicas anestésicas adequadas, ambiente calmo e explicação prévia ao paciente. •",
+"es": "Control del dolor y de la ansiedad: técnicas anestésicas adecuadas, ambiente calmo y explicación previa al paciente."
+},
+{
+"id": "p121_17",
+"pt": "Monitorização periódica da pressão arterial durante procedimentos em pacientes hipertensos. •",
+"es": "Monitorización periódica de la presión arterial durante los procedimientos en pacientes hipertensos."
+},
+{
+"id": "p121_18",
+"pt": "Evitar grandes volumes de anestésicos com epinefrina. •",
+"es": "Evitar grandes volúmenes de anestésicos con epinefrina."
+},
+{
+"id": "p121_19",
+"pt": "Encaminhar pacientes com hipertensão não controlada para avaliação clínica antes de realizar procedimentos.",
+"es": "Derivar a los pacientes con hipertensión no controlada a evaluación clínica antes de realizar procedimientos."
+},
+{
+"id": "p122_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p122_02",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p122_04",
+"pt": "Casos leves e transitórios: geralmente benignos, resolvendo-se com repouso, ansiolíticos ou anti hipertensivos orais. •",
+"es": "Casos leves y transitorios: en general benignos, se resuelven con reposo, ansiolíticos o antihipertensivos orales."
+},
+{
+"id": "p122_05",
+"pt": "Casos graves: dependem da rapidez no reconhecimento e manejo. Se tratados adequadamente, podem ter bom prognóstico sem sequelas. •",
+"es": "Casos graves: dependen de la rapidez del reconocimiento y del manejo. Si se tratan adecuadamente, pueden tener buen pronóstico sin secuelas."
+},
+{
+"id": "p122_06",
+"pt": "O prognóstico estético e funcional é preservado quando a crise é controlada antes de complicações cardiovasculares ou neurológicas.",
+"es": "El pronóstico estético y funcional se preserva cuando la crisis se controla antes de que surjan complicaciones cardiovasculares o neurológicas."
+},
+{
+"id": "p122_07",
+"pt": "FIGURA 40. INTERPRETAÇÃO DA MEDIDA DE PRESSÃO ARTERIAL EM ADULTOS",
+"es": "FIGURA 40. INTERPRETACIÓN DE LA MEDICIÓN DE LA PRESIÓN ARTERIAL EN ADULTOS"
+},
+{
+"id": "p122_08",
+"pt": "Fig. 40: Tabela da interpretação clínica da medida de pressão arterial em adultos, com orientação para classificação imediata, necessidade de confirmação diagnóstica e identificação de elevações transitórias, como as associadas à ansiedade. Fonte: Tabela adaptada das Diretrizes da Sociedade Brasileira de Cardiologia.",
+"es": "Fig. 40: Tabla de interpretación clínica de la medición de la presión arterial en adultos, con orientación para la clasificación inmediata, la necesidad de confirmación diagnóstica y la identificación de elevaciones transitorias, como las asociadas a la ansiedad. Fuente: tabla adaptada de las Directrices de la Sociedade Brasileira de Cardiologia."
+},
+{
+"id": "p122_09",
+"pt": "2.10 TRAUMA ARTERIAL",
+"es": "2.10 TRAUMATISMO ARTERIAL"
+},
+{
+"id": "p122_10",
+"pt": "O trauma arterial durante procedimentos estéticos injetáveis é uma intercorrência rara, mas de alto impacto clínico. Diferente da",
+"es": "El traumatismo arterial durante procedimientos estéticos inyectables es una intercurrencia rara, pero de alto impacto clínico. A diferencia de la"
+},
+{
+"id": "p123_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p123_02",
+"pt": "oclusão vascular por preenchedor, aqui a lesão é direta sobre a parede do vaso, podendo gerar sangramento imediato, hematomas de grande porte, pseudoaneurismas ou, em casos graves, dissecção e trombose secundária. O manejo rápido é essencial para evitar complicações estéticas, funcionais e vasculares permanentes.",
+"es": "oclusión vascular por producto de relleno, aquí la lesión es directa sobre la pared del vaso y puede generar sangrado inmediato, hematomas de gran tamaño, pseudoaneurismas o, en casos graves, disección y trombosis secundaria. El manejo rápido es esencial para evitar complicaciones estéticas, funcionales y vasculares permanentes."
+},
+{
+"id": "p123_03",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p123_04",
+"pt": "A lesão arterial pode ocorrer por diferentes mecanismos: •",
+"es": "La lesión arterial puede producirse por diferentes mecanismos:"
+},
+{
+"id": "p123_05",
+"pt": "Perfuração direta da parede arterial por agulha ou cânula. •",
+"es": "Perforación directa de la pared arterial con aguja o cánula."
+},
+{
+"id": "p123_06",
+"pt": "Dissecção da íntima vascular, com formação de trombo intraluminal. •",
+"es": "Disección de la íntima vascular, con formación de trombo intraluminal."
+},
+{
+"id": "p123_07",
+"pt": "Lesão parcial da parede extravasamento sanguíneo hematoma pulsátil. •",
+"es": "Lesión parcial de la pared: extravasación sanguínea y hematoma pulsátil."
+},
+{
+"id": "p123_08",
+"pt": "Lesão completa do vaso sangramento ativo de difícil contenção.",
+"es": "Lesión completa del vaso: sangrado activo de difícil contención."
+},
+{
+"id": "p123_09",
+"pt": "FIGURA 41. FORMAÇÃO DE HEMATOMA E EDEMA PÓS-PERFURAÇÃO CUTÂNEA",
+"es": "FIGURA 41. FORMACIÓN DE HEMATOMA Y EDEMA TRAS PERFORACIÓN CUTÁNEA"
+},
+{
+"id": "p123_10",
+"pt": "Figura 41. Imagem ilustrativa de ruptura vascular dérmica induzida por agulha, com extravasamento sanguíneo, formação de hematoma e edema local. Fonte: Imagem criada com IA.",
+"es": "Figura 41. Imagen ilustrativa de rotura vascular dérmica inducida por aguja, con extravasación sanguínea, formación de hematoma y edema local. Fuente: imagen creada con IA."
+},
+{
+"id": "p124_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p124_02",
+"pt": "CONSEQUÊNCIAS FISIOPATOLÓGICAS:",
+"es": "CONSECUENCIAS FISIOPATOLÓGICAS:"
+},
+{
+"id": "p124_04",
+"pt": "Hemorragia aguda hematoma local, aumento da pressão tecidual e risco de síndrome compartimental em áreas fechadas. •",
+"es": "Hemorragia aguda: hematoma local, aumento de la presión tisular y riesgo de síndrome compartimental en áreas cerradas."
+},
+{
+"id": "p124_05",
+"pt": "Trombose secundária isquemia distal. •",
+"es": "Trombosis secundaria: isquemia distal."
+},
+{
+"id": "p124_06",
+"pt": "Pseudoaneurisma extravasamento contido, risco de ruptura futura.",
+"es": "Pseudoaneurisma: extravasación contenida, riesgo de rotura futura."
+},
+{
+"id": "p124_07",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p124_08",
+"pt": "O risco é maior em regiões com vasos calibrosos e superficiais: •",
+"es": "El riesgo es mayor en regiones con vasos de gran calibre y superficiales:"
+},
+{
+"id": "p124_09",
+"pt": "Artéria facial (trajeto ao longo do sulco nasolabial). •",
+"es": "Arteria facial (trayecto a lo largo del surco nasolabial)."
+},
+{
+"id": "p124_10",
+"pt": "Artéria angular (canto medial do olho). •",
+"es": "Arteria angular (canto medial del ojo)."
+},
+{
+"id": "p124_11",
+"pt": "Artérias labiais (superior e inferior). •",
+"es": "Arterias labiales (superior e inferior)."
+},
+{
+"id": "p124_12",
+"pt": "Artéria temporal superficial (em regiões temporais). •",
+"es": "Arteria temporal superficial (en las regiones temporales)."
+},
+{
+"id": "p124_13",
+"pt": "Ramos nasais (especialmente a nasal lateral e dorsal).",
+"es": "Ramas nasales (en especial la nasal lateral y la dorsal)."
+},
+{
+"id": "p124_14",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p124_15",
+"pt": "Os sinais clínicos podem variar conforme o tipo e a gravidade da lesão: •",
+"es": "Los signos clínicos pueden variar según el tipo y la gravedad de la lesión:"
+},
+{
+"id": "p124_16",
+"pt": "Sangramento ativo e pulsátil imediatamente após a punção. •",
+"es": "Sangrado activo y pulsátil inmediatamente después de la punción."
+},
+{
+"id": "p124_17",
+"pt": "Hematoma expansivo de rápido crescimento. •",
+"es": "Hematoma expansivo de rápido crecimiento."
+},
+{
+"id": "p124_18",
+"pt": "Hematoma pulsátil (sugere pseudoaneurisma). •",
+"es": "Hematoma pulsátil (sugiere pseudoaneurisma)."
+},
+{
+"id": "p124_19",
+"pt": "Dor intensa desproporcional ao esperado. •",
+"es": "Dolor intenso desproporcionado a lo esperado."
+},
+{
+"id": "p124_20",
+"pt": "Sinais de isquemia distal em casos de trombose ou compressão (palidez, livedo, ausência de reperfusão capilar).",
+"es": "Signos de isquemia distal en casos de trombosis o compresión (palidez, livedo, ausencia de relleno capilar)."
+},
+{
+"id": "p125_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p125_02",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p125_04",
+"pt": "Hematoma venoso simples: sangramento menos intenso, coloração arroxeada sem pulsatilidade. •",
+"es": "Hematoma venoso simple: sangrado menos intenso, coloración violácea sin pulsatilidad."
+},
+{
+"id": "p125_05",
+"pt": "Isquemia por preenchedor: dor súbita, palidez e livedo, sem sangramento ativo. •",
+"es": "Isquemia por producto de relleno: dolor súbito, palidez y livedo, sin sangrado activo."
+},
+{
+"id": "p125_06",
+"pt": "Infecção aguda: eritema, calor, secreção, mas evolução mais tardia.",
+"es": "Infección aguda: eritema, calor, secreción, pero con evolución más tardía."
+},
+{
+"id": "p125_07",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p125_09",
+"pt": "Interromper imediatamente o procedimento. •",
+"es": "Interrumpir de inmediato el procedimiento."
+},
+{
+"id": "p125_10",
+"pt": "Compressão manual direta e sustentada sobre o local da lesão. •",
+"es": "Compresión manual directa y sostenida sobre el sitio de la lesión."
+},
+{
+"id": "p125_11",
+"pt": "Aplicar gelo local para vasoconstrição. •",
+"es": "Aplicar hielo local para vasoconstricción."
+},
+{
+"id": "p125_12",
+"pt": "Reavaliar perfusão distal após contenção do sangramento. •",
+"es": "Reevaluar la perfusión distal después de contener el sangrado."
+},
+{
+"id": "p125_13",
+"pt": "Não manipular excessivamente para evitar maior dissecção ou aumento do hematoma.",
+"es": "No manipular en exceso, para evitar mayor disección o el aumento del hematoma."
+},
+{
+"id": "p125_14",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p125_15",
+"pt": "Hemorragia persistente: •",
+"es": "Hemorragia persistente:"
+},
+{
+"id": "p125_16",
+"pt": "Compressão contínua prolongada (10–15 minutos). •",
+"es": "Compresión continua prolongada (10 a 15 minutos)."
+},
+{
+"id": "p125_17",
+"pt": "Curativo compressivo estéril. Hematomas volumosos ou pulsáteis: •",
+"es": "Apósito compresivo estéril. Hematomas voluminosos o pulsátiles:"
+},
+{
+"id": "p125_18",
+"pt": "Avaliação com ultrassom Doppler para descartar pseudoaneurisma. Pseudoaneurisma confirmado: •",
+"es": "Evaluación con ecografía Doppler para descartar pseudoaneurisma. Pseudoaneurisma confirmado:"
+},
+{
+"id": "p125_19",
+"pt": "Encaminhamento para avaliação vascular. •",
+"es": "Derivación para evaluación vascular."
+},
+{
+"id": "p125_20",
+"pt": "Opções incluem embolização endovascular ou ligadura cirúrgica.",
+"es": "Las opciones incluyen embolización endovascular o ligadura quirúrgica."
+},
+{
+"id": "p126_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p126_02",
+"pt": "Isquemia distal associada: •",
+"es": "Isquemia distal asociada:"
+},
+{
+"id": "p126_03",
+"pt": "Uso de hialuronidase, se houver preenchedor na região. •",
+"es": "Uso de hialuronidasa, si hay producto de relleno en la región."
+},
+{
+"id": "p126_04",
+"pt": "Terapia adjuvante: AAS 300 mg/dia, sildenafil 50 mg, corticoide sistêmico (prednisona 40 mg/dia). Antibioticoprofilaxia: •",
+"es": "Terapia adyuvante: AAS 300 mg/día, sildenafil 50 mg, corticoide sistémico (prednisona 40 mg/día). Profilaxis antibiótica:"
+},
+{
+"id": "p126_05",
+"pt": "Indicada em hematomas volumosos ou com necrose associada.",
+"es": "Indicada en hematomas voluminosos o con necrosis asociada."
+},
+{
+"id": "p126_06",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p126_08",
+"pt": "Hematomas extensos com fibrose residual. •",
+"es": "Hematomas extensos con fibrosis residual."
+},
+{
+"id": "p126_09",
+"pt": "Pseudoaneurismas tardios (dias a semanas). •",
+"es": "Pseudoaneurismas tardíos (días a semanas)."
+},
+{
+"id": "p126_10",
+"pt": "Trombose e necrose distal. •",
+"es": "Trombosis y necrosis distal."
+},
+{
+"id": "p126_11",
+"pt": "Infecção secundária em hematomas não drenados. •",
+"es": "Infección secundaria en hematomas no drenados."
+},
+{
+"id": "p126_12",
+"pt": "Sequelas estéticas (assimetria, cicatrizes, irregularidades de contorno).",
+"es": "Secuelas estéticas (asimetría, cicatrices, irregularidades de contorno)."
+},
+{
+"id": "p126_13",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p126_15",
+"pt": "Domínio da anatomia vascular e uso de técnicas seguras. •",
+"es": "Dominio de la anatomía vascular y uso de técnicas seguras."
+},
+{
+"id": "p126_16",
+"pt": "Preferência por cânulas rombas em áreas de risco. •",
+"es": "Preferencia por cánulas romas en áreas de riesgo."
+},
+{
+"id": "p126_17",
+"pt": "Aspiração antes da aplicação, mesmo com cânula. •",
+"es": "Aspiración antes de la aplicación, incluso con cánula."
+},
+{
+"id": "p126_18",
+"pt": "Evitar pressões de injeção excessivas. •",
+"es": "Evitar presiones de inyección excesivas."
+},
+{
+"id": "p126_19",
+"pt": "Treinar a equipe para manejo rápido de sangramentos.",
+"es": "Capacitar al equipo para el manejo rápido de los sangrados."
+},
+{
+"id": "p126_20",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p126_22",
+"pt": "Lesões arteriais leves: geralmente têm bom prognóstico com compressão imediata e cuidados locais.",
+"es": "Lesiones arteriales leves: en general tienen buen pronóstico con compresión inmediata y cuidados locales."
+},
+{
+"id": "p127_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p127_03",
+"pt": "Pseudoaneurismas ou hematomas extensos: exigem acompanhamento especializado, mas podem ser resolvidos sem sequelas se tratados precocemente. •",
+"es": "Pseudoaneurismas o hematomas extensos: requieren seguimiento especializado, pero pueden resolverse sin secuelas si se tratan de forma precoz."
+},
+{
+"id": "p127_04",
+"pt": "Isquemia associada: piora o prognóstico, podendo evoluir para necrose.",
+"es": "Isquemia asociada: empeora el pronóstico y puede evolucionar a necrosis."
+},
+{
+"id": "p127_05",
+"pt": "As intercorrências agudas não isquêmicas, embora geralmente benignas e autolimitadas, representam um dos principais pontos de atenção na prática clínica diária, justamente por sua alta frequência e pela capacidade de gerar desconforto imediato e insegurança no paciente. Diferentemente das complicações isquêmicas, que exigem intervenção emergencial, essas manifestações demandam principalmente um bom julgamento clínico para diferenciar respostas fisiológicas esperadas de sinais iniciais de quadros potencialmente mais graves.",
+"es": "Las intercurrencias agudas no isquémicas, aunque en general son benignas y autolimitadas, representan uno de los principales puntos de atención en la práctica clínica diaria, precisamente por su alta frecuencia y por su capacidad de generar malestar inmediato e inseguridad en el paciente. A diferencia de las complicaciones isquémicas, que exigen una intervención de emergencia, estas manifestaciones requieren sobre todo un buen juicio clínico para diferenciar las respuestas fisiológicas esperadas de los signos iniciales de cuadros potencialmente más graves."
+},
+{
+"id": "p127_06",
+"pt": "A correta interpretação de sintomas como dor, edema, eritema e reações sistêmicas é essencial para evitar tanto a subvalorização quanto o excesso de intervenção. Muitos desses eventos fazem parte da resposta normal ao trauma do procedimento, mas, quando mal interpretados, podem levar a condutas inadequadas ou atrasar o reconhecimento de complicações relevantes. Por isso, a experiência clínica e a capacidade de correlação entre sinais, tempo de evolução e contexto do procedimento são determinantes.",
+"es": "La interpretación correcta de síntomas como dolor, edema, eritema y reacciones sistémicas es esencial para evitar tanto la infravaloración como el exceso de intervención. Muchos de estos eventos forman parte de la respuesta normal al trauma del procedimiento, pero, cuando se interpretan mal, pueden llevar a conductas inadecuadas o retrasar el reconocimiento de complicaciones relevantes. Por eso, la experiencia clínica y la capacidad de correlacionar signos, tiempo de evolución y contexto del procedimiento son determinantes."
+},
+{
+"id": "p127_07",
+"pt": "Por fim, o manejo adequado dessas intercorrências vai além do tratamento em si e envolve comunicação clara com o paciente,",
+"es": "Por último, el manejo adecuado de estas intercurrencias va más allá del tratamiento en sí e implica una comunicación clara con el paciente,"
+},
+{
+"id": "p128_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p128_02",
+"pt": "preparo prévio da equipe e padronização de condutas. Quando bem conduzidas, essas situações não comprometem o resultado final e, muitas vezes, fortalecem a confiança do paciente no profissional, reforçando a importância de uma abordagem segura, previsível e bem estruturada.",
+"es": "la preparación previa del equipo y la estandarización de conductas. Cuando se conducen bien, estas situaciones no comprometen el resultado final y, muchas veces, fortalecen la confianza del paciente en el profesional, lo que refuerza la importancia de un abordaje seguro, previsible y bien estructurado."
+},
+{
+"id": "p130_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p130_02",
+"pt": "A",
+"es": "L"
+},
+{
+"id": "p130_03",
+"pt": "s intercorrências tardias isquêmicas representam um grupo de complicações menos frequentes, porém potencialmente graves, associadas à redução progressiva ou sustentada do fluxo sanguíneo em tecidos previamente manipulados. Diferentemente das intercorrências agudas, que se manifestam de forma imediata e exigem intervenção emergencial, essas condições podem surgir dias após o procedimento, muitas vezes de maneira insidiosa, dificultando o reconhecimento precoce e o diagnóstico diferencial.",
+"es": "as intercurrencias tardías isquémicas constituyen un grupo de complicaciones menos frecuentes, pero potencialmente graves, asociadas a la reducción progresiva o sostenida del flujo sanguíneo en tejidos previamente manipulados. A diferencia de las intercurrencias agudas, que se manifiestan de forma inmediata y exigen intervención de emergencia, estas condiciones pueden aparecer días después del procedimiento, muchas veces de manera insidiosa, lo que dificulta el reconocimiento precoz y el diagnóstico diferencial."
+},
+{
+"id": "p130_04",
+"pt": "Nesse contexto, a isquemia não decorre necessariamente de uma obstrução intravascular imediata, mas pode estar relacionada a fatores como compressão extrínseca, alterações inflamatórias locais, edema persistente ou reorganização tecidual. A compreensão desses mecanismos é fundamental para identificar sinais iniciais, evitar progressão para necrose e orientar condutas adequadas. Neste capítulo, serão abordadas a isquemia extrínseca compressiva, a necrose tardia e a ulceração cutânea, destacando seus aspectos clínicos, fisiopatológicos e estratégias de manejo.",
+"es": "En este contexto, la isquemia no se debe necesariamente a una obstrucción intravascular inmediata, sino que puede relacionarse con factores como compresión extrínseca, alteraciones inflamatorias locales, edema persistente o reorganización tisular. Comprender estos mecanismos es fundamental para identificar los signos iniciales, evitar la progresión a necrosis y orientar las conductas adecuadas. En este capítulo se abordan la isquemia extrínseca compresiva, la necrosis tardía y la ulceración cutánea, con énfasis en sus aspectos clínicos, fisiopatológicos y en las estrategias de manejo."
+},
+{
+"id": "p130_05",
+"pt": "3.1 ISQUEMIA EXTRÍNSECA COMPRESSIVA (INTERCORRÊNCIA TARDIA ISQUÊMICA)",
+"es": "3.1 ISQUEMIA EXTRÍNSECA COMPRESIVA (INTERCURRENCIA TARDÍA ISQUÉMICA)"
+},
+{
+"id": "p130_06",
+"pt": "A isquemia compressiva é uma intercorrência tardia e progressiva causada por pressão extrínseca sobre vasos sanguíneos, geralmente resultado de hematomas organizados, edema severo, fibrose ou acúmulo de preenchedor em áreas de pouco espaço anatômico.",
+"es": "La isquemia compresiva es una intercurrencia tardía y progresiva causada por presión extrínseca sobre los vasos sanguíneos, en general como resultado de hematomas organizados, edema grave, fibrosis o acumulación de producto de relleno en áreas con poco espacio anatómico."
+},
+{
+"id": "p131_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p131_02",
+"pt": "Ao contrário da oclusão intravascular, trata-se de uma interrupção do fluxo por compressão externa, que pode evoluir para necrose tecidual se não identificada e tratada precocemente.",
+"es": "A diferencia de la oclusión intravascular, se trata de una interrupción del flujo por compresión externa, que puede evolucionar a necrosis tisular si no se identifica y trata de forma precoz."
+},
+{
+"id": "p131_03",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p131_04",
+"pt": "Ocorre quando há: •",
+"es": "Se produce cuando hay:"
+},
+{
+"id": "p131_05",
+"pt": "Aumento da pressão tecidual externa (por edema, fibrose ou preenchedor excessivo). •",
+"es": "Aumento de la presión tisular externa (por edema, fibrosis o exceso de producto de relleno)."
+},
+{
+"id": "p131_06",
+"pt": "Compressão de vasos arteriais ou venosos superficiais, levando à redução do fluxo sanguíneo. •",
+"es": "Compresión de vasos arteriales o venosos superficiales, que reduce el flujo sanguíneo."
+},
+{
+"id": "p131_07",
+"pt": "Isquemia progressiva, geralmente subaguda ou insidiosa, em comparação à oclusão vascular imediata. •",
+"es": "Isquemia progresiva, en general subaguda o insidiosa, a diferencia de la oclusión vascular inmediata."
+},
+{
+"id": "p131_08",
+"pt": "Pode ser favorecida por alterações inflamatórias e edema em áreas com menor complacência (como ponta nasal, glabela ou fronte).",
+"es": "Puede verse favorecida por alteraciones inflamatorias y edema en áreas de menor complacencia (como punta nasal, glabela o frente)."
+},
+{
+"id": "p131_09",
+"pt": "FIGURA 42. APRESENTAÇÃO CLÍNICA INICIAL DE POSSÍVEL COMPRESSÃO PÓS PREENCHIMENTO E IMAGEM DE ULTRASSOM DOPPLER COLORIDO",
+"es": "FIGURA 42. PRESENTACIÓN CLÍNICA INICIAL DE POSIBLE COMPRESIÓN TRAS EL RELLENO E IMAGEN DE ECOGRAFÍA DOPPLER COLOR"
+},
+{
+"id": "p131_12",
+"pt": "Figura 42: Representação clínica de isquemia extrínseca compressiva pós preenchimento. (A) Imagem clínica mostrando placas eritemato-violáceas e pústulas no nariz. (B) Imagem transversal de ultrassom Doppler colorido mostrando uma estrutura tubular não compressível na artéria nasal dorsal (seta), compatível com compressão arterial. Fonte: Adaptada de Lee W. Ultrasound-Guided Hyaluronidase Injections for the Management of Filler-Induced Arterial Ischemia: A Pictorial Case Series and Systematic Review of Literature. Journal of Cosmetic Dermatology. 2023. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/ PMC12586333/",
+"es": "Figura 42: Representación clínica de isquemia extrínseca compresiva tras el relleno. (A) Imagen clínica que muestra placas eritematovioláceas y pústulas en la nariz. (B) Imagen transversal de ecografía Doppler color que muestra una estructura tubular no compresible en la arteria nasal dorsal (flecha), compatible con compresión arterial. Fuente: adaptada de Lee W. Ultrasound-Guided Hyaluronidase Injections for the Management of Filler-Induced Arterial Ischemia: A Pictorial Case Series and Systematic Review of Literature. Journal of Cosmetic Dermatology. 2023. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/ PMC12586333/"
+},
+{
+"id": "p132_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p132_02",
+"pt": "A fisiopatologia pode ser comparada à de uma síndrome compartimental facial, onde o excesso de pressão leva à redução do aporte de oxigênio tecidual.",
+"es": "La fisiopatología puede compararse con la de un síndrome compartimental facial, en el que el exceso de presión reduce el aporte de oxígeno a los tejidos."
+},
+{
+"id": "p132_03",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p132_04",
+"pt": "As regiões anatômicas com menor mobilidade de tecidos e maior risco de compressão são: •",
+"es": "Las regiones anatómicas con menor movilidad tisular y mayor riesgo de compresión son:"
+},
+{
+"id": "p132_05",
+"pt": "Ponta nasal (pressão contra a cartilagem alar e vasos colaterais). •",
+"es": "Punta nasal (presión contra el cartílago alar y los vasos colaterales)."
+},
+{
+"id": "p132_06",
+"pt": "Glabela (pele densa e menos complacente). •",
+"es": "Glabela (piel densa y menos complaciente)."
+},
+{
+"id": "p132_07",
+"pt": "Fronte e têmporas (quando há preenchimento profundo ou edema). •",
+"es": "Frente y sienes (cuando hay relleno profundo o edema)."
+},
+{
+"id": "p132_08",
+"pt": "Sulco nasolabial denso, com acúmulo de produto ou hematomas profundos.",
+"es": "Surco nasolabial denso, con acumulación de producto o hematomas profundos."
+},
+{
+"id": "p132_09",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p132_10",
+"pt": "A isquemia compressiva geralmente se manifesta de forma mais lenta que a oclusão vascular aguda. Os sinais incluem: •",
+"es": "La isquemia compresiva suele manifestarse de forma más lenta que la oclusión vascular aguda. Los signos incluyen:"
+},
+{
+"id": "p132_11",
+"pt": "Desconforto ou dor persistente na região, dias após o procedimento. •",
+"es": "Malestar o dolor persistente en la región, días después del procedimiento."
+},
+{
+"id": "p132_12",
+"pt": "Palidez localizada ou livedo leve. •",
+"es": "Palidez localizada o livedo leve."
+},
+{
+"id": "p132_13",
+"pt": "Redução da perfusão capilar em áreas distais. •",
+"es": "Reducción de la perfusión capilar en áreas distales."
+},
+{
+"id": "p132_14",
+"pt": "Endurecimento da região (fibrose ou acúmulo denso de preenchedor). •",
+"es": "Endurecimiento de la región (fibrosis o acumulación densa de relleno)."
+},
+{
+"id": "p132_15",
+"pt": "Temperatura reduzida da pele em relação ao lado contralateral. •",
+"es": "Temperatura cutánea reducida respecto del lado contralateral."
+},
+{
+"id": "p132_16",
+"pt": "Lesões ulceradas ou necrosadas nos casos mais tardios.",
+"es": "Lesiones ulceradas o necróticas en los casos más tardíos."
+},
+{
+"id": "p133_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p133_02",
+"pt": "Diferencia-se da oclusão aguda pela ausência de dor súbita e livedo reticular progressivo, ao invés de imediato.",
+"es": "Se diferencia de la oclusión aguda por la ausencia de dolor súbito y por un livedo reticular progresivo, en lugar de inmediato."
+},
+{
+"id": "p133_03",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p133_05",
+"pt": "Oclusão intravascular por preenchedor (dor súbita, livedo intenso, rápida evolução para necrose). •",
+"es": "Oclusión intravascular por producto de relleno (dolor súbito, livedo intenso, rápida evolución a necrosis)."
+},
+{
+"id": "p133_06",
+"pt": "Infecção local (eritema, calor, secreção). •",
+"es": "Infección local (eritema, calor, secreción)."
+},
+{
+"id": "p133_07",
+"pt": "Reação inflamatória estéril ou nódulo (massa local sem sinais isquêmicos). •",
+"es": "Reacción inflamatoria estéril o nódulo (masa local sin signos isquémicos)."
+},
+{
+"id": "p133_08",
+"pt": "ETIP (edema recorrente, inflamação tardia sem isquemia).",
+"es": "ETIP (edema recurrente, inflamación tardía sin isquemia)."
+},
+{
+"id": "p133_09",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p133_11",
+"pt": "Avaliação clínica minuciosa da perfusão e integridade cutânea. •",
+"es": "Evaluación clínica minuciosa de perfusión e integridad cutánea."
+},
+{
+"id": "p133_12",
+"pt": "Aplicação de calor local suave, para vasodilatação. •",
+"es": "Aplicación de calor local suave, para vasodilatación."
+},
+{
+"id": "p133_13",
+"pt": "Massagem delicada para mobilização do produto e redução da compressão. •",
+"es": "Masaje delicado para movilizar el producto y reducir la compresión."
+},
+{
+"id": "p133_14",
+"pt": "Uso de hialuronidase em áreas com suspeita de compressão por ácido hialurônico: •",
+"es": "Uso de hialuronidasa en áreas con sospecha de compresión por ácido hialurónico:"
+},
+{
+"id": "p133_15",
+"pt": "1000 UTR/mL, em múltiplos pontos da área afetada. •",
+"es": "1.000 UTR/mL, en múltiples puntos del área afectada."
+},
+{
+"id": "p133_16",
+"pt": "Pode ser repetido em 12–24 horas, se necessário. •",
+"es": "Puede repetirse en 12 a 24 horas, si es necesario."
+},
+{
+"id": "p133_17",
+"pt": "Elevação da cabeça e orientações para evitar pressão externa local. •",
+"es": "Elevación de la cabeza e indicaciones para evitar presión externa local."
+},
+{
+"id": "p133_18",
+"pt": "AAS 300 mg/dia por 7 dias, se houver risco de isquemia associada.",
+"es": "AAS (ácido acetilsalicílico) 300 mg/día por 7 días, si hay riesgo de isquemia asociada."
+},
+{
+"id": "p133_19",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p133_21",
+"pt": "Ultrassom com Doppler colorido para avaliar fluxo vascular e",
+"es": "Ecografía Doppler color para evaluar el flujo vascular y la"
+},
+{
+"id": "p134_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p134_02",
+"pt": "presença de coleções ou compressões. •",
+"es": "presencia de colecciones o compresiones."
+},
+{
+"id": "p134_03",
+"pt": "Sildenafil 50 mg/dia para aumento da perfusão. •",
+"es": "Sildenafil 50 mg/día para aumentar la perfusión."
+},
+{
+"id": "p134_04",
+"pt": "Corticóides sistêmicos em caso de edema compressivo severo: •",
+"es": "Corticoides sistémicos en caso de edema compresivo grave:"
+},
+{
+"id": "p134_05",
+"pt": "Prednisona 40 mg/dia por 3–5 dias. •",
+"es": "Prednisona 40 mg/día por 3 a 5 días."
+},
+{
+"id": "p134_06",
+"pt": "Drenagem de hematomas organizados com compressão evidente. •",
+"es": "Drenaje de hematomas organizados con compresión evidente."
+},
+{
+"id": "p134_07",
+"pt": "Encaminhamento para centro especializado caso haja risco de necrose iminente ou necessidade de intervenção cirúrgica.",
+"es": "Derivación a un centro especializado si hay riesgo de necrosis inminente o necesidad de intervención quirúrgica."
+},
+{
+"id": "p134_08",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p134_10",
+"pt": "Necrose cutânea tardia. •",
+"es": "Necrosis cutánea tardía."
+},
+{
+"id": "p134_11",
+"pt": "Fibrose e irregularidade de contorno. •",
+"es": "Fibrosis e irregularidad de contorno."
+},
+{
+"id": "p134_12",
+"pt": "Cicatriz atrófica ou hipertrófica. •",
+"es": "Cicatriz atrófica o hipertrófica."
+},
+{
+"id": "p134_13",
+"pt": "Hiperpigmentação pós-inflamatória. •",
+"es": "Hiperpigmentación posinflamatoria."
+},
+{
+"id": "p134_14",
+"pt": "Insatisfação estética significativa.",
+"es": "Insatisfacción estética significativa."
+},
+{
+"id": "p134_15",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p134_17",
+"pt": "Uso de volumes menores por ponto de aplicação. •",
+"es": "Uso de volúmenes menores por punto de aplicación."
+},
+{
+"id": "p134_18",
+"pt": "Evitar infiltração excessiva em áreas densas ou de risco. •",
+"es": "Evitar la infiltración excesiva en áreas densas o de riesgo."
+},
+{
+"id": "p134_19",
+"pt": "Técnica em camadas corretas, respeitando a anatomia. •",
+"es": "Técnica en las capas correctas, respetando la anatomía."
+},
+{
+"id": "p134_20",
+"pt": "Evitar compressões externas no pós-operatório imediato. •",
+"es": "Evitar compresiones externas en el posoperatorio inmediato."
+},
+{
+"id": "p134_21",
+"pt": "Orientar pacientes a não massagear ou dormir sobre a área tratada nos primeiros dias.",
+"es": "Indicar a los pacientes que no masajeen ni duerman sobre el área tratada en los primeros días."
+},
+{
+"id": "p134_22",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p134_23",
+"pt": "Quando detectada precocemente, a isquemia compressiva tem",
+"es": "Cuando se detecta de forma precoz, la isquemia compresiva tiene"
+},
+{
+"id": "p135_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p135_02",
+"pt": "prognóstico favorável, com resolução completa dos sintomas. Casos negligenciados ou com necrose estabelecida exigem abordagem multidisciplinar, com possíveis correções cirúrgicas.",
+"es": "pronóstico favorable, con resolución completa de los síntomas. Los casos desatendidos o con necrosis establecida requieren un abordaje multidisciplinario, con posibles correcciones quirúrgicas."
+},
+{
+"id": "p135_03",
+"pt": "3.2 NECROSE TECIDUAL TARDIA",
+"es": "3.2 NECROSIS TISULAR TARDÍA"
+},
+{
+"id": "p135_04",
+"pt": "A necrose tecidual tardia é uma complicação decorrente da progressão não reconhecida ou não tratada de um quadro isquêmico subclínico (como uma isquemia compressiva não resolvida), ou ainda de necroses parciais que evoluem lentamente após o procedimento. Diferente da necrose aguda, aqui os sinais aparecem dias após a aplicação, tornando o diagnóstico mais desafiador e muitas vezes confundido com infecção ou reação inflamatória persistente.",
+"es": "La necrosis tisular tardía es una complicación derivada de la progresión no reconocida o no tratada de un cuadro isquémico subclínico (como una isquemia compresiva no resuelta), o bien de necrosis parciales que evolucionan lentamente después del procedimiento. A diferencia de la necrosis aguda, aquí los signos aparecen días después de la aplicación, lo que hace el diagnóstico más difícil y a menudo se confunde con infección o reacción inflamatoria persistente."
+},
+{
+"id": "p135_05",
+"pt": "Embora menos dramática que a necrose aguda, pode deixar sequelas estéticas relevantes, incluindo cicatrizes atróficas, hiperpigmentação pós-inflamatória e irregularidades de contorno.",
+"es": "Aunque es menos aparatosa que la necrosis aguda, puede dejar secuelas estéticas relevantes, como cicatrices atróficas, hiperpigmentación posinflamatoria e irregularidades de contorno."
+},
+{
+"id": "p135_06",
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL",
+"es": "FIGURA 43. COMPROMISO ISQUÉMICO EN LA REGIÓN PERIORAL TRAS RELLENO LABIAL"
+},
+{
+"id": "p135_07",
+"pt": "Figura 43. Imagem clínica demonstrando fase inicial de comprometimento isquêmico em região perioral, com acentuada coloração violácea do lábio inferior, alterações cutâneas e presença de pústulas. O quadro sugere sofrimento vascular local, possivelmente relacionado a evento isquêmico secundário, com evolução progressiva e risco de necrose tecidual. Observa-se comprometimento da perfusão em fase precoce, ainda sem delimitação de necrose estabelecida, porém com potencial de progressão para perda tecidual e sequelas estéticas significativas. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 43. Imagen clínica que muestra la fase inicial de compromiso isquémico en la región perioral, con marcada coloración violácea del labio inferior, alteraciones cutáneas y presencia de pústulas. El cuadro sugiere sufrimiento vascular local, posiblemente relacionado con un evento isquémico secundario, con evolución progresiva y riesgo de necrosis tisular. Se observa compromiso de la perfusión en fase precoz, aún sin delimitación de necrosis establecida, pero con potencial de progresión a pérdida tisular y secuelas estéticas significativas. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p136_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p136_02",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p136_03",
+"pt": "A necrose tardia ocorre por mecanismos como: •",
+"es": "La necrosis tardía se produce por mecanismos como:"
+},
+{
+"id": "p136_04",
+"pt": "Isquemia compressiva crônica acúmulo de preenchedor ou fibrose causando pressão sobre vasos. •",
+"es": "Isquemia compresiva crónica: acumulación de relleno o fibrosis que comprime los vasos."
+},
+{
+"id": "p136_05",
+"pt": "Trombose progressiva em artérias de pequeno calibre, secundária a microtrauma endotelial. •",
+"es": "Trombosis progresiva en arterias de pequeño calibre, secundaria a microtraumatismo endotelial."
+},
+{
+"id": "p136_06",
+"pt": "Infecções subclínicas que agravam o processo inflamatório local e comprometem a perfusão. •",
+"es": "Infecciones subclínicas que agravan el proceso inflamatorio local y comprometen la perfusión."
+},
+{
+"id": "p136_07",
+"pt": "Reparação tecidual inadequada após microisquemias não reconhecidas.",
+"es": "Reparación tisular inadecuada tras microisquemias no reconocidas."
+},
+{
+"id": "p136_08",
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL",
+"es": "FIGURA 43. COMPROMISO ISQUÉMICO EN LA REGIÓN PERIORAL TRAS RELLENO LABIAL"
+},
+{
+"id": "p136_09",
+"pt": "Figura 44. Imagens clínicas demonstrando alteração de coloração em nariz e região perinasal, com áreas de palidez focal, compatíveis com redução significativa da perfusão sanguínea local. O padrão observado sugere comprometimento vascular com possível diminuição ou interrupção do fluxo arterial, caracterizando fase inicial de sofrimento isquêmico tecidual. O quadro apresenta distribuição heterogênea da coloração cutânea, podendo estar associado a evento obstrutivo ou compressivo de origem vascular, com potencial risco de progressão para necrose se não houver restabelecimento adequado da circulação. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 44. Imágenes clínicas que muestran alteración de la coloración en la nariz y la región perinasal, con áreas de palidez focal, compatibles con una reducción significativa de la perfusión sanguínea local. El patrón observado sugiere compromiso vascular con posible disminución o interrupción del flujo arterial, lo que caracteriza la fase inicial de sufrimiento isquémico tisular. El cuadro presenta una distribución heterogénea de la coloración cutánea y puede asociarse a un evento obstructivo o compresivo de origen vascular, con riesgo potencial de progresión a necrosis si no se restablece adecuadamente la circulación. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p137_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p137_02",
+"pt": "Do ponto de vista celular: há necrose por hipóxia mantida, inflamação crônica e substituição por tecido cicatricial fibrótico.",
+"es": "Desde el punto de vista celular: hay necrosis por hipoxia mantenida, inflamación crónica y sustitución por tejido cicatricial fibrótico."
+},
+{
+"id": "p137_03",
+"pt": "A progressão clínica da necrose tardia tende a seguir um padrão evolutivo, no qual sinais inicialmente discretos podem avançar para comprometimento mais evidente da pele e dos tecidos subjacentes. Esse comportamento reforça a importância do reconhecimento precoce e da compreensão das áreas anatômicas mais vulneráveis, onde pequenas alterações de perfusão podem resultar em lesões desproporcionais.",
+"es": "La progresión clínica de la necrosis tardía tiende a seguir un patrón evolutivo, en el que signos inicialmente discretos pueden avanzar hacia un compromiso más evidente de la piel y de los tejidos subyacentes. Este comportamiento refuerza la importancia del reconocimiento precoz y de comprender las áreas anatómicas más vulnerables, donde pequeñas alteraciones de la perfusión pueden producir lesiones desproporcionadas."
+},
+{
+"id": "p137_04",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p137_06",
+"pt": "Ponta nasal e asas nasais: regiões com pouca colateralização. •",
+"es": "Punta nasal y alas nasales: regiones con escasa circulación colateral."
+},
+{
+"id": "p137_07",
+"pt": "Glabela: pele espessa, pouco complacente e de difícil revascularização. •",
+"es": "Glabela: piel gruesa, poco complaciente y de difícil revascularización."
+},
+{
+"id": "p137_08",
+"pt": "Lábios: susceptíveis por trauma repetido e alta demanda metabólica. •",
+"es": "Labios: susceptibles por traumatismo repetido y alta demanda metabólica."
+},
+{
+"id": "p137_09",
+"pt": "Periorbitária: risco de ulceração e sequelas estéticas evidentes.",
+"es": "Periorbitaria: riesgo de ulceración y secuelas estéticas evidentes."
+},
+{
+"id": "p137_10",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p137_11",
+"pt": "Manifesta-se dias a semanas após o procedimento: •",
+"es": "Se manifiesta días a semanas después del procedimiento:"
+},
+{
+"id": "p137_12",
+"pt": "Dor persistente ou desconforto tardio. •",
+"es": "Dolor persistente o malestar tardío."
+},
+{
+"id": "p137_13",
+"pt": "Eritema crônico que não melhora com medidas simples. •",
+"es": "Eritema crónico que no mejora con medidas simples."
+},
+{
+"id": "p137_14",
+"pt": "Áreas de pele escurecida ou ulcerada em evolução lenta. •",
+"es": "Áreas de piel oscurecida o ulcerada de evolución lenta."
+},
+{
+"id": "p137_15",
+"pt": "Crosta necrótica em formação, muitas vezes confundida com “ferida traumática”.",
+"es": "Costra necrótica en formación, a menudo confundida con una “herida traumática”."
+},
+{
+"id": "p138_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p138_03",
+"pt": "Mau odor ou secreção em casos de necrose infectada.",
+"es": "Mal olor o secreción en casos de necrosis infectada."
+},
+{
+"id": "p138_04",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p138_06",
+"pt": "Infecção bacteriana: presença de febre, secreção purulenta e calor intenso. •",
+"es": "Infección bacteriana: presencia de fiebre, secreción purulenta y calor intenso."
+},
+{
+"id": "p138_07",
+"pt": "Reação inflamatória estéril (ETIP, nódulos): edema recorrente sem necrose. •",
+"es": "Reacción inflamatoria estéril (ETIP, nódulos): edema recurrente sin necrosis."
+},
+{
+"id": "p138_08",
+"pt": "Hematoma ou equimose residual: coloração arroxeada que clareia com o tempo, não escurece progressivamente. •",
+"es": "Hematoma o equimosis residual: coloración violácea que se aclara con el tiempo y no se oscurece progresivamente."
+},
+{
+"id": "p138_09",
+"pt": "Úlcera traumática: limites regulares, geralmente em áreas de atrito.",
+"es": "Úlcera traumática: bordes regulares, en general en áreas de fricción."
+},
+{
+"id": "p138_10",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p138_12",
+"pt": "Avaliação clínica da extensão da lesão. •",
+"es": "Evaluación clínica de la extensión de la lesión."
+},
+{
+"id": "p138_13",
+"pt": "Assepsia local rigorosa. •",
+"es": "Asepsia local rigurosa."
+},
+{
+"id": "p138_14",
+"pt": "Curativos úmidos e cicatrizantes (hidrogel, hidrocoloide, pomadas com dexpantenol ou AGE). •",
+"es": "Apósitos húmedos y cicatrizantes (hidrogel, hidrocoloide, pomadas con dexpantenol o AGE)."
+},
+{
+"id": "p138_15",
+"pt": "Analgésicos simples (dipirona, paracetamol) ou AINEs em casos selecionados. •",
+"es": "Analgésicos simples (dipirona, paracetamol) o AINE en casos seleccionados."
+},
+{
+"id": "p138_16",
+"pt": "Evitar traumas adicionais na região afetada.",
+"es": "Evitar nuevos traumatismos en la región afectada."
+},
+{
+"id": "p138_17",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p138_19",
+"pt": "Hialuronidase: indicada se houver suspeita de compressão tardia por excesso de ácido hialurônico. •",
+"es": "Hialuronidasa: indicada si hay sospecha de compresión tardía por exceso de ácido hialurónico."
+},
+{
+"id": "p138_20",
+"pt": "Antibioticoterapia: •",
+"es": "Antibioticoterapia:"
+},
+{
+"id": "p138_21",
+"pt": "Amoxicilina/clavulanato 875/125 mg 12/12h por 7–10 dias.",
+"es": "Amoxicilina/ácido clavulánico 875/125 mg cada 12 h por 7 a 10 días."
+},
+{
+"id": "p139_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p139_03",
+"pt": "Associar metronidazol em casos de suspeita de anaeróbios. •",
+"es": "Asociar metronidazol ante sospecha de anaerobios."
+},
+{
+"id": "p139_04",
+"pt": "Corticoides sistêmicos: prednisona 20–40 mg/dia por curto período, em casos de edema inflamatório associado. •",
+"es": "Corticoides sistémicos: prednisona 20 a 40 mg/día por un período corto, en casos de edema inflamatorio asociado."
+},
+{
+"id": "p139_05",
+"pt": "Oxigenoterapia hiperbárica: pode auxiliar na cicatrização e oxigenação tecidual. •",
+"es": "Oxigenoterapia hiperbárica: puede contribuir a la cicatrización y a la oxigenación tisular."
+},
+{
+"id": "p139_06",
+"pt": "Debridamento enzimático ou cirúrgico: quando houver tecido necrosado delimitado. •",
+"es": "Desbridamiento enzimático o quirúrgico: cuando hay tejido necrótico delimitado."
+},
+{
+"id": "p139_07",
+"pt": "Terapias regenerativas (PRP, fatores de crescimento tópicos, laser fracionado) em fase de cicatrização, para melhorar o reparo tecidual. •",
+"es": "Terapias regenerativas (PRP, factores de crecimiento tópicos, láser fraccionado) en fase de cicatrización, para mejorar la reparación tisular."
+},
+{
+"id": "p139_08",
+"pt": "Cirurgia reconstrutiva ou enxertos em necroses extensas.",
+"es": "Cirugía reconstructiva o injertos en necrosis extensas."
+},
+{
+"id": "p139_09",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p139_11",
+"pt": "Cicatrizes atróficas ou hipertróficas. •",
+"es": "Cicatrices atróficas o hipertróficas."
+},
+{
+"id": "p139_12",
+"pt": "Irregularidades de contorno. •",
+"es": "Irregularidades de contorno."
+},
+{
+"id": "p139_13",
+"pt": "Hiperpigmentação pós-inflamatória. •",
+"es": "Hiperpigmentación posinflamatoria."
+},
+{
+"id": "p139_14",
+"pt": "Infecção secundária de difícil controle. •",
+"es": "Infección secundaria de difícil control."
+},
+{
+"id": "p139_15",
+"pt": "Impacto psicológico significativo.",
+"es": "Impacto psicológico significativo."
+},
+{
+"id": "p139_16",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p139_18",
+"pt": "Reconhecimento precoce da isquemia aguda e tratamento imediato. •",
+"es": "Reconocimiento precoz de la isquemia aguda y tratamiento inmediato."
+},
+{
+"id": "p139_19",
+"pt": "Uso de volumes adequados e técnica em camadas seguras. •",
+"es": "Uso de volúmenes adecuados y técnica en capas seguras."
+},
+{
+"id": "p139_20",
+"pt": "Evitar sobrecorreção em áreas de menor complacência. •",
+"es": "Evitar la sobrecorrección en áreas de menor complacencia."
+},
+{
+"id": "p139_21",
+"pt": "Acompanhamento próximo nas primeiras semanas após o procedimento.",
+"es": "Seguimiento estrecho en las primeras semanas después del procedimiento."
+},
+{
+"id": "p140_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p140_02",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p140_04",
+"pt": "Casos leves: evolução favorável com medidas conservadoras, cicatrização sem grandes sequelas. •",
+"es": "Casos leves: evolución favorable con medidas conservadoras, cicatrización sin grandes secuelas."
+},
+{
+"id": "p140_05",
+"pt": "Casos moderados a graves: risco elevado de cicatrizes permanentes e necessidade de procedimentos reparadores. •",
+"es": "Casos moderados a graves: riesgo elevado de cicatrices permanentes y de necesidad de procedimientos reparadores."
+},
+{
+"id": "p140_06",
+"pt": "O prognóstico final depende da precocidade da intervenção e do manejo correto da fase cicatricial.",
+"es": "El pronóstico final depende de la precocidad de la intervención y del manejo correcto de la fase cicatricial."
+},
+{
+"id": "p140_07",
+"pt": "3.3 ULCERAÇÃO CUTÂNEA",
+"es": "3.3 ULCERACIÓN CUTÁNEA"
+},
+{
+"id": "p140_08",
+"pt": "Quando a necrose tecidual já está estabelecida, a prioridade do tratamento deixa de ser a reperfusão, pois o tecido desvitalizado não pode mais ser recuperado. O foco então passa a ser o manejo da ferida, com medidas que favoreçam a cicatrização, previnam infecção e minimizem sequelas estéticas e funcionais.",
+"es": "Cuando la necrosis tisular ya está establecida, la prioridad del tratamiento deja de ser la reperfusión, pues el tejido desvitalizado ya no puede recuperarse. El foco pasa entonces a ser el manejo de la herida, con medidas que favorezcan la cicatrización, prevengan la infección y minimicen las secuelas estéticas y funcionales."
+},
+{
+"id": "p140_09",
+"pt": "FIGURA 43. COMPROMETIMENTO ISQUÊMICO EM REGIÃO PERIORAL APÓS PREENCHIMENTO LABIAL",
+"es": "FIGURA 43. COMPROMISO ISQUÉMICO EN LA REGIÓN PERIORAL TRAS RELLENO LABIAL"
+},
+{
+"id": "p140_14",
+"pt": "Figura 45. Imagem de sequência clínica de evolução e resolução de necrose tardia após rinomodelação com ácido hialurônico, em seguimento de 26 dias. Nas imagens A–D observa-se inicialmente necrose cutânea estabelecida com comprometimento tecidual e presença de ulceração em região nasal, seguida por regressiva progressiva das lesões com melhora do aspecto inflamatório e da integridade cutânea ao longo do tempo. Ao final do seguimento, observa-se formação de cicatriz residual, com resultado estético aceitável após evolução do processo de reparação tecidual. Fonte: Adaptado de Lee W, et al. Management of ischemic complications after nonsurgical rhinoplasty with hyaluronic acid. Case report/review. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC12978417/",
+"es": "Figura 45. Imagen de secuencia clínica de la evolución y resolución de una necrosis tardía tras rinomodelación con ácido hialurónico, en un seguimiento de 26 días. En las imágenes A a D se observa inicialmente necrosis cutánea establecida con compromiso tisular y ulceración en la región nasal, seguida de regresión progresiva de las lesiones, con mejoría del aspecto inflamatorio y de la integridad cutánea a lo largo del tiempo. Al final del seguimiento se observa la formación de una cicatriz residual, con resultado estético aceptable tras la evolución del proceso de reparación tisular. Fuente: adaptado de Lee W, et al. Management of ischemic complications after nonsurgical rhinoplasty with hyaluronic acid. Case report/review. Available from: https://pmc.ncbi.nlm.nih.gov/articles/PMC12978417/"
+},
+{
+"id": "p141_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p141_02",
+"pt": "AVALIAÇÃO INICIAL",
+"es": "EVALUACIÓN INICIAL"
+},
+{
+"id": "p141_04",
+"pt": "Extensão e profundidade da necrose. •",
+"es": "Extensión y profundidad de la necrosis."
+},
+{
+"id": "p141_05",
+"pt": "Presença de infecção (odor, secreção, dor exacerbada). •",
+"es": "Presencia de infección (olor, secreción, dolor exacerbado)."
+},
+{
+"id": "p141_06",
+"pt": "Estado geral do paciente (comorbidades, imunidade). •",
+"es": "Estado general del paciente (comorbilidades, inmunidad)."
+},
+{
+"id": "p141_07",
+"pt": "Local anatômico (áreas de pele fina ou de alta mobilidade tendem a cicatrizar com retrações).",
+"es": "Sitio anatómico (las áreas de piel fina o de alta movilidad tienden a cicatrizar con retracciones)."
+},
+{
+"id": "p141_08",
+"pt": "CONDUTAS GERAIS",
+"es": "CONDUCTAS GENERALES"
+},
+{
+"id": "p141_09",
+"pt": "1. Limpeza da ferida •",
+"es": "1. Limpieza de la herida"
+},
+{
+"id": "p141_10",
+"pt": "Solução salina isotônica. •",
+"es": "Solución salina isotónica."
+},
+{
+"id": "p141_11",
+"pt": "Antissépticos apenas em fase inicial, quando há suspeita de contaminação. 2. Desbridamento •",
+"es": "Antisépticos solo en la fase inicial, cuando hay sospecha de contaminación. 2. Desbridamiento"
+},
+{
+"id": "p141_12",
+"pt": "Enzimático: colagenase, papaína, hidrogéis bioativos. •",
+"es": "Enzimático: colagenasa, papaína, hidrogeles bioactivos."
+},
+{
+"id": "p141_13",
+"pt": "Autolítico: curativos oclusivos (hidrogel, hidrocoloide). •",
+"es": "Autolítico: apósitos oclusivos (hidrogel, hidrocoloide)."
+},
+{
+"id": "p141_14",
+"pt": "Cirúrgico: em necroses espessas e delimitadas. 3. Controle da infecção •",
+"es": "Quirúrgico: en necrosis gruesas y delimitadas. 3. Control de la infección"
+},
+{
+"id": "p141_15",
+"pt": "Antibiótico profilático oral (amoxicilina/clavulanato com possível associação do metronidazol para cobertura de anaeróbios). •",
+"es": "Antibiótico profiláctico oral (amoxicilina/ácido clavulánico, con posible asociación de metronidazol para cubrir anaerobios)."
+},
+{
+"id": "p141_16",
+"pt": "Antibióticos tópicos em áreas colonizadas. •",
+"es": "Antibióticos tópicos en áreas colonizadas."
+},
+{
+"id": "p141_17",
+"pt": "Coleta de cultura em casos de ferida persistente. 4. Controle de inflamação e dor •",
+"es": "Toma de cultivo en casos de herida persistente. 4. Control de la inflamación y del dolor"
+},
+{
+"id": "p141_18",
+"pt": "AINEs para analgesia e modulação inflamatória. •",
+"es": "AINE para analgesia y modulación inflamatoria."
+},
+{
+"id": "p141_19",
+"pt": "Evitar corticoides sistêmicos nesta fase.",
+"es": "Evitar los corticoides sistémicos en esta fase."
+},
+{
+"id": "p142_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p142_02",
+"pt": "ESTÍMULO À CICATRIZAÇÃO",
+"es": "ESTÍMULO DE LA CICATRIZACIÓN"
+},
+{
+"id": "p142_04",
+"pt": "Curativos bioativos: hidrogel, hidrocoloide, AGE, membranas com prata. •",
+"es": "Apósitos bioactivos: hidrogel, hidrocoloide, AGE, membranas con plata."
+},
+{
+"id": "p142_05",
+"pt": "Terapias regenerativas: PRP, fatores de crescimento tópicos, laser fracionado em fase tardia. •",
+"es": "Terapias regenerativas: PRP, factores de crecimiento tópicos, láser fraccionado en fase tardía."
+},
+{
+"id": "p142_06",
+"pt": "Oxigenoterapia hiperbárica: indicada em necroses extensas ou cicatrizações lentas.",
+"es": "Oxigenoterapia hiperbárica: indicada en necrosis extensas o cicatrizaciones lentas."
+},
+{
+"id": "p142_07",
+"pt": "OZONIOTERAPIA COMO ADJUVANTE",
+"es": "OZONOTERAPIA COMO ADYUVANTE"
+},
+{
+"id": "p142_08",
+"pt": "A ozonioterapia tem sido estudada como opção complementar no tratamento de feridas crônicas e necroses, com potenciais benefícios: •",
+"es": "La ozonoterapia se ha estudiado como opción complementaria en el tratamiento de heridas crónicas y necrosis, con beneficios potenciales:"
+},
+{
+"id": "p142_09",
+"pt": "Antimicrobiano: reduz a carga bacteriana, incluindo anaeróbios. •",
+"es": "Antimicrobiano: reduce la carga bacteriana, incluidos los anaerobios."
+},
+{
+"id": "p142_10",
+"pt": "Bioestimulador: pode favorecer angiogênese em bordas viáveis. •",
+"es": "Bioestimulador: puede favorecer la angiogénesis en los bordes viables."
+},
+{
+"id": "p142_11",
+"pt": "Anti-inflamatório: relatos de melhora em dor e edema local.",
+"es": "Antiinflamatorio: reportes de mejoría del dolor y edema local."
+},
+{
+"id": "p142_12",
+"pt": "Entretanto, a evidência ainda é limitada e heterogênea, sem consenso internacional em estética. Seu uso deve ser considerado apenas como adjuvante, sem substituir curativos bioativos, antibióticos e terapias consagradas. É mais indicado em necroses de difícil cicatrização ou feridas extensas, sempre documentando em prontuário o caráter complementar e experimental.",
+"es": "Sin embargo, la evidencia aún es limitada y heterogénea, sin consenso internacional en estética. Su uso debe considerarse solo como adyuvante, sin sustituir los apósitos bioactivos, los antibióticos ni las terapias consolidadas. Está más indicada en necrosis de difícil cicatrización o heridas extensas, y siempre debe documentarse en la historia clínica su carácter complementario y experimental."
+},
+{
+"id": "p142_13",
+"pt": "PREVENÇÃO DE SEQUELAS",
+"es": "PREVENCIÓN DE SECUELAS"
+},
+{
+"id": "p142_15",
+"pt": "Prevenção de retrações: massagem, silicone gel, curativos compressivos.",
+"es": "Prevención de retracciones: masaje, gel de silicona, apósitos compresivos."
+},
+{
+"id": "p143_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p143_03",
+"pt": "Controle de pigmentação: fotoproteção + clareadores tópicos. •",
+"es": "Control de la pigmentación: fotoprotección + despigmentantes tópicos."
+},
+{
+"id": "p143_04",
+"pt": "Correções tardias: preenchimentos, subcisão, enxertos ou cirurgia reparadora após 6 meses.",
+"es": "Correcciones tardías: rellenos, subcisión, injertos o cirugía reparadora después de 6 meses."
+},
+{
+"id": "p143_05",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p143_07",
+"pt": "Pequenas necroses: cicatrização em 2–4 semanas, geralmente com hiperpigmentação residual. •",
+"es": "Necrosis pequeñas: cicatrización en 2 a 4 semanas, en general con hiperpigmentación residual."
+},
+{
+"id": "p143_08",
+"pt": "Necroses moderadas: risco de cicatrizes atróficas ou retrações. •",
+"es": "Necrosis moderadas: riesgo de cicatrices atróficas o retracciones."
+},
+{
+"id": "p143_09",
+"pt": "Necroses extensas: maior chance de deformidades permanentes, podendo exigir cirurgia reconstrutiva.",
+"es": "Necrosis extensas: mayor probabilidad de deformidades permanentes, que pueden requerir cirugía reconstructiva."
+},
+{
+"id": "p143_10",
+"pt": "FIGURA 46. CICATRIZ EM PONTA NASAL PÓS RESOLUÇÃO DE NECROSE CAUSADA POR PREENCHEDOR DÉRMICO",
+"es": "FIGURA 46. CICATRIZ EN PUNTA NASAL TRAS LA RESOLUCIÓN DE NECROSIS CAUSADA POR RELLENO DÉRMICO"
+},
+{
+"id": "p143_11",
+"pt": "Figura 46: Cicatriz em região de ponta nasal após resolução de necrose cutânea secundária à injeção de preenchedor dérmico em rinomodelação, evidenciando sequela tecidual pós-isquemia com perda parcial de contorno e irregularidade da superfície cutânea. Fonte: Adaptado de GRUNEBAUM, Lisa Danielle; ALLEMANN, Inja Bogdan; DAYAN, Steven; MANDY, Stephen; BAUMANN, Leslie. The risk of alar necrosis associated with dermal filler injection. Dermatologic Surgery, v. 35, n. Suppl 2, p. 1635-1640, 2009. https:// doi.org/10.1111/j.1524-4725.2009.01315.x",
+"es": "Figura 46: Cicatriz en la región de la punta nasal tras la resolución de una necrosis cutánea secundaria a la inyección de relleno dérmico en rinomodelación, que evidencia secuela tisular posisquémica con pérdida parcial de contorno e irregularidad de la superficie cutánea. Fuente: adaptado de GRUNEBAUM, Lisa Danielle; ALLEMANN, Inja Bogdan; DAYAN, Steven; MANDY, Stephen; BAUMANN, Leslie. The risk of alar necrosis associated with dermal filler injection. Dermatologic Surgery, v. 35, n. Suppl 2, p. 1635-1640, 2009. https:// doi.org/10.1111/j.1524-4725.2009.01315.x"
+},
+{
+"id": "p144_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p144_02",
+"pt": "As intercorrências tardias isquêmicas exigem um olhar clínico atento e, sobretudo, uma mudança de raciocínio em relação às complicações agudas. Aqui, o tempo deixa de ser um aliado evidente e passa a ser um fator de confusão, já que os sinais surgem de forma progressiva, muitas vezes discretos no início, o que pode atrasar o diagnóstico e permitir a evolução do dano tecidual.",
+"es": "Las intercurrencias tardías isquémicas exigen una mirada clínica atenta y, sobre todo, un cambio de razonamiento con respecto a las complicaciones agudas. Aquí el tiempo deja de ser un aliado evidente y pasa a ser un factor de confusión, ya que los signos aparecen de forma progresiva, muchas veces discretos al inicio, lo que puede retrasar el diagnóstico y permitir la evolución del daño tisular."
+},
+{
+"id": "p144_03",
+"pt": "A compreensão dos mecanismos envolvidos, especialmente aqueles relacionados à compressão extrínseca, hipóxia sustentada e reparação tecidual inadequada, é fundamental para interromper a progressão do quadro antes que haja perda irreversível de tecido. Diferentemente das oclusões agudas, o manejo dessas intercorrências depende mais da capacidade de reconhecimento precoce e da condução contínua do que de uma intervenção única e imediata.",
+"es": "Comprender los mecanismos implicados, en especial los relacionados con la compresión extrínseca, la hipoxia sostenida y la reparación tisular inadecuada, es fundamental para interrumpir la progresión del cuadro antes de que haya pérdida irreversible de tejido. A diferencia de las oclusiones agudas, el manejo de estas intercurrencias depende más de la capacidad de reconocimiento precoz y de la conducción continua que de una intervención única e inmediata."
+},
+{
+"id": "p144_04",
+"pt": "Por fim, o desfecho dessas complicações está diretamente relacionado à precocidade da intervenção e à qualidade do acompanhamento nas semanas subsequentes ao procedimento. O profissional deve estar preparado não apenas para tratar, mas para orientar, monitorar e, quando necessário, conduzir estratégias de reparação estética, reduzindo o impacto funcional e emocional dessas intercorrências no paciente.",
+"es": "Por último, el desenlace de estas complicaciones está directamente relacionado con la precocidad de la intervención y con la calidad del seguimiento en las semanas posteriores al procedimiento. El profesional debe estar preparado no solo para tratar, sino para orientar, monitorizar y, cuando sea necesario, conducir estrategias de reparación estética, para reducir el impacto funcional y emocional de estas intercurrencias en el paciente."
+},
+{
+"id": "p146_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p146_02",
+"pt": "A",
+"es": "L"
+},
+{
+"id": "p146_03",
+"pt": "s intercorrências tardias infecciosas e inflamatórias podem surgir dias ou semanas após os procedimentos com preenchedores, estando geralmente relacionadas à introdução de microrganismos no momento da aplicação ou à ativação de processos inflamatórios locais. Diferentemente das intercorrências agudas, esses quadros apresentam evolução mais lenta e, muitas vezes, inicial discreta, o que pode dificultar o reconhecimento precoce e atrasar a instituição do tratamento adequado.",
+"es": "as intercurrencias tardías infecciosas e inflamatorias pueden aparecer días o semanas después de los procedimientos con productos de relleno, y en general se relacionan con la introducción de microorganismos en el momento de la aplicación o con la activación de procesos inflamatorios locales. A diferencia de las intercurrencias agudas, estos cuadros presentan una evolución más lenta y, muchas veces, un inicio discreto, lo que puede dificultar el reconocimiento precoz y retrasar la instauración del tratamiento adecuado."
+},
+{
+"id": "p146_04",
+"pt": "Nesse contexto, manifestações clínicas como infecção bacteriana, formação de abscessos e reações inflamatórias persistentes compartilham sinais semelhantes, como dor, edema, eritema e alteração do relevo cutâneo, exigindo uma avaliação criteriosa para diferenciação diagnóstica. A compreensão desses processos é fundamental para direcionar a conduta, evitar recorrências e minimizar sequelas estéticas decorrentes da evolução prolongada do quadro.",
+"es": "En este contexto, manifestaciones clínicas como la infección bacteriana, la formación de abscesos y las reacciones inflamatorias persistentes comparten signos similares, como dolor, edema, eritema y alteración del relieve cutáneo, lo que exige una evaluación criteriosa para el diagnóstico diferencial. Comprender estos procesos es fundamental para orientar la conducta, evitar recurrencias y minimizar las secuelas estéticas derivadas de la evolución prolongada del cuadro."
+},
+{
+"id": "p146_05",
+"pt": "4.1 INFECÇÃO BACTERIANA",
+"es": "4.1 INFECCIÓN BACTERIANA"
+},
+{
+"id": "p146_06",
+"pt": "A infecção bacteriana é uma intercorrência tardia relativamente rara, mas de alto impacto nos procedimentos estéticos injetáveis. Pode se manifestar de forma localizada, como celulite ou abscesso, ou de forma difusa, comprometendo áreas maiores. Geralmente surgem dias a semanas após o procedimento, e seu reconhecimento precoce é crucial para evitar complicações graves como necrose, abscessos de difícil resolução ou infecções sistêmicas.",
+"es": "La infección bacteriana es una intercurrencia tardía relativamente rara, pero de alto impacto en los procedimientos estéticos inyectables. Puede manifestarse de forma localizada, como celulitis o absceso, o de forma difusa, y comprometer áreas mayores. En general aparece días a semanas después del procedimiento, y su reconocimiento precoz es crucial para evitar complicaciones graves como necrosis, abscesos de difícil resolución o infecciones sistémicas."
+},
+{
+"id": "p147_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p147_02",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p147_03",
+"pt": "As infecções bacterianas podem ocorrer por: •",
+"es": "Las infecciones bacterianas pueden producirse por:"
+},
+{
+"id": "p147_04",
+"pt": "Falha de assepsia durante o procedimento (pele, materiais, campo). •",
+"es": "Falla de asepsia durante el procedimiento (piel, materiales, campo)."
+},
+{
+"id": "p147_05",
+"pt": "Contaminação secundária após manipulação pelo paciente. •",
+"es": "Contaminación secundaria por manipulación del paciente."
+},
+{
+"id": "p147_06",
+"pt": "Inoculação de bactérias da flora cutânea, principalmente Staphylococcus aureus e Streptococcus pyogenes. •",
+"es": "Inoculación de bacterias de la flora cutánea, principalmente Staphylococcus aureus y Streptococcus pyogenes."
+},
+{
+"id": "p147_07",
+"pt": "Biofilme bacteriano aderido ao ácido hialurônico ou outros preenchedores, com resistência aumentada à resposta imune e aos antibióticos. •",
+"es": "Biofilm bacteriano adherido al ácido hialurónico u otros productos de relleno, con mayor resistencia a la respuesta inmunitaria y a los antibióticos."
+},
+{
+"id": "p147_08",
+"pt": "Isquemia prévia ou necrose parcial favorecendo colonização.",
+"es": "Isquemia previa o necrosis parcial que favorece la colonización."
+},
+{
+"id": "p147_09",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p147_11",
+"pt": "Região perioral e labial: maior exposição à flora oral. •",
+"es": "Región perioral y labial: mayor exposición a la flora oral."
+},
+{
+"id": "p147_12",
+"pt": "Nariz e glabela: risco elevado devido à drenagem venosa para o seio cavernoso. •",
+"es": "Nariz y glabela: riesgo elevado por el drenaje venoso hacia el seno cavernoso."
+},
+{
+"id": "p147_13",
+"pt": "Periorbitária: risco de complicações orbitárias e intracranianas. •",
+"es": "Región periorbitaria: riesgo de complicaciones orbitarias e intracraneales."
+},
+{
+"id": "p147_14",
+"pt": "Zonas de hematoma ou necrose prévia: ambientes propícios para colonização bacteriana.",
+"es": "Zonas de hematoma o necrosis previa: entornos propicios para la colonización bacteriana."
+},
+{
+"id": "p147_15",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p147_16",
+"pt": "Os sinais clássicos de infecção bacteriana incluem: •",
+"es": "Los signos clásicos de infección bacteriana incluyen:"
+},
+{
+"id": "p147_17",
+"pt": "Dor progressiva (diferente da dor súbita da isquemia). •",
+"es": "Dolor progresivo (distinto del dolor súbito de la isquemia)."
+},
+{
+"id": "p147_18",
+"pt": "Eritema e calor local. •",
+"es": "Eritema y calor local."
+},
+{
+"id": "p147_19",
+"pt": "Edema de evolução tardia.",
+"es": "Edema de evolución tardía."
+},
+{
+"id": "p148_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p148_03",
+"pt": "Secreção purulenta em casos avançados. •",
+"es": "Secreción purulenta en casos avanzados."
+},
+{
+"id": "p148_04",
+"pt": "Febre, mal-estar e linfadenopatia regional em casos sistêmicos. •",
+"es": "Fiebre, malestar general y linfadenopatía regional en casos sistémicos."
+},
+{
+"id": "p148_05",
+"pt": "Flutuação palpável: sugestiva de abscesso.",
+"es": "Fluctuación palpable: sugestiva de absceso."
+},
+{
+"id": "p148_06",
+"pt": "FIGURA 47. INFECÇÃO BACTERIANA EM REGIÃO PERIORBITÁRIA APÓS PREENCHIMENTO FACIAL",
+"es": "FIGURA 47. INFECCIÓN BACTERIANA EN LA REGIÓN PERIORBITARIA TRAS RELLENO FACIAL"
+},
+{
+"id": "p148_07",
+"pt": "Figura 47. Imagem clínica demonstrando processo infeccioso em região periorbitária, caracterizado por eritema localizado, edema e ponto central sugestivo de coleção purulenta em formação. O quadro é compatível com infecção bacteriana tardia, possivelmente associada à inoculação de microrganismos durante o procedimento ou à contaminação secundária, com risco de progressão para abscesso se não tratado precocemente. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 47. Imagen clínica que muestra un proceso infeccioso en la región periorbitaria, caracterizado por eritema localizado, edema y un punto central sugestivo de colección purulenta en formación. El cuadro es compatible con una infección bacteriana tardía, posiblemente asociada a la inoculación de microorganismos durante el procedimiento o a una contaminación secundaria, con riesgo de progresión a absceso si no se trata de forma precoz. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p148_08",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p148_10",
+"pt": "Isquemia tardia: palidez e necrose sem secreção purulenta. •",
+"es": "Isquemia tardía: palidez y necrosis sin secreción purulenta."
+},
+{
+"id": "p148_11",
+"pt": "Abscesso estéril: reação inflamatória sem crescimento bacteriano. •",
+"es": "Absceso estéril: reacción inflamatoria sin crecimiento bacteriano."
+},
+{
+"id": "p148_12",
+"pt": "ETIP (edema tardio intermitente persistente): edema recorrente, mas sem sinais infecciosos clássicos. •",
+"es": "ETIP (edema tardío intermitente persistente): edema recurrente, pero sin signos infecciosos clásicos."
+},
+{
+"id": "p148_13",
+"pt": "Granuloma de corpo estranho: inflamação crônica endurecida, sem calor ou secreção.",
+"es": "Granuloma de cuerpo extraño: inflamación crónica endurecida, sin calor ni secreción."
+},
+{
+"id": "p148_14",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p148_16",
+"pt": "Avaliar extensão e gravidade (localizada x difusa, superficial x profunda).",
+"es": "Evaluar la extensión y la gravedad (localizada vs. difusa, superficial vs. profunda)."
+}
+]
