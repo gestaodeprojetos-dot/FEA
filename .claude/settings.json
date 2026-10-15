@@ -11,7 +11,10 @@
       "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_transcrever.py:*)",
       "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_setup_google_oauth.sh:*)",
       "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_preparar_ambiente.sh:*)",
-      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_folha.sh:*)"
+      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_folha.sh:*)",
+      "mcp__HeyGen__create_asset_upload",
+      "mcp__HeyGen__complete_asset_upload",
+      "Bash(curl * https://heygen-resources-prod.s3-accelerate.amazonaws.com/external_upload_staging/*)"
     ]
   }
 }
