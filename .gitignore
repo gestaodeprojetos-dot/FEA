@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .env
 FEA-novo-acesso-google*.txt
+
+# Artes ES: binários grandes ficam fora do git (entregues em ZIP)
+FEA-traducoes/FEA-criativos-olheiras-latam/fea_artes/fontes/
+FEA-traducoes/FEA-criativos-olheiras-latam/fea_artes/trabalho/
+FEA-traducoes/FEA-criativos-olheiras-latam/FEA-artes-ES/*
+!FEA-traducoes/FEA-criativos-olheiras-latam/FEA-artes-ES/FEA-Ads 0[69]*

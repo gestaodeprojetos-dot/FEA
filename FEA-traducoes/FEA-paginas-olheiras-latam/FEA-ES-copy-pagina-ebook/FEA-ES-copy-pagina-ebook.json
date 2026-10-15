@@ -1,0 +1,254 @@
+{
+ "pagina": "Copy Página eBook Ojeras (headlines + blocos)",
+ "slug": "copy-pagina-ebook",
+ "produto": "Ebook Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI",
+ "mercado": "LATAM",
+ "idioma": "es-419",
+ "tratamento": "usted",
+ "fonte_copy": "https://docs.google.com/document/d/1v-gq1sJjdatMomxQkThTJSERjOuFqiUAlBjroz7u0no/edit",
+ "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view",
+ "paleta_padrao_html": {
+  "roxo": "#5B4599",
+  "azul_violeta": "#3846BB",
+  "lavanda": "#D0D1E9",
+  "alerta": "#BB3838",
+  "fundo": "#F9F9F9",
+  "borda": "#E9E9E9"
+ },
+ "tipografia": {
+  "titulos": "Sora 600-800",
+  "corpo": "Montserrat 400-500"
+ },
+ "pendencias": [
+  "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier.",
+  "Link de checkout Hotmart em USD.",
+  "WhatsApp de atendimento em espanhol.",
+  "Citação ao fabricante LG (bloco 6) precisa de aprovação."
+ ],
+ "secoes": [
+  {
+   "id": "hero",
+   "nome": "Hero com 3 variações de headline",
+   "tipo": "headline_variants",
+   "itens": [
+    {
+     "titulo": "Headline 1",
+     "texto": "Convierta el relleno de ojeras en su mayor diferencial dentro de la armonización facial al dominar una habilidad que pocos profesionales realmente poseen."
+    },
+    {
+     "titulo": "Headline 2",
+     "texto": "Domine el relleno de ojeras con seguridad y convierta una de las técnicas más temidas de la armonización facial en su mayor diferencial profesional."
+    },
+    {
+     "titulo": "Headline 3",
+     "texto": "Convierta el relleno de ojeras en su principal diferencial al dominar la técnica tridimensional y actuar con mayor previsibilidad."
+    }
+   ],
+   "subtitulo": "Un método simple y estructurado para que usted deje atrás la improvisación y aplique con precisión anatómica y previsibilidad desde sus próximas consultas.",
+   "cta": {
+    "texto": "QUIERO DOMINAR LA TÉCNICA TRIDIMENSIONAL POR SOLO US$ [PRECIO]",
+    "acao": "#oferta"
+   },
+   "nota_designer": "Headline 1 ativa no HTML; as outras ficam como variação para teste A/B. Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier."
+  },
+  {
+   "id": "verdade",
+   "nome": "Bloco 2",
+   "tipo": "text",
+   "eyebrow": "LA VERDAD DE LA QUE POCOS HABLAN",
+   "texto": [
+    "El relleno de ojeras no es una técnica difícil.",
+    "Es impredecible para quien no tiene un razonamiento clínico estructurado.",
+    "Y es precisamente esa imprevisibilidad la que genera:"
+   ],
+   "lista": [
+    "Miedo al edema",
+    "Inseguridad sobre el plano correcto",
+    "Dudas en el diagnóstico",
+    "Resultados inconsistentes",
+    "Falta de confianza para indicar y ejecutar"
+   ],
+   "texto_extra": "Por eso, muchos profesionales evitan la ojera; y pocos realmente la dominan."
+  },
+  {
+   "id": "arti",
+   "nome": "Bloco 3: metodologia ARTI",
+   "tipo": "text",
+   "eyebrow": "LA METODOLOGÍA ARTI",
+   "texto": [
+    "En este material, usted aplica la metodología ARTI, un paso a paso estructurado para convertir el relleno de ojeras en un diferencial real en su práctica clínica.",
+    "Un contenido pionero en el que describimos, por primera vez, un razonamiento distinto del que practica la mayoría de los profesionales en el mundo.",
+    "Nuestro protocolo se basa en el uso estratégico de productos de relleno con:"
+   ],
+   "lista": [
+    "Alto G’",
+    "Menor higroscopicidad (menor atracción de agua)",
+    "Partículas más grandes y más estables",
+    "Conexiones más estables entre las cadenas de ácido hialurónico"
+   ],
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Imagem da metodologia ARTI: Anatomía, Reología, Técnica e Intercurrencias (versão ES)"
+    }
+   ],
+   "cta": {
+    "texto": "QUIERO CONVERTIRME EN REFERENTE EN OJERAS",
+    "acao": "#oferta"
+   }
+  },
+  {
+   "id": "diferencial",
+   "nome": "Bloco 4",
+   "tipo": "text",
+   "eyebrow": "EL DIFERENCIAL",
+   "texto": [
+    "La mayoría de los profesionales evita la ojera. Pocos realmente la dominan.",
+    "Y precisamente por eso, quien la ejecuta con previsibilidad se diferencia."
+   ],
+   "lista": [
+    "Mayor precisión técnica",
+    "Mayor previsibilidad de resultado",
+    "Reducción significativa del edema",
+    "Resultados naturales y consistentes"
+   ]
+  },
+  {
+   "id": "anatomia",
+   "nome": "Bloco 5",
+   "tipo": "text",
+   "texto": [
+    "Asociado a esto, realizamos una revisión anatómica profunda de la región, basada en estudios con cadáveres frescos, que permitió identificar:"
+   ],
+   "lista": [
+    "La capa ideal de aplicación",
+    "Una técnica tridimensional más precisa",
+    "Variación estratégica entre 3 y 4 puntos de entrada",
+    "Mayor control del plano y de la distribución"
+   ]
+  },
+  {
+   "id": "industria",
+   "nome": "Bloco 6",
+   "tipo": "text",
+   "texto": [
+    "Este enfoque viene llamando la atención incluso de la industria de productos de relleno, como LG en Corea, que inició revisiones reológicas para aumentar la precisión de las indicaciones clínicas de sus materiales."
+   ],
+   "cta": {
+    "texto": "QUIERO CONVERTIR LA OJERA EN MI DIFERENCIAL",
+    "acao": "#oferta"
+   },
+   "nota_designer": "Cita fabricante (LG). Regra FEA: marca só com aprovação; confirmar com a gestão antes de publicar."
+  },
+  {
+   "id": "aplicacao",
+   "nome": "Bloco 7",
+   "tipo": "text",
+   "eyebrow": "RESULTADO PRÁCTICO Y APLICACIÓN INMEDIATA",
+   "texto": [
+    "Este no es un material teórico y extenso.",
+    "Es un contenido clínico, directo y aplicable.",
+    "Usted puede aplicar el razonamiento desde sus próximas consultas."
+   ]
+  },
+  {
+   "id": "para-quem",
+   "nome": "Bloco 8",
+   "tipo": "list",
+   "eyebrow": "PARA QUIÉN ES",
+   "titulo": "Este material es para profesionales que:",
+   "lista": [
+    "Evitan realizar relleno de ojeras por inseguridad",
+    "Ya lo realizan, pero sin previsibilidad clínica",
+    "Quieren reducir el riesgo y mejorar el control técnico",
+    "Buscan más seguridad y confianza en la ejecución",
+    "Quieren un diferencial real en la armonización facial"
+   ]
+  },
+  {
+   "id": "oferta",
+   "nome": "Bloco 9",
+   "tipo": "offer",
+   "eyebrow": "LO QUE USTED VA A RECIBIR",
+   "lista": [
+    "Metodología ARTI aplicada al relleno de ojeras",
+    "Técnica tridimensional paso a paso",
+    "Razonamiento clínico estructurado",
+    "Revisión científica con artículos para descargar",
+    "Casos clínicos comentados",
+    "Videoclases explicativas",
+    "Orientación clara sobre plano y ejecución"
+   ],
+   "texto_ancora": "Todo organizado para facilitar el aprendizaje y permitir una aplicación práctica inmediata.",
+   "preco": "US$ [PRECIO]",
+   "prefixo_preco": "Acceso de por vida por",
+   "cta": {
+    "texto": "QUIERO CONVERTIRME EN REFERENTE EN OJERAS",
+    "acao": "[CHECKOUT HOTMART USD: CONFIRMAR]"
+   },
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Imagem do doc original (mockup dos entregáveis em ES)"
+    }
+   ],
+   "nota_designer": "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier."
+  },
+  {
+   "id": "depoimentos",
+   "nome": "Bloco 10",
+   "tipo": "testimonials",
+   "midia": [
+    {
+     "tipo": "prints",
+     "descricao": "Manter os depoimentos, removendo os indicados no vídeo enviado pela gestão"
+    }
+   ],
+   "nota_designer": "Print original em português com legenda ES \"Testimonio original en portugués\". Conferir TCLE."
+  },
+  {
+   "id": "mentor",
+   "nome": "Bloco 11: autoridade",
+   "tipo": "authority",
+   "titulo": "¡João Pithon, su mentor!",
+   "texto": [
+    "Soy el Dr. João Pithon, médico, profesor e investigador.",
+    "Después de recorrer 8 países como investigador científico, le presentaré las técnicas refinadas de relleno que validé con más de 10.000 ml aplicados sin intercurrencias isquémicas.",
+    "Ya he formado a más de 20.000 alumnos con estas técnicas. Mi metodología le permitirá descubrir una nueva forma de ofrecer resultados de excelencia en relleno.",
+    "En 2019, tomé la decisión de trabajar con procedimientos mínimamente invasivos en la medicina estética. Esa elección transformó por completo mi vida.",
+    "Seis años después, vivo una vida con libertad financiera, experiencias únicas y la satisfacción de cuidar de mi familia como siempre soñé.",
+    "La armonización facial es un campo próspero y transformador. Y me pregunto: ¿dónde quiere estar usted dentro de 6 años?"
+   ],
+   "cta": {
+    "texto": "QUIERO DOMINAR LA TÉCNICA TRIDIMENSIONAL",
+    "acao": "#oferta"
+   },
+   "midia": [
+    {
+     "tipo": "foto",
+     "descricao": "Foto do Dr. João"
+    }
+   ],
+   "nota_designer": "Números de autoridade divergem entre as páginas (4.000, 20.000 e 30.000 alunos; 7, 8 e 9 países; 7.000 e 10.000 ml). Usar o dado que a gestão confirmar."
+  },
+  {
+   "id": "manter",
+   "nome": "Bloco final",
+   "tipo": "placeholder",
+   "midia": [
+    {
+     "tipo": "bloco",
+     "descricao": "MANTER o bloco atual da página (imagem no doc original)"
+    }
+   ]
+  },
+  {
+   "id": "rodape",
+   "nome": "Rodapé",
+   "tipo": "footer",
+   "texto": [
+    "Formação Especialista Academy · © 2026 · Todos los derechos reservados"
+   ]
+  }
+ ]
+}
