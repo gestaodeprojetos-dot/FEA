@@ -1,0 +1,278 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7282.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7282.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 1.mp4",
+   "titulo": "Planejamento rinomodelação e 2mL",
+   "titulo_origem": "imagem",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.0,
+     100.7,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]ucunaso labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Ss]ucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\betimoidal\\b",
+     "etmoidal"
+    ],
+    [
+     "\\boftalmica\\b",
+     "oftálmica"
+    ],
+    [
+     "\\bsupra-orbitária\\b",
+     "supraorbitária"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\be de vez de sair\\b",
+     "em vez de sair"
+    ],
+    [
+     "\\bouvindo o intraoral\\b",
+     "via intraoral"
+    ],
+    [
+     "\\bsubelares\\b",
+     "subalares"
+    ],
+    [
+     "\\b[Aa]lara\\b",
+     "alar"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7282.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7282.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 2.mp4",
+   "titulo": "Planejamento rinomodelação e 2mL",
+   "titulo_origem": "imagem",
+   "parte": 2,
+   "cartela_final": null,
+   "manter": [
+    [
+     100.7,
+     204.5,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]ucunaso labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Ss]ucunaso\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\betimoidal\\b",
+     "etmoidal"
+    ],
+    [
+     "\\boftalmica\\b",
+     "oftálmica"
+    ],
+    [
+     "\\bsupra-orbitária\\b",
+     "supraorbitária"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\be de vez de sair\\b",
+     "em vez de sair"
+    ],
+    [
+     "\\bouvindo o intraoral\\b",
+     "via intraoral"
+    ],
+    [
+     "\\bsubelares\\b",
+     "subalares"
+    ],
+    [
+     "\\b[Aa]lara\\b",
+     "alar"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7283.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7283.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/2- Técnica anestésica com SANEP.mp4",
+   "titulo": "Técnica anestésica com SANEP",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     44.95
+    ],
+    [
+     50.7,
+     70.35,
+     "exato"
+    ],
+    [
+     78.3,
+     139.0
+    ]
+   ],
+   "remover_legenda": [
+    [
+     5.4,
+     6.1
+    ],
+    [
+     70.4,
+     78.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ff]icadinho\\b",
+     "picadinha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7284.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7284.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/3- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     85.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bvou vender esse\\b",
+     "vou vir desse"
+    ],
+    [
+     "\\bperturito\\b",
+     "pertuito"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     66.8,
+     69.1
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7285.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7285.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/4- Pré-jowl conecta.mp4",
+   "titulo": "Pré-jowl conecta",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     33.9
+    ],
+    [
+     44.35,
+     53.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bdogzinho\\b",
+     "buldoguinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7286.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7286.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/5- Sulco nasolabial pode preencher.mp4",
+   "titulo": "Sulco nasolabial pode preencher?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     43.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7287.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7287.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/6- Rinomodelação com cânula.mp4",
+   "titulo": "Rinomodelação com cânula",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.0,
+     124.75
+    ],
+    [
+     183.0,
+     193.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "segurada\\. ver\\b",
+     "segurada, ver"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7288.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7288.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/7- Preenchimento de septo nasal.mp4",
+   "titulo": "Preenchimento de septo nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.8,
+     46.7
+    ]
+   ]
+  }
+ ]
+}

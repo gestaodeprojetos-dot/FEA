@@ -1,0 +1,212 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7305.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7305.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/1- Planejamento preenchimento de mãos.mp4",
+   "titulo": "Planejamento preenchimento de mãos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     122.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]pertoito\\b",
+     "o pertuito"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7306.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7306.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/2- Preenchimento de mãos e dedos Parte 1.mp4",
+   "titulo": "Preenchimento de mãos e dedos",
+   "titulo_origem": "imagem",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.0,
+     112.6,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Bb]ordamos\\b",
+     "Abordamos"
+    ],
+    [
+     "\\b70mm\\b",
+     "70 mm"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7306.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7306.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/2- Preenchimento de mãos e dedos Parte 2.mp4",
+   "titulo": "Preenchimento de mãos e dedos",
+   "titulo_origem": "imagem",
+   "parte": 2,
+   "cartela_final": null,
+   "manter": [
+    [
+     112.6,
+     225.0,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Bb]ordamos\\b",
+     "Abordamos"
+    ],
+    [
+     "\\b70mm\\b",
+     "70 mm"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     148.9,
+     149.8
+    ],
+    [
+     156.7,
+     157.6
+    ],
+    [
+     161.9,
+     163.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7308.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7308.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/3- Preenchimento de pés porção medial.mp4",
+   "titulo": "Preenchimento de pés porção medial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.2,
+     4.0
+    ],
+    [
+     7.6,
+     52.0
+    ],
+    [
+     59.0,
+     142.95
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Bb]ordamos\\b",
+     "Abordamos"
+    ],
+    [
+     "\\b[Aa]pertuito\\b",
+     "o pertuito"
+    ],
+    [
+     "\\be Aqui\\b",
+     "e aqui"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     83.9,
+     84.5
+    ],
+    [
+     92.8,
+     93.2
+    ]
+   ],
+   "mover_palavra": [
+    [
+     108.34,
+     108.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7309.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7309.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/4- Preenchimento de pés porção lateral.mp4",
+   "titulo": "Preenchimento de pés porção lateral",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     77.4
+    ]
+   ],
+   "remover_legenda": [
+    [
+     7.0,
+     7.6
+    ],
+    [
+     19.8,
+     22.6
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/IMG_7310.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b17/tr/IMG_7310.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e17/5- Preenchimento de pés porção média.mp4",
+   "titulo": "Preenchimento de pés porção média",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.0,
+     68.2
+    ]
+   ],
+   "remover_legenda": [
+    [
+     50.0,
+     53.0
+    ],
+    [
+     55.3,
+     57.2
+    ],
+    [
+     46.4,
+     47.5
+    ]
+   ]
+  }
+ ]
+}

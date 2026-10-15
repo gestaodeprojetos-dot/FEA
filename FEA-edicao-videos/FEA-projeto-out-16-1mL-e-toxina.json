@@ -1,0 +1,294 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7290.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7290.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/1- Planejamento de olheiras.mp4",
+   "titulo": "Planejamento de olheiras",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     62.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bCésiazinha\\b",
+     "Anestesiazinha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7291.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7291.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/2- Olheiras com bolsa Parte 1.mp4",
+   "titulo": "Olheiras com bolsa",
+   "titulo_origem": "imagem",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.0,
+     53.9
+    ],
+    [
+     64.7,
+     71.2
+    ],
+    [
+     76.2,
+     145.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[Bb]ordagem\\b",
+     "abordagem"
+    ],
+    [
+     "\\bnem 01\\b",
+     "nem 0,1"
+    ],
+    [
+     "\\busei 02\\b",
+     "usei 0,2"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7291.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7291.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/2- Olheiras com bolsa Parte 2.mp4",
+   "titulo": "Olheiras com bolsa",
+   "titulo_origem": "imagem",
+   "parte": 2,
+   "cartela_final": null,
+   "manter": [
+    [
+     167.2,
+     191.5
+    ],
+    [
+     205.0,
+     216.2
+    ],
+    [
+     230.4,
+     280.4
+    ],
+    [
+     305.3,
+     322.0
+    ],
+    [
+     400.5,
+     409.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\be voar com tour\\b",
+     "Yvoire Contour"
+    ],
+    [
+     "\\b[Bb]ordagem\\b",
+     "abordagem"
+    ],
+    [
+     "\\bnem 01\\b",
+     "nem 0,1"
+    ],
+    [
+     "\\busei 02\\b",
+     "usei 0,2"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     309.3,
+     318.9
+    ],
+    [
+     321.5,
+     322.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7297_7296.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7297_7296.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/3- Resultado das olheiras com bolsa.mp4",
+   "titulo": "Resultado das olheiras com bolsa",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     39.45
+    ],
+    [
+     44.1,
+     53.2
+    ],
+    [
+     55.4,
+     82.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bMallarmound\\b",
+     "malar mound"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7298.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7298.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/4- Planejamento toxina.mp4",
+   "titulo": "Planejamento toxina",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     55.7,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Dd](?:ISPUR|ispur|ispor)\\b",
+     "Dysport"
+    ],
+    [
+     "\\bVamos usar Vamos Dysport\\b",
+     "Vamos usar Dysport"
+    ],
+    [
+     "\\b[Vv]amos Dysport nessa\\b",
+     "Dysport nessa"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     40.5,
+     42.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7301.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7301.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/5- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     48.8
+    ],
+    [
+     51.6,
+     86.7
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7302.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7302.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/6- Orbiculares.mp4",
+   "titulo": "Orbiculares",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     59.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhumanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bolheiros\\b",
+     "olheiras"
+    ],
+    [
+     "^unidade$",
+     "uma unidade"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7300.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7300.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/7- Glabela.mp4",
+   "titulo": "Glabela",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     61.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Dd](?:ISPUR|ispur|ispor)\\b",
+     "Dysport"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7303.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7303.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/8- Nasal.mp4",
+   "titulo": "Nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     32.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Dd](?:ISPUR|ispur|ispor)\\b",
+     "Dysport"
+    ],
+    [
+     "uma, Uma",
+     "uma, uma"
+    ]
+   ]
+  }
+ ]
+}
