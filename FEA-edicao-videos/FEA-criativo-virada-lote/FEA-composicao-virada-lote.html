@@ -156,6 +156,16 @@ body.bf{--teal:#E9C77B}
   <div id="P_items"></div>
 </div>
 
+<!-- Pós-Graduação em Técnicas Injetáveis: identidade visual da pós (selo, grafismo grego, azul-marinho e cobre) -->
+<div id="PG" class="full" style="background:#0c1a2f;overflow:hidden">
+  <img id="PG_bg" src="pos-fundo.jpg" class="abs" style="left:-60px;top:-60px;width:1200px;height:2040px;object-fit:cover;opacity:.55">
+  <div class="abs" style="inset:0;background:radial-gradient(circle at 50% 36%,rgba(12,26,47,.15),rgba(12,26,47,.92) 62%)"></div>
+  <div id="PG_top" class="abs" style="left:0;right:0;top:170px;text-align:center;font-weight:700;letter-spacing:.22em;font-size:34px;color:#E3A88A"></div>
+  <img id="PG_selo" src="pos-selo.png" class="abs" style="left:150px;top:260px;width:780px;height:780px;border-radius:50%;box-shadow:0 30px 90px rgba(0,0,0,.6)">
+  <div id="PG_sh" class="abs" style="left:150px;top:260px;width:780px;height:780px;border-radius:50%;background:linear-gradient(110deg,rgba(255,255,255,0) 40%,rgba(255,236,220,.55) 50%,rgba(255,255,255,0) 60%);background-size:300% 100%"></div>
+  <div id="PG_txt" class="abs" style="left:60px;right:60px;top:1090px;text-align:center;font-weight:700;font-size:44px;color:#f4e6dc"></div>
+</div>
+
 <!-- lote card -->
 <div id="E" class="card" style="top:120px;height:330px;padding:40px 54px">
   <div style="font-weight:800;font-size:44px;letter-spacing:.04em"><span class="goldtxt">1º LOTE</span> <span style="color:var(--teal);font-weight:700;font-size:32px;letter-spacing:.14em">◆ INGRESSOS LIMITADOS</span></div>
@@ -531,8 +541,19 @@ function marca(c,t){
   const st=p(t,c.tLogo+.35,c.tLogo+.65); $('MK_sub').style.opacity=st; $('MK_sub').style.transform=`translateY(${(1-oc(st))*20}px)`;
   const tx=p(t,c.tTexto||c.tLogo+.7,(c.tTexto||c.tLogo+.7)+.3); $('MK_txt').style.opacity=tx; $('MK_txt').style.transform=`translateY(${(1-oc(tx))*20}px)`;
 }
-const FN={gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
-const ALL=['A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
+function pos(c,t){
+  const X=$('PG'); vis(X,true);
+  const w=oc(p(t,c.s,c.s+.38)), out=io(p(t,c.e-.22,c.e));
+  X.style.clipPath=`circle(${w*150}% at 50% 34%)`; X.style.opacity=1-out;
+  $('PG_bg').style.transform=`scale(${1.04+.06*p(t,c.s,c.e)})`;
+  const k=ob(p(t,c.s+.12,c.s+.7)); $('PG_selo').style.opacity=p(t,c.s+.12,c.s+.3);
+  $('PG_selo').style.transform=`scale(${.62+.38*k}) rotate(${(1-k)*-24}deg)`; $('PG_sh').style.transform=$('PG_selo').style.transform;
+  $('PG_sh').style.backgroundPosition=`${100-130*io(p(t,c.s+.7,c.s+1.6))}% 0`;
+  $('PG_top').innerHTML=c.topo||''; $('PG_top').style.opacity=p(t,c.s+.25,c.s+.5);
+  $('PG_txt').innerHTML=c.texto||''; const tx=p(t,c.tTexto||c.s+.8,(c.tTexto||c.s+.8)+.3); $('PG_txt').style.opacity=tx; $('PG_txt').style.transform=`translateY(${(1-oc(tx))*24}px)`;
+}
+const FN={pos,gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
+const ALL=['PG','A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
 if(CFG.cap_top) $('cap').style.top=CFG.cap_top+'px';   // vídeo que já tinha legenda gravada: a nova cobre a faixa apagada
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
