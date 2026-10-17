@@ -115,6 +115,51 @@ if URG:
     mus += lp(alarme, 3000)
     for k in range(1, int(DUR / (4 * bar)) + 1):
         add(mus, riser(1.2), k * 4 * bar - 1.2, .25); add(mus, boom(1.2), k * 4 * bar, .5)
+# estilos extras (Keila, 17/10/2026: "ir mudando a musiquinha de fundo para não ficar tudo igual")
+# cada um com tom, andamento e batida próprios; mesmo volume e mesmo abaixamento sob a voz
+ESTILOS = {
+ 'pulsante': dict(bpm=128, raizes=[73.42, 58.27, 87.31, 65.41], acordes=[[293.66, 349.23, 440], [233.08, 293.66, 349.23], [349.23, 440, 523.25], [261.63, 329.63, 392]],
+                  kick='4', clap=False, hat='off', arp=4, brilho=2400),           # Dm Bb F C, quatro no chão, arpejo em semicolcheias
+ 'epico':    dict(bpm=92, raizes=[65.41, 51.91, 77.78, 58.27], acordes=[[261.63, 311.13, 392], [207.65, 261.63, 311.13], [311.13, 392, 466.16], [233.08, 293.66, 349.23]],
+                  kick='toms', clap=False, hat=None, arp=2, brilho=1500),         # Cm Ab Eb Bb, tambores graves, cordas em colcheias
+ 'groove':   dict(bpm=118, raizes=[82.41, 65.41, 98.0, 73.42], acordes=[[329.63, 392, 493.88], [261.63, 329.63, 392], [392, 493.88, 587.33], [293.66, 369.99, 440]],
+                  kick='4', clap=True, hat='16', arp=2, brilho=2000),             # Em C G D, palma no 2 e no 4, chimbal em semicolcheias
+ 'brilho':   dict(bpm=132, raizes=[87.31, 65.41, 73.42, 58.27], acordes=[[349.23, 440, 523.25], [261.63, 329.63, 392], [293.66, 349.23, 440], [233.08, 293.66, 349.23]],
+                  kick='4', clap=True, hat='off', arp=4, brilho=3200),            # F C Dm Bb, mais aberto e luminoso
+}
+EST = ESTILOS.get(cfg.get('trilha'))
+if EST:
+    rng = np.random.default_rng(7)
+    def ruido(d, fc_lo, dec):
+        n = int(d * SR); x = rng.standard_normal(n); x = x - lp(x, fc_lo); return x * np.exp(-np.arange(n) / SR * dec)
+    beat = 60 / EST['bpm']; bar = 4 * beat
+    idx = np.minimum((T / bar).astype(int) % 4, 3)
+    pad = np.zeros(N)
+    for v in range(3):
+        f = np.array([EST['acordes'][i][v] for i in range(4)])[idx]
+        for det in (-.003, .003):
+            ph = np.cumsum(f * (1 + det)) / SR; pad += 2 * (ph % 1) - 1
+    pad = lp(lp(pad, 1100), 1100) * .17
+    sub = np.sin(2 * np.pi * np.cumsum(np.array(EST['raizes'])[idx]) / SR) * .33
+    arp = np.zeros(N); passo = beat / EST['arp']; ordem = [0, 1, 2, 1, 2, 0, 1, 2]
+    for k in range(int(DUR / passo)):
+        t0 = k * passo; b_ = int(t0 / bar) % 4; f = EST['acordes'][b_][ordem[k % 8]] * (2 if k % 16 >= 8 else 1)
+        n = int(.18 * SR); tt = np.arange(n) / SR
+        ph = np.cumsum(np.full(n, f)) / SR; s_ = (np.abs(2 * (ph % 1) - 1) * 2 - 1) * np.exp(-tt * 18)
+        add(arp, s_, t0, .10 + .08 * min(1, t0 / max(1, fim)))
+    arp = lp(arp, EST['brilho'])
+    bat = np.zeros(N)
+    for k in range(int(DUR / beat)):
+        t0 = k * beat
+        if EST['kick'] == '4': add(bat, boom(.32, 95, 42, 13), t0, .75)
+        elif EST['kick'] == 'toms' and k % 4 in (0, 2): add(bat, boom(.9, 80, 38, 5), t0, .9); add(bat, boom(.5, 120, 70, 8), t0 + beat * .75, .35)
+        if EST['clap'] and k % 2 == 1: add(bat, lp(ruido(.18, 900, 22), 5000), t0, .22)
+        if EST['hat'] == 'off': add(bat, ruido(.05, 6000, 60), t0 + beat / 2, .12)
+        if EST['hat'] == '16':
+            for q in range(4): add(bat, ruido(.035, 7000, 90), t0 + q * beat / 4, .09 if q % 2 else .05)
+    mus = pad + sub + arp + bat
+    for k in range(1, int(DUR / (4 * bar)) + 1):
+        add(mus, riser(1.0), k * 4 * bar - 1.0, .2)
 # impactos nas telas cheias e na virada; subida antes da virada e do final
 for c in cfg['cenas']:
     if c['tipo'] in ('logo', 'celular', 'palestrantes', 'cursos', 'live'): add(mus, boom(), c['s'], .5)
