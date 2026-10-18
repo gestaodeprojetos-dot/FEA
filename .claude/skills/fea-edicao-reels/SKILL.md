@@ -30,6 +30,17 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
+## Criativos de anúncio FEP Experience (FEPEXP), 18/10/2026
+
+Quando a Keila manda brutos marcados como "Criativos FEP" e a pasta de ID visual FEPEXP (`1JMPIuFGI7s-xLLhwlzu25mk8eTxg-wBu`), o vídeo é anúncio, não Reels de procedimento:
+
+- **Identidade FEPEXP** (guia no Drive: "TÍTULOS: EL MESSIRI, TEXTO CORRIDO: SATOSHI", paleta `#3D52FF` azul, `#AA45FF` roxo, `#000000`, `#FFC589` pêssego): no projeto.json, `"identidade": "fepexp"`. Fontes em `04 - TIPOGRAFIA` do Drive (El Messiri Bold, Satoshi Black), copiar para `fontsdir`.
+- **Logo no topo**: `FEA-assets/FEA-logo-fepexp-sem-edicao.png` (logo "FEP Experience" sem "ED.01", que fica datado), largura 480, y 90, o vídeo todo.
+- **CTA "Saiba mais"** (pedido da Keila, 18/10/2026): botão `FEA-assets/FEA-botao-saiba-mais-fepexp.png` (pill gradiente azul para roxo, Satoshi Black), entra quando o Dr. fala "clica em Saiba Mais" (`inicio_bruto`, tempo da primeira palavra "Saiba" no bruto) e fica até o fim, com pulso leve. Sem o CTA de vídeo concatenado (o anúncio já termina na fala do CTA).
+- **Duas frentes**: captação de aluno (B2B) e captação de paciente modelo (público leigo). Prefixar o nome do arquivo: `N- Aluno - Título.mp4` / `N- Paciente - Título.mp4`. Em criativo de paciente, cuidado redobrado com promessa de resultado (linha vermelha 1): frases como "garantido segurança" saem e vão para a Keila.
+- Grafias: **FEP Experience** (Whisper ouve "FAP Experience"), **FEPEXP** (palavra-chave de comentário), "Saiba Mais" (Whisper: "Saba Mais", "Sabamais", "saber mais", "quem saiba mais"), harmonização (nunca "hormonização").
+- Juntar vídeos pedidos ("juntar 7880 e 7881"): concat demuxer com `-c copy` (sem perda; o iPhone grava os dois com o mesmo codec), somar a duração do primeiro aos tempos da transcrição do segundo e cortar pelo `manter`.
+
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).
