@@ -386,7 +386,8 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA",
+                  "Black", "Mari", "Elite", "Combo", "YouTube", "MEC"}
 
 
 def limpar(texto):
@@ -471,8 +472,10 @@ def formatar_titulo(v):
 
 def gerar_ass(v, palavras, duracao, caminho):
     linhas = [ass_header()]
-    titulo = formatar_titulo(v)
-    linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
+    # sem "titulo" (Keila, 18/10/2026: "só legendar"): sem título e a legenda começa na 1ª fala
+    td = TITULO_DUR if v.get("titulo") else 0.0
+    if td:
+        linhas += dialogos_linhas(1, 0, td, "Titulo", formatar_titulo(v), r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
@@ -486,9 +489,9 @@ def gerar_ass(v, palavras, duracao, caminho):
         if carry:
             bloco = carry + bloco
             carry = []
-        if bloco[-1]["e"] <= TITULO_DUR:       # fala debaixo do título (padrão: sem legenda)
+        if bloco[-1]["e"] <= td:       # fala debaixo do título (padrão: sem legenda)
             continue
-        s, e = max(bloco[0]["s"], TITULO_DUR, livre), bloco[-1]["e"] + 0.15
+        s, e = max(bloco[0]["s"], td, livre), bloco[-1]["e"] + 0.15
         prox = blocos[i + 1] if i + 1 < len(blocos) else None
         if prox:
             e = min(e, prox[0]["s"])
@@ -505,7 +508,7 @@ def gerar_ass(v, palavras, duracao, caminho):
             # juntado estourava as 2 linhas: "por isso que a gente está escolhendo aqui um produto...")
             fala_inteira = len(bloco) == 1 and bloco[0].get("ini") and bloco[0]["w"].strip()[-1:] in ".?!"
             if prox and not fala_inteira and len(texto) + len(juntar_texto(prox)) + 1 <= MAX_CHARS_LINHA * 2:
-                carry = [p for p in bloco if p["s"] >= TITULO_DUR - 0.3]
+                carry = [p for p in bloco if p["s"] >= td - 0.3]
                 continue
             e = min(s + minimo, fim_legendas)
             livre = e

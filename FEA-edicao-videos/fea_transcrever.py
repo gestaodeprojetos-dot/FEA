@@ -165,14 +165,15 @@ def main():
     for wav in args[1:]:
         nome = os.path.basename(wav).rsplit(".", 1)[0]
         destino = f"{saida}/{nome}.json"
+        audio = carregar_audio(wav)
         if so_complemento:
             out = [s for s in json.load(open(destino, encoding="utf-8")) if not s.get("complemento")]
         else:
-            segs, _ = modelo.transcribe(wav, language="pt", word_timestamps=True, initial_prompt=PROMPT,
+            # passa o áudio já carregado: o PyAV 19 não aceita o argumento que o faster-whisper usa ao abrir arquivo
+            segs, _ = modelo.transcribe(audio, language="pt", word_timestamps=True, initial_prompt=PROMPT,
                                         vad_filter=True, condition_on_previous_text=False)
             out = [{"start": s.start, "end": s.end, "text": s.text,
                     "words": [{"s": x.start, "e": x.end, "w": x.word} for x in s.words]} for s in segs]
-        audio = carregar_audio(wav)
         if not any(s.get("refinado") for s in out):
             out = refinar(modelo, out, audio)
         out = complementar(modelo, out, audio)
