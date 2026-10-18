@@ -201,9 +201,9 @@ def revisar(cfg, v, folhas=None):
     if v.get("parte") == 1 and not any(s > 1 and "Parte 2" in t for s, e, t in titulo):
         erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
 
-    # 2b. headline: margem e comprimento
-    titulo_formatado = fe.formatar_titulo(v)
-    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
+    # 2b. headline: margem e comprimento ("titulo": "" = vídeo só com legenda, sem headline)
+    titulo_formatado = fe.formatar_titulo(v) if v["titulo"] else ""
+    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado) if v["titulo"] else (0, 0, [])
     if larg_px > LARGURA_SEGURA:
         erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
     elif larg_px > LARGURA_SEGURA * 0.92:
@@ -251,7 +251,7 @@ def revisar(cfg, v, folhas=None):
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
-        if s < fe.TITULO_DUR - 0.01:
+        if v["titulo"] and s < fe.TITULO_DUR - 0.01:
             erros.append(f"[{s:5.1f}s] legenda junto com o título")
         paciente = any(a <= s <= b for a, b in pac_saida)   # fala baixa do paciente, conferida no áudio
         seg = db[int(s / ps):int(e / ps) + 1]

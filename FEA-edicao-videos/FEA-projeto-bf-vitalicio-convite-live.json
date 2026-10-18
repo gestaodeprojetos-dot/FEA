@@ -1,0 +1,13 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/78914856-b78c-5e8a-880d-721514db7bf2/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/78914856-b78c-5e8a-880d-721514db7bf2/scratchpad/bruto/IMG_7890.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/78914856-b78c-5e8a-880d-721514db7bf2/scratchpad/tr/IMG_7890.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/78914856-b78c-5e8a-880d-721514db7bf2/scratchpad/out/IMG_7890 legendado.mp4",
+   "titulo": "",
+   "manter": [[0.28, 19.05], [20.2, 110.8], [111.6, 138.2]]
+  }
+ ]
+}
