@@ -52,6 +52,7 @@ DESTAQUE_Y = 1200
 
 PROD_LADO = 552
 PROD_CENTRO = (540, 1125)
+PROD_CENTRO_ALTO = 700   # durante o título (caixas em y 1120 a 1290)
 PROD_DUR = 2.5
 
 PIL_POR_ASS = 0.641    # calibrado: fonte ASS 100 = Montserrat PIL 64,1
@@ -338,7 +339,9 @@ def gerar(cfg, v, so_legenda=False):
         idx = 2 + k
         partes.append(f"[{idx}:v]format=rgba,scale=w='trunc(iw*min(1,0.82+t*1.2)/2)*2':h=-2:eval=frame,"
                       f"fade=t=in:d=0.1:alpha=1,setpts=PTS-STARTPTS+{t0:.3f}/TB[p{k}]")
-        partes.append(f"{atual}[p{k}]overlay=x='{PROD_CENTRO[0]}-w/2':y='{PROD_CENTRO[1]}-h/2':eval=frame:"
+        # citado enquanto o título está na tela: o quadro sobe para acima do título
+        cy = PROD_CENTRO_ALTO if t0 < TIT_FIM else PROD_CENTRO[1]
+        partes.append(f"{atual}[p{k}]overlay=x='{PROD_CENTRO[0]}-w/2':y='{cy}-h/2':eval=frame:"
                       f"enable='between(t,{t0:.3f},{t0 + dur:.3f})'[o{k}]")
         atual = f"[o{k}]"
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
