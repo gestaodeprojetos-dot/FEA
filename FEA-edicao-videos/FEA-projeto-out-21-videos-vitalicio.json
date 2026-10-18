@@ -1,0 +1,85 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/brutos/IMG_7889.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/tr/IMG_7889.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/out/1- Black Friday Vitalícia ao vivo.mp4",
+   "titulo": "",
+   "manter": [
+    [
+     1.2,
+     68.85
+    ],
+    [
+     70.1,
+     148.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bComo Vitalício",
+     "Combo Vitalício"
+    ],
+    [
+     "nesse lado especial",
+     "nesse lote especial"
+    ],
+    [
+     "\\bYoutube\\b",
+     "YouTube"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     68.9,
+     70.1
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/brutos/IMG_7902.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/tr/IMG_7902.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/6dfa2e81-c3d1-5713-a4ae-e69958c57489/scratchpad/out/2- Combo Vitalício com a Mari.mp4",
+   "titulo": "",
+   "manter": [
+    [
+     0.0,
+     47.3
+    ],
+    [
+     49.55,
+     115.55
+    ],
+    [
+     116.4,
+     173.45,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bTava\\b",
+     "Tava"
+    ],
+    [
+     "\\bas vezes\\b",
+     "às vezes"
+    ]
+   ],
+   "fala_paciente": [
+    [
+     35.85,
+     36.5
+    ]
+   ],
+   "remover_legenda": [
+    [
+     173.3,
+     173.45
+    ]
+   ]
+  }
+ ]
+}

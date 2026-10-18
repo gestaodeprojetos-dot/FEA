@@ -190,42 +190,45 @@ def revisar(cfg, v, folhas=None):
         erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
                      ", cortar o que é parado ou dividir em Parte 1/2"))
 
-    # 2. título: exatamente o da imagem, nos 3 primeiros segundos
     titulo, legendas = ler_ass(ass)
-    txt_tit = " ".join(t for s, e, t in titulo if s < 1)
-    esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
-    if re.sub(r"\s+", " ", txt_tit) != esperado:
-        erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
-    if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:
-        erros.append("título passa dos 3 s")
-    if v.get("parte") == 1 and not any(s > 1 and "Parte 2" in t for s, e, t in titulo):
-        erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
+    td = fe.TITULO_DUR if v.get("titulo") else 0.0
+    # vídeo sem título ("só legendar", Keila 18/10/2026): pula as checagens de título
+    if v.get("titulo"):
+        # 2. título: exatamente o da imagem, nos 3 primeiros segundos
+        txt_tit = " ".join(t for s, e, t in titulo if s < 1)
+        esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
+        if re.sub(r"\s+", " ", txt_tit) != esperado:
+            erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
+        if titulo and max(e for s, e, t in titulo if s < 1) > td + 0.01:
+            erros.append("título passa dos 3 s")
+        if v.get("parte") == 1 and not any(s > 1 and "Parte 2" in t for s, e, t in titulo):
+            erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
 
-    # 2b. headline: margem e comprimento
-    titulo_formatado = fe.formatar_titulo(v)
-    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
-    if larg_px > LARGURA_SEGURA:
-        erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
-    elif larg_px > LARGURA_SEGURA * 0.92:
-        aten.append(f"headline quase encostando na margem ({larg_px:.0f} px / {LARGURA_SEGURA} px): considerar enxugar")
-    for li in linhas_txt:
-        if len(li) > MAX_CHARS_TITULO_LINHA + 4 and not li.startswith("Parte "):
-            erros.append(f"linha de headline com {len(li)} chars (\"{li}\"): máximo ~{MAX_CHARS_TITULO_LINHA}, enxugar o título")
-    if n_linhas > 3 + (1 if v.get("parte") else 0) and fe.TITULO_TAM_LONGO not in [0]:
-        aten.append(f"headline com {n_linhas} linhas (fonte {fe.TITULO_TAM_LONGO}): título longo da imagem, conferir na tela")
-    elif n_linhas > 2 and not v.get("parte"):
-        aten.append(f"headline com {n_linhas} linhas: título longo, considerar enxugar")
+        # 2b. headline: margem e comprimento
+        titulo_formatado = fe.formatar_titulo(v)
+        larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
+        if larg_px > LARGURA_SEGURA:
+            erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
+        elif larg_px > LARGURA_SEGURA * 0.92:
+            aten.append(f"headline quase encostando na margem ({larg_px:.0f} px / {LARGURA_SEGURA} px): considerar enxugar")
+        for li in linhas_txt:
+            if len(li) > MAX_CHARS_TITULO_LINHA + 4 and not li.startswith("Parte "):
+                erros.append(f"linha de headline com {len(li)} chars (\"{li}\"): máximo ~{MAX_CHARS_TITULO_LINHA}, enxugar o título")
+        if n_linhas > 3 + (1 if v.get("parte") else 0) and fe.TITULO_TAM_LONGO not in [0]:
+            aten.append(f"headline com {n_linhas} linhas (fonte {fe.TITULO_TAM_LONGO}): título longo da imagem, conferir na tela")
+        elif n_linhas > 2 and not v.get("parte"):
+            aten.append(f"headline com {n_linhas} linhas: título longo, considerar enxugar")
 
-    # 2b'. título inventado (sem imagem de títulos) nunca leva nome de produto (Keila, 02/10/2026)
-    if v.get("titulo_origem") != "imagem":
-        for marca in MARCAS_TITULO:
-            if re.search(rf"\b{marca}\b", v["titulo"], re.I):
-                erros.append(f"título \"{v['titulo']}\" com nome de produto ({marca}): sem imagem de títulos, tirar o produto")
+        # 2b'. título inventado (sem imagem de títulos) nunca leva nome de produto (Keila, 02/10/2026)
+        if v.get("titulo_origem") != "imagem":
+            for marca in MARCAS_TITULO:
+                if re.search(rf"\b{marca}\b", v["titulo"], re.I):
+                    erros.append(f"título \"{v['titulo']}\" com nome de produto ({marca}): sem imagem de títulos, tirar o produto")
 
-    # 2c. nomes de produto no título (Whisper pode errar o título se veio da transcrição)
-    for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
-        if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
-            erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
+        # 2c. nomes de produto no título (Whisper pode errar o título se veio da transcrição)
+        for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
+            if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
+                erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
 
     # 3. legenda: texto proibido, só depois do título, sem legenda sobre silêncio
     db, lim, ps = fe.perfil_voz(ff, mp4)
@@ -251,7 +254,7 @@ def revisar(cfg, v, folhas=None):
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
-        if s < fe.TITULO_DUR - 0.01:
+        if s < td - 0.01:
             erros.append(f"[{s:5.1f}s] legenda junto com o título")
         paciente = any(a <= s <= b for a, b in pac_saida)   # fala baixa do paciente, conferida no áudio
         seg = db[int(s / ps):int(e / ps) + 1]
@@ -262,7 +265,7 @@ def revisar(cfg, v, folhas=None):
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
     # 3b. sincronia com o áudio (Keila 26/09 e 01/10: "legendas não estão sincronizadas")
     for k, (s, e, t) in enumerate(legendas):
-        if s < fe.TITULO_DUR + 0.5:
+        if s < td + 0.5:
             continue
         i = int(s / ps)
         # atrasada: o Dr. já fala antes da legenda aparecer
@@ -340,7 +343,7 @@ def revisar(cfg, v, folhas=None):
             off += b - a
         return -1
     mantido_total = sum(b - a for a, b in manter)
-    n_dit = sum(1 for w in ditas if t_saida((w["s"] + w["e"]) / 2) > fe.TITULO_DUR + 0.2)
+    n_dit = sum(1 for w in ditas if t_saida((w["s"] + w["e"]) / 2) > td + 0.2)
     if n_dit and n_leg / n_dit < 0.9:
         erros.append(f"legenda com {n_leg} palavras para {n_dit} faladas: faltam palavras (buracos na legenda)")
 
@@ -361,7 +364,7 @@ def revisar(cfg, v, folhas=None):
         if any(a <= m < b for a, b in v.get("remover_legenda", []) + v.get("silenciar", [])):
             continue
         ts_ = t_saida(m)
-        if ts_ > fe.TITULO_DUR + 0.3 and ts_ < mantido_total - 0.3:
+        if ts_ > td + 0.3 and ts_ < mantido_total - 0.3:
             falado += [(t, ts_) for t in _tok(fe.corrigir(w["w"], v.get("correcoes", ())))]
     leg = [t for _, _, txt in legendas for t in _tok(txt)]
     sm = difflib.SequenceMatcher(None, [t for t, _ in falado], leg, autojunk=False)
@@ -381,7 +384,7 @@ def revisar(cfg, v, folhas=None):
     for s_, e_, _ in legendas:
         no_ar[int(s_ / ps):int(e_ / ps) + 1] = True
     voz = db >= lim
-    k, ini_v = int((fe.TITULO_DUR + 0.5) / ps), None
+    k, ini_v = int((td + 0.5) / ps), None
     fim_conteudo = int((mantido_total - 0.3) / ps)
     while k < min(fim_conteudo, len(db)):
         if voz[k] and not no_ar[k]:
@@ -430,7 +433,7 @@ def revisar(cfg, v, folhas=None):
 
     # 6. silêncio longo (outro lado do rosto, procurando pertuito)
     fala = [(s, e) for s, e, _ in legendas]
-    ult = fe.TITULO_DUR
+    ult = td
     for s, e in fala + [(dur, dur)]:
         if s - ult > 8:
             aten.append(f"[{ult:5.1f}s a {s:5.1f}s] {s - ult:.0f} s sem fala: conferir nos quadros se o Dr. está parado (cortar) ou fazendo a técnica (fica)")
