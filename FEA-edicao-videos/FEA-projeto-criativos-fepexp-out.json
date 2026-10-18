@@ -1,0 +1,1260 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7874.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7874.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/1- Paciente - Planejamento full face de uma paciente modelo.mp4",
+   "titulo": "Planejamento full face de uma paciente modelo",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 22.0,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.2,
+     34.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7876.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7876.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/2- Aluno - Quantos mL em cada caso do hands-on.mp4",
+   "titulo": "Quantos mL em cada caso do hands-on?",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 59.52,
+    "y": 1380
+   },
+   "manter": [
+    [
+     1.37,
+     65.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null,
+   "remover_legenda": [
+    [
+     39.4,
+     40.36
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7878.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7878.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/3- Aluno - Hands-on de full face - um caso atrás do outro.mp4",
+   "titulo": "Hands-on de full face: um caso atrás do outro",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 36.42,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.0,
+     61.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7879.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7879.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/4- Aluno - Quem coloca a mão na massa é o aluno.mp4",
+   "titulo": "Quem coloca a mão na massa é o aluno",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 56.92,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.4,
+     63.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7880_7881.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7880_7881.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/5- Aluno - Um aluno por paciente, um monitor ao lado.mp4",
+   "titulo": "Um aluno por paciente, um monitor ao lado",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 52.980000000000004,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.2,
+     16.1
+    ],
+    [
+     29.1,
+     55.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7882.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7882.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/6- Paciente - Paciente modelo no meu curso avançado.mp4",
+   "titulo": "Paciente modelo no meu curso avançado",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 20.58,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.0,
+     31.75
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7883.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7883.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/7- Paciente - O cuidado com cada paciente modelo.mp4",
+   "titulo": "O cuidado com cada paciente modelo",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 43.51,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.0,
+     50.04
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null,
+   "remover_legenda": [
+    [
+     26.35,
+     27.12
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7884.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7884.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/8- Paciente - Caso clínico de 8 mL no hands-on.mp4",
+   "titulo": "Caso clínico de 8 mL no hands-on",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 42.24,
+    "y": 1380
+   },
+   "manter": [
+    [
+     1.84,
+     48.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7885.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7885.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/9- Paciente - Paciente modelo pagando só o material.mp4",
+   "titulo": "Paciente modelo pagando só o material",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 36.94,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.6,
+     48.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7886.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7886.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/10- Aluno - Profissionais do mundo todo aprendem aqui.mp4",
+   "titulo": "Profissionais do mundo todo aprendem aqui",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 40.98,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.0,
+     57.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/brutos/IMG_7887.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/tr/IMG_7887.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/out/11- Aluno - De onde vêm os alunos da FEP Experience.mp4",
+   "titulo": "De onde vêm os alunos da FEP Experience?",
+   "titulo_origem": "inventado",
+   "identidade": "fepexp",
+   "logo": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-logo-fepexp-sem-edicao.png",
+    "largura": 400,
+    "y": 70
+   },
+   "cta_botao": {
+    "arquivo": "/tmp/claude-0/-home-user-FEA/49a97b31-6f4b-52f4-aff7-197fdfa14b33/scratchpad/FEA-botao-saiba-mais-fepexp.png",
+    "inicio_bruto": 45.4,
+    "y": 1380
+   },
+   "manter": [
+    [
+     0.1,
+     55.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bFAP\\b",
+     "FEP"
+    ],
+    [
+     "\\b[Ff][AaEe][Pp] [Ee]xperience\\b",
+     "FEP Experience"
+    ],
+    [
+     "\\bFEPX\\b",
+     "FEPEXP"
+    ],
+    [
+     "\\b[Hh]ormoniza",
+     "harmoniza"
+    ],
+    [
+     "\\bquem [Ss]aiba [Mm]ais\\b",
+     "em Saiba Mais"
+    ],
+    [
+     "\\b(?:[Ss]aba [Mm]ais|[Ss]abamais|[Ss]aber [Mm]ais|[Ss]aiba [Mm]ais)\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\buma luna\\b",
+     "uma aluna"
+    ],
+    [
+     "\\bUma luna\\b",
+     "Uma aluna"
+    ],
+    [
+     "\\bpreenchidores\\b",
+     "preenchedores"
+    ],
+    [
+     "\\bno modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\b(?:com o|do) [Ff]ace do Brasil\\b",
+     "full face do Brasil"
+    ],
+    [
+     "\\b[Ff]ull [Ff]ace\\b",
+     "full face"
+    ],
+    [
+     "\\b[Hh]ands-[Oo]n\\b",
+     "hands-on"
+    ],
+    [
+     "\\b[Pp]aciente [Mm]odelo\\b",
+     "paciente modelo"
+    ],
+    [
+     "\\bml\\b",
+     "mL"
+    ],
+    [
+     "\\bDonde vienem\\?",
+     "¿De dónde vienen?"
+    ],
+    [
+     "\\bRio Grande, o Grande do Sul\\b",
+     "Rio Grande do Sul"
+    ],
+    [
+     "\\bo menor valor\\b",
+     "o menor valor"
+    ],
+    [
+     "\\b[Ee]xperience\\b",
+     "Experience"
+    ],
+    [
+     "\\bFull\\b",
+     "full"
+    ],
+    [
+     "clicar, em Saiba",
+     "clicar em Saiba"
+    ]
+   ],
+   "parte": null,
+   "cartela_final": null,
+   "remover_legenda": [
+    [
+     16.25,
+     17.15
+    ]
+   ]
+  }
+ ]
+}

@@ -18,7 +18,11 @@ O projeto.json descreve cada vídeo de saída:
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
       "manter": [[0.0, 12.4], [15.1, 40.0, "exato"]],  # trechos mantidos (s do bruto); "exato" = não encaixar
-      "cartela_final": null                     # ex.: "Parte 2 no perfil"
+      "cartela_final": null,                    # ex.: "Parte 2 no perfil"
+      "identidade": "fea",                      # "fepexp": El Messiri (título) + Satoshi (legenda)
+      "logo": {"arquivo": "FEA-assets/FEA-logo-fepexp-sem-edicao.png", "largura": 480, "y": 90},
+      "cta_botao": {"arquivo": "FEA-assets/FEA-botao-saiba-mais-fepexp.png",
+                    "inicio_bruto": 22.0, "y": 1380}   # botão do momento da fala até o fim
     }
   ]
 }
@@ -60,7 +64,17 @@ def ts(t):
     return f"{h}:{m:02d}:{s:05.2f}"
 
 
-def ass_header():
+# Identidade visual por projeto ("identidade" no projeto.json). Padrão: Reels FEA (Montserrat).
+# "fepexp": criativos FEP Experience (guia de marca no Drive, 18/10/2026): títulos em El Messiri,
+# texto corrido em Satoshi; logo "FEP Experience" sem número de edição no topo ("logo").
+IDENTIDADES = {
+    "fea": {"titulo": ("Montserrat ExtraBold", "&H00FFFFFF", 0), "legenda": ("Montserrat Bold", 0)},
+    "fepexp": {"titulo": ("El Messiri", "&H00FFFFFF", -1), "legenda": ("Satoshi Black", 0)},
+}
+
+
+def ass_header(identidade="fea"):
+    (ft, cor_t, neg_t), (fl, neg_l) = IDENTIDADES[identidade]["titulo"], IDENTIDADES[identidade]["legenda"]
     return f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -70,8 +84,8 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H00000000,&H60000000,0,0,0,0,100,100,0,0,1,4,1,5,80,80,0,1
-Style: Legenda,Montserrat Bold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
+Style: Titulo,{ft},{TITULO_TAM},{cor_t},&H00FFFFFF,&H00000000,&H60000000,{neg_t},0,0,0,100,100,0,0,1,4,1,5,80,80,0,1
+Style: Legenda,{fl},{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,{neg_l},0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -386,7 +400,9 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA",
+                  "Experience", "República", "Estados", "Espanha", "Canadá", "Manaus", "Toledo", "Paraguai", "Paraguay",
+                  "Rio", "Amazonas", "Paraná", "São", "Brasil", "Acá"}
 
 
 def limpar(texto):
@@ -470,7 +486,7 @@ def formatar_titulo(v):
 
 
 def gerar_ass(v, palavras, duracao, caminho):
-    linhas = [ass_header()]
+    linhas = [ass_header(v.get("identidade", "fea"))]
     titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
@@ -733,6 +749,30 @@ def renderizar(cfg, v, previa=False):
     filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
               f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+    logo = v.get("logo", cfg.get("logo"))
+    entradas = ["-i", v["entrada"]]
+    if logo:   # logo do evento no topo, o vídeo todo: {"arquivo", "largura", "y"}
+        entradas += ["-loop", "1", "-i", logo["arquivo"]]
+        filtro = (filtro[:-len("[vo]")] + "[va];"
+                  f"[1:v]scale={logo.get('largura', 420)}:-1,format=rgba[lg];"
+                  f"[va][lg]overlay=(W-w)/2:{logo.get('y', 90)}:shortest=1[vo]")
+    cta = v.get("cta_botao")
+    if cta:   # botão de CTA ("Saiba mais") do momento da fala até o fim: {"arquivo", "inicio_bruto", "y" (centro)}
+        ini = duracao - 5.0
+        if cta.get("inicio_bruto") is not None:
+            acum = 0.0
+            for a, b in v["manter"]:
+                if a <= cta["inicio_bruto"] < b:
+                    ini = acum + cta["inicio_bruto"] - a
+                    break
+                acum += b - a
+        n = 2 if logo else 1
+        entradas += ["-loop", "1", "-i", cta["arquivo"]]
+        filtro = (filtro[:-len("[vo]")] + "[vb];"
+                  # entra com fade e pulsa de leve (2% a cada 1,2 s), sem tirar a atenção da fala
+                  f"[{n}:v]format=rgba,fade=t=in:st={ini:.2f}:d=0.3:alpha=1,"
+                  f"scale=w='iw*(1+0.02*sin(2*PI*t/1.2))':h=-1:eval=frame[bt];"
+                  f"[vb][bt]overlay=(W-w)/2:{cta.get('y', 1380)}-h/2:enable='gte(t,{ini:.2f})':shortest=1[vo]")
     saida = v["saida"]
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -748,7 +788,7 @@ def renderizar(cfg, v, previa=False):
     else:
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
