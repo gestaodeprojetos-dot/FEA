@@ -10,9 +10,12 @@ BRUTO=$1; QUADROS=$2; CFG=$3; SFX=$4; TRILHA=$5; SAIDA=$6; CTA=${7:-}
 read DUR FIMFALA INICIO VOLTRILHA ZOOM TREMOR CORTE < <(python3 -c "
 import json; c=json.load(open('$CFG'))
 m=c.get('manter') or [(c.get('inicio',0),9999)]
-# trechos mantidos do bruto (corte do começo e cortes no meio), juntados com concat
-v=''.join(f'[0:v]trim={a}:{b},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS[a{i}];' for i,(a,b) in enumerate(m))
-corte=v+''.join(f'[v{i}][a{i}]' for i in range(len(m)))+f'concat=n={len(m)}:v=1:a=1[src][srca];'
+# trechos mantidos do bruto (corte do começo e cortes no meio). Vídeo num select só: vários trim do mesmo
+# [0:v] juntados com concat guardam os quadros na memória e o FFmpeg morria (Killed) com 3 ou mais cortes.
+sel='+'.join(f'between(t,{a},{b})' for a,b in m)
+v='[0:v]fps=30,select='+chr(39)+sel+chr(39)+',setpts=N/30/TB[src];'
+a=''.join(f'[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS[a{i}];' for i,(a,b) in enumerate(m))
+corte=v+a+''.join(f'[a{i}]' for i in range(len(m)))+f'concat=n={len(m)}:v=0:a=1[srca];'
 
 z='+'.join(f'between(t,{a},{b})' for a,b in c['zoom']+c.get('tremor',[])) or '0'
 tr='+'.join(f'between(t,{a},{b})' for a,b in c.get('tremor',[])) or '0'
