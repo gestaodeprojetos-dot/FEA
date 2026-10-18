@@ -48,7 +48,7 @@ def entrevista(k, nome, hl, q_fim, cat='MITO OU VERDADE', resp=None, dr=None, qu
                 inicio=0, fim=fim, zoom=[], cenas=cenas)
 
 # grafia das marcas e termos que o Whisper erra (as marcas ficam na fala do Dr.: precisam de aprovação, ver resumo)
-TROCAS = [(['rhinomodelação'], ['rinomodelação']), (['pros'], ['para', 'os']), (['revaneskis'], ['Revanesse']), (['neuromis'], ['Neuramis']), (['neuromys'], ['Neuramis']), (['neuronis'], ['Neuramis']),
+TROCAS = [(['cima', 'a', 'mais'], ['Saiba', 'Mais']), (['rhinomodelação'], ['rinomodelação']), (['pros'], ['para', 'os']), (['revaneskis'], ['Revanesse']), (['neuromis'], ['Neuramis']), (['neuromys'], ['Neuramis']), (['neuronis'], ['Neuramis']),
           (['jeep'], ['Deep']), (['resilane'], ['Restylane']), (['letibol'], ['Letybo']), (['dispult'], ['Dysport']),
           (['zelmen'], ['Xeomin']), (['profilo'], ['Profhilo']), (['biogealiz'], ['Biogelis']), (['cândula'], ['cânula']),
           (['arteiras'], ['artérias']), (['assegurança'], ['a', 'segurança']), (['perdo'], ['perda']), (['superbitária'], ['supraorbitária']),
