@@ -26,14 +26,39 @@ def TE(nome, frase, depois=0):  # fim da frase
 def FIM(nome):
     return _ws(nome)[-1][2]
 
+def auto_cortes(nome, fim, manuais=(), pausa=.7, folga=(.18, .15)):
+    """Keila, 18/10/2026: "senti falta dos cortes, no começo fica silencioso". Mede a voz no áudio limpo e devolve
+    (início, cortes): o vídeo começa na primeira fala e toda pausa maior que `pausa` vira corte seco."""
+    import numpy as np, soundfile as sf, os
+    a, sr = sf.read(os.path.join(os.path.dirname(TR.rstrip('/')), 'aud', f'{nome}_voz.wav'))
+    h = int(sr * .02); db = np.array([20 * np.log10(np.sqrt((a[i:i + h] ** 2).mean()) + 1e-9) for i in range(0, len(a) - h, h)])
+    lim = max(np.percentile(db, 90) - 24, -45); voz = db > lim
+    voz = np.convolve(voz, np.ones(7), 'same') > 0          # junta sílabas separadas por menos de 0,14 s
+    t = np.arange(len(voz)) * .02; ok = t < fim
+    ini = max(0, t[np.argmax(voz & ok)] - .12)
+    cortes, k = [], None
+    for i in range(len(voz)):
+        if t[i] <= ini or t[i] >= fim: continue
+        if not voz[i] and k is None: k = t[i]
+        if voz[i] and k is not None:
+            if t[i] - k > pausa: cortes.append((round(k + folga[0], 2), round(t[i] - folga[1], 2)))
+            k = None
+    for m in manuais: cortes.append(m)
+    cortes.sort(); out = []
+    for c in cortes:                                           # une cortes sobrepostos
+        if out and c[0] <= out[-1][1]: out[-1] = (out[-1][0], max(out[-1][1], c[1]))
+        else: out.append(c)
+    return round(ini, 2), out
+
 ALUNOS = dict(a='NA PRÁTICA', b='Alunos e monitores', c='Formação Especialista em Preenchimento')
 DR = dict(a='ESPECIALISTA', b='Dr. João Pithon', c='')
 TRILHAS = ['groove', 'tensao', 'pulsante', 'brilho', 'epico']      # sem "urgência": é conteúdo, não oferta
 SONS = ['tv', 'digital', 'radio']
 
 def entrevista(k, nome, hl, q_fim, cat='MITO OU VERDADE', resp=None, dr=None, quem_resp=ALUNOS, perguntas=(), cit=None,
-               final=None, fim=None, extra=(), primeiro=None):
+               final=None, fim=None, extra=(), primeiro=None, cortes=(), auto=True):
     fim = fim or FIM(nome) + .6
+    ini, cortes = auto_cortes(nome, fim, cortes) if auto else (0, list(cortes))
     cenas = [dict(tipo='manchete', s=0, e=q_fim + .35, cat=cat, hl=hl, meta='Entrevista na prática clínica · Dr. João Pithon',
                   tDig=min(1.4, max(.7, q_fim - 1.2))),
              dict(tipo='aovivo', s=q_fim + .35, e=fim, tag=cat)]
@@ -45,7 +70,7 @@ def entrevista(k, nome, hl, q_fim, cat='MITO OU VERDADE', resp=None, dr=None, qu
     if final is not None: cenas.append(dict(tipo='pergunta', s=final, e=fim, h='E VOCÊ?', q=f'Mito ou verdade? {G}Comenta aqui{GF}' if cat == 'MITO OU VERDADE' else f'Qual a sua opinião? {G}Comenta aqui{GF}'))
     cenas += list(extra)
     return dict(publico='geral', cta=None, trilha=TRILHAS[k % len(TRILHAS)], vol_trilha=.13, sons=SONS[k % len(SONS)],
-                inicio=0, fim=fim, zoom=[], cenas=cenas)
+                inicio=ini, cortes=cortes, fim=fim, zoom=[], cenas=cenas)
 
 # grafia das marcas e termos que o Whisper erra (as marcas ficam na fala do Dr.: precisam de aprovação, ver resumo)
 TROCAS = [(['cima', 'a', 'mais'], ['Saiba', 'Mais']), (['rhinomodelação'], ['rinomodelação']), (['pros'], ['para', 'os']), (['revaneskis'], ['Revanesse']), (['neuromis'], ['Neuramis']), (['neuromys'], ['Neuramis']), (['neuronis'], ['Neuramis']),
@@ -64,17 +89,18 @@ def _videos():
         final=T(n, 'E você?'))
     n = 'IMG_7830'; V[n] = entrevista(1, n, 'Olheiras com agulha: técnica ultrapassada?', TE(n, 'mito ou verdade?'),
         resp=T(n, 'Verdade.'), cit=(T(n, 'a melhor técnica'), TE(n, 'mais natural.'), 'A melhor técnica é com cânula: mais segura e mais natural', 'Resposta na prática clínica'),
-        final=FIM(n) - .3)
+        fim=TE(n, 'olheiras,', 30) + .3, final=T(n, 'infra', 30))       # sem o "também acho que é um mito. Verdade." do fim (Keila, 18/10)
     n = 'IMG_7831'; f = TE(n, 'sem dúvida.') + .6
     V[n] = entrevista(2, n, 'Rinomodelação só com agulha: técnica ultrapassada?', TE(n, 'mito ou verdade?'), fim=f,
         resp=T(n, 'Verdade. Verdade.'), cit=(T(n, 'na agulha'), TE(n, 'tridimensional,'), 'Na agulha você não consegue entregar o preenchimento tridimensional', 'Resposta na prática clínica'),
         final=T(n, 'Ultrapassado. Ultrapassado.'))
     n = 'IMG_7833'; V[n] = entrevista(3, n, 'Rinomodelação só com agulha: técnica ultrapassada?', TE(n, 'verdade?'),
+        cortes=[(TE(n, 'achou verdade?') + .12, T(n, 'Por que você acha') - .06)],     # sem o "Ai, Gil, pra mim!" (Keila, 18/10)
         resp=T(n, 'Verdade.'), dr=T(n, 'assegurança'),
         perguntas=[(T(n, 'é proibido'), TE(n, 'com agulha?', T(n, 'é proibido')) + .8, 'É proibido fazer rinomodelação com agulha?')],
         cit=(T(n, 'assegurança') + 1.2, T(n, 'assegurança') + 4.6, f'{G}Segurança{GF} em primeiro lugar, sempre'),
         final=T(n, 'E você, ultrapassado'))
-    n = 'IMG_7834'; V[n] = entrevista(4, n, 'Anestesia do forame supraorbitário na toxina: perda de tempo?', TE(n, 'verdade?', 10),
+    n = 'IMG_7834'; V[n] = entrevista(4, n, 'Anestesia do forame supraorbitário na toxina: perda de tempo?', TE(n, 'verdade?', 10), auto=False,   # aprovado como está (Keila, 18/10)
         resp=T(n, 'Eu acho que é perda'),
         perguntas=[(T(n, 'E se o paciente'), TE(n, 'fazer?', T(n, 'E se o paciente')) + .6, 'E se o paciente for muito sensível e pedir a anestesia?')],
         dr=T(n, 'realmente, na nossa'), cit=(T(n, 'Não é um erro'), TE(n, 'resultado,', T(n, 'Não é um erro')), 'Não é um erro fazer: não atrapalha o resultado, só gasta mais tempo'),
@@ -119,7 +145,8 @@ def _videos():
         cit=(T(n, 'maleabilidade,'), TE(n, 'migrar.'), f'Projeção e {G}maleabilidade{GF}: o produto não pode nodular nem migrar'),
         final=T(n, 'eu quero saber as suas'))
     n = 'IMG_7851'; V[n] = entrevista(1, n, 'Preenchimento labial com seringa BD: perda de tempo?', TE(n, 'verdade?'),
-        resp=T(n, 'Mito, total!'), dr=T(n, 'Eu não uso.'),
+        cortes=[(T(n, 'Você vai perguntar') - .1, T(n, 'Fazer preenchimento') - .06)],     # sem o "justo pra mim?" (Keila, 18/10)
+        resp=T(n, 'Com certeza não'), dr=T(n, 'Eu não uso.'),
         cit=(T(n, 'a individualização'), TE(n, 'importante.') + .4, f'A {G}individualização{GF} é o mais importante'),
         final=T(n, 'E a sua opinião,'))
     n = 'IMG_7854'; V[n] = entrevista(2, n, 'Efeito vacina da toxina: mito ou verdade?', TE(n, 'verdade?'),
