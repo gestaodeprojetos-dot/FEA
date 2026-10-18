@@ -74,6 +74,40 @@ for c in cfg['cenas']:
         for it in c['itens']: add(fx, pop(), it['t'], .26)
     if tp == 'saiba': add(fx, pop(), c['tToque'], .28)
     if tp == 'final': add(fx, pop(), c['s'] + .82, .22)
+# sons de entrevista: 3 assinaturas para alternar entre os vídeos (Keila, 18/10/2026: "altere os sons entre os vídeos")
+SONS = cfg.get('sons', 'tv')
+def sino(fs, d=1.6, dec=3.0):
+    n = int(d * SR); t = np.arange(n) / SR; y = np.zeros(n)
+    for k, f in enumerate(fs): y += np.sin(2 * np.pi * f * t) * np.exp(-t * (dec + k * .6)) * (1 - .15 * k)
+    return y / np.max(np.abs(y))
+def obturador():
+    n = int(.12 * SR); x = rng.standard_normal(n); t = np.arange(n) / SR
+    a = x * np.exp(-t * 90); b = np.zeros(n); i = int(.055 * SR); b[i:] = x[:n - i] * np.exp(-t[:n - i] * 120)
+    return lp(a + .8 * b, 6000)
+def tecla():
+    n = int(.03 * SR); t = np.arange(n) / SR; return lp(rng.standard_normal(n), 4500) * np.exp(-t * 260)
+def bip(f, d=.12):
+    n = int(d * SR); t = np.arange(n) / SR; return np.sin(2 * np.pi * f * t) * np.minimum(1, (d - t) * 60) * np.minimum(1, t * 400)
+VINHETA = {'tv': [523.25, 659.25, 783.99, 1046.5], 'digital': [880, 1318.5, 1760], 'radio': [392, 493.88, 587.33, 783.99]}[SONS]
+for c in cfg['cenas']:
+    tp = c['tipo']
+    if tp == 'manchete':
+        add(fx, W, c['s'] - .05, .28); add(fx, boom(.8, 100, 45, 6), c['s'] + .05, .45)
+        if SONS == 'digital':
+            for k in range(3): add(fx, bip(1200 + 300 * k, .07), c['s'] + .1 + k * .09, .18)
+        else: add(fx, sino(VINHETA, 1.8 if SONS == 'tv' else 1.2, 2.4 if SONS == 'tv' else 4), c['s'] + .1, .30)
+        nlet = len(c.get('hl', '')); dig = c.get('tDig', 1.2)
+        for k in range(0, nlet, 2): add(fx, tecla(), c['s'] + .35 + dig * k / max(1, nlet), .16 if SONS != 'radio' else .1)
+    if tp == 'tarja':
+        add(fx, Ws, c['s'] - .03, .2)
+        if SONS == 'tv': add(fx, obturador(), c['s'] + .12, .35)
+        elif SONS == 'digital': add(fx, bip(1568, .08), c['s'] + .1, .16); add(fx, bip(2093, .08), c['s'] + .2, .14)
+        else: add(fx, sino([659.25, 987.77], .8, 5), c['s'] + .1, .2)
+    if tp == 'pergunta':
+        add(fx, boom(.25, 160, 80, 18), c['s'], .45)
+        add(fx, sino([1318.5] if SONS == 'tv' else [987.77, 1479.98] if SONS == 'digital' else [783.99], .6, 6), c['s'] + .05, .2)
+    if tp == 'citacao': add(fx, Ws, c['s'] - .02, .18); add(fx, pop(), c['s'] + .3, .2)
+    if tp == 'aovivo' and SONS == 'radio': add(fx, tick(1000, .05), c['s'], .2)
 salvar(fx, sys.argv[2])
 
 # ---------- trilha ----------
@@ -162,7 +196,7 @@ if EST:
         add(mus, riser(1.0), k * 4 * bar - 1.0, .2)
 # impactos nas telas cheias e na virada; subida antes da virada e do final
 for c in cfg['cenas']:
-    if c['tipo'] in ('logo', 'celular', 'palestrantes', 'cursos', 'pos', 'live'): add(mus, boom(), c['s'], .5)
+    if c['tipo'] in ('logo', 'celular', 'palestrantes', 'cursos', 'pos', 'live', 'manchete'): add(mus, boom(), c['s'], .5)
     if c['tipo'] == 'alerta': add(mus, boom(2.0), c['tB'], 1.0)
     if c['tipo'] == 'virada': add(mus, riser(1.0), c['tFlip'] - 1.0, .35); add(mus, boom(1.8), c['tFlip'] + .02, 1.0)
     if c['tipo'] == 'final': add(mus, riser(.9), c['s'] - .9, .3); add(mus, boom(2.2), c['s'], 1.0)

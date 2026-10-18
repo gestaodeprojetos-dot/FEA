@@ -88,6 +88,31 @@ body.bf{--teal:#E9C77B}
 #CT .tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:800;font-size:46px;padding-top:10px;opacity:0}
 .dt{position:absolute;width:420px;text-align:center}
 .dt .lb{font-weight:800;font-size:36px;letter-spacing:.12em;margin-top:22px}
+
+/* kit de entrevista (Keila, 18/10/2026: "quero que pareça uma entrevista"), cabeçalho no padrão PITHON NEWS da equipe */
+.nw-red{background:#BE0000}
+#NM{position:absolute;left:0;right:0;top:0;height:560px;display:none}
+#NM .bar{height:150px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:66px;letter-spacing:.01em;position:relative}
+#NM .page{background:#fbfbf8;padding:40px 78px 46px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+#NM .cat{color:#9b9b9b;font-weight:500;font-size:40px;letter-spacing:.02em}
+#NM .hl{color:#111;font-weight:800;font-size:66px;line-height:1.12;margin-top:22px}
+#NM .meta{color:#9b9b9b;font-weight:500;font-size:26px;margin-top:20px}
+#AV{position:absolute;left:40px;top:70px;display:none;align-items:center;gap:14px}
+#AV .live{background:#BE0000;color:#fff;font-weight:800;font-size:28px;letter-spacing:.12em;padding:10px 20px;border-radius:8px;display:flex;align-items:center;gap:10px}
+#AV .live i{width:14px;height:14px;border-radius:50%;background:#fff;display:inline-block}
+#AV .tag{background:rgba(0,0,0,.62);color:#fff;font-weight:700;font-size:26px;letter-spacing:.14em;padding:11px 18px;border-radius:8px}
+#AV .rec{color:#fff;font-weight:700;font-size:26px;font-variant-numeric:tabular-nums;background:rgba(0,0,0,.45);padding:11px 14px;border-radius:8px}
+#LT{position:absolute;left:0;top:1050px;display:none}
+#LT .a{background:#BE0000;color:#fff;font-weight:800;font-size:30px;letter-spacing:.12em;padding:12px 26px 12px 48px;display:inline-block}
+#LT .b{background:#fff;color:#111;font-weight:800;font-size:46px;padding:14px 34px 14px 48px;margin-top:0;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#LT .c{background:rgba(10,10,10,.85);color:#E9C77B;font-weight:600;font-size:28px;padding:10px 34px 12px 48px;display:inline-block}
+#PQ{position:absolute;left:60px;right:60px;top:150px;display:none;background:rgba(255,255,255,.96);border-radius:22px;padding:34px 40px 36px 40px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+#PQ .h{display:flex;align-items:center;gap:16px;color:#BE0000;font-weight:800;font-size:30px;letter-spacing:.14em}
+#PQ .q{color:#111;font-weight:800;font-size:50px;line-height:1.15;margin-top:16px}
+#CQ{position:absolute;left:70px;right:70px;top:150px;display:none;background:rgba(8,8,8,.88);border-left:10px solid #E9C77B;border-radius:18px;padding:34px 40px}
+#CQ .m{font-family:Fra;color:#E9C77B;font-size:150px;line-height:.6;height:62px}
+#CQ .t{color:#fff;font-weight:800;font-size:52px;line-height:1.15}
+#CQ .w{color:#E9C77B;font-weight:600;font-size:30px;margin-top:16px}
 </style></head>
 <body>
 
@@ -166,6 +191,13 @@ body.bf{--teal:#E9C77B}
   <div id="PG_txt" class="abs" style="left:60px;right:60px;top:1090px;text-align:center;font-weight:700;font-size:44px;color:#f4e6dc"></div>
 </div>
 
+<!-- kit de entrevista -->
+<div id="NM"><div class="bar nw-red"><span style="position:absolute;left:62px;font-size:60px">&#9776;</span>PITHON NEWS<span style="position:absolute;right:62px;font-size:54px">&#9906;</span></div>
+  <div class="page"><div class="cat" id="NM_cat"></div><div class="hl" id="NM_hl"></div><div class="meta" id="NM_meta"></div></div></div>
+<div id="AV"><div class="live"><i id="AV_dot"></i>AO VIVO</div><div class="tag" id="AV_tag">ENTREVISTA</div><div class="rec" id="AV_rec">00:00</div></div>
+<div id="LT"><div class="a" id="LT_a"></div><div class="b" id="LT_b"></div><div class="c" id="LT_c"></div></div>
+<div id="PQ"><div class="h"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#BE0000" stroke-width="2.2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v4M8 22h8"/></svg><span id="PQ_h"></span></div><div class="q" id="PQ_q"></div></div>
+<div id="CQ"><div class="m">&ldquo;</div><div class="t" id="CQ_t"></div><div class="w" id="CQ_w"></div></div>
 <!-- lote card -->
 <div id="E" class="card" style="top:120px;height:330px;padding:40px 54px">
   <div style="font-weight:800;font-size:44px;letter-spacing:.04em"><span class="goldtxt">1º LOTE</span> <span style="color:var(--teal);font-weight:700;font-size:32px;letter-spacing:.14em">◆ INGRESSOS LIMITADOS</span></div>
@@ -552,8 +584,38 @@ function pos(c,t){
   $('PG_top').innerHTML=c.topo||''; $('PG_top').style.opacity=p(t,c.s+.25,c.s+.5);
   $('PG_txt').innerHTML=c.texto||''; const tx=p(t,c.tTexto||c.s+.8,(c.tTexto||c.s+.8)+.3); $('PG_txt').style.opacity=tx; $('PG_txt').style.transform=`translateY(${(1-oc(tx))*24}px)`;
 }
-const FN={pos,gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
-const ALL=['PG','A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
+function manchete(c,t){
+  const X=$('NM'); vis(X,true);
+  const k=ob(p(t,c.s,c.s+.4)), o=1-p(t,c.e-.3,c.e);
+  X.style.transform=`translateY(${(1-k)*-600-(1-o)*600}px)`;
+  $('NM_cat').textContent=c.cat||'MUNDO E CIÊNCIA'; $('NM_meta').textContent=c.meta||'';
+  const n=Math.round((c.hl||'').length*p(t,c.s+.35,c.s+.35+(c.tDig||1.2))); $('NM_hl').textContent=(c.hl||'').slice(0,n);
+}
+function aovivo(c,t){
+  const X=$('AV'); vis(X,true,'flex'); X.style.opacity=p(t,c.s,c.s+.3)*(1-p(t,c.e-.3,c.e));
+  $('AV_dot').style.opacity=(Math.floor((t-c.s)*2)%2)?.25:1; $('AV_tag').textContent=c.tag||'ENTREVISTA';
+  const sec=Math.max(0,Math.floor(t-c.s)); $('AV_rec').textContent=`${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`;
+}
+function tarja(c,t){
+  const X=$('LT'); vis(X,true);
+  const a=oc(p(t,c.s,c.s+.3)), b=oc(p(t,c.s+.12,c.s+.45)), o=io(p(t,c.e-.3,c.e));
+  $('LT_a').textContent=c.a||'ENTREVISTA'; $('LT_b').textContent=c.b||''; $('LT_c').textContent=c.c||''; vis($('LT_c'),!!c.c);
+  $('LT_a').style.transform=`translateX(${(1-a)*-700-o*900}px)`; $('LT_b').style.transform=`translateX(${(1-b)*-1100-o*1100}px)`; $('LT_c').style.transform=`translateX(${(1-b)*-1100-o*1100}px)`;
+}
+function pergunta(c,t){
+  const X=$('PQ'); vis(X,true);
+  const k=ob(p(t,c.s,c.s+.35)), o=1-p(t,c.e-.22,c.e);
+  X.style.transform=`translateY(${(1-k)*-280-(1-o)*100}px) scale(${.94+.06*k})`; X.style.opacity=p(t,c.s,c.s+.12)*o;
+  $('PQ_h').textContent=c.h||'PERGUNTA DO DR. JOÃO'; $('PQ_q').innerHTML=c.q||'';
+}
+function citacao(c,t){
+  const X=$('CQ'); vis(X,true);
+  const k=ob(p(t,c.s,c.s+.35)), o=1-p(t,c.e-.22,c.e);
+  X.style.transform=`translateX(${(1-k)*-900}px)`; X.style.opacity=o;
+  $('CQ_t').innerHTML=c.texto||''; $('CQ_w').textContent=c.quem||''; $('CQ_w').style.opacity=p(t,c.s+.5,c.s+.8);
+}
+const FN={manchete,aovivo,tarja,pergunta,citacao,pos,gancho:hook,logo,celular,palestrantes,lote,saiba,virada,final,alerta,cartao,cursos,live,conta,datas,marca};
+const ALL=['NM','AV','LT','PQ','CQ','PG','A','B','D','P','E','F','G','I','AL','K','C','L','CT','DT','MK'];
 if(CFG.cap_top) $('cap').style.top=CFG.cap_top+'px';   // vídeo que já tinha legenda gravada: a nova cobre a faixa apagada
 window.render=function(t){
   ALL.forEach(id=>vis($(id),false));
