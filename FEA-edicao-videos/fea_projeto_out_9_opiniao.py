@@ -61,7 +61,7 @@ COMUNS = [
     [r"\bFace for face\b", "Full face"], [r"\b1250\b", "1.250"],
     [r"\bparticipar, da nossa\b", "participar da nossa"], [r"\bclica aqui em cima a mais\b", "clica aqui em Saiba Mais"],
     [r"\b[Vv]italícia, está\b", "Vitalícia está"], [r"\bnaslobial\b", "nasolabial"],
-    [r"\bRestylane Lift\b", "Restylane Lyft"], [r"\bbotox\b", "Botox"], [r"\bYoutube\b", "YouTube"],
+    [r"\bRestylane Lift\b", "Restylane Lyft"], [r"\bbotox\b", "Botox"], [r"\bRestylane Kiss\b", "Restylane Kysse"], [r"\bYoutube\b", "YouTube"],
     [r"\bmais, de 1\.250\b", "mais de 1.250"], [r"\bnós vemos\b", "nos vemos"], [r"\bo rinomodelação\b", "a rinomodelação"],
 ]
 

@@ -265,7 +265,7 @@ PARES = {("belotero", "intense"), ("revanesse", "kiss"), ("neuramis", "deep"), (
          ("deep", "line"), ("rennova", "lift"), ("lift", "plus"), ("yvoire", "contour"),
          ("juvéderm", "voluma"), ("juvederm", "voluma"), ("neauvia", "stimulate"), ("perfectha", "subskin"),
          ("black", "friday"), ("elite", "injectors"), ("injectors", "congress"), ("md", "codes"),
-         ("restylane", "kiss"), ("restylane", "refyne"), ("restylane", "refine"), ("restylane", "lyft"),
+         ("restylane", "kiss"), ("restylane", "kysse"), ("restylane", "refyne"), ("restylane", "refine"), ("restylane", "lyft"),
          ("restylane", "lift"), ("restylane", "defyne"), ("restylane", "define"), ("saiba", "mais"),
          # como o Whisper escreve antes da correção
          ("neuromis", "deep"), ("neuromys", "deep"), ("renova", "deep"), ("renova", "lift"),
@@ -273,7 +273,7 @@ PARES = {("belotero", "intense"), ("revanesse", "kiss"), ("neuramis", "deep"), (
 NOMES = {"Black", "Friday", "Elite", "Injectors", "Congress", "Radiesse", "Rennova", "Deep", "Line",
          "Belotero", "Intense", "Refyne", "Restylane", "Profhilo", "Yvoire", "Contour", "Juvéderm",
          "Voluma", "Singderm", "Sofiderm", "Biogelis", "Neauvia", "Stimulate", "Lyft", "Defyne", "Kiss",
-         "Subskin", "Perfectha", "Vitalícia", "Vitalício", "MEC", "BD", "MD", "Codes", "Mari", "Botox",
+         "Subskin", "Perfectha", "Kysse", "Vitalícia", "Vitalício", "MEC", "BD", "MD", "Codes", "Mari", "Botox",
          "Lift", "Plus", "Revanesse", "Neuramis", "YouTube", "Saiba", "Combo", "Mônaco"}
 base.NOMES_PROPRIOS |= NOMES
 
