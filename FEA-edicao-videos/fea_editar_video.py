@@ -653,7 +653,9 @@ def encaixar_cortes(manter, db, passo, palavras=None):
     return novo
 
 
-def renderizar(cfg, v, previa=False):
+def preparar(cfg, v):
+    """Cortes encaixados no respiro e palavras da legenda já na linha do tempo editada.
+    Devolve (v com "manter" ajustado, palavras, duração). Usado também pelo fea_editar_opiniao.py."""
     ff = cfg["ffmpeg"]
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
@@ -702,6 +704,12 @@ def renderizar(cfg, v, previa=False):
     if "legendas" not in v:
         palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
+    return v, palavras, duracao
+
+
+def renderizar(cfg, v, previa=False):
+    ff = cfg["ffmpeg"]
+    v, palavras, duracao = preparar(cfg, v)
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     gerar_ass(v, palavras, duracao, ass)
     if previa == "legenda":   # só o .ass, para revisar o texto antes de renderizar

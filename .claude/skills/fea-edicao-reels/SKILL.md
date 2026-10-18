@@ -19,6 +19,20 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 **Atenção à ordem (pedido da Keila, 26/09/2026):** a imagem de títulos às vezes está na **ordem de postagem**, e não na ordem dos arquivos. Nunca casar título e vídeo só pela posição. Para cada vídeo, ler a transcrição (o que o Dr. fala e faz) e escolher o título que descreve aquele conteúdo. Montar uma tabela `arquivo -> título -> motivo (frase do Dr. que confirma)` e conferir que cada título foi usado uma vez só. A numeração da saída (`1-`, `2-`...) segue a ordem da imagem, a de postagem. Vídeos sem título correspondente, ou títulos sem vídeo, vão para a Keila decidir antes de renderizar.
 
+## Estilo "opinião / mito ou verdade" (Keila, 18/10/2026)
+
+Vídeos em que o Dr. João faz uma pergunta aos alunos ("técnica ultrapassada, mito ou verdade?", "os 3 melhores produtos para...") e dá a opinião dele no fim. Referência: pasta `1VLiEFkqYd7An0uzehyctKP76SIMPBNZg` ("1- Olheiras" a "4- Lábios", editados pela Keila). Script próprio: `python3 FEA-edicao-videos/fea_editar_opiniao.py projeto.json [--so-legenda] [trecho...]` (usa o mesmo projeto.json, mais `faixas`, `produtos`, `destaques`, `cartela`). Exemplo de lote: `fea_projeto_out_9_opiniao.py`.
+
+| Item | Valor (medido em pixels na referência "3- Toxina") |
+|---|---|
+| Título | caixas brancas com texto preto Montserrat Bold (ASS 83), alinhado à esquerda em x=104, barra bege `#DBD093` à esquerda (x 70 a 89), centro do bloco em y≈1202, 2 ou 3 linhas sem terminar linha em conectivo. Entra deslizando da esquerda (0,1 a 0,6 s) e some de uma vez aos 4,1 s |
+| Som de arrasto | `FEA-edicao-videos/FEA-som-arrasto-titulo.wav`, isolado da referência (subtraindo o bruto), toca no início junto com o título |
+| Legenda | Montserrat Bold ASS 62, branca, contorno fino escuro, centro em y=1500, desde o início (inclusive por baixo do título), mantém "?" |
+| Produto citado | foto real do produto (pesquisada na internet, nunca IA) num quadro branco 552x552 levemente inclinado no centro (540, 1125), com "pop" de entrada, ~2,5 s ou até o próximo produto. Título inventado nunca leva nome de produto |
+| CTA falado da Black Friday | "VITALÍCIO" grande (ExtraBold, branco, y=1200) da palavra "comenta vitalício" até o fim, e cartela final da campanha (8,7 s, extraída do fim da referência "3- Toxina" a partir de 83,467 s). Vídeo sem CTA falado não leva cartela |
+| Cortes | começa na primeira fala do Dr.; pausas acima de 0,9 s com áudio em silêncio saem sozinhas (`faixas` + `tirar_pausas`); conversa paralela sai na mão. Vídeo sem a opinião/conclusão do Dr. não é editado |
+| Limite | 3 min no total, com a cartela |
+
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
