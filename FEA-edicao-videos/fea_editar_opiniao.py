@@ -235,6 +235,10 @@ def tirar_pausas(cfg, v):
             continue
         # o trecho começa um respiro antes da primeira palavra (a transcrição adianta até 0,3 s)
         ini = min(a, max(0.0, dentro[0][0] - MARGEM_PAUSA))
+        # ...mas nunca pega o fim da palavra anterior, que ficou fora do trecho
+        antes = [w for w in ws if w[1] <= dentro[0][0] and (w[0] + w[1]) / 2 < a]
+        if antes:
+            ini = max(ini, min(a, antes[-1][1] + 0.05))
         for w0, w1 in zip(dentro, dentro[1:]):
             if w1[0] - w0[1] <= pmax:
                 continue

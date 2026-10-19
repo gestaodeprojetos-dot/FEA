@@ -81,12 +81,12 @@ video(6, "IMG_7833", "Rinomodelação só com agulha é técnica ultrapassada?",
       [[0.3, 11.75], [18.15, 82.0]],
       correcoes=[[r"\beu assegurança\b", "eu, segurança"], [r"\bbolos periosteal\b", "bolus periosteal"]])
 video(7, "IMG_7837", "MD Codes só com agulha é técnica ultrapassada?",
-      [[4.55, 17.85], [22.15, 37.5], [38.05, 40.45], [44.7, 51.6], [53.15, 71.2], [84.65, 86.75]],
+      [[4.55, 71.2], [84.65, 86.75]],
       remover_legenda=[[31.3, 32.2]])
 video(8, "IMG_7839", "Preenchimento de glabela com agulha é técnica ultrapassada?",
       [[1.7, 63.2]], destaques=[[60.1, 63.2, "VITALÍCIO"]], cartela=True)
 video(9, "IMG_7840", "Bioestimulador de hidroxiapatita: diluído ou puro?",
-      [[4.6, 25.95], [27.35, 101.5]],
+      [[4.6, 101.5]],
       correcoes=[[r"^[Ee]stimulador\b", "Bioestimulador"], [r"\bVitalício, até lá\b", "Vitalício, até lá"]],
       produtos=produtos([(5.88, "radiesse"), (74.32, "radiesse")], 101.5),
       destaques=[[95.0, 101.5, "VITALÍCIO"]], cartela=True)
@@ -114,7 +114,18 @@ video(15, "IMG_7851", "Preenchimento labial com seringa BD é perda de tempo?", 
 video(16, "IMG_7854", "Efeito vacina da toxina: mito ou verdade?", [[0.0, 70.1]])
 video(17, "IMG_7890", "Amanhã começa a Black Friday Vitalícia", [[0.4, 137.9]], cartela=True)
 video(18, "IMG_7889", "É hoje: Black Friday Vitalícia", [[1.4, 69.05], [70.12, 147.4]], cartela=True)
-video(19, "IMG_7902", "Quanto você já investiu em cursos?", [[0.0, 40.75], [43.25, 173.25]], cartela=True)
+video(19, "IMG_7902", "Quanto você já investiu em cursos?", [[0.0, 76.45], [79.12, 173.25]], cartela=True)
 
+# Ajuste da Keila (19/10/2026): aprovados sem mudança o 6, o 12 e o 14. Nos demais, a reação da
+# pessoa entra inteira (sem cortar a pausa depois da pergunta) e todos terminam com o CTA da Black
+# "Comente Vitalício" (arquivo FEA-02 BLACK VITALICIA_9x16_COPY01_DOURADO_COMENTE.mp4).
+APROVADOS = {6, 12, 14}
+for v in V:
+    n = int(os.path.basename(v["saida"]).split("-")[0])
+    if n not in APROVADOS:
+        v["pausa_max"] = 999
+        v["cartela"] = True
+
+CTA = glob.glob(f"{T}/cta/*COMENTE*.mp4")
 json.dump({"ffmpeg": FF, "fontsdir": f"{T}/fonts", "whoosh": f"{AQUI}/FEA-som-arrasto-titulo.wav",
-           "cartela": f"{T}/FEA-cartela-bf.mp4", "videos": V}, sys.stdout, ensure_ascii=False, indent=1)
+           "cartela": CTA[0] if CTA else f"{T}/FEA-cartela-bf.mp4", "videos": V}, sys.stdout, ensure_ascii=False, indent=1)
