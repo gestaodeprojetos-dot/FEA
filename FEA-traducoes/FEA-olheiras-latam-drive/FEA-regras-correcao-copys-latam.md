@@ -12,12 +12,11 @@ Fonte das decisões: Keila (gestão), conversa de 05/10 e 20/10/2026. Auditoria 
 ## Preço (definido pela gestão em 05/10/2026)
 - Ebook: **de US$47 por US$19** (60 % de descuento). Onde o original tiver R$ 47, R$ 97, R$ 200, R$ 297, R$ 397 ou 76 %, usar US$19 (preço) e US$47 (preço "de", riscado) e 60 %.
 - Parcelamento: não usar (ticket de US$19 é à vista). Remover "12 x R$ ...".
-- Upsell: preço em dólar **ainda não definido**. Escrever `US$ [PRECIO DEL UPSELL: A CONFIRMAR]`. Nunca inventar.
+- Upsell: **US$97** (decisão da gestão em 20/10/2026, equivalente ao R$ 497 do Brasil). Sem parcelas.
 - Nunca deixar R$ nem `[PRECIO EN MONEDA LOCAL...]` no texto final.
 
 ## Números de autoridade (não definidos para LATAM)
-- Alunos e países divergem nos originais (4 mil / 20 mil / 30 mil; 7 / 8 / 9 países). Usar a forma já aprovada na copy v2 dos criativos: **"+30 mil copias vendidas"** para o ebook. Para nº de alunos e países escrever `[N.º DE ALUMNOS: A CONFIRMAR]` e `[N.º DE PAÍSES: A CONFIRMAR]`. Nunca inventar.
-- Volume em ml: remover ou `[A CONFIRMAR]`.
+- Decisão 20/10/2026 (gestão autorizou): usar os números da versão mais recente do Brasil (página NUEVA, 14/05/2026): **más de 30.000 alumnos**, **9 países**, **10.000 ml**; ebook **+30 mil copias vendidas**. Substituir 4.000 / 20.000 alumnos, 7 / 8 países e 7.000 ml.
 
 ## Resíduos do Brasil (remover ou trocar por marcador)
 - Pix e boleto: remover; meio de pagamento = tarjeta de crédito/débito (Hotmart). Eventos de automação de Pix/boleto: remover.
