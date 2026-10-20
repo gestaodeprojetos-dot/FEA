@@ -61,14 +61,14 @@ const win = (t, a, b) => clamp((t - a) / (b - a));
 // ---------- cursos (ordem do slide 11) ----------
 // clip: pasta em seq/ com os quadros (30 fps); null = só a capa
 const COURSES = [
-  { kind: 'Formação', title: 'Formação Especialista em Preenchimento', clip: null },
-  { kind: 'Formação', title: 'Formação Especialista em Botox', clip: null },
-  { kind: 'Formação', title: 'Formação Especialista em Fios', clip: null },
+  { kind: 'Formação', title: 'Formação Especialista em Preenchimento', clip: 'fep' },
+  { kind: 'Formação', title: 'Formação Especialista em Botox', clip: 'botox' },
+  { kind: 'Formação', title: 'Formação Especialista em Fios', clip: 'fios' },
   { kind: 'Formação', title: 'Formação Especialista em Corporal', clip: 'corporal' },
-  { kind: 'Formação', title: 'Formação Especialista em Escultura Labial', clip: null },
+  { kind: 'Formação', title: 'Formação Especialista em Escultura Labial', clip: 'esclabial' },
   { kind: 'Formação', title: 'Formação Especialista em Anatomia', clip: 'anat' },
   { kind: 'Formação', title: 'Formação Especialista em Bioestimuladores', clip: 'febio' },
-  { kind: 'Curso', title: 'Curso Avançado de Complicações', clip: ['comp', 'comp2'] },
+  { kind: 'Curso', title: 'Curso Avançado de Complicações', clip: 'comp' },
   { kind: 'Imersão', title: 'Imersão Avançada em Rinomodelação', clip: 'rino' },
   { kind: 'Imersão', title: 'Imersão Avançada em Preenchimento de Olheiras', clip: 'olheiras' },
   { kind: 'Imersão', title: 'Imersão Avançada em Preenchimento Labial', clip: 'prlabial' },
@@ -76,10 +76,10 @@ const COURSES = [
   { kind: 'Imersão', title: 'Imersão Avançada em Full Face com menos de 5 ml', clip: 'ff5' },
   { kind: 'Imersão', title: 'Imersão Avançada em Full Face com mais de 10 ml', clip: 'ff10' },
   { kind: 'Curso', title: 'Atenda todo Santo dia', clip: 'atenda' },
-  { kind: 'Curso', title: 'Curso de Preenchimento Express', clip: null },
+  { kind: 'Curso', title: 'Curso de Preenchimento Express', clip: 'cpx' },
   { kind: 'Curso', title: 'Curso de Toxina Express · Protocolo Glabela', clip: 'ctx' },
-  { kind: 'Ebook', title: 'Preenchimento Tridimensional de Olheiras', clip: null },
-  { kind: 'Ebook', title: 'Intercorrências no Preenchimento Facial', clip: null },
+  { kind: 'Ebook', title: 'Preenchimento Tridimensional de Olheiras', clip: 'eb_olh' },
+  { kind: 'Ebook', title: 'Intercorrências no Preenchimento Facial', clip: 'eb_int' },
   { kind: '', title: '+ Novos cursos', clip: null },
 ];
 const FRAMES = window.FRAMES || {};   // preenchido abaixo com o número de quadros de cada clipe
