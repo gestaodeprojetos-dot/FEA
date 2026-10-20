@@ -169,6 +169,8 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 
 **Princípios:** premium e clean, muito espaço em branco, hierarquia clara, sem gradientes berrantes ou 3D, médico-científico, sem emoji em slides científicos (permitido em relatórios internos), lavanda como respiro, vermelho só para crítico, bordas suaves (`border-radius: 8-12px`), tabelas com header roxo e texto branco.
 
+**Lançamento com identidade própria (Keila, 20/10/2026):** cada lançamento tem sua própria identidade visual, e as peças daquela campanha seguem a marca dela, não a paleta acima. Exemplo: a Black Friday Vitalícia usa preto e dourado. Ao conferir arte de lançamento, nunca apontar cor ou fonte da campanha como erro; a paleta FEA acima vale para material institucional e documentos.
+
 **Deprecated (não usar):** terracota `#B25A32`, ardósia `#3F4E4F`, fontes Archivo, Alga, Inter e Roboto, verdes, dourados.
 
 **Referência visual canônica:** `dash-mini-clickup-15dias.html` (hero gradient roxo para azul-violeta, cards brancos radius 8-12px, chips pill, mockup WhatsApp com header roxo).
