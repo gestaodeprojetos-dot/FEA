@@ -54,7 +54,7 @@ EXTRAS = [  # mesmas duas colunas, depois do bloco do modelo
     ('Mensagem com pesquisa e presente', 'FEA-ES | Mensaje con encuesta y regalo + API de encuesta - eBook Ojeras', G + '1nFYnMcpU_sPyz1mlCVRZL_LgRyhxGA0n1rTbu-9xFYM/edit'),
     ('Criativos de remarketing', 'FEA-ES | Creativos de remarketing - eBook Ojeras', G + '1nN9XNZaK536cLA6CDjvqB0qZQMTBIiGfRHiS3q00kpg/edit'),
     ('Descrição do grupo Low tickets', 'FEA-ES | Descripción del grupo I Low tickets', G + '1shuG_ioT7pMBeJrys-SBagkPURePnL6bSp6ndfTqhwg/edit'),
-    ('Planilha de tráfego', 'FEA-Criativos para Tráfego - Ebook Olheiras LATAM', S + '1ZxfcVB5kbLx_qagtWL0bk8OlBoqiDh2CnIVAGLA1PXo/edit'),
+    ('Planilha de tráfego', 'FEA-Criativos para Tráfego - Ebook Olheiras LATAM', S + '13LRb10wwBDIdSsaOPxue6OYXCR0jlAVGm5U-zrwa70c/edit'),
     ('Links dos vídeos traduzidos', 'FEA-Links dos vídeos traduzidos - Ebook Olheiras LATAM', S + '1k9Cg8s6SIRdDhgVgFWhp9aPUL04zEfRvUGMPQ0nU3kc/edit'),
     ('Páginas em HTML e JSON (designer)', 'Copys páginas ES', D + '15RFlmEyX_sWqlCHJuL8ZPEo-YA0m8TgB'),
     ('Briefing reverso', 'FEA-Briefing Reverso - Ebook Olheiras LATAM (preenchido)', G + '1EfDIyPQqWMK41_sL5AHsEBl6W5bXzXAUnE2ALu2nnO0/edit'),
