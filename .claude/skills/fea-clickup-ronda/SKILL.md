@@ -39,7 +39,9 @@ Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras du
 
    Usar emoji e negrito, e um link para cada tarefa no formato `[nome](url)`.
 
-## Virada de sprint (sexta, rodada das 16h52)
+## Virada de sprint (sexta às 20h52, rotina própria)
+
+Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/2026). Antes de virar, receber as entregas comentadas até a hora da virada.
 
 1. Toda subtarefa da sprint atual que não esteja em `feito` vai para a sprint seguinte. Se a sprint seguinte não existir, criar no padrão de nome da pasta, de segunda a sexta, nunca passando da data do evento.
 2. Como o ClickUp não move subtarefa sozinha, recriar na sprint seguinte, dentro da tarefa-mãe da mesma área (criar a mãe se não existir, com as datas da sprint):
