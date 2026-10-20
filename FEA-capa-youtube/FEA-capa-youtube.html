@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEA Capa YouTube</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222;padding:20px}
+/* 2560x1440, area segura (aparece em todos os aparelhos): 1546x423 centralizada */
+.capa{width:2560px;height:1440px;position:relative;overflow:hidden;font-family:Sora,sans-serif;
+ background:radial-gradient(ellipse at 50% 50%,#3846BB 0%,#2a2470 22%,#1E1B4B 45%,#0d0b24 100%)}
+.grade{position:absolute;inset:0;background-image:radial-gradient(rgba(208,209,233,.16) 2px,transparent 2px);background-size:34px 34px}
+.segura{position:absolute;left:507px;top:508px;width:1546px;height:423px}
+.foto{position:absolute;left:560px;bottom:0;height:440px;filter:drop-shadow(0 0 40px rgba(56,70,187,.9))}
+.nome{position:absolute;left:0;top:92px;color:#fff;font-weight:800;font-size:84px;letter-spacing:-.03em;line-height:1}
+.nome small{display:block;font:600 26px Montserrat;color:#D0D1E9;letter-spacing:.02em;margin-top:16px}
+.tese{position:absolute;left:0;top:250px;width:560px;font:700 30px/1.25 Sora;color:#fff}
+.tese em{font-style:normal;color:#D0D1E9}
+.dir{position:absolute;right:0;top:70px;width:560px;display:flex;flex-direction:column;gap:18px}
+.chip{display:flex;align-items:center;gap:16px;font:700 28px Montserrat;color:#fff;white-space:nowrap;background:rgba(255,255,255,.08);border:2px solid rgba(208,209,233,.35);border-radius:14px;padding:16px 22px}
+.chip b{width:14px;height:14px;border-radius:50%;background:#D0D1E9;flex:none}
+.debug .segura{outline:3px dashed #BB3838}
+</style></head><body>
+<div class="capa" id="capa">
+ <div class="grade"></div>
+ <div class="segura">
+  <div class="nome">Dr. João Pithon<small>Médico · coautor do livro Arquitetura Facial</small></div>
+  <div class="tese">Anatomia e técnica para quem injeta com <em>segurança</em>.</div>
+  <img class="foto" src="recortes/FEA-joao-recorte-capa.png" alt="">
+  <div class="dir">
+   <div class="chip"><b></b>Casos clínicos completos</div>
+   <div class="chip"><b></b>Preenchimento, toxina e fios</div>
+   <div class="chip"><b></b>Raciocínio clínico na prática</div>
+  </div>
+ </div>
+</div>
+</body></html>
