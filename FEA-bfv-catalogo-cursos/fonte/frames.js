@@ -1,1 +1,1 @@
-window.FRAMES={"anat": 90, "atenda": 78, "botox": 90, "comp": 78, "corporal": 78, "cpx": 90, "ctx": 90, "eb_int": 90, "eb_olh": 90, "esclabial": 90, "febio": 90, "fep": 90, "ff10": 70, "ff5": 90, "fios": 90, "olheiras": 66, "plx": 90, "prlabial": 70, "rino": 90};
+window.FRAMES={"anat": 90, "atenda": 90, "botox": 90, "comp": 90, "corporal": 90, "cpx": 90, "ctx": 90, "eb_int": 90, "eb_olh": 90, "esclabial": 90, "febio": 90, "fep": 90, "ff10": 69, "ff5": 90, "fios": 90, "olheiras": 90, "plx": 90, "prlabial": 90, "rino": 90};

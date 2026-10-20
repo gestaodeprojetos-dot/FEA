@@ -21,7 +21,7 @@
   /* janela de vídeo */
   #win { position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 18px; opacity: 0; z-index: 300;
          box-shadow: 0 0 0 1px var(--gold-soft), 0 40px 90px rgba(0,0,0,.65), 0 0 70px rgba(230,184,115,.12); background: #000; }
-  #win img { position: absolute; left: 50%; top: 50%; width: 1080px; height: 400px; transform: translate(-50%,-50%); object-fit: cover; }
+  #win img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
   #win .grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.35)); }
   /* painel lateral */
   #panel { position: absolute; left: 1250px; top: 600px; width: 600px; z-index: 310; }
@@ -201,6 +201,7 @@ function drawCards(t) {
 // ---------- janela de vídeo e textos ----------
 const winEl = document.getElementById('win'), vid = document.getElementById('vid');
 const WR = { x: 80, y: 250, w: 1080, h: 400 };
+const WR_V = { x: 80 + (1080 - 420) / 2, y: 190, w: 420, h: 560 };   // ebooks: janela vertical 3:4
 const CARD_C = { x: 960, y: 560 + CY, w: 168 * FOCUS, h: 239 * FOCUS };
 function frameFor(c, local) {
   const list = clipList(c); let t = clamp(local, 0, clipDur(c) - 1 / 30);
@@ -214,7 +215,8 @@ const label = (c) => c.kind ? `${c.kind} <b>· ${String(c.n + 1).padStart(2, '0'
 async function drawWin(t, sh) {
   if (!sh) { winEl.style.opacity = 0; panel.style.opacity = 0; return; }
   const c = sh.s.n, C = COURSES[c], p = sh.p;
-  const r = { x: lerp(CARD_C.x - CARD_C.w / 2, WR.x, p), y: lerp(CARD_C.y - CARD_C.h / 2, WR.y, p), w: lerp(CARD_C.w, WR.w, p), h: lerp(CARD_C.h, WR.h, p) };
+  const R = C.kind === 'Ebook' ? WR_V : WR;
+  const r = { x: lerp(CARD_C.x - CARD_C.w / 2, R.x, p), y: lerp(CARD_C.y - CARD_C.h / 2, R.y, p), w: lerp(CARD_C.w, R.w, p), h: lerp(CARD_C.h, R.h, p) };
   Object.assign(winEl.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px', opacity: clamp(p * 2.2), borderRadius: lerp(10, 18, p) + 'px' });
   const src = frameFor(C, sh.local);
   if (vid.getAttribute('src') !== src) { vid.setAttribute('src', src); try { await vid.decode(); } catch (e) {} }

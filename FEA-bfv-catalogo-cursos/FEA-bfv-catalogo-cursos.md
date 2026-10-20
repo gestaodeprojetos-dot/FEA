@@ -8,10 +8,10 @@ Vídeo 16:9 no estilo da referência (vídeo do Drive, aos 1:38:14): carrossel 3
 
 ## Situação dos cursos
 
-- **Arquivo:** `FEA-bfv-catalogo-cursos-16x9.mp4`, 1920x1080, 30 fps, 95 s, sem áudio.
+- **Arquivo:** `FEA-bfv-catalogo-cursos-16x9.mp4`, 1920x1080, 30 fps, 97 s, sem áudio. Os ebooks aparecem em janela vertical (3:4).
 - Os **19 itens** têm vídeo: 17 cursos com trecho de aula e 2 ebooks com as páginas rolando. O "+ Novos cursos" fecha o carrossel antes da vitrine final.
 - Os trechos foram escolhidos pelo `fea_melhor_trecho.py`, que analisa quadro a quadro e só aceita janelas com movimento contínuo: sem carregamento, sem tela parada e sem corte para menus. Depois foram conferidos visualmente.
-- As fontes são 6 gravações de tela feitas pela Keila em 20/10/2026, da plataforma e do Drive com as aulas editadas.
+- As fontes são gravações de tela feitas pela Keila em 20/10/2026, da plataforma e do Drive com as aulas editadas. Na segunda rodada, ela escolheu os takes de Atenda, Olheiras, Corporal, Complicações, Fios, Rinomodelação, Preenchimento Labial, Preenchimento Express e Toxina Express. O Full Face com mais de 10 ml ganhou zoom para esconder o texto cortado no topo.
 
 ## Fonte
 
