@@ -58,9 +58,8 @@ EXTRAS = [  # mesmas duas colunas, depois do bloco do modelo
     ('Links dos vídeos traduzidos', 'FEA-Links dos vídeos traduzidos - Ebook Olheiras LATAM', S + '1k9Cg8s6SIRdDhgVgFWhp9aPUL04zEfRvUGMPQ0nU3kc/edit'),
     ('Páginas em HTML e JSON (designer)', 'Copys páginas ES', D + '15RFlmEyX_sWqlCHJuL8ZPEo-YA0m8TgB'),
     ('Briefing reverso e planejamento', '0. PLANEJAMENTO (FEA-Briefing Reverso preenchido)', D + '1M4OEW8rnJlNtADlhKByQUM8dQJ3t3EjV'),
-    ('Briefing de design', 'FEA-LATAM Briefing de Design - Ebook Olheiras', G + '1WIxuXHq5DraSxqYvBvigZPlD-nw4RWUH4V6AG2ZRHEA/edit'),
-    ('Briefing criativos e vídeo', 'FEA-LATAM Briefing Criativos e Edição de Vídeo - Ebook Olheiras', G + '1PBXJsn_bZRP2feh1JhKTKZ-FUd-caPBgxfpbU66rGUI/edit'),
-    ('Inventário de criativos', 'FEA-Inventário de Criativos Brasil para LATAM - Ebook Olheiras', S + '1HUrQsuLBRg7PZZtKeF5Q2Wpbyb98bVdv4s1RckraNJ4/edit'),
+    ('Briefing de design', '2. ARTES (FEA-LATAM Briefing de Design)', D + '1Q4UHzgdjlUx8_ewd1sBNWemyJ9JZT1ui'),
+    ('Briefing criativos e vídeo + inventário', '4. TRÁFEGO (FEA-LATAM Briefing Criativos e Edição de Vídeo e Inventário)', D + '1dsNl_SZq_LFbuqeI94ChQ7Mv1P8Jrt44'),
     ('Backlog ClickUp', 'Ebook Olheiras LATAM', 'https://app.clickup.com/9013080622/v/f/901319449714/901314001225'),
 ]
 
