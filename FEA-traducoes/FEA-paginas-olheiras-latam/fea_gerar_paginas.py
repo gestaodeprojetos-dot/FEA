@@ -4,7 +4,8 @@
     python3 fea_gerar_paginas.py  ->  FEA-ES-<slug>/FEA-ES-<slug>.json e .html
 
 O JSON é a estrutura de seções (fonte única); o HTML é renderizado dele, para o
-designer finalizar. Preços, checkout e WhatsApp pendentes aparecem em destaque.
+designer finalizar. Marcadores pendentes (checkout, WhatsApp, nomes a confirmar)
+aparecem em destaque. Sem contagem regressiva: urgência fabricada removida em 20/10/2026.
 """
 import html, json, os, re
 from fea_paginas_conteudo import PAGINAS
@@ -30,16 +31,13 @@ ul.ok li:before{content:"✓";background:none;color:var(--roxo);font-weight:800;
 .bar{background:var(--alerta);color:#fff;text-align:center;font:700 15px Sora,sans-serif;padding:12px;position:sticky;top:0;z-index:9}
 .prog{height:14px;background:var(--borda);border-radius:999px;overflow:hidden;margin-top:8px}.prog i{display:block;height:100%;background:var(--roxo)}
 .offer{max-width:620px;margin:0 auto;background:#fff;border:2px solid var(--roxo);border-radius:16px;padding:36px;text-align:center}
-.de{text-decoration:line-through;color:var(--sub)}.preco{font:800 44px Sora,sans-serif;color:var(--roxo);margin:6px 0}.timer{font:800 32px Sora,sans-serif;color:var(--alerta)}
+.de{text-decoration:line-through;color:var(--sub)}.preco{font:800 44px Sora,sans-serif;color:var(--roxo);margin:6px 0}.desc{font:700 15px Sora,sans-serif;color:var(--azul)}
 .selos{margin-top:14px;font-size:13px;color:var(--sub)}
 details{background:#fff;border:1px solid var(--borda);border-radius:var(--r);margin:10px 0;padding:16px 20px}summary{cursor:pointer;font:600 17px Sora,sans-serif;color:var(--roxo)}
 blockquote{margin:10px 0;padding:12px 18px;border-left:4px solid var(--roxo);background:var(--lav);border-radius:0 8px 8px 0;font-style:italic}
 .var{opacity:.5}.var.on{opacity:1}.foot{background:var(--txt);color:#cfcfe0;text-align:center;font-size:13px;padding:28px 0}
 #pendencias{background:#FFF8E1;font-size:14px}.nota,#pendencias,.media{overflow-wrap:anywhere}.btn{max-width:100%;text-align:center}#pendencias h2{color:#5C4A00;font-size:20px}
 @media(max-width:760px){.hero .grid,.cols{grid-template-columns:1fr}section{padding:44px 0}.offer{padding:24px}}"""
-
-JS = """document.querySelectorAll('[data-timer]').forEach(el=>{let s=+el.dataset.timer*60;const t=()=>{const m=String(Math.floor(s/60)).padStart(2,'0'),x=String(s%60).padStart(2,'0');el.textContent='00:'+m+':'+x;if(s>0)s--};t();setInterval(t,1000)});"""
-
 
 def txt(s):
     """Escapa e destaca marcadores [PENDENTE] e preços sem valor."""
@@ -71,12 +69,10 @@ def secao(s):
     corpo = ''.join(f'<p>{txt(p)}</p>' for p in s.get('texto', []))
     nota = f'<div class="nota">{txt(s["nota_designer"])}</div>' if s.get('nota_designer') else ''
     sid = f'id="{s["id"]}"'
-    if t == 'timer_bar':
-        return f'<div class="bar" {sid}>{txt(s["texto"][0])} <span data-timer="{s["timer_min"]}">00:15:00</span></div>'
     if t == 'alert_bar':
         return f'<div class="bar" {sid}>{txt(s["texto"][0])}</div>'
     if t == 'progress_bar':
-        return f'<section {sid}><div class="w"><b>{txt(s["texto"][0])}</b> {s["valor"]}%<div class="prog"><i style="width:{s["valor"]}%"></i></div></div></section>'
+        return f'<section {sid}><div class="w"><b>{txt(s["texto"][0])}</b> {s["valor"]} %<div class="prog"><i style="width:{s["valor"]}%"></i></div>{nota}</div></section>'
     if t == 'footer':
         return f'<footer class="foot">{txt(s["texto"][0])}</footer>'
     if t in ('hero', 'headline_variants'):
@@ -84,7 +80,8 @@ def secao(s):
             head = ''.join(f'<h1 class="var{" on" if i == 0 else ""}" data-variacao="{e(v["titulo"])}">{txt(v["texto"])}</h1>' for i, v in enumerate(s['itens']))
         sub = f'<p class="sub"><b>{txt(s["subtitulo"])}</b></p>' if s.get('subtitulo') else ''
         extra = f'<p class="sub">{txt(s["texto_extra"])}</p>' if s.get('texto_extra') else ''
-        left = head + corpo + lista(s.get('lista')) + sub + extra + cta(s.get('cta'))
+        pos = ''.join(f'<p class="sub">{txt(x)}</p>' for x in s.get('apos_cta', []))
+        left = head + corpo + lista(s.get('lista')) + sub + extra + cta(s.get('cta')) + pos
         right = midias(s) or '<div class="media">[MOCKUP] Capa ES do ebook</div>'
         return f'<section class="hero" {sid}><div class="w grid"><div>{left}</div><div>{right}</div></div><div class="w">{nota}</div></section>'
     body = corpo
@@ -100,12 +97,14 @@ def secao(s):
         body += ''.join(f'<details><summary>{txt(i["titulo"])}</summary><p>{txt(i["texto"])}</p></details>' for i in s['itens'])
     elif t == 'offer':
         ofr = head + lista(s.get('lista'))
-        ofr += f'<p>{txt(s["texto_ancora"])}' + (f' <span class="de">{txt(s["preco_de"])}</span>' if s.get('preco_de') and 'debería' in s.get('texto_ancora', '') else '') + '</p>' if s.get('texto_ancora') else ''
-        if s.get('preco_de') and 'debería' not in s.get('texto_ancora', ''):
+        ofr += f'<p>{txt(s["texto_ancora"])}</p>' if s.get('texto_ancora') else ''
+        if s.get('preco_de'):
             ofr += f'<p>De <span class="de">{txt(s["preco_de"])}</span></p>'
         ofr += f'<p>{txt(s.get("prefixo_preco", ""))}</p><div class="preco">{txt(s["preco"])}</div>'
-        if s.get('timer_min'):
-            ofr += f'<p><b>ESTA OFERTA TERMINA EN:</b></p><div class="timer" data-timer="{s["timer_min"]}">00:15:00</div>'
+        if s.get('desconto'):
+            ofr += f'<p class="desc">({txt(s["desconto"])})</p>'
+        if s.get('condicao'):
+            ofr += f'<p>{txt(s["condicao"])}</p>'
         ofr += cta(s.get('cta')) + (f'<div class="selos">{" | ".join(map(txt, s["selos"]))}</div>' if s.get('selos') else '')
         return f'<section {sid}><div class="w"><div class="offer">{ofr}</div>{midias(s)}{nota}</div></section>'
     else:
@@ -126,7 +125,7 @@ def pagina(p):
     return ('<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{e(p["pagina"])}</title><link rel="preconnect" href="https://fonts.googleapis.com">'
             '<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">'
-            f'<style>{CSS}</style></head><body>' + ''.join(secao(s) for s in p['secoes']) + pend + f'<script>{JS}</script></body></html>')
+            f'<style>{CSS}</style></head><body>' + ''.join(secao(s) for s in p['secoes']) + pend + '</body></html>')
 
 
 if __name__ == '__main__':

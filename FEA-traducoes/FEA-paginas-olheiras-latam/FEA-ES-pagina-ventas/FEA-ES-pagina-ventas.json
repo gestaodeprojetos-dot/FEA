@@ -5,8 +5,9 @@
  "mercado": "LATAM",
  "idioma": "es-419",
  "tratamento": "usted",
- "fonte_copy": "https://docs.google.com/document/d/1WAS9MpUjb-GUFCIh_Zr2ObHEVcqd8niRktByx2W2_b0/edit",
- "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view",
+ "revisao": "20/10/2026",
+ "fonte_copy": "https://docs.google.com/document/d/1DcfgS833430UPwl7_X1E9WLBkbWc2ek37udyS0ylLSE/edit",
+ "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view (versão ES)",
  "paleta_padrao_html": {
   "roxo": "#5B4599",
   "azul_violeta": "#3846BB",
@@ -20,27 +21,20 @@
   "corpo": "Montserrat 400-500"
  },
  "pendencias": [
-  "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier.",
-  "Link de checkout Hotmart em USD.",
-  "WhatsApp de atendimento em espanhol."
+  "[LINK DEL CHECKOUT EN USD: PENDIENTE] (botão de compra do ebook, Hotmart em USD).",
+  "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+  "[NOMBRE DEL CASO CLÍNICO: A CONFIRMAR] (3 bônus).",
+  "Depoimentos: prints em PT com legenda ES \"Testimonio original en portugués\".",
+  "Confirmar com a gestão se \"MD Codes\" (método associado à Allergan) pode ser citado na página LATAM."
  ],
  "secoes": [
-  {
-   "id": "tarja",
-   "nome": "Tarja vermelha com cronômetro",
-   "tipo": "timer_bar",
-   "texto": [
-    "Esta oferta termina en:"
-   ],
-   "timer_min": 15
-  },
   {
    "id": "hero",
    "nome": "Hero",
    "tipo": "hero",
-   "titulo": "Domine el procedimiento más desafiante de la armonización facial, el relleno de ojeras, con la metodología ARTI, y alcance resultados naturales, seguros y duraderos.",
+   "titulo": "Domine el procedimiento más desafiante de la armonización facial, el relleno de ojeras, con la metodología ARTI, y trabaje con seguridad, previsibilidad y resultados naturales y duraderos.",
    "texto": [
-    "Esta guía revela cómo aplicar la metodología ARTI (Anatomía, Reología, Técnica e Intercurrencias) en el relleno de ojeras, la región más delicada del rostro, logrando resultados superiores donde la mayoría falla."
+    "Esta guía muestra cómo aplicar la metodología ARTI (Anatomía, Reología, Técnica e Intercurrencias) en el relleno de ojeras, la región más delicada del rostro, con un razonamiento clínico que reduce el margen de error justo donde la mayoría falla."
    ],
    "cta": {
     "texto": "¡Quiero dominar la técnica tridimensional!",
@@ -57,7 +51,7 @@
    "id": "depoimentos",
    "nome": "Depoimentos",
    "tipo": "testimonials",
-   "titulo": "Lo que dicen sobre la Técnica Tridimensional de Relleno de Ojeras.",
+   "titulo": "Lo que dicen sobre la Técnica Tridimensional de Relleno de Ojeras",
    "midia": [
     {
      "tipo": "prints",
@@ -65,10 +59,10 @@
     }
    ],
    "cta": {
-    "texto": "Quiero resultados como estos",
+    "texto": "Quiero aplicar la técnica con este nivel de previsibilidad",
     "acao": "#oferta"
    },
-   "nota_designer": "Sem depoimento em espanhol: print original em português com legenda ES \"Testimonio original en portugués\" (decisão da gestão em 05/10/2026). Conferir TCLE de fotos de paciente."
+   "nota_designer": "Print original em português com legenda ES \"Testimonio original en portugués\" (decisão da gestão em 05/10/2026). Conferir TCLE de fotos de paciente."
   },
   {
    "id": "dor",
@@ -76,14 +70,14 @@
    "tipo": "pain",
    "titulo": "¿Qué le impide alcanzar la excelencia en el relleno de ojeras?",
    "contras": [
-    "Inseguridad ante complicaciones como edema, irregularidades o efecto Tyndall.",
+    "Inseguridad ante intercurrencias como edema, irregularidades o efecto Tyndall.",
     "Dudas sobre el producto ideal, la profundidad y el abordaje correcto.",
-    "Resultados mediocres, sin naturalidad ni durabilidad."
+    "Resultados inconsistentes, sin naturalidad ni duración."
    ],
-   "subtitulo": "Imagine ahora…",
+   "subtitulo": "Imagine ahora:",
    "pros": [
     "Elegir productos con fundamento científico.",
-    "Dominar la anatomía y aplicar con precisión absoluta.",
+    "Dominar la anatomía y aplicar con precisión.",
     "Usar una técnica tridimensional validada y segura."
    ]
   },
@@ -109,14 +103,15 @@
      "texto": "MD Codes y demás abordajes clásicos."
     },
     {
-     "titulo": "Complicaciones y soluciones",
+     "titulo": "Intercurrencias y soluciones",
      "texto": "cómo diagnosticarlas y tratarlas con seguridad."
     }
    ],
    "cta": {
     "texto": "Quiero aprender la técnica tridimensional ahora",
     "acao": "#oferta"
-   }
+   },
+   "nota_designer": "\"MD Codes\" é método associado a uma marca (Allergan): confirmar com a gestão se pode ser citado na página LATAM."
   },
   {
    "id": "acesso",
@@ -151,7 +146,7 @@
    ],
    "ordem": "pros_primeiro",
    "cta": {
-    "texto": "Sí, quiero ser un Inyector de Élite",
+    "texto": "Sí, quiero ser un inyector de excelencia",
     "acao": "#oferta"
    }
   },
@@ -169,7 +164,7 @@
      "lista": [
       "Comprenda cómo el proceso de envejecimiento impacta la región periorbitaria.",
       "Refuerce su base anatómica para diagnosticar correctamente cada caso.",
-      "Aprenda a identificar la estructura ósea, los compartimentos de grasa y los ligamentos."
+      "Aprenda a identificar la estructura ósea, los compartimentos grasos y los ligamentos."
      ]
     },
     {
@@ -183,7 +178,7 @@
      "titulo": "Reología: La Elección del Producto de Relleno Ideal",
      "lista": [
       "Domine el concepto de Swelling Factor (SF) y su influencia en el resultado final.",
-      "Aprenda a seleccionar los productos más adecuados para ojeras, evitando complicaciones."
+      "Aprenda a seleccionar los productos más adecuados para ojeras y a evitar intercurrencias."
      ]
     },
     {
@@ -192,7 +187,7 @@
       "Acceda al paso a paso detallado de la técnica ARTI.",
       "Aprenda a analizar y marcar los ligamentos con precisión.",
       "Descubra los puntos de acceso correctos (puntos de entrada).",
-      "Domine la técnica de Layering (capas) para resultados naturales y duraderos."
+      "Domine la técnica de layering (por capas) para resultados naturales y duraderos."
      ]
     },
     {
@@ -202,7 +197,7 @@
       "Cómo evitar y tratar el efecto Tyndall.",
       "Corrección de irregularidades de relieve.",
       "Manejo seguro de hematomas.",
-      "Cuidados posprocedimiento que garantizan la satisfacción y la seguridad del paciente."
+      "Cuidados posprocedimiento orientados a la seguridad y la satisfacción del paciente."
      ]
     }
    ],
@@ -244,52 +239,53 @@
    "itens": [
     {
      "titulo": "Bono 01",
-     "texto": "Caso clínico 1: [nombre del caso]"
+     "texto": "Caso clínico 1: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
     },
     {
      "titulo": "Bono 02",
-     "texto": "Caso clínico 2: [nombre del caso]"
+     "texto": "Caso clínico 2: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
     },
     {
      "titulo": "Bono 03",
-     "texto": "Caso clínico 3: [nombre del caso]"
+     "texto": "Caso clínico 3: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
     }
    ],
-   "nota_designer": "Nome de cada caso clínico pendente na copy original (Adriane): manter o marcador até a copy definir."
+   "nota_designer": "Ícone de presente antes do título. Nome de cada caso clínico pendente na copy: manter o marcador até a copy definir."
   },
   {
    "id": "oferta",
    "nome": "Oferta especial",
    "tipo": "offer",
    "titulo": "Oferta Especial",
-   "preco_de": "US$ [PRECIO ANTERIOR]",
-   "preco": "US$ [PRECIO]",
+   "preco_de": "US$47",
+   "preco": "US$19",
    "prefixo_preco": "Por solo",
-   "timer_min": 15,
+   "desconto": "60 % de descuento",
+   "condicao": "Pago único con tarjeta de crédito o débito.",
    "cta": {
     "texto": "Quiero mi e-book con descuento",
-    "acao": "[CHECKOUT HOTMART USD: CONFIRMAR]"
+    "acao": "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
    },
    "selos": [
     "Hotmart",
     "Garantía de 7 días"
    ],
-   "nota_designer": "Cronômetro de 15 min (já funcionando no HTML). Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier. No Brasil: de R$ 200,00 por R$ 47,00."
+   "nota_designer": "Ícone de bolsa de dinheiro antes do título. Bloco de oferta sem contagem regressiva (removida por ser urgência fabricada). Preço definido pela gestão: de US$47 (riscado) por US$19, 60 % de desconto, pagamento único com cartão de crédito ou débito, sem parcelas."
   },
   {
    "id": "custo",
-   "nome": "Custo de não comprar",
+   "nome": "Custo de adiar",
    "tipo": "pain",
-   "titulo": "Créalo: ¡no comprar le sale más caro!",
+   "titulo": "Postergar también tiene un costo",
    "contras": [
-    "Seguir sin dominar esta técnica significa permanecer vulnerable a complicaciones, inseguridad y resultados por debajo del promedio.",
-    "Significa perder pacientes frente a quienes ya dominan la metodología."
+    "Seguir sin dominar esta técnica significa trabajar expuesto a intercurrencias evitables, a la inseguridad en la indicación y a resultados poco previsibles.",
+    "Significa dejar de atender casos que hoy usted ya podría resolver con criterio técnico."
    ],
    "pros": [
-    "Con este e-book, usted tendrá en sus manos una guía definitiva para convertirse en referencia en relleno de ojeras, con seguridad y previsibilidad."
+    "Con este e-book, usted tendrá una guía de consulta para trabajar el relleno de ojeras con seguridad y previsibilidad."
    ],
    "cta": {
-    "texto": "No quiero quedarme atrás, quiero mi e-book ahora",
+    "texto": "Quiero mi e-book ahora",
     "acao": "#oferta"
    }
   },
@@ -297,14 +293,14 @@
    "id": "mentor",
    "nome": "Autoridade",
    "tipo": "authority",
-   "titulo": "¡João Pithon, su mentor!",
+   "titulo": "João Pithon, su mentor",
    "texto": [
     "Soy el Dr. João Pithon, médico, coautor del libro Arquitetura Facial, coordinador de cursos y CEO del Instituto Pithon Napoli.",
-    "Después de recorrer 7 países como investigador científico, le presentaré las técnicas refinadas de relleno que validé con más de 7.000 ml aplicados sin intercurrencias.",
-    "Ya he formado a más de 4.000 alumnos con estas técnicas. Mi metodología le permitirá ver una nueva forma de ofrecer resultados de excelencia en relleno.",
-    "En 2019, tomé la decisión de trabajar con procedimientos mínimamente invasivos en la medicina estética. Esa elección transformó por completo mi vida.",
-    "Seis años después, vivo una vida épica: con libertad financiera, experiencias únicas y la satisfacción de cuidar de mi familia como siempre lo soñé.",
-    "La medicina estética es un campo próspero y transformador. Y yo le pregunto: ¿dónde quiere estar dentro de 6 años?"
+    "Después de recorrer 9 países como investigador científico, le presentaré las técnicas refinadas de relleno que validé con más de 10.000 ml aplicados sin intercurrencias isquémicas.",
+    "Ya he formado a más de 30.000 alumnos con estas técnicas. Mi metodología le permitirá ver una nueva forma de trabajar el relleno, con razonamiento anatómico y previsibilidad.",
+    "Este e-book ya suma +30 mil copias vendidas.",
+    "En 2019, decidí dedicarme a los procedimientos mínimamente invasivos en la medicina estética, con un foco claro: la anatomía como base de la seguridad. Desde entonces, estudio la región facial en cadáveres frescos para entender, capa por capa, dónde están las zonas de riesgo y cómo evitarlas.",
+    "Es ese mismo razonamiento clínico el que comparto en este e-book, para que usted aplique la técnica con criterio, consistencia y previsibilidad en su práctica clínica."
    ],
    "cta": {
     "texto": "Quiero aprender con el Dr. João Pithon",
@@ -316,7 +312,7 @@
      "descricao": "Foto do Dr. João à direita"
     }
    ],
-   "nota_designer": "Números de autoridade divergem entre as páginas (4.000, 20.000 e 30.000 alunos; 7, 8 e 9 países; 7.000 e 10.000 ml). Usar o dado que a gestão confirmar."
+   "nota_designer": "Números de autoridade padronizados pela gestão em 20/10/2026: 9 países, más de 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas. Bloco reescrito em tom médico-científico (anatomia, cadáver fresco, zonas de risco)."
   },
   {
    "id": "faq",
@@ -330,7 +326,11 @@
     },
     {
      "titulo": "¿Tendré acceso de por vida?",
-     "texto": "¡Sí! El e-book es suyo para siempre."
+     "texto": "Sí. El e-book es suyo para siempre."
+    },
+    {
+     "titulo": "¿Cuál es la forma de pago?",
+     "texto": "Tarjeta de crédito o débito, en pago único, a través de Hotmart."
     },
     {
      "titulo": "¿Hay garantía?",
@@ -342,7 +342,7 @@
     }
    ],
    "cta": {
-    "texto": "Quiero mi acceso ahora con Riesgo Cero",
+    "texto": "Quiero mi acceso ahora con riesgo cero",
     "acao": "#oferta"
    }
   },
@@ -352,20 +352,20 @@
    "tipo": "contact",
    "titulo": "¿LE QUEDÓ ALGUNA DUDA?",
    "texto": [
-    "Si le quedó cualquier duda sobre la compra del e-book Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI, hable con mi equipo por WhatsApp."
+    "Si le quedó cualquier duda sobre la compra del e-book Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI, hable con mi equipo por WhatsApp: [WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
    ],
    "cta": {
     "texto": "¡Quiero hablar con el equipo!",
-    "acao": "[WHATSAPP ES: CONFIRMAR]"
+    "acao": "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
    },
-   "nota_designer": "Botão abre o WhatsApp de atendimento em espanhol (número pendente)."
+   "nota_designer": "Botão abre o WhatsApp de atendimento LATAM em espanhol (número pendente)."
   },
   {
    "id": "rodape",
    "nome": "Rodapé",
    "tipo": "footer",
    "texto": [
-    "Formação Especialista Academy · © 2026 · Todos los derechos reservados"
+    "Formación Especialista Academy · © 2026 · Todos los derechos reservados"
    ]
   }
  ]

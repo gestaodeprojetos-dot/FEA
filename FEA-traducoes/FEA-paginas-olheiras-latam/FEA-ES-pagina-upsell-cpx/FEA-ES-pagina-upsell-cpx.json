@@ -1,11 +1,12 @@
 {
  "pagina": "Página de Upsell - CPX",
  "slug": "pagina-upsell-cpx",
- "produto": "CPX, Curso de Relleno Express (upsell do Ebook Ojeras)",
+ "produto": "CPX, [NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR] (upsell do Ebook Ojeras)",
  "mercado": "LATAM",
  "idioma": "es-419",
  "tratamento": "usted",
- "fonte_copy": "https://docs.google.com/document/d/1aSJo7XbjbAOpMuFhbrYG1a_5BKd6y5jxzyvhUjdApgg/edit",
+ "revisao": "20/10/2026",
+ "fonte_copy": "https://docs.google.com/document/d/1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A/edit",
  "identidade_visual": "Identidade do CPX: https://joaopithon.com.br/cpx/",
  "paleta_padrao_html": {
   "roxo": "#5B4599",
@@ -20,10 +21,11 @@
   "corpo": "Montserrat 400-500"
  },
  "pendencias": [
-  "Preço do CPX em dólar.",
-  "Link de checkout do upsell em USD.",
-  "Nome do produto em espanhol.",
-  "WhatsApp de atendimento em espanhol."
+  "[NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR]",
+  "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+  "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]",
+  "Confirmar se o upsell CPX entra no funil LATAM e se o vídeo de vendas do CPX terá versão em espanhol.",
+  "Decisão da gestão sobre a barra \"Procesando su compra 90 %\" (alternativa sugerida na nota do bloco)."
  ],
  "secoes": [
   {
@@ -41,18 +43,19 @@
    "texto": [
     "Procesando su compra"
    ],
-   "valor": 90
+   "valor": 90,
+   "nota_designer": "Decisão da gestão pendente: a barra \"Procesando su compra 90 %\" simula um status que não existe. Alternativa recomendada: «Su compra del e-book fue confirmada. Antes de cerrar esta página, vea esta oportunidad complementaria.»"
   },
   {
    "id": "video",
    "nome": "Vídeo",
    "tipo": "video",
    "titulo": "Tengo una oportunidad todavía mejor para usted.",
-   "subtitulo": "Vea el video a continuación para descubrirla:",
+   "subtitulo": "Vea el video a continuación para conocerla:",
    "midia": [
     {
      "tipo": "video",
-     "descricao": "Vídeo de vendas do CPX (o mesmo da página de vendas). Versão ES traduzida no HeyGen, se houver."
+     "descricao": "Vídeo de vendas do CPX (o mesmo da página de vendas). Confirmar versão em espanhol."
     }
    ]
   },
@@ -62,12 +65,11 @@
    "tipo": "offer",
    "eyebrow": "Bono exclusivo:",
    "titulo": "Relleno Full Face guiado por ultrasonido en vivo",
-   "preco_de": "US$ [PRECIO ANTERIOR]",
    "prefixo_preco": "Por",
-   "preco": "US$ [PRECIO]",
+   "preco": "US$97",
    "cta": {
     "texto": "COMPRAR AHORA",
-    "acao": "[CHECKOUT UPSELL USD: CONFIRMAR]"
+    "acao": "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]"
    },
    "selos": [
     "Hotmart",
@@ -76,10 +78,10 @@
    "midia": [
     {
      "tipo": "imagem",
-     "descricao": "Imagem do bônus (doc original)"
+     "descricao": "Arte do bônus Relleno Full Face guiado por ultrasonido en vivo (versão ES da pasta 2. ARTES)"
     }
    ],
-   "nota_designer": "Preço do CPX em dólar pendente. No Brasil: de R$ 497 por 12 x R$ 30,72; confirmar se haverá parcelamento no LATAM."
+   "nota_designer": "Preço do upsell definido pela gestão em 20/10/2026: US$97 à vista, sem parcelas e sem preço \"de\"."
   },
   {
    "id": "duvidas",
@@ -87,20 +89,20 @@
    "tipo": "contact",
    "titulo": "¿LE QUEDÓ ALGUNA DUDA?",
    "texto": [
-    "Si le quedó cualquier duda sobre la compra del Curso de Relleno Express [CONFIRMAR NOMBRE DEL PRODUCTO EN ESPAÑOL], hable con mi equipo por WhatsApp."
+    "Si le quedó cualquier duda sobre la inscripción en el [NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR], hable con mi equipo por WhatsApp: [WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
    ],
    "cta": {
     "texto": "¡Quiero hablar con el equipo!",
-    "acao": "[WHATSAPP ES: CONFIRMAR]"
+    "acao": "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
    },
-   "nota_designer": "Botão abre o WhatsApp de atendimento em espanhol (número pendente)."
+   "nota_designer": "Botão abre o WhatsApp de atendimento LATAM em espanhol (número pendente)."
   },
   {
    "id": "rodape",
    "nome": "Rodapé",
    "tipo": "footer",
    "texto": [
-    "Formação Especialista Academy · © 2026 · Todos los derechos reservados"
+    "Formación Especialista Academy · © 2026 · Todos los derechos reservados"
    ]
   }
  ]

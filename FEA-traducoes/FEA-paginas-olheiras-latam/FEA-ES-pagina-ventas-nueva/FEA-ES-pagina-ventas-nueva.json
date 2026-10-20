@@ -5,8 +5,9 @@
  "mercado": "LATAM",
  "idioma": "es-419",
  "tratamento": "usted",
- "fonte_copy": "https://docs.google.com/document/d/1c2iylqHqvLsE_J17v86vlbz7o80-SagRswZA9_42PX8/edit",
- "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view (sem parecer Brasil na Copa)",
+ "revisao": "20/10/2026",
+ "fonte_copy": "https://docs.google.com/document/d/1pB0_8kKRS-VI3xZ8kOCDhcEoBqdJzvTJ5MvfYLruCJc/edit",
+ "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view (versão ES; evitar a combinação verde e amarelo de camisa de futebol)",
  "paleta_padrao_html": {
   "roxo": "#5B4599",
   "azul_violeta": "#3846BB",
@@ -20,10 +21,11 @@
   "corpo": "Montserrat 400-500"
  },
  "pendencias": [
-  "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier.",
-  "Link de checkout Hotmart em USD.",
-  "WhatsApp de atendimento em espanhol.",
-  "Os \"insights para o copy\" do doc (ruminações, hooks, eyebrows alternativos) ficaram fora da página: são material de apoio da copy, não blocos."
+  "[LINK DEL CHECKOUT EN USD: PENDIENTE] (botão de compra do ebook, Hotmart em USD).",
+  "Depoimentos: prints em PT com legenda ES \"Testimonio original en portugués\".",
+  "Versão ES do esquema do Figma do protocolo (bloco 5).",
+  "Imagens de referência do copywriter: versão ES na pasta 2. ARTES.",
+  "Os \"insights para o copy\" do doc PT (ruminações, pior cenário, hooks) ficaram fora da página: são material de apoio da copy, não blocos."
  ],
  "secoes": [
   {
@@ -31,20 +33,20 @@
    "nome": "Bloco 1: vender sozinho",
    "tipo": "hero",
    "eyebrow": "♾️ Acceso de por vida",
-   "titulo": "Evitar el relleno de ojeras le está haciendo perder pacientes, autoridad y dinero.",
+   "titulo": "Evitar el relleno de ojeras por falta de previsibilidad está limitando su práctica clínica.",
    "texto": [
-    "Reciba exactamente lo que necesita para tener más seguridad en:"
+    "Reciba exactamente lo que necesita para trabajar con más seguridad en:"
    ],
    "lista": [
-    "Técnicas de relleno de ojeras",
-    "Regiones anatómicas de riesgo",
+    "Técnica de relleno de ojeras",
+    "Zonas de riesgo anatómicas",
     "Plan para evitar el edema"
    ],
-   "subtitulo": "Todo esto para entregar resultados más naturales, seguros y valorados por sus pacientes.",
-   "texto_extra": "Aunque hoy todavía tenga inseguridad o miedo a las intercurrencias.",
+   "subtitulo": "Todo esto para entregar resultados naturales y seguros, con un razonamiento clínico que usted puede reproducir caso a caso.",
+   "texto_extra": "Incluso si hoy todavía tiene dudas sobre el plano correcto o sobre cómo evitar intercurrencias isquémicas.",
    "cta": {
-    "texto": "QUIERO DOMINAR LA TÉCNICA DE OJERAS POR SOLO US$ [PRECIO]",
-    "acao": "#oferta"
+    "texto": "QUIERO DOMINAR LA TÉCNICA DE OJERAS POR SOLO US$19",
+    "acao": "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
    },
    "midia": [
     {
@@ -52,7 +54,7 @@
      "descricao": "Mockup com a capa ES do ebook"
     }
    ],
-   "nota_designer": "UX segundo o JSON enviado no grupo; referência de leitura: bibliotecadecriativos.com.br. Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier."
+   "nota_designer": "Seguir a estrutura da imagem de referência do copywriter (versão ES na pasta 2. ARTES) e o UX do JSON enviado no grupo do projeto; referência de leitura: bibliotecadecriativos.com.br. Preço definido pela gestão: de US$47 (riscado) por US$19, 60 % de desconto, pagamento único com cartão de crédito ou débito, sem parcelas."
   },
   {
    "id": "depoimentos",
@@ -61,41 +63,41 @@
    "midia": [
     {
      "tipo": "prints",
-     "descricao": "Depoimentos do doc original"
+     "descricao": "Depoimentos de alunos em print (versão ES da pasta 2. ARTES)"
     }
    ],
-   "nota_designer": "Print original em português com legenda ES \"Testimonio original en portugués\". Conferir TCLE."
+   "nota_designer": "Print original em português com legenda ES \"Testimonio original en portugués\" (decisão da gestão em 05/10/2026). Conferir TCLE de fotos de paciente."
   },
   {
    "id": "dor",
    "nome": "Bloco 3: dor latente",
-   "tipo": "text",
-   "titulo": "Lo sé… usted ya no soporta ver cómo su inseguridad le hace perder pacientes incluso antes de empezar…",
+   "tipo": "list",
+   "titulo": "Usted ya estudió armonización facial, ya invirtió en cursos y, aun así, cuando aparece un paciente con ojeras, la indicación genera duda.",
    "texto": [
-    "Porque, en el fondo, usted siente:"
+    "Porque sabe que la región infraorbitaria no perdona improvisación:"
    ],
-   "citacoes": [
-    "Yo quería transmitir confianza… pero ni yo confío en mí todavía.",
-    "Mientras yo tengo miedo… otras profesionales están creciendo.",
-    "Mi inseguridad me está haciendo perder dinero.",
-    "Si sigo así… voy a terminar abandonando el área."
+   "lista": [
+    "¿En qué plano depositar el producto?",
+    "¿Qué producto de relleno elegir para no provocar edema persistente o efecto Tyndall?",
+    "¿Cómo reconocer a tiempo una intercurrencia isquémica?",
+    "¿Cómo explicarle al paciente qué esperar del procedimiento?"
    ],
-   "texto_extra": "Usted ya no soporta estudiar armonización facial, invertir en cursos y seguir sintiéndose insegura. Porque, en el fondo, sabe que no logra atraer pacientes justamente porque todavía no transmite confianza. ¿Me equivoco?",
+   "texto_extra": "Sin respuestas claras a estas preguntas, la seguridad que usted transmite en la evaluación se resiente, y el paciente lo percibe.",
    "midia": [
     {
-     "tipo": "foto",
-     "descricao": "Paciente insatisfeita, como na página de referência (banco de imagem licenciado ou foto própria com autorização; nunca IA)"
+     "tipo": "imagem",
+     "descricao": "Esquema anatômico da região infraorbitária com camadas e zonas de risco (versão ES da pasta 2. ARTES)"
     }
-   ]
+   ],
+   "nota_designer": "Dor reescrita em registro técnico (plano, edema, Tyndall, intercorrência isquêmica). Sem foto de paciente insatisfeita."
   },
   {
    "id": "transicao",
    "nome": "Bloco 4: transição",
    "tipo": "text",
    "texto": [
-    "Porque la verdad es que casi nadie logra entregar un resultado realmente bonito, natural y seguro en ojeras.",
-    "La mayoría lo evita. Otras lo hacen mal. Y muchas ni siquiera tienen la seguridad para ofrecerlo.",
-    "Mientras tanto… la demanda no deja de crecer."
+    "Pocos profesionales logran un resultado natural, seguro y previsible en ojeras. Muchos evitan el procedimiento y otros lo ejecutan sin un criterio anatómico claro.",
+    "Mientras tanto, la demanda de pacientes que buscan tratar las ojeras sigue creciendo."
    ]
   },
   {
@@ -121,38 +123,50 @@
      "texto": "Intercurrencias"
     }
    ],
-   "nota_designer": "Didático e numerado, a partir do Figma do protocolo: https://www.figma.com/design/BKHNP6al3V5MhEDTnydQE5/FEP---PUBLIC?node-id=0-1 . Incluir o texto que já está na página atual (imagem no doc original)."
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Bloco de copy da página atual sobre a metodologia ARTI (versão ES da pasta 2. ARTES)"
+    }
+   ],
+   "nota_designer": "Didático e numerado, a partir do Figma do protocolo: https://www.figma.com/design/BKHNP6al3V5MhEDTnydQE5/FEP---PUBLIC?node-id=0-1 (preparar a versão ES do esquema)."
   },
   {
    "id": "entregaveis",
    "nome": "Bloco 6: o que vai receber",
    "tipo": "list",
-   "titulo": "Vea todo lo que va a recibir con el libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI",
+   "titulo": "Vea todo lo que va a recibir con el libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI.",
    "lista": [
     "Acceso inmediato y de por vida al libro digital Relleno Tridimensional de Ojeras",
     "Revisión científica con artículos para descargar",
     "Casos clínicos comentados y videoclases explicativas"
    ],
-   "nota_designer": "Visual como na referência do doc original."
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Mockup visual dos entregáveis (versão ES da pasta 2. ARTES)"
+    }
+   ]
   },
   {
    "id": "para-quem",
    "nome": "Bloco 7: para quem é",
    "tipo": "list",
-   "titulo": "El libro digital Relleno Tridimensional de Ojeras es para usted que:",
+   "titulo": "El libro digital Relleno Tridimensional de Ojeras es para usted si:",
    "lista": [
-    "Evita hacer relleno de ojeras por inseguridad;",
+    "Evita hacer relleno de ojeras por inseguridad técnica;",
     "Quiere tener un diferencial real en la armonización facial;",
-    "Tiene miedo al edema e inseguridad sobre el plano correcto;",
-    "Siente que le falta confianza para indicar y ejecutar."
+    "Tiene dudas sobre el plano correcto y quiere prevenir el edema;",
+    "Siente que le falta criterio clínico para indicar y ejecutar."
    ],
-   "texto_extra": "Si usted quiere dominar el relleno tridimensional de ojeras y destacarse en el mercado MUCHO más rápido. Dejar de ser “una inyectora más”… y convertirse en la profesional de élite que entrega un procedimiento que pocas logran ejecutar con confianza. ¡El libro digital Relleno Tridimensional de Ojeras es para usted!"
+   "texto_extra": "Si usted quiere dominar el relleno tridimensional de ojeras con un razonamiento anatómico que pueda reproducir en cada caso, y ofrecer un procedimiento que pocos profesionales ejecutan con previsibilidad, el libro digital Relleno Tridimensional de Ojeras es para usted.",
+   "nota_designer": "Linguagem neutralizada para usted (público de médicos, dentistas e biomédicos de ambos os sexos)."
   },
   {
    "id": "oferta",
    "nome": "Ancoragem de preço + compra",
    "tipo": "offer",
-   "titulo": "Esto es todo a lo que tendrá acceso",
+   "titulo": "Esto es todo a lo que tendrá acceso:",
    "lista": [
     "Libro digital completo con acceso de por vida",
     "Metodología ARTI aplicada al relleno de ojeras",
@@ -163,21 +177,22 @@
     "Videoclases explicativas",
     "Orientación clara sobre plano y ejecución"
    ],
-   "texto_ancora": "Todo esto debería costar",
-   "preco_de": "US$ [PRECIO ANTERIOR]",
-   "prefixo_preco": "Pero hoy, usted accede por:",
-   "preco": "US$ [PRECIO]",
+   "preco_de": "US$47",
+   "prefixo_preco": "Por",
+   "preco": "US$19",
+   "desconto": "60 % de descuento",
+   "condicao": "Pago único con tarjeta de crédito o débito.",
    "cta": {
     "texto": "QUIERO CONVERTIRME EN REFERENTE EN OJERAS",
-    "acao": "[CHECKOUT HOTMART USD: CONFIRMAR]"
+    "acao": "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
    },
-   "nota_designer": "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier. No Brasil: de R$ 397,00 por 12 x R$ 10,03; confirmar se haverá parcelamento no LATAM. \"Videoclases\" só se as aulas ES estiverem prontas."
+   "nota_designer": "Preço definido pela gestão: de US$47 (riscado) por US$19, 60 % de desconto, pagamento único com cartão de crédito ou débito, sem parcelas. \"Videoclases\" só se as aulas ES estiverem prontas."
   },
   {
    "id": "entrega",
    "nome": "Como recebe",
    "tipo": "features",
-   "titulo": "¡Compre ahora y reciba su libro en el correo electrónico de inmediato!",
+   "titulo": "Compre ahora y reciba su acceso por correo electrónico de inmediato.",
    "itens": [
     {
      "titulo": "Revise su correo electrónico",
@@ -188,8 +203,14 @@
      "texto": "Recibirá todos los entregables de inmediato."
     },
     {
-     "titulo": "¡Todo listo!",
+     "titulo": "Todo listo",
      "texto": "Todo organizado para facilitar el aprendizaje y permitir una aplicación práctica inmediata."
+    }
+   ],
+   "midia": [
+    {
+     "tipo": "icones",
+     "descricao": "Ícones dos 3 passos de acesso (e-mail, produto, pronto), versão ES da pasta 2. ARTES"
     }
    ]
   },
@@ -201,14 +222,14 @@
    "itens": [
     {
      "titulo": "Opción 1",
-     "texto": "Que la paciente salga insatisfecha y hable mal de usted con todo el mundo, y que usted tenga que abandonar el área porque no consigue pacientes."
+     "texto": "Seguir evitando el relleno de ojeras, o ejecutarlo sin un criterio anatómico claro y con mayor exposición a intercurrencias evitables."
     },
     {
      "titulo": "Opción 2",
      "texto": "Convertir el relleno de ojeras en su mayor diferencial dentro de la armonización facial y dominar una habilidad que pocos profesionales realmente poseen."
     }
    ],
-   "texto_extra": "Lo sé (y usted también lo sabe): la opción 2 es la más inteligente. Entonces haga clic en el botón de abajo y acceda ahora mismo al libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI.",
+   "texto_extra": "Usted sabe cuál de las dos protege mejor a su paciente y a su práctica clínica. Haga clic en el botón de abajo y acceda ahora al libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI.",
    "cta": {
     "texto": "QUIERO CONVERTIRME EN REFERENTE EN OJERAS",
     "acao": "#oferta"
@@ -222,8 +243,9 @@
    "texto": [
     "Soy el Dr. João Pithon, médico, profesor e investigador.",
     "Después de recorrer 9 países como investigador científico, le presentaré las técnicas refinadas de relleno que validé con más de 10.000 ml aplicados sin intercurrencias isquémicas.",
-    "Ya he formado a más de 30.000 alumnos con estas técnicas. Mi metodología le permitirá ver una nueva forma de ofrecer resultados de excelencia en relleno.",
-    "Ahora le entrego un método simple y estructurado para que deje la improvisación y aplique con precisión anatómica y previsibilidad desde sus próximas consultas."
+    "Ya he formado a más de 30.000 alumnos con estas técnicas. Mi metodología le permitirá ver una nueva forma de trabajar el relleno, con razonamiento anatómico y previsibilidad.",
+    "Este e-book ya suma +30 mil copias vendidas.",
+    "Ahora le entrego un método claro y estructurado para que deje la improvisación y aplique con precisión anatómica y previsibilidad desde sus próximas consultas."
    ],
    "midia": [
     {
@@ -231,13 +253,13 @@
      "descricao": "Foto do Dr. João"
     }
    ],
-   "nota_designer": "Números de autoridade divergem entre as páginas (4.000, 20.000 e 30.000 alunos; 7, 8 e 9 países; 7.000 e 10.000 ml). Usar o dado que a gestão confirmar."
+   "nota_designer": "Números de autoridade padronizados pela gestão em 20/10/2026: 9 países, más de 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas."
   },
   {
    "id": "oferta-2",
    "nome": "Ancoragem de preço + compra",
    "tipo": "offer",
-   "titulo": "Esto es todo a lo que tendrá acceso",
+   "titulo": "Esto es todo a lo que tendrá acceso:",
    "lista": [
     "Libro digital completo con acceso de por vida",
     "Metodología ARTI aplicada al relleno de ojeras",
@@ -248,15 +270,16 @@
     "Videoclases explicativas",
     "Orientación clara sobre plano y ejecución"
    ],
-   "texto_ancora": "Todo esto debería costar",
-   "preco_de": "US$ [PRECIO ANTERIOR]",
-   "prefixo_preco": "Pero hoy, usted accede por:",
-   "preco": "US$ [PRECIO]",
+   "preco_de": "US$47",
+   "prefixo_preco": "Por",
+   "preco": "US$19",
+   "desconto": "60 % de descuento",
+   "condicao": "Pago único con tarjeta de crédito o débito.",
    "cta": {
     "texto": "QUIERO CONVERTIRME EN REFERENTE EN OJERAS",
-    "acao": "[CHECKOUT HOTMART USD: CONFIRMAR]"
+    "acao": "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
    },
-   "nota_designer": "Preço em dólar no formato dos criativos LATAM (US$19,00). Valor do ebook ainda não definido pela gestão: trocar [PRECIO] e [PRECIO ANTERIOR] quando vier. No Brasil: de R$ 397,00 por 12 x R$ 10,03; confirmar se haverá parcelamento no LATAM. \"Videoclases\" só se as aulas ES estiverem prontas."
+   "nota_designer": "Preço definido pela gestão: de US$47 (riscado) por US$19, 60 % de desconto, pagamento único com cartão de crédito ou débito, sem parcelas. \"Videoclases\" só se as aulas ES estiverem prontas."
   },
   {
    "id": "faq",
@@ -266,33 +289,39 @@
    "itens": [
     {
      "titulo": "¿Cuál es la forma de pago?",
-     "texto": "Puede pagar con tarjeta de crédito. [CONFIRMAR MÉTODOS DE PAGO PARA LATAM]"
+     "texto": "Puede pagar con tarjeta de crédito o débito, en pago único."
     },
     {
      "titulo": "¿El pago es seguro?",
-     "texto": "Sí, el pago es 100% seguro: utilizamos una de las mayores plataformas de ventas del mundo, Hotmart."
+     "texto": "Sí, el pago es 100 % seguro: utilizamos Hotmart, una de las mayores plataformas de ventas digitales del mundo."
     },
     {
      "titulo": "¿Me sirve a mí?",
-     "texto": "Sí, el libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI sirve para cualquier inyector, del principiante al avanzado."
+     "texto": "Sí. El libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI está dirigido a profesionales habilitados que realizan procedimientos inyectables, desde quienes están empezando hasta los más experimentados."
     },
     {
      "titulo": "¿Cómo voy a acceder al libro?",
-     "texto": "En cuanto se confirme su pago, le enviaremos un correo electrónico con todos los datos de inicio de sesión para que acceda al producto junto con todos los bonos."
+     "texto": "En cuanto se confirme su pago, le enviaremos un correo electrónico con los datos de acceso al producto y a todos los bonos."
     },
     {
      "titulo": "¿Por cuánto tiempo tengo acceso?",
      "texto": "Tendrá acceso de por vida al libro digital Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI."
     }
    ],
-   "nota_designer": "O original cita Pix, que não existe fora do Brasil: saiu até a gestão confirmar os meios de pagamento LATAM."
+   "midia": [
+    {
+     "tipo": "selo",
+     "descricao": "Selo de garantia de 7 dias e logo Hotmart (versão ES da pasta 2. ARTES)"
+    }
+   ],
+   "nota_designer": "Pagamento: cartão de crédito ou débito via Hotmart (meio de pagamento instantâneo brasileiro removido)."
   },
   {
    "id": "rodape",
    "nome": "Rodapé",
    "tipo": "footer",
    "texto": [
-    "Formação Especialista Academy · © 2026 · Todos los derechos reservados"
+    "Formación Especialista Academy · © 2026 · Todos los derechos reservados"
    ]
   }
  ]
