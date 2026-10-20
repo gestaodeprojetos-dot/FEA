@@ -169,7 +169,7 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 
 **Princípios:** premium e clean, muito espaço em branco, hierarquia clara, sem gradientes berrantes ou 3D, médico-científico, sem emoji em slides científicos (permitido em relatórios internos), lavanda como respiro, vermelho só para crítico, bordas suaves (`border-radius: 8-12px`), tabelas com header roxo e texto branco.
 
-**Deprecated (não usar):** terracota `#B25A32`, ardósia `#3F4E4F`, fontes Archivo, Alga, Inter e Roboto, verdes, dourados.
+**Deprecated (não usar):** terracota `#B25A32`, ardósia `#3F4E4F`, fontes Archivo, Alga, Inter e Roboto, verdes, dourados. **Exceção aprovada (Keila, 20/10/2026):** o dourado do brandbook FEP (`#D5AF74`) vale em peças do canal do YouTube do Dr. João (capa e derivados), em detalhes finos (filetes, rótulos, CTA) sobre fundo preto, visual sofisticado. Brandbook FEP: paleta preto, off-white, azul `#3446BE`, roxo `#75438A`, dourado `#D5AF74`; fontes Jarden (títulos) e Gotham (texto), substituídas por Sora e Montserrat quando não houver os arquivos.
 
 **Referência visual canônica:** `dash-mini-clickup-15dias.html` (hero gradient roxo para azul-violeta, cards brancos radius 8-12px, chips pill, mockup WhatsApp com header roxo).
 
