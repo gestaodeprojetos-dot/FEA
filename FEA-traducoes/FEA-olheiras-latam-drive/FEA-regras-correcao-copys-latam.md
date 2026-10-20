@@ -13,6 +13,7 @@ Fonte das decisões: Keila (gestão), conversa de 05/10 e 20/10/2026. Auditoria 
 - Ebook: **de US$47 por US$19** (60 % de descuento). Onde o original tiver R$ 47, R$ 97, R$ 200, R$ 297, R$ 397 ou 76 %, usar US$19 (preço) e US$47 (preço "de", riscado) e 60 %.
 - Parcelamento: não usar (ticket de US$19 é à vista). Remover "12 x R$ ...".
 - Upsell: **US$97** (decisão da gestão em 20/10/2026, equivalente ao R$ 497 do Brasil). Sem parcelas.
+- Nome do upsell em espanhol: **Curso de Relleno Express** (decisão 20/10/2026).
 - Nunca deixar R$ nem `[PRECIO EN MONEDA LOCAL...]` no texto final.
 
 ## Números de autoridade (não definidos para LATAM)
