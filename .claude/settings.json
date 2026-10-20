@@ -11,7 +11,23 @@
       "Bash(python3 /home/user/FEA/FEA-edicao-videos/fea_transcrever.py:*)",
       "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_setup_google_oauth.sh:*)",
       "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_preparar_ambiente.sh:*)",
-      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_folha.sh:*)"
+      "Bash(bash /home/user/FEA/FEA-edicao-videos/fea_folha.sh:*)",
+      "mcp__ClickUp",
+      "mcp__claude-code-remote",
+      "Bash(python3:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(zip:*)",
+      "Bash(unzip:*)",
+      "Bash(base64:*)"
     ]
   }
 }
