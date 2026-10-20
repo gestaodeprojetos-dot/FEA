@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>BFV cursos animados</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: #070605; }
+  #stage { position: absolute; inset: 0; overflow: hidden; perspective: 1700px; perspective-origin: 50% 46%; }
+  #bg { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  #vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(1300px 820px at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%); }
+  #logo { position: absolute; left: 88px; top: 58px; width: 212px; height: 84px; }
+  .card { position: absolute; left: 876px; top: 420.5px; width: 168px; height: 239px; transform-origin: 50% 50%; will-change: transform, opacity; backface-visibility: hidden; }
+  .card img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .card .shine { position: absolute; left: 6px; top: 6px; right: 6px; bottom: 6px; border-radius: 9px; overflow: hidden; mix-blend-mode: screen; }
+  .card .shine i { position: absolute; top: -40%; bottom: -40%; width: 45%; background: linear-gradient(100deg, transparent 0%, rgba(255,226,170,.0) 20%, rgba(255,226,170,.38) 50%, rgba(255,226,170,0) 80%, transparent 100%); transform: skewX(-18deg); }
+  .card .flash { position: absolute; left: 6px; top: 6px; right: 6px; bottom: 6px; border-radius: 10px; box-shadow: 0 0 0 1.5px rgba(230,184,115,.9), 0 0 38px 6px rgba(230,184,115,.55); opacity: 0; }
+  #ants { position: absolute; left: 1665px; top: 552px; width: 156px; height: 226px; opacity: 0; overflow: visible; }
+  #sweep { position: absolute; left: 0; top: 280px; width: 1920px; height: 520px; pointer-events: none; mix-blend-mode: screen; opacity: 0; background: linear-gradient(100deg, transparent 0%, transparent 42%, rgba(255,214,150,.22) 50%, transparent 58%, transparent 100%); background-size: 300% 100%; }
+  #fade { position: absolute; inset: 0; background: #000; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg" width="960" height="540"></canvas>
+  <div id="cards"></div>
+  <svg id="ants" viewBox="0 0 156 226"><rect x="1" y="1" width="154" height="224" rx="9" fill="none" stroke="#E6B873" stroke-width="2.2" stroke-dasharray="9 7"/></svg>
+  <div id="vig"></div>
+  <img id="logo" src="logo.png" alt="">
+  <div id="fade"></div>
+</div>
+<script>
+// ---------- utilidades ----------
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, p) => a + (b - a) * p;
+const ease3 = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;   // power3.inOut
+const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+const win = (t, a, b) => clamp((t - a) / (b - a));
+
+// ---------- fundo: ondas douradas (curvas de nível), geradas a cada quadro ----------
+const cv = document.getElementById('bg'), cx = cv.getContext('2d');
+const W = 960, H = 540, img = cx.createImageData(W, H);
+const F = new Float32Array(W * H), BASE = new Float32Array(W * H * 3);
+(function prep() {
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    const i = y * W + x;
+    const dA = Math.hypot(x - 670, y - 62);
+    const dB = Math.hypot(x + 140, y - 690) * .92 - 120;
+    const k = 90, h = clamp(.5 + .5 * (dB - dA) / k);       // mínimo suave entre os dois centros
+    F[i] = lerp(dB, dA, h) - k * h * (1 - h);
+    const r = Math.hypot((x - 670) / 1.15, y - 62) / 760;   // brilho quente vindo do alto à direita
+    const g = Math.pow(clamp(1 - r), 1.6);
+    const br = clamp((x / W) * (y / H)) * .35;
+    BASE[i * 3] = 8 + 40 * g + 8 * br; BASE[i * 3 + 1] = 7 + 29 * g + 5 * br; BASE[i * 3 + 2] = 5 + 15 * g + 2 * br;
+  }
+})();
+function drawBg(t) {
+  const d = img.data, SP = 23.5, ph = t * .55;
+  for (let i = 0, n = W * H; i < n; i++) {
+    const v = F[i] / SP - ph;
+    const fr = Math.abs(v - Math.round(v)) * SP;
+    const line = Math.exp(-fr * fr * 1.6) * .16;
+    d[i * 4] = BASE[i * 3] + 230 * line; d[i * 4 + 1] = BASE[i * 3 + 1] + 184 * line; d[i * 4 + 2] = BASE[i * 3 + 2] + 115 * line; d[i * 4 + 3] = 255;
+  }
+  cx.putImageData(img, 0, 0);
+}
+
+// ---------- cards ----------
+// Posição final = exatamente a do slide 11 (cards de 156x227 a partir de x=99+174i; linhas em y=301 e 551)
+const COURSES = [];
+for (let r = 0; r < 2; r++) for (let i = 0; i < 10; i++) COURSES.push({ r, i, gx: 99 + 174 * i + 78 - 960, gy: (r ? 551 : 301) + 113.5 - 540, src: `cards/c${r}${i}.png` });
+
+const PLANE = { rx: 24, ry: -30, rz: 9 };
+const S = 1.42, PITCH = 174 * S, ROWY = 132 * S, L = 10 * PITCH, V = 150;
+const T0 = 7.0;            // início do encaixe na grade
+const DUR = 1.7;           // duração do voo de cada card
+const host = document.getElementById('cards');
+const inst = [];           // 2 cópias por curso (esteira contínua)
+COURSES.forEach((c, n) => {
+  for (let k = 0; k < 2; k++) {
+    const el = document.createElement('div'); el.className = 'card';
+    el.innerHTML = `<img src="${c.src}" alt=""><div class="shine"><i></i></div><div class="flash"></div>`;
+    host.appendChild(el);
+    inst.push({ c, n, k, el, shine: el.querySelector('.shine i'), flash: el.querySelector('.flash') });
+  }
+});
+const wrap = (x) => ((x + L) % (2 * L) + 2 * L) % (2 * L) - L;
+const dir = (c) => c.r ? 1 : -1;
+// deslocamento da esteira: velocidade constante e freio suave durante o encaixe
+const travel = (t) => t < T0 ? V * t : V * T0 + V * 1.2 * (1 - Math.exp(-(t - T0) / 1.2));
+// deslocamento total quando a esteira para: compensado para que as capas parem já na ordem da grade
+const TRAVEL_END = V * T0 + V * 1.2;
+const mx = (o, t) => wrap(o.c.i * PITCH - 4.5 * PITCH + dir(o.c) * (travel(t) - TRAVEL_END) + o.k * L);
+// a cópia que estiver mais perto do centro no início do encaixe é a que voa para a grade
+inst.forEach(o => { o.primary = false; });
+COURSES.forEach((c, n) => {
+  const pair = inst.filter(o => o.n === n);
+  const best = pair.reduce((a, b) => Math.abs(mx(a, 99)) < Math.abs(mx(b, 99)) ? a : b);
+  best.primary = true;
+});
+// ordem de chegada: da esquerda para a direita, linha de cima primeiro um pouco
+const stagger = (c) => c.i * .085 + c.r * .18;
+
+function drawCards(t) {
+  for (const o of inst) {
+    const c = o.c;
+    const p = o.primary ? ease3(win(t, T0 + stagger(c), T0 + stagger(c) + DUR)) : 0;
+    // estado esteira
+    const intro = easeOut(win(t, .35 + c.i * .05 + c.r * .12, 1.6 + c.i * .05 + c.r * .12));
+    const x0 = mx(o, t), y0 = c.r ? ROWY : -ROWY;
+    const z0 = 26 * Math.sin(t * .9 + c.i * 1.7 + c.r) - (1 - intro) * 900;
+    const sway = Math.sin(t * .35) * 3;
+    // estado grade
+    const rx = lerp(PLANE.rx, 0, p), ry = lerp(PLANE.ry + sway, 0, p), rz = lerp(PLANE.rz, 0, p);
+    const x = lerp(x0, c.gx, p), y = lerp(y0, c.gy, p), z = lerp(z0, 0, p) + Math.sin(p * Math.PI) * 60;
+    const s = lerp(S, 1, p);
+    o.el.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) translate3d(${x}px,${y}px,${z}px) scale(${s})`;
+    let op = intro;
+    if (!o.primary) op *= 1 - win(t, T0 - .2, T0 + .7);
+    o.el.style.opacity = op;
+    o.el.style.zIndex = o.primary ? 2 : 1;
+    // brilho que atravessa o card de tempos em tempos (só na esteira)
+    const ph = ((t * .32 + c.i * .137 + c.r * .41 + o.k * .5) % 1);
+    const sw = (t - 10.2 - (c.gx + 960) / 1920 * .9 - c.r * .12) / .55;
+    if (p < 1) { o.shine.style.left = `${lerp(-60, 130, clamp(ph / .28))}%`; o.shine.style.opacity = ph < .28 ? (1 - p) : 0; }
+    else { o.shine.style.left = `${lerp(-60, 130, clamp(sw))}%`; o.shine.style.opacity = sw > 0 && sw < 1 ? 1 : 0; }
+    // clarão dourado ao encaixar
+    const land = T0 + stagger(c) + DUR;
+    o.flash.style.opacity = o.primary ? Math.max(0, 1 - Math.abs(t - land) / .35) * (t > land - .1 ? 1 : 0) : 0;
+  }
+}
+
+// ---------- quadro ----------
+const ants = document.getElementById('ants'), rect = ants.querySelector('rect');
+const fade = document.getElementById('fade'), logo = document.getElementById('logo');
+window.DURATION = 15;
+window.seek = (t) => {
+  drawBg(t);
+  drawCards(t);
+  fade.style.opacity = 1 - easeOut(win(t, 0, .9));
+  logo.style.opacity = easeOut(win(t, .4, 1.4));
+  logo.style.transform = `translateY(${(1 - easeOut(win(t, .4, 1.4))) * 14}px)`;
+  // varredura de luz sobre a grade montada
+  // "+ novos cursos": contorno tracejado andando e pulsando
+  const a = easeOut(win(t, 10.6, 11.3));
+  ants.style.opacity = a * (.75 + .25 * Math.sin(t * 3.2));
+  rect.style.strokeDashoffset = -t * 22;
+  ants.style.filter = `drop-shadow(0 0 ${6 + 6 * Math.sin(t * 3.2)}px rgba(230,184,115,.7))`;
+};
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>
