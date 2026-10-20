@@ -20,13 +20,15 @@ Datas, status, sprints, responsáveis e criação de tarefas são só comigo. Qu
 
 ## Em cada rodada (dias úteis: 7h52, 11h52 e 16h52, horário de Brasília)
 
+Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras duas rodadas existem para a entrega da equipe não esperar até o dia seguinte para andar.
+
 1. **Entregas comentadas.** Em toda subtarefa aberta da sprint atual, ler os comentários desde a última rodada. Comentário da equipe com link, anexo ou a palavra "entregue": mudar para `em revisão` e responder "Recebido, vou conferir.".
 2. **Conferência** de cada tarefa em `em revisão`:
    - Objetiva (link abre, página no ar com HTTP 200, UTM presente, arquivo no Drive com o nome certo, QR abre a URL certa): se passou, mudar para `aprovado` e comentar o que foi conferido. Se não passou, mudar para `em ajuste` com a lista exata do que corrigir.
    - Copy: conferir as regras FEA ("para", sem travessão, linha vermelha) e comentar a nota. Copy, conteúdo médico e peça de anúncio vão para `aprovado` só como pré-revisão: a Keila dá o ok final.
    - **`feito` é só a Keila quem marca.** Até ela autorizar outra coisa, eu nunca fecho tarefa.
 3. **Passagem de bastão.** Quando uma tarefa vira `aprovado` ou `feito`, procurar a próxima da corrente (Gestão → Copy → Design → Web → Automação → Tráfego) que depende dela e comentar lá, atribuindo o comentário ao responsável: "A etapa anterior foi aprovada: [link]. Pode seguir, o prazo é dd/mm."
-4. **Vencidas.** Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. **Só uma cobrança por tarefa por dia:** antes de comentar, ler os comentários e não repetir se já houver cobrança de hoje (minha ou da ronda antiga).
+4. **Vencidas, só na rodada das 7h52** (Keila, 20/10/2026: cobrar 1 vez por dia, nunca 2). Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. Antes de comentar, ler os comentários e não cobrar se já houver cobrança de hoje (minha ou da ronda antiga). As rodadas das 11h52 e das 16h52 **não cobram**: só recebem entregas, conferem, passam o bastão e mudam para `atrasado` o que venceu, sem comentar.
 5. **Vence amanhã.** Subtarefa aberta com prazo no próximo dia útil: um lembrete por tarefa, só na rodada das 7h52.
 6. **Sem prazo ou sem responsável.** Não inventar: listar no relatório para a Keila decidir. Se houver padrão na skill `fea-distribuir-datas`, sugerir a data.
 7. **Relatório para a Keila** no fim da rodada, curto e em português:
