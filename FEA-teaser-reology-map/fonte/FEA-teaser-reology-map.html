@@ -283,9 +283,19 @@ tl.to('#cursor', { opacity: 0, duration: .3 }, 12.4);
 sceneSpan('#s4', 13, 18);
 textIn('#s4', 13.2);
 frameIn('#s4', 13.05);
-tl.fromTo('#s4 .zoom', { y: 0, scale: 1 }, { y: -300, scale: 1.3, x: -250, duration: 2.4, ease: IO }, 14);
-tl.to('#s4 .after', { opacity: 1, duration: .5 }, 16.2);
-tl.to('#s4 .zoom', { y: -370, x: -280, scale: 1.34, duration: 1.8, ease: 'none' }, 16.4);
+// botão "5 Hz" fica em (1477, 598) no viewport de 1600 px, ou (1126, 456) na imagem de 1220 px, já sem a faixa de revisão interna
+const Z4 = { scale: 1.15, x: -200, y: -230 }, HZ = { x: 1126 * Z4.scale + Z4.x, y: 456 * Z4.scale + Z4.y };
+const FX = 700 + .93 * HZ.x, FY = 140 + 400 + .93 * (38 + HZ.y - 400);
+tl.fromTo('#s4 .zoom', { y: 0, x: 0, scale: 1 }, { ...Z4, duration: 1.4, ease: IO }, 14.3);
+tl.set('#cursor', { x: 1180, y: 980, scale: 1 }, 15.3);
+tl.to('#cursor', { opacity: 1, duration: .25 }, 15.3);
+tl.to('#cursor', { x: FX - 4, y: FY - 4, duration: .9, ease: IO }, 15.4);
+tl.set('#ripple', { left: FX, top: FY, scale: .3, opacity: 1 }, 16.35);
+tl.to('#ripple', { scale: 1.6, opacity: 0, duration: .7, ease: 'power2.out' }, 16.35);
+tl.to('#cursor', { scale: .85, duration: .08, yoyo: true, repeat: 1 }, 16.35);
+tl.to('#s4 .after', { opacity: 1, duration: .3 }, 16.42);
+tl.to('#s4 .zoom', { scale: 1.2, x: -225, y: -265, duration: 1.6, ease: 'none' }, 16.45);
+tl.to('#cursor', { opacity: 0, duration: .3 }, 17.2);
 tl.to('#s4 .frame', { rotateY: -2, rotateX: 1, duration: 4, ease: IO }, 14);
 
 // 5. Mapa da reologia 18 a 22
@@ -325,8 +335,18 @@ tl.from('#s9 .pill', { opacity: 0, y: 16, duration: .5, stagger: .1, ease: E }, 
 tl.from('#s9 .legal', { opacity: 0, duration: .8 }, 35.4);
 tl.to('#s9', { opacity: 0, duration: .6 }, 37.4);
 
-window.DURATION = 38;
-window.seek = (t) => { tl.seek(t, false); drawFx(t); };
+// A trilha tem 120 BPM (compasso de 2 s). Cada cena é esticada ou comprimida
+// para começar num tempo forte: [tempo da música, tempo da animação].
+const WARP = [[0, 0], [4, 3.4], [8, 7.8], [14, 13], [18, 18], [22, 22], [26, 26.2], [30, 29.4], [34, 33.4], [40, 38]];
+const warp = (T) => {
+  for (let i = 1; i < WARP.length; i++) {
+    const [a0, b0] = WARP[i - 1], [a1, b1] = WARP[i];
+    if (T <= a1) return b0 + (T - a0) * (b1 - b0) / (a1 - a0);
+  }
+  return WARP[WARP.length - 1][1];
+};
+window.DURATION = 40;
+window.seek = (T) => { tl.seek(warp(T), false); drawFx(T); };
 window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
 seek(0);
 </script>
