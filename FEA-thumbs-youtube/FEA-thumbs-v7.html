@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEA Thumbs v7</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F9F9F9;padding:24px 16px}
+.thumb{width:1280px;height:720px;position:relative;overflow:hidden;background:#0b0b0c}
+/* fundo: imagem temática do vídeo, bem desfocada e sem cor */
+.bg{position:absolute;inset:-40px;background-repeat:no-repeat;filter:grayscale(1) blur(4px) brightness(.6) contrast(1.15);transform:scaleX(-1)}
+/* acento de cor única (dourado) entrando pela esquerda, como o vermelho da referência */
+.tinta{position:absolute;inset:0;mix-blend-mode:color;background:radial-gradient(ellipse 760px 620px at 0% 30%,rgba(213,175,116,1) 0%,rgba(213,175,116,.5) 40%,rgba(213,175,116,0) 75%)}
+.luz{position:absolute;inset:0;mix-blend-mode:screen;background:radial-gradient(ellipse 600px 500px at 0% 20%,rgba(213,175,116,.42) 0%,rgba(213,175,116,0) 70%)}
+.escuro{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 60%),linear-gradient(0deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 35%)}
+.joao{position:absolute;right:-110px;top:30px;height:780px;filter:drop-shadow(-12px 0 30px rgba(0,0,0,.6))}
+.txt{position:absolute;left:48px;top:118px;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:#fff;font-size:120px;line-height:.98;letter-spacing:-.02em;text-shadow:0 6px 28px rgba(0,0,0,.65)}
+.box{display:inline-block;background:linear-gradient(180deg,#E2C48F 0%,#D5AF74 55%,#C49A5C 100%);color:#111;padding:6px 22px 10px;margin-top:14px;margin-left:-10px;text-shadow:none;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+</style></head><body>
+<div class="thumb" id="h7">
+ <div class="bg" style="background-image:url(antes/tBuVlo_svHw.jpg);background-size:118%;background-position:85% 0%"></div>
+ <div class="tinta"></div><div class="luz"></div><div class="escuro"></div>
+ <img class="joao" src="../FEA-recortes-dr-joao/FEA-joao-frame-video-fullface5ml.png" alt="">
+ <div class="txt">Não é<br>volume, é<br><span class="box">anatomia</span></div>
+</div>
+</body></html>

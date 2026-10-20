@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEA Thumbs YouTube</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#5B4599;--azul:#3846BB;--lav:#D0D1E9;--verm:#BB3838;--off:#F9F9F9;--cinza:#E9E9E9;--noite:#1E1B4B;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#2a2540;font-family:Montserrat,sans-serif;padding:24px 16px;color:var(--off)}
+h1.pg{font-family:Sora;font-size:22px;margin:0 0 6px}
+p.pg{font-size:14px;opacity:.8;margin-bottom:24px;max-width:900px}
+.wrap{display:flex;flex-direction:column;gap:40px;align-items:flex-start}
+.label{font-size:13px;letter-spacing:.04em;opacity:.75;margin-bottom:8px}
+.scale{width:min(1280px,100%);aspect-ratio:16/9;overflow:hidden;position:relative}
+.thumb{width:1280px;height:720px;position:relative;overflow:hidden;font-family:Sora,sans-serif;transform-origin:top left}
+.mini{display:flex;gap:16px;margin-top:12px;align-items:flex-end;flex-wrap:wrap}
+.mini .m{width:168px;height:94.5px;overflow:hidden;border-radius:6px;position:relative}
+.mini .m .thumb{transform:scale(.13125)}
+.mini small{font-size:12px;opacity:.7}
+
+/* foto: placeholder para a foto REAL recortada do Dr. João (PNG sem fundo) */
+.foto{position:absolute;bottom:0;display:flex;align-items:flex-end;justify-content:center}
+.foto img{height:100%;width:auto;object-fit:contain}
+.foto .ph{width:100%;height:100%;position:relative}
+.ph .cab{position:absolute;left:50%;top:6%;width:44%;aspect-ratio:1/1.2;transform:translateX(-50%);border-radius:48% 48% 44% 44%;background:#cfc8e6}
+.ph .tron{position:absolute;left:50%;bottom:0;width:96%;height:48%;transform:translateX(-50%);border-radius:46% 46% 0 0;background:#f3f2f8}
+.ph .tag{position:absolute;left:50%;top:42%;transform:translateX(-50%);background:rgba(30,27,75,.85);color:#fff;font:600 18px Montserrat;padding:8px 14px;border-radius:8px;white-space:nowrap}
+.glow{position:absolute;border-radius:50%;filter:blur(60px)}
+.pill{display:inline-block;font:700 26px Montserrat;padding:10px 22px;border-radius:999px}
+.marca{position:absolute;font:700 20px Sora;letter-spacing:.08em;color:var(--lav);opacity:.9}
+
+/* 1 ZONA DE RISCO */
+.t1{background:radial-gradient(circle at 75% 50%,#3846BB 0%,#2a2470 45%,#16133a 100%)}
+.t1 .txt{position:absolute;left:64px;top:96px;width:640px}
+.t1 h2{font-size:92px;line-height:.98;font-weight:800;color:#fff;letter-spacing:-.02em}
+.t1 h2 em{font-style:normal;color:var(--lav)}
+.t1 .pill{background:var(--verm);color:#fff;margin-top:34px}
+.t1 .foto{right:-10px;width:560px;height:690px}
+.t1 .vaso{position:absolute;left:640px;top:140px;width:220px;height:420px}
+
+/* 2 PERGUNTA / PLANO */
+.t2{background:#F9F9F9}
+.t2 .lado{position:absolute;top:0;bottom:0;width:50%}
+.t2 .a{left:0;background:#E9E9E9}
+.t2 .b{right:0;background:var(--roxo)}
+.t2 .camada{position:absolute;left:0;right:0;height:14px}
+.t2 .q{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;color:var(--roxo);font:800 120px Sora;width:200px;height:200px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(0,0,0,.25);z-index:3}
+.t2 .w{position:absolute;bottom:56px;font:800 74px Sora;letter-spacing:-.02em}
+.t2 .wa{left:56px;color:#3a3a3a}
+.t2 .wb{right:56px;color:#fff}
+.t2 .top{position:absolute;top:44px;font:700 30px Montserrat}
+.t2 .ta{left:56px;color:#666}.t2 .tb{right:56px;color:var(--lav)}
+
+/* 3 NUMERO */
+.t3{background:linear-gradient(120deg,#5B4599 0%,#3846BB 100%)}
+.t3 .n{position:absolute;left:30px;top:-60px;font:800 640px/1 Sora;color:rgba(255,255,255,.12)}
+.t3 .txt{position:absolute;left:72px;top:150px;width:700px}
+.t3 .big{font:800 210px/0.9 Sora;color:#fff}
+.t3 h2{font:800 76px/1 Sora;color:#fff;margin-top:6px;letter-spacing:-.02em}
+.t3 .sub{margin-top:26px;background:#fff;color:var(--roxo)}
+.t3 .foto{right:0;width:540px;height:700px}
+
+/* 4 CADAVER FRESCO */
+.t4{background:#16133a}
+.t4 .img{position:absolute;inset:0 520px 0 0;background:repeating-linear-gradient(135deg,#2c2758 0 18px,#262150 18px 36px)}
+.t4 .img span{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:600 20px Montserrat;color:var(--lav);text-align:center;width:80%}
+.t4 .painel{position:absolute;right:0;top:0;bottom:0;width:560px;background:linear-gradient(180deg,#5B4599,#3D2E73);padding:70px 54px}
+.t4 h2{font:800 70px/1.02 Sora;color:#fff;letter-spacing:-.02em}
+.t4 h2 em{font-style:normal;color:var(--lav)}
+.t4 .pill{background:#fff;color:var(--roxo);margin-top:30px;font-size:24px}
+.t4 .disc{position:absolute;left:24px;bottom:20px;font:500 16px Montserrat;color:#fff;background:rgba(0,0,0,.55);padding:6px 12px;border-radius:6px}
+.t4 .foto{left:330px;width:300px;height:430px}
+</style>
+</head>
+<body>
+<h1 class="pg">FEA · Sistema de thumbs YouTube (v1)</h1>
+<p class="pg">4 modelos 1280x720 na identidade FEP Experience. O bloco cinza com rosto é o lugar da <b>foto real recortada do Dr. João</b> (nunca imagem gerada por IA). Embaixo de cada modelo, o teste de leitura no tamanho real do feed do celular.</p>
+<div class="wrap">
+
+<section><div class="label">MODELO 1 · ZONA DE RISCO (retrato + alerta)</div>
+<div class="scale"><div class="thumb t1" id="t1">
+  <div class="glow" style="width:520px;height:520px;right:40px;top:80px;background:#5B4599;opacity:.7"></div>
+  <svg class="vaso" viewBox="0 0 220 420" fill="none"><path d="M110 410 C 60 330, 170 270, 110 200 S 60 80, 140 10" stroke="#BB3838" stroke-width="16" stroke-linecap="round"/><path d="M110 200 C 150 170, 190 160, 210 120" stroke="#BB3838" stroke-width="9" stroke-linecap="round"/><circle cx="112" cy="200" r="34" stroke="#fff" stroke-width="6"/></svg>
+  <div class="txt"><h2>A artéria que <em>ninguém</em> te mostrou</h2><span class="pill">risco isquêmico</span></div>
+  <div class="foto"><div class="ph"><div class="cab"></div><div class="tron"></div><div class="tag">foto real recortada</div></div></div>
+  <div class="marca" style="left:64px;bottom:40px">DR. JOÃO PITHON</div>
+</div></div>
+<div class="mini"><div class="m" data-src="t1"></div><small>tamanho do feed no celular: o título ainda lê?</small></div></section>
+
+<section><div class="label">MODELO 2 · PERGUNTA DE CAMADA (split A ou B)</div>
+<div class="scale"><div class="thumb t2" id="t2">
+  <div class="lado a"><div class="camada" style="top:300px;background:#f1c9a5"></div><div class="camada" style="top:330px;background:#e9b98f;height:40px"></div></div>
+  <div class="lado b"><div class="camada" style="top:470px;background:#D0D1E9;height:22px"></div></div>
+  <div class="top ta">subcutâneo</div><div class="top tb">supraperiostal</div>
+  <div class="q">?</div>
+  <div class="w wa">Raso</div><div class="w wb">Profundo</div>
+</div></div>
+<div class="mini"><div class="m" data-src="t2"></div><small>tamanho do feed no celular</small></div></section>
+
+<section><div class="label">MODELO 3 · NÚMERO (lista / sinais)</div>
+<div class="scale"><div class="thumb t3" id="t3">
+  <div class="n">3</div>
+  <div class="txt"><div class="big">3</div><h2>sinais de oclusão vascular</h2><span class="pill sub">nos primeiros minutos</span></div>
+  <div class="foto"><div class="ph"><div class="cab"></div><div class="tron"></div><div class="tag">foto real recortada</div></div></div>
+</div></div>
+<div class="mini"><div class="m" data-src="t3"></div><small>tamanho do feed no celular</small></div></section>
+
+<section><div class="label">MODELO 4 · CADÁVER FRESCO (mecanismo único)</div>
+<div class="scale"><div class="thumb t4" id="t4">
+  <div class="img"><span>frame real da dissecção<br>(desfocar/recortar o detalhe sensível)</span></div>
+  <div class="foto"><div class="ph"><div class="cab"></div><div class="tron"></div><div class="tag">Dr. João</div></div></div>
+  <div class="painel"><h2>O que o livro <em>não</em> mostra da glabela</h2><span class="pill">dissecção em cadáver fresco</span></div>
+  <div class="disc">conteúdo para profissionais de saúde</div>
+</div></div>
+<div class="mini"><div class="m" data-src="t4"></div><small>tamanho do feed no celular</small></div></section>
+
+</div>
+<script>
+// escala as thumbs para caber na tela e clona as miniaturas de leitura
+function fit(){document.querySelectorAll('.scale').forEach(s=>{const t=s.querySelector('.thumb');t.style.transform='scale('+(s.clientWidth/1280)+')'})}
+document.querySelectorAll('.mini .m').forEach(m=>{m.appendChild(document.getElementById(m.dataset.src).cloneNode(true)).removeAttribute('id')});
+addEventListener('resize',fit);fit();
+</script>
+</body>
+</html>
