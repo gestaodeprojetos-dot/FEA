@@ -29,8 +29,8 @@ NEG_PT = ['Domine o procedimento mais', 'desafiador da harmonização', 'facial 
           'olheiras — com a metodologia', 'ARTI, e alcance resultados', 'naturais, seguros e duradouros.']
 # (texto, laranja?) por linha; a parte laranja termina em "facial", como no original
 NEG_ES = [[('Domine el procedimiento más', 1)], [('desafiante de la armonización', 1)],
-          [('facial', 1), (' (el relleno de ojeras) con', 0)], [('la metodología ARTI y logre', 0)],
-          [('resultados naturales, seguros y', 0)], [('duraderos.', 0)]]
+          [('facial', 1), (' (el relleno de ojeras) con', 0)], [('la metodología ARTI y trabaje', 0)],
+          [('con seguridad, previsibilidad y', 0)], [('criterio anatómico.', 0)]]
 REG_PT = ['Este guia revela como aplicar a', 'metodologia ARTI — Anatomia,', 'Reologia, Técnica e Intercorrências',
           '— no preenchimento de olheiras,', 'a região mais delicada da face,', 'conquistando resultados superiores',
           'onde a maioria falha.']

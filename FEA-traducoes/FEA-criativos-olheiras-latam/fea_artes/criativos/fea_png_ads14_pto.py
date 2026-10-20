@@ -8,7 +8,7 @@ from _fea_layout_livro_preto import *
 
 TIT_ES = [('¿Le da miedo realizar el procedimiento más desafiante de la armonización facial:', 'Y'), (' el relleno de ojeras?', 'W')]
 CORPO_ES = [('Esta guía se creó precisamente para evitarlo: domine el procedimiento más desafiante de la armonización facial '
-             'con la metodología ARTI y logre resultados naturales, seguros y duraderos.', 'W')]
+             'con la metodología ARTI y trabaje con seguridad, previsibilidad y criterio anatómico.', 'W')]
 CTA_PT = [[('Toque em ', REG, 0, 0), ('SAIBA MAIS', BOLD, 0, 0)], [('e garanta o seu!', REG, 0, 0)]]
 CTA_ES = [[('Toque en ', REG, 'W'), ('MÁS INFORMACIÓN', BOLD, 'Y')], [('y asegure el suyo.', REG, 'W')]]
 
