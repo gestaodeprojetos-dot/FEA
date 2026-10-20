@@ -20,8 +20,9 @@ G = 'https://docs.google.com/document/d/'
 REF = {
     'pasta_estaticos': D + '1RibhoTeWsYU5wf4q__1aV_QGXGCia2n4',
     'pasta_videos': D + '1ZKGD-pQ0iA8FHqx6Ekc8HvIWYeqkfPS3',
-    'legenda_es': G + '1UgSAaYLfayStlF23n3jkKLxqM3u3I4481OtwTw4qPGg/edit',
-    'copy_estaticos': G + '159seUx0p5uXMYmNENALTJBuB7QV1pv3KKey2U_wDD4c/edit',
+    'legenda_es': G + '1Y2j4EnGg4H9n74A947ghMHZ_FU-JiOlKkIEHCT2Vatw/edit',
+    'copy_remarketing': G + '1nN9XNZaK536cLA6CDjvqB0qZQMTBIiGfRHiS3q00kpg/edit',
+    'copy_estaticos': G + '1jiKpctRIlg3LQHS2coCPLWmEELrSoRK9Z5C-g-gGn6E/edit',
     'briefing_criativos': G + '1SxAJCxfIiz_uqRXV0BuXKzhYxv-cDeL8NyhQVhSYAlU/edit',
     'pasta_brasil': D + '1UoFid4S3Fdb2VsZq49k_TZGHpf9clCNF',
     'planilha_brasil': F + '1iWdHQoTP6K0S507-DO3SnxldWlWT5Szq/view',
@@ -130,20 +131,18 @@ def main(saida):
     linhas = []
     for br in BR:
         k = chave(br)
-        obs = 'Preço em dólar pendente (arte com placeholder US$ até a gestão definir).'
-        status = 'Em produção'
+        obs = 'Arte ES pronta: de US$47 por US$19 (60 %). Aguardando upload no Drive.'
+        status = 'Em revisão'
         if k in MOCKUP:
-            obs += ' Mockup do ebook: trocar capa/página pela edição ES (fase 2).'
+            obs += ' Mockup com a capa ES aplicada.'
         if k in ('[FEED] ADS 05', '[STORIES] ADS 05', '[FEED] ADS 08', '[STORIES] ADS 08'):
             obs += ' Depoimento em print fica em PT com legenda ES.'
-        if k in ('Ads 06', 'Ads 09'):
-            status = 'Em revisão'
         linhas.append([status, camp, 'Meta Ads', None, 'Vendas ebook', REF['legenda_es'], REF['pasta_estaticos'], 'pendente: página LATAM (André Vivas)',
                        nome_latam(br), 'Estático', formato(br), REF['copy_estaticos'], F + BR[br] + '/view', 'pendente (Matheus Saar)', obs])
     for nome, vid in VIDEOS:
-        linhas.append(['Em tradução (HeyGen)', camp, 'Meta Ads', None, 'Vendas ebook', REF['legenda_es'], REF['pasta_videos'], 'pendente: página LATAM (André Vivas)',
+        linhas.append(['Em revisão', camp, 'Meta Ads', None, 'Vendas ebook', REF['legenda_es'], REF['pasta_videos'], 'pendente: página LATAM (André Vivas)',
                        f'FEA-{nome} - PTO-LATAM.mp4', 'Vídeo', 'Vertical', 'Transcrição ES na pasta VÍDEOS', F + vid + '/view', 'pendente (Matheus Saar)',
-                       'Dublado no HeyGen (modo precision, espanhol LATAM). Conferir sincronia labial e legenda antes de subir.'])
+                       'Dublado no HeyGen (completed). Falta baixar o mp4 e subir na pasta VÍDEOS; conferir sincronia labial e legenda.'])
     rotulos = {5: 'Leyenda ES', 6: 'Pasta LATAM', 11: 'Copy ES', 12: 'Original BR'}
     for l in linhas:
         ws.append([None] * len(cols))
@@ -159,7 +158,7 @@ def main(saida):
     rf = wb.create_sheet('Referências')
     cabecalho(rf, ['Item', 'Link'], [44, 70])
     for nome, chave_ in [('Pasta ESTÁTICOS (LATAM)', 'pasta_estaticos'), ('Pasta VÍDEOS (LATAM)', 'pasta_videos'),
-                         ('Legendas dos criativos (ES)', 'legenda_es'), ('Copy dos criativos estáticos PT | ES v2', 'copy_estaticos'),
+                         ('Legendas dos criativos (ES)', 'legenda_es'), ('Copy dos criativos estáticos PT | ES v3', 'copy_estaticos'), ('Copy dos criativos de remarketing (ES)', 'copy_remarketing'),
                          ('Briefing de criativos e edição de vídeo LATAM', 'briefing_criativos'), ('Criativos Brasil (1. Vendas)', 'pasta_brasil'),
                          ('Planilha modelo Brasil', 'planilha_brasil'), ('Página de vendas Brasil (referência de CTA)', 'cta_brasil')]:
         rf.append([nome])
@@ -167,7 +166,8 @@ def main(saida):
     rf.append([])
     rf.append(['Página de vendas LATAM']); celula(rf[rf.max_row][1], 'pendente: André Vivas')
     rf.append(['Checkout Hotmart USD']); celula(rf[rf.max_row][1], 'pendente: gestão')
-    rf.append(['Preço em dólar do ebook']); celula(rf[rf.max_row][1], 'pendente: gestão')
+    rf.append(['Preço em dólar do ebook']); celula(rf[rf.max_row][1], 'de US$47 por US$19 (60 %), definido em 05/10/2026')
+    rf.append(['Upsell (Curso de Relleno Express)']); celula(rf[rf.max_row][1], 'US$97 à vista, definido em 20/10/2026')
 
     cp = wb.create_sheet('Como preencher')
     cabecalho(cp, ['Status', 'Quando usar'], [24, 80])

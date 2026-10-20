@@ -54,11 +54,10 @@
     },
     {
       "antigo": "1aSJo7XbjbAOpMuFhbrYG1a_5BKd6y5jxzyvhUjdApgg",
-      "novo": "1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A",
+      "novo": "1xSxWtG7pvjFxLJsA_c1xj5ev9pm_er25Uy3Kp2R5iKE",
       "titulo": "FEA-ES | Página de Upsell - Cpx",
       "pasta": "1. COPY / 1. PÁGINAS",
       "pendencias": [
-        "[NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR]",
         "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
         "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]",
         "Confirmar se o upsell CPX entra no funil LATAM e se o vídeo de vendas CPX terá versão ES",
@@ -66,9 +65,12 @@
       ],
       "mudancas": [
         "Preço: 'DE R$497 POR 12 x R$ 30,72' trocado por US$97 à vista (decisão 20/10)",
-        "'Curso de Preenchimento Express' trocado por marcador de nome ES",
+        "'Curso de Preenchimento Express' trocado por 'Curso de Relleno Express' (nome ES definido pela gestão em 20/10/2026, rodada 2)",
         "Imagem do bônus com descrição para o designer",
         "Rodapé: Formación Especialista Academy · © 2026"
+      ],
+      "versoes_descartadas": [
+        "1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A"
       ]
     },
     {
@@ -110,5 +112,19 @@
         "Imagens e depoimentos com descrição e legenda ES"
       ]
     }
-  ]
+  ],
+  "rodada_2": {
+    "data": "2026-10-20",
+    "motivo": "Nome do upsell em espanhol definido pela gestão: Curso de Relleno Express",
+    "recriadas": [
+      "FEA-ES | Página de Upsell - Cpx: 1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A -> 1xSxWtG7pvjFxLJsA_c1xj5ev9pm_er25Uy3Kp2R5iKE"
+    ],
+    "sem_marcador_nao_recriadas": [
+      "1DcfgS833430UPwl7_X1E9WLBkbWc2ek37udyS0ylLSE",
+      "1pB0_8kKRS-VI3xZ8kOCDhcEoBqdJzvTJ5MvfYLruCJc",
+      "1Vbpklmy46mTIQizp5eSsf1OKcVFQXA0dLnXFTY3-U-w",
+      "1_Af60zj_W4Cld_q9JDKi9-ispKT2HUTLqxtw43wHEqg"
+    ],
+    "verificacao": "busca fullText no Drive por 'NOMBRE DEL PRODUCTO DEL UPSELL' e 'Preenchimento Express' retornou só a página de upsell e Comunicaciones"
+  }
 }
