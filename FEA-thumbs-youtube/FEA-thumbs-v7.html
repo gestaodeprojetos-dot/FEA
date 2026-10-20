@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEA Thumbs v7</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F9F9F9;padding:24px 16px}
+.thumb{width:1280px;height:720px;position:relative;overflow:hidden;background:#0b0b0c}
+/* frame real do vídeo, espelhado para o Dr. João ficar à direita, quase preto e branco */
+.bg{position:absolute;inset:0;background-repeat:no-repeat;transform:scaleX(-1);filter:saturate(.3) contrast(1.12) brightness(.9)}
+.sombra{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,10,.94) 0%,rgba(8,8,10,.82) 38%,rgba(8,8,10,.15) 62%,rgba(8,8,10,0) 100%)}
+/* brilho dourado nos cantos, assinatura de cor única (como o vermelho dela) */
+.ouro{position:absolute;inset:0;mix-blend-mode:screen;background:radial-gradient(circle at 0% 100%,rgba(213,175,116,.55) 0%,rgba(213,175,116,0) 38%),radial-gradient(circle at 100% 0%,rgba(213,175,116,.35) 0%,rgba(213,175,116,0) 30%)}
+.txt{position:absolute;left:56px;top:150px;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:#fff;font-size:92px;line-height:1.02;letter-spacing:-.01em;text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.box{display:inline-block;background:linear-gradient(180deg,#E2C48F 0%,#D5AF74 55%,#C49A5C 100%);color:#111;padding:2px 18px 6px;margin-top:8px;text-shadow:none;border-radius:6px}
+</style></head><body>
+<div class="thumb" id="h7">
+ <div class="bg" style="background-image:url(antes/Wjkp9TDqp6E.jpg);background-size:140%;background-position:25% 10%"></div>
+ <div class="sombra"></div>
+ <div class="ouro"></div>
+ <div class="txt">Menos<br>produto,<br>mais <span class="box">anatomia</span></div>
+</div>
+</body></html>
