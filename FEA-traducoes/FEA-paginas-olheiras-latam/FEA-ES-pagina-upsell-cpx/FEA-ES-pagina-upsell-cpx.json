@@ -1,0 +1,109 @@
+{
+ "pagina": "Página de Upsell - CPX",
+ "slug": "pagina-upsell-cpx",
+ "produto": "CPX, [NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR] (upsell do Ebook Ojeras)",
+ "mercado": "LATAM",
+ "idioma": "es-419",
+ "tratamento": "usted",
+ "revisao": "20/10/2026",
+ "fonte_copy": "https://docs.google.com/document/d/1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A/edit",
+ "identidade_visual": "Identidade do CPX: https://joaopithon.com.br/cpx/",
+ "paleta_padrao_html": {
+  "roxo": "#5B4599",
+  "azul_violeta": "#3846BB",
+  "lavanda": "#D0D1E9",
+  "alerta": "#BB3838",
+  "fundo": "#F9F9F9",
+  "borda": "#E9E9E9"
+ },
+ "tipografia": {
+  "titulos": "Sora 600-800",
+  "corpo": "Montserrat 400-500"
+ },
+ "pendencias": [
+  "[NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR]",
+  "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+  "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]",
+  "Confirmar se o upsell CPX entra no funil LATAM e se o vídeo de vendas do CPX terá versão em espanhol.",
+  "Decisão da gestão sobre a barra \"Procesando su compra 90 %\" (alternativa sugerida na nota do bloco)."
+ ],
+ "secoes": [
+  {
+   "id": "tarja",
+   "nome": "Tarja vermelha",
+   "tipo": "alert_bar",
+   "texto": [
+    "Atención, no cierre ni actualice esta página."
+   ]
+  },
+  {
+   "id": "progresso",
+   "nome": "Barra de progresso",
+   "tipo": "progress_bar",
+   "texto": [
+    "Procesando su compra"
+   ],
+   "valor": 90,
+   "nota_designer": "Decisão da gestão pendente: a barra \"Procesando su compra 90 %\" simula um status que não existe. Alternativa recomendada: «Su compra del e-book fue confirmada. Antes de cerrar esta página, vea esta oportunidad complementaria.»"
+  },
+  {
+   "id": "video",
+   "nome": "Vídeo",
+   "tipo": "video",
+   "titulo": "Tengo una oportunidad todavía mejor para usted.",
+   "subtitulo": "Vea el video a continuación para conocerla:",
+   "midia": [
+    {
+     "tipo": "video",
+     "descricao": "Vídeo de vendas do CPX (o mesmo da página de vendas). Confirmar versão em espanhol."
+    }
+   ]
+  },
+  {
+   "id": "oferta",
+   "nome": "Bônus + compra",
+   "tipo": "offer",
+   "eyebrow": "Bono exclusivo:",
+   "titulo": "Relleno Full Face guiado por ultrasonido en vivo",
+   "prefixo_preco": "Por",
+   "preco": "US$97",
+   "cta": {
+    "texto": "COMPRAR AHORA",
+    "acao": "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]"
+   },
+   "selos": [
+    "Hotmart",
+    "Garantía de 7 días"
+   ],
+   "midia": [
+    {
+     "tipo": "imagem",
+     "descricao": "Arte do bônus Relleno Full Face guiado por ultrasonido en vivo (versão ES da pasta 2. ARTES)"
+    }
+   ],
+   "nota_designer": "Preço do upsell definido pela gestão em 20/10/2026: US$97 à vista, sem parcelas e sem preço \"de\"."
+  },
+  {
+   "id": "duvidas",
+   "nome": "Dúvidas",
+   "tipo": "contact",
+   "titulo": "¿LE QUEDÓ ALGUNA DUDA?",
+   "texto": [
+    "Si le quedó cualquier duda sobre la inscripción en el [NOMBRE DEL PRODUCTO DEL UPSELL EN ESPAÑOL: A CONFIRMAR], hable con mi equipo por WhatsApp: [WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
+   ],
+   "cta": {
+    "texto": "¡Quiero hablar con el equipo!",
+    "acao": "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
+   },
+   "nota_designer": "Botão abre o WhatsApp de atendimento LATAM em espanhol (número pendente)."
+  },
+  {
+   "id": "rodape",
+   "nome": "Rodapé",
+   "tipo": "footer",
+   "texto": [
+    "Formación Especialista Academy · © 2026 · Todos los derechos reservados"
+   ]
+  }
+ ]
+}

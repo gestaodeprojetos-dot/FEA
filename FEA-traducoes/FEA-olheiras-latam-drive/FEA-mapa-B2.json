@@ -1,0 +1,74 @@
+[
+  {
+    "antigo": "1a1HERGQ99ZMg6Yv_Ku6SUfI4kLi0HPrXYV3FD1cxMGQ",
+    "novo": "1_2qjfrzOjOdkVt5iCVV50rZEGAawXcflJZ2wFfGfOhM",
+    "titulo": "FEA-ES | Listboss API - eBook Ojeras",
+    "pasta": "1. COPY (1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr)",
+    "status": "ativo",
+    "pendencias": ["[LINK DEL CHECKOUT EN USD: PENDIENTE]", "[LINK DE LA PÁGINA DE GRACIAS LATAM: PENDIENTE]", "[LINK DEL GRUPO LATAM: PENDIENTE]", "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]", "Eventos de pagamento local (ex.: OXXO) só se a gestão aprovar"]
+  },
+  {
+    "antigo": "14_pPw0qV88mc0Z4dX1v_SWjx9kDpUrYImIe9908fBX4",
+    "novo": "1_lBObGj1I0AFTjgiqnyaHXxJ0z2F5yGMwEqyMkYgtco",
+    "titulo": "FEA-ES | Listboss Email - eBook Ojeras",
+    "pasta": "1. COPY (1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr)",
+    "status": "ativo",
+    "pendencias": ["[LINK DEL CHECKOUT EN USD: PENDIENTE]", "[LINK DE LA PÁGINA DE GRACIAS LATAM: PENDIENTE]", "[LINK DEL GRUPO LATAM: PENDIENTE]", "[WHATSAPP DE SOPORTE LATAM: PENDIENTE] (separar comercial e suporte se houver dois canais)", "E-mails de pagamento local (ex.: OXXO) só se a gestão aprovar"]
+  },
+  {
+    "antigo": "13TzqiYe3ADx0CGK7hBffPOMh1W_HV3LW18RsTmSjcfQ",
+    "novo": "1PEiblJvEh754uu8sOm71kG9EcmytGfHWRijN8iAmTIQ",
+    "titulo": "FEA-ES | Checkout personalizado I e-Book",
+    "pasta": "1. COPY (1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr)",
+    "status": "ativo",
+    "pendencias": ["[LINK DEL CHECKOUT EN USD: PENDIENTE]", "Imagens de exemplo do checkout e pop-up em versão ES (2. ARTES)", "Se houver prazo real da oferta, a gestão pode voltar a frase de prazo citando a data"]
+  },
+  {
+    "antigo": "1EyK7oNX48jAd887nTvc5T5GGkKSTUqNpTyF2d1OfxzA",
+    "novo": "1shuG_ioT7pMBeJrys-SBagkPURePnL6bSp6ndfTqhwg",
+    "titulo": "FEA-ES | Descripción del grupo I Low tickets",
+    "pasta": "1. COPY (1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr)",
+    "status": "ativo",
+    "pendencias": ["[E-MAIL DE SOPORTE LATAM: PENDIENTE]"]
+  },
+  {
+    "antigo": "11ScQrS6ZEnHQmYFlk_bx0XXIxlznbIUYqOln1C9_Sfk",
+    "novo": "1NNd4Kr6UZ_UJ3Ns_XZJt21_MLEgnnX1vEDPBg3APv9g",
+    "titulo": "FEA-ES | Descripción del grupo I E-book Ojeras",
+    "pasta": "1. COPY (1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr)",
+    "status": "obsoleto (substituído pelo doc de Onboarding 1sJmojN0-NfGtTIOWUxzxeVjtiszDy7mUE1nMZIUCQP0 da outra frente, que fará a lixeira)",
+    "pendencias": ["[LINK DE LA PÁGINA DE GRACIAS LATAM: PENDIENTE]", "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]", "Confirmar se o produto 5021699 do Hotmart Club vale para a oferta em USD"]
+  },
+  {
+    "antigo": "1_QbWisDRpgBmrsWcSjPOU45LBBQ0Ce8UpUjViRiypGg",
+    "novo": "1aPENAjSDasC6RG8wcLg74dowKXJzpJwrRXSY5rWR5ME",
+    "titulo": "FEA-ES | Creativos - eBook Relleno de Ojeras",
+    "pasta": "1. COPY / 2. CRIATIVOS (1LDRr6p11GtIKaBT6O17ENgLzH0ToyaEs)",
+    "status": "ativo",
+    "pendencias": ["Mockups com capa e páginas da edição ES (nunca IA)", "Artes finais em LATAM ESTÁTICOS com nome PTO-LATAM", "Prazo real da oferta para sustentar 48 horas e SOLO HOY no tráfego"]
+  },
+  {
+    "antigo": "1gJ1mNDlW2-jjv8WSXxI64cES_M_enf52hoL3C4zdsyg",
+    "novo": "1gBY3ZkXgxrej8zyF-BwWPpVl2dxYvtgplK6p11Lewlc",
+    "titulo": "FEA-ES | Creativos - eBook Relleno de Ojeras 2",
+    "pasta": "1. COPY / 2. CRIATIVOS (1LDRr6p11GtIKaBT6O17ENgLzH0ToyaEs)",
+    "status": "ativo",
+    "pendencias": ["Videoclases (ADS 11 e 16) só com videoaulas em ES", "TCLE das fotos de paciente nos prints (ADS 05 e 08)", "Mockups com página gerada por IA (ADS 01, 02, 09, 15_V2, 17) trocar pela edição ES", "Logo LATAM inexistente na pasta 5. LOGO"]
+  },
+  {
+    "antigo": "1UgSAaYLfayStlF23n3jkKLxqM3u3I4481OtwTw4qPGg",
+    "novo": "1kv2bfMR8r7WIY_1cDUmp-07AXAOkjpbqEyWrttx3c-0",
+    "titulo": "FEA-ES | Leyenda I Creativos del eBook Ojeras",
+    "pasta": "1. COPY / 2. CRIATIVOS (1LDRr6p11GtIKaBT6O17ENgLzH0ToyaEs)",
+    "status": "obsoleto (substituído pelo doc de Leyendas 1Y2j4EnGg4H9n74A947ghMHZ_FU-JiOlKkIEHCT2Vatw da outra frente, que fará a lixeira)",
+    "pendencias": ["Legendas de remarketing inexistentes"]
+  },
+  {
+    "antigo": "159seUx0p5uXMYmNENALTJBuB7QV1pv3KKey2U_wDD4c",
+    "novo": "1jiKpctRIlg3LQHS2coCPLWmEELrSoRK9Z5C-g-gGn6E",
+    "titulo": "FEA-LATAM Copy dos Criativos Estáticos (PT | ES) v3 - Ebook Olheiras",
+    "pasta": "1. COPY / 2. Criativos (1mIqojfme0X5-TSbUavMbg8AW_6yjmSP7)",
+    "status": "ativo",
+    "pendencias": ["QR do Ads 31 e mockup com QR do Ads 36 apontam para destino PT", "Videoclases ([FEED] ADS 11 e 16) só com versão ES", "TCLE dos prints ([FEED] ADS 05 e 08)", "Mockups com capa e páginas da edição ES", "Recompor artes Ads 06 e 09 em ES com US$19"]
+  }
+]

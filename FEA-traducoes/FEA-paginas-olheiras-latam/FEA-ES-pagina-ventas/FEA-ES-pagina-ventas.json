@@ -1,0 +1,372 @@
+{
+ "pagina": "Página de ventas - eBook de Ojeras",
+ "slug": "pagina-ventas",
+ "produto": "Ebook Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI",
+ "mercado": "LATAM",
+ "idioma": "es-419",
+ "tratamento": "usted",
+ "revisao": "20/10/2026",
+ "fonte_copy": "https://docs.google.com/document/d/1DcfgS833430UPwl7_X1E9WLBkbWc2ek37udyS0ylLSE/edit",
+ "identidade_visual": "https://drive.google.com/file/d/1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f/view (versão ES)",
+ "paleta_padrao_html": {
+  "roxo": "#5B4599",
+  "azul_violeta": "#3846BB",
+  "lavanda": "#D0D1E9",
+  "alerta": "#BB3838",
+  "fundo": "#F9F9F9",
+  "borda": "#E9E9E9"
+ },
+ "tipografia": {
+  "titulos": "Sora 600-800",
+  "corpo": "Montserrat 400-500"
+ },
+ "pendencias": [
+  "[LINK DEL CHECKOUT EN USD: PENDIENTE] (botão de compra do ebook, Hotmart em USD).",
+  "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+  "[NOMBRE DEL CASO CLÍNICO: A CONFIRMAR] (3 bônus).",
+  "Depoimentos: prints em PT com legenda ES \"Testimonio original en portugués\".",
+  "Confirmar com a gestão se \"MD Codes\" (método associado à Allergan) pode ser citado na página LATAM."
+ ],
+ "secoes": [
+  {
+   "id": "hero",
+   "nome": "Hero",
+   "tipo": "hero",
+   "titulo": "Domine el procedimiento más desafiante de la armonización facial, el relleno de ojeras, con la metodología ARTI, y trabaje con seguridad, previsibilidad y resultados naturales y duraderos.",
+   "texto": [
+    "Esta guía muestra cómo aplicar la metodología ARTI (Anatomía, Reología, Técnica e Intercurrencias) en el relleno de ojeras, la región más delicada del rostro, con un razonamiento clínico que reduce el margen de error justo donde la mayoría falla."
+   ],
+   "cta": {
+    "texto": "¡Quiero dominar la técnica tridimensional!",
+    "acao": "#oferta"
+   },
+   "midia": [
+    {
+     "tipo": "mockup",
+     "descricao": "Mockup ao lado com a capa ES do ebook (e foto do Dr. João, se der para compor). Capa real da edição ES, nunca gerada por IA."
+    }
+   ]
+  },
+  {
+   "id": "depoimentos",
+   "nome": "Depoimentos",
+   "tipo": "testimonials",
+   "titulo": "Lo que dicen sobre la Técnica Tridimensional de Relleno de Ojeras",
+   "midia": [
+    {
+     "tipo": "prints",
+     "descricao": "Mesmos depoimentos e prints da página de vendas da Imersão de Olheiras"
+    }
+   ],
+   "cta": {
+    "texto": "Quiero aplicar la técnica con este nivel de previsibilidad",
+    "acao": "#oferta"
+   },
+   "nota_designer": "Print original em português com legenda ES \"Testimonio original en portugués\" (decisão da gestão em 05/10/2026). Conferir TCLE de fotos de paciente."
+  },
+  {
+   "id": "dor",
+   "nome": "Obstáculos",
+   "tipo": "pain",
+   "titulo": "¿Qué le impide alcanzar la excelencia en el relleno de ojeras?",
+   "contras": [
+    "Inseguridad ante intercurrencias como edema, irregularidades o efecto Tyndall.",
+    "Dudas sobre el producto ideal, la profundidad y el abordaje correcto.",
+    "Resultados inconsistentes, sin naturalidad ni duración."
+   ],
+   "subtitulo": "Imagine ahora:",
+   "pros": [
+    "Elegir productos con fundamento científico.",
+    "Dominar la anatomía y aplicar con precisión.",
+    "Usar una técnica tridimensional validada y segura."
+   ]
+  },
+  {
+   "id": "passo-a-passo",
+   "nome": "Conteúdo do ebook",
+   "tipo": "features",
+   "titulo": "El paso a paso de la técnica tridimensional en sus manos",
+   "texto": [
+    "En el e-book, usted tendrá acceso a:"
+   ],
+   "itens": [
+    {
+     "titulo": "Revisión anatómica y reológica",
+     "texto": "comprenda a fondo el comportamiento de los productos de relleno."
+    },
+    {
+     "titulo": "Técnica Tridimensional",
+     "texto": "paso a paso completo."
+    },
+    {
+     "titulo": "Comparación con otras técnicas",
+     "texto": "MD Codes y demás abordajes clásicos."
+    },
+    {
+     "titulo": "Intercurrencias y soluciones",
+     "texto": "cómo diagnosticarlas y tratarlas con seguridad."
+    }
+   ],
+   "cta": {
+    "texto": "Quiero aprender la técnica tridimensional ahora",
+    "acao": "#oferta"
+   },
+   "nota_designer": "\"MD Codes\" é método associado a uma marca (Allergan): confirmar com a gestão se pode ser citado na página LATAM."
+  },
+  {
+   "id": "acesso",
+   "nome": "Acesso",
+   "tipo": "list",
+   "titulo": "Estudie a su ritmo, con acceso inmediato y de por vida",
+   "lista": [
+    "E-book digital en PDF entregado inmediatamente después de la compra.",
+    "Lectura sencilla y práctica en cualquier dispositivo.",
+    "Estudio flexible, en sus tiempos.",
+    "Material de consulta permanente, basado en ciencia y práctica clínica."
+   ],
+   "cta": {
+    "texto": "Quiero mi acceso inmediato al e-book",
+    "acao": "#oferta"
+   }
+  },
+  {
+   "id": "para-quem",
+   "nome": "Para quem é",
+   "tipo": "pain",
+   "titulo": "¿Este e-book es para usted?",
+   "pros": [
+    "Para inyectores que buscan la excelencia en el relleno de ojeras.",
+    "Para quienes buscan seguridad, confianza y previsibilidad en los resultados.",
+    "Para quienes entienden que la diferenciación proviene del dominio científico sumado a una práctica refinada."
+   ],
+   "contras": [
+    "No es para quienes buscan atajos sin estudiar.",
+    "No es para quienes no están dispuestos a aplicar el conocimiento adquirido.",
+    "No es para quienes creen que la armonización facial es solo «inyectar producto», sin ciencia ni técnica."
+   ],
+   "ordem": "pros_primeiro",
+   "cta": {
+    "texto": "Sí, quiero ser un inyector de excelencia",
+    "acao": "#oferta"
+   }
+  },
+  {
+   "id": "conteudo",
+   "nome": "O que vai aprender",
+   "tipo": "modules",
+   "titulo": "Lo que usted aprenderá con este e-book",
+   "texto": [
+    "El e-book Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI fue estructurado para brindarle claridad, seguridad y confianza en cada etapa del procedimiento."
+   ],
+   "itens": [
+    {
+     "titulo": "Introducción al Razonamiento Clínico para el Relleno de Ojeras",
+     "lista": [
+      "Comprenda cómo el proceso de envejecimiento impacta la región periorbitaria.",
+      "Refuerce su base anatómica para diagnosticar correctamente cada caso.",
+      "Aprenda a identificar la estructura ósea, los compartimentos grasos y los ligamentos."
+     ]
+    },
+    {
+     "titulo": "Anatomía de la Región Infraorbitaria",
+     "lista": [
+      "Profundice en los detalles anatómicos más relevantes del área más delicada del rostro.",
+      "Descubra cómo cada estructura influye en la elección del producto y de la técnica."
+     ]
+    },
+    {
+     "titulo": "Reología: La Elección del Producto de Relleno Ideal",
+     "lista": [
+      "Domine el concepto de Swelling Factor (SF) y su influencia en el resultado final.",
+      "Aprenda a seleccionar los productos más adecuados para ojeras y a evitar intercurrencias."
+     ]
+    },
+    {
+     "titulo": "Técnica Avanzada de Relleno Tridimensional",
+     "lista": [
+      "Acceda al paso a paso detallado de la técnica ARTI.",
+      "Aprenda a analizar y marcar los ligamentos con precisión.",
+      "Descubra los puntos de acceso correctos (puntos de entrada).",
+      "Domine la técnica de layering (por capas) para resultados naturales y duraderos."
+     ]
+    },
+    {
+     "titulo": "Intercurrencias y Manejo de Complicaciones",
+     "lista": [
+      "Técnicas de prevención del edema persistente.",
+      "Cómo evitar y tratar el efecto Tyndall.",
+      "Corrección de irregularidades de relieve.",
+      "Manejo seguro de hematomas.",
+      "Cuidados posprocedimiento orientados a la seguridad y la satisfacción del paciente."
+     ]
+    }
+   ],
+   "cta": {
+    "texto": "Quiero asegurar mi e-book ahora mismo",
+    "acao": "#oferta"
+   },
+   "nota_designer": "Listas expansíveis (accordion), como sugere a copy."
+  },
+  {
+   "id": "passos",
+   "nome": "Oferta: 4 passos",
+   "tipo": "steps",
+   "titulo": "Domine el relleno tridimensional de ojeras en 4 pasos:",
+   "itens": [
+    {
+     "titulo": "Paso 01",
+     "texto": "Anatomía detallada de la región infraorbitaria"
+    },
+    {
+     "titulo": "Paso 02",
+     "texto": "Reología y elección del producto de relleno ideal"
+    },
+    {
+     "titulo": "Paso 03",
+     "texto": "Técnica avanzada de relleno tridimensional (paso a paso)"
+    },
+    {
+     "titulo": "Paso 04",
+     "texto": "Intercurrencias y manejo de complicaciones"
+    }
+   ]
+  },
+  {
+   "id": "bonus",
+   "nome": "Bônus",
+   "tipo": "bonuses",
+   "titulo": "+03 Bonos Exclusivos",
+   "itens": [
+    {
+     "titulo": "Bono 01",
+     "texto": "Caso clínico 1: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
+    },
+    {
+     "titulo": "Bono 02",
+     "texto": "Caso clínico 2: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
+    },
+    {
+     "titulo": "Bono 03",
+     "texto": "Caso clínico 3: [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]"
+    }
+   ],
+   "nota_designer": "Ícone de presente antes do título. Nome de cada caso clínico pendente na copy: manter o marcador até a copy definir."
+  },
+  {
+   "id": "oferta",
+   "nome": "Oferta especial",
+   "tipo": "offer",
+   "titulo": "Oferta Especial",
+   "preco_de": "US$47",
+   "preco": "US$19",
+   "prefixo_preco": "Por solo",
+   "desconto": "60 % de descuento",
+   "condicao": "Pago único con tarjeta de crédito o débito.",
+   "cta": {
+    "texto": "Quiero mi e-book con descuento",
+    "acao": "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
+   },
+   "selos": [
+    "Hotmart",
+    "Garantía de 7 días"
+   ],
+   "nota_designer": "Ícone de bolsa de dinheiro antes do título. Bloco de oferta sem contagem regressiva (removida por ser urgência fabricada). Preço definido pela gestão: de US$47 (riscado) por US$19, 60 % de desconto, pagamento único com cartão de crédito ou débito, sem parcelas."
+  },
+  {
+   "id": "custo",
+   "nome": "Custo de adiar",
+   "tipo": "pain",
+   "titulo": "Postergar también tiene un costo",
+   "contras": [
+    "Seguir sin dominar esta técnica significa trabajar expuesto a intercurrencias evitables, a la inseguridad en la indicación y a resultados poco previsibles.",
+    "Significa dejar de atender casos que hoy usted ya podría resolver con criterio técnico."
+   ],
+   "pros": [
+    "Con este e-book, usted tendrá una guía de consulta para trabajar el relleno de ojeras con seguridad y previsibilidad."
+   ],
+   "cta": {
+    "texto": "Quiero mi e-book ahora",
+    "acao": "#oferta"
+   }
+  },
+  {
+   "id": "mentor",
+   "nome": "Autoridade",
+   "tipo": "authority",
+   "titulo": "João Pithon, su mentor",
+   "texto": [
+    "Soy el Dr. João Pithon, médico, coautor del libro Arquitetura Facial, coordinador de cursos y CEO del Instituto Pithon Napoli.",
+    "Después de recorrer 9 países como investigador científico, le presentaré las técnicas refinadas de relleno que validé con más de 10.000 ml aplicados sin intercurrencias isquémicas.",
+    "Ya he formado a más de 30.000 alumnos con estas técnicas. Mi metodología le permitirá ver una nueva forma de trabajar el relleno, con razonamiento anatómico y previsibilidad.",
+    "Este e-book ya suma +30 mil copias vendidas.",
+    "En 2019, decidí dedicarme a los procedimientos mínimamente invasivos en la medicina estética, con un foco claro: la anatomía como base de la seguridad. Desde entonces, estudio la región facial en cadáveres frescos para entender, capa por capa, dónde están las zonas de riesgo y cómo evitarlas.",
+    "Es ese mismo razonamiento clínico el que comparto en este e-book, para que usted aplique la técnica con criterio, consistencia y previsibilidad en su práctica clínica."
+   ],
+   "cta": {
+    "texto": "Quiero aprender con el Dr. João Pithon",
+    "acao": "#oferta"
+   },
+   "midia": [
+    {
+     "tipo": "foto",
+     "descricao": "Foto do Dr. João à direita"
+    }
+   ],
+   "nota_designer": "Números de autoridade padronizados pela gestão em 20/10/2026: 9 países, más de 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas. Bloco reescrito em tom médico-científico (anatomia, cadáver fresco, zonas de risco)."
+  },
+  {
+   "id": "faq",
+   "nome": "FAQ",
+   "tipo": "faq",
+   "titulo": "FAQ (Preguntas Frecuentes)",
+   "itens": [
+    {
+     "titulo": "¿Cómo recibiré el e-book?",
+     "texto": "Después de la compra, usted recibirá de inmediato el enlace para descargarlo en PDF."
+    },
+    {
+     "titulo": "¿Tendré acceso de por vida?",
+     "texto": "Sí. El e-book es suyo para siempre."
+    },
+    {
+     "titulo": "¿Cuál es la forma de pago?",
+     "texto": "Tarjeta de crédito o débito, en pago único, a través de Hotmart."
+    },
+    {
+     "titulo": "¿Hay garantía?",
+     "texto": "Sí. Usted cuenta con 7 días de garantía incondicional. Si no queda satisfecho, le devolvemos su inversión."
+    },
+    {
+     "titulo": "¿Necesito internet para acceder?",
+     "texto": "Solo para descargarlo. Después, puede leerlo sin conexión en el celular, la tableta o la computadora."
+    }
+   ],
+   "cta": {
+    "texto": "Quiero mi acceso ahora con riesgo cero",
+    "acao": "#oferta"
+   }
+  },
+  {
+   "id": "duvidas",
+   "nome": "Dúvidas",
+   "tipo": "contact",
+   "titulo": "¿LE QUEDÓ ALGUNA DUDA?",
+   "texto": [
+    "Si le quedó cualquier duda sobre la compra del e-book Relleno Tridimensional de Ojeras: Una Guía Completa con la Metodología ARTI, hable con mi equipo por WhatsApp: [WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
+   ],
+   "cta": {
+    "texto": "¡Quiero hablar con el equipo!",
+    "acao": "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]"
+   },
+   "nota_designer": "Botão abre o WhatsApp de atendimento LATAM em espanhol (número pendente)."
+  },
+  {
+   "id": "rodape",
+   "nome": "Rodapé",
+   "tipo": "footer",
+   "texto": [
+    "Formación Especialista Academy · © 2026 · Todos los derechos reservados"
+   ]
+  }
+ ]
+}

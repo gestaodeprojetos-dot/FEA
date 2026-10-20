@@ -1,0 +1,130 @@
+{
+  "etapa": "B1 · 1. COPY / 1. PÁGINAS · recriação corrigida",
+  "data": "2026-10-20",
+  "pasta_id": "15RFlmEyX_sWqlCHJuL8ZPEo-YA0m8TgB",
+  "html_local": "/tmp/claude-0/-home-user-FEA/6500f297-8601-53d4-bc7c-33986b7f95c3/scratchpad/copys-B1/",
+  "observacao_tecnica": "O conversor HTML para Google Doc corrompe emojis fora do plano básico Unicode (🚫 🎁 💰 viram 'ð...', inclusive enviados como entidade HTML) e apaga o texto entre dois '$' no mesmo parágrafo. Solução aplicada: ⛔ no lugar de 🚫, ícones de presente e dinheiro indicados em texto para o designer, e preço 'de' e 'por' em parágrafos separados. Intermediários criados e descartados nesta etapa (lixeira): 1qSIpEPQSMq9TtUAaiKP5-ci6DpmQTxBMowZ4VyG0edE (upsell v1, preço marcador), 1VAPcjuDFKhuBQ0q2Qj_GreqjkU_63U45ryE0sPHafkc (ventas v1, números marcador), 1sfMrZNjAf8s_UUDiyP8TsVscxVvUIdXkRDhbhAuSePM (ventas v2, emoji e preço corrompidos), 1rNakgcCaF9JJrl-2czDKT4J8nScmQ7P4WAsW48zLP3Y (teste de encoding).",
+  "docs": [
+    {
+      "antigo": "1WAS9MpUjb-GUFCIh_Zr2ObHEVcqd8niRktByx2W2_b0",
+      "novo": "1DcfgS833430UPwl7_X1E9WLBkbWc2ek37udyS0ylLSE",
+      "titulo": "FEA-ES | Página de ventas - eBook de Ojeras",
+      "pasta": "1. COPY / 1. PÁGINAS",
+      "pendencias": [
+        "[NOMBRE DEL CASO CLÍNICO: A CONFIRMAR] (3 bônus)",
+        "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+        "[LINK DEL CHECKOUT EN USD: PENDIENTE]",
+        "Confirmar se 'MD Codes' (método associado à Allergan) pode ser citado na página LATAM",
+        "Depoimentos: prints em PT com legenda 'Testimonio original en portugués'"
+      ],
+      "mudancas": [
+        "Preço: de US$47 por US$19 (60 %), pagamento único, sem R$ e sem marcador de moeda local",
+        "Removidos faixa vermelha com cronômetro de 15 min e cronômetro do bloco de oferta",
+        "Autoridade: 9 países, más de 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas (decisão 20/10)",
+        "Removido 'vida épica, libertad financiera' e '¿dónde quiere estar dentro de 6 años?'; bloco reescrito com foco em anatomia, cadáver fresco e zonas de riesgo",
+        "Bônus 'nombre del caso' viraram [NOMBRE DEL CASO CLÍNICO: A CONFIRMAR]",
+        "Emojis corrompidos: 🚫 virou ⛔; ícones de presente e dinheiro indicados para o designer",
+        "'Créalo: ¡no comprar le sale más caro!' reescrito como 'Postergar también tiene un costo' em tom técnico",
+        "'garantizan la satisfacción' trocado por formulação sem promessa; 'complicaciones' do contexto de produto trocado por 'intercurrencias'",
+        "FAQ: incluída pergunta de forma de pagamento (cartão de crédito ou débito via Hotmart)",
+        "Rodapé: Formación Especialista Academy · © 2026"
+      ]
+    },
+    {
+      "antigo": "1c2iylqHqvLsE_J17v86vlbz7o80-SagRswZA9_42PX8",
+      "novo": "1pB0_8kKRS-VI3xZ8kOCDhcEoBqdJzvTJ5MvfYLruCJc",
+      "titulo": "FEA-ES | [NUEVA] Página de ventas - eBook de Ojeras",
+      "pasta": "1. COPY / 1. PÁGINAS",
+      "pendencias": [
+        "[LINK DEL CHECKOUT EN USD: PENDIENTE]",
+        "Depoimentos: prints em PT com legenda 'Testimonio original en portugués'",
+        "Versão ES do esquema do Figma do protocolo (bloco 5)",
+        "Imagens de referência do copywriter: versão ES em 2. ARTES"
+      ],
+      "mudancas": [
+        "Preço: botão R$ 97, âncora R$ 397 e 12 x R$ 10,03 trocados por de US$47 por US$19 (60 %), sem parcelas",
+        "FAQ: Pix removido; pagamento com cartão de crédito ou débito via Hotmart",
+        "Blocos 1, 3, 4, 7 e 10 reescritos em tom médico-científico (dor técnica: plano, edema, Tyndall, intercurrencia isquémica); removidos 'paciente infeliz', 'hable mal de usted', 'abandonar el área'",
+        "Linguagem no feminino neutralizada para usted",
+        "Autoridade: 9 países, 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas",
+        "Bloco 'INSIGHTS PARA EL COPY' (ruminações, pior cenário, hooks) retirado do corpo; resumo nas Notas para a equipe",
+        "Imagens '[Imagen del original...]' trocadas por [IMAGEN: descrição, usar la versión ES de la carpeta 2. ARTES]",
+        "Nota de identidade visual sem referência ao Brasil"
+      ]
+    },
+    {
+      "antigo": "1aSJo7XbjbAOpMuFhbrYG1a_5BKd6y5jxzyvhUjdApgg",
+      "novo": "1xSxWtG7pvjFxLJsA_c1xj5ev9pm_er25Uy3Kp2R5iKE",
+      "titulo": "FEA-ES | Página de Upsell - Cpx",
+      "pasta": "1. COPY / 1. PÁGINAS",
+      "pendencias": [
+        "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+        "[LINK DEL CHECKOUT DEL UPSELL EN USD: PENDIENTE]",
+        "Confirmar se o upsell CPX entra no funil LATAM e se o vídeo de vendas CPX terá versão ES",
+        "Decisão da gestão: barra 'Procesando su compra 90 %' (status simulado); alternativa sugerida no doc"
+      ],
+      "mudancas": [
+        "Preço: 'DE R$497 POR 12 x R$ 30,72' trocado por US$97 à vista (decisão 20/10)",
+        "'Curso de Preenchimento Express' trocado por 'Curso de Relleno Express' (nome ES definido pela gestão em 20/10/2026, rodada 2)",
+        "Imagem do bônus com descrição para o designer",
+        "Rodapé: Formación Especialista Academy · © 2026"
+      ],
+      "versoes_descartadas": [
+        "1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A"
+      ]
+    },
+    {
+      "antigo": "1F9VOiWu9tZkOm8-F4WIoO9aMu4ouO-HFS1_v1p3x-tk",
+      "novo": "1Vbpklmy46mTIQizp5eSsf1OKcVFQXA0dLnXFTY3-U-w",
+      "titulo": "FEA-ES | Página de ventas - corta - eBook de Ojeras",
+      "pasta": "1. COPY / 1. PÁGINAS",
+      "pendencias": [
+        "[NOMBRE DEL CASO CLÍNICO: A CONFIRMAR] (3 bônus)",
+        "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+        "[LINK DEL CHECKOUT EN USD: PENDIENTE]"
+      ],
+      "mudancas": [
+        "Preço: de US$47 por US$19 (60 %), pagamento único, sem R$",
+        "Removidos faixa vermelha e cronômetro de 15 min",
+        "Autoridade: 9 países, 10.000 ml, más de 30.000 alumnos, +30 mil copias vendidas",
+        "Removido 'vida épica, libertad financiera'; bloco reescrito em tom médico-científico",
+        "Bônus sem nome viraram marcador; ícones de presente e dinheiro indicados para o designer",
+        "Imagens com descrição para o designer; FAQ com forma de pagamento; rodapé em espanhol"
+      ]
+    },
+    {
+      "antigo": "1v-gq1sJjdatMomxQkThTJSERjOuFqiUAlBjroz7u0no",
+      "novo": "1_Af60zj_W4Cld_q9JDKi9-ispKT2HUTLqxtw43wHEqg",
+      "titulo": "FEA-ES | Copy Página eBook Ojeras",
+      "pasta": "1. COPY / 1. PÁGINAS",
+      "pendencias": [
+        "[LINK DEL CHECKOUT EN USD: PENDIENTE]",
+        "Bloco 6: confirmar com o Dr. João se a afirmação sobre revisão reológica da indústria pode ir ao ar sem fonte"
+      ],
+      "mudancas": [
+        "Botão 'R$ 97' trocado por US$19, com âncora de US$47 (60 %) logo abaixo",
+        "Removida a marca 'LG en Corea' (linha vermelha 3)",
+        "'El relleno de ojeras no es una técnica difícil' reescrito (linha vermelha 4, não minimizar risco)",
+        "Autoridade: 8 para 9 países, más de 20.000 para más de 30.000 alumnos, +30 mil copias vendidas",
+        "Removido 'libertad financiera' e '¿dónde quiere estar dentro de 6 años?'",
+        "'Método simple' trocado por 'método claro'",
+        "Segundo 'Bloque 11' (numeração duplicada) renomeado para 'Bloque 12'",
+        "Imagens e depoimentos com descrição e legenda ES"
+      ]
+    }
+  ],
+  "rodada_2": {
+    "data": "2026-10-20",
+    "motivo": "Nome do upsell em espanhol definido pela gestão: Curso de Relleno Express",
+    "recriadas": [
+      "FEA-ES | Página de Upsell - Cpx: 1POTRhQRTJOpUOrjYIYMjsdLt1A2h0eCQDltpAyDbb3A -> 1xSxWtG7pvjFxLJsA_c1xj5ev9pm_er25Uy3Kp2R5iKE"
+    ],
+    "sem_marcador_nao_recriadas": [
+      "1DcfgS833430UPwl7_X1E9WLBkbWc2ek37udyS0ylLSE",
+      "1pB0_8kKRS-VI3xZ8kOCDhcEoBqdJzvTJ5MvfYLruCJc",
+      "1Vbpklmy46mTIQizp5eSsf1OKcVFQXA0dLnXFTY3-U-w",
+      "1_Af60zj_W4Cld_q9JDKi9-ispKT2HUTLqxtw43wHEqg"
+    ],
+    "verificacao": "busca fullText no Drive por 'NOMBRE DEL PRODUCTO DEL UPSELL' e 'Preenchimento Express' retornou só a página de upsell e Comunicaciones"
+  }
+}
