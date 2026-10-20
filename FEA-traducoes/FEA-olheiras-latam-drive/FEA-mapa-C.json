@@ -1,0 +1,79 @@
+{
+ "etapa": "C · arquivos do designer (HTML + JSON) regenerados com as copys corrigidas B1",
+ "data": "2026-10-20",
+ "pasta_pai_id": "15RFlmEyX_sWqlCHJuL8ZPEo-YA0m8TgB",
+ "gerador": "FEA-traducoes/FEA-paginas-olheiras-latam/fea_paginas_conteudo.py + fea_gerar_paginas.py",
+ "verificacao": "fileSize no Drive (get_file_metadata) idêntico ao tamanho local em bytes para os 10 arquivos; antigos enviados para a lixeira (recuperáveis por 30 dias). O NUEVA.html antigo tinha 16384 B (truncado); o novo tem 16592 B e fecha em </html>.",
+ "arquivos": [
+  {
+   "antigo": "1bCiHv0t4GfwCL2ANJkg-dxpWAoPN1K7D",
+   "novo": "1ID9KWrp05Rc43zPT1Th-plCMIBqykOsi",
+   "nome": "FEA-ES-pagina-upsell-cpx.json",
+   "pasta": "1. PÁGINAS / FEA-ES Página de Upsell CPX (HTML + JSON) (1VmbO2A0D2qZBGtZj1R_8rkN6igMq_af5)",
+   "bytes": 3442
+  },
+  {
+   "antigo": "1NK3qbY15SixTblOfgV6ZsRM2jJRuJ8zE",
+   "novo": "177T-SUjINmSVpGuxDVHeHePt7X63nMuL",
+   "nome": "FEA-ES-pagina-upsell-cpx.html",
+   "pasta": "1. PÁGINAS / FEA-ES Página de Upsell CPX (HTML + JSON) (1VmbO2A0D2qZBGtZj1R_8rkN6igMq_af5)",
+   "bytes": 7400
+  },
+  {
+   "antigo": "15DbGdOKETKUrE_1d_jqbnfJZVCQ5-1rm",
+   "novo": "1yJKvhJdwVNsGrR2Sr6_UCZ_EaxA4yrE4",
+   "nome": "FEA-ES-copy-pagina-ebook.json",
+   "pasta": "1. PÁGINAS / FEA-ES Copy Página eBook Ojeras (HTML + JSON) (10I3rRBkv_N6iAEpQuKlmYCljdnFuh1rF)",
+   "bytes": 10208
+  },
+  {
+   "antigo": "1TnG61iz4a-Z_VnIQgCvM2nscSKVTxyGF",
+   "novo": "1BqtqpOaZWI2s5v595H4qo-UGs_DvajqG",
+   "nome": "FEA-ES-copy-pagina-ebook.html",
+   "pasta": "1. PÁGINAS / FEA-ES Copy Página eBook Ojeras (HTML + JSON) (10I3rRBkv_N6iAEpQuKlmYCljdnFuh1rF)",
+   "bytes": 13836
+  },
+  {
+   "antigo": "1QA-RfhsCCYX9pSckZ388B8QYqPVWvQoF",
+   "novo": "15ZNUZcrDBuHHtve2UwRYmJawKNaq2LfU",
+   "nome": "FEA-ES-pagina-ventas-corta.json",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas corta (HTML + JSON) (1a09Sqfm9ZAOAfKo9vHQbERAXv4GjppBW)",
+   "bytes": 9804
+  },
+  {
+   "antigo": "1SrCBvsTSMwq4_hNUwTtIegm0W0riuyxV",
+   "novo": "1jD-Zd71Z5oZKGwMLHgiCefGn3zfcIl0S",
+   "nome": "FEA-ES-pagina-ventas-corta.html",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas corta (HTML + JSON) (1a09Sqfm9ZAOAfKo9vHQbERAXv4GjppBW)",
+   "bytes": 13445
+  },
+  {
+   "antigo": "1AeEH3Sz2ia9v9LoLW8wdqtFI5GAwxK77",
+   "novo": "1RfvA9HDNdrZaTBHS-xFPWyWzyITpstY-",
+   "nome": "FEA-ES-pagina-ventas-nueva.json",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas NUEVA (HTML + JSON) (14yoZ9b4F9ucMAABSiIewfkhMkNtf-yOP)",
+   "bytes": 13397
+  },
+  {
+   "antigo": "1GV2C2cw9Hyo4lWfQU9YplPbSGbXH2a8S",
+   "novo": "1GyKGN_sdEMQFZ5_8yEiwpNxGOO_xtarL",
+   "nome": "FEA-ES-pagina-ventas-nueva.html",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas NUEVA (HTML + JSON) (14yoZ9b4F9ucMAABSiIewfkhMkNtf-yOP)",
+   "bytes": 16592
+  },
+  {
+   "antigo": "1XEYpLMLe5wqd2xMd_qAgdnMSdOPVOLIG",
+   "novo": "1P5UuLpYqAfgTGU6PNBqmNvSgkHzoBaVu",
+   "nome": "FEA-ES-pagina-ventas.json",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas (HTML + JSON) (18Ffda33DHAaWeOxk7gxQJ4MUXPDpmhM1)",
+   "bytes": 13789
+  },
+  {
+   "antigo": "1VJyBOGklJIvG-48_uKtkv9mSjkBxSAkh",
+   "novo": "1gGOrh2SWP4MWBEOIX8KwOfACeLcyMO5s",
+   "nome": "FEA-ES-pagina-ventas.html",
+   "pasta": "1. PÁGINAS / FEA-ES Página de ventas (HTML + JSON) (18Ffda33DHAaWeOxk7gxQJ4MUXPDpmhM1)",
+   "bytes": 17172
+  }
+ ]
+}
