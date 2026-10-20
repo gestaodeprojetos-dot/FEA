@@ -1,0 +1,78 @@
+[
+  {
+    "antigo": "1Tf7TeS_qmppjSUwGQxJP0WMBIf_mUd72u6y4ILZnF2c",
+    "novo": "1B4dLJH4mfa6dy4HcMC9i9tH6HBwdGd2E74ojH-FuPPY",
+    "titulo": "FEA-ES | Comunicaciones - eBook Ojeras",
+    "pasta": "1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr",
+    "fonte_br": null,
+    "pendencias": [
+      "Sem copy de origem no Brasil: nenhum doc de comunicações do Ebook Olheiras (Links úteis aba EBOOK OLHEIRAS, pasta 1. Copy BR e subpastas, 3. Pesquisa, 4. Tráfego, 6. Automação, busca no Drive)",
+      "Gestão define se haverá comunicações LATAM próprias e o briefing de cada uma (canal, público, objetivo)"
+    ]
+  },
+  {
+    "antigo": "1fSPGH0xAOHqDk80BJyI17KEFF7bZkxDYDQRoZg207w4",
+    "novo": "1zXgYuGs3A1_Qkm7pMv-UcFOP4L1gVv6lStiHjmKVVcE",
+    "titulo": "FEA-ES | Mensaje con encuesta y regalo + API de encuesta - eBook Ojeras",
+    "pasta": "1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr",
+    "fonte_br": null,
+    "pendencias": [
+      "Sem copy de origem no Brasil: não existe mensagem de pesquisa+presente, API de pesquisa nem lembrete no Ebook Olheiras BR",
+      "[REGALO LATAM: A CONFIRMAR]",
+      "Planilha BR de pesquisa existe só como atalho (1B2RD_U5ePP9zxf65wFb3vHbNs89sWAYi); perguntas não lidas"
+    ]
+  },
+  {
+    "antigo": "1LUg-USf7gafBtFieshqUQ3H2T6rAghaCk9338K2QN4c",
+    "novo": "1sJmojN0-NfGtTIOWUxzxeVjtiszDy7mUE1nMZIUCQP0",
+    "titulo": "FEA-ES | Onboarding API + Grupo lleno - eBook Ojeras",
+    "pasta": "1YUTK9DaHqRcbeJq79ZWNHMA6StfcghCr",
+    "fonte_br": "18GzP8H_vbZ78ognaq6Nu8ynrvpBCWHDJW2NAOrhAcmY",
+    "fontes_br_adicionais": ["1KuVKVJy0lyl_S5Yt7caEEFbZ8xaejTtbC5eOh01kvvU"],
+    "pendencias": [
+      "[LINK DE LA PÁGINA DE GRACIAS LATAM: PENDIENTE]",
+      "[LINK DEL GRUPO LATAM: PENDIENTE]",
+      "[WHATSAPP DE SOPORTE LATAM: PENDIENTE]",
+      "Mensagem de boas-vindas no grupo: sem copy de origem no Brasil",
+      "Mensagem de grupo cheio: sem copy de origem no Brasil",
+      "Doc antigo FEA-ES | Descripción del grupo I E-book Ojeras (11ScQrS6ZEnHQmYFlk_bx0XXIxlznbIUYqOln1C9_Sfk) fica obsoleto: arquivar após aprovação"
+    ]
+  },
+  {
+    "antigo": "1pVQU-7JYRP7IlPWCobx1Q4ttXypN3HQqPUARELt3A6A",
+    "novo": "1_mWD4SMFtlZvTjRxyEQCDsBwidvz0SWvrk_UXlc-qgo",
+    "titulo": "FEA-ES | Página de gracias y encuesta - eBook Ojeras",
+    "pasta": "15RFlmEyX_sWqlCHJuL8ZPEo-YA0m8TgB",
+    "fonte_br": null,
+    "pendencias": [
+      "Sem copy de origem no Brasil: nenhum doc da página de obrigado na pasta 1. Copy/1. Páginas BR; página publicada eb.joaopithon.com.br/ebook-pto-obrigado/ bloqueada pelo proxy da sessão",
+      "Perguntas da pesquisa BR inacessíveis (planilha só como atalho)",
+      "[LINK DE LA PÁGINA DE GRACIAS LATAM: PENDIENTE]",
+      "[LINK DEL GRUPO LATAM: PENDIENTE]"
+    ]
+  },
+  {
+    "antigo": "18T-XhwX8Laa8j4VDQBntp-iaKcYBpaD2j_AgUnoVh7c",
+    "novo": "1fpVpjThzh1I2sQ21ddSGqHhBcr2BkOuHdGNZtpcD2tw",
+    "titulo": "FEA-ES | Creativos de remarketing - eBook Ojeras",
+    "pasta": "1LDRr6p11GtIKaBT6O17ENgLzH0ToyaEs",
+    "fonte_br": null,
+    "pendencias": [
+      "Sem copy de origem no Brasil: Criativos 1 e 2, Legenda e planilha de tráfego BR só têm vendas; nenhum remarketing do Ebook Olheiras",
+      "Gestão decide se haverá remarketing LATAM escrito do zero"
+    ]
+  },
+  {
+    "antigo": "1HQHP1x4WXR4O_KPZgv012sAjIB-N7gMD3YxRz3y2x5I",
+    "novo": "1-bypaJG7SbFAM4PFb2t6NEnSo2g2wOPer8UQDMBtD6Q",
+    "titulo": "FEA-ES | Leyendas de creativos (ventas y remarketing) - eBook Ojeras",
+    "pasta": "1LDRr6p11GtIKaBT6O17ENgLzH0ToyaEs",
+    "fonte_br": "1PxsbyqQyibELlt9JYPT9WtnbuSUsI3t866cWhrBkRZQ",
+    "fontes_br_adicionais": [],
+    "base_es": "1UgSAaYLfayStlF23n3jkKLxqM3u3I4481OtwTw4qPGg",
+    "pendencias": [
+      "Remarketing versões 1 e 2: sem copy de origem no Brasil",
+      "Doc antigo FEA-ES | Leyenda I Creativos del eBook Ojeras (1UgSAaYLfayStlF23n3jkKLxqM3u3I4481OtwTw4qPGg) fica obsoleto: arquivar após aprovação"
+    ]
+  }
+]
