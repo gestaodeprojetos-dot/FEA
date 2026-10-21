@@ -1,5 +1,5 @@
 // Renderiza as artes da contagem regressiva (PNG + MP4) a partir de FEA-contagem.html.
-// Uso: node fea_render.js [--still-only] [--days 11,10] [--fmt feed,story] [--workers 3]
+// Uso: node fea_render.js [--tpl contagem|palestrantes] [--still-only] [--days 11,10] [--fmt feed,story] [--workers 3]
 const { chromium } = require('/opt/node-tools/node_modules/playwright');
 const { spawn } = require('child_process');
 const path = require('path');
@@ -11,15 +11,16 @@ const STILL_ONLY = args.includes('--still-only');
 const DAYS = opt('--days', '11,10,9,8,7,6,5,4,3,2,1,0').split(',').map(Number);
 const FMTS = opt('--fmt', 'feed,story').split(',');
 const WORKERS = parseInt(opt('--workers', '3'), 10);
-const BASE = opt('--base', 'http://127.0.0.1:8765/FEA-contagem.html');
-const OUT = path.resolve(__dirname, '..', 'output');
+const TPL = opt('--tpl', 'contagem'); // contagem | palestrantes
+const BASE = opt('--base', `http://127.0.0.1:8765/FEA-${TPL === 'palestrantes' ? 'contagem-palestrantes' : 'contagem'}.html`);
+const OUT = path.resolve(__dirname, '..', TPL === 'palestrantes' ? 'output-palestrantes' : 'output');
 const AUDIO = path.resolve(__dirname, '..', 'output', 'FEA-elite-trilha.wav');
 const FPS = 30, DUR = 10;
 
 // data de postagem: hoje (21/10) = faltam 11 dias
 const postDate = n => { const d = new Date(Date.UTC(2026, 9, 21 + (11 - n))); return `${String(d.getUTCDate()).padStart(2, '0')}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`; };
 const label = n => n === 0 ? 'e-hoje' : `faltam-${String(n).padStart(2, '0')}`;
-const fname = (n, fmt) => `FEA-elite-${postDate(n)}-${label(n)}-${fmt === 'story' ? 'stories' : 'feed'}`;
+const fname = (n, fmt) => `FEA-elite-${TPL === 'palestrantes' ? 'palestrantes-' : ''}${postDate(n)}-${label(n)}-${fmt === 'story' ? 'stories' : 'feed'}`;
 
 async function job(browser, n, fmt) {
   const H = fmt === 'story' ? 1920 : 1350;
