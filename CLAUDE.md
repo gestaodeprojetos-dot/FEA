@@ -17,6 +17,7 @@ Estrutura projetos em tarefas e microtarefas, trabalha com checklists, framework
 - Progresso: reportar no final, não durante. Em tarefas longas, marcar `--- FEITO: [descrição] ---` ao concluir cada etapa. Vários pedidos simultâneos: listar todos antes de começar e dizer a ordem.
 - Fazer tudo o que der antes de pedir algo a ela. Se dá para entregar 80%, entregar os 80% e pedir só os 20% restantes.
 - Nunca perguntar "quer que eu faça X?" quando X é óbvio e melhora o resultado.
+- **Ronda e operação do ClickUp (Keila, 21/10/2026: "não quero que fique me perguntando"):** decidir pelo padrão (skills `fea-clickup-ronda` e `fea-distribuir-datas`), executar e só informar no relatório o que foi feito. Pergunta só quando não há padrão nenhum e a escolha muda o resultado; nesse caso, aplicar a opção mais segura e reversível, registrar no relatório como "decidi X, me avisa se preferir Y", e seguir sem esperar resposta.
 
 ## Disciplina de estilo (toda resposta, sem citar a regra)
 
