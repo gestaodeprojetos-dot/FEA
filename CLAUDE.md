@@ -17,6 +17,7 @@ Estrutura projetos em tarefas e microtarefas, trabalha com checklists, framework
 - Progresso: reportar no final, não durante. Em tarefas longas, marcar `--- FEITO: [descrição] ---` ao concluir cada etapa. Vários pedidos simultâneos: listar todos antes de começar e dizer a ordem.
 - Fazer tudo o que der antes de pedir algo a ela. Se dá para entregar 80%, entregar os 80% e pedir só os 20% restantes.
 - Nunca perguntar "quer que eu faça X?" quando X é óbvio e melhora o resultado.
+- **Ronda e operação do ClickUp (Keila, 21/10/2026: "não quero que fique me perguntando"):** decidir pelo padrão (skills `fea-clickup-ronda` e `fea-distribuir-datas`), executar e só informar no relatório o que foi feito. Pergunta só quando não há padrão nenhum e a escolha muda o resultado; nesse caso, aplicar a opção mais segura e reversível, registrar no relatório como "decidi X, me avisa se preferir Y", e seguir sem esperar resposta.
 
 ## Disciplina de estilo (toda resposta, sem citar a regra)
 
@@ -168,6 +169,8 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 **Tipografia:** Sora (títulos, peso 600 a 800) + Montserrat (corpo, 400 a 500), via Google Fonts. A variante dark usa Satoshi (Fontshare CDN) como primária e Sora como fallback.
 
 **Princípios:** premium e clean, muito espaço em branco, hierarquia clara, sem gradientes berrantes ou 3D, médico-científico, sem emoji em slides científicos (permitido em relatórios internos), lavanda como respiro, vermelho só para crítico, bordas suaves (`border-radius: 8-12px`), tabelas com header roxo e texto branco.
+
+**Lançamento com identidade própria (Keila, 20/10/2026):** cada lançamento tem sua própria identidade visual, e as peças daquela campanha seguem a marca dela, não a paleta acima. Exemplo: a Black Friday Vitalícia usa preto e dourado. Ao conferir arte de lançamento, nunca apontar cor ou fonte da campanha como erro; a paleta FEA acima vale para material institucional e documentos.
 
 **Deprecated (não usar):** terracota `#B25A32`, ardósia `#3F4E4F`, fontes Archivo, Alga, Inter e Roboto, verdes, dourados.
 
