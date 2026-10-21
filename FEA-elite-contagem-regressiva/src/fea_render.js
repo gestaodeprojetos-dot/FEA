@@ -14,8 +14,8 @@ const WORKERS = parseInt(opt('--workers', '3'), 10);
 const TPL = opt('--tpl', 'contagem'); // contagem | palestrantes
 const BASE = opt('--base', `http://127.0.0.1:8765/FEA-${TPL === 'palestrantes' ? 'contagem-palestrantes' : 'contagem'}.html`);
 const OUT = path.resolve(__dirname, '..', TPL === 'palestrantes' ? 'output-palestrantes' : 'output');
-const AUDIO = path.resolve(__dirname, '..', 'output', 'FEA-elite-trilha.wav');
-const FPS = 30, DUR = 10;
+const AUDIO = path.resolve(__dirname, '..', 'output', TPL === 'palestrantes' ? 'FEA-elite-trilha.wav' : 'FEA-elite-trilha-6s.wav');
+const FPS = 30, DUR = parseFloat(opt('--dur', TPL === 'palestrantes' ? '10' : '6'));
 
 // data de postagem: hoje (21/10) = faltam 11 dias
 const postDate = n => { const d = new Date(Date.UTC(2026, 9, 21 + (11 - n))); return `${String(d.getUTCDate()).padStart(2, '0')}-${String(d.getUTCMonth() + 1).padStart(2, '0')}`; };
@@ -32,7 +32,7 @@ async function job(browser, n, fmt) {
   fs.mkdirSync(dir, { recursive: true });
   const base = path.join(dir, fname(n, fmt));
 
-  await page.evaluate(() => window.__render(9.9, 297));
+  await page.evaluate(d => window.__render(d - .05, 297), DUR);
   await page.screenshot({ path: base + '.png', clip: { x: 0, y: 0, width: 1080, height: H } });
   if (STILL_ONLY) { await page.close(); return; }
 

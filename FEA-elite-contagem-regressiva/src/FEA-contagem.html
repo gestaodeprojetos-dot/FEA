@@ -335,7 +335,17 @@ function render(t, frame = 0) {
   $('ruleL').style.transform = $('ruleR').style.transform = `scaleX(${rl})`;
 }
 
-window.__render = render;
+// Versão curta (6 s): a linha do tempo original de 10 s é comprimida por trechos,
+// mantendo os marcos em sincronia com a trilha (número 1,0 s, logo 2,4 s).
+const MAP = [[0, 0], [1.0, 2.0], [2.4, 4.6], [3.6, 7.0], [5.3, 9.2], [6.0, 9.9]];
+function remap(t) {
+  for (let i = 1; i < MAP.length; i++) {
+    const [n0, o0] = MAP[i - 1], [n1, o1] = MAP[i];
+    if (t <= n1) return o0 + (o1 - o0) * (t - n0) / (n1 - n0);
+  }
+  return 9.9;
+}
+window.__render = (t, f) => render(remap(t), f);
 window.__ready = document.fonts.ready.then(() => Promise.all(
   [...document.images].map(i => i.complete ? 1 : new Promise(r => i.onload = r))));
 render(Q.has('t') ? parseFloat(Q.get('t')) : 9.9);

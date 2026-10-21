@@ -3,7 +3,7 @@
 Evento: **01 e 02 de novembro de 2026 · WTC Sheraton, São Paulo**
 Base de copy: doc "3. Copy de criativos de lembrete - Elite Injectors Congress" + página de vendas (el.joaopithon.com.br/elite-injectors-congress).
 
-Cada dia tem 4 arquivos: feed (1080x1350) e stories (1080x1920), cada um em **PNG** (imagem) e **MP4** (vídeo de 10 s com trilha).
+Cada dia tem 4 arquivos: feed (1080x1350) e stories (1080x1920), cada um em **PNG** (imagem) e **MP4** (vídeo de 6 s com trilha, versão dinâmica aprovada).
 Os arquivos ficam em `output/feed/` e `output/stories/`, nomeados pela data de postagem.
 
 | Data | Arte | Legenda sugerida (feed) |
@@ -23,7 +23,9 @@ Os arquivos ficam em `output/feed/` e `output/stories/`, nomeados pela data de p
 
 ## Observações de uso
 
-- **Trilha:** original, sintetizada para este projeto (sem direito autoral de terceiros), sincronizada com a animação: tique-taque, impacto quando o número entra (2 s) e segundo impacto na logo (4,6 s). Para ganhar alcance orgânico no Reels, dá para trocar por um áudio da biblioteca do Instagram mantendo o vídeo.
+- **Trilha:** original, sintetizada para este projeto (sem direito autoral de terceiros), sincronizada com a animação: tique-taque, impacto quando o número entra (1 s) e segundo impacto na logo (2,4 s). Para ganhar alcance orgânico no Reels, dá para trocar por um áudio da biblioteca do Instagram mantendo o vídeo.
 - **Stories:** o texto respeita as zonas seguras (topo 250 px e base 270 px livres para a interface do Instagram e o sticker de link).
 - **Fontes:** Canela Deck e Galano Grotesque vêm da pasta de identidade do congresso. A Canela na pasta é versão *Trial*: para anúncio pago, confirmar com o designer se a licença comercial foi adquirida.
-- **Reeditar uma peça:** `src/FEA-contagem.html` (textos em `TAGS`), depois `python3 src/fea_trilha.py` e `node src/fea_render.js --days 5 --fmt feed` com um servidor local na pasta `src` (`python3 -m http.server 8765`). As fontes não vão para o Git, baixar da pasta 03 - TIPOGRAFIA do Drive para `src/assets/`.
+- **Reeditar uma peça:** `src/FEA-contagem.html` (textos em `TAGS`), depois `python3 src/fea_trilha.py` (gera `output/FEA-elite-trilha-6s.wav`) e `node src/fea_render.js --days 5 --fmt feed` com um servidor local na pasta `src` (`python3 -m http.server 8765`). As fontes não vão para o Git, baixar da pasta 03 - TIPOGRAFIA do Drive para `src/assets/`.
+
+- **Modelo 2 (palestrantes):** ficou como alternativa em `output-palestrantes/` (só Faltam 11 e É hoje renderizados, 10 s). Para gerar o resto: `node src/fea_render.js --tpl palestrantes`.
