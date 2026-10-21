@@ -1,11 +1,11 @@
 {
  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7282.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7282.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 1.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7282.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7282.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 1.mp4",
    "titulo": "Planejamento rinomodelação e 2mL",
    "titulo_origem": "imagem",
    "parte": 1,
@@ -61,9 +61,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7282.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7282.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 2.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7282.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7282.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/1- Planejamento rinomodelação e 2mL Parte 2.mp4",
    "titulo": "Planejamento rinomodelação e 2mL",
    "titulo_origem": "imagem",
    "parte": 2,
@@ -119,9 +119,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7283.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7283.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/2- Técnica anestésica com SANEP.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7283.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7283.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/2- Técnica anestésica com SANEP.mp4",
    "titulo": "Técnica anestésica com SANEP",
    "titulo_origem": "imagem",
    "parte": null,
@@ -159,9 +159,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7284.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7284.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/3- Comissura labial.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7284.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7284.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/3- Comissura labial.mp4",
    "titulo": "Comissura labial",
    "titulo_origem": "imagem",
    "parte": null,
@@ -190,9 +190,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7285.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7285.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/4- Pré-jowl conecta.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7285.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7285.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/4- Pré-jowl conecta.mp4",
    "titulo": "Pré-jowl conecta",
    "titulo_origem": "imagem",
    "parte": null,
@@ -220,9 +220,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7286.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7286.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/5- Sulco nasolabial pode preencher.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7286.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7286.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/5- Sulco nasolabial pode preencher.mp4",
    "titulo": "Sulco nasolabial pode preencher?",
    "titulo_origem": "imagem",
    "parte": null,
@@ -235,9 +235,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7287.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7287.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/6- Rinomodelação com cânula.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7287.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7287.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/6- Rinomodelação com cânula.mp4",
    "titulo": "Rinomodelação com cânula",
    "titulo_origem": "imagem",
    "parte": null,
@@ -260,9 +260,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/IMG_7288.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b15/tr/IMG_7288.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e15/7- Preenchimento de septo nasal.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/IMG_7288.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/b15/tr/IMG_7288.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/eb44df34-8c5b-5c5e-a2b4-9ee239edf6a1/scratchpad/out/e15/7- Preenchimento de septo nasal.mp4",
    "titulo": "Preenchimento de septo nasal",
    "titulo_origem": "imagem",
    "parte": null,
