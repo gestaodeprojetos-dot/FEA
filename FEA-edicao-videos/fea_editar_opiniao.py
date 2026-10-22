@@ -281,22 +281,35 @@ PARES = {("belotero", "intense"), ("revanesse", "kiss"), ("neuramis", "deep"), (
          ("restylane", "lift"), ("restylane", "defyne"), ("restylane", "define"), ("saiba", "mais"),
          # como o Whisper escreve antes da correção
          ("neuromis", "deep"), ("neuromys", "deep"), ("renova", "deep"), ("renova", "lift"),
-         ("nuve", "estimulate"), ("ivoar", "contour"), ("resilane", "refine"), ("neuronis", "jeep")}
+         ("nuve", "estimulate"), ("ivoar", "contour"), ("resilane", "refine"), ("neuronis", "jeep"),
+         # lote Melhores produtos (22/10): termos que a legenda quebrava ao meio e a correção não pegava
+         ("solo", "infector"), ("swelling", "factor"), ("e", "voar"), ("voar", "contour"), ("evoire", "contour"),
+         ("yvoire", "contour"), ("dr", "joão"), ("biogelis", "global"), ("biogelis", "volume"),
+         ("biogelis", "volumax"), ("neuramis", "volume"), ("belotero", "volume"), ("belotero", "intenso"),
+         ("restylane", "volyme"), ("restylane", "volime"), ("rechilane", "volime"), ("rechilane", "refine"),
+         ("restylane", "shape"), ("restylane", "shaype"), ("restylane", "gel"), ("hestlani", "kiss"),
+         ("neauvia", "intense"), ("nuvia", "intense"), ("núvia", "intense"), ("nuvia", "stimulate"),
+         ("neauvia", "stimulate"), ("eptik", "s100"), ("epetique", "s100"), ("perfecta", "subskin"),
+         ("perfectha", "subskin"), ("tear", "trough"), ("tan", "delta"), ("doutor", "pithon"), ("doutor", "piton"),
+         ("ácido", "hialurônico"), ("juvederm", "voluma")}
 NOMES = {"Black", "Friday", "Elite", "Injectors", "Congress", "Radiesse", "Rennova", "Deep", "Line",
          "Belotero", "Intense", "Refyne", "Restylane", "Profhilo", "Yvoire", "Contour", "Juvéderm",
          "Voluma", "Singderm", "Sofiderm", "Biogelis", "Neauvia", "Stimulate", "Lyft", "Defyne", "Kiss",
          "Subskin", "Perfectha", "Kysse", "Vitalícia", "Vitalício", "MEC", "BD", "MD", "Codes", "Mari", "Botox",
-         "Lift", "Plus", "Revanesse", "Neuramis", "YouTube", "Saiba", "Combo", "Mônaco"}
+         "Lift", "Plus", "Revanesse", "Neuramis", "YouTube", "Saiba", "Combo", "Mônaco",
+         "Global", "Volume", "Volumax", "Shaype", "Volyme", "Dr.", "Yvoire", "Thiamidol", "Eucerin", "Intense", "Dr"}
 base.NOMES_PROPRIOS |= NOMES
 
 
 def juntar_pares(palavras):
     out = []
     for p in palavras:
-        if out and out[-1]["w"].strip() and p["s"] - out[-1]["e"] < 0.6:
+        # marca dita devagar ("Restylane... Refyne") também fica junta: até 2 s entre as palavras
+        if out and out[-1]["w"].strip() and p["s"] - out[-1]["e"] < 2.0:
             a = re.sub(r"[^\wé]", "", out[-1]["w"].split()[-1]).lower()
             b = re.sub(r"[^\wé]", "", p["w"]).lower()
-            if (a, b) in PARES and not out[-1]["w"].strip()[-1:] in ".?!":
+            fim_frase = out[-1]["w"].strip()[-1:] in ".?!" and a != "dr"
+            if (a, b) in PARES and not fim_frase:
                 out[-1] = dict(out[-1], w=out[-1]["w"].rstrip().rstrip(",") + " " + p["w"].strip(), e=p["e"])
                 continue
         out.append(p)
@@ -318,8 +331,8 @@ def gerar(cfg, v, so_legenda=False):
         if t0 is None or t1 is None or t1 <= t0:
             print(f"  AVISO: caso clínico em {c[0]} s caiu num corte")
             continue
-        casos.append((max(t0, TIT_FIM), t1, c[2], c[3] if len(c) > 3 else 0.0))
-    ev += eventos_legenda(v, palavras, duracao, duracao, [(a, b) for a, b, _, _ in casos])
+        casos.append((max(t0, TIT_FIM), t1, c[2], c[3] if len(c) > 3 else 0.0, c[4] if len(c) > 4 else "split"))
+    ev += eventos_legenda(v, palavras, duracao, duracao, [(a, b) for a, b, _, _, modo in casos if modo == "split"])
     for a, b, texto in v.get("destaques", []):
         ta, tb = para_editado(a, v["manter"]), para_editado(min(b, v["manter"][-1][1] - 0.01), v["manter"])
         if ta is not None:
@@ -359,7 +372,7 @@ def gerar(cfg, v, so_legenda=False):
             entradas += ["-i", cfg["sfx_pop"]]
             sons.append((f"[{n_entradas() - 1}:a]", t0, 0.5))
     if cfg.get("sfx_split"):
-        for t0, _, _, _ in casos:
+        for t0, _, _, _, _ in casos:
             entradas += ["-i", cfg["sfx_split"]]
             sons.append((f"[{n_entradas() - 1}:a]", max(0.0, t0 - 0.15), 0.55))
     rot = ["[ac0]"]
@@ -378,10 +391,18 @@ def gerar(cfg, v, so_legenda=False):
     partes.append("".join(rot) + f"amix=inputs={len(rot)}:duration=first:normalize=0[ac]")
     atual = "[vc]"
     # tela dividida: caso clínico em cima, Dr. embaixo, faixa esfumaçada no meio (modelo da Keila, 22/10)
-    for k, (t0, t1, clip, ini) in enumerate(casos):
+    for k, (t0, t1, clip, ini, modo) in enumerate(casos):
         entradas += ["-ss", f"{ini:.2f}", "-t", f"{t1 - t0 + 0.5:.2f}", "-i", clip]
         idx = n_entradas() - 1
         en = f"enable='between(t,{t0:.3f},{t1:.3f})'"
+        if modo == "cheia":
+            # B-roll em tela cheia, com leve zoom para dar movimento
+            partes.append(f"[{idx}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps=30,"
+                          f"scale=w='trunc({W}*(1+0.04*t/{t1 - t0:.2f})/2)*2':h=-2:eval=frame,crop={W}:{H},"
+                          f"setpts=PTS-STARTPTS+{t0:.3f}/TB[cs{k}]")
+            partes.append(f"{atual}[cs{k}]overlay=0:0:eof_action=pass:{en}[sp{k}]")
+            atual = f"[sp{k}]"
+            continue
         partes.append(f"{atual}split[base{k}][dr{k}]")
         partes.append(f"[dr{k}]crop={W}:{SPLIT_DR_H}:0:{SPLIT_DR_Y}[drc{k}]")
         partes.append(f"[base{k}][drc{k}]overlay=0:{H - SPLIT_DR_H}:{en}[bm{k}]")
@@ -401,7 +422,7 @@ def gerar(cfg, v, so_legenda=False):
         # citado enquanto o título está na tela: o quadro sobe para acima do título
         cy = PROD_CENTRO_ALTO if t0 < TIT_FIM else PROD_CENTRO[1]
         # na tela dividida o produto fica no centro do caso clínico (metade de cima)
-        if any(a <= t0 <= b for a, b, _, _ in casos):
+        if any(a <= t0 <= b and m == "split" for a, b, _, _, m in casos):
             cy = SPLIT_TOPO // 2
         partes.append(f"{atual}[p{k}]overlay=x='{PROD_CENTRO[0]}-w/2':y='{cy}-h/2':eval=frame:"
                       f"enable='between(t,{t0:.3f},{t0 + dur:.3f})'[o{k}]")
