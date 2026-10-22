@@ -108,15 +108,15 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
       mover_palavra=[[18.66, 19.0]])
 video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[4.1, 8.4, f"{R}/olheira_massagem-olheira-escura_pexels-8075412.mp4", 1.0, "split"],
-       [8.4, 12.4, f"{R}/olheira_homem-maduro-bolsas-palpebrais_pexels-8724517.mp4", 2.0, "split"],
-       [12.4, 16.0, f"{R}/gel_creme-na-ponta-do-dedo_pexels-8141586.mp4", 0.5, "split"],
-       [16.0, 19.5, f"{R}/olho_macro-pele-madura-vertical_pexels-7299471.mp4", 1.0, "split"],
-       [27.2, 31.8, f"{R}/creme_aplicacao-olheira-mulher-madura_pexels-7306361.mp4", 3.0, "split"],
+      [[4.1, 8.4, f"{R}/olheira-forte_idosa-close-olhos-bolsas-sulco-lacrimal_pexels-5534415.mp4", 0.0, "split"],
+       [8.4, 12.4, f"{R}/olheira-forte_macro-palpebra-inferior-bolsa-pele-flacida_pexels-7298096.mp4", 0.0, "split"],
+       [12.4, 16.0, f"{R}/olheira-forte_idoso-rugas-profundas-bolsas-palpebrais_pexels-8871828.mp4", 0.0, "split"],
+       [16.0, 19.5, f"{R}/olheira-forte_macro-palpebra-inferior-enrugada-crepe-vertical_pexels-7299413.mp4", 0.0, "split"],
+       [27.2, 31.8, f"{R}/olheira-forte_idosa-bolsas-olheira-mao-sob-olho_pexels-8871837.mp4", 0.0, "split"],
        [33.0, 39.0, f"{R}/pele_mulher-madura-close-rosto_pexels-10251379.mp4", 1.0, "split"],
-       [39.1, 45.2, f"{R}/creme_pontos-de-creme-sob-olho_pexels-8141584.mp4", 0.5, "split"],
+       [39.1, 45.2, f"{R}/olheira-forte_idosa-close-olhos-cansados-bolsas_pexels-8165113.mp4", 0.0, "split"],
        [45.3, 50.2, f"{R}/clinica_marcacao-face-luvas_pexels-13008914.mp4", 2.0, "split"],
-       [50.3, 56.0, f"{R}/olheira_mulher-olhando-espelho_pexels-6443768.mp4", 1.0, "split"],   # Keila: nada de mandíbula quando o assunto é olheira
+       [50.3, 56.0, f"{R}/olheira-forte_macro-olho-maduro-lagrimas-rugas-vertical_pexels-8056469.mp4", 2.5, "split"],
        [56.0, 59.8, f"{R}/creme_massagem-periorbital-vertical_pexels-8995582.mp4", 3.0, "split"],
        [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "moda01",   # lounge deep house de moda (Keila: música de moda e beleza)
       realcar=[[0.0, 3.85, 4]])   # pergunta da entrevistadora fora do microfone
