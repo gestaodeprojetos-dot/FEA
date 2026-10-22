@@ -9,7 +9,7 @@
   66,
   51
  ],
- "cta": "id/2026/FEA-CTA-Black-Vitalicia-5s.mp4",
+ "cta": "id/FEA-CTA-Black-Vitalicia-som-5s.mp4",
  "videos": [
   {
    "entrada": "brutos/IMG_7978.MOV",
@@ -255,5 +255,6 @@
     ]
    ]
   }
- ]
+ ],
+ "cta_com_som": true
 }

@@ -142,8 +142,8 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 Script `FEA-edicao-videos/fea_criativo_ads.py` (projeto de exemplo: `FEA-projeto-ads-bfv-out-22.json`). Diferente do Reels:
 
 - Sem título de 3 s; legenda no padrão conteúdo (Montserrat Bold 56); frases de impacto em `destaques` (fonte maior, dourado #EDBF72 da Black Vitalícia, com o texto exato da fala).
-- Trilha por baixo da voz em **0,07** com compressor (a 0,13 ficou alta e o crescendo da faixa no final incomodou); no CTA sobe só para 0,10, em rampa de 1 s.
+- Trilha por baixo da voz em **0,07** com compressor (a 0,13 ficou alta e o crescendo da faixa no final incomodou). Com o CTA de som, ela sai antes do CTA.
 - Gravação de tela: sincronizar pelo áudio (correlação do envelope, `offset` = tela menos bruto) e usar `inserts` "split" (tela na largura toda em cima, Dr. embaixo) enquanto o Dr. fala do que está na tela.
-- CTA curto: `FEA-CTA-Black-Vitalicia-5s.mp4` (Drive, pasta identidade "03 - 2026").
+- **CTA da Black com som** (Keila, 22/10/2026: "o barulho da Black entrando e digitando o Toque em Saiba Mais"): `FEA-CTA-Black-Vitalicia-som-5s.mp4` (Drive, pasta identidade "03 - 2026"), recortado dos últimos 5 s do Ads 035 (`1dtN7Q_JVkL74TAnjN3n9U8nclImGfBkd`, a partir de 78,5 s). Usar com `"cta_com_som": true`: o som do CTA entra e a trilha sai 0,4 s antes. O `FEA-CTA-Black-Vitalicia-5s.mp4` (mudo) não é para usar.
 - Pausas longas encolhidas (`apertar_pausas`) e início direto na primeira palavra.
 - Pasta de Ads da Black: `1Rzq7m9bxT02jIugDf-FHziXdhMZ3aJLN`, nome `Ads 0NN - Tema - BFV.mp4`.

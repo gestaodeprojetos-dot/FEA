@@ -242,7 +242,9 @@ def renderizar(cfg, v, so_legenda=False):
     dcta = float(hh) * 3600 + float(mm) * 60 + float(ss)
     total = duracao + dcta
     filtro += (f";[{ic}:v]scale={W}:{H},setsar=1,fps=30,format=yuv420p[vcta];[vo][vcta]concat=n=2:v=1:a=0[vfim]"
-               f";[ac]apad=whole_dur={total:.3f}[voz]")
+               + (f";[ac]aresample=48000,aformat=channel_layouts=stereo[acv];[{ic}:a]aresample=48000,"
+                  f"aformat=channel_layouts=stereo[acta];[acv][acta]concat=n=2:v=0:a=1[voz]"
+                  if cfg.get("cta_com_som") else f";[ac]apad=whole_dur={total:.3f}[voz]"))
     faixas, cortes = cfg["musica"], cfg["musica_cortes"]
     im = ic + 1
     soma, k, ms = 0.0, 0, []
@@ -260,7 +262,10 @@ def renderizar(cfg, v, so_legenda=False):
     # compressor achata o crescendo da própria faixa (o "subir o tom" no final incomodava)
     vol = (f"acompressor=threshold=-24dB:ratio=6:attack=20:release=400,"
            f"volume='if(lt(t,{duracao:.3f}),{v0},if(lt(t,{duracao + 1:.3f}),{v0}+({v1}-{v0})*(t-{duracao:.3f}),{v1}))':eval=frame,"
-           f"atrim=0:{total:.3f},afade=t=in:d=0.6,afade=t=out:st={total - 1.5:.3f}:d=1.5")
+           f"atrim=0:{total:.3f},afade=t=in:d=0.6,"
+           # CTA com som próprio (impacto da logo + digitação, Keila 22/10/2026): a trilha sai antes dele
+           + (f"afade=t=out:st={duracao - 0.4:.3f}:d=0.4" if cfg.get("cta_com_som")
+              else f"afade=t=out:st={total - 1.5:.3f}:d=1.5"))
     filtro += f";{cad};[m{len(ms) - 1}]{vol}[mus];[voz]aresample=48000,aformat=channel_layouts=stereo[voz2]" \
               f";[voz2][mus]amix=inputs=2:duration=first:normalize=0[afim]"
     cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro,
