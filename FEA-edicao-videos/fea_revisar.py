@@ -24,7 +24,7 @@ LIMITE_S = 180
 # nomes de produto e termos técnicos com todas as variantes que o Whisper inventa;
 # cada tupla: (regex de erro, nome correto, motivo curto para o relatório)
 PRODUTOS_CONHECIDOS = [
-    (r"\b[Ee] ?voar\b|\b[Ee]voá\b|\b[Ii]voar\b|\b[Ii]vo[aá]r?\b", "Yvoire", "é Yvoire"),
+    (r"\b[Ee] ?[Vv]oar\b|\b[Ee]voá\b|\b[Ii]voar\b|\b[Ii]vo[aá]r?\b|\bEvoire\b", "Yvoire", "é Yvoire"),
     (r"\bcom ?o? ?tour\b|\b[Cc]ontur\b|\b[Cc]onto[uw]r\b(?! )", "Contour", "é Contour"),
     (r"\bN[uú]vi[ao]\b|\bLúvia\b|\b[Nn]euvia\b(?! )", "Neauvia", "é Neauvia"),
     (r"\b[Nn]euramiz\b|\b[Nn]euramise?\b|\b[Nn]uramis\b", "Neuramis", "é Neuramis"),
@@ -50,6 +50,15 @@ PROIBIDO_LEGENDA = [
     (r"\b[Gg]elinh", "\"gelinho\": é G'"),
     (r"\bbolos\b|\bbólos\b", "é bolus"),
     (r"\b[Tt]ier\b|\b[Tt]irtrof", "tear trough"),
+    # lote Melhores produtos (22/10): erros que passaram e a Keila pegou
+    (r"\bsolo\b|\binfector\b|\bswelling\b(?! factor)", "é swelling factor"),
+    (r"\b[Tt]andel|\b[Tt]an [Dd]el está", "é tan delta"),
+    (r"\b[Hh]estlani\b|\b[Rr]echilane\b|\b[Rr]esilane\b", "é Restylane"),
+    (r"\b[Pp]iton\b", "é Pithon"), (r"\bpras\b|\bpros\b", "\"pras/pros\": sempre \"para as/para os\""),
+    (r"\b[Ee]ptik\b|\b[Ee]petique\b", "é e.p.t.q."), (r"\bShape\b", "é Restylane Shaype"),
+    (r"\b(biogelis|neuramis|belotero|restylane|yvoire|neauvia|juvéderm|perfectha|singderm|rennova|revanesse|profhilo|radiesse)\b",
+     "marca com inicial minúscula"),
+    (r"\bdr\b", "\"dr\" minúsculo: é Dr."), (r"\be porquê\?", "é \"e por quê?\""),
     (r"(^|\s)%|\b0 0\b", "número incompleto (ex.: \"%\" sem o 1, \"0\" sem o ,2)"),
     (r"\bG linha\b|\bG duas linhas\b", "G linha: escrever G' ou G''"),
     (r"\b(18|2[0-7])[ -]?(38|40|50|70)\b", "cânula sem o x (ex.: 22x70)"),
@@ -169,7 +178,9 @@ def ler_ass(caminho):
         p = linha.rstrip("\n").split(",", 9)
         s, e, estilo = ts(p[1]), ts(p[2]), p[3]
         txt = re.sub(r"\{[^}]*\}", "", p[9]).replace("\\N", " ").strip()
-        (titulo if estilo == "Titulo" else legendas).append((s, e, txt))
+        if estilo in ("Caixa", "Dest"):      # caixas do título e destaque (estilo opinião)
+            continue
+        (titulo if estilo in ("Titulo", "Tit") else legendas).append((s, e, txt))
     return titulo, legendas
 
 
@@ -196,13 +207,14 @@ def revisar(cfg, v, folhas=None):
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
     if re.sub(r"\s+", " ", txt_tit) != esperado:
         erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
-    if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:
-        erros.append("título passa dos 3 s")
+    opiniao = bool(v.get("faixas"))   # estilo opinião / melhores produtos: título em caixas até 4,1 s
+    if titulo and max(e for s, e, t in titulo if s < 1) > (4.11 if opiniao else fe.TITULO_DUR + 0.01):
+        erros.append("título passa do tempo")
     if v.get("parte") == 1 and not any(s > 1 and "Parte 2" in t for s, e, t in titulo):
         erros.append("Parte 1 sem a cartela \"Parte 2 no perfil\" no final")
 
-    # 2b. headline: margem e comprimento
-    titulo_formatado = fe.formatar_titulo(v)
+    # 2b. headline: margem e comprimento (o estilo opinião quebra o título em caixas, medido no próprio script)
+    titulo_formatado = fe.formatar_titulo(v) if not opiniao else v["titulo"]
     larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
     if larg_px > LARGURA_SEGURA:
         erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
@@ -251,7 +263,7 @@ def revisar(cfg, v, folhas=None):
         for rx, motivo in PROIBIDO_LEGENDA:
             if re.search(rx, t):
                 erros.append(f"[{s:5.1f}s] \"{t}\": {motivo}")
-        if s < fe.TITULO_DUR - 0.01:
+        if s < fe.TITULO_DUR - 0.01 and not v.get("faixas"):   # no estilo opinião a legenda corre por baixo do título
             erros.append(f"[{s:5.1f}s] legenda junto com o título")
         paciente = any(a <= s <= b for a, b in pac_saida)   # fala baixa do paciente, conferida no áudio
         seg = db[int(s / ps):int(e / ps) + 1]
