@@ -430,7 +430,7 @@ def gerar(cfg, v, so_legenda=False):
     for k, (t0, t1, clip, ini, modo) in enumerate(casos):
         entradas += ["-ss", f"{ini:.2f}", "-t", f"{t1 - t0 + 0.5:.2f}", "-i", clip]
         idx = n_entradas() - 1
-        en = f"enable='between(t,{t0:.3f},{t1:.3f})'"
+        en = f"enable='gte(t,{t0:.3f})*lt(t,{t1:.3f})'"   # intervalo meio aberto: dois inserts nunca no mesmo quadro
         if modo == "cheia":
             # B-roll em tela cheia, com leve zoom para dar movimento
             partes.append(f"[{idx}:v]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,fps=30,"
