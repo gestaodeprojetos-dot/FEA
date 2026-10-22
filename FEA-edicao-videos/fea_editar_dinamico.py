@@ -32,6 +32,7 @@ projeto.json (tempos em segundos do BRUTO; o script converte para a linha do tem
   "vitrine": {"ini": 29.5, "fim": 31.5, "pngs": ["..."]},
   "cartela": {"ini": 14.2, "fim": 18.9, "linha1": "Dr. João Pithon", "linha2": "reologia das olheiras"},
   "comentario": {"ini": 62.0, "fim": 99},
+  "musica": {"arquivo": "FEA-musicas/x.mp3", "db": -19},   # trilha de fundo nivelada (abaixa sob a voz)
   "efeitos": {"impacto": "...mp3", "whoosh": "...", "obturador": "...", "pop": "...", "clique": "..."},
   "frases": [["solo infector", "swelling factor"]],   # troca de palavras na legenda (pode juntar 2)
   "correcoes": [["\\\\bLift\\\\b", "Lyft"]]
@@ -488,10 +489,21 @@ def renderizar(cfg, previa=False):
                            stdout=subprocess.PIPE)
     saida = cfg["saida"]
     os.makedirs(os.path.dirname(saida) or ".", exist_ok=True)
+    # música de fundo baixinha, que abaixa sozinha quando o Dr. fala (Keila 22/10: "faltou musiquinha")
+    mus = cfg.get("musica")
+    if mus:
+        entrada_musica = ["-ss", str(mus.get("inicio", 0)), "-i", mus["arquivo"]]
+        mix = ("[1:a]aresample=48000,asplit=2[voz][chave];"
+               f"[3:a]aresample=48000,dynaudnorm=f=750:g=31:p=0.9,volume={mus.get('db', -19)}dB,"
+               f"afade=t=in:d=0.5,afade=t=out:st={max(0, mapa.dur - 2.5):.2f}:d=2.5[m];"
+               "[m][chave]sidechaincompress=threshold=0.05:ratio=3:attack=30:release=400[md];"
+               "[voz][2:a][md]amix=inputs=3:normalize=0:duration=first[a]")
+    else:
+        entrada_musica = []
+        mix = "[1:a]aresample=48000[voz];[voz][2:a]amix=inputs=2:normalize=0:duration=first[a]"
     enc = subprocess.Popen([ff, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", str(FPS), "-i", "-", "-i", base, "-i", sfx,
-                            "-filter_complex", "[1:a]aresample=48000[voz];[voz][2:a]amix=inputs=2:normalize=0:duration=first[a]",
-                            "-map", "0:v", "-map", "[a]",
+                            "-r", str(FPS), "-i", "-", "-i", base, "-i", sfx] + entrada_musica + [
+                            "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
                             "-c:v", "libx264", "-preset", "medium" if not previa else "veryfast",
                             "-crf", "18" if not previa else "23", "-pix_fmt", "yuv420p", "-profile:v", "high",
                             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart",

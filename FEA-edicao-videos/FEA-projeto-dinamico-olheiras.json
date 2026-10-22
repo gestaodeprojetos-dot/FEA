@@ -67,37 +67,37 @@
     {
       "ini": 2.9,
       "fim": 3.85,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r5.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e41.jpg",
       "foco": [
         0.5,
-        0.35
+        0.45
       ]
     },
     {
       "ini": 5.8,
       "fim": 7.65,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r1.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e25.jpg",
       "foco": [
-        0.5,
+        0.6,
         0.3
       ]
     },
     {
       "ini": 7.65,
       "fim": 9.95,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r22.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e29.jpg",
       "foco": [
-        0.5,
-        0.3
+        0.7,
+        0.45
       ]
     },
     {
       "ini": 9.95,
       "fim": 11.85,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r8.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e30.jpg",
       "foco": [
         0.5,
-        0.4
+        0.55
       ]
     },
     {
@@ -139,19 +139,19 @@
     {
       "ini": 42.3,
       "fim": 45.4,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r60.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e26.jpg",
       "foco": [
-        0.5,
-        0.3
+        0.65,
+        0.5
       ]
     },
     {
       "ini": 45.7,
       "fim": 48.6,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r27.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e32.jpg",
       "foco": [
         0.5,
-        0.3
+        0.4
       ]
     },
     {
@@ -175,19 +175,19 @@
     {
       "ini": 54.3,
       "fim": 56.9,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r10.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e24.jpg",
       "foco": [
         0.5,
-        0.2
+        0.5
       ]
     },
     {
       "ini": 56.9,
       "fim": 59.75,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r11.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e20.jpg",
       "foco": [
-        0.5,
-        0.3
+        0.6,
+        0.45
       ]
     }
   ],
@@ -195,7 +195,7 @@
     {
       "ini": 19.6,
       "fim": 20.62,
-      "png": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/yvoire.png",
+      "png": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/yvoire2.png",
       "pos": [
         0.8,
         0.22
@@ -241,7 +241,7 @@
     "ini": 29.5,
     "fim": 31.6,
     "pngs": [
-      "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/yvoire.png",
+      "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/yvoire2.png",
       "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/subskin_b.png",
       "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/voluma.png",
       "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/lyft.png"
@@ -298,5 +298,9 @@
     "pop2": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-pop-click-mixkit2364.mp3",
     "clique": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-clique-mixkit1117.mp3",
     "vacuo": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-vacuo-ar-mixkit2608.mp3"
+  },
+  "musica": {
+    "arquivo": "/home/user/FEA/FEA-edicao-videos/FEA-musicas/FEA-silent-descent-mixkit614.mp3",
+    "db": -19
   }
 }

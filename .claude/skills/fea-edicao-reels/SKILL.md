@@ -42,6 +42,12 @@ Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos 
 
 **Efeitos sonoros obrigatórios** (Keila 22/10): impacto grave + batida de coração no gancho, whoosh + obturador em cada troca de imagem (pico do whoosh no corte), swoosh baixo nos socos de zoom, pop nos produtos, clique no ícone. Arquivos em `FEA-edicao-videos/FEA-efeitos-sonoros/` (Mixkit, licença livre), mapeados em `efeitos` no projeto.
 
+**Música de fundo obrigatória** (Keila 22/10: "faltou musiquinha"): trilha em `FEA-edicao-videos/FEA-musicas/` (Mixkit, licença livre), nivelada com dynaudnorm em -19 dB e abaixando sozinha sob a voz (sidechain). Atual: "Silent Descent" (cinematográfica, começa suave e cresce).
+
+**Imagens: foco no olho** (Keila 22/10). Close de olho, pálpebra, pé de galinha, olheira e pele ao redor. Nunca retrato de rosto inteiro de idoso "sofrido", de lenço na cabeça ou barba desgrenhada: "parece morador de rua".
+
+**Recorte de produto:** usar `birefnet-general` no rembg quando a caixa é branca (o `isnet` abriu buraco na caixa do Yvoire). Conferir sempre o PNG sobre fundo vermelho antes de usar.
+
 **Dinâmica:** zoom no Dr. trocando a cada frase (~2,2 s, níveis 1,0 / 1,18 / 1,08 / 1,28) com leve aproximação contínua. Vídeo "parado" foi reprovado.
 
 Resto: legenda de 1 a 3 palavras (ExtraBold 64 branca, sombra suave), no meio da tela; pausas > 0,35 s encurtadas; **produto sempre sem fundo** (rembg `isnet-general-use`, nunca caixa com fundo branco) aparecendo com "pop" ao lado da cabeça, um por vez, e todos juntos quando ele resume; cartela de autoridade com fundo desfocado (nome + credencial que ele fala no vídeo, texto branco); ícone de comentário no "qual a sua opinião?".
