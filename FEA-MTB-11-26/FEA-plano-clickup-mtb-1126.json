@@ -1,0 +1,772 @@
+{
+ "listas": {
+  "S1": "1400270000004209",
+  "S2": "1400270000004210",
+  "S3": "1400270000004211"
+ },
+ "plano": {
+  "S3": {
+   "Design": [],
+   "Gestão": [
+    {
+     "ref": "86ajqgcta",
+     "nome": "Caminho do lead para CPL",
+     "grupo": "Gestão",
+     "inicio": "2026-11-05",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajqgcta\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajvtjek",
+     "nome": "Agendar URA + SMS",
+     "grupo": "Gestão",
+     "inicio": "2026-11-09",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajvtjek\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajvtjwy",
+     "nome": "Enviar report 20h",
+     "grupo": "Gestão",
+     "inicio": "2026-11-09",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajvtjwy\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajvtjrw",
+     "nome": "Enviar report 9h",
+     "grupo": "Gestão",
+     "inicio": "2026-11-09",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajvtjrw\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajr4c0w",
+     "nome": "Enviar doc de URA e SMS no grupo Ligue Lead",
+     "grupo": "Gestão",
+     "inicio": "2026-11-05",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajr4c0w\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    }
+   ],
+   "Webdesigner": [
+    {
+     "ref": "86ajwz7uu",
+     "nome": "Desborrar preço da página de vendas - 19h",
+     "grupo": "Webdesigner",
+     "inicio": "2026-11-09",
+     "fim": "2026-11-09",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de vendas: https://docs.google.com/document/d/1W59ORSZoqTIsof99oh0pmFteAtcYTZzq_DgRV1g6TkU/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajwz7uu\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    }
+   ],
+   "Copy": [
+    {
+     "ref": "86ajm2bv8",
+     "nome": "Copy Comunicações (WhatsApp - API)",
+     "grupo": "Copy",
+     "inicio": "2026-10-29",
+     "fim": "2026-11-10",
+     "sprint": "S3",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nComunicação (API, WhatsApp, e-mail): https://drive.google.com/drive/folders/1nqz-OMfudyZKFlFLgth4tYsj5WMl-VBH\nCopy captação WhatsApp: https://docs.google.com/document/d/1K8oZeKQC6TiFdb9oHnzc26kzafD2dIlSpzrbPhu4QJ4/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajm2bv8\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    }
+   ],
+   "Edição de vídeo": [],
+   "Comercial": [],
+   "Suporte / CS": [],
+   "Automação": []
+  },
+  "S1": {
+   "Design": [
+    {
+     "ref": "86ahtp1rr",
+     "nome": "Atualizar criativos de captação",
+     "grupo": "Design",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp1rr"
+    },
+    {
+     "ref": "86agfvgng",
+     "nome": "Atualizar Ingresso",
+     "grupo": "Design",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Ingresso: https://drive.google.com/drive/folders/1BWcGy96zBbpPgyxy3lvVvN_G39WNKcPW\nInformações do ingresso: https://docs.google.com/document/d/1-ESgwPqdsY2spDUWCwuiJda1fF2q_cVOc9JqzIGPzIs/edit\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgng"
+    },
+    {
+     "ref": "86ajtcqm8",
+     "nome": "Criar Imagens de API",
+     "grupo": "Design",
+     "inicio": "2026-10-29",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy imagens API: https://docs.google.com/document/d/1cghg6pGyrridyUugcsVMOsGO3JJKyI5rtF3FWgYo3Ak/edit\nImagens API: https://drive.google.com/drive/folders/19eWwVNjjl8kP9hyi-Cx6it5rSxbFiZaT\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajtcqm8\nResponsável no MTB 08/26: Letícia Marangon (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajerwkw",
+     "nome": "Arte do ingresso",
+     "grupo": "Design",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Ingresso: https://drive.google.com/drive/folders/1BWcGy96zBbpPgyxy3lvVvN_G39WNKcPW\nInformações do ingresso: https://docs.google.com/document/d/1-ESgwPqdsY2spDUWCwuiJda1fF2q_cVOc9JqzIGPzIs/edit\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajerwkw"
+    },
+    {
+     "ref": "86ajkv5y0",
+     "nome": "Criar novos criativos de Vendas",
+     "grupo": "Design",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajkv5y0\nResponsável no MTB 08/26: Letícia Marangon (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajkv5xm",
+     "nome": "Criar novos criativos de Antecipação",
+     "grupo": "Design",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajkv5xm\nResponsável no MTB 08/26: Letícia Marangon (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajkv5ug",
+     "nome": "Criar novos criativos de Captação",
+     "grupo": "Design",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajkv5ug\nResponsável no MTB 08/26: Letícia Marangon (confirmar antes de atribuir)"
+    },
+    {
+     "ref": null,
+     "nome": "Reexportar artes e criativos estáticos que têm data do evento gravada (11/08 para 09/11)",
+     "grupo": "Design",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Lista dos arquivos com data gravada no doc de auditoria de criativos (pasta 4. TRÁFEGO). Criativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    },
+    {
+     "ref": null,
+     "nome": "Atualizar slides: data 09/11 e bônus 'até 23h59 de 9 de novembro'",
+     "grupo": "Design",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Slides: https://docs.google.com/presentation/d/19aogb2JP9cSCm6aiN_zEMaRosvBsp_i_Jf2z6tUx5Vo/edit\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    }
+   ],
+   "Gestão": [
+    {
+     "ref": "86agfvhfu",
+     "nome": "Caminho lead para início de captação",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhfu\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh48",
+     "nome": "Conferir se leads estão caindo no CRM",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh48\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh5p",
+     "nome": "Enviar Slides Luca",
+     "grupo": "Gestão",
+     "inicio": "2026-10-29",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nSlides: https://docs.google.com/presentation/d/19aogb2JP9cSCm6aiN_zEMaRosvBsp_i_Jf2z6tUx5Vo/edit\nBriefing Slides: https://docs.google.com/document/d/1sa7hp7PMWbOd-mKMWDI2_a21wQVkeIhV4K-TjQHb8cc/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh5p\nResponsável no MTB 08/26: Keila (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvhej",
+     "nome": "Enviar links traqueados para o Luca",
+     "grupo": "Gestão",
+     "inicio": "2026-10-29",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhej\nResponsável no MTB 08/26: Keila, Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajqga1d",
+     "nome": "Atualizar doc de URA e SMS",
+     "grupo": "Gestão",
+     "inicio": "2026-10-29",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajqga1d\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86aj5fmhb",
+     "nome": "Confirmar presente do ingresso com Luca",
+     "grupo": "Gestão",
+     "inicio": "2026-10-29",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Ingresso: https://drive.google.com/drive/folders/1BWcGy96zBbpPgyxy3lvVvN_G39WNKcPW\nInformações do ingresso: https://docs.google.com/document/d/1-ESgwPqdsY2spDUWCwuiJda1fF2q_cVOc9JqzIGPzIs/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86aj5fmhb\nResponsável no MTB 08/26: Keila (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh5b",
+     "nome": "Solicitar ingresso para automação",
+     "grupo": "Gestão",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Ingresso: https://drive.google.com/drive/folders/1BWcGy96zBbpPgyxy3lvVvN_G39WNKcPW\nInformações do ingresso: https://docs.google.com/document/d/1-ESgwPqdsY2spDUWCwuiJda1fF2q_cVOc9JqzIGPzIs/edit\nPasta Automação: https://drive.google.com/drive/folders/1FJnVUYVuMUGoX-cLA4cF1vYiBLKvHFDF\nDoc de automação: https://drive.google.com/file/d/1yZ2sGQIj-Oa9QUEh3RoRNAlGKfOoeG7d/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh5b\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgn1",
+     "nome": "Pedir para a Grazi criar link no Zoom",
+     "grupo": "Gestão",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgn1\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh44",
+     "nome": "Disponibilizar planilha com criativos para tráfego",
+     "grupo": "Gestão",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Tráfego: https://drive.google.com/drive/folders/1K9uEGFWPuJWNrCh8MSpWMDJoZqkfHZSq\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh44\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86aj5fhpm",
+     "nome": "Confirmar oferta",
+     "grupo": "Gestão",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nBriefing: https://drive.google.com/file/d/1hMAAGmH2IBpSJANxSANYEiF1_LISa4Hy/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86aj5fhpm\nResponsável no MTB 08/26: Keila (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajfvh15",
+     "nome": "Link do zoom",
+     "grupo": "Gestão",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajfvh15\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgmt",
+     "nome": "Organizar Planilha de criativos tráfego",
+     "grupo": "Gestão",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Tráfego: https://drive.google.com/drive/folders/1K9uEGFWPuJWNrCh8MSpWMDJoZqkfHZSq\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgmt\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajfvh1v",
+     "nome": "Links das páginas",
+     "grupo": "Gestão",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajfvh1v\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajk5j49",
+     "nome": "Alterar slides de FeAnatomy",
+     "grupo": "Gestão",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nSlides: https://docs.google.com/presentation/d/19aogb2JP9cSCm6aiN_zEMaRosvBsp_i_Jf2z6tUx5Vo/edit\nBriefing Slides: https://docs.google.com/document/d/1sa7hp7PMWbOd-mKMWDI2_a21wQVkeIhV4K-TjQHb8cc/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajk5j49"
+    },
+    {
+     "ref": "86ahtp4n6",
+     "nome": "Conferir se links estão ok",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp4n6\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvhqt",
+     "nome": "Confirmar Zoom - se está tudo certo",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhqt\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ahtp4nj",
+     "nome": "Conferir informações da página",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp4nj\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ahtp4mw",
+     "nome": "Conferir se recebeu mensagem de API",
+     "grupo": "Gestão",
+     "inicio": "2026-10-30",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp4mw\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgme",
+     "nome": "Atualizar Planilha de links úteis com links de páginas e utms",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-22",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgme\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgmb",
+     "nome": "Atualizar Cronograma URA/SMS",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-22",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgmb\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgmk",
+     "nome": "Organizar Ads nas pastas",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-22",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgmk\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86aj5fgt5",
+     "nome": "Estruturar Drive de lançamento",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-22",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86aj5fgt5\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ahtp38p",
+     "nome": "Brifar as alterações nos criativos para o Design",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-22",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp38p\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": null,
+     "nome": "Validar oferta FEB (R$997) em paralelo à Black Friday Vitalícia (vendas BF até 20/11)",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "A captação (02/11 a 09/11) e o carrinho FEB (09/11 a 11/11) caem dentro da janela de vendas da Black Friday. Decidir se o FEB entra com preço cheio, condição BF ou bônus diferente, e alinhar com o comercial (Sabrina).\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    },
+    {
+     "ref": null,
+     "nome": "Confirmar bônus da oferta FEB 11/26 (lista do 08/26 está marcada como 'confirmar' no briefing)",
+     "grupo": "Gestão",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Briefing: https://drive.google.com/file/d/1hMAAGmH2IBpSJANxSANYEiF1_LISa4Hy/view\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    }
+   ],
+   "Automação": [
+    {
+     "ref": "86ajpaz1n",
+     "nome": "Informar fluxos existentes com copys, gatilhos e presentes",
+     "grupo": "Automação",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nPasta Automação: https://drive.google.com/drive/folders/1FJnVUYVuMUGoX-cLA4cF1vYiBLKvHFDF\nDoc de automação: https://drive.google.com/file/d/1yZ2sGQIj-Oa9QUEh3RoRNAlGKfOoeG7d/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajpaz1n\nResponsável no MTB 08/26: Equipe IAutomate (Júlio Couto) (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgmy",
+     "nome": "Criar comunidades de WhatsApp para Automação",
+     "grupo": "Automação",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy captação WhatsApp: https://docs.google.com/document/d/1K8oZeKQC6TiFdb9oHnzc26kzafD2dIlSpzrbPhu4QJ4/edit\nPasta Automação: https://drive.google.com/drive/folders/1FJnVUYVuMUGoX-cLA4cF1vYiBLKvHFDF\nDoc de automação: https://drive.google.com/file/d/1yZ2sGQIj-Oa9QUEh3RoRNAlGKfOoeG7d/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgmy\nResponsável no MTB 08/26: Equipe IAutomate (Júlio Couto) (confirmar antes de atribuir)"
+    },
+    {
+     "ref": null,
+     "nome": "Criar estrutura do MTB 1126: grupo SendFlow, lista e tag [1126] [MTB] no Active, planilha CONTROLE DE LEADS e webhook da pesquisa",
+     "grupo": "Automação",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-29",
+     "sprint": "S1",
+     "descricao": "A planilha de controle e as respostas de pesquisa do 08/26 não foram copiadas (dado pessoal de lead). Atualizar a planilha de Links úteis com os novos links. https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    }
+   ],
+   "Webdesigner": [
+    {
+     "ref": "86agfvhnj",
+     "nome": "Deixar o preço borrado na Página de Vendas",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-28",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de vendas: https://docs.google.com/document/d/1W59ORSZoqTIsof99oh0pmFteAtcYTZzq_DgRV1g6TkU/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhnj\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajggpcr",
+     "nome": "Criar página do zoom",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajggpcr\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh6p",
+     "nome": "Atualizar grupo + Lista na Página",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh6p\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh5j",
+     "nome": "Atualizar máscara: https://joaopithon.com.br/aula-zoom",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh5j\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh67",
+     "nome": "Atualizar página de captura + thumb página",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de captura: https://docs.google.com/document/d/1deNQTJjIxQLq_lk_geVGkfNuk34ddauLNxZLOneAHLk/edit\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh67\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvhnh",
+     "nome": "Atualizar Página de Vendas",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de vendas: https://docs.google.com/document/d/1W59ORSZoqTIsof99oh0pmFteAtcYTZzq_DgRV1g6TkU/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhnh\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvh5h",
+     "nome": "Atualizar link: https://joaopithon.com.br/masterclass-grupo",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvh5h\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajfxa53",
+     "nome": "Criar página de obrigado/pesquisa",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy obrigado + check-in: https://docs.google.com/document/d/1EuDnZRTzAKMuyuEyClGlffwXUF2EZB4besLS1Zrg2bg/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajfxa53\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajj4hqn",
+     "nome": "Conferir Links das Páginas na planilha de Links úteis",
+     "grupo": "Webdesigner",
+     "inicio": "2026-10-27",
+     "fim": "2026-10-28",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajj4hqn\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    }
+   ],
+   "Edição de vídeo": [
+    {
+     "ref": "86ajuyfcu",
+     "nome": "Editar criativos novos MTB",
+     "grupo": "Edição de vídeo",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-30",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajuyfcu"
+    }
+   ],
+   "Copy": [
+    {
+     "ref": "86ajdpcz4",
+     "nome": "Copy legenda de vendas",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLegendas: https://drive.google.com/drive/folders/18rZyg34nqp1IBBdrk-3Xexv0qzjwgSMn\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpcz4\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd22",
+     "nome": "Copy legenda de captação",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLegendas: https://drive.google.com/drive/folders/18rZyg34nqp1IBBdrk-3Xexv0qzjwgSMn\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd22\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpczu",
+     "nome": "Atualizar da Página de Onboarding",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nComunicação (API, WhatsApp, e-mail): https://drive.google.com/drive/folders/1nqz-OMfudyZKFlFLgth4tYsj5WMl-VBH\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpczu\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd0t",
+     "nome": "Copy de capa de grupo de WhatsApp",
+     "grupo": "Copy",
+     "inicio": "2026-10-22",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy captação WhatsApp: https://docs.google.com/document/d/1K8oZeKQC6TiFdb9oHnzc26kzafD2dIlSpzrbPhu4QJ4/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd0t\nResponsável no MTB 08/26: Adriane Möbbs (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpcy4",
+     "nome": "Copy criativos de Venda",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpcy4\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd3d",
+     "nome": "Criar Copy para Arte que vai nas mensagens de API",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy imagens API: https://docs.google.com/document/d/1cghg6pGyrridyUugcsVMOsGO3JJKyI5rtF3FWgYo3Ak/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd3d\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd1g",
+     "nome": "Copy criativos de antecipação",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd1g\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd2j",
+     "nome": "Atualizar da Página de Captura",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de captura: https://docs.google.com/document/d/1deNQTJjIxQLq_lk_geVGkfNuk34ddauLNxZLOneAHLk/edit\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd2j\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvgnh",
+     "nome": "Copy de Onboarding (WhatsApp, E-mail, API)",
+     "grupo": "Copy",
+     "inicio": "2026-10-26",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nComunicação (API, WhatsApp, e-mail): https://drive.google.com/drive/folders/1nqz-OMfudyZKFlFLgth4tYsj5WMl-VBH\nCopy captação WhatsApp: https://docs.google.com/document/d/1K8oZeKQC6TiFdb9oHnzc26kzafD2dIlSpzrbPhu4QJ4/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvgnh\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86aje5eev",
+     "nome": "Copy de página de link para Zoom",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86aje5eev\nResponsável no MTB 08/26: Adriane Möbbs (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajb5w94",
+     "nome": "Copy da página de pesquisa + check-in de MTB",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-23",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy obrigado + check-in: https://docs.google.com/document/d/1EuDnZRTzAKMuyuEyClGlffwXUF2EZB4besLS1Zrg2bg/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajb5w94\nResponsável no MTB 08/26: Adriane Möbbs (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpczg",
+     "nome": "Copy legenda de remkt vendas",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLegendas: https://drive.google.com/drive/folders/18rZyg34nqp1IBBdrk-3Xexv0qzjwgSMn\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpczg\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd0e",
+     "nome": "Atualizar da Página de Vendas",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de vendas: https://docs.google.com/document/d/1W59ORSZoqTIsof99oh0pmFteAtcYTZzq_DgRV1g6TkU/edit\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd0e\nResponsável no MTB 08/26: Adriane Möbbs (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd1r",
+     "nome": "Copy legenda de antecipação",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-26",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nLegendas: https://drive.google.com/drive/folders/18rZyg34nqp1IBBdrk-3Xexv0qzjwgSMn\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd1r\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajdpd2x",
+     "nome": "Copy Criativos de Captação",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy de criativos: https://drive.google.com/drive/folders/1zs5UPvS-WFc6FDRSmmXCFfHBMi5Owoox\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nCriativos prontos: https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajdpd2x\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": null,
+     "nome": "Revisar copys com datas atualizadas para 09/11 (conferir dias da semana e agenda de disparos)",
+     "grupo": "Copy",
+     "inicio": "2026-10-23",
+     "fim": "2026-10-27",
+     "sprint": "S1",
+     "descricao": "Todas as copys foram duplicadas do MTB 08/26 com datas trocadas (evento 11/08 terça para 09/11 segunda). Conferir os disparos de abertura (02/11, Finados) e a véspera (domingo 08/11). Pasta: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\n\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"
+    }
+   ]
+  },
+  "S2": {
+   "Gestão": [
+    {
+     "ref": "86ajzkmz9",
+     "nome": "Enviar link da aula no Zoom para a Isa",
+     "grupo": "Gestão",
+     "inicio": "2026-11-06",
+     "fim": "2026-11-06",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajzkmz9\nResponsável no MTB 08/26: Keila, Gabriela Borges (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajzkmu0",
+     "nome": "Enviar link da página do Zoom para o Luca",
+     "grupo": "Gestão",
+     "inicio": "2026-11-06",
+     "fim": "2026-11-06",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajzkmu0\nResponsável no MTB 08/26: Keila (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86ajwz8e0",
+     "nome": "Enviar doc de URA + áudio",
+     "grupo": "Gestão",
+     "inicio": "2026-11-04",
+     "fim": "2026-11-04",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta URA + SMS: https://drive.google.com/drive/folders/1z38YYHI2spFhnsd5ztPvVwE2NKjMI9Wp\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajwz8e0\nResponsável no MTB 08/26: Gabriela Borges (confirmar antes de atribuir)"
+    }
+   ],
+   "Gestão de Tráfego": [
+    {
+     "ref": "86agfvhj1",
+     "nome": "Enviar dash - 1 dia após o início da captação",
+     "grupo": "Gestão de Tráfego",
+     "inicio": "2026-11-02",
+     "fim": "2026-11-02",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Tráfego: https://drive.google.com/drive/folders/1K9uEGFWPuJWNrCh8MSpWMDJoZqkfHZSq\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhj1\nResponsável no MTB 08/26: Matheus Saar (confirmar antes de atribuir)"
+    }
+   ],
+   "Copy": [
+    {
+     "ref": "86ajycujc",
+     "nome": "Enviar disparo de vídeo nos grupos",
+     "grupo": "Copy",
+     "inicio": "2026-11-06",
+     "fim": "2026-11-06",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajycujc\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86agfvhr3",
+     "nome": "Copy mensagem de vendas API comercial",
+     "grupo": "Copy",
+     "inicio": "2026-10-29",
+     "fim": "2026-11-05",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Copy: https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86agfvhr3\nResponsável no MTB 08/26: Adriane Möbbs, Matheus van der Ham (confirmar antes de atribuir)"
+    }
+   ],
+   "Webdesigner": [
+    {
+     "ref": "86ajwe3mt",
+     "nome": "Atualizar página de vendas com bônus",
+     "grupo": "Webdesigner",
+     "inicio": "2026-11-03",
+     "fim": "2026-11-04",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página de vendas: https://docs.google.com/document/d/1W59ORSZoqTIsof99oh0pmFteAtcYTZzq_DgRV1g6TkU/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajwe3mt\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    },
+    {
+     "ref": "86aju11re",
+     "nome": "Alterar link de redirecionamento live-zoom",
+     "grupo": "Webdesigner",
+     "inicio": "2026-11-02",
+     "fim": "2026-11-02",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nCopy página do Zoom: https://docs.google.com/document/d/1dzfD_XQE8UKmD1WfdN8g0avbNVzPB4qWKy0u4E4DDmI/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86aju11re\nResponsável no MTB 08/26: André Vivas (confirmar antes de atribuir)"
+    }
+   ],
+   "Automação": [
+    {
+     "ref": "86ajnz0rc",
+     "nome": "Criar automação do Ingresso",
+     "grupo": "Automação",
+     "inicio": "2026-11-02",
+     "fim": "2026-11-04",
+     "sprint": "S2",
+     "descricao": "Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nPasta Ingresso: https://drive.google.com/drive/folders/1BWcGy96zBbpPgyxy3lvVvN_G39WNKcPW\nInformações do ingresso: https://docs.google.com/document/d/1-ESgwPqdsY2spDUWCwuiJda1fF2q_cVOc9JqzIGPzIs/edit\nPasta Automação: https://drive.google.com/drive/folders/1FJnVUYVuMUGoX-cLA4cF1vYiBLKvHFDF\nDoc de automação: https://drive.google.com/file/d/1yZ2sGQIj-Oa9QUEh3RoRNAlGKfOoeG7d/view\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ajnz0rc\nResponsável no MTB 08/26: Equipe IAutomate (Júlio Couto) (confirmar antes de atribuir)"
+    }
+   ],
+   "Suporte / CS": [],
+   "Design": [
+    {
+     "ref": "86ahtp3vk",
+     "nome": "Criar slides do evento",
+     "grupo": "Design",
+     "inicio": "2026-11-02",
+     "fim": "2026-11-06",
+     "sprint": "S2",
+     "descricao": "Atualizar data para 09/11 e o prazo do bônus para 23h59 de 9 de novembro. Masterclass em Toxina Botulínica, aula ao vivo 09/11 às 20h (Zoom). Captação 02/11 a 09/11, carrinho FEB 09/11 a 11/11.\n\nSlides: https://docs.google.com/presentation/d/19aogb2JP9cSCm6aiN_zEMaRosvBsp_i_Jf2z6tUx5Vo/edit\nBriefing Slides: https://docs.google.com/document/d/1sa7hp7PMWbOd-mKMWDI2_a21wQVkeIhV4K-TjQHb8cc/edit\nPasta Artes: https://drive.google.com/drive/folders/1NjJT0aCDd3GSW3FT3DyHEJatFcwxiO5v\nBriefing Design: https://docs.google.com/document/d/1ibL6GyqX09hZiFmjNLEMXfYIuQBTlSJxPOHt8dazJko/edit\nDrive do lançamento: https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf\nLinks úteis: https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view\n\nTarefa espelhada do MTB 08/26: https://app.clickup.com/t/86ahtp3vk\nResponsável no MTB 08/26: Leo Quirino (confirmar antes de atribuir)"
+    }
+   ],
+   "Comercial": []
+  }
+ }
+}
