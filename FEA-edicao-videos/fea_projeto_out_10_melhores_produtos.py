@@ -73,6 +73,7 @@ TEMP4 = f"{K}/temporas_face_mao-rosto-espelho_pexels-6443768.mp4"
 SULCO1 = f"{K}/sulco_bigode_terco-inferior-sulco-nasolabial_pexels-3761533.mp4"
 SULCO2 = f"{K}/sulco_bigode_sorriso-sulco_pexels-8724246.mp4"
 SULCO3 = f"{K}/sulco_bigode_sorriso-terco-inferior_pexels-8724459.mp4"
+R = f"{T}/stock_real"   # filmagem real de pele e olheira (Pexels), pedido do Dr. em 22/10/2026
 IA = f"{T}/ia"   # ilustrações científicas por IA (exceção liberada pela Keila, 22/10/2026)
 P3D = f"{K}/pele_3d_proteinas-moleculas-vertical_pexels-25935022_1080.mp4"   # ilustração de artista (DeepMind)
 HA1 = f"{K}/acido_hialuronico_gota-serum-palma-vertical_pexels-8131887.mp4"
@@ -107,16 +108,16 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
       mover_palavra=[[18.66, 19.0]])
 video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[4.1, 8.4, f"{IA}/ia_olho_anatomia.mp4", 0.3, "split", "Anatomia da olheira"],
-       [8.4, 12.4, f"{IA}/ia_swelling.mp4", 0.5, "split", "Baixo swelling factor"],
-       [12.4, 16.0, HA1, 2.0, "split"],
-       [16.0, 19.5, P3D, 2.0, "split"],
+      [[4.1, 8.4, f"{C}/FEA-real-marcacao-olheira.mp4", 0.0, "split"],
+       [8.4, 12.4, f"{R}/olheira_massagem-olheira-escura_pexels-8075412.mp4", 2.0, "split"],
+       [12.4, 16.0, HA2, 1.0, "split"],
+       [16.0, 19.5, f"{R}/olheira_homem-maduro-bolsas-palpebrais_pexels-8724517.mp4", 2.0, "split"],
        [27.2, 31.8, f"{C}/IMG_2661.MOV", 24.0, "split"],
-       [33.0, 39.0, f"{IA}/ia_base_malar.mp4", 0.5, "split", "Pré-maxila e região malar"],
-       [39.1, 45.2, f"{IA}/ia_tear_trough.mp4", 0.5, "split", "Tear trough: pouca quantidade"],
-       [45.3, 50.2, CLIN3, 8.0, "split"],
-       [50.3, 56.0, f"{IA}/ia_ligamentos.mp4", 0.5, "split", "Zona delicada: ligamentos"],
-       [56.0, 59.8, f"{IA}/ia_espalhando.mp4", 0.5, "split", "Produto bem espalhado"],
+       [33.0, 39.0, f"{C}/FEA-real-canula-malar.mp4", 0.5, "split"],
+       [39.1, 45.2, f"{C}/FEA-real-canula-olheira.mp4", 0.5, "split"],
+       [45.3, 50.2, f"{C}/FEA-real-aplicacao-face.mp4", 0.5, "split"],
+       [50.3, 56.0, f"{C}/FEA-real-ligamentos.mp4", 0.0, "split"],
+       [56.0, 59.8, f"{C}/FEA-real-modelando-olheira.mp4", 0.0, "split"],
        [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "moda01",   # lounge deep house de moda (Keila: música de moda e beleza)
       realcar=[[0.0, 3.85, 4]])   # pergunta da entrevistadora fora do microfone
 video(3, "IMG_7936", "Os 3 melhores produtos para a linha de marionete", [0.0, 56.2],
@@ -179,11 +180,12 @@ video(7, "IMG_7942", "Os 3 melhores produtos para as têmporas", [0.0, 88.6],
        [75.4, 80.5, TEMP1, 5.0, "cheia"],
        [80.6, 87.5, TEMP4, 6.0, "split"]], "m07")
 
+# Feedback do Dr. (22/10/2026): imagens reais (casos da FEA e filmagem de pele), nada de 3D ou IA.
 # Versão B das olheiras (Keila, 22/10/2026): sem a pergunta da entrevistadora, o Dr. já abre
 # falando "3 melhores produtos para as olheiras" (3,9 s do bruto).
 v2b = dict(V[1], saida=V[1]["saida"].replace("/2- ", "/2B- ").replace(".mp4", " (Dr. abrindo).mp4"),
            faixas=[[3.85, 66.8]], realcar=[])
-v2b["casos"] = [[7.9, 11.8] + V[1]["casos"][1][2:], [11.8, 16.0] + V[1]["casos"][0][2:]] + V[1]["casos"][3:]
+v2b["casos"] = [[7.9, 12.4] + V[1]["casos"][0][2:]] + V[1]["casos"][2:]
 V.insert(2, v2b)
 
 # Ajuste da Keila (22/10/2026): Dr. sempre na tela (todos os inserts em tela dividida) e sem o CTA da Black.
