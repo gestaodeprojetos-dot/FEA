@@ -14,6 +14,8 @@ import json
 import os
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 T = sys.argv[1]
 FF = open(f"{T}/env.sh").read().split("=", 1)[1].strip()
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -37,33 +39,7 @@ def produtos(lista, fim):
     return out
 
 
-# correções de transcrição comuns ao lote
-COMUNS = [
-    [r"\bVitalice\b", "Vitalícia"], [r"\bitalícias\b", "vitalícias"],
-    [r"\bSaba ?[Mm]ais\b", "Saiba Mais"], [r"\bimunização facial\b", "harmonização facial"],
-    [r"\bMD-? ?[Cc]odes\b", "MD Codes"], [r"\bMDCodes\b", "MD Codes"],
-    [r"\bperiostal\b", "periosteal"], [r"\bacelerônico\b", "ácido hialurônico"],
-    [r"\bácido alurônico\b", "ácido hialurônico"], [r"\baluronidase\b", "hialuronidase"],
-    [r"\bBiestimulador\b", "Bioestimulador"], [r"\bgelinha\b", "G'"],
-    [r"\bNeurom[iy]s\b", "Neuramis"], [r"\bNeuronis Jeep\b", "Neuramis Deep"],
-    [r"\bResilane\b", "Restylane"], [r"\bRestylane Refine\b", "Restylane Refyne"],
-    [r"\bRefine\b", "Refyne"], [r"\bRestylane Define\b", "Restylane Defyne"],
-    [r"\bEptik S100\b", "e.p.t.q. S100"], [r"\bRenova\b", "Rennova"], [r"\bDeepline\b", "Deep Line"],
-    [r"\b[IE] ?voar\b", "Yvoire"], [r"\bYvoire,? [Cc]ont(ou|our)\b", "Yvoire Contour"],
-    [r"\bsubskin\b", "Subskin"], [r"\bJuvederm\b", "Juvéderm"],
-    [r"\bNuve Estimulate\b", "Neauvia Stimulate"], [r"\bBiogealiz\b", "Biogelis"],
-    [r"\bsuco naslobial\b", "sulco nasolabial"], [r"\bbigot?inês\b", "bigode chinês"],
-    [r"\breino de modulação\b", "rinomodelação"], [r"\bRino modelação\b", "Rinomodelação"],
-    [r"\bProfilo\b", "Profhilo"], [r"\bperdo de tempo\b", "perda de tempo"],
-    [r"\bGHKCU\b", "GHK-Cu"], [r"\bComo Vitalício\b", "Combo Vitalício"],
-    [r"\blado especial\b", "lote especial"], [r"\bOver Delivery\b", "over delivery"],
-    [r"\barteiras\b", "artérias"], [r"\brosteiro\b", "rosto inteiro"], [r"\bM face\b", "hemiface"],
-    [r"\bFace for face\b", "Full face"], [r"\b1250\b", "1.250"],
-    [r"\bparticipar, da nossa\b", "participar da nossa"], [r"\bclica aqui em cima a mais\b", "clica aqui em Saiba Mais"],
-    [r"\b[Vv]italícia, está\b", "Vitalícia está"], [r"\bnaslobial\b", "nasolabial"],
-    [r"\bRestylane Lift\b", "Restylane Lyft"], [r"\bbotox\b", "Botox"], [r"\bRestylane Kiss\b", "Restylane Kysse"], [r"\bYoutube\b", "YouTube"],
-    [r"\bmais, de 1\.250\b", "mais de 1.250"], [r"\bnós vemos\b", "nos vemos"], [r"\bo rinomodelação\b", "a rinomodelação"],
-]
+from fea_correcoes_marcas import COMUNS  # noqa: E402
 
 V = []
 

@@ -52,6 +52,11 @@ DESTAQUE_Y = 1200
 
 PROD_LADO = 552
 PROD_CENTRO = (540, 1125)
+SPLIT_TOPO = 1020          # caso clínico ocupa o topo até aqui (com o esfumado no fim)
+SPLIT_ESFUMADO = 240       # altura da faixa esfumaçada entre o caso e o Dr.
+SPLIT_DR_H = 1140          # faixa do vídeo do Dr. que desce para a metade de baixo (começa sob o esfumado)
+SPLIT_DR_Y = 200           # de onde ela sai no quadro original (rosto e mãos)
+LEG_Y_SPLIT = 1010         # na tela dividida a legenda fica na emenda (igual ao Reel de referência)
 PROD_CENTRO_ALTO = 700   # durante o título (caixas em y 1120 a 1290)
 PROD_DUR = 2.5
 
@@ -137,7 +142,7 @@ def eventos_titulo(cfg, linhas):
     return out
 
 
-def eventos_legenda(v, palavras, duracao, fim_fala):
+def eventos_legenda(v, palavras, duracao, fim_fala, splits=()):
     ts = base.ts
     out = []
     blocos = base.blocos_legenda(palavras)
@@ -168,7 +173,9 @@ def eventos_legenda(v, palavras, duracao, fim_fala):
         partes = texto.split(r"\N")
         n = len(partes)
         for k, p in enumerate(partes):
-            y = LEG_Y + (k - (n - 1) / 2) * LEG_PASSO
+            meio = (s + e) / 2
+            y0 = LEG_Y_SPLIT if any(a <= meio <= b for a, b in splits) else LEG_Y
+            y = y0 + (k - (n - 1) / 2) * LEG_PASSO
             out.append(f"Dialogue: 0,{ts(s)},{ts(e)},Leg,,0,0,0,,{{\\an5\\pos({W // 2},{y:.0f})}}{p}\n")
     return out
 
@@ -305,7 +312,14 @@ def gerar(cfg, v, so_legenda=False):
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     linhas = v.get("titulo_linhas") or quebrar_titulo(cfg, v["titulo"])
     ev = [ass_header()] + eventos_titulo(cfg, linhas)
-    ev += eventos_legenda(v, palavras, duracao, duracao)
+    casos = []
+    for c in v.get("casos", []):
+        t0, t1 = para_editado(c[0], v["manter"]), para_editado(min(c[1], v["manter"][-1][1] - 0.01), v["manter"])
+        if t0 is None or t1 is None or t1 <= t0:
+            print(f"  AVISO: caso clínico em {c[0]} s caiu num corte")
+            continue
+        casos.append((max(t0, TIT_FIM), t1, c[2], c[3] if len(c) > 3 else 0.0))
+    ev += eventos_legenda(v, palavras, duracao, duracao, [(a, b) for a, b, _, _ in casos])
     for a, b, texto in v.get("destaques", []):
         ta, tb = para_editado(a, v["manter"]), para_editado(min(b, v["manter"][-1][1] - 0.01), v["manter"])
         if ta is not None:
@@ -328,23 +342,67 @@ def gerar(cfg, v, so_legenda=False):
         arot.append(f"[a{i}]")
     partes.append("".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc]")
     partes.append("".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac0]")
-    partes.append("[1:a]aresample=48000,aformat=channel_layouts=stereo,volume=0.9[wh]")
-    partes.append("[ac0][wh]amix=inputs=2:duration=first:normalize=0[ac]")
-    atual = "[vc]"
-    pasta_tmp = os.path.dirname(v["saida"]) or "."
-    for k, prod in enumerate(v.get("produtos", [])):
+    def n_entradas():
+        return len([e for e in entradas if e == "-i"])
+
+    # efeitos sonoros: arrasto do título no início, "pop" em cada produto, whoosh em cada caso clínico
+    sons = [("[1:a]", 0.0, 0.9)]
+    prods = []
+    for prod in v.get("produtos", []):
         t0 = para_editado(prod[0], v["manter"])
         if t0 is None:
             print(f"  AVISO: produto {prod[1]} em {prod[0]} s caiu num corte")
             continue
-        dur = prod[2] if len(prod) > 2 else PROD_DUR
-        card = cartao_produto(prod[1], os.path.join(pasta_tmp, f".card_{k}.png"))
+        prods.append((t0, prod[1], prod[2] if len(prod) > 2 else PROD_DUR))
+    if cfg.get("sfx_pop"):
+        for t0, _, _ in prods:
+            entradas += ["-i", cfg["sfx_pop"]]
+            sons.append((f"[{n_entradas() - 1}:a]", t0, 0.5))
+    if cfg.get("sfx_split"):
+        for t0, _, _, _ in casos:
+            entradas += ["-i", cfg["sfx_split"]]
+            sons.append((f"[{n_entradas() - 1}:a]", max(0.0, t0 - 0.15), 0.55))
+    rot = ["[ac0]"]
+    for k, (r, t, vol) in enumerate(sons):
+        ms = int(t * 1000)
+        partes.append(f"{r}aresample=48000,aformat=channel_layouts=stereo,volume={vol},adelay={ms}|{ms}[s{k}]")
+        rot.append(f"[s{k}]")
+    if v.get("musica", cfg.get("musica")):
+        # trilha de fundo baixa, em loop, com fade no fim (a voz do Dr. sempre na frente)
+        entradas += ["-stream_loop", "-1", "-i", v.get("musica", cfg.get("musica"))]
+        vol = v.get("musica_vol", cfg.get("musica_vol", 0.07))
+        partes.append(f"[{n_entradas() - 1}:a]aresample=48000,aformat=channel_layouts=stereo,"
+                      f"atrim=0:{duracao:.3f},volume={vol},afade=t=in:d=1.0,"
+                      f"afade=t=out:st={max(0, duracao - 1.5):.3f}:d=1.5[mus]")
+        rot.append("[mus]")
+    partes.append("".join(rot) + f"amix=inputs={len(rot)}:duration=first:normalize=0[ac]")
+    atual = "[vc]"
+    # tela dividida: caso clínico em cima, Dr. embaixo, faixa esfumaçada no meio (modelo da Keila, 22/10)
+    for k, (t0, t1, clip, ini) in enumerate(casos):
+        entradas += ["-ss", f"{ini:.2f}", "-t", f"{t1 - t0 + 0.5:.2f}", "-i", clip]
+        idx = n_entradas() - 1
+        en = f"enable='between(t,{t0:.3f},{t1:.3f})'"
+        partes.append(f"{atual}split[base{k}][dr{k}]")
+        partes.append(f"[dr{k}]crop={W}:{SPLIT_DR_H}:0:{SPLIT_DR_Y}[drc{k}]")
+        partes.append(f"[base{k}][drc{k}]overlay=0:{H - SPLIT_DR_H}:{en}[bm{k}]")
+        partes.append(f"[{idx}:v]scale={W}:{SPLIT_TOPO}:force_original_aspect_ratio=increase,crop={W}:{SPLIT_TOPO},"
+                      f"setsar=1,fps=30,format=rgba,geq=r='r(X,Y)':g='g(X,Y)':b='b(X,Y)':"
+                      f"a='255*clip(({SPLIT_TOPO}-Y)/{SPLIT_ESFUMADO},0,1)',"
+                      f"setpts=PTS-STARTPTS+{t0:.3f}/TB[cs{k}]")
+        partes.append(f"[bm{k}][cs{k}]overlay=0:0:eof_action=pass:{en}[sp{k}]")
+        atual = f"[sp{k}]"
+    pasta_tmp = os.path.dirname(v["saida"]) or "."
+    for k, (t0, img, dur) in enumerate(prods):
+        card = cartao_produto(img, os.path.join(pasta_tmp, f".card_{k}.png"))
         entradas += ["-loop", "1", "-t", f"{dur:.2f}", "-framerate", "30", "-i", card]
-        idx = 2 + k
+        idx = n_entradas() - 1
         partes.append(f"[{idx}:v]format=rgba,scale=w='trunc(iw*min(1,0.82+t*1.2)/2)*2':h=-2:eval=frame,"
                       f"fade=t=in:d=0.1:alpha=1,setpts=PTS-STARTPTS+{t0:.3f}/TB[p{k}]")
         # citado enquanto o título está na tela: o quadro sobe para acima do título
         cy = PROD_CENTRO_ALTO if t0 < TIT_FIM else PROD_CENTRO[1]
+        # na tela dividida o produto fica no centro do caso clínico (metade de cima)
+        if any(a <= t0 <= b for a, b, _, _ in casos):
+            cy = SPLIT_TOPO // 2
         partes.append(f"{atual}[p{k}]overlay=x='{PROD_CENTRO[0]}-w/2':y='{cy}-h/2':eval=frame:"
                       f"enable='between(t,{t0:.3f},{t0 + dur:.3f})'[o{k}]")
         atual = f"[o{k}]"
