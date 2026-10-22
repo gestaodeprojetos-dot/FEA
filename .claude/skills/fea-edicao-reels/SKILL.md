@@ -38,7 +38,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Tirar falas que atacam colegas ou concorrentes (ex.: "é tudo marketing, todo mundo finge"). Linha vermelha FEA: atacar o sistema, nunca pessoas.
 - **Deixar o Dr. mostrar a técnica (regra principal, Keila 26/09/2026):** só cortar quando o Dr. **não está fazendo nada** (parado, esperando, limpando longamente, conversando fora do tema). Procedimento acontecendo, com cânula ou agulha trabalhando, marcação sendo feita ou resultado sendo mostrado, **fica, mesmo sem fala**. Silêncio não é motivo de corte: olhar os quadros antes de cortar qualquer pausa. Vídeo picotado ou curto demais foi reprovado nos casos "4mL e bio" (olheiras, labial, bioestimulador, bigode chinês).
 - **Outro lado do rosto**: se o Dr. repete o procedimento do outro lado, a repetição mostra técnica e fica. Só encurtar se passar de 3 min e o trecho for idêntico ao primeiro lado.
-- **Início do vídeo**: começa assim que o Dr. começa a falar (cerca de 0,25 s antes da voz). Medir o início da voz no áudio (volume acima de ~42 dB por 0,5 s), não pelo Whisper, que erra o tempo da primeira palavra depois de silêncio (pedido de 24/09/2026).
+- **Início do vídeo: zero silêncio, já na primeira palavra** (regra fixa, Keila 22/10/2026: "quero pegar ele já começando a falar, não parado"). Vale para todo vídeo (Reels, Ads, criativo). Nada do Dr. parado, nada da respiração antes da fala: o vídeo abre na primeira sílaba, no máximo 50 ms antes. A respiração aparece no áudio só uns 15 dB acima do ruído e enganava a medição antiga (42 dB, 0,25 s antes); a voz fica mais de 25 dB acima. Os dois scripts aplicam isso sozinhos (`inicio_na_fala` em `fea_editar_video.py`, usado também pelo `fea_criativo_ads.py`). Nunca usar o tempo do Whisper para o início: ele marca a primeira palavra em cima da respiração.
 - **Ponto de corte exato**: o script encaixa cada corte no respiro entre palavras medido no áudio (`encaixar_cortes`; o tempo das palavras da transcrição erra até 0,3 s e não é usado), para não pegar o início de outra palavra ("básico bem feito" do vídeo 10).
 - **Final do vídeo**: nunca terminar com frase ou palavra cortada, nem com cara de que falta algo ("vamos lá", "agora a gente vai para..." sem concluir). Se ele não conclui a frase, o vídeo acaba na última frase completa antes dela.
 - **Espelho**: cortar quando o Dr. pede o espelho ("espelhinho para ela ver") e a paciente se olha, a não ser que ele esteja explicando algo técnico.
@@ -136,3 +136,14 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Criativo de anúncio (Ads), formato aprovado em 22/10/2026
+
+Script `FEA-edicao-videos/fea_criativo_ads.py` (projeto de exemplo: `FEA-projeto-ads-bfv-out-22.json`). Diferente do Reels:
+
+- Sem título de 3 s; legenda no padrão conteúdo (Montserrat Bold 56); frases de impacto em `destaques` (fonte maior, dourado #EDBF72 da Black Vitalícia, com o texto exato da fala).
+- Trilha por baixo da voz em **0,07** com compressor (a 0,13 ficou alta e o crescendo da faixa no final incomodou); no CTA sobe só para 0,10, em rampa de 1 s.
+- Gravação de tela: sincronizar pelo áudio (correlação do envelope, `offset` = tela menos bruto) e usar `inserts` "split" (tela na largura toda em cima, Dr. embaixo) enquanto o Dr. fala do que está na tela.
+- CTA curto: `FEA-CTA-Black-Vitalicia-5s.mp4` (Drive, pasta identidade "03 - 2026").
+- Pausas longas encolhidas (`apertar_pausas`) e início direto na primeira palavra.
+- Pasta de Ads da Black: `1Rzq7m9bxT02jIugDf-FHziXdhMZ3aJLN`, nome `Ads 0NN - Tema - BFV.mp4`.

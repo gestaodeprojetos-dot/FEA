@@ -167,6 +167,7 @@ def renderizar(cfg, v, so_legenda=False):
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     manter = E.encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
                                [w for seg in trans for w in seg["words"]])
+    manter = E.inicio_na_fala(manter, db_voz[0], db_voz[2])
     if v.get("apertar_pausas"):
         manter = apertar_pausas(manter, db_voz[0], db_voz[2], v["apertar_pausas"])
     palavras = palavras_do_projeto(v, db_voz)
