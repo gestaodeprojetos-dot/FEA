@@ -108,16 +108,16 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
       mover_palavra=[[18.66, 19.0]])
 video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[4.1, 8.4, f"{C}/FEA-real-marcacao-olheira.mp4", 0.0, "split"],
-       [8.4, 12.4, f"{R}/olheira_massagem-olheira-escura_pexels-8075412.mp4", 2.0, "split"],
-       [12.4, 16.0, HA2, 1.0, "split"],
-       [16.0, 19.5, f"{R}/olheira_homem-maduro-bolsas-palpebrais_pexels-8724517.mp4", 2.0, "split"],
-       [27.2, 31.8, f"{C}/IMG_2661.MOV", 24.0, "split"],
-       [33.0, 39.0, f"{C}/FEA-real-canula-malar.mp4", 0.5, "split"],
-       [39.1, 45.2, f"{C}/FEA-real-canula-olheira.mp4", 0.5, "split"],
-       [45.3, 50.2, f"{C}/FEA-real-aplicacao-face.mp4", 0.5, "split"],
-       [50.3, 56.0, f"{C}/FEA-real-ligamentos.mp4", 0.0, "split"],
-       [56.0, 59.8, f"{C}/FEA-real-modelando-olheira.mp4", 0.0, "split"],
+      [[4.1, 8.4, f"{R}/olheira_massagem-olheira-escura_pexels-8075412.mp4", 1.0, "split"],
+       [8.4, 12.4, f"{R}/olheira_homem-maduro-bolsas-palpebrais_pexels-8724517.mp4", 2.0, "split"],
+       [12.4, 16.0, f"{R}/gel_creme-na-ponta-do-dedo_pexels-8141586.mp4", 0.5, "split"],
+       [16.0, 19.5, f"{R}/olho_macro-pele-madura-vertical_pexels-7299471.mp4", 1.0, "split"],
+       [27.2, 31.8, f"{R}/creme_aplicacao-olheira-mulher-madura_pexels-7306361.mp4", 3.0, "split"],
+       [33.0, 39.0, f"{R}/pele_mulher-madura-close-rosto_pexels-10251379.mp4", 1.0, "split"],
+       [39.1, 45.2, f"{R}/creme_pontos-de-creme-sob-olho_pexels-8141584.mp4", 0.5, "split"],
+       [45.3, 50.2, f"{R}/clinica_marcacao-face-luvas_pexels-13008914.mp4", 2.0, "split"],
+       [50.3, 56.0, f"{R}/clinica_exame-face-luvas_pexels-6036534.mp4", 2.0, "split"],
+       [56.0, 59.8, f"{R}/creme_massagem-periorbital-vertical_pexels-8995582.mp4", 3.0, "split"],
        [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "moda01",   # lounge deep house de moda (Keila: música de moda e beleza)
       realcar=[[0.0, 3.85, 4]])   # pergunta da entrevistadora fora do microfone
 video(3, "IMG_7936", "Os 3 melhores produtos para a linha de marionete", [0.0, 56.2],
@@ -180,7 +180,8 @@ video(7, "IMG_7942", "Os 3 melhores produtos para as têmporas", [0.0, 88.6],
        [75.4, 80.5, TEMP1, 5.0, "cheia"],
        [80.6, 87.5, TEMP4, 6.0, "split"]], "m07")
 
-# Feedback do Dr. (22/10/2026): imagens reais (casos da FEA e filmagem de pele), nada de 3D ou IA.
+# Feedback do Dr. e da Keila (22/10/2026): imagens reais e impactantes de fora dos brutos (filmagem real de pele),
+# nada de 3D ou IA; só o antes e depois final vem de caso da FEA.
 # Versão B das olheiras (Keila, 22/10/2026): sem a pergunta da entrevistadora, o Dr. já abre
 # falando "3 melhores produtos para as olheiras" (3,9 s do bruto).
 v2b = dict(V[1], saida=V[1]["saida"].replace("/2- ", "/2B- ").replace(".mp4", " (Dr. abrindo).mp4"),
