@@ -6,6 +6,7 @@ Vídeo: baixa, transcreve o áudio (Whisper small) e monta uma prancha com 1 qua
 Uso: python3 fea_auditar_criativos.py mapa.json PASTA_SAIDA
 """
 import json, os, re, subprocess, sys, unicodedata
+import numpy as np
 from PIL import Image, ImageDraw, ImageOps
 sys.path.insert(0, "/home/user/FEA/FEA-edicao-videos")
 from fea_drive import token, baixar_arquivo
@@ -52,9 +53,10 @@ for v in [v for v in itens if v["mime"] in VID]:
     vid = os.path.join(saida, v["id"] + ".video")
     if os.path.exists(os.path.join(saida, v["id"] + ".json")): continue
     baixar_arquivo(tk, v["id"], vid)
-    wav = vid + ".wav"
-    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", vid, "-ac", "1", "-ar", "16000", wav], check=True)
-    segs, _ = modelo.transcribe(wav, language="pt", vad_filter=True)
+    # áudio decodificado pelo ffmpeg (o PyAV instalado não aceita o parâmetro que o faster-whisper usa)
+    bruto = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", vid, "-ac", "1", "-ar", "16000", "-f", "f32le", "-"],
+                           check=True, capture_output=True).stdout
+    segs, _ = modelo.transcribe(np.frombuffer(bruto, np.float32), language="pt", vad_filter=True)
     texto = " ".join(s.text.strip() for s in segs)
     qdir = vid + "_q"; os.makedirs(qdir, exist_ok=True)
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", vid, "-vf", "fps=1/2,scale=360:-2", f"{qdir}/%03d.jpg"], check=True)
@@ -64,7 +66,7 @@ for v in [v for v in itens if v["mime"] in VID]:
     data = bool(re.search(r"agosto|onze de|\b11\b|terça", texto, re.I))
     resumo[v["id"]] = {"nome": nome, "caminho": v["caminho"], "texto": texto, "fala_data": data}
     json.dump(resumo[v["id"]], open(os.path.join(saida, v["id"] + ".json"), "w"), ensure_ascii=False)
-    for f in (vid, wav): os.remove(f)
+    os.remove(vid)
     subprocess.run(["rm", "-rf", qdir])
     print("VIDEO", "DATA!" if data else "ok   ", nome, flush=True)
 print("FIM")
