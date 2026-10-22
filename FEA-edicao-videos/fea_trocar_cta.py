@@ -5,7 +5,10 @@ A trilha do CTA é ajustada para a mesma loudness (LUFS) do conteúdo mantido, p
 volume na emenda. Cada corte interno ganha fade de 15 ms no áudio para não estalar.
 
 Uso:
-    python3 fea_trocar_cta.py FFMPEG entrada.mov CTA.mp4 saida.mp4 INICIO-FIM [INICIO-FIM ...]
+    python3 fea_trocar_cta.py FFMPEG entrada.mov CTA.mp4 saida.mp4 [--ganho=DB] INICIO-FIM [INICIO-FIM ...]
+
+--ganho fixa o ganho do áudio do CTA em vez de igualar a loudness (use --ganho=0 quando o CTA
+for só efeito sonoro, como o whoosh + teclado do CTA da equipe, que já vem no volume certo).
 
 Ex.: Ads 003, cortando "porque dia 20 de outubro" e o CTA antigo (a partir de 47,25 s):
     python3 fea_trocar_cta.py ffmpeg ads003.mp4 cta.mp4 out.mp4 0-19.30 21.27-47.25
@@ -22,9 +25,14 @@ def loudness(ffmpeg, arquivo, filtro=""):
 
 def main():
     ffmpeg, entrada, cta, saida = sys.argv[1:5]
-    trechos = [tuple(map(float, t.split("-"))) for t in sys.argv[5:]]
+    args = sys.argv[5:]
+    fixo = [a for a in args if a.startswith("--ganho=")]
+    trechos = [tuple(map(float, t.split("-"))) for t in args if not t.startswith("--")]
     sel = "+".join(f"between(t,{a},{b})" for a, b in trechos)
-    ganho = loudness(ffmpeg, entrada, f"aselect='{sel}'") - loudness(ffmpeg, cta)
+    if fixo:
+        ganho = float(fixo[-1].split("=")[1])
+    else:
+        ganho = loudness(ffmpeg, entrada, f"aselect='{sel}'") - loudness(ffmpeg, cta)
 
     partes, rot = [], []
     for i, (a, b) in enumerate(trechos):
