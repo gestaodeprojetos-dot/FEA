@@ -116,7 +116,7 @@ video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
        [33.0, 39.0, f"{R}/pele_mulher-madura-close-rosto_pexels-10251379.mp4", 1.0, "split"],
        [39.1, 45.2, f"{R}/creme_pontos-de-creme-sob-olho_pexels-8141584.mp4", 0.5, "split"],
        [45.3, 50.2, f"{R}/clinica_marcacao-face-luvas_pexels-13008914.mp4", 2.0, "split"],
-       [50.3, 56.0, f"{R}/clinica_exame-face-luvas_pexels-6036534.mp4", 2.0, "split"],
+       [50.3, 56.0, f"{R}/olheira_mulher-olhando-espelho_pexels-6443768.mp4", 1.0, "split"],   # Keila: nada de mandíbula quando o assunto é olheira
        [56.0, 59.8, f"{R}/creme_massagem-periorbital-vertical_pexels-8995582.mp4", 3.0, "split"],
        [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "moda01",   # lounge deep house de moda (Keila: música de moda e beleza)
       realcar=[[0.0, 3.85, 4]])   # pergunta da entrevistadora fora do microfone
