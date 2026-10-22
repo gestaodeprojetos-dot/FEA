@@ -7,6 +7,10 @@ em cada letra. Trilha suave por baixo (fade-in curto, fade-out no fim).
 
 Uso:
     python3 fea_cta_black_digitando.py LOGO.png FONTE.ttf FFMPEG MUSICA.wav CLIQUES.wav saida.mp4
+    python3 fea_cta_black_digitando.py LOGO.png FONTE.ttf FFMPEG --audio AUDIO_PRONTO saida.mp4
+
+--audio usa um áudio já pronto (ex.: whoosh + teclado do CTA antigo da equipe) no lugar da
+mistura de trilha e cliques.
 
 CLIQUES.wav = gravação curta de teclado com toques separados por silêncio; cada toque vira
 uma amostra e as letras usam as amostras em rodízio.
@@ -18,8 +22,9 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 W, H, FPS, DUR, SR = 1080, 1920, 30, 5.0, 48000
 DOURADO = (227, 172, 102)
 TEXTO = "Toque em Saiba Mais"
-LOGO_INI, LOGO_FIM = 0.2, 1.7
-DIG_INI, DIG_PASSO = 1.9, 0.085
+LOGO_INI, LOGO_FIM = 0.05, 1.3
+# mesmo tempo do CTA que a equipe já usava: digitação de 1,48 s a 3,29 s
+DIG_INI, DIG_FIM = 1.48, 3.29
 GANHO_MUSICA_DB, GANHO_CLIQUE_DB = -6.0, -9.0
 
 
@@ -52,10 +57,11 @@ def amostras_de_clique(sinal):
 
 def tempos_digitacao():
     rnd = random.Random(7)
-    t, tempos = DIG_INI, []
-    for ch in TEXTO:
-        tempos.append(t)
-        t += DIG_PASSO * (1.6 if ch == " " else rnd.uniform(0.8, 1.2))
+    passos = [1.6 if ch == " " else rnd.uniform(0.85, 1.15) for ch in TEXTO[1:]]
+    esc = (DIG_FIM - DIG_INI) / sum(passos)
+    tempos = [DIG_INI]
+    for p in passos:
+        tempos.append(tempos[-1] + p * esc)
     return tempos
 
 
@@ -88,8 +94,11 @@ def montar_audio(ffmpeg, musica_p, cliques_p, destino):
 
 def main():
     logo_p, fonte_p, ffmpeg, musica_p, cliques_p, saida = sys.argv[1:7]
-    audio_tmp = saida + ".wav"
-    montar_audio(ffmpeg, musica_p, cliques_p, audio_tmp)
+    if musica_p == "--audio":
+        audio_tmp = cliques_p
+    else:
+        audio_tmp = saida + ".wav"
+        montar_audio(ffmpeg, musica_p, cliques_p, audio_tmp)
 
     logo = Image.open(logo_p).convert("RGBA")
     logo = logo.resize((860, round(logo.height * 860 / logo.width)), Image.LANCZOS)
