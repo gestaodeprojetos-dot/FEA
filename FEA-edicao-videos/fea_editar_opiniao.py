@@ -49,6 +49,7 @@ LEG_MAX = 22
 
 DESTAQUE_FS = 125
 DESTAQUE_Y = 1200
+ROT_FS, ROT_PAD, ROT_H, ROT_Y = 50, 34, 86, 190  # rótulo das ilustrações (topo da tela)
 
 PROD_LADO = 552
 PROD_CENTRO = (540, 1125)
@@ -112,11 +113,30 @@ Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour,
 Style: Tit,Montserrat Bold,{TIT_FS},&H00000000,&H00000000,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,4,0,0,0,1
 Style: Caixa,Montserrat Bold,20,&H00FFFFFF,&H00FFFFFF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
 Style: Leg,Montserrat Bold,{LEG_FS},&H00FFFFFF,&H00FFFFFF,&H00202020,&H90000000,0,0,0,0,100,100,0,0,1,2,1.5,5,60,60,0,1
+Style: Rot,Montserrat Bold,{ROT_FS},&H0099455B,&H0099455B,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1
 Style: Dest,Montserrat ExtraBold,{DESTAQUE_FS},&H00FFFFFF,&H00FFFFFF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,0,4,5,0,0,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
+
+
+def caixa_arredondada(w, h, r):
+    """Desenho ASS de um retângulo com cantos arredondados (bezier), origem no canto superior esquerdo."""
+    k = r * 0.45
+    return (f"m {r} 0 l {w - r} 0 b {w - k} 0 {w} {k} {w} {r} l {w} {h - r} b {w} {h - k} {w - k} {h} {w - r} {h} "
+            f"l {r} {h} b {k} {h} 0 {h - k} 0 {h - r} l 0 {r} b 0 {k} {k} 0 {r} 0")
+
+
+def eventos_rotulo(cfg, texto, t0, t1):
+    """Rótulo das ilustrações: caixa branca arredondada no topo, texto roxo FEA (#5B4599)."""
+    ts = base.ts
+    larg = largura(cfg, texto, ROT_FS) + 2 * ROT_PAD
+    x0, y0 = (W - larg) / 2, ROT_Y - ROT_H / 2
+    fad = r"\fad(180,150)"
+    return [f"Dialogue: 4,{ts(t0)},{ts(t1)},Caixa,,0,0,0,,"
+            rf"{{\pos({x0:.0f},{y0:.0f}){fad}\1a&H08&\p1}}{caixa_arredondada(round(larg), ROT_H, 18)}" "\n",
+            f"Dialogue: 5,{ts(t0)},{ts(t1)},Rot,,0,0,0,,{{\\an5\\pos({W // 2},{ROT_Y}){fad}}}{texto}\n"]
 
 
 def eventos_titulo(cfg, linhas):
@@ -332,6 +352,8 @@ def gerar(cfg, v, so_legenda=False):
             print(f"  AVISO: caso clínico em {c[0]} s caiu num corte")
             continue
         casos.append((max(t0, TIT_FIM), t1, c[2], c[3] if len(c) > 3 else 0.0, c[4] if len(c) > 4 else "split"))
+        if len(c) > 5 and c[5]:
+            ev += eventos_rotulo(cfg, c[5], max(t0, TIT_FIM) + 0.15, t1)
     ev += eventos_legenda(v, palavras, duracao, duracao, [(a, b) for a, b, _, _, modo in casos if modo == "split"])
     for a, b, texto in v.get("destaques", []):
         ta, tb = para_editado(a, v["manter"]), para_editado(min(b, v["manter"][-1][1] - 0.01), v["manter"])

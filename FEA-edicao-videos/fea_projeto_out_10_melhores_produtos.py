@@ -73,6 +73,7 @@ TEMP4 = f"{K}/temporas_face_mao-rosto-espelho_pexels-6443768.mp4"
 SULCO1 = f"{K}/sulco_bigode_terco-inferior-sulco-nasolabial_pexels-3761533.mp4"
 SULCO2 = f"{K}/sulco_bigode_sorriso-sulco_pexels-8724246.mp4"
 SULCO3 = f"{K}/sulco_bigode_sorriso-terco-inferior_pexels-8724459.mp4"
+IA = f"{T}/ia"   # ilustrações científicas por IA (exceção liberada pela Keila, 22/10/2026)
 P3D = f"{K}/pele_3d_proteinas-moleculas-vertical_pexels-25935022_1080.mp4"   # ilustração de artista (DeepMind)
 HA1 = f"{K}/acido_hialuronico_gota-serum-palma-vertical_pexels-8131887.mp4"
 HA2 = f"{K}/acido_hialuronico_gel-textura-espalhando_pexels-10098025.mp4"
@@ -106,16 +107,16 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
       mover_palavra=[[18.66, 19.0]])
 video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[4.1, 8.0, OLHO_ESP, 1.0, "cheia"],
-       [8.0, 12.0, HA1, 2.0, "split"],
-       [12.2, 16.0, OLHO1, 1.0, "cheia"],
+      [[4.1, 8.4, f"{IA}/ia_olho_anatomia.mp4", 0.3, "cheia", "Anatomia da olheira"],
+       [8.4, 12.4, f"{IA}/ia_swelling.mp4", 0.5, "cheia", "Baixo swelling factor"],
+       [12.4, 16.0, OLHO1, 1.0, "cheia"],
        [16.0, 19.5, P3D, 2.0, "split"],
-       [27.2, 31.8, OLHO2, 1.0, "cheia"],
-       [33.6, 39.6, f"{C}/IMG_2661.MOV", 24.0, "split"],
-       [39.8, 44.5, CLIN3, 8.0, "split"],
-       [45.0, 50.2, OLHO1, 3.0, "cheia"],
-       [50.4, 56.2, f"{C}/IMG_2661.MOV", 12.0, "split"],
-       [56.3, 60.8, HA1, 8.0, "split"],
+       [27.2, 31.8, f"{C}/IMG_2661.MOV", 24.0, "split"],
+       [33.0, 39.0, f"{IA}/ia_base_malar.mp4", 0.5, "cheia", "Pré-maxila e região malar"],
+       [39.1, 45.2, f"{IA}/ia_tear_trough.mp4", 0.5, "cheia", "Tear trough: pouca quantidade"],
+       [45.3, 50.2, CLIN3, 8.0, "split"],
+       [50.3, 56.0, f"{IA}/ia_ligamentos.mp4", 0.5, "cheia", "Zona delicada: ligamentos"],
+       [56.0, 61.0, f"{IA}/ia_espalhando.mp4", 0.5, "cheia", "Produto bem espalhado"],
        [61.0, 65.5, OLHO_ESP, 2.0, "cheia"]], "m02")
 video(3, "IMG_7936", "Os 3 melhores produtos para a linha de marionete", [0.0, 56.2],
       [(11.1, "neauvia_stimulate"), (22.8, "biogelis_volume"), (23.9, "singderm")],

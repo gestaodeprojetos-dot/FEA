@@ -178,7 +178,7 @@ def ler_ass(caminho):
         p = linha.rstrip("\n").split(",", 9)
         s, e, estilo = ts(p[1]), ts(p[2]), p[3]
         txt = re.sub(r"\{[^}]*\}", "", p[9]).replace("\\N", " ").strip()
-        if estilo in ("Caixa", "Dest"):      # caixas do título e destaque (estilo opinião)
+        if estilo in ("Caixa", "Dest", "Rot"):  # caixas do título, destaque e rótulo das ilustrações
             continue
         (titulo if estilo in ("Titulo", "Tit") else legendas).append((s, e, txt))
     return titulo, legendas
