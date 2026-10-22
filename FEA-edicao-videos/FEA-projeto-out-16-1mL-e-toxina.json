@@ -1,11 +1,11 @@
 {
  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7290.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7290.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/1- Planejamento de olheiras.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7290.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7290.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/1- Planejamento de olheiras.mp4",
    "titulo": "Planejamento de olheiras",
    "titulo_origem": "imagem",
    "parte": null,
@@ -24,9 +24,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7291.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7291.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/2- Olheiras com bolsa Parte 1.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7291.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7291.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/2- Olheiras com bolsa Parte 1.mp4",
    "titulo": "Olheiras com bolsa",
    "titulo_origem": "imagem",
    "parte": 1,
@@ -65,9 +65,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7291.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7291.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/2- Olheiras com bolsa Parte 2.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7291.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7291.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/2- Olheiras com bolsa Parte 2.mp4",
    "titulo": "Olheiras com bolsa",
    "titulo_origem": "imagem",
    "parte": 2,
@@ -124,9 +124,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7297_7296.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7297_7296.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/3- Resultado das olheiras com bolsa.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7297_7296.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7297_7296.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/3- Resultado das olheiras com bolsa.mp4",
    "titulo": "Resultado das olheiras com bolsa",
    "titulo_origem": "inventado",
    "parte": null,
@@ -153,9 +153,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7298.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7298.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/4- Planejamento toxina.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7298.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7298.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/4- Planejamento toxina.mp4",
    "titulo": "Planejamento toxina",
    "titulo_origem": "imagem",
    "parte": null,
@@ -189,9 +189,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7301.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7301.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/5- Técnica da coroa.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7301.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7301.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/5- Técnica da coroa.mp4",
    "titulo": "Técnica da coroa",
    "titulo_origem": "imagem",
    "parte": null,
@@ -208,9 +208,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7302.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7302.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/6- Orbiculares.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7302.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7302.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/6- Orbiculares.mp4",
    "titulo": "Orbiculares",
    "titulo_origem": "imagem",
    "parte": null,
@@ -237,9 +237,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7300.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7300.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/7- Glabela.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7300.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7300.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/7- Glabela.mp4",
    "titulo": "Glabela",
    "titulo_origem": "imagem",
    "parte": null,
@@ -263,12 +263,18 @@
      "\\b[Cc]alda\\b",
      "cauda"
     ]
+   ],
+   "remover_legenda": [
+    [
+     43.1,
+     43.5
+    ]
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/IMG_7303.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/b16/tr/IMG_7303.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/f5bdb807-5c6e-5ed0-8bbe-8d2043e9042f/scratchpad/out/e16/8- Nasal.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/IMG_7303.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/b16/tr/IMG_7303.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/e51d7ee2-e9f5-5137-9e00-d549c0b8bf88/scratchpad/out/e16/8- Nasal.mp4",
    "titulo": "Nasal",
    "titulo_origem": "imagem",
    "parte": null,
