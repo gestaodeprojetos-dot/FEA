@@ -5,8 +5,11 @@ Fundo = banner.pdf da pasta "03 - 2026" da identidade visual, com logo, data e t
 (sobram só o palco e os raios dourados). Logo = BFV_Asset 15@4x.png (BLACK FRIDAY branco,
 VITALÍCIA dourado). Botão no estilo da pílula de data do banner (borda dourada, texto branco).
 
+Trilha opcional: MUSICA a partir de INICIO segundos (impacto da batida cai quando a logo entra),
+com fade-out no último 0,6 s. Sem MUSICA, sai com áudio mudo para concatenar.
+
 Uso:
-    python3 fea_cta_black.py FUNDO.png LOGO.png FONTE_BOLD.ttf FFMPEG saida.mp4
+    python3 fea_cta_black.py FUNDO.png LOGO.png FONTE_BOLD.ttf FFMPEG saida.mp4 [MUSICA INICIO]
 """
 import subprocess, sys
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -82,6 +85,12 @@ def colar_centro(base, img, cx, cy, escala=1.0, alfa=1.0):
 
 def main():
     fundo_p, logo_p, fonte_p, ffmpeg, saida = sys.argv[1:6]
+    if len(sys.argv) > 6:
+        audio = ["-ss", sys.argv[7] if len(sys.argv) > 7 else "0", "-t", str(DUR), "-i", sys.argv[6]]
+        filtro_a = ["-af", f"aformat=sample_rates=48000:channel_layouts=stereo,afade=t=out:st={DUR - 0.6}:d=0.6"]
+    else:
+        audio = ["-f", "lavfi", "-t", str(DUR), "-i", "anullsrc=channel_layout=stereo:sample_rate=48000"]
+        filtro_a = []
     fundo = montar_fundo(fundo_p)
     logo = Image.open(logo_p).convert("RGBA")
     logo = logo.resize((900, round(logo.height * 900 / logo.width)), Image.LANCZOS)
@@ -91,7 +100,7 @@ def main():
     proc = subprocess.Popen([
         ffmpeg, "-y", "-loglevel", "error",
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-        "-f", "lavfi", "-t", str(DUR), "-i", "anullsrc=channel_layout=stereo:sample_rate=48000",
+        *audio, *filtro_a,
         "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", saida],
         stdin=subprocess.PIPE)
