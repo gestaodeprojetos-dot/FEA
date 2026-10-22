@@ -105,19 +105,18 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
        [42.6, 46.0, HA2, 4.0, "split"],
        [46.2, 49.5, LAB2, 5.0, "cheia"]], "m01",
       mover_palavra=[[18.66, 19.0]])
-video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
+video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [3.7, 66.8],   # 0 a 3,7 s: take de ensaio repetido
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[4.1, 8.4, f"{IA}/ia_olho_anatomia.mp4", 0.3, "cheia", "Anatomia da olheira"],
-       [8.4, 12.4, f"{IA}/ia_swelling.mp4", 0.5, "cheia", "Baixo swelling factor"],
-       [12.4, 16.0, OLHO1, 1.0, "cheia"],
+      [[7.8, 11.8, f"{IA}/ia_swelling.mp4", 0.5, "split", "Baixo swelling factor"],
+       [11.8, 16.0, f"{IA}/ia_olho_anatomia.mp4", 0.3, "split", "Anatomia da olheira"],
        [16.0, 19.5, P3D, 2.0, "split"],
        [27.2, 31.8, f"{C}/IMG_2661.MOV", 24.0, "split"],
-       [33.0, 39.0, f"{IA}/ia_base_malar.mp4", 0.5, "cheia", "Pré-maxila e região malar"],
-       [39.1, 45.2, f"{IA}/ia_tear_trough.mp4", 0.5, "cheia", "Tear trough: pouca quantidade"],
+       [33.0, 39.0, f"{IA}/ia_base_malar.mp4", 0.5, "split", "Pré-maxila e região malar"],
+       [39.1, 45.2, f"{IA}/ia_tear_trough.mp4", 0.5, "split", "Tear trough: pouca quantidade"],
        [45.3, 50.2, CLIN3, 8.0, "split"],
-       [50.3, 56.0, f"{IA}/ia_ligamentos.mp4", 0.5, "cheia", "Zona delicada: ligamentos"],
-       [56.0, 61.0, f"{IA}/ia_espalhando.mp4", 0.5, "cheia", "Produto bem espalhado"],
-       [61.0, 65.5, OLHO_ESP, 2.0, "cheia"]], "m02")
+       [50.3, 56.0, f"{IA}/ia_ligamentos.mp4", 0.5, "split", "Zona delicada: ligamentos"],
+       [56.0, 59.8, f"{IA}/ia_espalhando.mp4", 0.5, "split", "Produto bem espalhado"],
+       [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "m02")
 video(3, "IMG_7936", "Os 3 melhores produtos para a linha de marionete", [0.0, 56.2],
       [(11.1, "neauvia_stimulate"), (22.8, "biogelis_volume"), (23.9, "singderm")],
       [[4.1, 7.4, SULCO3, 2.0, "cheia"],
@@ -177,6 +176,11 @@ video(7, "IMG_7942", "Os 3 melhores produtos para as têmporas", [0.0, 88.6],
        [62.7, 68.9, CLIN1, 1.0, "split"],
        [75.4, 80.5, TEMP1, 5.0, "cheia"],
        [80.6, 87.5, TEMP4, 6.0, "split"]], "m07")
+
+# Ajuste da Keila (22/10/2026): Dr. sempre na tela (todos os inserts em tela dividida) e sem o CTA da Black.
+for v in V:
+    v["cartela"] = False
+    v["casos"] = [c[:4] + ["split"] + c[5:] for c in v["casos"]]
 
 CTA = glob.glob(f"{T}/cta/*COMENTE*.mp4")
 json.dump({"ffmpeg": FF, "fontsdir": f"{T}/fonts", "whoosh": f"{AQUI}/FEA-som-arrasto-titulo.wav",
