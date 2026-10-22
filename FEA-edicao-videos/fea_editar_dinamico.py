@@ -4,13 +4,13 @@
 Diferente do fea_editar_video.py (título fixo + legenda em bloco), aqui o vídeo é montado
 quadro a quadro em Python (PIL) para ter os três ganchos e os cortes de impacto:
 
-  - gancho visual: tela dividida (imagem de impacto em cima, Dr. embaixo) com flash e zoom
-    a cada troca de imagem; imagens com tratamento "sinistro" (menos cor, mais contraste,
-    vinheta) para olheira, flacidez etc.
-  - gancho escrito: 2 a 3 linhas em caixas no meio da tela, uma delas em destaque roxo FEA.
+  - gancho visual: tela dividida esfumaçada (imagem de impacto em cima, Dr. embaixo) com flash,
+    zoom e whoosh a cada troca de imagem; fotos reais de rugas e flacidez com mais contraste e vinheta.
+  - gancho escrito: 2 a 3 linhas em caixas no meio da tela, brancas e uma preta de destaque.
   - gancho falado: a primeira frase do Dr., sem legenda enquanto o gancho escrito está na tela.
   - legenda de 1 a 3 palavras por vez (ExtraBold branca com sombra), no meio da tela.
-  - corte de respiros (pausas longas encurtadas) e zoom alternado no Dr. a cada trecho.
+  - corte de respiros (pausas longas encurtadas) e soco de zoom no Dr. a cada frase.
+  - efeitos sonoros (impacto, whoosh, obturador, pop, clique) mixados com a voz.
   - produto recortado sem fundo (rembg) aparecendo com "pop" ao lado da cabeça.
   - cartela de autoridade com fundo desfocado e ícone de comentário no fim.
 
@@ -23,7 +23,7 @@ projeto.json (tempos em segundos do BRUTO; o script converte para a linha do tem
   "entrada": "brutos/IMG_7935.MOV", "transcricao": "tr/IMG_7935.json", "saida": "out/x.mp4",
   "rosto": [0.48, 0.40],                 # centro do rosto do Dr. (fração do quadro)
   "manter": [[0, 3.85], [5.8, 59.75]],
-  "zoom": [1.0, 1.12],                   # zoom alternado por trecho de "manter"
+  "zoom_cada": 2.2,                      # troca de zoom no Dr. a cada frase (ou ~2,2 s)
   "pausa_max": 0.35,                     # pausas maiores que isso são encurtadas
   "gancho": {"linhas": ["...", "...", "..."], "destaque": 1, "ate": 11.8},
   "broll": [{"ini": 0, "fim": 1.3, "img": "img/a.jpg"},
@@ -32,6 +32,7 @@ projeto.json (tempos em segundos do BRUTO; o script converte para a linha do tem
   "vitrine": {"ini": 29.5, "fim": 31.5, "pngs": ["..."]},
   "cartela": {"ini": 14.2, "fim": 18.9, "linha1": "Dr. João Pithon", "linha2": "reologia das olheiras"},
   "comentario": {"ini": 62.0, "fim": 99},
+  "efeitos": {"impacto": "...mp3", "whoosh": "...", "obturador": "...", "pop": "...", "clique": "..."},
   "frases": [["solo infector", "swelling factor"]],   # troca de palavras na legenda (pode juntar 2)
   "correcoes": [["\\\\bLift\\\\b", "Lyft"]]
 }
@@ -50,9 +51,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from fea_editar_video import NOMES_PROPRIOS, corrigir, encaixar_cortes, perfil_voz  # noqa: E402
 
 W, H, FPS = 1080, 1920, 30
-ROXO = (91, 69, 153)
-LAVANDA = (208, 209, 233)
+PRETO = (0, 0, 0)
 METADE = H // 2
+FADE = 110          # meia faixa (px) do esfumaçado entre a imagem de cima e o Dr. (Keila 22/10: sem linha reta)
+HT = METADE + FADE  # altura da imagem de cima, que invade a metade de baixo pelo esfumaçado
+ZOOMS = [1.0, 1.18, 1.08, 1.28]   # soco de zoom no Dr. a cada frase (vídeo mais dinâmico)
 
 
 # ---------------------------------------------------------------- linha do tempo
@@ -185,7 +188,8 @@ def texto_sombra(texto, fonte, cor=(255, 255, 255), sombra=8, largura_max=None):
 
 
 def gancho_img(linhas, destaque, fonte):
-    """Caixas encostadas, como o gancho do Volpe: branca com texto preto; a de destaque em roxo FEA."""
+    """Caixas encostadas, como o gancho do Volpe: branca com texto preto; a de destaque preta com
+    texto branco (Keila 22/10: preto e branco, sem o roxo)."""
     asc, desc = fonte.getmetrics()
     padx, pady = 18, 8
     alt = asc + desc + 2 * pady
@@ -195,7 +199,7 @@ def gancho_img(linhas, destaque, fonte):
     d = ImageDraw.Draw(im)
     for i, l in enumerate(linhas):
         x0 = (Wt - larg[i]) // 2
-        fundo, cor = ((ROXO, (255, 255, 255)) if i == destaque else ((255, 255, 255), (20, 20, 20)))
+        fundo, cor = ((PRETO, (255, 255, 255)) if i == destaque else ((255, 255, 255), (20, 20, 20)))
         d.rectangle([x0, i * alt, x0 + larg[i], (i + 1) * alt], fill=fundo + (255,))
         d.text((x0 + padx, i * alt + pady), l, font=fonte, fill=cor)
     return im
@@ -235,7 +239,7 @@ def vinheta(w, h, forca=0.55):
 VIN = None
 
 
-def sinistro(im, cor=0.65, contraste=1.25, brilho=0.92):
+def sinistro(im, cor=0.85, contraste=1.22, brilho=0.95):
     """Tratamento de impacto: menos cor, mais contraste, leve tom frio e vinheta."""
     global VIN
     im = ImageEnhance.Color(im).enhance(cor)
@@ -271,6 +275,98 @@ def pop(t, dur=0.28):
     return 0.55 + 0.53 * ease(x) - 0.08 * max(0, x - 0.7) / 0.3
 
 
+# ---------------------------------------------------------------- dinâmica e som
+
+def marcas_zoom(leg, cada):
+    """Instantes de troca de zoom no Dr.: começo de frase ou a cada ~2 s, sempre no início de uma legenda."""
+    marcas, ult = [0.0], 0.0
+    for ini, _, texto in leg:
+        if ini - ult >= cada or (texto[:1].isupper() and ini - ult >= 1.2):
+            marcas.append(ini)
+            ult = ini
+    return marcas
+
+
+def zoom_dr(fr, t, marcas, fx, fy):
+    k = max(i for i, m in enumerate(marcas) if m <= t)
+    prox = marcas[k + 1] if k + 1 < len(marcas) else t + 3
+    z = ZOOMS[k % len(ZOOMS)] * (1 + 0.035 * (t - marcas[k]) / max(0.5, prox - marcas[k]))   # leve aproximação contínua
+    if z <= 1.001:
+        return fr
+    cw, ch = int(W / z), int(H / z)
+    cx = min(max(int(fx * W - cw / 2), 0), W - cw)
+    cy = min(max(int(fy * H - ch * fy), 0), H - ch)
+    return fr.crop((cx, cy, cx + cw, cy + ch)).resize((W, H), Image.BILINEAR)
+
+
+def mascara_esfumado():
+    a = np.full((HT, W), 255, np.float32)
+    faixa = np.linspace(1, 0, 2 * FADE) ** 1.3
+    a[METADE - FADE:METADE + FADE] = (faixa * 255)[:, None]
+    return Image.fromarray(a.astype(np.uint8), "L")
+
+
+def carregar_sfx(ff, caminho, cache={}):
+    if caminho not in cache:
+        pcm = subprocess.run([ff, "-v", "error", "-i", caminho, "-ac", "2", "-ar", "48000", "-f", "s16le", "-"],
+                             capture_output=True, check=True).stdout
+        a = np.frombuffer(pcm, np.int16).astype(np.float32).reshape(-1, 2) / 32768
+        cache[caminho] = a / max(1e-4, np.abs(a).max())
+    return cache[caminho]
+
+
+def trilha_efeitos(cfg, ff, mapa, broll, prods, vit, cart, com, marcas, pasta_tmp):
+    """Efeitos sonoros (Mixkit, licença livre): impacto no gancho, whoosh + obturador nas trocas de imagem,
+    swoosh baixo nos socos de zoom, pop nos produtos, clique no ícone. O pico do whoosh cai no corte."""
+    e = cfg.get("efeitos", {})
+    sr = 48000
+    trilha = np.zeros((int((mapa.dur + 4) * sr), 2), np.float32)
+
+    def por(t, nome, db, no_pico=False):
+        if nome not in e or t < 0:
+            return
+        a = carregar_sfx(ff, e[nome])
+        if no_pico:
+            env = np.abs(a).mean(axis=1)
+            t -= int(np.argmax(np.convolve(env, np.ones(480) / 480, "same"))) / sr
+        i = int(max(0, t) * sr)
+        n = min(len(a), len(trilha) - i)
+        trilha[i:i + n] += a[:n] * 10 ** (db / 20)
+
+    por(0, "impacto", -7)
+    por(0, "batida", -11)
+    whooshes = [x for x in ("whoosh", "whoosh2", "whoosh3") if x in e]
+    for k, b in enumerate(broll):
+        if b["ini"] > 0.05 and whooshes:
+            por(b["ini"], whooshes[k % len(whooshes)], -9, no_pico=True)
+        por(b["ini"], "obturador", -14)
+    em_broll = lambda t: any(b["ini"] - 0.3 <= t < b["fim"] for b in broll)
+    for m in marcas[1:]:
+        if not em_broll(m):
+            por(m, "swoosh", -17, no_pico=True)
+    for p in prods:
+        por(p["ini"], "pop", -6)
+    if vit:
+        for k in range(len(vit["ims"])):
+            por(vit["ini"] + 0.08 * k, "pop", -8)
+    if cart:
+        por(cart["ini"], "vacuo", -9, no_pico=True)
+    if com:
+        por(com["ini"], "clique", -6)
+        por(com["ini"] + 0.05, "pop2", -9)
+    pico = np.abs(trilha).max()
+    if pico > 0.9:
+        trilha *= 0.9 / pico
+    caminho = os.path.join(pasta_tmp, "efeitos.wav")
+    import wave
+    with wave.open(caminho, "wb") as w:
+        w.setnchannels(2)
+        w.setsampwidth(2)
+        w.setframerate(sr)
+        w.writeframes((trilha[:int(mapa.dur * sr)] * 32767).astype(np.int16).tobytes())
+    return caminho
+
+
 # ---------------------------------------------------------------- render
 
 def preparar_broll(cfg, ff, mapa, pasta_tmp):
@@ -282,17 +378,18 @@ def preparar_broll(cfg, ff, mapa, pasta_tmp):
         item = {"ini": ini, "fim": fim}
         if "img" in b:
             im = Image.open(b["img"]).convert("RGB")
-            big = cobrir(im, int(W * 1.12), int(METADE * 1.12), tuple(b.get("foco", (0.5, 0.45))))
+            big = cobrir(im, int(W * 1.12), int(HT * 1.12), tuple(b.get("foco", (0.5, 0.45))))
             item["img"] = sinistro(big, **b.get("tratamento", {}))
         else:
             n = int(math.ceil((fim - ini) * FPS)) + 2
             x, y, w, h = b["crop"]
+            h = int(h * HT / METADE)
             out = os.path.join(pasta_tmp, f"broll{k}_%04d.jpg")
             subprocess.run([ff, "-v", "error", "-y", "-ss", str(b["t0"]), "-i", b["video"], "-frames:v", str(n),
-                            "-vf", f"fps={FPS},crop={w}:{h}:{x}:{y},scale={W}:{METADE}:flags=lanczos",
+                            "-vf", f"fps={FPS},crop={w}:{h}:{x}:{y},scale={W}:{HT}:flags=lanczos",
                             "-q:v", "2", out], check=True)
             item["frames"] = [out % (i + 1) for i in range(n) if os.path.exists(out % (i + 1))]
-            item["trat"] = b.get("tratamento", {"cor": 0.8, "contraste": 1.18, "brilho": 0.95})
+            item["trat"] = b.get("tratamento", {"cor": 0.85, "contraste": 1.18, "brilho": 0.97})
         itens.append(item)
     return itens
 
@@ -303,15 +400,15 @@ def quadro_broll(item, t):
         prog = lt / max(0.1, item["fim"] - item["ini"])
         z = 1.0 + 0.10 * prog + 0.06 * (1 - ease(lt / 0.25))   # Ken Burns + soco no início
         big = item["img"]
-        w, h = int(W * 1.12 / z), int(METADE * 1.12 / z)
+        w, h = int(W * 1.12 / z), int(HT * 1.12 / z)
         x, y = (big.width - w) // 2, (big.height - h) // 2
-        return big.crop((x, y, x + w, y + h)).resize((W, METADE), Image.BILINEAR)
+        return big.crop((x, y, x + w, y + h)).resize((W, HT), Image.BILINEAR)
     i = min(int(lt * FPS), len(item["frames"]) - 1)
     im = sinistro(Image.open(item["frames"][i]).convert("RGB"), **item["trat"])
     z = 1.0 + 0.06 * (1 - ease(lt / 0.25))
     if z > 1.001:
-        w, h = int(W / z), int(METADE / z)
-        im = im.crop(((W - w) // 2, (METADE - h) // 2, (W - w) // 2 + w, (METADE - h) // 2 + h)).resize((W, METADE), Image.BILINEAR)
+        w, h = int(W / z), int(HT / z)
+        im = im.crop(((W - w) // 2, (HT - h) // 2, (W - w) // 2 + w, (HT - h) // 2 + h)).resize((W, HT), Image.BILINEAR)
     return im
 
 
@@ -328,7 +425,7 @@ def renderizar(cfg, previa=False):
     print(f"duração editada: {mapa.dur:.1f} s em {len(trechos)} trechos", flush=True)
 
     # 1) base: Dr. cortado, com zoom alternado por trecho de "manter"
-    zooms = cfg.get("zoom", [1.0, 1.12])
+    zooms = cfg.get("zoom_trecho", [1.0])
     fx, fy = cfg.get("rosto", (0.5, 0.4))
     partes, rot = [], []
     for i, (a, b, k) in enumerate(trechos):
@@ -372,13 +469,16 @@ def renderizar(cfg, previa=False):
     cart = cfg.get("cartela")
     if cart:
         c1 = texto_sombra(cart["linha1"], fontes("ExtraBold", 66), sombra=10)
-        c2 = texto_sombra(cart["linha2"], fontes("ExtraBoldItalic", 84), cor=LAVANDA, sombra=10, largura_max=W - 120)
+        c2 = texto_sombra(cart["linha2"], fontes("ExtraBoldItalic", 84), sombra=10, largura_max=W - 120)
         cart = {"ini": mapa(cart["ini"]), "fim": mapa(cart["fim"]), "c1": c1, "c2": c2}
     com = cfg.get("comentario")
     if com:
         com = {"ini": mapa(com["ini"]), "fim": min(mapa(com["fim"]), mapa.dur), "img": icone_comentario()}
     cache_leg = {}
     fonte_leg = fontes("ExtraBold", 64)
+    marcas = marcas_zoom(leg, cfg.get("zoom_cada", 2.2))
+    mascara = mascara_esfumado()
+    sfx = trilha_efeitos(cfg, ff, mapa, broll, prods, vit, cart, com, marcas, pasta_tmp)
 
     # 3) quadro a quadro
     n_total = int(mapa.dur * FPS)
@@ -389,7 +489,9 @@ def renderizar(cfg, previa=False):
     saida = cfg["saida"]
     os.makedirs(os.path.dirname(saida) or ".", exist_ok=True)
     enc = subprocess.Popen([ff, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
-                            "-r", str(FPS), "-i", "-", "-i", base, "-map", "0:v", "-map", "1:a",
+                            "-r", str(FPS), "-i", "-", "-i", base, "-i", sfx,
+                            "-filter_complex", "[1:a]aresample=48000[voz];[voz][2:a]amix=inputs=2:normalize=0:duration=first[a]",
+                            "-map", "0:v", "-map", "[a]",
                             "-c:v", "libx264", "-preset", "medium" if not previa else "veryfast",
                             "-crf", "18" if not previa else "23", "-pix_fmt", "yuv420p", "-profile:v", "high",
                             "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest", "-movflags", "+faststart",
@@ -401,6 +503,7 @@ def renderizar(cfg, previa=False):
             break
         t = n / FPS
         fr = Image.frombuffer("RGB", (W, H), raw, "raw", "RGB", 0, 1)
+        fr = zoom_dr(fr, t, marcas, fx, fy)
         b_ativo = next((b for b in broll if b["ini"] <= t < b["fim"]), None)
         c_ativa = cart and cart["ini"] <= t < cart["fim"]
         if c_ativa:
@@ -408,13 +511,14 @@ def renderizar(cfg, previa=False):
             fr = ImageEnhance.Brightness(peq.resize((W, H), Image.BILINEAR)).enhance(0.45)
         if b_ativo:
             # embaixo: o Dr. (rosto no centro da metade de baixo)
-            zb = 1.22   # Dr. um pouco mais perto na metade de baixo, como no Volpe
-            bw, bh = int(W / zb), int(METADE / zb)
+            zb = 1.15   # Dr. um pouco mais perto na metade de baixo, como no Volpe
+            hb = METADE + FADE
+            bw, bh = int(W / zb), int(hb / zb)
             x0 = min(max(int(fx * W - bw / 2), 0), W - bw)
-            y0 = min(max(int(fy * H) - int(bh * 0.40), 0), H - bh)
+            y0 = min(max(int(fy * H) - int(bh * 0.45), 0), H - bh)
             img = Image.new("RGB", (W, H))
-            img.paste(quadro_broll(b_ativo, t), (0, 0))
-            img.paste(fr.crop((x0, y0, x0 + bw, y0 + bh)).resize((W, METADE), Image.BILINEAR), (0, METADE))
+            img.paste(fr.crop((x0, y0, x0 + bw, y0 + bh)).resize((W, hb), Image.BILINEAR), (0, METADE - FADE))
+            img.paste(quadro_broll(b_ativo, t), (0, 0), mascara)
             fr = img
         fr = fr.convert("RGBA")
         # produtos ao lado da cabeça

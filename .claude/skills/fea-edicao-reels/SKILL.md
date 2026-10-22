@@ -36,13 +36,17 @@ Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos 
 
 | Gancho | Como fica |
 |---|---|
-| Visual | tela dividida: imagem de impacto em cima (1080x960), Dr. embaixo; troca de imagem a cada ~1,3 s com flash branco e soco de zoom; tratamento "sinistro" (menos cor, mais contraste, vinheta). Ela quer imagens "bem impactantes, estranhas, gente vampira": olheira profunda, olho arregalado, retrato escuro |
-| Escrito | 3 linhas em caixas encostadas no meio da tela (Montserrat Bold 58): branca com texto preto, a do meio em roxo FEA `#5B4599` (no Volpe é vermelho; trocado pela paleta FEA). Fica até o fim da 1ª ideia (~9 s) |
+| Visual | tela dividida: imagem de impacto em cima, Dr. embaixo, com **divisão esfumaçada** (nunca linha reta, Keila 22/10); troca de imagem a cada ~1 a 3 s com flash branco, soco de zoom e whoosh. Imagens **de pele real**: rugas, flacidez, pálpebra caída, close de pele madura (ela reprovou retrato "escuro/artístico" sem pele à mostra). Imagem de impacto em boa parte do vídeo, não só no gancho |
+| Escrito | 3 linhas em caixas encostadas no meio da tela (Montserrat Bold 58): brancas com texto preto e a do meio **preta com texto branco**. **Sem roxo** ("tá feio esse modelo roxo", 22/10). Fica até o fim da 1ª ideia (~9 s) |
 | Falado | a primeira frase do Dr., sem legenda enquanto o gancho escrito está na tela |
 
-Resto: legenda de 1 a 3 palavras (ExtraBold 64 branca, sombra suave), no meio da tela; pausas > 0,35 s encurtadas; zoom alternado no Dr. por trecho; **produto sempre sem fundo** (rembg `isnet-general-use`, nunca caixa com fundo branco) aparecendo com "pop" ao lado da cabeça, um por vez, e todos juntos quando ele resume; cartela de autoridade com fundo desfocado (nome + credencial que ele fala no vídeo); ícone de comentário no "qual a sua opinião?".
+**Efeitos sonoros obrigatórios** (Keila 22/10): impacto grave + batida de coração no gancho, whoosh + obturador em cada troca de imagem (pico do whoosh no corte), swoosh baixo nos socos de zoom, pop nos produtos, clique no ícone. Arquivos em `FEA-edicao-videos/FEA-efeitos-sonoros/` (Mixkit, licença livre), mapeados em `efeitos` no projeto.
 
-Imagens: material de paciente que a Keila manda (já autorizado) + banco Unsplash (licença livre; busca por Playwright em `unsplash.com/s/photos/...`, download por `images.unsplash.com/photo-ID`). Foto de produto: busca de imagens do DuckDuckGo por Playwright (Bing devolve resultado errado). Nunca imagem gerada por IA. Marcação vermelha na boca da paciente parece sangue: recortar só a região dos olhos.
+**Dinâmica:** zoom no Dr. trocando a cada frase (~2,2 s, níveis 1,0 / 1,18 / 1,08 / 1,28) com leve aproximação contínua. Vídeo "parado" foi reprovado.
+
+Resto: legenda de 1 a 3 palavras (ExtraBold 64 branca, sombra suave), no meio da tela; pausas > 0,35 s encurtadas; **produto sempre sem fundo** (rembg `isnet-general-use`, nunca caixa com fundo branco) aparecendo com "pop" ao lado da cabeça, um por vez, e todos juntos quando ele resume; cartela de autoridade com fundo desfocado (nome + credencial que ele fala no vídeo, texto branco); ícone de comentário no "qual a sua opinião?".
+
+Imagens: material de paciente que a Keila manda (já autorizado) + banco Unsplash (licença livre; busca por Playwright em `unsplash.com/s/photos/...` com termos como "wrinkles face", "old woman face", "elderly eyes", "eye wrinkles"; download por `images.unsplash.com/photo-ID`). Foto de produto: busca de imagens do DuckDuckGo por Playwright (Bing devolve resultado errado). Nunca imagem gerada por IA. Marcação vermelha na boca da paciente parece sangue: recortar só a região dos olhos.
 
 ## Regras de corte (critério da editora da equipe)
 
