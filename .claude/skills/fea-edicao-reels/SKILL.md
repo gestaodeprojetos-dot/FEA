@@ -30,6 +30,20 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
+## Modelo dinâmico "estilo Volpe" (em validação, Keila 22/10/2026)
+
+Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos para..."), a Keila pediu o estilo do perfil @clinicavolpe (referência: post `DefaCwRxDI4`). Script: `FEA-edicao-videos/fea_editar_dinamico.py` (docstring explica o projeto.json); exemplo: `FEA-projeto-dinamico-olheiras.json`. **Só replicar nos próximos depois que ela validar o vídeo 1 (olheiras).**
+
+| Gancho | Como fica |
+|---|---|
+| Visual | tela dividida: imagem de impacto em cima (1080x960), Dr. embaixo; troca de imagem a cada ~1,3 s com flash branco e soco de zoom; tratamento "sinistro" (menos cor, mais contraste, vinheta). Ela quer imagens "bem impactantes, estranhas, gente vampira": olheira profunda, olho arregalado, retrato escuro |
+| Escrito | 3 linhas em caixas encostadas no meio da tela (Montserrat Bold 58): branca com texto preto, a do meio em roxo FEA `#5B4599` (no Volpe é vermelho; trocado pela paleta FEA). Fica até o fim da 1ª ideia (~9 s) |
+| Falado | a primeira frase do Dr., sem legenda enquanto o gancho escrito está na tela |
+
+Resto: legenda de 1 a 3 palavras (ExtraBold 64 branca, sombra suave), no meio da tela; pausas > 0,35 s encurtadas; zoom alternado no Dr. por trecho; **produto sempre sem fundo** (rembg `isnet-general-use`, nunca caixa com fundo branco) aparecendo com "pop" ao lado da cabeça, um por vez, e todos juntos quando ele resume; cartela de autoridade com fundo desfocado (nome + credencial que ele fala no vídeo); ícone de comentário no "qual a sua opinião?".
+
+Imagens: material de paciente que a Keila manda (já autorizado) + banco Unsplash (licença livre; busca por Playwright em `unsplash.com/s/photos/...`, download por `images.unsplash.com/photo-ID`). Foto de produto: busca de imagens do DuckDuckGo por Playwright (Bing devolve resultado errado). Nunca imagem gerada por IA. Marcação vermelha na boca da paciente parece sangue: recortar só a região dos olhos.
+
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).
