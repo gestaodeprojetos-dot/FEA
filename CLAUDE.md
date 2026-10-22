@@ -148,7 +148,7 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 4. Nunca minimizar risco de procedimento ("é fácil", "qualquer um faz").
 5. Nunca direcionar conteúdo técnico-cirúrgico para leigo (risco de auto-aplicação).
 6. Nunca usar mídia de cadáver fresco em conteúdo público sem disclaimer (público técnico fechado é permitido).
-7. **Nunca gerar imagens via IA generativa** (Imagen, NanoBanana, Midjourney, DALL-E) em entregável final. Imagem médica ou clínica exige controle editorial humano: propor designer da equipe (Gabriela Costa ou André Vivas) ou ferramentas vetoriais com curadoria humana. IA pode gerar mockup interno de planejamento, nunca output final.
+7. **Nunca gerar imagens via IA generativa** (Imagen, NanoBanana, Midjourney, DALL-E) em entregável final. Imagem médica ou clínica exige controle editorial humano: propor designer da equipe (Gabriela Costa ou André Vivas) ou ferramentas vetoriais com curadoria humana. IA pode gerar mockup interno de planejamento, nunca output final. **Exceção liberada pela Keila (22/10/2026): ilustração científica gerada por IA pode entrar em Reels** (camadas da pele, anatomia do olho e da face, ação do produto, colágeno, ácido hialurônico), desde que eu confira cada quadro contra a fala do Dr. e a anatomia. Continua proibido gerar por IA rosto de paciente, antes e depois ou resultado estético.
 
 ## Identidade visual (base FEP Experience)
 

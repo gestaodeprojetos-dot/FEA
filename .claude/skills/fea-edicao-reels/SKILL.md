@@ -19,6 +19,27 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 **Atenção à ordem (pedido da Keila, 26/09/2026):** a imagem de títulos às vezes está na **ordem de postagem**, e não na ordem dos arquivos. Nunca casar título e vídeo só pela posição. Para cada vídeo, ler a transcrição (o que o Dr. fala e faz) e escolher o título que descreve aquele conteúdo. Montar uma tabela `arquivo -> título -> motivo (frase do Dr. que confirma)` e conferir que cada título foi usado uma vez só. A numeração da saída (`1-`, `2-`...) segue a ordem da imagem, a de postagem. Vídeos sem título correspondente, ou títulos sem vídeo, vão para a Keila decidir antes de renderizar.
 
+## Estilo "opinião / mito ou verdade" (Keila, 18/10/2026)
+
+Vídeos em que o Dr. João faz uma pergunta aos alunos ("técnica ultrapassada, mito ou verdade?", "os 3 melhores produtos para...") e dá a opinião dele no fim. Referência: pasta `1VLiEFkqYd7An0uzehyctKP76SIMPBNZg` ("1- Olheiras" a "4- Lábios", editados pela Keila). Script próprio: `python3 FEA-edicao-videos/fea_editar_opiniao.py projeto.json [--so-legenda] [trecho...]` (usa o mesmo projeto.json, mais `faixas`, `produtos`, `destaques`, `cartela`). Exemplo de lote: `fea_projeto_out_9_opiniao.py`.
+
+| Item | Valor (medido em pixels na referência "3- Toxina") |
+|---|---|
+| Título | caixas brancas com texto preto Montserrat Bold (ASS 83), alinhado à esquerda em x=104, barra bege `#DBD093` à esquerda (x 70 a 89), centro do bloco em y≈1202, 2 ou 3 linhas sem terminar linha em conectivo. Entra deslizando da esquerda (0,1 a 0,6 s) e some de uma vez aos 4,1 s |
+| Som de arrasto | `FEA-edicao-videos/FEA-som-arrasto-titulo.wav`, isolado da referência (subtraindo o bruto), toca no início junto com o título |
+| Legenda | Montserrat Bold ASS 62, branca, contorno fino escuro, centro em y=1500, desde o início (inclusive por baixo do título), mantém "?" |
+| Produto citado | foto real do produto (pesquisada na internet, nunca IA) num quadro branco 552x552 levemente inclinado no centro (540, 1125), com "pop" de entrada, ~2,5 s ou até o próximo produto. Título inventado nunca leva nome de produto |
+| CTA falado da Black Friday | "VITALÍCIO" grande (ExtraBold, branco, y=1200) da palavra "comenta vitalício" até o fim, e cartela final da campanha (8,7 s, extraída do fim da referência "3- Toxina" a partir de 83,467 s). Vídeo sem CTA falado não leva cartela |
+| Cortes | começa na primeira fala do Dr.; pausas acima de 0,9 s com áudio em silêncio saem sozinhas (`faixas` + `tirar_pausas`); conversa paralela sai na mão. Vídeo sem a opinião/conclusão do Dr. não é editado |
+| Limite | 3 min no total, com a cartela |
+
+### Lotes "Melhores produtos/tratamentos" (Keila, 22/10/2026)
+
+- **Vídeo rico de inserts**: um insert a cada 3 a 5 s, desde logo depois do título (4,1 s). Alternar foto do produto citado (com "pop"), tela dividida (caso clínico da 00 - Brutos ou B-roll em cima, Dr. embaixo, faixa esfumaçada no meio, legenda na emenda, whoosh na entrada) e B-roll em tela cheia (`casos`: `[ini, fim, clipe, início_no_clipe, "split" | "cheia"]`). Referência da tela dividida: Reel DdGmQEspUfZ.
+- **Música diferente em cada vídeo**, animada e moderna (nunca triste/piano lento); `musica` por vídeo, volume ~0,08.
+- B-roll: **só imagem real** (feedback do Dr. João, 22/10/2026, referências: Reels de dermatologistas como Dd2GxO2hUAR, DdkMx4pJNKp, DYvCE9lIrqB). Prioridade: (1) casos clínicos reais da FEA (00 - Brutos e reels de caso já editados, recortados sem a legenda antiga: `crop=1080:1200:0:200`), (2) filmagem real de pele do Pexels (close de olheira, textura de pele, pessoa aplicando creme, gel na ponta do dedo, profissional de luva). **Nada de 3D, moléculas, partículas, animação ou ilustração por IA** nesses Reels, mesmo com a exceção do CLAUDE.md. Rótulo no topo só quando agrega (ex.: "Antes e depois"). Fechar com antes e depois real quando houver.
+- **Revisão obrigatória antes de subir**: `fea_revisar.py` (entende o estilo de caixas) e leitura de todas as legendas. Termo de várias palavras ("swelling factor", "Yvoire Contour", "Dr. João") é juntado antes de montar a legenda (`PARES` em `fea_editar_opiniao.py`), senão a correção não pega quando a frase quebra entre duas legendas (erro que passou em 22/10).
+
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
@@ -136,3 +157,7 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+Grafias e padrão do lote Melhores produtos (22/10/2026, aprovado pela Keila no vídeo das olheiras): **calha lacrimal** (nunca "carne lacrimal"), tear trough (nunca "Tirtrof"). Música de moda e beleza (lounge, deep house de desfile, nunca piano triste), **bem baixa, só de fundo** (`musica_vol` 0,025). Todos os inserts em tela dividida (o Dr. sempre na tela), sem CTA da Black, pergunta da entrevistadora mantida com redução de ruído e ganho (`realcar`), antes e depois real no final.
+- **Os produtos citados pelo Dr. são preenchedores (ácido hialurônico injetável), não cosméticos de pele.** Nos inserts, preferir procedimento e clínica (luvas, seringa, cânula, marcação) e a região de que ele fala; take de pessoa passando creme é só apoio visual, nunca para ilustrar o produto. **Insert sempre da mesma região da fala** (Keila, 22/10/2026: take de mandíbula e pescoço num vídeo de olheira não faz sentido).
+- **Troca de insert direta, sem piscar o Dr. em tela cheia** (Keila, 22/10/2026): inserts seguidos emendam um no outro. `fea_editar_opiniao.py` fecha sozinho intervalos menores que `EMENDA` (1 s); ao montar `casos`, encostar o fim de um no início do próximo.
