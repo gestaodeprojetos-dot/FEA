@@ -105,10 +105,11 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
        [42.6, 46.0, HA2, 4.0, "split"],
        [46.2, 49.5, LAB2, 5.0, "cheia"]], "m01",
       mover_palavra=[[18.66, 19.0]])
-video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [3.7, 66.8],   # 0 a 3,7 s: take de ensaio repetido
+video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
-      [[7.8, 11.8, f"{IA}/ia_swelling.mp4", 0.5, "split", "Baixo swelling factor"],
-       [11.8, 16.0, f"{IA}/ia_olho_anatomia.mp4", 0.3, "split", "Anatomia da olheira"],
+      [[4.1, 8.4, f"{IA}/ia_olho_anatomia.mp4", 0.3, "split", "Anatomia da olheira"],
+       [8.4, 12.4, f"{IA}/ia_swelling.mp4", 0.5, "split", "Baixo swelling factor"],
+       [12.4, 16.0, HA1, 2.0, "split"],
        [16.0, 19.5, P3D, 2.0, "split"],
        [27.2, 31.8, f"{C}/IMG_2661.MOV", 24.0, "split"],
        [33.0, 39.0, f"{IA}/ia_base_malar.mp4", 0.5, "split", "Pré-maxila e região malar"],
@@ -116,7 +117,8 @@ video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [3.7, 66.8],   # 0 
        [45.3, 50.2, CLIN3, 8.0, "split"],
        [50.3, 56.0, f"{IA}/ia_ligamentos.mp4", 0.5, "split", "Zona delicada: ligamentos"],
        [56.0, 59.8, f"{IA}/ia_espalhando.mp4", 0.5, "split", "Produto bem espalhado"],
-       [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "m02")
+       [59.9, 65.5, f"{C}/FEA-antes-depois-olheira-bolsa.mp4", 0.0, "split", "Antes e depois"]], "moda01",   # lounge deep house de moda (Keila: música de moda e beleza)
+      realcar=[[0.0, 3.85, 4]])   # pergunta da entrevistadora fora do microfone
 video(3, "IMG_7936", "Os 3 melhores produtos para a linha de marionete", [0.0, 56.2],
       [(11.1, "neauvia_stimulate"), (22.8, "biogelis_volume"), (23.9, "singderm")],
       [[4.1, 7.4, SULCO3, 2.0, "cheia"],

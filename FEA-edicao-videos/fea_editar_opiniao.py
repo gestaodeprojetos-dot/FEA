@@ -367,10 +367,17 @@ def gerar(cfg, v, so_legenda=False):
     entradas = ["-i", v["entrada"], "-i", cfg["whoosh"]]
     partes, vrot, arot = [], [], []
     mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    # limpeza da voz: passa-alta, redução de ruído de fundo (afftdn) e ganho nas falas fora do
+    # microfone (pergunta da entrevistadora), "realcar": [[ini, fim, ganho_dB], ...] em tempo do bruto
+    ganho = "".join(f",volume={g}dB:enable='between(t,{a},{b})'" for a, b, g in v.get("realcar", []))
+    n_seg = len(v["manter"])
+    partes.append(f"[0:a]highpass=f=80,afftdn=nr=14:nf=-40:tn=1{ganho}{mudo},"
+                  f"alimiter=limit=0.9:level=disabled,asplit={n_seg}" + "".join(f"[src{i}]" for i in range(n_seg)))
+    mudo = ""
     for i, (a, b) in enumerate(v["manter"]):
         partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,"
                       f"crop={W}:{H},setsar=1,fps=30[v{i}]")
-        partes.append(f"[0:a]atrim={a}:{b}{mudo},asetpts=PTS-STARTPTS,aresample=48000,"
+        partes.append(f"[src{i}]atrim={a}:{b}{mudo},asetpts=PTS-STARTPTS,aresample=48000,"
                       f"aformat=channel_layouts=stereo,afade=t=in:d=0.02,"
                       f"afade=t=out:st={max(0, b - a - 0.02)}:d=0.02[a{i}]")
         vrot.append(f"[v{i}]")
