@@ -49,6 +49,7 @@ LEG_MAX = 22
 
 DESTAQUE_FS = 125
 DESTAQUE_Y = 1200
+EMENDA = 1.0   # intervalo máximo entre inserts que é fechado (o próximo entra direto)
 ROT_FS, ROT_PAD, ROT_H, ROT_Y = 50, 34, 86, 190  # rótulo das ilustrações (topo da tela)
 
 PROD_LADO = 552
@@ -354,6 +355,12 @@ def gerar(cfg, v, so_legenda=False):
         casos.append((max(t0, TIT_FIM), t1, c[2], c[3] if len(c) > 3 else 0.0, c[4] if len(c) > 4 else "split"))
         if len(c) > 5 and c[5]:
             ev += eventos_rotulo(cfg, c[5], max(t0, TIT_FIM) + 0.15, t1)
+    # inserts seguidos emendam direto (Keila, 22/10/2026): sem o Dr. em tela cheia piscando entre um
+    # insert e outro quando sobra menos de 1 s entre eles
+    casos.sort(key=lambda c: c[0])
+    for k in range(len(casos) - 1):
+        if 0 < casos[k + 1][0] - casos[k][1] < EMENDA:
+            casos[k] = (casos[k][0], casos[k + 1][0]) + casos[k][2:]
     ev += eventos_legenda(v, palavras, duracao, duracao, [(a, b) for a, b, _, _, modo in casos if modo == "split"])
     for a, b, texto in v.get("destaques", []):
         ta, tb = para_editado(a, v["manter"]), para_editado(min(b, v["manter"][-1][1] - 0.01), v["manter"])
