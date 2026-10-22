@@ -102,7 +102,8 @@ video(1, "IMG_7934", "Os 3 melhores produtos para os lábios", [3.5, 51.0],
        [33.9, 36.0, LAB1, 3.0, "cheia"],
        [36.0, 42.5, f"{C}/IMG_0719.MOV", 0.3, "split"],
        [42.6, 46.0, HA2, 4.0, "split"],
-       [46.2, 49.5, LAB2, 5.0, "cheia"]], "m01")
+       [46.2, 49.5, LAB2, 5.0, "cheia"]], "m01",
+      mover_palavra=[[18.66, 19.0]])
 video(2, "IMG_7935", "Os 3 melhores produtos para olheiras", [0.0, 66.8],
       [(19.7, "yvoire_contour"), (20.9, "perfectha_subskin"), (22.3, "juvederm_voluma"), (24.6, "restylane_lyft")],
       [[4.1, 8.0, OLHO_ESP, 1.0, "cheia"],

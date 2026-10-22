@@ -215,7 +215,7 @@ def revisar(cfg, v, folhas=None):
 
     # 2b. headline: margem e comprimento (o estilo opinião quebra o título em caixas, medido no próprio script)
     titulo_formatado = fe.formatar_titulo(v) if not opiniao else v["titulo"]
-    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado)
+    larg_px, n_linhas, linhas_txt = medir_titulo_px(titulo_formatado) if not opiniao else (0, 1, [])
     if larg_px > LARGURA_SEGURA:
         erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px): enxugar o título \"{v['titulo']}\"")
     elif larg_px > LARGURA_SEGURA * 0.92:

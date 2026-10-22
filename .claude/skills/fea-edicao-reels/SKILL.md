@@ -33,6 +33,13 @@ Vídeos em que o Dr. João faz uma pergunta aos alunos ("técnica ultrapassada, 
 | Cortes | começa na primeira fala do Dr.; pausas acima de 0,9 s com áudio em silêncio saem sozinhas (`faixas` + `tirar_pausas`); conversa paralela sai na mão. Vídeo sem a opinião/conclusão do Dr. não é editado |
 | Limite | 3 min no total, com a cartela |
 
+### Lotes "Melhores produtos/tratamentos" (Keila, 22/10/2026)
+
+- **Vídeo rico de inserts**: um insert a cada 3 a 5 s, desde logo depois do título (4,1 s). Alternar foto do produto citado (com "pop"), tela dividida (caso clínico da 00 - Brutos ou B-roll em cima, Dr. embaixo, faixa esfumaçada no meio, legenda na emenda, whoosh na entrada) e B-roll em tela cheia (`casos`: `[ini, fim, clipe, início_no_clipe, "split" | "cheia"]`). Referência da tela dividida: Reel DdGmQEspUfZ.
+- **Música diferente em cada vídeo**, animada e moderna (nunca triste/piano lento); `musica` por vídeo, volume ~0,08.
+- B-roll: stock de licença livre (Pexels) e o B-roll de pele da 00 - Brutos. **Imagem gerada por IA não entra** (linha vermelha do CLAUDE.md), mesmo para ilustrar anatomia: usar ilustração de artista ou pedir ao designer.
+- **Revisão obrigatória antes de subir**: `fea_revisar.py` (entende o estilo de caixas) e leitura de todas as legendas. Termo de várias palavras ("swelling factor", "Yvoire Contour", "Dr. João") é juntado antes de montar a legenda (`PARES` em `fea_editar_opiniao.py`), senão a correção não pega quando a frase quebra entre duas legendas (erro que passou em 22/10).
+
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
