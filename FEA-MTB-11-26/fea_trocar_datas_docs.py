@@ -35,12 +35,13 @@ def dia_semana(m):
     return caixa(velho, sem) + m.group(0)[len(velho) + len(feira or ""):].replace(num, dia, 1)
 
 
+# ATENÇÃO: não é idempotente (dia da semana troca de novo a cada rodada). Rodar só uma vez por doc.
 REGRAS = [
     (re.compile(SEMANA + r"(-feira)?,\s*(\d{2})\b", re.I), dia_semana),
     (re.compile(r"\b11 (de) (agosto)\b", re.I), lambda m: "9 " + m.group(1) + " " + caixa(m.group(2), "novembro")),
     (re.compile(r"(próxima|proxima) segunda-feira, dia 9", re.I), None),  # só marcador, já correto
     (re.compile(r"\b03/08 A 11/08\b", re.I), lambda m: "02/11 A 09/11"),
-    (re.compile(r"\b11/08\b"), lambda m: "09/11"), (re.compile(r"\b10/08\b"), lambda m: "08/11"),
+    (re.compile(r"\b11/08\b"), lambda m: "09/11"), (re.compile(r"\b11\.08\b"), lambda m: "09.11"), (re.compile(r"\b10/08\b"), lambda m: "08/11"),
     (re.compile(r"\b07/08\b"), lambda m: "05/11"), (re.compile(r"\b03/08\b"), lambda m: "02/11"),
     (re.compile(r"\b12/08\b"), lambda m: "10/11"), (re.compile(r"\b13/08\b"), lambda m: "11/11"),
     (re.compile(r"\b(0[16]|10)/07/2026\b"), lambda m: "22/10/2026"),
