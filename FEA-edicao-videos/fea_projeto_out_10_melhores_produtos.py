@@ -179,6 +179,13 @@ video(7, "IMG_7942", "Os 3 melhores produtos para as têmporas", [0.0, 88.6],
        [75.4, 80.5, TEMP1, 5.0, "cheia"],
        [80.6, 87.5, TEMP4, 6.0, "split"]], "m07")
 
+# Versão B das olheiras (Keila, 22/10/2026): sem a pergunta da entrevistadora, o Dr. já abre
+# falando "3 melhores produtos para as olheiras" (3,9 s do bruto).
+v2b = dict(V[1], saida=V[1]["saida"].replace("/2- ", "/2B- ").replace(".mp4", " (Dr. abrindo).mp4"),
+           faixas=[[3.85, 66.8]], realcar=[])
+v2b["casos"] = [[7.9, 11.8] + V[1]["casos"][1][2:], [11.8, 16.0] + V[1]["casos"][0][2:]] + V[1]["casos"][3:]
+V.insert(2, v2b)
+
 # Ajuste da Keila (22/10/2026): Dr. sempre na tela (todos os inserts em tela dividida) e sem o CTA da Black.
 for v in V:
     v["cartela"] = False
