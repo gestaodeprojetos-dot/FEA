@@ -42,8 +42,8 @@ W, H = E.W, E.H
 DOURADO = "&H0072BFED"        # #EDBF72, dourado da LP Black Friday Vitalícia
 DESTAQUE_TAM = 92
 DESTAQUE_Y = 1500
-MUSICA_VOL = 0.13             # trilha por baixo da voz
-MUSICA_VOL_CTA = 0.55         # trilha sobe no CTA
+MUSICA_VOL = 0.07             # trilha por baixo da voz (0,13 ficou alta, Keila 22/10/2026)
+MUSICA_VOL_CTA = 0.45         # trilha sobe no CTA
 
 
 def palavras_do_projeto(v, db_voz):
@@ -255,7 +255,7 @@ def renderizar(cfg, v, so_legenda=False):
     for q, (idx, c) in enumerate(ms[1:], 1):
         cad += (f";[{idx}:a]atrim=0:{c},aresample=48000,aformat=channel_layouts=stereo[mi{q}]"
                 f";[m{q - 1}][mi{q}]acrossfade=d=2[m{q}]")
-    vol = (f"volume='if(lt(t,{duracao:.3f}),{MUSICA_VOL},{MUSICA_VOL_CTA})':eval=frame,"
+    vol = (f"volume='if(lt(t,{duracao:.3f}),{cfg.get('musica_vol', MUSICA_VOL)},{cfg.get('musica_vol_cta', MUSICA_VOL_CTA)})':eval=frame,"
            f"atrim=0:{total:.3f},afade=t=in:d=0.6,afade=t=out:st={total - 1.2:.3f}:d=1.2")
     filtro += f";{cad};[m{len(ms) - 1}]{vol}[mus];[voz]aresample=48000,aformat=channel_layouts=stereo[voz2]" \
               f";[voz2][mus]amix=inputs=2:duration=first:normalize=0[afim]"
