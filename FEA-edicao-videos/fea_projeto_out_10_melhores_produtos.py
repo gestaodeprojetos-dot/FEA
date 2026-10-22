@@ -186,6 +186,6 @@ for v in V:
 
 CTA = glob.glob(f"{T}/cta/*COMENTE*.mp4")
 json.dump({"ffmpeg": FF, "fontsdir": f"{T}/fonts", "whoosh": f"{AQUI}/FEA-som-arrasto-titulo.wav",
-           "cartela": CTA[0], "musica_vol": 0.08,
+           "cartela": CTA[0], "musica_vol": 0.025,   # Keila: música só de fundo, bem baixa
            "sfx_pop": f"{T}/audio/pop.mp3", "sfx_split": f"{T}/audio/whoosh_split.mp3",
            "videos": V}, sys.stdout, ensure_ascii=False, indent=1)

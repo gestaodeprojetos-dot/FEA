@@ -1,6 +1,7 @@
 """FEA: correções de transcrição de marcas e termos usadas nos lotes de Reels (opinião, melhores produtos)."""
 
 COMUNS = [
+    [r"\b[Cc]arne lacrimal\b", "calha lacrimal"],   # Keila 22/10/2026: o Dr. fala calha lacrimal
     [r"\bVitalice\b", "Vitalícia"], [r"\bitalícias\b", "vitalícias"],
     [r"\bSaba ?[Mm]ais\b", "Saiba Mais"], [r"\bimunização facial\b", "harmonização facial"],
     [r"\bMD-? ?[Cc]odes\b", "MD Codes"], [r"\bMDCodes\b", "MD Codes"],

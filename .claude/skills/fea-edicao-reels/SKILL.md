@@ -157,3 +157,5 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+Grafias e padrão do lote Melhores produtos (22/10/2026, aprovado pela Keila no vídeo das olheiras): **calha lacrimal** (nunca "carne lacrimal"), tear trough (nunca "Tirtrof"). Música de moda e beleza (lounge, deep house de desfile, nunca piano triste), **bem baixa, só de fundo** (`musica_vol` 0,025). Todos os inserts em tela dividida (o Dr. sempre na tela), sem CTA da Black, pergunta da entrevistadora mantida com redução de ruído e ganho (`realcar`), antes e depois real no final.

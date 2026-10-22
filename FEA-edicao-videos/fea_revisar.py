@@ -45,6 +45,7 @@ PRODUTOS_CONHECIDOS = [
 # texto que nunca pode aparecer na legenda (regra -> motivo)
 PROIBIDO_LEGENDA = [
     (r"\b[Pp]ra\b|\b[Pp]ros?\b", "\"pra/pro\": sempre \"para\""),
+    (r"\b[Cc]arne lacrimal\b", "\"carne lacrimal\": é calha lacrimal"),
     (r"(^|\s)ó(\s|$|[,.!?])", "interjeição \"ó\""),
     (r"\bpr[ée]dio\b", "\"prédio\": é pré-jowl"),
     (r"\b[Gg]elinh", "\"gelinho\": é G'"),

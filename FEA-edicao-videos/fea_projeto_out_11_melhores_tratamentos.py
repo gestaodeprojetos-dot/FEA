@@ -114,6 +114,6 @@ video(6, "IMG_7929", "Ruga profunda entre as sobrancelhas: como tratar?", [0.2, 
 
 CTA = glob.glob(f"{T}/cta/*COMENTE*.mp4")
 json.dump({"ffmpeg": FF, "fontsdir": f"{T}/fonts", "whoosh": f"{AQUI}/FEA-som-arrasto-titulo.wav",
-           "cartela": CTA[0], "musica": f"{T}/audio/musica_piano.wav", "musica_vol": 0.07,
+           "cartela": CTA[0], "musica": f"{T}/audio/musica_piano.wav", "musica_vol": 0.025,
            "sfx_pop": f"{T}/audio/pop.mp3", "sfx_split": f"{T}/audio/whoosh_split.mp3",
            "videos": V}, sys.stdout, ensure_ascii=False, indent=1)
