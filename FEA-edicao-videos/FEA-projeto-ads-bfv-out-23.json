@@ -1,0 +1,364 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "fonts",
+ "musica": [
+  "musica/m1.wav",
+  "musica/m2.wav"
+ ],
+ "musica_cortes": [
+  66,
+  51
+ ],
+ "cta": "id/FEA-CTA-Black-Vitalicia-som-5s.mp4",
+ "videos": [
+  {
+   "entrada": "brutos3/IMG_8006.MOV",
+   "transcricao": "tr/IMG_8006.json",
+   "saida": "out/Ads 038 - Curso da vida - BFV.mp4",
+   "manter": [
+    [
+     0,
+     5.3
+    ],
+    [
+     5.3,
+     29.8
+    ],
+    [
+     36.0,
+     56.88,
+     "exato"
+    ]
+   ],
+   "apertar_pausas": 0.45,
+   "logo": [
+    "id/logo_gold.png",
+    0,
+    3.5
+   ],
+   "destaques": [
+    [
+     11.7,
+     12.55,
+     "tudo de tudo"
+    ],
+    [
+     20.55,
+     22.6,
+     "nunca mais vai precisar pagar um real para nada"
+    ],
+    [
+     23.85,
+     25.0,
+     "é teu curso da vida"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bblack Friday",
+     "Black Friday"
+    ],
+    [
+     "Friday vitalícia",
+     "Friday Vitalícia"
+    ],
+    [
+     "[Cc]ombo [Vv]italício",
+     "Combo Vitalício"
+    ],
+    [
+     "^então, a prática em cadáver",
+     "a prática em cadáver"
+    ],
+    [
+     "^friday",
+     "Friday"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     56.85,
+     60.0
+    ]
+   ],
+   "capas": [
+    {
+     "ate": 39.2,
+     "largura": 330,
+     "itens": [
+      [
+       36.05,
+       "anatomia"
+      ]
+     ]
+    }
+   ],
+   "parede": [
+    [
+     8.6,
+     12.6
+    ]
+   ],
+   "realcar": [
+    [
+     2.8,
+     5.25,
+     10
+    ]
+   ],
+   "palavras_extra": [
+    [
+     3.0,
+     3.28,
+     "Eu"
+    ],
+    [
+     3.28,
+     3.75,
+     "vi,"
+    ],
+    [
+     3.82,
+     3.86,
+     "eu"
+    ],
+    [
+     3.86,
+     3.92,
+     "tô"
+    ],
+    [
+     3.92,
+     4.12,
+     "de"
+    ],
+    [
+     4.12,
+     4.45,
+     "olho,"
+    ],
+    [
+     4.5,
+     4.6,
+     "eu"
+    ],
+    [
+     4.6,
+     4.7,
+     "tô"
+    ],
+    [
+     4.7,
+     4.74,
+     "de"
+    ],
+    [
+     4.74,
+     4.8,
+     "olho"
+    ],
+    [
+     4.8,
+     4.92,
+     "para"
+    ],
+    [
+     4.92,
+     5.15,
+     "pegar."
+    ]
+   ]
+  },
+  {
+   "entrada": "brutos4/IMG_7944.MOV",
+   "transcricao": "tr/IMG_7944.json",
+   "saida": "out/Ads 039 - Depoimento intercorrência labial - BFV.mp4",
+   "manter": [
+    [
+     0,
+     59.4
+    ]
+   ],
+   "apertar_pausas": 0.45,
+   "inserts": [
+    [
+     0.0,
+     7.2,
+     "imagem",
+     "brutos4/PHOTO-2026-10-21-20-46-48.jpg"
+    ]
+   ],
+   "split_dr_y": 330,
+   "img_altura": 900,
+   "destaques": [
+    [
+     27.85,
+     30.7,
+     "o diferencial de quem sabe, de quem domina"
+    ],
+    [
+     53.65,
+     57.05,
+     "acesso ilimitado, acesso imediato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bblack Friday",
+     "Black Friday"
+    ],
+    [
+     "Friday vitalícia",
+     "Friday Vitalícia"
+    ],
+    [
+     "[Cc]ombo [Vv]italício",
+     "Combo Vitalício"
+    ],
+    [
+     "^friday",
+     "Friday"
+    ]
+   ],
+   "capas": [
+    {
+     "ate": 37.7,
+     "largura": 330,
+     "itens": [
+      [
+       33.65,
+       "complicacoes"
+      ]
+     ]
+    }
+   ],
+   "saiba_mais": [
+    [
+     50.0,
+     53.6
+    ],
+    [
+     57.3,
+     59.2
+    ]
+   ],
+   "parede": [
+    [
+     38.85,
+     42.1
+    ]
+   ]
+  },
+  {
+   "entrada": "brutos5/IMG_7980.MOV",
+   "transcricao": "tr/IMG_7980.json",
+   "saida": "out/Ads 040 - Depoimento da mãe - BFV.mp4",
+   "manter": [
+    [
+     0,
+     70.8
+    ]
+   ],
+   "apertar_pausas": 0.45,
+   "inserts": [
+    [
+     0.0,
+     13.75,
+     "imagem",
+     "brutos5/captura.png"
+    ]
+   ],
+   "split_dr_y": 520,
+   "img_altura": 900,
+   "destaques": [
+    [
+     11.95,
+     13.75,
+     "que a gente conseguiu"
+    ],
+    [
+     35.05,
+     37.1,
+     "no conforto você nunca vai crescer"
+    ],
+    [
+     66.8,
+     69.32,
+     "pós-graduação com certificação do MEC"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bblack Friday",
+     "Black Friday"
+    ],
+    [
+     "Friday vitalícia",
+     "Friday Vitalícia"
+    ],
+    [
+     "[Cc]ombo [Vv]italício",
+     "Combo Vitalício"
+    ],
+    [
+     "precisei lotar",
+     "precisei lutar"
+    ],
+    [
+     "^friday",
+     "Friday"
+    ]
+   ],
+   "capas": [
+    {
+     "ate": 48.9,
+     "itens": [
+      [
+       46.2,
+       "fep"
+      ],
+      [
+       46.88,
+       "fios"
+      ],
+      [
+       47.22,
+       "febio"
+      ],
+      [
+       47.84,
+       "botox"
+      ]
+     ]
+    },
+    {
+     "ate": 69.35,
+     "largura": 330,
+     "itens": [
+      [
+       66.9,
+       "pos"
+      ]
+     ]
+    }
+   ],
+   "saiba_mais": [
+    [
+     59.0,
+     62.8
+    ],
+    [
+     69.3,
+     70.7
+    ]
+   ],
+   "parede": [
+    [
+     64.88,
+     66.86
+    ]
+   ]
+  }
+ ],
+ "cta_com_som": true
+}

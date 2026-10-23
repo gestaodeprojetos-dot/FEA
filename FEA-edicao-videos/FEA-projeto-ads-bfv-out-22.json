@@ -1,0 +1,276 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "fonts",
+ "musica": [
+  "musica/m1.wav",
+  "musica/m2.wav"
+ ],
+ "musica_cortes": [
+  66,
+  51
+ ],
+ "cta": "id/FEA-CTA-Black-Vitalicia-som-5s.mp4",
+ "videos": [
+  {
+   "entrada": "brutos/IMG_7978.MOV",
+   "transcricao": "tr/IMG_7978.json",
+   "saida": "out/Ads 036 - Tudo o que você vai ganhar - BFV.mp4",
+   "manter": [
+    [
+     0.0,
+     44.9
+    ],
+    [
+     46.98,
+     106.0
+    ],
+    [
+     106.0,
+     122.4
+    ],
+    [
+     126.0,
+     128.88
+    ],
+    [
+     128.9,
+     143.75
+    ],
+    [
+     157.2,
+     170.4
+    ]
+   ],
+   "apertar_pausas": 0.45,
+   "logo": [
+    "id/logo_gold.png",
+    0,
+    3.5
+   ],
+   "tela": {
+    "arquivo": "brutos2/tela.mov",
+    "offset": 0,
+    "crop": [
+     565,
+     400,
+     1809,
+     1340
+    ]
+   },
+   "inserts": [
+    [
+     30.2,
+     34.0,
+     "card",
+     29.6
+    ]
+   ],
+   "card_y": 330,
+   "destaques": [
+    [
+     28.1,
+     29.85,
+     "120 mil reais"
+    ],
+    [
+     43.05,
+     44.9,
+     "com certificado do MEC"
+    ],
+    [
+     72.45,
+     73.6,
+     "até o fim da minha vida"
+    ],
+    [
+     86.4,
+     87.7,
+     "mais de 500 mil reais"
+    ],
+    [
+     118.45,
+     120.5,
+     "a maior oportunidade da história"
+    ],
+    [
+     159.45,
+     161.56,
+     "o que você não pode é perder a sua oportunidade"
+    ],
+    [
+     164.5,
+     166.82,
+     "seu último curso de harmonização facial da vida"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bblack Friday",
+     "Black Friday"
+    ],
+    [
+     "Friday vitalícia",
+     "Friday Vitalícia"
+    ],
+    [
+     "[Cc]ombo [Vv]italício",
+     "Combo Vitalício"
+    ],
+    [
+     "imunização",
+     "harmonização"
+    ],
+    [
+     "Black Friday Vitalice",
+     "Black Friday Vitalícia"
+    ],
+    [
+     "Reolo de Map",
+     "Reology Map"
+    ],
+    [
+     "BelaSys",
+     "Belasis"
+    ],
+    [
+     "intercoerências",
+     "intercorrências"
+    ],
+    [
+     "mudança facial",
+     "harmonização facial"
+    ],
+    [
+     "\\b12 de R\\$ ?(\\d+),00",
+     "12x de R$ \\1"
+    ],
+    [
+     "R\\$ ?([\\d.]+),00",
+     "R$ \\1"
+    ],
+    [
+     "R\\$(\\d)",
+     "R$ \\1"
+    ]
+   ],
+   "parede": [
+    [
+     13.45,
+     17.0
+    ],
+    [
+     121.15,
+     128.85
+    ]
+   ]
+  },
+  {
+   "entrada": "brutos2/IMG_7979.MOV",
+   "transcricao": "tr/IMG_7979.json",
+   "saida": "out/Ads 037 - Plataforma do Combo Vitalício - BFV.mp4",
+   "manter": [
+    [
+     0.0,
+     65.3
+    ],
+    [
+     69.22,
+     78.54
+    ],
+    [
+     87.8,
+     116.57
+    ]
+   ],
+   "apertar_pausas": 0.45,
+   "logo": [
+    "id/logo_gold.png",
+    0,
+    3.5
+   ],
+   "tela": {
+    "arquivo": "brutos2/tela.mov",
+    "offset": 2.09,
+    "crop": [
+     230,
+     420,
+     2480,
+     1300
+    ]
+   },
+   "split_dr_y": 330,
+   "inserts": [
+    [
+     4.0,
+     13.2,
+     "split"
+    ],
+    [
+     22.8,
+     99.6,
+     "split"
+    ]
+   ],
+   "destaques": [
+    [
+     4.1,
+     7.05,
+     "1.254 aulas disponíveis"
+    ],
+    [
+     11.54,
+     12.9,
+     "600 aulas esse ano"
+    ],
+    [
+     21.05,
+     22.75,
+     "simplesmente tudo de tudo"
+    ],
+    [
+     88.45,
+     91.7,
+     "mais de 500 aulas só da pós-graduação"
+    ],
+    [
+     105.3,
+     107.35,
+     "a maior Black Friday da harmonização facial"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bblack Friday",
+     "Black Friday"
+    ],
+    [
+     "Friday vitalícia",
+     "Friday Vitalícia"
+    ],
+    [
+     "[Cc]ombo [Vv]italício",
+     "Combo Vitalício"
+    ],
+    [
+     "imunização",
+     "harmonização"
+    ],
+    [
+     "intercoerências",
+     "intercorrências"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
+    ]
+   ],
+   "parede": [
+    [
+     107.3,
+     112.7
+    ]
+   ]
+  }
+ ],
+ "cta_com_som": true
+}
