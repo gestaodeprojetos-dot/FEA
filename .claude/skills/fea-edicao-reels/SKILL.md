@@ -42,11 +42,15 @@ Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos 
 
 **Efeitos sonoros obrigatórios** (Keila 22/10): impacto grave + batida de coração no gancho, whoosh + obturador em cada troca de imagem (pico do whoosh no corte), swoosh baixo nos socos de zoom, pop nos produtos, clique no ícone. Arquivos em `FEA-edicao-videos/FEA-efeitos-sonoros/` (Mixkit, licença livre), mapeados em `efeitos` no projeto.
 
-**Música de fundo obrigatória** (Keila 22/10: "faltou musiquinha"): trilha em `FEA-edicao-videos/FEA-musicas/` (Mixkit, licença livre), nivelada com dynaudnorm em -19 dB e abaixando sozinha sob a voz (sidechain). Atual: "Silent Descent" (cinematográfica, começa suave e cresce).
+**Música de fundo obrigatória e impactante** (Keila 22 e 23/10): batida urbana/eletrônica constante, nunca trilha triste ou cinematográfica lenta ("Silent Descent" foi reprovada). Atual: "Deep Urban" (Mixkit 623, a partir dos 15 s, onde a batida já está cheia). Nivelada com dynaudnorm em -19 dB e abaixando sozinha sob a voz (sidechain). Referência de música que ela gosta: Reel `DeLAO0gRZ5m` (@diegocorreadermatologista).
 
-**Imagens: foco no olho** (Keila 22/10). Close de olho, pálpebra, pé de galinha, olheira e pele ao redor. Nunca retrato de rosto inteiro de idoso "sofrido", de lenço na cabeça ou barba desgrenhada: "parece morador de rua".
+**Objetivo de cada vídeo** (Keila 23/10): "impossível a pessoa pular no feed". Gancho com montagem rápida (troca a cada ~0,45 s), tremida de câmera, impacto grave e headline com tensão.
 
-**Livro/artigo do Dr.:** quando ele cita "meu artigo sobre reologia das olheiras", é o ebook *Preenchimento Tridimensional de Olheiras: Um Guia Completo com a Metodologia ARTI* (Drive `1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f`, capítulo "Reologia: a escolha do preenchedor ideal", p. 40 a 49). No vídeo: capa com pop na cartela (`cartela.capa`) e a frase-conclusão do capítulo recomposta em letra grande como imagem de cima. Não mostrar o gráfico "HIGH G PRIME / Low sweeling fator" (tem erro de digitação).
+**Som dos produtos suave** (Keila 23/10): swoosh baixo (-15 dB), nunca "pop"/clique.
+
+**Imagens: olheira feia e pele enrugada embaixo do olho** (Keila 22 e 23/10). Recorte fechado (`caixa` no broll) abaixo do olho; evitar íris em destaque e "olho bonito". Nunca retrato de rosto inteiro de idoso "sofrido", de lenço na cabeça ou barba desgrenhada: "parece morador de rua".
+
+**Artigo científico do Dr.:** quando ele cita "meu artigo publicado sobre reologia das olheiras", é *An Effective Technique for Improving Orbital Contour* (Pithon-Napoli JVM, Matos GD, Moretti MP, Vicentini MC. J Clin Exp Dermatol Res. 2024;16:683. DOI 10.35841/2155-9554.24.16.683). A primeira página aparece na p. 6 do ebook *Preenchimento Tridimensional de Olheiras* (Drive `1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f`; renderizar com escala 10, é vetorial). No vídeo, a página do artigo entra na cartela (`cartela.capa`), com "artigo científico publicado". **Nunca a capa do ebook** (Keila 23/10: "ele fala artigo científico, não livro").
 
 Grafia (Keila 23/10): "calha lacrimal" (o Whisper ouve "carne lacrimal").
 

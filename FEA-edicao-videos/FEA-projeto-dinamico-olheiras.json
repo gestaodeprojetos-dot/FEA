@@ -26,9 +26,9 @@
   "pausa_max": 0.35,
   "gancho": {
     "linhas": [
-      "Produto errado na olheira",
-      "atrai água e incha",
-      "o olhar do paciente"
+      "O erro que deixa",
+      "a olheira PIOR",
+      "depois do preenchimento"
     ],
     "destaque": 1,
     "ate": 11.8
@@ -36,74 +36,114 @@
   "broll": [
     {
       "ini": 0.0,
-      "fim": 1.0,
+      "fim": 0.45,
       "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/modelo/olheira_paciente.mp4",
       "t0": 8.0,
       "crop": [
-        0,
-        140,
-        576,
-        512
+        60,
+        230,
+        456,
+        405
       ]
     },
     {
-      "ini": 1.0,
-      "fim": 1.9,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r55.jpg",
-      "foco": [
-        0.5,
-        0.5
+      "ini": 0.45,
+      "fim": 0.9,
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/pd1.jpg",
+      "caixa": [
+        0.0,
+        0.38,
+        0.55,
+        0.85
       ]
     },
     {
-      "ini": 1.9,
+      "ini": 0.9,
+      "fim": 1.35,
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/d18.jpg",
+      "caixa": [
+        0.36,
+        0.3,
+        0.64,
+        0.62
+      ]
+    },
+    {
+      "ini": 1.35,
+      "fim": 1.8,
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r54.jpg",
+      "caixa": [
+        0.15,
+        0.3,
+        0.55,
+        0.85
+      ]
+    },
+    {
+      "ini": 1.8,
+      "fim": 2.35,
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/pd1.jpg",
+      "caixa": [
+        0.48,
+        0.0,
+        0.98,
+        0.35
+      ]
+    },
+    {
+      "ini": 2.35,
       "fim": 2.9,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r9.jpg",
-      "foco": [
-        0.5,
-        0.4
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r3.jpg",
+      "caixa": [
+        0.15,
+        0.25,
+        0.65,
+        0.95
       ]
     },
     {
       "ini": 2.9,
       "fim": 3.85,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e41.jpg",
-      "foco": [
-        0.5,
-        0.45
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/modelo/olheira_paciente.mp4",
+      "t0": 9.3,
+      "crop": [
+        60,
+        230,
+        456,
+        405
       ]
     },
     {
       "ini": 5.8,
       "fim": 7.65,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e25.jpg",
-      "foco": [
-        0.6,
-        0.3
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r9.jpg",
+      "caixa": [
+        0.15,
+        0.2,
+        0.5,
+        0.62
       ]
     },
     {
       "ini": 7.65,
       "fim": 9.95,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/artigo/frase_card.jpg",
-      "foco": [
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e29.jpg",
+      "caixa": [
+        0.3,
         0.5,
-        0.5
-      ],
-      "tratamento": {
-        "cor": 1.0,
-        "contraste": 1.05,
-        "brilho": 1.0,
-        "vinheta_on": false
-      }
+        0.95,
+        0.74
+      ]
     },
     {
       "ini": 9.95,
       "fim": 11.85,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e30.jpg",
-      "foco": [
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r5.jpg",
+      "caixa": [
+        0.12,
+        0.3,
         0.5,
-        0.55
+        0.68
       ]
     },
     {
@@ -145,55 +185,67 @@
     {
       "ini": 42.3,
       "fim": 45.4,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e26.jpg",
-      "foco": [
-        0.65,
-        0.5
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e30.jpg",
+      "caixa": [
+        0.15,
+        0.56,
+        0.85,
+        0.82
       ]
     },
     {
       "ini": 45.7,
       "fim": 48.6,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e32.jpg",
-      "foco": [
-        0.5,
-        0.4
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r1.jpg",
+      "caixa": [
+        0.52,
+        0.22,
+        0.82,
+        0.65
       ]
     },
     {
       "ini": 48.75,
       "fim": 51.4,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r3.jpg",
-      "foco": [
-        0.5,
-        0.5
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e25.jpg",
+      "caixa": [
+        0.2,
+        0.35,
+        0.75,
+        0.68
       ]
     },
     {
       "ini": 51.4,
       "fim": 54.3,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/r54.jpg",
-      "foco": [
-        0.5,
-        0.5
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e32.jpg",
+      "caixa": [
+        0.3,
+        0.4,
+        0.85,
+        0.95
       ]
     },
     {
       "ini": 54.3,
       "fim": 56.9,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e24.jpg",
-      "foco": [
-        0.5,
-        0.5
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/pd1.jpg",
+      "caixa": [
+        0.0,
+        0.38,
+        0.55,
+        0.85
       ]
     },
     {
       "ini": 56.9,
       "fim": 59.75,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e20.jpg",
-      "foco": [
-        0.6,
-        0.45
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/d18.jpg",
+      "caixa": [
+        0.36,
+        0.3,
+        0.64,
+        0.62
       ]
     }
   ],
@@ -257,8 +309,8 @@
     "ini": 14.1,
     "fim": 18.95,
     "linha1": "Dr. João Pithon",
-    "linha2": "autor do livro sobre olheiras",
-    "capa": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/artigo/capa.png"
+    "linha2": "artigo científico publicado",
+    "capa": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/artigo/artigo_card.png"
   },
   "comentario": {
     "ini": 61.95,
@@ -308,10 +360,12 @@
     "pop": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-pop-seco-mixkit2356.mp3",
     "pop2": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-pop-click-mixkit2364.mp3",
     "clique": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-clique-mixkit1117.mp3",
-    "vacuo": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-vacuo-ar-mixkit2608.mp3"
+    "vacuo": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-vacuo-ar-mixkit2608.mp3",
+    "produto": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-swoosh-pequeno-mixkit166.mp3"
   },
   "musica": {
-    "arquivo": "/home/user/FEA/FEA-edicao-videos/FEA-musicas/FEA-silent-descent-mixkit614.mp3",
+    "arquivo": "/home/user/FEA/FEA-edicao-videos/FEA-musicas/FEA-deep-urban-mixkit623.mp3",
+    "inicio": 15,
     "db": -19
   }
 }

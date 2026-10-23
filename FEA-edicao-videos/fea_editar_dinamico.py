@@ -338,24 +338,24 @@ def trilha_efeitos(cfg, ff, mapa, broll, prods, vit, cart, com, marcas, pasta_tm
     por(0, "impacto", -7)
     por(0, "batida", -11)
     whooshes = [x for x in ("whoosh", "whoosh2", "whoosh3") if x in e]
+    ult_w = -9.0
     for k, b in enumerate(broll):
-        if b["ini"] > 0.05 and whooshes:
+        if b["ini"] > 0.05 and whooshes and b["ini"] - ult_w >= 0.6:   # na montagem rápida, sem whoosh em cada quadro
             por(b["ini"], whooshes[k % len(whooshes)], -9, no_pico=True)
+            ult_w = b["ini"]
         por(b["ini"], "obturador", -14)
     em_broll = lambda t: any(b["ini"] - 0.3 <= t < b["fim"] for b in broll)
     for m in marcas[1:]:
         if not em_broll(m):
             por(m, "swoosh", -17, no_pico=True)
     for p in prods:
-        por(p["ini"], "pop", -6)
+        por(p["ini"], "produto", -15, no_pico=True)
     if vit:
-        for k in range(len(vit["ims"])):
-            por(vit["ini"] + 0.08 * k, "pop", -8)
+        por(vit["ini"], "produto", -13, no_pico=True)
     if cart:
         por(cart["ini"], "vacuo", -9, no_pico=True)
     if com:
-        por(com["ini"], "clique", -6)
-        por(com["ini"] + 0.05, "pop2", -9)
+        por(com["ini"], "produto", -13, no_pico=True)
     pico = np.abs(trilha).max()
     if pico > 0.9:
         trilha *= 0.9 / pico
@@ -380,6 +380,9 @@ def preparar_broll(cfg, ff, mapa, pasta_tmp):
         item = {"ini": ini, "fim": fim}
         if "img" in b:
             im = Image.open(b["img"]).convert("RGB")
+            if "caixa" in b:   # recorte fechado na olheira (Keila 23/10: "pele enrugada perto do olho, olheira feia")
+                x0, y0, x1, y1 = b["caixa"]
+                im = im.crop((int(x0 * im.width), int(y0 * im.height), int(x1 * im.width), int(y1 * im.height)))
             big = cobrir(im, int(W * 1.12), int(HT * 1.12), tuple(b.get("foco", (0.5, 0.45))))
             item["img"] = sinistro(big, **b.get("tratamento", {}))
         else:
@@ -475,7 +478,7 @@ def renderizar(cfg, previa=False):
         capa = None
         if cart.get("capa"):   # capa do livro/artigo do Dr. (Keila 23/10: "insere o artigo no vídeo")
             capa = Image.open(cart["capa"]).convert("RGBA")
-            capa.thumbnail((int(W * 0.62), int(H * 0.50)), Image.LANCZOS)
+            capa.thumbnail((int(W * 0.90), int(H * 0.50)), Image.LANCZOS)
             sh = Image.new("RGBA", (capa.width + 80, capa.height + 80), (0, 0, 0, 0))
             sh.paste((0, 0, 0, 170), (40, 55), capa)
             sh = sh.filter(ImageFilter.GaussianBlur(18))
@@ -600,6 +603,14 @@ def renderizar(cfg, previa=False):
             im = com["img"].resize((int(260 * s), int(260 * s)), Image.BILINEAR)
             fr.alpha_composite(im, ((W - im.width) // 2, int(H * 0.70) - im.height // 2))
         fr = fr.convert("RGB")
+        # tremida curta (gancho e trocas de imagem): o vídeo "bate" na tela e prende no feed
+        ult_t = max((x for x in trocas_broll if x <= t), default=None)
+        forca = cfg.get("tremida", 14) if t < g_fim else cfg.get("tremida", 14) * 0.5
+        if ult_t is not None and t - ult_t < 0.3 and forca:
+            k = (1 - (t - ult_t) / 0.3) * forca
+            dx, dy = int(k * math.sin(n * 2.7)), int(k * math.cos(n * 3.9))
+            m = int(forca) + 2
+            fr = fr.crop((m + dx, m + dy, W - m + dx, H - m + dy)).resize((W, H), Image.BILINEAR)
         # flash nas trocas de imagem
         ult = max((x for x in trocas_broll if x <= t), default=None)
         if ult is not None and t - ult < 0.17:
