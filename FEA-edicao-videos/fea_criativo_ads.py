@@ -226,7 +226,10 @@ def capa_png(nome, largura, pasta):
     caminho = os.path.abspath(os.path.join(pasta, f"capa_{nome}_{largura}.png"))
     if os.path.exists(caminho):
         return caminho
-    im = Image.open(os.path.join(CAPAS_DIR, f"capa_{nome}.png")).convert("RGBA")
+    arq = os.path.join(CAPAS_DIR, f"capa_{nome}.png")
+    if not os.path.exists(arq):
+        arq = os.path.join(CAPAS_DIR, f"{nome}.png")     # lp_00..lp_19: os 20 cards da LP da Black
+    im = Image.open(arq).convert("RGBA")
     h = int(largura * im.height / im.width)
     im = im.resize((largura, h), Image.LANCZOS)
     out = Image.new("RGBA", (largura + 8, h + 8), (0, 0, 0, 0))
@@ -235,6 +238,14 @@ def capa_png(nome, largura, pasta):
     ImageDraw.Draw(masc).rounded_rectangle([0, 0, largura - 1, h - 1], radius=12, fill=255)
     out.paste(im, (4, 4), masc)
     out.save(caminho)
+    return caminho
+
+
+def fundo_parede(pasta, altura):
+    """Faixa escura atrás da parede de cursos, para os cards se destacarem do vídeo."""
+    from PIL import Image
+    caminho = os.path.abspath(os.path.join(pasta, f"fundo_parede_{altura}.png"))
+    Image.new("RGBA", (W, altura), (8, 8, 8, 205)).save(caminho)
     return caminho
 
 
@@ -259,6 +270,22 @@ def sobreposicoes(v, manter):
             x0 = (W - (na_linha * (larg + 8) + (na_linha - 1) * 24)) // 2
             itens.append((capa_png(nome, larg, pasta), x0 + col * (larg + 32), topo + lin * (alt + 20),
                           editado(t, manter), fim, False))
+    # "parede": [[s, s]] (bruto) quando ele fala "todos os cursos": os 20 cards da LP entram em
+    # cascata numa grade 5x4 (Keila, 23/10/2026: "quero que mostre todos os cursos, parece pouco")
+    cards = sorted(f[:-4] for f in os.listdir(CAPAS_DIR) if f.startswith("lp_") and f.endswith(".png"))
+    for a, b in v.get("parede", []):
+        a2, b2 = editado(a, manter), editado(b, manter)
+        b2 = max(b2, a2 + 0.07 * len(cards) + 1.2)
+        larg, cols, gap = 188, 5, 14
+        alt = int(larg * 693 / 480) + 8
+        linhas = -(-len(cards) // cols)
+        topo = v.get("parede_y", 70)
+        itens.append((fundo_parede(pasta, linhas * alt + (linhas - 1) * gap + 60), 0, topo - 30, a2, b2, False))
+        x0 = (W - (cols * (larg + 8) + (cols - 1) * gap)) // 2
+        for i, nome in enumerate(cards):
+            lin, col = divmod(i, cols)
+            itens.append((capa_png(nome, larg, pasta), x0 + col * (larg + 8 + gap),
+                          topo + lin * (alt + gap), a2 + 0.07 * i, b2, False))
     for a, b in v.get("saiba_mais", []):
         itens.append((botao_saiba_mais(pasta), "(W-w)/2", f"{v.get('botao_y', 1200)}-h/2",
                       editado(a, manter), editado(b, manter), True))

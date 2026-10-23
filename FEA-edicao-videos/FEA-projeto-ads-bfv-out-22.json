@@ -14,7 +14,7 @@
   {
    "entrada": "brutos/IMG_7978.MOV",
    "transcricao": "tr/IMG_7978.json",
-   "saida": "out/Ads 092 - Tudo o que você vai ganhar - BFV.mp4",
+   "saida": "out/Ads 036 - Tudo o que você vai ganhar - BFV.mp4",
    "manter": [
     [
      0.0,
@@ -152,12 +152,22 @@
      "R\\$(\\d)",
      "R$ \\1"
     ]
+   ],
+   "parede": [
+    [
+     13.45,
+     17.0
+    ],
+    [
+     121.15,
+     128.85
+    ]
    ]
   },
   {
    "entrada": "brutos2/IMG_7979.MOV",
    "transcricao": "tr/IMG_7979.json",
-   "saida": "out/Ads 093 - Plataforma do Combo Vitalício - BFV.mp4",
+   "saida": "out/Ads 037 - Plataforma do Combo Vitalício - BFV.mp4",
    "manter": [
     [
      0.0,
@@ -252,6 +262,12 @@
     [
      "(\\d) ?ml\\b",
      "\\1 mL"
+    ]
+   ],
+   "parede": [
+    [
+     107.3,
+     112.7
     ]
    ]
   }
