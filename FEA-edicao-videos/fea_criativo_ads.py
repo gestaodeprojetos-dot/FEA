@@ -62,7 +62,16 @@ def palavras_do_projeto(v, db_voz):
     palavras = E.numerar_enumeracao(palavras)
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
-    return E.ancorar_na_voz(palavras, *db_voz)
+    palavras = E.ancorar_na_voz(palavras, *db_voz)
+    # fala baixa de outra pessoa (ex.: a mulher na chamada de vídeo do Ads 038), transcrita à parte
+    # com ganho: [[s, e, "palavra"], ...]; a 1ª palavra abre bloco novo (fala de outra pessoa)
+    extra = v.get("palavras_extra", [])
+    if extra:
+        a, b = extra[0][0] - 0.05, extra[-1][1] + 0.05
+        palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 <= b)]
+        palavras += [{"w": w, "s": s0, "e": e0, "ini": i == 0} for i, (s0, e0, w) in enumerate(extra)]
+        palavras.sort(key=lambda p: p["s"])
+    return palavras
 
 
 def apertar_pausas(manter, db, passo, maximo):
@@ -316,7 +325,9 @@ def renderizar(cfg, v, so_legenda=False):
     partes, vrot, arot = [], [], []
     n = 0
     for i, (a, b) in enumerate(manter):
-        partes.append(f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,"
+        # "realcar": [[s, e, dB]] no bruto, sobe o volume da fala baixa (a mulher no telefone)
+        realce = "".join(f"volume={g}dB:enable='between(t,{r0},{r1})'," for r0, r1, g in v.get("realcar", []))
+        partes.append(f"[0:a]{realce}atrim={a}:{b},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,"
                       f"afade=t=out:st={max(0, b - a - 0.02):.3f}:d=0.02[a{i}]")
         arot.append(f"[a{i}]")
         cortes = sorted({a, b} | {t for z in inserts for t in z[:2] if a < t < b})
@@ -381,9 +392,11 @@ def renderizar(cfg, v, so_legenda=False):
     k = 0
     for arq, x, y, a, b, pulsa in sobreposicoes(v, manter):
         anim = (f",scale=w='iw*(1+0.05*sin(2*PI*1.6*(t-{a:.3f})))':h=-1:eval=frame" if pulsa else "")
-        filtro += (f"movie='{arq}',loop=loop=-1:size=1,setpts=N/30/TB,format=rgba,"
+        # trim: sem ele o loop infinito da imagem segurava o último quadro do vídeo e o CTA
+        # não aparecia (Ads 036 a 040 ficaram travados na cara do Dr., 23/10/2026)
+        filtro += (f"movie='{arq}',loop=loop=-1:size=1,setpts=N/30/TB,trim=duration={duracao:.3f},format=rgba,"
                    f"fade=t=in:st={a:.3f}:d=0.22:alpha=1,fade=t=out:st={b - 0.2:.3f}:d=0.2:alpha=1{anim}[ov{k}];"
-                   f"{ultimo}[ov{k}]overlay=x='{x}':y='{y}':enable='between(t,{a:.3f},{b:.3f})'[vov{k}];")
+                   f"{ultimo}[ov{k}]overlay=x='{x}':y='{y}':eof_action=pass:enable='between(t,{a:.3f},{b:.3f})'[vov{k}];")
         ultimo = f"[vov{k}]"
         k += 1
     filtro += f"{ultimo}ass='{esc}':fontsdir='{fontes}',fps=30,format=yuv420p[vo]"
