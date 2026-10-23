@@ -22,6 +22,7 @@ projeto.json:
     "tela": {"arquivo": "tela.mov", "offset": 2.09, "crop": [x, y, w, h]},
     "inserts": [[4.0, 13.2, "split"], [30.3, 33.7, "card", 30.0]],
         # s do bruto. "split": tela em cima (sincronizada pelo offset), Dr. embaixo.
+        # "imagem": print (ex.: depoimento) em cima, Dr. embaixo; 4º valor = arquivo da imagem.
         # "card": tela num cartão sobre o vídeo; o 4º valor é o tempo da tela (sem sincronia).
     "logo": ["id/logo_gold.png", 0, 3.0],          # logo no topo nos primeiros segundos
     "correcoes": [["regex", "troca"]]
@@ -161,6 +162,24 @@ def gerar_ass(v, palavras_brutas, manter, caminho):
 
 
 
+def painel_imagem(arquivo, altura, saida, n):
+    """Painel 1080 x altura com a imagem centrada sobre o preto da Black e borda dourada."""
+    from PIL import Image, ImageDraw
+    caminho = os.path.abspath(f"{saida.rsplit('.', 1)[0]}_painel{n}.png")
+    im = Image.open(arquivo).convert("RGB")
+    esc = min((W - 100) / im.width, (altura - 90) / im.height)
+    im = im.resize((int(im.width * esc), int(im.height * esc)), Image.LANCZOS)
+    fundo = Image.new("RGB", (W, altura), (13, 13, 13))
+    x, y = (W - im.width) // 2, (altura - im.height) // 2
+    ImageDraw.Draw(fundo).rounded_rectangle([x - 6, y - 6, x + im.width + 5, y + im.height + 5],
+                                            radius=14, fill=(0xED, 0xBF, 0x72))
+    mascara = Image.new("L", im.size, 0)
+    ImageDraw.Draw(mascara).rounded_rectangle([0, 0, im.width - 1, im.height - 1], radius=10, fill=255)
+    fundo.paste(im, (x, y), mascara)
+    fundo.save(caminho)
+    return caminho, altura
+
+
 def renderizar(cfg, v, so_legenda=False):
     ff = cfg["ffmpeg"]
     db_voz = E.perfil_voz(ff, v["entrada"])
@@ -194,7 +213,16 @@ def renderizar(cfg, v, so_legenda=False):
                 continue
             ins = next((z for z in inserts if z[0] <= x0 + 1e-3 and x1 <= z[1] + 1e-3), None)
             dr = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
-            if ins and tela:
+            if ins and ins[2] == "imagem":
+                # print de depoimento em cima (fundo escuro, borda dourada), Dr. embaixo
+                painel, hp = painel_imagem(ins[3], v.get("img_altura", 900), v["saida"], n)
+                alt_dr = H - hp
+                yfoco = min(v.get("split_dr_y", 350), H - alt_dr)
+                partes.append(f"movie='{painel}',loop=loop=-1:size=1,setpts=N/30/TB,fps=30,"
+                              f"trim=duration={x1 - x0:.3f},format=yuv420p,setsar=1[t{n}]")
+                partes.append(f"{dr},crop={W}:{alt_dr}:0:{yfoco}[d{n}]")
+                partes.append(f"[t{n}][d{n}]vstack,drawbox=x=0:y={hp - 3}:w={W}:h=6:color=0xEDBF72@1:t=fill[v{n}]")
+            elif ins and tela:
                 cx, cy, cw, ch = tela["crop"]
                 if ins[2] == "split":
                     t0, t1 = x0 + tela["offset"], x1 + tela["offset"]
