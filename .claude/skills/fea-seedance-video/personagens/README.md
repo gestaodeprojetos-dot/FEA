@@ -12,7 +12,9 @@ personagens/
 
 **O rosto vem só de fotos reais.** Uma folha de rosto gerada por IA "embeleza" e muda a pessoa:
 nunca use como fonte de rosto. Para personagem inventado (um desenho, um animal, uma figura
-histórica), aí sim a folha gerada é a identidade.
+histórica), aí sim a folha gerada é a identidade. Exceção: folha do ChatGPT feita com fotos boas
+em vários ângulos, conferida e aprovada pelo usuário (ver `references/FEA-pre-producao.md`).
+Tire as fotos do jeito que a pessoa quer aparecer nos vídeos (com a maquiagem de sempre, por exemplo).
 
 ## Modelo de `card.md`
 

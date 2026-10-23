@@ -26,6 +26,8 @@ mostrar como cada regra foi aprendida.
 | **Áudio e falas** | `references/audio-dialogo.md` + `vozes.md` | Bloco AUDIO, áudio de referência, vozes |
 | **Modelo e plataformas** | `references/seedance-2-5.md` | Como o Seedance e o Higgsfield se comportam |
 | **Diagnóstico** | `references/troubleshooting.md` | Quando o vídeo volta errado |
+| **Antes e depois do prompt** | `references/FEA-pre-producao.md` | Roteiro em cenas, kit de imagens (cenário, folha de rosto, figurino, objeto, pose), voz, edição, tempo e custo |
+| **Exemplos da aula** | `references/FEA-exemplos-aula.md` | Dois prompts completos que a autora da skill aprovou, com o pedido que gerou cada um |
 
 As pastas `personagens/`, `projetos/` e `prompts-aprovados/` começam vazias. Elas se enchem com o uso.
 
@@ -70,6 +72,8 @@ Descubra o projeto e quem está na cena. Leia `projetos/<projeto>.md` e o `card.
 personagem em `personagens/`. Personagem novo: monte a pasta dele como explica
 `personagens/README.md`. Projeto novo: crie `projetos/<projeto>.md` com formato, plataforma, câmera
 e elenco, e pergunte a proporção.
+Se ainda falta o kit da cena (roteiro em cenas, cenário vazio, fotos ou folha de rosto, figurino,
+objeto com texto, pose difícil), ajude a montar antes do prompt: `references/FEA-pre-producao.md`.
 
 ### 2. O que já funcionou
 Abra `prompts-aprovados/README.md`. Se houver um aprovado do mesmo projeto ou da mesma situação
@@ -151,7 +155,9 @@ Não salve outros prompts em disco: eles saem como texto na conversa.
 ## Regras que não se negociam
 
 - **O rosto vem só das fotos reais do personagem.** Imagem gerada (folha de rosto, frame de vídeo,
-  recorte pequeno) nunca é fonte de rosto: deixa a pessoa "muito estranha".
+  recorte pequeno) nunca é fonte de rosto: deixa a pessoa "muito estranha". Única exceção: folha de
+  rosto feita no ChatGPT a partir de fotos boas em vários ângulos, conferida contra as fotos e
+  aprovada pelo usuário (`references/FEA-pre-producao.md`). Na dúvida, fotos reais.
 - **Identity Card copiado literal** do `card.md`. Encurtar é escolher campos inteiros. As exceções
   (frase de sorriso em cena sem sorriso, altura, comentários) estão em `prompt-template.md`.
 - **Ambiente vazio como `@Image1`, nunca frame inicial** (salvo quando o modo escolhido é Start

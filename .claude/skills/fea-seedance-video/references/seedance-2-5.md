@@ -59,6 +59,9 @@ Quatro comportamentos explicam quase todas as gerações reprovadas:
 - **Várias fotos da mesma pessoa:** todas definem uma única pessoa, que aparece uma vez.
 - **Nunca imagem gerada como fonte de rosto:** folha de rosto gerada, frame de vídeo, rosto
   recortado de baixa resolução. Confirmado três vezes (Ana ep. 2, Pedro, POV da plenária).
+  Exceção vista na aula da autora (23/10): a folha do ChatGPT feita com fotos boas em vários
+  ângulos saiu fiel e funciona em vídeo; a do Nano Banana mudou a pessoa. Só com folha conferida
+  e aprovada pelo usuário (`FEA-pre-producao.md`).
 - **Ambiente vazio** como `@Image1`. Imagem de cena com pessoas faz o modelo copiar os dublês.
 - **Foto de roupa sem rosto** (de preferência foto de produto ou corpo do queixo para baixo).
 - **Foto de corpo** quando o porte importa — sem ela o modelo engorda.
