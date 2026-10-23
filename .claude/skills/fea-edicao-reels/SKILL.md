@@ -46,6 +46,10 @@ Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos 
 
 **Imagens: foco no olho** (Keila 22/10). Close de olho, pálpebra, pé de galinha, olheira e pele ao redor. Nunca retrato de rosto inteiro de idoso "sofrido", de lenço na cabeça ou barba desgrenhada: "parece morador de rua".
 
+**Livro/artigo do Dr.:** quando ele cita "meu artigo sobre reologia das olheiras", é o ebook *Preenchimento Tridimensional de Olheiras: Um Guia Completo com a Metodologia ARTI* (Drive `1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f`, capítulo "Reologia: a escolha do preenchedor ideal", p. 40 a 49). No vídeo: capa com pop na cartela (`cartela.capa`) e a frase-conclusão do capítulo recomposta em letra grande como imagem de cima. Não mostrar o gráfico "HIGH G PRIME / Low sweeling fator" (tem erro de digitação).
+
+Grafia (Keila 23/10): "calha lacrimal" (o Whisper ouve "carne lacrimal").
+
 **Recorte de produto:** usar `birefnet-general` no rembg quando a caixa é branca (o `isnet` abriu buraco na caixa do Yvoire). Conferir sempre o PNG sobre fundo vermelho antes de usar.
 
 **Dinâmica:** zoom no Dr. trocando a cada frase (~2,2 s, níveis 1,0 / 1,18 / 1,08 / 1,28) com leve aproximação contínua. Vídeo "parado" foi reprovado.

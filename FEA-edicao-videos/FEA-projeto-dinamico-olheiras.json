@@ -85,11 +85,17 @@
     {
       "ini": 7.65,
       "fim": 9.95,
-      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/img/e29.jpg",
+      "img": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/artigo/frase_card.jpg",
       "foco": [
-        0.7,
-        0.45
-      ]
+        0.5,
+        0.5
+      ],
+      "tratamento": {
+        "cor": 1.0,
+        "contraste": 1.05,
+        "brilho": 1.0,
+        "vinheta_on": false
+      }
     },
     {
       "ini": 9.95,
@@ -251,7 +257,8 @@
     "ini": 14.1,
     "fim": 18.95,
     "linha1": "Dr. João Pithon",
-    "linha2": "artigo sobre reologia das olheiras"
+    "linha2": "autor do livro sobre olheiras",
+    "capa": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/artigo/capa.png"
   },
   "comentario": {
     "ini": 61.95,
@@ -265,6 +272,10 @@
     [
       "Ivoar Contour",
       "Yvoire Contour"
+    ],
+    [
+      "carne lacrimal",
+      "calha lacrimal"
     ]
   ],
   "correcoes": [

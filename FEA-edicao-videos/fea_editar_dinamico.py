@@ -240,7 +240,7 @@ def vinheta(w, h, forca=0.55):
 VIN = None
 
 
-def sinistro(im, cor=0.85, contraste=1.22, brilho=0.95):
+def sinistro(im, cor=0.85, contraste=1.22, brilho=0.95, vinheta_on=True):
     """Tratamento de impacto: menos cor, mais contraste, leve tom frio e vinheta."""
     global VIN
     im = ImageEnhance.Color(im).enhance(cor)
@@ -249,9 +249,10 @@ def sinistro(im, cor=0.85, contraste=1.22, brilho=0.95):
     a = np.asarray(im).astype(np.float32)
     a[..., 2] *= 1.04
     a[..., 0] *= 0.97
-    if VIN is None or VIN.shape[:2] != a.shape[:2]:
-        VIN = vinheta(a.shape[1], a.shape[0])
-    a *= VIN
+    if vinheta_on:
+        if VIN is None or VIN.shape[:2] != a.shape[:2]:
+            VIN = vinheta(a.shape[1], a.shape[0])
+        a *= VIN
     return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
 
 
@@ -470,8 +471,17 @@ def renderizar(cfg, previa=False):
     cart = cfg.get("cartela")
     if cart:
         c1 = texto_sombra(cart["linha1"], fontes("ExtraBold", 66), sombra=10)
-        c2 = texto_sombra(cart["linha2"], fontes("ExtraBoldItalic", 84), sombra=10, largura_max=W - 120)
-        cart = {"ini": mapa(cart["ini"]), "fim": mapa(cart["fim"]), "c1": c1, "c2": c2}
+        c2 = texto_sombra(cart["linha2"], fontes("ExtraBoldItalic", 72), sombra=10, largura_max=W - 120)
+        capa = None
+        if cart.get("capa"):   # capa do livro/artigo do Dr. (Keila 23/10: "insere o artigo no vídeo")
+            capa = Image.open(cart["capa"]).convert("RGBA")
+            capa.thumbnail((int(W * 0.62), int(H * 0.50)), Image.LANCZOS)
+            sh = Image.new("RGBA", (capa.width + 80, capa.height + 80), (0, 0, 0, 0))
+            sh.paste((0, 0, 0, 170), (40, 55), capa)
+            sh = sh.filter(ImageFilter.GaussianBlur(18))
+            sh.alpha_composite(capa, (40, 40))
+            capa = sh
+        cart = {"ini": mapa(cart["ini"]), "fim": mapa(cart["fim"]), "c1": c1, "c2": c2, "capa": capa}
     com = cfg.get("comentario")
     if com:
         com = {"ini": mapa(com["ini"]), "fim": min(mapa(com["fim"]), mapa.dur), "img": icone_comentario()}
@@ -565,6 +575,12 @@ def renderizar(cfg, previa=False):
             lt = t - cart["ini"]
             a = ease(lt / 0.3)
             y = int(H * 0.40 + 30 * (1 - a))
+            if cart["capa"] is not None:
+                y = int(H * 0.10 + 30 * (1 - a))
+                sc = pop(lt - 0.15, 0.35) if lt >= 0.15 else 0
+                if sc > 0:
+                    cp = cart["capa"].resize((int(cart["capa"].width * sc), int(cart["capa"].height * sc)), Image.BILINEAR)
+                    fr.alpha_composite(cp, ((W - cp.width) // 2, int(H * 0.60) - cp.height // 2))
             for im in (cart["c1"], cart["c2"]):
                 im2 = im if a >= 1 else Image.fromarray((np.asarray(im) * np.array([1, 1, 1, a])).astype(np.uint8))
                 fr.alpha_composite(im2, ((W - im.width) // 2, y))
