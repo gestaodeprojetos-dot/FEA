@@ -536,11 +536,11 @@ def renderizar(cfg, previa=False):
             fr = ImageEnhance.Brightness(peq.resize((W, H), Image.BILINEAR)).enhance(0.45)
         if b_ativo:
             # embaixo: o Dr. (rosto no centro da metade de baixo)
-            zb = 1.15   # Dr. um pouco mais perto na metade de baixo, como no Volpe
+            zb = cfg.get("zoom_baixo", 1.15)   # Dr. um pouco mais perto na metade de baixo (selfie fechada: 1.0)
             hb = METADE + FADE
             bw, bh = int(W / zb), int(hb / zb)
             x0 = min(max(int(fx * W - bw / 2), 0), W - bw)
-            y0 = min(max(int(fy * H) - int(bh * 0.45), 0), H - bh)
+            y0 = min(max(int(fy * H) - int(bh * cfg.get("rosto_baixo", 0.45)), 0), H - bh)
             img = Image.new("RGB", (W, H))
             img.paste(fr.crop((x0, y0, x0 + bw, y0 + bh)).resize((W, hb), Image.BILINEAR), (0, METADE - FADE))
             img.paste(quadro_broll(b_ativo, t), (0, 0), mascara)

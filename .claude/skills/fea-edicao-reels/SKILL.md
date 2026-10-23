@@ -54,6 +54,10 @@ Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos 
 
 Grafia (Keila 23/10): "calha lacrimal" (o Whisper ouve "carne lacrimal").
 
+**Vídeos de banco (inserts em movimento):** Mixkit (`mixkit.co/free-stock-video/<tema>/`, download em `assets.mixkit.co/videos/ID/ID-1080.mp4` ou `-720`). Bons para skincare: 22083 (pálpebra enrugada em close), 33371 (mulher madura passando creme no espelho), 33222/33227 (creme na bochecha enrugada), 33748 (rosto maduro), 33352 (mulher madura tocando o rosto), 23858 (lavando o rosto na pia). Recorte para vídeo 1280x720: `crop: [x, 37, 727, 646]`.
+
+Vídeo de selfie fechada (Dr. perto da câmera): `zoom_baixo: 1.0` para não cortar a testa na metade de baixo.
+
 **Recorte de produto:** usar `birefnet-general` no rembg quando a caixa é branca (o `isnet` abriu buraco na caixa do Yvoire). Conferir sempre o PNG sobre fundo vermelho antes de usar.
 
 **Dinâmica:** zoom no Dr. trocando a cada frase (~2,2 s, níveis 1,0 / 1,18 / 1,08 / 1,28) com leve aproximação contínua. Vídeo "parado" foi reprovado.
