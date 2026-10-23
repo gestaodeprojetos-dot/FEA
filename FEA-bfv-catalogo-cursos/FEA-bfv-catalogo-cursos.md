@@ -13,6 +13,12 @@ Vídeo 16:9 no estilo da referência (vídeo do Drive, aos 1:38:14): carrossel 3
 - Os trechos foram escolhidos pelo `fea_melhor_trecho.py`, que analisa quadro a quadro e só aceita janelas com movimento contínuo: sem carregamento, sem tela parada e sem corte para menus. Depois foram conferidos visualmente.
 - As fontes são gravações de tela feitas pela Keila em 20/10/2026, da plataforma e do Drive com as aulas editadas. Na segunda rodada, ela escolheu os takes de Atenda, Olheiras, Corporal, Complicações, Fios, Rinomodelação, Preenchimento Labial, Preenchimento Express e Toxina Express. O Full Face com mais de 10 ml ganhou zoom para esconder o texto cortado no topo.
 
+## Versão Reels (9:16)
+
+- **Arquivo:** `FEA-bfv-catalogo-cursos-9x16.mp4`, 1080x1920, 30 fps, 97 s.
+- **Layout:** logo centralizado no topo; janela de vídeo de 1000x600 com a capa e o nome do curso logo abaixo; ebooks em janela vertical de 540x720; carrossel no centro; vitrine final em grade de 4 colunas por 5 linhas. Nada fica na faixa inferior, onde o Instagram coloca legenda e botões.
+- **Fonte:** `fonte/FEA-bfv-catalogo-reels.html`. Para renderizar: `VW=1080 VH=1920 HTML=FEA-bfv-catalogo-reels.html node render_par.js 30 saida.mp4 4`.
+
 ## Fonte
 
 - `fonte/FEA-bfv-catalogo.html`: a animação. A lista `COURSES` define o título, o tipo e o clipe de cada curso. Os tempos (`STEP`, `OPEN`, `CLOSE`, `CLIP_MAX`) ficam logo abaixo.

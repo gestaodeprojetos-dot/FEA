@@ -5,7 +5,7 @@ const fs = require('fs');
 const DIR = __dirname, HTML = process.env.HTML || 'FEA-bfv-catalogo.html';
 async function worker(fps, k, W) {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', args: ['--allow-file-access-from-files'] });
-  const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
+  const p = await b.newPage({ viewport: { width: +(process.env.VW || 1920), height: +(process.env.VH || 1080) } });
   await p.goto('file://' + DIR + '/' + HTML);
   await p.evaluate(() => window.ready); await p.evaluate(() => document.fonts.ready);
   const n = Math.round(await p.evaluate(() => window.DURATION) * fps);
