@@ -2,7 +2,7 @@
 
 Teaser de 40 segundos do app **Reology Map** (reology.joaopithon.com.br), no formato do vídeo do ProHarmony Atlas mostrado aos 56:25 da referência: motion design sobre gravações reais do app, uma funcionalidade por cena, frases curtas e trilha marcada.
 
-- **Arquivo:** `FEA-teaser-reology-map-16x9.mp4` (1920x1080, 30 fps, AAC 256 kbps, -14 LUFS)
+- **Arquivos:** `FEA-teaser-reology-map-16x9.mp4` (1920x1080) e `FEA-teaser-reology-map-9x16.mp4` (1080x1920, Reels e Stories), ambos com 40 s, 30 fps, AAC 256 kbps, -14 LUFS
 - **Trilha:** `FEA-trilha-reology-map.wav`, original (ver abaixo)
 - **Identidade:** a do próprio app, no tema escuro. Fundo `#111517`, texto `#EDF2F1`, cinza `#B3BFBE`, verde-menta `#A3D4C7`, verde profundo `#174F4A`, fonte Satoshi. As cores das faixas de G′ (azul, laranja e roxo) são as mesmas do app.
 - **Telas:** capturadas em 20/10/2026 com o login da Keila, no modo escuro. O aviso "Modo revisão interna" e o menu Administração, que só aparecem para conta de equipe, foram escondidos.
@@ -54,11 +54,15 @@ Os dados do app estão marcados como "em revisão". Se o catálogo mudar antes d
 ## Pendências antes de publicar
 
 1. **Foto do mapa facial:** a imagem é da equipe (está no app). Confirmar se a autorização de uso cobre material de divulgação.
-2. **Versão vertical 9:16** para Reels e Stories, se for usada.
+
+## Versão Reels (9:16)
+
+Mesmo roteiro, mesma trilha e cliques nos mesmos tempos (12,27 s e 16,68 s). O texto de cada cena fica no alto e a janela do app embaixo, mais estreita (905 px de largura interna, ampliada 1,08x) para as telas ficarem legíveis no celular. Na ficha técnica o enquadramento corre para a direita para mostrar a caixa do produto e o botão de 5 Hz. Os contadores ficam empilhados, os dois celulares lado a lado, e o aviso legal sobe para fora da área coberta pelos botões do Instagram.
 
 ## Como editar e renderizar de novo (`fonte/`)
 
 - `fea_captura_telas.js` captura as telas logadas com Playwright (`BLUR=0` mantém produtos e marcas nítidos). Precisa de uma sessão salva (`state.json`), que não fica no repositório porque contém o cookie de login.
 - `FEA-teaser-reology-map.html` é a animação, feita em GSAP. A tabela `WARP` alinha cada cena ao compasso da trilha.
-- `fea_render.js` renderiza o HTML quadro a quadro e gera o MP4 com o ffmpeg.
+- `FEA-teaser-reology-map-reels.html` é a versão vertical.
+- `fea_render.js` renderiza o HTML quadro a quadro e gera o MP4 com o ffmpeg. `fea_render_paralelo.js` faz o mesmo com 4 processos (`HTML=FEA-teaser-reology-map-reels.html VW=1080 VH=1920 node fea_render_paralelo.js 30 saida.mp4 4`).
 - `fea_trilha.py` gera a trilha (`python3 fea_trilha.py saida.wav`). Depois, normalizar com `ffmpeg -af "highpass=f=25,loudnorm=I=-14:TP=-1.0:LRA=11"` e juntar ao vídeo.
