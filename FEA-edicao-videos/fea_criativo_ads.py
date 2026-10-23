@@ -180,6 +180,91 @@ def painel_imagem(arquivo, altura, saida, n):
     return caminho, altura
 
 
+CAPAS_DIR = os.path.join(AQUI, "FEA-capas-cursos")   # capas recortadas da plataforma (capa_<nome>.png)
+
+
+def editado(t, manter):
+    """Tempo do bruto -> linha editada; caindo numa pausa cortada, vai para o próximo trecho."""
+    off = 0.0
+    for a, b in manter:
+        if t < a:
+            return off
+        if t <= b:
+            return off + t - a
+        off += b - a
+    return off
+
+
+def botao_saiba_mais(pasta):
+    """Botão "Saiba Mais" no dourado da Black (PNG com transparência)."""
+    from PIL import Image, ImageDraw, ImageFont
+    caminho = os.path.abspath(os.path.join(pasta, "botao_saiba_mais.png"))
+    w, h = 640, 140
+    im = Image.new("RGBA", (w + 20, h + 20), (0, 0, 0, 0))
+    grad = Image.new("RGBA", (w, h))
+    for yy in range(h):
+        t = yy / h
+        cor = tuple(int(a * (1 - t) + b * t) for a, b in zip((0xF3, 0xD2, 0x8F), (0xC8, 0x93, 0x4E))) + (255,)
+        ImageDraw.Draw(grad).line([(0, yy), (w, yy)], fill=cor)
+    masc = Image.new("L", (w, h), 0)
+    ImageDraw.Draw(masc).rounded_rectangle([0, 0, w - 1, h - 1], radius=h // 2, fill=255)
+    sombra = Image.new("RGBA", (w, h), (0, 0, 0, 120))
+    im.paste(sombra, (14, 16), masc)
+    im.paste(grad, (10, 8), masc)
+    fonte = ImageFont.truetype(os.path.join("fonts", "Montserrat-ExtraBold.ttf"), 62)
+    d = ImageDraw.Draw(im)
+    texto = "Saiba Mais  ›"
+    bx = d.textbbox((0, 0), texto, font=fonte)
+    d.text((10 + (w - (bx[2] - bx[0])) / 2, 8 + (h - (bx[3] - bx[1])) / 2 - bx[1]), texto, font=fonte, fill=(13, 13, 13))
+    im.save(caminho)
+    return caminho
+
+
+def capa_png(nome, largura, pasta):
+    """Capa do curso com cantos arredondados e borda dourada, na largura pedida."""
+    from PIL import Image, ImageDraw
+    caminho = os.path.abspath(os.path.join(pasta, f"capa_{nome}_{largura}.png"))
+    if os.path.exists(caminho):
+        return caminho
+    im = Image.open(os.path.join(CAPAS_DIR, f"capa_{nome}.png")).convert("RGBA")
+    h = int(largura * im.height / im.width)
+    im = im.resize((largura, h), Image.LANCZOS)
+    out = Image.new("RGBA", (largura + 8, h + 8), (0, 0, 0, 0))
+    ImageDraw.Draw(out).rounded_rectangle([0, 0, largura + 7, h + 7], radius=16, fill=(0xED, 0xBF, 0x72, 255))
+    masc = Image.new("L", (largura, h), 0)
+    ImageDraw.Draw(masc).rounded_rectangle([0, 0, largura - 1, h - 1], radius=12, fill=255)
+    out.paste(im, (4, 4), masc)
+    out.save(caminho)
+    return caminho
+
+
+def sobreposicoes(v, manter):
+    """Capas de curso que aparecem quando o Dr. cita o curso, e o botão Saiba Mais quando ele
+    manda clicar (Keila, 23/10/2026: "aparecer na tela a capa dos cursos", "botão de saiba mais").
+    "capas": [{"ate": s, "y": topo, "itens": [[s, "fep"], ...]}], "saiba_mais": [[s, s]] (bruto)."""
+    pasta = os.path.dirname(os.path.abspath(v["saida"]))
+    itens = []
+    for g in v.get("capas", []):
+        n = len(g["itens"])
+        linhas = 2 if n > 4 else 1
+        por = -(-n // linhas)
+        # no alto do quadro: embaixo cobria o rosto do Dr. e a legenda (conferido em 23/10/2026)
+        larg = min(g.get("largura", 230 if linhas == 1 else 200), (W - 80 - (por - 1) * 24) // por)
+        alt = int(larg * 633 / 438) + 8
+        fim = editado(g["ate"], manter)
+        topo = g.get("y", 60 if linhas == 1 else 40)
+        for i, (t, nome) in enumerate(g["itens"]):
+            lin, col = divmod(i, por)
+            na_linha = por if lin < linhas - 1 else n - por * (linhas - 1)
+            x0 = (W - (na_linha * (larg + 8) + (na_linha - 1) * 24)) // 2
+            itens.append((capa_png(nome, larg, pasta), x0 + col * (larg + 32), topo + lin * (alt + 20),
+                          editado(t, manter), fim, False))
+    for a, b in v.get("saiba_mais", []):
+        itens.append((botao_saiba_mais(pasta), "(W-w)/2", f"{v.get('botao_y', 1200)}-h/2",
+                      editado(a, manter), editado(b, manter), True))
+    return itens
+
+
 def renderizar(cfg, v, so_legenda=False):
     ff = cfg["ffmpeg"]
     db_voz = E.perfil_voz(ff, v["entrada"])
@@ -213,6 +298,13 @@ def renderizar(cfg, v, so_legenda=False):
                 continue
             ins = next((z for z in inserts if z[0] <= x0 + 1e-3 and x1 <= z[1] + 1e-3), None)
             dr = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1"
+            if v.get("enquadrar") and not ins:
+                # "pegar a pessoa falando" (Keila, 23/10/2026): zoom no Dr. quando o plano é aberto
+                z, fx, fy = v["enquadrar"]
+                zw, zh = int(W / z) // 2 * 2, int(H / z) // 2 * 2
+                zx = min(max(0, int(fx * W - zw / 2)), W - zw)
+                zy = min(max(0, int(fy * H - zh / 2)), H - zh)
+                dr += f",crop={zw}:{zh}:{zx}:{zy},scale={W}:{H},setsar=1"
             if ins and ins[2] == "imagem":
                 # print de depoimento em cima (fundo escuro, borda dourada), Dr. embaixo
                 painel, hp = painel_imagem(ins[3], v.get("img_altura", 900), v["saida"], n)
@@ -259,6 +351,14 @@ def renderizar(cfg, v, so_legenda=False):
         filtro += (f"[{il}:v]scale=560:-1,format=rgba,fade=t=out:st={l1 - 0.4}:d=0.4:alpha=1[lg];"
                    f"[vc][lg]overlay=(W-w)/2:150:enable='between(t,{l0},{l1})'[vl];")
         ultimo = "[vl]"
+    k = 0
+    for arq, x, y, a, b, pulsa in sobreposicoes(v, manter):
+        anim = (f",scale=w='iw*(1+0.05*sin(2*PI*1.6*(t-{a:.3f})))':h=-1:eval=frame" if pulsa else "")
+        filtro += (f"movie='{arq}',loop=loop=-1:size=1,setpts=N/30/TB,format=rgba,"
+                   f"fade=t=in:st={a:.3f}:d=0.22:alpha=1,fade=t=out:st={b - 0.2:.3f}:d=0.2:alpha=1{anim}[ov{k}];"
+                   f"{ultimo}[ov{k}]overlay=x='{x}':y='{y}':enable='between(t,{a:.3f},{b:.3f})'[vov{k}];")
+        ultimo = f"[vov{k}]"
+        k += 1
     filtro += f"{ultimo}ass='{esc}':fontsdir='{fontes}',fps=30,format=yuv420p[vo]"
 
     # ---- CTA no fim, trilha por baixo da voz e subindo no CTA
