@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Reology Map teaser</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: 'Satoshi'; src: url('assets/satoshi.ttf') format('truetype'); font-weight: 300 900; }
+  :root {
+    --bg: #111517; --bg2: #161b1d; --card: #1b2124; --line: rgba(237,242,241,.09);
+    --ink: #EDF2F1; --muted: #B3BFBE; --mint: #A3D4C7; --mint-ink: #14312B; --forest: #174f4a;
+    --g-low: #3b8fe0; --g-mid: #f08a24; --g-high: #8b4fd8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); }
+  body { font-family: 'Satoshi', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(1200px 700px at 72% 55%, rgba(23,79,74,.38), transparent 70%), radial-gradient(900px 600px at 10% 10%, rgba(163,212,199,.06), transparent 70%), var(--bg); }
+  #grain { position: absolute; inset: 0; opacity: .5; background-image: radial-gradient(rgba(237,242,241,.05) 1px, transparent 1px); background-size: 28px 28px; mask-image: radial-gradient(1100px 700px at 60% 50%, #000 30%, transparent 80%); }
+  canvas { position: absolute; inset: 0; }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+
+  .eyebrow { font-size: 17px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .eyebrow::before { content: ''; display: inline-block; width: 28px; height: 2px; background: var(--mint); vertical-align: middle; margin-right: 14px; transform: translateY(-2px); }
+  .headline { font-size: 66px; font-weight: 720; letter-spacing: -.04em; line-height: 1.04; margin-top: 22px; }
+  .sub { font-size: 25px; font-weight: 450; color: var(--muted); margin-top: 26px; line-height: 1.4; letter-spacing: -.005em; }
+  .hl { color: var(--mint); }
+  .w { display: inline-block; will-change: transform; }
+  .copy { position: absolute; left: 110px; top: 50%; transform: translateY(-50%); width: 500px; z-index: 5; }
+
+  /* janela de navegador */
+  .persp { position: absolute; left: 700px; top: 140px; width: 1220px; height: 800px; perspective: 2600px; transform: scale(.93); transform-origin: 0 50%; }
+  .frame { position: absolute; inset: 0; border-radius: 16px; background: #0c0f10; border: 1px solid var(--line); box-shadow: 0 60px 120px rgba(0,0,0,.55), 0 0 0 1px rgba(0,0,0,.4), 0 0 90px rgba(163,212,199,.07); overflow: hidden; transform-style: preserve-3d; }
+  .bar { height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: #15191b; border-bottom: 1px solid var(--line); }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #2a3134; display: block; }
+  .url { margin-left: 18px; flex: 0 0 380px; height: 22px; border-radius: 7px; background: #0f1314; color: #7d8a89; font-size: 12.5px; display: flex; align-items: center; padding: 0 12px; letter-spacing: .01em; }
+  .screen { position: absolute; top: 38px; left: 0; width: 1220px; height: 762px; overflow: hidden; background: var(--bg); }
+  .zoom { position: absolute; left: 0; top: 0; width: 1220px; transform-origin: 0 0; }
+  .zoom img { width: 1220px; display: block; position: absolute; left: 0; top: 0; }
+
+  /* contadores */
+  .counters { position: absolute; left: 0; right: 0; top: 330px; display: flex; justify-content: center; gap: 120px; }
+  .ct { text-align: left; }
+  .ct b { display: block; font-size: 168px; font-weight: 760; letter-spacing: -.05em; line-height: 1; font-variant-numeric: tabular-nums; }
+  .ct span { display: block; margin-top: 14px; font-size: 26px; color: var(--muted); font-weight: 500; }
+  .ct .dot { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--mint); margin-right: 12px; }
+
+  /* celular */
+  .phone { position: absolute; width: 380px; height: 800px; border-radius: 54px; background: #050607; padding: 12px; box-shadow: 0 50px 110px rgba(0,0,0,.6), inset 0 0 0 2px #2a3134, 0 0 70px rgba(163,212,199,.08); }
+  .phone .scr { position: relative; width: 100%; height: 100%; border-radius: 43px; overflow: hidden; background: var(--bg); }
+  .phone .scr img { width: 100%; position: absolute; left: 0; top: 44px; }
+  .phone .nav { position: absolute; left: 0; right: 0; bottom: 0; height: 68px; background-size: 100% auto; background-position: center bottom; z-index: 2; border-top: 1px solid var(--line); }
+  .phone .status { position: absolute; left: 0; right: 0; top: 0; height: 44px; background: var(--bg); z-index: 2; }
+  .phone .notch { position: absolute; top: 22px; left: 50%; width: 104px; height: 30px; margin-left: -52px; border-radius: 20px; background: #050607; z-index: 3; }
+
+  /* cursor */
+  #cursor { position: absolute; width: 34px; height: 34px; left: 0; top: 0; opacity: 0; z-index: 50; filter: drop-shadow(0 4px 10px rgba(0,0,0,.5)); }
+  .ripple { position: absolute; width: 80px; height: 80px; margin: -40px 0 0 -40px; border-radius: 50%; border: 3px solid var(--mint); opacity: 0; z-index: 49; }
+
+  /* logo */
+  .logo { width: 150px; height: 150px; filter: brightness(0) invert(.94); }
+  .brand { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .word { font-size: 96px; font-weight: 760; letter-spacing: -.045em; line-height: 1; margin-top: 30px; }
+  .word small { display: block; font-size: 22px; letter-spacing: .5em; font-weight: 700; color: var(--muted); margin-top: 14px; padding-left: .5em; }
+  .tag { font-size: 40px; font-weight: 500; letter-spacing: -.02em; margin-top: 46px; }
+  .legal { position: absolute; bottom: 70px; left: 0; right: 0; text-align: center; font-size: 19px; color: #7d8a89; letter-spacing: .01em; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; padding: 10px 20px; border-radius: 999px; border: 1px solid var(--line); background: rgba(27,33,36,.7); font-size: 18px; color: var(--muted); font-weight: 600; }
+  .pill i { width: 9px; height: 9px; border-radius: 50%; display: block; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="grain"></div>
+  <canvas id="fx" width="1920" height="1080"></canvas>
+
+  <!-- 1. abertura -->
+  <section class="scene" id="s1">
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="">
+      <div class="word">Reology<small>MAP</small></div>
+      <div class="tag split">Reologia aplicada, <span class="hl">consulta consciente.</span></div>
+    </div>
+  </section>
+
+  <!-- 2. contadores -->
+  <section class="scene" id="s2">
+    <div style="position:absolute;left:0;right:0;top:210px;text-align:center"><span class="eyebrow">Catálogo técnico de preenchedores</span></div>
+    <div class="counters">
+      <div class="ct"><b data-to="73">0</b><span><i class="dot"></i>produtos</span></div>
+      <div class="ct"><b data-to="21">0</b><span><i class="dot"></i>marcas</span></div>
+      <div class="ct"><b data-to="19">0</b><span><i class="dot"></i>regiões faciais</span></div>
+    </div>
+    <div style="position:absolute;left:0;right:0;top:690px;text-align:center" class="headline split" id="s2h">Tudo em um <span class="hl">só lugar.</span></div>
+  </section>
+
+  <!-- 3. mapa facial -->
+  <section class="scene" id="s3">
+    <div class="copy">
+      <div class="eyebrow">Mapa facial</div>
+      <div class="headline split">Toque numa região do <span class="hl">rosto.</span></div>
+      <div class="sub split">Da região à ficha, com a faixa de G′ indicada para cada área.</div>
+    </div>
+    <div class="persp"><div class="frame">
+      <div class="bar"><i></i><i></i><i></i><div class="url">reology.joaopithon.com.br</div></div>
+      <div class="screen"><div class="zoom">
+        <img src="cap/01-regioes.png" alt="">
+        <img src="cap/02-regiao-click-a.png" alt="" class="after" style="opacity:0">
+      </div></div>
+    </div></div>
+  </section>
+
+  <!-- 4. ficha -->
+  <section class="scene" id="s4">
+    <div class="copy">
+      <div class="eyebrow">Ficha técnica</div>
+      <div class="headline split">Medições de <span class="hl">laboratório,</span> lote a lote.</div>
+      <div class="sub split">G′, G″, tan δ e η* em seis frequências, com radar de quatro eixos.</div>
+    </div>
+    <div class="persp"><div class="frame">
+      <div class="bar"><i></i><i></i><i></i><div class="url">reology.joaopithon.com.br/produtos</div></div>
+      <div class="screen"><div class="zoom">
+        <img src="cap/06-ficha-full.png" alt="">
+        <img src="cap/07-ficha-5Hz.png" alt="" class="after" style="opacity:0">
+      </div></div>
+    </div></div>
+  </section>
+
+  <!-- 5. mapa da reologia -->
+  <section class="scene" id="s5">
+    <div class="copy">
+      <div class="eyebrow">Mapa da reologia</div>
+      <div class="headline split">Cada ponto, um <span class="hl">ensaio.</span></div>
+      <div class="sub split">74 ensaios a 0,7 Hz, organizados em cinco perfis reológicos.</div>
+    </div>
+    <div class="persp"><div class="frame">
+      <div class="bar"><i></i><i></i><i></i><div class="url">reology.joaopithon.com.br/mapa-da-reologia</div></div>
+      <div class="screen"><div class="zoom"><img src="cap/08-mapa-full.png" alt=""></div></div>
+    </div></div>
+  </section>
+
+  <!-- 6. comparador -->
+  <section class="scene" id="s6">
+    <div class="copy">
+      <div class="eyebrow">Comparador</div>
+      <div class="headline split">Compare lado a <span class="hl">lado.</span></div>
+      <div class="sub split">Até quatro produtos, na mesma frequência, com a diferença calculada.</div>
+    </div>
+    <div class="persp"><div class="frame">
+      <div class="bar"><i></i><i></i><i></i><div class="url">reology.joaopithon.com.br/comparador</div></div>
+      <div class="screen"><div class="zoom"><img src="cap/09-comparador-full.png" alt=""></div></div>
+    </div></div>
+  </section>
+
+  <!-- 7. biblioteca -->
+  <section class="scene" id="s7">
+    <div class="copy">
+      <div class="eyebrow">Biblioteca</div>
+      <div class="headline split">Entenda o que você está <span class="hl">lendo.</span></div>
+      <div class="sub split">Conceitos de reologia, módulo a módulo, ligados às fichas.</div>
+    </div>
+    <div class="persp"><div class="frame">
+      <div class="bar"><i></i><i></i><i></i><div class="url">reology.joaopithon.com.br/biblioteca</div></div>
+      <div class="screen"><div class="zoom"><img src="cap/10-biblioteca.png" alt=""></div></div>
+    </div></div>
+  </section>
+
+  <!-- 8. mobile -->
+  <section class="scene" id="s8">
+    <div class="copy">
+      <div class="eyebrow">Web e celular</div>
+      <div class="headline split">Na palma da <span class="hl">mão.</span></div>
+      <div class="sub split">A mesma consulta no consultório, no congresso ou no caminho.</div>
+    </div>
+    <div class="phone" id="ph1" style="left:840px;top:150px"><div class="scr"><div class="notch"></div><div class="status"></div><img src="cap/11-mob-regioes-full.png" alt=""><div class="nav" style="background-image:url(cap/11-mob-regioes.png)"></div></div></div>
+    <div class="phone" id="ph2" style="left:1310px;top:120px"><div class="scr"><div class="notch"></div><div class="status"></div><img src="cap/13-mob-ficha-full.png" alt=""><div class="nav" style="background-image:url(cap/13-mob-ficha.png)"></div></div></div>
+  </section>
+
+  <!-- 9. assinatura -->
+  <section class="scene" id="s9">
+    <div class="brand">
+      <img class="logo" src="assets/logo.png" alt="">
+      <div class="word">Reology<small>MAP</small></div>
+      <div class="tag split">Reologia aplicada, <span class="hl">consulta consciente.</span></div>
+      <div style="margin-top:44px;display:flex;gap:14px;justify-content:center" class="pills">
+        <span class="pill"><i style="background:var(--g-low)"></i>Regiões faciais</span>
+        <span class="pill"><i style="background:var(--g-mid)"></i>Produtos</span>
+        <span class="pill"><i style="background:var(--g-high)"></i>Biblioteca de reologia</span>
+      </div>
+    </div>
+    <div class="legal">Material educacional para profissionais habilitados. A decisão clínica final é do profissional.</div>
+  </section>
+
+  <svg id="cursor" viewBox="0 0 24 24"><path d="M4 2l15 11-6.5 1.2L16 21l-3 1.4-3.5-6.8L4 19z" fill="#fff" stroke="#111517" stroke-width="1.4" stroke-linejoin="round"/></svg>
+  <div class="ripple" id="ripple"></div>
+</div>
+
+<script>
+// Partículas determinísticas (dependem só do tempo, para render quadro a quadro)
+const cv = document.getElementById('fx'), cx = cv.getContext('2d');
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const P = Array.from({ length: 150 }, () => ({ x: rnd() * 1920, y: rnd() * 1080, r: .6 + rnd() * 1.8, vx: (rnd() - .5) * 14, vy: -4 - rnd() * 10, a: .08 + rnd() * .3, ph: rnd() * 6.28 }));
+function drawFx(t) {
+  cx.clearRect(0, 0, 1920, 1080);
+  for (const p of P) {
+    const x = ((p.x + p.vx * t) % 1920 + 1920) % 1920, y = ((p.y + p.vy * t) % 1080 + 1080) % 1080;
+    cx.globalAlpha = p.a * (.6 + .4 * Math.sin(t * 1.3 + p.ph));
+    cx.fillStyle = '#A3D4C7'; cx.beginPath(); cx.arc(x, y, p.r, 0, 6.283); cx.fill();
+  }
+  cx.globalAlpha = 1;
+}
+
+// Quebra frases em palavras para animação cinética
+document.querySelectorAll('.split').forEach(el => {
+  const walk = (node) => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.nodeValue.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) frag.appendChild(document.createTextNode(part));
+          else { const s = document.createElement('span'); s.className = 'w'; s.textContent = part; frag.appendChild(s); }
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1) walk(n);
+    });
+  };
+  walk(el);
+});
+
+const tl = gsap.timeline({ paused: true });
+const E = 'power3.out', IO = 'power2.inOut';
+const words = (sel) => document.querySelectorAll(sel + ' .split .w, ' + sel + '.split .w');
+const textIn = (sc, at) => {
+  tl.from(`${sc} .eyebrow`, { opacity: 0, x: -20, duration: .6, ease: E }, at);
+  tl.from(`${sc} .headline .w`, { opacity: 0, y: 46, filter: 'blur(8px)', duration: .7, stagger: .06, ease: E }, at + .1);
+  tl.from(`${sc} .sub .w`, { opacity: 0, y: 14, duration: .5, stagger: .02, ease: E }, at + .55);
+};
+const frameIn = (sc, at) => {
+  tl.fromTo(`${sc} .frame`, { opacity: 0, y: 120, rotateY: -16, rotateX: 8, scale: .92 }, { opacity: 1, y: 0, rotateY: -6, rotateX: 3, scale: 1, duration: 1.2, ease: E }, at);
+};
+const sceneSpan = (sc, a, b) => {
+  tl.set(sc, { opacity: 1 }, a);
+  tl.to(sc, { opacity: 0, duration: .45, ease: 'power1.in' }, b - .45);
+};
+
+// 1. Abertura 0 a 3.4
+sceneSpan('#s1', 0, 3.4);
+tl.from('#s1 .logo', { opacity: 0, scale: .6, rotate: -25, duration: 1.1, ease: 'back.out(1.6)' }, .15);
+tl.from('#s1 .word', { opacity: 0, y: 30, letterSpacing: '.1em', duration: 1, ease: E }, .55);
+tl.from('#s1 .tag .w', { opacity: 0, y: 24, filter: 'blur(6px)', duration: .6, stagger: .07, ease: E }, 1.2);
+tl.to('#s1 .brand', { scale: 1.06, duration: 3.4, ease: 'none' }, 0);
+
+// 2. Contadores 3.4 a 7.8
+sceneSpan('#s2', 3.4, 7.8);
+tl.from('#s2 .eyebrow', { opacity: 0, y: 14, duration: .6, ease: E }, 3.5);
+document.querySelectorAll('#s2 .ct').forEach((ct, i) => {
+  const b = ct.querySelector('b'), o = { v: 0 }, to = +b.dataset.to;
+  tl.from(ct, { opacity: 0, y: 60, duration: .8, ease: E }, 3.6 + i * .18);
+  tl.to(o, { v: to, duration: 1.6, ease: 'power2.out', onUpdate: () => b.textContent = Math.round(o.v) }, 3.6 + i * .18);
+});
+tl.from('#s2h .w', { opacity: 0, y: 40, filter: 'blur(8px)', duration: .7, stagger: .07, ease: E }, 5.4);
+tl.to('#s2 .counters', { scale: 1.04, duration: 4.4, ease: 'none' }, 3.4);
+
+// 3. Mapa facial 7.8 a 13
+sceneSpan('#s3', 7.8, 13);
+textIn('#s3', 8);
+frameIn('#s3', 7.85);
+// imagem 3200px exibida a 1220px: fator 0.38125. Lábio em (555,875) no viewport de 1600.
+const k = 1220 / 1600, lab = { x: 555 * k, y: 875 * k };
+tl.fromTo('#s3 .zoom', { scale: 1, x: 0, y: 0 }, { scale: 1.75, x: -lab.x * 1.75 + 520, y: -lab.y * 1.75 + 470, duration: 2.2, ease: IO }, 9);
+tl.to('#s3 .frame', { rotateY: -2, rotateX: 1, duration: 4, ease: IO }, 9);
+tl.set('#cursor', { x: 1500, y: 900 }, 10.4);
+tl.to('#cursor', { opacity: 1, duration: .25 }, 10.4);
+const CX = 700 + .93 * 520, CY = 140 + 400 + .93 * (38 + 470 - 400);
+tl.to('#cursor', { x: CX - 4, y: CY - 4, duration: 1, ease: IO }, 10.5);
+tl.set('#ripple', { left: CX, top: CY, scale: .3, opacity: 1 }, 11.5);
+tl.to('#ripple', { scale: 1.6, opacity: 0, duration: .7, ease: 'power2.out' }, 11.5);
+tl.to('#cursor', { scale: .85, duration: .08, yoyo: true, repeat: 1 }, 11.5);
+tl.to('#s3 .after', { opacity: 1, duration: .35 }, 11.6);
+tl.to('#s3 .zoom', { scale: 1.45, x: -lab.x * 1.45 + 330, y: -lab.y * 1.45 + 420, duration: 1.3, ease: IO }, 11.7);
+tl.to('#cursor', { opacity: 0, duration: .3 }, 12.4);
+
+// 4. Ficha 13 a 18
+sceneSpan('#s4', 13, 18);
+textIn('#s4', 13.2);
+frameIn('#s4', 13.05);
+// botão "5 Hz" fica em (1477, 598) no viewport de 1600 px, ou (1126, 456) na imagem de 1220 px, já sem a faixa de revisão interna
+const Z4 = { scale: 1.15, x: -200, y: -230 }, HZ = { x: 1126 * Z4.scale + Z4.x, y: 456 * Z4.scale + Z4.y };
+const FX = 700 + .93 * HZ.x, FY = 140 + 400 + .93 * (38 + HZ.y - 400);
+tl.fromTo('#s4 .zoom', { y: 0, x: 0, scale: 1 }, { ...Z4, duration: 1.4, ease: IO }, 14.3);
+tl.set('#cursor', { x: 1180, y: 980, scale: 1 }, 15.3);
+tl.to('#cursor', { opacity: 1, duration: .25 }, 15.3);
+tl.to('#cursor', { x: FX - 4, y: FY - 4, duration: .9, ease: IO }, 15.4);
+tl.set('#ripple', { left: FX, top: FY, scale: .3, opacity: 1 }, 16.35);
+tl.to('#ripple', { scale: 1.6, opacity: 0, duration: .7, ease: 'power2.out' }, 16.35);
+tl.to('#cursor', { scale: .85, duration: .08, yoyo: true, repeat: 1 }, 16.35);
+tl.to('#s4 .after', { opacity: 1, duration: .3 }, 16.42);
+tl.to('#s4 .zoom', { scale: 1.2, x: -225, y: -265, duration: 1.6, ease: 'none' }, 16.45);
+tl.to('#cursor', { opacity: 0, duration: .3 }, 17.2);
+tl.to('#s4 .frame', { rotateY: -2, rotateX: 1, duration: 4, ease: IO }, 14);
+
+// 5. Mapa da reologia 18 a 22
+sceneSpan('#s5', 18, 22);
+textIn('#s5', 18.2);
+frameIn('#s5', 18.05);
+tl.fromTo('#s5 .zoom', { y: 0, scale: 1 }, { y: -230, scale: 1.08, x: -40, duration: 3.6, ease: IO }, 18.4);
+
+// 6. Comparador 22 a 26.2
+sceneSpan('#s6', 22, 26.2);
+textIn('#s6', 22.2);
+frameIn('#s6', 22.05);
+tl.fromTo('#s6 .zoom', { y: 0 }, { y: -440, duration: 3.4, ease: IO }, 22.6);
+
+// 7. Biblioteca 26.2 a 29.4
+sceneSpan('#s7', 26.2, 29.4);
+textIn('#s7', 26.4);
+frameIn('#s7', 26.25);
+tl.fromTo('#s7 .zoom', { scale: 1 }, { scale: 1.12, x: -60, y: -40, duration: 3.2, ease: 'none' }, 26.2);
+
+// 8. Mobile 29.4 a 33.4
+sceneSpan('#s8', 29.4, 33.4);
+textIn('#s8', 29.6);
+tl.from('#ph1', { opacity: 0, y: 260, rotate: -6, duration: 1.1, ease: E }, 29.5);
+tl.from('#ph2', { opacity: 0, y: 320, rotate: 6, duration: 1.1, ease: E }, 29.7);
+tl.to('#ph1 img', { y: -470, duration: 2.6, ease: IO }, 30.5);
+tl.to('#ph2 img', { y: -980, duration: 2.8, ease: IO }, 30.6);
+tl.to('#ph1', { y: -20, duration: 4, ease: 'none' }, 29.4);
+tl.to('#ph2', { y: 20, duration: 4, ease: 'none' }, 29.4);
+
+// 9. Assinatura 33.4 a 38
+tl.set('#s9', { opacity: 1 }, 33.4);
+tl.from('#s9 .logo', { opacity: 0, scale: .7, duration: 1, ease: 'back.out(1.5)' }, 33.5);
+tl.from('#s9 .word', { opacity: 0, y: 30, duration: .9, ease: E }, 33.8);
+tl.from('#s9 .tag .w', { opacity: 0, y: 24, filter: 'blur(6px)', duration: .6, stagger: .07, ease: E }, 34.3);
+tl.from('#s9 .pill', { opacity: 0, y: 16, duration: .5, stagger: .1, ease: E }, 35);
+tl.from('#s9 .legal', { opacity: 0, duration: .8 }, 35.4);
+tl.to('#s9', { opacity: 0, duration: .6 }, 37.4);
+
+// A trilha tem 120 BPM (compasso de 2 s). Cada cena é esticada ou comprimida
+// para começar num tempo forte: [tempo da música, tempo da animação].
+const WARP = [[0, 0], [4, 3.4], [8, 7.8], [14, 13], [18, 18], [22, 22], [26, 26.2], [30, 29.4], [34, 33.4], [40, 38]];
+const warp = (T) => {
+  for (let i = 1; i < WARP.length; i++) {
+    const [a0, b0] = WARP[i - 1], [a1, b1] = WARP[i];
+    if (T <= a1) return b0 + (T - a0) * (b1 - b0) / (a1 - a0);
+  }
+  return WARP[WARP.length - 1][1];
+};
+window.DURATION = 40;
+window.seek = (T) => { tl.seek(warp(T), false); drawFx(T); };
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>

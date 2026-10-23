@@ -1,0 +1,1 @@
+window.FRAMES={"anat": 90, "atenda": 90, "botox": 90, "comp": 90, "corporal": 90, "cpx": 90, "ctx": 90, "eb_int": 90, "eb_olh": 90, "esclabial": 90, "febio": 90, "fep": 90, "ff10": 69, "ff5": 90, "fios": 90, "olheiras": 90, "plx": 90, "prlabial": 90, "rino": 90};
