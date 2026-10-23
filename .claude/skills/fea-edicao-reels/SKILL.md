@@ -147,3 +147,6 @@ Script `FEA-edicao-videos/fea_criativo_ads.py` (projeto de exemplo: `FEA-projeto
 - **CTA da Black com som** (Keila, 22/10/2026: "o barulho da Black entrando e digitando o Toque em Saiba Mais"): `FEA-CTA-Black-Vitalicia-som-5s.mp4` (Drive, pasta identidade "03 - 2026"), recortado dos últimos 5 s do Ads 035 (`1dtN7Q_JVkL74TAnjN3n9U8nclImGfBkd`, a partir de 78,5 s). Usar com `"cta_com_som": true`: o som do CTA entra e a trilha sai 0,4 s antes. O `FEA-CTA-Black-Vitalicia-5s.mp4` (mudo) não é para usar.
 - Pausas longas encolhidas (`apertar_pausas`) e início direto na primeira palavra.
 - Pasta de Ads da Black: `1Rzq7m9bxT02jIugDf-FHziXdhMZ3aJLN`, nome `Ads 0NN - Tema - BFV.mp4`.
+- **Ao terminar, colocar "OK. " na frente do nome da pasta de bruto** que a Keila mandou (`fea_drive.py renomear ID "OK. nome"`), padrão das pastas em "00 - Brutos".
+- Depoimento por print (mensagem de aluno): `inserts` tipo `"imagem"` com o arquivo, print em cima e Dr. embaixo enquanto ele conta a história. Sem logo no início nesses (o print ocupa o topo).
+- A equipe renumera os Ads na pasta: antes de nomear, listar a pasta e usar o próximo número livre.
