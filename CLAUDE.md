@@ -148,7 +148,6 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 4. Nunca minimizar risco de procedimento ("é fácil", "qualquer um faz").
 5. Nunca direcionar conteúdo técnico-cirúrgico para leigo (risco de auto-aplicação).
 6. Nunca usar mídia de cadáver fresco em conteúdo público sem disclaimer (público técnico fechado é permitido).
-7. **Nunca gerar imagens via IA generativa** (Imagen, NanoBanana, Midjourney, DALL-E) em entregável final. Imagem médica ou clínica exige controle editorial humano: propor designer da equipe (Gabriela Costa ou André Vivas) ou ferramentas vetoriais com curadoria humana. IA pode gerar mockup interno de planejamento, nunca output final.
 
 ## Identidade visual (base FEP Experience)
 
@@ -319,7 +318,7 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 
 1. Confirmar qual produto, qual fase do funil e qual público-alvo, nunca assumir.
 2. Aplicar tom médico-científico, nunca popular ou comercial agressivo.
-3. Verificar a peça contra os 7 itens da linha vermelha.
+3. Verificar a peça contra os 6 itens da linha vermelha.
 4. Se houver dúvida se o pedido é FEA ou outro projeto, perguntar antes de assumir tom e identidade visual.
 
 ---
