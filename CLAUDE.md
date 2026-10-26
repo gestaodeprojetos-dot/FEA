@@ -295,7 +295,7 @@ Arquitetura de nutrição contínua da base de alunos FEA, para preencher o vazi
 | Card comercial (Canva) | link no Canva do time, pedir atualizado |
 | Fotos do Dr. João | pasta dedicada no Drive, pedir link atualizado |
 | Zoom recorrente | link fixo do time, pedir atualizado |
-| ClickUp workspace | pedir ID atual e token novo (o antigo expira ou é revogado com frequência) |
+| ClickUp workspace | ID 9013080622 (Marketing Brasil). Conta conectada: gestaodeprojetos@joaopithon.com.br (admin). **Preferir a API REST** (`https://api.clickup.com/api/v2/...` via curl ou Python, chave injetada pelo ambiente em Network secrets), sem limite diário; o conector MCP do ClickUp tem teto de 100 ações por dia. Se a API responder `OAUTH_019`, a chave do ambiente venceu: pedir à Keila para gerar outra em ClickUp > Configurações > Apps e trocar em Network secrets |
 
 **Truque para ler Google Docs internos que só abrem no navegador (copies, planilhas de disparo):**
 
