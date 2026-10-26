@@ -16,7 +16,7 @@ ESCURO_TXT = lambda r, g, b: (r < 140) & (g < 140) & (b < 140)
 BRANCO_TXT = lambda r, g, b: (r > 200) & (g > 170) & (b > 170)
 
 ES = dict(
-    b1='Hoy, saber rellenar esta región es lo que distingue a los inyectores en todo el mundo.',
+    b1='Hoy, saber rellenar esta región es lo que distingue a un inyector de la mayoría, en todo el mundo.',
     b2='Es una oportunidad única para mejorar sus resultados de manera eficaz y segura.',
     b3='Ebook: Relleno tridimensional de ojeras: una guía completa con la metodología ARTI',
     b4=('Esta guía muestra cómo aplicar la metodología ARTI (Anatomía, Reología, Técnica e Intercurrencias) '
