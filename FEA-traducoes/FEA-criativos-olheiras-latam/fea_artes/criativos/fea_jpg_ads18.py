@@ -25,7 +25,7 @@ def comum(im0):
     # 'Nenhum outro lugar no Brasil ensina esse método.'
     im = apagar(im, (195, 172, 990, 222), ESCURO, 3, 6)
     t = tam_por_largura(lambda s: [('Nenhum outro lugar no Brasil ensina esse método.', SANS, s, preto)], 970 - 211)
-    linha(im, [('Un método exclusivo del Dr. João Pithon.', SANS, t, preto)],
+    linha(im, [('Ningún otro programa enseña este método.', SANS, t, preto)],
           base_de(SANS, t, 'Nenhum outro lugar no Brasil ensina esse método.', 181), CX, 'centro')
 
     # parágrafo grande
