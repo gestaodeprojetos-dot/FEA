@@ -11,7 +11,7 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 
 - Bruto no Drive (pasta `00 - Brutos/Melhores produtos` ou `Melhores tratamentos`).
 - Referência da headline: `1- Olheiras` na pasta `20- Entrevistas mito ou verdade` (barra dourada `#DBD093` à esquerda, texto preto em caixas brancas, uma por linha, que sai de trás da barra deslizando para a direita).
-- Banco de B-roll: pasta `FEA-B-roll pele flácida e envelhecida (face)` (`11xqr4MAiTQz6nVptRl0FbvcCtxcJXsLX`), arquivos `FEA-broll-NN-...`. Escolher os mais chamativos e ligados ao tema (lábios: 08 idosa com batom e rugas periorais, 02 mulher madura, 14 massagem facial com lábios em close, 16 tratamento em clínica).
+- Banco de B-roll: pasta `FEA-B-roll pele flácida e envelhecida (face)` (`11xqr4MAiTQz6nVptRl0FbvcCtxcJXsLX`), arquivos `FEA-broll-NN-...`. Só usar quando os brutos não tiverem imagem do tema (ver regras abaixo).
 - Referência anterior do mesmo modelo (tela dividida): `FEA-teste edição estilo Volpe` dentro de `Melhores produtos`.
 
 ## Padrão visual
@@ -25,13 +25,20 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 | Legenda | padrão FEA (Montserrat Bold 56, contorno preto, ~80% da altura); neste modelo roda junto com a headline, como na referência |
 | Produto | recorte sem fundo e sem borda, sombra suave, etiqueta roxa `#5B4599` com o nome oficial; entra com leve zoom quando o Dr. fala o nome; "top 3" ganha uma cena com os 3 lado a lado numerados |
 | Fundo do painel de produto | quadro do próprio bruto (teto e parede, sem o Dr.), desfocado e com 35% de lavanda `#D0D1E9` |
-| Música | calma, ~20 dB abaixo da voz, entrada de 1,2 s e saída de 2 s. Só faixa CC0 ou domínio público (ex.: Chopin, Noturno op. 37 nº 2, Olga Gurevich, Musopen/archive.org, CC0) |
+| Música | calma, **~28 dB abaixo da voz** (Keila, 26/10: a de 20 dB ficou alta), entrada de 1,2 s e saída de 2 s. Só faixa CC0 ou domínio público (ex.: Chopin, Noturno op. 37 nº 2, Olga Gurevich, Musopen/archive.org, CC0) |
+
+## Regras da Keila (26/10/2026, revisão do primeiro teste)
+
+- **B-roll ilustra o que o Dr. está falando.** Falou de lábios, a tela mostra lábios: nada de B-roll genérico (massagem facial, pele envelhecida) que não combina com a fala. Fonte principal: os brutos do próprio Dr. (`00 - Brutos`: "36OK- Preenchimento labial e revisão toxina", "Toxina e lábios", "29.OK- Paciente Leonard - lábio"). Exemplo: "baixo G' com alto tan delta" = cânula entrando no lábio; "volumizações maiores" = lábio pronto; "cada perfil de paciente" = pacientes diferentes; "diferenças reológicas de cada produto" = seringa injetando o produto.
+- Conferir cada trecho a 2 quadros/s antes de usar: sem sangue escorrendo, sem cara de dor e sem troca de plano no meio (o IMG_7468 abre o plano em 1:32,5). Nunca usar pastas "NÃO AUTORIZADO".
+- **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
+- **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
 
 ## Fluxo
 
 1. Ambiente e transcrição como na skill `fea-edicao-reels` (passos 1 a 3). Se o `faster-whisper` falhar com `metadata_errors`, instalar `pip install --only-binary :all: "av>=12,<15"`.
-2. Cortes (`manter`, segundos do bruto): começar na primeira fala do Dr. sobre o tema; tirar a conversa com quem está atrás da câmera ("posso colocar?", "pode, pode"); fechar na pergunta de engajamento do fim ("e aí, quais são os top 3 da sua prática clínica?").
-3. Cenas (`cenas`, segundos do bruto, cada uma vai até a próxima): `broll` no gancho e nos trechos de explicação, `produto` em cada nome falado (entrar ~0,1 s antes da palavra), `produtos` para o resumo da lista, `cheio` quando o Dr. fala direto para a câmera.
+2. Cortes (`manter`, segundos do bruto): começar na fala de quem provoca o Dr. (se houver) ou na primeira fala dele; manter o diálogo com quem está atrás da câmera; fechar na pergunta de engajamento do fim ("e aí, quais são os top 3 da sua prática clínica?").
+3. Cenas (`cenas`, segundos do bruto, cada uma vai até a próxima): `broll` (trecho dos brutos que mostra o que ele fala, `cx`/`cy`/`zoom` centrando os lábios), `produto` em cada nome falado (entrar ~0,1 s antes da palavra), `produtos` para o resumo da lista, `cheio` quando o Dr. fala direto para a câmera.
 4. Produtos: foto oficial (distribuidor ou fabricante) com fundo branco, recortada pelo preenchimento a partir da borda (`fea_recortar_produto.py`: limiar de branco + componente ligada à borda + abertura morfológica, alfa erodido 2 px para tirar o halo). Caixa branca em fundo branco (e.p.t.q.): `--limiar 251 --convexo`. Nunca gerar imagem de produto por IA.
 5. Conferir quadros antes do render: `python3 fea_editar_noticia.py projeto.json --quadros 0.6,2,6,12,22,30,40`.
 6. Render: `python3 fea_editar_noticia.py projeto.json` (~4 min para 45 s). Conferir mosaico 1 quadro/s e as transições a 10 quadros/s.
