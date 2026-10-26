@@ -280,14 +280,6 @@
  ],
  "atualizar_descricao_v4": [
   {
-   "task_id": "86akbf6ga",
-   "markdown_description": "**📁 Pasta para salvar:** [2. ARTES / ESTÁTICOS](https://drive.google.com/drive/folders/1RibhoTeWsYU5wf4q__1aV_QGXGCia2n4)\n\n**📝 Copy para desenvolver a demanda:** [FEA-LATAM Copy dos Criativos Estáticos v3](https://docs.google.com/document/d/1jiKpctRIlg3LQHS2coCPLWmEELrSoRK9Z5C-g-gGn6E/edit) · [FEA-LATAM Briefing Criativos e Edição de Vídeo](https://docs.google.com/document/d/1kbx7FiNzU3DKuqgQVNQ6TmJLMnlV_7xQ03AFnxD9C-o/edit)"
-  },
-  {
-   "task_id": "86akbf6gc",
-   "markdown_description": "**📁 Pasta para salvar:** [4. TRÁFEGO / CRIATIVOS PRONTOS](https://drive.google.com/drive/folders/1qZSg3onT29mjTKRqmJ5LgYthAEypKLj_)\n\n**📝 Copy para desenvolver a demanda:** [FEA-LATAM Briefing Criativos e Edição de Vídeo](https://docs.google.com/document/d/1kbx7FiNzU3DKuqgQVNQ6TmJLMnlV_7xQ03AFnxD9C-o/edit)"
-  },
-  {
    "task_id": "86akbf6cr",
    "markdown_description": "**📁 Pasta para salvar:** [FEA-Links úteis - Ebook Olheiras LATAM](https://docs.google.com/spreadsheets/d/1-tEGCX3BMyE-vjOrQbg-rI1CbKUW3-O21MZAIQoNEd8/edit)\n\n**📝 Copy para desenvolver a demanda:** [FEA-Criativos para Tráfego - Ebook Olheiras LATAM](https://docs.google.com/spreadsheets/d/13LRb10wwBDIdSsaOPxue6OYXCR0jlAVGm5U-zrwa70c/edit) · [FEA-ES | Leyendas de creativos](https://docs.google.com/document/d/1Y2j4EnGg4H9n74A947ghMHZ_FU-JiOlKkIEHCT2Vatw/edit)"
   },
@@ -340,6 +332,8 @@
   {
    "task_id": "86akbf6nt",
    "markdown_description": "**📁 Pasta para salvar:** [FEA-Links úteis - Ebook Olheiras LATAM](https://docs.google.com/spreadsheets/d/1-tEGCX3BMyE-vjOrQbg-rI1CbKUW3-O21MZAIQoNEd8/edit)\n\n**📝 Copy para desenvolver a demanda:** [FEA-ES | Checkout personalizado](https://docs.google.com/document/d/1PEiblJvEh754uu8sOm71kG9EcmytGfHWRijN8iAmTIQ/edit)"
-  }
+  },
+  "86akbf6ga",
+  "86akbf6gc"
  ]
 }
