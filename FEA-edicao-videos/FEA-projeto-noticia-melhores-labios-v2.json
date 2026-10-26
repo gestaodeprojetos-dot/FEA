@@ -34,10 +34,10 @@
       {
         "ini": 5.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7462.MOV",
-        "src": 2.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 41.5,
         "cx": 0.5,
-        "cy": 0.68,
+        "cy": 0.55,
         "zoom": 1.15
       },
       {
@@ -142,20 +142,29 @@
       {
         "ini": 40.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
-        "src": 41.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/leonard/IMG_2505.MOV",
+        "src": 0.0,
         "cx": 0.5,
-        "cy": 0.55,
+        "cy": 0.4,
         "zoom": 1.15
       },
       {
-        "ini": 45.0,
+        "ini": 43.1,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7464.MOV",
         "src": 8.0,
         "cx": 0.5,
         "cy": 0.58,
         "zoom": 1.2
+      },
+      {
+        "ini": 45.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 44.0,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.15
       },
       {
         "ini": 47.1,
