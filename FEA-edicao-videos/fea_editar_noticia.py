@@ -28,7 +28,8 @@ projeto.json:
     "manter": [[5.0, 18.4], ...], "correcoes": [[regex, troca], ...],
     "fundo_produto": {"imagem": "quadro.png", "crop": [x, y, w, h]},  # fundo desfocado do painel
     "cenas": [                                                         # tempos em s do BRUTO
-      {"ini": 5.0, "tipo": "broll", "arquivo": "b.mp4", "src": 1.0, "cx": 0.5, "cy": 0.5, "zoom": 1},
+      {"ini": 5.0, "tipo": "broll", "arquivo": "b.mp4", "src": 1.0, "cx": 0.5, "cy": 0.5, "zoom": 1,
+       "rotulo": "1. Limpeza"},                                        # rotulo é opcional
       {"ini": 11.2, "tipo": "produto", "imagem": "p.png", "nome": "Neuramis Deep"},
       {"ini": 17.0, "tipo": "produtos", "imagens": ["a.png", "b.png", "c.png"], "numerar": true},
       {"ini": 33.6, "tipo": "cheio"}
@@ -56,6 +57,7 @@ ESF_INI, ESF_FIM = 820, 1000   # faixa do esfumaçado entre o painel e o Dr.
 DESCE = 480              # quanto o Dr. desce na tela dividida (cabeça logo abaixo do esfumaçado)
 TRANS = 0.38             # duração da transição deslizante (s)
 POP = 0.30               # entrada do produto (s)
+ROTULO_Y = 740           # centro da etiqueta do B-roll, logo acima do esfumaçado
 
 # headline: medida em pixels no "1- Olheiras" (barra 18 px, caixas a 14 px da barra, ~72 px por linha)
 HL_BARRA_X, HL_BARRA_L = 143, 18
@@ -231,7 +233,9 @@ def numero(n, fonte):
 # ---------- B-roll ----------
 
 class Broll:
-    def __init__(self, ff, cena, dur):
+    def __init__(self, ff, cena, dur, fonte=None):
+        # "rotulo": etiqueta roxa no pé do painel (ex.: "1. Limpeza"), entra com o mesmo pop do produto
+        self.rotulo = etiqueta(cena["rotulo"], fonte, 46) if cena.get("rotulo") else None
         z = cena.get("zoom", 1.0)
         cx, cy = cena.get("cx", 0.5), cena.get("cy", 0.5)
         asp = W / PAINEL_H
@@ -248,7 +252,18 @@ class Broll:
         b = self.p.stdout.read(W * PAINEL_H * 3)
         if len(b) == W * PAINEL_H * 3:
             self.ultimo = np.frombuffer(b, np.uint8).reshape(PAINEL_H, W, 3).astype(np.float32)
-        return self.ultimo
+        if self.rotulo is None:
+            return self.ultimo
+        p = ease((tl - 0.15) / POP)
+        if p <= 0:
+            return self.ultimo
+        esc = 0.86 + 0.14 * p
+        im = self.rotulo.resize((int(self.rotulo.width * esc), int(self.rotulo.height * esc)))
+        if p < 1:
+            im.putalpha(im.split()[3].point(lambda v: int(v * p)))
+        tela = Image.fromarray(self.ultimo.astype(np.uint8)).convert("RGBA")
+        tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(ROTULO_Y - im.height / 2)))
+        return np.asarray(tela.convert("RGB")).astype(np.float32)
 
     def fechar(self):
         self.p.stdout.close()
@@ -324,7 +339,7 @@ def main():
         c["t1"] = prox["t0"] if prox else dur
 
     hl = render_headline(v["headline"], fonte)
-    fundo = fundo_produto(v["fundo_produto"])
+    fundo = fundo_produto(v["fundo_produto"]) if v.get("fundo_produto") else None
     mascara = mascara_esfumado()
 
     # Dr. já cortado, direto do FFmpeg em quadros brutos
@@ -396,7 +411,7 @@ def main():
             return None
         k = id(c)
         if k not in fontes:
-            fontes[k] = (Broll(ff, c, c["t1"] - c["t0"] + TRANS) if c["tipo"] == "broll"
+            fontes[k] = (Broll(ff, c, c["t1"] - c["t0"] + TRANS, fonte) if c["tipo"] == "broll"
                          else PainelProduto(c, fundo, fonte))
         return fontes[k].quadro(t - c["t0"])
 

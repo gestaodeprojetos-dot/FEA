@@ -12,6 +12,7 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 - Bruto no Drive (pasta `00 - Brutos/Melhores produtos` ou `Melhores tratamentos`).
 - Referência da headline: `1- Olheiras` na pasta `20- Entrevistas mito ou verdade` (barra dourada `#DBD093` à esquerda, texto preto em caixas brancas, uma por linha, que sai de trás da barra deslizando para a direita).
 - Banco de B-roll: pasta `FEA-B-roll pele flácida e envelhecida (face)` (`11xqr4MAiTQz6nVptRl0FbvcCtxcJXsLX`), arquivos `FEA-broll-NN-...`. Só usar quando os brutos não tiverem imagem do tema (ver regras abaixo).
+- Banco de vídeos de skincare/pele (catálogos `FEA-banco-imagens/FEA-banco-videos-catalogo.csv` e `...-lote2-catalogo.csv` na branch `claude/great-hopper-vt6n13`): Pexels, Coverr e Mixkit, licença de uso comercial, com o link "baixar original" de cada clipe. A pasta do Drive desse banco não abre com a chave da FEA, então baixar direto da fonte pelo link do catálogo. Mixkit: `https://assets.mixkit.co/videos/ID/ID-1080.mp4` (se vier com 111 bytes, tentar `-720`). **Nunca** usar clipe marcado "gerado por IA: sim" (linha vermelha 7) nem os da `FEA-broll-lista.csv`, que foram recortados de reels de outros perfis (direito autoral de terceiros).
 - Referência anterior do mesmo modelo (tela dividida): `FEA-teste edição estilo Volpe` dentro de `Melhores produtos`.
 
 ## Padrão visual
@@ -48,6 +49,12 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 ## Grafias oficiais conferidas (26/10/2026)
 
 Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane Refyne e Restylane Kysse (Galderma), Belotero Intense (Merz), e.p.t.q. S100 (Jetema). Já estão em `CORRECOES` do `fea_editar_video.py`.
+
+## Vídeo de rotina/categoria sem marca (ex.: "3 passos do skincare", 26/10/2026)
+
+- O Dr. fala categorias (gel de limpeza, creme hidratante, protetor solar), não marcas: o painel mostra B-roll de pessoa fazendo o passo (limpeza com espuma, creme na bochecha, protetor no rosto) e uma etiqueta roxa com o passo (`"rotulo": "1. Limpeza"` na primeira cena de B-roll de cada passo).
+- Foto de produto sem fundo só com produto definido pela Keila (marca que o Dr. usa e aprova) ou packshot sem marca de banco com licença. Não colocar marca que o Dr. não falou.
+- Proteção solar: B-roll de praia de biquíni com zoom no rosto (`zoom` 2,0), sem mostrar o corpo.
 
 ## Pontos para levar à Keila
 

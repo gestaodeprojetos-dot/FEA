@@ -1,0 +1,162 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto/skincare.mp4",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/skincare.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out/1- Os 3 passos essenciais do skincare.mp4",
+    "titulo": "Os 3 passos essenciais do skincare",
+    "titulo_origem": "inventado",
+    "headline": [
+      "Os 3 passos",
+      "essenciais",
+      "do skincare"
+    ],
+    "headline_fim": 4.4,
+    "manter": [
+      [
+        0.0,
+        52.3
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\buma? foto ?dando\\b",
+        "um fotodano"
+      ],
+      [
+        "\\bpara gente\\b",
+        "para a gente"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd12843.mp4",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 5.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd50408.mp4",
+        "src": 4.0,
+        "cx": 0.6,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "1. Limpeza"
+      },
+      {
+        "ini": 9.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd23858.mp4",
+        "src": 5.5,
+        "cx": 0.5,
+        "cy": 0.3,
+        "zoom": 1.0
+      },
+      {
+        "ini": 11.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd33462.mp4",
+        "src": 6.0,
+        "cx": 0.35,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 13.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd50426.mp4",
+        "src": 1.0,
+        "cx": 0.55,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "2. Hidratação"
+      },
+      {
+        "ini": 17.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd45160.mp4",
+        "src": 0.0,
+        "cx": 0.35,
+        "cy": 0.6,
+        "zoom": 1.0
+      },
+      {
+        "ini": 19.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd47885.mp4",
+        "src": 1.0,
+        "cx": 0.5,
+        "cy": 0.35,
+        "zoom": 1.2
+      },
+      {
+        "ini": 22.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd9101.mp4",
+        "src": 2.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 25.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 29.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/cv_sun.mp4",
+        "src": 6.5,
+        "cx": 0.5,
+        "cy": 0.33,
+        "zoom": 2.0,
+        "rotulo": "3. Proteção solar"
+      },
+      {
+        "ini": 33.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd4573.mp4",
+        "src": 3.0,
+        "cx": 0.6,
+        "cy": 0.45,
+        "zoom": 1.3
+      },
+      {
+        "ini": 38.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/px90.mp4",
+        "src": 2.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 41.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/cv_sun.mp4",
+        "src": 9.5,
+        "cx": 0.5,
+        "cy": 0.33,
+        "zoom": 2.0
+      },
+      {
+        "ini": 44.8,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    }
+  }
+}
