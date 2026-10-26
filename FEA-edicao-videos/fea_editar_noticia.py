@@ -355,9 +355,18 @@ def main():
             r = subprocess.run([ff, "-v", "info", *extra, "-i", arq, "-t", f"{dur:.2f}", "-af", "volumedetect",
                                 "-f", "null", "-"], capture_output=True, text=True).stderr
             return float(re.search(r"mean_volume: (-?[\d.]+) dB", r).group(1))
-        ganho = media_db(voz) - mus.get("abaixo_da_voz_db", 20) - media_db(mus["arquivo"], ("-ss", str(mus.get("ini", 0))))
+        arq_mus, ini_mus = mus["arquivo"], mus.get("ini", 0)
+        if mus.get("nivelar"):
+            # faixa com parte calma e refrão forte ("Cat Walk" varia 9 dB): nivela antes de medir,
+            # para a música não crescer no meio do vídeo
+            arq_mus = os.path.join(tmpdir, "_musica_nivelada.wav")
+            subprocess.run([ff, "-y", "-v", "error", "-ss", str(ini_mus), "-i", mus["arquivo"], "-t", f"{dur + 1:.2f}",
+                            "-af", "acompressor=threshold=-30dB:ratio=8:attack=20:release=400:makeup=6,"
+                            "dynaudnorm=f=150:g=15:m=10", "-ar", "48000", arq_mus], check=True)
+            ini_mus = 0
+        ganho = media_db(voz) - mus.get("abaixo_da_voz_db", 20) - media_db(arq_mus, ("-ss", str(ini_mus)))
         audio = os.path.join(tmpdir, "_audio.wav")
-        subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-ss", str(mus.get("ini", 0)), "-i", mus["arquivo"],
+        subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-ss", str(ini_mus), "-i", arq_mus,
                         "-filter_complex",
                         f"[1:a]atrim=0:{dur:.3f},asetpts=PTS-STARTPTS,volume={ganho:.2f}dB,aresample=48000,"
                         f"aformat=channel_layouts=stereo,afade=t=in:d=1.2,afade=t=out:st={dur - 2:.3f}:d=2[m];"

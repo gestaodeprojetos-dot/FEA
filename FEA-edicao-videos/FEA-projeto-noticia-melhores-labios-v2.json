@@ -124,11 +124,11 @@
       {
         "ini": 35.5,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/labio36/IMG_2608.MOV",
-        "src": 296.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 56.5,
         "cx": 0.5,
-        "cy": 0.66,
-        "zoom": 1.2
+        "cy": 0.5,
+        "zoom": 1.15
       },
       {
         "ini": 39.5,
@@ -142,11 +142,11 @@
       {
         "ini": 40.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/labio36/IMG_2608.MOV",
-        "src": 302.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 41.5,
         "cx": 0.5,
-        "cy": 0.66,
-        "zoom": 1.2
+        "cy": 0.55,
+        "zoom": 1.15
       },
       {
         "ini": 45.0,
@@ -163,9 +163,10 @@
       }
     ],
     "musica": {
-      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/chopin_nocturne_op37_2.mp3",
-      "ini": 0,
-      "abaixo_da_voz_db": 28
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
     }
   }
 }
