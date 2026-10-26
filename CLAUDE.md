@@ -95,6 +95,8 @@ Quando pedido para montar do zero a estrutura de um novo lançamento no ClickUp 
 4. Depois de criar a v1, esperar o pedido de "v2 melhorada": mesmas demandas, extras que gestão de projetos sênior julgar necessários, dependências entre tarefas e melhoria visual da planilha.
 5. Nome da pasta é o nome do evento. Colunas do backlog: manter "Data de Início" sempre preenchida, adicionar "Comentários", remover "Prioridade".
 
+**Fonte das tarefas (Keila, 26/10/2026):** nunca basear só no evento anterior do mesmo produto. Comparar sempre três backlogs, porque o backlog é atualizado a cada lançamento: (a) o evento anterior do mesmo produto (ex.: MTB anterior), (b) a Masterclass mais recente, Brasil ou LATAM, e (c) o lançamento pago mais recente (ex.: IFF +10ml), de onde vêm ajustes de processo. Pastas antigas ficam arquivadas: ler as subtarefas de cada grupo com `clickup_get_task` (include subtasks), porque a busca por palavra-chave deixa tarefas de fora.
+
 Existe também o modo **migração** (não criação do zero): pegar demandas de um backlog origem e replicar num backlog destino, removendo datas e comentários.
 
 ## Ronda automática de prazos (padrão replicável para qualquer workspace ClickUp)
