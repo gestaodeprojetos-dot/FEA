@@ -113,9 +113,10 @@ NOME DO EVENTO/
 │   │   │   └── REMARKETING
 │   │   └── 2. VENDAS
 │   │       ├── AQUECIMENTO FEP   (obrigatória em todo lançamento)
+│   │       ├── RMKT VENDAS
 │   │       ├── ÚLTIMAS HORAS
 │   │       └── ÚLTIMO DIA
-│   ├── Criativos para Tráfego.xlsx
+│   ├── Criativos para Tráfego.xlsx   (atalho para a planilha central, ver abaixo)
 │   └── Doc de edição de vídeo.docx
 ├── 5. LOGO
 ├── 6. PÁGINA DE VENDAS
@@ -125,6 +126,12 @@ NOME DO EVENTO/
 ```
 
 Não usar mais as pastas antigas: PLANILHAS PÚBLICO, ALUNOS, LEADS ANTIGOS, OPERAÇÃO, REFERÊNCIAS, DEBRIEFING, DEPOIMENTOS, DOWNSELL, TMB. Ao copiar um evento antigo, reorganizar para esta estrutura movendo pastas (não recriando), para os links já distribuídos continuarem válidos.
+
+**Planilha central "Criativos para Tráfego" (Keila, 26/10/2026).** Arquivo único em `1. Gestão FEA/14. Tráfego` (id `1Uj9doFiSNDTOn9z3weT83NdQHvEB-y3e`); o `Criativos para Tráfego.xlsx` de cada lançamento é só atalho para ela. Todo lançamento entra nela, no mesmo padrão:
+- Uma aba por mês (`Novembro26`, `Outubro26`...), da mais nova para a mais antiga, com uma linha por dia (A:G mesclado). Se a aba do mês não existir, criar.
+- O bloco do lançamento entra logo abaixo do dia em que a captação começa, uma linha por fase: Captação, Rmkt (de captação), Antecipação, Lembrete, Aquecimento FEP, Vendas, RMKT Vendas.
+- Colunas: Status (`Agendar 📅`), Campanha (`[BR] PRODUTO MM/AA` ou `[LATAM] ...`), Fase, Deadline (dia em que a fase entra no ar), Legenda (link da pasta `1. COPY/4. LEGENDAS`), Link de Criativos (link da pasta da fase em `CRIATIVOS PRONTOS`), Links Úteis (link da planilha de links úteis, só na primeira linha do bloco).
+- Script: `FEA-MTB-11-26/fea_criativos_trafego_aba_mes.py` (acrescenta a aba pelo XML sem regravar as outras, fixa a revisão anterior para rollback e aborta se alguém editou durante a geração). Para lançamento em mês que já tem aba, inserir o bloco na aba existente em vez de criar outra.
 
 **Fonte das tarefas (Keila, 26/10/2026):** nunca basear só no evento anterior do mesmo produto. Comparar sempre três backlogs, porque o backlog é atualizado a cada lançamento: (a) o evento anterior do mesmo produto (ex.: MTB anterior), (b) a Masterclass mais recente, Brasil ou LATAM, e (c) o lançamento pago mais recente (ex.: IFF +10ml), de onde vêm ajustes de processo. Pastas antigas ficam arquivadas: ler as subtarefas de cada grupo com `clickup_get_task` (include subtasks), porque a busca por palavra-chave deixa tarefas de fora.
 
