@@ -123,6 +123,15 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 - Permissões do Drive e dos scripts ficam em `.claude/settings.json` (no git), então valem em toda conversa nova sem pedir confirmação.
 - A máquina é temporária: vídeos só na nuvem se perdem se a sessão ficar parada. Scripts e projeto.json ficam no git.
 
+## Fechamento obrigatório de toda edição (Keila, 26/10/2026: "peguei vários vídeos que você editou sem o OK")
+
+Vale para Reels, anúncios, criativos animados e qualquer vídeo editado. A entrega só termina depois dos 2 passos:
+
+1. **"OK." na pasta de brutos**: `python3 FEA-edicao-videos/fea_drive.py renomear ID_DA_PASTA_DE_BRUTOS "OK. <nome atual>"`. É o sinal do Drive para "já editado". Se forem várias pastas de brutos, renomear todas.
+2. **Planilha de controle** (aba EDIÇÕES): linha com o nome da pasta de brutos já com o "OK." e os dois links clicáveis (brutos e editados).
+
+Conferir os dois antes de escrever o resumo para a Keila e dizer no resumo que foram feitos.
+
 ## Autonomia total no Drive (Keila, 02/10/2026)
 
 Autorização total para mexer no Drive sem perguntar: criar pasta, baixar vídeo, subir vídeo, renomear pasta. Não perguntar nada. Executar direto. A Keila não vai aceitar perguntas sobre permissão de Drive.
