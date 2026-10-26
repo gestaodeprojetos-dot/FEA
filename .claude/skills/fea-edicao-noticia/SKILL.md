@@ -53,7 +53,8 @@ Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane R
 ## Vídeo de rotina/categoria sem marca (ex.: "3 passos do skincare", 26/10/2026)
 
 - O Dr. fala categorias (gel de limpeza, creme hidratante, protetor solar), não marcas: o painel mostra B-roll de pessoa fazendo o passo (limpeza com espuma, creme na bochecha, protetor no rosto) e uma etiqueta roxa com o passo (`"rotulo": "1. Limpeza"` na primeira cena de B-roll de cada passo).
-- Foto de produto sem fundo só com produto definido pela Keila (marca que o Dr. usa e aprova) ou packshot sem marca de banco com licença. Não colocar marca que o Dr. não falou.
+- Keila quer **foto de produto** mesmo quando o Dr. só fala a categoria (26/10/2026: "quero com foto do produto"). Usar o produto que o próprio Dr. já indicou em outro bruto da `00 - Brutos`: gel de limpeza = **CeraVe Gel de Limpeza** ("Gel de limpeza Pele madura": "é o produto que eu uso hoje no meu consultório"); protetor = **ISDIN Fusion Water Magic Color** e **La Roche-Posay Anthelios Ultra Cover** ("Protetor solar para telas", com fotos IMG_8074/IMG_8075 na pasta). Creme hidratante ainda sem indicação dele: usado CeraVe Creme Hidratante (ceramidas, barreira), levar para a Keila confirmar.
+- Fotos oficiais CeraVe: `https://www.cerave.com.br/-/media/project/loreal/brand-sites/cerave/americas/br/scx/pdp/new-packshots/<produto>/<arquivo>-lg.jpg` (700x875). Recorte: `fea_recortar_produto.py` normal para frasco colorido; pote branco `--limiar 246 --convexo`; bisnaga branca com sombra ao lado (La Roche-Posay) precisa de máscara manual limitando a borda direita.
 - Proteção solar: B-roll de praia de biquíni com zoom no rosto (`zoom` 2,0), sem mostrar o corpo.
 
 ## Pontos para levar à Keila
