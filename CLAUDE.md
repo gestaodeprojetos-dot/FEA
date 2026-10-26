@@ -315,6 +315,10 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 - Tradução e adaptação de campanha para mercado internacional (LATAM, espanhol) quando aplicável.
 - **Tradução de vídeo (depoimento, aula)** (09/10/2026): idioma padrão é **espanhol** (não perguntar) e "traduzir" significa **dublar, sem legenda**. Usar o HeyGen (`create_video_translation`, idioma "Spanish", modo `precision`, `speakerNum` quando houver mais de uma voz), que clona a voz original e sincroniza a boca. Subir o vídeo pronto direto na pasta do Drive indicada, com o nome no padrão da pasta: `Nome original FEP-Spanish.mp4`. Pasta de depoimentos em espanhol: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`. O MP4 do HeyGen vem com faixa de legenda embutida: remover antes de subir (`ffmpeg -i in.mp4 -map 0:v -map 0:a -c copy -sn out.mp4`). Legenda gravada só se a Keila pedir legenda.
 
+## Território da equipe de copy (Keila, 26/10/2026)
+
+**Nunca mexer na planilha "Disparos - João Pithon"** (cronograma de disparos de e-mail, WhatsApp e API), nem criar aba, nem mudar status ou horário. É tarefa do time de copy (Adriane Möbbs e Matheus van der Ham) e mexer lá confunde a equipe. Se algo precisar mudar, avisar a Keila ou criar tarefa no ClickUp para a copy.
+
 ## Antes de produzir qualquer peça FEA
 
 1. Confirmar qual produto, qual fase do funil e qual público-alvo, nunca assumir.
