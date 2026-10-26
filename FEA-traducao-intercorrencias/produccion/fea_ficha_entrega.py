@@ -7,7 +7,7 @@ os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 
 HTML = """
 <h1>Intercurrencias en el relleno con ácido hialurónico: edición en español</h1>
-<p class="sub">Estado de la entrega · 7 de octubre de 2026 · uso interno FEA</p>
+<p class="sub">Estado de la entrega · 26 de octubre de 2026 · uso interno FEA</p>
 
 <div class="box">
 <p><b>Veredicto: LIBERADO.</b> El archivo
@@ -40,6 +40,23 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <tr><td>24, 33, 40 a 53, 59, 61, 68 a 75</td><td>Listas con marcador: cada ítem vuelve a su propio párrafo, con su marcador.</td></tr>
 </table>
 
+<h2>Documento de correcciones del autor (23/10/2026): 13 de 13 aplicadas</h2>
+<table>
+<tr><th>Corrección</th><th>En la edición en español</th></tr>
+<tr><td>01, 02, 11</td><td>Ya estaban correctas en el español (sin comilla sobrante, título con espacio, «probabilidad de reversión»).</td></tr>
+<tr><td>03 · Fig. 5</td><td>Título: «Evolución clínica de la necrosis cutánea tras isquemia inducida por relleno facial».</td></tr>
+<tr><td>04 · Fig. 10</td><td>Leyenda histológica completa, sin cortes ni superposición.</td></tr>
+<tr><td>05 · Figs. 27 y 28</td><td>Renumeradas como 28.1 y 28.2 en título y leyenda.</td></tr>
+<tr><td>06 · Fig. 31</td><td>Leyenda sustituida por la descripción del abordaje retrobulbar (aguja 25G, esquemas A y B); se retiró la fuente que pertenecía a la Fig. 30.</td></tr>
+<tr><td>07 · Fig. 36</td><td>Título: «Edema agudo transitorio tras relleno con ácido hialurónico».</td></tr>
+<tr><td>08 · Fig. 44</td><td>Título y número propios de la Fig. 44.</td></tr>
+<tr><td>09 · Fig. 45</td><td>Título y número propios de la Fig. 45.</td></tr>
+<tr><td>10 · Fig. 63</td><td>Título y leyenda de efecto Tyndall periorbitario (antes repetía la Fig. 62).</td></tr>
+<tr><td>12 · Fig. 22</td><td>Franjas negras opacas sobre los ojos en las fotos A y B, grabadas en la propia imagen.</td></tr>
+<tr><td>13 · Fig. 53</td><td>Fotografía nueva del autor, recortada en la región labial; leyenda descriptiva sin la atribución «adaptado por IA».</td></tr>
+</table>
+<p><b>Pendiente de validación del autor:</b> la fuente o crédito de las Figs. 53 y 63 (el documento pide confirmarlos; no se inventó ninguna atribución) y el texto final de la leyenda de la Fig. 63.</p>
+
 <h2>Códigos QR: 23 leídos por escaneo, todos con el destino correcto</h2>
 <ul>
 <li><b>11 QR de clase:</b> abren la clase doblada al español en YouTube (no listada).</li>
@@ -63,7 +80,7 @@ amoxicilina/ácido clavulánico 875/125 mg cada 12 h, entre otras).</li>
 <li><b>Ventana de la retina:</b> cuatro cifras distintas a lo largo del libro (30 min, 90 min, 4 h, 12 h).</li>
 </ul>
 <h3>Línea roja 7: imágenes generadas por IA</h3>
-<p>Nueve figuras declaran imagen creada o adaptada por IA: 13, 14, 37, 39, 41, 52, 53, 61 y 62 (esta última en las págs. 192 y 194). La 53 además cita «búsqueda en internet» (derecho de uso) y la 14 y la 52 adaptan obras publicadas. Requiere decisión editorial antes de publicar en PT y ES.</p>
+<p>Ocho figuras declaran imagen creada o adaptada por IA: 13, 14, 37, 39, 41, 52, 61 y 62. La 14 y la 52 adaptan obras publicadas. La 53 ya fue sustituida por una fotografía del autor. Requiere decisión editorial antes de publicar en PT y ES.</p>
 <h3>Títulos y conceptos</h3>
 <ul>
 <li>Títulos de figura repetidos o que no corresponden: 5, 27, 31, 36, 43 (repetido en 44 y 45) y 62.</li>
