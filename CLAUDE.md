@@ -95,6 +95,37 @@ Quando pedido para montar do zero a estrutura de um novo lançamento no ClickUp 
 4. Depois de criar a v1, esperar o pedido de "v2 melhorada": mesmas demandas, extras que gestão de projetos sênior julgar necessários, dependências entre tarefas e melhoria visual da planilha.
 5. Nome da pasta é o nome do evento. Colunas do backlog: manter "Data de Início" sempre preenchida, adicionar "Comentários", remover "Prioridade".
 
+**Estrutura padrão da pasta de lançamento no Drive (Keila, 26/10/2026, modelo Masterclass em Intercorrências 09/26).** Vale para todo lançamento novo, mesmo quando o evento anterior usava outra estrutura:
+
+```
+NOME DO EVENTO/
+├── 0. PLANEJAMENTO   (briefing em branco para a equipe preencher)
+├── 1. COPY
+├── 2. ARTES
+├── 3. PESQUISA
+├── 4. TRÁFEGO
+│   ├── BRUTOS
+│   ├── CRIATIVOS PRONTOS
+│   │   ├── 1. CAPTAÇÃO
+│   │   │   ├── ANTECIPAÇÃO
+│   │   │   ├── CAPTAÇÃO
+│   │   │   ├── LEMBRETE
+│   │   │   └── REMARKETING
+│   │   └── 2. VENDAS
+│   │       ├── AQUECIMENTO FEP   (obrigatória em todo lançamento)
+│   │       ├── ÚLTIMAS HORAS
+│   │       └── ÚLTIMO DIA
+│   ├── Criativos para Tráfego.xlsx
+│   └── Doc de edição de vídeo.docx
+├── 5. LOGO
+├── 6. PÁGINA DE VENDAS
+├── 7. URA + SMS
+├── 8. AUTOMAÇÃO
+└── Links úteis . NOME DO EVENTO.xlsx
+```
+
+Não usar mais as pastas antigas: PLANILHAS PÚBLICO, ALUNOS, LEADS ANTIGOS, OPERAÇÃO, REFERÊNCIAS, DEBRIEFING, DEPOIMENTOS, DOWNSELL, TMB. Ao copiar um evento antigo, reorganizar para esta estrutura movendo pastas (não recriando), para os links já distribuídos continuarem válidos.
+
 **Fonte das tarefas (Keila, 26/10/2026):** nunca basear só no evento anterior do mesmo produto. Comparar sempre três backlogs, porque o backlog é atualizado a cada lançamento: (a) o evento anterior do mesmo produto (ex.: MTB anterior), (b) a Masterclass mais recente, Brasil ou LATAM, e (c) o lançamento pago mais recente (ex.: IFF +10ml), de onde vêm ajustes de processo. Pastas antigas ficam arquivadas: ler as subtarefas de cada grupo com `clickup_get_task` (include subtasks), porque a busca por palavra-chave deixa tarefas de fora.
 
 Existe também o modo **migração** (não criação do zero): pegar demandas de um backlog origem e replicar num backlog destino, removendo datas e comentários.
