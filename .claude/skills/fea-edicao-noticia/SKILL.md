@@ -36,6 +36,10 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 - **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
 - **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
 
+## Ritmo: corte rápido (Keila, 26/10/2026)
+
+"O corte está ficando muito silêncio... precisa de um corte mais rápido." Neste modelo, **toda pausa de respiração entre frases sai** (corte seco, jump cut): silêncio de 0,2 s ou mais com o áudio abaixo de 45 dB vira corte, deixando 0,06 s depois da última palavra e 0,04 s antes da próxima. Os pontos vão no `manter` com `"exato"` para o encaixe automático não devolver o respiro. Exemplo no projeto `FEA-projeto-noticia-3-passos-skincare.json` (52,3 s viraram 48,1 s em 11 trechos). Diferente dos Reels de procedimento, em que silêncio com técnica acontecendo fica.
+
 ## Fluxo
 
 1. Ambiente e transcrição como na skill `fea-edicao-reels` (passos 1 a 3). Se o `faster-whisper` falhar com `metadata_errors`, instalar `pip install --only-binary :all: "av>=12,<15"`.
@@ -53,8 +57,8 @@ Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane R
 ## Vídeo de rotina/categoria sem marca (ex.: "3 passos do skincare", 26/10/2026)
 
 - O Dr. fala categorias (gel de limpeza, creme hidratante, protetor solar), não marcas: o painel mostra B-roll de pessoa fazendo o passo (limpeza com espuma, creme na bochecha, protetor no rosto) e uma etiqueta roxa com o passo (`"rotulo": "1. Limpeza"` na primeira cena de B-roll de cada passo).
-- Keila quer **foto de produto** mesmo quando o Dr. só fala a categoria (26/10/2026: "quero com foto do produto"). Usar o produto que o próprio Dr. já indicou em outro bruto da `00 - Brutos`: gel de limpeza = **CeraVe Gel de Limpeza** ("Gel de limpeza Pele madura": "é o produto que eu uso hoje no meu consultório"); protetor = **ISDIN Fusion Water Magic Color** e **La Roche-Posay Anthelios Ultra Cover** ("Protetor solar para telas", com fotos IMG_8074/IMG_8075 na pasta). Creme hidratante ainda sem indicação dele: usado CeraVe Creme Hidratante (ceramidas, barreira), levar para a Keila confirmar.
-- Fotos oficiais CeraVe: `https://www.cerave.com.br/-/media/project/loreal/brand-sites/cerave/americas/br/scx/pdp/new-packshots/<produto>/<arquivo>-lg.jpg` (700x875). Recorte: `fea_recortar_produto.py` normal para frasco colorido; pote branco `--limiar 246 --convexo`; bisnaga branca com sombra ao lado (La Roche-Posay) precisa de máscara manual limitando a borda direita.
+- **Foto de produto só quando o Dr. indica o produto claramente no vídeo** (nome falado). Se ele fala só a categoria (gel de limpeza, creme, protetor), **sem foto de produto**: B-roll + etiqueta do passo (Keila, 26/10/2026, revisão do "3 passos": "se o doutor não indica o produto claramente no vídeo, pode tirar as fotos"). Não puxar marca indicada em outro vídeo.
+- Fotos oficiais CeraVe, se ele citar: `https://www.cerave.com.br/-/media/project/loreal/brand-sites/cerave/americas/br/scx/pdp/new-packshots/<produto>/<arquivo>-lg.jpg` (700x875). Recorte: `fea_recortar_produto.py` normal para frasco colorido; pote branco `--limiar 246 --convexo`; bisnaga branca com sombra ao lado precisa de máscara manual limitando a borda.
 - Proteção solar: B-roll de praia de biquíni com zoom no rosto (`zoom` 2,0), sem mostrar o corpo.
 
 ## Pontos para levar à Keila
