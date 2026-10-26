@@ -53,12 +53,9 @@
       },
       {
         "ini": 9.7,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd23858.mp4",
-        "src": 5.5,
-        "cx": 0.5,
-        "cy": 0.3,
-        "zoom": 1.0
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod/png/cerave_gel.png",
+        "nome": "CeraVe Gel de Limpeza"
       },
       {
         "ini": 11.9,
@@ -81,12 +78,9 @@
       },
       {
         "ini": 17.5,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/hd45160.mp4",
-        "src": 0.0,
-        "cx": 0.35,
-        "cy": 0.6,
-        "zoom": 1.0
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod/png/cerave_creme.png",
+        "nome": "CeraVe Creme Hidratante"
       },
       {
         "ini": 19.4,
@@ -112,13 +106,18 @@
       },
       {
         "ini": 29.0,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod/png/lrp_ultra_cover.png",
+        "nome": "La Roche-Posay Anthelios Ultra Cover"
+      },
+      {
+        "ini": 31.4,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/cv_sun.mp4",
         "src": 6.5,
         "cx": 0.5,
         "cy": 0.33,
-        "zoom": 2.0,
-        "rotulo": "3. Proteção solar"
+        "zoom": 2.0
       },
       {
         "ini": 33.8,
@@ -157,6 +156,15 @@
       "ini": 12,
       "abaixo_da_voz_db": 28,
       "nivelar": true
+    },
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/an/raw20.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
     }
   }
 }
