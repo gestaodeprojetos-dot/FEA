@@ -1,0 +1,2147 @@
+[
+{
+"id": "p149_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p149_03",
+"pt": "Assepsia rigorosa da região. •",
+"es": "Asepsia rigurosa de la región."
+},
+{
+"id": "p149_04",
+"pt": "Antibioticoterapia oral de amplo espectro: •",
+"es": "Antibioticoterapia oral de amplio espectro:"
+},
+{
+"id": "p149_05",
+"pt": "Amoxicilina/clavulanato 875/125 mg 12/12 horas por 7–10 dias. •",
+"es": "Amoxicilina/ácido clavulánico 875/125 mg cada 12 h por 7 a 10 días."
+},
+{
+"id": "p149_06",
+"pt": "Associar metronidazol 400 mg 8/8 horas em casos de suspeita de anaeróbios (necrose, odor fétido). •",
+"es": "Asociar metronidazol 400 mg cada 8 h ante sospecha de anaerobios (necrosis, olor fétido)."
+},
+{
+"id": "p149_07",
+"pt": "Analgesia conforme necessidade. •",
+"es": "Analgesia según necesidad."
+},
+{
+"id": "p149_08",
+"pt": "Compressas mornas para drenagem espontânea.",
+"es": "Compresas tibias para el drenaje espontáneo."
+},
+{
+"id": "p149_09",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p149_10",
+"pt": "Casos graves ou refratários: •",
+"es": "Casos graves o refractarios:"
+},
+{
+"id": "p149_11",
+"pt": "Ceftriaxona 1–2 g/dia EV. •",
+"es": "Ceftriaxona 1 a 2 g/día IV."
+},
+{
+"id": "p149_12",
+"pt": "Piperacilina/tazobactam 4,5 g 6/6 horas EV. •",
+"es": "Piperacilina/tazobactam 4,5 g cada 6 h IV."
+},
+{
+"id": "p149_13",
+"pt": "Carbapenêmicos (meropenem 1 g 8/8 horas) em infecções extensas ou multirresistentes. Abscessos definidos: •",
+"es": "Carbapenémicos (meropenem 1 g cada 8 h) en infecciones extensas o multirresistentes. Abscesos definidos:"
+},
+{
+"id": "p149_14",
+"pt": "Drenagem cirúrgica ou aspiração guiada por imagem. Suspeita de biofilme: •",
+"es": "Drenaje quirúrgico o aspiración guiada por imagen. Sospecha de biofilm:"
+},
+{
+"id": "p149_15",
+"pt": "Uso prolongado de antibióticos. •",
+"es": "Uso prolongado de antibióticos."
+},
+{
+"id": "p149_16",
+"pt": "Associar hialuronidase para degradação do preenchedor e ruptura da matriz de suporte bacteriana. •",
+"es": "Asociar hialuronidasa para degradar el producto de relleno y romper la matriz de soporte bacteriana."
+},
+{
+"id": "p149_17",
+"pt": "Suporte hospitalar em pacientes imunossuprimidos ou com sinais sistêmicos.",
+"es": "Soporte hospitalario en pacientes inmunosuprimidos o con signos sistémicos."
+},
+{
+"id": "p149_18",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p149_20",
+"pt": "Formação de abscesso bacteriano de difícil resolução.",
+"es": "Formación de absceso bacteriano de difícil resolución."
+},
+{
+"id": "p150_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p150_03",
+"pt": "Infecção orbitária ou intracraniana (em casos periorbitários/nasais). •",
+"es": "Infección orbitaria o intracraneal (en casos periorbitarios/nasales)."
+},
+{
+"id": "p150_04",
+"pt": "Sepse (raríssima, mas possível). •",
+"es": "Sepsis (rarísima, pero posible)."
+},
+{
+"id": "p150_05",
+"pt": "Cicatrizes atróficas ou hipertróficas. •",
+"es": "Cicatrices atróficas o hipertróficas."
+},
+{
+"id": "p150_06",
+"pt": "Pigmentação pós-inflamatória.",
+"es": "Pigmentación posinflamatoria."
+},
+{
+"id": "p150_07",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p150_09",
+"pt": "Assepsia rigorosa: clorexidina alcoólica na pele, ambiente estéril, materiais descartáveis. •",
+"es": "Asepsia rigurosa: clorhexidina alcohólica en la piel, ambiente estéril, materiales desechables."
+},
+{
+"id": "p150_10",
+"pt": "Evitar manipulação pós-procedimento pelo paciente. •",
+"es": "Evitar la manipulación posprocedimiento por el paciente."
+},
+{
+"id": "p150_11",
+"pt": "Orientações claras de higiene no pós-operatório. •",
+"es": "Indicaciones claras de higiene en el posoperatorio."
+},
+{
+"id": "p150_12",
+"pt": "Evitar sobrecorreção em áreas de necrose, que favorecem colonização bacteriana. •",
+"es": "Evitar la sobrecorrección en áreas de necrosis, que favorecen la colonización bacteriana."
+},
+{
+"id": "p150_13",
+"pt": "Acompanhamento precoce de sinais inflamatórios.",
+"es": "Seguimiento precoz de los signos inflamatorios."
+},
+{
+"id": "p150_14",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p150_16",
+"pt": "Infecções leves e tratadas precocemente: resolução completa sem sequelas. •",
+"es": "Infecciones leves y tratadas precozmente: resolución completa sin secuelas."
+},
+{
+"id": "p150_17",
+"pt": "Infecções graves: risco de necrose e cicatrizes, principalmente em áreas críticas. •",
+"es": "Infecciones graves: riesgo de necrosis y cicatrices, sobre todo en áreas críticas."
+},
+{
+"id": "p150_18",
+"pt": "Presença de biofilme: tratamento mais complexo, podendo exigir múltiplas sessões de antibiótico e uso de hialuronidase.",
+"es": "Presencia de biofilm: tratamiento más complejo, que puede exigir múltiples ciclos de antibiótico y uso de hialuronidasa."
+},
+{
+"id": "p150_19",
+"pt": "4.2 ABSCESSO BACTERIANO",
+"es": "4.2 ABSCESO BACTERIANO"
+},
+{
+"id": "p150_20",
+"pt": "O abscesso bacteriano é uma intercorrência não isquêmica tardia, caracterizada pela formação de uma coleção purulenta encap-",
+"es": "El absceso bacteriano es una intercurrencia no isquémica tardía, caracterizada por la formación de una colección purulenta encapsulada"
+},
+{
+"id": "p151_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p151_02",
+"pt": "sulada em resposta a uma infecção localizada após procedimentos estéticos injetáveis. Diferente da infecção bacteriana difusa (celulite), o abscesso envolve necrose liquefativa central, delimitada por cápsula de tecido de granulação. Representa uma complicação mais grave, que exige abordagem combinada, antibiótica e cirúrgica, para resolução completa.",
+"es": "en respuesta a una infección localizada tras procedimientos estéticos inyectables. A diferencia de la infección bacteriana difusa (celulitis), el absceso presenta necrosis licuefactiva central, delimitada por una cápsula de tejido de granulación. Representa una complicación más grave, que exige un abordaje combinado, antibiótico y quirúrgico, para su resolución completa."
+},
+{
+"id": "p151_03",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p151_04",
+"pt": "O mecanismo central é a colonização bacteriana localizada, geralmente em tecidos já lesionados, edemaciados ou com preenchedor residual.",
+"es": "El mecanismo central es la colonización bacteriana localizada, por lo general en tejidos ya lesionados, edematizados o con producto de relleno residual."
+},
+{
+"id": "p151_05",
+"pt": "Processo evolutivo: •",
+"es": "Proceso evolutivo:"
+},
+{
+"id": "p151_06",
+"pt": "Inoculação bacteriana inicial (flora cutânea, oral ou por falha de assepsia). •",
+"es": "Inoculación bacteriana inicial (flora cutánea, oral o por falla de asepsia)."
+},
+{
+"id": "p151_07",
+"pt": "Inflamação aguda recrutamento de neutrófilos. •",
+"es": "Inflamación aguda: reclutamiento de neutrófilos."
+},
+{
+"id": "p151_08",
+"pt": "Necrose tecidual central e formação de pus (neutrófilos mortos, bactérias e detritos). •",
+"es": "Necrosis tisular central y formación de pus (neutrófilos muertos, bacterias y detritos)."
+},
+{
+"id": "p151_09",
+"pt": "Encapsulamento por tecido de granulação abscesso organizado. Os principais agentes envolvidos: •",
+"es": "Encapsulamiento por tejido de granulación: absceso organizado. Principales agentes implicados:"
+},
+{
+"id": "p151_10",
+"pt": "Staphylococcus aureus (inclusive MRSA). •",
+"es": "Staphylococcus aureus (incluido MRSA)."
+},
+{
+"id": "p151_11",
+"pt": "Streptococcus pyogenes. •",
+"es": "Streptococcus pyogenes."
+},
+{
+"id": "p151_12",
+"pt": "Anaeróbios orais (quando há comunicação com mucosa labial/oral). •",
+"es": "Anaerobios orales (cuando hay comunicación con la mucosa labial/oral)."
+},
+{
+"id": "p151_13",
+"pt": "Flora mista em biofilmes aderidos ao preenchedor.",
+"es": "Flora mixta en biofilms adheridos al producto de relleno."
+},
+{
+"id": "p152_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p152_02",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p152_04",
+"pt": "Região labial e perioral: alta exposição à flora oral. •",
+"es": "Región labial y perioral: alta exposición a la flora oral."
+},
+{
+"id": "p152_05",
+"pt": "Nariz e glabela: risco grave devido à drenagem venosa orbitária e intracraniana. •",
+"es": "Nariz y glabela: riesgo grave por el drenaje venoso orbitario e intracraneal."
+},
+{
+"id": "p152_06",
+"pt": "Região malar e sulco nasolabial: áreas propensas a edema e acúmulo de preenchedor. •",
+"es": "Región malar y surco nasolabial: áreas propensas a edema y acumulación de relleno."
+},
+{
+"id": "p152_07",
+"pt": "Locais com necrose prévia ou hematomas mal resolvidos.",
+"es": "Sitios con necrosis previa o hematomas mal resueltos."
+},
+{
+"id": "p152_08",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p152_10",
+"pt": "Dor intensa e localizada, de caráter progressivo. •",
+"es": "Dolor intenso y localizado, de carácter progresivo."
+},
+{
+"id": "p152_11",
+"pt": "Eritema e calor local. •",
+"es": "Eritema y calor local."
+},
+{
+"id": "p152_12",
+"pt": "Edema duro, que evolui para flutuação palpável. •",
+"es": "Edema duro, que evoluciona a fluctuación palpable."
+},
+{
+"id": "p152_13",
+"pt": "Secreção purulenta espontânea ou ao realizar a punção. •",
+"es": "Secreción purulenta espontánea o al realizar la punción."
+},
+{
+"id": "p152_14",
+"pt": "Febre, mal-estar e linfadenopatia regional em casos sistêmicos.",
+"es": "Fiebre, malestar general y linfadenopatía regional en casos sistémicos."
+},
+{
+"id": "p152_15",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p152_17",
+"pt": "Infecção bacteriana difusa (celulite): não apresenta flutuação encapsulada. •",
+"es": "Infección bacteriana difusa (celulitis): no presenta fluctuación encapsulada."
+},
+{
+"id": "p152_18",
+"pt": "Abscesso estéril: inflamação nodular sem pus, geralmente relacionado a biofilme ou reação inflamatória. •",
+"es": "Absceso estéril: inflamación nodular sin pus, por lo general relacionada con biofilm o reacción inflamatoria."
+},
+{
+"id": "p152_19",
+"pt": "Granuloma: nódulo firme e crônico, sem sinais flogísticos intensos. •",
+"es": "Granuloma: nódulo firme y crónico, sin signos flogísticos intensos."
+},
+{
+"id": "p152_20",
+"pt": "Necrose tecidual isolada: crostas e ulceração, mas sem coleção purulenta.",
+"es": "Necrosis tisular aislada: costras y ulceración, pero sin colección purulenta."
+},
+{
+"id": "p153_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p153_02",
+"pt": "FIGURA 48. ABSCESSO BACTERIANO PÓS PREENCHIMENTO DE MANDÍBULA",
+"es": "FIGURA 48. ABSCESO BACTERIANO TRAS RELLENO DE MANDÍBULA"
+},
+{
+"id": "p153_03",
+"pt": "Figura 48. Imagem clínica demonstrando abscesso bacteriano cutâneo já formado, caracterizado por aumento de volume local com edema, área flutuante e presença de coleção purulenta visível. À palpação, observa-se consistência mais tensa e delimitada, compatível com processo encapsulado. O quadro é sugestivo de abscesso estabelecido, diferindo de celulite, que tipicamente apresenta inflamação difusa, sem coleção purulenta definida ou encapsulamento. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 48. Imagen clínica que muestra un absceso bacteriano cutáneo ya formado, caracterizado por aumento de volumen local con edema, área fluctuante y presencia de colección purulenta visible. A la palpación se observa una consistencia más tensa y delimitada, compatible con un proceso encapsulado. El cuadro es sugestivo de absceso establecido, a diferencia de la celulitis, que típicamente presenta inflamación difusa, sin colección purulenta definida ni encapsulamiento. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p153_04",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p153_06",
+"pt": "Avaliação clínica da extensão e profundidade. •",
+"es": "Evaluación clínica de la extensión y la profundidad."
+},
+{
+"id": "p153_07",
+"pt": "Início de antibioticoterapia oral: •",
+"es": "Inicio de antibioticoterapia oral:"
+},
+{
+"id": "p153_08",
+"pt": "Amoxicilina/clavulanato 875/125 mg 12/12h por 10–14 dias. •",
+"es": "Amoxicilina/ácido clavulánico 875/125 mg cada 12 h por 10 a 14 días."
+},
+{
+"id": "p153_09",
+"pt": "Associar metronidazol 400 mg 8/8h se suspeita de anaeróbios. •",
+"es": "Asociar metronidazol 400 mg cada 8 h si se sospechan anaerobios."
+},
+{
+"id": "p153_10",
+"pt": "Analgesia e anti-inflamatórios para dor e edema. •",
+"es": "Analgesia y antiinflamatorios para el dolor y el edema."
+},
+{
+"id": "p153_11",
+"pt": "Compressas mornas para favorecer a maturação e drenagem.",
+"es": "Compresas tibias para favorecer la maduración y el drenaje."
+},
+{
+"id": "p153_12",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p153_14",
+"pt": "Drenagem cirúrgica ou aspiração guiada por ultrassom: tratamento definitivo, especialmente em coleções maiores.",
+"es": "Drenaje quirúrgico o aspiración guiada por ecografía: tratamiento definitivo, en especial en colecciones mayores."
+},
+{
+"id": "p154_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p154_03",
+"pt": "Antibióticos EV em casos graves: •",
+"es": "Antibióticos IV en casos graves:"
+},
+{
+"id": "p154_04",
+"pt": "Ceftriaxona 1–2 g/dia. •",
+"es": "Ceftriaxona 1 a 2 g/día."
+},
+{
+"id": "p154_05",
+"pt": "Piperacilina/tazobactam 4,5 g 6/6h. •",
+"es": "Piperacilina/tazobactam 4,5 g cada 6 h."
+},
+{
+"id": "p154_06",
+"pt": "Meropenem 1 g 8/8h em casos multirresistentes. •",
+"es": "Meropenem 1 g cada 8 h en casos multirresistentes."
+},
+{
+"id": "p154_07",
+"pt": "Hialuronidase: indicada quando o abscesso se relaciona diretamente a depósito de ácido hialurônico degradação do preenchedor ajuda a romper o biofilme e reduzir a recidiva. •",
+"es": "Hialuronidasa: indicada cuando el absceso se relaciona directamente con un depósito de ácido hialurónico; la degradación del producto ayuda a romper el biofilm y a reducir la recidiva."
+},
+{
+"id": "p154_08",
+"pt": "Exame de cultura e antibiograma do material drenado: essencial para guiar antibioticoterapia em infecções persistentes. •",
+"es": "Cultivo y antibiograma del material drenado: esencial para guiar la antibioticoterapia en infecciones persistentes."
+},
+{
+"id": "p154_09",
+"pt": "Oxigenoterapia hiperbárica: pode ser adjuvante em casos com necrose associada.",
+"es": "Oxigenoterapia hiperbárica: puede ser adyuvante en casos con necrosis asociada."
+},
+{
+"id": "p154_10",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p154_12",
+"pt": "Necrose tecidual extensa. •",
+"es": "Necrosis tisular extensa."
+},
+{
+"id": "p154_13",
+"pt": "Cicatrizes atróficas, hipertróficas ou fibrose irregular. •",
+"es": "Cicatrices atróficas, hipertróficas o fibrosis irregular."
+},
+{
+"id": "p154_14",
+"pt": "Infecção orbitária ou intracraniana em regiões de risco (nariz, glabela). •",
+"es": "Infección orbitaria o intracraneal en regiones de riesgo (nariz, glabela)."
+},
+{
+"id": "p154_15",
+"pt": "Sepse em pacientes imunocomprometidos. •",
+"es": "Sepsis en pacientes inmunocomprometidos."
+},
+{
+"id": "p154_16",
+"pt": "Recorrência em casos de biofilme não resolvido.",
+"es": "Recurrencia en casos de biofilm no resuelto."
+},
+{
+"id": "p154_17",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p154_19",
+"pt": "Assepsia rigorosa durante o procedimento. •",
+"es": "Asepsia rigurosa durante el procedimiento."
+},
+{
+"id": "p154_20",
+"pt": "Técnica adequada, evitando hematomas e necroses predisponentes. •",
+"es": "Técnica adecuada, que evite hematomas y necrosis predisponentes."
+},
+{
+"id": "p154_21",
+"pt": "Orientação clara ao paciente sobre cuidados pós-procedimento.",
+"es": "Indicaciones claras al paciente sobre los cuidados posprocedimiento."
+},
+{
+"id": "p155_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p155_03",
+"pt": "Acompanhamento próximo nos primeiros dias e semanas após o tratamento.",
+"es": "Seguimiento estrecho en los primeros días y semanas tras el tratamiento."
+},
+{
+"id": "p155_04",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p155_06",
+"pt": "Com drenagem precoce + antibiótico adequado: prognóstico geralmente favorável, com resolução completa. •",
+"es": "Con drenaje precoz + antibiótico adecuado: pronóstico por lo general favorable, con resolución completa."
+},
+{
+"id": "p155_07",
+"pt": "Sem drenagem adequada: risco de recidiva, cronicidade e cicatrizes permanentes. •",
+"es": "Sin drenaje adecuado: riesgo de recidiva, cronicidad y cicatrices permanentes."
+},
+{
+"id": "p155_08",
+"pt": "Casos graves em áreas críticas (periorbitária/nasal): prognóstico reservado, risco de complicações intracranianas.",
+"es": "Casos graves en áreas críticas (periorbitaria/nasal): pronóstico reservado, riesgo de complicaciones intracraneales."
+},
+{
+"id": "p155_09",
+"pt": "4.3 ABSCESSO ESTÉRIL",
+"es": "4.3 ABSCESO ESTÉRIL"
+},
+{
+"id": "p155_10",
+"pt": "O abscesso estéril é uma intercorrência não isquêmica tardia, caracterizada pelo acúmulo de material inflamatório e necrose liquefativa sem presença de microrganismos viáveis. Ao contrário do abscesso bacteriano, não há infecção ativa, mas sim uma reação inflamatória intensa, frequentemente associada à presença de preenchedores, biofilmes não cultiváveis ou resposta imunológica exacerbada.",
+"es": "El absceso estéril es una intercurrencia no isquémica tardía, caracterizada por la acumulación de material inflamatorio y necrosis licuefactiva sin presencia de microorganismos viables. A diferencia del absceso bacteriano, no hay infección activa, sino una reacción inflamatoria intensa, a menudo asociada a la presencia de productos de relleno, biofilms no cultivables o una respuesta inmunológica exacerbada."
+},
+{
+"id": "p155_11",
+"pt": "Clinicamente, pode se apresentar de forma semelhante ao abscesso infeccioso, sendo necessário diferenciá-los para evitar uso desnecessário de antibióticos.",
+"es": "Clínicamente puede presentarse de forma similar al absceso infeccioso, por lo que es necesario diferenciarlos para evitar el uso innecesario de antibióticos."
+},
+{
+"id": "p155_12",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p155_13",
+"pt": "Os mecanismos envolvidos incluem:",
+"es": "Los mecanismos implicados incluyen:"
+},
+{
+"id": "p156_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p156_03",
+"pt": "Resposta inflamatória estéril a produtos de degradação do preenchedor (ácido hialurônico fragmentado). •",
+"es": "Respuesta inflamatoria estéril a productos de degradación del relleno (ácido hialurónico fragmentado)."
+},
+{
+"id": "p156_04",
+"pt": "Reação imunológica de hipersensibilidade tardia ao biomaterial. •",
+"es": "Reacción inmunológica de hipersensibilidad tardía al biomaterial."
+},
+{
+"id": "p156_05",
+"pt": "Biofilme bacteriano não cultivável, com reação inflamatória persistente mesmo sem infecção ativa evidente. •",
+"es": "Biofilm bacteriano no cultivable, con reacción inflamatoria persistente aun sin infección activa evidente."
+},
+{
+"id": "p156_06",
+"pt": "Necrose tecidual prévia que evolui para coleção inflamatória, sem colonização bacteriana.",
+"es": "Necrosis tisular previa que evoluciona a colección inflamatoria, sin colonización bacteriana."
+},
+{
+"id": "p156_07",
+"pt": "O líquido aspirado geralmente contém células inflamatórias, restos necróticos e detritos do material, mas sem crescimento bacteriano em cultura.",
+"es": "El líquido aspirado suele contener células inflamatorias, restos necróticos y detritos del material, pero sin crecimiento bacteriano en el cultivo."
+},
+{
+"id": "p156_08",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p156_10",
+"pt": "Regiões de grande volume de preenchimento (malar, mandíbula, têmporas). •",
+"es": "Regiones con gran volumen de relleno (malar, mandíbula, sienes)."
+},
+{
+"id": "p156_11",
+"pt": "Áreas submetidas a múltiplos procedimentos e retoques. •",
+"es": "Áreas sometidas a múltiples procedimientos y retoques."
+},
+{
+"id": "p156_12",
+"pt": "Locais com histórico de intercorrência inflamatória prévia (edema, necrose parcial, biofilme).",
+"es": "Sitios con antecedente de intercurrencia inflamatoria previa (edema, necrosis parcial, biofilm)."
+},
+{
+"id": "p156_13",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p156_15",
+"pt": "Nódulo doloroso ou sensível ao toque. •",
+"es": "Nódulo doloroso o sensible al tacto."
+},
+{
+"id": "p156_16",
+"pt": "Eritema e edema localizados, podendo simular infecção. •",
+"es": "Eritema y edema localizados, que pueden simular una infección."
+},
+{
+"id": "p156_17",
+"pt": "Flutuação palpável em alguns casos. •",
+"es": "Fluctuación palpable en algunos casos."
+},
+{
+"id": "p156_18",
+"pt": "Ausência de febre, linfadenopatia ou sintomas sistêmicos.",
+"es": "Ausencia de fiebre, linfadenopatía o síntomas sistémicos."
+},
+{
+"id": "p157_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p157_03",
+"pt": "Aspiração com seringa: saída de conteúdo inflamatório espesso, geralmente sem odor fétido.",
+"es": "Aspiración con jeringa: salida de contenido inflamatorio espeso, por lo general sin olor fétido."
+},
+{
+"id": "p157_04",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p157_06",
+"pt": "Abscesso bacteriano: dor mais intensa, secreção purulenta, febre e sintomas sistêmicos. •",
+"es": "Absceso bacteriano: dolor más intenso, secreción purulenta, fiebre y síntomas sistémicos."
+},
+{
+"id": "p157_07",
+"pt": "Granuloma: nódulo firme, não flutuante, evolução mais crônica. •",
+"es": "Granuloma: nódulo firme, no fluctuante, de evolución más crónica."
+},
+{
+"id": "p157_08",
+"pt": "Reação inflamatória estéril difusa: edema e eritema sem coleção organizada. •",
+"es": "Reacción inflamatoria estéril difusa: edema y eritema sin colección organizada."
+},
+{
+"id": "p157_09",
+"pt": "Nódulo tardio de preenchimento: endurecido, sem sinais flogísticos intensos.",
+"es": "Nódulo tardío de relleno: endurecido, sin signos flogísticos intensos."
+},
+{
+"id": "p157_10",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p157_12",
+"pt": "Avaliação clínica e ultrassonográfica para diferenciar de abscesso bacteriano. •",
+"es": "Evaluación clínica y ecográfica para diferenciarlo del absceso bacteriano."
+},
+{
+"id": "p157_13",
+"pt": "Aspiração diagnóstica com coleta do material para análise citológica e cultura. •",
+"es": "Aspiración diagnóstica con toma de material para análisis citológico y cultivo."
+},
+{
+"id": "p157_14",
+"pt": "Uso de anti-inflamatórios (AINEs ou corticoides, dependendo da intensidade): •",
+"es": "Uso de antiinflamatorios (AINE o corticoides, según la intensidad):"
+},
+{
+"id": "p157_15",
+"pt": "Prednisona 20–40 mg/dia por 3–5 dias em casos graves. •",
+"es": "Prednisona 20 a 40 mg/día por 3 a 5 días en casos graves."
+},
+{
+"id": "p157_16",
+"pt": "Hialuronidase: indicada se houver relação com ácido hialurônico, para reduzir material residual. •",
+"es": "Hialuronidasa: indicada si hay relación con ácido hialurónico, para reducir el material residual."
+},
+{
+"id": "p157_17",
+"pt": "Evitar antibióticos empíricos, salvo se houver dúvida clínica razoável sobre infecção.",
+"es": "Evitar antibióticos empíricos, salvo que exista una duda clínica razonable de infección."
+},
+{
+"id": "p158_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p158_02",
+"pt": "FIGURA 49. ABSCESSO ESTÉRIL PÓS PREENCHIMENTO FACIAL COM ÁCIDO HIALURÔNICO: ACHADOS CLÍNICOS, TOMOGRÁFICOS E HISTOPATOLÓGICOS",
+"es": "FIGURA 49. ABSCESO ESTÉRIL TRAS RELLENO FACIAL CON ÁCIDO HIALURÓNICO: HALLAZGOS CLÍNICOS, TOMOGRÁFICOS E HISTOPATOLÓGICOS"
+},
+{
+"id": "p158_07",
+"pt": "Figura 49: Imagem demonstrando abscesso estéril multisseptado em região paranasal após procedimento com preenchimento dérmico. (A, B) Tumefação leve, eritematosa e edematosa em região glabelar. (C) Tomografia computadorizada evidenciando lesão hipodensa multisseptada em região frontal e dorso nasal, compatível com coleção em partes moles. (D) Exame histopatológico demonstrando necrose supurativa, com infiltrado neutrofílico abundante associado a detritos necróticos (H&E, ×400). Fonte: Adaptado de Cavallieri F, Munhoz G, et al. Management of hyaluronic acid filler–induced refractory sterile abscess with modified lavage protocol. J Cosmet Dermatol. 2025. Available from: https://pmc.ncbi.nlm.nih.gov/articles/ PMC12439020/",
+"es": "Figura 49: Imagen que muestra un absceso estéril multitabicado en región paranasal tras un procedimiento con relleno dérmico. (A, B) Tumefacción leve, eritematosa y edematosa en región glabelar. (C) Tomografía computarizada que evidencia una lesión hipodensa multitabicada en región frontal y dorso nasal, compatible con colección en partes blandas. (D) Estudio histopatológico que muestra necrosis supurativa, con abundante infiltrado neutrofílico asociado a detritos necróticos (H&E, ×400). Fuente: adaptado de Cavallieri F, Munhoz G, et al. Management of hyaluronic acid filler–induced refractory sterile abscess with modified lavage protocol. J Cosmet Dermatol. 2025. Available from: https://pmc.ncbi.nlm.nih.gov/articles/ PMC12439020/"
+},
+{
+"id": "p159_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p159_02",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p159_04",
+"pt": "Corticoterapia sistêmica prolongada em casos resistentes. •",
+"es": "Corticoterapia sistémica prolongada en casos resistentes."
+},
+{
+"id": "p159_05",
+"pt": "Imunomoduladores tópicos ou sistêmicos (ex.: colchicina, hidroxicloroquina) em casos de reação granulomatosa estéril crônica. •",
+"es": "Inmunomoduladores tópicos o sistémicos (p. ej., colchicina, hidroxicloroquina) en casos de reacción granulomatosa estéril crónica."
+},
+{
+"id": "p159_06",
+"pt": "Infiltrações intralesionais com corticoides (triancinolona) para reduzir inflamação persistente. •",
+"es": "Infiltraciones intralesionales con corticoides (triamcinolona) para reducir la inflamación persistente."
+},
+{
+"id": "p159_07",
+"pt": "Excisão cirúrgica apenas em coleções encapsuladas refratárias. •",
+"es": "Escisión quirúrgica solo en colecciones encapsuladas refractarias."
+},
+{
+"id": "p159_08",
+"pt": "Monitoramento com ultrassom de partes moles para avaliar evolução.",
+"es": "Monitoreo con ecografía de partes blandas para evaluar la evolución."
+},
+{
+"id": "p159_09",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p159_11",
+"pt": "Fibrose e irregularidade de contorno. •",
+"es": "Fibrosis e irregularidad del contorno."
+},
+{
+"id": "p159_12",
+"pt": "Evolução para granuloma de corpo estranho. •",
+"es": "Evolución a granuloma de cuerpo extraño."
+},
+{
+"id": "p159_13",
+"pt": "Impacto estético negativo prolongado. •",
+"es": "Impacto estético negativo prolongado."
+},
+{
+"id": "p159_14",
+"pt": "Confusão diagnóstica com abscesso bacteriano, levando a tratamentos inadequados.",
+"es": "Confusión diagnóstica con absceso bacteriano, que lleva a tratamientos inadecuados."
+},
+{
+"id": "p159_15",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p159_17",
+"pt": "Técnica asséptica rigorosa durante o procedimento. •",
+"es": "Técnica aséptica rigurosa durante el procedimiento."
+},
+{
+"id": "p159_18",
+"pt": "Uso de produtos de alta qualidade e biocompatibilidade comprovada. •",
+"es": "Uso de productos de alta calidad y biocompatibilidad comprobada."
+},
+{
+"id": "p159_19",
+"pt": "Evitar múltiplas camadas de preenchimento e sobrecorreções. •",
+"es": "Evitar múltiples capas de relleno y sobrecorrecciones."
+},
+{
+"id": "p159_20",
+"pt": "Monitorar pacientes com histórico de reação inflamatória ou biofilme.",
+"es": "Monitorear a los pacientes con antecedente de reacción inflamatoria o biofilm."
+},
+{
+"id": "p160_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p160_02",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p160_04",
+"pt": "Casos leves: excelente, com resolução após aspiração e anti-inflamatórios. •",
+"es": "Casos leves: excelente, con resolución tras aspiración y antiinflamatorios."
+},
+{
+"id": "p160_05",
+"pt": "Casos moderados: podem exigir hialuronidase e corticoides sistêmicos. •",
+"es": "Casos moderados: pueden exigir hialuronidasa y corticoides sistémicos."
+},
+{
+"id": "p160_06",
+"pt": "Casos refratários: risco de cronificação com granulomas ou cicatrizes.",
+"es": "Casos refractarios: riesgo de cronificación con granulomas o cicatrices."
+},
+{
+"id": "p160_07",
+"pt": "4.4 GRANULOMA INFLAMATÓRIO",
+"es": "4.4 GRANULOMA INFLAMATORIO"
+},
+{
+"id": "p160_08",
+"pt": "O granuloma é uma resposta inflamatória crônica, tardia, que ocorre após procedimentos estéticos injetáveis, caracterizada pela formação de um nódulo endurecido resultante da tentativa do organismo de isolar e degradar corpos estranhos, geralmente fragmentos de preenchedores. Diferencia-se dos nódulos simples por apresentar uma reação imunológica organizada, com predomínio de células gigantes multinucleadas, macrófagos e fibrose.",
+"es": "El granuloma es una respuesta inflamatoria crónica y tardía que aparece tras procedimientos estéticos inyectables, caracterizada por la formación de un nódulo endurecido, resultado del intento del organismo de aislar y degradar cuerpos extraños, por lo general fragmentos de productos de relleno. Se diferencia de los nódulos simples por presentar una reacción inmunológica organizada, con predominio de células gigantes multinucleadas, macrófagos y fibrosis."
+},
+{
+"id": "p160_09",
+"pt": "Embora incomum, pode surgir meses após o procedimento, exigindo diagnóstico cuidadoso e conduta adequada para evitar sequelas estéticas permanentes.",
+"es": "Aunque poco frecuente, puede surgir meses después del procedimiento y exige diagnóstico cuidadoso y conducta adecuada para evitar secuelas estéticas permanentes."
+},
+{
+"id": "p160_10",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p160_11",
+"pt": "O granuloma é formado pela ativação persistente do sistema imune frente a partículas estranhas: •",
+"es": "El granuloma se forma por la activación persistente del sistema inmune frente a partículas extrañas:"
+},
+{
+"id": "p160_12",
+"pt": "Deposição de material estranho (ex.: ácido hialurônico degradado, restos de biofilme).",
+"es": "Depósito de material extraño (p. ej., ácido hialurónico degradado, restos de biofilm)."
+},
+{
+"id": "p161_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p161_03",
+"pt": "Ativação de macrófagos formação de células epitelioides e gigantes multinucleadas. •",
+"es": "Activación de macrófagos y formación de células epitelioides y gigantes multinucleadas."
+},
+{
+"id": "p161_04",
+"pt": "Liberação crônica de citocinas inflamatórias (TNF-, IL-1, IL-6). •",
+"es": "Liberación crónica de citocinas inflamatorias (TNF-alfa, IL-1, IL-6)."
+},
+{
+"id": "p161_05",
+"pt": "Encapsulamento fibroso em torno do material. Pode estar associado a: •",
+"es": "Encapsulamiento fibroso alrededor del material. Puede asociarse a:"
+},
+{
+"id": "p161_06",
+"pt": "Produtos de baixa pureza ou contaminados. •",
+"es": "Productos de baja pureza o contaminados."
+},
+{
+"id": "p161_07",
+"pt": "Injeções repetidas no mesmo local. •",
+"es": "Inyecciones repetidas en el mismo sitio."
+},
+{
+"id": "p161_08",
+"pt": "Presença de biofilme bacteriano latente. •",
+"es": "Presencia de biofilm bacteriano latente."
+},
+{
+"id": "p161_09",
+"pt": "Predisposição individual a reações de hipersensibilidade.",
+"es": "Predisposición individual a reacciones de hipersensibilidad."
+},
+{
+"id": "p161_10",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p161_12",
+"pt": "Lábios: devido à mobilidade constante e risco de biofilme. •",
+"es": "Labios: por la movilidad constante y el riesgo de biofilm."
+},
+{
+"id": "p161_13",
+"pt": "Sulco nasolabial e malar: locais de alto volume de preenchimento. •",
+"es": "Surco nasolabial y malar: sitios de alto volumen de relleno."
+},
+{
+"id": "p161_14",
+"pt": "Região periorbitária: risco estético relevante por pele fina. •",
+"es": "Región periorbitaria: riesgo estético relevante por la piel fina."
+},
+{
+"id": "p161_15",
+"pt": "Têmporas e mandíbula: áreas de sobreposição de aplicações em retoques.",
+"es": "Sienes y mandíbula: áreas de superposición de aplicaciones en retoques."
+},
+{
+"id": "p161_16",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p161_18",
+"pt": "Nódulo endurecido e persistente, palpável sob a pele. •",
+"es": "Nódulo endurecido y persistente, palpable bajo la piel."
+},
+{
+"id": "p161_19",
+"pt": "Pouca ou nenhuma dor, podendo ser sensível em fases inflamatórias. •",
+"es": "Poco o ningún dolor; puede ser sensible en las fases inflamatorias."
+},
+{
+"id": "p161_20",
+"pt": "Eritema ou edema associado em surtos inflamatórios. •",
+"es": "Eritema o edema asociado en brotes inflamatorios."
+},
+{
+"id": "p161_21",
+"pt": "Consistência firme ou elástica, diferente do edema ou abscesso. •",
+"es": "Consistencia firme o elástica, distinta del edema o del absceso."
+},
+{
+"id": "p161_22",
+"pt": "Evolução crônica: semanas a meses após o procedimento.",
+"es": "Evolución crónica: de semanas a meses tras el procedimiento."
+},
+{
+"id": "p162_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p162_02",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p162_04",
+"pt": "Nódulos precoces de preenchedor: surgem logo após aplicação, amolecidos e resolvem com massagem/hialuronidase. •",
+"es": "Nódulos precoces de relleno: surgen poco después de la aplicación, son blandos y se resuelven con masaje/hialuronidasa."
+},
+{
+"id": "p162_05",
+"pt": "Abscesso bacteriano: doloroso, flutuante, com febre e secreção. •",
+"es": "Absceso bacteriano: doloroso, fluctuante, con fiebre y secreción."
+},
+{
+"id": "p162_06",
+"pt": "Abscesso estéril: coleção inflamatória sem infecção, de evolução mais aguda. •",
+"es": "Absceso estéril: colección inflamatoria sin infección, de evolución más aguda."
+},
+{
+"id": "p162_07",
+"pt": "ETIP (Edema Tardio Intermitente Persistente): edema flutuante e não nodular. •",
+"es": "ETIP (edema tardío intermitente persistente): edema fluctuante y no nodular."
+},
+{
+"id": "p162_08",
+"pt": "Neoplasias benignas (lipomas, fibromas): histórico não relacionado a preenchimento.",
+"es": "Neoplasias benignas (lipomas, fibromas): antecedentes no relacionados con el relleno."
+},
+{
+"id": "p162_09",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p162_11",
+"pt": "Avaliar intensidade e tempo de evolução. •",
+"es": "Evaluar la intensidad y el tiempo de evolución."
+},
+{
+"id": "p162_12",
+"pt": "Exames complementares úteis: •",
+"es": "Estudios complementarios útiles:"
+},
+{
+"id": "p162_13",
+"pt": "Ultrassom de partes moles (para caracterizar lesão e descartar abscesso). •",
+"es": "Ecografía de partes blandas (para caracterizar la lesión y descartar absceso)."
+},
+{
+"id": "p162_14",
+"pt": "Biópsia (em casos atípicos ou refratários, para confirmar granuloma verdadeiro). •",
+"es": "Biopsia (en casos atípicos o refractarios, para confirmar un granuloma verdadero)."
+},
+{
+"id": "p162_15",
+"pt": "Infiltração intralesional com corticoides: •",
+"es": "Infiltración intralesional con corticoides:"
+},
+{
+"id": "p162_16",
+"pt": "Triancinolona 10 mg/mL, diluída, aplicada diretamente no nódulo. •",
+"es": "Triamcinolona 10 mg/mL, diluida, aplicada directamente en el nódulo."
+},
+{
+"id": "p162_17",
+"pt": "Pode ser repetida a cada 4–6 semanas. •",
+"es": "Puede repetirse cada 4 a 6 semanas."
+},
+{
+"id": "p162_18",
+"pt": "Hialuronidase: indicada em granulomas relacionados a ácido hialurônico.",
+"es": "Hialuronidasa: indicada en granulomas relacionados con ácido hialurónico."
+},
+{
+"id": "p163_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p163_02",
+"pt": "FIGURA 50. GRANULOMA EM TECIDO SUBCUTÂNEO FACIAL SECUNDÁRIO A MATERIAL DE PREENCHIMENTO DÉRMICO",
+"es": "FIGURA 50. GRANULOMA EN TEJIDO SUBCUTÁNEO FACIAL SECUNDARIO A MATERIAL DE RELLENO DÉRMICO"
+},
+{
+"id": "p163_03",
+"pt": "Figura 50: Imagem histologia de biópsia cutânea da região malar evidenciando depósitos basofílicos irregulares em derme e tecido subcutâneo, circundados por reação granulomatosa de corpo estranho com histiócitos, células gigantes multinucleadas e infiltrado linfocitário. Observa-se proliferação de septos fibrosos adjacentes. Hematoxilina-eosina, ×200. Fonte: Adaptado de Alam M, Tung R, et al. Granulomatous foreign body reaction to dermal filler materials: histopathologic features and clinical correlation. Dermatologic Surgery.",
+"es": "Figura 50: Imagen histológica de biopsia cutánea de la región malar que evidencia depósitos basófilos irregulares en dermis y tejido subcutáneo, rodeados por una reacción granulomatosa de cuerpo extraño con histiocitos, células gigantes multinucleadas e infiltrado linfocitario. Se observa proliferación de septos fibrosos adyacentes. Hematoxilina-eosina, ×200. Fuente: adaptado de Alam M, Tung R, et al. Granulomatous foreign body reaction to dermal filler materials: histopathologic features and clinical correlation. Dermatologic Surgery."
+},
+{
+"id": "p163_04",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p163_06",
+"pt": "Corticoterapia sistêmica: prednisona 20–40 mg/dia por 5–7 dias em surtos inflamatórios intensos. •",
+"es": "Corticoterapia sistémica: prednisona 20 a 40 mg/día por 5 a 7 días en brotes inflamatorios intensos."
+},
+{
+"id": "p163_07",
+"pt": "Associação de antibióticos: quando há suspeita de biofilme (amoxicilina/clavulanato + metronidazol). •",
+"es": "Asociación de antibióticos: ante sospecha de biofilm (amoxicilina/ácido clavulánico + metronidazol)."
+},
+{
+"id": "p163_08",
+"pt": "Imunomoduladores: colchicina, hidroxicloroquina ou alopuri-",
+"es": "Inmunomoduladores: colchicina, hidroxicloroquina o alopurinol"
+},
+{
+"id": "p164_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p164_02",
+"pt": "nol em casos refratários. •",
+"es": "en casos refractarios."
+},
+{
+"id": "p164_03",
+"pt": "Cirurgia: excisão apenas em granulomas encapsulados não responsivos às terapias medicamentosas. •",
+"es": "Cirugía: escisión solo en granulomas encapsulados que no responden a las terapias farmacológicas."
+},
+{
+"id": "p164_04",
+"pt": "Laser fracionado ou radiofrequência: como adjuvante para reduzir fibrose residual.",
+"es": "Láser fraccionado o radiofrecuencia: como adyuvante para reducir la fibrosis residual."
+},
+{
+"id": "p164_05",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p164_07",
+"pt": "Deformidades locais por fibrose. •",
+"es": "Deformidades locales por fibrosis."
+},
+{
+"id": "p164_08",
+"pt": "Cicatrizes atróficas ou hipertróficas após regressão. •",
+"es": "Cicatrices atróficas o hipertróficas tras la regresión."
+},
+{
+"id": "p164_09",
+"pt": "Recorrência em pacientes predispostos. •",
+"es": "Recurrencia en pacientes predispuestos."
+},
+{
+"id": "p164_10",
+"pt": "Impacto psicológico negativo pelo caráter crônico da complicação.",
+"es": "Impacto psicológico negativo por el carácter crónico de la complicación."
+},
+{
+"id": "p164_11",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p164_13",
+"pt": "Uso de preenchedores de alta qualidade, com baixo risco de impurezas. •",
+"es": "Uso de productos de relleno de alta calidad, con bajo riesgo de impurezas."
+},
+{
+"id": "p164_14",
+"pt": "Evitar múltiplos retoques na mesma região em intervalos curtos. •",
+"es": "Evitar múltiples retoques en la misma región a intervalos cortos."
+},
+{
+"id": "p164_15",
+"pt": "Técnica asséptica rigorosa para prevenir biofilmes. •",
+"es": "Técnica aséptica rigurosa para prevenir biofilms."
+},
+{
+"id": "p164_16",
+"pt": "Avaliação criteriosa do histórico de reações imunológicas do paciente.",
+"es": "Evaluación criteriosa de antecedentes de reacciones inmunológicas del paciente."
+},
+{
+"id": "p164_17",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p164_19",
+"pt": "Granulomas leves a moderados: bom prognóstico com infiltração intralesional de corticoides e/ou hialuronidase. •",
+"es": "Granulomas leves a moderados: buen pronóstico con infiltración intralesional de corticoides y/o hialuronidasa."
+},
+{
+"id": "p164_20",
+"pt": "Granulomas extensos ou refratários: podem evoluir para fibrose persistente, exigindo tratamento cirúrgico.",
+"es": "Granulomas extensos o refractarios: pueden evolucionar a fibrosis persistente y exigir tratamiento quirúrgico."
+},
+{
+"id": "p165_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p165_03",
+"pt": "O prognóstico estético depende da precocidade do diagnóstico e da intensidade da resposta inflamatória.",
+"es": "El pronóstico estético depende de la precocidad del diagnóstico y de la intensidad de la respuesta inflamatoria."
+},
+{
+"id": "p165_04",
+"pt": "4.5 ETIP (EDEMA TARDIO INTERMITENTE PERSISTENTE)",
+"es": "4.5 ETIP (EDEMA TARDÍO INTERMITENTE PERSISTENTE)"
+},
+{
+"id": "p165_05",
+"pt": "O edema tardio intermitente persistente (ETIP) é uma intercorrência não isquêmica tardia caracterizada por episódios recorrentes de edema na área tratada, que podem surgir semanas a meses após a aplicação de preenchedores dérmicos. Trata-se de um quadro de natureza inflamatória, geralmente autolimitado, mas que pode gerar desconforto ao paciente e preocupação clínica, especialmente pela sua recorrência e pela dificuldade em identificar um fator desencadeante único.",
+"es": "El edema tardío intermitente persistente (ETIP) es una intercurrencia no isquémica tardía caracterizada por episodios recurrentes de edema en el área tratada, que pueden surgir de semanas a meses después de la aplicación de rellenos dérmicos. Se trata de un cuadro de naturaleza inflamatoria, por lo general autolimitado, pero que puede generar molestias al paciente y preocupación clínica, en especial por su recurrencia y por la dificultad de identificar un único factor desencadenante."
+},
+{
+"id": "p165_06",
+"pt": "DIAGNÓSTICO",
+"es": "DIAGNÓSTICO"
+},
+{
+"id": "p165_07",
+"pt": "Resposta inflamatória intermitente e persistente, semanas a meses após a aplicação.",
+"es": "Respuesta inflamatoria intermitente y persistente, de semanas a meses tras la aplicación."
+},
+{
+"id": "p165_08",
+"pt": "SINAIS CLÍNICOS",
+"es": "SIGNOS CLÍNICOS"
+},
+{
+"id": "p165_10",
+"pt": "Inchaço recorrente na área tratada, com ou sem dor.",
+"es": "Hinchazón recurrente en el área tratada, con o sin dolor."
+},
+{
+"id": "p165_11",
+"pt": "TRATAMENTO",
+"es": "TRATAMIENTO"
+},
+{
+"id": "p165_13",
+"pt": "Anti-inflamatórios não esteroidais. •",
+"es": "Antiinflamatorios no esteroideos."
+},
+{
+"id": "p165_14",
+"pt": "Corticóides em casos graves. •",
+"es": "Corticoides en casos graves."
+},
+{
+"id": "p165_15",
+"pt": "Hialuronidase se refratário. •",
+"es": "Hialuronidasa si es refractario."
+},
+{
+"id": "p165_16",
+"pt": "Avaliação de gatilhos imunológicos ou infecciosos.",
+"es": "Evaluación de desencadenantes inmunológicos o infecciosos."
+},
+{
+"id": "p166_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p166_02",
+"pt": "O Edema Tardio Intermitente Persistente (ETIP) é uma intercorrência observada após procedimentos estéticos envolvendo preenchedores dérmicos, particularmente aqueles à base de ácido hialurônico. Sua etiologia pode estar relacionada a dois fatores principais: a composição química do preenchedor e a resposta imunológica do paciente.",
+"es": "El edema tardío intermitente persistente (ETIP) es una intercurrencia observada tras procedimientos estéticos con rellenos dérmicos, en particular los de ácido hialurónico. Su etiología puede relacionarse con dos factores principales: la composición química del producto de relleno y la respuesta inmunológica del paciente."
+},
+{
+"id": "p166_03",
+"pt": "Primeiramente, acredita-se que a presença de agentes reticulantes, como BDDE (1,4-butanediol diglycidyl ether), DVS (divinyl sulfone), no ácido hialurônico pode desencadear uma resposta inflamatória crônica. Quanto maior a concentração dos resíduos desses agentes nos preenchedores, mais pronunciada pode ser a resposta inflamatória, levando ao ETIP. Preenchedores com menor quantidade de resíduos desses agentes são menos modificados e, portanto, menos propensos a induzir inflamação.",
+"es": "En primer lugar, se cree que la presencia de agentes reticulantes, como el BDDE (1,4-butanodiol diglicidil éter) y la DVS (divinilsulfona), en el ácido hialurónico puede desencadenar una respuesta inflamatoria crónica. Cuanto mayor es la concentración de residuos de estos agentes en los rellenos, más pronunciada puede ser la respuesta inflamatoria, lo que conduce al ETIP. Los rellenos con menor cantidad de residuos de estos agentes están menos modificados y, por lo tanto, son menos propensos a inducir inflamación."
+},
+{
+"id": "p166_04",
+"pt": "Além disso, infecções bacterianas ou virais podem atuar como gatilhos para o ETIP. Acredita-se que, em casos de imunossupressão ou desequilíbrio imunológico, o corpo pode iniciar uma resposta imunológica contra o preenchedor, através de um mecanismo de \"chave-fechadura\" onde anticorpos formados para combater uma infecção também reagem com o preenchedor, causando os sinais inflamatórios.",
+"es": "Además, las infecciones bacterianas o virales pueden actuar como desencadenantes del ETIP. Se cree que, en casos de inmunosupresión o desequilibrio inmunológico, el organismo puede iniciar una respuesta inmunológica contra el relleno mediante un mecanismo de “llave-cerradura”, en el que los anticuerpos formados para combatir una infección también reaccionan con el relleno y causan los signos inflamatorios."
+},
+{
+"id": "p166_05",
+"pt": "Os sintomas incluem dor, calor, rubor e inflamação, geralmente auto-limitada, mas que pode persistir por dias. O tratamento pode envolver corticoides ou anti-inflamatórios, e medidas como compressas geladas.",
+"es": "Los síntomas incluyen dolor, calor, rubor e inflamación, por lo general autolimitada, pero que puede persistir durante días. El tratamiento puede incluir corticoides o antiinflamatorios, y medidas como compresas frías."
+},
+{
+"id": "p167_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p167_02",
+"pt": "Embora o ETIP ainda não tenha uma etiologia completamente esclarecida, essas teorias ajudam a entender e manejar melhor essa intercorrência.",
+"es": "Aunque la etiología del ETIP aún no está completamente esclarecida, estas teorías ayudan a comprender y manejar mejor esta intercurrencia."
+},
+{
+"id": "p167_03",
+"pt": "FIGURA 51. EDEMA TARDIO INTERMITENTE PERSISTENTE (ETIP) EM REGIÃO LABIAL APÓS PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "FIGURA 51. EDEMA TARDÍO INTERMITENTE PERSISTENTE (ETIP) EN REGIÓN LABIAL TRAS RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p167_04",
+"pt": "Figura 51. Imagens clínicas demonstrando episódios de edema recorrente em região labial após procedimento com preenchedor dérmico. Observa-se aumento de volume difuso, com discreto eritema, compatível com quadro de edema tardio intermitente persistente (ETIP), caracterizado por resposta inflamatória não infecciosa, de início tardio e evolução recorrente. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 51. Imágenes clínicas que muestran episodios de edema recurrente en región labial tras un procedimiento con relleno dérmico. Se observa aumento de volumen difuso, con discreto eritema, compatible con un cuadro de edema tardío intermitente persistente (ETIP), caracterizado por una respuesta inflamatoria no infecciosa, de inicio tardío y evolución recurrente. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p167_05",
+"pt": "4.6 SURTO HERPÉTICO",
+"es": "4.6 BROTE HERPÉTICO"
+},
+{
+"id": "p167_06",
+"pt": "O surto herpético é uma complicação infecciosa causada",
+"es": "El brote herpético es una complicación infecciosa causada"
+},
+{
+"id": "p167_07",
+"pt": "pela",
+"es": "por la"
+},
+{
+"id": "p167_08",
+"pt": "reativação",
+"es": "reactivación"
+},
+{
+"id": "p167_09",
+"pt": "do",
+"es": "del"
+},
+{
+"id": "p167_10",
+"pt": "vírus",
+"es": "virus"
+},
+{
+"id": "p167_11",
+"pt": "Herpes",
+"es": "herpes"
+},
+{
+"id": "p167_12",
+"pt": "simplex",
+"es": "simple"
+},
+{
+"id": "p167_13",
+"pt": "(geralmente HSV-1), podendo ocorrer após procedimentos estéticos injetáveis, especialmente em regiões labiais e periorais. O trauma local, o estresse imunológico e a inflamação provocada pela aplicação podem desencadear a reativação viral. Embora não represente risco sistêmico na maioria dos casos, pode comprometer",
+"es": "(por lo general HSV-1), que puede producirse tras procedimientos estéticos inyectables, sobre todo en regiones labiales y periorales. El trauma local, el estrés inmunológico y la inflamación provocada por la aplicación pueden desencadenar la reactivación viral. Aunque en la mayoría de los casos no representa un riesgo sistémico, puede comprometer"
+},
+{
+"id": "p168_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p168_02",
+"pt": "a cicatrização, predispor a sobreinfecções bacterianas e gerar cicatrizes permanentes se não tratado adequadamente.",
+"es": "la cicatrización, predisponer a sobreinfecciones bacterianas y generar cicatrices permanentes si no se trata adecuadamente."
+},
+{
+"id": "p168_03",
+"pt": "Figura 52. Herpes labial. Múltiplas vesículas agrupadas, preenchidas por líquido claro, distribuídas sobre o vermelhão do lábio, característica clínica típica da infecção pelo vírus herpes simples. Fonte: Adaptado por IA de Neville BW, Damm DD, Allen CM, Bouquot JE. Patologia oral e maxilofacial. 3rd ed. Rio de Janeiro: Elsevier; 2009. Capítulo 7: Infecções virais.",
+"es": "Figura 52. Herpes labial. Múltiples vesículas agrupadas, llenas de líquido claro, distribuidas sobre el bermellón del labio, característica clínica típica de la infección por el virus del herpes simple. Fuente: adaptado por IA de Neville BW, Damm DD, Allen CM, Bouquot JE. Patologia oral e maxilofacial. 3rd ed. Rio de Janeiro: Elsevier; 2009. Capítulo 7: Infecções virais."
+},
+{
+"id": "p168_04",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p168_05",
+"pt": "O HSV-1 permanece em estado latente nos gânglios do nervo trigêmeo. Fatores desencadeantes levam à sua reativação e migração axonal até a mucosa e pele, resultando em vesículas dolorosas.",
+"es": "El HSV-1 permanece en estado latente en los ganglios del nervio trigémino. Los factores desencadenantes provocan su reactivación y migración axonal hasta la mucosa y la piel, con vesículas dolorosas."
+},
+{
+"id": "p168_06",
+"pt": "Principais gatilhos relacionados a procedimentos estéticos: •",
+"es": "Principales desencadenantes relacionados con procedimientos estéticos:"
+},
+{
+"id": "p168_07",
+"pt": "Trauma mecânico da injeção. •",
+"es": "Trauma mecánico de la inyección."
+},
+{
+"id": "p168_08",
+"pt": "Inflamação local intensa. •",
+"es": "Inflamación local intensa."
+},
+{
+"id": "p168_09",
+"pt": "Estresse físico ou psicológico. •",
+"es": "Estrés físico o psicológico."
+},
+{
+"id": "p168_10",
+"pt": "Redução transitória da imunidade celular.",
+"es": "Reducción transitoria de la inmunidad celular."
+},
+{
+"id": "p169_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p169_02",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p169_04",
+"pt": "Lábios (superior e inferior): maior frequência de surtos. •",
+"es": "Labios (superior e inferior): mayor frecuencia de brotes."
+},
+{
+"id": "p169_05",
+"pt": "Região perioral. •",
+"es": "Región perioral."
+},
+{
+"id": "p169_06",
+"pt": "Glabela e nariz: raros, mas possíveis. •",
+"es": "Glabela y nariz: raros, pero posibles."
+},
+{
+"id": "p169_07",
+"pt": "Pacientes com histórico de herpes recorrente: risco muito maior.",
+"es": "Pacientes con antecedente de herpes recurrente: riesgo mucho mayor."
+},
+{
+"id": "p169_08",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p169_10",
+"pt": "Sintomas prodrômicos (horas antes): formigamento, prurido ou ardência local. •",
+"es": "Síntomas prodrómicos (horas antes): hormigueo, prurito o ardor local."
+},
+{
+"id": "p169_11",
+"pt": "Lesões típicas: vesículas agrupadas em base eritematosa, dolorosas. •",
+"es": "Lesiones típicas: vesículas agrupadas sobre base eritematosa, dolorosas."
+},
+{
+"id": "p169_12",
+"pt": "Evolução: vesículas ulceração crosta em 7–14 dias. •",
+"es": "Evolución: vesículas, ulceración y costra en 7 a 14 días."
+},
+{
+"id": "p169_13",
+"pt": "Recorrência no mesmo local em pacientes predispostos.",
+"es": "Recurrencia en el mismo sitio en pacientes predispuestos."
+},
+{
+"id": "p169_14",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p169_16",
+"pt": "Infecção bacteriana inicial: dor e eritema sem vesículas. •",
+"es": "Infección bacteriana inicial: dolor y eritema sin vesículas."
+},
+{
+"id": "p169_17",
+"pt": "Reações alérgicas: edema e prurido, sem crostas ulceradas. •",
+"es": "Reacciones alérgicas: edema y prurito, sin costras ulceradas."
+},
+{
+"id": "p169_18",
+"pt": "Abscesso estéril ou nódulo inflamatório: endurecimento sem vesiculação. •",
+"es": "Absceso estéril o nódulo inflamatorio: induración sin vesiculación."
+},
+{
+"id": "p169_19",
+"pt": "Aftas: úlceras isoladas, não vesiculares, na mucosa oral.",
+"es": "Aftas: úlceras aisladas, no vesiculares, en la mucosa oral."
+},
+{
+"id": "p169_20",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p169_22",
+"pt": "Início precoce da terapia antiviral oral: •",
+"es": "Inicio precoz de la terapia antiviral oral:"
+},
+{
+"id": "p169_23",
+"pt": "Aciclovir 400 mg VO 3x/dia por 7–10 dias. •",
+"es": "Aciclovir 400 mg VO 3x/día por 7 a 10 días."
+},
+{
+"id": "p169_24",
+"pt": "Valaciclovir 500 mg VO 2x/dia por 5–7 dias (mais prático e eficaz). •",
+"es": "Valaciclovir 500 mg VO 2x/día por 5 a 7 días (más práctico y eficaz)."
+},
+{
+"id": "p169_25",
+"pt": "Famciclovir 250 mg VO 2x/dia por 5–7 dias.",
+"es": "Famciclovir 250 mg VO 2x/día por 5 a 7 días."
+},
+{
+"id": "p170_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p170_03",
+"pt": "Tratamento tópico adjuvante: aciclovir creme 5% 5x/dia. •",
+"es": "Tratamiento tópico adyuvante: aciclovir crema al 5 % 5x/día."
+},
+{
+"id": "p170_04",
+"pt": "Higienização local rigorosa com antissépticos suaves. •",
+"es": "Higiene local rigurosa con antisépticos suaves."
+},
+{
+"id": "p170_05",
+"pt": "Orientar evitar manipulação e contato direto (risco de autoinoculação ou transmissão).",
+"es": "Indicar que evite la manipulación y el contacto directo (riesgo de autoinoculación o transmisión)."
+},
+{
+"id": "p170_06",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p170_08",
+"pt": "Profilaxia antiviral em pacientes com histórico de herpes recorrente antes de procedimentos em área de risco (ex.: preenchimento labial): •",
+"es": "Profilaxis antiviral en pacientes con antecedente de herpes recurrente antes de procedimientos en áreas de riesgo (p. ej., relleno labial):"
+},
+{
+"id": "p170_09",
+"pt": "Aciclovir 400 mg VO 2x/dia, iniciado 2 dias antes e mantido por 5–7 dias. •",
+"es": "Aciclovir 400 mg VO 2x/día, iniciado 2 días antes y mantenido por 5 a 7 días."
+},
+{
+"id": "p170_10",
+"pt": "Valaciclovir 500 mg VO 1x/dia, iniciado 1–2 dias antes e mantido por 5–7 dias. •",
+"es": "Valaciclovir 500 mg VO 1x/día, iniciado 1 a 2 días antes y mantenido por 5 a 7 días."
+},
+{
+"id": "p170_11",
+"pt": "Infecções extensas ou imunossuprimidos: considerar aciclovir EV 5 mg/kg 8/8h. •",
+"es": "Infecciones extensas o inmunosuprimidos: considerar aciclovir IV 5 mg/kg cada 8 h."
+},
+{
+"id": "p170_12",
+"pt": "Infecções secundárias bacterianas: cobertura antibiótica (amoxicilina/clavulanato ou cefalexina). •",
+"es": "Infecciones bacterianas secundarias: cobertura antibiótica (amoxicilina/ácido clavulánico o cefalexina)."
+},
+{
+"id": "p170_13",
+"pt": "Analgesia adequada (dipirona, paracetamol, AINEs).",
+"es": "Analgesia adecuada (dipirona, paracetamol, AINE)."
+},
+{
+"id": "p170_14",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p170_16",
+"pt": "Ulcerações dolorosas com risco de cicatrizes residuais. •",
+"es": "Ulceraciones dolorosas con riesgo de cicatrices residuales."
+},
+{
+"id": "p170_17",
+"pt": "Infecção bacteriana secundária. •",
+"es": "Infección bacteriana secundaria."
+},
+{
+"id": "p170_18",
+"pt": "Disseminação em pacientes imunossuprimidos. •",
+"es": "Diseminación en pacientes inmunosuprimidos."
+},
+{
+"id": "p170_19",
+"pt": "Autoinoculação ocular (herpes ocular). •",
+"es": "Autoinoculación ocular (herpes ocular)."
+},
+{
+"id": "p170_20",
+"pt": "Recorrência frequente em pacientes predispostos.",
+"es": "Recurrencia frecuente en pacientes predispuestos."
+},
+{
+"id": "p171_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p171_02",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p171_04",
+"pt": "Anamnese detalhada: questionar sobre histórico de herpes recorrente antes de procedimentos em lábios e região perioral. •",
+"es": "Anamnesis detallada: preguntar por antecedentes de herpes recurrente antes de procedimientos en labios y región perioral."
+},
+{
+"id": "p171_05",
+"pt": "Profilaxia antiviral nos pacientes com histórico positivo. •",
+"es": "Profilaxis antiviral en los pacientes con antecedente positivo."
+},
+{
+"id": "p171_06",
+"pt": "Cuidados de assepsia e orientação pós-procedimento. •",
+"es": "Cuidados de asepsia e indicaciones posprocedimiento."
+},
+{
+"id": "p171_07",
+"pt": "Evitar procedimentos em fase ativa da doença.",
+"es": "Evitar procedimientos en fase activa de la enfermedad."
+},
+{
+"id": "p171_08",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p171_10",
+"pt": "Casos leves: resolução espontânea em 7–14 dias, sem sequelas. •",
+"es": "Casos leves: resolución espontánea en 7 a 14 días, sin secuelas."
+},
+{
+"id": "p171_11",
+"pt": "Casos recorrentes: resposta favorável à profilaxia. •",
+"es": "Casos recurrentes: respuesta favorable a la profilaxis."
+},
+{
+"id": "p171_12",
+"pt": "Casos graves (imunossuprimidos): podem evoluir com complicações sistêmicas, exigindo internação.",
+"es": "Casos graves (inmunosuprimidos): pueden evolucionar con complicaciones sistémicas y exigir hospitalización."
+},
+{
+"id": "p173_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p173_02",
+"pt": "A",
+"es": "L"
+},
+{
+"id": "p173_03",
+"pt": "s intercorrências tardias não infecciosas estão relacionadas, principalmente, ao comportamento do preenchedor nos tecidos, à resposta tecidual do paciente e a aspectos técnicos do procedimento. Diferentemente das complicações infecciosas ou isquêmicas, esses quadros tendem a apresentar evolução mais insidiosa e, muitas vezes, estão associados a fatores como volume, plano de aplicação, características reológicas do produto e dinâmica anatômica da região tratada.",
+"es": "as intercurrencias tardías no infecciosas se relacionan principalmente con el comportamiento del producto de relleno en los tejidos, con la respuesta tisular del paciente y con aspectos técnicos del procedimiento. A diferencia de las complicaciones infecciosas o isquémicas, estos cuadros tienden a una evolución más insidiosa y, a menudo, se asocian a factores como el volumen, el plano de aplicación, las características reológicas del producto y la dinámica anatómica de la región tratada."
+},
+{
+"id": "p173_04",
+"pt": "Nesse contexto, manifestações como migração do ácido hialurônico, formação de nódulos, edema persistente, alterações pigmentares e efeitos ópticos, como o efeito Tyndall, refletem não apenas a interação entre produto e tecido, mas também a precisão técnica da aplicação. A compreensão desses fenômenos é fundamental para o diagnóstico adequado, manejo correto e prevenção de resultados estéticos indesejáveis, garantindo maior previsibilidade e segurança nos procedimentos com preenchedores dérmicos.",
+"es": "En este contexto, manifestaciones como la migración del ácido hialurónico, la formación de nódulos, el edema persistente, las alteraciones pigmentarias y los efectos ópticos, como el efecto Tyndall, reflejan no solo la interacción entre producto y tejido, sino también la precisión técnica de la aplicación. Comprender estos fenómenos es fundamental para un diagnóstico adecuado, un manejo correcto y la prevención de resultados estéticos indeseables, con mayor previsibilidad y seguridad en los procedimientos con rellenos dérmicos."
+},
+{
+"id": "p173_05",
+"pt": "5.1 MIGRAÇÃO DO ÁCIDO HIALURÔNICO",
+"es": "5.1 MIGRACIÓN DEL ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p173_06",
+"pt": "A migração do ácido hialurônico (AH) é uma intercorrência tardia caracterizada pelo deslocamento do preenchedor para além da área de aplicação desejada. Pode ocorrer de forma imediata, nos primeiros dias após o procedimento, ou mais tardia, semanas a meses depois, geralmente percebida como irregularidade de contorno ou volume em áreas adjacentes.",
+"es": "La migración del ácido hialurónico (AH) es una intercurrencia tardía caracterizada por el desplazamiento del producto de relleno más allá del área de aplicación deseada. Puede ocurrir de forma inmediata, en los primeros días tras el procedimiento, o más tardía, semanas a meses después, y suele percibirse como irregularidad de contorno o de volumen en áreas adyacentes."
+},
+{
+"id": "p173_07",
+"pt": "Embora não represente risco vital, pode comprometer significa-",
+"es": "Aunque no representa un riesgo vital, puede comprometer significativamente"
+},
+{
+"id": "p174_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p174_02",
+"pt": "tivamente o resultado estético, gerar insatisfação e até predispor a complicações secundárias, como formação de nódulos, biofilme ou inflamação crônica.",
+"es": "el resultado estético, generar insatisfacción e incluso predisponer a complicaciones secundarias, como formación de nódulos, biofilm o inflamación crónica."
+},
+{
+"id": "p174_03",
+"pt": "FISIOPATOLOGIA",
+"es": "FISIOPATOLOGÍA"
+},
+{
+"id": "p174_04",
+"pt": "Os mecanismos envolvidos na migração incluem: •",
+"es": "Los mecanismos implicados en la migración incluyen:"
+},
+{
+"id": "p174_05",
+"pt": "Injeção em planos incorretos: deposição em camadas móveis ou de baixa resistência. •",
+"es": "Inyección en planos incorrectos: depósito en capas móviles o de baja resistencia."
+},
+{
+"id": "p174_06",
+"pt": "Uso de produtos com reologia inadequada para a região (baixo G’ em áreas de suporte, ou alto swelling factor em planos superficiais). •",
+"es": "Uso de productos con reología inadecuada para la región (G’ bajo en áreas de soporte, o swelling factor alto en planos superficiales)."
+},
+{
+"id": "p174_07",
+"pt": "Excesso de volume aplicado, favorecendo extravasamento para planos vizinhos. •",
+"es": "Exceso de volumen aplicado, que favorece la extravasación a planos vecinos."
+},
+{
+"id": "p174_08",
+"pt": "Manipulação externa pós-procedimento (massagens excessivas, pressão ao dormir). •",
+"es": "Manipulación externa posprocedimiento (masajes excesivos, presión al dormir)."
+},
+{
+"id": "p174_09",
+"pt": "Atividade muscular intensa que “empurra” o produto. •",
+"es": "Actividad muscular intensa que “empuja” el producto."
+},
+{
+"id": "p174_10",
+"pt": "Dissecção mecânica com cânula ou agulha, criando trajetos de menor resistência. •",
+"es": "Disección mecánica con cánula o aguja, que crea trayectos de menor resistencia."
+},
+{
+"id": "p174_11",
+"pt": "Gravidade e dinâmica tecidual em áreas como região perioral, olheiras e mandíbulas.",
+"es": "Gravedad y dinámica tisular en áreas como la región perioral, las ojeras y la mandíbula."
+},
+{
+"id": "p174_12",
+"pt": "ÁREAS DE MAIOR RISCO",
+"es": "ÁREAS DE MAYOR RIESGO"
+},
+{
+"id": "p174_14",
+"pt": "Olheiras e região malar: risco de migração inferior ou medial, gerando bolsas ou irregularidades. •",
+"es": "Ojeras y región malar: riesgo de migración inferior o medial, con formación de bolsas o irregularidades."
+},
+{
+"id": "p174_15",
+"pt": "Lábios: extravasamento para o filtro labial ou região perioral.",
+"es": "Labios: extravasación hacia el filtrum o la región perioral."
+},
+{
+"id": "p175_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p175_03",
+"pt": "Sulco nasolabial: produto pode migrar lateralmente ou inferiormente. •",
+"es": "Surco nasolabial: el producto puede migrar lateral o inferiormente."
+},
+{
+"id": "p175_04",
+"pt": "Mandíbula: risco de acúmulo em região submandibular com sobrepeso. •",
+"es": "Mandíbula: riesgo de acumulación en la región submandibular con sobrepeso."
+},
+{
+"id": "p175_05",
+"pt": "Têmporas: migração inferior para região zigomática.",
+"es": "Sienes: migración inferior hacia la región cigomática."
+},
+{
+"id": "p175_06",
+"pt": "DIAGNÓSTICO CLÍNICO",
+"es": "DIAGNÓSTICO CLÍNICO"
+},
+{
+"id": "p175_08",
+"pt": "Irregularidade de contorno perceptível à inspeção. •",
+"es": "Irregularidad de contorno perceptible a la inspección."
+},
+{
+"id": "p175_09",
+"pt": "Nódulos palpáveis em áreas adjacentes ao ponto de aplicação. •",
+"es": "Nódulos palpables en áreas adyacentes al punto de aplicación."
+},
+{
+"id": "p175_10",
+"pt": "Assimetria que não acompanha o padrão de envelhecimento natural. •",
+"es": "Asimetría que no sigue el patrón de envejecimiento natural."
+},
+{
+"id": "p175_11",
+"pt": "Edema persistente localizado, sem sinais infecciosos. •",
+"es": "Edema persistente localizado, sin signos infecciosos."
+},
+{
+"id": "p175_12",
+"pt": "Sinais indiretos em áreas críticas: sombra sob os olhos (“Tyndall effect” na região periorbitária).",
+"es": "Signos indirectos en áreas críticas: sombra bajo los ojos (“efecto Tyndall” en la región periorbitaria)."
+},
+{
+"id": "p175_13",
+"pt": "DIAGNÓSTICO DIFERENCIAL",
+"es": "DIAGNÓSTICO DIFERENCIAL"
+},
+{
+"id": "p175_15",
+"pt": "Nódulos precoces: acúmulo de produto no mesmo local, sem deslocamento. •",
+"es": "Nódulos precoces: acumulación de producto en el mismo sitio, sin desplazamiento."
+},
+{
+"id": "p175_16",
+"pt": "Edema persistente (ETIP): recorrente e intermitente, sem produto palpável deslocado. •",
+"es": "Edema persistente (ETIP): recurrente e intermitente, sin producto palpable desplazado."
+},
+{
+"id": "p175_17",
+"pt": "Granuloma: nódulo firme de caráter inflamatório crônico. •",
+"es": "Granuloma: nódulo firme de carácter inflamatorio crónico."
+},
+{
+"id": "p175_18",
+"pt": "Biofilme: endurecimento associado a inflamação recorrente.",
+"es": "Biofilm: induración asociada a inflamación recurrente."
+},
+{
+"id": "p175_19",
+"pt": "CONDUTA IMEDIATA",
+"es": "CONDUCTA INMEDIATA"
+},
+{
+"id": "p175_21",
+"pt": "Avaliar a gravidade estética e o impacto funcional.",
+"es": "Evaluar la gravedad estética y el impacto funcional."
+},
+{
+"id": "p176_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p176_03",
+"pt": "Massagem suave em casos leves e recentes, para redistribuição parcial. •",
+"es": "Masaje suave en casos leves y recientes, para una redistribución parcial."
+},
+{
+"id": "p176_04",
+"pt": "Aguardo expectante por 1–2 semanas, se a irregularidade for mínima e recente. •",
+"es": "Conducta expectante por 1 a 2 semanas, si la irregularidad es mínima y reciente."
+},
+{
+"id": "p176_05",
+"pt": "Uso de hialuronidase nos casos confirmados de migração indesejada: •",
+"es": "Uso de hialuronidasa en los casos confirmados de migración indeseada:"
+},
+{
+"id": "p176_06",
+"pt": "10–30 UTR em pontos localizados (quantidade maior se área extensa). •",
+"es": "10 a 30 UTR en puntos localizados (cantidad mayor si el área es extensa)."
+},
+{
+"id": "p176_07",
+"pt": "Aplicação guiada por ultrassom é recomendada para precisão.",
+"es": "La aplicación guiada por ecografía se recomienda por su precisión."
+},
+{
+"id": "p176_08",
+"pt": "CONDUTA AVANÇADA",
+"es": "CONDUCTA AVANZADA"
+},
+{
+"id": "p176_10",
+"pt": "Ultrassom de partes moles: útil para confirmar localização e volume de produto migrado. •",
+"es": "Ecografía de partes blandas: útil para confirmar la localización y el volumen del producto migrado."
+},
+{
+"id": "p176_11",
+"pt": "Hialuronidase em múltiplas sessões, até resolução total. •",
+"es": "Hialuronidasa en múltiples sesiones, hasta la resolución total."
+},
+{
+"id": "p176_12",
+"pt": "Retrabalho planejado, após resolução, em plano anatômico correto com produto adequado. •",
+"es": "Retratamiento planificado, tras la resolución, en plano anatómico correcto con producto adecuado."
+},
+{
+"id": "p176_13",
+"pt": "Terapia adjuvante com corticoides (prednisona 20–40 mg/dia por 3–5 dias) em casos com edema inflamatório associado) •",
+"es": "Terapia adyuvante con corticoides (prednisona 20 a 40 mg/día por 3 a 5 días) en casos con edema inflamatorio asociado."
+},
+{
+"id": "p176_14",
+"pt": "Excisão cirúrgica (muito raro): apenas em casos refratários com encapsulamento fibrótico.",
+"es": "Escisión quirúrgica (muy rara): solo en casos refractarios con encapsulamiento fibrótico."
+},
+{
+"id": "p176_15",
+"pt": "COMPLICAÇÕES ASSOCIADAS",
+"es": "COMPLICACIONES ASOCIADAS"
+},
+{
+"id": "p176_17",
+"pt": "Insatisfação estética persistente. •",
+"es": "Insatisfacción estética persistente."
+},
+{
+"id": "p176_18",
+"pt": "Fibrose após degradação incompleta. •",
+"es": "Fibrosis tras una degradación incompleta."
+},
+{
+"id": "p176_19",
+"pt": "Nódulos crônicos inflamatórios.",
+"es": "Nódulos crónicos inflamatorios."
+},
+{
+"id": "p177_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p177_03",
+"pt": "Estigmatização estética (“olhos inchados”, “lábio artificial”). •",
+"es": "Estigmatización estética (“ojos hinchados”, “labio artificial”)."
+},
+{
+"id": "p177_04",
+"pt": "Impacto psicológico significativo no paciente.",
+"es": "Impacto psicológico significativo en el paciente."
+},
+{
+"id": "p177_05",
+"pt": "FIGURA 53. MIGRAÇÃO DO ÁCIDO HIALURÔNICO EM PACIENTE PÓS PREENCHIMENTO LABIAL.",
+"es": "FIGURA 53. MIGRACIÓN DEL ÁCIDO HIALURÓNICO EN PACIENTE TRAS RELLENO LABIAL."
+},
+{
+"id": "p177_06",
+"pt": "Fig. 53: Migração de ácido hialurônico após preenchimento labial. Observa-se acúmulo de produto na região perioral, além dos limites anatômicos da mucosa labial, caracterizando migração do preenchedor. Fonte: Adaptado por IA, imagem de caso clínico disponível em busca na internet.",
+"es": "Fig. 53: Migración de ácido hialurónico tras relleno labial. Se observa acumulación de producto en la región perioral, más allá de los límites anatómicos de la mucosa labial, lo que caracteriza la migración del producto de relleno. Fuente: adaptado por IA, imagen de caso clínico disponible en búsqueda en internet."
+},
+{
+"id": "p177_07",
+"pt": "PREVENÇÃO",
+"es": "PREVENCIÓN"
+},
+{
+"id": "p177_09",
+"pt": "Uso de técnica correta e plano anatômico adequado. •",
+"es": "Uso de técnica correcta y plano anatómico adecuado."
+},
+{
+"id": "p177_10",
+"pt": "Reologia adequada ao local: produtos com maior G’ para suporte, e menor swelling em planos superficiais. •",
+"es": "Reología adecuada al sitio: productos con mayor G’ para soporte y menor swelling en planos superficiales."
+},
+{
+"id": "p177_11",
+"pt": "Evitar sobrecorreção. •",
+"es": "Evitar la sobrecorrección."
+},
+{
+"id": "p177_12",
+"pt": "Orientar paciente a não massagear excessivamente ou dormir com pressão sobre a área nos primeiros dias. •",
+"es": "Indicar al paciente que no masajee en exceso ni duerma con presión sobre el área en los primeros días."
+},
+{
+"id": "p177_13",
+"pt": "Evitar múltiplos retoques em curto intervalo. •",
+"es": "Evitar múltiples retoques en un intervalo corto."
+},
+{
+"id": "p177_14",
+"pt": "Uso de ultrassom para aplicação em regiões de risco ou retratamentos.",
+"es": "Uso de ecografía para la aplicación en regiones de riesgo o retratamientos."
+},
+{
+"id": "p177_15",
+"pt": "PROGNÓSTICO",
+"es": "PRONÓSTICO"
+},
+{
+"id": "p177_17",
+"pt": "Casos leves e recentes: resolução completa com massagem ou pequena dose de hialuronidase.",
+"es": "Casos leves y recientes: resolución completa con masaje o una pequeña dosis de hialuronidasa."
+},
+{
+"id": "p178_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p178_03",
+"pt": "Casos crônicos com fibrose: podem necessitar de múltiplas sessões de hialuronidase e terapias complementares. •",
+"es": "Casos crónicos con fibrosis: pueden requerir múltiples sesiones de hialuronidasa y terapias complementarias."
+},
+{
+"id": "p178_04",
+"pt": "Casos refratários: risco de sequelas estéticas permanentes, mas geralmente com bom prognóstico se tratados precocemente.",
+"es": "Casos refractarios: riesgo de secuelas estéticas permanentes, aunque por lo general con buen pronóstico si se tratan precozmente."
+},
+{
+"id": "p178_05",
+"pt": "5.2 NÓDULOS OU IRREGULARIDADES",
+"es": "5.2 NÓDULOS O IRREGULARIDADES"
+},
+{
+"id": "p178_06",
+"pt": "Os nódulos ou irregularidades após preenchimento com ácido hialurônico correspondem, em geral, à persistência de material mal distribuído, superficialmente depositado ou encapsulado, podendo comprometer o relevo e a harmonia da área tratada. Embora muitas vezes não representem gravidade clínica, essas alterações podem gerar desconforto estético, percepção tátil anormal e necessidade de intervenção corretiva, especialmente quando persistem ao longo do tempo. Diagnóstico:",
+"es": "Los nódulos o irregularidades tras el relleno con ácido hialurónico corresponden, en general, a la persistencia de material mal distribuido, depositado superficialmente o encapsulado, y pueden comprometer el relieve y la armonía del área tratada. Aunque a menudo no representan gravedad clínica, estas alteraciones pueden generar molestia estética, percepción táctil anormal y necesidad de intervención correctiva, sobre todo cuando persisten en el tiempo. Diagnóstico:"
+},
+{
+"id": "p178_07",
+"pt": "Persistência de material mal distribuído ou encapsulado. Sinais clínicos:",
+"es": "Persistencia de material mal distribuido o encapsulado. Signos clínicos:"
+},
+{
+"id": "p178_08",
+"pt": "Áreas endurecidas, irregularidade estética, nódulos palpáveis. Tratamento: •",
+"es": "Áreas endurecidas, irregularidad estética, nódulos palpables. Tratamiento:"
+},
+{
+"id": "p178_09",
+"pt": "Massagem. •",
+"es": "Masaje."
+},
+{
+"id": "p178_10",
+"pt": "Hialuronidase. •",
+"es": "Hialuronidasa."
+},
+{
+"id": "p178_11",
+"pt": "Microinjeções de corticoide.",
+"es": "Microinyecciones de corticoide."
+},
+{
+"id": "p179_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p179_02",
+"pt": "FIGURA 54. NÓDULO LABIAL APÓS PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "FIGURA 54. NÓDULO LABIAL TRAS RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p179_03",
+"pt": "Figura 54. Imagem clínica demonstrando nódulo visível em região labial após preenchimento com ácido hialurônico, evidenciando acúmulo superficial de material e irregularidade de contorno. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 54. Imagen clínica que muestra un nódulo visible en región labial tras relleno con ácido hialurónico, con acumulación superficial de material e irregularidad de contorno. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p179_04",
+"pt": "Outra opção de remoção do excesso de material preenchedor sem o uso da hialuronidase é a remoção com auxílio de uma agulha ou lâmina de bisturi. Procedimento que pode ser realizado quando o ácido hialurônico está superficial na região intraoral, ou região subcutânea superficial, desde que não corra risco de formação de cicatriz. Veja o caso abaixo:",
+"es": "Otra opción para retirar el exceso de producto de relleno sin usar hialuronidasa es la extracción con ayuda de una aguja o una hoja de bisturí. Este procedimiento puede realizarse cuando el ácido hialurónico está superficial en la región intraoral o en el tejido subcutáneo superficial, siempre que no haya riesgo de formación de cicatriz. Vea el caso a continuación:"
+},
+{
+"id": "p180_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p180_02",
+"pt": "FIGURA 55. ÁCIDO HIALURÔNICO SUPERFICIAL NA MUCOSA LABIAL SUPERIOR",
+"es": "FIGURA 55. ÁCIDO HIALURÓNICO SUPERFICIAL EN LA MUCOSA LABIAL SUPERIOR"
+},
+{
+"id": "p180_03",
+"pt": "Figura 55. Imagem clínica demonstrando acúmulo superficial de ácido hialurônico na mucosa labial superior, causando desconforto à paciente. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 55. Imagen clínica que muestra acumulación superficial de ácido hialurónico en la mucosa labial superior, que causa molestias a la paciente. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p180_04",
+"pt": "Ácido hialurônico superficial na mucosa labial superior, causando desconforto para a paciente.",
+"es": "Ácido hialurónico superficial en la mucosa labial superior, que causa molestias a la paciente."
+},
+{
+"id": "p180_05",
+"pt": "FIGURA 56. APLICAÇÃO DE ANESTÉSICO TÓPICO NA MUCOSA LABIAL",
+"es": "FIGURA 56. APLICACIÓN DE ANESTÉSICO TÓPICO EN LA MUCOSA LABIAL"
+},
+{
+"id": "p180_06",
+"pt": "Figura 56. Preparação da área com anestésico tópico antes da abordagem para drenagem do material preenchedor superficial. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 56. Preparación del área con anestésico tópico antes del abordaje para el drenaje del producto de relleno superficial. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p181_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p181_02",
+"pt": "Aplicação de anestésico tópico na área a ser trabalhada.",
+"es": "Aplicación de anestésico tópico en el área a tratar."
+},
+{
+"id": "p181_03",
+"pt": "FIGURA 57. PERFURAÇÃO COM AGULHA 18G PARA DRENAGEM DO MATERIAL PREENCHEDOR",
+"es": "FIGURA 57. PERFORACIÓN CON AGUJA DE 18 G PARA DRENAJE DEL PRODUCTO DE RELLENO"
+},
+{
+"id": "p181_04",
+"pt": "Figura 57. Realização de perfuração com agulha 18G para permitir a drenagem do ácido hialurônico superficial na mucosa labial. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 57. Perforación con aguja de 18 G para permitir el drenaje del ácido hialurónico superficial en la mucosa labial. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p181_05",
+"pt": "Com o auxílio de uma agulha 18G, realizou uma perfuração para a drenagem do material preenchedor.",
+"es": "Con ayuda de una aguja de 18 G, se realizó una perforación para drenar el producto de relleno."
+},
+{
+"id": "p181_06",
+"pt": "FIGURA 58. DRENAGEM DO ÁCIDO HIALURÔNICO PELO ORIFÍCIO REALIZADO",
+"es": "FIGURA 58. DRENAJE DEL ÁCIDO HIALURÓNICO POR EL ORIFICIO REALIZADO"
+},
+{
+"id": "p181_07",
+"pt": "Figura 58. Extravasamento do ácido hialurônico através do orifício realizado, demonstrando a remoção mecânica do excesso de material preenchedor. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 58. Salida del ácido hialurónico a través del orificio realizado, que demuestra la extracción mecánica del exceso de producto de relleno. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p182_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p182_02",
+"pt": "Ácido hialurônico sendo drenado pelo orifício realizado.",
+"es": "Ácido hialurónico drenándose por el orificio realizado."
+},
+{
+"id": "p182_03",
+"pt": "FIGURA 59. ASPECTO FINAL APÓS DRENAGEM DO ÁCIDO HIALURÔNICO SUPERFICIAL",
+"es": "FIGURA 59. ASPECTO FINAL TRAS EL DRENAJE DEL ÁCIDO HIALURÓNICO SUPERFICIAL"
+},
+{
+"id": "p182_04",
+"pt": "Figura 59. Aspecto clínico após drenagem do material preenchedor superficial. Como o orifício realizado é pequeno, não houve necessidade de sutura. Fonte: Arquivo pessoal / banco de imagens dos autores.",
+"es": "Figura 59. Aspecto clínico tras el drenaje del producto de relleno superficial. Como el orificio realizado es pequeño, no fue necesaria la sutura. Fuente: archivo personal / banco de imágenes de los autores."
+},
+{
+"id": "p182_05",
+"pt": "Ácido hialurônico drenado. Como o orifício realizado é pequeno, não tem necessidade de sutura. Recomendações para o paciente: manter boa higiene oral e bochecho com Periogard (Digluconato de Clorexidina 0,12%) 2x ao dia por 7 dias.",
+"es": "Ácido hialurónico drenado. Como el orificio realizado es pequeño, no es necesaria la sutura. Recomendaciones al paciente: mantener una buena higiene oral y enjuagues con Periogard (digluconato de clorhexidina al 0,12 %) 2x al día por 7 días."
+},
+{
+"id": "p183_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p183_02",
+"pt": "5.3 EDEMA PERSISTENTE",
+"es": "5.3 EDEMA PERSISTENTE"
+},
+{
+"id": "p183_03",
+"pt": "O edema persistente, comumente observado na região órbito-malar, está diretamente relacionado às particularidades anatômicas e à espessura do tecido na região infraorbitária. Trata-se de uma condição que se manifesta principalmente na região pré-maxilar, centro da face, logo abaixo dos olhos, onde há uma transição entre a pele palpebral fina e delicada e as camadas mais espessas do tecido orbital. Essa transição anatômica torna o local mais vulnerável ao acúmulo de líquidos e ao comprometimento da drenagem linfática.",
+"es": "El edema persistente, observado con frecuencia en la región órbito-malar, está directamente relacionado con las particularidades anatómicas y con el grosor del tejido de la región infraorbitaria. Se trata de una condición que se manifiesta sobre todo en la región premaxilar, centro de la cara, justo debajo de los ojos, donde hay una transición entre la piel palpebral fina y delicada y las capas más gruesas del tejido orbitario. Esta transición anatómica vuelve la zona más vulnerable a la acumulación de líquidos y al compromiso del drenaje linfático."
+},
+{
+"id": "p183_04",
+"pt": "O processo fisiológico da drenagem é auxiliado pela contração dos músculos orbiculares dos olhos, que, durante o piscar e os movimentos da região central da face, favorecem o escoamento dos líquidos. Essa drenagem ocorre principalmente pela conexão entre o ligamento de retenção orbitário e o ligamento zigomático-cutâneo, estruturas que delimitam o sulco naso-jugal. Acima dessa região, encontram-se a pele, o músculo orbicular e, logo abaixo, as bolsas de gordura orbitais profundas, responsáveis pelo acolchoamento dos globos oculares. Esses compartimentos gordurosos são separados do osso subjacente, a maxila, por camadas musculares e ligamentares que, em situações de acúmulo líquido, favorecem o aparecimento do edema clínico evidente.",
+"es": "El proceso fisiológico del drenaje se ve favorecido por la contracción de los músculos orbiculares de los ojos, que, al parpadear y durante los movimientos de la región central de la cara, facilitan la salida de los líquidos. Este drenaje se produce principalmente por la conexión entre el ligamento retenedor orbitario y el ligamento cigomático-cutáneo, estructuras que delimitan el surco nasoyugal. Por encima de esta región se encuentran la piel, el músculo orbicular y, justo debajo, las bolsas de grasa orbitaria profundas, responsables del acolchado de los globos oculares. Estos compartimentos grasos están separados del hueso subyacente, el maxilar, por capas musculares y ligamentosas que, ante una acumulación de líquido, favorecen la aparición de un edema clínico evidente."
+},
+{
+"id": "p183_05",
+"pt": "Na prática clínica, esse edema se manifesta com maior intensidade na região central da face e, quando persistente, tende a evidenciar o sulco malar ou “festoon”, resultado do acúmulo de líquido entre o ligamento orbitário e o zigomático-cutâneo.",
+"es": "En la práctica clínica, este edema se manifiesta con mayor intensidad en la región central de la cara y, cuando persiste, tiende a evidenciar el surco malar o “festoon”, resultado de la acumulación de líquido entre el ligamento orbitario y el cigomático-cutáneo."
+},
+{
+"id": "p184_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p184_02",
+"pt": "O fenômeno está relacionado, em muitos casos, à presença do preenchedor em excesso ou inadequado para a região. Isso ocorre porque, na região infraorbitária, os preenchedores apresentam maior longevidade devido às características anatômicas locais, permanecendo ativos por anos.",
+"es": "En muchos casos, el fenómeno se relaciona con la presencia de producto de relleno en exceso o inadecuado para la región. Esto ocurre porque, en la región infraorbitaria, los rellenos tienen mayor longevidad debido a las características anatómicas locales y permanecen activos durante años."
+},
+{
+"id": "p184_03",
+"pt": "O tratamento recomendado para o edema persistente é a utilização de hialuronidase, com o objetivo de remover o preenchedor previamente depositado. Após a resolução do edema, podese realizar uma nova aplicação, priorizando produtos com baixo “swelling factor”, elevada elasticidade (alto G’), baixa concentração de ácido hialurônico e alta estabilidade química. Produtos com partículas maiores e menor grau de reticulação por agentes como BDDE ou DVS apresentam menor risco de acúmulo hídrico, oferecendo maior previsibilidade e segurança. Essa seleção criteriosa do preenchedor contribui para reduzir significativamente a incidência de edema persistente na região órbito-malar.",
+"es": "El tratamiento recomendado para el edema persistente es el uso de hialuronidasa, con el objetivo de retirar el producto previamente depositado. Tras la resolución del edema, puede realizarse una nueva aplicación, con prioridad para productos con bajo “swelling factor”, elevada elasticidad (G’ alto), baja concentración de ácido hialurónico y alta estabilidad química. Los productos con partículas mayores y menor grado de reticulación por agentes como el BDDE o la DVS presentan menor riesgo de acumulación hídrica y ofrecen mayor previsibilidad y seguridad. Esta selección criteriosa del producto contribuye a reducir significativamente la incidencia de edema persistente en la región órbito-malar."
+},
+{
+"id": "p184_04",
+"pt": "DEFINIÇÃO",
+"es": "DEFINICIÓN"
+},
+{
+"id": "p184_05",
+"pt": "O edema persistente é uma intercorrência tardia observada principalmente na região órbito-malar, caracterizada pelo acúmulo recorrente de líquidos em virtude das particularidades anatômicas da região infraorbitária. Surge devido à fragilidade da drenagem linfática local e à longevidade do preenchedor nesta área, resultando em aspecto edemaciado crônico, especialmente no centro da face e abaixo dos olhos.",
+"es": "El edema persistente es una intercurrencia tardía observada sobre todo en la región órbito-malar, caracterizada por la acumulación recurrente de líquidos debido a las particularidades anatómicas de la región infraorbitaria. Surge por la fragilidad del drenaje linfático local y la longevidad del producto de relleno en esta área, lo que produce un aspecto edematoso crónico, en especial en el centro de la cara y debajo de los ojos."
+},
+{
+"id": "p185_00",
+"pt": "INTERCORRÊNCIAS NO PREENCHIMENTO COM ÁCIDO HIALURÔNICO",
+"es": "INTERCURRENCIAS EN EL RELLENO CON ÁCIDO HIALURÓNICO"
+},
+{
+"id": "p185_02",
+"pt": "FIGURA 60: IMAGEM CLÍNICA E ULTRASSONOGRAFIA DE PACIENTE COM EDEMA TARDIO PERSISTENTE PÓS PROCEDIMENTO.",
+"es": "FIGURA 60: IMAGEN CLÍNICA Y ECOGRAFÍA DE PACIENTE CON EDEMA TARDÍO PERSISTENTE TRAS EL PROCEDIMIENTO."
+},
+{
+"id": "p185_03",
+"pt": "Figura 60. Em cima: imagem clínica de edema infrapalpebral à esquerda em local de injeção prévia de AH (Juvederm Volbela®). À esquerda: imagem ultrassonográfica da presença de depósitos de AH (entre x e +) associado ao aumento da espessura e ecogenicidade do tecido celular subcutâneo circunjacente da região infrapalpebral esquerda. À direita: comparação ultrassonográfica da região infrapalpebral direita (não afetada) com a região infrapalpebral esquerda da paciente, demonstrando aumento da espessura e ecogenicidade do tecido celular subcutâneo Fonte: Adaptado de Cavallieri, Fernanda Aquino, et al. \"Edema tardio intermitente e persistente ETIP: reação adversa tardia ao preenchedor de ácido hialurônico.\" Surgical & Cosmetic Dermatology 9.3 (2017): 218-2222.",
+"es": "Figura 60. Arriba: imagen clínica de edema infrapalpebral izquierdo en sitio de inyección previa de AH (Juvederm Volbela®). A la izquierda: imagen ecográfica de depósitos de AH (entre x y +) asociados a aumento del grosor y de la ecogenicidad del tejido celular subcutáneo circundante de la región infrapalpebral izquierda. A la derecha: comparación ecográfica de la región infrapalpebral derecha (no afectada) con la región infrapalpebral izquierda de la paciente, que muestra aumento del grosor y de la ecogenicidad del tejido celular subcutáneo. Fuente: adaptado de Cavallieri, Fernanda Aquino, et al. \"Edema tardio intermitente e persistente ETIP: reação adversa tardia ao preenchedor de ácido hialurônico.\" Surgical & Cosmetic Dermatology 9.3 (2017): 218-2222."
+},
+{
+"id": "p185_04",
+"pt": "ANATOMIA RELACIONADA",
+"es": "ANATOMÍA RELACIONADA"
+},
+{
+"id": "p185_05",
+"pt": "A região infraorbitária apresenta transição entre a pele palpebral fina e delicada e o tecido orbital, mais espesso, rico em gordura profunda e sustentado por ligamentos como o orbitário e o zigomático-cutâneo. Essa transição favorece o acúmulo de líquidos e torna o local mais suscetível a edema.",
+"es": "La región infraorbitaria presenta una transición entre la piel palpebral fina y delicada y el tejido orbitario, más grueso, rico en grasa profunda y sostenido por ligamentos como el orbitario y el cigomático-cutáneo. Esta transición favorece la acumulación de líquidos y hace la zona más susceptible al edema."
+}
+]

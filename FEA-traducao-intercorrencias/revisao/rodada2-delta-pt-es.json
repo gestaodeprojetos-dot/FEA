@@ -1,0 +1,377 @@
+[
+ {
+  "id": "p6_03",
+  "pt": "A literatura recente também chama atenção para o papel da técnica na segurança do procedimento. A velocidade e a pressão de injeção, o tipo de instrumento utilizado (agulhas versus cânulas), a profundidade escolhida e o volume aplicado são determinantes no risco de intercorrências. Técnicas cuidadosas, com injeções lentas e depósitos fracionados em múltiplos pontos, estão associadas a uma redução significativa das complicações. A aspiração prévia pode ser utilizada como recurso adicional, porém não deve ser considerada um método de segurança isolado, uma vez que sua precisão é limitada na prática clínica. Do mesmo modo, a seleção adequada do produto é essencial: géis mais densos e com alto “swelling factor” tendem a atrair maior volume de água e prolongar edemas em determinadas áreas, enquanto formulações com grau de reticulação elevado podem aumentar a incidência de reações inflamatórias tardias, nódulos e granulomas.",
+  "es": "La literatura reciente también llama la atención sobre el papel de la técnica en la seguridad del procedimiento. La velocidad y la presión de inyección, el tipo de instrumento utilizado (agujas frente a cánulas), la profundidad elegida y el volumen aplicado son determinantes en el riesgo de intercurrencias. Las técnicas cuidadosas, con inyecciones lentas y depósitos fraccionados en múltiples puntos, se asocian a una reducción significativa de las complicaciones. La aspiración previa puede utilizarse como recurso adicional, pero no debe considerarse un método de seguridad aislado, ya que su precisión es limitada en la práctica clínica. Del mismo modo, la selección adecuada del producto es esencial: los geles más densos y con alto swelling factor (capacidad de hinchamiento del gel) tienden a atraer mayor volumen de agua y a prolongar los edemas en determinadas áreas, mientras que las formulaciones con grado de reticulación elevado pueden aumentar la incidencia de reacciones inflamatorias tardías, nódulos y granulomas."
+ },
+ {
+  "id": "p7_02",
+  "pt": "Nos últimos anos, o desenvolvimento e a padronização de protocolos de manejo emergencial consolidaram a conduta frente a eventos graves. O uso precoce e em doses adequadas de hialuronidase continua sendo a principal estratégia para dissolver o produto em situações de oclusão vascular ou compressão tecidual. Estudos recentes também destacam a utilidade do ultrassom Doppler na detecção precoce de áreas comprometidas, guiando de maneira mais precisa a infiltração da enzima. Condutas adjuvantes, como oxigenoterapia hiperbárica, terapias de luz e antibioticoterapia profilática em casos de infecção associada, também têm se mostrado relevantes em determinados contextos.",
+  "es": "En los últimos años, el desarrollo y la estandarización de protocolos de manejo de emergencia consolidaron la conducta ante eventos graves. El uso precoz y en dosis adecuadas de hialuronidasa sigue siendo la principal estrategia para disolver el producto en situaciones de oclusión vascular o compresión tisular. Estudios recientes también destacan la utilidad de la ecografía Doppler en la detección precoz de áreas comprometidas, ya que guía con mayor precisión la infiltración de la enzima. Las conductas adyuvantes, como la oxigenoterapia hiperbárica, las terapias de luz y la antibioticoterapia profiláctica en casos de infección asociada, también han demostrado ser relevantes en determinados contextos."
+ },
+ {
+  "id": "p20_04",
+  "pt": "Figura 4. Representação gráfica da distribuição das áreas faciais tratadas que evoluíram com isquemia cutânea, eventos isquêmicos graves e comprometimento visual. Observa-se maior concentração de casos em regiões como sulco nasolabial, dorso nasal e glabela, com destaque para a participação dos angiossomas relacionados à artéria facial e à artéria oftálmica. A presença de envolvimento do território oftálmico associa-se a maior risco de complicações neurooftalmológicas, incluindo perda visual e eventos cerebrovasculares, reforçando a necessidade de cautela em áreas com anastomoses vasculares críticas.",
+  "es": "Figura 4. Representación gráfica de la distribución de las áreas faciales tratadas que evolucionaron con isquemia cutánea, eventos isquémicos graves y compromiso visual. Se observa una mayor concentración de casos en regiones como el surco nasolabial, el dorso nasal y la glabela, con especial participación de los angiosomas relacionados con la arteria facial y la arteria oftálmica. La afectación del territorio oftálmico se asocia a un mayor riesgo de complicaciones neurooftalmológicas, incluidas la pérdida visual y los eventos cerebrovasculares, lo que refuerza la necesidad de cautela en áreas con anastomosis vasculares críticas."
+ },
+ {
+  "id": "p21_06",
+  "pt": "Os resultados demonstram que a artéria facial (58%) e a artéria oftálmica (48%) foram os angiossomas mais frequentemente envolvidos, sendo os segmentos frontonasal e angulonasal as regiões cutâneas mais acometidas. O envolvimento do território oftálmico esteve significativamente associado a complicações neuro-oftalmológicas graves, incluindo perda visual (39% vs. 0,8%) e acidente vascular cerebral (8% vs. 0,8%), reforçando a necessidade de cautela nas áreas de alto risco anatômico.",
+  "es": "Los resultados demuestran que la arteria facial (58 %) y la arteria oftálmica (48 %) fueron los angiosomas comprometidos con mayor frecuencia, y que los segmentos frontonasal y angulonasal fueron las regiones cutáneas más afectadas. La afectación del territorio oftálmico se asoció significativamente a complicaciones neurooftalmológicas graves, incluidas la pérdida visual (39 % vs. 0,8 %) y el accidente cerebrovascular (8 % vs. 0,8 %), lo que refuerza la necesidad de cautela en las áreas de alto riesgo anatómico."
+ },
+ {
+  "id": "p24_04",
+  "pt": "Artéria Facial: irriga a região perioral; sua obstrução pode com- prometer lábios e região paranasal.",
+  "es": "Arteria facial: irriga la región perioral; su obstrucción puede comprometer los labios y la región paranasal."
+ },
+ {
+  "id": "p24_05",
+  "pt": "Artérias Labiais (superior e inferior): irriga os lábios; pode cau- sar palidez, dor, risco de ulceração e evolução para necrose.",
+  "es": "Arterias labiales (superior e inferior): irrigan los labios; pueden causar palidez, dolor, riesgo de ulceración y evolución hacia necrosis."
+ },
+ {
+  "id": "p24_06",
+  "pt": "Artéria Columelar: pode causar necrose da columela e ponta nasal.",
+  "es": "Arteria columelar: puede causar necrosis de la columela y de la punta nasal."
+ },
+ {
+  "id": "p24_07",
+  "pt": "Artéria Angular: corre próximo ao canto medial do olho e comu- nica-se com a oftálmica, podendo causar amaurose. Além disso, por suas variações anatômicas, considera-se uma via crítica para necrose nasal.",
+  "es": "Arteria angular: discurre cerca del canto medial del ojo y se comunica con la oftálmica, por lo que puede causar amaurosis. Además, por sus variaciones anatómicas, se considera una vía crítica para la necrosis nasal."
+ },
+ {
+  "id": "p24_08",
+  "pt": "Artérias Nasais (alar inferior, subalar, nasal lateral e nasal dorsal): risco elevado de necrose nasal e, dado a proximidade com a circulação oftálmica, complicações oculares.",
+  "es": "Arterias nasales (alar inferior, subalar, nasal lateral y nasal dorsal): riesgo elevado de necrosis nasal y, dada la proximidad con la circulación oftálmica, de complicaciones oculares."
+ },
+ {
+  "id": "p24_09",
+  "pt": "Artérias Supratroclear e Supraorbitária: irrigam fronte e gla- bela; obstrução pode levar a necrose cutânea e amaurose.",
+  "es": "Arterias supratroclear y supraorbitaria: irrigan la frente y la glabela; su obstrucción puede provocar necrosis cutánea y amaurosis."
+ },
+ {
+  "id": "p24_10",
+  "pt": "Artéria Temporal Superficial: irriga a região temporal, couro ca- beludo e arco superciliar; oclusão gera dor intensa e necrose da região temporal e possível alopecia.",
+  "es": "Arteria temporal superficial: irriga la región temporal, el cuero cabelludo y el arco superciliar; su oclusión provoca dolor intenso, necrosis de la región temporal y posible alopecia."
+ },
+ {
+  "id": "p31_08",
+  "pt": "1. Interromper a aplicação imediatamente. 2. Massagem vigorosa da área comprometida. 3. Compressas mornas para vasodilatação. 4. Hialuronidase: injetar 1000 UTR/mL na região afetada,",
+  "es": "1. Interrumpir la aplicación de inmediato. 2. Masaje vigoroso del área comprometida. 3. Compresas tibias para vasodilatación. 4. Hialuronidasa: inyectar 1.000 UTR/mL en la región afectada,"
+ },
+ {
+  "id": "p33_12",
+  "pt": "Ultrassom com Doppler: para localizar obstruções e guiar aplicação da hialuronidase.",
+  "es": "Ecografía Doppler: para localizar obstrucciones y guiar la aplicación de hialuronidasa."
+ },
+ {
+  "id": "p33_13",
+  "pt": "Oxigenoterapia hiperbárica: 5-10 sessões em dias seguidos, melhora a oxigenação tecidual e cicatrização.",
+  "es": "Oxigenoterapia hiperbárica: 5 a 10 sesiones en días seguidos; mejora la oxigenación tisular y la cicatrización."
+ },
+ {
+  "id": "p40_07",
+  "pt": "Intervenção tardia (> 24h): risco elevado de necrose e se- quelas permanentes.",
+  "es": "Intervención tardía (> 24 h): riesgo elevado de necrosis y secuelas permanentes."
+ },
+ {
+  "id": "p40_08",
+  "pt": "Casos de embolização retiniana: prognóstico reservado, com baixa taxa de recuperação visual, tempo previsto de 30 minutos para melhor prognóstico, podendo ser revertida de acordo com alguns oftalmologistas em até 4 horas após procedimento como período máximo.",
+  "es": "Casos de embolización retiniana: pronóstico reservado, con baja tasa de recuperación visual; el tiempo previsto para un mejor pronóstico es de 30 minutos, aunque, según algunos oftalmólogos, el cuadro puede revertirse hasta 4 horas después del procedimiento como período máximo."
+ },
+ {
+  "id": "p41_06",
+  "pt": "preenchedor, calor local e LED-terapia para vasodilatação. 5. Hialuronidase: aplicação em altas doses (1000 UTR/ml) na",
+  "es": "relleno, calor local y terapia LED para vasodilatación. 5. Hialuronidasa: aplicación en altas dosis (1.000 UTR/mL) en la"
+ },
+ {
+  "id": "p41_13",
+  "pt": "Ultrassom Doppler para guiar hialuronidase em áreas críticas.",
+  "es": "Ecografía Doppler para guiar la hialuronidasa en áreas críticas. •"
+ },
+ {
+  "id": "p42_03",
+  "pt": "Necrose cutânea: quando o fluxo não é restabelecido em tempo adequado.",
+  "es": "Necrosis cutánea: cuando el flujo no se restablece a tiempo."
+ },
+ {
+  "id": "p42_04",
+  "pt": "Cicatrizes inestéticas e retrações.",
+  "es": "Cicatrices inestéticas y retracciones."
+ },
+ {
+  "id": "p42_05",
+  "pt": "Comprometimento ocular: podendo levar à amaurose irreversível.",
+  "es": "Compromiso ocular: puede conducir a amaurosis irreversible."
+ },
+ {
+  "id": "p43_03",
+  "pt": "Técnica adequada: sempre aspirar antes de injetar, aplicar lentamente e em pequenas quantidades.",
+  "es": "Técnica adecuada: aspirar siempre antes de inyectar, aplicar lentamente y en pequeñas cantidades."
+ },
+ {
+  "id": "p43_04",
+  "pt": "Uso de cânulas em áreas de alto risco.",
+  "es": "Uso de cánulas en áreas de alto riesgo."
+ },
+ {
+  "id": "p43_05",
+  "pt": "Profundo conhecimento anatômico das variações vascu- lares da face.",
+  "es": "Conocimiento anatómico profundo de las variaciones vasculares del rostro."
+ },
+ {
+  "id": "p43_10",
+  "pt": "Ambiente preparado: ter hialuronidase disponível em quantidade suficiente.",
+  "es": "Entorno preparado: tener hialuronidasa disponible en cantidad suficiente."
+ },
+ {
+  "id": "p45_04",
+  "pt": "Nesta aula, é demonstrada a aplicação de preenchedores com auxílio de ultrassonografia, permitindo visualização em tempo real das estruturas vasculares e do plano de aplicação. O uso do ultrassom amplia a segurança do procedimento ao possibilitar identificação de vasos, avaliação de profundidade e monitoramento da dispersão do produto.",
+  "es": "En esta clase se demuestra la aplicación de rellenos con apoyo ecográfico, lo que permite visualizar en tiempo real las estructuras vasculares y el plano de aplicación. El uso de la ecografía amplía la seguridad del procedimiento al posibilitar la identificación de vasos, la evaluación de la profundidad y el monitoreo de la dispersión del producto."
+ },
+ {
+  "id": "p46_06",
+  "pt": "Sofrimento celular reversível: edema intracelular, alteração da permeabilidade, início de estresse oxidativo.",
+  "es": "Sufrimiento celular reversible: edema intracelular, alteración de la permeabilidad, inicio de estrés oxidativo."
+ },
+ {
+  "id": "p46_07",
+  "pt": "Sofrimento celular avançado (princípio de necrose): tecido em hipóxia prolongada, com áreas de dano celular subletal.",
+  "es": "Sufrimiento celular avanzado (principio de necrosis): tejido en hipoxia prolongada, con áreas de daño celular subletal."
+ },
+ {
+  "id": "p46_08",
+  "pt": "Necrose irreversível: lise celular, inflamação intensa, formação de crosta necrótica.",
+  "es": "Necrosis irreversible: lisis celular, inflamación intensa, formación de costra necrótica."
+ },
+ {
+  "id": "p49_02",
+  "pt": "Hematoma: coloração arroxeada, não há palidez e geralmente há melhora com compressão local.",
+  "es": "Hematoma: coloración violácea, sin palidez y, en general, con mejoría con la compresión local."
+ },
+ {
+  "id": "p49_03",
+  "pt": "Edema inflamatório: pele quente e ruborizada, sem livedo reticular. Infecção precoce: rara nas primeiras horas, associada a calor local e secreção.",
+  "es": "Edema inflamatorio: piel caliente y enrojecida, sin livedo reticular. Infección precoz: rara en las primeras horas, asociada a calor local y secreción."
+ },
+ {
+  "id": "p49_04",
+  "pt": "Reação alérgica: prurido e edema difuso, sem padrão segmentar.",
+  "es": "Reacción alérgica: prurito y edema difuso, sin patrón segmentario."
+ },
+ {
+  "id": "p50_04",
+  "pt": "Hialuronidase: 1000 UTR/mL infiltrada na região comprometi- da, repetida a cada 15–30 minutos conforme necessidade.",
+  "es": "Hialuronidasa: 1.000 UTR/mL infiltrada en la región comprometida, repetida cada 15 a 30 minutos según necesidad."
+ },
+ {
+  "id": "p50_08",
+  "pt": "Sildenafil 50 mg VO como vasodilatador.",
+  "es": "Sildenafil 50 mg VO como vasodilatador."
+ },
+ {
+  "id": "p50_09",
+  "pt": "Corticoides sistêmicos: prednisona 40 mg pela manhã; em casos graves, diprospan IM.",
+  "es": "Corticoides sistémicos: prednisona 40 mg por la mañana; en casos graves, Diprospan IM."
+ },
+ {
+  "id": "p50_13",
+  "pt": "Ultrassom com Doppler para mapear área e extensão da obstrução.",
+  "es": "Ecografía Doppler para mapear área y extensión de la obstrucción. •"
+ },
+ {
+  "id": "p51_10",
+  "pt": "Enzimático: uso de colagenase ou papaína em gel, para remoção gradual do tecido desvitalizado.",
+  "es": "Enzimático: uso de colagenasa o papaína en gel, para la eliminación gradual del tejido desvitalizado."
+ },
+ {
+  "id": "p51_11",
+  "pt": "Autolítico: curativos oclusivos (hidrogel, hidrocoloide), favore- cendo a ação enzimática natural.",
+  "es": "Autolítico: apósitos oclusivos (hidrogel, hidrocoloide), que favorecen la acción enzimática natural."
+ },
+ {
+  "id": "p51_12",
+  "pt": "Cirúrgico: indicado em necroses extensas, espessas ou infecta- das, feito sob anestesia local.",
+  "es": "Quirúrgico: indicado en necrosis extensas, gruesas o infectadas, realizado con anestesia local."
+ },
+ {
+  "id": "p53_05",
+  "pt": "Princípio de necrose: membranas celulares comprometidas, mas parte ainda viável.",
+  "es": "Principio de necrosis: membranas celulares comprometidas, pero con parte aún viable."
+ },
+ {
+  "id": "p53_06",
+  "pt": "Necrose irreversível: lise celular, liberação de enzimas li- sossômicas, inflamação intensa e formação de crosta.",
+  "es": "Necrosis irreversible: lisis celular, liberación de enzimas lisosomales, inflamación intensa y formación de costra."
+ },
+ {
+  "id": "p58_02",
+  "pt": "As conexões anatômicas entre os territórios facial e oftálmico explicam a via de acesso do material injetado ao sistema infraorbitário. Quando ocorre embolização retrógrada até a artéria oftálmica, o comprometimento pode avançar para seus ramos terminais, especialmente a artéria central da retina, estrutura crítica para manutenção da visão. A figura a seguir ilustra esse mecanismo de obstrução em nível intraocular.",
+  "es": "Las conexiones anatómicas entre los territorios facial y oftálmico explican la vía de acceso del material inyectado al sistema infraorbitario. Cuando se produce una embolización retrógrada hasta la arteria oftálmica, el compromiso puede avanzar hacia sus ramas terminales, en especial la arteria central de la retina, estructura crítica para el mantenimiento de la visión. La figura siguiente ilustra este mecanismo de obstrucción a nivel intraocular."
+ },
+ {
+  "id": "p59_04",
+  "pt": "OUTROS MECANISMOS CONTRIBUINTES:",
+  "es": "OTROS MECANISMOS QUE CONTRIBUYEN:"
+ },
+ {
+  "id": "p59_06",
+  "pt": "Compressão extrínseca da microcirculação retiniana por partículas do preenchedor.",
+  "es": "Compresión extrínseca de la microcirculación retiniana por partículas del relleno."
+ },
+ {
+  "id": "p61_03",
+  "pt": "Este QR code direciona para um artigo científico que revisa de forma abrangente as complicações isquêmicas associadas aos preenchedores dérmicos. O artigo revisa de forma abrangente as complicações isquêmicas associadas aos preenchedores dérmicos, abordando desde necrose cutânea até eventos neuro-oftalmológicos graves, como perda visual e infarto cerebral. Os autores destacam que, embora os preenchedores sejam considerados procedimentos seguros, o aumento do número de aplicações elevou proporcionalmente a incidência de complicações vasculares. A revisão enfatiza a importância do conhecimento detalhado da anatomia vascular facial como principal estratégia de prevenção, além de discutir fatores técnicos relacionados ao risco, como escolha da agulha ou cânula, pressão de injeção, uso de aspiraçã o e emprego de ultrassonografia como ferramenta complementar. O artigo também analisa a reversibilidade dos diferentes tipos de preenchedores, reforçando o papel central da hialuronidase no manejo de eventos associados ao ácido hialurônico e destacando que preenchedores que não são à base de ácido hialurônico são irreversíveis. Trata-se de leitura fundamental para estruturação de protocolos de prevenção, reconhecimento precoce e manejo das complicações isquêmicas.",
+  "es": "Este código QR remite a un artículo científico que revisa de forma exhaustiva las complicaciones isquémicas asociadas a los rellenos dérmicos, desde la necrosis cutánea hasta eventos neurooftalmológicos graves, como la pérdida visual y el infarto cerebral. Los autores destacan que, aunque los rellenos se consideran procedimientos seguros, el aumento del número de aplicaciones ha elevado proporcionalmente la incidencia de complicaciones vasculares. La revisión enfatiza la importancia de un conocimiento detallado de la anatomía vascular facial como principal estrategia de prevención y discute factores técnicos relacionados con el riesgo, como la elección de aguja o cánula, la presión de inyección, el uso de aspiración y el empleo de la ecografía como herramienta complementaria. El artículo también analiza la reversibilidad de los distintos tipos de rellenos, refuerza el papel central de la hialuronidasa en el manejo de los eventos asociados al ácido hialurónico y destaca que los rellenos que no son a base de ácido hialurónico son irreversibles. Se trata de una lectura fundamental para estructurar protocolos de prevención, reconocimiento precoz y manejo de las complicaciones isquémicas."
+ },
+ {
+  "id": "p61_10",
+  "pt": "Dor ocular ou cefaleia frontal.",
+  "es": "Dolor ocular o cefalea frontal."
+ },
+ {
+  "id": "p61_11",
+  "pt": "Oftalmoplegia: dificuldade de movimentar o olho.",
+  "es": "Oftalmoplejía: dificultad para mover el ojo."
+ },
+ {
+  "id": "p61_12",
+  "pt": "Ptose palpebral.",
+  "es": "Ptosis palpebral."
+ },
+ {
+  "id": "p61_13",
+  "pt": "Branqueamento retiniano e mancha vermelho-cereja na fóvea (exame oftalmológico com fundoscopia).",
+  "es": "Blanqueamiento retiniano y mancha rojo cereza en la fóvea (examen oftalmológico con fondoscopia)."
+ },
+ {
+  "id": "p67_04",
+  "pt": "Paciente costuma ter histórico prévio, e o déficit não é permanente. Espasmo vascular transitório induzido pelo procedimento",
+  "es": "El paciente suele referir antecedentes, y el déficit no es permanente. Espasmo vascular transitorio inducido por el procedimiento •"
+ },
+ {
+  "id": "p68_09",
+  "pt": "Suspender imediatamente a aplicação.",
+  "es": "Suspender de inmediato la aplicación."
+ },
+ {
+  "id": "p68_10",
+  "pt": "Iniciar hialuronidase em alta dose (1.000 UTR/mL): realizar flush no trajeto das artérias supraorbitárias, supratrocleares, nasal dorsal, angular/facial ou temporal superficial, dependendo da área infiltrada.",
+  "es": "Iniciar hialuronidasa en dosis alta (1.000 UTR/mL): realizar flush en el trayecto de las arterias supraorbitarias, supratrocleares, nasal dorsal, angular/facial o temporal superficial, según el área infiltrada."
+ },
+ {
+  "id": "p69_02",
+  "pt": "Técnica: tentativa de punção intravascular com aspiração para refluxo positivo, seguida de flush vigoroso de hialuronidase para dissolução do ácido hialurônico.",
+  "es": "Técnica: intento de punción intravascular con aspiración para reflujo positivo, seguido de flush vigoroso de hialuronidasa para disolver el ácido hialurónico."
+ },
+ {
+  "id": "p69_03",
+  "pt": "Objetivo: destruir o material obstrutivo e restaurar a perfusão.",
+  "es": "Objetivo: destruir el material obstructivo y restaurar la perfusión."
+ },
+ {
+  "id": "p69_04",
+  "pt": "Massagem ocular digital intermitente: 5 a 10 segundos de com- pressão seguidos de relaxamento, tentando desalojar o êmbolo.",
+  "es": "Masaje ocular digital intermitente: 5 a 10 segundos de compresión seguidos de relajación, para intentar desalojar el émbolo."
+ },
+ {
+  "id": "p70_02",
+  "pt": "Vasodilatação sistêmica: sildenafil 50 mg VO pode ser consid- erado.",
+  "es": "Vasodilatación sistémica: puede considerarse sildenafil 50 mg VO."
+ },
+ {
+  "id": "p70_03",
+  "pt": "Corticoterapia sistêmica: prednisona 40 mg/dia VO, respeitan- do o ciclo circadiano, ou diprospan IM, para reduzir inflamação secundária.",
+  "es": "Corticoterapia sistémica: prednisona 40 mg/día VO, respetando el ciclo circadiano, o Diprospan IM, para reducir la inflamación secundaria."
+ },
+ {
+  "id": "p70_04",
+  "pt": "Oxigenoterapia hiperbárica precoce: se disponível, uma ses- são imediata pode melhorar a oxigenação retiniana em até 12h após o evento.",
+  "es": "Oxigenoterapia hiperbárica precoz: si está disponible, una sesión inmediata puede mejorar la oxigenación retiniana hasta 12 h después del evento."
+ },
+ {
+  "id": "p71_04",
+  "pt": "Hialuronidase retrobulbar ou peribulbar: descrita em protoco- los recentes, mas de eficácia ainda controversa e dependente de experiência do operador.",
+  "es": "Hialuronidasa retrobulbar o peribulbar: descrita en protocolos recientes, pero de eficacia aún controvertida y dependiente de la experiencia del operador."
+ },
+ {
+  "id": "p75_04",
+  "pt": "Figura 34. A figura ilustra diferentes mecanismos de oclusão intravascular após injeção de preenchedores no território nasoglabelar: (A) Tipo I – o material dispersa-se distalmente, promovendo embolização periférica; (B) Tipo II – formação de tampão intravascular proximal com mínima dispersão distal; (C) Tipo III – dispersão distal associada à formação de tampão proximal que se expande em direção anterógrada; (D) Tipo IV – formação de tampão proximal com expansão retrógrada, podendo alcançar ramos comunicantes com o sistema da artéria oftálmica. Esses padrões ilustram como a dinâmica da injeção, a pressão exercida e as características reológicas do material influenciam o comportamento intravascular do preenchedor, impactando diretamente o risco de isquemia cutânea e ocular. Fonte: Adaptado de literatura científica sobre mecanismos de embolização arterial em procedimentos com preenchedores dérmicos.",
+  "es": "Figura 34. La figura ilustra distintos mecanismos de oclusión intravascular tras la inyección de rellenos en el territorio nasoglabelar: (A) Tipo I: el material se dispersa distalmente y promueve una embolización periférica; (B) Tipo II: formación de un tapón intravascular proximal con mínima dispersión distal; (C) Tipo III: dispersión distal asociada a la formación de un tapón proximal que se expande en dirección anterógrada; (D) Tipo IV: formación de un tapón proximal con expansión retrógrada, que puede alcanzar ramas comunicantes con el sistema de la arteria oftálmica. Estos patrones ilustran cómo la dinámica de la inyección, la presión ejercida y las características reológicas del material influyen en el comportamiento intravascular del relleno, con impacto directo en el riesgo de isquemia cutánea y ocular. Fuente: adaptado de la literatura científica sobre mecanismos de embolización arterial en procedimientos con rellenos dérmicos."
+ },
+ {
+  "id": "p75_06",
+  "pt": "Tempo crítico: a retina tolera até 90 minutos sem oxigenação. Após esse período, a cwhance de reversão é mínima.",
+  "es": "Tiempo crítico: la retina tolera hasta 90 minutos sin oxigenación. Tras este período, la probabilidad de reversión es mínima."
+ },
+ {
+  "id": "p75_07",
+  "pt": "Casos tratados precocemente (<1h): podem recuperar parcial- mente a visão.",
+  "es": "Casos tratados precozmente (menos de 1 h): pueden recuperar parcialmente la visión."
+ },
+ {
+  "id": "p97_09",
+  "pt": "FIGURA 37. ANGIOEDEMA EM LÁBIO SUPERIOR PÓS HIALURONIDASE",
+  "es": "FIGURA 37. ANGIOEDEMA EN EL LABIO SUPERIOR TRAS HIALURONIDASA"
+ },
+ {
+  "id": "p106_04",
+  "pt": "Reação bifásica: pode ocorrer em até 20% dos casos necessidade de observação hospitalar.",
+  "es": "Reacción bifásica: puede ocurrir hasta en el 20 % de los casos, lo que hace necesaria la observación hospitalaria. •"
+ },
+ {
+  "id": "p112_11",
+  "pt": "Não conter os movimentos, apenas proteger a cabeça.",
+  "es": "No restringir los movimientos del paciente, solo proteger la cabeza. •"
+ },
+ {
+  "id": "p117_09",
+  "pt": "Recorrência em atendimentos futuros (condicionamento psicológico negativo).",
+  "es": "Recurrencia en sesiones futuras (condicionamiento psicológico negativo). •"
+ },
+ {
+  "id": "p124_20",
+  "pt": "Sinais de isquemia distal em casos de trombose ou compressão (palidez, livedo, ausência de reperfusão capilar).",
+  "es": "Signos de isquemia distal en casos de trombosis o compresión (palidez, livedo, ausencia de llenado capilar)."
+ },
+ {
+  "id": "p132_06",
+  "pt": "Glabela (pele densa e menos complacente).",
+  "es": "Glabela (piel densa y de menor complacencia). •"
+ },
+ {
+  "id": "p135_04",
+  "pt": "A necrose tecidual tardia é uma complicação decorrente da progressão não reconhecida ou não tratada de um quadro isquêmico subclínico (como uma isquemia compressiva não resolvida), ou ainda de necroses parciais que evoluem lentamente após o procedimento. Diferente da necrose aguda, aqui os sinais aparecem dias após a aplicação, tornando o diagnóstico mais desafiador e muitas vezes confundido com infecção ou reação inflamatória persistente.",
+  "es": "La necrosis tisular tardía es una complicación derivada de la progresión no reconocida o no tratada de un cuadro isquémico subclínico (como una isquemia compresiva no resuelta), o bien de necrosis parciales que evolucionan lentamente después del procedimiento. A diferencia de la necrosis aguda, aquí los signos aparecen días después de la aplicación, lo que dificulta el diagnóstico, y el cuadro a menudo se confunde con infección o reacción inflamatoria persistente."
+ },
+ {
+  "id": "p137_07",
+  "pt": "Glabela: pele espessa, pouco complacente e de difícil revascularização.",
+  "es": "Glabela: piel gruesa, de baja complacencia y de difícil revascularización. •"
+ },
+ {
+  "id": "p147_05",
+  "pt": "Contaminação secundária após manipulação pelo paciente.",
+  "es": "Contaminación secundaria tras la manipulación de la zona por parte del paciente. •"
+ },
+ {
+  "id": "p170_05",
+  "pt": "Orientar evitar manipulação e contato direto (risco de autoinoculação ou transmissão).",
+  "es": "Indicar al paciente que evite la manipulación y el contacto directo (riesgo de autoinoculación o transmisión)."
+ },
+ {
+  "id": "p183_05",
+  "pt": "Na prática clínica, esse edema se manifesta com maior intensidade na região central da face e, quando persistente, tende a evidenciar o sulco malar ou “festoon”, resultado do acúmulo de líquido entre o ligamento orbitário e o zigomático-cutâneo.",
+  "es": "En la práctica clínica, este edema se manifiesta con mayor intensidad en la región central de la cara y, cuando persiste, tiende a evidenciar el surco malar o festón (festoon), resultado de la acumulación de líquido entre el ligamento orbitario y el cigomático-cutáneo."
+ },
+ {
+  "id": "p188_11",
+  "pt": "Fig. 61: Hiperpigmentação pós inflamatória em região periorbital com coloração amarronada decorrente do trauma causado pela manipulação do tecido pós preenchimento. Fonte: Imagem gerada por IA.",
+  "es": "Fig. 61: Hiperpigmentación posinflamatoria en región periorbitaria con coloración parduzca, debida al traumatismo causado por la manipulación del tejido tras el relleno. Fuente: imagen generada por IA."
+ },
+ {
+  "id": "p194_12",
+  "pt": "Palpação: pode ou não haver presença de pequeno acúmulo de produto.",
+  "es": "Palpación: puede haber o no una pequeña acumulación de producto. •"
+ }
+]
