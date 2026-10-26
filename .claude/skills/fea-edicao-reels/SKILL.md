@@ -30,6 +30,15 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
+## Anúncios do Elite Injectors Congress (`"estilo": "elite"`, 26/10/2026)
+
+Pedido "estilo dos anúncios do Elite": é a série "Ads NN - EIC" (Ads 01 a 06 e Ads 29 no Drive, medida no Ads 29). Pôr `"estilo": "elite"` no projeto.json:
+- Headline Montserrat ExtraBold 108, branca, sombra marcada, centro do quadro, linhas curtas (até ~16 caracteres), nos 3 primeiros segundos.
+- Legenda Montserrat SemiBold 58, branca, só sombra suave (sem contorno grosso), a ~78% da altura.
+- Final: cartela `CTA ELITE.mov` do Drive (`1_vJGHp9DWsoAMY0SH7_RuG49WTxm1P9T`, 5 s, logo e "Toque em Saiba Mais"). Ela é HEVC 44,1 kHz: converter para H.264 1080x1920 30 fps e AAC 48 kHz estéreo antes do `fea_render_com_cta.py`, senão a concatenação por stream copy quebra.
+- Nome no padrão `Ads - <tema> - EIC.mp4`; correções de fala do lote: "tô" vira "estou", "tá" vira "está".
+- Vídeo longo para anúncio (os de referência têm 18 a 32 s): entregar a versão inteira e uma versão curta (~45 s) com o essencial.
+
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).

@@ -50,6 +50,28 @@ MAX_PALAVRAS_BLOCO = 10
 ENTRELINHA_TITULO = 0.78   # linhas bem próximas, igual à referência (medido em pixels)
 ENTRELINHA_LEGENDA = 0.80  # idem, medido na referência de legenda
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
+TITULO_ASS = "Montserrat ExtraBold,{tam},&H00FFFFFF,&H00FFFFFF,&H00000000,&H60000000,0,0,0,0,100,100,0,0,1,4,1"
+LEGENDA_ASS = "Montserrat Bold,{tam},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2"
+
+# "estilo" no projeto.json troca o visual. "elite" = anúncios do Elite Injectors Congress (série
+# "Ads NN - EIC", medida no Ads 29 em 26/10/2026): headline menor (3 linhas curtas), sombra marcada,
+# legenda pequena SemiBold, só sombra suave, a ~78% da altura. Sem estilo = padrão dos Reels.
+ESTILOS = {
+    "elite": dict(
+        TITULO_TAM=108, LEGENDA_TAM=58, LEGENDA_Y=1525, ENTRELINHA_TITULO=0.77, ENTRELINHA_LEGENDA=0.93,
+        TITULO_ASS="Montserrat ExtraBold,{tam},&H00FFFFFF,&H00FFFFFF,&H30000000,&H20000000,0,0,0,0,100,100,0,0,1,3.5,5",
+        LEGENDA_ASS="Montserrat SemiBold,{tam},&H00FFFFFF,&H00FFFFFF,&HA0000000,&H90000000,0,0,0,0,100,100,0,0,1,1,2",
+        TITULO_LIMITE=16,
+    ),
+}
+TITULO_LIMITE = 22     # caracteres por linha do título
+PADRAO = {k: globals()[k] for k in ESTILOS["elite"]}
+
+
+def aplicar_estilo(nome):
+    globals().update(PADRAO)
+    if nome:
+        globals().update(ESTILOS[nome])
 
 
 def ts(t):
@@ -70,8 +92,8 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Titulo,Montserrat ExtraBold,{TITULO_TAM},&H00FFFFFF,&H00FFFFFF,&H00000000,&H60000000,0,0,0,0,100,100,0,0,1,4,1,5,80,80,0,1
-Style: Legenda,Montserrat Bold,{LEGENDA_TAM},&H00FFFFFF,&H00FFFFFF,&H10000000,&H80000000,0,0,0,0,100,100,0,0,1,3.5,2,2,90,90,{H - LEGENDA_Y - 20},1
+Style: Titulo,{TITULO_ASS.format(tam=TITULO_TAM)},5,80,80,0,1
+Style: Legenda,{LEGENDA_ASS.format(tam=LEGENDA_TAM)},2,90,90,{H - LEGENDA_Y - 20},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -386,7 +408,8 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA",
+                  "Elite", "Injectors", "Congress", "São", "Paulo", "Brasil", "WTC", "Sheraton", "VIPs"}
 
 
 def limpar(texto):
@@ -448,10 +471,10 @@ def formatar_titulo(v):
     3 linhas de ~22 caracteres, vai em 4 linhas com fonte 100 (Keila: título exato da imagem)."""
     texto = v["titulo"]
     if v.get("titulo_origem", "imagem") != "imagem":
-        texto, mudou = condensar_titulo(texto)
+        texto, mudou = condensar_titulo(texto, TITULO_LIMITE)
         if mudou:
             print(f"  Headline condensada: \"{v['titulo']}\" → \"{texto}\"")
-    titulo = quebrar_titulo(texto)
+    titulo = quebrar_titulo(texto, TITULO_LIMITE)
     linhas = titulo.split(r"\N")
     if len(linhas) > 3 or max(map(len, linhas)) > MAX_CHARS_LINHA + 3:
         ps = texto.split()
@@ -654,6 +677,7 @@ def encaixar_cortes(manter, db, passo, palavras=None):
 
 
 def renderizar(cfg, v, previa=False):
+    aplicar_estilo(v.get("estilo", cfg.get("estilo")))
     ff = cfg["ffmpeg"]
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
