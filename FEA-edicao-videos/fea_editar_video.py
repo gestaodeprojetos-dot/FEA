@@ -323,6 +323,13 @@ CORRECOES = [
     # caso a caso, em "correcoes" do vídeo (Keila pediu em 02/10; conferir o contexto).
     (r"\b([Cc]omo (?:foi|ficou|está|tá) a) parestesia\b", r"\1 anestesia"),
     (r"\bdescimento\b", "desse mento"),
+    # preenchedores labiais (26/10/2026), grafia do fabricante: Restylane Refyne e Kysse (Galderma),
+    # e.p.t.q. S100 (Jetema), Belotero Intense (Merz); o Whisper ouve "Refine", "Hestlanikis", "Epetic"
+    (r"\b(Restylane) [Rr]ef[iy]ne?\b", r"\1 Refyne"),
+    (r"\b(?:[Hh]estlanikis|[Rr]estylane [Kk]i(?:ss|s)e?)\b", "Restylane Kysse"),
+    (r"\b[Ee]\.? ?[Pp]\.? ?[Tt]\.? ?[Qq]\.?(?= ?S ?\d)", "e.p.t.q."), (r"\b[Ee]petic\b", "e.p.t.q."),
+    (r"\b(e\.p\.t\.q\.) ?S ?(\d00)\b", r"\1 S\2"),
+    (r"\b[Bb]elotero [Ii]ntense\b", "Belotero Intense"),
 ]
 
 
@@ -386,7 +393,7 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Belotero", "Refyne", "Kysse", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
 
 def limpar(texto):
