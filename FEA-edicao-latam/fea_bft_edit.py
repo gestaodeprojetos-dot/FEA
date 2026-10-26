@@ -56,6 +56,9 @@ STOP = set("de la el los las en y a al tu mi su con para que un una por del se l
 KEY = re.compile(r"^(BLACK|FRIDAY|TOTAL|COMBO|ESPAÑOL|\d+%?|MESES|AÑO|CLASES|TOXINA|RELLENO|BIOESTIMULADORES|BONOS|VIVO|APERTURA|NOVIEMBRE|PRECIO|INFORMACIÓN|FORMACIONES|EXCLUSIVOS)$")
 
 
+CAP_SIZE = 62  # tamanho único em todas as legendas (Keila, 26/10: nada de letra maior que a outra)
+
+
 def caption_img(text):
     words = text.upper().split()
     keys = [i for i, w in enumerate(words) if KEY.match(w.strip(",.:;!?¡¿"))]
@@ -63,18 +66,15 @@ def caption_img(text):
         cand = [i for i, w in enumerate(words) if w.lower().strip(",.:;!?¡¿") not in STOP]
         keys = [max(cand, key=lambda i: len(words[i]))] if cand else []
     hl = set(keys[:2])
-    size = 66
+    size = CAP_SIZE
     d = ImageDraw.Draw(Image.new("RGB", (8, 8)))
-    while True:
-        f = font(900, size)
-        lines, cur = [], []
-        for i, w in enumerate(words):
-            t = " ".join(words[j] for j in cur + [i])
-            if cur and d.textlength(t, font=f) > 940: lines.append(cur); cur = [i]
-            else: cur.append(i)
-        if cur: lines.append(cur)
-        if len(lines) <= 2 or size <= 44: break
-        size -= 4
+    f = font(900, size)
+    lines, cur = [], []
+    for i, w in enumerate(words):
+        t = " ".join(words[j] for j in cur + [i])
+        if cur and d.textlength(t, font=f) > 960: lines.append(cur); cur = [i]
+        else: cur.append(i)
+    if cur: lines.append(cur)
     lh = int(size * 1.08)
     im = Image.new("RGBA", (W, lh * len(lines) + 60), (0, 0, 0, 0))
     sh = Image.new("RGBA", im.size, (0, 0, 0, 0)); ds = ImageDraw.Draw(sh); dr = ImageDraw.Draw(im)
@@ -287,10 +287,10 @@ def main(spec):
     cards = [(c, card_img(c["label"], c["title"])) for c in spec.get("cards", [])]
     capy = spec.get("caption_y", 1300)
     args = ["ffmpeg", "-v", "error", "-y", "-i", spec["video"], "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{W}x{H}", "-framerate", f"{num}/{den}", "-i", "-"]
-    fc = ["[0:v][1:v]overlay=0:0:eof_action=pass:format=auto,fps=30,format=yuv420p,setsar=1[vm]"]
+    fc = ["[0:v][1:v]overlay=0:0:eof_action=pass:format=auto,format=yuv420p,setsar=1[vm]"]
     if spec.get("endcard"):
         args += ["-i", spec["endcard"]]
-        fc += ["[2:v]fps=30,format=yuv420p,setsar=1[ve]", "[0:a]aresample=48000,aformat=channel_layouts=stereo[am]",
+        fc += [f"[2:v]fps={num}/{den},format=yuv420p,setsar=1[ve]", "[0:a]aresample=48000,aformat=channel_layouts=stereo[am]",
                "[2:a]aresample=48000,aformat=channel_layouts=stereo[ae]", "[vm][am][ve][ae]concat=n=2:v=1:a=1[v][a]"]
         vmap, amap = "[v]", "[a]"
     else:
@@ -315,9 +315,7 @@ def main(spec):
         cy = ins.get("cap_y", 1690 if ins["kind"] == "combo" else capy) if ins else capy
         for (a0, a1, _), img in zip(chunks, capimgs):
             if a0 <= t < a1:
-                e = ease((t - a0) / 0.12); s = 0.88 + 0.12 * e
-                im2 = img if s > 0.999 else img.resize((int(img.width * s), int(img.height * s)), Image.LANCZOS)
-                layers.append((fade(im2, min(1, e * 1.5)), ((W - im2.width) // 2, cy - im2.height // 2)))
+                layers.append((img, ((W - img.width) // 2, cy - img.height // 2)))
                 break
         if not layers:
             proc.stdin.write(empty); continue

@@ -136,3 +136,13 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Criativos LATAM dublados (Black Friday Total), padrão Elite Injectors (Keila, 26/10/2026)
+
+Scripts em `FEA-edicao-latam/` (ver o README da pasta). Regras pedidas pela Keila:
+
+- **Corte dinâmico, sem silêncio:** depois da dublagem, rodar `fea_dinamico.py` (corta toda pausa acima de 0,12 s entre falas, medida no áudio, deixando 0,05 s de folga). Não pode sobrar respiro parado no vídeo.
+- **Legenda com tamanho fixo:** todas as legendas no mesmo tamanho (Montserrat 900, 62 px), caixa alta, até 2 linhas, sem efeito de zoom na entrada. Letra crescendo ou bloco maior que o outro foi reprovado ("parece letra maior que a outra").
+- **Sem conversão de quadros:** o HeyGen entrega 25 fps; renderizar no fps original (converter para 30 duplica quadros e o vídeo parece travar).
+- **Voz:** a dublagem do HeyGen clona a voz do Dr., mas o timbre em espanhol muda um pouco. Se a Keila apontar um trecho específico com voz estranha, conferir aquele segundo antes de redublar (redublar gasta crédito).
+- Cartela final padrão em todo vídeo: logo Black Friday Total com impacto e "Toca en Más información" digitado com som de teclado (`assets/FEA-endcard-ES.mp4`).
