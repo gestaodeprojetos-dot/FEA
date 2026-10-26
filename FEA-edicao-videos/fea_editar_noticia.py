@@ -292,6 +292,33 @@ def compor(dr, painel, desce, dx_painel, mascara):
     return out
 
 
+def tirar_silencios(manter, db, limiar, passo, minimo=0.30, folga=0.08, limiar_db=None):
+    """Corte seco nos respiros (Keila, 26/10/2026: "está com muito silêncio, o vídeo precisa ter um
+    corte melhor"): toda pausa sem voz maior que `minimo` sai, deixando `folga` de cada lado da fala.
+    `limiar_db` sobe o limiar de "voz" acima do ruído da sala (o eco depois da frase ficava como voz)."""
+    limiar = limiar_db or limiar
+    novo = []
+    for a, b in manter:
+        i0, i1 = int(a / passo), min(len(db), int(b / passo))
+        voz = [db[i] >= limiar for i in range(i0, i1)]
+        ini = a
+        k = 0
+        while k < len(voz):
+            if voz[k]:
+                k += 1
+                continue
+            j = k
+            while j < len(voz) and not voz[j]:
+                j += 1
+            t0, t1 = (i0 + k) * passo, (i0 + j) * passo
+            if j < len(voz) and k > 0 and t1 - t0 > minimo:
+                novo.append([round(ini, 3), round(t0 + folga, 3)])
+                ini = t1 - folga
+            k = j
+        novo.append([round(ini, 3), b])
+    return [t for t in novo if t[1] - t[0] > 0.15]
+
+
 def main():
     args = sys.argv[1:]
     previa = "--previa" in args
@@ -306,6 +333,9 @@ def main():
     db = base.perfil_voz(ff, v["entrada"])
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     manter = base.encaixar_cortes(v["manter"], db[0], db[2], [w for s in trans for w in s["words"]])
+    if v.get("tirar_silencios"):
+        manter = tirar_silencios(manter, *db, **v["tirar_silencios"])
+        v = dict(v, manter=[[a, b, "exato"] for a, b in manter])
     # no modelo notícia a legenda roda junto com a headline (referência "1- Olheiras"): posições
     # diferentes na tela, e a fala do começo não fica sem legenda
     base.TITULO_DUR = 0.0
