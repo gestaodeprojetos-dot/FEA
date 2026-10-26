@@ -11,4 +11,5 @@ for s in sorted(glob.glob(os.path.join(aqui, 'criativos', '*.py'))):
 subprocess.run([sys.executable, os.path.join(aqui, "fea_mockup_capa_es.py")], cwd=aqui)
 subprocess.run([sys.executable, os.path.join(aqui, "fea_mockup_livro_branco.py")], cwd=aqui)
 subprocess.run([sys.executable, os.path.join(aqui, "fea_mockup_lombada_es.py")], cwd=aqui)
+subprocess.run([sys.executable, os.path.join(aqui, "fea_mockup_capa_preta_es.py")], cwd=aqui)
 sys.exit(1 if falhas else 0)

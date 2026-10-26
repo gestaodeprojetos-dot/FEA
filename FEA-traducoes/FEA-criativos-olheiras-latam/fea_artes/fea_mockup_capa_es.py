@@ -72,6 +72,10 @@ def aplicar(arte, H):
     zona = cv2.GaussianBlur(zona, (0, 0), 8)
     zona = cv2.resize(zona, (br.shape[1], br.shape[0]), interpolation=cv2.INTER_AREA)
     wz = cv2.warpPerspective(zona, Hk, (w, h)).astype(np.float32) / 255
+    # capa preta (letras prateadas, Ads 37 e 39) não tem cor: fica com fea_mockup_capa_preta_es.py
+    sat = cv2.cvtColor(arte, cv2.COLOR_BGR2HSV)[..., 1][wz > 0.5]
+    if sat.size and np.median(sat) < 40:
+        return arte, 0
     a = arte.astype(np.float32)
     # oclusão: compara em escala grossa (tolera serrilhado e leve desalinho do texto);
     # selo, tablet ou mão sobre a capa ficam de fora
