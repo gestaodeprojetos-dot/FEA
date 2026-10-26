@@ -27,7 +27,17 @@
       "Bash(mkdir:*)",
       "Bash(zip:*)",
       "Bash(unzip:*)",
-      "Bash(base64:*)"
+      "Bash(base64:*)",
+      "Bash",
+      "Edit",
+      "Write",
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch",
+      "Agent",
+      "mcp__github"
     ]
   }
 }
