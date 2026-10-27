@@ -57,7 +57,6 @@ ESF_INI, ESF_FIM = 820, 1000   # faixa do esfumaçado entre o painel e o Dr.
 DESCE = 480              # quanto o Dr. desce na tela dividida (cabeça logo abaixo do esfumaçado)
 TRANS = 0.38             # duração da transição deslizante (s)
 POP = 0.30               # entrada do produto (s)
-ROTULO_Y = 740           # centro da etiqueta do B-roll, logo acima do esfumaçado
 
 # headline: medida em pixels no "1- Olheiras" (barra 18 px, caixas a 14 px da barra, ~72 px por linha)
 HL_BARRA_X, HL_BARRA_L = 143, 18
@@ -68,6 +67,20 @@ HL_Y = 730               # topo da primeira linha
 HL_DOURADO = (219, 208, 147)
 ROXO = (91, 69, 153)     # #5B4599, identidade FEA
 LAVANDA = (208, 209, 233)
+
+
+ESTILOS = {
+    # referência do Dr. (27/10/2026, reels "03 cremes fantásticos" e "3 cremes de farmácia"): B-roll em
+    # close extremo ocupando ~2/3 da tela, Dr. menor embaixo, zoom contínuo e headline grande
+    "exagerado": {"PAINEL_H": 1240, "ESF_INI": 1070, "ESF_FIM": 1240, "DESCE": 720, "PUSH": 0.16,
+                  "HL_FONTE": 80, "HL_LINHA_H": 106, "HL_LINHA_GAP": 8, "HL_Y": 860},
+}
+PUSH = 0.0               # zoom contínuo do B-roll (fração a mais no fim da cena); 0 = parado
+
+
+def aplicar_estilo(nome):
+    if nome:
+        globals().update(ESTILOS[nome])
 
 
 def ease(p):
@@ -236,6 +249,7 @@ class Broll:
     def __init__(self, ff, cena, dur, fonte=None):
         # "rotulo": etiqueta roxa no pé do painel (ex.: "1. Limpeza"), entra com o mesmo pop do produto
         self.rotulo = etiqueta(cena["rotulo"], fonte, 46) if cena.get("rotulo") else None
+        self.push, self.dur = cena.get("push", PUSH), max(dur - TRANS, 0.5)
         z = cena.get("zoom", 1.0)
         cx, cy = cena.get("cx", 0.5), cena.get("cy", 0.5)
         asp = W / PAINEL_H
@@ -252,17 +266,25 @@ class Broll:
         b = self.p.stdout.read(W * PAINEL_H * 3)
         if len(b) == W * PAINEL_H * 3:
             self.ultimo = np.frombuffer(b, np.uint8).reshape(PAINEL_H, W, 3).astype(np.float32)
+        base_q = self.ultimo
+        if self.push:
+            z = 1 + self.push * ease_io(tl / self.dur)
+            cw, ch = W / z, PAINEL_H / z
+            x0, y0 = (W - cw) / 2, (PAINEL_H - ch) / 2
+            im = Image.fromarray(self.ultimo.astype(np.uint8)).resize(
+                (W, PAINEL_H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch))
+            base_q = np.asarray(im).astype(np.float32)
         if self.rotulo is None:
-            return self.ultimo
+            return base_q
         p = ease((tl - 0.15) / POP)
         if p <= 0:
-            return self.ultimo
+            return base_q
         esc = 0.86 + 0.14 * p
         im = self.rotulo.resize((int(self.rotulo.width * esc), int(self.rotulo.height * esc)))
         if p < 1:
             im.putalpha(im.split()[3].point(lambda v: int(v * p)))
-        tela = Image.fromarray(self.ultimo.astype(np.uint8)).convert("RGBA")
-        tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(ROTULO_Y - im.height / 2)))
+        tela = Image.fromarray(base_q.astype(np.uint8)).convert("RGBA")
+        tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(PAINEL_H - 260 - im.height / 2)))
         return np.asarray(tela.convert("RGB")).astype(np.float32)
 
     def fechar(self):
@@ -316,6 +338,7 @@ def main():
     cfg = json.load(open([a for a in args if a.endswith(".json")][0], encoding="utf-8"))
     ff, v = cfg["ffmpeg"], cfg["video"]
     fonte = cfg["fonte_headline"]
+    aplicar_estilo(v.get("estilo"))
 
     # cortes no respiro e legenda: mesma lógica do padrão FEA
     db = base.perfil_voz(ff, v["entrada"])
