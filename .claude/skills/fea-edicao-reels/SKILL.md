@@ -147,3 +147,10 @@ Scripts em `FEA-edicao-latam/` (ver o README da pasta). Regras pedidas pela Keil
 - **Voz:** a dublagem do HeyGen clona a voz do Dr., mas o timbre em espanhol muda um pouco. Se a Keila apontar um trecho específico com voz estranha, conferir aquele segundo antes de redublar (redublar gasta crédito).
 - **Nome do arquivo no Drive (Keila, 27/10):** `ADS 001 - BLACK LATAM.mp4`, `ADS 002 - BLACK LATAM.mp4`... numeração contínua. Os 12 primeiros (IMG_8182 a IMG_8196) são ADS 001 a ADS 012; a contagem regressiva (IMG_8246 a IMG_8254, 27/10) é ADS 013 a ADS 021; o próximo vídeo novo é ADS 022. Os antigos reeditados (lote BFV) mantêm o número original com "(REEDIÇÃO)" no nome, para não colidir com esta numeração.
 - Cartela final padrão em todo vídeo: logo Black Friday Total com impacto e "Toca en Más información" digitado com som de teclado (`assets/FEA-endcard-ES.mp4`).
+
+### Reedição de vídeos antigos com legenda PT gravada (lote BFV, 27/10/2026)
+
+- A faixa da legenda ES precisa ser **contínua até o último quadro antes da cartela**: qualquer folga entre blocos (mesmo 1 quadro) deixa a legenda PT antiga piscar por baixo. O mesmo vale para card, selo e botão. Conferir com detector de "piscada" (quadro sem faixa entre dois com faixa) antes de subir.
+- Texto PT fora da faixa padrão (título no meio da tela, card "Pergunta rápida") é coberto com card ES no mesmo lugar, nunca deixado à mostra.
+- Selo novo nunca por cima de card; botão "MÁS INFORMACIÓN" nunca por cima da legenda (a legenda sobe ou desce).
+- Nome no Drive: número original + "(REEDIÇÃO) - BLACK LATAM". Vídeo com marca de produto ou virada de lote vai para a subpasta "AGUARDANDO APROVAÇÃO".
