@@ -1,11 +1,13 @@
 """Corte dinâmico: remove os silêncios do vídeo dublado (respiros entre frases), mantendo o fps original.
-Uso: fea_dinamico.py entrada.mp4 palavras.json saida.mp4 palavras_saida.json
+Com trilha de fundo (volume nunca cai), usa os tempos das palavras para achar as pausas.
+Uso: fea_dinamico.py entrada.mp4 palavras.json saida.mp4 palavras_saida.json  (ou "-" no lugar das palavras)
 Mede o silêncio no áudio (janelas de 10 ms), corta pausas > 0,12 s deixando 0,05 s de folga de cada lado,
 e remapeia os tempos das palavras para o vídeo cortado."""
 import json, subprocess, sys, wave, os
 import numpy as np
 
-src, wj, dst, wout = sys.argv[1:5]
+src, dst = sys.argv[1], sys.argv[3]
+wj, wout = (sys.argv[2], sys.argv[4]) if sys.argv[2] != "-" else (None, None)
 PAD, MINGAP = 0.05, 0.12
 tmp = dst + ".wav"
 subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-ac", "1", "-ar", "16000", tmp], check=True, stdin=subprocess.DEVNULL)
@@ -26,6 +28,13 @@ while k < len(v):
 dur = len(v) / 100
 keep, k = [], 0
 segs = []
+if wj and np.percentile(db, 10) > 40:
+    # vídeo com trilha/ruído de fundo: o silêncio não aparece no volume, então usa os tempos das palavras
+    # (folga maior, 0,12 s, porque o fim de palavra do Whisper erra um pouco)
+    PAD, MINGAP = 0.12, 0.3
+    v[:] = False
+    for a0, a1, _ in json.load(open(wj)):
+        v[int(a0 * 100):int(a1 * 100) + 1] = True
 while k < len(v):
     if v[k]:
         j = k
@@ -60,7 +69,8 @@ def remap(t):
     return off
 
 
-words = json.load(open(wj))
-json.dump([[round(remap(a0), 3), round(max(remap(a0) + 0.05, remap(a1)), 3), w] for a0, a1, w in words], open(wout, "w"), ensure_ascii=False)
+if wj:
+    words = json.load(open(wj))
+    json.dump([[round(remap(a0), 3), round(max(remap(a0) + 0.05, remap(a1)), 3), w] for a0, a1, w in words], open(wout, "w"), ensure_ascii=False)
 tot = sum(y - x for x, y in keep)
 print(f"{os.path.basename(src)}: {dur:.1f}s -> {tot:.1f}s ({len(keep)} trechos)")
