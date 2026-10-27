@@ -5,7 +5,7 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 # FEA: edição de Reels no modelo notícia
 
-Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenchedores para os lábios"), **ainda em validação**: só replicar nos próximos vídeos depois do OK dela. Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
+Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenchedores para os lábios"), aprovado pela Keila em 27/10/2026 com o vídeo "3 passos do skincare" ("esse vamos deixar assim mesmo, vamos para os próximos"). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
 
 ## Entrada
 
@@ -35,6 +35,16 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 - Conferir cada trecho a 2 quadros/s antes de usar: sem sangue escorrendo, sem cara de dor e sem troca de plano no meio (o IMG_7468 abre o plano em 1:32,5). Nunca usar pastas "NÃO AUTORIZADO".
 - **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
 - **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
+
+## Estilo "exagerado" (feedback do Dr. João, 27/10/2026)
+
+O Dr. mandou 2 reels de referência ("Queria umas coisas mais exageradas assim"): "03 cremes fantásticos para sua pele de idosa" e "3 cremes de farmácia barato que toda mulher 40+ precisa usar". O que eles têm:
+- B-roll em **close extremo** (creme em pontinhos ou espirais no rosto, pele brilhando de perto, aparelho na bochecha), nunca plano aberto;
+- o B-roll ocupa **2/3 a 3/4 da tela**, com o Dr. menor embaixo (só rosto e ombros);
+- zoom contínuo na imagem, nada parado;
+- headline grande em caixas brancas com texto preto.
+
+No script: `"estilo": "exagerado"` no projeto (painel de 1240 px, Dr. desce 720 px, zoom contínuo de 16% em cada B-roll, headline Sora 80). Usar em todos os próximos vídeos do modelo notícia. Escolher B-roll com zoom maior (`zoom` 1,4 a 2,0) centrado na pele ou no produto espalhado. Os reels de referência usam headline toda em maiúscula e apelo popular ("pele de idosa", "barato"): **não copiar**, porque a CLAUDE.md proíbe caixa alta integral e tom popular; o "exagero" fica no visual.
 
 ## Ritmo: corte rápido (Keila, 26/10/2026)
 
