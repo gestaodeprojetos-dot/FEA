@@ -73,8 +73,12 @@ ESTILOS = {
     # referência do Dr. (27/10/2026, reels "03 cremes fantásticos" e "3 cremes de farmácia"): B-roll em
     # close extremo ocupando ~2/3 da tela, Dr. menor embaixo, zoom contínuo e headline grande
     "exagerado": {"PAINEL_H": 1240, "ESF_INI": 1070, "ESF_FIM": 1240, "DESCE": 720, "PUSH": 0.16,
-                  "HL_FONTE": 80, "HL_LINHA_H": 106, "HL_LINHA_GAP": 8, "HL_Y": 860},
+                  "HL_FONTE": 80, "HL_LINHA_H": 106, "HL_LINHA_GAP": 8, "HL_Y": 860,
+                  "PROD_MAX": (860, 700), "PROD_Y": 540, "PROD_NOME_Y": 970,
+                  "PRODS_ALT": 640, "PRODS_Y": 600, "PRODS_NUM_Y": 210},
 }
+PROD_MAX, PROD_Y, PROD_NOME_Y = (700, 470), 430, 760          # produto único no painel
+PRODS_ALT, PRODS_Y, PRODS_NUM_Y = 400, 470, 190                # vários lado a lado
 PUSH = 0.0               # zoom contínuo do B-roll (fração a mais no fim da cena); 0 = parado
 
 
@@ -203,19 +207,19 @@ class PainelProduto:
         self.fundo = fundo
         self.itens = []          # (imagem RGBA, centro x, centro y, atraso)
         if cena["tipo"] == "produto":
-            im = com_sombra(caber(Image.open(cena["imagem"]).convert("RGBA"), 700, 470))
-            self.itens.append((im, W // 2, 430, 0.0))
+            im = com_sombra(caber(Image.open(cena["imagem"]).convert("RGBA"), *PROD_MAX))
+            self.itens.append((im, W // 2, PROD_Y, 0.0))
             if cena.get("nome"):
-                self.itens.append((etiqueta(cena["nome"], fonte), W // 2, 760, 0.10))
+                self.itens.append((etiqueta(cena["nome"], fonte), W // 2, PROD_NOME_Y, 0.10))
         else:
             n = len(cena["imagens"])
             larg = (W - 80) // n
             for i, f in enumerate(cena["imagens"]):
-                im = com_sombra(caber(Image.open(f).convert("RGBA"), larg - 40, 400))
+                im = com_sombra(caber(Image.open(f).convert("RGBA"), larg - 40, PRODS_ALT))
                 cx = 40 + larg * i + larg // 2
-                self.itens.append((im, cx, 470, 0.12 * i))
+                self.itens.append((im, cx, PRODS_Y, 0.12 * i))
                 if cena.get("numerar"):
-                    self.itens.append((numero(i + 1, fonte), cx, 190, 0.12 * i + 0.05))
+                    self.itens.append((numero(i + 1, fonte), cx, PRODS_NUM_Y, 0.12 * i + 0.05))
 
     def quadro(self, tl):
         tela = Image.fromarray(self.fundo.astype(np.uint8)).convert("RGBA")

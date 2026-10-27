@@ -82,6 +82,21 @@ def remapear_palavras(palavras, manter):
     """Converte tempos do bruto para a linha do tempo editada e descarta o que foi cortado."""
     saida = []
     offset = 0.0
+    # corte rápido (respiro de menos de 1 s tirado, modelo notícia): a palavra com tempo adiantado
+    # pela transcrição cai no respiro cortado, mas a voz dela está no trecho seguinte ou anterior;
+    # ela vai para o trecho mais perto em vez de sumir da legenda (Keila, 27/10/2026)
+    trechos = [(t[0], t[1]) for t in manter]
+    for p in palavras:
+        meio = (p["s"] + p["e"]) / 2
+        if any(a <= meio < b for a, b in trechos):
+            continue
+        for (a0, b0), (a1, b1) in zip(trechos, trechos[1:]):
+            if b0 <= meio < a1 and a1 - b0 < 1.0:
+                if meio - b0 < a1 - meio:
+                    p["s"], p["e"] = min(p["s"], b0 - 0.05), b0 - 0.01
+                else:
+                    p["s"], p["e"] = a1, max(p["e"], a1 + 0.05)
+                break
     for a, b in manter:
         for p in palavras:
             meio = (p["s"] + p["e"]) / 2
