@@ -200,19 +200,22 @@ def insert_frame(ins, t):
         _center_lines(d, ins["label"].upper(), font(900, 58), 900, 900, fill=WHITE + (int(255 * ease((t - t0 - 0.2) / 0.4)),))
         im.alpha_composite(LOGO_S.resize((240, int(LOGO_S.height * 240 / LOGO_S.width))), ((W - 240) // 2, 230))
     elif k == "checklist":
-        im.alpha_composite(LOGO_S.resize((300, int(LOGO_S.height * 300 / LOGO_S.width))), ((W - 300) // 2, 260))
-        if ins.get("title"): _center_lines(d, ins["title"].upper(), font(900, 52), 900, 520, fill=WHITE + (255,))
-        fs = 56
-        while fs > 40 and max(d.textlength(it, font=font(800, fs)) for it in ins["items"]) > 640: fs -= 2
-        f = font(800, fs); y = 680
+        many = len(ins["items"]) > 4  # 6 formações: bloco mais compacto, termina acima da faixa da legenda
+        ly, ty, y0 = (190, 420, 520) if many else (260, 520, 680)
+        im.alpha_composite(LOGO_S.resize((300, int(LOGO_S.height * 300 / LOGO_S.width))), ((W - 300) // 2, ly))
+        if ins.get("title"): _center_lines(d, ins["title"].upper(), font(900, 46 if many else 52), 960, ty, fill=WHITE + (255,))
+        fs, step, x0, maxw = (44, 104, 90, 760) if many else (56, 130, 150, 640)
+        while fs > 30 and max(d.textlength(it, font=font(800, fs)) for it in ins["items"]) > maxw: fs -= 2
+        f = font(800, fs); y = y0
         for n, item in enumerate(ins["items"]):
-            e = ease((t - t0 - 0.12 - n * 0.22) / 0.3)
-            if e <= 0: y += 130; continue
-            x = 150 + int(60 * (1 - e)); a = int(255 * e)
-            d.rounded_rectangle([x - 10, y - 16, 950, y + 92], 24, fill=(20, 16, 12, int(220 * e)), outline=GOLD + (int(170 * e),), width=2)
-            d.ellipse([x + 14, y + 6, x + 62, y + 54], fill=GOLD + (a,))
-            d.line([(x + 25, y + 31), (x + 35, y + 42), (x + 52, y + 19)], fill=DARK + (a,), width=6)
-            d.text((x + 88, y + 2), item, font=f, fill=WHITE + (a,)); y += 130
+            e = ease((t - t0 - 0.12 - n * (0.16 if many else 0.22)) / 0.3)
+            if e <= 0: y += step; continue
+            x = x0 + int(60 * (1 - e)); a = int(255 * e); h = step - 34
+            d.rounded_rectangle([x - 10, y - 14, W - x0 + 10, y + h], 22, fill=(20, 16, 12, int(220 * e)), outline=GOLD + (int(170 * e),), width=2)
+            cy = y + (h - 14) // 2
+            d.ellipse([x + 12, cy - 20, x + 52, cy + 20], fill=GOLD + (a,))
+            d.line([(x + 22, cy), (x + 30, cy + 9), (x + 44, cy - 9)], fill=DARK + (a,), width=5)
+            d.text((x + 74, cy - fs * 0.62), item, font=f, fill=WHITE + (a,)); y += step
     elif k == "date":  # en vivo de apertura
         e = ease((t - t0) / 0.5)
         cx, cy = W // 2, 720
@@ -224,7 +227,7 @@ def insert_frame(ins, t):
         _center_text(d, "MARTES", font(800, 36), cy + 125 + int(40 * (1 - e)), fill=(110, 90, 60, int(255 * e)))
         a2 = int(255 * ease((t - t0 - 0.35) / 0.4))
         _center_text(d, "EN VIVO DE APERTURA", font(900, 60), 1000, fill=GOLD_HI + (a2,))
-        _center_text(d, "Bonos exclusivos para quien esté en vivo", font(700, 40), 1085, fill=(240, 232, 220, a2))
+        _center_text(d, "El menor precio del Combo Total", font(700, 40), 1085, fill=(240, 232, 220, a2))
         im.alpha_composite(LOGO_S.resize((240, int(LOGO_S.height * 240 / LOGO_S.width))), ((W - 240) // 2, 230))
     # entrada/saída rápida
     a = min(ease((t - t0) / 0.18), ease((t1 - t) / 0.18))

@@ -22,6 +22,9 @@ def find(pat, after=0.0):
     return res
 
 
+# as 6 formações do Combo Total LATAM (briefing Black Friday Latam, out/2026)
+FORMACIONES = ["Toxina Express (Protocolo Glabela)", "Relleno Facial Express", "Especialista en Bioestimuladores",
+               "Inmersión Full Face < 5 ml", "Especialista en Botox", "FEP Latam (Especialista en Rellenos)"]
 inserts, cards, cta = [], [], []
 busy = []
 def free(a, b): return all(b <= x0 - 0.4 or a >= x1 + 0.4 for x0, x1 in busy)
@@ -47,8 +50,8 @@ for a, b, i in find(r"(toxina|relleno|bioestimuladores?)"):
     if near:
         a = max(a, hook_end + 0.6)
         end = max(near[-1][1] + 0.5, a + 2.4)
-        if add_insert(a - 0.1, min(end, a + 3.6), kind="checklist", title="Combo Total",
-                      items=["Toxina botulínica", "Relleno facial", "Bioestimuladores de colágeno"]): break
+        if add_insert(a - 0.1, min(max(end, a + 3.4), a + 4.2), kind="checklist", title="Combo Total · 6 formaciones",
+                      items=FORMACIONES): break
 # 2) número de clases
 for a, b, i in sorted(find(r"\d+ clases"), key=lambda x: -int(T[x[2]])):
     if add_insert(a - 0.2, a + 2.4, kind="number", value="+" + T[i], label="clases disponibles"): break
@@ -71,14 +74,28 @@ def add_card(a, b, label, title):
     cards.append({"t0": round(a, 2), "t1": round(b, 2), "label": label, "title": title})
 
 add_card(0.15, hook_end, "Black Friday Total", adj.get("hook", "Todos mis cursos en un solo combo"))
+M12 = ("Acceso por 12 meses", "6 formaciones + todo lo que lance en 12 meses")
 for a, b, i in find(r"(12|doce) meses") + find(r"un ano"):
-    add_card(a - 0.3, a + 3.0, "Acceso por 12 meses", "Toxina, relleno y bioestimuladores"); break
+    add_card(a - 0.3, a + 3.0, *M12); break
 for a, b, i in find(r"espanol"):
     if a > 3: add_card(a - 0.4, a + 2.8, "100% en español", "Clases, resúmenes y materiales"); break
+# sem bônus definido no briefing: no lugar do card de bônus, o benefício real (menor preço no en vivo / antes do lote)
 for a, b, i in find(r"bonos"):
-    add_card(a - 0.4, a + 3.0, "Solo para quien esté en vivo", "Bonos exclusivos en la apertura"); break
+    if re.search(r"\blote\b", txt): add_card(a - 0.4, a + 3.0, "Antes del cambio de lote", "Asegura el menor precio")
+    else: add_card(a - 0.4, a + 3.0, "En vivo · 10 de noviembre", "El menor precio del Combo Total")
+    break
 for a, b, i in find(r"menor precio"):
     add_card(a - 0.4, a + 2.8, "Black Friday Total", "Al menor precio posible"); break
+
+# o prazo de 12 meses aparece em toda peça (briefing): se a fala não cita, o card entra no primeiro espaço livre
+if not any(c["label"] == M12[0] for c in cards):
+    t = hook_end + 0.4
+    while t + 3.0 < dur - 1.0:
+        ins_free = all(t + 3.0 <= x["t0"] - 0.3 or t >= x["t1"] + 0.3 for x in inserts)
+        n = len(cards)
+        if ins_free: add_card(t, t + 3.0, *M12)
+        if len(cards) > n: break
+        t += 0.5
 
 spec = {"video": video, "out": out, "words": words, "cards": cards, "inserts": sorted(inserts, key=lambda x: x["t0"]), "cta": cta,
         "endcard": adj.get("endcard")}
