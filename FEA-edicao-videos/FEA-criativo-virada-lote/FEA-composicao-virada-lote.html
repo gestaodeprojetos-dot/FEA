@@ -450,7 +450,7 @@ function esgotado(c,t){
   $('G_tk').style.transform=`rotateX(0deg) rotateZ(${Math.sin((t-c.s)*1.3)*1.5}deg)`;
   const st=p(t,c.tCarimbo,c.tCarimbo+.25);
   $('G_st').textContent=c.carimbo||'ESGOTADO'; vis($('G_up'),false);
-  const sw=$('G_stamp'); sw.style.left=(540-sw.offsetWidth/2)+'px'; sw.style.top='640px'; sw.style.fontSize='120px';
+  const sw=$('G_stamp'); sw.style.left=(540-sw.offsetWidth/2)+'px'; sw.style.top='640px'; sw.style.fontSize=(c.carimbo||'ESGOTADO').length>8?'92px':'120px';
   sw.style.opacity=st>0?1:0; sw.style.transform=`rotate(-8deg) scale(${2.4-1.4*ob(st)})`;
   $('G_tkwrap').style.marginLeft=(t>c.tCarimbo+.25&&t<c.tCarimbo+.45?Math.sin((t-c.tCarimbo)*80)*8:0)+'px';
   $('G_tkwrap').style.filter=t>c.tCarimbo+.25?'saturate(.55) brightness(.8)':'none';
