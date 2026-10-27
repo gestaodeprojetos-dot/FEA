@@ -5,7 +5,8 @@ Tempos na linha do tempo do bruto. Fatos da página el.joaopithon.com.br/elite-i
 01 e 02/11, WTC Sheraton, São Paulo, 11 palestrantes nos cards (o Dr. fala "12 grandes palestrantes").
 Uso: python3 fea_configs_soldout.py PASTA_TRANSCRICOES PASTA_SAIDA"""
 import json, sys
-from fea_configs_bf import K, LOGO_, SAIBA, G, GF, gerar
+from fea_configs_bf import K, LOGO_, SAIBA, G, GF, gerar, mapa
+from fea_configs_contagem5 import VISITA, PALCO, MESAS, LED_GENTE, INS
 
 def ESG(s, e, tCarimbo): return dict(tipo='esgotado', s=s, e=e, tCarimbo=tCarimbo, a='ELITE INJECTORS CONGRESS',
                                      b='Ingressos', c='01 E 02 DE NOVEMBRO · SÃO PAULO', carimbo='ESGOTADO')
@@ -16,6 +17,7 @@ VIDEOS = {
    cortes=[(8.68, 24.98), (39.7, 88.7)],
    trocas=[(['para', 'gente'], ['para', 'a', 'gente']), (['para', 'edição'], ['para', 'a', 'edição'])],
    zoom=[(3.6, 4.7), (29.15, 31.8), (88.7, 90.95), (100.6, 102.6)],
+   inserts=[INS(29.15, 31.8, PALCO), INS(88.7, 90.95, MESAS), INS(100.6, 102.6, LED_GENTE)],
    cenas=[
     K(0, 2.45, 'sino', 'COMUNICADO', 'Elite Injectors Congress', '01 e 02 de novembro'),
     LOGO_(2.45, 3.6),
@@ -37,6 +39,8 @@ if __name__ == '__main__':
     gerar(VIDEOS, tr, saida)
     for nome in VIDEOS:     # cartela final fica 2 s depois da última palavra (como na virada de lote)
         p = f'{saida}/{nome}.json'; c = json.load(open(p))
+        v = VIDEOS[nome]; f = mapa(v.get('inicio', 0), v.get('cortes', []))
+        c['inserts'] = [dict(s=f(x['s']), e=f(x['e']), de=x['de'], src=VISITA, crop_h=1440) for x in v.get('inserts', [])]
         c['dur'] = round(c['dur'] + 2.0, 2); c.pop('tema', None); c.pop('logo', None); c.pop('cursos', None)
         # "se você quiser saber mais" é o verbo, não o botão: o palavras() trocava por "SAIBA MAIS"
         for g in c['legendas']:

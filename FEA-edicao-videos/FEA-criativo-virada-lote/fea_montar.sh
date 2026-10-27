@@ -27,10 +27,25 @@ for f in glob.glob('$QUADROS/f_*.png'):
     im=Image.open(f)
     if im.mode!='RGBA': im.convert('RGBA').save(f,compress_level=1)"
 TMP=$(mktemp -d)
-ffmpeg -v error -y -i "$BRUTO" -framerate 30 -i "$QUADROS/f_%05d.png" -i "$SFX" -i "$TRILHA" -filter_complex "$CORTE\
+# imagens de apoio ("inserts": [{s, e, src, de}], tempos do vídeo editado): vídeo de outro arquivo em tela cheia,
+# sem som, por baixo das animações e da legenda. crop_h corta a legenda gravada no vídeo de apoio (visita técnica).
+python3 - "$CFG" "$TMP" <<'PY'
+import json, sys
+c = json.load(open(sys.argv[1])); ins = c.get('inserts', [])
+args, filt = [], ''
+for k, x in enumerate(ins):
+    args += ['-ss', str(x['de']), '-t', str(round(x['e'] - x['s'] + .1, 3)), '-i', x['src']]
+    ch = x.get('crop_h', 1920)
+    filt += (f"[{4 + k}:v]fps=30,crop=1080:{ch}:0:0,scale=-2:1920,crop=1080:1920,setsar=1,"
+             f"setpts=PTS-STARTPTS+{x['s']}/TB[ins{k}];[vi{k}][ins{k}]overlay=0:0:eof_action=pass:enable='between(t,{x['s']},{x['e']})'[vi{k + 1}];")
+open(sys.argv[2] + '/args', 'w').write('\n'.join(args))
+open(sys.argv[2] + '/filt', 'w').write(filt + f"[vi{len(ins)}]null[v1]")
+PY
+mapfile -t INS < "$TMP/args"; INSF=$(cat "$TMP/filt")
+ffmpeg -v error -y -i "$BRUTO" -framerate 30 -i "$QUADROS/f_%05d.png" -i "$SFX" -i "$TRILHA" "${INS[@]}" -filter_complex "$CORTE\
 [src]fps=30,scale=1080:1920,setsar=1,tpad=stop_mode=clone:stop_duration=5,trim=0:$DUR,setpts=PTS-STARTPTS,split[b][z];\
 [z]scale=1210:2152,crop=1080:1920:'65+if($TREMOR,18*sin(t*97),0)':'88+if($TREMOR,14*cos(t*83),0)'[zz];\
-[b][zz]overlay=0:0:enable='$ZOOM'[v1];\
+[b][zz]overlay=0:0:enable='$ZOOM'[vi0];$INSF;\
 [v1][1:v]overlay=0:0:format=auto,format=yuv420p[v];\
 [srca]aresample=48000,apad,atrim=0:$DUR,afade=t=out:st=$FIMFALA:d=0.3,asplit[voz][chave];\
 [2:a]volume=0.5[fx];\
