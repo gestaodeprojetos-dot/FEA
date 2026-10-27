@@ -80,7 +80,7 @@ ESTILOS = {
     # B-roll do gancho cresce até quase a tela cheia, headline centralizada na emenda (caixas brancas,
     # letra preta grossa), depois o Dr. em tela cheia. O B-roll é renderizado com 1700 px e recortado
     # no centro conforme a altura da cena ("altura" ou "cresce": [h0, h1] no projeto).
-    "referencia": {"PAINEL_H": 1700, "ALTURA": 960, "CROP_CENTRO": True, "PUSH": 0.10, "HL_CENTRO": True,
+    "referencia": {"PAINEL_H": 1700, "ALTURA": 960, "CROP_CENTRO": True, "PUSH": 0.06, "HL_CENTRO": True,
                    "PROD_MAX": (860, 560), "PROD_Y": 850, "PROD_NOME_Y": 1170,
                    "PRODS_ALT": 520, "PRODS_Y": 860, "PRODS_NUM_Y": 560, "ROTULO_Y": 1180, "DESCE_OFF": 300},
 }
