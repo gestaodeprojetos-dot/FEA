@@ -15,7 +15,8 @@ Datas, status, sprints, responsáveis e criação de tarefas são só comigo. Qu
 
 - Workspace `9013080622`.
 - Pastas monitoradas: as pastas de lançamento ativas no espaço Marketing Brasil (`90130517360`) e no espaço Marketing Latam (`901314001225`). Hoje são **Black Friday Vitalícia 10/26** (`901318759044`) e **Black Friday Total - Latam** (`901318793839`).
-- Dentro de cada pasta, a **sprint atual** é a lista cujo intervalo no nome contém a data de hoje. A Brasil usa `dd/mm`, a Latam usa `m/d`.
+- Demandas contínuas, fora de lançamento: pasta **Redes Sociais** (`1400270000003670`) no espaço Marketing Brasil, uma lista por canal (hoje só **YouTube**, `1400270000004568`). Não tem sprint: a ronda olha a lista inteira, pelo prazo de cada tarefa (Keila, 27/10/2026).
+- Dentro de cada pasta de lançamento, a **sprint atual** é a lista cujo intervalo no nome contém a data de hoje. A Brasil usa `dd/mm`, a Latam usa `m/d`.
 - Incluir pasta nova só com o ok da Keila (regra do CLAUDE.md).
 
 ## Em cada rodada (dias úteis: 7h52, 11h52 e 16h52, horário de Brasília)
