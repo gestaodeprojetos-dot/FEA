@@ -48,7 +48,7 @@ No script: `"estilo": "exagerado"` no projeto (painel de 1240 px, Dr. desce 720 
 
 ## Ritmo: corte rápido (Keila, 26/10/2026)
 
-"O corte está ficando muito silêncio... precisa de um corte mais rápido." Neste modelo, **toda pausa de respiração entre frases sai** (corte seco, jump cut): silêncio de 0,2 s ou mais com o áudio abaixo de 45 dB vira corte, deixando 0,06 s depois da última palavra e 0,04 s antes da próxima. Os pontos vão no `manter` com `"exato"` para o encaixe automático não devolver o respiro. Exemplo no projeto `FEA-projeto-noticia-3-passos-skincare.json` (52,3 s viraram 48,1 s em 11 trechos). Diferente dos Reels de procedimento, em que silêncio com técnica acontecendo fica.
+"O corte está ficando muito silêncio... precisa de um corte mais rápido." Neste modelo, **toda pausa de respiração entre frases sai** (corte seco, jump cut): silêncio de 0,2 s ou mais com o áudio abaixo de 45 dB vira corte, deixando 0,06 s depois da última palavra e 0,04 s antes da próxima. Os pontos vão no `manter` com `"exato"` para o encaixe automático não devolver o respiro: `python3 fea_cortes_rapidos.py bruto.mp4 trechos.json > manter.json` (trechos = conteúdo escolhido, sem repetição). A legenda leva para o trecho vizinho a palavra com tempo adiantado que cairia no respiro cortado (antes sumiam "Por", "Depois", "antes"). Exemplo no projeto `FEA-projeto-noticia-3-passos-skincare.json` (52,3 s viraram 48,1 s em 11 trechos). Diferente dos Reels de procedimento, em que silêncio com técnica acontecendo fica.
 
 ## Fluxo
 
@@ -68,6 +68,7 @@ Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane R
 
 - O Dr. fala categorias (gel de limpeza, creme hidratante, protetor solar), não marcas: o painel mostra B-roll de pessoa fazendo o passo (limpeza com espuma, creme na bochecha, protetor no rosto) e uma etiqueta roxa com o passo (`"rotulo": "1. Limpeza"` na primeira cena de B-roll de cada passo).
 - **Foto de produto só quando o Dr. indica o produto claramente no vídeo** (nome falado). Se ele fala só a categoria (gel de limpeza, creme, protetor), **sem foto de produto**: B-roll + etiqueta do passo (Keila, 26/10/2026, revisão do "3 passos": "se o doutor não indica o produto claramente no vídeo, pode tirar as fotos"). Não puxar marca indicada em outro vídeo.
+- Onde achar a foto do produto citado (fundo branco ou PNG sem fundo): site oficial do Brasil primeiro; se não tiver, site oficial de outro país da América Latina (Toleriane Dermo-Cleanser: `laroche-posay.com.ar`, arquivo `...-200ml-3433422406599-front.png`, já sem fundo); por último foto de farmácia (Bioderma Sensibio Gel Moussant: Drogasil `product-data.raiadrogasil.io/images/12624490.webp`). Etiqueta numerada quando ele lista ("1. CeraVe Gel de Limpeza") e cena `produtos` com os 3 numerados quando ele fala "esses 3" ou "anota essas três opções".
 - Fotos oficiais CeraVe, se ele citar: `https://www.cerave.com.br/-/media/project/loreal/brand-sites/cerave/americas/br/scx/pdp/new-packshots/<produto>/<arquivo>-lg.jpg` (700x875). Recorte: `fea_recortar_produto.py` normal para frasco colorido; pote branco `--limiar 246 --convexo`; bisnaga branca com sombra ao lado precisa de máscara manual limitando a borda.
 - Proteção solar: B-roll de praia de biquíni com zoom no rosto (`zoom` 2,0), sem mostrar o corpo.
 
