@@ -36,15 +36,17 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 - **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
 - **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
 
-## Estilo "exagerado" (feedback do Dr. João, 27/10/2026)
+## Estilo das referências do Dr. (27/10/2026): `"estilo": "referencia"`
 
-O Dr. mandou 2 reels de referência ("Queria umas coisas mais exageradas assim"): "03 cremes fantásticos para sua pele de idosa" e "3 cremes de farmácia barato que toda mulher 40+ precisa usar". O que eles têm:
-- B-roll em **close extremo** (creme em pontinhos ou espirais no rosto, pele brilhando de perto, aparelho na bochecha), nunca plano aberto;
-- o B-roll ocupa **2/3 a 3/4 da tela**, com o Dr. menor embaixo (só rosto e ombros);
-- zoom contínuo na imagem, nada parado;
-- headline grande em caixas brancas com texto preto.
-
-No script: `"estilo": "exagerado"` no projeto (painel de 1240 px, Dr. desce 720 px, zoom contínuo de 16% em cada B-roll, headline Sora 80). Usar em todos os próximos vídeos do modelo notícia. Escolher B-roll com zoom maior (`zoom` 1,4 a 2,0) centrado na pele ou no produto espalhado. Os reels de referência usam headline toda em maiúscula e apelo popular ("pele de idosa", "barato"): **não copiar**, porque a CLAUDE.md proíbe caixa alta integral e tom popular; o "exagero" fica no visual.
+O Dr. mandou 2 reels ("Queria umas coisas mais exageradas assim"): "03 cremes fantásticos para sua pele de idosa" e "3 cremes de farmácia barato que toda mulher 40+ precisa usar". A primeira tentativa (painel fixo de 2/3 com close de ruga e pele de idoso) foi **reprovada** pela Keila: "nada a ver com as referências; ele fala depois dos 40, não idoso". O que as referências têm de fato:
+- **Gente de 30 a 45 anos com pele bonita e brilhando**, nunca idoso nem close de ruga, poro ou pele doente. Para "depois dos 40", mulher na faixa dos 40 com boa pele.
+- **Produto sendo aplicado de forma exagerada**: espuma em espiral com esponja, creme em listras ou pontinhos no rosto, bisnaga encostada na pele, rolinho no rosto. O B-roll mostra a ação do produto de que o Dr. fala (limpeza = espuma, lavar o rosto, algodão; creme = creme espalhado).
+- **Tela dividida na metade** no gancho, e o B-roll cresce para baixo (o Dr. vai descendo): `"cresce": [960, 1200]`. Com clipe horizontal, não passar de ~1200 px, senão a imagem fecha demais no rosto. Clipe vertical pode ir até 1650.
+- **Headline centralizada na emenda** entre a imagem e o Dr., caixas brancas com letra preta grossa (Montserrat ExtraBold), sem a barra dourada, durante todo o gancho (`headline_fim` ~6 s).
+- Depois do gancho, o **Dr. em tela cheia** (`cheio`), com inserção dividida só nos produtos e nos momentos de ação.
+- Não copiar a caixa alta integral nem o apelo popular ("pele de idosa", "barato"): a CLAUDE.md proíbe. O "exagero" fica no visual.
+- Clipes bons do banco: Mixkit 50408 (espuma com esponja, `c5`), 50426 (creme na bochecha, `c13`), Pexels 7306686 e 7306685 (mulher de 40 aplicando creme, mas com bastão escuro: não usar em limpeza), Mixkit 51181/limpeza com algodão (`c39`, vertical). Não usar: Pexels 5534415, 7298096, 11120960, 7582851 (idosos).
+- O B-roll é renderizado na altura máxima da cena e recortado no centro; `PUSH` 0,06.
 
 ## Ritmo: corte rápido (Keila, 26/10/2026)
 
