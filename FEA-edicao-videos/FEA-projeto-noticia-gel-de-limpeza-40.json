@@ -141,10 +141,10 @@
         "ini": 0.0,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c5.mp4",
-        "src": 6.0,
-        "cx": 0.5,
-        "cy": 0.45,
-        "zoom": 1.25,
+        "src": 8.5,
+        "cx": 0.42,
+        "cy": 0.5,
+        "zoom": 1.0,
         "cresce": [
           960,
           1650
@@ -186,11 +186,11 @@
       {
         "ini": 24.5,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c160.mp4",
-        "src": 3.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c39.mp4",
+        "src": 1.0,
         "cx": 0.5,
-        "cy": 0.4,
-        "zoom": 1.1
+        "cy": 0.35,
+        "zoom": 1.0
       },
       {
         "ini": 30.6,
@@ -220,20 +220,20 @@
       {
         "ini": 47.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c163.mp4",
-        "src": 7.0,
-        "cx": 0.5,
-        "cy": 0.35,
-        "zoom": 1.2
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c13.mp4",
+        "src": 8.0,
+        "cx": 0.55,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 50.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c160.mp4",
-        "src": 10.0,
-        "cx": 0.5,
-        "cy": 0.4,
-        "zoom": 1.1
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock/c5.mp4",
+        "src": 11.0,
+        "cx": 0.45,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 72.4,
