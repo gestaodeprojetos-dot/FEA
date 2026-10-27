@@ -64,6 +64,14 @@ Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/20
 3. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
 4. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
 
+## Thumbs semanais do YouTube (Keila, 27/10/2026)
+
+O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo faz as 3 thumbs da semana num dia só.
+
+- Na rodada das 7h52 de **segunda**, criar na lista YouTube a tarefa `Thumbs YouTube da semana dd/mm a dd/mm (seg, qua e sex)` da semana **seguinte**, para o Leo (`44232914`), com início sexta 8h e prazo **sexta da semana atual às 18h**. Copiar a descrição da última tarefa semanal (checklist dos 3 dias com título e vídeo em branco, formato 1280 x 720 px).
+- Na quinta, se os 3 títulos e vídeos ainda não estiverem nos comentários, listar no relatório para a Keila (não cobrar o Leo por isso).
+- Semana com feriado ou postagem diferente: seguir o que a Keila disser e não criar no automático.
+
 ## Textos padrão (regra FEA: sempre "para", nunca "pra", sem travessão)
 
 - Prefixo de todo comentário: `🤖 Claude:` (o conector comenta com a conta da Keila, e o prefixo deixa claro quem escreveu).
