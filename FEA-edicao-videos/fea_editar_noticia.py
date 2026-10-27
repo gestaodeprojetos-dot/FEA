@@ -296,33 +296,34 @@ def numero(n, fonte):
 # ---------- B-roll ----------
 
 class Broll:
-    def __init__(self, ff, cena, dur, fonte=None):
+    def __init__(self, ff, cena, dur, fonte=None, alt=None):
+        self.ph = alt or PAINEL_H     # renderiza na altura máxima da cena: em 960 px a imagem não fica cortada
         # "rotulo": etiqueta roxa no pé do painel (ex.: "1. Limpeza"), entra com o mesmo pop do produto
         self.rotulo = etiqueta(cena["rotulo"], fonte, 46) if cena.get("rotulo") else None
         self.push, self.dur = cena.get("push", PUSH), max(dur - TRANS, 0.5)
         z = cena.get("zoom", 1.0)
         cx, cy = cena.get("cx", 0.5), cena.get("cy", 0.5)
-        asp = W / PAINEL_H
+        asp = W / self.ph
         vf = (f"fps={FPS},crop=w='min(iw,ih*{asp})/{z}':h='min(iw,ih*{asp})/{z}/{asp}':"
               f"x='max(0,min(iw-ow,{cx}*iw-ow/2))':y='max(0,min(ih-oh,{cy}*ih-oh/2))',"
-              f"scale={W}:{PAINEL_H}:flags=lanczos,setsar=1")
+              f"scale={W}:{self.ph}:flags=lanczos,setsar=1")
         self.p = subprocess.Popen([ff, "-v", "error", "-stream_loop", "-1", "-ss", str(cena.get("src", 0)),
                                    "-i", cena["arquivo"], "-t", f"{dur + 1:.2f}", "-an", "-vf", vf,
                                    "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE,
                                   stderr=subprocess.DEVNULL)   # fechado no meio de propósito
-        self.ultimo = np.zeros((PAINEL_H, W, 3), np.float32)
+        self.ultimo = np.zeros((self.ph, W, 3), np.float32)
 
     def quadro(self, tl):
-        b = self.p.stdout.read(W * PAINEL_H * 3)
-        if len(b) == W * PAINEL_H * 3:
-            self.ultimo = np.frombuffer(b, np.uint8).reshape(PAINEL_H, W, 3).astype(np.float32)
+        b = self.p.stdout.read(W * self.ph * 3)
+        if len(b) == W * self.ph * 3:
+            self.ultimo = np.frombuffer(b, np.uint8).reshape(self.ph, W, 3).astype(np.float32)
         base_q = self.ultimo
         if self.push:
             z = 1 + self.push * ease_io(tl / self.dur)
-            cw, ch = W / z, PAINEL_H / z
-            x0, y0 = (W - cw) / 2, (PAINEL_H - ch) / 2
+            cw, ch = W / z, self.ph / z
+            x0, y0 = (W - cw) / 2, (self.ph - ch) / 2
             im = Image.fromarray(self.ultimo.astype(np.uint8)).resize(
-                (W, PAINEL_H), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch))
+                (W, self.ph), Image.BILINEAR, box=(x0, y0, x0 + cw, y0 + ch))
             base_q = np.asarray(im).astype(np.float32)
         if self.rotulo is None:
             return base_q
@@ -334,7 +335,7 @@ class Broll:
         if p < 1:
             im.putalpha(im.split()[3].point(lambda v: int(v * p)))
         tela = Image.fromarray(base_q.astype(np.uint8)).convert("RGBA")
-        ry = ROTULO_Y if ROTULO_Y is not None else PAINEL_H - 260
+        ry = (ROTULO_Y - (PAINEL_H - self.ph) // 2) if ROTULO_Y is not None else self.ph - 260
         tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(ry - im.height / 2)))
         return np.asarray(tela.convert("RGB")).astype(np.float32)
 
@@ -490,11 +491,12 @@ def main():
             return None
         k = id(c)
         if k not in fontes:
-            fontes[k] = (Broll(ff, c, c["t1"] - c["t0"] + TRANS, fonte) if c["tipo"] == "broll"
+            alt_max = max(c["cresce"]) if c.get("cresce") else (c.get("altura") or ALTURA or PAINEL_H)
+            fontes[k] = (Broll(ff, c, c["t1"] - c["t0"] + TRANS, fonte, alt_max) if c["tipo"] == "broll"
                          else PainelProduto(c, fundo, fonte))
         q = fontes[k].quadro(t - c["t0"])
         h = altura(c, t)
-        y0 = (PAINEL_H - h) // 2 if CROP_CENTRO else 0
+        y0 = (q.shape[0] - h) // 2 if CROP_CENTRO else 0
         return q[y0:y0 + h]
 
     def altura(c, t):
