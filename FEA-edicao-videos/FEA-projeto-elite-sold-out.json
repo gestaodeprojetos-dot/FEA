@@ -1,0 +1,96 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/fonts",
+ "estilo": "elite",
+ "videos": [
+  {
+   "titulo": "Ingressos esgotados",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     109.39
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bpara gente\\b",
+     "para a gente"
+    ],
+    [
+     "\\bpara edição\\b",
+     "para a edição"
+    ],
+    [
+     "certeza, que",
+     "certeza que"
+    ],
+    [
+     "isso, para você",
+     "isso para você"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/bruto/IMG_8181.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/tr/IMG_8181.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/out/Ads - Sold out - EIC.mp4"
+  },
+  {
+   "titulo": "Ingressos esgotados",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     8.68,
+     "exato"
+    ],
+    [
+     24.98,
+     39.7,
+     "exato"
+    ],
+    [
+     88.7,
+     109.39,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\btô\\b",
+     "estou"
+    ],
+    [
+     "\\btá\\b",
+     "está"
+    ],
+    [
+     "\\bpara gente\\b",
+     "para a gente"
+    ],
+    [
+     "\\bpara edição\\b",
+     "para a edição"
+    ],
+    [
+     "certeza, que",
+     "certeza que"
+    ],
+    [
+     "isso, para você",
+     "isso para você"
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/bruto/IMG_8181.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/tr/IMG_8181.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1a096594-a9fd-570f-8a02-14d5ab643a70/scratchpad/elite/out/Ads - Sold out (curto) - EIC.mp4"
+  }
+ ]
+}

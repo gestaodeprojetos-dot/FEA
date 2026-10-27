@@ -30,6 +30,15 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
+## Anúncios do Elite Injectors Congress (`"estilo": "elite"`, 26/10/2026)
+
+Pedido "estilo dos anúncios do Elite": é a série "Ads NN - EIC" (Ads 01 a 06 e Ads 29 no Drive, medida no Ads 29). Pôr `"estilo": "elite"` no projeto.json:
+- Headline Montserrat ExtraBold 108, branca, sombra marcada, centro do quadro, linhas curtas (até ~16 caracteres), nos 3 primeiros segundos.
+- Legenda Montserrat SemiBold 58, branca, só sombra suave (sem contorno grosso), a ~78% da altura.
+- Final: cartela `CTA ELITE.mov` do Drive (`1_vJGHp9DWsoAMY0SH7_RuG49WTxm1P9T`, 5 s, logo e "Toque em Saiba Mais"). Ela é HEVC 44,1 kHz: converter para H.264 1080x1920 30 fps e AAC 48 kHz estéreo antes do `fea_render_com_cta.py`, senão a concatenação por stream copy quebra.
+- Nome no padrão `Ads - <tema> - EIC.mp4`; correções de fala do lote: "tô" vira "estou", "tá" vira "está".
+- Vídeo longo para anúncio (os de referência têm 18 a 32 s): entregar a versão inteira e uma versão curta (~45 s) com o essencial.
+
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).
@@ -113,6 +122,15 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 - **Upload, pasta e renomear**: `python3 FEA-edicao-videos/fea_drive.py upload PASTA_ID arquivos... [--substituir]`, `pasta PAI_ID "nome"`, `renomear ID "OK. nome"`, `testar`. Chaves só nas variáveis do ambiente (`FEA_GDRIVE_CLIENT_ID`, `FEA_GDRIVE_CLIENT_SECRET`, `FEA_GDRIVE_REFRESH_TOKEN`), nunca no código nem no git. Se `testar` falhar ou não mostrar Drive inteiro e Sheets, rodar `bash FEA-edicao-videos/fea_setup_google_oauth.sh` (link para a Keila autorizar uma vez).
 - Permissões do Drive e dos scripts ficam em `.claude/settings.json` (no git), então valem em toda conversa nova sem pedir confirmação.
 - A máquina é temporária: vídeos só na nuvem se perdem se a sessão ficar parada. Scripts e projeto.json ficam no git.
+
+## Fechamento obrigatório de toda edição (Keila, 26/10/2026: "peguei vários vídeos que você editou sem o OK")
+
+Vale para Reels, anúncios, criativos animados e qualquer vídeo editado. A entrega só termina depois dos 2 passos:
+
+1. **"OK." na pasta de brutos**: `python3 FEA-edicao-videos/fea_drive.py renomear ID_DA_PASTA_DE_BRUTOS "OK. <nome atual>"`. É o sinal do Drive para "já editado". Se forem várias pastas de brutos, renomear todas.
+2. **Planilha de controle** (aba EDIÇÕES): linha com o nome da pasta de brutos já com o "OK." e os dois links clicáveis (brutos e editados).
+
+Conferir os dois antes de escrever o resumo para a Keila e dizer no resumo que foram feitos.
 
 ## Autonomia total no Drive (Keila, 02/10/2026)
 
