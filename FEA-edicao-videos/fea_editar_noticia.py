@@ -76,7 +76,19 @@ ESTILOS = {
                   "HL_FONTE": 80, "HL_LINHA_H": 106, "HL_LINHA_GAP": 8, "HL_Y": 860,
                   "PROD_MAX": (860, 700), "PROD_Y": 540, "PROD_NOME_Y": 970,
                   "PRODS_ALT": 640, "PRODS_Y": 600, "PRODS_NUM_Y": 210},
+    # Keila, 27/10/2026, refeito depois de "nada a ver com as referências": tela dividida na metade,
+    # B-roll do gancho cresce até quase a tela cheia, headline centralizada na emenda (caixas brancas,
+    # letra preta grossa), depois o Dr. em tela cheia. O B-roll é renderizado com 1700 px e recortado
+    # no centro conforme a altura da cena ("altura" ou "cresce": [h0, h1] no projeto).
+    "referencia": {"PAINEL_H": 1700, "ALTURA": 960, "CROP_CENTRO": True, "PUSH": 0.10, "HL_CENTRO": True,
+                   "PROD_MAX": (860, 560), "PROD_Y": 850, "PROD_NOME_Y": 1170,
+                   "PRODS_ALT": 520, "PRODS_Y": 860, "PRODS_NUM_Y": 560, "ROTULO_Y": 1180, "DESCE_OFF": 300},
 }
+ALTURA = None            # altura visível do painel (None = PAINEL_H inteiro)
+CROP_CENTRO = False      # recorta o painel no centro (True) ou no topo
+DESCE_OFF = 520          # o Dr. desce (altura do painel - 520 px): cabeça logo abaixo do esfumaçado
+HL_CENTRO = False        # headline centralizada na emenda (estilo referencia) em vez da barra dourada
+ROTULO_Y = None
 PROD_MAX, PROD_Y, PROD_NOME_Y = (700, 470), 430, 760          # produto único no painel
 PRODS_ALT, PRODS_Y, PRODS_NUM_Y = 400, 470, 190                # vários lado a lado
 PUSH = 0.0               # zoom contínuo do B-roll (fração a mais no fim da cena); 0 = parado
@@ -131,6 +143,40 @@ def render_headline(linhas, fonte):
                                     fill=HL_DOURADO + (255,))
     larg_total = max(np.nonzero(np.asarray(camadas)[:, :, 3].max(0))[0]) - HL_CAIXA_X + 1
     return np.asarray(camadas).astype(np.float32), np.asarray(barra).astype(np.float32), larg_total
+
+
+def render_headline_centro(linhas, fonte, tam=66):
+    """Caixas brancas centralizadas, letra preta grossa (reels de referência do Dr., 27/10/2026)."""
+    ft = ImageFont.truetype(fonte, tam)
+    d0 = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    caixas = []
+    for ln in linhas:
+        l, t, r, b = d0.textbbox((0, 0), ln, font=ft)
+        caixas.append((ln, r - l + 40, l, t, b))
+    alt = int(tam * 1.32)
+    im = Image.new("RGBA", (W, len(linhas) * (alt + 6)), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    for i, (ln, larg, l, t, b) in enumerate(caixas):
+        x0, y0 = (W - larg) // 2, i * (alt + 6)
+        d.rectangle([x0, y0, x0 + larg, y0 + alt], fill=(255, 255, 255, 255))
+        d.text((x0 + 20 - l, y0 + (alt - (b - t)) / 2 - t), ln, font=ft, fill=(0, 0, 0, 255))
+    return im
+
+
+def aplicar_headline_centro(quadro, im, t, fim, emenda):
+    p_in = ease((t - 0.10) / 0.30)
+    p_out = 1 - ease((t - fim) / 0.25)
+    a = min(p_in, p_out)
+    if a <= 0:
+        return quadro
+    esc = 0.88 + 0.12 * p_in
+    img = im.resize((int(im.width * esc), int(im.height * esc)))
+    if a < 1:
+        img.putalpha(img.split()[3].point(lambda v: int(v * a)))
+    tela = Image.fromarray(quadro).convert("RGBA")
+    y = int(min(H - img.height - 40, emenda - img.height * 0.55))
+    tela.alpha_composite(img, ((W - img.width) // 2, max(0, y)))
+    return np.asarray(tela.convert("RGB"))
 
 
 def aplicar_headline(quadro, hl, t, fim):
@@ -288,7 +334,8 @@ class Broll:
         if p < 1:
             im.putalpha(im.split()[3].point(lambda v: int(v * p)))
         tela = Image.fromarray(base_q.astype(np.uint8)).convert("RGBA")
-        tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(PAINEL_H - 260 - im.height / 2)))
+        ry = ROTULO_Y if ROTULO_Y is not None else PAINEL_H - 260
+        tela.alpha_composite(im, (int(W / 2 - im.width / 2), int(ry - im.height / 2)))
         return np.asarray(tela.convert("RGB")).astype(np.float32)
 
     def fechar(self):
@@ -298,9 +345,11 @@ class Broll:
 
 # ---------- composição ----------
 
-def mascara_esfumado():
+def mascara_esfumado(h=None):
+    banda = ESF_FIM - ESF_INI
+    fim = ESF_FIM if h is None else h
     y = np.arange(H, dtype=np.float32)
-    m = np.clip((ESF_FIM - y) / (ESF_FIM - ESF_INI), 0, 1)
+    m = np.clip((fim - y) / banda, 0, 1)
     m = m * m * (3 - 2 * m)                     # suave nas duas pontas
     return m[:, None, None]
 
@@ -320,7 +369,7 @@ def compor(dr, painel, desce, dx_painel, mascara):
     if painel is not None:
         pl = np.zeros((H, W, 3), np.float32)
         alfa = mascara.copy()
-        pl[:PAINEL_H] = painel
+        pl[:painel.shape[0]] = painel
         if dx_painel:
             dx = int(round(dx_painel))
             pl = np.roll(pl, dx, axis=1)
@@ -365,9 +414,12 @@ def main():
     for c, prox in zip(cenas, cenas[1:] + [None]):
         c["t1"] = prox["t0"] if prox else dur
 
-    hl = render_headline(v["headline"], fonte)
+    if HL_CENTRO:
+        hl = render_headline_centro(v["headline"], os.path.join(cfg["fontsdir"], "Montserrat-ExtraBold.ttf"))
+    else:
+        hl = render_headline(v["headline"], fonte)
     fundo = fundo_produto(v["fundo_produto"]) if v.get("fundo_produto") else None
-    mascara = mascara_esfumado()
+    mascara0 = mascara_esfumado()
 
     # Dr. já cortado, direto do FFmpeg em quadros brutos
     partes, rot, arot = [], [], []
@@ -440,7 +492,16 @@ def main():
         if k not in fontes:
             fontes[k] = (Broll(ff, c, c["t1"] - c["t0"] + TRANS, fonte) if c["tipo"] == "broll"
                          else PainelProduto(c, fundo, fonte))
-        return fontes[k].quadro(t - c["t0"])
+        q = fontes[k].quadro(t - c["t0"])
+        h = altura(c, t)
+        y0 = (PAINEL_H - h) // 2 if CROP_CENTRO else 0
+        return q[y0:y0 + h]
+
+    def altura(c, t):
+        if c.get("cresce"):
+            h0, h1 = c["cresce"]
+            return int(h0 + (h1 - h0) * ease_io((t - c["t0"]) / max(0.5, c["t1"] - c["t0"])))
+        return int(c.get("altura", ALTURA or PAINEL_H))
 
     n = int(round(dur * FPS))
     alvo = {int(round(q * FPS)) for q in quadros} if quadros else None
@@ -451,6 +512,7 @@ def main():
         t = i / FPS
         dr = np.frombuffer(b, np.uint8).reshape(H, W, 3).astype(np.float32)
         k = max(j for j, c in enumerate(cenas) if c["t0"] <= t + 1e-6) if t >= cenas[0]["t0"] else None
+        emenda = H * 0.5
         if k is None:
             quadro = dr
         else:
@@ -459,6 +521,13 @@ def main():
             p = ease_io((t - c["t0"]) / TRANS) if ant is not None else 1.0
             novo = conteudo(c, t)
             velho = conteudo(ant, t) if (ant is not None and p < 1) else None
+            hv = novo.shape[0] if novo is not None else (velho.shape[0] if velho is not None else 0)
+            if velho is not None and novo is not None and velho.shape[0] != hv:
+                velho = velho[:hv] if velho.shape[0] > hv else np.vstack(
+                    [velho, np.repeat(velho[-1:], hv - velho.shape[0], axis=0)])
+            DESCE = max(0, hv - DESCE_OFF)
+            mascara = mascara_esfumado(hv) if hv else mascara0
+            emenda = hv
             if p >= 1 or ant is None:
                 quadro = compor(dr, novo, DESCE if novo is not None else 0, 0, mascara)
             elif novo is not None and velho is not None:
@@ -475,7 +544,11 @@ def main():
                 if all(id(cc) != kk for cc in (c, ant)) and isinstance(fontes[kk], Broll):
                     fontes[kk].fechar()
                     del fontes[kk]
-        quadro = aplicar_headline(np.clip(quadro, 0, 255).astype(np.uint8), hl, t, v["headline_fim"])
+        quadro = np.clip(quadro, 0, 255).astype(np.uint8)
+        if HL_CENTRO:
+            quadro = aplicar_headline_centro(quadro, hl, t, v["headline_fim"], emenda or H * 0.5)
+        else:
+            quadro = aplicar_headline(quadro, hl, t, v["headline_fim"])
         if alvo is not None:
             if i in alvo:
                 Image.fromarray(quadro).save(os.path.join(tmpdir, f"_quadro_{t:05.2f}.png"))
@@ -495,7 +568,7 @@ def main():
 
 def compor_por_cima(fundo, painel, dx, mascara):
     pl = np.zeros((H, W, 3), np.float32)
-    pl[:PAINEL_H] = painel
+    pl[:painel.shape[0]] = painel
     alfa = np.repeat(mascara, W, axis=1).copy()
     d = int(round(dx))
     if d:
