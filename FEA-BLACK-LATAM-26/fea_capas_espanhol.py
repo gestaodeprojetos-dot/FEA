@@ -43,7 +43,7 @@ def escrever(img, texto, f, cor, centro_x=None, x=None, topo=0, largura=None):
     return img
 
 
-def largura_texto(texto, f, track=0):
+def _largura_texto(texto, f, track=0):
     d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
     return sum(d.textlength(c, font=f) for c in texto) + track * (len(texto) - 1)
 
@@ -63,25 +63,41 @@ def ctx(p):
     return apagar(im, [(285, 910, 435, 992)], 95)
 
 
+def colar_logo(im, logo_path, x, y, largura):
+    logo = Image.open(logo_path).convert("RGBA")
+    logo = logo.crop(logo.getbbox())
+    logo = logo.resize((largura, round(logo.height * largura / logo.width)), Image.LANCZOS)
+    base = im.convert("RGBA")
+    base.alpha_composite(logo, (x, y))
+    return base.convert("RGB")
+
+
 def full_face(p):
+    """Logo oficial LATAM ("Inmersión Avanzada en Relleno Full Face") no lugar do logo em português."""
     im = Image.open(f"{p}/site/capa-full-face-5ml.png").convert("RGB")
-    im = apagar(im, [(236, 764, 642, 791), (339, 868, 382, 883)], 85, dilata=2, raio=5)
-    cor = (200, 158, 116)
-    escrever(im, "INMERSIÓN AVANZADA EN", fonte("Montserrat", "Medium", 21), cor, x=240, topo=771, largura=396)
-    escrever(im, "CON", fonte("Montserrat", "SemiBold", 12), (192, 158, 126), x=342, topo=871, largura=37)
-    return im
+    im = apagar(im, [(60, 745, 670, 905)], 85, dilata=4, raio=9)
+    return colar_logo(im, f"{p}/orig/logo-ff-latam.png", 70, 748, 590)
 
 
 def botox(p):
     im = Image.open(f"{p}/site/capa-botox.png").convert("RGB")
     im = apagar(im, [(100, 705, 668, 880)], 70, dilata=5, raio=9)
-    logo = Image.open(f"{p}/orig/logo-feb-latam.png").convert("RGBA")
-    logo = logo.crop(logo.getbbox())
-    w = 498
-    logo = logo.resize((w, round(logo.height * w / logo.width)), Image.LANCZOS)
-    base = im.convert("RGBA")
-    base.alpha_composite(logo, (112, 715))
-    return base.convert("RGB")
+    return colar_logo(im, f"{p}/orig/logo-feb-latam.png", 112, 715, 498)
+
+
+def logos(p):
+    """Logos pequenos da seção de cursos (exibidos em 143x45 e 142x39): versões 3x a partir dos oficiais LATAM."""
+    for nome, origem, (w, h) in [("logo-botox", "logo-feb-latam.png", (143, 45)),
+                                 ("logo-full-face-5ml", "logo-ff-latam.png", (142, 39))]:
+        lg = Image.open(f"{p}/orig/{origem}").convert("RGBA")
+        lg = lg.crop(lg.getbbox())
+        W, H = w * 3, h * 3
+        esc = min(W / lg.width, H / lg.height)
+        lg = lg.resize((round(lg.width * esc), round(lg.height * esc)), Image.LANCZOS)
+        tela = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        tela.alpha_composite(lg, ((W - lg.width) // 2, (H - lg.height) // 2))
+        tela.save(f"{p}/{nome}-ES.png")
+        print("ok", nome)
 
 
 if __name__ == "__main__":
@@ -90,3 +106,4 @@ if __name__ == "__main__":
                      ("capa-full-face-5ml", full_face), ("capa-botox", botox)]:
         fn(p).save(f"{p}/{nome}-ES.png")
         print("ok", nome)
+    logos(p)
