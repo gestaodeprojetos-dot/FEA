@@ -386,7 +386,8 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA",
+                  "Black", "Friday", "Vitalícia", "Combo", "Belasis", "Reology", "Elite", "Pix", "MEC"}
 
 
 def limpar(texto):
@@ -653,13 +654,32 @@ def encaixar_cortes(manter, db, passo, palavras=None):
     return novo
 
 
+def inicio_na_fala(manter, db, passo):
+    """O vídeo começa na primeira sílaba do Dr., não no silêncio nem na respiração antes dela
+    (Keila, 22/10/2026: "quero pegar ele já começando a falar, não parado"). A respiração fica
+    uns 15 dB acima do ruído, a voz mais de 25 dB: o início é a primeira janela de 150 ms com
+    voz forte, menos 50 ms. Só adianta o começo (até 3 s), nunca corta fala."""
+    import numpy as np
+    if not manter:
+        return manter
+    a, b = manter[0][0], manter[0][1]
+    limiar = max(52.0, float(np.percentile(db, 5)) + 25)
+    i0, i1 = int(a / passo), min(len(db) - 2, int(min(b, a + 3.0) / passo))
+    for i in range(i0, i1):
+        if db[i] >= limiar and db[i + 1] >= limiar and db[i + 2] >= limiar:
+            ini = max(a, round(i * passo - 0.05, 3))
+            return [[ini, b] + list(manter[0][2:])] + [list(t) for t in manter[1:]]
+    return manter
+
+
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
-    v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
-                                       [w for seg in trans for w in seg["words"]]))
+    v = dict(v, manter=inicio_na_fala(encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
+                                                      [w for seg in trans for w in seg["words"]]),
+                                      db_voz[0], db_voz[2]))
     if "legendas" in v:          # palavras já revisadas manualmente
         palavras = v["legendas"]
     else:
