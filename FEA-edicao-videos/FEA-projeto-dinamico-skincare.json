@@ -1,0 +1,203 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fonts": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/fonts",
+  "tmp": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/tmp_skin",
+  "entrada": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/skin/skin_bruto.mp4",
+  "transcricao": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/skin/skin.json",
+  "saida": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/out/FEA-teste skincare estilo Volpe.mp4",
+  "rosto": [
+    0.47,
+    0.3
+  ],
+  "manter": [
+    [
+      0.0,
+      9.9
+    ]
+  ],
+  "zoom_cada": 1.6,
+  "pausa_max": 0.35,
+  "gancho": {
+    "linhas": [
+      "Anota essa dupla",
+      "para a sua pele",
+      "da noite para o dia"
+    ],
+    "destaque": 1,
+    "ate": 4.85
+  },
+  "broll": [
+    {
+      "ini": 0.0,
+      "fim": 0.9,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v22083.mp4",
+      "t0": 2.0,
+      "crop": [
+        276,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    },
+    {
+      "ini": 0.9,
+      "fim": 1.9,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v33371.mp4",
+      "t0": 3.0,
+      "crop": [
+        430,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    },
+    {
+      "ini": 1.9,
+      "fim": 2.9,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v33748.mp4",
+      "t0": 6.0,
+      "crop": [
+        276,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    },
+    {
+      "ini": 2.9,
+      "fim": 4.9,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v33222.mp4",
+      "t0": 2.0,
+      "crop": [
+        400,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    },
+    {
+      "ini": 7.0,
+      "fim": 8.4,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v23858.mp4",
+      "t0": 3.0,
+      "crop": [
+        276,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    },
+    {
+      "ini": 8.4,
+      "fim": 9.9,
+      "video": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/stock/v33352.mp4",
+      "t0": 1.0,
+      "crop": [
+        213,
+        37,
+        727,
+        646
+      ],
+      "tratamento": {
+        "cor": 0.9,
+        "contraste": 1.15,
+        "brilho": 0.97
+      }
+    }
+  ],
+  "produtos": [
+    {
+      "ini": 4.95,
+      "fim": 5.65,
+      "png": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/cicaplast.png",
+      "pos": [
+        0.85,
+        0.22
+      ],
+      "larg": 200,
+      "alt": 420
+    },
+    {
+      "ini": 5.65,
+      "fim": 6.95,
+      "png": "/tmp/claude-0/-home-user-FEA/c37d86cb-8b77-5df7-aa5d-59241691ad9d/scratchpad/prod/vitacid_a.png",
+      "pos": [
+        0.82,
+        0.2
+      ],
+      "larg": 330,
+      "alt": 330
+    }
+  ],
+  "frases": [
+    [
+      "cicaplast",
+      "Cicaplast"
+    ],
+    [
+      "vitacid.",
+      "Vitacid."
+    ]
+  ],
+  "correcoes": [
+    [
+      "\\bvitacid\\b",
+      "Vitacid"
+    ],
+    [
+      "\\bcicaplast\\b",
+      "Cicaplast"
+    ],
+    [
+      "\\btua\\b",
+      "sua"
+    ]
+  ],
+  "efeitos": {
+    "impacto": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-impacto-grave-mixkit1143.mp3",
+    "batida": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-batida-coracao-mixkit498.mp3",
+    "whoosh": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-whoosh-rapido-mixkit1490.mp3",
+    "whoosh2": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-whoosh-cinematico-mixkit1492.mp3",
+    "whoosh3": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-swoosh-vento-curto-mixkit1461.mp3",
+    "swoosh": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-swoosh-pequeno-mixkit166.mp3",
+    "obturador": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-obturador-camera-mixkit1133.mp3",
+    "pop": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-pop-seco-mixkit2356.mp3",
+    "pop2": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-pop-click-mixkit2364.mp3",
+    "clique": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-clique-mixkit1117.mp3",
+    "vacuo": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-vacuo-ar-mixkit2608.mp3",
+    "produto": "/home/user/FEA/FEA-edicao-videos/FEA-efeitos-sonoros/FEA-swoosh-pequeno-mixkit166.mp3"
+  },
+  "musica": {
+    "arquivo": "/home/user/FEA/FEA-edicao-videos/FEA-musicas/FEA-deep-urban-mixkit623.mp3",
+    "inicio": 15,
+    "db": -19
+  },
+  "tremida": 14,
+  "zoom_baixo": 1.0,
+  "rosto_baixo": 0.42
+}

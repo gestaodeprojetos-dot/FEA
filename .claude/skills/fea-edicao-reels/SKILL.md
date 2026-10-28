@@ -30,6 +30,42 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Como o CTA tem ~60 s, o conteúdo editado deve caber em ~120 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
+## Modelo dinâmico "estilo Volpe" (em validação, Keila 22/10/2026)
+
+Para vídeos de fala do Dr. (sem procedimento, ex.: série "3 melhores produtos para..."), a Keila pediu o estilo do perfil @clinicavolpe (referência: post `DefaCwRxDI4`). Script: `FEA-edicao-videos/fea_editar_dinamico.py` (docstring explica o projeto.json); exemplo: `FEA-projeto-dinamico-olheiras.json`. **Só replicar nos próximos depois que ela validar o vídeo 1 (olheiras).**
+
+| Gancho | Como fica |
+|---|---|
+| Visual | tela dividida: imagem de impacto em cima, Dr. embaixo, com **divisão esfumaçada** (nunca linha reta, Keila 22/10); troca de imagem a cada ~1 a 3 s com flash branco, soco de zoom e whoosh. Imagens **de pele real**: rugas, flacidez, pálpebra caída, close de pele madura (ela reprovou retrato "escuro/artístico" sem pele à mostra). Imagem de impacto em boa parte do vídeo, não só no gancho |
+| Escrito | 3 linhas em caixas encostadas no meio da tela (Montserrat Bold 58): brancas com texto preto e a do meio **preta com texto branco**. **Sem roxo** ("tá feio esse modelo roxo", 22/10). Fica até o fim da 1ª ideia (~9 s) |
+| Falado | a primeira frase do Dr., sem legenda enquanto o gancho escrito está na tela |
+
+**Efeitos sonoros obrigatórios** (Keila 22/10): impacto grave + batida de coração no gancho, whoosh + obturador em cada troca de imagem (pico do whoosh no corte), swoosh baixo nos socos de zoom, pop nos produtos, clique no ícone. Arquivos em `FEA-edicao-videos/FEA-efeitos-sonoros/` (Mixkit, licença livre), mapeados em `efeitos` no projeto.
+
+**Música de fundo obrigatória e impactante** (Keila 22 e 23/10): batida urbana/eletrônica constante, nunca trilha triste ou cinematográfica lenta ("Silent Descent" foi reprovada). Atual: "Deep Urban" (Mixkit 623, a partir dos 15 s, onde a batida já está cheia). Nivelada com dynaudnorm em -19 dB e abaixando sozinha sob a voz (sidechain). Referência de música que ela gosta: Reel `DeLAO0gRZ5m` (@diegocorreadermatologista).
+
+**Objetivo de cada vídeo** (Keila 23/10): "impossível a pessoa pular no feed". Gancho com montagem rápida (troca a cada ~0,45 s), tremida de câmera, impacto grave e headline com tensão.
+
+**Som dos produtos suave** (Keila 23/10): swoosh baixo (-15 dB), nunca "pop"/clique.
+
+**Imagens: olheira feia e pele enrugada embaixo do olho** (Keila 22 e 23/10). Recorte fechado (`caixa` no broll) abaixo do olho; evitar íris em destaque e "olho bonito". Nunca retrato de rosto inteiro de idoso "sofrido", de lenço na cabeça ou barba desgrenhada: "parece morador de rua".
+
+**Artigo científico do Dr.:** quando ele cita "meu artigo publicado sobre reologia das olheiras", é *An Effective Technique for Improving Orbital Contour* (Pithon-Napoli JVM, Matos GD, Moretti MP, Vicentini MC. J Clin Exp Dermatol Res. 2024;16:683. DOI 10.35841/2155-9554.24.16.683). A primeira página aparece na p. 6 do ebook *Preenchimento Tridimensional de Olheiras* (Drive `1W2gI1BCdKl7BT55sMsUSsRj9Zh0xFj8f`; renderizar com escala 10, é vetorial). No vídeo, a página do artigo entra na cartela (`cartela.capa`), com "artigo científico publicado". **Nunca a capa do ebook** (Keila 23/10: "ele fala artigo científico, não livro").
+
+Grafia (Keila 23/10): "calha lacrimal" (o Whisper ouve "carne lacrimal").
+
+**Vídeos de banco (inserts em movimento):** Mixkit (`mixkit.co/free-stock-video/<tema>/`, download em `assets.mixkit.co/videos/ID/ID-1080.mp4` ou `-720`). Bons para skincare: 22083 (pálpebra enrugada em close), 33371 (mulher madura passando creme no espelho), 33222/33227 (creme na bochecha enrugada), 33748 (rosto maduro), 33352 (mulher madura tocando o rosto), 23858 (lavando o rosto na pia). Recorte para vídeo 1280x720: `crop: [x, 37, 727, 646]`.
+
+Vídeo de selfie fechada (Dr. perto da câmera): `zoom_baixo: 1.0` para não cortar a testa na metade de baixo.
+
+**Recorte de produto:** usar `birefnet-general` no rembg quando a caixa é branca (o `isnet` abriu buraco na caixa do Yvoire). Conferir sempre o PNG sobre fundo vermelho antes de usar.
+
+**Dinâmica:** zoom no Dr. trocando a cada frase (~2,2 s, níveis 1,0 / 1,18 / 1,08 / 1,28) com leve aproximação contínua. Vídeo "parado" foi reprovado.
+
+Resto: legenda de 1 a 3 palavras (ExtraBold 64 branca, sombra suave), no meio da tela; pausas > 0,35 s encurtadas; **produto sempre sem fundo** (rembg `isnet-general-use`, nunca caixa com fundo branco) aparecendo com "pop" ao lado da cabeça, um por vez, e todos juntos quando ele resume; cartela de autoridade com fundo desfocado (nome + credencial que ele fala no vídeo, texto branco); ícone de comentário no "qual a sua opinião?".
+
+Imagens: material de paciente que a Keila manda (já autorizado) + banco Unsplash (licença livre; busca por Playwright em `unsplash.com/s/photos/...` com termos como "wrinkles face", "old woman face", "elderly eyes", "eye wrinkles"; download por `images.unsplash.com/photo-ID`). Foto de produto: busca de imagens do DuckDuckGo por Playwright (Bing devolve resultado errado). Nunca imagem gerada por IA. Marcação vermelha na boca da paciente parece sangue: recortar só a região dos olhos.
+
 ## Regras de corte (critério da editora da equipe)
 
 - **Limite: 3 minutos no total (conteúdo + CTA).** Cortar o máximo necessário para caber. Como o CTA de campanha tem ~60 s, o conteúdo editado deve ter no máximo ~120 s. Se não couber, dividir em Parte 1/Parte 2 (Keila, 02/10/2026).
