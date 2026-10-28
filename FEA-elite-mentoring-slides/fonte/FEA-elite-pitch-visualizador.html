@@ -1,0 +1,200 @@
+<title>Elite Mentoring Pitch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+  /* Layout: palco 16:9 no topo como o telão, barra de comando logo abaixo, roteiro dos slides em lista à direita (ou embaixo no celular).
+     Mundo único, escuro, da marca Elite Mentoring: não segue o tema claro de propósito. */
+  :root {
+    --bg: #011A24; --panel: #062a36; --line: #12404d; --ink: #EAF7F7; --muted: #86a9ad;
+    --accent: #86F9F8; --accent-2: #2DB9B3; --todo: #c9a86a;
+    --display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+    --body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body { font-family: var(--body); font-size: 15px; line-height: 1.5; padding-block: 20px 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .wrap { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+  header { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--accent-2); }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; margin: 4px 0 0; text-wrap: balance; }
+  .keys { color: var(--muted); font-size: 13px; }
+  kbd { font-family: var(--body); font-size: 12px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; color: var(--ink); }
+
+  .stage-col { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .stage { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.45); cursor: pointer; }
+  .stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #011A24; }
+  .stage video.off { visibility: hidden; }
+  .todo-card { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 24px; background: radial-gradient(60% 60% at 50% 45%, #0b3a47, var(--bg)); }
+  .todo-card .t { font-family: var(--display); font-size: clamp(24px, 4vw, 48px); }
+  .todo-card .w { color: var(--muted); max-width: 46ch; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .tag.todo { color: var(--bg); background: var(--todo); }
+
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+  .now { flex: 1 1 260px; min-width: 0; }
+  .now .n { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-2); }
+  .now .d { font-family: var(--display); font-size: 24px; line-height: 1.15; }
+  .now .c { color: var(--muted); font-size: 14px; }
+  .btns { display: flex; gap: 8px; }
+  button { font: 600 14px var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+  button:hover { border-color: var(--accent-2); }
+  button.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  button:focus-visible, .list button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .progress { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+  .progress i { display: block; height: 100%; background: var(--accent-2); width: 0; transition: width .25s; }
+
+  aside { min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; max-height: calc(100vh - 140px); overflow: auto; position: sticky; top: max(16px, env(safe-area-inset-top, 0px)); }
+  aside h2 { font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin: 0; padding: 14px 16px 6px; }
+  .list { list-style: none; margin: 0; padding: 0 0 8px; }
+  .list button { width: 100%; text-align: left; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: baseline; background: none; border: 0; border-radius: 0; padding: 9px 16px; font-weight: 500; color: var(--ink); }
+  .list button:hover { background: rgba(134,249,248,.06); }
+  .list .num { font-variant-numeric: tabular-nums; color: var(--accent-2); font-weight: 600; }
+  .list .meta { color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .list li.on button { background: rgba(134,249,248,.1); box-shadow: inset 3px 0 0 var(--accent); }
+  .list li.todo .num, .list li.todo .meta { color: var(--todo); }
+  .note { color: var(--muted); font-size: 13px; max-width: 70ch; }
+
+  @media (max-width: 900px) {
+    .wrap { grid-template-columns: minmax(0, 1fr); }
+    aside { position: static; max-height: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .progress i { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Elite Mentoring · Elite Injectors Congress</div>
+      <h1>Slides animados do pitch</h1>
+    </div>
+    <div class="keys">Avance com <kbd>→</kbd> <kbd>espaço</kbd> ou o passador · volte com <kbd>←</kbd> · clique no vídeo para avançar</div>
+  </header>
+
+  <div class="stage-col">
+    <div class="stage" id="stage" aria-label="Palco: clique para avançar">
+      <video id="va" muted playsinline preload="auto"></video>
+      <video id="vb" class="off" muted playsinline preload="auto"></video>
+      <div class="todo-card" id="todo" hidden>
+        <span class="tag todo">A fazer</span>
+        <div class="t" id="todoT"></div>
+        <div class="w" id="todoW"></div>
+      </div>
+    </div>
+    <div class="progress"><i id="prog"></i></div>
+    <div class="bar">
+      <div class="now"><div class="n" id="nowN"></div><div class="d" id="nowD"></div><div class="c" id="nowC"></div></div>
+      <div class="btns">
+        <button id="prev" type="button">← Voltar</button>
+        <button id="replay" type="button">Repetir</button>
+        <button id="next" type="button" class="primary">Avançar →</button>
+      </div>
+    </div>
+    <p class="note">Cada passo é um vídeo, como no PowerPoint: ele toca ao entrar e para no último quadro até o próximo clique. Nos slides 15, 27 e 67 o loop começa sozinho depois da entrada. Os slides em dourado ainda dependem de material.</p>
+  </div>
+
+  <aside>
+    <h2>Roteiro, na ordem da copy</h2>
+    <ul class="list" id="list"></ul>
+  </aside>
+</div>
+
+<script>
+const SLIDES = [
+  ['02', 'Raio-X da Clínica Elite', ['Scanner revela o título']],
+  ['03', 'Os 4 pilares', ['Pilares sobem um a um']],
+  ['09', 'Some as 4 notas', ['Pilares com o campo da nota']],
+  ['10', 'Qual é o momento da sua clínica?', ['Título e as 4 faixas apagadas', '0 a 15 · Clínica no improviso', '16 a 25 · Fatura, mas não sobra', '26 a 33 · Pronta para escalar', '34 a 40 · Clínica Elite']],
+  ['12', 'Como virar uma Clínica Elite', ['Passo 1 · Diagnóstico', 'Passo 2 · Plano', 'Passo 3 · Acompanhamento']],
+  ['13', 'Cada momento pede um próximo passo', ['Três degraus']],
+  ['14', '1h por semana', ['1h e a frase', 'Só 1 hora? Sim. Feita do jeito certo.']],
+  ['15', 'Vamos voltar no tempo', ['Portal abre e fica girando'], 'loop'],
+  ['19', 'Rostos = vidas = clínica que cresce', ['Equação']],
+  ['23', 'Linha do tempo do Dr. João', null, 'Falta: marcos, idades e a queda.'],
+  ['24', 'Data com raio verde', null, 'Falta: mês e ano.'],
+  ['25', 'Data com raio vermelho', null, 'Falta: mês e ano.'],
+  ['27', 'Vamos voltar ao presente', ['Portal do outro lado'], 'loop'],
+  ['28', 'Responda comigo: os 6 sins', ['Título e os cartões apagados', 'Pergunta 1 · SIM', 'Pergunta 2 · SIM', 'Pergunta 3 · SIM', 'Pergunta 4 · SIM', 'Pergunta 5 · SIM', 'Pergunta 6 · SIM e todos acendem']],
+  ['37', 'Mentores: o guarda-chuva', null, 'Falta: fotos do Dr. João, do Luca e dos 4 mentores.'],
+  ['46', 'Quanto vale?', ['Recibo vazio', 'Mentoria de 6 meses · R$ 35.000', 'Cursos online por 12 meses · R$ 20.000', '8 calls individuais · R$ 8.000', 'Grupo e encontro presencial · R$ 5.000', 'Diagnóstico nos 4 pilares · R$ 2.000', 'Total · R$ 70.000']],
+  ['47', 'Cursos em cards', null, 'Falta: lista de cursos e capas. Reaproveita o carrossel da Black Friday.'],
+  ['49', 'Tem mais', ['Vinheta (serve para todos os “Tem mais”)']],
+  ['54', 'Desafio Clínica Elite', ['R$ 300 mil no telão']],
+  ['58', 'Segunda cadeira de graça', ['Bônus mais forte']],
+  ['59', 'Por apenas R$ 35.000', ['Preço cheio, seco (serve também para o 48)']],
+  ['60', 'A revelação', ['R$ 35.000 riscado, R$ 25.000']],
+  ['62', 'Garantia', ['Selo de 7 dias']],
+  ['67', 'Bem-vinda, Clínica Elite', ['Entrada e loop para a fila no palco'], 'loop'],
+];
+
+// achata em passos: cada passo é um clique
+const STEPS = [];
+SLIDES.forEach(([n, title, clicks, extra], si) => {
+  if (!clicks) { STEPS.push({ si, n, title, todo: extra }); return; }
+  clicks.forEach((c, i) => STEPS.push({
+    si, n, title, label: c, k: i + 1, of: clicks.length,
+    src: `videos/FEA-elite-slide-${n}${clicks.length > 1 ? `-clique-${i + 1}` : ''}.mp4`,
+    loop: extra === 'loop' ? `videos/FEA-elite-slide-${n}-loop.mp4` : null,
+  }));
+});
+
+const $ = (id) => document.getElementById(id);
+const vids = [$('va'), $('vb')];
+let front = 0, cur = -1;
+
+// roteiro lateral
+$('list').innerHTML = SLIDES.map(([n, title, clicks, extra], si) => `
+  <li data-si="${si}" class="${clicks ? '' : 'todo'}"><button type="button">
+    <span class="num">${n}</span><span>${title}</span>
+    <span class="meta">${!clicks ? 'a fazer' : extra === 'loop' ? 'loop' : clicks.length > 1 ? clicks.length + ' cliques' : ''}</span>
+  </button></li>`).join('');
+$('list').addEventListener('click', (e) => {
+  const li = e.target.closest('li'); if (!li) return;
+  go(STEPS.findIndex(s => s.si === +li.dataset.si));
+});
+
+function preloadNext(i) {
+  const nx = STEPS[i + 1], back = vids[1 - front];
+  if (nx && nx.src && !back.src.endsWith(nx.src)) { back.loop = false; back.src = nx.src; back.load(); }
+}
+
+function go(i) {
+  if (i < 0 || i >= STEPS.length) return;
+  cur = i;
+  const s = STEPS[i];
+  $('nowN').textContent = `Slide ${s.n}` + (s.of > 1 ? ` · clique ${s.k} de ${s.of}` : '');
+  $('nowD').textContent = s.title;
+  $('nowC').textContent = s.todo ? 'Ainda não animado.' : s.label;
+  $('prog').style.width = ((i + 1) / STEPS.length * 100) + '%';
+  document.querySelectorAll('#list li').forEach(li => li.classList.toggle('on', +li.dataset.si === s.si));
+  document.querySelector('#list li.on')?.scrollIntoView({ block: 'nearest' });
+
+  if (s.todo) {
+    vids.forEach(v => { v.pause(); v.classList.add('off'); });
+    $('todo').hidden = false; $('todoT').textContent = `Slide ${s.n} · ${s.title}`; $('todoW').textContent = s.todo;
+    preloadNext(i); return;
+  }
+  $('todo').hidden = true;
+  // usa o vídeo de trás (já pré-carregado) e só troca quando ele começar a tocar
+  const nv = vids[1 - front], ov = vids[front];
+  if (!nv.src.endsWith(s.src)) { nv.src = s.src; nv.load(); }
+  nv.loop = false; nv.currentTime = 0;
+  nv.onended = () => {
+    if (s.loop && cur === i) { nv.onended = null; nv.loop = true; nv.src = s.loop; nv.play().catch(() => {}); }
+  };
+  const show = () => { nv.classList.remove('off'); ov.classList.add('off'); ov.pause(); front = 1 - front; preloadNext(i); };
+  nv.play().then(show).catch(show);
+}
+
+const next = () => go(Math.min(cur + 1, STEPS.length - 1));
+const prev = () => go(Math.max(cur - 1, 0));
+$('next').onclick = next; $('prev').onclick = prev; $('stage').onclick = next;
+$('replay').onclick = () => go(cur);
+document.addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
+  if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
+});
+go(0);
+</script>
