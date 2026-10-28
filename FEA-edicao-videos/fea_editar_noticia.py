@@ -193,14 +193,20 @@ class PainelProduto:
             if cena.get("nome"):
                 self.itens.append((etiqueta(cena["nome"], fonte), W // 2, 760, 0.10))
         else:
-            n = len(cena["imagens"])
-            larg = (W - 80) // n
-            for i, f in enumerate(cena["imagens"]):
-                im = com_sombra(caber(Image.open(f).convert("RGBA"), larg - 40, 400))
-                cx = 40 + larg * i + larg // 2
-                self.itens.append((im, cx, 470, 0.12 * i))
-                if cena.get("numerar"):
-                    self.itens.append((numero(i + 1, fonte), cx, 190, 0.12 * i + 0.05))
+            imgs = cena["imagens"]
+            # até 4 numa fileira; 5 ou mais em duas fileiras (3 em cima, 2 embaixo) para não miniaturizar
+            fileiras = [imgs] if len(imgs) <= 4 else [imgs[:(len(imgs) + 1) // 2], imgs[(len(imgs) + 1) // 2:]]
+            alt, ys = (400, [470]) if len(fileiras) == 1 else (300, [280, 620])
+            i = 0
+            for fil, cy in zip(fileiras, ys):
+                larg = (W - 80) // len(fil)
+                for j, f in enumerate(fil):
+                    im = com_sombra(caber(Image.open(f).convert("RGBA"), larg - 40, alt))
+                    cx = 40 + larg * j + larg // 2
+                    self.itens.append((im, cx, cy, 0.12 * i))
+                    if cena.get("numerar"):
+                        self.itens.append((numero(i + 1, fonte), cx, cy - alt // 2 - 50, 0.12 * i + 0.05))
+                    i += 1
 
     def quadro(self, tl):
         tela = Image.fromarray(self.fundo.astype(np.uint8)).convert("RGBA")

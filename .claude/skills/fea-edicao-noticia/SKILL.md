@@ -42,7 +42,7 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 ## Olheiras (IMG_7935, 28/10/2026)
 
-Projeto `FEA-projeto-noticia-olheiras.json`. Takes: olheira profunda antes, olhando para a câmera (pasta "50.OK- Paciente olheiras" IMG_2072 1 s) na abertura; cânula no tear trough em close ("Olheiras" IMG_7986 186,5 s e 190,5 s; marcação + cânula 6,2 s); paciente masculino com marcação roxa ("34.OK" IMG_2662 52 s e 90 s, resultado IMG_2666); cânula malar ("Olheiras 2mL" IMG_7007 22 s); produto esticando (IMG_3691 19 s) em "artigo sobre reologia". Fotos dos produtos recortadas da edição da equipe (`23- Melhores produtos/2-`). Cortado "assim você vai ter um resultado perfeito" (CFM).
+Projeto `FEA-projeto-noticia-olheiras.json`. Takes: olheira profunda antes, olhando para a câmera (pasta "50.OK- Paciente olheiras" IMG_2072 1 s) na abertura; cânula no tear trough em close ("Olheiras" IMG_7986 186,5 s e 190,5 s; marcação + cânula 6,2 s); paciente masculino com marcação roxa ("34.OK" IMG_2662 52 s e 90 s, resultado IMG_2666); cânula malar ("Olheiras 2mL" IMG_7007 22 s); produto esticando (IMG_3691 19 s) em "artigo sobre reologia". Fotos dos produtos recortadas da edição da equipe (`23- Melhores produtos/2-`). Cortado "assim você vai ter um resultado perfeito" (CFM). **Contar os produtos que ele cita** (Keila, 28/10: "fala cinco e aparece só quatro"): o "Restylane Gel" falado junto com o Lyft é o Restylane clássico, hoje "Restylane Classyc" (foto oficial do distribuidor ddgroup.com, item 600207), etiqueta "Restylane"; a grade do resumo tem que ter o mesmo número que ele fala. Com 5 ou mais, a cena `produtos` monta duas fileiras (3 em cima, 2 embaixo).
 
 ## Fluxo
 

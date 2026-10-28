@@ -129,13 +129,20 @@
         "nome": "Restylane Lyft"
       },
       {
+        "ini": 28.35,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane.png",
+        "nome": "Restylane"
+      },
+      {
         "ini": 29.5,
         "tipo": "produtos",
         "imagens": [
           "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
           "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
           "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/juvederm_voluma.png",
-          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane_lyft.png"
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane_lyft.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane.png"
         ],
         "numerar": false
       },
