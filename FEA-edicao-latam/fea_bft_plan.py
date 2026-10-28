@@ -50,8 +50,13 @@ for a, b, i in find(r"(toxina|relleno|bioestimuladores?)"):
     if near:
         a = max(a, hook_end + 0.6)
         end = max(near[-1][1] + 0.5, a + 2.4)
-        if add_insert(a - 0.1, min(max(end, a + 3.4), a + 4.2), kind="checklist", title="Combo Total · 6 formaciones",
-                      items=FORMACIONES): break
+        if adj.get("courses_grid"):  # capas dos 6 cursos da página de vendas
+            if add_insert(a - 0.1, min(max(end, a + 3.0), a + 3.8), kind="cursos"): break
+        elif add_insert(a - 0.1, min(max(end, a + 3.4), a + 4.2), kind="checklist", title="Combo Total · 6 formaciones",
+                        items=FORMACIONES): break
+# 1b) ingresso do Lote Especial (página de vendas) quando o Dr. cita o lote especial
+for a, b, i in find(r"lote especial"):
+    if add_insert(a - 0.2, a + 2.8, kind="lote"): break
 # 2) número de clases
 for a, b, i in sorted(find(r"\d+ clases"), key=lambda x: -int(T[x[2]])):
     if add_insert(a - 0.2, a + 2.4, kind="number", value="+" + T[i], label="clases disponibles"): break
@@ -84,6 +89,8 @@ for a, b, i in find(r"bonos"):
     if re.search(r"\blote\b", txt): add_card(a - 0.4, a + 3.0, "Antes del cambio de lote", "Asegura el menor precio")
     else: add_card(a - 0.4, a + 3.0, "En vivo · 10 de noviembre", "El menor precio del Combo Total")
     break
+for a, b, i in find(r"35 mil"):
+    add_card(a - 0.3, a + 3.0, "Más de 35 mil alumnos en Brasil", "Creador del Elite Injectors Congress"); break
 for a, b, i in find(r"menor precio"):
     add_card(a - 0.4, a + 2.8, "Black Friday Total", "Al menor precio posible"); break
 

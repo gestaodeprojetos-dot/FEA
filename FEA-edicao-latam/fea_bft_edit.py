@@ -171,6 +171,9 @@ def art(name):
     return _art[name]
 
 
+COURSES = ["capa-toxina-express.png", "capa-cpx.png", "capa-full-face-5ml.png", "capa-botox.png", "capa-fep.png", "capa-bioestimuladores.png"]
+
+
 def insert_frame(ins, t):
     k, t0, t1 = ins["kind"], ins["t0"], ins["t1"]
     p = (t - t0) / max(0.01, t1 - t0)
@@ -216,6 +219,24 @@ def insert_frame(ins, t):
             d.ellipse([x + 12, cy - 20, x + 52, cy + 20], fill=GOLD + (a,))
             d.line([(x + 22, cy), (x + 30, cy + 9), (x + 44, cy - 9)], fill=DARK + (a,), width=5)
             d.text((x + 74, cy - fs * 0.62), item, font=f, fill=WHITE + (a,)); y += step
+    elif k == "cursos":  # capas dos 6 cursos da página de vendas, entrando uma a uma
+        _gold_text(im, ((W - d.textlength("6 CURSOS", font=font(900, 92))) / 2, 120), "6 CURSOS", font(900, 92))
+        _center_text(d, "EN UN SOLO PAGO", font(900, 46), 235, fill=WHITE + (int(255 * ease((t - t0 - 0.1) / 0.3)),))
+        cw, gap = 292, 22; ch = int(cw * 1040 / 720); x0 = (W - 3 * cw - 2 * gap) // 2
+        for n, name in enumerate(COURSES):
+            e = ease((t - t0 - 0.15 - n * 0.12) / 0.35)
+            if e <= 0: continue
+            c = art("lp/" + name).resize((int(cw * (0.85 + 0.15 * e)), int(ch * (0.85 + 0.15 * e))), Image.LANCZOS)
+            r = Image.new("L", c.size, 0); ImageDraw.Draw(r).rounded_rectangle([0, 0, c.width - 1, c.height - 1], 18, fill=int(255 * e)); c.putalpha(r)
+            cx = x0 + (n % 3) * (cw + gap) + cw // 2; cy = 320 + (n // 3) * (ch + gap) + ch // 2
+            im.alpha_composite(c, (cx - c.width // 2, cy - c.height // 2))
+    elif k == "lote":  # ingresso do Lote Especial (arte da página de vendas)
+        e = ease((t - t0) / 0.5); tk = art("lp/ticket-lote-especial.png")
+        w2 = int(470 * (0.9 + 0.1 * e)); tk = tk.resize((w2, int(tk.height * w2 / tk.width)), Image.LANCZOS).rotate(-4 + 4 * e + 1.2 * math.sin(t * 2), expand=True, resample=Image.BICUBIC)
+        im.alpha_composite(fade(tk, e), ((W - tk.width) // 2, 150 + int(40 * (1 - e))))
+        a2 = int(255 * ease((t - t0 - 0.3) / 0.4))
+        _center_text(d, "SOLO EN LA LIVE DEL 10/11", font(900, 58), 900, fill=GOLD_HI + (a2,))
+        _center_text(d, "19 h (hora de Colombia) · el valor más bajo", font(700, 38), 980, fill=(240, 232, 220, a2))
     elif k == "date":  # en vivo de apertura
         e = ease((t - t0) / 0.5)
         cx, cy = W // 2, 720
@@ -227,7 +248,7 @@ def insert_frame(ins, t):
         _center_text(d, "MARTES", font(800, 36), cy + 125 + int(40 * (1 - e)), fill=(110, 90, 60, int(255 * e)))
         a2 = int(255 * ease((t - t0 - 0.35) / 0.4))
         _center_text(d, "EN VIVO DE APERTURA", font(900, 60), 1000, fill=GOLD_HI + (a2,))
-        _center_text(d, "El menor precio del Combo Total", font(700, 40), 1085, fill=(240, 232, 220, a2))
+        _center_text(d, "19 h (hora de Colombia) · Lote Especial", font(700, 40), 1085, fill=(240, 232, 220, a2))
         im.alpha_composite(LOGO_S.resize((240, int(LOGO_S.height * 240 / LOGO_S.width))), ((W - 240) // 2, 230))
     # entrada/saída rápida
     a = min(ease((t - t0) / 0.18), ease((t1 - t) / 0.18))
