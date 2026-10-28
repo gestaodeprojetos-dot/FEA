@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FEA Banco de Imagens</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#5B4599;--azul:#3846BB;--lav:#D0D1E9;--verm:#BB3838;--off:#F9F9F9;--cinza:#E9E9E9;--txt:#23212e;--sub:#5e5b6d;--card:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--off:#17151f;--card:#211e2c;--txt:#ecebf3;--sub:#aaa7bb;--cinza:#34304a;--lav:#2e2a47}}
+:root[data-theme="dark"]{--off:#17151f;--card:#211e2c;--txt:#ecebf3;--sub:#aaa7bb;--cinza:#34304a;--lav:#2e2a47}
+*{box-sizing:border-box}
+body{margin:0;background:var(--off);color:var(--txt);font:15px/1.55 Montserrat,system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,sans-serif;margin:0}
+.hero{background:linear-gradient(120deg,#5B4599,#3846BB);color:#fff;padding:40px 16px 32px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+.hero h1{font-size:clamp(26px,4vw,40px);font-weight:800}
+.hero p{max-width:760px;opacity:.92;margin:10px 0 0}
+.kpis{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.kpi{background:rgba(255,255,255,.14);border-radius:10px;padding:10px 16px}
+.kpi b{font-family:Sora;font-size:24px;display:block}
+section{margin:32px 0}
+h2{font-size:22px;color:var(--roxo);margin-bottom:12px}
+:root[data-theme="dark"] h2{color:#b9a9f0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:#b9a9f0}}
+.alert{background:var(--card);border-left:4px solid var(--verm);border-radius:10px;padding:14px 18px;margin:12px 0}
+.alert b{color:var(--verm)}
+.note{background:var(--lav);border-radius:10px;padding:14px 18px}
+.tbl{overflow-x:auto;border-radius:10px;border:1px solid var(--cinza)}
+table{border-collapse:collapse;width:100%;min-width:760px;background:var(--card)}
+th{background:var(--roxo);color:#fff;text-align:left;font:600 13px Sora;padding:10px}
+td{border-top:1px solid var(--cinza);padding:10px;vertical-align:top;font-size:13.5px}
+.mono,code{font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.chip{border:1px solid var(--cinza);background:var(--card);color:var(--txt);border-radius:999px;padding:6px 12px;font:500 13px Montserrat;cursor:pointer}
+.chip b{color:var(--azul)}
+.chip.on{background:var(--roxo);color:#fff;border-color:var(--roxo)}
+.chip.on b{color:#fff}
+input[type=search]{flex:1;min-width:200px;padding:9px 12px;border-radius:999px;border:1px solid var(--cinza);background:var(--card);color:var(--txt);font:14px Montserrat}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px}
+.card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--cinza);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:9/14;object-fit:cover;display:block;background:var(--cinza)}
+.card .b{padding:10px 12px 12px}
+.card p{margin:6px 0;font-size:13px}
+.card small{color:var(--sub);font-size:11.5px}
+.card a{color:var(--azul)}
+.id{font:700 11px Sora;color:var(--roxo);margin-right:6px}
+.tag{display:inline-block;margin-top:4px;font-size:11px;background:var(--lav);border-radius:999px;padding:2px 8px}
+.fontes{columns:2 260px;padding-left:18px}
+.fontes li{margin:4px 0}.fontes span{color:var(--sub);font-size:12px}
+footer{color:var(--sub);font-size:12px;padding:24px 0 40px}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<h1>Banco de Imagens de Referência</h1>
+<p>Mapeamento das imagens inseridas nos 18 posts de referência (reels e carrosséis de skincare de profissionais de saúde). Cada item tem o quadro de referência, a pasta de destino no banco e onde conseguir um equivalente com licença.</p>
+<div class="kpis"><div class="kpi"><b>113</b>imagens mapeadas</div><div class="kpi"><b>13</b>categorias</div><div class="kpi"><b>18</b>posts analisados</div></div>
+</div></header>
+<main class="wrap">
+<section>
+<h2>Antes de usar</h2>
+<div class="alert"><b>Os quadros desta página são referência visual, não material para publicar.</b> Pertencem aos criadores originais (vários trazem marca d'água de TikTok ou de estúdios de animação). Usar o mesmo recorte em conteúdo próprio é violação de direito autoral e pode derrubar o post. O banco final se monta com equivalentes licenciados, packshots oficiais das marcas, gravação própria ou imagem gerada por IA a partir da referência.</div>
+<div class="note">Padrão observado nos 18 posts: apresentador falando para a câmera, com inserções curtas a cada 3 a 8 segundos. As mais frequentes são <b>packshot de produto recortado flutuando ao lado do rosto</b>, <b>close de pele com a queixa</b> (antes) e <b>aplicação do produto</b>. Quase todas entram em tela dividida (metade superior) ou como PNG sobreposto. Nos carrosséis, o formato dominante é o <b>split "se você tem isso / use isso"</b>: close de pele com a queixa em cima, pele resolvida embaixo e o packshot cruzando a linha do meio.</div>
+<div class="alert"><b>Antes e depois montado é zona de risco regulatório.</b> Vários carrosséis usam o mesmo rosto dividido ao meio ou retocado para simular o resultado do produto. Para perfil de profissional de saúde, isso se aproxima de promessa de resultado e de publicidade de produto, o que os conselhos (CFM e CFO) restringem. Se o formato for usado, a recomendação é ilustrar a queixa com imagem de banco e não simular resultado; vale validar com o jurídico antes de publicar.</div>
+</section>
+<section>
+<h2>Estrutura de pastas e onde conseguir</h2>
+<div class="tbl"><table><thead><tr><th>Pasta</th><th>Categoria</th><th>Itens</th><th>Onde conseguir o equivalente</th><th>Termos de busca</th></tr></thead><tbody><tr><td><code>01-packshots-produtos</code></td><td>Packshots de produto</td><td>23</td><td>Press kit ou site oficial da marca (pedir via assessoria), ou foto própria em estúdio com fundo recortado. Entregar em PNG transparente.</td><td class="mono">nome exato do produto + &quot;press kit&quot; / &quot;packshot PNG&quot;</td></tr><tr><td><code>02-pele-queixas</code></td><td>Pele com queixa (acne, manchas, rugas, flacidez, descamação)</td><td>26</td><td>Banco licenciado com model release (Adobe Stock, Shutterstock, iStock, Envato Elements) ou registro próprio de paciente com TCLE. Ou gerar por IA (Higgsfield, Imagen), o que dispensa model release.</td><td class="mono">skin texture wrinkles macro · acne scars close up · neck sagging skin · peeling skin retinol irritation · melasma cheek</td></tr><tr><td><code>03-pele-saudavel</code></td><td>Pele saudável e luminosa (glass skin)</td><td>5</td><td>Banco licenciado; Pexels e Unsplash têm boas opções gratuitas para uso comercial. Ou gerar por IA.</td><td class="mono">glowing skin close up · dewy skin macro · hydrated neck skin · eye close up mature skin</td></tr><tr><td><code>04-aplicacao</code></td><td>Aplicação de produto (mãos, rosto, pescoço)</td><td>16</td><td>Gravação própria (mais barato e sem risco) ou banco de vídeo licenciado. Ou gerar por IA (imagem ou vídeo curto).</td><td class="mono">woman applying face cream · applying neck cream · serum dropper on face · applying body lotion elbow</td></tr><tr><td><code>04-aplicacao</code></td><td>Aplicação estilo UGC (selfie caseira)</td><td>2</td><td>Gravação própria com modelo ou criadora contratada, com cessão de imagem assinada. Ou gerar por IA em formato vertical.</td><td class="mono">UGC skincare routine vertical · woman applying moisturizer selfie</td></tr><tr><td><code>05-texturas</code></td><td>Textura e swatch de produto</td><td>4</td><td>Gravação própria em macro (celular com lente macro resolve) ou banco licenciado. Ou gerar por IA.</td><td class="mono">cream swatch texture macro · finger in cream jar · cosmetic smear on skin</td></tr><tr><td><code>06-rotina-lifestyle</code></td><td>Rotina e lifestyle</td><td>4</td><td>Banco licenciado ou gravação própria. Ou gerar por IA.</td><td class="mono">woman washing face sink · sheet mask face · skincare routine bathroom</td></tr><tr><td><code>06-rotina-lifestyle</code></td><td>Contexto (farmácia, prateleira)</td><td>2</td><td>Gravação própria em farmácia com autorização do local, ou banco licenciado. Evitar rosto de terceiros identificável.</td><td class="mono">pharmacy shelves skincare · drugstore aisle cosmetics</td></tr><tr><td><code>07-animacoes-3d-pele</code></td><td>Animação 3D de pele e ativos</td><td>3</td><td>Gerar por IA (Higgsfield, vídeo de 5 a 10 s) a partir do quadro de referência, ou banco de motion licenciado (Envato Elements, Adobe Stock, Storyblocks). Uma das referências tem marca d&#x27;água de terceiro, então não dá para reaproveitar o original.</td><td class="mono">skin layers 3D animation · serum penetrating skin cells · collagen 3D render · vitamin C skin animation</td></tr><tr><td><code>08-objetos-metaforas</code></td><td>Objetos e metáforas visuais (PNG)</td><td>6</td><td>Banco gratuito de PNG recortado (Pexels + remoção de fundo, Freepik com licença) ou foto própria. Ou gerar por IA com fundo recortado.</td><td class="mono">green peas pod isolated · avocado seed isolated · mango isolated png · witch cauldron png</td></tr><tr><td><code>09-graficos-ui</code></td><td>Elementos gráficos (selos, ícones, stickers)</td><td>5</td><td>Criar no Canva ou Figma no padrão visual do perfil (designer da equipe). Logos de marcas de terceiros: não usar.</td><td class="mono">selo compro / não compro · coração CTA · bandeira em emoji</td></tr><tr><td><code>10-autoridade</code></td><td>Prova de autoridade</td><td>7</td><td>Somente fotos reais do próprio profissional (congressos, certificados, palcos). Nunca montagem.</td><td class="mono">acervo próprio do Dr. (pasta de fotos no Drive)</td></tr><tr><td><code>11-layouts-carrossel</code></td><td>Layouts de carrossel (modelo de diagramação)</td><td>10</td><td>Recriar como template no Canva ou Figma pelo designer da equipe, na identidade visual do perfil. Serve de modelo de estrutura, não de imagem.</td><td class="mono">template carrossel antes e depois · grade de produtos com preço · infográfico queixa x produto</td></tr></tbody></table></div>
+</section>
+<section>
+<h2>Catálogo</h2>
+<div class="bar"><button class="chip on" data-c="*">Todas <b>113</b></button><button class="chip" data-c="packshot">Packshots de produto <b>23</b></button><button class="chip" data-c="pele_queixa">Pele com queixa <b>26</b></button><button class="chip" data-c="pele_close">Pele saudável e luminosa <b>5</b></button><button class="chip" data-c="aplicacao">Aplicação de produto <b>16</b></button><button class="chip" data-c="ugc_aplicacao">Aplicação estilo UGC <b>2</b></button><button class="chip" data-c="textura">Textura e swatch de produto <b>4</b></button><button class="chip" data-c="rotina">Rotina e lifestyle <b>4</b></button><button class="chip" data-c="contexto">Contexto <b>2</b></button><button class="chip" data-c="animacao_3d">Animação 3D de pele e ativos <b>3</b></button><button class="chip" data-c="objeto">Objetos e metáforas visuais <b>6</b></button><button class="chip" data-c="grafico">Elementos gráficos <b>5</b></button><button class="chip" data-c="autoridade">Prova de autoridade <b>7</b></button><button class="chip" data-c="layout">Layouts de carrossel <b>10</b></button><input type="search" id="q" placeholder="Buscar (ex.: pescoço, retinol, Nivea)"></div>
+<div class="grid" id="grid"><article class="card" data-c="packshot" data-t="lata azul nivea creme + loção hidratante cerave (png recortado sobre o vídeo) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-005.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-005.0s.jpg" alt="lata azul Nivea Creme + loção hidratante CeraVe (PNG recortado sobre o vídeo)"></a>
+<div class="b"><span class="id">FEA-IMG-001</span><span class="tag">Packshots de produto</span>
+<p>lata azul Nivea Creme + loção hidratante CeraVe (PNG recortado sobre o vídeo)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 0:05.0</small></div></article>
+<article class="card" data-c="packshot" data-t="dove loção corporal com ácido glicólico 380 ml (png fundo branco) josirobaina">
+<a href="referencias/FEA-ref-03-025.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-025.5s.jpg" alt="Dove loção corporal com ácido glicólico 380 ml (PNG fundo branco)"></a>
+<div class="b"><span class="id">FEA-IMG-002</span><span class="tag">Packshots de produto</span>
+<p>Dove loção corporal com ácido glicólico 380 ml (PNG fundo branco)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:25.5</small></div></article>
+<article class="card" data-c="packshot" data-t="bepantol derma loção hidratante corporal 400 ml com pump (png fundo branco) josirobaina">
+<a href="referencias/FEA-ref-03-040.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-040.0s.jpg" alt="Bepantol Derma loção hidratante corporal 400 ml com pump (PNG fundo branco)"></a>
+<div class="b"><span class="id">FEA-IMG-003</span><span class="tag">Packshots de produto</span>
+<p>Bepantol Derma loção hidratante corporal 400 ml com pump (PNG fundo branco)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:40.0</small></div></article>
+<article class="card" data-c="packshot" data-t="raavi creme hidratante corporal ureia 3% bisnaga (png fundo branco) josirobaina">
+<a href="referencias/FEA-ref-03-064.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-064.0s.jpg" alt="Raavi creme hidratante corporal ureia 3% bisnaga (PNG fundo branco)"></a>
+<div class="b"><span class="id">FEA-IMG-004</span><span class="tag">Packshots de produto</span>
+<p>Raavi creme hidratante corporal ureia 3% bisnaga (PNG fundo branco)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 1:04.0</small></div></article>
+<article class="card" data-c="packshot" data-t="avène retrinal sérum 0,1% frasco airless branco (png flutuando ao lado do rosto) drguidi">
+<a href="referencias/FEA-ref-04-025.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-04-025.5s.jpg" alt="Avène Retrinal sérum 0,1% frasco airless branco (PNG flutuando ao lado do rosto)"></a>
+<div class="b"><span class="id">FEA-IMG-005</span><span class="tag">Packshots de produto</span>
+<p>Avène Retrinal sérum 0,1% frasco airless branco (PNG flutuando ao lado do rosto)</p>
+<small><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">@drguidi</a> · reel, 0:25.5</small></div></article>
+<article class="card" data-c="packshot" data-t="laneige máscara de dormir pote rosa (png) drguidi">
+<a href="referencias/FEA-ref-04-036.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-04-036.0s.jpg" alt="Laneige máscara de dormir pote rosa (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-006</span><span class="tag">Packshots de produto</span>
+<p>Laneige máscara de dormir pote rosa (PNG)</p>
+<small><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">@drguidi</a> · reel, 0:36.0</small></div></article>
+<article class="card" data-c="packshot" data-t="skinceuticals a.g.e. interrupter advanced pote preto e branco (png) drguidi">
+<a href="referencias/FEA-ref-04-054.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-04-054.5s.jpg" alt="SkinCeuticals A.G.E. Interrupter Advanced pote preto e branco (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-007</span><span class="tag">Packshots de produto</span>
+<p>SkinCeuticals A.G.E. Interrupter Advanced pote preto e branco (PNG)</p>
+<small><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">@drguidi</a> · reel, 0:54.5</small></div></article>
+<article class="card" data-c="packshot" data-t="la roche-posay cicaplast baume b5 bisnaga branca e azul (png flutuando) clinicaedilsonpinheiro">
+<a href="referencias/FEA-ref-06-004.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-06-004.5s.jpg" alt="La Roche-Posay Cicaplast Baume B5 bisnaga branca e azul (PNG flutuando)"></a>
+<div class="b"><span class="id">FEA-IMG-008</span><span class="tag">Packshots de produto</span>
+<p>La Roche-Posay Cicaplast Baume B5 bisnaga branca e azul (PNG flutuando)</p>
+<small><a href="https://www.instagram.com/reel/Dc8fKhpB56M/" target="_blank">@clinicaedilsonpinheiro</a> · reel, 0:04.5</small></div></article>
+<article class="card" data-c="packshot" data-t="vitacid (tretinoína) bisnaga branca e vermelha (png flutuando) clinicaedilsonpinheiro">
+<a href="referencias/FEA-ref-06-005.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-06-005.0s.jpg" alt="Vitacid (tretinoína) bisnaga branca e vermelha (PNG flutuando)"></a>
+<div class="b"><span class="id">FEA-IMG-009</span><span class="tag">Packshots de produto</span>
+<p>Vitacid (tretinoína) bisnaga branca e vermelha (PNG flutuando)</p>
+<small><a href="https://www.instagram.com/reel/Dc8fKhpB56M/" target="_blank">@clinicaedilsonpinheiro</a> · reel, 0:05.0</small></div></article>
+<article class="card" data-c="packshot" data-t="pote azul nivea cellular expert lift segurado na mão dratelmagiordani">
+<a href="referencias/FEA-ref-07-084.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-084.0s.jpg" alt="pote azul Nivea Cellular Expert Lift segurado na mão"></a>
+<div class="b"><span class="id">FEA-IMG-010</span><span class="tag">Packshots de produto</span>
+<p>pote azul Nivea Cellular Expert Lift segurado na mão</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 1:24.0</small></div></article>
+<article class="card" data-c="packshot" data-t="caixa nivea cellular expert lift com bakuchiol (close) dratelmagiordani">
+<a href="referencias/FEA-ref-07-085.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-085.5s.jpg" alt="caixa Nivea Cellular Expert Lift com bakuchiol (close)"></a>
+<div class="b"><span class="id">FEA-IMG-011</span><span class="tag">Packshots de produto</span>
+<p>caixa Nivea Cellular Expert Lift com bakuchiol (close)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 1:25.5</small></div></article>
+<article class="card" data-c="packshot" data-t="shiseido bb for sports fps 50+ (png) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="Shiseido BB for Sports FPS 50+ (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-012</span><span class="tag">Packshots de produto</span>
+<p>Shiseido BB for Sports FPS 50+ (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="packshot" data-t="eucerin sun fluido pigment control fps 60 (png) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="Eucerin Sun Fluido Pigment Control FPS 60 (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-013</span><span class="tag">Packshots de produto</span>
+<p>Eucerin Sun Fluido Pigment Control FPS 60 (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="packshot" data-t="adcos protetor solar stick com cor fps 80 (png) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="ADCOS protetor solar stick com cor FPS 80 (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-014</span><span class="tag">Packshots de produto</span>
+<p>ADCOS protetor solar stick com cor FPS 80 (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="packshot" data-t="isdin fotoultra active unify fusion fluid (png) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="ISDIN Fotoultra Active Unify Fusion Fluid (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-015</span><span class="tag">Packshots de produto</span>
+<p>ISDIN Fotoultra Active Unify Fusion Fluid (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="packshot" data-t="nivea sun protetor facial (png) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="Nivea Sun protetor facial (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-016</span><span class="tag">Packshots de produto</span>
+<p>Nivea Sun protetor facial (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="packshot" data-t="medicube zero pore pad pote azul e branco (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-001.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-001.0s.jpg" alt="medicube Zero Pore Pad pote azul e branco (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-017</span><span class="tag">Packshots de produto</span>
+<p>medicube Zero Pore Pad pote azul e branco (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:01.0</small></div></article>
+<article class="card" data-c="packshot" data-t="skin1004 madagascar centella ampoule frasco conta-gotas (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-006.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-006.0s.jpg" alt="Skin1004 Madagascar Centella Ampoule frasco conta-gotas (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-018</span><span class="tag">Packshots de produto</span>
+<p>Skin1004 Madagascar Centella Ampoule frasco conta-gotas (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:06.0</small></div></article>
+<article class="card" data-c="packshot" data-t="skin1004 madagascar centella light cleansing oil com pump (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-009.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-009.0s.jpg" alt="Skin1004 Madagascar Centella Light Cleansing Oil com pump (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-019</span><span class="tag">Packshots de produto</span>
+<p>Skin1004 Madagascar Centella Light Cleansing Oil com pump (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:09.0</small></div></article>
+<article class="card" data-c="packshot" data-t="anua niacinamide 10 + txa 4 sérum vermelho (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-013.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-013.0s.jpg" alt="Anua Niacinamide 10 + TXA 4 sérum vermelho (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-020</span><span class="tag">Packshots de produto</span>
+<p>Anua Niacinamide 10 + TXA 4 sérum vermelho (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:13.0</small></div></article>
+<article class="card" data-c="packshot" data-t="aparelho facial rosa de uso doméstico tipo booster/radiofrequência (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-017.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-017.0s.jpg" alt="aparelho facial rosa de uso doméstico tipo booster/radiofrequência (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-021</span><span class="tag">Packshots de produto</span>
+<p>aparelho facial rosa de uso doméstico tipo booster/radiofrequência (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:17.0</small></div></article>
+<article class="card" data-c="packshot" data-t="cellimax retinal shot tightening booster bisnaga verde (png) dra.marinabarix">
+<a href="referencias/FEA-ref-13-024.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-024.0s.jpg" alt="Cellimax Retinal Shot Tightening Booster bisnaga verde (PNG)"></a>
+<div class="b"><span class="id">FEA-IMG-022</span><span class="tag">Packshots de produto</span>
+<p>Cellimax Retinal Shot Tightening Booster bisnaga verde (PNG)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:24.0</small></div></article>
+<article class="card" data-c="packshot" data-t="vários potes de vaselina em composição editorial com selo de prêmio draluciarebello">
+<a href="referencias/FEA-ref-18-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide01.jpg" alt="vários potes de vaselina em composição editorial com selo de prêmio"></a>
+<div class="b"><span class="id">FEA-IMG-023</span><span class="tag">Packshots de produto</span>
+<p>vários potes de vaselina em composição editorial com selo de prêmio</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="close macro do olho com pele madura, rugas finas e textura (card arredondado) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-031.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-031.5s.jpg" alt="close macro do olho com pele madura, rugas finas e textura (card arredondado)"></a>
+<div class="b"><span class="id">FEA-IMG-024</span><span class="tag">Pele com queixa</span>
+<p>close macro do olho com pele madura, rugas finas e textura (card arredondado)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 0:31.5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="close de bochecha com acne inflamatória e manchas pós-acne drrodrigocesar">
+<a href="referencias/FEA-ref-02-001.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-001.5s.jpg" alt="close de bochecha com acne inflamatória e manchas pós-acne"></a>
+<div class="b"><span class="id">FEA-IMG-025</span><span class="tag">Pele com queixa</span>
+<p>close de bochecha com acne inflamatória e manchas pós-acne</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 0:01.5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="mãos repuxando a pele flácida do pescoço, linhas horizontais (close) josirobaina">
+<a href="referencias/FEA-ref-03-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-000.0s.jpg" alt="mãos repuxando a pele flácida do pescoço, linhas horizontais (close)"></a>
+<div class="b"><span class="id">FEA-IMG-026</span><span class="tag">Pele com queixa</span>
+<p>mãos repuxando a pele flácida do pescoço, linhas horizontais (close)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="pescoço de mulher madura com flacidez e bandas platismais, unha vermelha apontando josirobaina">
+<a href="referencias/FEA-ref-03-009.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-009.0s.jpg" alt="pescoço de mulher madura com flacidez e bandas platismais, unha vermelha apontando"></a>
+<div class="b"><span class="id">FEA-IMG-027</span><span class="tag">Pele com queixa</span>
+<p>pescoço de mulher madura com flacidez e bandas platismais, unha vermelha apontando</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:09.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="pescoço com bandas platismais marcadas, dedo apontando (close, paciente em maca) josirobaina">
+<a href="referencias/FEA-ref-03-085.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-085.5s.jpg" alt="pescoço com bandas platismais marcadas, dedo apontando (close, paciente em maca)"></a>
+<div class="b"><span class="id">FEA-IMG-028</span><span class="tag">Pele com queixa</span>
+<p>pescoço com bandas platismais marcadas, dedo apontando (close, paciente em maca)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 1:25.5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="mulher 40+ sem maquiagem mostrando rugas e linhas de expressão (selfie em casa) dratelmagiordani">
+<a href="referencias/FEA-ref-07-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-000.0s.jpg" alt="mulher 40+ sem maquiagem mostrando rugas e linhas de expressão (selfie em casa)"></a>
+<div class="b"><span class="id">FEA-IMG-029</span><span class="tag">Pele com queixa</span>
+<p>mulher 40+ sem maquiagem mostrando rugas e linhas de expressão (selfie em casa)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="close de pele irritada e descamando ao redor do nariz e boca (reação a retinol) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-000.0s.jpg" alt="close de pele irritada e descamando ao redor do nariz e boca (reação a retinol)"></a>
+<div class="b"><span class="id">FEA-IMG-030</span><span class="tag">Pele com queixa</span>
+<p>close de pele irritada e descamando ao redor do nariz e boca (reação a retinol)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="close do canto da boca com descamação fina (card sobre o apresentador) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-021.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-021.0s.jpg" alt="close do canto da boca com descamação fina (card sobre o apresentador)"></a>
+<div class="b"><span class="id">FEA-IMG-031</span><span class="tag">Pele com queixa</span>
+<p>close do canto da boca com descamação fina (card sobre o apresentador)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 0:21.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="close de bochecha com descamação e ressecamento drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-042.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-042.0s.jpg" alt="close de bochecha com descamação e ressecamento"></a>
+<div class="b"><span class="id">FEA-IMG-032</span><span class="tag">Pele com queixa</span>
+<p>close de bochecha com descamação e ressecamento</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 0:42.0</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split antes e depois: lábio e pele lisa x pele descamada drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-089.8s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-089.8s.jpg" alt="split antes e depois: lábio e pele lisa x pele descamada"></a>
+<div class="b"><span class="id">FEA-IMG-033</span><span class="tag">Pele com queixa</span>
+<p>split antes e depois: lábio e pele lisa x pele descamada</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:29.8</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split horizontal: rugas perioculares (antes) x pele lisa (depois) com bisnaga de olhos no centro yumi.kbeauty">
+<a href="referencias/FEA-ref-10-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-10-slide01.jpg" alt="split horizontal: rugas perioculares (antes) x pele lisa (depois) com bisnaga de olhos no centro"></a>
+<div class="b"><span class="id">FEA-IMG-034</span><span class="tag">Pele com queixa</span>
+<p>split horizontal: rugas perioculares (antes) x pele lisa (depois) com bisnaga de olhos no centro</p>
+<small><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">@yumi.kbeauty</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split horizontal: poros dilatados x pele uniforme com pote de pads no centro yumi.kbeauty">
+<a href="referencias/FEA-ref-10-slide02.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-10-slide02.jpg" alt="split horizontal: poros dilatados x pele uniforme com pote de pads no centro"></a>
+<div class="b"><span class="id">FEA-IMG-035</span><span class="tag">Pele com queixa</span>
+<p>split horizontal: poros dilatados x pele uniforme com pote de pads no centro</p>
+<small><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">@yumi.kbeauty</a> · carrossel, slide 2</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split horizontal: melasma na maçã do rosto x pele uniforme com bisnaga e swatch yumi.kbeauty">
+<a href="referencias/FEA-ref-10-slide03.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-10-slide03.jpg" alt="split horizontal: melasma na maçã do rosto x pele uniforme com bisnaga e swatch"></a>
+<div class="b"><span class="id">FEA-IMG-036</span><span class="tag">Pele com queixa</span>
+<p>split horizontal: melasma na maçã do rosto x pele uniforme com bisnaga e swatch</p>
+<small><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">@yumi.kbeauty</a> · carrossel, slide 3</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split horizontal: olheira x área dos olhos uniforme com sérum roxo no centro yumi.kbeauty">
+<a href="referencias/FEA-ref-10-slide04.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-10-slide04.jpg" alt="split horizontal: olheira x área dos olhos uniforme com sérum roxo no centro"></a>
+<div class="b"><span class="id">FEA-IMG-037</span><span class="tag">Pele com queixa</span>
+<p>split horizontal: olheira x área dos olhos uniforme com sérum roxo no centro</p>
+<small><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">@yumi.kbeauty</a> · carrossel, slide 4</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split horizontal: vermelhidão x pele calma com bisnaga e swatch de creme yumi.kbeauty">
+<a href="referencias/FEA-ref-10-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-10-slide05.jpg" alt="split horizontal: vermelhidão x pele calma com bisnaga e swatch de creme"></a>
+<div class="b"><span class="id">FEA-IMG-038</span><span class="tag">Pele com queixa</span>
+<p>split horizontal: vermelhidão x pele calma com bisnaga e swatch de creme</p>
+<small><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">@yumi.kbeauty</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="rosto dividido ao meio: lado com manchas x lado uniforme, packshot no canto (montagem) drachristieviviane">
+<a href="referencias/FEA-ref-15-slide02.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-15-slide02.jpg" alt="rosto dividido ao meio: lado com manchas x lado uniforme, packshot no canto (montagem)"></a>
+<div class="b"><span class="id">FEA-IMG-039</span><span class="tag">Pele com queixa</span>
+<p>rosto dividido ao meio: lado com manchas x lado uniforme, packshot no canto (montagem)</p>
+<small><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">@drachristieviviane</a> · carrossel, slide 2</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="rosto dividido ao meio: lado com acne x lado limpo, packshot no canto (montagem) drachristieviviane">
+<a href="referencias/FEA-ref-15-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-15-slide05.jpg" alt="rosto dividido ao meio: lado com acne x lado limpo, packshot no canto (montagem)"></a>
+<div class="b"><span class="id">FEA-IMG-040</span><span class="tag">Pele com queixa</span>
+<p>rosto dividido ao meio: lado com acne x lado limpo, packshot no canto (montagem)</p>
+<small><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">@drachristieviviane</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="rosto dividido ao meio: lado com rugas x lado liso, packshot no canto (montagem) drachristieviviane">
+<a href="referencias/FEA-ref-15-slide06.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-15-slide06.jpg" alt="rosto dividido ao meio: lado com rugas x lado liso, packshot no canto (montagem)"></a>
+<div class="b"><span class="id">FEA-IMG-041</span><span class="tag">Pele com queixa</span>
+<p>rosto dividido ao meio: lado com rugas x lado liso, packshot no canto (montagem)</p>
+<small><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">@drachristieviviane</a> · carrossel, slide 6</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: testa oleosa com poros x testa lisa, pote no centro e linha guia &quot;se você tem isso / use isso&quot; lucianabriitto">
+<a href="referencias/FEA-ref-16-slide02.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide02.jpg" alt="split: testa oleosa com poros x testa lisa, pote no centro e linha guia &quot;se você tem isso / use isso&quot;"></a>
+<div class="b"><span class="id">FEA-IMG-042</span><span class="tag">Pele com queixa</span>
+<p>split: testa oleosa com poros x testa lisa, pote no centro e linha guia &quot;se você tem isso / use isso&quot;</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 2</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: textura irregular e marcas x pele lisa, bisnaga no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide03.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide03.jpg" alt="split: textura irregular e marcas x pele lisa, bisnaga no centro"></a>
+<div class="b"><span class="id">FEA-IMG-043</span><span class="tag">Pele com queixa</span>
+<p>split: textura irregular e marcas x pele lisa, bisnaga no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 3</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: nariz com cravos e poros x nariz limpo, 2 frascos no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide04.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide04.jpg" alt="split: nariz com cravos e poros x nariz limpo, 2 frascos no centro"></a>
+<div class="b"><span class="id">FEA-IMG-044</span><span class="tag">Pele com queixa</span>
+<p>split: nariz com cravos e poros x nariz limpo, 2 frascos no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 4</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: linhas finas ao redor dos olhos x olho uniforme, bisnaga roxa no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide05.jpg" alt="split: linhas finas ao redor dos olhos x olho uniforme, bisnaga roxa no centro"></a>
+<div class="b"><span class="id">FEA-IMG-045</span><span class="tag">Pele com queixa</span>
+<p>split: linhas finas ao redor dos olhos x olho uniforme, bisnaga roxa no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: pele acneica com vermelhidão x pele calma, bisnaga no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide06.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide06.jpg" alt="split: pele acneica com vermelhidão x pele calma, bisnaga no centro"></a>
+<div class="b"><span class="id">FEA-IMG-046</span><span class="tag">Pele com queixa</span>
+<p>split: pele acneica com vermelhidão x pele calma, bisnaga no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 6</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: pele muito seca e descamando x pele hidratada, bisnaga no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide07.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide07.jpg" alt="split: pele muito seca e descamando x pele hidratada, bisnaga no centro"></a>
+<div class="b"><span class="id">FEA-IMG-047</span><span class="tag">Pele com queixa</span>
+<p>split: pele muito seca e descamando x pele hidratada, bisnaga no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 7</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="split: pele sensível com vermelhidão x pele calma, frasco conta-gotas no centro lucianabriitto">
+<a href="referencias/FEA-ref-16-slide08.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide08.jpg" alt="split: pele sensível com vermelhidão x pele calma, frasco conta-gotas no centro"></a>
+<div class="b"><span class="id">FEA-IMG-048</span><span class="tag">Pele com queixa</span>
+<p>split: pele sensível com vermelhidão x pele calma, frasco conta-gotas no centro</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 8</small></div></article>
+<article class="card" data-c="pele_queixa" data-t="olho irritado e vermelho com dedo puxando a pálpebra inferior metropoles_saudeciencia">
+<a href="referencias/FEA-ref-17-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-17-slide05.jpg" alt="olho irritado e vermelho com dedo puxando a pálpebra inferior"></a>
+<div class="b"><span class="id">FEA-IMG-049</span><span class="tag">Pele com queixa</span>
+<p>olho irritado e vermelho com dedo puxando a pálpebra inferior</p>
+<small><a href="https://www.instagram.com/p/DeZq8vWFTIR/" target="_blank">@metropoles_saudeciencia</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="pele_close" data-t="close de rosto feminino com pele hidratada e brilho (glass skin) drrodrigocesar">
+<a href="referencias/FEA-ref-02-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-000.0s.jpg" alt="close de rosto feminino com pele hidratada e brilho (glass skin)"></a>
+<div class="b"><span class="id">FEA-IMG-050</span><span class="tag">Pele saudável e luminosa</span>
+<p>close de rosto feminino com pele hidratada e brilho (glass skin)</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="pele_close" data-t="close de olho e pele lisa luminosa (pele &quot;de porcelana&quot;) dratelmagiordani">
+<a href="referencias/FEA-ref-07-004.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-004.5s.jpg" alt="close de olho e pele lisa luminosa (pele &quot;de porcelana&quot;)"></a>
+<div class="b"><span class="id">FEA-IMG-051</span><span class="tag">Pele saudável e luminosa</span>
+<p>close de olho e pele lisa luminosa (pele &quot;de porcelana&quot;)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:04.5</small></div></article>
+<article class="card" data-c="pele_close" data-t="mulher jovem tocando a pele do rosto (pele lisa) dratelmagiordani">
+<a href="referencias/FEA-ref-07-010.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-010.5s.jpg" alt="mulher jovem tocando a pele do rosto (pele lisa)"></a>
+<div class="b"><span class="id">FEA-IMG-052</span><span class="tag">Pele saudável e luminosa</span>
+<p>mulher jovem tocando a pele do rosto (pele lisa)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:10.5</small></div></article>
+<article class="card" data-c="pele_close" data-t="close macro de olho castanho com cílios (capa de matéria jornalística) metropoles_saudeciencia">
+<a href="referencias/FEA-ref-17-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-17-slide01.jpg" alt="close macro de olho castanho com cílios (capa de matéria jornalística)"></a>
+<div class="b"><span class="id">FEA-IMG-053</span><span class="tag">Pele saudável e luminosa</span>
+<p>close macro de olho castanho com cílios (capa de matéria jornalística)</p>
+<small><a href="https://www.instagram.com/p/DeZq8vWFTIR/" target="_blank">@metropoles_saudeciencia</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="pele_close" data-t="close editorial de rosto com pele glossy e iluminada draluciarebello">
+<a href="referencias/FEA-ref-18-slide03.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide03.jpg" alt="close editorial de rosto com pele glossy e iluminada"></a>
+<div class="b"><span class="id">FEA-IMG-054</span><span class="tag">Pele saudável e luminosa</span>
+<p>close editorial de rosto com pele glossy e iluminada</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 3</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mulher jovem aplicando creme na região dos olhos (roupão, toalha no cabelo) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-001.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-001.5s.jpg" alt="mulher jovem aplicando creme na região dos olhos (roupão, toalha no cabelo)"></a>
+<div class="b"><span class="id">FEA-IMG-055</span><span class="tag">Aplicação de produto</span>
+<p>mulher jovem aplicando creme na região dos olhos (roupão, toalha no cabelo)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 0:01.5</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mão recebendo loção de frasco com válvula pump (cerave) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-060.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-060.0s.jpg" alt="mão recebendo loção de frasco com válvula pump (CeraVe)"></a>
+<div class="b"><span class="id">FEA-IMG-056</span><span class="tag">Aplicação de produto</span>
+<p>mão recebendo loção de frasco com válvula pump (CeraVe)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 1:00.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mãos aplicando creme no cotovelo e braço (fundo azulejo) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-086.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-086.0s.jpg" alt="mãos aplicando creme no cotovelo e braço (fundo azulejo)"></a>
+<div class="b"><span class="id">FEA-IMG-057</span><span class="tag">Aplicação de produto</span>
+<p>mãos aplicando creme no cotovelo e braço (fundo azulejo)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 1:26.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mulher negra segurando bisnaga cerave e espalhando creme no rosto dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-093.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-093.0s.jpg" alt="mulher negra segurando bisnaga CeraVe e espalhando creme no rosto"></a>
+<div class="b"><span class="id">FEA-IMG-058</span><span class="tag">Aplicação de produto</span>
+<p>mulher negra segurando bisnaga CeraVe e espalhando creme no rosto</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 1:33.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="dedo aplicando sérum na maçã do rosto (close) drrodrigocesar">
+<a href="referencias/FEA-ref-02-003.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-003.0s.jpg" alt="dedo aplicando sérum na maçã do rosto (close)"></a>
+<div class="b"><span class="id">FEA-IMG-059</span><span class="tag">Aplicação de produto</span>
+<p>dedo aplicando sérum na maçã do rosto (close)</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 0:03.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="bastão rosa (stick hidratante) deslizando no pescoço josirobaina">
+<a href="referencias/FEA-ref-03-001.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-001.5s.jpg" alt="bastão rosa (stick hidratante) deslizando no pescoço"></a>
+<div class="b"><span class="id">FEA-IMG-060</span><span class="tag">Aplicação de produto</span>
+<p>bastão rosa (stick hidratante) deslizando no pescoço</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:01.5</small></div></article>
+<article class="card" data-c="aplicacao" data-t="pescoço com colar e gotas de creme antes de espalhar josirobaina">
+<a href="referencias/FEA-ref-03-003.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-003.0s.jpg" alt="pescoço com colar e gotas de creme antes de espalhar"></a>
+<div class="b"><span class="id">FEA-IMG-061</span><span class="tag">Aplicação de produto</span>
+<p>pescoço com colar e gotas de creme antes de espalhar</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:03.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mulher madura sorrindo passando bastão/stick no pescoço josirobaina">
+<a href="referencias/FEA-ref-03-013.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-013.5s.jpg" alt="mulher madura sorrindo passando bastão/stick no pescoço"></a>
+<div class="b"><span class="id">FEA-IMG-062</span><span class="tag">Aplicação de produto</span>
+<p>mulher madura sorrindo passando bastão/stick no pescoço</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:13.5</small></div></article>
+<article class="card" data-c="aplicacao" data-t="espátula e dedos espalhando creme em pescoço com linhas horizontais josirobaina">
+<a href="referencias/FEA-ref-03-016.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-016.0s.jpg" alt="espátula e dedos espalhando creme em pescoço com linhas horizontais"></a>
+<div class="b"><span class="id">FEA-IMG-063</span><span class="tag">Aplicação de produto</span>
+<p>espátula e dedos espalhando creme em pescoço com linhas horizontais</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:16.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="dedos massageando creme no pescoço (close lateral) josirobaina">
+<a href="referencias/FEA-ref-03-018.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-018.0s.jpg" alt="dedos massageando creme no pescoço (close lateral)"></a>
+<div class="b"><span class="id">FEA-IMG-064</span><span class="tag">Aplicação de produto</span>
+<p>dedos massageando creme no pescoço (close lateral)</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:18.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mulher negra (tranças) espalhando creme no pescoço com as mãos josirobaina">
+<a href="referencias/FEA-ref-03-049.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-03-049.5s.jpg" alt="mulher negra (tranças) espalhando creme no pescoço com as mãos"></a>
+<div class="b"><span class="id">FEA-IMG-065</span><span class="tag">Aplicação de produto</span>
+<p>mulher negra (tranças) espalhando creme no pescoço com as mãos</p>
+<small><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">@josirobaina</a> · reel, 0:49.5</small></div></article>
+<article class="card" data-c="aplicacao" data-t="close lateral de rosto feminino usando massageador/rolo facial rosa (marca d&#x27;água tiktok) biancalannee">
+<a href="referencias/FEA-ref-05-001.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-05-001.5s.jpg" alt="close lateral de rosto feminino usando massageador/rolo facial rosa (marca d&#x27;água TikTok)"></a>
+<div class="b"><span class="id">FEA-IMG-066</span><span class="tag">Aplicação de produto</span>
+<p>close lateral de rosto feminino usando massageador/rolo facial rosa (marca d&#x27;água TikTok)</p>
+<small><a href="https://www.instagram.com/reel/DcobQ3kMZ6X/" target="_blank">@biancalannee</a> · reel, 0:01.5</small></div></article>
+<article class="card" data-c="aplicacao" data-t="rosto feminino com vários pontos de produto espalhados (exemplo do que não fazer) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-087.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-087.0s.jpg" alt="rosto feminino com vários pontos de produto espalhados (exemplo do que não fazer)"></a>
+<div class="b"><span class="id">FEA-IMG-067</span><span class="tag">Aplicação de produto</span>
+<p>rosto feminino com vários pontos de produto espalhados (exemplo do que não fazer)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:27.0</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mão com unhas vinho tocando o lábio (close editorial) draluciarebello">
+<a href="referencias/FEA-ref-18-slide04.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide04.jpg" alt="mão com unhas vinho tocando o lábio (close editorial)"></a>
+<div class="b"><span class="id">FEA-IMG-068</span><span class="tag">Aplicação de produto</span>
+<p>mão com unhas vinho tocando o lábio (close editorial)</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 4</small></div></article>
+<article class="card" data-c="aplicacao" data-t="pés descalços e mão tocando o calcanhar (pele áspera) draluciarebello">
+<a href="referencias/FEA-ref-18-slide07.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide07.jpg" alt="pés descalços e mão tocando o calcanhar (pele áspera)"></a>
+<div class="b"><span class="id">FEA-IMG-069</span><span class="tag">Aplicação de produto</span>
+<p>pés descalços e mão tocando o calcanhar (pele áspera)</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 7</small></div></article>
+<article class="card" data-c="aplicacao" data-t="mulher sorrindo com creme branco na maçã do rosto draluciarebello">
+<a href="referencias/FEA-ref-18-slide08.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide08.jpg" alt="mulher sorrindo com creme branco na maçã do rosto"></a>
+<div class="b"><span class="id">FEA-IMG-070</span><span class="tag">Aplicação de produto</span>
+<p>mulher sorrindo com creme branco na maçã do rosto</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 8</small></div></article>
+<article class="card" data-c="ugc_aplicacao" data-t="mulher jovem cabelo cacheado espalhando creme denso no rosto (split tela superior) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-012.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-012.0s.jpg" alt="mulher jovem cabelo cacheado espalhando creme denso no rosto (split tela superior)"></a>
+<div class="b"><span class="id">FEA-IMG-071</span><span class="tag">Aplicação estilo UGC</span>
+<p>mulher jovem cabelo cacheado espalhando creme denso no rosto (split tela superior)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 0:12.0</small></div></article>
+<article class="card" data-c="ugc_aplicacao" data-t="mulher madura com máscara de creme no rosto (cena caseira) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-061.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-061.5s.jpg" alt="mulher madura com máscara de creme no rosto (cena caseira)"></a>
+<div class="b"><span class="id">FEA-IMG-072</span><span class="tag">Aplicação estilo UGC</span>
+<p>mulher madura com máscara de creme no rosto (cena caseira)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 1:01.5</small></div></article>
+<article class="card" data-c="textura" data-t="pote de creme branco aberto com espátula (close de textura) dra.ameliagizzi">
+<a href="referencias/FEA-ref-01-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-01-000.0s.jpg" alt="pote de creme branco aberto com espátula (close de textura)"></a>
+<div class="b"><span class="id">FEA-IMG-073</span><span class="tag">Textura e swatch de produto</span>
+<p>pote de creme branco aberto com espátula (close de textura)</p>
+<small><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">@dra.ameliagizzi</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="textura" data-t="dedo pegando creme do pote azul dratelmagiordani">
+<a href="referencias/FEA-ref-07-087.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-087.0s.jpg" alt="dedo pegando creme do pote azul"></a>
+<div class="b"><span class="id">FEA-IMG-074</span><span class="tag">Textura e swatch de produto</span>
+<p>dedo pegando creme do pote azul</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 1:27.0</small></div></article>
+<article class="card" data-c="textura" data-t="swatch de creme espalhado na pele (close) dratelmagiordani">
+<a href="referencias/FEA-ref-07-089.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-089.0s.jpg" alt="swatch de creme espalhado na pele (close)"></a>
+<div class="b"><span class="id">FEA-IMG-075</span><span class="tag">Textura e swatch de produto</span>
+<p>swatch de creme espalhado na pele (close)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 1:29.0</small></div></article>
+<article class="card" data-c="textura" data-t="pote de vaselina aberto mostrando a textura do gel (vista de cima) draluciarebello">
+<a href="referencias/FEA-ref-18-slide09.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide09.jpg" alt="pote de vaselina aberto mostrando a textura do gel (vista de cima)"></a>
+<div class="b"><span class="id">FEA-IMG-076</span><span class="tag">Textura e swatch de produto</span>
+<p>pote de vaselina aberto mostrando a textura do gel (vista de cima)</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 9</small></div></article>
+<article class="card" data-c="rotina" data-t="mulher lavando o rosto na pia do banheiro (faixa no cabelo) clinicaedilsonpinheiro">
+<a href="referencias/FEA-ref-06-007.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-06-007.5s.jpg" alt="mulher lavando o rosto na pia do banheiro (faixa no cabelo)"></a>
+<div class="b"><span class="id">FEA-IMG-077</span><span class="tag">Rotina e lifestyle</span>
+<p>mulher lavando o rosto na pia do banheiro (faixa no cabelo)</p>
+<small><a href="https://www.instagram.com/reel/Dc8fKhpB56M/" target="_blank">@clinicaedilsonpinheiro</a> · reel, 0:07.5</small></div></article>
+<article class="card" data-c="rotina" data-t="rosto com máscara facial de tecido (sheet mask) dratelmagiordani">
+<a href="referencias/FEA-ref-07-012.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-012.0s.jpg" alt="rosto com máscara facial de tecido (sheet mask)"></a>
+<div class="b"><span class="id">FEA-IMG-078</span><span class="tag">Rotina e lifestyle</span>
+<p>rosto com máscara facial de tecido (sheet mask)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:12.0</small></div></article>
+<article class="card" data-c="rotina" data-t="close de olho aplicando máscara de cílios metropoles_saudeciencia">
+<a href="referencias/FEA-ref-17-slide03.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-17-slide03.jpg" alt="close de olho aplicando máscara de cílios"></a>
+<div class="b"><span class="id">FEA-IMG-079</span><span class="tag">Rotina e lifestyle</span>
+<p>close de olho aplicando máscara de cílios</p>
+<small><a href="https://www.instagram.com/p/DeZq8vWFTIR/" target="_blank">@metropoles_saudeciencia</a> · carrossel, slide 3</small></div></article>
+<article class="card" data-c="rotina" data-t="mulher cobrindo os olhos com as mãos (desconforto ocular), ambiente doméstico metropoles_saudeciencia">
+<a href="referencias/FEA-ref-17-slide06.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-17-slide06.jpg" alt="mulher cobrindo os olhos com as mãos (desconforto ocular), ambiente doméstico"></a>
+<div class="b"><span class="id">FEA-IMG-080</span><span class="tag">Rotina e lifestyle</span>
+<p>mulher cobrindo os olhos com as mãos (desconforto ocular), ambiente doméstico</p>
+<small><a href="https://www.instagram.com/p/DeZq8vWFTIR/" target="_blank">@metropoles_saudeciencia</a> · carrossel, slide 6</small></div></article>
+<article class="card" data-c="contexto" data-t="fila e prateleiras de farmácia/drogaria lotada (gente com cestinha) dratelmagiordani">
+<a href="referencias/FEA-ref-07-015.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-015.0s.jpg" alt="fila e prateleiras de farmácia/drogaria lotada (gente com cestinha)"></a>
+<div class="b"><span class="id">FEA-IMG-081</span><span class="tag">Contexto</span>
+<p>fila e prateleiras de farmácia/drogaria lotada (gente com cestinha)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:15.0</small></div></article>
+<article class="card" data-c="contexto" data-t="cabelo longo castanho liso visto de costas draluciarebello">
+<a href="referencias/FEA-ref-18-slide06.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide06.jpg" alt="cabelo longo castanho liso visto de costas"></a>
+<div class="b"><span class="id">FEA-IMG-082</span><span class="tag">Contexto</span>
+<p>cabelo longo castanho liso visto de costas</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 6</small></div></article>
+<article class="card" data-c="animacao_3d" data-t="animação 3d: gota de sérum (retinol) caindo e penetrando camadas de células da pele drrodrigocesar">
+<a href="referencias/FEA-ref-02-028.5s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-028.5s.jpg" alt="animação 3D: gota de sérum (retinol) caindo e penetrando camadas de células da pele"></a>
+<div class="b"><span class="id">FEA-IMG-083</span><span class="tag">Animação 3D de pele e ativos</span>
+<p>animação 3D: gota de sérum (retinol) caindo e penetrando camadas de células da pele</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 0:28.5</small></div></article>
+<article class="card" data-c="animacao_3d" data-t="animação 3d: mascote gota de hidratação sobre pele ressecada e rachada (com marca d&#x27;água de terceiro) drrodrigocesar">
+<a href="referencias/FEA-ref-02-063.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-063.0s.jpg" alt="animação 3D: mascote gota de hidratação sobre pele ressecada e rachada (com marca d&#x27;água de terceiro)"></a>
+<div class="b"><span class="id">FEA-IMG-084</span><span class="tag">Animação 3D de pele e ativos</span>
+<p>animação 3D: mascote gota de hidratação sobre pele ressecada e rachada (com marca d&#x27;água de terceiro)</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 1:03.0</small></div></article>
+<article class="card" data-c="animacao_3d" data-t="animação 3d: gota de vitamina c penetrando poro com pigmento de melanina (manchas) drrodrigocesar">
+<a href="referencias/FEA-ref-02-099.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-02-099.0s.jpg" alt="animação 3D: gota de vitamina C penetrando poro com pigmento de melanina (manchas)"></a>
+<div class="b"><span class="id">FEA-IMG-085</span><span class="tag">Animação 3D de pele e ativos</span>
+<p>animação 3D: gota de vitamina C penetrando poro com pigmento de melanina (manchas)</p>
+<small><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">@drrodrigocesar</a> · reel, 1:39.0</small></div></article>
+<article class="card" data-c="objeto" data-t="caroço de abacate (png recortado, comparação de quantidade) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-065.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-065.0s.jpg" alt="caroço de abacate (PNG recortado, comparação de quantidade)"></a>
+<div class="b"><span class="id">FEA-IMG-086</span><span class="tag">Objetos e metáforas visuais</span>
+<p>caroço de abacate (PNG recortado, comparação de quantidade)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:05.0</small></div></article>
+<article class="card" data-c="objeto" data-t="duas mangas (png recortado, comparação de quantidade) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-067.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-067.0s.jpg" alt="duas mangas (PNG recortado, comparação de quantidade)"></a>
+<div class="b"><span class="id">FEA-IMG-087</span><span class="tag">Objetos e metáforas visuais</span>
+<p>duas mangas (PNG recortado, comparação de quantidade)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:07.0</small></div></article>
+<article class="card" data-c="objeto" data-t="fruta-do-conde (png recortado, comparação de quantidade) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-068.8s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-068.8s.jpg" alt="fruta-do-conde (PNG recortado, comparação de quantidade)"></a>
+<div class="b"><span class="id">FEA-IMG-088</span><span class="tag">Objetos e metáforas visuais</span>
+<p>fruta-do-conde (PNG recortado, comparação de quantidade)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:08.8</small></div></article>
+<article class="card" data-c="objeto" data-t="ervilhas na vagem (png recortado, referência &quot;quantidade de uma ervilha&quot;) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-070.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-070.0s.jpg" alt="ervilhas na vagem (PNG recortado, referência &quot;quantidade de uma ervilha&quot;)"></a>
+<div class="b"><span class="id">FEA-IMG-089</span><span class="tag">Objetos e metáforas visuais</span>
+<p>ervilhas na vagem (PNG recortado, referência &quot;quantidade de uma ervilha&quot;)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 1:10.0</small></div></article>
+<article class="card" data-c="objeto" data-t="caldeirão de bruxa com líquido verde (png, metáfora de misturar produtos) drursinho_carinhoso">
+<a href="referencias/FEA-ref-08-130.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-08-130.0s.jpg" alt="caldeirão de bruxa com líquido verde (PNG, metáfora de misturar produtos)"></a>
+<div class="b"><span class="id">FEA-IMG-090</span><span class="tag">Objetos e metáforas visuais</span>
+<p>caldeirão de bruxa com líquido verde (PNG, metáfora de misturar produtos)</p>
+<small><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">@drursinho_carinhoso</a> · reel, 2:10.0</small></div></article>
+<article class="card" data-c="objeto" data-t="mãos segurando frasco de perfume transparente draluciarebello">
+<a href="referencias/FEA-ref-18-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-18-slide05.jpg" alt="mãos segurando frasco de perfume transparente"></a>
+<div class="b"><span class="id">FEA-IMG-091</span><span class="tag">Objetos e metáforas visuais</span>
+<p>mãos segurando frasco de perfume transparente</p>
+<small><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">@draluciarebello</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="grafico" data-t="emoji/ícone bandeira da coreia do sul sobre o apresentador (efeito p&amp;b) drguidi">
+<a href="referencias/FEA-ref-04-012.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-04-012.0s.jpg" alt="emoji/ícone bandeira da Coreia do Sul sobre o apresentador (efeito P&amp;B)"></a>
+<div class="b"><span class="id">FEA-IMG-092</span><span class="tag">Elementos gráficos</span>
+<p>emoji/ícone bandeira da Coreia do Sul sobre o apresentador (efeito P&amp;B)</p>
+<small><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">@drguidi</a> · reel, 0:12.0</small></div></article>
+<article class="card" data-c="grafico" data-t="coração vermelho (sticker cta &quot;toque duas vezes&quot;) drguidi">
+<a href="referencias/FEA-ref-04-042.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-04-042.0s.jpg" alt="coração vermelho (sticker CTA &quot;toque duas vezes&quot;)"></a>
+<div class="b"><span class="id">FEA-IMG-093</span><span class="tag">Elementos gráficos</span>
+<p>coração vermelho (sticker CTA &quot;toque duas vezes&quot;)</p>
+<small><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">@drguidi</a> · reel, 0:42.0</small></div></article>
+<article class="card" data-c="grafico" data-t="logos de marcas de moda hermès, prada, gucci, zara, marisa (analogia de posicionamento) dranataliacolassiol">
+<a href="referencias/FEA-ref-11-002.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-11-002.0s.jpg" alt="logos de marcas de moda Hermès, Prada, Gucci, Zara, Marisa (analogia de posicionamento)"></a>
+<div class="b"><span class="id">FEA-IMG-094</span><span class="tag">Elementos gráficos</span>
+<p>logos de marcas de moda Hermès, Prada, Gucci, Zara, Marisa (analogia de posicionamento)</p>
+<small><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">@dranataliacolassiol</a> · reel, 0:02.0</small></div></article>
+<article class="card" data-c="grafico" data-t="print do perfil do instagram da apresentadora (cta seguir) dra.marinabarix">
+<a href="referencias/FEA-ref-13-035.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-035.0s.jpg" alt="print do perfil do Instagram da apresentadora (CTA seguir)"></a>
+<div class="b"><span class="id">FEA-IMG-095</span><span class="tag">Elementos gráficos</span>
+<p>print do perfil do Instagram da apresentadora (CTA seguir)</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:35.0</small></div></article>
+<article class="card" data-c="grafico" data-t="selos fixos &quot;compro&quot; (verde) e &quot;não compro&quot; (vermelho) no topo da tela dra.marinabarix">
+<a href="referencias/FEA-ref-13-000.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-13-000.0s.jpg" alt="selos fixos &quot;Compro&quot; (verde) e &quot;Não compro&quot; (vermelho) no topo da tela"></a>
+<div class="b"><span class="id">FEA-IMG-096</span><span class="tag">Elementos gráficos</span>
+<p>selos fixos &quot;Compro&quot; (verde) e &quot;Não compro&quot; (vermelho) no topo da tela</p>
+<small><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">@dra.marinabarix</a> · reel, 0:00.0</small></div></article>
+<article class="card" data-c="autoridade" data-t="foto institucional com painel harvard medical school (prova de autoridade) dratelmagiordani">
+<a href="referencias/FEA-ref-07-008.0s.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-07-008.0s.jpg" alt="foto institucional com painel Harvard Medical School (prova de autoridade)"></a>
+<div class="b"><span class="id">FEA-IMG-097</span><span class="tag">Prova de autoridade</span>
+<p>foto institucional com painel Harvard Medical School (prova de autoridade)</p>
+<small><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">@dratelmagiordani</a> · reel, 0:08.0</small></div></article>
+<article class="card" data-c="autoridade" data-t="selfie da cientista cosmética de jaleco, óculos de proteção e luvas azuis (capa) cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide01.jpg" alt="selfie da cientista cosmética de jaleco, óculos de proteção e luvas azuis (capa)"></a>
+<div class="b"><span class="id">FEA-IMG-098</span><span class="tag">Prova de autoridade</span>
+<p>selfie da cientista cosmética de jaleco, óculos de proteção e luvas azuis (capa)</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="autoridade" data-t="selfie da criadora em casa com título &quot;a ordem certa do skincare&quot; thatasalves">
+<a href="referencias/FEA-ref-14-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-14-slide01.jpg" alt="selfie da criadora em casa com título &quot;a ordem certa do skincare&quot;"></a>
+<div class="b"><span class="id">FEA-IMG-099</span><span class="tag">Prova de autoridade</span>
+<p>selfie da criadora em casa com título &quot;a ordem certa do skincare&quot;</p>
+<small><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">@thatasalves</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="autoridade" data-t="retrato de estúdio da médica com expressão séria segurando 5 produtos (capa) drachristieviviane">
+<a href="referencias/FEA-ref-15-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-15-slide01.jpg" alt="retrato de estúdio da médica com expressão séria segurando 5 produtos (capa)"></a>
+<div class="b"><span class="id">FEA-IMG-100</span><span class="tag">Prova de autoridade</span>
+<p>retrato de estúdio da médica com expressão séria segurando 5 produtos (capa)</p>
+<small><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">@drachristieviviane</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="autoridade" data-t="retrato sorrindo com print do perfil do instagram (cta seguir) drachristieviviane">
+<a href="referencias/FEA-ref-15-slide08.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-15-slide08.jpg" alt="retrato sorrindo com print do perfil do Instagram (CTA seguir)"></a>
+<div class="b"><span class="id">FEA-IMG-101</span><span class="tag">Prova de autoridade</span>
+<p>retrato sorrindo com print do perfil do Instagram (CTA seguir)</p>
+<small><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">@drachristieviviane</a> · carrossel, slide 8</small></div></article>
+<article class="card" data-c="autoridade" data-t="foto da criadora em loja de cosméticos com selos &quot;use isso&quot; e &quot;se tem isso&quot; lucianabriitto">
+<a href="referencias/FEA-ref-16-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide01.jpg" alt="foto da criadora em loja de cosméticos com selos &quot;use isso&quot; e &quot;se tem isso&quot;"></a>
+<div class="b"><span class="id">FEA-IMG-102</span><span class="tag">Prova de autoridade</span>
+<p>foto da criadora em loja de cosméticos com selos &quot;use isso&quot; e &quot;se tem isso&quot;</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="autoridade" data-t="foto da criadora com cta &quot;comenta coreano&quot; e selo &quot;me seguir custa zero reais&quot; lucianabriitto">
+<a href="referencias/FEA-ref-16-slide09.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-16-slide09.jpg" alt="foto da criadora com CTA &quot;comenta COREANO&quot; e selo &quot;me seguir custa zero reais&quot;"></a>
+<div class="b"><span class="id">FEA-IMG-103</span><span class="tag">Prova de autoridade</span>
+<p>foto da criadora com CTA &quot;comenta COREANO&quot; e selo &quot;me seguir custa zero reais&quot;</p>
+<small><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">@lucianabriitto</a> · carrossel, slide 9</small></div></article>
+<article class="card" data-c="layout" data-t="slide de passo da rotina em fundo branco: título, texto e 2 packshots com legenda (limpeza) cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide02.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide02.jpg" alt="slide de passo da rotina em fundo branco: título, texto e 2 packshots com legenda (limpeza)"></a>
+<div class="b"><span class="id">FEA-IMG-104</span><span class="tag">Layouts de carrossel</span>
+<p>slide de passo da rotina em fundo branco: título, texto e 2 packshots com legenda (limpeza)</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 2</small></div></article>
+<article class="card" data-c="layout" data-t="comparativo de 2 sérums de vitamina c com packshot, nome e descrição curta cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide04.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide04.jpg" alt="comparativo de 2 sérums de vitamina C com packshot, nome e descrição curta"></a>
+<div class="b"><span class="id">FEA-IMG-105</span><span class="tag">Layouts de carrossel</span>
+<p>comparativo de 2 sérums de vitamina C com packshot, nome e descrição curta</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 4</small></div></article>
+<article class="card" data-c="layout" data-t="3 protetores solares com selo de tipo de pele (oleosa, seca, sensível) cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide07.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide07.jpg" alt="3 protetores solares com selo de tipo de pele (oleosa, seca, sensível)"></a>
+<div class="b"><span class="id">FEA-IMG-106</span><span class="tag">Layouts de carrossel</span>
+<p>3 protetores solares com selo de tipo de pele (oleosa, seca, sensível)</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 7</small></div></article>
+<article class="card" data-c="layout" data-t="escada de tolerância de retinoides (melhor tolerado, intermediário, mais forte) com packshots cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide08.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide08.jpg" alt="escada de tolerância de retinoides (melhor tolerado, intermediário, mais forte) com packshots"></a>
+<div class="b"><span class="id">FEA-IMG-107</span><span class="tag">Layouts de carrossel</span>
+<p>escada de tolerância de retinoides (melhor tolerado, intermediário, mais forte) com packshots</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 8</small></div></article>
+<article class="card" data-c="layout" data-t="card de citação &quot;regra de ouro&quot; em caixa verde-água sobre branco cientistadabeleza">
+<a href="referencias/FEA-ref-09-slide09.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-09-slide09.jpg" alt="card de citação &quot;regra de ouro&quot; em caixa verde-água sobre branco"></a>
+<div class="b"><span class="id">FEA-IMG-108</span><span class="tag">Layouts de carrossel</span>
+<p>card de citação &quot;regra de ouro&quot; em caixa verde-água sobre branco</p>
+<small><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">@cientistadabeleza</a> · carrossel, slide 9</small></div></article>
+<article class="card" data-c="layout" data-t="infográfico: 6 queixas em círculos de pele (manchas, poros, linhas, acne, sensibilizada, barreira) apontando para 6 produtos viralizei.news">
+<a href="referencias/FEA-ref-12-slide01.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-12-slide01.jpg" alt="infográfico: 6 queixas em círculos de pele (manchas, poros, linhas, acne, sensibilizada, barreira) apontando para 6 produtos"></a>
+<div class="b"><span class="id">FEA-IMG-109</span><span class="tag">Layouts de carrossel</span>
+<p>infográfico: 6 queixas em círculos de pele (manchas, poros, linhas, acne, sensibilizada, barreira) apontando para 6 produtos</p>
+<small><a href="https://www.instagram.com/p/Ddo7wuESyni/" target="_blank">@viralizei.news</a> · carrossel, slide 1</small></div></article>
+<article class="card" data-c="layout" data-t="grade de 6 packshots de sabonete facial com preço embaixo de cada um thatasalves">
+<a href="referencias/FEA-ref-14-slide02.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-14-slide02.jpg" alt="grade de 6 packshots de sabonete facial com preço embaixo de cada um"></a>
+<div class="b"><span class="id">FEA-IMG-110</span><span class="tag">Layouts de carrossel</span>
+<p>grade de 6 packshots de sabonete facial com preço embaixo de cada um</p>
+<small><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">@thatasalves</a> · carrossel, slide 2</small></div></article>
+<article class="card" data-c="layout" data-t="grade de protetores solares com preço, fundo branco thatasalves">
+<a href="referencias/FEA-ref-14-slide04.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-14-slide04.jpg" alt="grade de protetores solares com preço, fundo branco"></a>
+<div class="b"><span class="id">FEA-IMG-111</span><span class="tag">Layouts de carrossel</span>
+<p>grade de protetores solares com preço, fundo branco</p>
+<small><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">@thatasalves</a> · carrossel, slide 4</small></div></article>
+<article class="card" data-c="layout" data-t="ativos de tratamento com packshot, nome do ativo e função em uma linha thatasalves">
+<a href="referencias/FEA-ref-14-slide05.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-14-slide05.jpg" alt="ativos de tratamento com packshot, nome do ativo e função em uma linha"></a>
+<div class="b"><span class="id">FEA-IMG-112</span><span class="tag">Layouts de carrossel</span>
+<p>ativos de tratamento com packshot, nome do ativo e função em uma linha</p>
+<small><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">@thatasalves</a> · carrossel, slide 5</small></div></article>
+<article class="card" data-c="layout" data-t="checklist de rotina manhã e noite em texto (fundo branco) thatasalves">
+<a href="referencias/FEA-ref-14-slide07.jpg" target="_blank"><img loading="lazy" src="referencias/FEA-ref-14-slide07.jpg" alt="checklist de rotina manhã e noite em texto (fundo branco)"></a>
+<div class="b"><span class="id">FEA-IMG-113</span><span class="tag">Layouts de carrossel</span>
+<p>checklist de rotina manhã e noite em texto (fundo branco)</p>
+<small><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">@thatasalves</a> · carrossel, slide 7</small></div></article></div>
+</section>
+<section>
+<h2>Posts de origem</h2>
+<ol class="fontes"><li><a href="https://www.instagram.com/reel/DdkMx4pJNKp/" target="_blank">01 · @dra.ameliagizzi</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/DdGmQEspUfZ/" target="_blank">02 · @drrodrigocesar</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/Dd2GxO2hUAR/" target="_blank">03 · @josirobaina</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/Dc_sAewJVOf/" target="_blank">04 · @drguidi</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/DcobQ3kMZ6X/" target="_blank">05 · @biancalannee</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/Dc8fKhpB56M/" target="_blank">06 · @clinicaedilsonpinheiro</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/DdTyLOOxgo1/" target="_blank">07 · @dratelmagiordani</a> <span>reel</span></li><li><a href="https://www.instagram.com/reel/DYvCE9lIrqB/" target="_blank">08 · @drursinho_carinhoso</a> <span>reel</span></li><li><a href="https://www.instagram.com/p/Dd5FA3jjNOc/" target="_blank">09 · @cientistadabeleza</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/p/DeAakiwFtVy/" target="_blank">10 · @yumi.kbeauty</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/reel/DeNP2qoRkdo/" target="_blank">11 · @dranataliacolassiol</a> <span>reel</span></li><li><a href="https://www.instagram.com/p/Ddo7wuESyni/" target="_blank">12 · @viralizei.news</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/reel/DdrAVlhsGHv/" target="_blank">13 · @dra.marinabarix</a> <span>reel</span></li><li><a href="https://www.instagram.com/p/DdoCVKgHCQg/" target="_blank">14 · @thatasalves</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/p/DdoCXwNmzLr/" target="_blank">15 · @drachristieviviane</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/p/DeXvttKH_9h/" target="_blank">16 · @lucianabriitto</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/p/DeZq8vWFTIR/" target="_blank">17 · @metropoles_saudeciencia</a> <span>carrossel</span></li><li><a href="https://www.instagram.com/p/Ddn0hIPFuJf/" target="_blank">18 · @draluciarebello</a> <span>carrossel</span></li></ol>
+</section>
+<footer>FEA · Banco de imagens de referência · out/2026 · uso interno da equipe</footer>
+</main>
+<script>
+const chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.card')],q=document.getElementById('q');let cat='*';
+function f(){const t=q.value.trim().toLowerCase();cards.forEach(c=>{c.style.display=((cat==='*'||c.dataset.c===cat)&&(!t||c.dataset.t.includes(t)))?'':'none'})}
+chips.forEach(b=>b.onclick=()=>{chips.forEach(x=>x.classList.remove('on'));b.classList.add('on');cat=b.dataset.c;f()});q.oninput=f;
+</script>
+</body>
+</html>
