@@ -44,7 +44,7 @@ O loop fecha sem salto: o último quadro emenda no primeiro.
 | 27 | Portal: "Vamos voltar ao presente" | entrada + loop |
 | 28 | Os 6 sins | 7 cliques (título + 1 por pergunta) |
 | 46 | Quanto vale? (recibo até R$ 70.000) | 7 cliques (recibo + 5 itens + total) |
-| 49 | Tem mais (usar também nos slides 52, 55, 57, 61 e 63) | 1 |
+| 49 | Tem mais (usar também nos slides 52, 55, 57 e 61; o 63, "O último Tem mais", tem texto próprio) | 1 |
 | 54 | Desafio Clínica Elite, R$ 300 mil | 1 |
 | 58 | Segunda cadeira de graça | 1 |
 | 59 | Por apenas R$ 35.000 (usar também no 48) | 1 |
