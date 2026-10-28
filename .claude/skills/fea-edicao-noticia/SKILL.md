@@ -5,7 +5,7 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 # FEA: edição de Reels no modelo notícia
 
-Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenchedores para os lábios"), **ainda em validação**: só replicar nos próximos vídeos depois do OK dela. Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
+**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: pasta `10- Outubro/26- Produtos` (1Fhn... no Drive), numeração `1-`, `2-`... e linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras feito em 28/10). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
 
 ## Entrada
 
@@ -39,6 +39,10 @@ Teste pedido pela Keila em 26/10/2026 (vídeo IMG_7934, "Os 3 melhores preenched
 - Conferir cada trecho a 2 quadros/s antes de usar: sem sangue escorrendo, sem cara de dor e sem troca de plano no meio (o IMG_7468 abre o plano em 1:32,5). Nunca usar pastas "NÃO AUTORIZADO".
 - **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
 - **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
+
+## Olheiras (IMG_7935, 28/10/2026)
+
+Projeto `FEA-projeto-noticia-olheiras.json`. Takes: olheira profunda antes, olhando para a câmera (pasta "50.OK- Paciente olheiras" IMG_2072 1 s) na abertura; cânula no tear trough em close ("Olheiras" IMG_7986 186,5 s e 190,5 s; marcação + cânula 6,2 s); paciente masculino com marcação roxa ("34.OK" IMG_2662 52 s e 90 s, resultado IMG_2666); cânula malar ("Olheiras 2mL" IMG_7007 22 s); produto esticando (IMG_3691 19 s) em "artigo sobre reologia". Fotos dos produtos recortadas da edição da equipe (`23- Melhores produtos/2-`). Cortado "assim você vai ter um resultado perfeito" (CFM).
 
 ## Fluxo
 

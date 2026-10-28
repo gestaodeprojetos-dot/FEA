@@ -336,6 +336,19 @@ def main():
     if v.get("tirar_silencios"):
         manter = tirar_silencios(manter, *db, **v["tirar_silencios"])
         v = dict(v, manter=[[a, b, "exato"] for a, b in manter])
+        # palavra cujo meio caiu num respiro cortado sumia da legenda ("podem", "na"): encosta a
+        # palavra no trecho mantido mais próximo
+        for seg in trans:
+            for w in seg["words"]:
+                for (a0, b0), (a1, b1) in zip(manter, manter[1:]):
+                    if a1 - b0 < 0.6 and b0 <= (w["s"] + w["e"]) / 2 < a1:   # só respiro, não corte de edição
+                        if w["s"] < b0:
+                            w["e"] = b0 - 0.01
+                        else:
+                            w["s"], w["e"] = a1 + 0.01, max(w["e"], a1 + 0.2)
+        tr_aj = v["saida"].rsplit(".", 1)[0] + "_tr.json"
+        json.dump(trans, open(tr_aj, "w", encoding="utf-8"), ensure_ascii=False)
+        v = dict(v, transcricao=tr_aj)
     # no modelo notícia a legenda roda junto com a headline (referência "1- Olheiras"): posições
     # diferentes na tela, e a fala do começo não fica sem legenda
     base.TITULO_DUR = 0.0

@@ -330,6 +330,9 @@ CORRECOES = [
     (r"\b[Ee]\.? ?[Pp]\.? ?[Tt]\.? ?[Qq]\.?(?= ?S ?\d)", "e.p.t.q."), (r"\b[Ee]petic\b", "e.p.t.q."),
     (r"\b(e\.p\.t\.q\.) ?S ?(\d00)\b", r"\1 S\2"),
     (r"\b[Bb]elotero [Ii]ntense\b", "Belotero Intense"),
+    # olheiras (28/10/2026): Juvéderm Voluma (Allergan), Restylane Lyft (Galderma), swelling factor
+    (r"\b[Jj]uv[eé]derm\b", "Juvéderm"), (r"\bRestylane Lift\b", "Restylane Lyft"),
+    (r"\b[Ss]olo ?[Ii]nfector\b", "swelling factor"),
 ]
 
 
@@ -393,7 +396,7 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Belotero", "Refyne", "Kysse", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Belotero", "Refyne", "Kysse", "Juvéderm", "Lyft", "Voluma", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
 
 def limpar(texto):
