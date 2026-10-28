@@ -77,16 +77,18 @@ ESTILOS = {
                   "PROD_MAX": (860, 700), "PROD_Y": 540, "PROD_NOME_Y": 970,
                   "PRODS_ALT": 640, "PRODS_Y": 600, "PRODS_NUM_Y": 210},
     # Keila, 27/10/2026, refeito depois de "nada a ver com as referências": tela dividida na metade,
-    # B-roll do gancho cresce até quase a tela cheia, headline centralizada na emenda (caixas brancas,
+    # Painel fixo na metade (sem crescer, Keila 28/10/2026), headline centralizada na emenda (caixas brancas,
     # letra preta grossa), depois o Dr. em tela cheia. O B-roll é renderizado com 1700 px e recortado
     # no centro conforme a altura da cena ("altura" ou "cresce": [h0, h1] no projeto).
     "referencia": {"PAINEL_H": 1700, "ALTURA": 960, "CROP_CENTRO": True, "PUSH": 0.06, "HL_CENTRO": True,
                    "PROD_MAX": (860, 560), "PROD_Y": 850, "PROD_NOME_Y": 1170,
-                   "PRODS_ALT": 520, "PRODS_Y": 860, "PRODS_NUM_Y": 560, "ROTULO_Y": 1180, "DESCE_OFF": 300},
+                   "PRODS_ALT": 520, "PRODS_Y": 860, "PRODS_NUM_Y": 560, "ROTULO_Y": 1180, "DESCE_OFF": 380,
+                   "LEG_EMENDA": True},
 }
 ALTURA = None            # altura visível do painel (None = PAINEL_H inteiro)
 CROP_CENTRO = False      # recorta o painel no centro (True) ou no topo
 DESCE_OFF = 520          # o Dr. desce (altura do painel - 520 px): cabeça logo abaixo do esfumaçado
+LEG_EMENDA = False       # legenda na emenda da tela dividida, fora do rosto do Dr. (Keila, 28/10/2026)
 HL_CENTRO = False        # headline centralizada na emenda (estilo referencia) em vez da barra dourada
 ROTULO_Y = None
 PROD_MAX, PROD_Y, PROD_NOME_Y = (700, 470), 430, 760          # produto único no painel
@@ -163,6 +165,25 @@ def render_headline_centro(linhas, fonte, tam=66):
     return im
 
 
+def legenda_na_emenda(ass, cenas):
+    """Durante a tela dividida, a legenda sobe para a emenda (logo abaixo do B-roll), em vez de ficar no
+    rosto do Dr.; na tela cheia continua embaixo. Decide pelo meio de cada fala."""
+    def seg(x):
+        h, m, sec = x.split(":")
+        return int(h) * 3600 + int(m) * 60 + float(sec)
+    saida = []
+    for ln in open(ass, encoding="utf-8"):
+        if ln.startswith("Dialogue:"):
+            campos = ln.split(",", 3)
+            meio = (seg(campos[1]) + seg(campos[2])) / 2
+            c = next((c for c in cenas if c["t0"] <= meio < c["t1"]), None)
+            if c is not None and c["tipo"] != "cheio":
+                h = int(c.get("altura", ALTURA or PAINEL_H))
+                ln = re.sub(r"\\pos\(540,(\d+)\)", lambda m: f"\\pos(540,{int(m.group(1)) - 1515 + h + 25})", ln)
+        saida.append(ln)
+    open(ass, "w", encoding="utf-8").writelines(saida)
+
+
 def aplicar_headline_centro(quadro, im, t, fim, emenda):
     p_in = ease((t - 0.10) / 0.30)
     p_out = 1 - ease((t - fim) / 0.25)
@@ -174,8 +195,9 @@ def aplicar_headline_centro(quadro, im, t, fim, emenda):
     if a < 1:
         img.putalpha(img.split()[3].point(lambda v: int(v * a)))
     tela = Image.fromarray(quadro).convert("RGBA")
-    # nunca abaixo de 1380 px: a legenda fica a ~80% da altura (1515 px) e a headline não pode cobri-la
-    y = int(min(1380 - img.height, emenda - img.height * 0.55))
+    # nunca abaixo de 1380 px: a legenda fica a ~80% da altura (1515 px) e a headline não pode cobri-la;
+    # com a legenda na emenda, a headline fica inteira acima dela
+    y = int(emenda - img.height - 70) if LEG_EMENDA else int(min(1380 - img.height, emenda - img.height * 0.55))
     tela.alpha_composite(img, ((W - img.width) // 2, max(0, y)))
     return np.asarray(tela.convert("RGB"))
 
@@ -415,6 +437,8 @@ def main():
         c["t0"] = tmap(c["ini"])
     for c, prox in zip(cenas, cenas[1:] + [None]):
         c["t1"] = prox["t0"] if prox else dur
+    if LEG_EMENDA:
+        legenda_na_emenda(ass, cenas)
 
     if HL_CENTRO:
         hl = render_headline_centro(v["headline"], os.path.join(cfg["fontsdir"], "Montserrat-ExtraBold.ttf"))
