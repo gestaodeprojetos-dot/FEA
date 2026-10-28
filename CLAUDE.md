@@ -174,6 +174,8 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 
 **Regra de escrita fixa: nunca usar "pra", sempre "para" por extenso.** Vale para copy e para textos internos, inclusive mensagens de automação do ClickUp.
 
+**Data de live sempre com horário (Adriane, copy, 28/10/2026):** toda copy que cita a data da live ou da aula leva também o horário, por exemplo "Dia 9 de novembro às 20h", nunca só "Dia 9 de novembro.". O padrão do time é 20h (horário de Brasília; na LATAM, usar o horário local informado no briefing). Vale para legendas, criativos, e-mails, WhatsApp e API.
+
 **Nunca:** tom popular, "garimpo" ou econômico · tom motivacional ("você consegue!", "transforme sua vida!") · tom comercial agressivo ou urgência artificial · linguagem para leigo · em-dash · palavra-tell · cadência staccato de IA.
 
 **Palavras de poder:** segurança · anatomia · planejamento · estratégia · profundidade · camada · zona de risco · tridimensional · intercorrência · manejo · técnica · prática clínica · cadáver fresco · vascular · neural · previsibilidade · raciocínio clínico · domínio técnico · critério · protocolo · consistência.
