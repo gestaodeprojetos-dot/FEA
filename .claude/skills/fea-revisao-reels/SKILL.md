@@ -55,6 +55,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 15 | Cortar espelho, "fecha o olho", conversa pessoal e histórico da paciente, dor e medo fora de contexto técnico, falas que atacam colegas | palavras-chave nas falas mantidas | ATENÇÃO |
 | 16 | Tudo que dá errado sai: sangue escorrendo, agulha estourando, intercorrência | folha de contato (visual) | revisão visual |
 | 17 | Cara ou gemido de dor: cortar, silenciar ou dar zoom | folha de contato e som sem fala | revisão visual |
+| 17b | **Som de dor da paciente no procedimento: silenciar sem cortar** (Keila 28/10): cada janela de `silenciar` tem que estar muda no vídeo final, e a duração e a imagem não mudam. Gemido não aparece na transcrição: procurar pelo pitch (voz mais aguda e fraca que a do Dr.) e pelo rosto | volume do final em cada janela (`trecho silenciado com som`) | ERRO |
 | 18 | Conversa de fundo: cortar ou silenciar | voz sem fala transcrita | revisão visual e de áudio |
 | 19 | **Fala do paciente legendada** (Keila, 02/10): quando o Dr. pergunta e o paciente responde, a resposta precisa aparecer na legenda | conferir trechos de diálogo na transcrição | ERRO |
 | 20 | **Título sem nome de produto** quando inventado (sem imagem de títulos). Ex.: "mento feminino" sim, "mento feminino com Volumax" não. Se o título veio da imagem, manter como está | conferir título contra lista de produtos | ERRO |

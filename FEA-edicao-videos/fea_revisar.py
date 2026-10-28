@@ -325,6 +325,20 @@ def revisar(cfg, v, folhas=None):
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
+    # 3a. "silenciar" (gemido ou som de dor da paciente, Keila 28/10/2026: silenciar sem cortar):
+    # o trecho tem que estar mudo no vídeo final. A régua é o ruído de fundo (lim - 12).
+    if v.get("silenciar"):
+        _mc = fe.encaixar_cortes(v["manter"], *fe.perfil_voz(ff, v["entrada"])[::2])
+        for a, b in v["silenciar"]:
+            off = 0.0
+            for m0, m1 in _mc:
+                x0, x1 = max(a, m0) + 0.05, min(b, m1) - 0.05
+                if x1 > x0:
+                    seg = db[int((off + x0 - m0) / ps):int((off + x1 - m0) / ps) + 1]
+                    if len(seg) and seg.max() > lim - 12 + 6:
+                        erros.append(f"[{off + x0 - m0:5.1f}s] trecho silenciado ({a}-{b} s do bruto) com som "
+                                     f"({seg.max():.0f} dB, ruído {lim - 12:.0f} dB)")
+                off += m1 - m0
     # 3b. sincronia com o áudio (Keila 26/09 e 01/10: "legendas não estão sincronizadas")
     for k, (s, e, t) in enumerate(legendas):
         if s < fe.TITULO_DUR + 0.5:

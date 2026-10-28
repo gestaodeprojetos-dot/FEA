@@ -789,6 +789,14 @@ def renderizar(cfg, v, previa=False):
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
                                        [w for seg in trans for w in seg["words"]]))
+    # a legenda não se ancora em som que vai ser silenciado (pasta 27 de outubro, 28/10/2026:
+    # "foi" e "passou" do Dr. entravam no gemido da paciente, 1,5 s e 0,6 s antes da fala dele).
+    # Só para a legenda: os cortes acima continuam medidos no áudio original.
+    if v.get("silenciar"):
+        mascarado = db_voz[0].copy()
+        for a, b in v["silenciar"]:
+            mascarado[int(a / db_voz[2]):int(b / db_voz[2]) + 1] = 0
+        db_voz = (mascarado,) + tuple(db_voz[1:])
     if "legendas" in v:          # palavras já revisadas manualmente
         palavras = v["legendas"]
     else:
@@ -845,7 +853,13 @@ def renderizar(cfg, v, previa=False):
     # "silenciar": [[a, b], ...] em segundos do bruto (conversa de fundo, gemido ou som de dor
     # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
     # (cx, cy), frações da largura/altura, para não mostrar a paciente com expressão de dor.
-    mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    # O mudo tem rampa de 40 ms por fora da janela (Keila, 28/10/2026: silenciar o som de dor sem
+    # estalo), e a janela inteira fica em silêncio. Quadros de 256 amostras para a rampa ser suave.
+    rampa = v.get("silenciar_rampa", 0.04)
+    mudo = ""
+    if v.get("silenciar"):
+        ganho_mudo = "*".join(f"clip(max({a}-t,t-{b})/{rampa},0,1)" for a, b in v["silenciar"])
+        mudo = f",asetnsamples=n=256,volume='{ganho_mudo}':eval=frame"
     ganho = f",volume={v['volume_db']}dB" if v.get("volume_db") else ""
     zooms = v.get("zoom", [])
     partes, vrot, arot = [], [], []

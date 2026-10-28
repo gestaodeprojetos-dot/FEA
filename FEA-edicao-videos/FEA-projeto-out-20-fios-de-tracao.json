@@ -1,11 +1,11 @@
 {
  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7448.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7448.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/1- Reposicionamento de tecidos com fios PCA PCL.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/b20/IMG_7448.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/tr/IMG_7448.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/out/e20/1- Reposicionamento de tecidos com fios PCA PCL.mp4",
    "titulo": "Reposicionamento de tecidos com fios PCA PCL",
    "titulo_origem": "imagem",
    "parte": null,
@@ -59,9 +59,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7449.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7449.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 1.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/b20/IMG_7449.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/tr/IMG_7449.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 1.mp4",
    "titulo": "Técnica tradicional de fios de tração",
    "titulo_origem": "imagem",
    "parte": 1,
@@ -118,15 +118,19 @@
    ],
    "silenciar": [
     [
+     41.98,
+     42.46
+    ],
+    [
      70.5,
      78.4
     ]
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7449.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7449.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 2.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/b20/IMG_7449.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/tr/IMG_7449.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 2.mp4",
    "titulo": "Técnica tradicional de fios de tração",
    "titulo_origem": "imagem",
    "parte": 2,
@@ -179,19 +183,43 @@
    ],
    "silenciar": [
     [
-     169.9,
-     171.0
+     111.66,
+     111.84
+    ],
+    [
+     116.28,
+     116.74
+    ],
+    [
+     119.16,
+     119.98
+    ],
+    [
+     134.24,
+     135.1
+    ],
+    [
+     136.03,
+     136.38
     ],
     [
      155.5,
      156.5
+    ],
+    [
+     168.6,
+     169.3
+    ],
+    [
+     169.9,
+     171.0
     ]
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7450.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7450.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/3- Nós nos fios de tração: os fios evoluíram agora com PCA PCL.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/b20/IMG_7450.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/tr/IMG_7450.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/939fdbb7-a190-5b79-a817-2b91bcbb1f20/scratchpad/out/e20/3- Nós nos fios de tração: os fios evoluíram agora com PCA PCL.mp4",
    "titulo": "Nós nos fios de tração: os fios evoluíram agora com PCA PCL",
    "titulo_origem": "imagem",
    "parte": null,
