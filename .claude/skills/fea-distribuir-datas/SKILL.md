@@ -50,6 +50,14 @@ Por que duas: na Brasil a captação começou 20 dias antes da live e na Latam s
    - Antes de recriar, conferir se a original tem descrição, anexo ou checklist. Se tiver, copiar a descrição e avisar a Keila do anexo.
 7. **Conferir** com `clickup_filter_tasks` nas listas mexidas: toda subtarefa aberta com prazo e responsável, nada esquecido na sprint antiga.
 
+## Organização das pastas por ano (Keila, 28/10/2026)
+
+- **Uma pasta por lançamento** (cada masterclass, desafio, evento ou Black Friday é uma pasta própria), no espaço Marketing Brasil ou Marketing Latam, com o mês e o ano no nome: `Masterclass Toxina 01/27`, `Masterclass Bioestimulador Latam 02/27`.
+- O plano do ClickUp **não deixa criar espaço novo** (limite de 5, contando os arquivados), então não existe "Marketing 2027" separado: o ano vai no nome da pasta.
+- **A pasta só nasce quando o lançamento se aproxima:** cerca de 45 dias antes do início da captação, a partir do calendário `FEA-gestao-clickup/FEA-calendario-2026-2027.md`. Assim o espaço mostra só o que está em uso. Ao criar, avisar a Keila no relatório e montar o backlog copiando o lançamento anterior parecido.
+- **Fim do lançamento:** a API não arquiva pasta. Listar no relatório as pastas encerradas para a Keila arquivar na interface (três pontinhos da pasta > Arquivar).
+- **Perpétuos** ficam com o prefixo `Perpétuo ·` no nome, em cada espaço.
+
 ## Referências fixas (workspace 9013080622)
 
 | Pessoa | ID ClickUp |
