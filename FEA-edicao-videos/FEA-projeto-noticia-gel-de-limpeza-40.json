@@ -140,14 +140,27 @@
       {
         "ini": 0.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t1.mp4",
-        "src": 0.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt13.mp4",
+        "src": 0.5,
         "cx": 0.5,
         "cy": 0.5,
         "zoom": 1.0,
         "cresce": [
           960,
-          1500
+          1100
+        ]
+      },
+      {
+        "ini": 2.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt02.mp4",
+        "src": 4.5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "cresce": [
+          1100,
+          1250
         ]
       },
       {
@@ -194,7 +207,7 @@
         "ini": 24.5,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8338.MOV",
-        "src": 30.0,
+        "src": 37.0,
         "cx": 0.5,
         "cy": 0.45,
         "zoom": 1.0,
@@ -245,8 +258,8 @@
       {
         "ini": 50.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t4.mp4",
-        "src": 2.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt13.mp4",
+        "src": 2.5,
         "cx": 0.5,
         "cy": 0.5,
         "zoom": 1.0,
