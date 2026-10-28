@@ -167,10 +167,10 @@
       {
         "ini": 11.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t2.mp4",
-        "src": 0.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8338.MOV",
+        "src": 15.0,
         "cx": 0.5,
-        "cy": 0.5,
+        "cy": 0.4,
         "zoom": 1.0,
         "altura": 1100
       },
@@ -183,26 +183,32 @@
       {
         "ini": 20.9,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t3.mp4",
-        "src": 0.0,
-        "cx": 0.5,
-        "cy": 0.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8338.MOV",
+        "src": 0.3,
+        "cx": 0.4,
+        "cy": 0.45,
         "zoom": 1.0,
         "altura": 1100
       },
       {
         "ini": 24.5,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t5.mp4",
-        "src": 0.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8338.MOV",
+        "src": 30.0,
         "cx": 0.5,
-        "cy": 0.5,
+        "cy": 0.45,
         "zoom": 1.0,
         "altura": 1100
       },
       {
         "ini": 30.6,
-        "tipo": "cheio"
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8341.MOV",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0,
+        "altura": 1100
       },
       {
         "ini": 37.0,
@@ -213,10 +219,10 @@
       {
         "ini": 40.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t4.mp4",
-        "src": 0.0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8339.MOV",
+        "src": 1.0,
         "cx": 0.5,
-        "cy": 0.5,
+        "cy": 0.4,
         "zoom": 1.0,
         "altura": 1100
       },
@@ -229,10 +235,10 @@
       {
         "ini": 47.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/ia/t2.mp4",
-        "src": 0.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8340.MOV",
+        "src": 1.0,
         "cx": 0.5,
-        "cy": 0.5,
+        "cy": 0.4,
         "zoom": 1.0,
         "altura": 1100
       },
