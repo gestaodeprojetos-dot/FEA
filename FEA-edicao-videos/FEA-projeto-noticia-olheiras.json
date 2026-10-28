@@ -1,0 +1,232 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7935.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7935.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/2- Os 3 melhores produtos para olheiras.mp4",
+    "titulo": "Os 3 melhores produtos para olheiras",
+    "headline": [
+      "Os 3 melhores",
+      "produtos",
+      "para olheiras"
+    ],
+    "headline_fim": 4.4,
+    "manter": [
+      [
+        3.75,
+        59.75
+      ],
+      [
+        61.85,
+        66.5
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bpré ?-?maxila\\b",
+        "pré-maxila"
+      ],
+      [
+        "\\b[Tt]irtrof\\b",
+        "tear trough"
+      ],
+      [
+        "\\bE Voar Contour\\b",
+        "Yvoire Contour"
+      ],
+      [
+        "\\b[Jj]uvederm\\b",
+        "Juvéderm"
+      ],
+      [
+        "\\bRestylane Lift\\b",
+        "Restylane Lyft"
+      ],
+      [
+        "\\bo Lift\\b",
+        "o Lyft"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw25.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "cenas": [
+      {
+        "ini": 3.75,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/b/IMG_2072.MOV",
+        "src": 1.0,
+        "cx": 0.5,
+        "cy": 0.38,
+        "zoom": 1.25
+      },
+      {
+        "ini": 7.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/a/IMG_7986.MOV",
+        "src": 186.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 9.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/c/IMG_2662.MOV",
+        "src": 52.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 12.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 15.35,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/novos/IMG_3691.MOV",
+        "src": 19.0,
+        "cx": 0.5,
+        "cy": 0.36,
+        "zoom": 1.0
+      },
+      {
+        "ini": 18.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 19.1,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
+        "nome": "Yvoire Contour"
+      },
+      {
+        "ini": 20.75,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
+        "nome": "Perfectha Subskin"
+      },
+      {
+        "ini": 22.2,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/juvederm_voluma.png",
+        "nome": "Juvéderm Voluma"
+      },
+      {
+        "ini": 24.45,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane_lyft.png",
+        "nome": "Restylane Lyft"
+      },
+      {
+        "ini": 28.35,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane.png",
+        "nome": "Restylane"
+      },
+      {
+        "ini": 29.5,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/juvederm_voluma.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane_lyft.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/restylane.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 32.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 35.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/d/IMG_7007.MOV",
+        "src": 22.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 39.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/a/IMG_7986.MOV",
+        "src": 190.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 42.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/c/IMG_2662.MOV",
+        "src": 90.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 45.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 49.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/a/IMG_7986.MOV",
+        "src": 6.2,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 53.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 54.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/b/IMG_2069.MOV",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.15
+      },
+      {
+        "ini": 57.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/olh/c/IMG_2666.MOV",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.38,
+        "zoom": 1.15
+      },
+      {
+        "ini": 61.85,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    }
+  }
+}
