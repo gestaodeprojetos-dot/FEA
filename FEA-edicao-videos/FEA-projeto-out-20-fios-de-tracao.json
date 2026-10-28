@@ -1,0 +1,210 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7448.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7448.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/1- Reposicionamento de tecidos com fios PCA PCL.mp4",
+   "titulo": "Reposicionamento de tecidos com fios PCA PCL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     103.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Bb]iofuse\\b",
+     "Biofils"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Cc]olocionamento\\b",
+     "Reposicionamento"
+    ],
+    [
+     "\\bgás estéreo\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\b[Pp]ira (?:pra|para) mim\\b",
+     "vira para mim"
+    ],
+    [
+     "\\b[Pp]ro outro\\b",
+     "para o outro"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     59.3,
+     60.3
+    ],
+    [
+     67.1,
+     67.6
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7449.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7449.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 1.mp4",
+   "titulo": "Técnica tradicional de fios de tração",
+   "titulo_origem": "imagem",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "manter": [
+    [
+     0.0,
+     90.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Bb]iofuse\\b",
+     "Biofils"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Cc]olocionamento\\b",
+     "Reposicionamento"
+    ],
+    [
+     "\\bgás estéreo\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\b[Pp]ira (?:pra|para) mim\\b",
+     "vira para mim"
+    ],
+    [
+     "\\b[Pp]ro outro\\b",
+     "para o outro"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     25.05,
+     26.3
+    ],
+    [
+     66.3,
+     67.1
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7449.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7449.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/2- Técnica tradicional de fios de tração Parte 2.mp4",
+   "titulo": "Técnica tradicional de fios de tração",
+   "titulo_origem": "imagem",
+   "parte": 2,
+   "cartela_final": null,
+   "manter": [
+    [
+     90.6,
+     92.6
+    ],
+    [
+     93.9,
+     177.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Bb]iofuse\\b",
+     "Biofils"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Cc]olocionamento\\b",
+     "Reposicionamento"
+    ],
+    [
+     "\\bgás estéreo\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\b[Pp]ira (?:pra|para) mim\\b",
+     "vira para mim"
+    ],
+    [
+     "\\b[Pp]ro outro\\b",
+     "para o outro"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b20/IMG_7450.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7450.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e20/3- Nós nos fios de tração: os fios evoluíram agora com PCA PCL.mp4",
+   "titulo": "Nós nos fios de tração: os fios evoluíram agora com PCA PCL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     102.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Bb]iofuse\\b",
+     "Biofils"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Cc]olocionamento\\b",
+     "Reposicionamento"
+    ],
+    [
+     "\\bgás estéreo\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\b[Pp]ira (?:pra|para) mim\\b",
+     "vira para mim"
+    ],
+    [
+     "\\b[Pp]ro outro\\b",
+     "para o outro"
+    ]
+   ]
+  }
+ ]
+}
