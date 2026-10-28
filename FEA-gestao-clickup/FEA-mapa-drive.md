@@ -24,11 +24,11 @@ Subpastas (modelo do FEA-MTB 11/26): `0. PLANEJAMENTO` · `1. COPY` · `2. ARTES
 
 As subpastas são criadas quando o lançamento entra em produção (junto com a pasta do ClickUp, cerca de 45 dias antes da captação). Em 28/10/2026 já estão prontas: Masterclass Anatomia 12/26, Masterclass Toxina 01/27, Masterclass Preenchimento Labial 01/27 e Desafio Full Face Na Prática 02/27.
 
-## Limite de permissão
+## Como mover pastas e arquivos
 
-A conta conectada ao Claude **cria** pastas e arquivos no Drive compartilhado, mas **não move** (erro "The caller does not have permission"). Mover exige o papel de "Administrador de conteúdo" ou "Gerente" no Drive compartilhado. Até isso mudar, mudanças de lugar ficam com a Keila.
+O conector do Google Drive do Claude cria e renomeia, mas **não move** dentro do Drive compartilhado (erro "The caller does not have permission", mesmo com papel de Administrador de conteúdo). Para mover, usar a API do Drive com o acesso do ambiente (`FEA_GDRIVE_CLIENT_ID`, `FEA_GDRIVE_CLIENT_SECRET`, `FEA_GDRIVE_REFRESH_TOKEN`), pelo `token()` e `chamar()` de `FEA-edicao-videos/fea_drive.py`: `PATCH files/{id}?supportsAllDrives=true&addParents={destino}&removeParents={origem}`. Mover não muda o ID nem quebra link.
 
-Pendências de mudança de lugar (para a Keila ou para quando a permissão mudar):
-- `Planejamento Anual FEA 2027` (doc, hoje em 1. Gestão FEA > 1. Gestão) para 11. Planejamento Anual.
-- Latam 2026 (`Black Friday Total - Latam`, `IFF-5ML LATAM`, `FEBio Latam`, `FEB Latam`, `MBC Latam`), hoje soltos em 8. Internacionalização, para Lançamentos Latam > 2026.
-- `Masterclass em Anatomia - 06/26` (em FEA Anatomy > 2. Lançamento > 2026) e `1. Masterclass em Biostimulador de Colágeno` (em FEBio > 2. Lançamento) para Lançamentos Brasil > 2026.
+Movidos em 28/10/2026:
+- `Planejamento Anual FEA 2027` para 1. Gestão FEA > 11. Planejamento Anual.
+- `Black Friday Total - Latam`, `IFF-5ML LATAM`, `FEBio Latam`, `FEB Latam` e `MBC Latam` para Lançamentos Latam > 2026.
+- `Masterclass em Anatomia - 06/26` e `1. Masterclass em Biostimulador de Colágeno` para Lançamentos Brasil > 2026.
