@@ -47,6 +47,13 @@ O Dr. mandou 2 reels ("Queria umas coisas mais exageradas assim"): "03 cremes fa
 - Não copiar a caixa alta integral nem o apelo popular ("pele de idosa", "barato"): a CLAUDE.md proíbe. O "exagero" fica no visual.
 - Clipes bons do banco: Mixkit 50408 (espuma com esponja, `c5`), 50426 (creme na bochecha, `c13`), Pexels 7306686 e 7306685 (mulher de 40 aplicando creme, mas com bastão escuro: não usar em limpeza), Mixkit 51181/limpeza com algodão (`c39`, vertical). Não usar: Pexels 5534415, 7298096, 11120960, 7582851 (idosos).
 - O B-roll é renderizado na altura máxima da cena e recortado no centro; `PUSH` 0,06.
+- **"Exagerado" = pessoa se lambuzando** (Keila, 28/10/2026): "vídeos exagerados da pessoa enchendo o rosto de creme, se lambuzando de creme... muito estranho, você vai parar para assistir". Banco gratuito não tem isso. **Fonte aprovada: IA no HeyGen** (exceção registrada na CLAUDE.md, só skincare). `text_to_video`, 9:16, 1080p, 5 s: **4 créditos por clipe**, pronto em ~1 min (conta Pro, créditos renovam todo mês). Prompts que funcionaram (em inglês, sempre "Brazilian woman around 40/45, healthy glowing skin, smartphone UGC style, no text, no logos, no brand"):
+  - rosto coberto de espuma com as duas mãos, "almost absurd amount of product" (gancho);
+  - enxaguando a espuma com água espirrando, revela pele limpa e sorri;
+  - gel bombeado em quantidade na mão, escorrendo, vira espuma (frasco branco sem marca);
+  - camada grossa de creme espalhada no rosto inteiro como máscara;
+  - secando com toalha e tocando a pele macia.
+- Clipe vertical da IA vai no painel com `"altura": 1100` e o gancho com `"cresce": [960, 1500]`.
 
 ## Ritmo: corte rápido (Keila, 26/10/2026)
 
