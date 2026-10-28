@@ -1,0 +1,372 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7455.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7455.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/1- Planejamento fios filler em pálpebra inferior.mp4",
+   "titulo": "Planejamento fios filler em pálpebra inferior",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     25.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7457.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7457.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/2- Fios de colágeno para pálpebras inferiores.mp4",
+   "titulo": "Fios de colágeno para pálpebras inferiores",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     55.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7456.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7456.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/3- Planejamento fios de tração na técnica reversa.mp4",
+   "titulo": "Planejamento fios de tração na técnica reversa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     50.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7458.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7458.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/4- Fios de tração na técnica reversa.mp4",
+   "titulo": "Fios de tração na técnica reversa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     55.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7459.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7459.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/5- A importância da compactação dos fios: prenda as garras no tecido.mp4",
+   "titulo": "A importância da compactação dos fios: prenda as garras no tecido",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     107.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/b21/IMG_7460.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/tr/IMG_7460.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/1790ca6d-5da8-5057-b4cd-3a8b3773bd0c/scratchpad/out/e21/6- Dar nós ou não nos fios?.mp4",
+   "titulo": "Dar nós ou não nos fios?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     89.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Pp]ro\\b",
+     "para o"
+    ],
+    [
+     "\\bexocântium\\b",
+     "exocanto"
+    ],
+    [
+     "\\b[Ll]evanta mole com mole, onde\\b",
+     "levanta. Mole com mole, aonde"
+    ],
+    [
+     "\\b[Gg]ainha aprendendo\\b",
+     "garrinha prendendo"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b[Pp]õe o núcleo na mão\\b",
+     "vamos lá, vamos lá"
+    ],
+    [
+     "\\b[Vv]im, pode puxar\\b",
+     "vou vir, pode puxar"
+    ],
+    [
+     "\\bnúcleo\\b",
+     "nó"
+    ],
+    [
+     "\\b[Uu]m,? [Dd]ois\\b",
+     "1, 2"
+    ],
+    [
+     "Garrinha",
+     "garrinha"
+    ],
+    [
+     "\\b[Ii]sso, coisa aqui\\b",
+     "mesma coisa aqui"
+    ]
+   ]
+  }
+ ]
+}
