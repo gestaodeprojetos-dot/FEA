@@ -53,6 +53,7 @@ O Dr. mandou 2 reels ("Queria umas coisas mais exageradas assim"): "03 cremes fa
   - gel bombeado em quantidade na mão, escorrendo, vira espuma (frasco branco sem marca);
   - camada grossa de creme espalhada no rosto inteiro como máscara;
   - secando com toalha e tocando a pele macia.
+- **B-roll do próprio Dr. (prioridade sobre IA e banco)**: pasta `1hajwqryVv90nzbOCW1lYTyHYZlmpXNRx` (Keila, 28/10/2026, "vou pegar mais"). Vídeos de celular na vertical (gravados deitados, o FFmpeg gira sozinho). IMG_8338 (53 s): 0-2 s bombeia o CeraVe Gel de Limpeza na mão, 14-26 s espalha a espuma no rosto de frente, 28-40 s enxágua na pia, 42-53 s seca com toalha. IMG_8339: secando com toalha. IMG_8340: passando algodão (tônico). IMG_8341: bisnaga branca na mão e espalhando no rosto. Usar com `"altura": 1100`, `cy` 0,4 a 0,45. Quando a Keila mandar mais, conferir em folha de contato e anotar aqui.
 - Clipe vertical da IA vai no painel com `"altura": 1100` e o gancho com `"cresce": [960, 1500]`.
 
 ## Ritmo: corte rápido (Keila, 26/10/2026)
