@@ -1,0 +1,264 @@
+<title>Elite Mentoring Pitch</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+  /* Layout: palco 16:9 no topo como o telão, barra de comando logo abaixo, roteiro dos slides em lista à direita (ou embaixo no celular).
+     Mundo único, escuro, da marca Elite Mentoring: não segue o tema claro de propósito. */
+  :root {
+    --bg: #011A24; --panel: #062a36; --line: #12404d; --ink: #EAF7F7; --muted: #86a9ad;
+    --accent: #86F9F8; --accent-2: #2DB9B3; --todo: #c9a86a;
+    --display: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+    --body: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body { font-family: var(--body); font-size: 15px; line-height: 1.5; padding-block: 20px 32px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .wrap { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 24px; align-items: start; }
+  header { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+  .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--accent-2); }
+  h1 { font-family: var(--display); font-weight: 600; font-size: clamp(28px, 4vw, 42px); line-height: 1.05; margin: 4px 0 0; text-wrap: balance; }
+  .keys { color: var(--muted); font-size: 13px; }
+  kbd { font-family: var(--body); font-size: 12px; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; color: var(--ink); }
+
+  .stage-col { min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+  .stage { position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.45); cursor: pointer; }
+  .stage video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #011A24; }
+  .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+  .ov { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 14px; text-align: center; max-width: 80%; }
+  .tapbtn { color: var(--bg); background: var(--accent); border: 0; font-size: 16px; padding: 14px 22px; border-radius: 999px; }
+  .spin { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: sp .8s linear infinite; }
+  @keyframes sp { to { transform: rotate(360deg); } }
+  .todo-card { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 10px; padding: 24px; background: radial-gradient(60% 60% at 50% 45%, #0b3a47, var(--bg)); }
+  .todo-card .t { font-family: var(--display); font-size: clamp(24px, 4vw, 48px); }
+  .todo-card .w { color: var(--muted); max-width: 46ch; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .tag.todo { color: var(--bg); background: var(--todo); }
+
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
+  .now { flex: 1 1 260px; min-width: 0; }
+  .now .n { font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-2); }
+  .now .d { font-family: var(--display); font-size: 24px; line-height: 1.15; }
+  .now .c { color: var(--muted); font-size: 14px; }
+  .btns { display: flex; gap: 8px; }
+  button { font: 600 14px var(--body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+  button:hover { border-color: var(--accent-2); }
+  button.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  button:focus-visible, .list button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .progress { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+  .progress i { display: block; height: 100%; background: var(--accent-2); width: 0; transition: width .25s; }
+
+  aside { min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; max-height: calc(100vh - 140px); overflow: auto; position: sticky; top: max(16px, env(safe-area-inset-top, 0px)); }
+  aside h2 { font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); margin: 0; padding: 14px 16px 6px; }
+  .list { list-style: none; margin: 0; padding: 0 0 8px; }
+  .list button { width: 100%; text-align: left; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 10px; align-items: baseline; background: none; border: 0; border-radius: 0; padding: 9px 16px; font-weight: 500; color: var(--ink); }
+  .list button:hover { background: rgba(134,249,248,.06); }
+  .list .num { font-variant-numeric: tabular-nums; color: var(--accent-2); font-weight: 600; }
+  .list .meta { color: var(--muted); font-size: 12px; font-weight: 500; white-space: nowrap; }
+  .list li.on button { background: rgba(134,249,248,.1); box-shadow: inset 3px 0 0 var(--accent); }
+  .list li.todo .num, .list li.todo .meta { color: var(--todo); }
+  .list li.anim .meta { color: var(--accent); }
+  .list li.stat button { color: var(--muted); }
+  .list li.stat .num { color: #4f7378; }
+  .sum { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 16px 10px; }
+  .pill { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; border: 1px solid var(--line); }
+  .pill.anim { color: var(--bg); background: var(--accent); border-color: var(--accent); }
+  .pill.todo { color: var(--bg); background: var(--todo); border-color: var(--todo); }
+  .pill.stat { color: var(--muted); }
+  .badge { position: absolute; left: 12px; top: 12px; z-index: 2; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--bg); background: var(--accent); border-radius: 999px; padding: 4px 10px; }
+  .tag.stat { color: var(--ink); background: var(--line); }
+  .note { color: var(--muted); font-size: 13px; max-width: 70ch; }
+
+  @media (max-width: 900px) {
+    .wrap { grid-template-columns: minmax(0, 1fr); }
+    aside { position: static; max-height: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { .progress i { transition: none; } .spin { animation-duration: 2s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">Elite Mentoring · Elite Injectors Congress</div>
+      <h1>Slides animados do pitch</h1>
+    </div>
+    <div class="keys">Avance com <kbd>→</kbd> <kbd>espaço</kbd> ou o passador · volte com <kbd>←</kbd> · clique no vídeo para avançar</div>
+  </header>
+
+  <div class="stage-col">
+    <div class="stage" id="stage" aria-label="Palco: clique para avançar">
+      <video id="va" muted playsinline webkit-playsinline preload="auto"></video>
+      <canvas id="freeze" hidden></canvas>
+      <div class="ov" id="load" hidden><span class="spin" aria-hidden="true"></span>Carregando</div>
+      <button class="ov tapbtn" id="tap" type="button" hidden>▶ Tocar animação</button>
+      <div class="ov" id="err" hidden>Não foi possível carregar este vídeo. Verifique a conexão e toque em Repetir.</div>
+      <span class="badge" id="badge">● Animado</span>
+      <div class="todo-card" id="todo" hidden>
+        <span class="tag todo" id="todoTag">A fazer</span>
+        <div class="t" id="todoT"></div>
+        <div class="w" id="todoW"></div>
+      </div>
+    </div>
+    <div class="progress"><i id="prog"></i></div>
+    <div class="bar">
+      <div class="now"><div class="n" id="nowN"></div><div class="d" id="nowD"></div><div class="c" id="nowC"></div></div>
+      <div class="btns">
+        <button id="prev" type="button">← Voltar</button>
+        <button id="replay" type="button">Repetir</button>
+        <button id="next" type="button" class="primary">Avançar →</button>
+      </div>
+    </div>
+    <p class="note">Cada passo é um vídeo, como no PowerPoint: ele toca ao entrar e para no último quadro até o próximo clique. Nos slides 15, 27 e 67 o loop começa sozinho depois da entrada. Na lista, cada um dos 78 slides da copy vem marcado: animado (ciano), a fazer (dourado) ou estático (cinza, fica como o designer montar).</p>
+  </div>
+
+  <aside>
+    <h2>Os 78 slides da copy</h2>
+    <div class="sum" id="sum"></div>
+    <ul class="list" id="list"></ul>
+  </aside>
+</div>
+
+<script>
+const SLIDES = [
+  ['02', 'Raio-X da Clínica Elite', ['Scanner revela o título']],
+  ['03', 'Os 4 pilares', ['Pilares sobem um a um']],
+  ['09', 'Some as 4 notas', ['Pilares com o campo da nota']],
+  ['10', 'Qual é o momento da sua clínica?', ['Título e as 4 faixas apagadas', '0 a 15 · Clínica no improviso', '16 a 25 · Fatura, mas não sobra', '26 a 33 · Pronta para escalar', '34 a 40 · Clínica Elite']],
+  ['12', 'Como virar uma Clínica Elite', ['Passo 1 · Diagnóstico', 'Passo 2 · Plano', 'Passo 3 · Acompanhamento']],
+  ['13', 'Cada momento pede um próximo passo', ['Três degraus']],
+  ['14', '1h por semana', ['1h e a frase', 'Só 1 hora? Sim. Feita do jeito certo.']],
+  ['15', 'Vamos voltar no tempo', ['Portal abre e fica girando'], 'loop'],
+  ['19', 'Rostos = vidas = clínica que cresce', ['Equação']],
+  ['23', 'Linha do tempo do Dr. João', null, 'Falta: marcos, idades e a queda.'],
+  ['24', 'Data com raio verde', null, 'Falta: mês e ano.'],
+  ['25', 'Data com raio vermelho', null, 'Falta: mês e ano.'],
+  ['27', 'Vamos voltar ao presente', ['Portal do outro lado'], 'loop'],
+  ['28', 'Responda comigo: os 6 sins', ['Título e os cartões apagados', 'Pergunta 1 · SIM', 'Pergunta 2 · SIM', 'Pergunta 3 · SIM', 'Pergunta 4 · SIM', 'Pergunta 5 · SIM', 'Pergunta 6 · SIM e todos acendem']],
+  ['37', 'Mentores: o guarda-chuva', null, 'Falta: fotos do Dr. João, do Luca e dos 4 mentores.'],
+  ['46', 'Quanto vale?', ['Recibo vazio', 'Mentoria de 6 meses · R$ 35.000', 'Cursos online por 12 meses · R$ 20.000', '8 calls individuais · R$ 8.000', 'Grupo e encontro presencial · R$ 5.000', 'Diagnóstico nos 4 pilares · R$ 2.000', 'Total · R$ 70.000']],
+  ['47', 'Cursos em cards', null, 'Falta: lista de cursos e capas. Reaproveita o carrossel da Black Friday.'],
+  ['49', 'Tem mais', ['Vinheta (serve para todos os “Tem mais”)']],
+  ['54', 'Desafio Clínica Elite', ['R$ 300 mil no telão']],
+  ['58', 'Segunda cadeira de graça', ['Bônus mais forte']],
+  ['59', 'Por apenas R$ 35.000', ['Preço cheio, seco (serve também para o 48)']],
+  ['60', 'A revelação', ['R$ 35.000 riscado, R$ 25.000']],
+  ['62', 'Garantia', ['Selo de 7 dias']],
+  ['67', 'Bem-vinda, Clínica Elite', ['Entrada e loop para a fila no palco'], 'loop'],
+];
+
+// achata em passos: cada passo é um clique
+const STEPS = [];
+SLIDES.forEach(([n, title, clicks, extra], si) => {
+  if (!clicks) { STEPS.push({ si, n, title, todo: extra }); return; }
+  clicks.forEach((c, i) => STEPS.push({
+    si, n, title, label: c, k: i + 1, of: clicks.length,
+    src: `videos/FEA-elite-slide-${n}${clicks.length > 1 ? `-clique-${i + 1}` : ''}.mp4`,
+    loop: extra === 'loop' ? `videos/FEA-elite-slide-${n}-loop.mp4` : null,
+  }));
+});
+
+const $ = (id) => document.getElementById(id);
+const v = $('va');
+let cur = -1, token = 0;
+
+// os 78 slides da copy: status de cada um
+const ALL = [
+  ['01','Abertura: Elite Injectors Congress'],['02','Raio-X da Clínica Elite'],['03','Os 4 pilares'],['04','Pilar 1 · Vendas'],['05','Pilar 2 · Financeiro'],
+  ['06','Depoimento da Dra. Michelle (10x)'],['07','Pilar 3 · Marketing'],['08','Pilar 4 · Gestão'],['09','Some as 4 notas'],['10','Qual é o momento da sua clínica?'],
+  ['11','A técnica é a base'],['12','Como virar uma Clínica Elite'],['13','Cada momento pede um próximo passo'],['14','1h por semana'],['15','Vamos voltar no tempo'],
+  ['16','Qual era o seu sonho?'],['17','A inspiração'],['18','Os dois desejos'],['19','Rostos = vidas = clínica que cresce'],['20','Cada rosto que você transforma muda uma vida'],
+  ['21','Começando pela sua...'],['22','Assim como mudou a minha...'],['23','Linha do tempo do Dr. João'],['24','Data com raio verde'],['25','Data com raio vermelho'],
+  ['26','Vídeo: a virada e o hoje'],['27','Vamos voltar ao presente'],['28','Responda comigo: os 6 sins'],['29','Feche os olhos'],['30','Mais lucro, mais liberdade'],
+  ['31','Dois caminhos'],['32','Imagine: especialistas na sua clínica'],['33','Imagine: 6 meses de acompanhamento'],['34','Imagine: um ambiente exclusivo'],['35','Imagine: faturar de R$ 100 a 300 mil'],
+  ['36','A promessa'],['37','Mentores: o guarda-chuva'],['38','8 calls individuais'],['39','Ambiente'],['40','Para quem é'],
+  ['41','Para quem não é'],['42','Bônus até amanhã, 12h: Almoço Elite'],['43','Por que a Elite é diferente'],['44','Quanto vale ter uma Clínica Elite?'],['45','+35 mil alunos · R$ 25 mi por ano'],
+  ['46','Quanto vale? (recibo)'],['47','Cursos em cards'],['48','Por apenas R$ 35.000','59'],['49','Tem mais'],['50','Tem mais: aula ao vivo com hot seat'],
+  ['51','Dia e horário da aula semanal'],['52','Tem mais','49'],['53','Eu sou obcecado com resultado'],['54','Desafio Clínica Elite'],['55','Tem mais','49'],
+  ['56','Bônus volta: Almoço Elite'],['57','Tem mais','49'],['58','Segunda cadeira de graça'],['59','Por apenas R$ 35.000'],['60','A revelação: R$ 25.000'],
+  ['61','Tem mais','49'],['62','Garantia de 7 dias'],['63','O último Tem mais'],['64','Hoje você paga só a pré-matrícula'],['65','Só para os 5 primeiros'],
+  ['66','Pagou? Sobe no palco (QR e contador)'],['67','Bem-vinda, Clínica Elite'],['68','Pergunta final 1'],['69','Pergunta final 2'],['70','Pergunta final 3'],
+  ['71','Antes e hoje'],['72','Slide final com QR'],['73','Dia 2: clínicas que viraram Elite ontem'],['74','Dia 2: até hoje, 12h'],['75','Dia 2: última chamada'],
+  ['76','Dia 2: hoje, X clínicas'],['77','Dia 2: repitch R$ 25.000'],['78','Dia 2: matrícula até 23h59'],
+];
+const byN = Object.fromEntries(SLIDES.map((x, si) => [x[0], { si, anim: !!x[2], loop: x[3] === 'loop', clicks: x[2] ? x[2].length : 0 }]));
+const nAnim = ALL.filter(([n, , ref]) => (byN[n] && byN[n].anim) || ref).length, nTodo = ALL.filter(([n]) => byN[n] && !byN[n].anim).length;
+$('sum').innerHTML = `<span class="pill anim">${nAnim} animados</span><span class="pill todo">${nTodo} a fazer</span><span class="pill stat">${ALL.length - nAnim - nTodo} estáticos</span>`;
+$('list').innerHTML = ALL.map(([n, title, ref]) => {
+  const b = byN[n], kind = ref ? 'anim' : b ? (b.anim ? 'anim' : 'todo') : 'stat';
+  const meta = ref ? `animado · usa o ${ref}` : kind === 'todo' ? 'a fazer' : kind === 'stat' ? 'estático' : 'animado' + (b.loop ? ' · loop' : b.clicks > 1 ? ` · ${b.clicks} cliques` : '');
+  return `<li data-n="${n}" data-go="${ref || n}" class="${kind}"><button type="button"><span class="num">${n}</span><span>${title}</span><span class="meta">${meta}</span></button></li>`;
+}).join('');
+$('list').addEventListener('click', (e) => {
+  const li = e.target.closest('li'); if (!li) return;
+  if (li.classList.contains('stat')) return showStatic(li.dataset.n, li.querySelector('span:nth-child(2)').textContent);
+  go(STEPS.findIndex(s => s.n === li.dataset.go));
+});
+function showStatic(n, title) {
+  ++token; v.pause(); v.hidden = true; freeze.hidden = true; $('badge').hidden = true; $('tap').hidden = true; $('load').hidden = true; $('err').hidden = true;
+  $('todo').hidden = false; $('todoTag').className = 'tag stat'; $('todoTag').textContent = 'Estático';
+  $('todoT').textContent = `Slide ${n} · ${title}`; $('todoW').textContent = 'Sem animação: fica no PowerPoint como o designer montar.';
+  $('nowN').textContent = `Slide ${n} · estático`; $('nowD').textContent = title; $('nowC').textContent = 'Avance para voltar aos animados.';
+  document.querySelectorAll('#list li').forEach(li => li.classList.toggle('on', li.dataset.n === n));
+}
+
+// No iPhone o vídeo só toca se o servidor aceitar pedidos por partes (Range).
+// Para não depender disso, cada vídeo é baixado inteiro e tocado a partir da memória (blob).
+const cache = new Map();
+function getURL(src) {
+  if (!cache.has(src)) cache.set(src, fetch(src).then(r => { if (!r.ok) throw new Error(r.status); return r.blob(); })
+    .then(b => URL.createObjectURL(new Blob([b], { type: 'video/mp4' }))).catch(e => { cache.delete(src); throw e; }));
+  return cache.get(src);
+}
+function prefetch(i) { for (let k = i + 1; k <= i + 2; k++) { const s = STEPS[k]; if (s && s.src) getURL(s.src).catch(() => {}); if (s && s.loop) getURL(s.loop).catch(() => {}); } }
+
+// congela o último quadro numa imagem enquanto o próximo vídeo carrega, para não piscar
+const freeze = $('freeze'), fctx = freeze.getContext('2d');
+function holdFrame() {
+  if (v.readyState >= 2 && v.videoWidth) { freeze.width = v.videoWidth / 2; freeze.height = v.videoHeight / 2; try { fctx.drawImage(v, 0, 0, freeze.width, freeze.height); freeze.hidden = false; } catch (e) {} }
+}
+
+async function playSrc(src, loop, my) {
+  const url = await getURL(src);
+  if (my !== token) return;
+  v.loop = loop; v.src = url;
+  try { await v.play(); $('tap').hidden = true; }
+  catch (e) { if (my === token) $('tap').hidden = false; }
+}
+v.addEventListener('playing', () => { freeze.hidden = true; });
+
+function go(i) {
+  if (i < 0 || i >= STEPS.length) return;
+  cur = i; const my = ++token;
+  const s = STEPS[i];
+  $('nowN').textContent = `Slide ${s.n}` + (s.of > 1 ? ` · clique ${s.k} de ${s.of}` : '');
+  $('nowD').textContent = s.title;
+  $('nowC').textContent = s.todo ? 'Ainda não animado.' : s.label;
+  $('prog').style.width = ((i + 1) / STEPS.length * 100) + '%';
+  document.querySelectorAll('#list li').forEach(li => li.classList.toggle('on', li.dataset.n === s.n));
+  $('badge').hidden = !!s.todo;
+  prefetch(i);
+  if (s.todo) {
+    v.pause(); v.hidden = true; freeze.hidden = true; $('tap').hidden = true; $('load').hidden = true;
+    $('todo').hidden = false; $('todoTag').className = 'tag todo'; $('todoTag').textContent = 'A fazer'; $('todoT').textContent = `Slide ${s.n} · ${s.title}`; $('todoW').textContent = s.todo;
+    return;
+  }
+  $('todo').hidden = true; holdFrame(); v.hidden = false;
+  $('load').hidden = false;
+  v.onended = s.loop ? () => { if (my === token) playSrc(s.loop, true, my); } : null;
+  playSrc(s.src, false, my).then(() => { if (my === token) $('load').hidden = true; })
+    .catch(() => { if (my === token) { $('load').hidden = true; $('err').hidden = false; } });
+}
+$('tap').addEventListener('click', (e) => { e.stopPropagation(); $('tap').hidden = true; v.play().catch(() => { $('tap').hidden = false; }); });
+
+const next = () => go(Math.min(cur + 1, STEPS.length - 1));
+const prev = () => go(Math.max(cur - 1, 0));
+$('next').onclick = next; $('prev').onclick = prev; $('stage').onclick = next;
+$('replay').onclick = () => { $('err').hidden = true; go(cur); };
+document.addEventListener('keydown', (e) => {
+  if (['ArrowRight', 'PageDown', ' ', 'Enter'].includes(e.key)) { e.preventDefault(); next(); }
+  if (['ArrowLeft', 'PageUp', 'Backspace'].includes(e.key)) { e.preventDefault(); prev(); }
+});
+go(0);
+</script>
