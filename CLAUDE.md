@@ -186,24 +186,15 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 
 **Lead magnets:** Masterclass em Anatomia (gratuita, capta para FEA) · Masterclass em Toxina Botulínica (recorrente, capta para FEB) · Masterclass em Fios de PDO · CPX/MEP (captura) · Ebooks perpétuos
 
-## Calendário anual (última versão conhecida, 2026, confirmar a cada retomada)
+## Calendário anual (versão de 27/10/2026, confirmar a cada retomada)
 
-**1º semestre**
-- Jan: Captação Masterclass Toxina (05 a 12/01), Downsell 12/01, Vendas FEB (12 a 14/01) · Congresso CIOSP SP (28 a 31/01)
-- Fev: Captação Imersão Full Face menor que 5ml (15/01 a 09/02), Imersão (09 e 10/02) · Vendas Pós-Graduação (10 a 18/02) · Captação Toxina (18 a 23/02), Vendas FEB (23 a 25/02)
-- Mar e Abr: Congresso SBTI SP (20/03) · Congresso AMWC Mônaco (26/03 a 05/04) · Captação Full Face maior que 10ml (09/03 a 07/04), Imersão (07 e 08/04), Vendas FEP (08 a 15/04) · Captação Toxina (08 a 13/04), Vendas FEB (13 a 15/04) · Congresso Neotox Tec Ribeirão Preto (24 e 25/04)
-- Mai: Captação PSP (13/04 a 05/05), Imersão PSP (05 a 07/05), Vendas FEP (07 a 13/05) · FEP Experience 8 (16 e 17/05) · Captação Toxina (13 a 18/05), Vendas FEB (18 a 20/05) · Congresso Full Face SP (27 a 30/05)
-- **Jun: Congresso AMWC Brazil SP (17 a 19/06) · FEP Experience 9 (27 e 28/06) · Captação Masterclass Anatomia (25/05 a 02/06), Masterclass ao vivo em 02/06 (Zoom, 20h), Vendas FEA (02 a 04/06)**
+Calendário completo do 2º semestre de 2026 e de todo 2027, agrupado por lançamento: `FEA-gestao-clickup/FEA-calendario-2026-2027.md` (fonte: documentos de calendário da Keila, 28/10/2026, montados a partir da agenda oficial do Luca Yu).
 
-**2º semestre**
-- Jul: Imersão IFF5 (21 e 22/07), Vendas FEP (22 a 29/07)
-- Ago: FEP Experience 10 (29 e 30/08) · Captação Toxina (03 a 12/08), Masterclass Toxina (11 e 12/08), Vendas FEB (11 a 13/08) · Captação IFF10 (17/08 a 16/09)
-- Set: Imersão IFF10 (15 e 16/09), Vendas FEP (16 a 24/09) · Captação Black Friday (29/09 a 21/10)
-- Out: FEP Experience 11 (17 e 18/10) · Congresso Elite Injectors (10 e 11/10) · **Vendas Black Friday (20/10 a 20/11), Black Friday Vitalícia (20/10)**
-- Nov: FEP Experience 12 (28 e 29/11) · Congresso Elite Injectors (07 e 08/11) · Captação Masterclass Toxina (23/11 a 02/12)
-- **Dez: Masterclass Toxina (01 e 02/12), Vendas FEB (01 a 03/12) · Captação Masterclass Anatomia (07 a 16/12), Masterclass Anatomia (15 e 16/12), Vendas FEA (15 a 17/12)**
+**Resto de 2026:** Vendas Black Friday (20/10 a 19/11) · Elite Injectors Congress (01 e 02/11) · Masterclass Toxina 09/11 (captação 02 a 09/11, vendas FEB 09 a 11/11) · Reabertura Black Friday Vitalícia (24/11) · FEP Experience 12 (28 e 29/11) · Masterclass Anatomia 15/12 (captação 07 a 15/12, vendas FEA 15 a 17/12).
 
-O FEA (curso de Anatomia) tem 2 grandes lançamentos por ano, início de junho e meio de dezembro. A estratégia de nutrição contínua (email e WhatsApp) existe para preencher o vazio entre eles. Datas mudam ano a ano, sempre pedir o planejamento anual atualizado antes de montar peça com data.
+**2027 em uma linha:** 14 lançamentos Brasil (masterclasses de Toxina, Bioestimulador, Intercorrências, Preenchimento Labial, Rinomodelação e Anatomia, quatro delas emendadas num Desafio que vende FEP), 11 masterclasses Latam (segunda-feira), FEPX (12 e 13/03 e 15 e 16/10), Curso Presencial Full Face Demonstrativo (5 sábados), Elite Injectors Congress (21 e 22/08) e Black Friday (captação 28/09, Vitalícia 19/10, vendas até 17/11, reabertura 24/11). Captação e vendas de 2027 são previsão pelo padrão de 2026, a validar com o Luca.
+
+O FEA (curso de Anatomia) teve 2 lançamentos em 2026 (junho e dezembro); **em 2027 tem um só, em setembro** (Masterclass 27/09, vendas 27 a 29/09). A nutrição contínua (email e WhatsApp) existe para preencher o vazio entre eles. Datas mudam ano a ano, sempre pedir o planejamento atualizado antes de montar peça com data.
 
 ## Equipe FEA: 30 pessoas em 7 times
 
