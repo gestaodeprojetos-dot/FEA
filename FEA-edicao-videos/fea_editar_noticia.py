@@ -174,7 +174,8 @@ def aplicar_headline_centro(quadro, im, t, fim, emenda):
     if a < 1:
         img.putalpha(img.split()[3].point(lambda v: int(v * a)))
     tela = Image.fromarray(quadro).convert("RGBA")
-    y = int(min(H - img.height - 40, emenda - img.height * 0.55))
+    # nunca abaixo de 1380 px: a legenda fica a ~80% da altura (1515 px) e a headline não pode cobri-la
+    y = int(min(1380 - img.height, emenda - img.height * 0.55))
     tela.alpha_composite(img, ((W - img.width) // 2, max(0, y)))
     return np.asarray(tela.convert("RGB"))
 
