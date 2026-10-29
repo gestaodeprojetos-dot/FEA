@@ -16,7 +16,7 @@ Datas, status, sprints, responsáveis e criação de tarefas são só comigo. Qu
 - Workspace `9013080622`.
 - Pastas monitoradas: as pastas de lançamento ativas no espaço Marketing Brasil (`90130517360`) e no espaço Marketing Latam (`901314001225`). Hoje são **Black Friday Vitalícia 10/26** (`901318759044`), **Black Friday Total - Latam** (`901318793839`) e **FEA-MTB 11/26** (`1400270000003387`, sprints S1 a S4 no formato `S2 (26/10 - 30/10)`, incluída em 28/10/2026).
 - Demandas contínuas, fora de lançamento: pasta **Redes Sociais** (`1400270000003670`) no espaço Marketing Brasil, uma lista por canal (hoje só **YouTube**, `1400270000004568`). Não tem sprint: a ronda olha a lista inteira, pelo prazo de cada tarefa (Keila, 27/10/2026).
-- Tarefas avulsas criadas pelo Claude a pedido da Keila fora das sprints também entram na ronda até serem concluídas. Hoje: [Página de Pré-venda Elite Injectors Congress 2027](https://app.clickup.com/t/17th71z85hv) (`17th71z85hv`, André, prazo 30/10 18h), na lista Pré produção Congresso (`901325815294`).
+- Tarefas avulsas criadas pelo Claude a pedido da Keila fora das sprints também entram na ronda até serem concluídas. Hoje: [Página de Pré-venda Elite Injectors Congress 2027](https://app.clickup.com/t/17th71z85hv) (`17th71z85hv`, André, prazo 30/10 18h) e [Página de Vendas Elite Mentoring](https://app.clickup.com/t/17th71z88k8) (`17th71z88k8`, André, prazo 30/10 18h), na lista Pré produção Congresso (`901325815294`).
 - Dentro de cada pasta de lançamento, a **sprint atual** é a lista cujo intervalo no nome contém a data de hoje. A Brasil usa `dd/mm`, a Latam usa `m/d`.
 - Incluir pasta nova só com o ok da Keila (regra do CLAUDE.md).
 
