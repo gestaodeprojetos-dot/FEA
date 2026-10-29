@@ -1,0 +1,474 @@
+<title>Clássicos do Dr. Pithon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: faixa de abertura em gradiente FEA, depois coluna única de leitura (max 1080px) com blocos de dados e um backlog filtrável */
+:root {
+  --roxo: #5B4599;
+  --violeta: #3846BB;
+  --lavanda: #D0D1E9;
+  --alerta: #BB3838;
+  --fundo: #F9F9F9;
+  --superficie: #FFFFFF;
+  --borda: #E9E9E9;
+  --texto: #1F1B2E;
+  --texto-suave: #5C5770;
+  --lavanda-suave: #EEEEF7;
+  --ok: #2F7D5B;
+  --atencao: #9A6A12;
+  --hero-a: #5B4599;
+  --hero-b: #3846BB;
+  --hero-texto: #FFFFFF;
+  --barra-banco: #5B4599;
+  --barra-novo: #B9BADB;
+  --f-display: "Sora", "Segoe UI", system-ui, sans-serif;
+  --f-corpo: "Montserrat", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --roxo: #A795E6; --violeta: #8F9BF2; --lavanda: #3A3657; --alerta: #E07A7A;
+    --fundo: #14121C; --superficie: #1D1A29; --borda: #2E2A40; --texto: #ECEAF5; --texto-suave: #A9A4BF;
+    --lavanda-suave: #252137; --ok: #6CC79E; --atencao: #E2B45A;
+    --hero-a: #3D2E73; --hero-b: #1E1B4B; --hero-texto: #F7F6FB;
+    --barra-banco: #A795E6; --barra-novo: #4A4566;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --roxo: #A795E6; --violeta: #8F9BF2; --lavanda: #3A3657; --alerta: #E07A7A;
+  --fundo: #14121C; --superficie: #1D1A29; --borda: #2E2A40; --texto: #ECEAF5; --texto-suave: #A9A4BF;
+  --lavanda-suave: #252137; --ok: #6CC79E; --atencao: #E2B45A;
+  --hero-a: #3D2E73; --hero-b: #1E1B4B; --hero-texto: #F7F6FB;
+  --barra-banco: #A795E6; --barra-novo: #4A4566;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--fundo); color: var(--texto); font-family: var(--f-corpo); font-size: 16px; line-height: 1.6; }
+.faixa { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.miolo { max-width: 1080px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; line-height: 1.2; margin: 0; }
+h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 1.9rem); font-weight: 700; color: var(--roxo); }
+h3 { font-size: 1.05rem; font-weight: 700; }
+p { margin: 0; }
+.rotulo { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--violeta); }
+.leitura { max-width: 68ch; color: var(--texto-suave); }
+a { color: var(--violeta); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--violeta); outline-offset: 2px; border-radius: 6px; }
+
+/* abertura */
+.hero { background: linear-gradient(120deg, var(--hero-a), var(--hero-b)); color: var(--hero-texto); padding-block: 56px 48px; }
+.hero .miolo { display: grid; gap: 20px; }
+.hero .rotulo { color: var(--hero-texto); opacity: 0.8; }
+.hero h1 { font-size: clamp(2rem, 1.4rem + 3vw, 3.4rem); font-weight: 800; max-width: 18ch; }
+.hero p { max-width: 62ch; font-size: 1.05rem; opacity: 0.92; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; border: 1px solid currentColor; }
+.hero .chip { border-color: rgba(255,255,255,0.45); }
+
+main { display: grid; gap: 64px; padding-block: 48px 72px; }
+section { display: grid; gap: 20px; }
+.cabeca { display: grid; gap: 8px; }
+
+/* números */
+.numeros { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.numero { background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; display: grid; gap: 6px; }
+.numero strong { font-family: var(--f-display); font-size: 2rem; color: var(--roxo); font-variant-numeric: tabular-nums; line-height: 1.1; }
+.numero span { color: var(--texto-suave); font-size: 0.92rem; }
+
+/* gráfico */
+.grafico { background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; display: grid; gap: 14px; }
+.legenda { display: flex; flex-wrap: wrap; gap: 16px; font-size: 0.85rem; color: var(--texto-suave); }
+.legenda i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
+.barras { display: grid; gap: 8px; }
+.barra { display: grid; grid-template-columns: minmax(0, 15rem) 1fr; gap: 12px; align-items: center; font-size: 0.86rem; }
+.barra .nome { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.trilho { position: relative; height: 22px; }
+.preench { height: 100%; border-radius: 4px; background: var(--barra-novo); min-width: 2px; }
+.preench.banco { background: var(--barra-banco); }
+.valor { position: absolute; top: 0; font-size: 0.78rem; line-height: 22px; font-variant-numeric: tabular-nums; color: var(--texto-suave); padding-left: 8px; }
+.eixo { display: grid; grid-template-columns: minmax(0, 15rem) 1fr; gap: 12px; font-size: 0.75rem; color: var(--texto-suave); }
+.eixo div:last-child { display: flex; justify-content: space-between; border-top: 1px solid var(--borda); padding-top: 4px; font-variant-numeric: tabular-nums; }
+.valor.dentro { transform: translateX(-100%); padding-left: 0; padding-right: 8px; color: var(--texto); font-weight: 600; }
+.valor.dentro.banco { color: var(--fundo); }
+.nota-fonte { font-size: 0.82rem; color: var(--texto-suave); }
+
+/* leituras */
+.leituras { display: grid; gap: 12px; counter-reset: l; }
+.leituras li { list-style: none; display: grid; grid-template-columns: 2.2rem 1fr; gap: 12px; align-items: start; }
+.leituras li::before { counter-increment: l; content: counter(l); font-family: var(--f-display); font-weight: 800; color: var(--roxo); background: var(--lavanda-suave); border-radius: 8px; text-align: center; line-height: 2.2rem; }
+.leituras { padding: 0; margin: 0; }
+.leituras p { min-width: 0; }
+
+/* linhas */
+.linhas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.linha { background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; display: grid; gap: 10px; align-content: start; }
+.linha header { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.linha .papel { font-size: 0.78rem; font-weight: 600; color: var(--violeta); white-space: nowrap; }
+.linha p { color: var(--texto-suave); font-size: 0.92rem; }
+.linha dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: 0.86rem; }
+.linha dt { font-weight: 600; }
+.linha dd { margin: 0; color: var(--texto-suave); min-width: 0; }
+
+/* tabelas */
+.tabela { overflow-x: auto; border: 1px solid var(--borda); border-radius: 12px; background: var(--superficie); }
+table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+th { background: var(--roxo); color: var(--fundo); text-align: left; font-family: var(--f-display); font-weight: 600; font-size: 0.82rem; padding: 10px 14px; }
+td { padding: 10px 14px; border-top: 1px solid var(--borda); vertical-align: top; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* método */
+.metodo { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.bloco { background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+.filtros { margin: 0; padding-left: 1.2rem; display: grid; gap: 8px; color: var(--texto-suave); font-size: 0.92rem; }
+.pesos { display: grid; gap: 10px; }
+.peso { display: grid; grid-template-columns: minmax(0, 1fr) 2.5rem; gap: 4px 10px; font-size: 0.88rem; }
+.peso .trilho-p { grid-column: 1 / -1; height: 8px; background: var(--lavanda-suave); border-radius: 4px; overflow: hidden; }
+.peso .trilho-p div { height: 100%; background: var(--violeta); }
+.peso b { text-align: right; font-variant-numeric: tabular-nums; }
+.semaforo { display: grid; gap: 8px; }
+.sinal { display: grid; grid-template-columns: 4.5rem 1fr; gap: 10px; font-size: 0.88rem; align-items: baseline; }
+.sinal span:first-child { font-weight: 700; font-variant-numeric: tabular-nums; }
+.verde { color: var(--ok); } .amarelo { color: var(--atencao); } .vermelho { color: var(--alerta); }
+
+/* formatos */
+.formatos { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.formato { border-left: 3px solid var(--lavanda); padding: 4px 0 4px 14px; display: grid; gap: 4px; }
+.formato p { color: var(--texto-suave); font-size: 0.9rem; }
+.formato small { color: var(--violeta); font-weight: 600; font-size: 0.8rem; }
+
+/* janelas */
+.janelas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.janela { background: var(--lavanda-suave); border-radius: 12px; padding: 18px; display: grid; gap: 6px; align-content: start; }
+.janela .datas { font-family: var(--f-display); font-weight: 700; color: var(--roxo); font-variant-numeric: tabular-nums; }
+.janela p { font-size: 0.9rem; color: var(--texto-suave); }
+
+/* backlog */
+.controles { display: flex; flex-wrap: wrap; gap: 8px; }
+.controles button { font: inherit; font-size: 0.85rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--borda); background: var(--superficie); color: var(--texto); cursor: pointer; }
+.controles button[aria-pressed="true"] { background: var(--roxo); border-color: var(--roxo); color: var(--fundo); }
+.contagem { font-size: 0.85rem; color: var(--texto-suave); }
+.tag { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--lavanda-suave); color: var(--roxo); white-space: nowrap; }
+.tag.alerta { background: transparent; border: 1px solid var(--alerta); color: var(--alerta); }
+.tag.dado { background: transparent; border: 1px solid var(--ok); color: var(--ok); }
+.gancho { font-style: italic; }
+
+/* rastreio e pendências */
+.duas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.lista { margin: 0; padding-left: 1.2rem; display: grid; gap: 10px; color: var(--texto-suave); font-size: 0.92rem; }
+.lista b { color: var(--texto); }
+.fecho { font-family: var(--f-display); font-weight: 700; color: var(--roxo); font-size: 1.1rem; }
+code { font-size: 0.85em; background: var(--lavanda-suave); padding: 1px 6px; border-radius: 4px; overflow-wrap: anywhere; }
+footer { border-top: 1px solid var(--borda); padding-block: 24px 40px; font-size: 0.82rem; color: var(--texto-suave); }
+@media (max-width: 560px) {
+  .barra, .eixo { grid-template-columns: minmax(0, 8.5rem) 1fr; }
+  .hero { padding-block: 40px 36px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .preench { transition: width 0.6s ease; }
+}
+</style>
+
+<header class="hero faixa">
+  <div class="miolo">
+    <span class="rotulo">FEA · Instagram @drjoaopithon · outubro 2026</span>
+    <h1>Clássicos do Dr. Pithon</h1>
+    <p>O que já provou valor no perfil volta ao ar com critério: linhas de conteúdo definidas, uma nota objetiva para escolher cada repost, formatos que renovam a peça sem repetir e um calendário ligado aos lançamentos de toxina e anatomia.</p>
+    <div class="hero-meta">
+      <span class="chip">7 linhas de conteúdo</span>
+      <span class="chip">nota de curadoria 0 a 100</span>
+      <span class="chip">6 formatos de reciclagem</span>
+      <span class="chip">20 sugestões iniciais</span>
+    </div>
+  </div>
+</header>
+
+<main class="faixa">
+<div class="miolo" style="display:grid;gap:64px">
+
+  <section aria-labelledby="t-dados">
+    <div class="cabeca">
+      <span class="rotulo">O que os dados já mostram</span>
+      <h2 id="t-dados">Conteúdo do banco teve o dobro de alcance</h2>
+      <p class="leitura">A planilha de controle registra 272 posts entre 01/06 e 04/08/2026, mas só 12 têm métricas (coleta de 09/06). É pouco para concluir, e suficiente para confirmar a percepção do time e orientar o método.</p>
+    </div>
+    <div class="numeros">
+      <div class="numero"><strong>93,6 mil</strong><span>média de views dos 3 posts vindos do banco de conteúdo (marcados "NOTION")</span></div>
+      <div class="numero"><strong>46,5 mil</strong><span>média de views dos 9 posts inéditos no mesmo período</span></div>
+      <div class="numero"><strong>4,4×</strong><span>"Fios lisos em comissura": versão do banco contra versão nova do mesmo tema, mesmo dia</span></div>
+      <div class="numero"><strong>260</strong><span>posts sem nenhuma métrica registrada desde 09/06</span></div>
+    </div>
+    <div class="grafico" role="img" aria-label="Visualizações dos 12 posts com métrica, de 23,6 mil a 118,2 mil">
+      <div class="legenda"><span><i style="background:var(--barra-banco)"></i>Banco de conteúdo</span><span><i style="background:var(--barra-novo)"></i>Inédito</span></div>
+      <div class="barras" id="barras"></div>
+      <div class="eixo" aria-hidden="true"><div></div><div><span>0</span><span>40 mil</span><span>80 mil</span><span>120 mil</span></div></div>
+      <p class="nota-fonte">Visualizações por post, coleta de 09/06/2026. Fonte: aba POSTAGENS INSTAGRAM, planilha "Controle de Edições e Postagens".</p>
+    </div>
+    <ol class="leituras">
+      <li><p><b>Reciclar a peça rende mais do que regravar o tema.</b> O mesmo assunto, postado duas vezes no mesmo dia, teve 118 mil views na versão do banco e 27 mil na nova. O que viraliza é a peça: gancho, corte e ritmo.</p></li>
+      <li><p><b>Micro-técnica vence planejamento.</b> Os três maiores mostram um gesto técnico específico. Planejamento funciona melhor dentro de série ou compilação do que sozinho.</p></li>
+      <li><p><b>A amostra é pequena</b> (3 contra 9). Tratamos como indício forte; o export completa a prova.</p></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="t-porque">
+    <div class="cabeca">
+      <span class="rotulo">Princípio</span>
+      <h2 id="t-porque">Por que o repost volta a viralizar</h2>
+    </div>
+    <div class="duas">
+      <ul class="lista">
+        <li><b>Quem recebe o Reels, em grande parte, não segue o perfil.</b> Para essa pessoa o conteúdo é inédito.</li>
+        <li><b>Anatomia não expira.</b> Plano, camada e zona de risco valem hoje como valiam há um ano.</li>
+        <li><b>Gancho validado reduz risco.</b> Peça que já segurou atenção tende a repetir; peça nova é aposta.</li>
+      </ul>
+      <ul class="lista">
+        <li><b>Originalidade:</b> desde abril de 2026 o Instagram deixa de recomendar contas que postam majoritariamente conteúdo de terceiros. Repostar o próprio conteúdo não aparece como alvo nas fontes, mas não há confirmação oficial explícita. Por isso o padrão é <b>transformar</b>: gancho, capa, legenda ou corte novos.</li>
+        <li><b>Sinais de distribuição</b> citados por Adam Mosseri (jan/2025, fonte secundária): tempo de visualização, curtidas por alcance e compartilhamentos por mensagem direta.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-linhas">
+    <div class="cabeca">
+      <span class="rotulo">Linhas de conteúdo</span>
+      <h2 id="t-linhas">Sete linhas, cada uma com papel no funil</h2>
+      <p class="leitura">Toda peça, nova ou reciclada, entra em uma linha só. A linha diz o que ela precisa provocar e qual produto alimenta.</p>
+    </div>
+    <div class="linhas">
+      <article class="linha"><header><h3>Técnica em 1 minuto</h3><span class="papel">alcance</span></header><p>Um gesto técnico específico, mostrado de perto, com a fala do Dr.</p><dl><dt>Alimenta</dt><dd>FEP, IFF, FEB</dd><dt>Acervo</dt><dd>fio liso na comissura, anestesia intraoral, nó no fio PLA/PCL, pertuito labial, técnica da coroa</dd><dt>Reciclar como</dt><dd>novo gancho, Trial Reel</dd></dl></article>
+      <article class="linha"><header><h3>Anatomia que protege</h3><span class="papel">autoridade</span></header><p>Plano, camada, vaso e ligamento explicados para quem injeta.</p><dl><dt>Alimenta</dt><dd>FEA, Masterclass Anatomia</dd><dt>Acervo</dt><dd>vascularização da face, fluxo do nariz, agulhas na fronte, ligamento zigomático cutâneo</dd><dt>Reciclar como</dt><dd>série numerada, carrossel</dd></dl></article>
+      <article class="linha"><header><h3>Segurança e intercorrência</h3><span class="papel">consciência da dor</span></header><p>Como evitar intercorrências isquêmicas e como manejar quando acontecem.</p><dl><dt>Alimenta</dt><dd>FEA, FEPEXP</dd><dt>Acervo</dt><dd>hematoma, hialuronidase no mento, intercorrência no nariz, angioedema</dd><dt>Reciclar como</dt><dd>revisitando, carrossel</dd></dl></article>
+      <article class="linha"><header><h3>Produto e preparo</h3><span class="papel">salvamento</span></header><p>Conteúdo de consulta: reconstituição, diluição, reologia, critério de escolha.</p><dl><dt>Alimenta</dt><dd>FEP, FEB</dd><dt>Acervo</dt><dd>reconstituição seca e molhada, diluição de bioestimuladores, reologia em 2 minutos</dd><dt>Reciclar como</dt><dd>carrossel, compilação</dd></dl></article>
+      <article class="linha"><header><h3>Pergunta de consultório</h3><span class="papel">conversa</span></header><p>A dúvida real do injetor, respondida com critério anatômico.</p><dl><dt>Alimenta</dt><dd>todos os produtos</dd><dt>Acervo</dt><dd>bigode chinês pode ou não preencher?, agulha ou cânula?, qual lado começo as olheiras?</dd><dt>Reciclar como</dt><dd>pergunta na capa</dd></dl></article>
+      <article class="linha"><header><h3>Planejamento de caso</h3><span class="papel">retenção</span></header><p>O caso inteiro, do raciocínio à execução, para quem já acompanha.</p><dl><dt>Alimenta</dt><dd>IFF, FEP</dd><dt>Acervo</dt><dd>full face 2, 3, 4 e 6 mL, planejamento toxina padrão ouro</dd><dt>Reciclar como</dt><dd>compilação de 90 segundos</dd></dl></article>
+      <article class="linha"><header><h3>Bastidores e autoridade</h3><span class="papel">prova</span></header><p>FEP Experience, artigo premiado, congressos. Recicla só o que não tem data.</p><dl><dt>Alimenta</dt><dd>lançamentos</dd><dt>Fica de fora</dt><dd>lançamento, inscrição, live, congresso, notícia, evento pessoal</dd></dl></article>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-metodo">
+    <div class="cabeca">
+      <span class="rotulo">Curadoria</span>
+      <h2 id="t-metodo">Como escolher o que volta ao ar</h2>
+      <p class="leitura">A nota compara cada post com os outros da própria conta (percentil). O script <code>fea_curadoria_reposts.py</code> calcula tudo a partir do export do Meta Business Suite e entrega o ranking por linha.</p>
+    </div>
+    <div class="metodo">
+      <div class="bloco">
+        <h3>Filtros obrigatórios</h3>
+        <ol class="filtros">
+          <li>Postado há pelo menos 90 dias.</li>
+          <li>Tema perene, sem data, preço, vaga ou evento.</li>
+          <li>Linha vermelha conferida: sem promessa de resultado estético, sem minimizar risco, aviso de conteúdo sensível em intercorrência e marca de produto só com ok da Keila.</li>
+          <li>Não reciclado nos últimos 120 dias.</li>
+        </ol>
+      </div>
+      <div class="bloco">
+        <h3>Pesos da nota</h3>
+        <div class="pesos">
+          <div class="peso"><span>Compartilhamentos por alcance</span><b>30</b><div class="trilho-p"><div style="width:100%"></div></div></div>
+          <div class="peso"><span>Salvamentos por alcance</span><b>25</b><div class="trilho-p"><div style="width:83.3%"></div></div></div>
+          <div class="peso"><span>Visualizações</span><b>25</b><div class="trilho-p"><div style="width:83.3%"></div></div></div>
+          <div class="peso"><span>Seguidores ganhos por alcance</span><b>10</b><div class="trilho-p"><div style="width:33.3%"></div></div></div>
+          <div class="peso"><span>Comentários por alcance</span><b>10</b><div class="trilho-p"><div style="width:33.3%"></div></div></div>
+        </div>
+      </div>
+      <div class="bloco">
+        <h3>Semáforo</h3>
+        <div class="semaforo">
+          <div class="sinal"><span class="verde">80 a 100</span><span>volta como repost transformado</span></div>
+          <div class="sinal"><span class="amarelo">60 a 79</span><span>volta como compilação ou carrossel</span></div>
+          <div class="sinal"><span class="vermelho">abaixo de 60</span><span>não recicla; no máximo vira matéria-prima de compilação</span></div>
+        </div>
+        <p class="nota-fonte">Compartilhamento e salvamento pesam mais porque mostram o profissional guardando o conteúdo ou mandando para um colega.</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-formatos">
+    <div class="cabeca">
+      <span class="rotulo">Reciclagem</span>
+      <h2 id="t-formatos">Seis formatos que renovam sem repetir</h2>
+    </div>
+    <div class="formatos">
+      <div class="formato"><h3>Repost com novo gancho</h3><p>Mesmo vídeo; título novo nos 3 primeiros segundos, capa e legenda novas.</p><small>nota 80 ou mais · padrão</small></div>
+      <div class="formato"><h3>Trial Reel primeiro</h3><p>Recurso do Instagram que mostra o Reels só para não seguidores antes de ir ao perfil.</p><small>testar 2 ganchos para a mesma peça</small></div>
+      <div class="formato"><h3>Compilação</h3><p>Trechos de vários vídeos do mesmo gesto: "anestesia com SANEP em 5 rostos".</p><small>temas repetidos no acervo · nota 60 a 79</small></div>
+      <div class="formato"><h3>Carrossel derivado</h3><p>Quadros do vídeo com texto técnico curto: plano, camada, volume.</p><small>anatomia e produto</small></div>
+      <div class="formato"><h3>Revisitando</h3><p>O Dr. grava 15 a 20 segundos comentando o próprio vídeo antigo: o que manteria e o que ajustaria hoje.</p><small>segurança e casos de grande alcance</small></div>
+      <div class="formato"><h3>Série numerada</h3><p>"Anatomia em 1 minuto, ep. 3", com capa padrão.</p><small>captação da Masterclass Anatomia</small></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-calendario">
+    <div class="cabeca">
+      <span class="rotulo">Cadência</span>
+      <h2 id="t-calendario">Um slot por dia útil, ligado aos lançamentos</h2>
+      <p class="leitura">1 repost por dia útil na faixa "Clássicos do Dr." (cerca de 20 a 25% do volume atual, que foi de 4 posts por dia em junho e julho) e 2 Trial Reels por semana testando gancho novo em peça antiga. Nunca dois reposts seguidos, nunca a mesma peça antes de 90 dias. Datas abaixo são a última versão conhecida do calendário 2026 e precisam de confirmação.</p>
+    </div>
+    <div class="janelas">
+      <div class="janela"><span class="rotulo">Black Friday</span><span class="datas">até 20/11</span><p>Técnica em 1 minuto e Planejamento de caso: prova da profundidade da formação.</p></div>
+      <div class="janela"><span class="rotulo">Masterclass Toxina</span><span class="datas">16/11 a 03/12</span><p>Técnica e Produto em toxina: técnica da coroa, glabela, orbicular 60+, Nefertiti, profundidade da agulha, reconstituição.</p></div>
+      <div class="janela"><span class="rotulo">Masterclass Anatomia · FEA</span><span class="datas">03/12 a 17/12</span><p>Anatomia e Segurança em série: vascularização, fluxo do nariz, fronte, ligamentos, manejo de intercorrência.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-backlog">
+    <div class="cabeca">
+      <span class="rotulo">Backlog semente</span>
+      <h2 id="t-backlog">As primeiras 20 sugestões</h2>
+      <p class="leitura">Os 4 primeiros já têm número. Os demais entram ou saem quando o export trouxer as métricas. Ganchos são propostas para aprovação.</p>
+    </div>
+    <div class="controles" id="filtro-linha" role="group" aria-label="Filtrar por linha"></div>
+    <div class="controles" id="filtro-janela" role="group" aria-label="Filtrar por janela de lançamento"></div>
+    <p class="contagem" id="contagem" aria-live="polite"></p>
+    <div class="tabela">
+      <table>
+        <thead><tr><th>#</th><th>Peça de origem</th><th>Linha</th><th>Formato</th><th>Gancho proposto</th></tr></thead>
+        <tbody id="backlog"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-rastreio">
+    <div class="cabeca">
+      <span class="rotulo">Rastreamento de funil</span>
+      <h2 id="t-rastreio">Medir para provar que funciona</h2>
+    </div>
+    <div class="duas">
+      <ol class="lista">
+        <li><b>Limitação atual:</b> a coleta parou em 09/06. Não há número que diga qual linha traz seguidor qualificado, nem qual post gerou inscrição ou venda.</li>
+        <li><b>Leitura via plataforma:</b> o Instagram mede retenção por Reels (tempo médio e ponto de abandono), o melhor indicador de gancho. Entra na coleta.</li>
+      </ol>
+      <ol class="lista" start="3">
+        <li><b>Link único por linha:</b> Reels não aceita link clicável, então o rastreio vem da bio e dos stories com UTM (etiqueta no fim do link que diz de onde veio a visita) por linha e por janela, por exemplo <code>utm_campaign=masterclass-anatomia-dez26&amp;utm_content=linha2-anatomia</code>.</li>
+        <li><b>Rastreamento fim a fim:</b> coleta 7 dias após cada post, colunas "linha" e "versão" (original, repost, compilação, revisitando) e comparação mensal repost contra inédito.</li>
+      </ol>
+    </div>
+    <p class="fecho">Sem métrica, otimização é palpite.</p>
+  </section>
+
+  <section aria-labelledby="t-pendente">
+    <div class="cabeca">
+      <span class="rotulo">Próximos passos</span>
+      <h2 id="t-pendente">O que destrava o ranking real</h2>
+    </div>
+    <div class="duas">
+      <div class="bloco">
+        <h3>Rotina semanal (cerca de 40 minutos)</h3>
+        <ol class="lista">
+          <li>Segunda: exportar as métricas dos últimos 7 dias e rodar o script.</li>
+          <li>Escolher no ranking 5 reposts e 2 Trial Reels, respeitando a janela.</li>
+          <li>Pedir à edição só o que muda: gancho, capa, compilação.</li>
+          <li>Postar no slot "Clássicos do Dr." e registrar a versão na planilha.</li>
+        </ol>
+      </div>
+      <div class="bloco">
+        <h3>Decisões da Keila</h3>
+        <ol class="lista">
+          <li>Export do Meta Business Suite (Insights &gt; Conteúdo &gt; Exportar dados) ou token da API do Instagram.</li>
+          <li>Confirmar que "NOTION" na planilha é o banco de conteúdo antigo.</li>
+          <li>Regra de marca em repost: peça já aprovada pode voltar, ou precisa de novo ok?</li>
+          <li>Calendário de novembro e dezembro de 2026 confirmado.</li>
+          <li>Quem opera a rotina (Social Media).</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="faixa"><div class="miolo">FEA · Formação Especialista em Anatomia · Dr. João Pithon · versão 1.0, 29/10/2026 · uso interno da equipe</div></footer>
+
+<script>
+(function () {
+  var posts = [
+    ["Fios lisos em comissura", 118152, true],
+    ["Técnica anestésica intraoral", 103450, true],
+    ["EPTQ no preenchimento", 98565, false],
+    ["Dando nó no fio PLA/PCL", 74708, false],
+    ["Live injection toxina", 59245, true],
+    ["Proibição PMMA", 53477, false],
+    ["Fios de PLA/PCL reversos", 47922, false],
+    ["Técnica de fios de PDO", 35911, false],
+    ["Como acertar o plano", 33455, false],
+    ["Fios lisos em comissura (nova)", 27077, false],
+    ["Planejamento fios de PDO", 23890, false],
+    ["Foto masterclass anatomia", 23625, false]
+  ];
+  var max = 120000, fmt = new Intl.NumberFormat("pt-BR");
+  var alvo = document.getElementById("barras");
+  posts.forEach(function (p) {
+    var pct = (p[1] / max * 100).toFixed(2);
+    var linha = document.createElement("div");
+    linha.className = "barra";
+    linha.innerHTML = '<span class="nome" title="' + p[0] + '">' + p[0] + '</span>' +
+      '<div class="trilho"><div class="preench' + (p[2] ? ' banco' : '') + '" style="width:' + pct + '%"></div>' +
+      '<span class="valor' + (pct > 70 ? ' dentro' + (p[2] ? ' banco' : '') : '') + '" style="left:' + pct + '%">' + fmt.format(p[1]) + '</span></div>';
+    alvo.appendChild(linha);
+  });
+
+  var L = ["Técnica em 1 minuto", "Anatomia que protege", "Segurança e intercorrência", "Produto e preparo", "Pergunta de consultório", "Bastidores e autoridade"];
+  var backlog = [
+    [1, "Fios lisos em comissura (01/06, 118 mil views)", [0], "Novo gancho + Trial Reel", "Comissura caída: onde o fio liso entra e por quê", ["bf"], "dado"],
+    [2, "Técnica anestésica intraoral (02/06, 103 mil)", [0], "Novo gancho", "O bloqueio intraoral que muda o conforto do preenchimento labial", ["bf"], "dado"],
+    [3, "EPTQ no preenchimento (03/06, 98 mil)", [3], "Repost com ok de marca, ou recorte sem marca", "Reologia na prática: por que este gel se comporta assim no lábio", ["bf"], "marca"],
+    [4, "Dando nó no fio PLA/PCL (01/06, 75 mil) + nós e compactação do fio", [0], "Compilação", "Fio de tração: os 3 detalhes de ancoragem que definem a durabilidade", ["bf"], "dado"],
+    [5, "Anestesia com SANEP (8 versões no acervo)", [0], "Compilação", "Anestesia com SANEP em 5 rostos: o que muda e o que nunca muda", ["bf"]],
+    [6, "Pertuitos labiais (6 ou mais versões)", [0], "Compilação", "Pertuito labial: o plano certo antes da primeira gota de preenchedor", ["bf"]],
+    [7, "Entenda a vascularização da face", [1], "Série ep. 1", "Anatomia em 1 minuto: o mapa vascular que todo injetor precisa ter na cabeça", ["anat"]],
+    [8, "Rinomodelação: como é o fluxo de sangue no nariz", [1], "Série ep. 2", "Por que o nariz é zona de risco: o fluxo vascular explicado", ["anat"]],
+    [9, "Perigos das agulhas na fronte", [1, 2], "Série ep. 3", "Fronte: a camada em que a agulha nunca deveria estar", ["anat"]],
+    [10, "Cânulas e agulhas: perigos", [2], "Carrossel derivado", "Agulha ou cânula: critério anatômico, não preferência", ["anat"]],
+    [11, "Ligamento zigomático cutâneo", [1], "Série ep. 4", "O ligamento que explica o terço médio", ["anat"]],
+    [12, "Anatomia do mento e anatomia das olheiras", [1], "Série ep. 5 e 6", "Mento: profundidade, plano e previsibilidade", ["anat"]],
+    [13, "Como injetores preparados lidam com esse tipo de intercorrência (04/08)", [2], "Revisitando", "Intercorrência vascular: os primeiros minutos do manejo", ["anat"], "sensivel"],
+    [14, "Hialuronidase no mento (14/07)", [2], "Novo gancho", "Quando e como desfazer: hialuronidase com critério", ["anat"]],
+    [15, "Técnica da coroa para arqueamento da sobrancelha", [0], "Novo gancho", "Arqueamento do olhar com toxina: a técnica da coroa ponto a ponto", ["tox"]],
+    [16, "Profundidades nas aplicações do botox (14/07)", [1], "Carrossel derivado", "Profundidade da agulha na toxina: músculo a músculo", ["tox"]],
+    [17, "Qual a diferença entre a reconstituição seca e molhada?", [3], "Novo gancho", "Reconstituição seca ou molhada: o que muda na prática", ["tox"]],
+    [18, "Explicando reologia em menos de 2 min", [3], "Repost + carrossel", "Reologia em 2 minutos: o conceito que decide o preenchedor certo", ["bf"]],
+    [19, "Bigode chinês: pode ou não preencher?", [4], "Pergunta na capa", "Bigode chinês: pode ou não preencher? (mantém)", ["bf"]],
+    [20, "Fiz 1000 narizes sem intercorrências (17/07)", [5], "Revisitando", "Mantém a frase do Dr.; legenda ancorada em técnica e segurança", ["anat"]]
+  ];
+  var J = { bf: "Black Friday", tox: "Masterclass Toxina", anat: "Masterclass Anatomia" };
+  var estado = { linha: -1, janela: "" };
+  try { var s = JSON.parse(localStorage.getItem("fea-backlog-filtro") || "null"); if (s) estado = s; } catch (e) {}
+
+  function botoes(id, itens, chave) {
+    var box = document.getElementById(id);
+    box.innerHTML = "";
+    itens.forEach(function (it) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.textContent = it[1];
+      b.setAttribute("aria-pressed", String(estado[chave] === it[0]));
+      b.addEventListener("click", function () { estado[chave] = it[0]; render(); });
+      box.appendChild(b);
+    });
+  }
+  function render() {
+    botoes("filtro-linha", [[-1, "Todas as linhas"]].concat(L.map(function (n, i) { return [i, n]; })), "linha");
+    botoes("filtro-janela", [["", "Todas as janelas"]].concat(Object.keys(J).map(function (k) { return [k, J[k]]; })), "janela");
+    var corpo = document.getElementById("backlog");
+    corpo.innerHTML = "";
+    var vis = backlog.filter(function (b) {
+      return (estado.linha < 0 || b[2].indexOf(estado.linha) >= 0) && (!estado.janela || b[5].indexOf(estado.janela) >= 0);
+    });
+    vis.forEach(function (b) {
+      var tags = b[2].map(function (i) { return '<span class="tag">' + L[i] + '</span>'; }).join(" ");
+      var extra = b[6] === "dado" ? ' <span class="tag dado">com métrica</span>' :
+                  b[6] === "marca" ? ' <span class="tag alerta">confirmar marca</span>' :
+                  b[6] === "sensivel" ? ' <span class="tag alerta">aviso de conteúdo sensível</span>' : "";
+      var tr = document.createElement("tr");
+      tr.innerHTML = '<td class="num">' + b[0] + '</td><td>' + b[1] + extra + '</td><td>' + tags + '</td><td>' + b[3] +
+        '<br><small>' + b[5].map(function (k) { return J[k]; }).join(", ") + '</small></td><td class="gancho">' + b[4] + '</td>';
+      corpo.appendChild(tr);
+    });
+    document.getElementById("contagem").textContent = vis.length + " de " + backlog.length + " sugestões";
+    try { localStorage.setItem("fea-backlog-filtro", JSON.stringify(estado)); } catch (e) {}
+  }
+  render();
+})();
+</script>
