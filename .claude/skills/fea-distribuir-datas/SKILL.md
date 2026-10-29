@@ -57,6 +57,10 @@ Por que duas: na Brasil a captação começou 20 dias antes da live e na Latam s
 - **A pasta só nasce quando o lançamento se aproxima:** cerca de 45 dias antes do início da captação, a partir do calendário `FEA-gestao-clickup/FEA-calendario-2026-2027.md`. Assim o espaço mostra só o que está em uso. Ao criar, avisar a Keila no relatório e montar o backlog copiando o lançamento anterior parecido.
 - **Fim do lançamento:** a API não arquiva pasta. Listar no relatório as pastas encerradas para a Keila arquivar na interface (três pontinhos da pasta > Arquivar).
 - **Perpétuos** ficam com o prefixo `Perpétuo ·` no nome, em cada espaço.
+- **Toda lista nova (backlog ou sprint) nasce com o padrão FEA** (Keila, 29/10/2026):
+  - status do modelo **FEA**: a fazer · fazendo · em revisão · em ajuste · atrasado · aprovado · pausado · sprint · feito. Aplicar com `list.update` (`clickup_execute_operator`), `override_statuses: true` e a lista de status copiada da Sprint 10 da Black Brasil (`1400270000002473`); mapear `brifado`→a fazer, `revisao`→em revisão, `ajustar`→em ajuste, `complete`→feito, `to do`→a fazer, `in progress`→fazendo.
+  - visualização **Modelo de Sprint**: `view.create` tipo `list`, agrupada por status, colunas visíveis responsável, data de início, prazo e comentários, mostrando tarefas fechadas.
+  - Ficam fora do padrão só a lista de produção do Elite Injectors (status próprios do evento) e o Webinário FEB Latam (encerrado).
 
 ## Referências fixas (workspace 9013080622)
 
