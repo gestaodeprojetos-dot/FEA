@@ -65,6 +65,15 @@ Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/20
 3. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
 4. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
 
+## Material recebido vai para a planilha de links úteis (Keila, 29/10/2026)
+
+Todo material que a Keila enviar para uma demanda (copy, ID visual, pasta do Drive, vídeo, link de checkout, página, UTM) é registrado **na mesma hora** na planilha de links úteis do lançamento ou evento, junto com a criação da tarefa. A planilha é a fonte única que a equipe consulta; tarefa sem o material na planilha está incompleta.
+
+- **Onde fica:** na raiz da pasta do lançamento no Drive (`Links úteis - <lançamento>.xlsx`) ou pelo Guia de Lançamento no ClickUp.
+- **Em qual aba:** GERAL (checkout, grupos, listas, tags, webhooks) · COPY (docs de copy) · ARTE (ID visual, KV, pastas de arte) · WEB DESIGNER (páginas; deixar "(André cria até dd/mm)" enquanto não tiver URL) · TRÁFEGO (UTMs, criativos).
+- **Como gravar:** baixar o .xlsx pela API do Drive (`fea_drive.py`), acrescentar a linha depois da última preenchida da aba, copiando o estilo da linha de cima e colocando o link como hiperlink, conferir que o `modifiedTime` não mudou durante a edição e subir no mesmo arquivo (mesmo ID). Nunca apagar nem sobrescrever linha existente; se uma linha parecer errada, avisar a Keila.
+- No relatório, dizer o que foi registrado e em qual aba.
+
 ## Thumbs semanais do YouTube (Keila, 27/10/2026)
 
 O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo faz as 3 thumbs da semana num dia só.
