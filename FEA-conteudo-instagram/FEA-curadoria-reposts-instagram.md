@@ -33,6 +33,24 @@ Três leituras, com o nível de confiança de cada uma:
 
 Padrão de volume que também importa: entre junho e agosto o perfil postou cerca de 4 conteúdos por dia, e vários temas se repetiram com pacientes diferentes ("Orbiculares dos olhos" 7 vezes, "Técnica da coroa" 5, "Nasal" 5, anestesia com SANEP 8 ou mais). O acervo é grande e a repetição de tema já acontece naturalmente; falta transformar isso em escolha deliberada, guiada por desempenho.
 
+## 1.1 O padrão dos que viralizam de novo (até aqui)
+
+Com 12 posts medidos e só um tema repetido, o padrão ainda é hipótese. Cinco sinais aparecem, do mais forte para o mais fraco:
+
+| Hipótese | O que sustenta hoje | Confiança |
+|---|---|---|
+| **A peça carrega o resultado, não o tema.** O vídeo que viralizou uma vez tende a viralizar de novo; regravar o assunto não garante | "Fios lisos em comissura": 118 mil na peça do banco, 27 mil na versão nova, mesmo dia | média (1 caso, mas muito claro) |
+| **Gesto técnico único, mostrado de perto** (linha Técnica em 1 minuto) | 50% desses posts ficaram no quartil superior da conta, contra 0% das outras linhas (8 contra 4 posts) | média |
+| **Região perioral e lábio** | os 2 maiores confirmados são de lábio e comissura; 2 de 3 posts dessa região viralizaram, contra 1 de 3 na conta | baixa (3 posts) |
+| **Compartilhamento alto já no primeiro ciclo** | os 3 maiores tiveram de 1,4% a 1,9% de compartilhamento por alcance; os demais ficaram abaixo de 1% | baixa, mas é o sinal mais útil para prever |
+| **Título descritivo funciona; gancho de alerta e primeira pessoa ainda não foi medido** | os 12 medidos têm título descritivo. Os de julho com gancho ("Fiz 1000 narizes sem intercorrências", "Nunca mais errei a anestesia do lábio inferior") estão sem métrica | sem dado |
+
+**Como fechar a resposta:** o script `fea_padroes_reposts.py` encontra sozinho no export os pares original e repost (título parecido, ou mesma duração de vídeo com título próximo), calcula quanto cada repost rendeu contra o original e compara os que viralizaram de novo com os que não viralizaram por região, procedimento, tipo de gancho, duração e linha. Também testa se o desempenho do original (views, compartilhamento, salvamento) prevê o repost. Se a equipe souber de reposts que a detecção não pegar, basta listar os links num `pares.csv`.
+
+```bash
+python3 FEA-conteudo-instagram/fea_padroes_reposts.py --csv export.csv
+```
+
 ## 2. Por que o repost volta a viralizar (o princípio)
 
 - **Quem vê o Reels, em grande parte, não segue o perfil.** O alcance vem da recomendação para não seguidores, então para a maior parte de quem recebe o repost, o conteúdo é inédito.

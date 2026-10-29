@@ -154,6 +154,16 @@ td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tag.dado { background: transparent; border: 1px solid var(--ok); color: var(--ok); }
 .gancho { font-style: italic; }
 
+/* padrão */
+.hipoteses { display: grid; gap: 12px; }
+.hipotese { background: var(--superficie); border: 1px solid var(--borda); border-radius: 12px; padding: 16px 20px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 16px; align-items: start; }
+.hipotese h3 { font-size: 1rem; }
+.hipotese p { grid-column: 1 / -1; color: var(--texto-suave); font-size: 0.9rem; }
+.conf { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; border: 1px solid currentColor; }
+.conf.media { color: var(--violeta); }
+.conf.baixa { color: var(--atencao); }
+.conf.sem { color: var(--texto-suave); }
+
 /* rastreio e pendências */
 .duas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .lista { margin: 0; padding-left: 1.2rem; display: grid; gap: 10px; color: var(--texto-suave); font-size: 0.92rem; }
@@ -210,6 +220,21 @@ footer { border-top: 1px solid var(--borda); padding-block: 24px 40px; font-size
       <li><p><b>Micro-técnica vence planejamento.</b> Os três maiores mostram um gesto técnico específico. Planejamento funciona melhor dentro de série ou compilação do que sozinho.</p></li>
       <li><p><b>A amostra é pequena</b> (3 contra 9). Tratamos como indício forte; o export completa a prova.</p></li>
     </ol>
+  </section>
+
+  <section aria-labelledby="t-padrao">
+    <div class="cabeca">
+      <span class="rotulo">Padrão dos que viralizam de novo</span>
+      <h2 id="t-padrao">O que se repete nos campeões, até aqui</h2>
+      <p class="leitura">Com 12 posts medidos, o padrão ainda é hipótese. O script <code>fea_padroes_reposts.py</code> fecha a resposta com o export: encontra sozinho os pares original e repost e compara os que voltaram a viralizar com os que não voltaram.</p>
+    </div>
+    <div class="hipoteses">
+      <div class="hipotese"><h3>A peça carrega o resultado, não o tema</h3><span class="conf media">confiança média</span><p>"Fios lisos em comissura": 118 mil na peça do banco, 27 mil na versão nova do mesmo assunto, no mesmo dia. O vídeo que viralizou tende a viralizar de novo; regravar o tema não garante.</p></div>
+      <div class="hipotese"><h3>Gesto técnico único, mostrado de perto</h3><span class="conf media">confiança média</span><p>Metade dos posts da linha Técnica em 1 minuto ficou no quartil superior da conta; nenhum das outras linhas ficou (8 contra 4 posts).</p></div>
+      <div class="hipotese"><h3>Região perioral e lábio</h3><span class="conf baixa">confiança baixa</span><p>Os 2 maiores confirmados são de lábio e comissura. 2 de 3 posts dessa região viralizaram, contra 1 de 3 na conta.</p></div>
+      <div class="hipotese"><h3>Compartilhamento alto já no primeiro ciclo</h3><span class="conf baixa">confiança baixa</span><p>Os 3 maiores tiveram de 1,4% a 1,9% de compartilhamento por alcance; os demais ficaram abaixo de 1%. Se confirmar, vira o critério para prever qual post reciclar.</p></div>
+      <div class="hipotese"><h3>Título com gancho de alerta ou primeira pessoa</h3><span class="conf sem">sem dado</span><p>Os 12 medidos têm título descritivo. Os de julho com gancho, como "Fiz 1000 narizes sem intercorrências", estão sem métrica.</p></div>
+    </div>
   </section>
 
   <section aria-labelledby="t-porque">
