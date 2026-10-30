@@ -1,0 +1,1060 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8295.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8295.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/1- Planejamento 3mL.mp4",
+   "titulo": "Planejamento 3mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.9,
+     52.55
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8298.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8298.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     137.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bquiarde\\b",
+     "que arde"
+    ],
+    [
+     "\\bQuiarde\\b",
+     "Que arde"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     43.8,
+     44.8
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8299.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8299.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/3- Saiba mesclar os produtos.mp4",
+   "titulo": "Saiba mesclar os produtos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     108.0
+    ],
+    [
+     111.6,
+     148.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8300.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8300.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/4- Bigode chinês: qual o plano?.mp4",
+   "titulo": "Bigode chinês: qual o plano?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.9,
+     65.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8301.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8301.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/5- Pertuito perfeito dos lábios.mp4",
+   "titulo": "Pertuito perfeito dos lábios",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     37.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8302.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8302.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/6- Código de barras: superficial e pouco produto.mp4",
+   "titulo": "Código de barras: superficial e pouco produto",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.5,
+     59.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8303.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8303.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/7- Contorno labial.mp4",
+   "titulo": "Contorno labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.6,
+     112.94
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8297.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8297.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/8- Planejamento toxina estética.mp4",
+   "titulo": "Planejamento toxina estética",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     123.85
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\btrês, três\\b",
+     "3, 3"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8304.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8304.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/9- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     60.4
+    ],
+    [
+     82.2,
+     108.5
+    ],
+    [
+     138.4,
+     142.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8305.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8305.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/10- Glabela técnica dos 9 pontos.mp4",
+   "titulo": "Glabela técnica dos 9 pontos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     46.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\btrês\\b",
+     "3"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8306.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8306.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/11- Orbiculares.mp4",
+   "titulo": "Orbiculares",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     54.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b32/IMG_8307.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8307.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e32/12- Nasal.mp4",
+   "titulo": "Nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     72.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Ii]comissura\\b",
+     "comissura"
+    ],
+    [
+     "\\bfossa peri?forme\\b",
+     "fossa piriforme"
+    ],
+    [
+     "\\bgel diacilurônico\\b",
+     "gel de ácido hialurônico"
+    ],
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\b[Cc]orrogadores\\b",
+     "corrugadores"
+    ],
+    [
+     "\\bsupra-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupra-troclear\\b",
+     "supratroclear"
+    ],
+    [
+     "\\b[Ss]ubskin\\b",
+     "Subskin"
+    ],
+    [
+     "\\bbotulina\\b",
+     "botulínica"
+    ],
+    [
+     "\\b3 ml\\b",
+     "3 mL"
+    ]
+   ]
+  }
+ ]
+}
