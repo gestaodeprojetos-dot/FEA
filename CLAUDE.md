@@ -95,6 +95,46 @@ Quando pedido para montar do zero a estrutura de um novo lançamento no ClickUp 
 4. Depois de criar a v1, esperar o pedido de "v2 melhorada": mesmas demandas, extras que gestão de projetos sênior julgar necessários, dependências entre tarefas e melhoria visual da planilha.
 5. Nome da pasta é o nome do evento. Colunas do backlog: manter "Data de Início" sempre preenchida, adicionar "Comentários", remover "Prioridade".
 
+**Estrutura padrão da pasta de lançamento no Drive (Keila, 26/10/2026, modelo Masterclass em Intercorrências 09/26).** Vale para todo lançamento novo, mesmo quando o evento anterior usava outra estrutura:
+
+```
+NOME DO EVENTO/
+├── 0. PLANEJAMENTO   (briefing em branco para a equipe preencher)
+├── 1. COPY
+├── 2. ARTES
+├── 3. PESQUISA
+├── 4. TRÁFEGO
+│   ├── BRUTOS
+│   ├── CRIATIVOS PRONTOS
+│   │   ├── 1. CAPTAÇÃO
+│   │   │   ├── ANTECIPAÇÃO
+│   │   │   ├── CAPTAÇÃO
+│   │   │   ├── LEMBRETE
+│   │   │   └── REMARKETING
+│   │   └── 2. VENDAS
+│   │       ├── AQUECIMENTO FEP   (obrigatória em todo lançamento)
+│   │       ├── RMKT VENDAS
+│   │       ├── ÚLTIMAS HORAS
+│   │       └── ÚLTIMO DIA
+│   ├── Criativos para Tráfego.xlsx   (atalho para a planilha central, ver abaixo)
+│   └── Doc de edição de vídeo.docx
+├── 5. LOGO
+├── 6. PÁGINA DE VENDAS
+├── 7. URA + SMS
+├── 8. AUTOMAÇÃO
+└── Links úteis . NOME DO EVENTO.xlsx
+```
+
+Não usar mais as pastas antigas: PLANILHAS PÚBLICO, ALUNOS, LEADS ANTIGOS, OPERAÇÃO, REFERÊNCIAS, DEBRIEFING, DEPOIMENTOS, DOWNSELL, TMB. Ao copiar um evento antigo, reorganizar para esta estrutura movendo pastas (não recriando), para os links já distribuídos continuarem válidos.
+
+**Planilha central "Criativos para Tráfego" (Keila, 26/10/2026).** Arquivo único em `1. Gestão FEA/14. Tráfego` (id `1Uj9doFiSNDTOn9z3weT83NdQHvEB-y3e`); o `Criativos para Tráfego.xlsx` de cada lançamento é só atalho para ela. Todo lançamento entra nela, no mesmo padrão:
+- Uma aba por mês (`Novembro26`, `Outubro26`...), da mais nova para a mais antiga, com uma linha por dia (A:G mesclado). Se a aba do mês não existir, criar.
+- O bloco do lançamento entra logo abaixo do dia em que a captação começa, uma linha por fase: Captação, Rmkt (de captação), Antecipação, Lembrete, Aquecimento FEP, Vendas, RMKT Vendas.
+- Colunas: Status (`Agendar 📅`), Campanha (`[BR] PRODUTO MM/AA` ou `[LATAM] ...`), Fase, Deadline (dia em que a fase entra no ar), Legenda (link da pasta `1. COPY/4. LEGENDAS`), Link de Criativos (link da pasta da fase em `CRIATIVOS PRONTOS`), Links Úteis (link da planilha de links úteis, só na primeira linha do bloco).
+- Script: `FEA-MTB-11-26/fea_criativos_trafego_aba_mes.py` (acrescenta a aba pelo XML sem regravar as outras, fixa a revisão anterior para rollback e aborta se alguém editou durante a geração). Para lançamento em mês que já tem aba, inserir o bloco na aba existente em vez de criar outra.
+
+**Fonte das tarefas (Keila, 26/10/2026):** nunca basear só no evento anterior do mesmo produto. Comparar sempre três backlogs, porque o backlog é atualizado a cada lançamento: (a) o evento anterior do mesmo produto (ex.: MTB anterior), (b) a Masterclass mais recente, Brasil ou LATAM, e (c) o lançamento pago mais recente (ex.: IFF +10ml), de onde vêm ajustes de processo. Pastas antigas ficam arquivadas: ler as subtarefas de cada grupo com `clickup_get_task` (include subtasks), porque a busca por palavra-chave deixa tarefas de fora.
+
 Existe também o modo **migração** (não criação do zero): pegar demandas de um backlog origem e replicar num backlog destino, removendo datas e comentários.
 
 ## Ronda automática de prazos (padrão replicável para qualquer workspace ClickUp)
@@ -133,6 +173,8 @@ Ativar sempre que mencionarem FEA, João Pithon, Pithon, Dr. João, anatomia fac
 Profissional médico-científico, com peso de autoridade clínica. Didático mas técnico. Foco em segurança, palavra-chave central: "evitar intercorrências isquêmicas". Linguagem de par profissional, nunca de leigo.
 
 **Regra de escrita fixa: nunca usar "pra", sempre "para" por extenso.** Vale para copy e para textos internos, inclusive mensagens de automação do ClickUp.
+
+**Data de live sempre com horário (Adriane, copy, 28/10/2026):** toda copy que cita a data da live ou da aula leva também o horário, por exemplo "Dia 9 de novembro às 20h", nunca só "Dia 9 de novembro.". O padrão do time é 20h (horário de Brasília; na LATAM, usar o horário local informado no briefing). Vale para legendas, criativos, e-mails, WhatsApp e API.
 
 **Nunca:** tom popular, "garimpo" ou econômico · tom motivacional ("você consegue!", "transforme sua vida!") · tom comercial agressivo ou urgência artificial · linguagem para leigo · em-dash · palavra-tell · cadência staccato de IA.
 
@@ -181,7 +223,7 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 
 **Imersões presenciais:** IFF5 e IFF10 (Full Face 5ml e 10ml) · IAR (Rinomodelação Avançada) · PSP · IPO e IPL (a confirmar)
 
-**Lead magnets:** Masterclass em Anatomia (gratuita, capta para FEA) · Masterclass em Toxina Botulínica (recorrente, capta para FEB) · Masterclass em Fios de PDO · CPX/MEP (captura) · Ebooks perpétuos
+**Lead magnets:** Masterclass em Anatomia (gratuita, capta para FEA) · Masterclass em Toxina Botulínica (recorrente, capta para FEB; exceção: o MTB 11/26 vende a Black Friday Vitalícia) · Masterclass em Fios de PDO · CPX/MEP (captura) · Ebooks perpétuos
 
 ## Calendário anual (última versão conhecida, 2026, confirmar a cada retomada)
 
@@ -197,7 +239,7 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 - Ago: FEP Experience 10 (29 e 30/08) · Captação Toxina (03 a 12/08), Masterclass Toxina (11 e 12/08), Vendas FEB (11 a 13/08) · Captação IFF10 (17/08 a 16/09)
 - Set: Imersão IFF10 (15 e 16/09), Vendas FEP (16 a 24/09) · Captação Black Friday (29/09 a 21/10)
 - Out: FEP Experience 11 (17 e 18/10) · Congresso Elite Injectors (10 e 11/10) · **Vendas Black Friday (20/10 a 20/11), Black Friday Vitalícia (20/10)**
-- Nov: FEP Experience 12 (28 e 29/11) · Congresso Elite Injectors (07 e 08/11) · Captação Masterclass Toxina (23/11 a 02/12)
+- Nov: **MTB 11/26: captação 02 a 09/11, Masterclass 09/11 às 20h (Zoom), venda da Black Friday Vitalícia (Combo Vitalício), não do FEB (Keila, 26/10/2026), na página e nos checkouts da Black BR já no ar** · FEP Experience 12 (28 e 29/11) · Congresso Elite Injectors (07 e 08/11) · Captação Masterclass Toxina (23/11 a 02/12)
 - **Dez: Masterclass Toxina (01 e 02/12), Vendas FEB (01 a 03/12) · Captação Masterclass Anatomia (07 a 16/12), Masterclass Anatomia (15 e 16/12), Vendas FEA (15 a 17/12)**
 
 O FEA (curso de Anatomia) tem 2 grandes lançamentos por ano, início de junho e meio de dezembro. A estratégia de nutrição contínua (email e WhatsApp) existe para preencher o vazio entre eles. Datas mudam ano a ano, sempre pedir o planejamento anual atualizado antes de montar peça com data.
@@ -293,7 +335,7 @@ Arquitetura de nutrição contínua da base de alunos FEA, para preencher o vazi
 | Card comercial (Canva) | link no Canva do time, pedir atualizado |
 | Fotos do Dr. João | pasta dedicada no Drive, pedir link atualizado |
 | Zoom recorrente | link fixo do time, pedir atualizado |
-| ClickUp workspace | pedir ID atual e token novo (o antigo expira ou é revogado com frequência) |
+| ClickUp workspace | ID 9013080622 (Marketing Brasil). Conta conectada: gestaodeprojetos@joaopithon.com.br (admin). **Preferir a API REST** (`https://api.clickup.com/api/v2/...` via curl ou Python, chave injetada pelo ambiente em Network secrets), sem limite diário; o conector MCP do ClickUp tem teto de 100 ações por dia. Se a API responder `OAUTH_019`, a chave do ambiente venceu: pedir à Keila para gerar outra em ClickUp > Configurações > Apps e trocar em Network secrets |
 
 **Truque para ler Google Docs internos que só abrem no navegador (copies, planilhas de disparo):**
 
@@ -314,6 +356,10 @@ Referência de formato, não de conteúdo. Pedir os arquivos reais se for contin
 - Apresentação executiva enxuta (só fatos auditados) para reunião com o time de automação.
 - Tradução e adaptação de campanha para mercado internacional (LATAM, espanhol) quando aplicável.
 - **Tradução de vídeo (depoimento, aula)** (09/10/2026): idioma padrão é **espanhol** (não perguntar) e "traduzir" significa **dublar, sem legenda**. Usar o HeyGen (`create_video_translation`, idioma "Spanish", modo `precision`, `speakerNum` quando houver mais de uma voz), que clona a voz original e sincroniza a boca. Subir o vídeo pronto direto na pasta do Drive indicada, com o nome no padrão da pasta: `Nome original FEP-Spanish.mp4`. Pasta de depoimentos em espanhol: `1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN`. O MP4 do HeyGen vem com faixa de legenda embutida: remover antes de subir (`ffmpeg -i in.mp4 -map 0:v -map 0:a -c copy -sn out.mp4`). Legenda gravada só se a Keila pedir legenda.
+
+## Território da equipe de copy (Keila, 26/10/2026)
+
+**Nunca mexer na planilha "Disparos - João Pithon"** (cronograma de disparos de e-mail, WhatsApp e API), nem criar aba, nem mudar status ou horário. É tarefa do time de copy (Adriane Möbbs e Matheus van der Ham) e mexer lá confunde a equipe. Se algo precisar mudar, avisar a Keila ou criar tarefa no ClickUp para a copy.
 
 ## Antes de produzir qualquer peça FEA
 
