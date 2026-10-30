@@ -5,7 +5,7 @@ Apaga os textos do modelo com inpaint (OpenCV, sem IA generativa) e escreve a co
 nas mesmas posições e cores. Palavras entre [colchetes] no apoio saem em dourado.
 Fatos da oferta conferidos na página lp.joaopithon.com.br/black-friday/vitalicia/ em 28/10/2026.
 
-Uso: python3 fea_criativos_venda_black.py PASTA_SAIDA  (modelos em PASTA_SAIDA/modelo-story.png e modelo-feed.png)"""
+Uso: python3 fea_criativos_venda_black.py PASTA_SAIDA [GRUPO ...]  (modelos em PASTA_SAIDA/modelo-story.png e modelo-feed.png)"""
 import os, re, sys, cv2, numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
@@ -53,6 +53,28 @@ RMKT = [
      "Toque em Saiba Mais e garanta seu acesso vitalício."),
 ]
 
+# fim da Black (20/11, conferir dia e horário de fechamento do carrinho antes de subir)
+ULTIMO_DIA = [
+    ("Ads 110 - Último dia", "ÚLTIMO DIA",
+     "Hoje é o último dia da Black Friday Vitalícia: acesso vitalício a [todos os meus cursos online].",
+     "Toque em Saiba Mais e garanta seu acesso vitalício."),
+    ("Ads 111 - Último dia com bônus", "ÚLTIMO DIA DA BLACK",
+     "Hoje você ainda garante os [7 bônus], incluindo a Pós-Graduação em Técnicas Injetáveis.",
+     "Toque em Saiba Mais e veja todos os bônus."),
+    ("Ads 112 - Hoje é o último dia", "HOJE É O ÚLTIMO DIA",
+     "Depois de hoje, a Black Friday Vitalícia [não tem previsão de voltar].",
+     "Toque em Saiba Mais e garanta seu acesso vitalício."),
+]
+ULTIMAS_HORAS = [
+    ("Ads 113 - Últimas horas", "ÚLTIMAS HORAS",
+     "A Black Friday Vitalícia termina hoje. Garanta [acesso vitalício] a todos os meus cursos online.",
+     "Toque em Saiba Mais e garanta seu acesso vitalício."),
+    ("Ads 114 - Termina hoje", "TERMINA HOJE",
+     "Ainda dá tempo de entrar na Black Friday Vitalícia com [os 7 bônus inclusos].",
+     "Toque em Saiba Mais e garanta seu acesso vitalício."),
+]
+GRUPOS = {"VENDAS": VENDAS, "RMKT VENDAS": RMKT, "ÚLTIMO DIA": ULTIMO_DIA, "ÚLTIMAS HORAS": ULTIMAS_HORAS}
+
 
 def fonte(peso, px):
     f = ImageFont.truetype(FONTE, px)
@@ -88,7 +110,11 @@ def tokens(texto):
     out = []
     for m in re.finditer(r"\[([^\]]+)\]|([^\[]+)", texto):
         parte, dest = m.group(1) or m.group(2), bool(m.group(1))
-        out += [(w, dest) for w in parte.split()]
+        for w in parte.split():
+            if w[0] in ".,;:!?" and out:                    # pontuação nunca fica sozinha na linha
+                out[-1] = (out[-1][0] + w, out[-1][1])
+            else:
+                out.append((w, dest))
     return out
 
 
@@ -146,7 +172,8 @@ def gerar(modelo, formato, titulo, apoio, cta, saida):
 
 if __name__ == "__main__":
     p = sys.argv[1]
-    for pasta, pecas in (("VENDAS", VENDAS), ("RMKT VENDAS", RMKT)):
+    escolha = sys.argv[2:] or list(GRUPOS)            # opcional: só alguns grupos
+    for pasta, pecas in ((g, GRUPOS[g]) for g in escolha):
         os.makedirs(f"{p}/{pasta}", exist_ok=True)
         for nome, tit, ap, cta in pecas:
             for formato in ("story", "feed"):
