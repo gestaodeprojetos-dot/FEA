@@ -483,13 +483,14 @@ def pontuar(texto):
     # antes de "né" (marcador) e de "tá"/"viu" só no fim da frase ("..., tá?"): no meio, "tá" é o
     # verbo ("a minha agulha tá de cima para baixo" ficava "agulha, tá de cima")
     texto = re.sub(r"(\w) (né)([.,?!\s]|$)", r"\1, \2\3", texto)
-    texto = re.sub(r"(\w) (tá|viu)([.,?!])", r"\1, \2\3", texto)   # sem "$": "a gente ainda tá / começando"
+    # depois de "que"/"como", "tá" é o verbo ("que lindo que tá", lote 30 de outubro): sem vírgula
+    texto = re.sub(r"\b(?!(?:que|como)\b)(\w+) (tá|viu)([.,?!])", r"\1, \2\3", texto)   # sem "$": "a gente ainda tá / começando"
     # evitar vírgula duplicada
     texto = re.sub(r",\s*,", ",", texto)
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
+NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Rennova", "Plus", "Lido", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
                   "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 

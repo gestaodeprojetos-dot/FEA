@@ -1,0 +1,235 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b33/IMG_8313.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8313.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e33/1- Planejamento 2mL.mp4",
+   "titulo": "Planejamento 2mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.8,
+     72.1,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bÉ evidente\\b",
+     "é evidente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b33/IMG_8314.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8314.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e33/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     15.9
+    ],
+    [
+     19.9,
+     63.75
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ]
+   ],
+   "silenciar": [
+    [
+     28.9,
+     29.15
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b33/IMG_8315.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8315.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e33/3- Técnica tridimensional de olheiras.mp4",
+   "titulo": "Técnica tridimensional de olheiras",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     4.9
+    ],
+    [
+     7.2,
+     98.0
+    ],
+    [
+     109.6,
+     138.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bo meia-lorodase\\b",
+     "a hialuronidase"
+    ],
+    [
+     "\\bresultado,? [Aa]í\\b",
+     "resultado final"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     48.5,
+     50.3
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b33/IMG_8316.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8316.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e33/4- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     63.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\ba ciência está ótima\\b",
+     "assim está ótimo"
+    ],
+    [
+     "\\bBiogelis Volume\\b",
+     "Biogelis Volumax"
+    ],
+    [
+     "\\bG' intermediário\\b",
+     "G' intermediário"
+    ]
+   ]
+  }
+ ]
+}
