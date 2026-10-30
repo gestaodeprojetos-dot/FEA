@@ -12,7 +12,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.9,
+     1.1,
      52.55
     ]
    ],
@@ -541,7 +541,8 @@
    "manter": [
     [
      1.6,
-     112.94
+     113.0,
+     "exato"
     ]
    ],
    "correcoes": [
