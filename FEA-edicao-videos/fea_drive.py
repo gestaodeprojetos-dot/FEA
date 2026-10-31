@@ -14,7 +14,7 @@ Uso:
 
 --substituir manda para a lixeira o arquivo de mesmo nome na pasta antes de subir.
 """
-import json, os, sys, urllib.error, urllib.parse, urllib.request
+import json, mimetypes, os, sys, urllib.error, urllib.parse, urllib.request
 
 API = "https://www.googleapis.com/drive/v3/files"
 UPLOAD = "https://www.googleapis.com/upload/drive/v3/files"
@@ -63,9 +63,10 @@ def listar(tk, pasta, nome, mime=None):
 def subir(tk, pasta, caminho):
     nome = os.path.basename(caminho)
     tam = os.path.getsize(caminho)
+    mime = mimetypes.guess_type(nome)[0] or "video/mp4"  # imagem sobe como imagem, vídeo como vídeo
     r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
-               corpo={"name": nome, "parents": [pasta]},
-               cabecalhos={"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)})
+               corpo={"name": nome, "parents": [pasta], "mimeType": mime},
+               cabecalhos={"X-Upload-Content-Type": mime, "X-Upload-Content-Length": str(tam)})
     sessao = r.headers["Location"]
     print(f"  subindo {tam / 1024 / 1024:.1f} MB...", flush=True)
     with open(caminho, "rb") as f:
