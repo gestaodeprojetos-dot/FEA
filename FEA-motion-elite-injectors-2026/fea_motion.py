@@ -33,8 +33,17 @@ for key,ids in gid.items():
     m=cv2.dilate(m.astype(np.uint8),np.ones((5,5),np.uint8)).astype(bool)
     ys,xs=np.where(m); y0,y1,x0,x1=ys.min(),ys.max()+1,xs.min(),xs.max()+1
     a=(lcrop*m)[y0:y1,x0:x1]
-    LETTERS.append(dict(kind=key[0],k=key[1],x0=x0+LX0,y0=y0+LY0,a=a,c=ccrop[y0:y1,x0:x1].copy(),cx=(x0+x1)/2+LX0))
+    P=50
+    a=np.pad(a,P); c=np.pad(ccrop[y0:y1,x0:x1].copy(),((P,P),(P,P),(0,0)))
+    LETTERS.append(dict(kind=key[0],k=key[1],x0=x0+LX0-P,y0=y0+LY0-P,a=a,c=c,cx=(x0+x1)/2+LX0))
 nE=sum(1 for L in LETTERS if L['kind']=='E')
+subs=sorted([L for L in LETTERS if L['kind']=='S'],key=lambda L:L['cx'])
+for j,L in enumerate(subs): L['j']=j
+NS=len(subs)
+def clamp(x): return min(max(x,0.0),1.0)
+def eout(x): return 1-(1-x)**3
+def ein(x): return x**2
+def bump(x,c,wd): return float(np.exp(-((x-c)/wd)**2))
 LCX,LCY=(LX0+LX1)/2,(LY0+LY1)/2
 # --- individual sway centers (face positions, full res)
 FACES=[(1774,330),(2066,250),(2419,250),(2701,200),(2984,250),(3296,250),(3608,290),
@@ -81,7 +90,7 @@ X=np.arange(W,dtype=np.float32)[None,:]; Y=np.arange(H,dtype=np.float32)[:,None]
 def frame(t):
     w=2*np.pi*t/T
     # background: slow breathing zoom + lateral drift, neon pulse
-    k=0.55+0.45*np.sin(2*w-0.6)
+    k=0.55+0.45*np.sin(2*w-0.6)+1.2*bump(t,2.35,0.45)+0.6*bump(t,13.3,0.5)
     bgsrc=plate+glow*(0.04+0.12*k)+glow2*(0.02+0.05*k)
     M=aff(1.045+0.018*np.sin(w),-20*np.sin(w),6*np.cos(w),W/2,H/2)
     bg=cv2.warpAffine(bgsrc,M,(W,H),flags=cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)
@@ -102,51 +111,80 @@ def frame(t):
     aw=cv2.remap(pa,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_REPLICATE)[...,None]
     out=bg*(1-aw)+pw*aw
     particles(out,PF,t)
-    # logo: breathing scale + float, ELITE letters wave and light up one by one, subtitle tracking wave
-    ls=1.0+0.03*np.sin(w-0.8); lfy=8*np.sin(w+0.5)
-    pad=40
+    # logo timeline: empty -> ELITE letters rise in one by one -> subtitle reveal -> hold -> dissolve up -> empty
+    ls=1.0+0.02*np.sin(w-0.8); lfy=6*np.sin(w+0.5)
+    pad=60
     canvas_c=np.zeros((LY1-LY0+2*pad,LX1-LX0+2*pad,3),np.float32); canvas_a=np.zeros(canvas_c.shape[:2],np.float32)
     canvas_g=np.zeros(canvas_c.shape[:2],np.float32)
+    sz=(canvas_c.shape[1],canvas_c.shape[0])
     for L in LETTERS:
+        h,wl=L['a'].shape
         if L['kind']=='E':
             i=L['k']
-            ox=0; oy=-11*np.sin(2*w-i*0.9)
-            lt=(t-0.8-0.35*i)
-            lit=np.exp(-(lt/0.28)**2)+np.exp(-((t-8.3-0.35*i)/0.28)**2)
+            pin=eout(clamp((t-0.35-0.32*i)/0.75))
+            pout=ein(clamp((t-12.3-0.12*i)/0.8))
+            vis=pin*(1-pout)
+            if vis<0.003: continue
+            sc=1+0.55*(1-pin)+0.25*pout
+            ox=0; oy=70*(1-pin)-60*pout-9*np.sin(2*w-i*0.9)*pin*(1-pout)
+            blur=12*(1-pin)+10*pout
+            lit=bump(t,0.35+0.32*i+0.55,0.22)*1.3+bump(t,7.6+0.3*i,0.3)*0.8
         else:
-            ox=(L['cx']-LCX)*0.025*np.sin(w-0.8); oy=-4*np.sin(2*w-(L['cx']-LX0)*0.008-1.2)
+            j=L['j']
+            pin=eout(clamp((t-2.15-0.035*j)/0.55))
+            pout=ein(clamp((t-12.0-0.02*j)/0.6))
+            vis=pin*(1-pout)
+            if vis<0.003: continue
+            sc=1.0
+            ox=(L['cx']-LCX)*(0.35*(1-pin)+0.25*pout+0.02*np.sin(w))
+            oy=10*(1-pin)-25*pout-3*np.sin(2*w-(L['cx']-LX0)*0.008)
+            blur=6*(1-pin)+6*pout
             lit=0.0
-        h,wl=L['a'].shape
+        a=L['a']; c=L['c']
+        if blur>0.6:
+            a=cv2.GaussianBlur(a,(0,0),blur); c=cv2.GaussianBlur(c,(0,0),blur)
+        cxp,cyp=wl/2,h/2
         X0=L['x0']-LX0+pad+ox; Y0=L['y0']-LY0+pad+oy
-        Mt=np.float32([[1,0,X0],[0,1,Y0]])
-        sz=(canvas_c.shape[1],canvas_c.shape[0])
-        a2=cv2.warpAffine(L['a'],Mt,sz,flags=cv2.INTER_LINEAR)
-        c2=cv2.warpAffine(L['c'],Mt,sz,flags=cv2.INTER_LINEAR)
+        Mt=np.float32([[sc,0,X0+cxp-sc*cxp],[0,sc,Y0+cyp-sc*cyp]])
+        a2=cv2.warpAffine(a,Mt,sz,flags=cv2.INTER_LINEAR)*vis
+        c2=cv2.warpAffine(c,Mt,sz,flags=cv2.INTER_LINEAR)
+        cm=np.maximum(cv2.warpAffine(L['a'] if blur<=0.6 else a,Mt,sz,flags=cv2.INTER_LINEAR),1e-4)
+        c2=c2/cm[...,None] if blur>0.6 else c2/np.maximum(cv2.warpAffine(L['a']*0+1,Mt,sz),1e-4)[...,None]
+        c2=np.clip(c2,0,1)
         canvas_c=canvas_c*(1-a2[...,None])+c2*a2[...,None]
-        canvas_a=np.maximum(canvas_a,a2)
+        canvas_a=canvas_a+a2*(1-canvas_a)
         if lit>0.01: canvas_g+=a2*lit
-    # place canvas with global logo transform
-    Ml=aff(ls,-LX0+pad*0,lfy,LCX-LX0+pad,LCY-LY0+pad)
-    Ml=np.float32([[ls,0,(1-ls)*LCX+LX0*(ls-ls)+ (LX0-pad)*ls - (LX0-pad)*0 ],[0,ls,0]])
-    # explicit: canvas coord u -> frame coord: LCX + ls*(u + LX0 - pad - LCX)
     Ml=np.float32([[ls,0,LCX+ls*(LX0-pad-LCX)],[0,ls,LCY+ls*(LY0-pad-LCY)+lfy]])
     fa=cv2.warpAffine(canvas_a,Ml,(W,H),flags=cv2.INTER_LINEAR)
     fc=cv2.warpAffine(canvas_c,Ml,(W,H),flags=cv2.INTER_LINEAR)
     fg=cv2.warpAffine(canvas_g,Ml,(W,H),flags=cv2.INTER_LINEAR)
-    small=cv2.resize(fa[LY0-120:LY1+120,LX0-160:LX1+160],None,fx=0.25,fy=0.25)
+    R=(slice(LY0-120,LY1+120),slice(LX0-160,LX1+160))
+    small=cv2.resize(fa[R],None,fx=0.25,fy=0.25)
     halo=cv2.resize(cv2.GaussianBlur(small,(0,0),5),(LX1-LX0+320,LY1-LY0+240))
-    k2=0.16+0.10*np.sin(2*w)
-    out[LY0-120:LY1+120,LX0-160:LX1+160]+=halo[...,None]*k2*COL
-    gl=cv2.GaussianBlur(fg[LY0-120:LY1+120,LX0-160:LX1+160],(0,0),14)
-    out[LY0-120:LY1+120,LX0-160:LX1+160]+=gl[...,None]*0.55*COL
+    k2=0.18+0.10*np.sin(2*w)+0.5*bump(t,2.35,0.4)
+    out[R]+=halo[...,None]*k2*COL
+    gl=cv2.GaussianBlur(fg[R],(0,0),14)
+    out[R]+=gl[...,None]*0.6*COL
     out=out*(1-fa[...,None])+fc*fa[...,None]
-    out=out+(fg*0.55)[...,None]*np.array([1,0.97,0.92],np.float32)
+    out=out+(fg*0.6)[...,None]*np.array([1,0.97,0.92],np.float32)
+    # anamorphic light streak sweeping across the logo as it lands, and again on exit
+    for tc,amp in ((1.7,1.0),(12.7,0.6)):
+        e=bump(t,tc,0.55)
+        if e>0.01:
+            sx=LX0-300+(LX1-LX0+600)*clamp((t-tc+0.9)/1.8)
+            streak=np.exp(-((Yf-672)/7)**2)*np.exp(-((Xf-sx)/900)**2)*0.9+np.exp(-((Yf-672)/60)**2)*np.exp(-((Xf-sx)/260)**2)*0.35
+            out=out+(streak*e*amp)[...,None]*COL
+    # soft burst when the word is complete
+    bb=bump(t,2.35,0.35)
+    if bb>0.01:
+        burst=np.exp(-(((Xf-LCX)/520)**2+((Yf-650)/200)**2))
+        out=out+(burst*bb*0.28)[...,None]*COL
     return np.clip(out,0,1)
 if mode=='preview':
-    for t in [0,1.6,3.75,7.5,11.25]:
+    for t in [0.5,1.0,1.7,2.35,3.0,12.6,13.2]:
         f=(frame(t)*255).astype(np.uint8)
         cv2.imwrite(f'{S}/work/f_{t}.jpg',cv2.resize(f,(2016,672),interpolation=cv2.INTER_AREA))
-        cv2.imwrite(f'{S}/work/crop_{t}.jpg',f[100:1000,1500:3800]); cv2.imwrite(f'{S}/work/logo_{t}.jpg',f[400:950,100:1350])
+        cv2.imwrite(f'{S}/work/logo_{t}.jpg',f[400:950,100:1350])
 else:
     out=sys.argv[3]
     p=subprocess.Popen(['ffmpeg','-y','-loglevel','error','-f','rawvideo','-pix_fmt','bgr24','-s',f'{W}x{H}','-r',str(FPS),'-i','-',

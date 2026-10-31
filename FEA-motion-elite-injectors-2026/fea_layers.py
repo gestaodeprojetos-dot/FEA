@@ -18,13 +18,16 @@ print('bg lum',bgl)
 # plate: inpaint people + logo (at 1/4 res), keep original outside
 hole=(cv2.dilate(((pa>5)).astype(np.uint8),np.ones((9,9),np.uint8))|cv2.dilate((la>0.01).astype(np.uint8),np.ones((31,31),np.uint8))).astype(np.uint8)*255
 hole=cv2.dilate(hole,np.ones((41,41),np.uint8))
+hole[505:840,225:1200]=255
 sm=cv2.resize(img,(W//4,H//4),interpolation=cv2.INTER_AREA)
 hs=cv2.resize(hole,(W//4,H//4),interpolation=cv2.INTER_NEAREST)
 inp=cv2.inpaint(sm,hs,25,cv2.INPAINT_TELEA)
 inp=cv2.GaussianBlur(inp,(0,0),6)
 up=cv2.resize(inp,(W,H),interpolation=cv2.INTER_CUBIC)
 tight=(cv2.dilate((pa>8).astype(np.uint8),np.ones((7,7),np.uint8))|cv2.dilate((la>0.01).astype(np.uint8),np.ones((9,9),np.uint8)))*255
-hf=cv2.GaussianBlur(tight.astype(np.uint8),(0,0),2).astype(np.float32)[...,None]/255
+hf=cv2.GaussianBlur(tight.astype(np.uint8),(0,0),2).astype(np.float32)/255
+rm=np.zeros((H,W),np.float32); rm[530:815,260:1165]=1; rm=cv2.GaussianBlur(rm,(0,0),30); rm=np.clip(rm*1.6,0,1)
+hf=np.maximum(hf,rm)[...,None]
 plate=(img*(1-hf)+up*hf).astype(np.uint8)
 cv2.imwrite(f'{S}/work/plate.png',plate)
 cv2.imwrite(f'{S}/work/plate_prev.jpg',cv2.resize(plate,(2016,672)))

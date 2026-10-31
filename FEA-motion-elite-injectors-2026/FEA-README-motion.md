@@ -28,6 +28,8 @@ A pasta de trabalho precisa de `src/descanso.png` (arte original 4032x1344).
 
 v2 (31/10/2026): movimento ampliado a pedido da Keila (v1 ficou estático demais).
 
+v3 (31/10/2026): o logo deixa de ficar fixo e passa a ter entrada e saída. A tela começa sem logo; as letras do ELITE sobem uma a uma, desfocadas e maiores, até assentar com flash; o INJECTORS CONGRESS se revela com as letras se aproximando; um feixe de luz horizontal passa e o T de neon do fundo pisca junto; no fim do loop o logo se dissolve para cima. O fundo atrás do logo foi totalmente limpo para não deixar fantasma da arte original.
+
 Todos os movimentos são periódicos em 15 s: o loop repete sem corte visível.
 
 Saída: MP4 H.264, 4032x1344, 30 fps, yuv420p (o vídeo não vai para o Git, fica no Drive na pasta MOTION do evento).
