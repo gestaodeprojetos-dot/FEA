@@ -20,10 +20,13 @@ A pasta de trabalho precisa de `src/descanso.png` (arte original 4032x1344).
 
 | Camada | Movimento |
 |---|---|
-| Fundo | zoom lento de respiração, deriva lateral, pulso de luz no T de neon, varredura de luz diagonal por loop |
+| Fundo | zoom de respiração, deriva lateral, pulso de luz no T de neon, varredura de luz diagonal por loop |
 | Partículas | poeira de luz azul subindo, atrás e na frente dos palestrantes |
-| Palestrantes | contra-paralaxe sutil (profundidade) ancorada na base |
-| Logo | fixo, halo suave e brilho especular passando pelas letras |
+| Palestrantes | aproximação de câmera (push-in) com contra-paralaxe, e cada palestrante balança em ritmo próprio (deslocamento local suave, rosto se move inteiro sem deformar) |
+| Logo ELITE | letras flutuam em onda e acendem uma a uma (2 vezes por loop), halo pulsando, logo inteiro respira e flutua |
+| INJECTORS CONGRESS | onda suave letra a letra e espaçamento entre letras respirando |
+
+v2 (31/10/2026): movimento ampliado a pedido da Keila (v1 ficou estático demais).
 
 Todos os movimentos são periódicos em 15 s: o loop repete sem corte visível.
 
