@@ -38,6 +38,67 @@ def remontar(f):
     return topo * (1 - a) + lat * a
 
 
+class Moldura:
+    """Linha de luz em volta do totem, com o mesmo jogo da moldura da porta do elevador (medido no 2B):
+    dois pontos de luz saem do centro do topo, um para cada lado, e descem até o centro de baixo
+    (quadros 14-90 e 194-270), ficando mais fortes no caminho; entre 288 e 344 a moldura toda acende e apaga."""
+    INSET, RAIO = 6, 12
+    NUCLEO = np.array([150, 196, 214], np.float32)   # cor da linha (porta do elevador)
+    BRILHO = np.array([40, 110, 140], np.float32)    # halo azul em volta
+    LUZ = np.array([205, 240, 255], np.float32)      # cor do ponto de luz
+
+    def __init__(self):
+        from scipy.spatial import cKDTree
+        i, r = self.INSET, self.RAIO
+        x0, y0, x1, y1 = i, i, W - 1 - i, HF - 1 - i
+        pts = []
+        def reta(a, b, n):
+            for t in np.linspace(0, 1, n, endpoint=False):
+                pts.append((a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t))
+        def arco(cx, cy, a0, a1):
+            for t in np.linspace(a0, a1, 24, endpoint=False):
+                pts.append((cx + r * np.cos(t), cy + r * np.sin(t)))
+        cxm = W / 2
+        reta((cxm, y0), (x1 - r, y0), 200); arco(x1 - r, y0 + r, -np.pi / 2, 0)
+        reta((x1, y0 + r), (x1, y1 - r), 1000); arco(x1 - r, y1 - r, 0, np.pi / 2)
+        reta((x1 - r, y1), (x0 + r, y1), 400); arco(x0 + r, y1 - r, np.pi / 2, np.pi)
+        reta((x0, y1 - r), (x0, y0 + r), 1000); arco(x0 + r, y0 + r, np.pi, 1.5 * np.pi)
+        reta((x0 + r, y0), (cxm, y0), 200)
+        P = np.array(pts)
+        seg = np.r_[0, np.cumsum(np.hypot(*np.diff(P, axis=0).T))]
+        self.per = seg[-1]
+        yy, xx = np.mgrid[0:HF, 0:W]
+        d, k = cKDTree(P).query(np.c_[xx.ravel(), yy.ravel()])
+        self.d = d.reshape(HF, W).astype(np.float32)
+        self.s = seg[k].reshape(HF, W).astype(np.float32)   # posição ao longo da moldura, 0 = centro do topo
+        self.nucleo = np.exp(-(self.d / 1.1) ** 2)[..., None]
+        self.halo = np.exp(-(self.d / 6.0) ** 2)[..., None]
+        self.halo_luz = np.exp(-(self.d / 11.0) ** 2)[..., None]
+
+    def intensidade(self, n):
+        meio = self.per / 2
+        dist = np.minimum(self.s, self.per - self.s)      # distância ao centro do topo pelos dois lados
+        luz = np.zeros_like(self.s)
+        for n0, n1 in ((14, 90), (194, 270)):
+            if n0 <= n <= n1 + 6:
+                prog = min((n - n0) / (n1 - n0), 1.0)
+                cab = prog * meio
+                forca = (0.3 + 0.7 * prog) * (1 if n <= n1 else (n1 + 6 - n) / 6)
+                luz += forca * (np.exp(-((dist - cab) / 30) ** 2) + 0.45 * np.exp(-((dist - cab + 70) / 90) ** 2) * (dist < cab))
+        if 288 <= n <= 344:
+            g = (n - 288) / 28 if n <= 316 else (344 - n) / 28
+            luz += 0.45 * g
+        return luz[..., None]
+
+    def aplicar(self, img, n):
+        a = np.array(img).astype(np.float32)
+        luz = self.intensidade(n)
+        a = a * (1 - 0.85 * self.nucleo) + self.NUCLEO * 0.85 * self.nucleo     # linha fixa
+        a += self.BRILHO * 0.55 * self.halo                                     # halo fixo
+        a += self.LUZ * luz * (1.6 * self.nucleo + 0.9 * self.halo_luz)        # ponto de luz (com rastro) e acendimento
+        return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
+
+
 def camada(pasta, nome, largura):
     im = Image.open(os.path.join(pasta, nome)).convert("RGBA")
     h = round(im.height * largura / im.width)
@@ -50,6 +111,14 @@ def main():
     a2 = glob.glob(os.path.join(elev, "2A*.mp4"))[0]
     b2 = glob.glob(os.path.join(elev, "2B*.mp4"))[0]
     limpo = next(quadros(a2))  # quadro 0 do 2A: fundo sem nenhum texto
+    b_ini = next(quadros(b2))
+    # onde o 2B tem texto (ou a porta), o movimento não é do fundo: brilho que passa no logo virava
+    # um "ELITE" fantasma atrás do logo do totem. Nessas áreas o movimento é zerado.
+    txt = (np.abs(b_ini - limpo).sum(2) > 12).astype(np.uint8) * 255
+    txt[350:, 222:802] = 255
+    txt = np.array(Image.fromarray(txt).filter(ImageFilter.MaxFilter(17)).filter(ImageFilter.GaussianBlur(6)))
+    livre = (1 - txt.astype(np.float32) / 255)[..., None]
+    moldura = Moldura()
 
     # posições no padrão do elevador (Bem-vindos y=67, logo logo abaixo; FEA e mentoria sobre a arena)
     # tempos medidos quadro a quadro no 2A do elevador: (entra_ini, entra_fim, sai_ini, sai_fim) em quadros
@@ -90,8 +159,8 @@ def main():
     for n, fb in enumerate(quadros(b2)):
         if b0 is None:
             b0 = fb
-        fundo = remontar(limpo + (fb - b0))
-        q = compor(fundo, n)
+        fundo = remontar(limpo + (fb - b0) * livre)
+        q = moldura.aplicar(compor(fundo, n), n)
         if n == 60:
             q.save(saida + ".png")
         enc.stdin.write(q.tobytes())
