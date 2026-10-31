@@ -12,6 +12,9 @@ bright=np.clip((lum-0.45)/0.35,0,1); bright[int(H*0.55):]*=0.3
 glow=cv2.GaussianBlur(plate*bright[...,None],(0,0),35)*1.6
 glow2=cv2.GaussianBlur(plate*bright[...,None],(0,0),8)
 people=img.copy()
+rmk=np.zeros((H,W),np.float32); rmk[530:815,260:1165]=1; rmk=cv2.GaussianBlur(rmk,(0,0),30); rmk=np.clip(rmk*1.6,0,1)[...,None]
+BASE=(img*(1-rmk)+plate*rmk).astype(np.float32)
+LIM=np.clip((1370-np.arange(W,dtype=np.float32))/260,0,1)[None,:,None]  # effects fade out before mid-screen
 logo=img.copy()
 # --- logo split into letters (ELITE) and subtitle letters (INJECTORS CONGRESS)
 LX0,LY0,LX1,LY1=200,480,1240,860
@@ -63,7 +66,7 @@ def mkp(n,rmin,rmax,amax):
     return dict(x=rng.uniform(0,W,n),y=rng.uniform(H*0.15,H*1.05,n),r=rng.uniform(rmin,rmax,n),
                 v=rng.uniform(40,140,n),ph=rng.uniform(0,T,n),a=rng.uniform(0.25,1,n)*amax,
                 dx=rng.uniform(-25,25,n),k=rng.integers(1,3,n))
-PB=mkp(170,1.5,5,0.55); PF=mkp(26,7,16,0.22)
+PB=mkp(70,1.5,4.5,0.45); PB['x']=rng.uniform(0,1250,70)
 sprites={}
 def sprite(r):
     key=round(r*2)/2
@@ -89,28 +92,8 @@ def aff(scale,tx,ty,cx,cy):
 X=np.arange(W,dtype=np.float32)[None,:]; Y=np.arange(H,dtype=np.float32)[:,None]
 def frame(t):
     w=2*np.pi*t/T
-    # background: slow breathing zoom + lateral drift, neon pulse
-    k=0.55+0.45*np.sin(2*w-0.6)+1.2*bump(t,2.35,0.45)+0.6*bump(t,13.3,0.5)
-    bgsrc=plate+glow*(0.04+0.12*k)+glow2*(0.02+0.05*k)
-    M=aff(1.045+0.018*np.sin(w),-20*np.sin(w),6*np.cos(w),W/2,H/2)
-    bg=cv2.warpAffine(bgsrc,M,(W,H),flags=cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)
-    # light sweep across background, once per loop (off-screen at loop seam)
-    pos=-0.35*W+1.7*W*(t/T)
-    d=(X+0.45*Y-pos)
-    band=np.exp(-(d/260)**2)*0.16+np.exp(-(d/60)**2)*0.05
-    bg=1-(1-bg)*(1-band[...,None]*COL)
-    particles(bg,PB,t)
-    # people: counter-parallax, anchored bottom-center
-    sc=1.0+0.022*(0.5-0.5*np.cos(w)); tx=14*np.sin(w); ax_,ay_=2700,H
-    qx=(GX-tx-ax_)/sc+ax_; qy=(GY-ay_)/sc+ay_
-    dx=np.zeros((H,W),np.float32); dy=np.zeros((H,W),np.float32)
-    for f,wn in zip(SW,WN):
-        dx+=wn*np.float32(f["ax"]*np.sin(f["fx"]*w+f["px"])); dy+=wn*np.float32(f["ay"]*np.sin(f["fy"]*w+f["py"]))
-    mx=(qx-dx).astype(np.float32); my=(qy-dy).astype(np.float32)
-    pw=cv2.remap(people,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_REPLICATE)
-    aw=cv2.remap(pa,mx,my,cv2.INTER_LINEAR,borderMode=cv2.BORDER_REPLICATE)[...,None]
-    out=bg*(1-aw)+pw*aw
-    particles(out,PF,t)
+    out=BASE.copy()
+    pb=np.zeros_like(out); particles(pb,PB,t); out=out+pb*LIM
     # logo timeline: empty -> ELITE letters rise in one by one -> subtitle reveal -> hold -> dissolve up -> empty
     ls=1.0+0.02*np.sin(w-0.8); lfy=6*np.sin(w+0.5)
     pad=60
@@ -173,18 +156,18 @@ def frame(t):
         if e>0.01:
             sx=LX0-300+(LX1-LX0+600)*clamp((t-tc+0.9)/1.8)
             streak=np.exp(-((Yf-672)/7)**2)*np.exp(-((Xf-sx)/900)**2)*0.9+np.exp(-((Yf-672)/60)**2)*np.exp(-((Xf-sx)/260)**2)*0.35
-            out=out+(streak*e*amp)[...,None]*COL
+            out=out+(streak*e*amp)[...,None]*COL*LIM
     # soft burst when the word is complete
     bb=bump(t,2.35,0.35)
     if bb>0.01:
         burst=np.exp(-(((Xf-LCX)/520)**2+((Yf-650)/200)**2))
-        out=out+(burst*bb*0.28)[...,None]*COL
+        out=out+(burst*bb*0.28)[...,None]*COL*LIM
     return np.clip(out,0,1)
 if mode=='preview':
-    for t in [0.5,1.0,1.7,2.35,3.0,12.6,13.2]:
+    for t in [0.1,1.7,2.4,6.0,12.7]:
         f=(frame(t)*255).astype(np.uint8)
         cv2.imwrite(f'{S}/work/f_{t}.jpg',cv2.resize(f,(2016,672),interpolation=cv2.INTER_AREA))
-        cv2.imwrite(f'{S}/work/logo_{t}.jpg',f[400:950,100:1350])
+        cv2.imwrite(f'{S}/work/v5_{t}.jpg',cv2.resize(f,(2016,672),interpolation=cv2.INTER_AREA)); cv2.imwrite(f'{S}/work/logo_{t}.jpg',f[400:950,100:1350])
 else:
     out=sys.argv[3]
     p=subprocess.Popen(['ffmpeg','-y','-loglevel','error','-f','rawvideo','-pix_fmt','bgr24','-s',f'{W}x{H}','-r',str(FPS),'-i','-',
