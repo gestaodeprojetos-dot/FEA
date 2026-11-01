@@ -1,5 +1,5 @@
 # FEA · Monta o PPTX 4032x1344 de um palestrante: cada slide vira imagem no fundo Elite e os vídeos voltam ao lugar
-import sys, os, glob, json, subprocess, zipfile, tempfile
+import sys, os, re, glob, json, subprocess, zipfile, tempfile
 from pptx import Presentation
 from pptx.util import Emu
 from lxml import etree
@@ -23,7 +23,7 @@ prs = Presentation()
 prs.slide_width, prs.slide_height = Emu(4032*PX), Emu(1344*PX)
 blank = prs.slide_layouts[6]
 k = 0
-for i, f in enumerate(sorted(glob.glob(f'{img_dir}/slide-*.jpg')), 1):
+for i, f in enumerate(sorted(glob.glob(f'{img_dir}/slide-*.jpg'), key=lambda p: int(re.search(r'slide-(\d+)', p).group(1))), 1):
     s = prs.slides.add_slide(blank)
     s.shapes.add_picture(f, 0, 0, prs.slide_width, prs.slide_height)
     vs = [v for v in videos if v['slide'] == i]
