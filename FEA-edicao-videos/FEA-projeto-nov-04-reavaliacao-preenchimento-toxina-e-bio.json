@@ -1,0 +1,693 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2826.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2826.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/1- Reavaliação de toxina.mp4",
+   "titulo": "Reavaliação de toxina",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.6,
+     30.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2827.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2827.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/2- Bioestimulação em atleta fisiculturista.mp4",
+   "titulo": "Bioestimulação em atleta fisiculturista",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.5,
+     116.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2829.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2829.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/3- Hidroxiapatita hiperdiluída na face.mp4",
+   "titulo": "Hidroxiapatita hiperdiluída na face",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     35.5
+    ],
+    [
+     43.1,
+     76.0
+    ],
+    [
+     91.3,
+     166.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2830.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2830.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/4- Hidroxiapatita hiperdiluída no pescoço.mp4",
+   "titulo": "Hidroxiapatita hiperdiluída no pescoço",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.6,
+     10.2
+    ],
+    [
+     28.8,
+     115.95
+    ],
+    [
+     119.8,
+     140.1,
+     "exato"
+    ],
+    [
+     149.8,
+     162.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2831.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2831.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/5- Massagem pós-bioestimulador.mp4",
+   "titulo": "Massagem pós-bioestimulador",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.8,
+     85.7
+    ],
+    [
+     141.85,
+     148.4,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2832.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2832.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/6- Toxina nos dilatadores da asa do nariz.mp4",
+   "titulo": "Toxina nos dilatadores da asa do nariz",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     56.65
+    ],
+    [
+     80.5,
+     85.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2833.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2833.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/7- Toxina no depressor do septo nasal.mp4",
+   "titulo": "Toxina no depressor do septo nasal",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     4.4,
+     56.85
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2834.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2834.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/8- Complexo muscular do centro da face.mp4",
+   "titulo": "Complexo muscular do centro da face",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.4,
+     105.95
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/brutos/IMG_2836.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c4/tr/IMG_2836.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n4/9- Revisão de toxina no Nefertiti.mp4",
+   "titulo": "Revisão de toxina no Nefertiti",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     96.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bhiper ?dilu",
+     "hiperdilu"
+    ],
+    [
+     "\\b[Mm] ?[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Pp]itangui\\b",
+     "Pitanguy"
+    ],
+    [
+     "\\ba lares\\b",
+     "alares"
+    ],
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\bper(?:turito|toito)(zinho)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpós -",
+     "pós-"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ]
+   ]
+  }
+ ]
+}

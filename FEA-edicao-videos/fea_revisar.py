@@ -65,7 +65,6 @@ PROIBIDO_LEGENDA = [
     (r"\binterfacial\b", "é interfascial"),
     (r"\bcarpulha\b|\b[Cc]arpulli\b", "é carpule"),
     (r"\btempra\b", "é têmpora"),
-    (r"\bsubi?mento\b", "é submento"),
     (r"\bmanejamento\b", "é planejamento"),
     (r"\bintercorrente\b", "é intercorrência"),
     (r"\b[Hh]iper ?tu[ií]tos?\b|\bpertuíto", "\"hipertuito\": é pertuito"),
