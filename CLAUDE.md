@@ -69,6 +69,7 @@ Nome de skill não aceita maiúscula nem espaço, então ali o prefixo vai minú
 - Nenhum arquivo criado pelo Claude fica fora da pasta de trabalho, organizar por projeto ou pasta, nunca solto.
 - Toda entrega de conteúdo (relatório, planejamento, análise) deve ter também versão HTML interativa quando fizer sentido para apresentação a terceiros (equipe, cliente).
 - Após alteração em página ou LP que vai para o ar: verificar FTP, URL pública, headers de cache, limpar cache CDN se necessário e testar link de CTA, antes de avisar que "está no ar".
+- **Teste de página sempre inclui revisão visual da diagramação** (Keila, 02/11/2026): tirar print em celular (360, 375, 390, 414 px), tablet (768, 1024) e desktop, depois de interagir com a página (o WP Rocket só carrega o JS após interação), e olhar cada print procurando texto sobre foto, botão flutuante cobrindo formulário ou CTA, palavra órfã ou quebra feia em título, conteúdo colado na borda e elemento cortado. Todo defeito visual entra no relatório, mesmo pequeno: o funcional funcionar não basta.
 - **Blindar a operação contra erros**: antes de qualquer ação que mexe em serviço ativo (API, webhook, conta, deploy em produção), mapear o estado atual, avaliar risco de quebrar algo funcionando, confirmar com a Keila se a ação afeta serviço ativo e ter plano de rollback. Nunca registrar ou desregistrar contas, números e pixels sem confirmar.
 
 ## Multi-cliente
