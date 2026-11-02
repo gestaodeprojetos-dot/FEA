@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Elite Mentoring perfil</title>
+<style>
+  html,body{margin:0;padding:0;background:#011A24}
+  .arte{position:relative;width:1080px;height:1080px;overflow:hidden;background:#011A24}
+  /* luz aqua central, como nos fundos do KV */
+  .luz{position:absolute;inset:0;background:
+     radial-gradient(ellipse 62% 55% at 50% 44%, rgba(134,249,248,.20) 0%, rgba(45,185,179,.08) 45%, rgba(1,26,36,0) 75%),
+     radial-gradient(ellipse 120% 90% at 50% 120%, rgba(0,8,12,.65) 0%, rgba(0,8,12,0) 60%)}
+  /* pontilhado suave do KV */
+  .pontos{position:absolute;inset:0;background-image:radial-gradient(rgba(134,249,248,.22) 1.2px, transparent 1.6px);
+     background-size:26px 26px;background-position:13px 13px;
+     -webkit-mask-image:radial-gradient(circle at 50% 46%, #000 0%, rgba(0,0,0,.55) 35%, transparent 68%);
+             mask-image:radial-gradient(circle at 50% 46%, #000 0%, rgba(0,0,0,.55) 35%, transparent 68%);opacity:.55}
+  /* monograma M+E gigante ao fundo */
+  .fantasma{position:absolute;left:50%;top:-6%;width:1500px;transform:translateX(-50%);opacity:.045}
+  .logo{position:absolute;left:50%;top:50%;width:650px;transform:translate(-50%,-50%);
+        filter:drop-shadow(0 0 28px rgba(134,249,248,.18))}
+</style></head>
+<body><div class="arte">
+  <div class="luz"></div>
+  <img class="fantasma" src="FEA-EM-monograma-branco.svg" alt="">
+  <div class="pontos"></div>
+  <img class="logo" src="FEA-EM-logo-vertical-cor.svg" alt="Elite Mentoring">
+</div></body></html>
