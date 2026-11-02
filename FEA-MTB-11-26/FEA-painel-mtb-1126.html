@@ -1,0 +1,176 @@
+<title>Painel MTB 11/26</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* Layout: faixa de cabeçalho roxa, régua do cronograma, depois seções em coluna única com tabelas de header roxo */
+:root {
+  --roxo: #5B4599; --azul: #3846BB; --lavanda: #D0D1E9; --alerta: #BB3838;
+  --bg: #F9F9F9; --card: #FFFFFF; --linha: #E9E9E9; --texto: #23212E; --suave: #5E5A70;
+  --amarelo: #FFF4CC; --amarelo-t: #6B5300; --ok: #2E6B4E; --ok-bg: #E3F1EA;
+  --hero-txt: #FFFFFF;
+  --f-titulo: "Sora", "Segoe UI", system-ui, sans-serif;
+  --f-corpo: "Montserrat", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --roxo: #9C88E0; --azul: #8C97F0; --lavanda: #2C2846; --alerta: #E07A7A;
+  --bg: #15131C; --card: #1E1B28; --linha: #322E40; --texto: #ECEAF4; --suave: #A9A4BD;
+  --amarelo: #3A3218; --amarelo-t: #F1D98A; --ok: #8FD3B0; --ok-bg: #1D3329; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --roxo: #9C88E0; --azul: #8C97F0; --lavanda: #2C2846; --alerta: #E07A7A;
+  --bg: #15131C; --card: #1E1B28; --linha: #322E40; --texto: #ECEAF4; --suave: #A9A4BD;
+  --amarelo: #3A3218; --amarelo-t: #F1D98A; --ok: #8FD3B0; --ok-bg: #1D3329; color-scheme: dark }
+body { background: var(--bg); color: var(--texto); font: 400 15px/1.6 var(--f-corpo); }
+.faixa { background: linear-gradient(120deg, #5B4599, #3846BB); color: var(--hero-txt);
+  padding-block: 36px 30px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.miolo { max-width: 1040px; margin: 0 auto; }
+.pagina { padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+h1, h2, h3 { font-family: var(--f-titulo); text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(26px, 4.5vw, 38px); font-weight: 800; letter-spacing: -0.01em; }
+h2 { font-size: 20px; font-weight: 700; color: var(--roxo); }
+.rotulo { font: 600 11px/1 var(--f-corpo); text-transform: uppercase; letter-spacing: .12em; opacity: .85; }
+.faixa p { margin: 10px 0 0; max-width: 62ch; opacity: .92; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chip { border: 1px solid rgba(255,255,255,.45); border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 500; }
+section { display: grid; gap: 14px; margin-top: 36px; }
+section > p { margin: 0; max-width: 72ch; color: var(--suave); }
+a { color: var(--azul); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--azul); outline-offset: 2px; border-radius: 3px; }
+/* régua do cronograma */
+.regua { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.marco { background: var(--card); border: 1px solid var(--linha); border-radius: 10px; padding: 14px; display: grid; gap: 4px; }
+.marco b { font: 700 18px/1.2 var(--f-titulo); font-variant-numeric: tabular-nums; }
+.marco span { font-size: 13px; color: var(--suave); }
+.marco.evento { border-color: var(--roxo); background: var(--lavanda); }
+/* tabelas */
+.tabela { overflow-x: auto; border: 1px solid var(--linha); border-radius: 10px; background: var(--card); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { background: #5B4599; color: #FFFFFF; text-align: left; font: 600 12px/1.3 var(--f-corpo); text-transform: uppercase; letter-spacing: .06em; padding: 10px 12px; }
+td { padding: 10px 12px; border-top: 1px solid var(--linha); vertical-align: top; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pill { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.pill.ok { background: var(--ok-bg); color: var(--ok); }
+.pill.pend { background: var(--amarelo); color: var(--amarelo-t); }
+.pill.risco { background: var(--alerta); color: #FFFFFF; }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+.link { background: var(--card); border: 1px solid var(--linha); border-radius: 10px; padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.link b { font-family: var(--f-titulo); font-size: 15px; }
+.link span { font-size: 13px; color: var(--suave); }
+.decisao { background: var(--lavanda); border-radius: 12px; padding: 18px; display: grid; gap: 8px; }
+.decisao h3 { font-size: 16px; color: var(--roxo); }
+.decisao p { margin: 0; max-width: 72ch; }
+ul.lista { margin: 0; padding-left: 20px; display: grid; gap: 6px; max-width: 76ch; }
+footer { margin-top: 44px; font-size: 12px; color: var(--suave); }
+</style>
+
+<header class="faixa">
+  <div class="miolo">
+    <div class="rotulo">FEA · Lançamento FEB · Masterclass em Toxina Botulínica</div>
+    <h1>MTB 11/26: aula ao vivo segunda, 09/11, às 20h</h1>
+    <p>Estrutura do lançamento duplicada do MTB 08/26 (aula de 11/08) e atualizada para a nova data: Drive, copys, planilha de links e backlog no ClickUp. Este painel mostra o que está pronto, o que depende de cada pessoa e as decisões que só a gestão pode tomar.</p>
+    <div class="chips">
+      <span class="chip">Captação 02/11 a 09/11</span>
+      <span class="chip">Zoom, 20h</span>
+      <span class="chip">Carrinho FEB 09/11 a 11/11, 23h59</span>
+      <span class="chip">Referência: MTB 08/26</span>
+    </div>
+  </div>
+</header>
+
+<main class="pagina"><div class="miolo">
+
+<section>
+  <h2>Cronograma</h2>
+  <p>O MTB 08/26 teve quatro semanas de preparação; aqui são sete dias úteis até a captação. Por isso o backlog foi comprimido em três sprints, mantendo a distância de cada entrega até o dia da aula.</p>
+  <div class="regua">
+    <div class="marco"><span>Sprint 1 · Preparação</span><b>22/10 a 30/10</b><span>Copys, páginas, criativos, automação</span></div>
+    <div class="marco"><span>Sprint 2 · Captação</span><b>02/11 a 06/11</b><span>Abre segunda, feriado de Finados</span></div>
+    <div class="marco"><span>Véspera</span><b>Dom 08/11</b><span>Disparos de lembrete "amanhã"</span></div>
+    <div class="marco evento"><span>Aula ao vivo</span><b>Seg 09/11 · 20h</b><span>Abre carrinho FEB, preço desborrado às 19h</span></div>
+    <div class="marco"><span>Sprint 3 · Vendas</span><b>09/11 a 11/11</b><span>Fecha quarta, 23h59</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Decisões da gestão</h2>
+  <div class="decisao">
+    <h3>Oferta FEB dentro da janela da Black Friday</h3>
+    <p>As vendas da Black Friday Vitalícia vão de 20/10 a 20/11, então a captação e o carrinho do FEB acontecem no meio dela. O briefing foi mantido com a oferta do 08/26 (R$ 997 ou 12x de R$ 99,50, bônus marcados como "confirmar"). Recomendação: decidir até 23/10 se o FEB entra com preço cheio e bônus próprios ou com condição alinhada à Black Friday, porque a copy da página de vendas, as mensagens comerciais e os criativos de vendas dependem dessa resposta.</p>
+  </div>
+  <div class="decisao">
+    <h3>Abertura da captação em 02/11, feriado</h3>
+    <p>A agenda nova tem um dia de captação a menos que o 08/26. Os disparos dos dois primeiros dias foram concentrados na segunda 02/11 e redistribuídos por horário: e-mail 01 às 10h, WhatsApp 01 às 11h30, 02 às 15h, 03 às 18h, e-mail 02 às 19h e WhatsApp 04 às 20h30. Docs e planilha de disparos já estão com esse horário; a Adriane só valida.</p>
+  </div>
+</section>
+
+<section>
+  <h2>O que já está pronto</h2>
+  <div class="tabela"><table>
+    <thead><tr><th>Frente</th><th>Situação</th><th>Detalhe</th></tr></thead>
+    <tbody>
+      <tr><td>Drive</td><td><span class="pill ok">Pronto</span></td><td>Pasta do MTB 08/26 duplicada inteira (252 itens, 4,4 GB) como FEA-MTB 11/26, na raiz de 2026, nomes com 11/26. Planilha de controle de leads e respostas de pesquisa do 08/26 ficaram de fora por terem dado pessoal.</td></tr>
+      <tr><td>Copys</td><td><span class="pill pend">Revisar</span></td><td>27 documentos com datas trocadas (11 de agosto para 9 de novembro, dia da semana novo nos disparos, carrinho até quarta-feira). Pacote novo com 6 anúncios de captação, 3 de antecipação, 3 legendas e 2 roteiros de vídeo para o Dr. João, aguardando revisão da Adriane.</td></tr>
+      <tr><td>Links úteis</td><td><span class="pill ok">Pronto</span></td><td>Links das copys, artes, briefing, automação e ClickUp apontam para o 11/26. UTMs, páginas e checkout mantidos. Pendências marcadas em amarelo na aba GERAL.</td></tr>
+      <tr><td>ClickUp</td><td><span class="pill ok">Pronto</span></td><td>Pasta FEA-MTB 11/26 em Marketing Brasil: 3 sprints, 81 tarefas, todas com início e vencimento e com os links do Drive novo. Sem responsáveis atribuídos; cada tarefa indica quem fez no 08/26.</td></tr>
+      <tr><td>Criativos</td><td><span class="pill ok">Pronto</span></td><td id="criativos-resumo">44 artes com data gravada corrigidas no próprio arquivo do Drive (mesmo link): segunda, 09/11, mesma fonte, peso e cor. 18 estáticos novos (Ads 46 a 51 de captação, Ads 015 a 017 de lembrete, Feed e Story) montados sobre artes aprovadas, com foto real do Dr. João. Faltam só o vídeo de lembrete e o PSD do Ads 37 Feed.</td></tr>
+      <tr><td>Disparos</td><td><span class="pill ok">Pronto</span></td><td>Aba Novembro26 criada na planilha Disparos - João Pithon com os 57 disparos do MTB 11/26 (e-mail, WhatsApp e API, de 02/11 a 11/11), cada um com o link da copy nova. Copys de disparo revisadas: cabeçalhos de dia e hora, "12 mil inscritos" do 08/26 substituído por campo a preencher, "para" por extenso e sem travessão.</td></tr>
+      <tr><td>Slides</td><td><span class="pill pend">1 minuto</span></td><td>Um slide ainda diz "até 23h59 do dia 11 de Agosto". O arquivo é grande demais para a API do Google exportar; ajuste manual no Slides (Ctrl+H, trocar "11 de Agosto" por "9 de Novembro").</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Criativos com data gravada</h2>
+  <p id="criativos-intro">Na mudança de terça 11/08 para segunda 09/11, o que precisa ser refeito é só o que carrega data ou dia da semana. Arte final fica com o design da equipe, sem geração por IA.</p>
+  <div class="tabela"><table>
+    <thead><tr><th>Arquivo</th><th>Tipo</th><th>O que muda</th><th>Quem</th></tr></thead>
+    <tbody id="criativos-lista">
+      <tr><td>Ingresso · Opção 1, 2 e 3</td><td>Arte</td><td>"11 de agosto, às 20h" para "9 de novembro, às 20h"</td><td><span class="pill ok">Feito</span></td></tr>
+      <tr><td>Captação · Ads 21, 23, 24, 25, 26, 30, 31, 32, 33, 36, 37, 38, 39, 40, 42, 43, 44, 45 (Feed e Story)</td><td>Estático</td><td>"Terça-feira, 11/08" e "11 de agosto" para "Segunda, 09/11" e "9 de novembro"</td><td><span class="pill ok">Feito</span></td></tr>
+      <tr><td>Lembrete · Ads 012, 013, 014 (Feed e Story)</td><td>Estático</td><td>Selo "11/08 • 20H • AO VIVO NO ZOOM" para "09/11"</td><td><span class="pill ok">Feito</span></td></tr>
+      <tr><td>Ads 37 Feed (arquivo PSD)</td><td>Fonte editável</td><td>O PNG já está corrigido; o PSD ainda tem "Terça-feira, 11/08"</td><td>Design</td></tr>
+      <tr><td>Vídeo Lembrete 12 mil inscritos (WhatsApp)</td><td>Vídeo</td><td>Fala "terça-feira" e mostra "+12 mil inscritos" do 08/26: regravar ou recortar</td><td>Edição</td></tr>
+      <tr><td>Slides Masterclass em Toxina 11/26</td><td>Slides</td><td>Bônus "até 23h59 do dia 11 de Agosto" para "9 de novembro"</td><td>Keila (Ctrl+H)</td></tr>
+      <tr><td>Reaproveitáveis como estão: 52 vídeos de tráfego, captação Ads 35 e 41, lembretes Ads 01 a 07, 010, 011, 015, 016, imagens de API, capa do WhatsApp e todos os criativos de vendas FEB</td><td>Todos</td><td>Nada, salvo se a oferta FEB mudar por causa da Black Friday (hoje: de R$ 1.497 por 12x de R$ 99,50)</td><td><span class="pill ok">Ok</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>A criar por outras pessoas</h2>
+  <div class="tabela"><table>
+    <thead><tr><th>Item</th><th>Quem</th><th>Prazo</th></tr></thead>
+    <tbody>
+      <tr><td>Grupo SendFlow MTB 1126, lista e tag [1126] [MTB] no ActiveCampaign, planilha CONTROLE DE LEADS e webhook da pesquisa (o do 08/26 aponta para "febio-latam-pesquisa")</td><td>Júlio Couto (IAutomate); conta do ActiveCampaign com o Mariano</td><td class="num">29/10</td></tr>
+      <tr><td>Link do Zoom de 09/11 às 20h</td><td>Grazi</td><td class="num">23/10</td></tr>
+      <tr><td>Páginas: captura, obrigado/pesquisa, Zoom, vendas com preço borrado</td><td>André Vivas</td><td class="num">28/10</td></tr>
+      <tr><td>Validação das copys e dos horários de 02/11; número real de inscritos no lembrete de 08/11</td><td>Adriane Möbbs</td><td class="num">27/10</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Acessos</h2>
+  <div class="links">
+    <a class="link" href="https://drive.google.com/drive/folders/1_wCvkle3kXCX1bPkrAl7NvFbOueDn7Wf"><b>Drive do lançamento</b><span>FEA-MTB 11/26, na pasta 2026</span></a>
+    <a class="link" href="https://app.clickup.com/9013080622/v/f/1400270000003387/90130517360"><b>ClickUp</b><span>FEA-MTB 11/26 · 3 sprints</span></a>
+    <a class="link" href="https://drive.google.com/file/d/1Psxwt2QCTgqeOf7pU5NvSbNq3R8bEhwp/view"><b>Links úteis</b><span>Links úteis . MTB - FEB 11/2026</span></a>
+    <a class="link" href="https://drive.google.com/file/d/1hMAAGmH2IBpSJANxSANYEiF1_LISa4Hy/view"><b>Briefing</b><span>Briefing MTB 11/26</span></a>
+    <a class="link" href="https://drive.google.com/drive/folders/1CIu53jB4qJiRLfUOfuOD7v6GGBfEhlxZ"><b>Copys</b><span>1. COPY · páginas, criativos, comunicação, legendas</span></a>
+    <a class="link" href="https://docs.google.com/document/d/1COyaFEH8h_Piy4IZiXtQXThJ-z8TZBsmi4jUVYDjBAo/edit"><b>Copies novas</b><span>Criativos, legendas e roteiros 11/26</span></a>
+    <a class="link" href="https://drive.google.com/drive/folders/1RWRl3Bnk81Ng_wLErJoOTHJu8XbFgI8h"><b>Criativos prontos</b><span>Captação, lembrete, aquecimento, vendas</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>Rastreamento de funil</h2>
+  <ul class="lista">
+    <li>Limitação atual: as UTMs de captação (feb.joaopithon.com.br/mtb-*) são as mesmas do 08/26, então o relatório precisa filtrar por data para não somar os dois eventos.</li>
+    <li>A planilha de controle de leads é nova, o que permite comparar a captação do 11/26 com a do 08/26 dia a dia.</li>
+    <li>Vale criar UTMs com sufixo 1126 se o tráfego quiser separar origem por evento sem depender de filtro de data.</li>
+    <li>Sem métrica, otimização é palpite.</li>
+  </ul>
+</section>
+
+<footer>Montado em 22/10/2026 a partir do MTB 08/26. Datas e oferta seguem o pedido da Keila e o briefing anterior.</footer>
+</div></main>

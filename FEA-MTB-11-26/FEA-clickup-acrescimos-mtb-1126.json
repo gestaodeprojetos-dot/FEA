@@ -1,0 +1,26 @@
+{"descricao": "Tarefas que faltam no MTB 11/26, vindas da comparação com Masterclass em Intercorrências (09/26) e MPL 07/26 (backlogs completos). Criar como subtarefa do grupo indicado. Ainda falta comparar FeBio LATAM, Bioestimuladores 06/26 e IFF +10ml 09/26 (ler os grupos com clickup_get_task include subtasks; ids no fim).",
+ "grupos": {"S2|Gestão": "17th71z7eq1", "S2|Copy": "17th71z7eq2", "S2|Automação": "17th71z7eq5", "S2|Webdesigner": "17th71z7eq4",
+            "S3|Gestão": "17th71z7e8a", "S3|Webdesigner": "17th71z7e8g"},
+ "responsaveis": {"Gestão": [118026144], "Copy": [82063965, 55090440], "Automação": [194479496], "Webdesigner": [81993945]},
+ "tarefas": [
+  ["S2|Automação", "Disponibilizar link do webhook da página de obrigado/pesquisa", "2026-10-27", "2026-10-28", "Intercorrências S1 / MPL S2"],
+  ["S2|Automação", "Configurar listboss do produto FEB para o carrinho de 09 a 11/11", "2026-10-28", "2026-10-30", "MPL S2"],
+  ["S2|Copy", "Ajustar onboarding + descrição do grupo com link da pesquisa", "2026-10-29", "2026-10-30", "Intercorrências S1 / MPL S1"],
+  ["S2|Gestão", "Pedir link do checkout FEB para o Luca", "2026-10-27", "2026-10-28", "MPL S1 / Bioestimuladores S7"],
+  ["S2|Gestão", "Pedir copy dos slides do evento para o Luca", "2026-10-28", "2026-10-29", "MPL S2"],
+  ["S2|Gestão", "Encaminhar link do Zoom para tráfego e automação", "2026-10-29", "2026-10-29", "MPL S2"],
+  ["S2|Gestão", "Confirmar créditos e saldo da Ligue Leads para URA e SMS", "2026-10-29", "2026-10-30", "MPL S2"],
+  ["S2|Webdesigner", "Atualizar página da bio para a captação", "2026-10-29", "2026-10-30", "Intercorrências"],
+  ["S3|Gestão", "Pedir troca do link da bio do TikTok para a captação", "2026-11-02", "2026-11-02", "MPL S2"],
+  ["S3|Gestão", "Enviar página de onboarding para a Grazi revisar", "2026-11-02", "2026-11-03", "MPL S2"],
+  ["S3|Gestão", "Pedir UTMs de vendas para o tráfego", "2026-11-03", "2026-11-04", "MPL S2"],
+  ["S3|Gestão", "Pedir à Grazi a comunidade de alunos da FEB", "2026-11-04", "2026-11-05", "MPL S1"],
+  ["S3|Gestão", "Avisar no grupo da Ligue Leads que haverá disparo de URA e SMS em 09/11", "2026-11-06", "2026-11-06", "MPL S2"],
+  ["S3|Gestão", "09/11: conferir envios de URA (9h e 20h) e SMS (12h) e pedir os reports à Ligue Leads", "2026-11-09", "2026-11-09", "MPL S2"],
+  ["S3|Gestão", "09/11: trocar link da bio do TikTok para vendas (com a Iara)", "2026-11-09", "2026-11-09", "MPL S2"]
+ ],
+ "grupos_a_ler": {
+  "IFF": "86ajj12tn 86aju1u1r 86aju1u0e 86aju1tz9 86agfvxh1 86ahtxw8f 86ajth11m 86aju1u0j 86ajqhfpu 86ajj12rd 86ajjmkzz 86ajjmkan 86aju1u1g 86ajjm992 86ajjm0ug 86ajfdu99 86ajfdu13 86ajeej9x 86aju1u0d 86ajj12ur 86aju1tzv 86aju1tyy 86ahtxvhk 86ajmwj0d 86aju1u1p 86agfvy7m 86aju1u03 86aju1tz8 86aju1tz6 86ajj12vx 86agfvxnt 86ajjkev6 86aju1u17 86ajjm9tm 17th71z169f 86ajth0a3 86ajj12zj 86ajet804 86ajr7zqf 86aju1u1c 86aju1u0c 86ajth09b 86ajqhfnc 86ajj12x6",
+  "FEBIO": "86aju1twq 86aju1tx4 86ajdgej3 86ajdgfbn 86ajfxqcf 86aju1tvc 86ajqhmnj 86ajybhqy 86aju1ty7 86aju1tww 86ajkv250 86ajkv3cr 86ajdge0q 86ajdgfqa 86ajfxq9f 86ajqj4v1 86ajecg3k 86aju1twd 86aju1tw8 86ajr420n 86ajeeh4y 86aju1twj 86aju1tvx 86ajkuyzb 86ajfvy9q 86aju1twb 86ajqhmmf 86aju1txx 86ajr422y",
+  "BIO": "86ahxxffm 86ahge9xx 86aj20jq0 86aj1xumy 86ahz7t53 86ahxxf3e 86ahkepfj 86aj20jwq 86ahge44c 86ahxxeuq 86aj1xv3r 86ahge1q7 86ahge462 86aj1xvba 86aj2128g"}
+}
