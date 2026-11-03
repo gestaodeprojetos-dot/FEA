@@ -69,6 +69,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
 | 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |
 
+**Troca de CTA por stream copy** (`fea_trocar_cta.py`, 03/11/2026): o conteúdo é o mesmo arquivo que já passou na revisora na entrega, mas a revisora recalcula a legenda pela transcrição refeita (o JSON ajustado à mão da edição original fica só na máquina antiga). ERRO de legenda nesse caso não é do vídeo: conferir o quadro do arquivo final no instante acusado. O que vale ali é a conferência do próprio script (conteúdo idêntico quadro a quadro ao entregue, CTA novo idêntico quadro a quadro) mais formato, duração e a emenda olhada nos quadros.
+
 ## Revisão visual (obrigatória, não pular)
 
 1. Abrir a folha de contato de cada vídeo final (em `--folhas`).
