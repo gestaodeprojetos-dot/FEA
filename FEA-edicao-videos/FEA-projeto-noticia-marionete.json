@@ -178,6 +178,19 @@
       {
         "ini": 51.1,
         "tipo": "cheio"
+      },
+      {
+        "ini": 52.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 78.4,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 55.3,
+        "tipo": "cheio"
       }
     ]
   }
