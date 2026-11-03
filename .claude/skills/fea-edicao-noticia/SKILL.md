@@ -5,7 +5,7 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 # FEA: edição de Reels no modelo notícia
 
-**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: pasta `10- Outubro/26- Produtos` (1Fhn... no Drive), numeração `1-`, `2-`... e linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras feito em 28/10). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
+**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: pasta `10- Outubro/26- Produtos` (1Fhn... no Drive), numeração `1-`, `2-`... e linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras aprovado; IMG_7936 linha de marionete feito em 03/11; faltam IMG_7937, 7938, 7941, 7942). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
 
 ## Entrada
 
@@ -43,6 +43,10 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 ## Olheiras (IMG_7935, 28/10/2026)
 
 Projeto `FEA-projeto-noticia-olheiras.json`. Takes: olheira profunda antes, olhando para a câmera (pasta "50.OK- Paciente olheiras" IMG_2072 1 s) na abertura; cânula no tear trough em close ("Olheiras" IMG_7986 186,5 s e 190,5 s; marcação + cânula 6,2 s); paciente masculino com marcação roxa ("34.OK" IMG_2662 52 s e 90 s, resultado IMG_2666); cânula malar ("Olheiras 2mL" IMG_7007 22 s); produto esticando (IMG_3691 19 s) em "artigo sobre reologia". Fotos dos produtos recortadas da edição da equipe (`23- Melhores produtos/2-`). Cortado "assim você vai ter um resultado perfeito" (CFM). **Contar os produtos que ele cita** (Keila, 28/10: "fala cinco e aparece só quatro"): o "Restylane Gel" falado junto com o Lyft é o Restylane clássico, hoje "Restylane Classyc" (foto oficial do distribuidor ddgroup.com, item 600207), etiqueta "Restylane"; a grade do resumo tem que ter o mesmo número que ele fala. Com 5 ou mais, a cena `produtos` monta duas fileiras (3 em cima, 2 embaixo).
+
+## Linha de marionete (IMG_7936, 03/11/2026)
+
+Projeto `FEA-projeto-noticia-marionete.json`. Começa direto no Dr. (pergunta da moça cortada, como na versão aprovada de lábios). Produtos: Neauvia Stimulate (foto oficial neauvia.com, caixa "Dual Core"), Biogelis Volume (loja.pharmaesthetics.com.br, PNG já sem fundo) e Singderm (b2brazil, fábrica Hangzhou Singclean; só existe foto de 600 px). Takes: "2- Linha de marionete" (Instagram > 2026 > 05 - Maio > 01 - Preenchimento terço inferior e botox; legenda gravada a ~85% da altura, enquadrar com cy até 0,45; usar 47-54 s, 64-68 s, 70-73 s; sangue a partir de 88 s) e live "Linha de marionete e comissura labial.mp4" (Instagram > Lives > 2025 > Preenchimento, 720p; agulha na marionete 89-92 s e 102-106 s; sangue em 335 s). Produto esticando (IMG_3691 19 s) em "G' intermediário, tan delta mais alto". Headline em 3,3 s para não encobrir o primeiro produto. Busca no Drive por nome: `scratchpad/fea_busca_drive.py termo` (o Drive casa só início de palavra: "marionete", não "arionete").
 
 ## Fluxo
 
