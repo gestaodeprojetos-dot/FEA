@@ -457,7 +457,9 @@ def main():
         rot.append(f"[v{i}]")
         arot.append(f"[a{i}]")
     fc_v = ";".join(x for x in partes if x.startswith("[0:v]")) + ";" + "".join(rot) + \
-        f"concat=n={len(rot)}:v=1:a=0[vc]"
+        f"concat=n={len(rot)}:v=1:a=0[vc0];[vc0]tpad=stop_mode=clone:stop_duration=1[vc]"
+    # o vídeo do bruto pode acabar uns quadros antes do áudio: segura o último quadro para o
+    # -shortest não cortar a última palavra (Keila, 03/11/2026: "cortou um pouco o 'indicação'")
     fc_a = ";".join(x for x in partes if x.startswith("[0:a]")) + ";" + "".join(arot) + \
         f"concat=n={len(arot)}:v=0:a=1[ac]"
     tmpdir = os.path.dirname(os.path.abspath(v["saida"]))

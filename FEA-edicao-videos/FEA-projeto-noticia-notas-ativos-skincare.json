@@ -167,7 +167,7 @@
       ],
       [
         99.21,
-        102.4,
+        102.66,
         "exato"
       ]
     ],
@@ -326,24 +326,33 @@
       {
         "ini": 65.6,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt25.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 16.4,
         "cx": 0.5,
         "cy": 0.42,
         "zoom": 1.0,
         "rotulo": "4. Protetor solar: nota 10"
       },
       {
-        "ini": 69.0,
+        "ini": 67.2,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt29.mp4",
-        "src": 31,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 19.8,
         "cx": 0.5,
         "cy": 0.42,
         "zoom": 1.0
       },
       {
-        "ini": 72.3,
+        "ini": 71.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt06.mp4",
+        "src": 8.4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 75.0,
         "tipo": "cheio"
       },
       {
