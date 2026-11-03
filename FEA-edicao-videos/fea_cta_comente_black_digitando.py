@@ -19,9 +19,17 @@ Medidas da referência (25 fps, tempos a partir do início da cartela):
 Uso:
     python3 fea_cta_comente_black_digitando.py SAIDA.mp4
         [--texto "Comente BLACK"] [--destaque BLACK] [--logo PNG] [--duracao 5.0]
-        [--sfx WAV] [--fonte TTF] [--tamanho 78] [--png-final PREVIA.png]
+        [--sfx WAV] [--fonte TTF] [--tamanho 78] [--cor-destaque E5AD6A] [--png-final PREVIA.png]
 
---destaque = palavra do texto que sai no dourado do logo (o resto sai branco).
+--destaque = palavra do texto que sai na cor de destaque (o resto sai branco).
+--cor-destaque = cor da palavra em destaque, em hex (padrão #E5AD6A, dourado do logo Black).
+
+Variante MTB (Masterclass em Toxina Botulínica, "Comente BOTOX", 03/11/2026):
+    python3 fea_cta_comente_black_digitando.py FEA-CTA-digitando-comente-botox-MTB.mp4 \
+        --texto "Comente BOTOX" --destaque BOTOX --cor-destaque 00D45A \
+        --logo FEA-cta-digitando/FEA-MTB-logo.png
+    Logo = "logo---mtb.png" oficial (Drive 184qPwr5q6RoPz5gh5-b_Y9_cFz99WaB7), sem alteração.
+    Verde #00D45A = verde de destaque das peças MTB sobre fundo preto (Ads 33 Story - MTB).
 Logo padrão: FEA-cta-digitando/FEA-BFV-logo-Asset15.png = "02 - LOGOTIPO/PNG/Black Vitalícia/
 BFV_Asset 15@4x.png" da pasta oficial Black Vitalícia (1s1hs4Pmy4BZCUj5q82IeUQFcDyzfipoU), sem
 redesenho e sem IA.
@@ -113,10 +121,13 @@ def main():
     ap.add_argument("--sfx", default=os.path.join(LATAM, "sfx.wav"))
     ap.add_argument("--fonte", default=os.path.join(LATAM, "Montserrat-800.ttf"))
     ap.add_argument("--tamanho", type=int, default=78)
+    ap.add_argument("--cor-destaque", default="E5AD6A", help="hex da palavra em destaque")
     ap.add_argument("--png-final", help="salva o último quadro (prévia)")
     a = ap.parse_args()
 
     texto = a.texto
+    h = a.cor_destaque.lstrip("#")
+    cor_dest = tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
     # teclas = caracteres visíveis; o espaço sai junto com a letra seguinte
     teclas = [i for i, c in enumerate(texto) if c != " "]
     passos = PASSOS if len(teclas) == len(PASSOS) + 1 else \
@@ -162,7 +173,7 @@ def main():
         n = visiveis(q)
         x = x0
         for i, c in enumerate(texto[:n]):
-            cor = DOURADO if 0 <= ini_dest <= i < ini_dest + len(a.destaque) else BRANCO
+            cor = cor_dest if 0 <= ini_dest <= i < ini_dest + len(a.destaque) else BRANCO
             d.text((x, TXT_TOPO), c, font=fnt, fill=cor + (255,))
             x = x0 + d.textlength(texto[:i + 1], font=fnt)
         if t >= CURSOR_INI:
