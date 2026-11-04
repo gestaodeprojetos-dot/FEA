@@ -4,6 +4,9 @@
 Uso:
     python3 fea_revisar.py projeto.json [projeto2.json ...] [--folhas PASTA]
     python3 fea_revisar.py projeto.json ... --so-legenda   # sem render: só número e unidade no .ass
+    python3 fea_revisar.py projeto.json ... --so-formato [--folhas PASTA]
+        # troca de CTA por stream copy (fea_trocar_cta.py): o conteúdo é o aprovado, bit a bit, e a
+        # transcrição da edição não existe mais; confere só formato, duração e título (headline)
 
 Para cada vídeo do projeto confere o arquivo final (.mp4 + .ass) contra todas as regras
 pedidas pela Keila e imprime um relatório com ERRO (reprovado, refazer) e ATENÇÃO (conferir
@@ -237,11 +240,13 @@ def revisar_so_legenda(cfg, v):
     return erros + e_l, aten + a_l
 
 
-def revisar(cfg, v, folhas=None):
+def revisar(cfg, v, folhas=None, so_formato=False):
     ff, erros, aten = cfg["ffmpeg"], [], []
     mp4, ass = v["saida"], v["saida"].rsplit(".", 1)[0] + ".ass"
     if not os.path.exists(mp4):
         return [f"arquivo final não existe: {mp4}"], []
+    if so_formato:
+        return revisar_formato(ff, v, mp4, folhas)
 
     # 1. formato de entrega
     codec, res, dur = sonda(ff, mp4)
@@ -567,6 +572,45 @@ def revisar(cfg, v, folhas=None):
     return erros, aten
 
 
+def revisar_formato(ff, v, mp4, folhas=None):
+    """Formato de entrega, duração e headline (sem .ass nem transcrição): para troca de CTA."""
+    erros, aten = [], []
+    codec, res, dur = sonda(ff, mp4)
+    if codec != "h264":
+        erros.append(f"codec {codec}: tem que ser H.264 (HEVC abre com tela preta)")
+    if res != (1080, 1920):
+        erros.append(f"resolução {res}: tem que ser 1080x1920")
+    err = subprocess.run([ff, "-hide_banner", "-i", mp4], capture_output=True, text=True).stderr
+    if "48000 Hz" not in err or "aac" not in err:
+        erros.append("áudio tem que ser AAC 48 kHz")
+    if not re.search(r"(29\.9\d|30) fps", err):
+        erros.append("vídeo tem que ser 30 fps")
+    if dur > LIMITE_S + 0.05:
+        aten.append(f"{dur:.1f} s com CTA: passa de 3 min (conteúdo é o aprovado; listar para a Keila)")
+    nome = os.path.basename(mp4).rsplit(".", 1)[0]
+    esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
+    if not re.sub(r"\s+", " ", nome).replace(":", "").endswith(esperado.replace(":", "").replace("?", "")):
+        erros.append(f"nome do arquivo \"{nome}\" não bate com o título \"{esperado}\"")
+    larg_px, n_linhas, _ = medir_titulo_px(fe.formatar_titulo(v))
+    if larg_px > LARGURA_SEGURA:
+        erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px)")
+    if v.get("titulo_origem") != "imagem":
+        for marca in MARCAS_TITULO:
+            if re.search(rf"\b{marca}\b", v["titulo"], re.I):
+                erros.append(f"título \"{v['titulo']}\" com nome de produto ({marca})")
+    for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
+        if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
+            erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
+    aten.append(f"formato OK: {codec} {res[0]}x{res[1]}, {dur:.2f} s")
+    if folhas:
+        os.makedirs(folhas, exist_ok=True)
+        folha = os.path.join(folhas, nome + ".png")
+        subprocess.run([ff, "-nostdin", "-v", "error", "-y", "-i", mp4, "-vf",
+                        "fps=1/2,scale=120:213,tile=15x6", "-frames:v", "1", folha], check=False)
+        aten.append(f"revisão visual: {folha}")
+    return erros, aten
+
+
 def main():
     args = sys.argv[1:]
     folhas = None
@@ -575,12 +619,13 @@ def main():
         folhas = args[i + 1]
         args = args[:i] + args[i + 2:]
     so_legenda = "--so-legenda" in args
-    args = [a for a in args if a != "--so-legenda"]
+    so_formato = "--so-formato" in args
+    args = [a for a in args if a not in ("--so-legenda", "--so-formato")]
     total_err = 0
     for proj in args:
         cfg = json.load(open(proj, encoding="utf-8"))
         for v in cfg["videos"]:
-            erros, aten = revisar_so_legenda(cfg, v) if so_legenda else revisar(cfg, v, folhas)
+            erros, aten = revisar_so_legenda(cfg, v) if so_legenda else revisar(cfg, v, folhas, so_formato)
             total_err += len(erros)
             status = "REPROVADO" if erros else "OK"
             print(f"\n## {os.path.basename(v['saida'])}: {status}")
