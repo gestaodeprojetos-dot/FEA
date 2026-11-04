@@ -79,6 +79,7 @@ Todo material que a Keila enviar para uma demanda (copy, ID visual, pasta do Dri
 O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo faz as 3 thumbs da semana num dia só.
 
 - Na rodada das 7h52 de **segunda**, criar na lista YouTube a tarefa `Thumbs YouTube da semana dd/mm a dd/mm (seg, qua e sex)` da semana **seguinte**, para o Leo (`44232914`), com início sexta 8h e prazo **sexta da semana atual às 18h**. Copiar a descrição da última tarefa semanal (checklist dos 3 dias com título e vídeo em branco, formato 1280 x 720 px).
+- Toda tarefa de thumb leva a linha `Pasta para salvar:` com a pasta **FEA-THUMBS YOUTUBE** (`1hDzlnSbOnPrjCTdbCaJrcqNZ3G8OhmcP`, dentro de Aulas Novas > YOUTUBE, ao lado de BRUTAS NÃO POSTADAS e POSTADAS). Os vídeos que a Keila manda ficam em BRUTAS NÃO POSTADAS.
 - Na quinta, se os 3 títulos e vídeos ainda não estiverem nos comentários, listar no relatório para a Keila (não cobrar o Leo por isso).
 - Semana com feriado ou postagem diferente: seguir o que a Keila disser e não criar no automático.
 
