@@ -273,7 +273,8 @@ class Broll:
         asp = W / PAINEL_H
         vf = (f"fps={FPS},crop=w='min(iw,ih*{asp})/{z}':h='min(iw,ih*{asp})/{z}/{asp}':"
               f"x='max(0,min(iw-ow,{cx}*iw-ow/2))':y='max(0,min(ih-oh,{cy}*ih-oh/2))',"
-              f"scale={W}:{PAINEL_H}:flags=lanczos,setsar=1")
+              f"scale={W}:{PAINEL_H}:flags=lanczos,setsar=1" + (",hflip" if cena.get("espelhar") else ""))
+        # "espelhar": só em banco de imagem (Pexels, Mixkit), para a linha mostrada não ficar atrás da headline
         self.p = subprocess.Popen([ff, "-v", "error", "-stream_loop", "-1", "-ss", str(cena.get("src", 0)),
                                    "-i", cena["arquivo"], "-t", f"{dur + 1:.2f}", "-an", "-vf", vf,
                                    "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE,
@@ -403,6 +404,8 @@ def main():
         c["t1"] = prox["t0"] if prox else dur
     legenda_no_meio(ass, cenas)
 
+    global HL_Y
+    HL_Y = v.get("headline_y", HL_Y)   # B-roll de queixo: headline no alto, para não tampar boca e marionete
     hl = render_headline(v["headline"], fonte)
     fundo = fundo_produto(v["fundo_produto"])
     mascara = mascara_esfumado()
