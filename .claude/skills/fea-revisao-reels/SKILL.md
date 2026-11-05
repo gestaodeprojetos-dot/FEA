@@ -23,6 +23,8 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 
 Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos de uma vez): `python3 FEA-edicao-videos/fea_revisar.py FEA-projeto-*.json --so-legenda`. Gera o .ass de cada vídeo e acusa número e unidade separados.
 
+**Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
+
 **Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.
 
 ## Checklist completo (o que cada regra exige)
@@ -47,6 +49,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 9 | Grafias (lista completa em `fea-edicao-reels`, inclusive o lote de outubro: Letybo, pré-jowl, Perfectha, Biogelis Volumax, ptose, Dysport, DAO, **Biofils** (nunca "biofios")): Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial), **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia"), **desse mento** (nunca "descimento" junto) | texto da legenda | ERRO |
 | 9c | Pontuação: vírgulas antes de conjunções (mas, porém, porque, pois, então) e marcadores (né, tá, viu) | texto da legenda | ERRO |
 | 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
+| 10b | **Primeira palavra inteira** (Keila 05/11): o vídeo começa pelo menos 0,40 s antes do ataque da voz | `checar_inicio`: ataque da voz medido no áudio (janelas de 10 ms) a menos de 0,30 s do início | ERRO |
+| 10c | **Início que prende** (quem posta, 05/11): o Dr. não demora para falar e a primeira frase não é aquecimento ("então", "bom", "deixa eu ver", "vamos lá", "ó", "olha só"...) | `checar_inicio`: voz depois de 1,5 s, ou primeira palavra (Whisper nos 6 s iniciais) da lista `AQUECIMENTO`; olhar os quadros do 1º segundo (fala de impacto ou ação) | ATENÇÃO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
 | 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
 | 13 | Corte no respiro, sem pedaço de palavra | voz dos dois lados do ponto, no bruto | ATENÇÃO (ouvir) |

@@ -5,6 +5,9 @@ Uso:
     python3 fea_revisar.py projeto.json [projeto2.json ...] [--folhas PASTA]
     python3 fea_revisar.py projeto.json ... --so-legenda   # sem render: só número e unidade no .ass
     python3 fea_revisar.py projeto.json ... --so-formato [--folhas PASTA]
+    python3 fea_revisar.py --so-inicio video1.mp4 [video2.mp4 ...]
+        # só o início (voz a menos de 0,30 s = ERRO; demora de mais de 1,5 s ou aquecimento = ATENÇÃO),
+        # direto nos .mp4: auditoria de vídeos já entregues
         # troca de CTA por stream copy (fea_trocar_cta.py): o conteúdo é o aprovado, bit a bit, e a
         # transcrição da edição não existe mais; confere só formato, duração e título (headline)
 
@@ -380,6 +383,13 @@ def revisar(cfg, v, folhas=None, so_formato=False):
         k += 1
     if k * ps > 0.8:
         erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+    # 4a. início que prende e primeira palavra inteira (Keila, 05/11/2026)
+    trans_ini = json.load(open(v["transcricao"], encoding="utf-8"))
+    a_ini = v["manter"][0][0]
+    pal_ini = [w["w"].strip() for seg in trans_ini for w in seg["words"] if a_ini - 0.2 <= w["s"] < a_ini + 6]
+    e_i, a_i, _ = checar_inicio(ff, mp4, palavras=pal_ini)
+    erros += e_i
+    aten += a_i
     # fim: som subindo no último instante = começo de outra palavra (o bruto às vezes acaba assim)
     if len(db) > 6 and db[-2:].max() >= lim + 6 and db[-2:].mean() > db[-6:-3].mean() + 6:
         erros.append("som subindo no último instante: começo de outra palavra no fim")
@@ -572,6 +582,81 @@ def revisar(cfg, v, folhas=None, so_formato=False):
     return erros, aten
 
 
+# Início que prende (Keila e quem posta os vídeos, 05/11/2026): "tô cortando uns começos porque está
+# meio ruim o início, às vezes ele demora para falar, ou não está iniciando num momento que prende";
+# e a Keila: "você tem cortado um pouco as palavras no começo dos vídeos".
+INICIO_MIN_S = 0.30      # voz antes disso = primeira palavra cortada (a edição mira 0,40 s)
+INICIO_MAX_S = 1.5       # voz depois disso = o Dr. demora para falar
+AQUECIMENTO = ["deixa eu ver", "deixa eu", "vamos lá", "vamos ver", "olha só", "então", "bom", "ó",
+               "pronto", "beleza", "ok", "ah", "hum", "bora"]
+
+
+def onset_voz(db, passo=0.01):
+    """Ataque da primeira fala: primeiro trecho com voz sustentada (média de 50 ms acima de
+    piso + 12 dB, mínimo 38 dB, em 70% de 150 ms) e, dali, volta enquanto o som está acima de
+    piso + 6 dB (o começo da sílaba é mais fraco que o meio). Medido no áudio, nunca pelo Whisper."""
+    piso = float(np.percentile(db, 5))
+    lim = max(38.0, piso + 12)
+    sm = np.convolve(db, np.ones(5) / 5, "same")
+    on = sm >= lim
+    for i in range(len(db)):
+        if on[i] and on[i:i + 15].mean() >= 0.7:
+            k = i
+            while k > 0 and db[k - 1] > piso + 6 and i - k < 40:
+                k -= 1
+            return k * passo, piso, lim
+    return None, piso, lim
+
+
+def primeiras_palavras(ff, mp4, ate=6.0):
+    """Primeiras palavras faladas (Whisper nos primeiros segundos), só para achar aquecimento."""
+    try:
+        from faster_whisper import WhisperModel
+    except ImportError:
+        return None
+    global _MODELO
+    if "_MODELO" not in globals():
+        _MODELO = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8",
+                               download_root=os.environ.get("FEA_MODELOS", "models"))
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", str(ate), "-vn", "-ac", "1",
+                          "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+    segs, _ = _MODELO.transcribe(audio, language="pt", word_timestamps=True, vad_filter=False)
+    return [w.word.strip() for s in segs for w in s.words]
+
+
+def checar_inicio(ff, mp4, transcrever=True, palavras=None):
+    """ERRO se a voz começa a menos de 0,30 s do início (palavra cortada); ATENÇÃO se o Dr. demora
+    mais de 1,5 s para falar ou se a primeira frase é aquecimento ("então", "bom", "vamos lá"...).
+    Retorna (erros, atenções, {"voz": s, "palavras": texto})."""
+    erros, aten = [], []
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", "20", "-vn", "-ac", "1", "-ar", "16000",
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(float)
+    n = len(a) // 160
+    db = 20 * np.log10(np.sqrt((a[:n * 160].reshape(n, 160) ** 2).mean(axis=1)) + 1)
+    voz, piso, lim = onset_voz(db)
+    if voz is None:
+        aten.append("sem fala nos primeiros 20 s: conferir se o começo prende (ação do procedimento)")
+        voz = 99.0
+    elif voz < INICIO_MIN_S:
+        erros.append(f"início: a voz começa em {voz:.2f} s, primeira palavra cortada (mínimo {INICIO_MIN_S:.2f} s; "
+                     "a edição deixa 0,40 s antes do ataque da voz)")
+    elif voz > INICIO_MAX_S:
+        aten.append(f"início: o Dr. demora {voz:.2f} s para falar (máximo {INICIO_MAX_S} s): começar mais perto da fala")
+    if palavras is None and transcrever:
+        palavras = primeiras_palavras(ff, mp4)
+    texto = " ".join(palavras or [])
+    norm = re.sub(r"[^\w\s]", "", texto.lower()).split()
+    for exp in AQUECIMENTO:
+        e = exp.split()
+        if norm[:len(e)] == e:
+            aten.append(f"início: primeira frase começa com aquecimento (\"{' '.join(norm[:6])}...\"): "
+                        "começar na fala de impacto ou na ação")
+            break
+    return erros, aten, {"voz": voz, "palavras": texto}
+
+
 def revisar_formato(ff, v, mp4, folhas=None):
     """Formato de entrega, duração e headline (sem .ass nem transcrição): para troca de CTA."""
     erros, aten = [], []
@@ -601,6 +686,9 @@ def revisar_formato(ff, v, mp4, folhas=None):
     for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
         if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
             erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
+    e_i, a_i, _ = checar_inicio(ff, mp4)
+    erros += e_i
+    aten += a_i
     aten.append(f"formato OK: {codec} {res[0]}x{res[1]}, {dur:.2f} s")
     if folhas:
         os.makedirs(folhas, exist_ok=True)
@@ -609,6 +697,14 @@ def revisar_formato(ff, v, mp4, folhas=None):
                         "fps=1/2,scale=120:213,tile=15x6", "-frames:v", "1", folha], check=False)
         aten.append(f"revisão visual: {folha}")
     return erros, aten
+
+
+def fe_ffmpeg():
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        return "ffmpeg"
 
 
 def main():
@@ -620,8 +716,22 @@ def main():
         args = args[:i] + args[i + 2:]
     so_legenda = "--so-legenda" in args
     so_formato = "--so-formato" in args
-    args = [a for a in args if a not in ("--so-legenda", "--so-formato")]
+    so_inicio = "--so-inicio" in args
+    args = [a for a in args if a not in ("--so-legenda", "--so-formato", "--so-inicio")]
     total_err = 0
+    if so_inicio:   # auditoria: só o início, direto nos .mp4 (sem projeto nem transcrição)
+        ff = os.environ.get("FEA_FFMPEG") or fe_ffmpeg()
+        for mp4 in args:
+            erros, aten, info = checar_inicio(ff, mp4)
+            total_err += len(erros)
+            status = "REPROVADO" if erros else ("ATENÇÃO" if aten else "OK")
+            print(f"\n## {os.path.basename(mp4)}: {status} | voz em {info['voz']:.2f} s | \"{info['palavras'][:70]}\"")
+            for x in erros:
+                print(f"  ERRO     {x}")
+            for x in aten:
+                print(f"  ATENÇÃO  {x}")
+        print(f"\nTotal de erros: {total_err}")
+        sys.exit(1 if total_err else 0)
     for proj in args:
         cfg = json.load(open(proj, encoding="utf-8"))
         for v in cfg["videos"]:

@@ -12,7 +12,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.6,
+     0.866667,
      30.3
     ]
    ],
@@ -85,7 +85,7 @@
    "cartela_final": null,
    "manter": [
     [
-     2.5,
+     4.8,
      116.8
     ]
    ],
@@ -158,7 +158,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.0,
+     12.266667,
      35.5
     ],
     [
@@ -239,7 +239,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.6,
+     4.633333,
      10.2
     ],
     [
@@ -553,7 +553,7 @@
    "cartela_final": null,
    "manter": [
     [
-     1.4,
+     1.6,
      105.95
     ]
    ],
@@ -626,7 +626,7 @@
    "cartela_final": null,
    "manter": [
     [
-     0.0,
+     1.9,
      96.6
     ]
    ],
@@ -687,7 +687,14 @@
      "\\b([Pp])ara gente\\b",
      "\\1ara a gente"
     ]
-   ]
+   ],
+   "silenciar": [
+    [
+     1.9,
+     2.345
+    ]
+   ],
+   "silenciar_rampa": 0.03
   }
  ]
 }
