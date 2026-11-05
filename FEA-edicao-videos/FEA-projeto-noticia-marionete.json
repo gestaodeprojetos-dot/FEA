@@ -70,20 +70,20 @@
       {
         "ini": 6.8,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/broll/FEA-broll-08-idosa-olhos-marejados-pexels-8165110.mp4",
-        "src": 3.0,
-        "cx": 0.52,
-        "cy": 0.95,
-        "zoom": 1.7
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c1.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 9.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7683.MOV",
-        "src": 8.8,
-        "cx": 0.78,
-        "cy": 0.6,
-        "zoom": 1.4
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c2.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 11.0,
@@ -106,7 +106,12 @@
       },
       {
         "ini": 19.0,
-        "tipo": "cheio"
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c34.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 22.6,
@@ -201,7 +206,6 @@
         "ini": 55.3,
         "tipo": "cheio"
       }
-    ],
-    "headline_y": 110
+    ]
   }
 }
