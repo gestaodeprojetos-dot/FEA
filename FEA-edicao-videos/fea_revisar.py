@@ -390,7 +390,10 @@ def revisar(cfg, v, folhas=None, so_formato=False):
     # 4a. início que prende e primeira palavra inteira (Keila, 05/11/2026)
     trans_ini = json.load(open(v["transcricao"], encoding="utf-8"))
     a_ini = v["manter"][0][0]
-    pal_ini = [w["w"].strip() for seg in trans_ini for w in seg["words"] if a_ini - 0.2 <= w["s"] < a_ini + 6]
+    # palavra silenciada no começo (aquecimento mudo, ex.: "Então" colado no gancho) não conta
+    mudos_ini = v.get("silenciar", [])
+    pal_ini = [w["w"].strip() for seg in trans_ini for w in seg["words"] if a_ini - 0.2 <= w["s"] < a_ini + 6
+               and not any(x <= (w["s"] + w["e"]) / 2 <= y for x, y in mudos_ini)]
     e_i, a_i, _ = checar_inicio(ff, mp4, palavras=pal_ini)
     erros += e_i
     aten += a_i
@@ -523,7 +526,14 @@ def revisar(cfg, v, folhas=None, so_formato=False):
     # (priming do AAC) e, em janelas de 50 ms, isso parecia queda de voz (falso alarme)
     db5, _, p5 = fe.perfil_voz(ff, mp4, passo=0.005)
     db5b, lim5b, _ = fe.perfil_voz(ff, v["entrada"], passo=0.005)
-    mudo_int = [(t_saida(a), t_saida(b)) for a, b in v.get("silenciar", [])]
+    # a janela silenciada inclui a rampa de 40 ms por fora (silenciar_rampa), que também é mudo de propósito
+    _r = v.get("silenciar_rampa", 0.04)
+    def _ts_mudo(a, b):   # janela que começa antes do 1º trecho mantido (aquecimento mudo no começo)
+        xa = t_saida(a)
+        if xa < 0 and a <= manter[0][0] <= b:
+            xa = 0.0
+        return xa, t_saida(b)
+    mudo_int = [(x - _r if x > 0 else x, y + _r) for x, y in (_ts_mudo(a, b) for a, b in v.get("silenciar", []))]
     quedas, off = [], 0.0
     for a, b in manter:
         esp = db5b[int(a / p5):int(b / p5)]
