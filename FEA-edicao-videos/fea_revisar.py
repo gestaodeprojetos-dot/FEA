@@ -261,6 +261,10 @@ def revisar(cfg, v, folhas=None, so_formato=False):
     if dur > LIMITE_S + 0.05:
         erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
                      ", cortar o que é parado ou dividir em Parte 1/2"))
+    # 1b. transição antes do CTA (Keila, 05/11/2026): corte seco é erro
+    e_em, a_em = checar_emenda(ff, v, mp4, folhas)
+    erros += e_em
+    aten += a_em
 
     # 2. título: exatamente o da imagem, nos 3 primeiros segundos
     titulo, legendas = ler_ass(ass)
@@ -657,6 +661,66 @@ def checar_inicio(ff, mp4, transcrever=True, palavras=None):
     return erros, aten, {"voz": voz, "palavras": texto}
 
 
+def checar_emenda(ff, v, mp4, folhas=None):
+    """Transição antes do CTA (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"). ERRO se a
+    emenda conteúdo->CTA for corte seco ou se a transição começa antes do fim da fala do Dr.
+    Lê NOME.emenda.json (gravado pelo render) e mede nos quadros: num crossfade a imagem muda aos
+    poucos (cada quadro ~1/15 da mudança total em 0,5 s); num corte seco, a mudança inteira cai
+    num quadro só. Com --folhas, salva NOME-emenda.png (antes, meio e fim da transição)."""
+    erros, aten = [], []
+    if v.get("sem_cta"):
+        return erros, aten
+    caminho = mp4.rsplit(".", 1)[0] + ".emenda.json"
+    if not os.path.exists(caminho):
+        erros.append("emenda conteúdo->CTA sem transição registrada (sem .emenda.json): renderizar com "
+                     "fea_render_com_cta.py, que faz o crossfade de ~0,5 s antes do CTA (corte seco é erro)")
+        return erros, aten
+    info = json.load(open(caminho, encoding="utf-8"))
+    t, ini, fim = info["transicao_s"], info["inicio_transicao_s"], info["fim_transicao_s"]
+    if not t:
+        erros.append("emenda conteúdo->CTA em corte seco (transição 0): tem que ter crossfade de ~0,5 s")
+        return erros, aten
+    if not 0.3 <= t <= 1.0:
+        aten.append(f"transição de {t} s: o padrão é ~0,5 s")
+    fv = info.get("fim_voz_conteudo_s")
+    if fv is not None and fv + 0.05 > ini:
+        erros.append(f"transição começa em {ini:.2f} s e a fala do Dr. termina em {fv:.2f} s: engole a última palavra")
+    # quadros da emenda: 30 fps, cinza 54x96, de 0,5 s antes a 0,5 s depois da transição
+    a0 = max(0.0, ini - 0.5)
+    raw = subprocess.run([ff, "-nostdin", "-v", "error", "-ss", f"{a0:.3f}", "-i", mp4, "-t", f"{fim - a0 + 0.5:.3f}",
+                          "-vf", "fps=30,scale=54:96,format=gray", "-f", "rawvideo", "-"],
+                         capture_output=True, check=True).stdout
+    q = np.frombuffer(raw, np.uint8).reshape(-1, 96, 54).astype(float)
+    if len(q) < 10:
+        erros.append("não consegui ler os quadros da emenda")
+        return erros, aten
+    i0 = int(round((ini - a0) * 30)) - 1
+    i1 = min(len(q) - 1, int(round((fim - a0) * 30)) + 1)
+    total = np.abs(q[i1] - q[max(0, i0)]).mean()
+    passos = np.abs(np.diff(q[max(0, i0 - 3):i1 + 4], axis=0)).mean(axis=(1, 2))
+    maior = float(passos.max())
+    if total >= 8 and maior > 0.5 * total:
+        erros.append(f"emenda conteúdo->CTA em corte seco: {maior:.0f} de {total:.0f} níveis de cinza mudam num "
+                     "quadro só (tem que ser crossfade de ~0,5 s)")
+    elif total < 8:
+        aten.append("emenda: conteúdo e CTA muito parecidos na imagem, conferir a transição nos quadros")
+    aten.append(f"transição de {t} s em {ini:.2f} s (voz do Dr. termina em {fv} s; tpad {info.get('pad_s', 0)} s; "
+                f"maior salto entre quadros {maior:.1f} de {total:.1f})")
+    if folhas:
+        os.makedirs(folhas, exist_ok=True)
+        nome = os.path.basename(mp4).rsplit(".", 1)[0]
+        png = os.path.join(folhas, nome + "-emenda.png")
+        tempos = [ini - 0.1, ini + t / 2, fim + 0.1]
+        entradas = []
+        for x in tempos:
+            entradas += ["-ss", f"{x:.3f}", "-i", mp4]
+        filtro = "".join(f"[{i}:v]scale=360:640,setsar=1[f{i}];" for i in range(3)) + "[f0][f1][f2]hstack=3"
+        subprocess.run([ff, "-nostdin", "-v", "error", "-y", *entradas, "-filter_complex", filtro,
+                        "-frames:v", "1", png], check=False)
+        aten.append(f"emenda (antes, meio e fim da transição): {png}")
+    return erros, aten
+
+
 def revisar_formato(ff, v, mp4, folhas=None):
     """Formato de entrega, duração e headline (sem .ass nem transcrição): para troca de CTA."""
     erros, aten = [], []
@@ -689,6 +753,9 @@ def revisar_formato(ff, v, mp4, folhas=None):
     e_i, a_i, _ = checar_inicio(ff, mp4)
     erros += e_i
     aten += a_i
+    e_em, a_em = checar_emenda(ff, v, mp4, folhas)
+    erros += e_em
+    aten += a_em
     aten.append(f"formato OK: {codec} {res[0]}x{res[1]}, {dur:.2f} s")
     if folhas:
         os.makedirs(folhas, exist_ok=True)

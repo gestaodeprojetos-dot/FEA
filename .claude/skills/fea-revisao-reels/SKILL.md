@@ -23,6 +23,8 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 
 Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos de uma vez): `python3 FEA-edicao-videos/fea_revisar.py FEA-projeto-*.json --so-legenda`. Gera o .ass de cada vídeo e acusa número e unidade separados.
 
+**Transição antes do CTA (05/11/2026):** a checagem `checar_emenda` roda na revisão completa e no `--so-formato`. ERRO se a emenda conteúdo->CTA for corte seco.
+
 **Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
 
 **Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.
@@ -72,11 +74,13 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
 | 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |
+| 29 | **Transição antes do CTA** (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"): crossfade de ~0,5 s (vídeo e áudio), nunca corte seco, e a transição começa depois do fim da fala do Dr. | `checar_emenda`: lê `NOME.emenda.json` do render (sem ele = ERRO) e mede os quadros da emenda a 30 fps: se mais da metade da mudança de imagem cai num quadro só, é corte seco (ERRO); transição começando antes do fim da voz = ERRO; duração fora de 0,3 a 1,0 s = ATENÇÃO. Com `--folhas`, salva `NOME-emenda.png` (antes, meio e fim da transição) para olhar | ERRO |
 
 **Troca de CTA por stream copy** (`fea_trocar_cta.py`, 03/11/2026): o conteúdo é o mesmo arquivo que já passou na revisora na entrega, mas a revisora recalcula a legenda pela transcrição refeita (o JSON ajustado à mão da edição original fica só na máquina antiga). ERRO de legenda nesse caso não é do vídeo: conferir o quadro do arquivo final no instante acusado. O que vale ali é a conferência do próprio script (conteúdo idêntico quadro a quadro ao entregue, CTA novo idêntico quadro a quadro) mais formato, duração e a emenda olhada nos quadros. Desde 04/11/2026 há o modo `python3 FEA-edicao-videos/fea_revisar.py projeto.json --so-formato --folhas PASTA` (com `saida` apontando para os vídeos trocados): confere só codec H.264, 1080x1920, 30 fps, AAC 48 kHz, duração, nome do arquivo igual ao título e a headline, sem precisar da transcrição. Áudio do CTA: comparar pacote a pacote (framemd5 com `-c copy`, campo do hash, não o último campo da linha, porque o 1º pacote traz dado extra); comparar o áudio decodificado dá diferença falsa, porque o ruído sintético do AAC (PNS) é sorteado no decodificador e muda conforme o que veio antes.
 
 ## Revisão visual (obrigatória, não pular)
 
+0. Abrir a `NOME-emenda.png` de cada vídeo com CTA: o quadro do meio tem que mostrar o conteúdo e o CTA misturados (crossfade), sem efeito chamativo, e o primeiro quadro não pode ter o Dr. no meio de uma palavra.
 1. Abrir a folha de contato de cada vídeo final (em `--folhas`).
 2. Procurar:
    - sangue **escorrendo** (gota que desce pelo queixo ou lábio, gaze ou cotonete encharcado em primeiro plano);
