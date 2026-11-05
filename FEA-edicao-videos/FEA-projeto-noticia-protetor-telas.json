@@ -23,21 +23,21 @@
       ],
       [
         4.21,
-        5.06,
+        5.0,
         "exato"
       ],
       [
-        5.46,
-        6.26,
+        6.9,
+        7.85,
         "exato"
       ],
       [
-        6.71,
-        12.21,
+        8.1,
+        9.22,
         "exato"
       ],
       [
-        12.46,
+        12.48,
         13.36,
         "exato"
       ],
@@ -58,7 +58,7 @@
       ],
       [
         17.16,
-        19.96,
+        18.3,
         "exato"
       ],
       [
@@ -73,12 +73,12 @@
       ],
       [
         25.86,
-        26.61,
+        26.6,
         "exato"
       ],
       [
         27.01,
-        29.36,
+        28.28,
         "exato"
       ],
       [
@@ -88,26 +88,51 @@
       ],
       [
         31.01,
+        32.76,
+        "exato"
+      ],
+      [
+        32.78,
         34.71,
         "exato"
       ],
       [
         34.96,
+        38.3,
+        "exato"
+      ],
+      [
+        41.48,
         42.36,
         "exato"
       ],
       [
         42.46,
+        44.02,
+        "exato"
+      ],
+      [
+        44.02,
         45.06,
         "exato"
       ],
       [
         45.31,
-        47.31,
+        47.3,
         "exato"
       ],
       [
         47.46,
+        47.74,
+        "exato"
+      ],
+      [
+        49.12,
+        50.76,
+        "exato"
+      ],
+      [
+        50.78,
         52.66,
         "exato"
       ],
@@ -123,61 +148,41 @@
       ],
       [
         56.21,
-        56.66,
-        "exato"
-      ],
-      [
-        56.81,
-        58.31,
-        "exato"
-      ],
-      [
-        58.51,
-        61.81,
-        "exato"
-      ],
-      [
-        62.01,
-        64.16,
-        "exato"
-      ],
-      [
-        64.26,
-        67.81,
+        56.6,
         "exato"
       ],
       [
         68.01,
-        70.46,
+        68.85,
         "exato"
       ],
       [
-        70.81,
-        73.51,
+        72.26,
+        73.38,
         "exato"
       ],
       [
         73.66,
-        74.71,
+        74.6,
         "exato"
       ],
       [
         75.31,
-        76.91,
+        76.74,
         "exato"
       ],
       [
         77.16,
-        78.16,
+        77.95,
         "exato"
       ],
       [
-        78.31,
-        79.01,
+        78.44,
+        78.9,
         "exato"
       ],
       [
-        79.36,
+        80.42,
         81.71,
         "exato"
       ],
@@ -231,55 +236,20 @@
         "numerar": true
       },
       {
-        "ini": 5.4,
+        "ini": 6.8,
         "tipo": "cheio"
       },
       {
-        "ini": 20.6,
+        "ini": 12.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m257.mp4",
-        "src": 1,
-        "cx": 0.42,
-        "cy": 0.45,
-        "zoom": 1.0
-      },
-      {
-        "ini": 21.8,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m39789.mp4",
-        "src": 7,
-        "cx": 0.5,
-        "cy": 0.45,
-        "zoom": 1.0
-      },
-      {
-        "ini": 22.8,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4954.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 0.5,
         "cx": 0.5,
         "cy": 0.4,
         "zoom": 1.0
       },
       {
-        "ini": 26.6,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 44.0,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt23.mp4",
-        "src": 2.4,
-        "cx": 0.5,
-        "cy": 0.42,
-        "zoom": 1.0
-      },
-      {
-        "ini": 47.0,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 50.8,
+        "ini": 16.1,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
         "src": 16.4,
@@ -288,7 +258,78 @@
         "zoom": 1.0
       },
       {
-        "ini": 52.4,
+        "ini": 19.85,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m257.mp4",
+        "src": 1,
+        "cx": 0.42,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 21.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m39789.mp4",
+        "src": 7,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 22.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4954.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 26.65,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4713.mp4",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 32.77,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 41.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 15.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 44.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m52044.mp4",
+        "src": 0,
+        "cx": 0.45,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 46.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m52057.mp4",
+        "src": 0,
+        "cx": 0.4,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 47.35,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 50.77,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt06.mp4",
         "src": 8.4,
@@ -297,59 +338,7 @@
         "zoom": 1.0
       },
       {
-        "ini": 56.6,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 58.5,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
-        "nome": "ISDIN Fusion Water Magic Color"
-      },
-      {
-        "ini": 61.95,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
-        "nome": "La Roche-Posay Anthelios Ultra Cover"
-      },
-      {
-        "ini": 64.25,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png",
-        "nome": "Adcos Fluid Tonalizante"
-      },
-      {
-        "ini": 66.5,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 72.2,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
-        "nome": "1. ISDIN Fusion Water Magic Color"
-      },
-      {
-        "ini": 73.4,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 75.05,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
-        "nome": "2. La Roche-Posay Anthelios Ultra Cover"
-      },
-      {
-        "ini": 76.8,
-        "tipo": "cheio"
-      },
-      {
-        "ini": 78.35,
-        "tipo": "produto",
-        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png",
-        "nome": "3. Adcos Fluid Tonalizante"
-      },
-      {
-        "ini": 79.0,
+        "ini": 54.3,
         "tipo": "produtos",
         "imagens": [
           "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
@@ -359,7 +348,39 @@
         "numerar": true
       },
       {
-        "ini": 82.8,
+        "ini": 56.7,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 67.9,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+        "nome": "1. ISDIN Fusion Water Magic Color"
+      },
+      {
+        "ini": 73.38,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+        "nome": "2. La Roche-Posay Anthelios Ultra Cover"
+      },
+      {
+        "ini": 76.74,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png",
+        "nome": "3. Adcos Fluid Tonalizante"
+      },
+      {
+        "ini": 80.4,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 82.7,
         "tipo": "cheio"
       }
     ],
