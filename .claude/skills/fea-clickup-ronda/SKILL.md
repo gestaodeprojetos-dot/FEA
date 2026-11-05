@@ -63,7 +63,7 @@ Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/20
 
    Depois arquivar a original (`task.archive`). Arquivar dá para desfazer; apagar, nunca.
 3. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
-4. **Arquivar a sprint encerrada** (Keila, 04/11/2026: "está muito bagunçado"): depois de virar, se a sprint antiga ficou sem nenhuma tarefa aberta, arquivar a lista com `list.update` (`archived: true`, via `clickup_execute_operator`). Arquivar dá para desfazer e o histórico continua lá (API: `/folder/{id}/list?archived=true`). Na pasta fica só o backlog, a sprint atual e as próximas.
+4. **Nunca arquivar sprint encerrada** (Keila, 05/11/2026): as sprints passadas ficam visíveis na pasta até o fim do lançamento. O arquivamento é de tudo de uma vez, quando o lançamento acabar, e só com o ok da Keila. A bagunça que ela quer evitar são as pastas de lançamentos futuros, não as sprints antigas.
 5. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
 
 ## Material recebido vai para a planilha de links úteis (Keila, 29/10/2026)
