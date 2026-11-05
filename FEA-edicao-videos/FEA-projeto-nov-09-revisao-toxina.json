@@ -62,6 +62,10 @@
     [
      "\\brefinamentinho\\b",
      "refinamentinho"
+    ],
+    [
+     "\\bBrava\\b",
+     "brava"
     ]
    ]
   },
@@ -137,6 +141,10 @@
     [
      "\\brefinamentinho\\b",
      "refinamentinho"
+    ],
+    [
+     "\\bBrava\\b",
+     "brava"
     ]
    ],
    "mover_palavra": [
