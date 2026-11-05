@@ -1,0 +1,274 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto5/IMG_8063.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/r_rejuv.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_rejuv/7- 3 cremes rejuvenescedores para a pele madura.mp4",
+    "titulo": "3 cremes rejuvenescedores para a pele madura",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "3 cremes rejuvenescedores",
+      "para a pele madura"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        1.07,
+        15.37,
+        "exato"
+      ],
+      [
+        15.47,
+        20.87,
+        "exato"
+      ],
+      [
+        21.07,
+        30.42,
+        "exato"
+      ],
+      [
+        31.22,
+        32.27,
+        "exato"
+      ],
+      [
+        32.87,
+        37.97,
+        "exato"
+      ],
+      [
+        38.17,
+        47.97,
+        "exato"
+      ],
+      [
+        48.12,
+        59.67,
+        "exato"
+      ],
+      [
+        60.02,
+        60.82,
+        "exato"
+      ],
+      [
+        61.47,
+        67.02,
+        "exato"
+      ],
+      [
+        67.27,
+        76.87,
+        "exato"
+      ],
+      [
+        77.22,
+        79.02,
+        "exato"
+      ],
+      [
+        79.12,
+        85.92,
+        "exato"
+      ],
+      [
+        86.32,
+        89.37,
+        "exato"
+      ],
+      [
+        89.57,
+        95.47,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bserum\\b",
+        "sérum"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt15.mp4",
+        "src": 4.5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 6.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt29.mp4",
+        "src": 31,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 9.7,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 13.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m12843.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 18.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m12843.mp4",
+        "src": 12.5,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 22.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 26.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8340.MOV",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "1. Ácido salicílico"
+      },
+      {
+        "ini": 31.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 32.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 15.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0,
+        "rotulo": "2. Retinol na região dos olhos"
+      },
+      {
+        "ini": 36.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 43.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 19,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 47.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 54.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m9158.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 59.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 61.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 65.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt24.mp4",
+        "src": 3,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "3. Niacinamida em sérum"
+      },
+      {
+        "ini": 71.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m47885.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 77.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 79.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8340.MOV",
+        "src": 6,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 82.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 86.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt22.mp4",
+        "src": 20,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 89.1,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_770.mp3",
+      "ini": 40,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    }
+  }
+}
