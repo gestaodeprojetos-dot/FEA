@@ -1,0 +1,851 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2849.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2849.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/1- Planejamento do full face.mp4",
+   "titulo": "Planejamento do full face",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.92,
+     18.9,
+     "exato"
+    ],
+    [
+     56.3,
+     67.3
+    ],
+    [
+     117.85,
+     122.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\b[Nn]euromis(?:mo)? [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\bdo [Nn]euromismo\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\bdo meu volume\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\b2550\\b",
+     "25x50"
+    ],
+    [
+     "\\barteira\\b",
+     "artéria"
+    ],
+    [
+     "\\b[Rr]eenchimento\\b",
+     "preenchimento"
+    ],
+    [
+     "\\btempera\\b",
+     "têmpora"
+    ],
+    [
+     "\\bfox eyes\\b",
+     "fox eyes"
+    ],
+    [
+     "\\bcomeçar com um sorrir\\b",
+     "começar, sorri"
+    ],
+    [
+     "\\bcomeçar com sorrir\\b",
+     "começar, sorri"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     117.99,
+     118.44
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2850.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2850.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/2- Técnica tridimensional nas olheiras.mp4",
+   "titulo": "Técnica tridimensional nas olheiras",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.25,
+     94.2
+    ],
+    [
+     101.7,
+     120.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     22.6,
+     23.07
+    ],
+    [
+     65.65,
+     66.6
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2852.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2852.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/3- Mento feminino e pré-jowl.mp4",
+   "titulo": "Mento feminino e pré-jowl",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     17.6,
+     98.9
+    ],
+    [
+     112.2,
+     135.8
+    ],
+    [
+     145.0,
+     155.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\bvamos para mais um desse\\b",
+     "vou botar mais um desse"
+    ],
+    [
+     "\\b[Ee]ntão vou\\b(?! botar)",
+     "então vou botar"
+    ],
+    [
+     "^lado fazer a mesma coisa",
+     "vou fazer a mesma coisa"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     46.7,
+     47.9
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2854.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2854.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/4- Sulco nasolabial e fratura labial.mp4",
+   "titulo": "Sulco nasolabial e fratura labial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     9.95,
+     68.9
+    ]
+   ],
+   "zoom": [
+    [
+     10.0,
+     56.0,
+     1.8,
+     0.5,
+     0.7
+    ]
+   ],
+   "remover_legenda": [
+    [
+     18.5,
+     20.6
+    ],
+    [
+     23.4,
+     25.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2855.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2855.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/5- Preenchimento labial com cânula.mp4",
+   "titulo": "Preenchimento labial com cânula",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.33,
+     84.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\b[Nn]euromis(?:mo)? [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\bdo [Nn]euromismo\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\bdo meu volume\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\b2550\\b",
+     "25x50"
+    ],
+    [
+     "\\barteira\\b",
+     "artéria"
+    ],
+    [
+     "\\b[Rr]eenchimento\\b",
+     "preenchimento"
+    ],
+    [
+     "\\btempera\\b",
+     "têmpora"
+    ],
+    [
+     "\\bfox eyes\\b",
+     "fox eyes"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     63.3,
+     63.75
+    ]
+   ],
+   "mover_palavra": [
+    [
+     73.53,
+     72.2
+    ]
+   ],
+   "silenciar": [
+    [
+     49.9,
+     52.3
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2856.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2856.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/6- Preenchimento da cauda da sobrancelha.mp4",
+   "titulo": "Preenchimento da cauda da sobrancelha",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.73,
+     71.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\b[Nn]euromis(?:mo)? [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\bdo [Nn]euromismo\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\bdo meu volume\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\b2550\\b",
+     "25x50"
+    ],
+    [
+     "\\barteira\\b",
+     "artéria"
+    ],
+    [
+     "\\b[Rr]eenchimento\\b",
+     "preenchimento"
+    ],
+    [
+     "\\btempera\\b",
+     "têmpora"
+    ],
+    [
+     "\\bfox eyes\\b",
+     "fox eyes"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     25.4,
+     26.6
+    ]
+   ],
+   "silenciar": [
+    [
+     56.2,
+     57.3
+    ],
+    [
+     58.8,
+     60.2
+    ],
+    [
+     62.0,
+     63.2
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2857.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2857.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/7- Têmpora com cânula: abrir o espaço.mp4",
+   "titulo": "Têmpora com cânula: abrir o espaço",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     9.76,
+     87.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\b[Nn]euromis(?:mo)? [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\bdo [Nn]euromismo\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\bdo meu volume\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\b2550\\b",
+     "25x50"
+    ],
+    [
+     "\\barteira\\b",
+     "artéria"
+    ],
+    [
+     "\\b[Rr]eenchimento\\b",
+     "preenchimento"
+    ],
+    [
+     "\\btempera\\b",
+     "têmpora"
+    ],
+    [
+     "\\bfox eyes\\b",
+     "fox eyes"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/ff/IMG_2858.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2858.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n11/8- Fio filler na pálpebra inferior.mp4",
+   "titulo": "Fio filler na pálpebra inferior",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     3.6,
+     34.7
+    ],
+    [
+     69.75,
+     91.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Jj]udeiras\\b",
+     "olheiras"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bpré-jaw\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bneoangiogênese\\b",
+     "neoangiogênese"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está|percebe|combinou|consegue|mexe|dorme)\\b",
+     "a gente \\1"
+    ],
+    [
+     "\\b[Nn]euromis(?:mo)? [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\bdo [Nn]euromismo\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\bdo meu volume\\b",
+     "do Neuramis Volume"
+    ],
+    [
+     "\\b2550\\b",
+     "25x50"
+    ],
+    [
+     "\\barteira\\b",
+     "artéria"
+    ],
+    [
+     "\\b[Rr]eenchimento\\b",
+     "preenchimento"
+    ],
+    [
+     "\\btempera\\b",
+     "têmpora"
+    ],
+    [
+     "\\bfox eyes\\b",
+     "fox eyes"
+    ],
+    [
+     "\\bseus filler\\b",
+     "os fios filler"
+    ],
+    [
+     "\\bcoxinho gorduroso\\b",
+     "coxim gorduroso"
+    ]
+   ]
+  }
+ ]
+}

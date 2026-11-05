@@ -2,7 +2,9 @@
 """FEA: edição automática de vídeos verticais (Reels) no padrão da equipe.
 
 Uso:
-    python3 fea_editar_video.py projeto.json [--previa | --entrega | --so-legenda] [trecho_do_nome ...]
+    python3 fea_editar_video.py projeto.json [--previa | --entrega | --so-legenda] [--cta CTA.mp4 --transicao 0.5] [trecho_do_nome ...]
+
+--cta cola o CTA no mesmo render, com crossfade de vídeo e áudio antes dele (use o fea_render_com_cta.py).
 
 --so-legenda gera só o .ass (rápido), para ler e conferir o texto antes do render.
 
@@ -657,7 +659,10 @@ def perfil_voz(ff, entrada, passo=0.05, ganho_db=0):
     h = int(16000 * passo)
     n = len(a) // h
     db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
-    return db, max(38.0, float(np.percentile(db, 5)) + 12), passo
+    # silêncio digital (trecho silenciado no render, fim da cartela do CTA) não é ruído de fundo: fora
+    # do percentil, senão o piso despenca e ruído de sala vira "voz" (pasta 11 de novembro, 05/11/2026)
+    vivo = db[db > 3]
+    return db, max(38.0, float(np.percentile(vivo if len(vivo) > 20 else db, 5)) + 12), passo
 
 
 def ancorar_na_voz(palavras, db, limiar, passo):
@@ -884,21 +889,30 @@ def renderizar(cfg, v, previa=False):
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
               f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
+    mapa_v, mapa_a, entradas = "[vo]", "[ac]", ["-i", v["entrada"]]
+    # CTA com transição (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"): o CTA entra como
+    # 2ª entrada do mesmo render, com crossfade de vídeo e de áudio (fea_render_com_cta.py)
+    if cfg.get("_cta") and not v.get("sem_cta"):
+        import fea_render_com_cta as rc
+        info = rc.plano_emenda(ff, v, v["manter"], cfg["_cta"], cfg["_transicao"])
+        filtro += ";" + rc.filtro_emenda(info, W, H)
+        mapa_v, mapa_a, entradas = "[vx]", "[ax]", entradas + ["-i", cfg["_cta"]]
+        json.dump(info, open(saida.rsplit(".", 1)[0] + ".emenda.json", "w", encoding="utf-8"), indent=1)
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", mapa_v, "-map", mapa_a, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
-        filtro += ";[vo]scale=720:1280[vp]"
-        codec = ["-map", "[vp]", "-map", "[ac]", "-c:v", "libx264", "-preset", "fast",
+        filtro += f";{mapa_v}scale=720:1280[vp]"
+        codec = ["-map", "[vp]", "-map", mapa_a, "-c:v", "libx264", "-preset", "fast",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-c:a", "aac", "-b:a", "96k"]
         pasta, nome = saida.rsplit("/", 1)
         saida = f"{pasta}/PREVIA {nome}"
     else:
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", mapa_v, "-map", mapa_a, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
@@ -908,8 +922,19 @@ def main():
     args = sys.argv[1:]
     previa = ("entrega" if "--entrega" in args else "legenda" if "--so-legenda" in args
               else ("--previa" in args))
+    cta, transicao = None, 0.5
+    if "--cta" in args:      # CTA com transição (chamado pelo fea_render_com_cta.py)
+        i = args.index("--cta")
+        cta = args[i + 1]
+        args = args[:i] + args[i + 2:]
+    if "--transicao" in args:
+        i = args.index("--transicao")
+        transicao = float(args[i + 1])
+        args = args[:i] + args[i + 2:]
     args = [a for a in args if a not in ("--previa", "--entrega", "--so-legenda")]
     cfg = json.load(open(args[0], encoding="utf-8"))
+    if cta:
+        cfg.update(_cta=cta, _transicao=transicao)
     so = args[1:] or None
     for v in cfg["videos"]:
         if so and not any(x in v["saida"] for x in so):
