@@ -25,6 +25,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 
 **Transição antes do CTA (05/11/2026):** a checagem `checar_emenda` roda na revisão completa e no `--so-formato`. ERRO se a emenda conteúdo->CTA for corte seco.
 
+**Régua de voz com trecho silenciado (05/11/2026, pasta 11 de novembro):** o piso de ruído do `perfil_voz` ignora janelas de silêncio digital (trecho silenciado no render, fim mudo da cartela). Antes, 6 s silenciados derrubavam o piso do arquivo inteiro e ruído de sala virava "voz": 4 ERRO falsos de legenda atrasada no vídeo 6 com o áudio medido em 0 ms de deslocamento.
+
 **Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
 
 **Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.

@@ -659,7 +659,10 @@ def perfil_voz(ff, entrada, passo=0.05, ganho_db=0):
     h = int(16000 * passo)
     n = len(a) // h
     db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
-    return db, max(38.0, float(np.percentile(db, 5)) + 12), passo
+    # silêncio digital (trecho silenciado no render, fim da cartela do CTA) não é ruído de fundo: fora
+    # do percentil, senão o piso despenca e ruído de sala vira "voz" (pasta 11 de novembro, 05/11/2026)
+    vivo = db[db > 3]
+    return db, max(38.0, float(np.percentile(vivo if len(vivo) > 20 else db, 5)) + 12), passo
 
 
 def ancorar_na_voz(palavras, db, limiar, passo):
