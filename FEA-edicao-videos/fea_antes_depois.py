@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""FEA: quadro com 2 fotos de antes e depois (etiquetas Antes/Depois e aviso de imagem ilustrativa) para o painel do modelo notícia. Uso: python3 fea_antes_depois.py SCRATCHPAD"""
+"""FEA: quadro com 2 fotos de antes e depois (etiquetas Antes/Depois, sem aviso: público técnico) para o painel do modelo notícia. Uso: python3 fea_antes_depois.py SCRATCHPAD"""
 import sys
 from PIL import Image, ImageFilter, ImageDraw, ImageEnhance, ImageFont
 W, H = 1080, 1000
@@ -30,8 +30,5 @@ for im, y in zip(ims, ys):
     bg.alpha_composite(sh.filter(ImageFilter.GaussianBlur(18)), (x - 40, y - 40)); bg.alpha_composite(card, (x, y))
     a, d = pill("Antes", (60, 60, 60, 230)), pill("Depois", (91, 69, 153, 240))
     bg.alpha_composite(a, (x + 22, y + card.height - a.height - 18)); bg.alpha_composite(d, (x + card.width // 2 + 22, y + card.height - d.height - 18))
-dr = ImageDraw.Draw(bg)
-txt = "Imagens ilustrativas. Resultados variam de pessoa para pessoa."
-l, t, r, b = fp.getbbox(txt)
-dr.text(((W - (r - l)) / 2 - l, 785), txt, font=fp, fill=(255, 255, 255, 235), stroke_width=2, stroke_fill=(0, 0, 0, 160))
+# sem aviso de "imagem ilustrativa": público técnico (Keila, 06/11/2026)
 bg.convert("RGB").save(P + "/c_antesdepois.png")
