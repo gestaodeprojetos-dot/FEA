@@ -1,0 +1,357 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto6/IMG_8065.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/r_oleosa.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_oleosa/8- Pele oleosa 50+, sérum ou creme.mp4",
+    "titulo": "Pele oleosa 50+: sérum ou creme?",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "Pele oleosa 50+:",
+      "sérum ou creme?"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.77,
+        2.82,
+        "exato"
+      ],
+      [
+        2.92,
+        9.02,
+        "exato"
+      ],
+      [
+        9.27,
+        10.37,
+        "exato"
+      ],
+      [
+        10.57,
+        13.72,
+        "exato"
+      ],
+      [
+        14.02,
+        27.67,
+        "exato"
+      ],
+      [
+        27.87,
+        35.87,
+        "exato"
+      ],
+      [
+        36.07,
+        40.37,
+        "exato"
+      ],
+      [
+        40.52,
+        43.72,
+        "exato"
+      ],
+      [
+        43.87,
+        46.32,
+        "exato"
+      ],
+      [
+        46.42,
+        54.32,
+        "exato"
+      ],
+      [
+        54.42,
+        58.87,
+        "exato"
+      ],
+      [
+        58.97,
+        60.47,
+        "exato"
+      ],
+      [
+        60.57,
+        65.72,
+        "exato"
+      ],
+      [
+        65.82,
+        71.22,
+        "exato"
+      ],
+      [
+        71.37,
+        83.42,
+        "exato"
+      ],
+      [
+        83.57,
+        85.52,
+        "exato"
+      ],
+      [
+        85.67,
+        89.97,
+        "exato"
+      ],
+      [
+        90.12,
+        95.77,
+        "exato"
+      ],
+      [
+        95.87,
+        102.67,
+        "exato"
+      ],
+      [
+        103.07,
+        116.67,
+        "exato"
+      ],
+      [
+        116.82,
+        117.82,
+        "exato"
+      ],
+      [
+        117.92,
+        122.67,
+        "exato"
+      ],
+      [
+        122.92,
+        123.92,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bserum\\b",
+        "sérum"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222557.mp4",
+        "src": 3,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 11.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251379.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 16.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 19.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222553.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 21.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222554.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 24.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p7298014.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 30.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 35.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724739.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 40.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724701.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 42.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724778.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 46.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 52.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222564.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 56.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 62.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6551000.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 66.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 71.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222560.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0,
+        "rotulo": "1. Controlar a glândula sebácea"
+      },
+      {
+        "ini": 76.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724704.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "2. Não obstruir os poros"
+      },
+      {
+        "ini": 83.1,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 87.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p7582851.mp4",
+        "src": 4,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "Pele oleosa: sérum"
+      },
+      {
+        "ini": 92.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222555.mp4",
+        "src": 10,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 95.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251369.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 99.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724781.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 102.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 104.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251374.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "Pele oleosa: sérum"
+      },
+      {
+        "ini": 109.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724689.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "Pele seca: creme"
+      },
+      {
+        "ini": 114.8,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_473.mp3",
+      "ini": 10,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    }
+  }
+}

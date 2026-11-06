@@ -1,0 +1,172 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7934.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7934.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/2- Os 3 melhores preenchedores para os lábios - versão Dr direto.mp4",
+    "titulo": "Os 3 melhores preenchedores para os lábios",
+    "headline": [
+      "Os 3 melhores",
+      "preenchedores",
+      "para os lábios"
+    ],
+    "headline_fim": 4.4,
+    "manter": [
+      [
+        5.0,
+        51.0
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw25.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "cenas": [
+      {
+        "ini": 5.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7462.MOV",
+        "src": 2.0,
+        "cx": 0.5,
+        "cy": 0.68,
+        "zoom": 1.15
+      },
+      {
+        "ini": 7.45,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 14.5,
+        "cx": 0.5,
+        "cy": 0.47,
+        "zoom": 1.15
+      },
+      {
+        "ini": 11.2,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/neuramis_deep.png",
+        "nome": "Neuramis Deep"
+      },
+      {
+        "ini": 12.35,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/revanesse_kiss.png",
+        "nome": "Revanesse Kiss"
+      },
+      {
+        "ini": 14.9,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/restylane_refyne.png",
+        "nome": "Restylane Refyne"
+      },
+      {
+        "ini": 16.75,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/neuramis_deep.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/revanesse_kiss.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/restylane_refyne.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 18.55,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 23.9,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/belotero_intense.png",
+        "nome": "Belotero Intense"
+      },
+      {
+        "ini": 25.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 90.4,
+        "cx": 0.5,
+        "cy": 0.52,
+        "zoom": 1.2
+      },
+      {
+        "ini": 26.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 19.6,
+        "cx": 0.5,
+        "cy": 0.47,
+        "zoom": 1.15
+      },
+      {
+        "ini": 29.1,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/restylane_kysse.png",
+        "nome": "Restylane Kysse"
+      },
+      {
+        "ini": 31.25,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/png/eptq_s100.png",
+        "nome": "e.p.t.q. S100"
+      },
+      {
+        "ini": 33.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 35.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 56.5,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.15
+      },
+      {
+        "ini": 39.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7462.MOV",
+        "src": 5.0,
+        "cx": 0.5,
+        "cy": 0.68,
+        "zoom": 1.15
+      },
+      {
+        "ini": 40.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7468.MOV",
+        "src": 41.5,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.15
+      },
+      {
+        "ini": 45.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/toxlab/IMG_7464.MOV",
+        "src": 8.0,
+        "cx": 0.5,
+        "cy": 0.58,
+        "zoom": 1.2
+      },
+      {
+        "ini": 47.1,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    }
+  }
+}

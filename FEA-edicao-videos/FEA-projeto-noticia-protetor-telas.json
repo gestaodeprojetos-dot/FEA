@@ -1,0 +1,368 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto4/IMG_8066.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/protetor4.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_prot/6- 3 protetores solares para quem trabalha com telas.mp4",
+    "titulo": "3 protetores solares para quem trabalha com telas",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "3 protetores solares",
+      "para quem trabalha",
+      "com telas"
+    ],
+    "headline_fim": 5.0,
+    "manter": [
+      [
+        0.67,
+        5.12,
+        "exato"
+      ],
+      [
+        5.42,
+        6.32,
+        "exato"
+      ],
+      [
+        6.67,
+        12.27,
+        "exato"
+      ],
+      [
+        12.42,
+        13.42,
+        "exato"
+      ],
+      [
+        13.52,
+        13.92,
+        "exato"
+      ],
+      [
+        14.02,
+        15.07,
+        "exato"
+      ],
+      [
+        15.22,
+        17.02,
+        "exato"
+      ],
+      [
+        17.12,
+        23.62,
+        "exato"
+      ],
+      [
+        23.77,
+        25.72,
+        "exato"
+      ],
+      [
+        25.82,
+        26.67,
+        "exato"
+      ],
+      [
+        26.97,
+        29.42,
+        "exato"
+      ],
+      [
+        29.62,
+        34.77,
+        "exato"
+      ],
+      [
+        35.37,
+        45.12,
+        "exato"
+      ],
+      [
+        45.27,
+        58.37,
+        "exato"
+      ],
+      [
+        58.47,
+        61.87,
+        "exato"
+      ],
+      [
+        61.97,
+        67.87,
+        "exato"
+      ],
+      [
+        67.97,
+        70.52,
+        "exato"
+      ],
+      [
+        70.77,
+        74.77,
+        "exato"
+      ],
+      [
+        75.27,
+        76.97,
+        "exato"
+      ],
+      [
+        77.12,
+        79.07,
+        "exato"
+      ],
+      [
+        79.32,
+        83.87,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bS[gk]in\\b",
+        "ISDIN"
+      ],
+      [
+        "\\bDercos\\b",
+        "Adcos"
+      ],
+      [
+        "\\bLa Roche\\b",
+        "La Roche-Posay"
+      ],
+      [
+        "\\bFusion Water\\b",
+        "Fusion Water"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 19.8,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 2.3,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 5.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 12.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 16.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 16.4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 18.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 19.85,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m257.mp4",
+        "src": 1,
+        "cx": 0.42,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 21.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m39789.mp4",
+        "src": 7,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 22.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4954.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 26.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4713.mp4",
+        "src": 0.5,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 32.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 39.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m4954.mp4",
+        "src": 6,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 41.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
+        "src": 15.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 44.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m52044.mp4",
+        "src": 0,
+        "cx": 0.45,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 46.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m52057.mp4",
+        "src": 0,
+        "cx": 0.4,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 47.35,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 50.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt06.mp4",
+        "src": 8.4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 54.3,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 56.7,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 58.5,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+        "nome": "ISDIN Fusion Water Magic Color"
+      },
+      {
+        "ini": 61.95,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+        "nome": "La Roche-Posay Anthelios Ultra Cover"
+      },
+      {
+        "ini": 64.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png",
+        "nome": "Adcos Fluid Tonalizante"
+      },
+      {
+        "ini": 66.5,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 67.9,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+        "nome": "1. ISDIN Fusion Water Magic Color"
+      },
+      {
+        "ini": 73.38,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+        "nome": "2. La Roche-Posay Anthelios Ultra Cover"
+      },
+      {
+        "ini": 76.74,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png",
+        "nome": "3. Adcos Fluid Tonalizante"
+      },
+      {
+        "ini": 78.95,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/isdin_fusion_magic_color.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/lrp_anthelios_ultra_cover.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod4/png/adcos_fluid_tonalizante.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 82.7,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_744.mp3",
+      "ini": 5,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/an/gel10.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    }
+  }
+}
