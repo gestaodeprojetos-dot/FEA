@@ -39,3 +39,27 @@ Pedido da Keila (06/11/2026): voz do Dr. João pouco presente e áudio abafado. 
 | `FEA-AO-VIVO-MTB-v4-BlackVitalicia.mp3` | Master 44,1 kHz, 192 kbps, para ouvir e aprovar |
 | `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.mp3` | Para a URA: 8 kHz mono, 64 kbps |
 | `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.wav` | Para a URA, se a plataforma aceitar WAV (melhor qualidade em 8 kHz) |
+
+## v5: semelhança com a voz do Dr. João (em avaliação)
+
+Retorno da Keila (06/11/2026): a v4 não ficou mais parecida com a voz dele. A equalização mexe só em brilho, não em timbre.
+
+Medições (`fea_similaridade_voz.py` para timbre, pYIN para tom), sempre contra o áudio original da URA:
+
+| Versão | Tom mediano | Semelhança de timbre |
+|---|---|---|
+| Voz real (original) | 133 Hz | referência |
+| Clone, motor padrão, sem tratamento (v3) | 188 Hz | 0,865 |
+| v4 (com equalização) | 188 Hz | 0,806 |
+| Clone, motor Starfish | 182 Hz | 0,848 |
+| Clone, motor ElevenLabs | 165 Hz | 0,765 |
+| Clone com tom -3 semitons | 158 Hz | 0,769 |
+| Clone com tom -5 semitons | 142 Hz | 0,734 |
+
+Conclusão: o clone "Black 2026" fala cerca de 5 semitons acima da voz real em todos os motores. Baixar o tom aproxima a altura, mas o processamento piora o timbre.
+
+Opções em `FEA-opcoes-v5/` para escolha de ouvido:
+
+- **A, voz real do Dr. João (29,1 s, 8 kHz):** trechos do áudio original + só a frase da Black Friday Vitalícia gerada pelo clone, com tom ajustado (139 Hz) e passada pelo mesmo filtro de telefone. Volta à copy original nos trechos reais ("novas técnicas", "Para você entrar nessa aula agora, você vai clicar no link da minha bio"). Cerca de 75% do áudio é a voz real.
+- **B, clone com tom médio (-3 semitons, 23,7 s):** copy e cortes da v3.
+- **C, clone com tom grave (-5 semitons, 23,7 s):** copy e cortes da v3.
