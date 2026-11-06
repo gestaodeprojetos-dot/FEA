@@ -57,6 +57,12 @@ for a, b, i in find(r"(toxina|relleno|bioestimuladores?)"):
 # 1b) ingresso do Lote Especial (página de vendas) quando o Dr. cita o lote especial
 for a, b, i in find(r"lote especial"):
     if add_insert(a - 0.2, a + 2.8, kind="lote"): break
+if adj.get("captacao") and not any(x["kind"] == "lote" for x in inserts):  # captação: ingresso antes da arte do combo
+    for a, b, i in find(r"(lote|menor|mejor|black|combo|cursos)", after=hook_end + 0.5):
+        if add_insert(a - 0.2, a + 2.6, kind="lote"): break
+    t = hook_end + 0.6
+    while not any(x["kind"] == "lote" for x in inserts) and t + 2.2 < dur - 0.5:  # qualquer espaço livre
+        add_insert(t, t + 2.4, kind="lote"); t += 0.25
 # 2) número de clases
 for a, b, i in sorted(find(r"\d+ clases"), key=lambda x: -int(T[x[2]])):
     if add_insert(a - 0.2, a + 2.4, kind="number", value="+" + T[i], label="clases disponibles"): break
@@ -89,6 +95,19 @@ for a, b, i in find(r"bonos"):
     if re.search(r"\blote\b", txt): add_card(a - 0.4, a + 3.0, "Antes del cambio de lote", "Asegura el menor precio")
     else: add_card(a - 0.4, a + 3.0, "En vivo · 10 de noviembre", "El menor precio del Combo Total")
     break
+# captação: vídeo com fala de inscrição/lote rodando antes da live -> deixa claro que a inscrição é gratuita, para a live do 10/11,
+# e mostra o ingresso do Lote Especial no momento em que o Dr. fala de lote ou de menor preço
+if adj.get("captacao"):
+    INS = ("Inscripción gratuita", "Live del 10/11 · 19 h (hora de Colombia)")
+    for a, b, i in find(r"(inscribete|inscripciones|inscribirte)"):
+        add_card(a - 0.3, a + 3.0, *INS); break
+    if not any(c["label"] == INS[0] for c in cards):  # sem menção a inscrição: card no primeiro espaço livre
+        t = hook_end + 0.4
+        while t + 3.0 < dur - 1.0:
+            if all(t + 3.0 <= x["t0"] - 0.3 or t >= x["t1"] + 0.3 for x in inserts):
+                n = len(cards); add_card(t, t + 3.0, *INS)
+                if len(cards) > n: break
+            t += 0.5
 for a, b, i in find(r"35 mil"):
     add_card(a - 0.3, a + 3.0, "Más de 35 mil alumnos en Brasil", "Creador del Elite Injectors Congress"); break
 for a, b, i in find(r"menor precio"):

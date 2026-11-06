@@ -145,7 +145,7 @@ Scripts em `FEA-edicao-latam/` (ver o README da pasta). Regras pedidas pela Keil
 - **Legenda com tamanho fixo:** todas as legendas no mesmo tamanho (Montserrat 900, 62 px), caixa alta, até 2 linhas, sem efeito de zoom na entrada. Letra crescendo ou bloco maior que o outro foi reprovado ("parece letra maior que a outra").
 - **Sem conversão de quadros:** o HeyGen entrega 25 fps; renderizar no fps original (converter para 30 duplica quadros e o vídeo parece travar).
 - **Voz:** a dublagem do HeyGen clona a voz do Dr., mas o timbre em espanhol muda um pouco. Se a Keila apontar um trecho específico com voz estranha, conferir aquele segundo antes de redublar (redublar gasta crédito).
-- **Nome do arquivo no Drive (Keila, 27/10):** `ADS 001 - BLACK LATAM.mp4`, `ADS 002 - BLACK LATAM.mp4`... numeração contínua **por pasta**, começando em 001 em cada uma. Vídeo que convida para a live, pré-cadastro ou lembrete vai para CAPTAÇÃO (`1T8yac7R5LM0RcjMDPhD45J0BS23LlVTS`); vídeo que fala de compra, preço, inscrições abertas ou lote vai para 1. VENDAS (`1fo8_HMC8c2sKvZOM_rlMFdXbZK3FYmg3`). Em 28/10: CAPTAÇÃO vai até ADS 022 (próximo 023), VENDAS até ADS 014 (próximo 015). Os antigos reeditados (lote BFV) mantêm o número original com "(REEDIÇÃO)" no nome.
+- **Nome do arquivo no Drive (Keila, 27/10):** `ADS 001 - BLACK LATAM.mp4`, `ADS 002 - BLACK LATAM.mp4`... numeração contínua **por pasta**, começando em 001 em cada uma. Vídeo que convida para a live, pré-cadastro ou lembrete vai para CAPTAÇÃO (`1T8yac7R5LM0RcjMDPhD45J0BS23LlVTS`); vídeo que fala de compra, preço, inscrições abertas ou lote vai para 1. VENDAS (`1fo8_HMC8c2sKvZOM_rlMFdXbZK3FYmg3`). Em 28/10: CAPTAÇÃO vai até ADS 027 (próximo 028), VENDAS até ADS 009 (próximo 010). Os antigos reeditados (lote BFV) mantêm o número original com "(REEDIÇÃO)" no nome.
 - Cartela final padrão em todo vídeo: logo Black Friday Total com impacto e "Toca en Más información" digitado com som de teclado (`assets/FEA-endcard-ES.mp4`).
 
 ### Reedição de vídeos antigos com legenda PT gravada (lote BFV, 27/10/2026)
@@ -161,3 +161,9 @@ Scripts em `FEA-edicao-latam/` (ver o README da pasta). Regras pedidas pela Keil
 - O que a LP promete vale como regra de roteiro: live 10/11 às 19 h (hora de Colombia), Lote Especial só para quem estiver na live, "más de 35 mil alumnos en Brasil", "Creador del Elite Injectors Congress". A LP não mostra preço: nada de preço nos vídeos.
 - Sem bônus e sem grupo VIP/WhatsApp (Keila, 27/10): onde o Dr. fala em bônus, o roteiro ES troca por "asegura el Lote Especial, el valor más bajo". "Cursos de anatomía" vira "cursos con anatomía" (anatomia não é curso do combo). Nada de "inglés".
 - Ao criar o lote de upload do HeyGen, o tamanho declarado de cada arquivo precisa ser o tamanho final (gerar o SRT antes de pedir as URLs).
+
+### Captação ou vendas: na dúvida, é captação (Keila, 06/11/2026)
+
+- Antes da live de 10/11 o funil LATAM é de captação: "inscríbete" = inscrição gratuita na live, e "va a cambiar el lote / va a subir de precio" = depois da live o preço sobe (texto da LP). Vídeo gravado nesse período, ou pedido pelo gestor de tráfego como criativo, vai para CAPTAÇÃO, mesmo falando em lote ou menor preço.
+- Nesses casos usar `"captacao": true` no ajuste: entram o card "Inscripción gratuita · Live del 10/11 · 19 h (hora de Colombia)" e o ingresso do Lote Especial.
+- VENDAS fica só para vídeo que pede compra depois que o carrinho abre.
