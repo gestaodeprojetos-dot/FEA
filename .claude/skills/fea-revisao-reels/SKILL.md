@@ -26,6 +26,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | # | Regra da Keila | Como é conferida | Nível |
 |---|---|---|---|
 | 1 | H.264, nunca HEVC (tela preta no computador dela) | codec do arquivo | ERRO |
+| 1b | Cor certa: bruto HDR do iPhone convertido para SDR (senão a cor sai lavada) | marcação de cor do arquivo final (HLG/PQ/BT.2020 = ERRO) | ERRO |
 | 2 | 1080x1920, sem limite de tamanho (qualidade total) | resolução | ERRO |
 | 3 | **Máximo 3 min no total (conteúdo + CTA concatenado)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
 | 4 | Título exatamente o da imagem, nos 3 primeiros segundos, Montserrat ExtraBold 116 | texto do .ass contra o projeto | ERRO |

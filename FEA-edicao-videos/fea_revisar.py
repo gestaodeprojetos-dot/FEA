@@ -185,6 +185,10 @@ def revisar(cfg, v, folhas=None):
         erros.append(f"codec {codec}: tem que ser H.264 (HEVC abre com tela preta)")
     if res != (1080, 1920):
         erros.append(f"resolução {res}: tem que ser 1080x1920")
+    # bruto em HDR (iPhone com "Vídeo HDR" ligado) tem que sair convertido para SDR, senão a cor fica lavada
+    info = subprocess.run([ff, "-nostdin", "-i", mp4], capture_output=True, text=True).stderr
+    if re.search(r"Video:.*(arib-std-b67|smpte2084|bt2020)", info):
+        erros.append("vídeo final marcado como HDR/BT.2020: cor lavada, renderizar de novo (filtro_hdr)")
     # limite vale para cada parte também (antes a Parte 1/2 passava sem conferir)
     if dur > LIMITE_S + 0.05:
         erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else

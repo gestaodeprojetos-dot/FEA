@@ -57,6 +57,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 1. **Ambiente**: `bash FEA-edicao-videos/fea_preparar_ambiente.sh <scratchpad>`. Se faltar rede, pedir à Keila para liberar os domínios listados no topo do script (menu do ambiente > Edit > Network access).
 2. **Acesso aos vídeos**: `python3 FEA-edicao-videos/fea_drive.py baixar PASTA_ID destino/` baixa a pasta inteira pela API (acesso das variáveis do ambiente, sem abrir link público), retomando se a conexão cair e conferindo o tamanho (a conexão às vezes fechava sem erro e o .MOV vinha truncado, "moov atom not found"). `fea_drive.py listar PASTA_ID` mostra id, nome, tamanho e duração.
 3. **Áudio e transcrição**: extrair WAV mono 16 kHz com o FFmpeg de `env.sh` e rodar `python3 FEA-edicao-videos/fea_transcrever.py tr/ wav/*.wav` (roda em segundo plano). O script faz 3 passadas (02/10/2026): (a) Whisper com VAD; (b) **refino**: segmento longo (> 15 s) é retranscrito em pedaços cortados nos silêncios, porque o tempo das palavras vinha esticado e a legenda saía até 9 s atrasada em vídeo de toxina com fala esparsa; (c) **complemento**: cada buraco entre palavras em que o áudio tem voz é transcrito de novo sem VAD, porque o VAD pulava fala baixa (o "4, 5, 6" de "pertuito 1, 2, 3, 4, 5, 6" e o "Ótimo" baixinho da paciente). Para refazer só (b) e (c) num JSON existente: `--complementar`.
+   - **Alternativa em teste: ElevenLabs Scribe** (06/11/2026). `python3 FEA-edicao-videos/fea_transcrever_scribe.py tr_scribe/ wav/*.wav` gera o mesmo formato do Whisper (o resto do fluxo não muda) e marca o falante de cada trecho (Dr. x paciente). Precisa da variável do ambiente `ELEVENLABS_API_KEY` (na ElevenLabs, criar a chave com "Restrict Key" desligada). Enquanto o Whisper for o padrão, comparar os dois no mesmo áudio com `python3 FEA-edicao-videos/fea_comparar_transcricao.py wav/X.wav tr/X.json tr_scribe/X.json` (palavras sem voz, voz sem palavra e atraso). Só trocar o padrão depois de um lote inteiro com resultado melhor e aprovação da Keila.
 4. **Mesmo material já editado?** Comparar quadros (miniaturas 27x48 em cinza a 5 fps, correlação normalizada). Correlação ~0,99 = mesmo material: mapear offset quadro a quadro a 30 fps e extrair os trechos `manter`. Zero correspondência = outro paciente, decidir os cortes pela transcrição.
 5. **Cortes**: ler a transcrição com tempos, escolher `manter` (segundos do bruto) cortando em pausas entre palavras. Marcar em `remover_legenda` trechos em que a transcrição inventou fala sobre silêncio (ou palavra repetida pelo complemento). Para recuperar os cortes de uma edição já entregue: `python3 FEA-edicao-videos/fea_alinhar.py FFMPEG editado.mp4 brutos... --cta 59.55`.
    - **Começo**: o vídeo começa na primeira fala do bruto, mesmo que a frase repita o título (a fala dos 3 s do título fica sem legenda, padrão). Começar no meio de frase ("...na lista de preenchedores") é erro.
@@ -75,6 +76,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
     - Quantidade de vídeos e nome da pasta
     - A planilha vai para quem posta nas redes sociais: sem link, a pessoa não acha os vídeos
     - Se a numeração de pastas ficou com buraco (ex.: 1, 2, 4 sem o 3), renomear para ficar sequencial ao criar a próxima pasta, ou criar a pasta com o número faltante
+12. **Legenda do post**: escrever com a skill `fea-legenda-post` (2 versões por vídeo, a partir do texto final das legendas) e colocar no resumo final para a Keila aprovar.
 
 ## Pontos para sempre levar à Keila antes de finalizar
 
@@ -106,6 +108,7 @@ Notação técnica (pedido da Keila, 24/09/2026): cânula se escreve **calibre x
 
 ## Entrega e limites conhecidos
 
+- **HDR do iPhone** (06/11/2026): se o bruto vier gravado em HDR (HLG, "Vídeo HDR" ligado na câmera), `fea_editar_video.py` converte sozinho para SDR com tone mapping, senão a cor sai lavada. Brutos de nov/2026 conferidos vieram em SDR; a revisora acusa ERRO se o final sair marcado como HDR.
 - **Qualidade total, sem limite de tamanho** (Keila, 02/10/2026: "não é para limitar, quero qualidade"). `--entrega` gera H.264 CRF 18, áudio AAC 192k 48 kHz, e o CTA entra por stream copy, sem recompressão. Nunca voltar a mirar 30 MB nem 2 passadas por bitrate. **Nunca HEVC/H.265**: no computador dela o vídeo abre com tela preta e só áudio (24/09/2026).
 - **Nunca entregar vídeo pelo chat** (`SendUserFile`): a entrega é sempre direto na pasta de destino do Drive.
 - **CTA Black Friday** (válido até 09/10/2026): todo vídeo editado termina com o CTA (`1FKH9yu_5Dyz31hmeSKIgyu-WzHcR2Nn8` no Drive, ~60 s). Renderizar com `python3 FEA-edicao-videos/fea_render_com_cta.py projeto.json CTA.mp4`.
