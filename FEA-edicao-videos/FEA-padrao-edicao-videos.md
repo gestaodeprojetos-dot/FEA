@@ -57,3 +57,17 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 5. Revisão da Keila, correções, render final e envio para a pasta de destino no Drive.
 
 Passo a passo completo na skill `.claude/skills/fea-edicao-reels/SKILL.md`.
+
+## Melhorias de 06/11/2026 (estudo do guia "O Seu Editor de Vídeo de IA")
+
+O guia ensina a montar um editor automático genérico para criador de conteúdo. O fluxo FEA já cobre corte, título, legenda e revisão com mais rigor, então só entrou o que melhora o padrão atual:
+
+| Melhoria | Onde |
+|------|------|
+| Conversão automática de HDR do iPhone para SDR (cor lavada) e checagem na revisora | `fea_editar_video.py` (`filtro_hdr`), `fea_revisar.py` |
+| Transcrição pela ElevenLabs Scribe, no mesmo formato do Whisper, em teste lado a lado | `fea_transcrever_scribe.py`, `fea_comparar_transcricao.py` |
+| Legenda do post em 2 versões, no tom médico-científico | skill `fea-legenda-post` |
+| Vídeo-resumo de evento (~45 s, 9:16) | `fea_resumo_evento.py`, skill `fea-resumo-evento` |
+
+Ficou de fora: imagem ou vídeo gerado por IA (linha vermelha 7), efeitos de criador (recorte da pessoa, capa de revista, zoom com flash), normalização de volume (o padrão FEA é áudio original) e motion design nos Reels de procedimento.
+

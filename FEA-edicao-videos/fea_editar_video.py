@@ -653,8 +653,30 @@ def encaixar_cortes(manter, db, passo, palavras=None):
     return novo
 
 
+def filtro_hdr(ff, entrada):
+    """iPhone com "Vídeo HDR" ligado grava em HLG (10 bits, BT.2020). Sem conversão, o vídeo
+    sai com cor lavada e pele acinzentada. Detecta pelo cabeçalho e devolve o trecho de filtro
+    que converte para SDR (BT.709) com tone mapping; vídeo SDR devolve "" e nada muda.
+    Ideia tirada do guia "O Seu Editor de Vídeo de IA" (06/11/2026); os brutos de nov/2026
+    conferidos vieram em SDR, isto é proteção para o dia em que o HDR estiver ligado."""
+    info = subprocess.run([ff, "-nostdin", "-i", entrada], capture_output=True, text=True).stderr
+    linha = next((l for l in info.splitlines() if "Video:" in l), "")
+    if "arib-std-b67" in linha:
+        tin = "arib-std-b67"
+    elif "smpte2084" in linha:
+        tin = "smpte2084"
+    else:
+        return ""
+    return (f",zscale=tin={tin}:min=bt2020nc:pin=bt2020:rin=tv:t=linear:npl=203,format=gbrpf32le,"
+            "zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p,"
+            "setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709")
+
+
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
+    hdr = filtro_hdr(ff, v["entrada"])
+    if hdr:
+        print(f"{v['entrada']}: HDR detectado, convertendo para SDR", flush=True)
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
@@ -720,7 +742,7 @@ def renderizar(cfg, v, previa=False):
         arot.append(f"[a{i}]")
         cortes = sorted({a, b} | {t for z in zooms for t in z[:2] if a < t < b})
         for j, (x0, x1) in enumerate(zip(cortes, cortes[1:])):
-            f = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
+            f = f"[0:v]trim={x0}:{x1},setpts=PTS-STARTPTS{hdr},scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H}"
             z = next((z for z in zooms if z[0] <= x0 and x1 <= z[1]), None)
             if z:
                 zw, zh = int(W / z[2]) // 2 * 2, int(H / z[2]) // 2 * 2
@@ -749,7 +771,8 @@ def renderizar(cfg, v, previa=False):
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
     cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
-           "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
+           "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+           "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
 
