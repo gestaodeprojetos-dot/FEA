@@ -299,6 +299,13 @@ def processar(cfg, v, so_legenda=False):
     ev += legenda(blocos, v.get("destaques", []), v.get("correcoes", ()))
     sfx = []
     ocupado = [(0, GANCHO_DUR)]
+    botao = None
+    if v.get("saiba_mais"):
+        t = achar(pal, v["saiba_mais"], 3.0)
+        if t is not None:
+            botao = (t, min(t + 3.2, dur - 0.2))
+            ev += botao_saiba_mais(*botao)
+            sfx.append(("pop", t))
     for gat, txt in v.get("inserts", []):
         t = achar(pal, gat, 0.5)
         if t is None:
@@ -308,15 +315,18 @@ def processar(cfg, v, so_legenda=False):
         if any(a - 0.2 < t < b + 0.2 for a, b in ocupado):
             t = max(b for a, b in ocupado if a - 0.2 < t < b + 0.2) + 0.25
         fim = min(t + INSERT_DUR, dur - 0.3)
+        if botao and t < botao[1] and fim > botao[0]:
+            # o botão "Saiba Mais" ocupa o mesmo lugar: o insert sai antes ou entra depois dele
+            if botao[0] - t >= 1.2:
+                fim = botao[0] - 0.05
+            elif botao[1] + 1.4 < dur - 0.3:
+                t, fim = botao[1] + 0.1, min(botao[1] + 0.1 + INSERT_DUR, dur - 0.3)
+            else:
+                print(f"  AVISO: insert '{txt}' sem espaço (botão Saiba Mais), ficou fora")
+                continue
         ev += cartao(t, fim, txt, INSERT_Y, INSERT_TAM, LAVANDA, ROXO)
         ocupado.append((t, fim))
         sfx.append(("whoosh", t))
-    if v.get("saiba_mais"):
-        t = achar(pal, v["saiba_mais"], 3.0)
-        if t is not None:
-            fim = min(t + 3.2, dur - 0.2)
-            ev += botao_saiba_mais(t, fim)
-            sfx.append(("pop", t))
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
     os.makedirs(os.path.dirname(ass) or ".", exist_ok=True)
     open(ass, "w", encoding="utf-8").write("".join(ev))
