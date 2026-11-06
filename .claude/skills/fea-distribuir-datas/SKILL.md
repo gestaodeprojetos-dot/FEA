@@ -62,6 +62,11 @@ Por que duas: na Brasil a captação começou 20 dias antes da live e na Latam s
   - visualização **Modelo de Sprint**: `view.create` tipo `list`, agrupada por status, colunas visíveis responsável, data de início, prazo e comentários, mostrando tarefas fechadas.
   - Ficam fora do padrão só a lista de produção do Elite Injectors (status próprios do evento) e o Webinário FEB Latam (encerrado).
 
+## Tarefas obrigatórias em todo backlog de lançamento
+
+- **Automação: "Disponibilizar no Drive a planilha de respostas dos compradores"** (Keila, 06/11/2026: "nunca está no nosso Drive"). Responsável: Equipe IAutomate (`194479496`). Dentro da tarefa-mãe Automação. Prazo: o dia em que as vendas abrem, 18h; início 5 dias úteis antes. Descrição: garantir que a pesquisa de quem compra grave numa planilha Google, salvar na pasta AUTOMAÇÃO do lançamento com o nome "[lançamento] - RESPOSTAS DOS COMPRADORES" e comentar o link com "entregue"; o Claude registra na aba GERAL da planilha de links úteis. Hoje o Drive só tem a planilha de captação e a de respostas dos inscritos no evento.
+- Ao copiar o backlog de um lançamento anterior, conferir se essa tarefa veio junto; se não, criar.
+
 ## Referências fixas (workspace 9013080622)
 
 | Pessoa | ID ClickUp |
