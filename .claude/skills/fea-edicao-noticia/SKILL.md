@@ -1,0 +1,77 @@
+---
+name: fea-edicao-noticia
+description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notícia" - headline que desliza da barra dourada como faixa de telejornal, tela dividida com esfumaçado no meio (B-roll ou produto em cima, Dr. embaixo), foto do produto sem fundo quando ele cita o produto, música calma baixa e legenda padrão FEA. Usar quando a Keila pedir vídeo de opinião ou lista ("melhores produtos", "melhores tratamentos", "mito ou verdade") com B-roll, tela dividida, produtos na tela ou "edição estilo notícia/Volpe".
+---
+
+# FEA: edição de Reels no modelo notícia
+
+**Quem pede e aprova as edições é a Gabi, Gabriela Costa (editora)** (06/11/2026), na conta compartilhada de gestão de projetos. Os feedbacks registrados abaixo como "Keila" vieram dessa mesma conversa de edição. Responder e chamar pelo nome dela.
+
+**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: a partir de novembro, pasta `11- Novembro/7- Produtos` (1vo-nXLJK_oEEPV684Mst0DVk5K0KBWAZ), numeração `1-`, `2-`... dentro dela (Keila, 03/11: vídeo do mês vai para a pasta do mês, na sequência das pastas já criadas); outubro ficou em `10- Outubro/26- Produtos`. Linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras aprovado; IMG_7936 linha de marionete feito em 03/11; faltam IMG_7937, 7938, 7941, 7942). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
+
+## Entrada
+
+- Bruto no Drive (pasta `00 - Brutos/Melhores produtos` ou `Melhores tratamentos`).
+- Referência da headline: `1- Olheiras` na pasta `20- Entrevistas mito ou verdade` (barra dourada `#DBD093` à esquerda, texto preto em caixas brancas, uma por linha, que sai de trás da barra deslizando para a direita).
+- Banco de B-roll: pasta `FEA-B-roll pele flácida e envelhecida (face)` (`11xqr4MAiTQz6nVptRl0FbvcCtxcJXsLX`), arquivos `FEA-broll-NN-...`. Só usar quando os brutos não tiverem imagem do tema (ver regras abaixo).
+- Referência anterior do mesmo modelo (tela dividida): `FEA-teste edição estilo Volpe` dentro de `Melhores produtos`.
+
+## Padrão visual
+
+| Item | Valor |
+|---|---|
+| Formato | 1080x1920, 30 fps, H.264 CRF 18, AAC 192k (nunca HEVC) |
+| Tela dividida | painel de cima com 1000 px; esfumaçado de 820 a 1000 px; Dr. desce 480 px (cabeça logo abaixo do esfumaçado) |
+| Transição | deslizante de 0,38 s: o painel novo entra pela direita empurrando o antigo; tela cheia para dividida, o Dr. desce enquanto o painel entra |
+| Headline | Sora Bold 60, caixas brancas de 80 px por linha, barra dourada de 18 px em x=143, topo em y=560 (era 730; subiu para não bater na legenda do meio), até ~4,4 s; quebrar em linhas curtas (3 linhas de até ~15 caracteres) para não passar da tela |
+| Legenda | padrão FEA (Montserrat Bold 56, contorno preto). **Na tela dividida vai para o meio da tela, sobre o esfumaçado (linhas em y 975 e 1020)**: na altura padrão (~80%) caía no rosto do Dr., que desce 480 px (Keila, 03/11/2026: "a legenda na cara do doutor"). Em tela cheia fica na altura padrão, no colete. Fala que atravessa troca de cena é partida na troca (`legenda_no_meio`). Roda junto com a headline |
+| Produto | recorte sem fundo e sem borda, sombra suave, etiqueta roxa `#5B4599` com o nome oficial; entra com leve zoom quando o Dr. fala o nome; "top 3" ganha uma cena com os 3 lado a lado numerados |
+| Fundo do painel de produto | quadro do próprio bruto (teto e parede, sem o Dr.), desfocado e com 35% de lavanda `#D0D1E9` |
+| Música | **estilo moda/passarela** (Keila, 26/10: trocar o piano por "musiquinha tipo moda"): "Cat Walk" (Arulo, house) do Mixkit, licença gratuita para vídeo em rede social, sem atribuição (`https://assets.mixkit.co/music/371/371.mp3`, a partir de 12 s). **~28 dB abaixo da voz** (volume aprovado), `"nivelar": true` (compressor + dynaudnorm: a faixa varia 9 dB entre a parte calma e o refrão). Só faixa de licença livre (Mixkit ou CC0); nunca música comercial |
+
+## Regras da Keila (26/10/2026, revisão do primeiro teste)
+
+- **B-roll ilustra o que o Dr. está falando.** Falou de lábios, a tela mostra lábios: nada de B-roll genérico (massagem facial, pele envelhecida) que não combina com a fala. Fonte principal: os brutos do próprio Dr. (`00 - Brutos`: "36OK- Preenchimento labial e revisão toxina", "Toxina e lábios", "29.OK- Paciente Leonard - lábio"). Exemplo: "baixo G' com alto tan delta" = cânula entrando no lábio; "volumizações maiores" = lábio pronto; "cada perfil de paciente" = pacientes diferentes; "diferenças reológicas de cada produto" = seringa injetando o produto.
+- **Insert de procedimento = agulha trabalhando DENTRO do lábio** (Keila, 26/10/2026): retroinjeção lateral no lábio inferior (IMG_7468 14,5-24,5 s; IMG_2608 296-308 s) ou agulha no lábio superior (IMG_7464 8-10,5 s). Não serve: anestesia, agulha ou cânula entrando perto do queixo (IMG_2608 55 s e 280 s), seringa por baixo com a boca aberta (IMG_7463). Takes de lábio sorrindo ou lábio pronto continuam valendo. Também não serve: agulha ainda fora do lábio, só se aproximando (IMG_2608 296 s, reprovado no print de 26/10), nem seringa de êmbolo amarelo, que é a de anestesia (aparece dentro da boca no IMG_2504). Aprovados na versão final: IMG_7468 14,5-23 s, 41,5-46,2 s e 56,5-60,9 s, e IMG_7464 8-10,5 s.
+- **Primeiro insert tem que ser "bem tchan"** (feedback de 26/10/2026): o close mais forte do material abre o vídeo (ex.: dedos segurando o lábio com a agulha preenchendo, IMG_7468 41,5 s). **Variar pacientes**: não deixar todos os inserts da mesma paciente; buscar outros casos de preenchimento labial nos brutos (ex.: paciente masculino IMG_2505 0-2,4 s, pasta "29.OK- Paciente Leonard"). Vídeos já editados (Dr. no quadrinho + legenda gravada, pastas "07 - Julho") não servem de insert. Reprovados por sangue visível: IMG_2609 90-94 s.
+- **Abertura "estranha" de propósito** (Keila, 26/10/2026: "tá bem estranho, tem que ser assim pra chamar atenção"): no vídeo de lábios, o primeiro insert é o lábio evertido com nódulos de "Hialuronidase em lábios.mp4" (pasta "Hialuronidase e Anafilaxia", 5-10 s). Procurar imagem que cause estranhamento para o primeiro segundo.
+- **Banco de takes de lábio** (busca "lábios" no Drive, pasta 1AmdIeWXwFH5IF7ek2ARGrBE6j4mvCHSX): "Lábios Naturais com volumização" (agulha no lábio inferior 12 s, resultado 85,5 s, agulha no lábio superior 207 s), "Lábios Perfeitos com Cânula" (3 s e 13 s), "Preenchimento labial." (paciente madura, 4 s). São 720x1280: usar zoom 1,0 a 1,15. Até 2 inserts seguidos da mesma paciente, nunca mais.
+- **Ritmo**: `"tirar_silencios": {"minimo": 0.18, "folga": 0.06, "limiar_db": 50}` corta toda pausa sem voz do Dr. (corte seco, Keila: "está com muito silêncio"). Conferir que o corte cai em silêncio real (< 40 dB).
+- **Feedback de 28/10/2026**: "tem bastante mudança de imagens" (manter), "queria uma de boca bem bonita" e "segurar um pouco mais os takes pra chamar atenção". Regra: cada insert de 2 a 4 s (nunca troca de 1 s), e o primeiro take com boca bonita segurando até o fim do gesto. Abertura aprovada pela Keila: beijinho de batom vermelho de IMG_3691 (pasta "FEA-teste edição estilo Volpe", 35,8 a 39,5 s, termina no sorriso). Outros takes novos: produto esticando entre as seringas (IMG_3691 19 s, para "baixo G'/tan delta"), resultado lindo em close ("Preenchimento labial (1).mp4" 600 s e 606 s), agulha no lábio superior (mesmo vídeo, 13 s), sorriso da paciente do "Live injection" (0,4 s, em "cada perfil de paciente"). IMG_3691 tem legenda gravada a ~70% da altura: enquadrar com cy até 0,38.
+- Conferir cada trecho a 2 quadros/s antes de usar: sem sangue escorrendo, sem cara de dor e sem troca de plano no meio (o IMG_7468 abre o plano em 1:32,5). Nunca usar pastas "NÃO AUTORIZADO".
+- **Não cortar o diálogo com quem está atrás da câmera** quando o corte fica perceptível ("vou colocar uns extras" / "posso colocar?" / "pode, pode"): manter a conversa inteira.
+- **Testar a fala da moça que provoca o Dr. no começo** ("Ei, só vale três. Produtos para os lábios."): o vídeo começa nela, com a headline por cima.
+
+## Olheiras (IMG_7935, 28/10/2026)
+
+Projeto `FEA-projeto-noticia-olheiras.json`. Takes: olheira profunda antes, olhando para a câmera (pasta "50.OK- Paciente olheiras" IMG_2072 1 s) na abertura; cânula no tear trough em close ("Olheiras" IMG_7986 186,5 s e 190,5 s; marcação + cânula 6,2 s); paciente masculino com marcação roxa ("34.OK" IMG_2662 52 s e 90 s, resultado IMG_2666); cânula malar ("Olheiras 2mL" IMG_7007 22 s); produto esticando (IMG_3691 19 s) em "artigo sobre reologia". Fotos dos produtos recortadas da edição da equipe (`23- Melhores produtos/2-`). Cortado "assim você vai ter um resultado perfeito" (CFM). **Contar os produtos que ele cita** (Keila, 28/10: "fala cinco e aparece só quatro"): o "Restylane Gel" falado junto com o Lyft é o Restylane clássico, hoje "Restylane Classyc" (foto oficial do distribuidor ddgroup.com, item 600207), etiqueta "Restylane"; a grade do resumo tem que ter o mesmo número que ele fala. Com 5 ou mais, a cena `produtos` monta duas fileiras (3 em cima, 2 embaixo).
+
+## Linha de marionete (IMG_7936, 03/11/2026)
+
+Projeto `FEA-projeto-noticia-marionete.json`. Começa direto no Dr. (pergunta da moça cortada, como na versão aprovada de lábios). Produtos: Neauvia Stimulate (foto oficial neauvia.com, caixa "Dual Core"), Biogelis Volume (loja.pharmaesthetics.com.br, PNG já sem fundo) e Singderm (b2brazil, fábrica Hangzhou Singclean; só existe foto de 600 px). Takes: "2- Linha de marionete" (Instagram > 2026 > 05 - Maio > 01 - Preenchimento terço inferior e botox; legenda gravada a ~85% da altura, enquadrar com cy até 0,45; usar 47-54 s, 64-68 s, 70-73 s; sangue a partir de 88 s) e live "Linha de marionete e comissura labial.mp4" (Instagram > Lives > 2025 > Preenchimento, 720p; agulha na marionete 89-92 s e 102-106 s; sangue em 335 s). Produto esticando (IMG_3691 19 s) em "G' intermediário, tan delta mais alto". Headline em 3,3 s para não encobrir o primeiro produto. **Marionete bem evidente** (Keila, 03/11: "acha uma linha de marionete bem evidente nos brutos"): `00 - Brutos/Mentoniano e DAO/IMG_5563.MOV` 78,4-81 s (close da comissura com a linha marcada por 3 pontos roxos, sem agulha; a agulha de toxina entra em 81 s), usada no fim, na pergunta "para a linha de marionete?", com o Dr. apontando o canto da boca. Não serve na abertura: a headline cobre o lado esquerdo do painel, onde fica a linha. Outras pacientes com marionete e jowl marcados: `B roll pele flácida` (IMG_7683 9-11 s, IMG_7684 15-16,8 s, IMG_7685 0-2,5 s). Busca no Drive por nome: `scratchpad/fea_busca_drive.py termo` (o Drive casa só início de palavra: "marionete", não "arionete").
+
+## Primeiros inserts de impacto (Keila, 04/11/2026)
+
+"As imagens precisam ser mais impactantes... mostrar somente o queixo com a linha bem evidenciada, principalmente nos primeiros inserts." Regra: os 2 primeiros inserts mostram só boca e queixo (olhos fora do quadro pelo recorte, `cy` no máximo e `zoom` 1,4 a 1,7), com a alteração do tema bem marcada. Quando o insert é de queixo, a headline sobe para o alto do painel (`"headline_y": 110` no projeto) para não tampar boca e marionete. Fontes permitidas: brutos da FEA (pacientes com autorização) e bancos de licença livre (Pexels, Mixkit; `dl/broll` e pasta FEA-B-roll); `"espelhar": true` só em banco de imagem. Marionete: Pexels 8165110 (`FEA-broll-08-idosa-olhos-marejados`, 3 s, zoom 1,7, cy 0,95) e IMG_7683 8,8 s (B roll pele flácida, cx 0,78, cy 0,6, zoom 1,4). **Imagem de paciente achada no Google não entra**, nem com os olhos tampados: é paciente de outra clínica, sem TCLE (linha vermelha 2) e com direito autoral de terceiro. Alternativa: banco pago licenciado (Shutterstock, Freepik, Envato) com conta da FEA, ou fotos de antes do próprio Dr.
+
+**Fotos enviadas pela Keila (05/11/2026)**: 4 imagens de antes e depois na pasta FEA-B-roll (`images.jfif`, `eucerin-...-marionette`, `image.png`, `WhatsApp Image 2026-11-05`). Usar só o lado "antes", recortado da boca para baixo, como cartão (foto com borda branca e sombra sobre a própria foto desfocada com 25% de lavanda, zoom lento de 5 s): `FEA-edicao-videos/fea_cartao_foto.py` gera o PNG e o ffmpeg `zoompan` gera o clipe 1080x1000. Foto pequena (menos de 300 px) nunca em tela inteira: cartão de até ~2,5x o tamanho original; as duas menores vão lado a lado. Abertura: frente (`images.jfif`) e depois perfil (Eucerin). As duas menores lado a lado em 19,0 s do bruto. **Antes e depois** (Keila, 05/11: "quando o doutor fala esses vão ser a melhor proposta, mostra uma foto de antes e depois"): em "eu acho que esses são os três melhores produtos" (24,6 s do bruto, no lugar da grade) entram as duas fotos inteiras empilhadas, com etiquetas "Antes" (cinza) e "Depois" (roxo), **sem aviso de "imagem ilustrativa"** (Keila, 06/11/2026: "o público do Dr. João entende, são profissionais, não precisa") (`FEA-edicao-videos/fea_antes_depois.py`). A grade dos 3 produtos fica só no resumo do fim.
+
+## Fluxo
+
+1. Ambiente e transcrição como na skill `fea-edicao-reels` (passos 1 a 3). Se o `faster-whisper` falhar com `metadata_errors`, instalar `pip install --only-binary :all: "av>=12,<15"`.
+2. Cortes (`manter`, segundos do bruto): começar na fala de quem provoca o Dr. (se houver) ou na primeira fala dele; manter o diálogo com quem está atrás da câmera; fechar na pergunta de engajamento do fim ("e aí, quais são os top 3 da sua prática clínica?").
+3. Cenas (`cenas`, segundos do bruto, cada uma vai até a próxima): `broll` (trecho dos brutos que mostra o que ele fala, `cx`/`cy`/`zoom` centrando os lábios), `produto` em cada nome falado (entrar ~0,1 s antes da palavra), `produtos` para o resumo da lista, `cheio` quando o Dr. fala direto para a câmera.
+4. Produtos: foto oficial (distribuidor ou fabricante) com fundo branco, recortada pelo preenchimento a partir da borda (`fea_recortar_produto.py`: limiar de branco + componente ligada à borda + abertura morfológica, alfa erodido 2 px para tirar o halo). Caixa branca em fundo branco (e.p.t.q.): `--limiar 251 --convexo`. Nunca gerar imagem de produto por IA.
+5. Conferir quadros antes do render: `python3 fea_editar_noticia.py projeto.json --quadros 0.6,2,6,12,22,30,40`.
+6. Render: `python3 fea_editar_noticia.py projeto.json` (~4 min para 45 s). Conferir mosaico 1 quadro/s e as transições a 10 quadros/s.
+7. Subir com `fea_drive.py upload` na pasta indicada pela Keila.
+
+## Grafias oficiais conferidas (26/10/2026)
+
+Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane Refyne e Restylane Kysse (Galderma), Belotero Intense (Merz), e.p.t.q. S100 (Jetema). Já estão em `CORRECOES` do `fea_editar_video.py`.
+
+## Pontos para levar à Keila
+
+- Marca de ácido hialurônico na tela (linha vermelha 3 do CLAUDE.md): o pedido dela é mostrar os produtos, mas confirmar se pode publicar com as marcas.
+- Origem das fotos de produto (site de distribuidor ou quadro de edição anterior da equipe).
+- Música escolhida (estilo e volume).

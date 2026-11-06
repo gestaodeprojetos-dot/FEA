@@ -12,7 +12,10 @@ Uso:
     python3 fea_drive.py baixar PASTA_OU_ARQUIVO_ID DESTINO     # baixa a pasta inteira (ou 1 arquivo)
     python3 fea_drive.py listar PASTA_ID                        # id | nome | MB | duração
 
---substituir manda para a lixeira o arquivo de mesmo nome na pasta antes de subir.
+--substituir troca o conteúdo do arquivo de mesmo nome na pasta e mantém o MESMO ID e o MESMO
+link (Keila, 28/10/2026: "não consigo abrir os vídeos, fica só carregando"). Antes a versão antiga ia
+para a lixeira e o arquivo novo ganhava outro link: quem abria um link já enviado caía num arquivo na
+lixeira, e o Drive precisava processar do zero cada arquivo novo antes de tocar.
 """
 import json, os, sys, urllib.error, urllib.parse, urllib.request
 
@@ -60,12 +63,17 @@ def listar(tk, pasta, nome, mime=None):
     return json.load(chamar(tk, "GET", url))["files"]
 
 
-def subir(tk, pasta, caminho):
+def subir(tk, pasta, caminho, fid=None):
+    """Sobe o arquivo; com fid, troca o conteúdo desse arquivo (mesmo ID e mesmo link)."""
     nome = os.path.basename(caminho)
     tam = os.path.getsize(caminho)
-    r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
-               corpo={"name": nome, "parents": [pasta]},
-               cabecalhos={"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)})
+    cab = {"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)}
+    if fid:
+        r = chamar(tk, "PATCH", f"{UPLOAD}/{fid}?uploadType=resumable&supportsAllDrives=true&fields=id",
+                   corpo={}, cabecalhos=cab)
+    else:
+        r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
+                   corpo={"name": nome, "parents": [pasta]}, cabecalhos=cab)
     sessao = r.headers["Location"]
     print(f"  subindo {tam / 1024 / 1024:.1f} MB...", flush=True)
     with open(caminho, "rb") as f:
@@ -94,11 +102,10 @@ def cmd_upload(args):
     for i, arq in enumerate(arquivos, 1):
         nome = os.path.basename(arq)
         print(f"[{i}/{len(arquivos)}] {nome}", flush=True)
-        if substituir:
-            for velho in listar(tk, pasta, nome):
-                chamar(tk, "PATCH", f"{API}/{velho['id']}?supportsAllDrives=true", corpo={"trashed": True})
-                print(f"  versão antiga na lixeira: {velho['id']}")
-        fid = subir(tk, pasta, arq)
+        existentes = listar(tk, pasta, nome) if substituir else []
+        if existentes:
+            print(f"  substituindo o conteúdo de {existentes[0]['id']} (mesmo link)")
+        fid = subir(tk, pasta, arq, existentes[0]["id"] if existentes else None)
         print(f"\n  OK id={fid}", flush=True)
 
 

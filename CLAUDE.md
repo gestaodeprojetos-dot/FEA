@@ -202,7 +202,7 @@ Todo documento, slide, relatório, HTML, PDF, banner, social, email ou material 
 
 O FEA (curso de Anatomia) tem 2 grandes lançamentos por ano, início de junho e meio de dezembro. A estratégia de nutrição contínua (email e WhatsApp) existe para preencher o vazio entre eles. Datas mudam ano a ano, sempre pedir o planejamento anual atualizado antes de montar peça com data.
 
-## Equipe FEA: 30 pessoas em 7 times
+## Equipe FEA: 29 pessoas em 7 times
 
 Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
@@ -210,7 +210,7 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **CS e Suporte (5)** Head: Graziele Gomes de Almeida · Aline Silva Tavares Carneiro, Daniela Dantas de Araujo Barbosa, Fernanda Cristina Cardoso Marconi · Erika Sabino Cabral (eventos presenciais, freela)
 
-**Projetos (3)** Keila Cassiana Quaresma (Gestora) · Gabrielle Ineu Coradini, Livia Silva Lima (Assistentes)
+**Projetos (2)** Keila Cassiana Quaresma (Gestora) · Livia Silva Lima (Assistente). Gabrielle Ineu Coradini saiu da empresa (informado em 06/11/2026).
 
 **Copy (1)** Adriane da Silva Machado Möbbs
 
@@ -224,7 +224,7 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 | Necessidade | Falar com |
 |-------------|-----------|
-| Edição de vídeo | Gabriela Costa (Editor) · Weslei Sousa (Videomaker) |
+| Edição de vídeo | Gabriela Costa (Editor; é quem pede e aprova as edições feitas pelo Claude, usando a conta de gestão de projetos) · Weslei Sousa (Videomaker) |
 | Tráfego pago e pixels | Matheus Saar (The Trinity) |
 | Páginas e web | André Vivas |
 | Automações de email e SMS (Send Flow) | Julio Cesar de Souza Couto ("Júlio Couto") |
