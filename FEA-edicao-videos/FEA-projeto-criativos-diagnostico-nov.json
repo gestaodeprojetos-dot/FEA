@@ -57,8 +57,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -140,8 +148,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -215,8 +231,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -294,8 +318,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -369,8 +401,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -444,8 +484,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -523,8 +571,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -598,8 +654,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -673,8 +737,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -748,8 +820,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -823,8 +903,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -898,8 +986,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -973,8 +1069,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [
@@ -1056,8 +1160,16 @@
      "complete o formulário"
     ],
     [
-     "\\bmil\\b",
-     "mil"
+     "\\ba 5 anos\\b",
+     "há 5 anos"
+    ],
+    [
+     "\\b([Ee]las|[Cc]línicas) tem\\b",
+     "\\1 têm"
+    ],
+    [
+     "\\btem mais pacientes\\b",
+     "têm mais pacientes"
     ]
    ],
    "destaques": [

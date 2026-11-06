@@ -44,7 +44,7 @@ import fea_editar_video as fe  # noqa: E402
 W, H = 1080, 1920
 ROXO, AZUL, LAVANDA, BRANCO, PRETO = "&H0099455B", "&H00BB4638", "&H00E9D1D0", "&H00FFFFFF", "&H00000000"
 LEG_TAM, LEG_Y = 76, 1480
-GANCHO_TAM, GANCHO_Y, GANCHO_DUR = 62, 250, 4.0
+GANCHO_TAM, GANCHO_Y, GANCHO_DUR = 70, 250, 4.0
 INSERT_TAM, INSERT_Y, INSERT_DUR = 70, 1130, 2.2
 ZOOM_B, ZOOM_CY = 1.12, 0.40
 SILENCIO_MIN, MARGEM = 0.40, 0.12
@@ -118,10 +118,10 @@ def cartao(s, e, txt, y, tam, cor_fundo, cor_txt, maxc=18, pad=(46, 26)):
 
 
 def botao_saiba_mais(s, e):
-    ev = cartao(s, e, "SAIBA MAIS", 1180, 64, ROXO, BRANCO, maxc=20, pad=(60, 30))
+    ev = cartao(s, e, "SAIBA MAIS", 1020, 64, ROXO, BRANCO, maxc=20, pad=(60, 30))
     # seta para baixo (aponta para o botão do anúncio), quicando
     seta = "m 0 0 l 60 0 l 60 50 l 95 50 l 30 115 l -35 50 l 0 50 l 0 0"
-    x, y = W // 2 - 30, 1290
+    x, y = W // 2 - 30, 1120
     t, k = s + 0.25, 0
     while t < e:
         dy = 0 if k % 2 == 0 else 28
@@ -162,11 +162,12 @@ def legenda(blocos, destaques, correcoes, ini=0.0):
         texto = fe.limpar(fe.pontuar(fe.corrigir(fe.juntar_texto(b), correcoes)))
         if not texto.strip():
             continue
-        linhas = quebrar(texto, 18)
+        linhas = quebrar(texto.replace("Saiba Mais", "Saiba\x00Mais"), 18)
         out = []
         for l in linhas:
             ws = []
             for w in l.split(" "):
+                w = w.replace("\x00", " ")
                 ws.append(f"{{\\3c{ROXO}\\bord8}}{w}{{\\3c{PRETO}\\bord5}}" if norm(w) in dest else w)
             out.append(" ".join(ws))
         lh = LEG_TAM * 0.92
@@ -216,7 +217,26 @@ def palavras_do_video(v, db_voz):
     palavras = fe.numerar_enumeracao(palavras)
     for a, b in v.get("remover_legenda", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
-    return fe.ancorar_na_voz(palavras, *db_voz)
+    palavras = fe.ancorar_na_voz(palavras, *db_voz)
+    # "Saiba Mais" (botão do anúncio) numa palavra só, para nunca quebrar entre duas legendas
+    # e sair com a grafia certa ("Sabamais", "Seba Mais", "sabe a mais", "Saiba / mais")
+    saida, i = [], 0
+    while i < len(palavras):
+        p = palavras[i]
+        for n in (3, 2):
+            grupo = palavras[i:i + n]
+            junto = "".join(norm(x["w"]) for x in grupo)
+            if len(grupo) == n and junto in ("saibamais", "sabeamais", "sebamais", "sabamais", "saibaamais"):
+                fim = re.sub(r"^.*?([.,?!]*)$", r"\1", grupo[-1]["w"].strip())
+                saida.append(dict(p, w=" Saiba Mais" + fim, e=grupo[-1]["e"]))
+                i += n
+                break
+        else:
+            if norm(p["w"]) == "sabamais":
+                p = dict(p, w=" Saiba Mais" + re.sub(r"^.*?([.,?!]*)$", r"\1", p["w"].strip()))
+            saida.append(p)
+            i += 1
+    return saida
 
 
 def achar(palavras, gatilho, depois=0.0):
@@ -234,6 +254,32 @@ def achar(palavras, gatilho, depois=0.0):
     return None
 
 
+def remapear(palavras, segs, manter):
+    """Como fe.remapear_palavras, mas a palavra cujo meio caiu num silêncio tirado pelo jump cut
+    (tempo da transcrição esticado) vai para o trecho mais próximo, em vez de sumir da legenda
+    ("Clique agora em Saiba Mais" saía sem o "Clique")."""
+    ini, acc = [], 0.0
+    for a, b in segs:
+        ini.append(acc)
+        acc += b - a
+    saida = []
+    for p in palavras:
+        m = (p["s"] + p["e"]) / 2
+        if not any(a <= m < b for a, b in manter):
+            continue
+        k = min(range(len(segs)), key=lambda i: 0 if segs[i][0] <= m < segs[i][1]
+                else min(abs(m - segs[i][0]), abs(m - segs[i][1])))
+        a, b = segs[k]
+        s, e = min(max(p["s"], a), b - 0.05), max(min(p["e"], b), a + 0.05)
+        if e - s < 0.12:
+            e = min(b, s + 0.15)
+        w = p["w"].strip()
+        if w:
+            saida.append({"w": w, "ini": p.get("ini", False), "s": s - a + ini[k], "e": e - a + ini[k]})
+    saida.sort(key=lambda x: x["s"])
+    return saida, acc
+
+
 def processar(cfg, v, so_legenda=False):
     ff = cfg["ffmpeg"]
     db_voz = fe.perfil_voz(ff, v["entrada"])
@@ -241,7 +287,7 @@ def processar(cfg, v, so_legenda=False):
     manter = fe.encaixar_cortes(v["manter"], db, passo)
     segs = jump_cuts(manter, db, limiar, passo)
     palavras = palavras_do_video(v, db_voz)
-    pal, dur = fe.remapear_palavras(palavras, segs)
+    pal, dur = remapear(palavras, segs, manter)
 
     fe.MAX_CHARS_LINHA, fe.MAX_PALAVRAS_BLOCO, fe.PAUSA_QUEBRA = 14, 5, 0.35
     blocos = fe.blocos_legenda(pal)
