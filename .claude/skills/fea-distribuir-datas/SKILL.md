@@ -65,7 +65,8 @@ Por que duas: na Brasil a captação começou 20 dias antes da live e na Latam s
 ## Tarefas obrigatórias em todo backlog de lançamento
 
 - **Automação: "Disponibilizar no Drive a planilha de respostas dos compradores"** (Keila, 06/11/2026: "nunca está no nosso Drive"). Responsável: Equipe IAutomate (`194479496`). Dentro da tarefa-mãe Automação. Prazo: o dia em que as vendas abrem, 18h; início 5 dias úteis antes. Descrição: garantir que a pesquisa de quem compra grave numa planilha Google, salvar na pasta AUTOMAÇÃO do lançamento com o nome "[lançamento] - RESPOSTAS DOS COMPRADORES" e comentar o link com "entregue"; o Claude registra na aba GERAL da planilha de links úteis. Hoje o Drive só tem a planilha de captação e a de respostas dos inscritos no evento.
-- Ao copiar o backlog de um lançamento anterior, conferir se essa tarefa veio junto; se não, criar.
+- **Automação: "Criar formulário de matrícula"** (Keila, 06/11/2026), a pesquisa que o comprador responde depois de comprar e que alimenta a planilha acima. Responsável: Equipe IAutomate. Prazo: 5 dias úteis antes da abertura das vendas, 18h. Modelos no Drive: Brasil, `Formulário de Matrícula FEP 2.0` (`1PuiNRY-N28aEQuOdDtO_ahOF9sIUXM8C6rG30fjr1Go`, FEP > 1. Curso > 2. Pesquisas); Latam, `Formulario de Matrícula - Black Friday Total Latam` (`1TbiR7GzVK9G9Tdc-yo97vbin1FXCH4W0a3LNYoDCSM8`). O Claude pode criar a cópia pela API do Drive (`files/{id}/copy` para a pasta 3. PESQUISA); editar perguntas e vincular a planilha só pelo editor do Forms (o acesso do Claude não tem o escopo do Forms).
+- Ao copiar o backlog de um lançamento anterior, conferir se essas duas tarefas vieram junto; se não, criar.
 
 ## Referências fixas (workspace 9013080622)
 
