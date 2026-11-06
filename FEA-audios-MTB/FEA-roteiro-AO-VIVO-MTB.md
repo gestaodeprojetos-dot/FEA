@@ -2,13 +2,13 @@
 
 Disparo: URA às 20h, dia da Masterclass em Toxina Botulínica (doc "MTB 11/26 URA + SMS").
 Voz: clone HeyGen "FEA Dr João Pithon (Black 2026)", engine padrão (HeyGen Voice).
-Versão vigente: **v3**, 23,7 s.
+Versão vigente: **v4** (copy e cortes da v3, aprovados pela Keila em 06/11/2026, com tratamento de voz), 23,7 s.
 
 ## Original (AO-VIVO-MTB.mp3, 28,7 s)
 
 > Masterclass em Toxina Botulínica. Estou ao vivo agora ensinando as novas técnicas de Toxina Botulínica, abordando as diferenças entre as marcas e trazendo todas as atualizações que eu tenho visto aí nos principais congressos do mundo. Então não fique de fora, eu estou ao vivo no Zoom. Para você entrar nessa aula agora, você vai clicar no link da minha bio que está disponível. São somente 3 mil vagas disponíveis no Zoom. Então esteja lá agora antes que as vagas se esgotem.
 
-## v3 (vigente)
+## Copy aprovada (v3 e v4)
 
 > Masterclass em Toxina Botulínica. Eu estou ao vivo agora, ensinando nove técnicas avançadas de toxina, as diferenças entre as marcas e as atualizações que eu tenho visto nos principais congressos do mundo. E quem estiver comigo ao vivo vai ter acesso a uma oferta exclusiva da Black Friday Vitalícia, só para quem estiver na aula. Para entrar, clique no link da minha bio. São somente três mil vagas no Zoom, então entre agora, antes que elas se esgotem.
 
@@ -18,13 +18,24 @@ Ajustes pedidos pela Keila (06/11/2026) sobre a v2: o Dr. João não fala tão e
 - Frases ligadas por vírgula, fala a 1,05x e silêncio entre frases encurtado para no máximo 0,15 s na edição.
 - Mesmo conteúdo da v2, com a Black Friday Vitalícia antes do CTA.
 
+## v4: tratamento de voz (vigente)
+
+Pedido da Keila (06/11/2026): voz do Dr. João pouco presente e áudio abafado. Medição com `fea_espectro_voz.py`: energia concentrada em 300 a 1000 Hz e faixa de clareza da fala (1 a 3,4 kHz) 13 a 21 dB abaixo; na versão de URA, o MP3 a 24 kbps tirava ainda mais nitidez.
+
+- Equalização: corte de grave abaixo de 90 Hz, -3 dB em 220 Hz e 450 Hz (embolado), +3 dB em 1,5 kHz, +6 dB em 2,8 kHz (presença), +3 dB acima de 5 kHz (ar).
+- Compressão leve (3:1) para a voz ficar na frente e constante, volume final a -14 LUFS (2 dB acima da v3).
+- Versão de telefone: banda de 250 a 3700 Hz com +2 dB em 3 kHz, 8 kHz mono, MP3 a 64 kbps (antes 24 kbps) e WAV sem compressão.
+- Resultado medido: faixa de 2 a 3,4 kHz subiu de -21 dB para -10 dB; cortes idênticos aos da v3.
+
 ## Histórico
 
+- **v3** (substituída): copy e cortes aprovados, mas voz abafada.
 - **v2** (descartada): exclamações e pausas de 0,3 a 0,8 s. Ficou eufórica e lenta para uma ligação. Arquivos no histórico do git.
 
 ## Arquivos
 
 | Arquivo | Uso |
 |---|---|
-| `FEA-AO-VIVO-MTB-v3-BlackVitalicia.mp3` | Master 44,1 kHz, 128 kbps, volume normalizado |
-| `FEA-AO-VIVO-MTB-v3-BlackVitalicia-URA-8kHz.mp3` | Mesmo formato técnico do original (8 kHz, mono, 24 kbps), para subir direto na URA |
+| `FEA-AO-VIVO-MTB-v4-BlackVitalicia.mp3` | Master 44,1 kHz, 192 kbps, para ouvir e aprovar |
+| `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.mp3` | Para a URA: 8 kHz mono, 64 kbps |
+| `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.wav` | Para a URA, se a plataforma aceitar WAV (melhor qualidade em 8 kHz) |
