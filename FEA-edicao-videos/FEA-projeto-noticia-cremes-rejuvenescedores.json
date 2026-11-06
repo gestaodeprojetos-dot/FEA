@@ -101,10 +101,10 @@
       {
         "ini": 0.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt15.mp4",
-        "src": 4.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724839.mp4",
+        "src": 0,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.4,
         "zoom": 1.0
       },
       {
@@ -114,10 +114,10 @@
       {
         "ini": 6.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt29.mp4",
-        "src": 31,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p3795653.mp4",
+        "src": 0,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.45,
         "zoom": 1.0
       },
       {
@@ -127,17 +127,17 @@
       {
         "ini": 13.6,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m12843.mp4",
-        "src": 2,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251377.mp4",
+        "src": 15,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.5,
         "zoom": 1.0
       },
       {
         "ini": 18.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m12843.mp4",
-        "src": 12.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724691.mp4",
+        "src": 0,
         "cx": 0.5,
         "cy": 0.45,
         "zoom": 1.0
@@ -222,10 +222,10 @@
       {
         "ini": 71.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m47885.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251377.mp4",
+        "src": 20,
         "cx": 0.5,
-        "cy": 0.4,
+        "cy": 0.5,
         "zoom": 1.0
       },
       {
@@ -244,8 +244,8 @@
       {
         "ini": 82.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m51185.mp4",
-        "src": 0.5,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724839.mp4",
+        "src": 6,
         "cx": 0.5,
         "cy": 0.4,
         "zoom": 1.0
@@ -253,8 +253,8 @@
       {
         "ini": 86.2,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt22.mp4",
-        "src": 20,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724703.mp4",
+        "src": 5,
         "cx": 0.5,
         "cy": 0.45,
         "zoom": 1.0
@@ -267,7 +267,7 @@
     "musica": {
       "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_770.mp3",
       "ini": 40,
-      "abaixo_da_voz_db": 28,
+      "abaixo_da_voz_db": 22,
       "nivelar": true
     }
   }
