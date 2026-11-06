@@ -1,0 +1,1097 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/fonts",
+ "sfx": {
+  "whoosh": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/whoosh.mp3",
+  "pop": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/pop.mp3"
+ },
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9008.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9008.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/1- IMG_9008.mp4",
+   "gancho": "Por que meus pacientes fecham na avaliação",
+   "manter": [
+    [
+     0.4,
+     56.25
+    ],
+    [
+     58.35,
+     64.1
+    ]
+   ],
+   "remover_legenda": [
+    [
+     24.05,
+     24.5
+    ],
+    [
+     31.1,
+     32.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "carisma",
+     "NÃO É CARISMA"
+    ],
+    [
+     "método",
+     "É MÉTODO"
+    ],
+    [
+     "replicável",
+     "ROTEIRO REPLICÁVEL"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO DE 2 MINUTOS"
+    ],
+    [
+     "especialistas",
+     "AVALIAÇÃO GRATUITA COM O TIME"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/01.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9009.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9009.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/2- IMG_9009.mp4",
+   "gancho": "Não é sorte nem carisma: é método",
+   "manter": [
+    [
+     0.0,
+     55.75
+    ],
+    [
+     68.4,
+     78.7
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "roteiro",
+     "ROTEIRO + PERGUNTAS CERTAS"
+    ],
+    [
+     "assertivo",
+     "AVALIAÇÕES ASSERTIVAS"
+    ],
+    [
+     "pré-diagnóstico",
+     "PRÉ-DIAGNÓSTICO GRATUITO"
+    ],
+    [
+     "execução",
+     "PLANO DE EXECUÇÃO"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/05.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9059.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9059.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/3- IMG_9059.mp4",
+   "gancho": "Veio pelo lábio, saiu com o tratamento completo",
+   "manter": [
+    [
+     0.0,
+     72.3
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "bioestimuladores",
+     "FACE + BIOESTIMULADOR + TOXINA"
+    ],
+    [
+     "conjunto",
+     "ELA QUER UM CONJUNTO"
+    ],
+    [
+     "posicionamento",
+     "MÉTODO + POSICIONAMENTO"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO DE 2 MINUTOS"
+    ],
+    [
+     "limitadas",
+     "VAGAS LIMITADAS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/03.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9060.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9060.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/4- IMG_9060.mp4",
+   "gancho": "Técnica boa não basta para converter",
+   "manter": [
+    [
+     0.0,
+     63.1
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "Instagram",
+     "INSTAGRAM + REDES SOCIAIS"
+    ],
+    [
+     "avaliações",
+     "CONVERSÃO EM AVALIAÇÕES"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO GRATUITO"
+    ],
+    [
+     "diagnóstico",
+     "DIAGNÓSTICO GRATUITO"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/08.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9066.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9066.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/5- IMG_9066.mp4",
+   "gancho": "Você não precisa de mais pacientes",
+   "manter": [
+    [
+     0.0,
+     53.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "ticket",
+     "AUMENTE O TICKET"
+    ],
+    [
+     "300",
+     "R$ 100 MIL A R$ 300 MIL"
+    ],
+    [
+     "completos",
+     "PLANOS MAIS COMPLETOS"
+    ],
+    [
+     "questionário",
+     "QUESTIONÁRIO DE 2 MINUTOS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/02.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9069.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9069.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/6- IMG_9069.mp4",
+   "gancho": "Dificuldade em vender mais seringas?",
+   "manter": [
+    [
+     0.0,
+     85.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "planejamento",
+     "AVALIAÇÃO E PLANEJAMENTO"
+    ],
+    [
+     "todo",
+     "O PACIENTE COMO UM TODO"
+    ],
+    [
+     "bioestimuladores",
+     "TOXINA + PREENCHIMENTO + BIO + FIOS"
+    ],
+    [
+     "faturamento",
+     "MAIS FATURAMENTO"
+    ],
+    [
+     "diagnóstico",
+     "DIAGNÓSTICO GRATUITO"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/07.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9070.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9070.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/7- IMG_9070.mp4",
+   "gancho": "Você perde a paciente na hora do preço",
+   "manter": [
+    [
+     0.0,
+     69.1
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "agregar",
+     "AGREGUE VALOR ANTES DO PREÇO"
+    ],
+    [
+     "vida",
+     "TRATAMENTO PARA A VIDA"
+    ],
+    [
+     "pilares",
+     "PLANEJAMENTO · AVALIAÇÃO · MARKETING · VENDAS"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO RÁPIDO"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/12.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9073.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9073.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/8- IMG_9073.mp4",
+   "gancho": "Quando a paciente diz \"vou pensar\"",
+   "manter": [
+    [
+     3.0,
+     69.0
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "barato",
+     "NÃO É PREÇO BAIXO"
+    ],
+    [
+     "roteiro",
+     "ROTEIRO + PLANEJAMENTO + MÉTODO"
+    ],
+    [
+     "metodologia",
+     "AVALIAÇÃO · PLANEJAMENTO · VENDAS"
+    ],
+    [
+     "perfil",
+     "SELEÇÃO POR PERFIL"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/04.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9076.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9076.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/9- IMG_9076.mp4",
+   "gancho": "Sala alugada e agenda vazia?",
+   "manter": [
+    [
+     0.0,
+     58.9
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "comecei",
+     "EU COMECEI ASSIM"
+    ],
+    [
+     "metodologia",
+     "AVALIAÇÃO · PLANEJAMENTO · EXECUÇÃO · VENDAS"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO RÁPIDO"
+    ],
+    [
+     "limitadas",
+     "VAGAS LIMITADAS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/06.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9077.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9077.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/10- IMG_9077.mp4",
+   "gancho": "Agenda lotada tem método",
+   "manter": [
+    [
+     0.2,
+     52.7
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "método",
+     "AVALIAÇÃO · PLANEJAMENTO · MARKETING · VENDAS"
+    ],
+    [
+     "dificuldades",
+     "SUAS PRINCIPAIS DIFICULDADES"
+    ],
+    [
+     "minutinhos",
+     "2 MINUTOS"
+    ],
+    [
+     "semanais",
+     "VAGAS SEMANAIS LIMITADAS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/13.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9078.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9078.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/11- IMG_9078.mp4",
+   "gancho": "O mesmo paciente não faz o consultório crescer",
+   "manter": [
+    [
+     0.0,
+     65.5
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "rotatividade",
+     "ROTATIVIDADE DE PACIENTES"
+    ],
+    [
+     "captação",
+     "CAPTAÇÃO + CONVERSÃO"
+    ],
+    [
+     "previsibilidade",
+     "PREVISIBILIDADE"
+    ],
+    [
+     "semana",
+     "SELEÇÃO SEMANAL"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/09.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9079.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9079.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/12- IMG_9079.mp4",
+   "gancho": "Full face acima de 5 mL: o erro está no método",
+   "manter": [
+    [
+     0.0,
+     65.2
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "indicar",
+     "INDICAÇÃO"
+    ],
+    [
+     "toxina",
+     "TOXINA + BIOESTIMULADOR + TECNOLOGIAS"
+    ],
+    [
+     "metodologia",
+     "AVALIAÇÃO · PLANEJAMENTO · VENDAS · MARKETING"
+    ],
+    [
+     "dois",
+     "FORMULÁRIO DE 2 MINUTOS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/10.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9081.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9081.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/13- IMG_9081.mp4",
+   "gancho": "\"Sei injetar, mas não sei vender\"",
+   "manter": [
+    [
+     0.0,
+     47.5
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "queixas",
+     "A QUEIXA MAIS COMUM"
+    ],
+    [
+     "método",
+     "MÉTODO COMPLETO DE CRESCIMENTO"
+    ],
+    [
+     "gratuita",
+     "DIAGNÓSTICO GRATUITO"
+    ],
+    [
+     "semanalmente",
+     "AVALIAÇÕES UM A UM"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/11.wav",
+   "trilha_db": 0
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9082.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9082.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/14- IMG_9082.mp4",
+   "gancho": "Procuro 3 profissionais de harmonização",
+   "manter": [
+    [
+     0.0,
+     9.3
+    ],
+    [
+     12.0,
+     23.1
+    ],
+    [
+     26.0,
+     41.8
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\b[Ss]abamais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]eba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]abe a mais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Ss]aiba [Mm]ais\\b",
+     "Saiba Mais"
+    ],
+    [
+     "\\b[Cc]ompleto o formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\b[Cc]ompleto formulário\\b",
+     "complete o formulário"
+    ],
+    [
+     "\\bmil\\b",
+     "mil"
+    ]
+   ],
+   "destaques": [
+    "método",
+    "metodologia",
+    "roteiro",
+    "conversão",
+    "faturamento",
+    "gratuita",
+    "gratuito",
+    "diagnóstico",
+    "planejamento"
+   ],
+   "inserts": [
+    [
+     "conversão",
+     "CONVERSÃO + VENDAS"
+    ],
+    [
+     "formulário",
+     "FORMULÁRIO DE DIAGNÓSTICO"
+    ],
+    [
+     "três",
+     "3 PESSOAS SELECIONADAS"
+    ],
+    [
+     "vagas",
+     "3 VAGAS GRATUITAS"
+    ]
+   ],
+   "saiba_mais": "saiba mais",
+   "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/14.wav",
+   "trilha_db": 0
+  }
+ ]
+}

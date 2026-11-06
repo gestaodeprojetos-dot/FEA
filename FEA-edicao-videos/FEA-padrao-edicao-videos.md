@@ -57,3 +57,19 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 5. Revisão da Keila, correções, render final e envio para a pasta de destino no Drive.
 
 Passo a passo completo na skill `.claude/skills/fea-edicao-reels/SKILL.md`.
+
+## Criativos de anúncio (Dr. João falando para a câmera), desde 06/11/2026
+
+Script: `fea_criativo.py` (projeto de exemplo: `FEA-projeto-criativos-diagnostico-nov.json`). Diferente do Reels de procedimento:
+
+| Item | Padrão do criativo |
+|------|--------------------|
+| Ritmo | jump cut automático nos silêncios acima de 0,4 s (fica 0,12 s de respiro) |
+| Dinâmica | zoom alternado a cada corte (100% e 112%, centrado no rosto) |
+| Gancho | headline curta em cartão roxo `#5B4599` no topo, primeiros 4 s, sem nome de produto |
+| Legenda | desde o início, Montserrat ExtraBold 76, blocos curtos (até 5 palavras), palavra-chave com contorno roxo |
+| Inserts | cartão lavanda `#D0D1E9` com texto roxo em caixa alta, entra com "pop" quando o Dr. fala a palavra-gatilho, com whoosh |
+| Saiba Mais | botão roxo "SAIBA MAIS" com seta branca quicando, quando ele manda clicar |
+| Barra de progresso | linha roxa no topo |
+| Trilha | uma trilha diferente por vídeo (banco HeyGen, instrumental), voz normalizada em -15 LUFS e trilha em -28 LUFS, abaixando sozinha quando ele fala |
+| CTA | sem CTA concatenado (o próprio criativo já pede o clique) |
