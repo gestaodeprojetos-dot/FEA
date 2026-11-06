@@ -1,6 +1,7 @@
 {
  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
  "fontsdir": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/fonts",
+ "logo": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/elite/logo_elite.png",
  "sfx": {
   "whoosh": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/whoosh.mp3",
   "pop": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/pop.mp3"
@@ -9,26 +10,27 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9008.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9008.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/1- IMG_9008.mp4",
-   "gancho": "Por que meus pacientes fecham na avaliação",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/1- IMG_9008.mp4",
+   "gancho": "O método por trás de cada tratamento fechado",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
-     0.4,
-     56.25
+     0.8,
+     31.05
     ],
     [
-     58.35,
-     64.1
+     33.0,
+     56.15
+    ],
+    [
+     58.7,
+     63.9
     ]
    ],
    "remover_legenda": [
     [
      24.05,
      24.5
-    ],
-    [
-     31.1,
-     32.0
     ]
    ],
    "correcoes": [
@@ -67,18 +69,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -86,20 +85,12 @@
      "NÃO É CARISMA"
     ],
     [
-     "método",
-     "É MÉTODO"
-    ],
-    [
      "replicável",
-     "ROTEIRO REPLICÁVEL"
-    ],
-    [
-     "formulário",
-     "FORMULÁRIO DE 2 MINUTOS"
+     "É UM MÉTODO REPLICÁVEL"
     ],
     [
      "especialistas",
-     "AVALIAÇÃO GRATUITA COM O TIME"
+     "AVALIAÇÃO COM O MEU TIME"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -109,16 +100,17 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9009.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9009.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/2- IMG_9009.mp4",
-   "gancho": "Não é sorte nem carisma: é método",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/2- IMG_9009.mp4",
+   "gancho": "Não é sorte nem carisma. É método.",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
      55.75
     ],
     [
-     68.4,
-     78.7
+     68.3,
+     78.4
     ]
    ],
    "remover_legenda": [],
@@ -158,23 +150,20 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "roteiro",
-     "ROTEIRO + PERGUNTAS CERTAS"
+     "ROTEIRO E PERGUNTAS ESPECÍFICAS"
     ],
     [
      "assertivo",
@@ -183,10 +172,6 @@
     [
      "pré-diagnóstico",
      "PRÉ-DIAGNÓSTICO GRATUITO"
-    ],
-    [
-     "execução",
-     "PLANO DE EXECUÇÃO"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -196,12 +181,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9059.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9059.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/3- IMG_9059.mp4",
-   "gancho": "Veio pelo lábio, saiu com o tratamento completo",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/3- IMG_9059.mp4",
+   "gancho": "Ela veio pelo lábio e saiu com o tratamento completo",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     72.3
+     71.9
     ]
    ],
    "remover_legenda": [],
@@ -241,23 +227,20 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "bioestimuladores",
-     "FACE + BIOESTIMULADOR + TOXINA"
+     "FULL FACE, BIOESTIMULADOR E TOXINA"
     ],
     [
      "conjunto",
@@ -265,15 +248,7 @@
     ],
     [
      "posicionamento",
-     "MÉTODO + POSICIONAMENTO"
-    ],
-    [
-     "formulário",
-     "FORMULÁRIO DE 2 MINUTOS"
-    ],
-    [
-     "limitadas",
-     "VAGAS LIMITADAS"
+     "MÉTODO E POSICIONAMENTO"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -283,12 +258,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9060.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9060.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/4- IMG_9060.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/4- IMG_9060.mp4",
    "gancho": "Técnica boa não basta para converter",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     63.1
+     62.6
     ]
    ],
    "remover_legenda": [],
@@ -328,31 +304,24 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "Instagram",
-     "INSTAGRAM + REDES SOCIAIS"
+     "INSTAGRAM E REDES SOCIAIS"
     ],
     [
      "avaliações",
-     "CONVERSÃO EM AVALIAÇÕES"
-    ],
-    [
-     "formulário",
-     "FORMULÁRIO GRATUITO"
+     "CONVERSÃO NA AVALIAÇÃO"
     ],
     [
      "diagnóstico",
@@ -366,12 +335,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9066.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9066.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/5- IMG_9066.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/5- IMG_9066.mp4",
    "gancho": "Você não precisa de mais pacientes",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     53.9
+     53.5
     ]
    ],
    "remover_legenda": [],
@@ -411,27 +381,20 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "ticket",
      "AUMENTE O TICKET"
-    ],
-    [
-     "300",
-     "R$ 100 MIL A R$ 300 MIL"
     ],
     [
      "completos",
@@ -449,12 +412,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9069.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9069.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/6- IMG_9069.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/6- IMG_9069.mp4",
    "gancho": "Dificuldade em vender mais seringas?",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     85.9
+     85.5
     ]
    ],
    "remover_legenda": [],
@@ -494,18 +458,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -517,16 +478,8 @@
      "O PACIENTE COMO UM TODO"
     ],
     [
-     "bioestimuladores",
-     "TOXINA + PREENCHIMENTO + BIO + FIOS"
-    ],
-    [
      "faturamento",
-     "MAIS FATURAMENTO"
-    ],
-    [
-     "diagnóstico",
-     "DIAGNÓSTICO GRATUITO"
+     "PLANO COMPLETO, MAIS FATURAMENTO"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -536,12 +489,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9070.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9070.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/7- IMG_9070.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/7- IMG_9070.mp4",
    "gancho": "Você perde a paciente na hora do preço",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     69.1
+     68.9
     ]
    ],
    "remover_legenda": [],
@@ -581,18 +535,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -600,12 +551,8 @@
      "AGREGUE VALOR ANTES DO PREÇO"
     ],
     [
-     "vida",
-     "TRATAMENTO PARA A VIDA"
-    ],
-    [
      "pilares",
-     "PLANEJAMENTO · AVALIAÇÃO · MARKETING · VENDAS"
+     "PLANEJAMENTO, AVALIAÇÃO, MARKETING E VENDAS"
     ],
     [
      "formulário",
@@ -619,12 +566,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9073.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9073.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/8- IMG_9073.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/8- IMG_9073.mp4",
    "gancho": "Quando a paciente diz \"vou pensar\"",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      3.0,
-     69.0
+     68.6
     ]
    ],
    "remover_legenda": [],
@@ -664,18 +612,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -684,11 +629,7 @@
     ],
     [
      "roteiro",
-     "ROTEIRO + PLANEJAMENTO + MÉTODO"
-    ],
-    [
-     "metodologia",
-     "AVALIAÇÃO · PLANEJAMENTO · VENDAS"
+     "ROTEIRO, PLANEJAMENTO E MÉTODO"
     ],
     [
      "perfil",
@@ -702,12 +643,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9076.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9076.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/9- IMG_9076.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/9- IMG_9076.mp4",
    "gancho": "Sala alugada e agenda vazia?",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     58.9
+     58.5
     ]
    ],
    "remover_legenda": [],
@@ -747,18 +689,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -767,15 +706,11 @@
     ],
     [
      "metodologia",
-     "AVALIAÇÃO · PLANEJAMENTO · EXECUÇÃO · VENDAS"
+     "UMA METODOLOGIA DE AVALIAÇÃO"
     ],
     [
      "formulário",
      "FORMULÁRIO RÁPIDO"
-    ],
-    [
-     "limitadas",
-     "VAGAS LIMITADAS"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -785,12 +720,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9077.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9077.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/10- IMG_9077.mp4",
-   "gancho": "Agenda lotada tem método",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/10- IMG_9077.mp4",
+   "gancho": "A agenda lotada tem método",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
-     0.2,
-     52.7
+     0.1,
+     52.4
     ]
    ],
    "remover_legenda": [],
@@ -830,35 +766,28 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "método",
-     "AVALIAÇÃO · PLANEJAMENTO · MARKETING · VENDAS"
+     "AVALIAÇÃO, PLANEJAMENTO, MARKETING E VENDAS"
     ],
     [
      "dificuldades",
      "SUAS PRINCIPAIS DIFICULDADES"
     ],
     [
-     "minutinhos",
-     "2 MINUTOS"
-    ],
-    [
-     "semanais",
-     "VAGAS SEMANAIS LIMITADAS"
+     "individual",
+     "AVALIAÇÃO INDIVIDUAL"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -868,12 +797,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9078.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9078.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/11- IMG_9078.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/11- IMG_9078.mp4",
    "gancho": "O mesmo paciente não faz o consultório crescer",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     65.5
+     65.4
     ]
    ],
    "remover_legenda": [],
@@ -913,18 +843,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -933,15 +860,11 @@
     ],
     [
      "captação",
-     "CAPTAÇÃO + CONVERSÃO"
+     "CAPTAÇÃO E CONVERSÃO"
     ],
     [
      "previsibilidade",
      "PREVISIBILIDADE"
-    ],
-    [
-     "semana",
-     "SELEÇÃO SEMANAL"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -951,12 +874,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9079.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9079.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/12- IMG_9079.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/12- IMG_9079.mp4",
    "gancho": "Full face acima de 5 mL: o erro está no método",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     65.2
+     65.0
     ]
    ],
    "remover_legenda": [],
@@ -996,18 +920,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -1016,15 +937,11 @@
     ],
     [
      "toxina",
-     "TOXINA + BIOESTIMULADOR + TECNOLOGIAS"
+     "TOXINA, BIOESTIMULADOR E TECNOLOGIAS"
     ],
     [
      "metodologia",
-     "AVALIAÇÃO · PLANEJAMENTO · VENDAS · MARKETING"
-    ],
-    [
-     "dois",
-     "FORMULÁRIO DE 2 MINUTOS"
+     "AVALIAÇÃO, PLANEJAMENTO E VENDAS"
     ]
    ],
    "saiba_mais": "saiba mais",
@@ -1034,12 +951,13 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9081.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9081.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/13- IMG_9081.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/13- IMG_9081.mp4",
    "gancho": "\"Sei injetar, mas não sei vender\"",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     47.5
+     46.8
     ]
    ],
    "remover_legenda": [],
@@ -1079,18 +997,15 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
@@ -1098,12 +1013,8 @@
      "A QUEIXA MAIS COMUM"
     ],
     [
-     "método",
+     "completo",
      "MÉTODO COMPLETO DE CRESCIMENTO"
-    ],
-    [
-     "gratuita",
-     "DIAGNÓSTICO GRATUITO"
     ],
     [
      "semanalmente",
@@ -1117,20 +1028,21 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/brutos/IMG_9082.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/tr/IMG_9082.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out/14- IMG_9082.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/out2/14- IMG_9082.mp4",
    "gancho": "Procuro 3 profissionais de harmonização",
+   "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
      0.0,
-     9.3
+     9.2
     ],
     [
-     12.0,
-     23.1
+     12.95,
+     23.05
     ],
     [
-     26.0,
-     41.8
+     25.9,
+     41.4
     ]
    ],
    "remover_legenda": [],
@@ -1170,35 +1082,28 @@
     [
      "\\btem mais pacientes\\b",
      "têm mais pacientes"
+    ],
+    [
+     "\\bpreenchimento com face\\b",
+     "preenchimento full face"
+    ],
+    [
+     "(\\d) ?ml\\b",
+     "\\1 mL"
     ]
-   ],
-   "destaques": [
-    "método",
-    "metodologia",
-    "roteiro",
-    "conversão",
-    "faturamento",
-    "gratuita",
-    "gratuito",
-    "diagnóstico",
-    "planejamento"
    ],
    "inserts": [
     [
      "conversão",
-     "CONVERSÃO + VENDAS"
+     "CONVERSÃO E VENDAS"
     ],
     [
      "formulário",
      "FORMULÁRIO DE DIAGNÓSTICO"
     ],
     [
-     "três",
-     "3 PESSOAS SELECIONADAS"
-    ],
-    [
-     "vagas",
-     "3 VAGAS GRATUITAS"
+     "participará",
+     "AVALIAÇÃO COM A MINHA EQUIPE"
     ]
    ],
    "saiba_mais": "saiba mais",

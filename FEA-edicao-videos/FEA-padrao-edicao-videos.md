@@ -58,18 +58,19 @@ As referências analisadas foram as pastas de setembro "2- Full face 3ml", "4- F
 
 Passo a passo completo na skill `.claude/skills/fea-edicao-reels/SKILL.md`.
 
-## Criativos de anúncio (Dr. João falando para a câmera), desde 06/11/2026
+## Criativos de anúncio Elite Mentoring (Dr. João falando para a câmera), v2 de 06/11/2026
 
-Script: `fea_criativo.py` (projeto de exemplo: `FEA-projeto-criativos-diagnostico-nov.json`). Diferente do Reels de procedimento:
+Script: `fea_criativo.py` (projeto: `FEA-projeto-criativos-diagnostico-nov.json`). A v1 (cartões roxos, legenda em blocos curtos, jump cut agressivo) foi reprovada pela Keila: "legenda feia, cortes estranhos, o Dr. comendo palavra".
 
-| Item | Padrão do criativo |
-|------|--------------------|
-| Ritmo | jump cut automático nos silêncios acima de 0,4 s (fica 0,12 s de respiro) |
-| Dinâmica | zoom alternado a cada corte (100% e 112%, centrado no rosto) |
-| Gancho | headline curta em cartão roxo `#5B4599` no topo, primeiros 4 s, sem nome de produto |
-| Legenda | desde o início, Montserrat ExtraBold 76, blocos curtos (até 5 palavras), palavra-chave com contorno roxo |
-| Inserts | cartão lavanda `#D0D1E9` com texto roxo em caixa alta, entra com "pop" quando o Dr. fala a palavra-gatilho, com whoosh |
-| Saiba Mais | botão roxo "SAIBA MAIS" com seta branca quicando, quando ele manda clicar |
-| Barra de progresso | linha roxa no topo |
-| Trilha | uma trilha diferente por vídeo (banco HeyGen, instrumental), voz normalizada em -15 LUFS e trilha em -28 LUFS, abaixando sozinha quando ele fala |
-| CTA | sem CTA concatenado (o próprio criativo já pede o clique) |
+| Item | Padrão v2 |
+|------|-----------|
+| Identidade | Elite Mentoring (Drive: pasta ELITE MENTORING; página do diagnóstico): fundo `#011A24`, superfície `#072B38`, turquesa `#62B9B4`, água `#86F9F8` |
+| Fontes | títulos em Gloock (a Canela Deck do Drive é trial e não tem acento; a página usa Gloock como substituta), textos em Galano Grotesque (Drive), legenda em Montserrat |
+| Logo | EM_Asset 15 (símbolo em degradê, ELITE branco, MENTORING turquesa) no topo, o vídeo inteiro |
+| Gancho | cartão escuro no topo, selo "DIAGNÓSTICO GRATUITO" em turquesa espaçado e headline em Gloock branca, 4 s |
+| Legenda | padrão dos conteúdos FEA: Montserrat Bold 56, branca, contorno preto, ~80% da altura, até 2 linhas de 22 caracteres |
+| Inserts | cartão escuro com borda água e texto em Galano caixa alta, 3 por vídeo, com whoosh |
+| Saiba Mais | pílula água com texto escuro (o botão da página) e seta água abaixo da legenda |
+| Cortes | só sai silêncio real (ruído de fundo + 6 dB por 0,55 s ou mais) com 0,2 s de respiro; erros de fala (frase abandonada, gaguejada) saem pelo `manter`. Nunca usar o limiar de voz do Reels (ruído + 12 dB): ele corta sílaba fraca |
+| Zoom | alterna 100%/110% só depois de trecho de 2 s ou mais |
+| Trilha | uma por vídeo, voz em -15 LUFS e trilha em -28 LUFS, abaixando quando ele fala |
