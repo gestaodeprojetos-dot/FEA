@@ -118,10 +118,10 @@ def cartao(s, e, txt, y, tam, cor_fundo, cor_txt, maxc=18, pad=(46, 26)):
 
 
 def botao_saiba_mais(s, e):
-    ev = cartao(s, e, "SAIBA MAIS", 1020, 64, ROXO, BRANCO, maxc=20, pad=(60, 30))
+    ev = cartao(s, e, "SAIBA MAIS", 1650, 64, ROXO, BRANCO, maxc=20, pad=(60, 30))
     # seta para baixo (aponta para o botão do anúncio), quicando
     seta = "m 0 0 l 60 0 l 60 50 l 95 50 l 30 115 l -35 50 l 0 50 l 0 0"
-    x, y = W // 2 - 30, 1120
+    x, y = W // 2 - 30, 1728
     t, k = s + 0.25, 0
     while t < e:
         dy = 0 if k % 2 == 0 else 28
