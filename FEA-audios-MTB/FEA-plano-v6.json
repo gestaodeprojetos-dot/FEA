@@ -1,0 +1,33 @@
+[
+ {
+  "arq": "AO-VIVO-MTB.mp3 (Drive 1zEFkPIyaXf93zyUEKIUrFvsQM2g8QZOO)",
+  "ini": 0.22,
+  "fim": 13.55,
+  "pausa_depois": 0.15
+ },
+ {
+  "arq": "Ads 028 - BFV.mov (Drive 1c6SbIN6L9M2Yss0kGoId5t8Gk6AzueCL)",
+  "ini": 2.22,
+  "fim": 5.42,
+  "pausa_depois": 0.12
+ },
+ {
+  "arq": "AO-VIVO-MTB.mp3 (Drive 1zEFkPIyaXf93zyUEKIUrFvsQM2g8QZOO)",
+  "ini": 15.22,
+  "fim": 16.84,
+  "pausa_depois": 0.15
+ },
+ {
+  "arq": "AO-VIVO-MTB.mp3 (Drive 1zEFkPIyaXf93zyUEKIUrFvsQM2g8QZOO)",
+  "ini": 17.1,
+  "fim": 20.46,
+  "pausa_depois": 0.15
+ },
+ {
+  "arq": "AO-VIVO-MTB.mp3 (Drive 1zEFkPIyaXf93zyUEKIUrFvsQM2g8QZOO)",
+  "ini": 21.76,
+  "fim": 28.3,
+  "pausa_depois": 0.1,
+  "exato_ini": true
+ }
+]

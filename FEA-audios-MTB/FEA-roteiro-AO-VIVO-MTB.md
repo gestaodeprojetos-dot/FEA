@@ -2,7 +2,7 @@
 
 Disparo: URA às 20h, dia da Masterclass em Toxina Botulínica (doc "MTB 11/26 URA + SMS").
 Voz: clone HeyGen "FEA Dr João Pithon (Black 2026)", engine padrão (HeyGen Voice).
-Versão vigente: **v4** (copy e cortes da v3, aprovados pela Keila em 06/11/2026, com tratamento de voz), 23,7 s.
+Versão vigente: **v6** (100% voz real do Dr. João), 29,0 s. Ver seção v6 no fim.
 
 ## Original (AO-VIVO-MTB.mp3, 28,7 s)
 
@@ -18,7 +18,7 @@ Ajustes pedidos pela Keila (06/11/2026) sobre a v2: o Dr. João não fala tão e
 - Frases ligadas por vírgula, fala a 1,05x e silêncio entre frases encurtado para no máximo 0,15 s na edição.
 - Mesmo conteúdo da v2, com a Black Friday Vitalícia antes do CTA.
 
-## v4: tratamento de voz (vigente)
+## v4: tratamento de voz (substituída)
 
 Pedido da Keila (06/11/2026): voz do Dr. João pouco presente e áudio abafado. Medição com `fea_espectro_voz.py`: energia concentrada em 300 a 1000 Hz e faixa de clareza da fala (1 a 3,4 kHz) 13 a 21 dB abaixo; na versão de URA, o MP3 a 24 kbps tirava ainda mais nitidez.
 
@@ -40,7 +40,7 @@ Pedido da Keila (06/11/2026): voz do Dr. João pouco presente e áudio abafado. 
 | `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.mp3` | Para a URA: 8 kHz mono, 64 kbps |
 | `FEA-AO-VIVO-MTB-v4-BlackVitalicia-URA-8kHz.wav` | Para a URA, se a plataforma aceitar WAV (melhor qualidade em 8 kHz) |
 
-## v5: semelhança com a voz do Dr. João (em avaliação)
+## v5: semelhança com a voz do Dr. João (substituída)
 
 Retorno da Keila (06/11/2026): a v4 não ficou mais parecida com a voz dele. A equalização mexe só em brilho, não em timbre.
 
@@ -63,3 +63,17 @@ Opções em `FEA-opcoes-v5/` para escolha de ouvido:
 - **A, voz real do Dr. João (29,1 s, 8 kHz):** trechos do áudio original + só a frase da Black Friday Vitalícia gerada pelo clone, com tom ajustado (139 Hz) e passada pelo mesmo filtro de telefone. Volta à copy original nos trechos reais ("novas técnicas", "Para você entrar nessa aula agora, você vai clicar no link da minha bio"). Cerca de 75% do áudio é a voz real.
 - **B, clone com tom médio (-3 semitons, 23,7 s):** copy e cortes da v3.
 - **C, clone com tom grave (-5 semitons, 23,7 s):** copy e cortes da v3.
+
+## v6: 100% voz real do Dr. João (vigente)
+
+Retorno da Keila (06/11/2026) sobre a v5: a opção A agradou, mas a frase do clone soou "bizarra". Quer só a voz real.
+
+Montagem com `fea_montar_voz_real.py` e `FEA-plano-v6.json`, todos os trechos gravados por ele:
+
+> Masterclass em Toxina Botulínica. Estou ao vivo agora ensinando as novas técnicas de toxina botulínica, abordando as diferenças entre as marcas e trazendo todas as atualizações que eu tenho visto aí nos principais congressos do mundo. **[Ads 028 - BFV] Essa é a tua oportunidade de participar da Black Friday Vitalícia.** Eu estou ao vivo no Zoom. Para você entrar nessa aula agora, você vai clicar no link da minha bio. São somente 3 mil vagas disponíveis no Zoom. Então esteja lá agora antes que as vagas se esgotem.
+
+- Fonte da frase nova: Ads 028 - BFV (gravação crua, ruído de fundo -51 dB). Ads 014 e 016 têm "você precisa estar ao vivo", mas com trilha por baixo.
+- Trecho novo passado pela mesma cadeia de telefone (8 kHz, MP3 24 kbps), com equalização casada ao espectro do original e volume igualado.
+- Semelhança de timbre da frase nova com a voz original: 0,78 (o clone da v5 dava 0,675).
+- 29,0 s. Transcrição do arquivo final confere palavra por palavra.
+- Busca em 22 gravações da campanha BFV: nenhuma tem "oferta exclusiva para quem estiver ao vivo". Para deixar explícito, o Dr. João precisa gravar a frase.
