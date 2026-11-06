@@ -5,6 +5,8 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 # FEA: edição de Reels no modelo notícia
 
+**Quem pede e aprova as edições é a Gabi** (06/11/2026), na conta compartilhada de gestão de projetos. Os feedbacks registrados abaixo como "Keila" vieram dessa mesma conversa de edição. Responder e chamar pelo nome dela.
+
 **Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: a partir de novembro, pasta `11- Novembro/7- Produtos` (1vo-nXLJK_oEEPV684Mst0DVk5K0KBWAZ), numeração `1-`, `2-`... dentro dela (Keila, 03/11: vídeo do mês vai para a pasta do mês, na sequência das pastas já criadas); outubro ficou em `10- Outubro/26- Produtos`. Linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras aprovado; IMG_7936 linha de marionete feito em 03/11; faltam IMG_7937, 7938, 7941, 7942). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
 
 ## Entrada
