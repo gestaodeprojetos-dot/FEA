@@ -554,7 +554,7 @@ def processar(cfg, v, so_legenda=False):
         ar.append(f"[a{i}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
     filtro = ";".join(partes) + ";" + "".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc];" + \
-        "".join(ar) + f"concat=n={len(ar)}:v=0:a=1,aresample=48000,aformat=channel_layouts=stereo," \
+        "".join(ar) + f"concat=n={len(ar)}:v=0:a=1,aresample=48000,aformat=channel_layouts=stereo," + \
         (f"highpass=f=70,arnndn=m='{cfg['rnnoise']}':mix=0.85," if cfg.get("rnnoise") else "") + "loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[voz];"
     # logo oficial no topo (o vídeo inteiro), por baixo do texto
     filtro += (f"[2:v]scale={LOGO_W}:-1,format=rgba,colorchannelmixer=aa=0.95[logo];"
