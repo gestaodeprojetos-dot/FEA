@@ -14,8 +14,48 @@ def G(texto, eyebrow="Pela primeira vez", fim=3.4):
 def C(ancora, texto, eyebrow="", dur=3.6, **kw):
     return dict({"tipo": "card", "ancora": ancora, "dur": dur, "eyebrow": eyebrow, "texto": texto}, **kw)
 
-def DIAG(ancora, **kw):
-    return C(ancora, "Sua venda comparada *ao método*", "Diagnóstico gratuito", chips=["Plano de ação"], **kw)
+ESQ = ["Responde o preço no direct", "Vende procedimento solto", "Ouve \u201cvou pensar\u201d"]
+DIR = ["Avaliação com roteiro", "Plano de tratamento completo", "Preço depois do valor"]
+
+def DIAG(ancora, esq=ESQ, dir=DIR, **kw):
+    """Tela dividida do roteiro (SUA AVALIAÇÃO × O MÉTODO): Dr. em cima, comparação embaixo."""
+    return dict({"tipo": "dividida", "ancora": ancora, "dur": 5.0, "eyebrow": "Diagnóstico gratuito · plano de ação",
+                 "esq": esq, "dir": dir}, **kw)
+
+def WHATS(ancora, **kw):
+    return dict({"tipo": "whats", "ancora": ancora, "dur": 3.4,
+                 "mensagens": ["Quanto é o ml?", "Qual o valor do lábio?", "Tem promoção?"]}, **kw)
+
+# B-roll real do Drive (pastas "B roll ..."): avaliação com luva e marcação de planejamento.
+# Conferido quadro a quadro: sem agulha, sem sangue, sem expressão de dor.
+AVAL = [["IMG_8289", 2.0, 2.4], ["IMG_8292", 6.0, 2.4], ["IMG_8294", 5.0, 2.4]]
+AVAL2 = [["IMG_8308", 2.0, 2.4], ["IMG_8293", 3.0, 2.4], ["IMG_8318", 4.0, 2.4]]
+PLAN = [["IMG_8313", 2.0, 2.6], ["IMG_8313", 8.0, 2.4]]
+
+def B(ancora, clipes, depois=3.6):
+    return {"ancora": ancora, "clipes": clipes, "depois": depois}
+
+BROLL = {
+    1: [B("genial", AVAL), B("roteiro", PLAN, 15)],
+    2: [B("roteiro", AVAL), B("planos", PLAN, 15)],
+    3: [B("realçar", AVAL2), B("métodos", PLAN)],
+    4: [B("olhar", AVAL), B("plano", PLAN, 28)],
+    5: [B("mostrar", AVAL), B("planejamento", PLAN, 20)],
+    6: [B("completo", AVAL, 6), B("planos", PLAN, 15)],
+    7: [B("avaliação", AVAL, 7), B("planejamento", PLAN, 7)],
+    8: [B("roteiro", AVAL2, 10)],
+    9: [B("avaliações", AVAL, 10)],
+    10: [B("baseado", AVAL)],
+    11: [B("metodologias", AVAL2)],
+    12: [B("indicar", AVAL, 6), B("completar", PLAN, 12)],
+    13: [B("errando", AVAL2)],
+    15: [B("avaliações", AVAL, 8)],
+    16: [B("avaliação", AVAL2, 4)],
+    17: [B("tratamentos", PLAN, 4)],
+    18: [B("metodologia", PLAN, 9)],
+    19: [B("avaliação", AVAL, 12)],
+    20: [B("roteiro", [["IMG_8289", 2.0, 2.0]]), B("planejamento", PLAN, 9), B("individual", AVAL2[:2])],
+}
 
 def FORM(ancora, **kw):
     return C(ancora, "Formulário rápido · *2 minutos*", "Preencha a aplicação", **kw)
@@ -45,7 +85,7 @@ V = [
   [G("Dificuldade em vender *mais seringas*?", "O erro está na avaliação"),
    C("gerenciamento", "Um plano, *não um procedimento*", "O rosto inteiro", chips=["Toxina", "Preenchimento", "Bioestimulador", "Fios"], dur=4.2),
    C("metodologia", "Minha metodologia *completa*", "Pela primeira vez", dur=3.4),
-   DIAG("avaliação de diagnóstico"), CTA("clicar"), FORM("demora")], []),
+   WHATS("seringas", depois=8), DIAG("avaliação de diagnóstico", esq=["Vende seringa", "Compete por preço", "Plano de um procedimento"], dir=["Olha o rosto inteiro", "Plano de tratamento completo", "Ticket maior"]), CTA("clicar"), FORM("demora")], []),
  ("5- Você perde a paciente na hora do preço", [["IMG_9070", 0.0, 61.5], ["IMG_9070", 68.0, 68.8]],
   [G("Você perde a paciente *na hora do preço*", "O momento do preço"),
    C("agregar", "Valor *antes* do preço", "A ordem", chips=["O que", "Como", "Por que", "Resultado"], dur=4.2),
@@ -114,7 +154,7 @@ V = [
    CTA("clicar"), DIAG("avaliação de diagnóstico")], []),
  ("19- A jornada do paciente começa no WhatsApp", [["IMG_9149", 0.1, 53.3]],
   [G("A jornada do paciente *começa no WhatsApp*", "Do direct à conversão"),
-   C("captação", "Onde a venda *escapa*", "Os passos da jornada", chips=["Captação", "Avaliação", "Planejamento"], seta=True, dur=4.4),
+   WHATS("dificuldade", depois=5), C("captação", "Onde a venda *escapa*", "Os passos da jornada", chips=["Captação", "Avaliação", "Planejamento"], seta=True, dur=4.4),
    C("método", "Existe *um método*", "", dur=3.2),
    CTA("clicar"), DIAG("selecionadas")], []),
  ("20- Quase 100% de conversão, nem sempre foi assim", [["IMG_9150", 0.0, 10.95], ["IMG_9150", 14.35, 68.5]],
@@ -135,7 +175,8 @@ CORRECOES = [
 
 videos = []
 for saida, trechos, cartelas, remover in V:
+    num = int(saida.split("-")[0])
     videos.append({"saida": f"{T}/out/{saida}.mp4", "trechos": trechos, "cartelas": cartelas,
-                   "remover_legenda": remover, "correcoes": CORRECOES})
-print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos",
+                   "remover_legenda": remover, "correcoes": CORRECOES, "broll": BROLL.get(num, [])})
+print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos", "broll": f"{T}/broll",
                   "transcricoes": f"{T}/tr", "videos": videos}, ensure_ascii=False, indent=1))

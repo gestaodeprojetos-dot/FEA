@@ -110,8 +110,76 @@ def espacado(draw, xy, texto, f, cor, esp=0.22, centro=False):
     return larg
 
 
+def icone(d, x, y, ok, tam=30):
+    """Check (aqua) ou X (cinza) desenhados à mão: as fontes não têm os glifos."""
+    if ok:
+        d.ellipse((x, y, x + tam, y + tam), fill=AQUA + (255,))
+        d.line((x + tam * .25, y + tam * .52, x + tam * .43, y + tam * .70, x + tam * .76, y + tam * .32),
+               fill=BG + (255,), width=4, joint="curve")
+    else:
+        d.ellipse((x, y, x + tam, y + tam), outline=MUTED + (255,), width=3)
+        k = tam * .32
+        d.line((x + k, y + k, x + tam - k, y + tam - k), fill=MUTED + (255,), width=3)
+        d.line((x + tam - k, y + k, x + k, y + tam - k), fill=MUTED + (255,), width=3)
+
+
+def dividida_png(cfg, c, caminho):
+    """Tela dividida: o Dr. fica na metade de cima e a metade de baixo compara
+    a venda de hoje com o método (roteiro: SUA AVALIAÇÃO × O MÉTODO)."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    y0 = 960
+    d.rectangle((0, y0, W, H), fill=BG + (246,))
+    d.rectangle((0, y0, W, y0 + 6), fill=AQUA + (255,))
+    eyeb = fonte(cfg, "Urbanist.ttf", 25, 700)
+    cab = fonte(cfg, "Gloock-Regular.ttf", 50)
+    item = fonte(cfg, "Urbanist.ttf", 33, 600)
+    espacado(d, (W / 2, y0 + 34), c.get("eyebrow", "Diagnóstico gratuito").upper(), eyeb, TEAL + (255,), 0.3, centro=True)
+    col = [(60, c.get("esq_titulo", "Sua venda hoje"), c["esq"], False),
+           (W // 2 + 30, c.get("dir_titulo", "O método"), c["dir"], True)]
+    d.line((W // 2, y0 + 100, W // 2, y0 + 440), fill=LINHA + (255,), width=2)
+    for x, tit, itens, ok in col:
+        d.text((x, y0 + 86), tit, font=cab, fill=(AQUA if ok else MUTED) + (255,))
+        y = y0 + 176
+        for it in itens:
+            icone(d, x, y + 4, ok, 32)
+            linhas = quebrar(d, it, item, W // 2 - 140)
+            for ln in linhas:
+                d.text((x + 48, y), ln, font=item, fill=(INK if ok else MUTED) + (255,))
+                y += 40
+            y += 26
+    img.save(caminho)
+
+
+def whats_png(cfg, c, caminho):
+    """Conversa de direct/WhatsApp desenhada (mensagens que a avatar recebe)."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    f = fonte(cfg, "Urbanist.ttf", 34, 600)
+    fh = fonte(cfg, "Urbanist.ttf", 27, 700)
+    largura, x0, y0 = 760, (W - 760) // 2, c.get("y", 930)
+    msgs = c["mensagens"]
+    alt = 92 + 104 * len(msgs) + 30
+    d.rounded_rectangle((x0, y0, x0 + largura, y0 + alt), radius=34, fill=(7, 43, 56, 240), outline=LINHA + (255,), width=2)
+    d.rounded_rectangle((x0, y0, x0 + largura, y0 + 80), radius=34, fill=BG + (255,))
+    d.rectangle((x0, y0 + 46, x0 + largura, y0 + 80), fill=BG + (255,))
+    d.ellipse((x0 + 28, y0 + 18, x0 + 72, y0 + 62), fill=TEAL + (255,))
+    espacado(d, (x0 + 92, y0 + 26), c.get("cabecalho", "Direct · novas mensagens").upper(), fh, INK + (255,), 0.14)
+    y = y0 + 106
+    for m in msgs:
+        tw = d.textlength(m, font=f)
+        d.rounded_rectangle((x0 + 30, y, x0 + 30 + tw + 56, y + 78), radius=26, fill=(234, 246, 246, 255))
+        d.text((x0 + 58, y + 18), m, font=f, fill=BG + (255,))
+        y += 104
+    img.save(caminho)
+
+
 def cartela_png(cfg, c, caminho):
     """Desenha a cartela em PNG transparente 1080x1920."""
+    if c["tipo"] == "dividida":
+        return dividida_png(cfg, c, caminho)
+    if c["tipo"] == "whats":
+        return whats_png(cfg, c, caminho)
     img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     serif = fonte(cfg, "Gloock-Regular.ttf", c.get("tam", 66 if c["tipo"] != "gancho" else 72))
@@ -212,6 +280,21 @@ def palavras_do_bruto(cfg, nome, extras_remover):
     return palavras
 
 
+def apertar_pausas(db, lim, passo, a, b, minimo=0.45, margem=0.12):
+    """Silêncios de mais de `minimo` s dentro de [a, b] (bem abaixo do limiar de voz) ficam
+    com `margem` s de cada lado. Devolve os cortes [(fim_fala, volta_fala), ...]."""
+    cortes, ini = [], None
+    i0, i1 = int(a / passo) + 4, int(b / passo) - 4
+    for i in range(i0, i1):
+        if db[i] < lim - 6:
+            ini = i if ini is None else ini
+        else:
+            if ini is not None and (i - ini) * passo > minimo:
+                cortes.append((round(ini * passo + margem, 3), round(i * passo - margem, 3)))
+            ini = None
+    return cortes
+
+
 def montar(cfg, v):
     ff = cfg["ffmpeg"]
     entradas, cache_db = [], {}
@@ -226,6 +309,17 @@ def montar(cfg, v):
             a2, b2 = a, b
         else:
             a2, b2 = fe.encaixar_cortes([[a, b]], db, passo)[0]
+        if not trechos:
+            # o vídeo abre com o Dr. já falando (Keila, 07/11: "o respiro no começo parece edição ruim")
+            i0 = int(a2 / passo)
+            for i in range(i0, min(len(db) - 6, i0 + int(3 / passo))):
+                if all(db[j] >= lim for j in range(i, i + 6)):
+                    a2 = max(a2, i * passo - 0.06)
+                    break
+        # pausa longa no meio da fala vira respiro curto (ritmo de anúncio)
+        for x, y in apertar_pausas(db, lim, passo, a2, b2):
+            trechos.append((nome, arq, a2, x))
+            a2 = y
         trechos.append((nome, arq, a2, b2))
     # legenda
     todas, offset = [], 0.0
@@ -275,11 +369,20 @@ def montar(cfg, v):
         png = f"{base}.cart{k}.png"
         cartela_png(cfg, c, png)
         cartelas.append((png, ini, fim))
-    return trechos, ass, duracao, cartelas, todas
+    broll = []
+    for b in v.get("broll", []):
+        t0 = achar(b["ancora"], b.get("depois", 0.0)) - 0.05
+        for arq, ss, dur in b["clipes"]:
+            if t0 >= duracao - 0.5:
+                break
+            dur = min(dur, duracao - t0)
+            broll.append((os.path.join(cfg["broll"], arq + ".MOV"), ss, t0, dur))
+            t0 += dur
+    return trechos, ass, duracao, cartelas, todas, broll
 
 
 def renderizar(cfg, v, so_legenda=False):
-    trechos, ass, duracao, cartelas, palavras = montar(cfg, v)
+    trechos, ass, duracao, cartelas, palavras, broll = montar(cfg, v)
     if so_legenda:
         return duracao
     ff = cfg["ffmpeg"]
@@ -295,6 +398,9 @@ def renderizar(cfg, v, so_legenda=False):
     cmd += ["-i", logo]
     for png, ini, fim in cartelas:
         cmd += ["-loop", "1", "-t", f"{fim - ini:.3f}", "-framerate", "30", "-i", png]
+    nb = n + 1 + len(cartelas)
+    for arq, ss, t0, dur in broll:
+        cmd += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", arq]
     partes, vr, ar = [], [], []
     for i, (nome, arq, a, b) in enumerate(trechos):
         j = arquivos.index(arq)
@@ -306,9 +412,15 @@ def renderizar(cfg, v, so_legenda=False):
         ar.append(f"[a{i}]")
     partes.append("".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc]")
     partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1[ac]")
+    base_v = "vc"
+    for k, (arq, ss, t0, dur) in enumerate(broll):
+        partes.append(f"[{nb + k}:v]fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
+                      f"setpts=PTS-STARTPTS+{t0:.3f}/TB[b{k}]")
+        partes.append(f"[{base_v}][b{k}]overlay=0:0:eof_action=pass[vb{k}]")
+        base_v = f"vb{k}"
     # logo no topo e barra de progresso aqua
     partes.append(f"[{n}:v]scale=300:-1,format=rgba,colorchannelmixer=aa=0.95[lg]")
-    partes.append("[vc][lg]overlay=x=(W-w)/2:y=64[v0x]")
+    partes.append(f"[{base_v}][lg]overlay=x=(W-w)/2:y=64[v0x]")
     partes.append(f"color=c=0x86F9F8:s={W}x8:r=30:d={duracao:.3f}[bar]")
     partes.append(f"[v0x][bar]overlay=x='-W+W*t/{duracao:.3f}':y=0:shortest=1[vb]")
     atual = "vb"
