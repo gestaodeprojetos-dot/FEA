@@ -373,7 +373,7 @@ TIPOS = {"fotos": q_fotos,
 
 def gerar(tipo, params, dur, fontsdir, pasta_cache):
     """Gera (ou reaproveita) a sequência PNG e devolve o padrão de nome para o FFmpeg."""
-    chave = hashlib.sha1(json.dumps([tipo, params, dur, 3], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]
+    chave = hashlib.sha1(json.dumps([tipo, params, dur, 4], sort_keys=True, ensure_ascii=False).encode()).hexdigest()[:12]  # mude o número da versão (lista acima) quando o desenho mudar
     pasta = os.path.join(pasta_cache, f"{tipo}-{chave}")
     n = int(round(dur * FPS))
     if not (os.path.isdir(pasta) and len(os.listdir(pasta)) >= n):
