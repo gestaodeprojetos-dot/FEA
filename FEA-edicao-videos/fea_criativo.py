@@ -49,7 +49,7 @@ INSERT_Y, INSERT_DUR = 1215, 2.4
 BOTAO_Y = 1735
 ILUS_Y, ILUS_DUR = 1095, 3.6
 ZOOM_B, ZOOM_CY = 1.10, 0.40
-SIL_DB, SIL_MIN, RESPIRO = 6.0, 0.55, 0.20
+SIL_DB, SIL_MIN, RESPIRO = 6.0, 0.55, 0.06
 
 
 def ts(t):
@@ -459,10 +459,11 @@ def cortes_finos(v, manter, ff):
                 while j < len(q) and q[j]:
                     j += 1
                 t0, t1 = a + k / 100, a + j / 100
-                if t1 - t0 >= 0.40 and k > 0 and j < len(q) and not any(t0 + 0.12 < m < t1 - 0.12 for m in palavras):
-                    if t0 + 0.12 - ini > 0.3:
-                        segs.append([round(ini, 3), round(t0 + 0.12, 3)])
-                        ini = t1 - 0.12
+                # respiro de 0,05 s (Keila, 07/11: "tem um respiro no meio dos cortes, precisa ser contínuo")
+                if t1 - t0 >= 0.30 and k > 0 and j < len(q) and not any(t0 + 0.05 < m < t1 - 0.05 for m in palavras):
+                    if t0 + 0.05 - ini > 0.3:
+                        segs.append([round(ini, 3), round(t0 + 0.05, 3)])
+                        ini = t1 - 0.05
                 k = j
             else:
                 k += 1
@@ -540,8 +541,11 @@ def processar(cfg, v, so_legenda=False):
     # o pulo do corte não ficar estranho (Keila, 07/11: "teve um corte no vídeo 1 que ficou estranho")
     enq = enquadramento(ff, v["entrada"])
     partes, vr, ar = [], [], []
+    punch = 1.0
     for i, (a, b) in enumerate(segs):
-        punch = PUNCH if i % 2 else 1.0
+        # alterna o punch-in só depois de trecho com 1,2 s ou mais (emenda curtinha não pula o zoom)
+        if i and segs[i - 1][1] - segs[i - 1][0] >= 1.2:
+            punch = PUNCH if punch == 1.0 else 1.0
         partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,"
                       f"crop={W}:{H}{filtro_quadro(pedacos(a, b, enq), punch)},setsar=1[v{i}]")
         vr.append(f"[v{i}]")
@@ -551,7 +555,7 @@ def processar(cfg, v, so_legenda=False):
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
     filtro = ";".join(partes) + ";" + "".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc];" + \
         "".join(ar) + f"concat=n={len(ar)}:v=0:a=1,aresample=48000,aformat=channel_layouts=stereo," \
-        "loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[voz];"
+        (f"highpass=f=70,arnndn=m='{cfg['rnnoise']}':mix=0.85," if cfg.get("rnnoise") else "") + "loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[voz];"
     # logo oficial no topo (o vídeo inteiro), por baixo do texto
     filtro += (f"[2:v]scale={LOGO_W}:-1,format=rgba,colorchannelmixer=aa=0.95[logo];"
                f"[vc][logo]overlay=(W-w)/2:{LOGO_Y}[vl0];")

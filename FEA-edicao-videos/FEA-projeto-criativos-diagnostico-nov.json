@@ -2,6 +2,7 @@
  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
  "fontsdir": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/fonts",
  "logo": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/elite/logo_elite.png",
+ "rnnoise": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/elite/sh.rnnn",
  "sfx": {
   "whoosh": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/whoosh.mp3",
   "pop": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/sfx/pop.mp3"
@@ -141,7 +142,8 @@
    "manter": [
     [
      0.0,
-     55.75
+     55.62,
+     "exato"
     ],
     [
      68.3,
@@ -376,7 +378,12 @@
      }
     ]
    ],
-   "remover": [],
+   "remover": [
+    [
+     38.0,
+     41.22
+    ]
+   ],
    "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9059.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
@@ -1062,6 +1069,19 @@
    ],
    "ilustracoes": [
     [
+     "comecei",
+     "fotos",
+     {
+      "titulo": "Onde eu comecei",
+      "destaque": "comecei",
+      "fotos": [
+       "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/antes_jpg/IMG_3916.jpg",
+       "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/antes_jpg/IMG_1991.jpg",
+       "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/antes_jpg/IMG_1160.jpg"
+      ]
+     }
+    ],
+    [
      "metodologia",
      "pilares",
      {
@@ -1599,7 +1619,12 @@
      }
     ]
    ],
-   "remover": [],
+   "remover": [
+    [
+     12.78,
+     13.775
+    ]
+   ],
    "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9081.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,

@@ -20,7 +20,7 @@ import math
 import os
 import sys
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageOps
 
 PW, PH = 1000, 600          # painel
 FPS = 30
@@ -232,40 +232,46 @@ def q_plano(t, dur, p, F):
     itens = p.get("itens", ["TOXINA", "PREENCHIMENTO", "BIOESTIMULADOR", "FIOS"])
     camada = Image.new("RGBA", (PW, PH), (0, 0, 0, 0))
     dc = ImageDraw.Draw(camada)
-    fr = F.get("forte", 34)
-    linhas, atual, larg_lin = [], [], 0
-    for it in itens:   # chips em até 2 linhas
-        wc = dc.textlength(it, font=fr) + 70
-        if atual and larg_lin + wc > 860:
-            linhas.append(atual)
-            atual, larg_lin = [], 0
-        atual.append((it, wc))
-        larg_lin += wc + 56
-    linhas.append(atual)
+    # chips em no máximo 2 linhas: a fonte diminui até caber (com 5 itens, a 3ª linha
+    # encavalava no rodapé: "TECNOLOGIAS" riscado pela linha, Keila 07/11)
+    for tam in (34, 30, 27, 24):
+        fr = F.get("forte", tam)
+        pad, gap = int(tam * 1.9), int(tam * 1.5)
+        linhas, atual, larg_lin = [], [], 0
+        for it in itens:
+            wc = dc.textlength(it, font=fr) + pad
+            if atual and larg_lin + wc > 900:
+                linhas.append(atual)
+                atual, larg_lin = [], 0
+            atual.append((it, wc))
+            larg_lin += wc + gap
+        linhas.append(atual)
+        if len(linhas) <= 2:
+            break
+    alt = int(tam * 2.25)
+    passo_lin = alt + 44
     k = 0
-    y = 230 if len(linhas) == 1 else 190
+    y = 230 if len(linhas) == 1 else 175
     for li, ln in enumerate(linhas):
-        total = sum(wc for _, wc in ln) + 56 * (len(ln) - 1)
+        total = sum(wc for _, wc in ln) + gap * (len(ln) - 1)
         x = (PW - total) / 2
         for j, (it, wc) in enumerate(ln):
-            f = fase(t, 0.3 + k * 0.32, 0.7 + k * 0.32)
+            f = fase(t, 0.3 + k * 0.3, 0.7 + k * 0.3)
             if f > 0:
                 al = int(255 * f)
                 dy = (1 - f) * 30
-                dc.rounded_rectangle([x, y + dy, x + wc, y + 78 + dy], 39, fill=SURF + (int(240 * f),), outline=AQUA + (al,), width=3)
-                dc.text((x + wc / 2, y + 41 + dy), it, font=fr, fill=INK + (al,), anchor="mm")
-                if j < len(ln) - 1 or li < len(linhas) - 1:
-                    fx = x + wc + 28 if j < len(ln) - 1 else None
-                    if fx:
-                        dc.text((fx, y + 39), "+", font=F.get("forte", 52), fill=AQUA + (al,), anchor="mm")
-            x += wc + 56
+                dc.rounded_rectangle([x, y + dy, x + wc, y + alt + dy], alt // 2, fill=SURF + (int(240 * f),), outline=AQUA + (al,), width=3)
+                dc.text((x + wc / 2, y + alt / 2 + 2 + dy), it, font=fr, fill=INK + (al,), anchor="mm")
+                if j < len(ln) - 1:
+                    dc.text((x + wc + gap / 2, y + alt / 2), "+", font=F.get("forte", int(tam * 1.4)), fill=AQUA + (al,), anchor="mm")
+            x += wc + gap
             k += 1
-        y += 130
-    fz = fase(t, 0.4 + k * 0.32, 0.8 + k * 0.32)
+        y += passo_lin
+    fz = fase(t, 0.4 + k * 0.3, 0.8 + k * 0.3)
     if fz > 0:
-        yb = 480 if len(linhas) > 1 else 420
+        yb = y + 20
         dc.line([(PW / 2 - 300 * fz, yb), (PW / 2 + 300 * fz, yb)], fill=AQUA + (255,), width=4)
-        texto_espacado(dc, (PW / 2, yb + 50), p.get("rodape", "UM PLANO, NÃO UM PROCEDIMENTO"), F.get("rotulo", 26),
+        texto_espacado(dc, (PW / 2, yb + 46), p.get("rodape", "UM PLANO, NÃO UM PROCEDIMENTO"), F.get("rotulo", 26),
                        AQUA + (int(255 * fz),), 5)
     img.alpha_composite(com_brilho(camada, 7, 1.2))
     return img, a
@@ -319,7 +325,49 @@ def cartao_abertura(gancho, destaque, selo, logo, fontsdir, saida):
     return saida
 
 
-TIPOS = {"crescimento": q_crescimento, "pilares": q_pilares, "passos": q_passos, "plano": q_plano,
+def q_fotos(t, dur, p, F):
+    """Fotos impressas (borda branca, levemente giradas) entrando uma a uma: 'antes' do Dr."""
+    img, a = painel(t, dur)
+    dr = ImageDraw.Draw(img)
+    titulo_destaque(dr, PW / 2, 70, p.get("titulo", "Onde eu comecei"), p.get("destaque", "comecei"), F)
+    fotos = p.get("fotos", [])
+    n = len(fotos)
+    angs = [-7, 3, -3, 6][:n]
+    w = 250
+    for i, (arq, ang) in enumerate(zip(fotos, angs)):
+        f = fase(t, 0.25 + i * 0.4, 0.75 + i * 0.4)
+        if f <= 0:
+            continue
+        chave = (arq, w)
+        if chave not in _FOTOS:
+            im = ImageOps.exif_transpose(Image.open(arq)).convert("RGB")
+            alvo = (w, int(w * 1.25))
+            im = ImageOps.fit(im, alvo, Image.LANCZOS)
+            im = ImageEnhance.Color(im).enhance(0.75)      # tom levemente esmaecido de foto antiga
+            moldura = Image.new("RGBA", (alvo[0] + 24, alvo[1] + 64), (245, 245, 240, 255))
+            moldura.paste(im, (12, 12))
+            _FOTOS[chave] = moldura
+        fr = _FOTOS[chave].rotate(ang, expand=True, resample=Image.BICUBIC)
+        esc = 0.85 + 0.15 * f
+        fr = fr.resize((int(fr.width * esc), int(fr.height * esc)), Image.LANCZOS)
+        if f < 1:
+            r, g, b, al = fr.split()
+            fr = Image.merge("RGBA", (r, g, b, al.point(lambda v: int(v * f))))
+        cx = PW / 2 + (i - (n - 1) / 2) * 290
+        cy = 345 + (1 - f) * 40
+        sombra = Image.new("RGBA", fr.size, (0, 0, 0, 0))
+        sombra.putalpha(fr.split()[3].point(lambda v: int(v * 0.45)))
+        sombra = sombra.filter(ImageFilter.GaussianBlur(12))
+        img.alpha_composite(sombra, (int(cx - fr.width / 2 + 8), int(cy - fr.height / 2 + 12)))
+        img.alpha_composite(fr, (int(cx - fr.width / 2), int(cy - fr.height / 2)))
+    return img, a
+
+
+_FOTOS = {}
+
+
+TIPOS = {"fotos": q_fotos,
+         "crescimento": q_crescimento, "pilares": q_pilares, "passos": q_passos, "plano": q_plano,
          "relogio": q_relogio}
 
 
