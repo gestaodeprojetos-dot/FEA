@@ -175,7 +175,7 @@ def q_pilares(t, dur, p, F):
         cx = 60 + larg * (i + 0.5)
         w = min(120, larg * 0.5)
         h = alt * f
-        if h > 4:
+        if h > 34:      # abaixo disso o fuste ainda não cabe entre a base e o capitel
             topo = base_y - h
             dc.rectangle([cx - w / 2, topo + 14, cx + w / 2, base_y - 12], fill=TEAL + (120,))
             for k in range(1, 4):   # caneluras
