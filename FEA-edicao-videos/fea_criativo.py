@@ -416,13 +416,68 @@ def filtro_quadro(chave, punch):
 
 # ---------------------------------------------------------------- vídeo
 
+def perfil_10ms(ff, entrada):
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", entrada, "-vn", "-ac", "1", "-ar", "16000",
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(float)
+    n = len(a) // 160
+    return 20 * np.log10(np.sqrt((a[:n * 160].reshape(n, 160) ** 2).mean(axis=1)) + 1)
+
+
+def cortes_finos(v, manter, ff):
+    """v4 (07/11, Keila: "o Dr. dá uma errada e você deixa"):
+    1) "remover": trechos do bruto com erro de fala (frase recomeçada, palavra repetida), achados na
+       transcrição LITERAL (com hesitações) e com os pontos conferidos no áudio em janelas de 10 ms;
+    2) pausas e hesitações: todo trecho sem fala (abaixo do ruído + 10 dB) de 0,40 s ou mais, onde a
+       transcrição literal não tem palavra, sai, deixando 0,12 s de respiro de cada lado."""
+    db = perfil_10ms(ff, v["entrada"])
+    limiar = float(np.percentile(db, 5)) + 10
+    trechos = [[t[0], t[1]] for t in manter]
+    for r0, r1 in v.get("remover", []):
+        novo = []
+        for a, b in trechos:
+            if r1 <= a or r0 >= b:
+                novo.append([a, b])
+                continue
+            if r0 > a:
+                novo.append([a, r0])
+            if r1 < b:
+                novo.append([r1, b])
+        trechos = novo
+    palavras = []
+    if v.get("transcricao_literal") and os.path.exists(v["transcricao_literal"]):
+        palavras = [((w["s"] + w["e"]) / 2) for seg in json.load(open(v["transcricao_literal"], encoding="utf-8"))
+                    for w in seg["words"] if w["e"] - w["s"] < 1.0]
+    segs = []
+    for a, b in trechos:
+        i0, i1 = int(a * 100), min(len(db), int(b * 100))
+        q = db[i0:i1] < limiar
+        ini, k = a, 0
+        while k < len(q):
+            if q[k]:
+                j = k
+                while j < len(q) and q[j]:
+                    j += 1
+                t0, t1 = a + k / 100, a + j / 100
+                if t1 - t0 >= 0.40 and k > 0 and j < len(q) and not any(t0 + 0.12 < m < t1 - 0.12 for m in palavras):
+                    if t0 + 0.12 - ini > 0.3:
+                        segs.append([round(ini, 3), round(t0 + 0.12, 3)])
+                        ini = t1 - 0.12
+                k = j
+            else:
+                k += 1
+        if b - ini > 0.25:
+            segs.append([round(ini, 3), round(b, 3)])
+    return segs
+
+
 def processar(cfg, v, so_legenda=False):
     ff = cfg["ffmpeg"]
     db_voz = fe.perfil_voz(ff, v["entrada"])
     db, _, passo = db_voz
     sil = silencio(db)
     manter = encaixar(v["manter"], db, passo, sil)
-    segs = jump_cuts(manter, db, passo, sil)
+    segs = cortes_finos(v, manter, ff)
     pal, dur = remapear(palavras_do_video(v, db_voz), segs, manter)
 
     ev = [cabecalho()]

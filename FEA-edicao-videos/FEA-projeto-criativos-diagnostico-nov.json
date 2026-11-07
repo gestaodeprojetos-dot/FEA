@@ -15,7 +15,7 @@
    "selo": "DIAGNÓSTICO GRATUITO",
    "manter": [
     [
-     0.8,
+     0.6,
      31.05
     ],
     [
@@ -124,8 +124,10 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9008.json",
    "saiba_mais": "saiba mais",
-   "abertura": 1.7,
+   "abertura": 0,
    "gancho_destaque": "método",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/01.wav",
    "trilha_db": 0
@@ -259,6 +261,13 @@
      }
     ]
    ],
+   "remover": [
+    [
+     4.72,
+     5.79
+    ]
+   ],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9009.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -367,6 +376,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9059.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -489,6 +500,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9060.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -598,6 +611,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9066.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -730,6 +745,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9069.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -852,6 +869,13 @@
      }
     ]
    ],
+   "remover": [
+    [
+     3.95,
+     4.36
+    ]
+   ],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9070.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -959,6 +983,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9073.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1081,6 +1107,13 @@
      }
     ]
    ],
+   "remover": [
+    [
+     41.05,
+     42.08
+    ]
+   ],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9076.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1203,6 +1236,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9077.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1325,6 +1360,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9078.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1447,6 +1484,13 @@
      }
     ]
    ],
+   "remover": [
+    [
+     20.95,
+     21.8
+    ]
+   ],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9079.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1555,6 +1599,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9081.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",
@@ -1577,7 +1623,7 @@
      23.05
     ],
     [
-     25.9,
+     26.2,
      41.4
     ]
    ],
@@ -1671,6 +1717,8 @@
      }
     ]
    ],
+   "remover": [],
+   "transcricao_literal": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trv/IMG_9082.json",
    "saiba_mais": "saiba mais",
    "abertura": 0,
    "gancho_destaque": "",

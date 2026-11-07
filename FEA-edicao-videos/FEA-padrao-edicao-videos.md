@@ -84,3 +84,13 @@ Script: `fea_criativo.py` (projeto: `FEA-projeto-criativos-diagnostico-nov.json`
 | Abertura | quando o começo do bruto não presta (o Dr. ainda sentando), cartão de tela cheia da marca (logo, selo, gancho) por cima da fala (`abertura` em segundos) |
 | Ilustrações | `fea_ilustracoes.py`, no estilo dos slides do pitch: `crescimento` (barras + linha com seta), `pilares`, `passos` numerados, `plano` (itens que se somam) e `relogio` (2 minutos). Entram na frase-gatilho, por 3,6 s, no centro da tela, com whoosh; se cair no botão Saiba Mais, entram logo depois |
 
+### Ajustes de 07/11/2026 (v4): cortes
+
+Reprovado: "o Dr. dá uma errada e você deixa". Causa: a transcrição padrão (Whisper) LIMPA a fala, então tropeço, repetição e frase recomeçada não apareciam.
+
+- Transcrição LITERAL em todo criativo (prompt com hesitações, sem VAD, sem contexto anterior), salva em `trv/`, e revisão vídeo a vídeo com o mapa de tropeços (repetição, palavra cortada, pausa com voz sem palavra).
+- Ponto ambíguo: transcrever o trecho de 2 a 3 s isolado. A transcrição longa às vezes "inventa" repetição (vídeos 2, 5, 6 e 10 estavam limpos).
+- Erro confirmado vai em `remover` com pontos medidos no áudio em janelas de 10 ms (respiro entre palavras).
+- Pausa e hesitação: sai todo trecho abaixo de ruído + 10 dB por 0,40 s ou mais sem palavra da transcrição literal, com 0,12 s de respiro.
+- Sem cartão de abertura em tela cheia (a Keila não gostou).
+
