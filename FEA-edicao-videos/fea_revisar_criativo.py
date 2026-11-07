@@ -29,7 +29,10 @@ def revisar(cfg, v):
     trechos, ass, duracao, cartelas, palavras, broll = cr.montar(cfg, v)
     db, lim, passo = fe.perfil_voz(ff, v["saida"])
     # abertura
-    ini = next((i * passo for i in range(len(db) - 4) if all(db[j] >= lim for j in range(i, i + 4))), 0)
+    # sílaba forte seguida de fala (a voz oscila entre sílabas: 4 janelas seguidas acima do limiar
+    # dava falso "respiro" quando a 1ª palavra tinha uma consoante fraca no meio)
+    ini = next((i * passo for i in range(len(db) - 6)
+                if db[i] >= lim + 6 and sum(db[j] >= lim - 3 for j in range(i + 1, i + 6)) >= 3), 0)
     if ini > 0.15:
         probs.append(("ERRO", f"respiro no começo: voz só aos {ini:.2f} s"))
     # emendas
