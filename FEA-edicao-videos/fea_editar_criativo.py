@@ -1,0 +1,330 @@
+#!/usr/bin/env python3
+"""FEA: edição de criativos de anúncio (Reels/Stories 9:16) com a identidade Elite Mentoring.
+
+Diferente do fea_editar_video.py (Reels de procedimento): aqui não há título de 3 s, porque o
+gancho é a própria fala do primeiro quadro (roteiro "Roteiros dos criativos", v4 05/11/2026).
+A legenda entra desde o 0 s, e as cartelas de texto do roteiro ("Tela") entram por cima.
+
+Uso:
+    python3 fea_editar_criativo.py projeto.json [--so-legenda] [trecho_do_nome ...]
+
+projeto.json:
+{
+  "ffmpeg": "...", "fontsdir": "fonts", "assets": "assets",   # assets: logo_elite_h.png
+  "brutos": "brutos", "transcricoes": "tr",
+  "videos": [
+    {
+      "saida": "out/01A- Quase 100% na cadeira.mp4",
+      "trechos": [["IMG_9008", 0.4, 12.3], ["IMG_9009", 3.1, 40.0, "exato"]],  # s do bruto
+      "remover_legenda": [["IMG_9008", 5.0, 6.0]],
+      "correcoes": [["regex", "troca"]],
+      "cartelas": [
+        {"tipo": "gancho", "ini": 0, "fim": 3.2, "eyebrow": "Pela primeira vez",
+         "texto": "Quase 100% na cadeira"},
+        {"tipo": "card", "ancora": "roteiro", "dur": 4, "eyebrow": "...", "texto": "...",
+         "chips": ["A", "B"]},                    # ancora = 1ª palavra (texto) a partir do início
+        {"tipo": "cta", "ancora": "clica", "fim": "final"}
+      ]
+    }
+  ]
+}
+"""
+import json
+import os
+import re
+import subprocess
+import sys
+
+from PIL import Image, ImageDraw, ImageFont
+
+import fea_editar_video as fe
+
+W, H = 1080, 1920
+fe.TITULO_DUR = 0.0           # sem título: a legenda começa no primeiro quadro (gancho legendado)
+fe.formatar_titulo = lambda v: ""   # criativo não tem título de 3 s
+fe.LEGENDA_Y = 1500
+
+# identidade Elite Mentoring (mesma da página da oferta e do roteiro)
+BG = (1, 26, 36)
+LINHA = (22, 66, 79)
+TEAL = (98, 185, 180)
+AQUA = (134, 249, 248)
+INK = (234, 246, 246)
+MUTED = (147, 179, 184)
+
+
+def fonte(cfg, nome, tam, peso=None):
+    f = ImageFont.truetype(os.path.join(cfg["fontsdir"], nome), tam)
+    if peso:
+        try:
+            f.set_variation_by_axes([peso])
+        except Exception:
+            pass
+    return f
+
+
+def quebrar(draw, texto, f, largura):
+    linhas, atual = [], ""
+    for p in texto.split():
+        t = (atual + " " + p).strip()
+        if draw.textlength(t.replace("*", ""), font=f) <= largura or not atual:
+            atual = t
+        else:
+            linhas.append(atual)
+            atual = p
+    if atual:
+        linhas.append(atual)
+    # equilibra 2 linhas (evita viúva)
+    if len(linhas) == 2:
+        ps = texto.split()
+        melhor = min(range(1, len(ps)), key=lambda i: max(
+            draw.textlength(" ".join(ps[:i]).replace("*", ""), font=f),
+            draw.textlength(" ".join(ps[i:]).replace("*", ""), font=f)))
+        a, b = " ".join(ps[:melhor]), " ".join(ps[melhor:])
+        if max(draw.textlength(a.replace("*", ""), font=f), draw.textlength(b.replace("*", ""), font=f)) <= largura:
+            linhas = [a, b]
+    return linhas
+
+
+def desenhar_linha(draw, x, y, linha, f, cor, destaque):
+    """Texto com trechos entre *asteriscos* na cor de destaque."""
+    partes = re.split(r"(\*[^*]+\*)", linha)
+    for p in partes:
+        if not p:
+            continue
+        c = destaque if p.startswith("*") else cor
+        p = p.strip("*")
+        draw.text((x, y), p, font=f, fill=c)
+        x += draw.textlength(p, font=f)
+
+
+def espacado(draw, xy, texto, f, cor, esp=0.22, centro=False):
+    tam = f.size
+    larg = sum(draw.textlength(ch, font=f) + tam * esp for ch in texto) - tam * esp
+    x, y = xy
+    if centro:
+        x -= larg / 2
+    for ch in texto:
+        draw.text((x, y), ch, font=f, fill=cor)
+        x += draw.textlength(ch, font=f) + tam * esp
+    return larg
+
+
+def cartela_png(cfg, c, caminho):
+    """Desenha a cartela em PNG transparente 1080x1920."""
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    serif = fonte(cfg, "Gloock-Regular.ttf", c.get("tam", 66 if c["tipo"] != "gancho" else 72))
+    eyeb = fonte(cfg, "Urbanist.ttf", 25, 700)
+    chipf = fonte(cfg, "Urbanist.ttf", 31, 700)
+    if c["tipo"] == "cta":
+        # botão "Saiba mais" com seta para baixo, logo acima da legenda não: abaixo dela
+        bw, bh, by = 420, 96, 1660
+        bx = (W - bw) // 2
+        d.rounded_rectangle((bx, by, bx + bw, by + bh), radius=bh // 2, fill=AQUA + (255,))
+        f = fonte(cfg, "Urbanist.ttf", 38, 800)
+        espacado(d, (W / 2, by + 26), "SAIBA MAIS", f, BG + (255,), 0.12, centro=True)
+        ax, ay = W // 2, by + bh + 22
+        d.polygon([(ax - 18, ay), (ax + 18, ay), (ax, ay + 20)], fill=AQUA + (255,))
+        if c.get("texto"):
+            c = dict(c, tipo="card")
+        else:
+            img.save(caminho)
+            return
+    largura = c.get("largura", 900)
+    pad = 46
+    linhas = quebrar(d, c["texto"], serif, largura - 2 * pad)
+    lh = int(serif.size * 1.12)
+    alt = pad + (44 if c.get("eyebrow") else 0) + lh * len(linhas) + pad
+    if c.get("chips"):
+        alt += 92
+    x0 = (W - largura) // 2
+    y0 = c.get("y", 1000)   # no peito: o rosto (y 330 a 900) fica livre
+    # sombra suave
+    sh = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(sh).rounded_rectangle((x0, y0 + 10, x0 + largura, y0 + alt + 10), radius=30, fill=(0, 0, 0, 90))
+    from PIL import ImageFilter
+    img = Image.alpha_composite(img, sh.filter(ImageFilter.GaussianBlur(18)))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle((x0, y0, x0 + largura, y0 + alt), radius=30, fill=BG + (232,), outline=LINHA + (255,), width=2)
+    d.rounded_rectangle((x0, y0, x0 + largura, y0 + 7), radius=3, fill=AQUA + (255,))
+    y = y0 + pad - 6
+    if c.get("eyebrow"):
+        espacado(d, (W / 2, y), c["eyebrow"].upper(), eyeb, TEAL + (255,), 0.3, centro=True)
+        y += 44
+    for ln in linhas:
+        lw = d.textlength(ln.replace("*", ""), font=serif)
+        desenhar_linha(d, (W - lw) / 2, y, ln, serif, INK + (255,), AQUA + (255,))
+        y += lh
+    if c.get("chips"):
+        y += 22
+        chips = c["chips"]
+        larguras = [d.textlength(ch.upper(), font=chipf) + 3.5 * len(ch) + 52 for ch in chips]
+        sep = 26
+        total = sum(larguras) + sep * (len(chips) - 1)
+        x = (W - total) / 2
+        for i, (ch, lw) in enumerate(zip(chips, larguras)):
+            riscado = c.get("riscar")
+            d.rounded_rectangle((x, y, x + lw, y + 66), radius=33, outline=TEAL + (255,), width=2,
+                                fill=(7, 43, 56, 255))
+            espacado(d, (x + lw / 2, y + 16), ch.upper(), chipf, INK + (255,), 0.12, centro=True)
+            if riscado:
+                d.line((x + 16, y + 34, x + lw - 16, y + 34), fill=AQUA + (255,), width=4)
+            x += lw + sep
+            if i < len(chips) - 1 and c.get("seta"):
+                d.text((x - sep + 2, y + 12), "→", font=chipf, fill=AQUA + (255,))
+    img.save(caminho)
+
+
+def palavras_do_bruto(cfg, nome, extras_remover):
+    trans = json.load(open(os.path.join(cfg["transcricoes"], nome + ".json"), encoding="utf-8"))
+    palavras = []
+    for seg in trans:
+        ws = [dict(w) for w in seg["words"]]
+        for i, w in enumerate(ws):
+            if i and palavras and not w["w"].startswith(" "):
+                palavras[-1]["w"] += w["w"]
+                palavras[-1]["e"] = min(w["e"], palavras[-1]["s"] + 1.2)
+                continue
+            palavras.append(dict(w, e=min(w["e"], w["s"] + 1.2), e0=w["e"], ini=(i == 0)))
+    palavras.sort(key=lambda p: p["s"])
+    palavras = fe.numerar_enumeracao(palavras)
+    for a, b in extras_remover:
+        palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
+    return palavras
+
+
+def montar(cfg, v):
+    ff = cfg["ffmpeg"]
+    entradas, cache_db = [], {}
+    trechos = []
+    for t in v["trechos"]:
+        nome, a, b = t[0], t[1], t[2]
+        arq = os.path.join(cfg["brutos"], nome + ".MOV")
+        if nome not in cache_db:
+            cache_db[nome] = fe.perfil_voz(ff, arq)
+        db, lim, passo = cache_db[nome]
+        if len(t) > 3 and t[3] == "exato":
+            a2, b2 = a, b
+        else:
+            a2, b2 = fe.encaixar_cortes([[a, b]], db, passo)[0]
+        trechos.append((nome, arq, a2, b2))
+    # legenda
+    todas, offset = [], 0.0
+    por_bruto = {}
+    for nome, arq, a, b in trechos:
+        if nome not in por_bruto:
+            rem = [(x[1], x[2]) for x in v.get("remover_legenda", []) if x[0] == nome]
+            ps = palavras_do_bruto(cfg, nome, rem)
+            ps = [p for p in ps if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
+            por_bruto[nome] = fe.ancorar_na_voz(ps, *cache_db[nome])
+        ps, dur = fe.remapear_palavras(por_bruto[nome], [[a, b]])
+        for p in ps:
+            p["s"] += offset
+            p["e"] += offset
+        # o 1º bloco de cada trecho começa frase nova na legenda
+        if ps:
+            ps[0]["ini"] = True
+        todas += ps
+        offset += dur
+    duracao = offset
+    base = v["saida"].rsplit(".", 1)[0]
+    ass = base + ".ass"
+    vv = dict(v, titulo="-")
+    fe.gerar_ass(vv, todas, duracao, ass)
+    # tempos das cartelas
+    texto_tl = [(p["s"], re.sub(r"[^\w%]", "", p["w"]).lower()) for p in todas]
+
+    def achar(ancora, depois=0.0):
+        alvo = [re.sub(r"[^\w%]", "", x).lower() for x in ancora.split()]
+        for i in range(len(texto_tl)):
+            if texto_tl[i][0] < depois:
+                continue
+            if all(i + k < len(texto_tl) and texto_tl[i + k][1].startswith(alvo[k]) for k in range(len(alvo))):
+                return texto_tl[i][0]
+        raise SystemExit(f"{v['saida']}: âncora não encontrada: {ancora!r}")
+
+    cartelas = []
+    for k, c in enumerate(v.get("cartelas", [])):
+        ini = c["ini"] if "ini" in c else achar(c["ancora"], c.get("depois", 0.0)) - 0.1
+        ini = max(0.0, ini)
+        fim = c.get("fim")
+        if fim == "final" or fim is None and "dur" not in c:
+            fim = duracao
+        elif fim is None:
+            fim = ini + c["dur"]
+        fim = min(fim, duracao)
+        png = f"{base}.cart{k}.png"
+        cartela_png(cfg, c, png)
+        cartelas.append((png, ini, fim))
+    return trechos, ass, duracao, cartelas, todas
+
+
+def renderizar(cfg, v, so_legenda=False):
+    trechos, ass, duracao, cartelas, palavras = montar(cfg, v)
+    if so_legenda:
+        return duracao
+    ff = cfg["ffmpeg"]
+    cmd = [ff, "-y", "-v", "error"]
+    arquivos = []
+    for nome, arq, a, b in trechos:
+        if arq not in arquivos:
+            arquivos.append(arq)
+    for arq in arquivos:
+        cmd += ["-i", arq]
+    n = len(arquivos)
+    logo = os.path.join(cfg["assets"], "logo_elite_h.png")
+    cmd += ["-i", logo]
+    for png, ini, fim in cartelas:
+        cmd += ["-loop", "1", "-t", f"{fim - ini:.3f}", "-framerate", "30", "-i", png]
+    partes, vr, ar = [], [], []
+    for i, (nome, arq, a, b) in enumerate(trechos):
+        j = arquivos.index(arq)
+        partes.append(f"[{j}:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,"
+                      f"crop={W}:{H},setsar=1[v{i}]")
+        partes.append(f"[{j}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000,"
+                      f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.03):.3f}:d=0.03[a{i}]")
+        vr.append(f"[v{i}]")
+        ar.append(f"[a{i}]")
+    partes.append("".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc]")
+    partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1[ac]")
+    # logo no topo e barra de progresso aqua
+    partes.append(f"[{n}:v]scale=300:-1,format=rgba,colorchannelmixer=aa=0.95[lg]")
+    partes.append("[vc][lg]overlay=x=(W-w)/2:y=64[v0x]")
+    partes.append(f"color=c=0x86F9F8:s={W}x8:r=30:d={duracao:.3f}[bar]")
+    partes.append(f"[v0x][bar]overlay=x='-W+W*t/{duracao:.3f}':y=0:shortest=1[vb]")
+    atual = "vb"
+    for k, (png, ini, fim) in enumerate(cartelas):
+        idx = n + 1 + k
+        d = fim - ini
+        fo = max(0.0, d - 0.25)
+        partes.append(f"[{idx}:v]format=rgba,fade=t=in:st=0:d=0.22:alpha=1,"
+                      f"fade=t=out:st={fo:.3f}:d=0.22:alpha=1,setpts=PTS+{ini:.3f}/TB[c{k}]")
+        partes.append(f"[{atual}][c{k}]overlay=0:0:eof_action=pass[o{k}]")
+        atual = f"o{k}"
+    esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
+    partes.append(f"[{atual}]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+    cmd += ["-filter_complex", ";".join(partes), "-map", "[vo]", "-map", "[ac]",
+            "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high",
+            "-pix_fmt", "yuv420p", "-r", "30",
+            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",
+            "-t", f"{duracao:.3f}", "-movflags", "+faststart", v["saida"]]
+    subprocess.run(cmd, check=True)
+    return duracao
+
+
+def main():
+    args = sys.argv[1:]
+    so_legenda = "--so-legenda" in args
+    args = [a for a in args if a != "--so-legenda"]
+    cfg = json.load(open(args[0], encoding="utf-8"))
+    so = args[1:] or None
+    for v in cfg["videos"]:
+        if so and not any(x in v["saida"] for x in so):
+            continue
+        d = renderizar(cfg, v, so_legenda)
+        print(f"{v['saida']}: {d:.1f}s", flush=True)
+
+
+if __name__ == "__main__":
+    main()
