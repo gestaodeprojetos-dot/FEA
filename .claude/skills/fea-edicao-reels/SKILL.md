@@ -145,3 +145,5 @@ Brutos de anúncio (roteiro "Roteiros dos criativos", Elite Mentoring) **não** 
 - Cada bruto foi gravado de improviso como criativo completo: 1 bruto = 1 vídeo; cortar gaguejos, falas de bastidor ("não precisa falar da mentoria") e repetições do CTA.
 - Keila pediu (07/11): editar **todos** os brutos, mesmo os já editados antes, e subir em **pasta nova**.
 - Gloock não tem o glifo "×": não usar em cartela.
+- **Correção de 07/11 (Keila):** o roteiro pede imagens de apoio e tela dividida; não entregar só cartelas de texto. B-roll real das pastas "B roll ..." do Drive (avaliação com luva, marcação de planejamento; sem agulha, sangue ou dor), cortes de 2 a 3 s; "B roll tiktok" é conteúdo de terceiros, não usar. Tela dividida (`"tipo": "dividida"`) no trecho do diagnóstico: Dr. em cima, "Sua venda hoje × O método" embaixo. Conversa de direct (`"tipo": "whats"`) quando ele fala de preço por mensagem.
+- **Abertura sem respiro:** o vídeo começa com o Dr. já falando (o script corta até 0,06 s antes da voz) e pausa longa no meio vira respiro curto. Antes de entregar, rodar `python3 fea_revisar_criativo.py projeto.json` (0 ERRO).
