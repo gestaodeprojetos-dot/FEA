@@ -446,8 +446,8 @@ def cortes_finos(v, manter, ff):
         trechos = novo
     palavras = []
     if v.get("transcricao_literal") and os.path.exists(v["transcricao_literal"]):
-        palavras = [((w["s"] + w["e"]) / 2) for seg in json.load(open(v["transcricao_literal"], encoding="utf-8"))
-                    for w in seg["words"] if w["e"] - w["s"] < 1.0]
+        palavras = [(w["s"], w["e"]) for seg in json.load(open(v["transcricao_literal"], encoding="utf-8"))
+                    for w in seg["words"] if w["e"] - w["s"] < 1.2]
     segs = []
     for a, b in trechos:
         i0, i1 = int(a * 100), min(len(db), int(b * 100))
@@ -460,10 +460,13 @@ def cortes_finos(v, manter, ff):
                     j += 1
                 t0, t1 = a + k / 100, a + j / 100
                 # respiro de 0,05 s (Keila, 07/11: "tem um respiro no meio dos cortes, precisa ser contínuo")
-                if t1 - t0 >= 0.30 and k > 0 and j < len(q) and not any(t0 + 0.05 < m < t1 - 0.05 for m in palavras):
-                    if t0 + 0.05 - ini > 0.3:
-                        segs.append([round(ini, 3), round(t0 + 0.05, 3)])
-                        ini = t1 - 0.05
+                # 0,30 s cortava dentro de palavra ("fórmulas", vídeo 9): mínimo 0,45 s e nenhuma
+                # palavra da transcrição literal pode encostar no trecho cortado
+                c0, c1 = t0 + 0.06, t1 - 0.06
+                if t1 - t0 >= 0.45 and k > 0 and j < len(q) and not any(c0 < (ws + we) / 2 < c1 for ws, we in palavras):
+                    if c0 - ini > 0.3:
+                        segs.append([round(ini, 3), round(c0, 3)])
+                        ini = c1
                 k = j
             else:
                 k += 1
