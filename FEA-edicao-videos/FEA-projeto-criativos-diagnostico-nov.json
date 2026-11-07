@@ -20,11 +20,13 @@
     ],
     [
      33.0,
-     56.15
+     57.13,
+     "exato"
     ],
     [
-     58.7,
-     63.9
+     59.79,
+     63.9,
+     "exato"
     ]
    ],
    "remover_legenda": [
@@ -87,13 +89,44 @@
     [
      "replicável",
      "É UM MÉTODO REPLICÁVEL"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "conversão",
+     "crescimento",
+     {
+      "titulo": "Mais conversão na avaliação",
+      "destaque": "conversão",
+      "eyebrow": "TAXA DE CONVERSÃO"
+     }
     ],
     [
-     "especialistas",
-     "AVALIAÇÃO COM O MEU TIME"
+     "formulário",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "2 minutos"
+       ],
+       [
+        "Triagem",
+        "do meu time"
+       ],
+       [
+        "Avaliação",
+        "gratuita"
+       ]
+      ]
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 1.7,
+   "gancho_destaque": "método",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/01.wav",
    "trilha_db": 0
   },
@@ -168,13 +201,67 @@
     [
      "assertivo",
      "AVALIAÇÕES ASSERTIVAS"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "roteiro",
+     "plano",
+     {
+      "titulo": "O que tem no método",
+      "destaque": "método",
+      "itens": [
+       "ROTEIRO",
+       "PERGUNTAS",
+       "CRESCENTE",
+       "PLANOS"
+      ],
+      "rodape": "AVALIAÇÕES ASSERTIVAS"
+     }
+    ],
+    [
+     "conversão",
+     "crescimento",
+     {
+      "titulo": "Mais vendas no consultório",
+      "destaque": "vendas",
+      "eyebrow": "TAXA DE CONVERSÃO"
+     }
+    ],
+    [
+     "minutinhos",
+     "relogio",
+     {
+      "titulo": "Formulário gratuito",
+      "destaque": "gratuito"
+     }
     ],
     [
      "pré-diagnóstico",
-     "PRÉ-DIAGNÓSTICO GRATUITO"
+     "passos",
+     {
+      "titulo": "O próximo passo",
+      "destaque": "próximo passo",
+      "itens": [
+       [
+        "Formulário",
+        "gratuito"
+       ],
+       [
+        "Pré-",
+        "diagnóstico\nonline"
+       ],
+       [
+        "Plano",
+        "de execução"
+       ]
+      ]
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/05.wav",
    "trilha_db": 0
   },
@@ -245,13 +332,44 @@
     [
      "conjunto",
      "ELA QUER UM CONJUNTO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "bioestimuladores",
+     "plano",
+     {
+      "titulo": "Ela saiu com um plano completo",
+      "destaque": "completo",
+      "itens": [
+       "FULL FACE",
+       "BIOESTIMULADOR",
+       "TOXINA"
+      ],
+      "rodape": "UM PLANO, NÃO UM PROCEDIMENTO"
+     }
     ],
     [
-     "posicionamento",
-     "MÉTODO E POSICIONAMENTO"
+     "conversão",
+     "crescimento",
+     {
+      "titulo": "Mais conversão no consultório",
+      "destaque": "conversão",
+      "eyebrow": "TAXA DE CONVERSÃO"
+     }
+    ],
+    [
+     "Demora",
+     "relogio",
+     {
+      "titulo": "Formulário rápido",
+      "destaque": "rápido"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/03.wav",
    "trilha_db": 0
   },
@@ -322,13 +440,58 @@
     [
      "avaliações",
      "CONVERSÃO NA AVALIAÇÃO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "Instagram",
+     "pilares",
+     {
+      "titulo": "O que fez a clínica crescer",
+      "destaque": "crescer",
+      "itens": [
+       "INSTAGRAM",
+       "AVALIAÇÃO",
+       "PLANEJAMENTO",
+       "EXECUÇÃO"
+      ]
+     }
     ],
     [
-     "diagnóstico",
-     "DIAGNÓSTICO GRATUITO"
+     "formulário",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "2 minutos"
+       ],
+       [
+        "Seleção",
+        "do meu time"
+       ],
+       [
+        "Diagnóstico",
+        "gratuito"
+       ]
+      ]
+     }
+    ],
+    [
+     "aumentando",
+     "crescimento",
+     {
+      "titulo": "Sua conversão subindo",
+      "destaque": "subindo",
+      "eyebrow": "CONVERSÃO NO CONSULTÓRIO"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/08.wav",
    "trilha_db": 0
   },
@@ -399,13 +562,45 @@
     [
      "completos",
      "PLANOS MAIS COMPLETOS"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "ticket",
+     "crescimento",
+     {
+      "titulo": "Aumente o ticket",
+      "destaque": "ticket",
+      "eyebrow": "TICKET POR PACIENTE"
+     }
     ],
     [
-     "questionário",
-     "QUESTIONÁRIO DE 2 MINUTOS"
+     "completos",
+     "plano",
+     {
+      "titulo": "Planos mais completos",
+      "destaque": "completos",
+      "itens": [
+       "TOXINA",
+       "PREENCHIMENTO",
+       "BIOESTIMULADOR",
+       "TECNOLOGIAS"
+      ],
+      "rodape": "UM PLANO, NÃO UM PROCEDIMENTO"
+     }
+    ],
+    [
+     "minutinhos",
+     "relogio",
+     {
+      "titulo": "Questionário rápido",
+      "destaque": "rápido"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/02.wav",
    "trilha_db": 0
   },
@@ -476,13 +671,68 @@
     [
      "todo",
      "O PACIENTE COMO UM TODO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "toxina",
+     "plano",
+     {
+      "titulo": "O paciente como um todo",
+      "destaque": "um todo",
+      "itens": [
+       "TOXINA",
+       "PREENCHIMENTO",
+       "BIOESTIMULADOR",
+       "FIOS",
+       "TECNOLOGIAS"
+      ],
+      "rodape": "UM PLANO, NÃO UM PROCEDIMENTO"
+     }
     ],
     [
      "faturamento",
-     "PLANO COMPLETO, MAIS FATURAMENTO"
+     "crescimento",
+     {
+      "titulo": "Mais faturamento",
+      "destaque": "faturamento",
+      "eyebrow": "FATURAMENTO"
+     }
+    ],
+    [
+     "diagnóstico",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Saiba Mais",
+        "no anúncio"
+       ],
+       [
+        "Diagnóstico",
+        "gratuito"
+       ],
+       [
+        "Dicas",
+        "da equipe"
+       ]
+      ]
+     }
+    ],
+    [
+     "minutos",
+     "relogio",
+     {
+      "titulo": "Formulário rápido",
+      "destaque": "rápido"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/07.wav",
    "trilha_db": 0
   },
@@ -553,13 +803,58 @@
     [
      "pilares",
      "PLANEJAMENTO, AVALIAÇÃO, MARKETING E VENDAS"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "agregar",
+     "passos",
+     {
+      "titulo": "Agregue valor antes do preço",
+      "destaque": "valor",
+      "itens": [
+       [
+        "O que",
+        "você faz"
+       ],
+       [
+        "Como",
+        "você faz"
+       ],
+       [
+        "Por que",
+        "você faz"
+       ]
+      ]
+     }
     ],
     [
-     "formulário",
-     "FORMULÁRIO RÁPIDO"
+     "pilares",
+     "pilares",
+     {
+      "titulo": "Os pilares da clínica",
+      "destaque": "pilares",
+      "itens": [
+       "PLANEJAMENTO",
+       "AVALIAÇÃO",
+       "MARKETING",
+       "VENDAS"
+      ]
+     }
+    ],
+    [
+     "faturamento",
+     "crescimento",
+     {
+      "titulo": "Faturamento crescendo",
+      "destaque": "crescendo",
+      "eyebrow": "TODOS OS MESES"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/12.wav",
    "trilha_db": 0
   },
@@ -630,13 +925,43 @@
     [
      "roteiro",
      "ROTEIRO, PLANEJAMENTO E MÉTODO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "roteiro",
+     "pilares",
+     {
+      "titulo": "O que faz a paciente fechar",
+      "destaque": "fechar",
+      "itens": [
+       "ROTEIRO",
+       "PLANEJAMENTO",
+       "MÉTODO"
+      ]
+     }
     ],
     [
-     "perfil",
-     "SELEÇÃO POR PERFIL"
+     "conversão",
+     "crescimento",
+     {
+      "titulo": "Sua taxa de conversão",
+      "destaque": "conversão",
+      "eyebrow": "AVALIAÇÃO E VENDAS"
+     }
+    ],
+    [
+     "minutos",
+     "relogio",
+     {
+      "titulo": "Formulário rápido",
+      "destaque": "rápido"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/04.wav",
    "trilha_db": 0
   },
@@ -707,13 +1032,58 @@
     [
      "metodologia",
      "UMA METODOLOGIA DE AVALIAÇÃO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "metodologia",
+     "pilares",
+     {
+      "titulo": "A metodologia que mudou tudo",
+      "destaque": "metodologia",
+      "itens": [
+       "AVALIAÇÃO",
+       "PLANEJAMENTO",
+       "EXECUÇÃO",
+       "VENDAS"
+      ]
+     }
     ],
     [
      "formulário",
-     "FORMULÁRIO RÁPIDO"
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "2 minutos"
+       ],
+       [
+        "Seleção",
+        "do meu time"
+       ],
+       [
+        "Diagnóstico",
+        "gratuito"
+       ]
+      ]
+     }
+    ],
+    [
+     "faturamento",
+     "crescimento",
+     {
+      "titulo": "Mais faturamento no consultório",
+      "destaque": "faturamento",
+      "eyebrow": "FATURAMENTO"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/06.wav",
    "trilha_db": 0
   },
@@ -784,13 +1154,58 @@
     [
      "dificuldades",
      "SUAS PRINCIPAIS DIFICULDADES"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "método",
+     "pilares",
+     {
+      "titulo": "Existe um método",
+      "destaque": "método",
+      "itens": [
+       "AVALIAÇÃO",
+       "PLANEJAMENTO",
+       "MARKETING",
+       "VENDAS"
+      ]
+     }
     ],
     [
-     "individual",
-     "AVALIAÇÃO INDIVIDUAL"
+     "formulário",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "2 minutos"
+       ],
+       [
+        "Seleção",
+        "semanal"
+       ],
+       [
+        "Avaliação",
+        "individual"
+       ]
+      ]
+     }
+    ],
+    [
+     "faturamento",
+     "crescimento",
+     {
+      "titulo": "Agenda e faturamento crescendo",
+      "destaque": "crescendo",
+      "eyebrow": "FATURAMENTO"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/13.wav",
    "trilha_db": 0
   },
@@ -861,13 +1276,58 @@
     [
      "captação",
      "CAPTAÇÃO E CONVERSÃO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "captação",
+     "plano",
+     {
+      "titulo": "O que faz a clínica crescer",
+      "destaque": "crescer",
+      "itens": [
+       "CAPTAÇÃO",
+       "CONVERSÃO",
+       "PREVISIBILIDADE"
+      ],
+      "rodape": "CRESCIMENTO TODOS OS ANOS"
+     }
     ],
     [
-     "previsibilidade",
-     "PREVISIBILIDADE"
+     "constante",
+     "crescimento",
+     {
+      "titulo": "Faturamento constante e crescente",
+      "destaque": "crescente",
+      "eyebrow": "FATURAMENTO"
+     }
+    ],
+    [
+     "formulário",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "seus dados"
+       ],
+       [
+        "Seleção",
+        "semanal"
+       ],
+       [
+        "Avaliação",
+        "gratuita"
+       ]
+      ]
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/09.wav",
    "trilha_db": 0
   },
@@ -938,13 +1398,58 @@
     [
      "toxina",
      "TOXINA, BIOESTIMULADOR E TECNOLOGIAS"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "toxina",
+     "plano",
+     {
+      "titulo": "Completar o tratamento",
+      "destaque": "tratamento",
+      "itens": [
+       "TOXINA",
+       "BIOESTIMULADORES",
+       "TECNOLOGIAS"
+      ],
+      "rodape": "UM PLANO, NÃO UM PROCEDIMENTO"
+     }
     ],
     [
      "metodologia",
-     "AVALIAÇÃO, PLANEJAMENTO E VENDAS"
+     "pilares",
+     {
+      "titulo": "A metodologia completa",
+      "destaque": "metodologia",
+      "itens": [
+       "AVALIAÇÃO",
+       "PLANEJAMENTO",
+       "VENDAS",
+       "MARKETING"
+      ]
+     }
+    ],
+    [
+     "minutos",
+     "relogio",
+     {
+      "titulo": "Formulário rápido",
+      "destaque": "rápido"
+     }
+    ],
+    [
+     "cresça",
+     "crescimento",
+     {
+      "titulo": "Cresça profissionalmente",
+      "destaque": "Cresça",
+      "eyebrow": "VENDAS E MARKETING"
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/10.wav",
    "trilha_db": 0
   },
@@ -1015,13 +1520,44 @@
     [
      "completo",
      "MÉTODO COMPLETO DE CRESCIMENTO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "crescimento",
+     "crescimento",
+     {
+      "titulo": "Crescimento de vendas",
+      "destaque": "Crescimento",
+      "eyebrow": "VENDAS E MARKETING"
+     }
     ],
     [
-     "semanalmente",
-     "AVALIAÇÕES UM A UM"
+     "diagnóstico",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Saiba Mais",
+        "no anúncio"
+       ],
+       [
+        "Diagnóstico",
+        "gratuito"
+       ],
+       [
+        "Orientação",
+        "do meu time"
+       ]
+      ]
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/11.wav",
    "trilha_db": 0
   },
@@ -1100,13 +1636,44 @@
     [
      "formulário",
      "FORMULÁRIO DE DIAGNÓSTICO"
+    ]
+   ],
+   "ilustracoes": [
+    [
+     "aumentar",
+     "crescimento",
+     {
+      "titulo": "Conversão e vendas crescendo",
+      "destaque": "crescendo",
+      "eyebrow": "CONSULTÓRIO DE HARMONIZAÇÃO"
+     }
     ],
     [
-     "participará",
-     "AVALIAÇÃO COM A MINHA EQUIPE"
+     "formulário",
+     "passos",
+     {
+      "titulo": "Como participar",
+      "destaque": "participar",
+      "itens": [
+       [
+        "Formulário",
+        "de diagnóstico"
+       ],
+       [
+        "Seleção",
+        "de 3 pessoas"
+       ],
+       [
+        "Avaliação",
+        "gratuita"
+       ]
+      ]
+     }
     ]
    ],
    "saiba_mais": "saiba mais",
+   "abertura": 0,
+   "gancho_destaque": "",
    "trilha": "/tmp/claude-0/-home-user-FEA/89d0db38-69aa-5d7e-befd-f5c4804571fb/scratchpad/trilhas/14.wav",
    "trilha_db": 0
   }

@@ -47,6 +47,7 @@ LOGO_W, LOGO_Y = 330, 92
 GANCHO_DUR = 4.2
 INSERT_Y, INSERT_DUR = 1215, 2.4
 BOTAO_Y = 1735
+ILUS_Y, ILUS_DUR = 1095, 3.6
 ZOOM_B, ZOOM_CY = 1.10, 0.40
 SIL_DB, SIL_MIN, RESPIRO = 6.0, 0.55, 0.20
 
@@ -111,7 +112,7 @@ def texto(s, e, x, y, txt, estilo, tam, cor, esp=0, camada=3, org_y=None, anim=E
             f"\\fs{tam}\\fsp{esp}\\1c{cor}\\fad(160,200){anim}}}{txt}\n")
 
 
-def gancho(txt, selo):
+def gancho(txt, selo, t0=0.0):
     """Cartão do topo nos primeiros segundos: selo em Galano espaçado (turquesa) + headline em
     Gloock branca, sobre a superfície escura da página, com fio água à esquerda."""
     linhas = quebrar(txt, 22)
@@ -120,10 +121,10 @@ def gancho(txt, selo):
     w = min(w, W - 90)
     h = 70 + lh * len(linhas) + 40
     x, y = (W - w) / 2, LOGO_Y + 150
-    ev = [caixa(0, GANCHO_DUR, x, y, w, h, SURF, LINE, r=26, alfa="&H10&")]
-    ev.append(texto(0, GANCHO_DUR, W / 2, y + 48, selo, "Texto", 26, TEAL, esp=6, org_y=y + h / 2))
+    ev = [caixa(t0, t0 + GANCHO_DUR, x, y, w, h, SURF, LINE, r=26, alfa="&H10&")]
+    ev.append(texto(t0, t0 + GANCHO_DUR, W / 2, y + 48, selo, "Texto", 26, TEAL, esp=6, org_y=y + h / 2))
     for i, l in enumerate(linhas):
-        ev.append(texto(0, GANCHO_DUR, W / 2, y + 70 + lh * i + lh / 2 + 6, l, "Titulo", tam, BRANCO,
+        ev.append(texto(t0, t0 + GANCHO_DUR, W / 2, y + 70 + lh * i + lh / 2 + 6, l, "Titulo", tam, BRANCO,
                         org_y=y + h / 2))
     return ev
 
@@ -220,7 +221,9 @@ def encaixar(manter, db, passo, sil):
         if inicio:
             return max(melhor[0] * passo, melhor[-1] * passo - RESPIRO)
         return min(melhor[-1] * passo, melhor[0] * passo + RESPIRO)
-    return [[round(ponto(a, True), 3), round(ponto(b, False), 3)] for a, b in manter]
+    # [a, b, "exato"]: ponto conferido à mão no áudio (respiro de 40 ms entre palavras), não mexe
+    return [[t[0], t[1]] if len(t) > 2 and t[2] == "exato" else
+            [round(ponto(t[0], True), 3), round(ponto(t[1], False), 3)] for t in manter]
 
 
 def jump_cuts(manter, db, passo, sil):
@@ -326,6 +329,91 @@ def achar(palavras, gatilho, depois=0.0):
     return None
 
 
+# ---------------------------------------------------------------- enquadramento
+
+ROSTO_ALVO, ROSTO_Y, ZOOM_MAX, PUNCH = 0.27, 0.36, 1.8, 1.07
+
+
+def enquadramento(ff, entrada, passo=0.5):
+    """Rosto do Dr. a cada 0,5 s (Haar do OpenCV): devolve tempos e (zoom, cx, cy) suavizados.
+    Zoom = altura de rosto alvo (busto, ~27% do quadro) / altura medida, entre 1 e ZOOM_MAX:
+    com o Dr. sentado longe da câmera (rosto ~18%), aproxima e tira as pernas do quadro
+    (pedido da Keila, 07/11/2026)."""
+    import cv2
+    casc = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    raw = subprocess.run([ff, "-v", "error", "-i", entrada, "-vf", f"fps={1 / passo},scale=540:960",
+                          "-f", "rawvideo", "-pix_fmt", "gray", "-"], capture_output=True, check=True).stdout
+    quadros = np.frombuffer(raw, np.uint8).reshape(-1, 960, 540)
+    med = []
+    for q in quadros:
+        r = casc.detectMultiScale(q, 1.1, 5, minSize=(40, 40))
+        if len(r):
+            x, y, w, h = max(r, key=lambda k: k[2] * k[3])
+            med.append((h / 960, (x + w / 2) / 540, (y + h / 2) / 960))
+        else:
+            med.append(None)
+    validos = [m for m in med if m]
+    padrao = tuple(np.median(np.array(validos), axis=0)) if validos else (ROSTO_ALVO, 0.5, ROSTO_Y)
+    med = [m or padrao for m in med]
+    arr = np.array(med)
+    suave = np.array([np.median(arr[max(0, i - 2):i + 3], axis=0) for i in range(len(arr))])
+    suave = np.array([suave[max(0, i - 1):i + 2].mean(axis=0) for i in range(len(suave))])
+    t = np.arange(len(arr)) * passo
+    z = np.clip(ROSTO_ALVO / suave[:, 0], 1.0, ZOOM_MAX)
+    z[z < 1.08] = 1.0
+    return t, z, suave[:, 1], suave[:, 2]
+
+
+def pedacos(a, b, enq):
+    """Pontos-chave do enquadramento dentro do trecho [a, b]: [(t_rel, z, cx, cy), ...].
+    Enquadramento parado vira 1 ponto (corte fixo); quando o Dr. se mexe ou a câmera ajusta
+    (começo do vídeo 1: ele ainda sentando), a curva acompanha o rosto."""
+    t, z, cx, cy = enq
+    idx = [i for i in range(len(t)) if a - 0.25 <= t[i] <= b + 0.25] or [int(np.argmin(abs(t - a)))]
+    pts = [(max(0.0, t[i] - a), float(z[i]), float(cx[i]), float(cy[i])) for i in idx]
+    zs, ys, xs = [p[1] for p in pts], [p[3] for p in pts], [p[2] for p in pts]
+    if max(zs) - min(zs) < 0.15 and max(ys) - min(ys) < 0.06 and max(xs) - min(xs) < 0.08:
+        return [(0.0, float(np.median(zs)), float(np.median(xs)), float(np.median(ys)))]
+    chave = [pts[0]]
+    for p in pts[1:]:
+        q = chave[-1]
+        if abs(p[1] - q[1]) > 0.06 or abs(p[3] - q[3]) > 0.025 or abs(p[2] - q[2]) > 0.03:
+            chave.append(p)
+    if chave[-1] is not pts[-1]:
+        chave.append(pts[-1])
+    return chave
+
+
+def _curva(chave, k):
+    """Expressão do FFmpeg, linear por partes no tempo (on/30), do valor k dos pontos-chave."""
+    if len(chave) == 1:
+        return f"{chave[0][k]:.4f}"
+    e = f"{chave[-1][k]:.4f}"
+    for (t0, *v0), (t1, *v1) in reversed(list(zip(chave, chave[1:]))):
+        a, b = v0[k - 1], v1[k - 1]
+        e = f"if(lt(on/30,{t1:.3f}),{a:.4f}+({b - a:.4f})*(on/30-{t0:.3f})/{max(0.01, t1 - t0):.3f},{e})"
+    return f"if(lt(on/30,{chave[0][0]:.3f}),{chave[0][k]:.4f},{e})"
+
+
+def filtro_quadro(chave, punch):
+    if len(chave) == 1:
+        _, z, cx, cy = chave[0]
+        z = min(ZOOM_MAX * PUNCH, max(1.0, z) * punch)
+        if z <= 1.0:
+            return ""
+        zw, zh = int(W / z) // 2 * 2, int(H / z) // 2 * 2
+        x = min(max(0, int(cx * W - zw / 2)), W - zw)
+        y = min(max(0, int(cy * H - ROSTO_Y * zh)), H - zh)
+        nitidez = ",unsharp=5:5:0.7:5:5:0.0" if z > 1.15 else ""
+        return f",crop={zw}:{zh}:{x}:{y},scale={W}:{H}:flags=lanczos{nitidez}"
+    # enquadramento que se mexe: zoompan com curvas (zoom, centro x, y do rosto)
+    zc = f"min({ZOOM_MAX * PUNCH:.3f},max(1,({_curva(chave, 1)})*{punch}))"
+    xc = f"max(0,min(iw-iw/zoom,({_curva(chave, 2)})*iw-iw/zoom/2))"
+    yc = f"max(0,min(ih-ih/zoom,({_curva(chave, 3)})*ih-{ROSTO_Y}*ih/zoom))"
+    return (f",scale={W * 2}:{H * 2}:flags=lanczos,zoompan=z='{zc}':x='{xc}':y='{yc}':d=1:s={W}x{H}:fps=30,"
+            f"unsharp=5:5:0.6:5:5:0.0")
+
+
 # ---------------------------------------------------------------- vídeo
 
 def processar(cfg, v, so_legenda=False):
@@ -339,7 +427,8 @@ def processar(cfg, v, so_legenda=False):
 
     ev = [cabecalho()]
     ev += barra_progresso(dur)
-    ev += gancho(v["gancho"], v.get("selo", "DIAGNÓSTICO GRATUITO"))
+    abertura = float(v.get("abertura", 0))
+    ev += gancho(v["gancho"], v.get("selo", "DIAGNÓSTICO GRATUITO"), abertura)
     ev += legendas(pal, v.get("correcoes", ()))
     sfx, ocupado, botao = [], [(0, GANCHO_DUR)], None
     if v.get("saiba_mais"):
@@ -348,16 +437,38 @@ def processar(cfg, v, so_legenda=False):
             botao = (t, min(t + 3.2, dur - 0.2))
             ev += botao_saiba_mais(*botao)
             sfx.append(("pop", t))
+    ilus = []
+    for gat, tipo, params in v.get("ilustracoes", []):
+        t = achar(pal, gat, 0.3)
+        if t is None:
+            print(f"  AVISO: gatilho de ilustração '{gat}' não encontrado")
+            continue
+        t = max(t - 0.15, 0.2)
+        conflito = [b for a, b in ocupado[1:] if a - 0.3 < t < b + 0.3]
+        if conflito:
+            t = max(conflito) + 0.3
+        if botao and t < botao[1] and t + ILUS_DUR > botao[0]:
+            t = botao[1] + 0.3          # entra logo depois do botão "Saiba Mais"
+            conflito = [b for a, b in ocupado[1:] if a - 0.3 < t < b + 0.3]
+            if conflito:
+                t = max(conflito) + 0.3
+        if t + ILUS_DUR > dur - 0.3:
+            continue
+        ilus.append((t, tipo, params))
+        ocupado.append((t, t + ILUS_DUR))
+        sfx.append(("whoosh", t))
     for gat, txt in v.get("inserts", []):
         t = achar(pal, gat, 0.5)
         if t is None:
             print(f"  AVISO: gatilho '{gat}' não encontrado")
             continue
         t = max(t - 0.1, 0.2)
-        if any(a - 0.2 < t < b + 0.2 for a, b in ocupado):
-            t = max(b for a, b in ocupado if a - 0.2 < t < b + 0.2) + 0.25
+        if any(a - 0.2 < t < b + 0.2 for a, b in ocupado[1:]):
+            t = max(b for a, b in ocupado[1:] if a - 0.2 < t < b + 0.2) + 0.25
         fim = min(t + INSERT_DUR, dur - 0.3)
-        if fim - t < 1.2:
+        if botao and t < botao[1] and fim > botao[0]:
+            continue
+        if fim - t < 1.2 or any(a < fim and t < b for a, b in ocupado[1:]):
             continue
         ev += insert(t, fim, txt)
         ocupado.append((t, fim))
@@ -366,23 +477,21 @@ def processar(cfg, v, so_legenda=False):
     os.makedirs(os.path.dirname(ass) or ".", exist_ok=True)
     open(ass, "w", encoding="utf-8").write("".join(ev))
     if so_legenda:
+        for t, tipo, _ in ilus:
+            print(f"  ilustração {tipo} em {t:.1f}s")
         return dur, segs
 
-    # zoom: alterna 100% / 110% só quando o trecho anterior tem 2 s ou mais
-    partes, vr, ar, z = [], [], [], 1.0
+    # enquadramento pelo rosto em cada pedaço; a cada corte, alterna um leve punch-in (7%) para
+    # o pulo do corte não ficar estranho (Keila, 07/11: "teve um corte no vídeo 1 que ficou estranho")
+    enq = enquadramento(ff, v["entrada"])
+    partes, vr, ar = [], [], []
     for i, (a, b) in enumerate(segs):
-        if i and segs[i - 1][1] - segs[i - 1][0] >= 2.0:
-            z = ZOOM_B if z == 1.0 else 1.0
-        f = (f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,"
-             f"crop={W}:{H}")
-        if z > 1:
-            zw, zh = int(W / z) // 2 * 2, int(H / z) // 2 * 2
-            zy = min(max(0, int(ZOOM_CY * H - zh * ZOOM_CY)), H - zh)
-            f += f",crop={zw}:{zh}:{(W - zw) // 2}:{zy},scale={W}:{H}"
-        partes.append(f + f",setsar=1[v{i}]")
+        punch = PUNCH if i % 2 else 1.0
+        partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,"
+                      f"crop={W}:{H}{filtro_quadro(pedacos(a, b, enq), punch)},setsar=1[v{i}]")
+        vr.append(f"[v{i}]")
         partes.append(f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,afade=t=in:d=0.03,"
                       f"afade=t=out:st={max(0, b - a - 0.03)}:d=0.03[a{i}]")
-        vr.append(f"[v{i}]")
         ar.append(f"[a{i}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
     filtro = ";".join(partes) + ";" + "".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc];" + \
@@ -390,20 +499,39 @@ def processar(cfg, v, so_legenda=False):
         "loudnorm=I=-15:TP=-1.5:LRA=11,aresample=48000[voz];"
     # logo oficial no topo (o vídeo inteiro), por baixo do texto
     filtro += (f"[2:v]scale={LOGO_W}:-1,format=rgba,colorchannelmixer=aa=0.95[logo];"
-               f"[vc][logo]overlay=(W-w)/2:{LOGO_Y}[vl];"
-               f"[vl]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo];")
+               f"[vc][logo]overlay=(W-w)/2:{LOGO_Y}[vl0];")
+    import fea_ilustracoes as fi
+    entradas_ilus, ultimo = [], "vl0"
+    cache = os.path.join(os.path.dirname(v["saida"]), "_ilustracoes")
+    os.makedirs(cache, exist_ok=True)
+    for k, (t, tipo, params) in enumerate(ilus):
+        padrao, _ = fi.gerar(tipo, params, ILUS_DUR, cfg["fontsdir"], cache)
+        entradas_ilus += ["-framerate", "30", "-i", padrao]
+        idx = 3 + k
+        filtro += (f"[{idx}:v]format=rgba,setpts=PTS+{t:.3f}/TB[il{k}];"
+                   f"[{ultimo}][il{k}]overlay=(W-w)/2:{int(ILUS_Y - fi.PH / 2)}:eof_action=pass[vl{k + 1}];")
+        ultimo = f"vl{k + 1}"
+    if abertura:
+        cart = fi.cartao_abertura(v["gancho"], v.get("gancho_destaque", ""), v.get("selo", "DIAGNÓSTICO GRATUITO"),
+                                  cfg["logo"], cfg["fontsdir"], os.path.join(cache, "abertura-" + os.path.basename(v["saida"]) + ".png"))
+        entradas_ilus += ["-loop", "1", "-t", f"{abertura:.2f}", "-i", cart]
+        idx = 3 + len(ilus)
+        filtro += (f"[{idx}:v]format=rgba,fade=t=out:st={abertura - 0.3:.2f}:d=0.3:alpha=1[ab];"
+                   f"[{ultimo}][ab]overlay=0:0:eof_action=pass[vab];")
+        ultimo = "vab"
+    filtro += f"[{ultimo}]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo];"
     tdb = v.get("trilha_db", 0)
     filtro += (f"[1:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:{dur},asetpts=PTS-STARTPTS,"
                f"loudnorm=I=-28:TP=-8,aresample=48000,volume={tdb}dB,afade=t=in:d=0.6,"
                f"afade=t=out:st={max(0, dur - 1.8)}:d=1.8[tri];"
                f"[voz]asplit=2[voz1][vozsc];"
                f"[tri][vozsc]sidechaincompress=threshold=0.02:ratio=5:attack=40:release=450[trid];")
-    entradas = ["-i", v["entrada"], "-stream_loop", "-1", "-i", v["trilha"], "-loop", "1", "-i", cfg["logo"]]
+    entradas = ["-i", v["entrada"], "-stream_loop", "-1", "-i", v["trilha"], "-loop", "1", "-i", cfg["logo"]] + entradas_ilus
     mix = ["[voz1]", "[trid]"]
     for k, (nome, t) in enumerate(sfx):
         entradas += ["-i", cfg["sfx"][nome]]
         ms = int(max(0, t - 0.25) * 1000)
-        filtro += (f"[{k + 3}:a]aresample=48000,aformat=channel_layouts=stereo,volume=-10dB,"
+        filtro += (f"[{k + 3 + len(ilus) + (1 if abertura else 0)}:a]aresample=48000,aformat=channel_layouts=stereo,volume=-10dB,"
                    f"adelay={ms}|{ms}[s{k}];")
         mix.append(f"[s{k}]")
     filtro += "".join(mix) + f"amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.95[ao]"
