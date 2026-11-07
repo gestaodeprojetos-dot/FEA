@@ -134,10 +134,28 @@ def cartela_png(cfg, c, caminho):
     largura = c.get("largura", 900)
     pad = 46
     linhas = quebrar(d, c["texto"], serif, largura - 2 * pad)
+    # destaque *...* que quebra de linha: fecha numa linha e reabre na seguinte
+    aberto = False
+    for i, ln in enumerate(linhas):
+        if aberto:
+            ln = "*" + ln
+        aberto = ln.count("*") % 2 == 1
+        linhas[i] = ln + "*" if aberto else ln
     lh = int(serif.size * 1.12)
     alt = pad + (44 if c.get("eyebrow") else 0) + lh * len(linhas) + pad
+    linhas_chips = []
     if c.get("chips"):
-        alt += 92
+        chipf0 = fonte(cfg, "Urbanist.ttf", 31, 700)
+        lc, larg = [], 0
+        for ch in c["chips"]:
+            lw = d.textlength(ch.upper(), font=chipf0) + 3.5 * len(ch) + 52
+            if lc and larg + 26 + lw > largura - 60:
+                linhas_chips.append(lc)
+                lc, larg = [], 0
+            larg += (26 if lc else 0) + lw
+            lc.append(ch)
+        linhas_chips.append(lc)
+        alt += 92 + 84 * (len(linhas_chips) - 1)
     x0 = (W - largura) // 2
     y0 = c.get("y", 1000)   # no peito: o rosto (y 330 a 900) fica livre
     # sombra suave
@@ -156,23 +174,23 @@ def cartela_png(cfg, c, caminho):
         lw = d.textlength(ln.replace("*", ""), font=serif)
         desenhar_linha(d, (W - lw) / 2, y, ln, serif, INK + (255,), AQUA + (255,))
         y += lh
-    if c.get("chips"):
+    if linhas_chips:
         y += 22
-        chips = c["chips"]
-        larguras = [d.textlength(ch.upper(), font=chipf) + 3.5 * len(ch) + 52 for ch in chips]
-        sep = 26
-        total = sum(larguras) + sep * (len(chips) - 1)
-        x = (W - total) / 2
-        for i, (ch, lw) in enumerate(zip(chips, larguras)):
-            riscado = c.get("riscar")
-            d.rounded_rectangle((x, y, x + lw, y + 66), radius=33, outline=TEAL + (255,), width=2,
-                                fill=(7, 43, 56, 255))
-            espacado(d, (x + lw / 2, y + 16), ch.upper(), chipf, INK + (255,), 0.12, centro=True)
-            if riscado:
-                d.line((x + 16, y + 34, x + lw - 16, y + 34), fill=AQUA + (255,), width=4)
-            x += lw + sep
-            if i < len(chips) - 1 and c.get("seta"):
-                d.text((x - sep + 2, y + 12), "→", font=chipf, fill=AQUA + (255,))
+        for chips in linhas_chips:
+            larguras = [d.textlength(ch.upper(), font=chipf) + 3.5 * len(ch) + 52 for ch in chips]
+            sep = 26
+            total = sum(larguras) + sep * (len(chips) - 1)
+            x = (W - total) / 2
+            for i, (ch, lw) in enumerate(zip(chips, larguras)):
+                d.rounded_rectangle((x, y, x + lw, y + 66), radius=33, outline=TEAL + (255,), width=2,
+                                    fill=(7, 43, 56, 255))
+                espacado(d, (x + lw / 2, y + 16), ch.upper(), chipf, INK + (255,), 0.12, centro=True)
+                if c.get("riscar"):
+                    d.line((x + 16, y + 34, x + lw - 16, y + 34), fill=AQUA + (255,), width=4)
+                x += lw + sep
+                if i < len(chips) - 1 and c.get("seta"):
+                    d.text((x - sep + 2, y + 12), "→", font=chipf, fill=AQUA + (255,))
+            y += 84
     img.save(caminho)
 
 

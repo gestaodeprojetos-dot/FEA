@@ -94,7 +94,7 @@ V = [
    C("vagas", "Avaliações *um a um*", "Vagas limitadas por semana", dur=3.4)], []),
  ("14- Procuro 3 profissionais de harmonização", [["IMG_9082", 0.0, 9.0], ["IMG_9082", 11.95, 23.05], ["IMG_9082", 26.0, 41.8]],
   [G("Procuro *3 profissionais*", "Harmonização facial"),
-   CTA("clicar"), C("três pessoas", "*3 vagas* gratuitas", "Avaliação de diagnóstico", dur=3.4),
+   CTA("clicar"), C("três pessoas", "*3 vagas* gratuitas", "Avaliação de diagnóstico", dur=3.4, depois=12),
    DIAG("participará")], []),
  ("15- Clínica de alto padrão", [["IMG_9143", 0.5, 64.7]],
   [G("Você sonha com uma clínica *de alto padrão*?", "A minha trajetória"),
@@ -119,7 +119,7 @@ V = [
    CTA("clicar"), DIAG("selecionadas")], []),
  ("20- Quase 100% de conversão, nem sempre foi assim", [["IMG_9150", 0.0, 10.95], ["IMG_9150", 14.35, 68.5]],
   [G("Conversão de *quase 100%*", "Nem sempre foi assim"),
-   C("roteiro", "O que *nenhuma avaliação* pode ter sem", "A metodologia", chips=["Roteiro", "Planejamento", "Opções"], dur=4.4),
+   C("roteiro", "O que não pode faltar *na avaliação*", "A metodologia", chips=["Roteiro", "Planejamento", "Opções"], dur=4.4),
    C("individual", "Cada paciente *é individual*", "", dur=3.2),
    CTA("clicar"), FORM("formuláriozinho"), DIAG("diagnóstico gratuito")], []),
 ]
