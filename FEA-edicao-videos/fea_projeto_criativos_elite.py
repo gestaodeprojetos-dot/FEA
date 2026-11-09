@@ -37,7 +37,9 @@ def B(ancora, clipes, depois=3.6):
 
 BROLL = {
     1: [B("genial", AVAL), B("roteiro", PLAN, 15)],
-    2: [B("roteiro", AVAL), B("planos", PLAN, 15)],
+    # vídeo 2: tomadas que nenhum outro vídeo usa (Keila 09/11: "trocar os takes, para não ficar igual ao 1")
+    2: [B("roteiro", [["IMG_8288", 1.5, 2.4], ["IMG_8293", 0.5, 2.4]]),
+        B("planos", [["IMG_8313", 33.0, 2.4], ["IMG_8313", 42.0, 2.4]], 15)],
     3: [B("realçar", AVAL2), B("métodos", PLAN)],
     4: [B("olhar", AVAL), B("plano", PLAN, 28)],
     5: [B("mostrar", AVAL), B("planejamento", PLAN, 20)],
@@ -70,7 +72,7 @@ V = [
    C("roteiro", "Um *método* replicável, com roteiro", "O que é", dur=3.6),
    CTA("clicar"), FORM("dois"), DIAG("avaliação gratuita")],
   [["IMG_9008", 24.11, 24.65]]),
- ("2- Não é sorte nem carisma, é método", [["IMG_9009", 0.0, 55.85], ["IMG_9009", 68.4, 78.3]],
+ ("2- Não é sorte nem carisma, é método", [["IMG_9009", 0.0, 55.92, "exato"], ["IMG_9009", 68.75, 78.2, "exato"]],
   [G("Por que quase toda paciente *fecha no mesmo dia*?", "Pela primeira vez"),
    C("sorte", "Não é sorte nem carisma. *É método.*", "O segredo", chips=["Sorte", "Carisma"], riscar=True, dur=3.2),
    C("roteiro", "Roteiro, perguntas e *planos de tratamento*", "O método", dur=4.0),
@@ -176,6 +178,7 @@ CORRECOES = [
 # revisão da Keila (09/11): zoom no Dr. sem as pernas, cortes sem salto e sem encurtar pausas
 AJUSTES = {
     1: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
+    2: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
 }
 
 videos = []
