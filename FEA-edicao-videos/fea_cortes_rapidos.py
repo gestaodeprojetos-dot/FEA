@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fea_editar_video as base  # noqa: E402
 
 LIMIAR_DB, PAUSA_MIN, FOLGA_FIM, FOLGA_INI = 45.0, 0.20, 0.06, 0.04
+CORTE_MIN = 0.25   # corte que tira menos que isso só dá um soluço no som (Keila, 09/11/2026: "falha no áudio")
 
 
 def silencios(db, passo):
@@ -49,6 +50,8 @@ def cortar(trechos, runs):
             if e >= b:                      # termina no silêncio: sai logo depois da voz
                 b = min(b, s + FOLGA_FIM)
                 break
+            if (e - FOLGA_INI) - (s + FOLGA_FIM) < CORTE_MIN:
+                continue
             saida.append([round(ini, 2), round(s + FOLGA_FIM, 2)])
             ini = e - FOLGA_INI
         saida.append([round(ini, 2), round(b, 2)])
