@@ -64,7 +64,7 @@ def CTA(ancora, **kw):
     return dict({"tipo": "cta", "ancora": ancora, "fim": "final"}, **kw)
 
 V = [
- ("1- Quase 100% na cadeira", [["IMG_9008", 0.45, 30.95], ["IMG_9008", 32.65, 56.33], ["IMG_9008", 58.35, 63.7]],
+ ("1- Quase 100% na cadeira", [["IMG_9008", 0.45, 30.92, "exato"], ["IMG_9008", 32.98, 55.97, "exato"], ["IMG_9008", 58.92, 63.7]],
   [G("*Quase 100%* das pacientes fecham o tratamento"),
    C("carisma", "Não é carisma, preço *nem genialidade*", "O que não é", chips=["Carisma", "Preço"], riscar=True, dur=3.4),
    C("roteiro", "Um *método* replicável, com roteiro", "O que é", dur=3.6),
@@ -173,10 +173,16 @@ CORRECOES = [
     [r"\belas tem\b", "elas têm"], [r"\bnão tem mais pacientes", "não têm mais pacientes"],
 ]
 
+# revisão da Keila (09/11): zoom no Dr. sem as pernas, cortes sem salto e sem encurtar pausas
+AJUSTES = {
+    1: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
+}
+
 videos = []
 for saida, trechos, cartelas, remover in V:
     num = int(saida.split("-")[0])
-    videos.append({"saida": f"{T}/out/{saida}.mp4", "trechos": trechos, "cartelas": cartelas,
-                   "remover_legenda": remover, "correcoes": CORRECOES, "broll": BROLL.get(num, [])})
+    videos.append(dict({"saida": f"{T}/out/{saida}.mp4", "trechos": trechos, "cartelas": cartelas,
+                        "remover_legenda": remover, "correcoes": CORRECOES, "broll": BROLL.get(num, [])},
+                       **AJUSTES.get(num, {})))
 print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos", "broll": f"{T}/broll",
                   "transcricoes": f"{T}/tr", "videos": videos}, ensure_ascii=False, indent=1))

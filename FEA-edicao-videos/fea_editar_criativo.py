@@ -314,10 +314,14 @@ def montar(cfg, v):
             i0 = int(a2 / passo)
             for i in range(i0, min(len(db) - 6, i0 + int(3 / passo))):
                 if all(db[j] >= lim for j in range(i, i + 6)):
-                    a2 = max(a2, i * passo - 0.06)
+                    # volta até a 1ª sílaba, que costuma ser mais baixa ("Quase" de "Quase todo
+                    # paciente" saía comido, Keila 09/11)
+                    while i > i0 and db[i - 1] >= lim - 10:
+                        i -= 1
+                    a2 = max(a2, i * passo - 0.12)
                     break
         # pausa longa no meio da fala vira respiro curto (ritmo de anúncio)
-        for x, y in apertar_pausas(db, lim, passo, a2, b2):
+        for x, y in (apertar_pausas(db, lim, passo, a2, b2) if v.get("apertar", True) else []):
             trechos.append((nome, arq, a2, x))
             a2 = y
         trechos.append((nome, arq, a2, b2))
@@ -402,10 +406,18 @@ def renderizar(cfg, v, so_legenda=False):
     for arq, ss, t0, dur in broll:
         cmd += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", arq]
     partes, vr, ar = [], [], []
+    zoom = v.get("zoom")   # [fator, cx, cy]: aproxima no Dr. (sem pernas no quadro)
     for i, (nome, arq, a, b) in enumerate(trechos):
         j = arquivos.index(arq)
+        zf = ""
+        if zoom:
+            f = zoom[0] * (v.get("zoom_alterna", 1.0) if i % 2 else 1.0)   # troca de "câmera" a cada corte
+            zw, zh = int(W / f) // 2 * 2, int(H / f) // 2 * 2
+            zx = min(max(0, int(zoom[1] * W - zw / 2)), W - zw)
+            zy = min(max(0, int(zoom[2] * H - zh / 2)), H - zh)
+            zf = f",crop={zw}:{zh}:{zx}:{zy},scale={W}:{H}:flags=lanczos"
         partes.append(f"[{j}:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,"
-                      f"crop={W}:{H},setsar=1[v{i}]")
+                      f"crop={W}:{H}{zf},setsar=1[v{i}]")
         partes.append(f"[{j}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.03):.3f}:d=0.03[a{i}]")
         vr.append(f"[v{i}]")

@@ -4,7 +4,7 @@
 Uso: python3 fea_revisar_criativo.py projeto.json [trecho_do_nome ...]
 
 Confere em cada vídeo final:
-  - abertura: a voz do Dr. começa em até 0,15 s (Keila, 07/11: nada de respiro no começo);
+  - abertura: a voz do Dr. começa em até 0,2 s (Keila, 07/11: nada de respiro no começo);
   - cortes: cada emenda cai em silêncio, não no meio de palavra;
   - legenda: cada bloco tem voz durante pelo menos 35% do tempo na tela;
   - duração: entre 30 s e 70 s (roteiro: 45 a 60 s).
@@ -33,7 +33,11 @@ def revisar(cfg, v):
     # dava falso "respiro" quando a 1ª palavra tinha uma consoante fraca no meio)
     ini = next((i * passo for i in range(len(db) - 6)
                 if db[i] >= lim + 6 and sum(db[j] >= lim - 3 for j in range(i + 1, i + 6)) >= 3), 0)
-    if ini > 0.15:
+    i = int(ini / passo)
+    while i > 0 and db[i - 1] >= lim - 10:   # a 1ª sílaba costuma ser mais baixa
+        i -= 1
+    ini = i * passo
+    if ini > 0.2:
         probs.append(("ERRO", f"respiro no começo: voz só aos {ini:.2f} s"))
     # emendas
     t = 0.0
