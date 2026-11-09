@@ -464,7 +464,8 @@ def main():
         f"concat=n={len(arot)}:v=0:a=1[ac]"
     tmpdir = os.path.dirname(os.path.abspath(v["saida"]))
     voz = os.path.join(tmpdir, "_voz.wav")
-    subprocess.run([ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", fc_a, "-map", "[ac]",
+    # "audio_entrada": áudio do bruto já tratado (ex.: filtro de ruído só num trecho), mesmos tempos do bruto
+    subprocess.run([ff, "-y", "-v", "error", "-i", v.get("audio_entrada", v["entrada"]), "-filter_complex", fc_a, "-map", "[ac]",
                     "-ar", "48000", "-ac", "2", voz], check=True)
     dr_pipe = subprocess.Popen([ff, "-v", "error", "-i", v["entrada"], "-filter_complex", fc_v, "-map", "[vc]",
                                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)

@@ -257,6 +257,8 @@
       "ini": 10,
       "abaixo_da_voz_db": 22,
       "nivelar": true
-    }
+    },
+    "audio_entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/limpo/audio_limpo.wav",
+    "audio_tratamento": "afftdn nr 18 e lowpass 7500 Hz só entre 81,9 e 84,3 s do bruto (voz granulada do celular); filtro mais forte (anlmdn/adeclick) abria buracos no som"
   }
 }
