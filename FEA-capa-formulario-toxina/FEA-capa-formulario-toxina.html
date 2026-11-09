@@ -11,7 +11,7 @@ body{width:1600px;height:400px;overflow:hidden;background:#070B0A}
 .ring{position:absolute;border-radius:50%;border:1.5px solid rgba(110,210,180,.28)}
 .r1{width:520px;height:520px;left:950px;top:-20px}
 .r2{width:700px;height:700px;left:860px;top:-110px;border-color:rgba(110,210,180,.10)}
-.photo{position:absolute;filter:drop-shadow(-14px 10px 40px rgba(0,0,0,.55))}
+.photo{position:absolute;height:720px;left:1010px;top:14px;filter:drop-shadow(-14px 10px 40px rgba(0,0,0,.55))}
 .left{position:absolute;left:100px;top:0;height:400px;display:flex;flex-direction:column;justify-content:center;width:820px}
 .logo{width:280px;display:block;margin-bottom:30px}
 .eyebrow{font:600 14px/1 Montserrat;letter-spacing:.3em;color:#6FCCB0;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:18px}
@@ -25,7 +25,7 @@ h1 span{display:block;font-weight:600;color:#8FDCC3}
 </style></head><body>
 <div class="c">
  <div class="ring r2"></div><div class="ring r1"></div>
- <img class="photo" id="ph" src="FEA-dr-joao-estudio.png" alt="Dr. João Pithon">
+ <img class="photo" id="ph" src="FEA-dr-joao-elite.png" alt="Dr. João Pithon">
  <div class="left">
   <img class="logo" src="FEA-logo-mtb.png" alt="Masterclass em Toxina Botulínica">
   <div class="eyebrow">Formulário de pesquisa</div>
@@ -34,10 +34,4 @@ h1 span{display:block;font-weight:600;color:#8FDCC3}
  </div>
  <div class="bar"></div>
 </div>
-<script>
-const v=new URLSearchParams(location.search).get('v')||'estudio';
-const ph=document.getElementById('ph');
-if(v==='clinica'){ph.src='FEA-dr-joao-clinica.png';Object.assign(ph.style,{height:'760px',left:'960px',top:'10px'});}
-else{Object.assign(ph.style,{height:'680px',left:'905px',top:'12px'});}
-</script>
 </body></html>
