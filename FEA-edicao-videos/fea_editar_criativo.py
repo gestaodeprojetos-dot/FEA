@@ -321,7 +321,7 @@ def montar(cfg, v):
                     a2 = max(a2, i * passo - 0.12)
                     break
         # pausa longa no meio da fala vira respiro curto (ritmo de anúncio)
-        for x, y in (apertar_pausas(db, lim, passo, a2, b2) if v.get("apertar", True) else []):
+        for x, y in (apertar_pausas(db, lim, passo, a2, b2) if v.get("apertar", False) else []):
             trechos.append((nome, arq, a2, x))
             a2 = y
         trechos.append((nome, arq, a2, b2))
@@ -332,6 +332,12 @@ def montar(cfg, v):
         if nome not in por_bruto:
             rem = [(x[1], x[2]) for x in v.get("remover_legenda", []) if x[0] == nome]
             ps = palavras_do_bruto(cfg, nome, rem)
+            # palavra que a transcrição juntou com um tropeço cortado ("para o seu... para a tua"):
+            # entra à mão, com o tempo medido no áudio
+            for x in v.get("inserir_legenda", []):
+                if x[0] == nome:
+                    ps.append({"s": x[1], "e": x[2], "e0": x[2], "w": " " + x[3], "ini": False})
+            ps.sort(key=lambda p: p["s"])
             ps = [p for p in ps if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
             por_bruto[nome] = fe.ancorar_na_voz(ps, *cache_db[nome])
         ps, dur = fe.remapear_palavras(por_bruto[nome], [[a, b]])

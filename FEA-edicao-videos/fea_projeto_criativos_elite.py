@@ -82,7 +82,7 @@ V = [
    C("sorte", "Não é sorte nem carisma. *É método.*", "O segredo", chips=["Sorte", "Carisma"], riscar=True, dur=3.2),
    C("roteiro", "Roteiro, perguntas e *planos de tratamento*", "O método", dur=4.0),
    CTA("clicar"), FORM("dois"), DIAG("pré-diagnóstico")], []),
- ("3- Ela veio fazer só o lábio", [["IMG_9059", 0.0, 58.36], ["IMG_9059", 67.54, 71.9]],
+ ("3- Ela veio fazer só o lábio", [["IMG_9059", 0.0, 38.47, "exato"], ["IMG_9059", 41.2, 58.33, "exato"], ["IMG_9059", 67.56, 71.88, "exato"]],
   [G("Ela veio fazer *só o lábio*", "Avaliação completa"),
    C("saiu", "Saiu com o *tratamento completo*", "O resultado", chips=["Full face", "Bioestimulador", "Toxina"], dur=4.0),
    C("conjunto", "Ela não quer um lábio. *Quer um conjunto.*", "O que ela quer", dur=3.4),
@@ -184,6 +184,11 @@ CORRECOES = [
 AJUSTES = {
     1: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
     2: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
+    # "para o seu... para a tua": sai o tropeço inteiro (38,47 a 41,2 s) e a legenda recebe o
+    # "para a tua" que a transcrição tinha esticado sobre o tropeço
+    3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
+        "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
+                            ["IMG_9059", 41.52, 41.68, "tua"]]},
 }
 
 videos = []
