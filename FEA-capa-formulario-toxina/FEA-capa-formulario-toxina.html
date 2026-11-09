@@ -5,34 +5,39 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{width:1600px;height:400px;overflow:hidden;background:#070B0A}
 .c{position:relative;width:1600px;height:400px;overflow:hidden;
- background:radial-gradient(ellipse 420px 150px at 280px 112px,rgba(120,220,190,.16),transparent 70%),radial-gradient(ellipse 620px 420px at 1330px 230px,rgba(0,150,112,.42),rgba(0,87,67,.12) 55%,transparent 75%),
- linear-gradient(100deg,#060908 0%,#0A1412 48%,#0C1C18 100%)}
-.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:40px 40px;
- -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 55%,transparent 100%)}
-.ring{position:absolute;border:1px solid rgba(0,170,128,.22);border-radius:50%}
-.r1{width:520px;height:520px;left:1075px;top:-40px}
-.r2{width:700px;height:700px;left:985px;top:-130px;border-color:rgba(0,170,128,.10)}
-.left{position:absolute;left:96px;top:0;height:400px;display:flex;flex-direction:column;justify-content:center;width:880px}
-.logo{width:360px;display:block;margin-bottom:34px}
-.eyebrow{font:600 13px/1 Montserrat;letter-spacing:.32em;color:#5FC4A6;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:16px}
-.eyebrow:before{content:"";width:36px;height:2px;background:#00A57D;border-radius:2px}
-h1{font:700 58px/1.04 Sora;color:#fff;letter-spacing:-.015em}
+ background:radial-gradient(ellipse 380px 130px at 250px 92px,rgba(120,220,190,.14),transparent 70%),
+ radial-gradient(circle 460px at 1210px 240px,rgba(0,160,120,.55),rgba(0,87,67,.18) 55%,transparent 78%),
+ linear-gradient(100deg,#050807 0%,#09120F 45%,#0B1C17 100%)}
+.ring{position:absolute;border-radius:50%;border:1.5px solid rgba(110,210,180,.28)}
+.r1{width:520px;height:520px;left:950px;top:-20px}
+.r2{width:700px;height:700px;left:860px;top:-110px;border-color:rgba(110,210,180,.10)}
+.photo{position:absolute;filter:drop-shadow(-14px 10px 40px rgba(0,0,0,.55))}
+.left{position:absolute;left:100px;top:0;height:400px;display:flex;flex-direction:column;justify-content:center;width:820px}
+.logo{width:280px;display:block;margin-bottom:30px}
+.eyebrow{font:600 14px/1 Montserrat;letter-spacing:.3em;color:#6FCCB0;text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.eyebrow:before{content:"";width:40px;height:2px;background:#00A57D;border-radius:2px}
+h1{font:800 60px/1.02 Sora;color:#fff;letter-spacing:-.02em}
 h1 span{display:block;font-weight:600;color:#8FDCC3}
-.photo{position:absolute;right:120px;top:74px;height:540px;-webkit-mask-image:linear-gradient(0deg,transparent 0,#000 60px);filter:drop-shadow(0 18px 40px rgba(0,0,0,.45))}
-.tag{position:absolute;right:500px;bottom:34px;font:500 13px/1.3 Montserrat;color:rgba(255,255,255,.82);text-align:right;
- background:rgba(6,10,9,.55);border:1px solid rgba(143,220,195,.25);border-radius:999px;padding:8px 16px;backdrop-filter:blur(4px)}
-.tag b{font:700 13px Sora;color:#fff}
-.bar{position:absolute;left:0;bottom:0;width:100%;height:4px;background:linear-gradient(90deg,#005743,#00A57D 50%,#005743)}
+.name{position:absolute;right:56px;bottom:34px;text-align:right;font:500 13px/1.35 Montserrat;color:rgba(255,255,255,.7);letter-spacing:.04em}
+.name b{display:block;font:700 22px/1.2 Sora;color:#fff;letter-spacing:0}
+.by{margin-top:22px;font:500 18px/1 Montserrat;color:rgba(255,255,255,.72)}.by b{font:700 18px Sora;color:#fff}
+.bar{position:absolute;left:0;bottom:0;width:100%;height:5px;background:linear-gradient(90deg,#005743,#00A57D 50%,#005743)}
 </style></head><body>
 <div class="c">
- <div class="grid"></div><div class="ring r2"></div><div class="ring r1"></div>
- <img class="photo" src="FEA-dr-joao-recorte.png" alt="Dr. João Pithon">
+ <div class="ring r2"></div><div class="ring r1"></div>
+ <img class="photo" id="ph" src="FEA-dr-joao-estudio.png" alt="Dr. João Pithon">
  <div class="left">
   <img class="logo" src="FEA-logo-mtb.png" alt="Masterclass em Toxina Botulínica">
-  <div class="eyebrow">Pesquisa</div>
+  <div class="eyebrow">Formulário de pesquisa</div>
   <h1>Toxina Botulínica<span>na Prática Clínica</span></h1>
+  <div class="by">com <b>Dr. João Pithon</b></div>
  </div>
- <div class="tag"><b>Dr. João Pithon</b></div>
  <div class="bar"></div>
 </div>
+<script>
+const v=new URLSearchParams(location.search).get('v')||'estudio';
+const ph=document.getElementById('ph');
+if(v==='clinica'){ph.src='FEA-dr-joao-clinica.png';Object.assign(ph.style,{height:'760px',left:'960px',top:'10px'});}
+else{Object.assign(ph.style,{height:'680px',left:'905px',top:'12px'});}
+</script>
 </body></html>
