@@ -19,6 +19,21 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 **Atenção à ordem (pedido da Keila, 26/09/2026):** a imagem de títulos às vezes está na **ordem de postagem**, e não na ordem dos arquivos. Nunca casar título e vídeo só pela posição. Para cada vídeo, ler a transcrição (o que o Dr. fala e faz) e escolher o título que descreve aquele conteúdo. Montar uma tabela `arquivo -> título -> motivo (frase do Dr. que confirma)` e conferir que cada título foi usado uma vez só. A numeração da saída (`1-`, `2-`...) segue a ordem da imagem, a de postagem. Vídeos sem título correspondente, ou títulos sem vídeo, vão para a Keila decidir antes de renderizar.
 
+## SEM CTA (regra em vigor)
+
+**Desde 09/11/2026, por enquanto, os conteúdos vão SEM CTA (Keila). Só voltar a colocar CTA quando ela pedir.** Pedido literal: "pode fazer os de hoje, mas sem cta, não precisamos mais, por enquanto".
+
+- Nada de Ads 12, cartela "Comente BOTOX" ou transição para CTA. O vídeo termina no fim do conteúdo.
+- O vídeo termina numa **frase completa do Dr.**, sem cortar a última palavra, com **~0,3 a 0,5 s de respiro** depois da fala (medir no áudio, janelas de 10 ms; o Whisper erra o fim da palavra).
+- Fade-out curto de vídeo e áudio dentro do respiro: `"fade_final": 0.3` no projeto (o `fea_editar_video.py` aplica `fade` e `afade` nos 0,3 s finais). Marcar também `"sem_cta": true`.
+- Se o respiro natural for curto porque a próxima fala vem colada (ou há ruído de sala logo depois), estender o `manter` e pôr o trecho depois da última palavra em `silenciar`, para o respiro ficar limpo.
+- **O limite de 180 s vale para o vídeo inteiro** (não há mais CTA somando).
+- Render: `python3 FEA-edicao-videos/fea_editar_video.py projeto.json --entrega` (não usar o `fea_render_com_cta.py` enquanto a regra valer).
+- A revisora (`checar_final_sem_cta`) não exige `.emenda.json` em vídeo sem CTA: confere o respiro no fim (ERRO abaixo de 0,20 s, ATENÇÃO acima de 1,0 s).
+- Chamada falada pelo Dr. para curso, ebook, live, congresso ou "comenta X" também sai: sem CTA vale para a fala dele.
+
+As seções de CTA mais abaixo ficam como histórico, para quando a Keila pedir CTA de novo.
+
 ## Padrão visual (não mudar sem pedido)
 
 | Item | Valor |
@@ -28,7 +43,7 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 | Legenda | Montserrat **Bold 56 px**, branca, contorno preto 3,5 px, centralizada a ~80% da altura, 1 a 2 linhas de até 22 caracteres (cada linha ocupa ~1/3 da largura), entrelinha 0,80 (medida na referência da Keila), começa minúscula, sem ponto final, **sem a interjeição "ó"**. **Só entra depois que o título sai**. Ajustada em 24/09/2026: a de 36 px ficou pequena demais. **Legendar toda fala audível, incluindo a do paciente** quando o Dr. pergunta e o paciente responde (ex.: "como ficou a anestesia?", paciente: "não senti nada"). Não pular a resposta do paciente (Keila, 02/10/2026) |
 | Sem CTA autoral | não colocar chamada de imersão criada pela edição (padrão desde 16/09). Quando houver CTA de campanha (ex.: `blackfriday_cta.mp4`), ele entra no final pelo `fea_render_com_cta.py`, **com transição** (linha abaixo) |
 | **Transição de ~0,5 s antes de qualquer CTA (Keila, 05/11/2026)** | "quando tiver algum cta nos conteúdos, faz uma transiçãozinha, porque do nada aparece o cta, fica ruim". Crossfade de vídeo (`xfade` fade) e `acrossfade` de áudio, mesma duração (0,5 s, `--transicao 0.5`, ligado por padrão no `fea_render_com_cta.py`). Nada de efeito chamativo (wipe, zoom, glitch): premium e clean. A transição **nunca engole a última palavra do Dr.**: o script mede o fim da voz no áudio (10 ms) e só começa a transição 0,10 s depois; se o conteúdo acaba colado na fala, estende o último quadro (`tpad` clone) e põe silêncio. Melhor ainda: deixar no `manter` ~0,6 s de imagem real depois da última palavra (silêncio com o Dr. trabalhando), para a transição cair em movimento e não em quadro congelado. Se a voz do CTA começar antes de 0,5 s, o fade de entrada do áudio do CTA encurta sozinho. Conferir os quadros da emenda (antes, meio e fim) na folha `NOME-emenda.png` da revisora |
-| **Limite de 3 min inclui CTA** | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Com o CTA composto atual (~46 s, ver Entrega), o conteúdo editado deve caber em ~134 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
+| **Limite de 3 min inclui CTA** (com CTA; sem CTA, desde 09/11/2026, os 180 s são do vídeo inteiro) | a duração total do vídeo final (conteúdo + CTA concatenado) **não pode passar de 3 minutos** (180 s). Com o CTA composto atual (~46 s, ver Entrega), o conteúdo editado deve caber em ~134 s. Se não couber, dividir em Parte 1/Parte 2 (pedido da Keila, 02/10/2026) |
 | Parte 1/2 | se, depois de cortar, o conteúdo + CTA passar de 3 min: dividir; título igual com "Parte 1"/"Parte 2" embaixo; nos 3 s finais da Parte 1, cartela "Parte 2 no perfil" no estilo do título (`parte` e `cartela_final` no projeto.json). Cada parte + CTA ≤ 3 min |
 
 ## Regras de corte (critério da editora da equipe)

@@ -492,7 +492,7 @@ def pontuar(texto):
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Rennova", "Plus", "Lido", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
+NOMES_PROPRIOS = {"Instagram", "Neuramis", "Revanesse", "Rennova", "Plus", "Lido", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
                   "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
@@ -898,6 +898,15 @@ def renderizar(cfg, v, previa=False):
         filtro += ";" + rc.filtro_emenda(info, W, H)
         mapa_v, mapa_a, entradas = "[vx]", "[ax]", entradas + ["-i", cfg["_cta"]]
         json.dump(info, open(saida.rsplit(".", 1)[0] + ".emenda.json", "w", encoding="utf-8"), indent=1)
+    elif v.get("fade_final"):
+        # SEM CTA (Keila, 09/11/2026: "sem cta, não precisamos mais, por enquanto"): o vídeo termina
+        # no fim da frase do Dr., com ~0,3 a 0,5 s de respiro no `manter`, e um fade-out curto de
+        # vídeo e áudio (padrão 0,3 s) dentro desse respiro, para o final não ficar seco.
+        f = float(v["fade_final"])
+        st = max(0.0, duracao - f)
+        filtro = filtro.replace("[vo]", "[vf0]", 1) + f";[vf0]fade=t=out:st={st:.3f}:d={f}[vo]"
+        filtro = filtro.replace(f"concat=n={len(arot)}:v=0:a=1[ac]", f"concat=n={len(arot)}:v=0:a=1[ac0]", 1)
+        filtro += f";[ac0]afade=t=out:st={st:.3f}:d={f}[ac]"
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
         codec = ["-map", mapa_v, "-map", mapa_a, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]

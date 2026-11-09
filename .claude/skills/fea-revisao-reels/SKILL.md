@@ -25,6 +25,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 
 **Transição antes do CTA (05/11/2026):** a checagem `checar_emenda` roda na revisão completa e no `--so-formato`. ERRO se a emenda conteúdo->CTA for corte seco.
 
+**Sem CTA (09/11/2026, em vigor):** os conteúdos vão sem CTA até a Keila pedir de novo. Vídeo com `"sem_cta": true` (ou `"fade_final"`) não dá ERRO por falta de emenda: a revisora confere o final (respiro de 0,3 a 0,5 s depois da última fala) e o limite de 180 s vale para o vídeo inteiro.
+
 **Régua de voz com trecho silenciado (05/11/2026, pasta 11 de novembro):** o piso de ruído do `perfil_voz` ignora janelas de silêncio digital (trecho silenciado no render, fim mudo da cartela). Antes, 6 s silenciados derrubavam o piso do arquivo inteiro e ruído de sala virava "voz": 4 ERRO falsos de legenda atrasada no vídeo 6 com o áudio medido em 0 ms de deslocamento.
 
 **Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
@@ -37,7 +39,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 |---|---|---|---|
 | 1 | H.264, nunca HEVC (tela preta no computador dela) | codec do arquivo | ERRO |
 | 2 | 1080x1920, sem limite de tamanho (qualidade total) | resolução | ERRO |
-| 3 | **Máximo 3 min no total (conteúdo + CTA concatenado)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
+| 3 | **Máximo 3 min no total (conteúdo + CTA concatenado; sem CTA, o vídeo inteiro)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
 | 4 | Título exatamente o da imagem, nos 3 primeiros segundos, Montserrat ExtraBold 116 | texto do .ass contra o projeto | ERRO |
 | 4b | Título certo para o conteúdo: a imagem pode estar na ordem de postagem e não na dos arquivos | conferir a tabela arquivo -> título -> frase do Dr. | revisão manual |
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
@@ -76,13 +78,14 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
 | 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |
+| 29b | **Sem CTA** (Keila, 09/11/2026: "sem cta, não precisamos mais, por enquanto"): vídeo marcado com `"sem_cta": true` ou `"fade_final"` não tem emenda; termina numa frase completa do Dr. com ~0,3 a 0,5 s de respiro (fade-out de ~0,3 s permitido) | `checar_emenda` chama `checar_final_sem_cta`: sem `.emenda.json` não é erro; mede o fim da voz no .mp4 final (janelas de 10 ms): respiro abaixo de 0,20 s = ERRO (última palavra cortada), acima de 1,0 s = ATENÇÃO (final arrastado); `.emenda.json` antigo ao lado = ATENÇÃO | ERRO |
 | 29 | **Transição antes do CTA** (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"): crossfade de ~0,5 s (vídeo e áudio), nunca corte seco, e a transição começa depois do fim da fala do Dr. | `checar_emenda`: lê `NOME.emenda.json` do render (sem ele = ERRO) e mede os quadros da emenda a 30 fps: se mais da metade da mudança de imagem cai num quadro só, é corte seco (ERRO); transição começando antes do fim da voz = ERRO; duração fora de 0,3 a 1,0 s = ATENÇÃO. Com `--folhas`, salva `NOME-emenda.png` (antes, meio e fim da transição) para olhar | ERRO |
 
 **Troca de CTA por stream copy** (`fea_trocar_cta.py`, 03/11/2026): o conteúdo é o mesmo arquivo que já passou na revisora na entrega, mas a revisora recalcula a legenda pela transcrição refeita (o JSON ajustado à mão da edição original fica só na máquina antiga). ERRO de legenda nesse caso não é do vídeo: conferir o quadro do arquivo final no instante acusado. O que vale ali é a conferência do próprio script (conteúdo idêntico quadro a quadro ao entregue, CTA novo idêntico quadro a quadro) mais formato, duração e a emenda olhada nos quadros. Desde 04/11/2026 há o modo `python3 FEA-edicao-videos/fea_revisar.py projeto.json --so-formato --folhas PASTA` (com `saida` apontando para os vídeos trocados): confere só codec H.264, 1080x1920, 30 fps, AAC 48 kHz, duração, nome do arquivo igual ao título e a headline, sem precisar da transcrição. Áudio do CTA: comparar pacote a pacote (framemd5 com `-c copy`, campo do hash, não o último campo da linha, porque o 1º pacote traz dado extra); comparar o áudio decodificado dá diferença falsa, porque o ruído sintético do AAC (PNS) é sorteado no decodificador e muda conforme o que veio antes.
 
 ## Revisão visual (obrigatória, não pular)
 
-0. Abrir a `NOME-emenda.png` de cada vídeo com CTA: o quadro do meio tem que mostrar o conteúdo e o CTA misturados (crossfade), sem efeito chamativo, e o primeiro quadro não pode ter o Dr. no meio de uma palavra.
+0. Vídeo sem CTA: ouvir os 2 últimos segundos (a frase termina inteira e o fade não engole a palavra). Vídeo com CTA: abrir a `NOME-emenda.png`: o quadro do meio tem que mostrar o conteúdo e o CTA misturados (crossfade), sem efeito chamativo, e o primeiro quadro não pode ter o Dr. no meio de uma palavra.
 1. Abrir a folha de contato de cada vídeo final (em `--folhas`).
 2. Procurar:
    - sangue **escorrendo** (gota que desce pelo queixo ou lábio, gaze ou cotonete encharcado em primeiro plano);

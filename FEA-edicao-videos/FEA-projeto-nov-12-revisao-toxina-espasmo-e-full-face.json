@@ -1,0 +1,780 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2873.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2873.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/1- Toxina no espasmo: relato da paciente.mp4",
+   "titulo": "Toxina no espasmo: relato da paciente",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     24.65,
+     49.25
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     40.67,
+     42.3
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2876.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2876.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/2- Ponto extra pré-tarsal no espasmo.mp4",
+   "titulo": "Ponto extra pré-tarsal no espasmo",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     12.15,
+     41.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bo pronto que\\b",
+     "o ponto que"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2877.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2877.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/3- Toxina no espasmo sem causar ptose.mp4",
+   "titulo": "Toxina no espasmo sem causar ptose",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.45,
+     10.45
+    ],
+    [
+     22.0,
+     45.49
+    ],
+    [
+     51.95,
+     71.0
+    ],
+    [
+     74.2,
+     127.45
+    ],
+    [
+     136.5,
+     142.47
+    ],
+    [
+     143.72,
+     157.55
+    ],
+    [
+     160.2,
+     200.05
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     45.38,
+     45.52
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2878.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2878.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/4- Planejamento do full face após a toxina.mp4",
+   "titulo": "Planejamento do full face após a toxina",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.62,
+     141.15
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bO que é\\b",
+     "A gente fez"
+    ],
+    [
+     "\\bnas aplicações\\b",
+     "as aplicações"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "silenciar": [
+    [
+     140.72,
+     141.6
+    ]
+   ],
+   "remover_legenda": [
+    [
+     118.3,
+     119.1
+    ],
+    [
+     125.9,
+     126.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2880.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2880.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/5- Técnica tridimensional de olheiras.mp4",
+   "titulo": "Técnica tridimensional de olheiras",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.5,
+     125.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Uu]sei 03\\b",
+     "usei 0,3"
+    ],
+    [
+     "\\bIVOR\\b",
+     "Yvoire"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2881.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2881.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/6- Mandíbula feminina delicada.mp4",
+   "titulo": "Mandíbula feminina delicada",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.55,
+     62.15
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bquero lá maior\\b",
+     "quero ela maior"
+    ],
+    [
+     "\\balto gelinh[ao]\\b",
+     "alto G'"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\bmicrob[oó]l[ou]s\\b",
+     "microbolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2882.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2882.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/7- Mandíbula: técnica das micropérolas.mp4",
+   "titulo": "Mandíbula: técnica das micropérolas",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     12.65,
+     55.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bmicro pérolas\\b",
+     "micropérolas"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c12/IMG_2883.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_2883.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n12/8- Estruturação labiomentoniana.mp4",
+   "titulo": "Estruturação labiomentoniana",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.4,
+     48.95
+    ],
+    [
+     90.45,
+     101.02
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\blabialmentoniana\\b",
+     "labiomentoniana"
+    ],
+    [
+     "\\bDVS de vinil sulfona\\b",
+     "DVS, divinilsulfona"
+    ],
+    [
+     "\\balto gelinh[ao]\\b",
+     "alto G'"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     100.72,
+     101.8
+    ]
+   ]
+  }
+ ]
+}
