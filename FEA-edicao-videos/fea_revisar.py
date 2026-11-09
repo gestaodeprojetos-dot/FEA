@@ -259,7 +259,7 @@ def revisar(cfg, v, folhas=None, so_formato=False):
         erros.append(f"resolução {res}: tem que ser 1080x1920")
     # limite vale para cada parte também (antes a Parte 1/2 passava sem conferir)
     if dur > LIMITE_S + 0.05:
-        erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
+        erros.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
                      ", cortar o que é parado ou dividir em Parte 1/2"))
     # 1b. transição antes do CTA (Keila, 05/11/2026): corte seco é erro
     e_em, a_em = checar_emenda(ff, v, mp4, folhas)
@@ -671,6 +671,43 @@ def checar_inicio(ff, mp4, transcrever=True, palavras=None):
     return erros, aten, {"voz": voz, "palavras": texto}
 
 
+def sem_cta(v):
+    """Vídeo sem CTA: desde 09/11/2026 (Keila: "sem cta, não precisamos mais, por enquanto") os
+    conteúdos vão sem CTA. Marcado no projeto com "sem_cta": true (ou "fade_final", que só existe
+    no final sem CTA)."""
+    return bool(v.get("sem_cta") or v.get("fade_final"))
+
+
+RESPIRO_MIN_S = 0.20     # menos que isso depois da última fala = palavra cortada no fim
+RESPIRO_MAX_S = 1.0      # mais que isso = final arrastado (a edição mira 0,3 a 0,5 s)
+
+
+def checar_final_sem_cta(ff, v, mp4):
+    """Final sem CTA (09/11/2026): o vídeo acaba numa frase completa do Dr., com ~0,3 a 0,5 s de
+    respiro depois da fala (fade-out de ~0,3 s permitido). Sem CTA não há emenda: nada de ERRO por
+    falta de .emenda.json. ERRO se a voz vai até menos de 0,20 s do fim (última palavra cortada);
+    ATENÇÃO se o respiro passa de 1,0 s ou se sobrou .emenda.json de um render antigo com CTA."""
+    import fea_render_com_cta as rc
+    erros, aten = [], []
+    _, _, dur = sonda(ff, mp4)
+    if os.path.exists(mp4.rsplit(".", 1)[0] + ".emenda.json"):
+        aten.append("vídeo sem CTA com .emenda.json de render antigo: conferir se o arquivo final é o novo, sem CTA")
+    fim = rc.fim_da_voz(ff, mp4, max(0.0, dur - 8), dur)
+    if fim is None:
+        aten.append("final sem CTA: sem fala nos últimos 8 s, conferir se termina numa frase do Dr.")
+        return erros, aten
+    resp = dur - fim
+    if resp < RESPIRO_MIN_S:
+        erros.append(f"final sem CTA: a voz vai até {fim:.2f} s de {dur:.2f} s (respiro {resp:.2f} s): "
+                     f"última palavra cortada, deixar ~0,3 a 0,5 s depois da fala")
+    elif resp > RESPIRO_MAX_S:
+        aten.append(f"final sem CTA: {resp:.2f} s depois da última fala (mira 0,3 a 0,5 s): conferir se não arrasta")
+    else:
+        aten.append(f"final sem CTA: respiro de {resp:.2f} s depois da última fala"
+                    + (f", fade-out de {v['fade_final']} s" if v.get("fade_final") else ""))
+    return erros, aten
+
+
 def checar_emenda(ff, v, mp4, folhas=None):
     """Transição antes do CTA (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"). ERRO se a
     emenda conteúdo->CTA for corte seco ou se a transição começa antes do fim da fala do Dr.
@@ -678,8 +715,8 @@ def checar_emenda(ff, v, mp4, folhas=None):
     poucos (cada quadro ~1/15 da mudança total em 0,5 s); num corte seco, a mudança inteira cai
     num quadro só. Com --folhas, salva NOME-emenda.png (antes, meio e fim da transição)."""
     erros, aten = [], []
-    if v.get("sem_cta"):
-        return erros, aten
+    if sem_cta(v):
+        return checar_final_sem_cta(ff, v, mp4)
     caminho = mp4.rsplit(".", 1)[0] + ".emenda.json"
     if not os.path.exists(caminho):
         erros.append("emenda conteúdo->CTA sem transição registrada (sem .emenda.json): renderizar com "
@@ -745,7 +782,7 @@ def revisar_formato(ff, v, mp4, folhas=None):
     if not re.search(r"(29\.9\d|30) fps", err):
         erros.append("vídeo tem que ser 30 fps")
     if dur > LIMITE_S + 0.05:
-        aten.append(f"{dur:.1f} s com CTA: passa de 3 min (conteúdo é o aprovado; listar para a Keila)")
+        aten.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: passa de 3 min (conteúdo é o aprovado; listar para a Keila)")
     nome = os.path.basename(mp4).rsplit(".", 1)[0]
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
     if not re.sub(r"\s+", " ", nome).replace(":", "").endswith(esperado.replace(":", "").replace("?", "")):
