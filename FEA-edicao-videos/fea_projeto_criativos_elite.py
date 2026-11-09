@@ -35,28 +35,33 @@ PLAN = [["IMG_8313", 2.0, 2.6], ["IMG_8313", 8.0, 2.4]]
 def B(ancora, clipes, depois=3.6):
     return {"ancora": ancora, "clipes": clipes, "depois": depois}
 
+def P(arq, *ss, dur=2.4):
+    return [[arq, x, dur] for x in ss]
+
+# Uma paciente diferente por vídeo (Keila 09/11: "coloque pacientes diferentes"), tiradas da pasta
+# "00 - Brutos" (casos já publicados) e das pastas "B roll". Só avaliação, marcação, espelho ou o Dr.
+# conversando: conferido quadro a quadro, sem agulha, cânula ou sangue. O vídeo 1 (aprovado em 09/11)
+# fica com as tomadas dele.
 BROLL = {
     1: [B("genial", AVAL), B("roteiro", PLAN, 15)],
-    # vídeo 2: tomadas que nenhum outro vídeo usa (Keila 09/11: "trocar os takes, para não ficar igual ao 1")
-    2: [B("roteiro", [["IMG_8288", 1.5, 2.4], ["IMG_8293", 0.5, 2.4]]),
-        B("planos", [["IMG_8313", 33.0, 2.4], ["IMG_8313", 42.0, 2.4]], 15)],
-    3: [B("realçar", AVAL2), B("métodos", PLAN)],
-    4: [B("olhar", AVAL), B("plano", PLAN, 28)],
-    5: [B("mostrar", AVAL), B("planejamento", PLAN, 20)],
-    6: [B("completo", AVAL, 6), B("planos", PLAN, 15)],
-    7: [B("avaliação", AVAL, 7), B("planejamento", PLAN, 7)],
-    8: [B("roteiro", AVAL2, 10)],
-    9: [B("avaliações", AVAL, 10)],
-    10: [B("baseado", AVAL)],
-    11: [B("metodologias", AVAL2)],
-    12: [B("indicar", AVAL, 6), B("completar", PLAN, 12)],
-    13: [B("errando", AVAL2)],
-    15: [B("avaliações", AVAL, 8)],
-    16: [B("avaliação", AVAL2, 4)],
-    17: [B("tratamentos", PLAN, 4)],
-    18: [B("metodologia", PLAN, 9)],
-    19: [B("avaliação", AVAL, 12)],
-    20: [B("roteiro", [["IMG_8289", 2.0, 2.0]]), B("planejamento", PLAN, 9), B("individual", AVAL2[:2])],
+    2: [B("roteiro", P("IMG_1744", 6, 10)), B("planos", P("IMG_1744", 20, 24), 15)],
+    3: [B("realçar", P("IMG_1081", 0, 10)), B("métodos", P("IMG_1081", 26))],
+    4: [B("olhar", P("IMG_0718", 0.5, 42)), B("plano", P("IMG_0718", 46), 28)],
+    5: [B("mostrar", P("IMG_8295", 42, 46)), B("planejamento", P("IMG_8295", 50), 20)],
+    6: [B("completo", P("IMG_2045", 8, 14), 6), B("planos", P("IMG_2045", 20), 15)],
+    7: [B("avaliação", P("IMG_0725", 62, 66), 7), B("planejamento", P("IMG_0725", 70), 7)],
+    8: [B("roteiro", P("IMG_2661", 2, 10), 10)],
+    9: [B("avaliações", P("IMG_2509", 2), 10)],
+    10: [B("baseado", P("IMG_2155", 0, 4, 18))],
+    11: [B("metodologias", P("IMG_2503", 6, 10, 14))],
+    12: [B("indicar", P("IMG_2072", 4, 20), 6), B("completar", P("IMG_2072", 36), 12)],
+    13: [B("errando", P("IMG_1668", 0))],
+    15: [B("avaliações", P("IMG_1077", 0.5, 4), 8)],
+    16: [B("avaliação", P("IMG_2640", 0.5), 4)],
+    17: [B("tratamentos", P("IMG_8318", 0.5, 13, 18.5), 4)],
+    18: [B("metodologia", P("IMG_7285", 44, 48, 52), 9)],
+    19: [B("avaliação", P("IMG_2485", 0.5), 12)],
+    20: [B("roteiro", P("IMG_8311", 1)), B("planejamento", P("IMG_8311", 6), 9), B("individual", P("IMG_8311", 12))],
 }
 
 def FORM(ancora, **kw):
