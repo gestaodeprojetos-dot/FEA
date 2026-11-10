@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Masterclass em Preenchimento Labial · Dr. João Pithon</title>
-<meta name="description" content="Masterclass gratuita e ao vivo no Zoom: as 15 técnicas de preenchimento labial com segurança, com agulha ou cânula, baseadas em anatomia de cadáver fresco.">
+<title>Masterclass em Preenchimento Labial · 19 de novembro, 20h</title>
+<meta property="og:title" content="Masterclass em Preenchimento Labial · 19 de novembro, 20h">
+<meta name="description" content="Quinta, 19 de novembro, às 20h. Masterclass gratuita e ao vivo no Zoom: as 15 técnicas de preenchimento labial com segurança, com agulha ou cânula, baseadas em anatomia de cadáver fresco.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="assets/Logo-MPL-copiar.webp">
 
@@ -21,6 +22,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preload" as="image" href="assets/primeira-dobra-ipl-mobile-3.webp" media="(max-width: 767px)">
 <link rel="preload" as="image" href="assets/primeira-dobra-ipl-2.webp" media="(min-width: 768px)">
 
+<script src="assets/FEA-aula-config.js"></script>
+<script src="assets/FEA-aula-componentes.js"></script>
 <link rel="stylesheet" href="assets/FEA-ac-form-38.css">
 <link rel="stylesheet" href="assets/FEA-intl-tel-ajustes.css">
 
@@ -34,6 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   *,*::before,*::after{box-sizing:border-box}
   html,body{margin:0;width:100%;overflow-x:hidden}
+  @supports (overflow:clip){html,body{overflow-x:clip}}
   body{font-family:"Sora",system-ui,-apple-system,sans-serif;color:var(--petroleo);background:var(--areia);-webkit-font-smoothing:antialiased;line-height:1.5}
   img{max-width:100%;display:block}
   a{color:inherit}
@@ -42,9 +46,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   .destaque{background:linear-gradient(45deg,var(--vermelho-2),var(--vermelho-1));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--vermelho-2);-webkit-box-decoration-break:clone;box-decoration-break:clone}
 
-  /* ===== Tarja do topo ===== */
-  .tarja{position:relative;z-index:9;background:radial-gradient(at top right,var(--vermelho-1) 0%,var(--vermelho-2) 100%);box-shadow:0 0 22px -8px var(--vermelho-2);color:#fff;text-align:center;padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top))}
-  .tarja p{margin:0;font-size:.825rem;font-weight:700;line-height:1.5;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+  /* ===== Barra fixa do topo (ajuste 1) ===== */
+  .fea-barra{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 .5em;width:100%;margin:0;border:0;cursor:pointer;font:inherit;color:#fff;text-align:center;background:radial-gradient(at top right,var(--vermelho-1) 0%,var(--vermelho-2) 100%);box-shadow:0 0 22px -8px var(--vermelho-2);padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));padding-left:max(14px,env(safe-area-inset-left));padding-right:max(14px,env(safe-area-inset-right));min-height:44px}
+  .fea-barra[hidden]{display:none}
+  .fea-barra__contador{font-weight:700;font-size:.95rem;line-height:1.35;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .fea-barra__sep{opacity:.75}
+  .fea-barra__frase{font-weight:400;font-size:.9rem;line-height:1.35;text-wrap:balance}
+  .fea-barra.is-aovivo .fea-barra__contador::before{content:"";display:inline-block;width:.55em;height:.55em;margin-right:.4em;border-radius:50%;background:#fff;vertical-align:.05em;animation:fea-pulso 1.4s ease-in-out infinite}
+  @keyframes fea-pulso{50%{opacity:.25}}
+  .fea-barra:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+  @media (prefers-reduced-motion:reduce){.fea-barra.is-aovivo .fea-barra__contador::before{animation:none}}
+
+  /* ===== Linha de data e tarja da oferta (ajustes 2 e 3) ===== */
+  .fea-linha-data{display:flex;align-items:flex-start;justify-content:center;gap:8px;margin:14px 0 0;font-size:.875rem;line-height:1.45;font-weight:600;color:var(--petroleo);text-align:left}
+  .fea-linha-data svg{flex:0 0 18px;width:18px;height:18px;margin-top:1px;color:var(--vermelho-2)}
+  .fea-tarja{--tarja-cor:#E8142F;display:flex;gap:10px;align-items:flex-start;margin:12px 0 0;padding:10px 12px;border:1px solid color-mix(in srgb,var(--tarja-cor) 35%,transparent);border-left:3px solid var(--tarja-cor);border-radius:8px;background:color-mix(in srgb,var(--tarja-cor) 6%,#fff 60%);color:var(--petroleo)}
+  .fea-tarja svg{flex:0 0 16px;width:16px;height:16px;margin-top:2px;color:var(--tarja-cor)}
+  .fea-tarja p{margin:0;font-size:.8125rem;line-height:1.5;text-wrap:pretty}
+  .fea-tarja strong{color:var(--tarja-cor);font-weight:700}
+  .fea-linha-data[hidden],.fea-tarja[hidden],.fea-linha-final[hidden]{display:none}
+  .conteudo .fea-linha-final{margin:26px auto 0;color:#FF7A8A;font-size:1rem;font-weight:600;text-wrap:balance}
 
   /* ===== Primeira dobra ===== */
   .hero{position:relative;background:var(--areia) url("assets/primeira-dobra-ipl-2.webp") center/cover no-repeat;min-height:780px;display:flex;align-items:center;padding:3em 0 6em}
@@ -65,6 +86,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   #_form_38_ ._form_element{margin-bottom:10px}
   #_form_38_ input[type="text"],#_form_38_ input[type="tel"]{font-family:"Sora",sans-serif;font-size:14px;padding:6px 6px;min-height:35px;border:#979797 1px solid;border-radius:4px;background:#fff}
   #_form_38_ input::placeholder{color:#000}
+  /* ajuste 7: seletor de país nunca sobrepõe o número */
+  #_form_38_ .iti{display:block;width:100%}
   #_form_38_submit,#_form_38_ ._submit{font-family:"Sora",sans-serif !important;white-space:normal !important;word-break:break-word;height:auto !important;min-height:48px !important;line-height:1.3 !important;padding:18px 16px !important;margin-top:12px;font-size:15px !important;letter-spacing:.01em}
   #_form_38_ ._form-thank-you{font-size:15px;padding:14px;border-radius:8px;background:#fff}
 
@@ -86,8 +109,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ===== Celular ===== */
   @media (max-width:767px){
-    .tarja{padding-left:8px;padding-right:8px}
-    .tarja p{font-size:clamp(10.5px,3.1vw,13px);letter-spacing:0}
+    .fea-barra{flex-direction:column;gap:1px;padding-top:max(8px,env(safe-area-inset-top));padding-bottom:8px}
+    .fea-barra__sep{display:none}
+    .fea-barra__contador{font-size:1rem}
+    .fea-barra__frase{font-size:clamp(11.5px,3.4vw,13.5px)}
+    .fea-linha-data{font-size:.8125rem}
     .hero{background-image:url("assets/primeira-dobra-ipl-mobile-3.webp");background-position:bottom center;min-height:0;padding:1em 1em 27em;display:block}
     .hero__inner{padding:0}
     .hero__col{width:auto;min-width:0;max-width:25em;margin:0 auto}
@@ -113,9 +139,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFCMG8V3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header class="tarja">
-  <p id="tarja-texto">13 de julho, às 20h, ao vivo e gratuito no Zoom</p>
-</header>
+<button type="button" class="fea-barra" id="fea-barra" aria-label="Ir para a inscrição">
+  <span class="fea-barra__contador" aria-live="off">&nbsp;</span><span class="fea-barra__sep" aria-hidden="true">·</span><span class="fea-barra__frase">&nbsp;</span>
+</button>
+<script>FEA_COMPONENTES.render('barra')</script>
 
 <main>
   <section class="hero" id="oferta" aria-label="Inscrição">
@@ -141,10 +168,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <input type="hidden" name="v" value="2" />
           <input type="hidden" name="or" value="ab04cd26-f8ac-4784-a3ae-375a13ef1acc" />
           <div class="_form-content">
-            <div class="_form_element _x31328069 _full_width">
-              <label for="fullname" class="_form-label form-sr-only">Nome</label>
-              <div class="_field-wrapper"><input type="text" id="fullname" name="fullname" placeholder="Digite seu nome" autocomplete="name" required/></div>
-            </div>
             <div class="_form_element _x70852489 _full_width">
               <label for="email" class="_form-label form-sr-only">E-mail</label>
               <div class="_field-wrapper"><input type="text" id="email" name="email" placeholder="*Insira seu email " autocomplete="email" inputmode="email" required/></div>
@@ -165,6 +188,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
           <div class="_form-thank-you" style="display:none;"></div>
         </form>
+        <p class="fea-linha-data" id="fea-linha-data"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 2h2v2h6V2h2v2h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2V2Zm12 8H5v9h14v-9ZM5 8h14V6H5v2Z"/></svg><span></span></p>
+        <script>FEA_COMPONENTES.render('linhaData')</script>
+        <div class="fea-tarja" id="fea-tarja" role="note"></div>
+        <script>FEA_COMPONENTES.render('tarja')</script>
       </div>
     </div>
     <div class="curva" aria-hidden="true"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"/></svg></div>
@@ -174,7 +201,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="conteudo__inner">
       <h2><span class="destaque">Você vai aprender anatomia da região labial baseada em cadáveres frescos:</span> vascularização das artérias labiais, localização e plano correto de aplicação.</h2>
       <p>Na prática: casos clínicos reais com agulha e cânula, técnica de palitos russos e preenchimento com cânula 22G e 25G.<br><br>Sai da masterclass pronta para aplicar já na próxima consulta.</p>
-      <p class="aviso">⚠️ Vagas limitadas. Evento fechado no Zoom.</p><br>
+      <p class="aviso">⚠️ Vagas limitadas. Evento fechado no Zoom, sem gravação.</p><br>
+      <p class="fea-linha-final" id="fea-linha-final"></p>
+      <script>FEA_COMPONENTES.render('linhaFinal')</script>
       <a class="cta" href="#oferta">Garantir minha vaga gratuita</a>
     </div>
   </section>
@@ -202,19 +231,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </defs>
 </svg>
 
-<!-- rolagem suave até o formulário -->
-<script>
-document.addEventListener('click',function(e){
-  var a=e.target.closest('a[href="#oferta"]'); if(!a) return;
-  e.preventDefault();
-  var alvo=document.getElementById('_form_38_')||document.getElementById('oferta');
-  var y=alvo.getBoundingClientRect().top+window.pageYOffset-(window.innerWidth<=767?80:100);
-  window.scrollTo({top:y,behavior:'smooth'});
-  setTimeout(function(){var c=document.getElementById('fullname'); if(c) c.focus({preventScroll:true});},600);
-});
-</script>
+
 <!-- formulário (script oficial do ActiveCampaign) e redirecionamento para a pesquisa -->
 <script src="assets/FEA-ac-form-38.js"></script>
 <script src="assets/FEA-redirect-pesquisa.js"></script>
+<script src="assets/FEA-telefone-ajuste.js"></script>
 </body>
 </html>
