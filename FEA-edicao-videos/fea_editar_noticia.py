@@ -62,8 +62,9 @@ HL_BARRA_X, HL_BARRA_L = 143, 18
 HL_CAIXA_X = 175
 HL_LINHA_H, HL_LINHA_GAP = 80, 6
 HL_FONTE = 60
-HL_Y = 560               # topo da primeira linha (era 730 como no "1- Olheiras"; subiu para não bater
-                         # na legenda, que na tela dividida fica no meio, sobre o esfumaçado)
+HL_Y = 846               # topo da primeira linha: bloco de 3 linhas centrado na faixa da legenda (Gabi,
+                         # 10/11/2026: "título bem no meio, onde está pegando a legenda"); a legenda só
+                         # entra quando o título sai (legenda_depois_headline)
 HL_DOURADO = (219, 208, 147)
 ROXO = (91, 69, 153)     # #5B4599, identidade FEA
 LAVANDA = (208, 209, 233)
@@ -107,6 +108,30 @@ def legenda_no_meio(ass, cenas):
             meio = (t0 + t1) / 2
             yy = y - 1560 + ESF_FIM + 20 if any(d0 <= meio < d1 for d0, d1 in dividida) else y
             saida.append(f"{m.group(1)},{fmt(t0)},{fmt(t1)},{m.group(4)}{yy}{m.group(6)}")
+    open(ass, "w", encoding="utf-8").writelines(saida)
+
+
+def legenda_depois_headline(ass, corte):
+    """O título ocupa a faixa da legenda e já diz a frase de abertura ("os 3 melhores produtos para..."):
+    nenhuma legenda enquanto ele está na tela; fala que atravessa a saída do título começa no corte."""
+    def seg(t):
+        h, m, s = t.split(":")
+        return int(h) * 3600 + int(m) * 60 + float(s)
+
+    def fmt(x):
+        cs = int(round(x * 100))
+        return f"{cs // 360000}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}"
+
+    saida = []
+    for ln in open(ass, encoding="utf-8"):
+        m = re.match(r"(Dialogue: \d+),([\d:.]+),([\d:.]+),(Legenda,.*)", ln, re.S)
+        if m:
+            a, b = seg(m.group(2)), seg(m.group(3))
+            if b <= corte + 0.15:
+                continue
+            if a < corte:
+                ln = f"{m.group(1)},{fmt(corte)},{m.group(3)},{m.group(4)}"
+        saida.append(ln)
     open(ass, "w", encoding="utf-8").writelines(saida)
 
 
@@ -403,9 +428,8 @@ def main():
     for c, prox in zip(cenas, cenas[1:] + [None]):
         c["t1"] = prox["t0"] if prox else dur
     legenda_no_meio(ass, cenas)
+    legenda_depois_headline(ass, v["headline_fim"] + TRANS)
 
-    global HL_Y
-    HL_Y = v.get("headline_y", HL_Y)   # B-roll de queixo: headline no alto, para não tampar boca e marionete
     hl = render_headline(v["headline"], fonte)
     fundo = fundo_produto(v["fundo_produto"])
     mascara = mascara_esfumado()
