@@ -101,30 +101,14 @@ strong { font-weight: 700; }
 .hero-art img { width: 100%; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.45)); }
 .hero-art::before { content: ""; position: absolute; inset: 18% 10% 0 10%; background: radial-gradient(closest-side, rgba(239,35,60,.22), transparent); filter: blur(10px); }
 
-/* antes e depois */
-.ba-wrap { margin-top: 48px; }
-.ba { position: relative; max-width: 860px; margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: var(--navy-3); border: 1px solid var(--line-dark); user-select: none; touch-action: pan-y; }
-.ba-layer { position: absolute; inset: 0; display: grid; place-items: center; }
-.ba-layer span { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--slate); }
-.ba-before { background: repeating-linear-gradient(135deg, #2b2f40 0 14px, #2e3244 14px 28px); }
-.ba-after { background: repeating-linear-gradient(135deg, #343a4f 0 14px, #383e54 14px 28px); clip-path: inset(0 0 0 var(--pos, 50%)); }
-.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; background: var(--cream); transform: translateX(-1px); pointer-events: none; }
-.ba-handle::after { content: "⟷"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: var(--cream); color: var(--navy); display: grid; place-items: center; font-size: 18px; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
-.ba-tag { position: absolute; top: 14px; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; background: rgba(27,29,40,.75); padding: 6px 12px; border-radius: 999px; }
-.ba-tag--l { left: 14px; } .ba-tag--r { right: 14px; }
-.ba input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
-.ba-caption { text-align: center; font-size: 13px; color: var(--slate); margin-top: 12px; }
-
 /* pendente: blocos que aguardam material real da equipe */
 .pendente { position: relative; outline: 2px dashed rgba(239,35,60,.55); outline-offset: 6px; }
 .pendente-flag { display: inline-block; margin-bottom: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
 
 /* 02 resultados */
-.proofs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 40px; }
-.proof { border-radius: 14px; background: var(--white); border: 1px solid var(--line-light); padding: 20px; min-height: 220px; display: flex; flex-direction: column; gap: 12px; }
-.proof .bubble { background: #eef0f4; border-radius: 14px 14px 14px 4px; padding: 12px 14px; font-size: 14px; color: var(--slate-ink); }
-.proof .bubble.short { width: 62%; }
-.proof .shot { flex: 1; border-radius: 10px; background: repeating-linear-gradient(135deg, #f1ece8 0 12px, #f6f1ed 12px 24px); display: grid; place-items: center; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--slate-ink); min-height: 110px; }
+.proofs { columns: 3 260px; column-gap: 18px; margin-top: 40px; }
+.proof { break-inside: avoid; margin: 0 0 18px; border-radius: 14px; overflow: hidden; background: var(--white); border: 1px solid var(--line-light); box-shadow: 0 12px 28px -18px rgba(36,39,53,.35); }
+.proof img { width: 100%; height: auto; }
 
 /* 03 soa familiar */
 .split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
@@ -205,7 +189,7 @@ strong { font-weight: 700; }
 
 /* 13 quem te ensina */
 .teacher { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
-.teacher-photo { aspect-ratio: 4 / 5; border-radius: 16px; background: repeating-linear-gradient(135deg, #f1ece8 0 14px, #f6f1ed 14px 28px); display: grid; place-items: center; text-align: center; padding: 24px; color: var(--slate-ink); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; }
+.teacher-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; box-shadow: 0 24px 50px -24px rgba(36,39,53,.55); }
 .teacher h2 { font-size: clamp(34px, 4.6vw, 52px); margin-top: 10px; }
 .teacher .role { margin-top: 8px; color: var(--slate-ink); font-size: 16px; }
 .teacher .bio { margin-top: 22px; display: grid; gap: 14px; font-size: 17.5px; }
@@ -312,21 +296,6 @@ strong { font-weight: 700; }
   </div>
 </header>
 
-<!-- 01b ANTES E DEPOIS -->
-<section class="band band--deep" aria-label="Antes e depois">
-  <div class="wrap">
-    <div class="center"><span class="pendente-flag">Aguardando fotos de antes e depois</span></div>
-    <div class="ba pendente" id="ba" style="--pos:50%">
-      <div class="ba-layer ba-before"><span>Foto antes</span></div>
-      <div class="ba-layer ba-after"><span>Foto depois</span></div>
-      <div class="ba-handle"></div>
-      <span class="ba-tag ba-tag--l">Antes</span><span class="ba-tag ba-tag--r">Depois</span>
-      <input type="range" id="ba-range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
-    </div>
-    <p class="ba-caption">Arraste para comparar</p>
-  </div>
-</section>
-
 <!-- 02 RESULTADOS REAIS -->
 <section class="band band--cream">
   <div class="wrap">
@@ -334,11 +303,12 @@ strong { font-weight: 700; }
       <span class="eyebrow">Resultados reais</span>
       <h2 class="h2" style="margin-top:14px">Veja abaixo resultados de quem utiliza o protocolo de preenchimento labial do Dr. João Pithon</h2>
     </div>
-    <div class="center" style="margin-top:28px"><span class="pendente-flag">Aguardando depoimentos (Grazi)</span></div>
-    <div class="proofs pendente">
-      <div class="proof"><div class="bubble">Print de conversa da aluna</div><div class="bubble short">…</div><div class="shot">Foto do caso</div></div>
-      <div class="proof"><div class="bubble">Print de conversa da aluna</div><div class="shot">Foto do caso</div></div>
-      <div class="proof"><div class="bubble">Print de conversa da aluna</div><div class="bubble short">…</div><div class="shot">Foto do caso</div></div>
+    <div class="proofs">
+      <figure class="proof"><img src="assets/plx-depoimento-labio1.webp" alt="Depoimento de aluna no WhatsApp: primeira boquinha após o curso, sem intercorrência, com foto do resultado" width="720" height="837" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-feb-e-labios.webp" alt="Depoimento de aluna no Instagram: criou coragem de trabalhar com harmonização e hoje faz lábios com segurança" width="590" height="1280" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labio.webp" alt="Depoimento de aluna na comunidade: lábio fino tratado em duas etapas, 0,6 ml e retorno com 0,5 ml" width="720" height="605" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labio2.webp" alt="Depoimento de aluna na comunidade: assimetria de lábio tratada com menos de 1 ml, com fotos de antes e depois" width="720" height="563" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labios.webp" alt="Depoimento de aluna na comunidade: primeira experiência com cânulas nos lábios, mais segurança para começar" width="675" height="141" loading="lazy"></figure>
     </div>
   </div>
 </section>
@@ -519,7 +489,7 @@ strong { font-weight: 700; }
 <!-- 13 QUEM TE ENSINA -->
 <section class="band band--cream">
   <div class="wrap teacher">
-    <div class="teacher-photo pendente">Foto do Dr. João Pithon<br>(pasta de fotos do Drive)</div>
+    <img class="teacher-photo" src="assets/plx-dr-joao.webp" alt="Dr. João Pithon" width="900" height="1125" loading="lazy">
     <div>
       <span class="eyebrow">Quem te ensina</span>
       <h2>Dr. João Pithon</h2>
@@ -601,12 +571,6 @@ strong { font-weight: 700; }
 
 <script>
 (function () {
-  // Slider de antes e depois
-  var ba = document.getElementById('ba');
-  var range = document.getElementById('ba-range');
-  if (ba && range) {
-    range.addEventListener('input', function () { ba.style.setProperty('--pos', range.value + '%'); });
-  }
   // Repassa UTMs e parâmetros da URL da página para o checkout da Hotmart (rastreamento fim a fim)
   try {
     var params = new URLSearchParams(window.location.search);
