@@ -27,7 +27,17 @@ def revisar(cfg, v):
     ff = cfg["ffmpeg"]
     probs = []
     trechos, ass, duracao, cartelas, palavras, broll = cr.montar(cfg, v)
-    db, lim, passo = fe.perfil_voz(ff, v["saida"])
+    # perfil de voz montado dos brutos, trecho a trecho, na linha do tempo final: com a trilha de
+    # fundo, medir o vídeo final acusava "respiro" falso (a música mexe no limiar de voz)
+    import numpy as np
+    cache, partes, lim, passo = {}, [], None, 0.05
+    for nome, arq, a, b in trechos:
+        if arq not in cache:
+            cache[arq] = fe.perfil_voz(ff, arq)
+        rdb, rlim, passo = cache[arq]
+        lim = rlim if lim is None else lim
+        partes.append(rdb[int(a / passo):int(b / passo)])
+    db = np.concatenate(partes)
     # abertura
     # sílaba forte seguida de fala (a voz oscila entre sílabas: 4 janelas seguidas acima do limiar
     # dava falso "respiro" quando a 1ª palavra tinha uma consoante fraca no meio)

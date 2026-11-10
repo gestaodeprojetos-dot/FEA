@@ -435,7 +435,11 @@ def renderizar(cfg, v, so_legenda=False):
             zf = f",crop={zw}:{zh}:{zx}:{zy},scale={W}:{H}:flags=lanczos"
         partes.append(f"[{j}:v]trim={a}:{b},setpts=PTS-STARTPTS,fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,"
                       f"crop={W}:{H}{zf},setsar=1[v{i}]")
-        partes.append(f"[{j}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,aresample=48000,"
+        # "limpar_audio" (Keila 10/11, vídeo 6: "silenciar o fundo e deixar somente a voz do Dr."):
+        # faixa da voz, redução de ruído por FFT e portão que fecha o fundo entre as falas
+        limpa = ("highpass=f=90,lowpass=f=9000,afftdn=nr=20:nf=-40:tn=1,"
+                 "agate=threshold=0.025:ratio=4:attack=8:release=220:range=0.06," if v.get("limpar_audio") else "")
+        partes.append(f"[{j}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,{limpa}aresample=48000,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.03):.3f}:d=0.03[a{i}]")
         vr.append(f"[v{i}]")
         ar.append(f"[a{i}]")

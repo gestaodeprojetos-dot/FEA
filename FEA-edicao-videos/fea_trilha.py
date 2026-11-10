@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """FEA: compõe uma trilha instrumental original (sem direito autoral de terceiros) para fundo de vídeo.
 
-Uso: python3 fea_trilha.py saida.wav [duracao_s] [bpm]
+Uso: python3 fea_trilha.py saida.wav [duracao_s] [variacao A a F]
 
 Clima calmo e premium (Elite Mentoring): pad quente de acordes, piano suave em arpejo e um grave
 discreto. Progressão em lá menor (Am - F - C - G), 84 bpm. Gerada por síntese, então pode ir para
@@ -75,13 +75,30 @@ def reverb(x, segs=(0.031, 0.047, 0.061, 0.079), fb=0.55, mix=0.35):
     return (out * (1 - mix) + wet * mix)[:len(x)]
 
 
-def compor(dur=75.0, bpm=84):
+# Variações para alternar entre os vídeos (Keila 10/11: "não é para colocar a mesma em todos").
+# acordes: tríades em MIDI; graves: fundamental; arpejo: índices do acorde em colcheias (None = pausa)
+VARIACOES = {
+    "A": dict(bpm=84, acordes=[[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]],
+              graves=[45, 41, 48, 43], arpejo=[0, 1, 2, 1, 2, 0, 1, 2]),                # Am F C G
+    "B": dict(bpm=92, acordes=[[60, 64, 67], [55, 59, 62], [57, 60, 64], [53, 57, 60]],
+              graves=[48, 43, 45, 41], arpejo=[0, 2, 1, 2, 0, 2, 1, 2]),                # C G Am F
+    "C": dict(bpm=74, acordes=[[62, 65, 69], [58, 62, 65], [53, 57, 60], [60, 64, 67]],
+              graves=[50, 46, 41, 48], arpejo=[0, None, 2, None, 1, None, 2, None]),    # Dm Bb F C (lenta)
+    "D": dict(bpm=96, acordes=[[64, 67, 71], [60, 64, 67], [55, 59, 62], [62, 66, 69]],
+              graves=[52, 48, 43, 50], arpejo=[0, 1, 2, 0, 1, 2, 0, 1]),                # Em C G D
+    "E": dict(bpm=80, acordes=[[53, 57, 60], [60, 64, 67], [62, 65, 69], [58, 62, 65]],
+              graves=[41, 48, 50, 46], arpejo=[2, 1, 0, 1, 2, 1, 0, 1]),                # F C Dm Bb
+    "F": dict(bpm=88, acordes=[[55, 58, 62], [51, 55, 58], [58, 62, 65], [53, 57, 60]],
+              graves=[43, 39, 46, 41], arpejo=[0, 2, None, 1, 0, 2, None, 2]),          # Gm Eb Bb F
+}
+
+
+def compor(dur=75.0, bpm=84, variacao="A"):
+    v = VARIACOES[variacao]
+    bpm = v["bpm"]
     beat = 60.0 / bpm
     compasso = 4 * beat
-    # Am - F - C - G (acordes em notas MIDI, região média)
-    acordes = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]
-    graves = [45, 41, 48, 43]
-    arpejo = [0, 1, 2, 1, 2, 0, 1, 2]           # índices do acorde, em colcheias
+    acordes, graves, arpejo = v["acordes"], v["graves"], v["arpejo"]
     n = int(dur * SR)
     L = np.zeros(n + SR * 4)
     R = np.zeros(n + SR * 4)
@@ -97,6 +114,8 @@ def compor(dur=75.0, bpm=84):
         R[i0:i0 + len(g)] += g
         if c >= 1:   # o piano entra no 2º compasso
             for k, idx in enumerate(arpejo):
+                if idx is None:
+                    continue
                 ti = t0 + k * beat / 2
                 if ti >= dur:
                     break
@@ -121,15 +140,16 @@ def compor(dur=75.0, bpm=84):
 def main():
     saida = sys.argv[1]
     dur = float(sys.argv[2]) if len(sys.argv) > 2 else 75.0
-    bpm = float(sys.argv[3]) if len(sys.argv) > 3 else 84
-    st = compor(dur, bpm)
+    variacao = sys.argv[3] if len(sys.argv) > 3 else "A"
+    bpm = VARIACOES[variacao]["bpm"]
+    st = compor(dur, bpm, variacao)
     pcm = (st * 32767).astype(np.int16)
     with wave.open(saida, "wb") as w:
         w.setnchannels(2)
         w.setsampwidth(2)
         w.setframerate(SR)
         w.writeframes(pcm.tobytes())
-    print(f"{saida}: {dur:.0f} s, {bpm:.0f} bpm")
+    print(f"{saida}: {dur:.0f} s, variação {variacao}, {bpm:.0f} bpm")
 
 
 if __name__ == "__main__":
