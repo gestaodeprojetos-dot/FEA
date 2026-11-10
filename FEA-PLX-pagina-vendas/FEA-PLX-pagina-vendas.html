@@ -1,0 +1,597 @@
+<meta charset="utf-8">
+<title>PLX Preenchimento Labial Express</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="PLX, Preenchimento Labial Express. O protocolo do Dr. João Pithon para construir o lábio com 1 ml, com previsibilidade e sem produto aparente.">
+<link rel="icon" type="image/svg+xml" href="assets/plx-isotipo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700;800&display=swap">
+<style>
+/* Layout: faixas alternadas navy e creme, como o molde CTX, com o vermelho PLX só em CTA, marcadores e preço. */
+:root {
+  --navy: #242735;
+  --navy-2: #1b1d28;
+  --navy-3: #2e3244;
+  --red: #EF233C;
+  --red-deep: #c81830;
+  --cream: #FFF5EF;
+  --white: #FFFFFF;
+  --slate: #8D99AF;
+  --slate-ink: #5d6880;
+  --line-dark: rgba(141,153,175,.22);
+  --line-light: rgba(36,39,53,.12);
+  --display: "Exo 2", "Segoe UI", system-ui, sans-serif; /* ZCOOL XiaoWei do manual nao tem acentos do portugues */
+  --body: "Exo 2", "Segoe UI", system-ui, sans-serif;
+  --radius: 10px;
+  --wrap: 1120px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--cream);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--display); font-weight: 300; line-height: 1.16; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+h1 em, .h2 strong { font-weight: 600; }
+p { margin: 0; }
+strong { font-weight: 700; }
+
+.band { padding-block: clamp(56px, 8vw, 104px); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band--navy { background: var(--navy); color: var(--cream); }
+.band--deep { background: var(--navy-2); color: var(--cream); }
+.band--cream { background: var(--cream); color: var(--navy); }
+.wrap { max-width: var(--wrap); margin: 0 auto; }
+.narrow { max-width: 760px; margin: 0 auto; }
+.center { text-align: center; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--body); font-size: 12px; font-weight: 600;
+  letter-spacing: .28em; text-transform: uppercase; color: var(--slate);
+}
+.eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--red); }
+.band--cream .eyebrow { color: var(--slate-ink); }
+.h2 { font-size: clamp(28px, 4vw, 44px); }
+.lede { font-size: clamp(17px, 1.6vw, 19px); color: var(--slate); max-width: 62ch; }
+.band--cream .lede { color: var(--slate-ink); }
+
+/* CTA */
+.cta {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  background: var(--red); color: var(--white); text-decoration: none;
+  font-family: var(--body); font-weight: 700; font-size: 16px; letter-spacing: .06em; text-transform: uppercase;
+  padding: 20px 34px; border-radius: 999px;
+  box-shadow: 0 10px 30px -10px rgba(239,35,60,.7);
+  transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  max-width: 100%; text-align: center;
+}
+.cta:hover { background: var(--red-deep); transform: translateY(-2px); box-shadow: 0 16px 34px -12px rgba(239,35,60,.8); }
+.cta:focus-visible { outline: 3px solid var(--cream); outline-offset: 4px; }
+.cta svg { flex: none; }
+.cta-note { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; margin-top: 16px; font-size: 13px; color: var(--slate); }
+.band--cream .cta-note { color: var(--slate-ink); }
+.cta-note span { display: inline-flex; align-items: center; gap: 6px; }
+.cta-block { display: flex; flex-direction: column; align-items: center; margin-top: 40px; }
+
+/* 01 HERO */
+.hero { position: relative; overflow: hidden; background: radial-gradient(120% 90% at 85% 10%, #33384c 0%, var(--navy) 46%, var(--navy-2) 100%); padding-block: clamp(28px, 4vw, 44px) 0; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.hero::after { content: ""; position: absolute; right: -8%; top: 8%; width: 46%; aspect-ratio: 1; background: url("assets/plx-isotipo.svg") center/contain no-repeat; opacity: .05; pointer-events: none; }
+.hero-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.hero-top img { width: clamp(150px, 18vw, 210px); height: auto; }
+.pill { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; border: 1px solid var(--line-dark); color: var(--slate); padding: 7px 14px; border-radius: 999px; white-space: nowrap; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(28px, 4vw, 64px); align-items: end; margin-top: clamp(28px, 4vw, 48px); position: relative; z-index: 1; }
+.hero-copy { min-width: 0; padding-bottom: clamp(48px, 6vw, 80px); }
+.hero h1 { font-size: clamp(30px, 4.3vw, 52px); }
+.hero h1 em { font-style: normal; color: var(--red); }
+.hero-sub { margin-top: 22px; font-size: clamp(17px, 1.7vw, 20px); color: #c9cfdb; max-width: 54ch; }
+.badges { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.badges li { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; line-height: 1.4; padding: 12px 14px; border: 1px solid var(--line-dark); border-radius: var(--radius); background: rgba(255,245,239,.03); }
+.badges li svg { flex: none; margin-top: 2px; }
+.hero .cta-block { align-items: flex-start; margin-top: 32px; }
+.hero .cta-note { justify-content: flex-start; }
+.hero-art { position: relative; min-width: 0; margin: 0; align-self: stretch; min-height: 600px; }
+.orb { position: absolute; border-radius: 50%; overflow: hidden; border: 2px solid rgba(239,35,60,.65); box-shadow: 0 24px 50px -20px rgba(0,0,0,.7); }
+.orb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.orb--a { width: 60%; top: 4%; left: -8%; }
+.orb--b { width: 44%; bottom: 30%; right: -12%; z-index: 1; }
+.hero-art .doc { position: absolute; bottom: 0; left: 50%; transform: translateX(-58%); height: 86%; z-index: 0; width: auto; max-width: none; filter: drop-shadow(0 20px 40px rgba(0,0,0,.45)); }
+.hero-art figcaption { position: absolute; right: 0; bottom: 24px; z-index: 2; display: inline-flex; align-items: center; gap: 8px; background: rgba(27,29,40,.85); color: var(--cream); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; }
+.hero-art figcaption::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+
+/* pendente: blocos que aguardam material real da equipe */
+.pendente { position: relative; outline: 2px dashed rgba(239,35,60,.55); outline-offset: 6px; }
+.pendente-flag { display: inline-block; margin-bottom: 10px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--red); }
+
+/* 02 resultados */
+.proofs { columns: 3 260px; column-gap: 18px; margin-top: 40px; }
+.proof { break-inside: avoid; margin: 0 0 18px; border-radius: 14px; overflow: hidden; background: var(--white); border: 1px solid var(--line-light); box-shadow: 0 12px 28px -18px rgba(36,39,53,.35); }
+.proof img { width: 100%; height: auto; }
+
+/* 03 soa familiar */
+.split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.pains { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+.pains li { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line-light); }
+.pains li .x { flex: none; width: 24px; height: 24px; border-radius: 50%; background: rgba(239,35,60,.1); display: grid; place-items: center; margin-top: 1px; }
+.split-art { position: relative; min-width: 0; }
+.split-art img { width: 100%; height: auto; }
+.closing-line { margin-top: 28px; font-family: var(--display); font-size: clamp(21px, 2.3vw, 26px); line-height: 1.3; color: var(--navy); }
+
+/* 04 pergunta */
+.ask { font-family: var(--display); font-size: clamp(24px, 3.2vw, 36px); line-height: 1.3; }
+.ask-q { margin-top: 26px; font-weight: 500; font-family: var(--display); font-size: clamp(30px, 4.4vw, 50px); color: var(--red); }
+.ask-then { margin-top: 26px; font-size: 18px; color: #c9cfdb; }
+.ask-then strong { color: var(--cream); }
+
+/* 05 solução */
+.solution { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; display: grid; gap: 0; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 56px minmax(0,1fr); gap: 16px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line-light); font-size: 18px; }
+.steps li:first-child { border-top: 1px solid var(--line-light); }
+.steps li::before { content: counter(s); font-weight: 600; font-family: var(--display); font-size: 34px; line-height: 1; color: var(--red); }
+
+/* 06 o que você recebe */
+.modules { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 44px; }
+.module { position: relative; overflow: hidden; border-radius: 14px; background: var(--navy-3); border: 1px solid var(--line-dark); padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.module h3 { font-size: clamp(22px, 2.3vw, 28px); color: var(--cream); }
+.module .kicker { font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--red); }
+.module p { color: #c3c9d6; font-size: 16px; }
+.module--feature { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: center; }
+.module--feature .txt { display: flex; flex-direction: column; gap: 12px; }
+.module--feature img { width: 100%; height: auto; border-radius: 10px; }
+
+/* 07 bônus */
+.bonus { display: grid; grid-template-columns: auto minmax(0,1fr); gap: clamp(20px, 4vw, 44px); align-items: center; background: var(--white); border-radius: 16px; border: 1px solid var(--line-light); padding: clamp(24px, 4vw, 44px); }
+.bonus-tag { font-family: var(--display); font-size: clamp(26px, 3.4vw, 38px); color: var(--red); line-height: 1.1; }
+.bonus-tag small { display: block; font-family: var(--body); font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--slate-ink); margin-top: 8px; }
+.bonus h3 { font-size: clamp(22px, 2.4vw, 28px); }
+.bonus p { margin-top: 10px; color: var(--slate-ink); }
+
+/* 08 validação */
+.big-number { font-weight: 600; font-family: var(--display); font-size: clamp(60px, 10vw, 120px); line-height: 1; color: var(--red); margin-top: 18px; font-variant-numeric: tabular-nums; }
+.big-label { font-size: 18px; color: var(--slate-ink); margin-top: 10px; }
+
+/* 09 para quem */
+.for-list { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.for-list li { display: flex; gap: 14px; align-items: flex-start; padding: 18px 20px; border-radius: var(--radius); border: 1px solid var(--line-dark); background: rgba(255,245,239,.03); }
+
+/* 10 e 11 recap e preço */
+.offer { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(24px, 4vw, 48px); align-items: start; margin-top: 40px; }
+.recap { width: 100%; border-collapse: collapse; font-size: 15.5px; color: var(--navy); font-family: var(--body); }
+.recap-box { background: var(--white); border-radius: 14px; border: 1px solid var(--line-light); overflow-x: auto; }
+.recap th { text-align: left; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--white); background: var(--navy); padding: 14px 18px; font-weight: 600; }
+.recap th:last-child, .recap td:last-child { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.recap td { padding: 14px 18px; border-bottom: 1px solid var(--line-light); }
+.recap tr.is-bonus td { color: var(--red-deep); font-weight: 600; }
+.recap tfoot td { font-weight: 800; font-size: 17px; border-bottom: 0; }
+.recap tfoot td:last-child { text-decoration: line-through; text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.price-card { position: relative; border-radius: 16px; background: var(--navy); color: var(--cream); padding: clamp(28px, 4vw, 40px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; overflow: hidden; }
+.price-card::before { content: ""; position: absolute; inset: auto -30% -40% auto; width: 70%; aspect-ratio: 1; background: url("assets/plx-isotipo.svg") center/contain no-repeat; opacity: .07; }
+.price-card .cover { width: 120px; height: auto; border-radius: 10px; box-shadow: 0 14px 30px rgba(0,0,0,.35); margin-bottom: 12px; }
+.price-from { font-size: 14px; letter-spacing: .2em; text-transform: uppercase; color: var(--slate); }
+.price-from s { color: var(--cream); text-decoration-color: var(--red); text-decoration-thickness: 2px; }
+.price-main { font-weight: 600; font-family: var(--display); font-size: clamp(54px, 7vw, 76px); line-height: 1; margin-top: 8px; font-variant-numeric: tabular-nums; }
+.price-main small { font-size: .42em; vertical-align: .55em; margin-right: 6px; }
+.price-alt { color: #c9cfdb; font-size: 16px; }
+.price-alt strong { color: var(--cream); }
+.price-card .cta { margin-top: 22px; width: 100%; }
+.price-card .cta-note { margin-top: 14px; }
+
+/* 12 como acessar */
+.how { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 40px; counter-reset: h; }
+.how li { counter-increment: h; list-style: none; padding: 26px 24px; border-radius: 14px; border: 1px solid var(--line-dark); background: var(--navy-3); display: flex; flex-direction: column; gap: 8px; }
+.how li::before { content: "Passo " counter(h); font-size: 11px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; color: var(--red); }
+.how h3 { font-size: 24px; }
+.how p { color: #c3c9d6; font-size: 15.5px; }
+.how-list { padding: 0; margin: 0; }
+
+/* 13 quem te ensina */
+.teacher { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.teacher-photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; box-shadow: 0 24px 50px -24px rgba(36,39,53,.55); }
+.teacher h2 { font-size: clamp(34px, 4.6vw, 52px); margin-top: 10px; }
+.teacher .role { margin-top: 8px; color: var(--slate-ink); font-size: 16px; }
+.teacher .bio { margin-top: 22px; display: grid; gap: 14px; font-size: 17.5px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 30px; }
+.stat { border-top: 2px solid var(--red); padding-top: 12px; }
+.stat b { display: block; font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--slate-ink); }
+
+/* 14 dois caminhos */
+.paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 40px; }
+.path { border-radius: 14px; padding: clamp(24px, 3vw, 34px); display: flex; flex-direction: column; gap: 12px; }
+.path--1 { border: 1px solid var(--line-dark); color: #b7bfcd; }
+.path--2 { background: var(--cream); color: var(--navy); }
+.path .label { font-size: 12px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; }
+.path--1 .label { color: var(--slate); }
+.path--2 .label { color: var(--red); }
+.path p { font-size: 18px; }
+.decision { margin-top: 36px; font-family: var(--display); font-size: clamp(22px, 2.6vw, 30px); }
+
+/* 15 faq */
+.faq-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr); gap: clamp(20px, 4vw, 44px); margin-top: 40px; align-items: start; }
+.faq details { border-bottom: 1px solid var(--line-light); }
+.faq details:first-child { border-top: 1px solid var(--line-light); }
+.faq summary { list-style: none; cursor: pointer; padding: 20px 4px; font-weight: 600; font-size: 17.5px; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; flex: none; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line-light); display: grid; place-items: center; font-weight: 400; font-size: 20px; color: var(--red); transition: transform .2s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq summary:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.faq .ans { padding: 0 4px 22px; color: var(--slate-ink); max-width: 62ch; }
+.help { border-radius: 16px; background: var(--navy); color: var(--cream); padding: 28px 24px; display: flex; flex-direction: column; gap: 14px; }
+.help h3 { font-size: 24px; }
+.help p { color: #c3c9d6; font-size: 15.5px; }
+.wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 1px solid var(--cream); color: var(--cream); text-decoration: none; border-radius: 999px; padding: 14px 20px; font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; transition: background .18s ease, color .18s ease; }
+.wa:hover { background: var(--cream); color: var(--navy); }
+.wa:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+
+/* 16 rodapé */
+.foot { background: var(--navy-2); color: var(--slate); font-size: 13.5px; padding-block: 44px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: flex-start; }
+.foot img { width: 120px; height: auto; opacity: .9; }
+.foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.foot-links a { color: var(--cream); text-decoration: none; }
+.foot-links a:hover { text-decoration: underline; }
+.foot .disc { margin-top: 24px; max-width: 70ch; }
+
+/* responsivo */
+@media (max-width: 900px) {
+  .hero-grid, .split, .solution, .offer, .teacher, .faq-grid, .module--feature { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding-bottom: 8px; }
+  .hero-art { width: 100%; max-width: 420px; margin: 8px auto 0; min-height: 0; aspect-ratio: 5 / 6; }
+  .orb--a { left: 0; width: 56%; } .orb--b { right: 0; width: 40%; bottom: 34%; }
+  .hero-art .doc { transform: translateX(-60%); height: 84%; }
+  .proofs, .how { grid-template-columns: minmax(0, 1fr); }
+  .split-art { max-width: 520px; }
+}
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .badges, .for-list, .modules, .paths { grid-template-columns: minmax(0, 1fr); }
+  .bonus { grid-template-columns: minmax(0, 1fr); }
+  .hero .cta, .cta-block .cta { width: 100%; padding-inline: 18px; font-size: 14.5px; letter-spacing: .03em; white-space: nowrap; }
+  .pill { display: none; }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .stat span { font-size: 11px; letter-spacing: .06em; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cta, .wa, .faq summary::after { transition: none; }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#EF233C"/><path d="M5.6 10.3l2.9 2.8 5.9-6" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 12 12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="#EF233C" stroke-width="2" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 16 16"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 16 16"><path d="M8 1.5l5 2v4c0 3.2-2.2 5.6-5 7-2.8-1.4-5-3.8-5-7v-4z" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.6 8l1.7 1.7L10.6 6.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1112 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 01-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 00-.7.3 3 3 0 00-.9 2.2 5.2 5.2 0 001.1 2.7 11.8 11.8 0 004.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 001.8-1.2 2.2 2.2 0 00.1-1.2c0-.1-.2-.2-.4-.3z"/></symbol>
+</svg>
+
+<!-- 01 HERO -->
+<header class="hero" id="topo">
+  <div class="wrap">
+    <div class="hero-top">
+      <img src="assets/plx-logo-negativo.svg" alt="PLX, Preenchimento Labial Express" width="210" height="82">
+      <span class="pill">Dr. João Pithon</span>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1>Copie a minha técnica de preenchimento labial que <em>constrói o volume com 1 ml</em>, eliminando a boca artificial e aumentando a previsibilidade do resultado já no seu próximo atendimento.</h1>
+        <p class="hero-sub">Execute uma técnica simples e replicável para qualquer formato de lábio, sem produto aparente nem boca inflada.</p>
+        <ul class="badges">
+          <li><svg width="18" height="18"><use href="#i-check"/></svg>Direto ao ponto: assista e já aplique na próxima paciente</li>
+          <li><svg width="18" height="18"><use href="#i-check"/></svg>Técnica validada em casos clínicos reais</li>
+          <li><svg width="18" height="18"><use href="#i-check"/></svg>Anatomia do lábio em cadáver fresco mais protocolo de anestesia</li>
+          <li><svg width="18" height="18"><use href="#i-check"/></svg>Mais previsibilidade mesmo em lábios finos e assimétricos</li>
+        </ul>
+        <div class="cta-block">
+          <a class="cta js-checkout" href="https://pay.hotmart.com/P107410854L?off=whzgr6uz">Garantir o protocolo por R$ 67 <svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+          <div class="cta-note"><span><svg width="14" height="14"><use href="#i-lock"/></svg>Compra segura</span><span><svg width="14" height="14"><use href="#i-shield"/></svg>Garantia de 7 dias</span></div>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <div class="orb orb--a"><img src="assets/plx-orb-labio.webp" alt="Lábio após preenchimento, caso de aluna" width="600" height="600"></div>
+        <div class="orb orb--b"><img src="assets/plx-orb-anatomia.webp" alt="Ilustração anatômica das camadas do lábio superior" width="600" height="600"></div>
+        <img class="doc" src="assets/plx-dr-joao-recorte.webp" alt="Dr. João Pithon" width="884" height="1350" fetchpriority="high">
+        <figcaption>Dr. João Pithon</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<!-- 02 RESULTADOS REAIS -->
+<section class="band band--cream">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Resultados reais</span>
+      <h2 class="h2" style="margin-top:14px">Veja abaixo resultados de quem utiliza o protocolo de preenchimento labial do Dr. João Pithon</h2>
+    </div>
+    <div class="proofs">
+      <figure class="proof"><img src="assets/plx-depoimento-labio1.webp" alt="Depoimento de aluna no WhatsApp: primeira boquinha após o curso, sem intercorrência, com foto do resultado" width="720" height="837" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-feb-e-labios.webp" alt="Depoimento de aluna no Instagram: criou coragem de trabalhar com harmonização e hoje faz lábios com segurança" width="590" height="1280" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labio.webp" alt="Depoimento de aluna na comunidade: lábio fino tratado em duas etapas, 0,6 ml e retorno com 0,5 ml" width="720" height="605" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labio2.webp" alt="Depoimento de aluna na comunidade: assimetria de lábio tratada com menos de 1 ml, com fotos de antes e depois" width="720" height="563" loading="lazy"></figure>
+      <figure class="proof"><img src="assets/plx-depoimento-labios.webp" alt="Depoimento de aluna na comunidade: primeira experiência com cânulas nos lábios, mais segurança para começar" width="675" height="141" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SOA FAMILIAR -->
+<section class="band band--cream" style="padding-top:0">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow">Soa familiar?</span>
+      <h2 class="h2" style="margin-top:14px">Se você faz preenchimento labial no dia a dia, provavelmente já passou por isso:</h2>
+      <ul class="pains">
+        <li><span class="x"><svg width="12" height="12"><use href="#i-x"/></svg></span>Já aplicou 1 ml e o resultado não apareceu como você imaginava</li>
+        <li><span class="x"><svg width="12" height="12"><use href="#i-x"/></svg></span>Já ficou em dúvida sobre onde exatamente depositar em cada tipo de lábio</li>
+        <li><span class="x"><svg width="12" height="12"><use href="#i-x"/></svg></span>Já teve receio de causar nódulo ou assimetria</li>
+        <li><span class="x"><svg width="12" height="12"><use href="#i-x"/></svg></span>Já anestesiou uma paciente que não sentiu nada e a seguinte sentiu tudo</li>
+      </ul>
+    </div>
+    <div class="split-art">
+      <img src="assets/plx-labios.webp" alt="Lábios em close, vista frontal" width="900" height="520" loading="lazy">
+      <p class="closing-line">Você não aguenta mais fazer cursos de preenchimento e ainda sentir insegurança na hora de fechar um lábio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 AGORA EU TE PERGUNTO -->
+<section class="band band--navy">
+  <div class="narrow center">
+    <span class="eyebrow">Agora eu te pergunto…</span>
+    <p class="ask" style="margin-top:22px">Se você pudesse copiar um protocolo simples e altamente replicável para construir qualquer lábio com 1 ml, com resultado previsível e sem produto aparente…</p>
+    <p class="ask-q">você aplicaria na próxima paciente?</p>
+    <p class="ask-then">Então o <strong>PLX, Preenchimento Labial Express</strong>, é para você.</p>
+    <div class="cta-block">
+      <a class="cta js-checkout" href="https://pay.hotmart.com/P107410854L?off=whzgr6uz">Garantir o protocolo por R$ 67 <svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+      <div class="cta-note"><span><svg width="14" height="14"><use href="#i-lock"/></svg>Compra segura</span><span><svg width="14" height="14"><use href="#i-shield"/></svg>Garantia de 7 dias</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 A SOLUÇÃO -->
+<section class="band band--cream">
+  <div class="wrap solution">
+    <div>
+      <span class="eyebrow">A solução</span>
+      <h2 class="h2" style="margin-top:14px">Com o PLX, Preenchimento Labial Express, você vai:</h2>
+    </div>
+    <div>
+      <ol class="steps">
+        <li>Construir volume e projeção com 1 ml, mesmo em lábios finos</li>
+        <li>Aplicar com mais previsibilidade e segurança clínica</li>
+        <li>Entender os pontos anatômicos que definem o resultado do lábio</li>
+        <li>Reduzir o risco de nódulo, assimetria e produto aparente</li>
+        <li>Corrigir os erros que fazem o resultado sumir em poucas semanas</li>
+        <li>Melhorar a satisfação das pacientes sem precisar aplicar mais produto</li>
+      </ol>
+      <div class="cta-block" style="align-items:flex-start">
+        <a class="cta js-checkout" href="https://pay.hotmart.com/P107410854L?off=whzgr6uz">Garantir o protocolo por R$ 67 <svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 O QUE VOCÊ RECEBE -->
+<section class="band band--navy">
+  <div class="wrap">
+    <span class="eyebrow">Conteúdo</span>
+    <h2 class="h2" style="margin-top:14px">Veja o que você recebe no PLX</h2>
+    <p class="lede" style="margin-top:14px">Um passo a passo direto para aplicar preenchimento labial com mais segurança, previsibilidade e confiança clínica.</p>
+    <div class="modules">
+      <article class="module module--feature">
+        <div class="txt">
+          <span class="kicker">O protocolo</span>
+          <h3>O protocolo que eu uso para construir o lábio com 1 ml</h3>
+          <p>Como ler o lábio antes de abrir a seringa, qual preenchedor a região pede e onde depositar para o volume aparecer sem inflar a boca.</p>
+        </div>
+        <img src="assets/plx-mapa-labial.webp" alt="Mapa de zonas do lábio superior e inferior" width="1000" height="620" loading="lazy">
+      </article>
+      <article class="module">
+        <span class="kicker">Anestesia</span>
+        <h3>Protocolo de anestesia com agulha e com cânula</h3>
+        <p>O passo a passo para a paciente não sentir, e por que às vezes não pega.</p>
+      </article>
+      <article class="module">
+        <span class="kicker">Anatomia em cadáver fresco</span>
+        <h3>Planos, vasos e estruturas do lábio</h3>
+        <p>Veja exatamente os planos, os vasos e as estruturas que definem onde o produto pode e não pode ir.</p>
+      </article>
+      <article class="module" style="grid-column:1 / -1">
+        <span class="kicker">Casos clínicos</span>
+        <h3>Casos completos e comentados</h3>
+        <p>Como adaptar o protocolo para lábio fino, lábio maduro, assimetria de base e paciente que já tem produto antigo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 07 BÔNUS -->
+<section class="band band--cream">
+  <div class="wrap">
+    <div class="bonus">
+      <div class="bonus-tag">+ Bônus exclusivo<small>Comprando hoje você também leva</small></div>
+      <div>
+        <h3>Checklist de avaliação labial</h3>
+        <p>Um passo a passo simples para você revisar antes de aplicar e aumentar sua segurança clínica na hora de atender lábios com formatos e histórias diferentes.</p>
+      </div>
+    </div>
+
+    <!-- 08 VALIDAÇÃO -->
+    <div class="center" style="margin-top:clamp(56px,8vw,96px)">
+      <h2 class="h2">Uma técnica validada por profissionais da harmonização facial</h2>
+      <div class="big-number">+35.000</div>
+      <p class="big-label">profissionais já aprenderam técnicas de preenchimento com o Dr. João Pithon</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 PARA QUEM SERVE -->
+<section class="band band--navy">
+  <div class="wrap">
+    <span class="eyebrow">Para quem é</span>
+    <h2 class="h2" style="margin-top:14px">O PLX é para você que:</h2>
+    <ul class="for-list">
+      <li><svg width="20" height="20" style="flex:none;margin-top:3px"><use href="#i-check"/></svg>Não aguenta mais aplicar lábio e ainda entregar resultado que não aparece</li>
+      <li><svg width="20" height="20" style="flex:none;margin-top:3px"><use href="#i-check"/></svg>Sente insegurança em lábio fino, assimétrico ou com produto antigo</li>
+      <li><svg width="20" height="20" style="flex:none;margin-top:3px"><use href="#i-check"/></svg>Quer reduzir o risco de nódulo, assimetria e produto aparente</li>
+      <li><svg width="20" height="20" style="flex:none;margin-top:3px"><use href="#i-check"/></svg>Deseja melhorar seus resultados já no próximo atendimento</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 10 RECAPITULANDO + 11 PREÇO -->
+<section class="band band--cream" id="oferta">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Recapitulando</span>
+      <h2 class="h2" style="margin-top:14px">Tudo o que você recebe no PLX</h2>
+    </div>
+    <div class="offer">
+      <div class="recap-box">
+        <table class="recap">
+          <thead><tr><th>Item</th><th>Valor</th></tr></thead>
+          <tbody>
+            <tr><td>Protocolo completo de preenchimento labial com 1 ml</td><td>R$ 97</td></tr>
+            <tr><td>Técnica com agulha e com cânula</td><td>R$ 67</td></tr>
+            <tr><td>Aula de anatomia do lábio em cadáver fresco</td><td>R$ 147</td></tr>
+            <tr><td>Protocolo de anestesia labial</td><td>R$ 97</td></tr>
+            <tr><td>Casos clínicos comentados por tipo de lábio</td><td>R$ 67</td></tr>
+            <tr class="is-bonus"><td>Bônus: Checklist de avaliação labial</td><td>R$ 47</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td>R$ 522</td></tr></tfoot>
+        </table>
+      </div>
+      <div class="price-card">
+        <img class="cover" src="assets/plx-capa.webp" alt="Capa do PLX" width="600" height="600" loading="lazy">
+        <p class="price-alt">Tudo isso deveria custar R$ 522.<br>Mas hoje você tem acesso ao PLX com o bônus por apenas:</p>
+        <p class="price-from" style="margin-top:14px">De <s>R$ 522</s> por</p>
+        <p class="price-main"><small>9x de R$</small>8,80</p>
+        <p class="price-alt">ou <strong>R$ 67 à vista</strong> com desconto no checkout</p>
+        <a class="cta js-checkout" href="https://pay.hotmart.com/P107410854L?off=whzgr6uz">Garantir o protocolo por R$ 67 <svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+        <div class="cta-note"><span><svg width="14" height="14"><use href="#i-lock"/></svg>Compra segura</span><span><svg width="14" height="14"><use href="#i-shield"/></svg>Garantia de 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 COMO ACESSAR -->
+<section class="band band--navy">
+  <div class="wrap">
+    <span class="eyebrow">Como acessar</span>
+    <h2 class="h2" style="margin-top:14px">Do pagamento ao próximo atendimento</h2>
+    <ol class="how how-list">
+      <li><h3>Faça sua compra</h3><p>Em poucos minutos você recebe seu acesso na caixa de entrada.</p></li>
+      <li><h3>Assista hoje</h3><p>É direto ao ponto, sem enrolação. No celular ou no computador, quando você quiser.</p></li>
+      <li><h3>Tudo pronto</h3><p>Agora é só seguir o protocolo no próximo atendimento de lábio.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 13 QUEM TE ENSINA -->
+<section class="band band--cream">
+  <div class="wrap teacher">
+    <img class="teacher-photo" src="assets/plx-dr-joao.webp" alt="Dr. João Pithon" width="900" height="1125" loading="lazy">
+    <div>
+      <span class="eyebrow">Quem te ensina</span>
+      <h2>Dr. João Pithon</h2>
+      <p class="role">Criador do PLX, Preenchimento Labial Express. Médico, professor e pesquisador.</p>
+      <div class="bio">
+        <p>Depois de viajar por 9 países como pesquisador científico, vou te apresentar as técnicas refinadas de preenchimento labial que validei em mais de 12.000 ml aplicados, sem uma única intercorrência isquêmica.</p>
+        <p>Já formei mais de 35.000 alunos com essas técnicas.</p>
+        <p>Agora chegou a sua vez de copiar e colar esse protocolo para aumentar a satisfação das suas pacientes e virar referência na sua cidade.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>9</b><span>países</span></div>
+        <div class="stat"><b>+12.000</b><span>ml aplicados</span></div>
+        <div class="stat"><b>+35.000</b><span>alunos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 DOIS CAMINHOS -->
+<section class="band band--navy">
+  <div class="wrap">
+    <div class="center"><h2 class="h2">Agora, você tem dois caminhos</h2></div>
+    <div class="paths">
+      <div class="path path--1">
+        <span class="label"><svg width="12" height="12"><use href="#i-x"/></svg>Opção 1</span>
+        <p>Continuar fazendo cursos… e ainda travar diante de um lábio fino, de uma assimetria, ou de uma paciente que volta dizendo que não viu diferença.</p>
+      </div>
+      <div class="path path--2">
+        <span class="label"><svg width="16" height="16"><use href="#i-check"/></svg>Opção 2</span>
+        <p>Receber um protocolo simples, rápido e altamente replicável para construir qualquer lábio com 1 ml, já na próxima paciente.</p>
+      </div>
+    </div>
+    <div class="center">
+      <p class="decision">Você sabe qual é a decisão mais inteligente. Garanta seu acesso ao PLX.</p>
+      <div class="cta-block">
+        <a class="cta js-checkout" href="https://pay.hotmart.com/P107410854L?off=whzgr6uz">Garantir o protocolo por R$ 67 <svg width="20" height="20"><use href="#i-arrow"/></svg></a>
+        <div class="cta-note"><span><svg width="14" height="14"><use href="#i-lock"/></svg>Compra segura</span><span><svg width="14" height="14"><use href="#i-shield"/></svg>Garantia de 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 FAQ -->
+<section class="band band--cream">
+  <div class="wrap">
+    <h2 class="h2">Perguntas frequentes</h2>
+    <div class="faq-grid">
+      <div class="faq">
+        <details><summary>Funciona para mim se eu já faço lábio?</summary><p class="ans">Funciona, e provavelmente é o seu caso. A maior parte dos alunos já aplica e vem buscar critério de decisão, não a técnica básica.</p></details>
+        <details><summary>Eu não sou médica. Posso fazer?</summary><p class="ans">Pode. A maior parte de quem aplica preenchimento no Brasil não é médico, e o curso foi feito para biomedicina, odontologia, enfermagem, farmácia, fisioterapia e medicina. O que cada profissão pode executar depende das normas do seu conselho.</p></details>
+        <details><summary>O pagamento é seguro?</summary><p class="ans">Sim. A compra é processada pela plataforma e você recebe o acesso por e-mail em poucos minutos.</p></details>
+        <details><summary>Como vou acessar as aulas?</summary><p class="ans">Pela área de membros, no celular ou no computador, com o login que chega no seu e-mail.</p></details>
+        <details><summary>Por quanto tempo tenho acesso?</summary><p class="ans">1 ano.</p></details>
+        <details><summary>E se eu não gostar?</summary><p class="ans">7 dias de garantia. Pede reembolso e devolvemos.</p></details>
+      </div>
+      <aside class="help">
+        <h3>Você ficou com alguma dúvida?</h3>
+        <p>Se ficou qualquer dúvida sobre o PLX, fale com a minha equipe no WhatsApp.</p>
+        <a class="wa" href="https://wa.me/5511966256272?text=Oi%2C%20tenho%20interesse%20no%20PLX%20-%20Preenchimento%20Labial%20Express" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#i-wa"/></svg>Falar com a equipe</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 16 RODAPÉ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <img src="assets/plx-logo-negativo.svg" alt="PLX" width="120" height="47" loading="lazy">
+      <nav class="foot-links" aria-label="Documentos legais">
+        <a href="https://joaopithon.com.br/politica-de-privacidade/" target="_blank" rel="noopener">Política de Privacidade</a>
+        <a href="https://joaopithon.com.br/termos-de-uso/" target="_blank" rel="noopener">Termos de uso</a>
+      </nav>
+    </div>
+    <p class="disc">*Curso exclusivo para profissionais habilitados por lei a trabalhar com medicina estética.</p>
+    <p style="margin-top:10px">Copyright © 2026, todos os direitos reservados · Formação Especialista Academy LTDA · CNPJ 50.297.444/0001-09</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Repassa UTMs e parâmetros da URL da página para o checkout da Hotmart (rastreamento fim a fim)
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if ([...params.keys()].length) {
+      document.querySelectorAll('a.js-checkout').forEach(function (a) {
+        var url = new URL(a.href);
+        params.forEach(function (v, k) { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
+        if (params.get('utm_source') && !url.searchParams.has('src')) url.searchParams.set('src', params.get('utm_source'));
+        a.href = url.toString();
+      });
+    }
+  } catch (e) {}
+})();
+</script>
