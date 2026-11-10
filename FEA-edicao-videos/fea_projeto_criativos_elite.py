@@ -204,5 +204,5 @@ for saida, trechos, cartelas, remover in V:
     videos.append(dict({"saida": f"{T}/out/{saida}.mp4", "trechos": trechos, "cartelas": cartelas,
                         "remover_legenda": remover, "correcoes": CORRECOES, "broll": BROLL.get(num, [])},
                        **AJUSTES.get(num, {})))
-print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos", "broll": f"{T}/broll",
+print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos", "broll": f"{T}/broll", "trilha": f"{T}/assets/FEA-trilha-elite.wav", "trilha_db": -24,
                   "transcricoes": f"{T}/tr", "videos": videos}, ensure_ascii=False, indent=1))

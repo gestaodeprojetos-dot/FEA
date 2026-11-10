@@ -417,6 +417,11 @@ def renderizar(cfg, v, so_legenda=False):
     nb = n + 1 + len(cartelas)
     for arq, ss, t0, dur in broll:
         cmd += ["-ss", f"{ss:.3f}", "-t", f"{dur:.3f}", "-i", arq]
+    # trilha de fundo (Keila 10/11: "uma musiquinha baixa"): original, composta por fea_trilha.py
+    trilha = v.get("trilha", cfg.get("trilha"))
+    if trilha:
+        it = nb + len(broll)
+        cmd += ["-stream_loop", "-1", "-i", trilha]
     partes, vr, ar = [], [], []
     zoom = v.get("zoom")   # [fator, cx, cy]: aproxima no Dr. (sem pernas no quadro)
     for i, (nome, arq, a, b) in enumerate(trechos):
@@ -435,7 +440,17 @@ def renderizar(cfg, v, so_legenda=False):
         vr.append(f"[v{i}]")
         ar.append(f"[a{i}]")
     partes.append("".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc]")
-    partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1[ac]")
+    partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1[ac0]")
+    if trilha:
+        tdb = v.get("trilha_db", cfg.get("trilha_db", -24))
+        # a trilha abaixa sozinha quando o Dr. fala (sidechain) e some no fim
+        partes.append(f"[{it}:a]aresample=48000,atrim=0:{duracao:.3f},asetpts=PTS-STARTPTS,volume={tdb}dB,"
+                      f"afade=t=in:d=0.6,afade=t=out:st={max(0, duracao - 1.5):.3f}:d=1.5[tr]")
+        partes.append("[ac0]asplit=2[voz][chave]")
+        partes.append("[tr][chave]sidechaincompress=threshold=0.02:ratio=4:attack=30:release=400[trd]")
+        partes.append("[voz][trd]amix=inputs=2:duration=first:normalize=0[ac]")
+    else:
+        partes.append("[ac0]anull[ac]")
     base_v = "vc"
     for k, (arq, ss, t0, dur) in enumerate(broll):
         partes.append(f"[{nb + k}:v]fps=30,scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1,"
