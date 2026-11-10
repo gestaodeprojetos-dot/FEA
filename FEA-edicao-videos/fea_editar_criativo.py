@@ -437,8 +437,11 @@ def renderizar(cfg, v, so_legenda=False):
                       f"crop={W}:{H}{zf},setsar=1[v{i}]")
         # "limpar_audio" (Keila 10/11, vídeo 6: "silenciar o fundo e deixar somente a voz do Dr."):
         # faixa da voz, redução de ruído por FFT e portão que fecha o fundo entre as falas
-        limpa = ("highpass=f=90,lowpass=f=9000,afftdn=nr=20:nf=-40:tn=1,"
-                 "agate=threshold=0.025:ratio=4:attack=8:release=220:range=0.06," if v.get("limpar_audio") else "")
+        # (a 1ª versão cortava acima de 9 kHz e a voz ficou abafada, Keila 10/11: redução mais leve,
+        # sem corte de agudos e com leve realce acima de 6 kHz; medido: agudos iguais ao bruto)
+        limpa = ("highpass=f=70,afftdn=nr=12:nf=-45:tn=1,"
+                 "agate=threshold=0.018:ratio=3:attack=10:release=280:range=0.12,treble=g=2:f=6000,"
+                 if v.get("limpar_audio") else "")
         partes.append(f"[{j}:a]atrim={a}:{b},asetpts=PTS-STARTPTS,{limpa}aresample=48000,"
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.03):.3f}:d=0.03[a{i}]")
         vr.append(f"[v{i}]")

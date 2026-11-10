@@ -205,8 +205,7 @@ for saida, trechos, cartelas, remover in V:
     num = int(saida.split("-")[0])
     videos.append(dict({"saida": f"{T}/out/{saida}.mp4", "trechos": trechos, "cartelas": cartelas,
                         "remover_legenda": remover, "correcoes": CORRECOES, "broll": BROLL.get(num, [])},
-                       # trilha a partir do vídeo 5, alternando A a F (Keila 10/11)
-                       **({"trilha": f"{T}/assets/FEA-trilha-elite-{'ABCDEF'[(num - 5) % 6]}.wav"} if num >= 5 else {}),
+                       # sem trilha: Keila testou nos vídeos 5 e 6 e não gostou (10/11)
                        **AJUSTES.get(num, {})))
 print(json.dumps({"ffmpeg": None, "fontsdir": f"{T}/fonts", "assets": f"{T}/assets", "brutos": f"{T}/brutos", "broll": f"{T}/broll", "trilha_db": -24,
                   "transcricoes": f"{T}/tr", "videos": videos}, ensure_ascii=False, indent=1))
