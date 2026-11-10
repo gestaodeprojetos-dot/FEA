@@ -54,6 +54,8 @@ Por que duas: na Brasil a captação começou 20 dias antes da live e na Latam s
 
 - **Uma pasta por lançamento** (cada masterclass, desafio, evento ou Black Friday é uma pasta própria), no espaço Marketing Brasil ou Marketing Latam, com o mês e o ano no nome: `Masterclass Toxina 01/27`, `Masterclass Bioestimulador Latam 02/27`.
 - O plano do ClickUp **não deixa criar espaço novo** (limite de 5, contando os arquivados), então não existe "Marketing 2027" separado: o ano vai no nome da pasta.
+- **No ClickUp ficam só os lançamentos do ano corrente e os de janeiro do ano seguinte** (Keila, 10/11/2026: "para não atrapalhar a cabeça de ninguém"). No Drive pode ficar tudo criado. Pasta de lançamento posterior a janeiro que já exista: arquivar as listas e renomear a pasta com o prefixo `ARQUIVAR ·` para a Keila arquivar na interface.
+- **Férias coletivas a partir de 15/12/2026** (Keila, 10/11/2026): o lançamento de dezembro (Masterclass Anatomia 12/26) e os de janeiro (Toxina 01/27, Preenchimento Labial 01/27 + Desafio Full Face) precisam estar com tudo produzido antes de 15/12. Ao distribuir datas desses lançamentos, o prazo máximo de qualquer entrega da equipe é 11/12/2026.
 - **A pasta só nasce quando o lançamento se aproxima:** cerca de 45 dias antes do início da captação, a partir do calendário `FEA-gestao-clickup/FEA-calendario-2026-2027.md`. Assim o espaço mostra só o que está em uso. Ao criar, avisar a Keila no relatório e montar o backlog copiando o lançamento anterior parecido.
 - **Fim do lançamento:** a API não arquiva pasta. Listar no relatório as pastas encerradas para a Keila arquivar na interface (três pontinhos da pasta > Arquivar).
 - **Perpétuos** ficam com o prefixo `Perpétuo ·` no nome, em cada espaço.
