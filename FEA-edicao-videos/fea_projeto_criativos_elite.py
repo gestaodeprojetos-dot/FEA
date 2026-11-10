@@ -56,7 +56,7 @@ BROLL = {
     10: [B("baseado", P("IMG_2155", 0, 4, 18))],
     11: [B("metodologias", P("IMG_2503", 6, 10, 14))],
     12: [B("indicar", P("IMG_2072", 4, 20), 6), B("completar", P("IMG_2072", 36), 12)],
-    13: [B("errando", P("IMG_1668", 0))],
+    13: [B("errando", P("IMG_1668", 0, 3.6))],
     15: [B("avaliações", P("IMG_1077", 0.5, 4), 8)],
     16: [B("avaliação", P("IMG_2640", 0.5), 4)],
     17: [B("tratamentos", P("IMG_8318", 0.5, 13, 18.5), 4)],
