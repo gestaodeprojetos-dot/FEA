@@ -73,10 +73,10 @@
       {
         "ini": 0.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt39.mp4",
         "src": 0,
         "cx": 0.5,
-        "cy": 0.66,
+        "cy": 0.4,
         "zoom": 1.0
       },
       {
@@ -92,10 +92,10 @@
       {
         "ini": 8.6,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt38.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt37.mp4",
         "src": 0,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.38,
         "zoom": 1.0
       },
       {
@@ -107,10 +107,10 @@
       {
         "ini": 12.5,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt36.mp4",
-        "src": 4,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
+        "src": 0,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.66,
         "zoom": 1.0
       },
       {
@@ -122,10 +122,10 @@
       {
         "ini": 16.6,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt39.mp4",
-        "src": 16,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt37.mp4",
+        "src": 2,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.38,
         "zoom": 1.0
       },
       {
@@ -137,19 +137,28 @@
       {
         "ini": 19.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
-        "src": 6,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724793.mp4",
+        "src": 0,
         "cx": 0.5,
-        "cy": 0.66,
+        "cy": 0.45,
         "zoom": 1.0
       },
       {
         "ini": 23.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt37.mp4",
-        "src": 20,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt39.mp4",
+        "src": 3.5,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 25.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
+        "src": 2.5,
+        "cx": 0.5,
+        "cy": 0.66,
         "zoom": 1.0
       },
       {
