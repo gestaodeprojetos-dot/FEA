@@ -1,0 +1,201 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7937.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7937.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/2- Os 3 melhores produtos para a mandíbula.mp4",
+    "titulo": "Os 3 melhores produtos para a mandíbula",
+    "headline": [
+      "Os 3 melhores",
+      "produtos para",
+      "a mandíbula"
+    ],
+    "headline_fim": 3.3,
+    "manter": [
+      [
+        5.8,
+        50.2
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bIvoar\\b",
+        "Yvoire"
+      ],
+      [
+        "\\b[Nn]uvia\\b",
+        "Neauvia"
+      ],
+      [
+        "\\b[Ss]ing ?derm\\b",
+        "Singderm"
+      ],
+      [
+        "\\bBio ?gelis\\b",
+        "Biogelis"
+      ],
+      [
+        "\\b[Ss]ub ?skin\\b",
+        "Subskin"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7937.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 5.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/subskin.mp4",
+        "src": 138.0,
+        "cx": 0.56,
+        "cy": 0.62,
+        "zoom": 1.15
+      },
+      {
+        "ini": 8.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/IMG_7582.MOV",
+        "src": 19.5,
+        "cx": 0.55,
+        "cy": 0.55,
+        "zoom": 1.15
+      },
+      {
+        "ini": 9.95,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/biogelis_volumax.png",
+        "nome": "Biogelis Volumax"
+      },
+      {
+        "ini": 11.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/IMG_7582.MOV",
+        "src": 88.0,
+        "cx": 0.45,
+        "cy": 0.55,
+        "zoom": 1.1
+      },
+      {
+        "ini": 13.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 16.05,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
+        "nome": "Yvoire Contour"
+      },
+      {
+        "ini": 18.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/IMG_7582.MOV",
+        "src": 60.5,
+        "cx": 0.6,
+        "cy": 0.36,
+        "zoom": 1.25
+      },
+      {
+        "ini": 20.1,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
+        "nome": "Perfectha Subskin"
+      },
+      {
+        "ini": 21.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 25.8,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/neauvia_intense.png",
+        "nome": "Neauvia Intense"
+      },
+      {
+        "ini": 27.65,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png",
+        "nome": "Singderm"
+      },
+      {
+        "ini": 28.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/subskin.mp4",
+        "src": 160.0,
+        "cx": 0.56,
+        "cy": 0.62,
+        "zoom": 1.15
+      },
+      {
+        "ini": 31.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/IMG_7582.MOV",
+        "src": 100.0,
+        "cx": 0.4,
+        "cy": 0.6,
+        "zoom": 1.1
+      },
+      {
+        "ini": 33.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 37.1,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/neauvia_intense.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 39.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mand/subskin.mp4",
+        "src": 102.0,
+        "cx": 0.56,
+        "cy": 0.62,
+        "zoom": 1.15
+      },
+      {
+        "ini": 43.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 44.85,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/biogelis_volumax.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 46.55,
+        "tipo": "cheio"
+      }
+    ],
+    "headline_y": 110
+  }
+}
