@@ -1,0 +1,226 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7938.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7938.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/3- Os 3 melhores produtos para o mento.mp4",
+    "titulo": "Os 3 melhores produtos para o mento",
+    "headline": [
+      "Os 3 melhores",
+      "produtos para",
+      "o mento"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        6.9,
+        63.1
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bgelinho\\b",
+        "G'"
+      ],
+      [
+        "\\bVoar\\b",
+        "Yvoire"
+      ],
+      [
+        "\\bPerfecta\\b",
+        "Perfectha"
+      ],
+      [
+        "\\bNúvia\\b",
+        "Neauvia"
+      ],
+      [
+        "\\bRestylane Shape\\b",
+        "Restylane Shaype"
+      ],
+      [
+        "\\bBio ?gelis\\b",
+        "Biogelis"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7938.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 6.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 12.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.1
+      },
+      {
+        "ini": 9.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/novos/IMG_3691.MOV",
+        "src": 19.0,
+        "cx": 0.5,
+        "cy": 0.36,
+        "zoom": 1.0
+      },
+      {
+        "ini": 12.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 14.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 41.5,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 16.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 20.45,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mento/restylane_shaype.png",
+        "nome": "Restylane Shaype"
+      },
+      {
+        "ini": 22.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mento/IMG_1418.MOV",
+        "src": 66.0,
+        "cx": 0.5,
+        "cy": 0.8,
+        "zoom": 1.2
+      },
+      {
+        "ini": 25.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 26.95,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/biogelis_volumax.png",
+        "nome": "Biogelis Volumax"
+      },
+      {
+        "ini": 28.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 22.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.1
+      },
+      {
+        "ini": 31.7,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png",
+        "nome": "Yvoire Contour"
+      },
+      {
+        "ini": 33.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 37.2,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
+        "nome": "Perfectha Subskin"
+      },
+      {
+        "ini": 39.4,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/neauvia_intense.png",
+        "nome": "Neauvia Intense"
+      },
+      {
+        "ini": 40.9,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/perfectha_subskin.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/neauvia_intense.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 43.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mento/IMG_1418.MOV",
+        "src": 100.0,
+        "cx": 0.5,
+        "cy": 0.68,
+        "zoom": 1.2
+      },
+      {
+        "ini": 46.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 48.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 2.5,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 50.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 30.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.1
+      },
+      {
+        "ini": 53.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 59.55,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mento/restylane_shaype.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mand/biogelis_volumax.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/olh/yvoire_contour.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 61.1,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
