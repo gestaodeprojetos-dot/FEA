@@ -1,0 +1,210 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto8/IMG_8067.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/vitc.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_vitc/10- Vitamina C ou niacinamida.mp4",
+    "titulo": "Vitamina C ou niacinamida?",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "Vitamina C ou",
+      "niacinamida?"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.0,
+        22.97,
+        "exato"
+      ],
+      [
+        23.42,
+        34.17,
+        "exato"
+      ],
+      [
+        34.42,
+        72.72,
+        "exato"
+      ],
+      [
+        73.12,
+        76.42,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bserum\\b",
+        "sérum"
+      ],
+      [
+        "\\bskin ?care\\b",
+        "skincare"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222554.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 11.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222564.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "Retinol"
+      },
+      {
+        "ini": 13.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724689.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "Ácido salicílico"
+      },
+      {
+        "ini": 14.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724701.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "Niacinamida"
+      },
+      {
+        "ini": 17.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 20.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m50794.mp4",
+        "src": 1,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "Vitamina C"
+      },
+      {
+        "ini": 23.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 24.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p7582851.mp4",
+        "src": 1,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 27.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222557.mp4",
+        "src": 3,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 30.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251379.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 34.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 40.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222554.mp4",
+        "src": 16,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0,
+        "rotulo": "Niacinamida em sérum"
+      },
+      {
+        "ini": 44.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6551000.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 49.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 55.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10251369.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 60.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m10429.mp4",
+        "src": 1,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "Vitamina C"
+      },
+      {
+        "ini": 64.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724778.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 68.0,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_130.mp3",
+      "ini": 10,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    }
+  }
+}
