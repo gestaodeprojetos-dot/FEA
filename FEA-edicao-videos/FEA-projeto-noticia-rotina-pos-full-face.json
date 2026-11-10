@@ -89,10 +89,10 @@
       {
         "ini": 0.0,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724739.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 6.5,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.55,
         "zoom": 1.0
       },
       {
@@ -102,8 +102,8 @@
       {
         "ini": 24.8,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724705.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt31.mp4",
+        "src": 47,
         "cx": 0.5,
         "cy": 0.42,
         "zoom": 1.0,
@@ -116,10 +116,10 @@
       {
         "ini": 31.8,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724753.mp4",
-        "src": 3,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt42.mp4",
+        "src": 6,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.6,
         "zoom": 1.0,
         "rotulo": "1. Ácido salicílico"
       },
@@ -130,18 +130,27 @@
       {
         "ini": 45.1,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222561.mp4",
-        "src": 10,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 13,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.5,
         "zoom": 1.0,
         "rotulo": "2. Niacinamida em sérum"
       },
       {
+        "ini": 49.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 45,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
         "ini": 54.1,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724738.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt41.mp4",
+        "src": 29,
         "cx": 0.5,
         "cy": 0.45,
         "zoom": 1.0,
@@ -150,29 +159,38 @@
       {
         "ini": 58.8,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724706.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt41.mp4",
+        "src": 47,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.45,
         "zoom": 1.0
       },
       {
         "ini": 64.3,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222559.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 22,
         "cx": 0.5,
         "cy": 0.45,
         "zoom": 1.0,
         "rotulo": "Noite: gel de limpeza"
       },
       {
+        "ini": 68.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 28,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
         "ini": 71.4,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724781.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt31.mp4",
+        "src": 50,
         "cx": 0.5,
-        "cy": 0.45,
+        "cy": 0.42,
         "zoom": 1.0,
         "rotulo": "4. Retinol em dias alternados"
       },
@@ -183,10 +201,10 @@
       {
         "ini": 84.8,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724702.mp4",
-        "src": 6,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 42,
         "cx": 0.5,
-        "cy": 0.5,
+        "cy": 0.42,
         "zoom": 1.0
       },
       {
@@ -196,12 +214,21 @@
       {
         "ini": 95.2,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724753.mp4",
-        "src": 9,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt42.mp4",
+        "src": 13,
         "cx": 0.5,
-        "cy": 0.42,
+        "cy": 0.6,
         "zoom": 1.0,
         "rotulo": "5. Hidratante"
+      },
+      {
+        "ini": 99.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 20,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
       },
       {
         "ini": 104.2,
@@ -210,8 +237,8 @@
       {
         "ini": 109.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p10222558.mp4",
-        "src": 0,
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt32.mp4",
+        "src": 15.3,
         "cx": 0.5,
         "cy": 0.42,
         "zoom": 1.0
