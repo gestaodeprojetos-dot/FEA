@@ -82,13 +82,13 @@ strong { font-weight: 700; }
 .cta-block { display: flex; flex-direction: column; align-items: center; margin-top: 40px; }
 
 /* 01 HERO */
-.hero { position: relative; overflow: hidden; background: radial-gradient(120% 90% at 85% 10%, #33384c 0%, var(--navy) 46%, var(--navy-2) 100%); padding-block: clamp(28px, 4vw, 44px) 0; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.hero { position: relative; overflow: hidden; background: radial-gradient(120% 90% at 85% 10%, #33384c 0%, var(--navy) 46%, var(--navy-2) 100%); padding-block: clamp(28px, 4vw, 44px) clamp(48px, 6vw, 80px); padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .hero::after { content: ""; position: absolute; right: -8%; top: 8%; width: 46%; aspect-ratio: 1; background: url("assets/plx-isotipo.svg") center/contain no-repeat; opacity: .05; pointer-events: none; }
 .hero-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .hero-top img { width: clamp(150px, 18vw, 210px); height: auto; }
 .pill { font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; border: 1px solid var(--line-dark); color: var(--slate); padding: 7px 14px; border-radius: 999px; white-space: nowrap; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: clamp(20px, 4vw, 56px); align-items: end; margin-top: clamp(28px, 4vw, 48px); position: relative; z-index: 1; }
-.hero-copy { padding-bottom: clamp(40px, 6vw, 80px); min-width: 0; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: clamp(28px, 4vw, 64px); align-items: center; margin-top: clamp(28px, 4vw, 48px); position: relative; z-index: 1; }
+.hero-copy { min-width: 0; }
 .hero h1 { font-size: clamp(30px, 4.3vw, 52px); }
 .hero h1 em { font-style: normal; color: var(--red); }
 .hero-sub { margin-top: 22px; font-size: clamp(17px, 1.7vw, 20px); color: #c9cfdb; max-width: 54ch; }
@@ -97,9 +97,11 @@ strong { font-weight: 700; }
 .badges li svg { flex: none; margin-top: 2px; }
 .hero .cta-block { align-items: flex-start; margin-top: 32px; }
 .hero .cta-note { justify-content: flex-start; }
-.hero-art { position: relative; align-self: end; min-width: 0; }
-.hero-art img { width: 100%; height: auto; filter: drop-shadow(0 30px 60px rgba(0,0,0,.45)); }
-.hero-art::before { content: ""; position: absolute; inset: 18% 10% 0 10%; background: radial-gradient(closest-side, rgba(239,35,60,.22), transparent); filter: blur(10px); }
+.hero-art { position: relative; min-width: 0; margin: 0; }
+.hero-art::before { content: ""; position: absolute; inset: 14px -14px -14px 14px; border: 1px solid rgba(239,35,60,.55); border-radius: 18px; pointer-events: none; }
+.hero-art img { position: relative; display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: 50% 8%; border-radius: 18px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.6); }
+.hero-art figcaption { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 8px; background: rgba(27,29,40,.82); color: var(--cream); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; backdrop-filter: blur(6px); }
+.hero-art figcaption::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
 
 /* pendente: blocos que aguardam material real da equipe */
 .pendente { position: relative; outline: 2px dashed rgba(239,35,60,.55); outline-offset: 6px; }
@@ -238,8 +240,7 @@ strong { font-weight: 700; }
 /* responsivo */
 @media (max-width: 900px) {
   .hero-grid, .split, .solution, .offer, .teacher, .faq-grid, .module--feature { grid-template-columns: minmax(0, 1fr); }
-  .hero-art { max-width: 420px; margin: 0 auto; order: -1; }
-  .hero-copy { padding-bottom: 48px; }
+  .hero-art { width: 100%; max-width: 420px; margin: 8px auto 14px; }
   .proofs, .how { grid-template-columns: minmax(0, 1fr); }
   .split-art { max-width: 520px; }
 }
@@ -247,7 +248,7 @@ strong { font-weight: 700; }
   body { font-size: 16px; }
   .badges, .for-list, .modules, .paths { grid-template-columns: minmax(0, 1fr); }
   .bonus { grid-template-columns: minmax(0, 1fr); }
-  .hero .cta, .cta-block .cta { width: 100%; padding-inline: 20px; }
+  .hero .cta, .cta-block .cta { width: 100%; padding-inline: 18px; font-size: 14.5px; letter-spacing: .03em; white-space: nowrap; }
   .pill { display: none; }
   .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
   .stat span { font-size: 11px; letter-spacing: .06em; }
@@ -289,9 +290,10 @@ strong { font-weight: 700; }
           <div class="cta-note"><span><svg width="14" height="14"><use href="#i-lock"/></svg>Compra segura</span><span><svg width="14" height="14"><use href="#i-shield"/></svg>Garantia de 7 dias</span></div>
         </div>
       </div>
-      <div class="hero-art">
-        <img src="assets/plx-hero.webp" alt="Ilustração anatômica do lábio superior com corte em camadas e aplicação com seringa" width="900" height="1015" fetchpriority="high">
-      </div>
+      <figure class="hero-art">
+        <img src="assets/plx-hero-dr-joao-labial.webp" alt="Dr. João Pithon aplicando preenchimento labial em paciente, com seringa na mão" width="680" height="1090" fetchpriority="high">
+        <figcaption>Dr. João Pithon em atendimento</figcaption>
+      </figure>
     </div>
   </div>
 </header>
