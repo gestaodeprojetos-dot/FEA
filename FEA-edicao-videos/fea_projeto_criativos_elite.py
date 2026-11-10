@@ -88,7 +88,7 @@ V = [
    C("conjunto", "Ela não quer um lábio. *Quer um conjunto.*", "O que ela quer", dur=3.4),
    C("chaves", "As chaves da minha *conversão*", "Pela primeira vez", dur=3.6),
    DIAG("avaliação gratuita"), CTA("clicar"), FORM("demora")], []),
- ("4- Dificuldade em vender mais seringas", [["IMG_9069", 0.0, 38.86], ["IMG_9069", 44.46, 61.72], ["IMG_9069", 69.04, 73.44], ["IMG_9069", 79.75, 85.4, "exato"]],
+ ("4- Dificuldade em vender mais seringas", [["IMG_9069", 0.0, 38.84, "exato"], ["IMG_9069", 44.78, 61.73, "exato"], ["IMG_9069", 69.1, 73.44, "exato"], ["IMG_9069", 79.8, 85.4, "exato"]],
   [G("Dificuldade em vender *mais seringas*?", "O erro está na avaliação"),
    C("gerenciamento", "Um plano, *não um procedimento*", "O rosto inteiro", chips=["Toxina", "Preenchimento", "Bioestimulador", "Fios"], dur=4.2),
    C("metodologia", "Minha metodologia *completa*", "Pela primeira vez", dur=3.4),
