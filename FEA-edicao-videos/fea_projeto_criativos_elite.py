@@ -57,6 +57,8 @@ BROLL = {
     11: [B("metodologias", P("IMG_2503", 6, 10, 14))],
     12: [B("indicar", P("IMG_2072", 4, 20), 6), B("completar", P("IMG_2072", 36), 12)],
     13: [B("errando", P("IMG_1668", 0, 3.6))],
+    # vídeo 14: paciente nova (reavaliação, fotos de frente e perfil) cobrindo os 2 cortes dos tropeços
+    14: [B("saiba", P("IMG_9026", 0.5, 6)), B("gratuita", P("IMG_9026", 12.5), 12)],
     15: [B("avaliações", P("IMG_1077", 0.5, 4), 8)],
     16: [B("avaliação", P("IMG_2640", 0.5), 4)],
     17: [B("tratamentos", P("IMG_8318", 0.5, 13, 18.5), 4)],
@@ -141,10 +143,10 @@ V = [
    C("método", "Meu método *completo* de crescimento", "Pela primeira vez", chips=["Vendas", "Marketing"], dur=4.0),
    DIAG("avaliação de diagnóstico"), CTA("clicar"),
    C("vagas", "Avaliações *um a um*", "Vagas limitadas por semana", dur=3.4)], []),
- ("14- Procuro 3 profissionais de harmonização", [["IMG_9082", 0.0, 9.0], ["IMG_9082", 11.95, 23.05], ["IMG_9082", 26.0, 41.8]],
+ ("14- Procuro 3 profissionais de harmonização", [["IMG_9082", 0.0, 9.02, "exato"], ["IMG_9082", 12.88, 22.98, "exato"], ["IMG_9082", 26.92, 41.45, "exato"]],
   [G("Procuro *3 profissionais*", "Harmonização facial"),
    CTA("clicar"), C("três pessoas", "*3 vagas* gratuitas", "Avaliação de diagnóstico", dur=3.4, depois=12),
-   DIAG("participará")], []),
+   DIAG("equipe", depois=15)], []),
  ("15- Clínica de alto padrão", [["IMG_9143", 0.5, 64.7]],
   [G("Você sonha com uma clínica *de alto padrão*?", "A minha trajetória"),
    C("marketing", "Marketing, vendas e *conversão*", "O que mudou", chips=["Avaliação", "Marketing", "Vendas"], dur=4.0),
@@ -195,6 +197,10 @@ AJUSTES = {
         "inserir_legenda": [["IMG_9070", 30.16, 30.3, "o"], ["IMG_9070", 31.38, 31.86, "método"]]},
     # vídeo 6: ruído de fundo (só a voz do Dr.) e zoom sem as pernas, como no 1 e no 2
     6: {"limpar_audio": True, "zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12},
+    # tropeços "você vai ser, você vai" e "onde nós, eu e minha equipe, estaremos..." saem; o "Você"
+    # que volta depois de cada pausa entra travado no tempo medido
+    14: {"remover_legenda": [["IMG_9082", 11.9, 13.11], ["IMG_9082", 25.9, 27.19]],
+         "inserir_legenda": [["IMG_9082", 12.95, 13.1, "você"], ["IMG_9082", 27.0, 27.18, "Você"]]},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
