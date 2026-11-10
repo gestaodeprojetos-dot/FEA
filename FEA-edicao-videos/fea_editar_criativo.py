@@ -336,10 +336,14 @@ def montar(cfg, v):
             # entra à mão, com o tempo medido no áudio
             for x in v.get("inserir_legenda", []):
                 if x[0] == nome:
-                    ps.append({"s": x[1], "e": x[2], "e0": x[2], "w": " " + x[3], "ini": False})
+                    ps.append({"s": x[1], "e": x[2], "e0": x[2], "w": " " + x[3], "ini": False,
+                               "fixo": (x[1], x[2])})
             ps.sort(key=lambda p: p["s"])
             ps = [p for p in ps if re.sub(r"[^\w]", "", p["w"]).lower() != "ó"]
-            por_bruto[nome] = fe.ancorar_na_voz(ps, *cache_db[nome])
+            ps = fe.ancorar_na_voz(ps, *cache_db[nome])
+            # palavra inserida à mão fica no tempo medido (o ajuste puxava "método" para dentro
+            # do tropeço cortado e ela sumia da legenda)
+            por_bruto[nome] = [dict(p, s=p["fixo"][0], e=p["fixo"][1]) if p.get("fixo") else p for p in ps]
         ps, dur = fe.remapear_palavras(por_bruto[nome], [[a, b]])
         for p in ps:
             p["s"] += offset

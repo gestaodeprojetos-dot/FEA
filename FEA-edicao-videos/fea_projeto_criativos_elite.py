@@ -94,7 +94,7 @@ V = [
    C("gerenciamento", "Um plano, *não um procedimento*", "O rosto inteiro", chips=["Toxina", "Preenchimento", "Bioestimulador", "Fios"], dur=4.2),
    C("metodologia", "Minha metodologia *completa*", "Pela primeira vez", dur=3.4),
    WHATS("seringas", depois=8), DIAG("avaliação de diagnóstico", esq=["Vende seringa", "Compete por preço", "Plano de um procedimento"], dir=["Olha o rosto inteiro", "Plano de tratamento completo", "Ticket maior"]), CTA("clicar"), FORM("demora")], []),
- ("5- Você perde a paciente na hora do preço", [["IMG_9070", 0.0, 30.08, "exato"], ["IMG_9070", 30.56, 30.99, "exato"],
+ ("5- Você perde a paciente na hora do preço", [["IMG_9070", 0.0, 30.33, "exato"],
    ["IMG_9070", 31.36, 36.8, "exato"], ["IMG_9070", 38.88, 61.52, "exato"], ["IMG_9070", 68.04, 68.82, "exato"]],
   [G("Você perde a paciente *na hora do preço*", "O momento do preço"),
    C("agregar", "Valor *antes* do preço", "A ordem", chips=["O que", "Como", "Por que", "Resultado"], dur=4.2),
@@ -189,8 +189,10 @@ AJUSTES = {
     # "para o seu... para a tua": sai o tropeço inteiro (38,47 a 41,2 s) e a legenda recebe o
     # "para a tua" que a transcrição tinha esticado sobre o tropeço
     # tropeço "o meu mé... mé... método" e "e tudo isso pela primeira vez" (repetido) saem
-    5: {"remover_legenda": [["IMG_9070", 30.1, 30.5], ["IMG_9070", 30.99, 31.36]],
-        "inserir_legenda": [["IMG_9070", 30.58, 30.75, "o"]]},
+    # corte único no respiro depois de "mostrar o" (Keila 10/11: "o meu" picotado ficou estranho):
+    # "mostrar o método onde eu consigo..."
+    5: {"remover_legenda": [["IMG_9070", 30.1, 31.5]],
+        "inserir_legenda": [["IMG_9070", 30.16, 30.3, "o"], ["IMG_9070", 31.38, 31.86, "método"]]},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
