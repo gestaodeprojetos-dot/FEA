@@ -92,3 +92,9 @@ Confirmar se a pessoa ainda está na função antes de atribuir (a equipe muda).
 ## Manter o padrão vivo
 
 Ao fim de cada lançamento, recalcular a tabela com as datas reais: para cada subtarefa concluída, o dia mais cedo entre o prazo e a conclusão, medido em dias desde a captação (se ficou entre D-30 e D-18 do evento) ou desde o evento. Acrescentar as tarefas novas que surgiram, com `origem` dizendo de qual lançamento vieram.
+
+## Reaproveitar criativos de edição anterior (Keila, 10/11/2026)
+
+- Ao copiar criativos de uma edição anterior, trocar só o que está **datado** (data, dia da semana, "pela primeira vez", "em setembro"). Erros pequenos de legenda não justificam reeditar vídeo.
+- **Nome do evento nos vídeos:** a Masterclass em Preenchimento Labial já rodou com vídeos falando "imersão avançada" e página dizendo "Masterclass". Isso não é problema: os vídeos podem rodar assim. Nos estáticos e nas copys, usar o nome atual do evento.
+- Copys adaptadas podem ir sem a revisão da Adriane quando não há tempo (decisão da Keila): aplicar a regra de escrita FEA ("para" por extenso, sem travessão) antes de liberar.
