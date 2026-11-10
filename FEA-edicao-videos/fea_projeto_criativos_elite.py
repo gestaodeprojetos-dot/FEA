@@ -47,7 +47,8 @@ BROLL = {
     2: [B("roteiro", P("IMG_1744", 6, 10)), B("planos", P("IMG_1744", 20, 24), 15)],
     3: [B("realçar", P("IMG_1081", 0, 10)), B("métodos", P("IMG_1081", 26))],
     4: [B("olhar", P("IMG_0718", 0.5, 42)), B("plano", P("IMG_0718", 46), 28)],
-    5: [B("mostrar", P("IMG_8295", 42, 46)), B("planejamento", P("IMG_8295", 50), 20)],
+    # vídeo 5: o 2º bloco cobre os cortes do tropeço "o meu mé... mé... método" (Keila 10/11)
+    5: [B("mostrar", P("IMG_8295", 42, 46)), B("primeira", P("IMG_8295", 50, 53.6), 25)],
     6: [B("completo", P("IMG_2045", 8, 14), 6), B("planos", P("IMG_2045", 20), 15)],
     7: [B("avaliação", P("IMG_0725", 62, 66), 7), B("planejamento", P("IMG_0725", 70), 7)],
     8: [B("roteiro", P("IMG_2661", 2, 10), 10)],
@@ -93,7 +94,8 @@ V = [
    C("gerenciamento", "Um plano, *não um procedimento*", "O rosto inteiro", chips=["Toxina", "Preenchimento", "Bioestimulador", "Fios"], dur=4.2),
    C("metodologia", "Minha metodologia *completa*", "Pela primeira vez", dur=3.4),
    WHATS("seringas", depois=8), DIAG("avaliação de diagnóstico", esq=["Vende seringa", "Compete por preço", "Plano de um procedimento"], dir=["Olha o rosto inteiro", "Plano de tratamento completo", "Ticket maior"]), CTA("clicar"), FORM("demora")], []),
- ("5- Você perde a paciente na hora do preço", [["IMG_9070", 0.0, 61.5], ["IMG_9070", 68.0, 68.8]],
+ ("5- Você perde a paciente na hora do preço", [["IMG_9070", 0.0, 30.08, "exato"], ["IMG_9070", 30.56, 30.99, "exato"],
+   ["IMG_9070", 31.36, 36.8, "exato"], ["IMG_9070", 38.88, 61.52, "exato"], ["IMG_9070", 68.04, 68.82, "exato"]],
   [G("Você perde a paciente *na hora do preço*", "O momento do preço"),
    C("agregar", "Valor *antes* do preço", "A ordem", chips=["O que", "Como", "Por que", "Resultado"], dur=4.2),
    C("pilares", "Os 4 pilares da *conversão*", "Onde você erra", chips=["Planejamento", "Avaliação", "Marketing", "Vendas"], dur=4.0),
@@ -186,6 +188,9 @@ AJUSTES = {
     2: {"zoom": [1.45, 0.5, 0.40], "zoom_alterna": 1.12, "apertar": False},
     # "para o seu... para a tua": sai o tropeço inteiro (38,47 a 41,2 s) e a legenda recebe o
     # "para a tua" que a transcrição tinha esticado sobre o tropeço
+    # tropeço "o meu mé... mé... método" e "e tudo isso pela primeira vez" (repetido) saem
+    5: {"remover_legenda": [["IMG_9070", 30.1, 30.5], ["IMG_9070", 30.99, 31.36]],
+        "inserir_legenda": [["IMG_9070", 30.58, 30.75, "o"]]},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},

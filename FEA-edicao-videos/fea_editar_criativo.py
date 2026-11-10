@@ -344,9 +344,11 @@ def montar(cfg, v):
         for p in ps:
             p["s"] += offset
             p["e"] += offset
-        # o 1º bloco de cada trecho começa frase nova na legenda
+        # o 1º bloco do trecho só começa frase nova se a fala recomeça mesmo (maiúscula na
+        # transcrição ou ponto antes); corte curto dentro da frase não ganha vírgula ("meu, método")
         if ps:
-            ps[0]["ini"] = True
+            fim_ant = todas[-1]["w"].strip()[-1:] if todas else "."
+            ps[0]["ini"] = ps[0]["w"].strip()[:1].isupper() or fim_ant in ".?!"
         todas += ps
         offset += dur
     duracao = offset
