@@ -52,7 +52,7 @@ BROLL = {
     6: [B("completo", P("IMG_2045", 8, 14), 6), B("planos", P("IMG_2045", 20), 15)],
     7: [B("avaliação", P("IMG_0725", 62, 66), 7), B("planejamento", P("IMG_0725", 70), 7)],
     8: [B("roteiro", P("IMG_2661", 2, 10), 10)],
-    9: [B("avaliações", P("IMG_2509", 2), 10)],
+    9: [B("avaliações", P("IMG_2509", 2, 8), 10)],
     10: [B("baseado", P("IMG_2155", 0, 4, 18))],
     11: [B("metodologias", P("IMG_2503", 6, 10, 14))],
     12: [B("indicar", P("IMG_2072", 4, 20), 6), B("completar", P("IMG_2072", 36), 12)],
