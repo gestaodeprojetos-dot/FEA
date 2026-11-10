@@ -62,9 +62,8 @@ HL_BARRA_X, HL_BARRA_L = 143, 18
 HL_CAIXA_X = 175
 HL_LINHA_H, HL_LINHA_GAP = 80, 6
 HL_FONTE = 60
-HL_Y = 846               # topo da primeira linha: bloco de 3 linhas centrado na faixa da legenda (Gabi,
-                         # 10/11/2026: "título bem no meio, onde está pegando a legenda"); a legenda só
-                         # entra quando o título sai (legenda_depois_headline)
+HL_Y = 846               # recalculado em render_headline: bloco centrado na tela; a legenda só entra
+                         # quando o título sai (legenda_depois_headline)
 HL_DOURADO = (219, 208, 147)
 ROXO = (91, 69, 153)     # #5B4599, identidade FEA
 LAVANDA = (208, 209, 233)
@@ -151,16 +150,30 @@ def mapa_tempo(manter):
 # ---------- headline ----------
 
 def render_headline(linhas, fonte):
+    """Bloco centralizado no vídeo (Gabi, 10/11/2026: "a linha do meio precisa estar no meio e toda a
+    headline no meio do vídeo"): cada linha centrada na coluna do texto, barra dourada à esquerda da
+    linha mais larga, bloco centrado na vertical (a linha do meio cai no centro da tela)."""
+    global HL_CAIXA_X, HL_BARRA_X, HL_Y
     ft = ImageFont.truetype(fonte, HL_FONTE)
     camadas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     d = ImageDraw.Draw(camadas)
-    y = HL_Y
+    caixas = []
     for ln in linhas:
         l, t, r, b = d.textbbox((0, 0), ln, font=ft)
-        larg = r - l + 2 * 16
-        d.rectangle([HL_CAIXA_X, y, HL_CAIXA_X + larg, y + HL_LINHA_H], fill=(255, 255, 255, 255))
+        caixas.append((ln, r - l + 2 * 16, l, t, b))
+    maxw = max(c[1] for c in caixas)
+    gap = HL_CAIXA_X - HL_BARRA_X - HL_BARRA_L          # distância barra-caixa do "1- Olheiras"
+    HL_CAIXA_X = (W - maxw) // 2                        # texto no centro exato; a barra fica à esquerda
+    HL_BARRA_X = HL_CAIXA_X - gap - HL_BARRA_L
+    centro = HL_CAIXA_X + maxw / 2
+    alt = len(linhas) * HL_LINHA_H + (len(linhas) - 1) * HL_LINHA_GAP
+    HL_Y = H // 2 - alt // 2
+    y = HL_Y
+    for ln, larg, l, t, b in caixas:
+        x0 = int(round(centro - larg / 2))
+        d.rectangle([x0, y, x0 + larg, y + HL_LINHA_H], fill=(255, 255, 255, 255))
         ty = y + (HL_LINHA_H - (b - t)) / 2 - t
-        d.text((HL_CAIXA_X + 16 - l, ty), ln, font=ft, fill=(0, 0, 0, 255))
+        d.text((x0 + 16 - l, ty), ln, font=ft, fill=(0, 0, 0, 255))
         y += HL_LINHA_H + HL_LINHA_GAP
     barra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     ImageDraw.Draw(barra).rectangle([HL_BARRA_X, HL_Y, HL_BARRA_X + HL_BARRA_L - 1, y - HL_LINHA_GAP],
