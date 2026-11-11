@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Experience · Paletas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0c0e;--fg:#ececf1;--muted:#9a9aa6;--card:#141418;--line:#26262d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:Montserrat,system-ui,sans-serif;padding:40px 16px 64px}
+header{max-width:1280px;margin:0 auto 32px}
+h1{font-family:Sora,sans-serif;font-weight:700;font-size:clamp(24px,3vw,34px);letter-spacing:-.01em}
+header p{color:var(--muted);margin-top:8px;max-width:820px;line-height:1.55;font-size:15px}
+.grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,560px),1fr));gap:28px}
+.opt{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.opt figure{aspect-ratio:16/9;position:relative;overflow:hidden}
+.opt svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.logo{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.logo svg{width:58%;height:auto}
+.meta{padding:16px 18px 18px}
+.meta h2{font-family:Sora,sans-serif;font-size:17px;font-weight:600;display:flex;gap:10px;align-items:baseline}
+.meta h2 span{font-family:Montserrat;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.meta p{color:var(--muted);font-size:13.5px;line-height:1.5;margin-top:6px}
+.sw{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.sw i{display:flex;align-items:flex-end;width:62px;height:34px;border-radius:6px;font-style:normal;font-size:9.5px;padding:3px 5px;color:#fff;text-shadow:0 1px 2px #0009;border:1px solid #ffffff1a;font-family:monospace}
+.note{max-width:1280px;margin:36px auto 0;color:var(--muted);font-size:13px;line-height:1.6;border-top:1px solid var(--line);padding-top:18px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Elite Experience · opções de paleta</h1>
+  <p>Mesma linguagem do Elite Mentoring (fundo escuro com feixes de luz diagonais, logo oficial em vetor, "ELITE" original e "EXPERIENCE" na fonte da marca, Galano Grotesque), agora e oito pedras que ainda não existem na família: Turmalina Paraíba, Alexandrita, Esmeralda, Diamante, Topázio Imperial e Água-Marinha ficaram de fora.</p>
+</header>
+<main class="grid" id="grid"></main>
+<p class="note">Montado sobre o SVG oficial do Elite Mentoring (pasta IDENTIDADE VISUAL &gt; 02 - LOGOTIPO &gt; SVG, arquivo EM_Asset 19). Ícone e "ELITE" são os vetores originais; "EXPERIENCE" foi composto em Galano Grotesque Regular (pasta 03 - TIPOGRAFIA), com a mesma altura e o mesmo alinhamento de "MENTORING". O acabamento metálico aqui é gradiente vetorial; a versão final com textura e luz deve sair do designer da equipe, aplicando os HEX desta página.</p>
+
+<script>
+const P = [
+  {n:"Ametista", tag:"roxo profundo", d:"Violeta régio com brilho lilás. Conversa com o roxo da FEA sem repetir a Alexandrita (que é azul-petróleo para roxo).",
+   bg:"#0f0716", glow:"#7a3fb8", glow2:"#3a1460", hi:"#efe2ff", mid:"#c79bff", lo:"#7d4bc4"},
+  {n:"Citrino", tag:"ouro champanhe", d:"Dourado quente sobre preto. A leitura mais clássica de 'evento premium presencial'.",
+   bg:"#0e0b05", glow:"#b8862e", glow2:"#4a3410", hi:"#fff6dc", mid:"#e8c27a", lo:"#a77a2c"},
+  {n:"Morganita", tag:"rosé gold", d:"Pêssego rosado metálico. Elegante e contemporâneo, se diferencia de tudo o que a marca já usou.",
+   bg:"#120a0a", glow:"#c97d72", glow2:"#4d2522", hi:"#fff0ea", mid:"#f0b6a6", lo:"#b8746a"},
+  {n:"Granada", tag:"vinho bordô", d:"Bordô escuro e aveludado. Mais sóbrio que o Topázio Imperial, com cara de jantar de gala.",
+   bg:"#0f0507", glow:"#8e1f3a", glow2:"#3d0a17", hi:"#ffe3ea", mid:"#e48aa0", lo:"#9b2f4b"},
+  {n:"Tanzanita", tag:"índigo violeta", d:"Azul-índigo que vira violeta na luz. Fica entre a Água-Marinha e a Ametista, com mais profundidade.",
+   bg:"#07081a", glow:"#4b46c9", glow2:"#1c1a5e", hi:"#e9e8ff", mid:"#a9a6ff", lo:"#5d58d6"},
+  {n:"Ônix & Ouro", tag:"preto e dourado", d:"Fundo praticamente preto, só um feixe de luz fria, e logo em ouro. A opção mais minimalista e 'black tie'.",
+   bg:"#050506", glow:"#3a3a40", glow2:"#151518", hi:"#fff4d6", mid:"#d9b56a", lo:"#8f6a26"},
+  {n:"Opala Negra", tag:"iridescente", d:"Fundo escuro com reflexos que mudam de cor (azul, verde, magenta). É a novidade de verdade da família: a pedra que reúne todas as outras.",
+   bg:"#06070c", glow:"#2b8fd1", glow2:"#9b2c8f", glow3:"#20b38a", hi:"#ffffff", mid:"#9fd8ff", lo:"#d083ff", iri:true},
+  {n:"Pérola", tag:"versão clara", d:"Inverte a família: fundo marfim perolado e logo em grafite com reflexo prata. Útil para crachá, papelaria, backdrop de dia e fotos.",
+   bg:"#efece6", glow:"#ffffff", glow2:"#d8d2c8", hi:"#5a5a63", mid:"#2c2c33", lo:"#0f0f14", light:true},
+];
+
+const ICON="<path d=\"M82.94,23.89c-8.98,5.21-16.2,12.98-20.76,22.3l-.08.17h0c-4.58-9.4-11.86-17.22-20.91-22.44L0,.15v12.29c0,2.74,1.47,5.28,3.84,6.65l58.25,33.57,47.46-27.4v50.37l.03-.02v16.91l9.74-5.61c2.94-1.69,4.75-4.82,4.75-8.21V0l-41.14,23.89Z\"/><path d=\"M62.18,79.38l-.08.17c-4.58-9.4-11.86-17.22-20.91-22.44L0,33.33v11.87c0,3.01,1.6,5.78,4.21,7.28l57.89,33.36,29.44-17c2.19-1.26,3.53-3.59,3.53-6.12v-12.69l-12.13,7.04c-8.98,5.21-16.2,12.98-20.76,22.3Z\"/><path d=\"M62.18,113.42l-.08.17c-4.58-9.4-11.86-17.22-20.91-22.44L0,67.37v11.87c0,3.01,1.6,5.78,4.21,7.28l57.89,33.36,29.44-17c2.19-1.26,3.53-3.59,3.53-6.12v-12.69l-12.13,7.04c-8.98,5.21-16.2,12.98-20.76,22.3Z\"/>";
+const ELITE="<path d=\"M155.73,80.36v-.21c2.72-6.28,4.08-10.58,4.08-17.49V21.4c0-7.02-1.36-11.1-4.08-17.49v-.21h48.38l4.08,18.64-.84.31c-5.55-5.86-13.09-16.33-17.7-16.65l-17.7-.73v35.39h9.01c5.13,0,9.32-7.02,12.98-10.99h.94v23.66h-.94c-3.35-3.66-7.96-10.58-12.98-10.58h-9.01v36.02l18.64-.73c8.59-.31,16.65-10.68,22.51-18.74l.84.31-4.61,20.73h-53.61Z\"/><path d=\"M226.42,80.15c3.35-6.39,4.19-10.26,4.19-18.74V22.66c0-8.48-.84-12.36-4.19-18.74v-.21h20.42v.21c-3.46,6.49-4.19,10.05-4.19,18.74v56.23l15.81-.63c8.69-.31,16.86-10.16,22.62-18.95l.84.31-4.61,20.73h-50.89v-.21Z\"/><path d=\"M298.04,61.4V22.66c0-8.69-.73-12.25-4.19-18.74v-.21h20.42v.21c-3.46,6.49-4.19,10.05-4.19,18.74v38.74c0,8.69.73,12.25,4.19,18.74v.21h-20.42v-.21c3.46-6.49,4.19-10.05,4.19-18.74Z\"/><path d=\"M352.38,80.36v-.21c3.35-6.39,4.19-10.26,4.19-18.74V5.49l-11.41.42c-4.61.31-12.36,12.04-17.7,19.69l-.84-.31,3.98-21.57h63.98l3.98,21.57-.84.31c-5.65-7.64-12.98-19.37-17.7-19.69l-11.41-.42v55.92c0,8.69.73,12.25,4.19,18.74v.21h-20.42Z\"/><path d=\"M410.92,80.36v-.21c2.72-6.28,4.08-10.58,4.08-17.49V21.4c0-7.02-1.36-11.1-4.08-17.49v-.21h48.38l4.08,18.64-.84.31c-5.55-5.86-13.09-16.33-17.7-16.65l-17.7-.73v35.39h9.01c5.13,0,9.32-7.02,12.98-10.99h.94v23.66h-.94c-3.35-3.66-7.96-10.58-12.98-10.58h-9.01v36.02l18.64-.73c8.59-.31,16.65-10.68,22.51-18.74l.84.31-4.61,20.73h-53.61Z\"/>";
+const EXP="M178.8257910447761 116.47755223880597H163.20907462686569V107.7550447761194H177.68310447761195V105.05068656716418H163.20907462686569V96.40435820895522H178.7877014925373V93.7H160.2V119.22H178.8257910447761ZM208.81130679933662 119.22H212.5059933665008L203.36450082918736 106.38382089552239L212.31554560530677 93.7H208.6208590381426L201.1172172470978 104.44125373134328L193.61357545605304 93.7H189.9569784411277L198.86993366500826 106.38382089552239L189.76653067993365 119.22H193.46121724709784L201.1172172470978 108.32638805970149ZM224.4751509121061 93.7V119.22H227.4842255389718V109.54525373134328H235.59730016583745C241.0441061359867 109.54525373134328 244.47216583747925 106.30764179104477 244.47216583747925 101.62262686567163C244.47216583747925 96.93761194029851 241.0441061359867 93.7 235.59730016583745 93.7ZM227.4842255389718 106.84089552238805V96.40435820895522H235.59730016583745C239.25389718076283 96.40435820895522 241.50118076285239 98.57546268656716 241.50118076285239 101.62262686567163C241.50118076285239 104.66979104477612 239.25389718076283 106.84089552238805 235.59730016583745 106.84089552238805ZM275.8669950248756 116.47755223880597H260.25027860696514V107.7550447761194H274.7243084577114V105.05068656716418H260.25027860696514V96.40435820895522H275.8289054726368V93.7H257.2412039800995V119.22H275.8669950248756ZM310.6898839137645 119.22 300.8246898839138 108.28829850746268H301.2817645107794C306.271495854063 108.28829850746268 309.62337645107795 105.35540298507462 309.62337645107795 100.97510447761194C309.62337645107795 96.59480597014925 306.271495854063 93.7 301.2817645107794 93.7H289.4740033167496V119.22H292.4830779436152V108.28829850746268H297.16809286898837L306.9190182421227 119.22ZM292.4830779436152 105.54585074626866V96.40435820895522H301.2817645107794C304.48128689883913 96.40435820895522 306.61430182421225 98.2326567164179 306.61430182421225 100.97510447761194C306.61430182421225 103.71755223880596 304.48128689883913 105.54585074626866 301.2817645107794 105.54585074626866ZM325.9728325041459 119.22V93.7H322.9637578772803V119.22ZM359.2340497512438 116.47755223880597H343.6173333333333V107.7550447761194H358.09136318407957V105.05068656716418H343.6173333333333V96.40435820895522H359.19596019900496V93.7H340.60825870646767V119.22H359.2340497512438ZM395.12344610281923 93.7H392.11437147595353V114.19217910447762L375.43114759535655 93.7H372.84105804311776V119.22H375.8501326699834V98.95635820895522L392.53335655058044 119.22H395.12344610281923ZM421.7570812603648 116.89653731343283C416.04364842454396 116.89653731343283 411.54908126036486 112.32579104477612 411.54908126036486 106.46000000000001C411.54908126036486 100.55611940298508 416.04364842454396 96.02346268656717 421.7570812603648 96.02346268656717C426.1754693200663 96.02346268656717 429.7177976782753 98.38501492537313 431.0128424543947 102.49868656716419L433.90764842454394 101.66071641791045C432.3459767827529 96.51862686567165 427.62287230514096 93.20483582089552 421.7570812603648 93.20483582089552C414.3296185737977 93.20483582089552 408.5019170812604 99.03253731343284 408.5019170812604 106.46000000000001C408.5019170812604 113.88746268656716 414.3296185737977 119.71516417910448 421.7570812603648 119.71516417910448C427.62287230514096 119.71516417910448 432.3459767827529 116.40137313432835 433.90764842454394 111.06883582089552L431.0128424543947 110.38322388059701C429.6797081260365 114.57307462686568 426.1754693200663 116.89653731343283 421.7570812603648 116.89653731343283ZM465.95 116.47755223880597H450.3332835820895V107.7550447761194H464.80731343283577V105.05068656716418H450.3332835820895V96.40435820895522H465.91191044776116V93.7H447.32420895522387V119.22H465.95Z";
+
+function card(p,i){
+  const id=i;
+  const stripes = [0,1,2,3].map(k=>`<rect x="${-200+k*170}" y="-300" width="${60+k*10}" height="1400" fill="url(#s${id})" transform="rotate(-38 800 450)" opacity="${.55-k*.1}"/>`).join("");
+  const extra = p.iri ? `<circle cx="1350" cy="760" r="520" fill="url(#g3${id})"/>` : "";
+  const bg = `<svg class="bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+   <defs>
+    <radialGradient id="g1${id}" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 120) scale(1100)"><stop offset="0" stop-color="${p.glow}" stop-opacity="${p.light?1:.95}"/><stop offset="1" stop-color="${p.glow}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2${id}" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1450 180) scale(700)"><stop offset="0" stop-color="${p.glow2}" stop-opacity=".9"/><stop offset="1" stop-color="${p.glow2}" stop-opacity="0"/></radialGradient>
+    ${p.iri?`<radialGradient id="g3${id}"><stop offset="0" stop-color="${p.glow3}" stop-opacity=".55"/><stop offset="1" stop-color="${p.glow3}" stop-opacity="0"/></radialGradient>`:""}
+    <linearGradient id="s${id}" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity="${p.light?.35:.07}"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="v${id}" x1="0" y1="0" x2="0" y2="1"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity="${p.light?.08:.55}"/></linearGradient>
+   </defs>
+   <rect width="1600" height="900" fill="${p.bg}"/>
+   <rect width="1600" height="900" fill="url(#g1${id})"/>
+   <rect width="1600" height="900" fill="url(#g2${id})"/>${extra}
+   ${stripes}
+   <rect width="1600" height="900" fill="url(#v${id})"/>
+  </svg>`;
+  const metal = p.iri
+   ? `<stop offset="0" stop-color="#ffffff"/><stop offset=".3" stop-color="#9fd8ff"/><stop offset=".55" stop-color="#d7a4ff"/><stop offset=".8" stop-color="#8ff0cf"/><stop offset="1" stop-color="#6f8cff"/>`
+   : `<stop offset="0" stop-color="${p.hi}"/><stop offset=".45" stop-color="${p.mid}"/><stop offset=".7" stop-color="${p.hi}"/><stop offset="1" stop-color="${p.lo}"/>`;
+  const logo = `<svg viewBox="0 0 469.14 119.88" role="img" aria-label="Elite Experience · ${p.n}">
+   <defs><linearGradient id="m${id}" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="469" y2="120">${metal}</linearGradient>
+   <linearGradient id="i${id}" gradientUnits="userSpaceOnUse" x1="10" y1="-20" x2="100" y2="120">${metal}</linearGradient>
+   <filter id="f${id}"><feDropShadow dx="0" dy="1.2" stdDeviation="1.4" flood-color="#000" flood-opacity="${p.light?.15:.45}"/></filter></defs>
+   <g filter="url(#f${id})">
+    <g fill="url(#i${id})">${ICON}</g>
+    <g fill="url(#m${id})">${ELITE}</g>
+    <path d="${EXP}" fill="${p.iri?'url(#m'+id+')':p.mid}"/>
+   </g></svg>`;
+  const sw = [["fundo",p.bg],["luz",p.glow],["brilho",p.hi],["metal",p.mid],["sombra",p.lo]]
+    .map(([k,v])=>{const n=parseInt(v.slice(1),16),L=(.299*(n>>16)+.587*(n>>8&255)+.114*(n&255))/255;
+      return `<i title="${k}" style="background:${v};${L>.6?'color:#222;text-shadow:none':''}">${v}</i>`}).join("");
+  return `<article class="opt"><figure>${bg}<div class="logo">${logo}</div></figure>
+   <div class="meta"><h2>${i+1}. ${p.n} <span>${p.tag}</span></h2><p>${p.d}</p><div class="sw">${sw}</div></div></article>`;
+}
+document.getElementById("grid").innerHTML = P.map(card).join("");
+</script>
+</body>
+</html>
