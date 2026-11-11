@@ -499,14 +499,17 @@ def main():
         pasta, nome = saida.rsplit("/", 1)
         saida = f"{pasta}/PREVIA {nome}"
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    vf = f"ass='{esc}':fontsdir='{cfg['fontsdir']}'" + (",scale=720:1280" if previa else "")
+    # o vídeo termina depois da última sílaba (Gabi, 11/11/2026: terminava em "bigode chinê"): o último
+    # quadro fica parado e o áudio ganha silêncio, 0,4 s além da fala; antes o -shortest cortava ~0,2 s
+    vf = f"tpad=stop_mode=clone:stop_duration=1,ass='{esc}':fontsdir='{cfg['fontsdir']}'" + \
+        (",scale=720:1280" if previa else "")
     enc = None
     if quadros is None:
         enc = subprocess.Popen([ff, "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}",
                                 "-r", str(FPS), "-i", "-", "-i", audio, "-vf", vf, "-map", "0:v", "-map", "1:a",
                                 "-c:v", "libx264", "-preset", "fast" if previa else "medium",
                                 "-crf", "23" if previa else "18", "-profile:v", "high", "-pix_fmt", "yuv420p",
-                                "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-shortest",
+                                "-af", "apad", "-t", f"{dur + 0.4:.3f}", "-c:a", "aac", "-b:a", "192k", "-ar", "48000",
                                 "-movflags", "+faststart", saida], stdin=subprocess.PIPE)
 
     fontes = {}            # cena -> objeto (B-roll aberto ou painel de produto)
