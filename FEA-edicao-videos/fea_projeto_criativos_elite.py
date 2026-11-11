@@ -63,7 +63,9 @@ BROLL = {
     15: [B("avaliações", P("IMG_1077", 25.8, 50, dur=2.6), 8)],
     16: [B("avaliação", P("IMG_2640", 10.5, 16.5), 4)],
     # 17: sem B-roll, só o Dr. (Keila 11/11: "não precisa de inserts, só esse")
-    18: [B("metodologia", P("IMG_7285", 44, 48, 52), 9)],
+    # 18: luva tocando o rosto com gaze (14 a 19 s) e de frente (32,5 s); conferido: a seringa aparece
+    # só em 0 a 9 s e 29,5 a 31,5 s, fora dos trechos usados
+    18: [B("metodologia", P("IMG_7285", 14, 17, 32.5), 9)],
     19: [B("avaliação", P("IMG_2485", 0.5), 12)],
     20: [B("roteiro", P("IMG_8311", 1)), B("planejamento", P("IMG_8311", 6), 9), B("individual", P("IMG_8311", 12))],
 }
@@ -160,7 +162,7 @@ V = [
   [G("Clínica de alto padrão e *tratamentos completos*", "Eu sempre sonhei com"),
    C("desenvolvi", "Isso acontece porque *existe um método*", "Pela primeira vez", chips=["Marketing", "Vendas"], dur=4.0),
    DIAG("diagnóstico"), CTA("clicar")], []),
- ("18- Planejamento full face que converte", [["IMG_9148", 0.0, 54.3]],
+ ("18- Planejamento full face que converte", [["IMG_9148", 0.0, 54.25, "exato"]],
   [G("Planejamento full face *que converte*", "Existe um método"),
    C("passos", "Passos simples e *replicáveis*", "Planos mais amplos e rentáveis", dur=4.0),
    CTA("clicar"), DIAG("avaliação de diagnóstico")], []),
@@ -215,6 +217,9 @@ AJUSTES = {
     17: {"zoom": [1.0, 0.5, 0.40], "zoom_alterna": 1.12, "cauda": 0.8, "remover_legenda": [["IMG_9147", 31.4, 35.71]],
          "inserir_legenda": [["IMG_9147", 35.8, 35.99, "Você"]],
          "trilha": f"{T}/assets/FEA-trilha-hg-01932a72.wav", "trilha_db": -20},
+    # 18: take limpo, sem tropeço (varredura em janelas de 1,6 s); termina em "Então eu te espero lá"
+    18: {"cauda": 0.8, "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
+         "trilha": f"{T}/assets/FEA-trilha-hg-718fa6c1.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
