@@ -98,3 +98,7 @@ Ao fim de cada lançamento, recalcular a tabela com as datas reais: para cada su
 - Ao copiar criativos de uma edição anterior, trocar só o que está **datado** (data, dia da semana, "pela primeira vez", "em setembro"). Erros pequenos de legenda não justificam reeditar vídeo.
 - **Nome do evento nos vídeos:** a Masterclass em Preenchimento Labial já rodou com vídeos falando "imersão avançada" e página dizendo "Masterclass". Isso não é problema: os vídeos podem rodar assim. Nos estáticos e nas copys, usar o nome atual do evento.
 - Copys adaptadas podem ir sem a revisão da Adriane quando não há tempo (decisão da Keila): aplicar a regra de escrita FEA ("para" por extenso, sem travessão) antes de liberar.
+
+## Planilha de disparos (Keila, 11/11/2026)
+
+A planilha "Disparos - João Pithon .xlsx" (aba do mês) é montada pela equipe. O Claude não inclui, apaga nem muda status de linhas nela sem pedido explícito da Keila ("volta como estava antes, estava tudo ok"). Se achar erro ou falta, só reportar.
