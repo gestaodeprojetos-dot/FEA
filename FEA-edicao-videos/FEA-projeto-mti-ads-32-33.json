@@ -1,0 +1,52 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/brutos/IMG_9208.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/tr/IMG_9208.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/out/Ads 32 - MTI.mp4",
+   "titulo": "Intercorrências isquêmicas e não isquêmicas",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     25.74
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintercoências\\b",
+     "intercorrências"
+    ]
+   ],
+   "titulo_y": 1250
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/brutos/IMG_9209.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/tr/IMG_9209.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/out/Ads 33 - MTI.mp4",
+   "titulo": "Protocolos medicamentosos em intercorrências",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.4,
+     24.14
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bintercoências\\b",
+     "intercorrências"
+    ]
+   ],
+   "titulo_y": 1250
+  }
+ ]
+}
