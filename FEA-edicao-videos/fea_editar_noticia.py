@@ -441,6 +441,11 @@ def main():
     for c, prox in zip(cenas, cenas[1:] + [None]):
         c["t1"] = prox["t0"] if prox else dur
     legenda_no_meio(ass, cenas)
+    # tela cheia antes do fim do título: o Dr. sobe e o rosto passa por trás do título no meio da tela
+    # (Gabi, 11/11/2026, têmporas): o título sai antes da troca para tela cheia
+    cheio = [c["t0"] for c in cenas if c["tipo"] == "cheio" and c["t0"] < v["headline_fim"] + TRANS]
+    if cheio:
+        v = dict(v, headline_fim=max(1.5, cheio[0] - TRANS))
     legenda_depois_headline(ass, v["headline_fim"] + TRANS)
 
     hl = render_headline(v["headline"], fonte)
