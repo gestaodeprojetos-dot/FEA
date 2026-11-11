@@ -7,9 +7,8 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9223.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 56 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Aula *gratuita*",
+   "titulo": "Aula gratuita",
    "titulo_origem": "inventado",
-   "subtitulo": "Masterclass em preenchimento labial",
    "parte": null,
    "cartela_final": null,
    "manter": [
@@ -35,16 +34,19 @@
      14.6
     ]
    ],
-   "paleta": "MPL"
+   "paleta": "MPL",
+   "faixas": [
+    "Aula gratuita",
+    "Agulha e cânula"
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9224.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9224.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 57 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "*Agulha* ou *cânula*?",
+   "titulo": "Agulha ou cânula?",
    "titulo_origem": "inventado",
-   "subtitulo": "Masterclass em preenchimento labial",
    "parte": null,
    "cartela_final": null,
    "manter": [
@@ -70,16 +72,19 @@
      14.6
     ]
    ],
-   "paleta": "MPL"
+   "paleta": "MPL",
+   "faixas": [
+    "Agulha ou cânula?",
+    "Qual produto escolher?"
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9225.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9225.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 58 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Não é *tudo igual*",
+   "titulo": "Não é tudo igual",
    "titulo_origem": "inventado",
-   "subtitulo": "Masterclass em preenchimento labial",
    "parte": null,
    "cartela_final": null,
    "manter": [
@@ -105,16 +110,19 @@
      14.6
     ]
    ],
-   "paleta": "MPL"
+   "paleta": "MPL",
+   "faixas": [
+    "Não é tudo igual",
+    "Agulha ou cânula"
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9226.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9226.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 59 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Medo da *anatomia*?",
+   "titulo": "Medo da anatomia?",
    "titulo_origem": "inventado",
-   "subtitulo": "Masterclass em preenchimento labial",
    "parte": null,
    "cartela_final": null,
    "manter": [
@@ -151,7 +159,11 @@
      21.0
     ]
    ],
-   "paleta": "MPL"
+   "paleta": "MPL",
+   "faixas": [
+    "Medo da anatomia?",
+    "Cadáver fresco"
+   ]
   }
  ]
 }

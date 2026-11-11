@@ -524,32 +524,43 @@ def _linhas_headline(texto, largura):
     return melhor
 
 
+ADS_FAIXA_CY, ADS_FAIXA_ALT, ADS_FAIXA_ANG = 1470, 118, 16
+ADS_FAIXA_PX, ADS_FAIXA_VEL = 54, 110        # texto (px reais) e rolagem (px/s)
+
+
 def titulo_ads(v):
-    """Eventos ASS do cartão de headline dos anúncios: "subtitulo" = sobretítulo (caixa alta,
-    espaçado) e "titulo" = headline, com *palavra* na cor de destaque. Entra com fade, 3 s."""
+    """Gancho dos anúncios (Keila, 11/11/2026: o cartão com "Masterclass em preenchimento labial" ficou
+    estranho; modelo que chame atenção, sem escrever a logo): duas faixas cruzadas no peito, como nos
+    criativos da Black, na paleta da masterclass. "faixas": [texto_da_vermelha, texto_da_petroleo];
+    o texto se repete e corre em sentidos opostos, 3 s, com fade."""
     pal = ADS_PALETAS[v.get("paleta", "MPL")]
+    faixas = v.get("faixas") or [v.get("titulo", "").replace("*", "")]
     saida = []
-    ev = lambda camada, txt: saida.append(
-        f"Dialogue: {camada},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,{{\\fad(200,250)}}{txt}\n")
-    linhas = _linhas_headline(v.get("titulo", ""), ADS_CARD_X1 - ADS_CARD_X0 - 2 * ADS_CARD_PAD)
-    sobre = v.get("subtitulo", "").upper()
-    y0 = ADS_CARD_Y0
-    y_sobre = y0 + ADS_CARD_PAD + 6
-    y_head = y_sobre + (52 if sobre else 0)
-    y1 = y_head + ADS_HEAD_LINHA * len(linhas) + ADS_CARD_PAD - 10
-    desenho = lambda x0, ya, x1, yb, r: f"{{\\p1}}{_ret_arredondado(x0, ya, x1, yb, r)}{{\\p0}}"
-    ev(2, f"{{\\an7\\pos(0,0)\\1c{_cor(pal['painel'])}\\1a&H14&\\bord0\\shad0}}"
-          + desenho(ADS_CARD_X0, y0, ADS_CARD_X1, y1, ADS_RAIO))
-    ev(3, f"{{\\an7\\pos(0,0)\\1c{_cor(pal['destaque'])}\\bord0\\shad0}}"
-          + desenho(ADS_CARD_X0, y0, ADS_CARD_X1, y0 + ADS_CARD_BARRA, 3))
-    if sobre:
-        esp = ADS_SOBRE_PX * ADS_SOBRE_ESP
-        ev(4, f"{{\\an8\\pos({W // 2},{y_sobre})\\fnMontserrat SemiBold\\fs{_fs(ADS_SOBRE_PX)}"
-              f"\\fsp{esp:.0f}\\1c{_cor(pal['sobre'])}\\bord0\\shad0}}{sobre}")
-    for i, ln in enumerate(linhas):
-        txt = re.sub(r"\*([^*]+)\*", lambda m: f"{{\\1c{_cor(pal['destaque'])}}}{m.group(1)}{{\\1c{_cor(pal['texto'])}}}", ln)
-        ev(5, f"{{\\an8\\pos({W // 2},{y_head + ADS_HEAD_LINHA * i})\\fnMontserrat ExtraBold"
-              f"\\fs{_fs(ADS_HEAD_PX)}\\1c{_cor(pal['texto'])}\\bord0\\shad0}}{txt}")
+    cx, cy = W // 2, ADS_FAIXA_CY
+    meia, h2 = 1500, ADS_FAIXA_ALT // 2
+    escuro = tuple(max(0, int(c * 0.55)) for c in pal["destaque"])
+    cores = [(pal["destaque"], escuro), (pal["painel"], (2, 18, 22))]
+    angulos = [-ADS_FAIXA_ANG, ADS_FAIXA_ANG]
+    for k, texto in enumerate(faixas[:2]):
+        fundo, borda = cores[k]
+        ang = angulos[k]
+        dy = 34 if k == 0 else -34          # as duas cruzam um pouco abaixo/acima do centro
+        camada_f, camada_t = 4 - 2 * k, 5 - 2 * k   # a vermelha (gancho) fica por cima no cruzamento
+        base = f"{{\\fad(150,250)\\org({cx},{cy + dy})\\frz{ang}"
+        desenho = (f"m {cx - meia} {cy + dy - h2} l {cx + meia} {cy + dy - h2} l {cx + meia} {cy + dy + h2} "
+                   f"l {cx - meia} {cy + dy + h2}")
+        saida.append(f"Dialogue: {camada_f},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
+                     f"{base}\\an7\\pos(0,0)\\1c{_cor(fundo)}\\3c{_cor(borda)}\\bord5\\shad0}}"
+                     f"{{\\p1}}{desenho}{{\\p0}}\n")
+        unidade = texto.upper() + "   \u2022   "
+        rep = unidade * 8
+        larg_un = _largura(unidade, ADS_FAIXA_PX, "ExtraBold")
+        sentido = -1 if k == 0 else 1
+        x0 = cx - (0 if k == 0 else larg_un)
+        x1 = x0 + sentido * ADS_FAIXA_VEL * TITULO_DUR
+        saida.append(f"Dialogue: {camada_t},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
+                     f"{base}\\an5\\move({x0:.0f},{cy + dy},{x1:.0f},{cy + dy})\\fnMontserrat ExtraBold"
+                     f"\\fs{_fs(ADS_FAIXA_PX)}\\fsp2\\1c{_cor(pal['texto'])}\\bord0\\shad0}}{rep}\n")
     return saida
 
 

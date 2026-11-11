@@ -198,8 +198,10 @@ def revisar(cfg, v, folhas=None):
     txt_tit = " ".join(t for s, e, t in titulo if s < 1)
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
     if v.get("estilo") == "ads":   # anúncio: cartão com sobretítulo + headline (*destaque*)
-        esperado = re.sub(r"\s+", " ", v["titulo"].replace("*", ""))
-        txt_tit = " ".join(t for s, e, t in titulo if s < 1 and t != v.get("subtitulo", "").upper())
+        faixas = v.get("faixas") or [v["titulo"].replace("*", "")]
+        esperado = " | ".join(f.upper() for f in faixas)
+        textos = " ".join(t for s, e, t in titulo if s < 1)
+        txt_tit = " | ".join(f.upper() for f in faixas if f.upper() in textos)
     if re.sub(r"\s+", " ", txt_tit) != esperado:
         erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
     if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:
