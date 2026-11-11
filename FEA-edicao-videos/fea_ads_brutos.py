@@ -5,9 +5,12 @@ faixas vermelhas em X na abertura e botão Saiba Mais). Uso: FEA_TRAB=pasta pyth
 FEA_TRAB (pasta de trabalho) precisa ter: env.sh e fonts/ (fea_preparar_ambiente.sh),
 brutos/IMG_<ID>.MOV, tr/IMG_<ID>.json (fea_transcrever.py), cfg.json (ver
 FEA-projeto-ads-bfv-virada-lote.json: faixa_ate = segundo do bruto em que a frase de abertura
-termina, cortar = trechos do bruto a remover, nome = arquivo de saída) e gfx/ gerado por
-fea_ads_graficos.js (tape_<ID>.png, periodos.json, botao.png). Saída em FEA_TRAB/out/.
-Padrão aprovado pela Keila em 10/11/2026 (Ads 021 BFV): faixas em X até o fim da frase de urgência."""
+termina, cortar = trechos do bruto a remover, nome = arquivo de saída), gfx/ gerado por
+fea_ads_graficos.js (tape_<ID>.png, periodos.json, botao.png), lp/ins_<nome>.png gerados por
+fea_ads_capturar_pagina.js (recortes da página de vendas) e musica/bed.wav (trilha em loop).
+Saída em FEA_TRAB/out/.
+Padrão aprovado pela Keila em 10 e 11/11/2026 (Ads 021 BFV): faixas em X até o fim da frase
+de urgência, inserts da página de vendas quando o Dr. fala do assunto, trilha baixa com ducking."""
 import json, re, subprocess, sys, os
 S = os.environ.get("FEA_TRAB") or os.path.dirname(os.path.abspath(__file__))
 F = open(f"{S}/env.sh").read().split("=",1)[1].strip()
@@ -86,6 +89,46 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     ev = [e.replace(",Leg,,0,0,0,,", r",Leg,,0,0,0,,{\pos(540,1330)}", 1) for e in ev]
     return head + "\n".join(ev) + "\n", W
 
+INS_DIR = f"{S}/lp"
+REGRAS = [  # (insert, gatilhos: início da palavra, minúsculo)
+    ("bonus", ("bônus", "congresso", "pós-graduação", "presencial", "presente")),
+    ("emais", ("cursos", "aulas", "livros", "curso")),
+    ("comp", ("centavo", "gastar", "pagar", "pagando", "recorrência", "comprar")),
+    ("lotes", ("valor", "barato", "valores", "preço")),
+    ("forte", ("vitalícias", "vitalício", "imperdível", "loucura", "oportunidade")),
+    ("hero", ("inscrever", "inscreve", "inscrevendo")),
+]
+DUR_INS, WIN_W, WIN_H, Y_INS = 3.4, 900, 1060, 150
+
+def escolhe_inserts(W, desde, botoes):
+    """Prioridade na ordem de REGRAS: cada insert pega a 1ª palavra-gatilho cuja janela
+    não encosta (folga 1,2 s) em outro insert já escolhido."""
+    out = []
+    for nome, gat in REGRAS:
+        for w in W:
+            a = w["s"] - 0.1
+            if a < desde or W[-1]["e"] - a < DUR_INS + 0.5: continue
+            if not any(w["t"].lower().startswith(g) for g in gat): continue
+            if any(abs(a - b) < DUR_INS + 1.2 for _, b in out): continue
+            out.append((nome, round(a, 2))); break
+    return sorted(out, key=lambda x: x[1])
+
+def molduras(nome):
+    from PIL import Image, ImageDraw
+    im = Image.open(f"{INS_DIR}/ins_{nome}.png")
+    h = min(WIN_H, round(im.height * WIN_W / im.width))
+    for tipo in ("mask", "frame"):
+        fn = f"{S}/gfx/{tipo}_{h}.png"
+        if os.path.exists(fn): continue
+        if tipo == "mask":
+            m = Image.new("L", (WIN_W, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, WIN_W-1, h-1), 34, fill=255)
+            m.convert("RGB").save(fn)
+        else:
+            f = Image.new("RGBA", (WIN_W+16, h+16), (0, 0, 0, 0)); d = ImageDraw.Draw(f)
+            d.rounded_rectangle((2, 2, WIN_W+13, h+13), 40, outline=(217, 180, 90, 255), width=5)
+            f.save(fn)
+    return h, round(im.height * WIN_W / im.width)
+
 def main():
     vid = sys.argv[1]; c = CFG[vid]
     ws = palavras(vid)
@@ -106,6 +149,8 @@ def main():
         if W[i]["t"].lower() == "saiba" and W[i+1]["t"].lower().startswith("mais") and W[i]["s"] > bend + 0.3:
             if not bot or W[i]["s"] - bot[-1] > 2.5: bot.append(W[i]["s"])
     P = PER[vid]; A = 0.30; CY = 1580
+    ins = escolhe_inserts(W, bend + 0.6, bot)
+    DUR = sum(y-x for x, y in segs)
     flt = []
     # corte
     parts = "".join(f"[0:v]trim={x}:{y},setpts=PTS-STARTPTS[v{k}];[0:a]atrim={x}:{y},asetpts=PTS-STARTPTS[a{k}];" for k, (x, y) in enumerate(segs))
@@ -114,18 +159,39 @@ def main():
     flt.append(f"[1:v]format=rgba,split=2[s1][s2];"
                f"[s1]crop=1800:150:'mod(t*170,{P})':0,rotate=-{A}:ow=rotw(-{A}):oh=roth(-{A}):c=none,fade=out:st={bend-0.2:.2f}:d=0.2:alpha=1[t1];"
                f"[s2]crop=1800:150:'{P}-mod(t*170,{P})':0,rotate={A}:ow=rotw({A}):oh=roth({A}):c=none,fade=out:st={bend-0.2:.2f}:d=0.2:alpha=1[t2];"
-               f"[vc]scale=1080:1920,setsar=1,ass={S}/out/{vid}.ass:fontsdir={S}/fonts[vs];"
+               f"[vc]scale=1080:1920,setsar=1[v0];")
+    base = "v0"
+    for k, (nome, t0) in enumerate(ins):
+        h, H = molduras(nome); n = 4 + 3*k
+        pan = f"'min({H-h},max(0,({H-h})*(t-0.4)/{DUR_INS-0.9:.2f}))'" if H > h else "0"
+        flt.append(f"[{base}]drawbox=x=0:y=0:w=iw:h=ih:color=black@0.45:t=fill:enable='between(t,{t0},{t0+DUR_INS})'[d{k}];"
+                   f"[{n}:v]scale={WIN_W}:-1,crop={WIN_W}:{h}:0:{pan},format=rgba[c{k}];[{n+1}:v]format=gray,scale={WIN_W}:{h}[m{k}];"
+                   f"[c{k}][m{k}]alphamerge,pad={WIN_W+16}:{h+16}:8:8:color=black@0[cm0{k}];[{n+2}:v]format=rgba[fr{k}];[cm0{k}][fr{k}]overlay=0:0[cm{k}];")
+        flt.append(f"[cm{k}]fade=in:st=0:d=0.25:alpha=1,fade=out:st={DUR_INS-0.25:.2f}:d=0.25:alpha=1,setpts=PTS+{t0}/TB[ci{k}];"
+                   f"[d{k}][ci{k}]overlay=(W-w)/2:{Y_INS}-8+'max(0,40*(1-(t-{t0})/0.3))':eof_action=pass[i{k}];")
+        base = f"i{k}"
+    flt.append(f"[{base}]ass={S}/out/{vid}.ass:fontsdir={S}/fonts[vs];"
                f"[vs][t1]overlay=540-w/2:{CY}-h/2:eof_action=pass[x1];[x1][t2]overlay=540-w/2:{CY}-h/2:eof_action=pass[x2]")
     last = "x2"
     for k, t0 in enumerate(bot):
         flt.append(f";[2:v]scale=420:-1,format=rgba,fade=in:st=0:d=0.15:alpha=1,fade=out:st=1.85:d=0.15:alpha=1,setpts=PTS+{t0:.2f}/TB[b{k}];[{last}][b{k}]overlay=(W-w)/2:1420:eof_action=pass[y{k}]")
         last = f"y{k}"
+    extra = []
+    for nome, t0 in ins:
+        h, H = molduras(nome)
+        extra += ["-loop", "1", "-framerate", "30", "-t", str(DUR_INS), "-i", f"{INS_DIR}/ins_{nome}.png",
+                  "-loop", "1", "-framerate", "30", "-t", str(DUR_INS), "-i", f"{S}/gfx/mask_{h}.png",
+                  "-loop", "1", "-framerate", "30", "-t", str(DUR_INS), "-i", f"{S}/gfx/frame_{h}.png"]
+    flt.append(f";[3:a]atrim=0:{DUR:.2f},volume=-18dB,afade=t=in:d=0.6,afade=t=out:st={DUR-1.8:.2f}:d=1.8[mu];"
+           f"[ac]asplit[va][vb];[mu][vb]sidechaincompress=threshold=0.04:ratio=3:attack=30:release=500[md];"
+           f"[va][md]amix=inputs=2:duration=first:normalize=0[aout]")
     cmd = [F, "-v", "error", "-y", "-i", f"{S}/brutos/IMG_{vid}.MOV",
            "-loop", "1", "-framerate", "30", "-t", f"{bend:.2f}", "-i", f"{S}/gfx/tape_{vid}.png",
            "-loop", "1", "-framerate", "30", "-t", "2", "-i", f"{S}/gfx/botao.png",
-           "-filter_complex", "".join(flt), "-map", f"[{last}]", "-map", "[ac]", "-r", "30",
+           "-i", f"{S}/musica/bed.wav"] + extra + [
+           "-filter_complex", "".join(flt), "-map", f"[{last}]", "-map", "[aout]", "-r", "30",
            "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-pix_fmt", "yuv420p", "-profile:v", "high",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", f"{S}/out/{c['nome']}.mp4"]
     subprocess.run(cmd, check=True)
-    print(vid, "ok", f"faixas ate {bend:.2f}s", "botoes", [round(b,2) for b in bot], "dur", round(sum(y-x for x,y in segs),2))
+    print(vid, "ok", "inserts", ins, f"faixas ate {bend:.2f}s", "botoes", [round(b,2) for b in bot], "dur", round(sum(y-x for x,y in segs),2))
 main()
