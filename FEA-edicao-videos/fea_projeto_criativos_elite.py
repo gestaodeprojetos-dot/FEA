@@ -68,7 +68,7 @@ BROLL = {
     18: [B("metodologia", P("IMG_7285", 14, 17, 32.5), 9)],
     # 19: a IMG_2485 tem agulha em quase todo quadro, trocada pela IMG_2826 (Dr. avaliando com a mão
     # no queixo, girando o rosto; conferido de 4 a 14 s sem agulha)
-    19: [B("melhorar", P("IMG_2826", 6, 8.5, 11))],
+    19: [B("melhorar", P("IMG_2826", 7.0, 23.2))],   # Keila 11/11: sem a careta do fim (11 a 13 s), só sorriso
     20: [B("roteiro", P("IMG_8311", 1)), B("planejamento", P("IMG_8311", 6), 9), B("individual", P("IMG_8311", 12))],
 }
 
@@ -223,7 +223,8 @@ AJUSTES = {
     18: {"cauda": 0.8, "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-718fa6c1.wav", "trilha_db": -20},
     # 19: o Dr. entra andando de longe; zoom fixo que corta na cintura do começo ao fim. Take limpo
-    19: {"cauda": 0.8, "zoom": [1.5, 0.5, 0.33], "cartelas_y": 175,
+    # Keila 11/11: gancho em cima do rosto (Dr. descido no quadro) e final sem imagem parada (sem cauda)
+    19: {"zoom": [1.5, 0.5, 0.24], "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-b97ad2d8.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
