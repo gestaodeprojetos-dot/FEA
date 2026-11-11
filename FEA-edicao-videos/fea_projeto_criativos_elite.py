@@ -152,7 +152,7 @@ V = [
   [G("Você sonha com uma clínica *de alto padrão*?", "A minha trajetória"),
    C("marketing", "Marketing, vendas e *conversão*", "O que mudou", chips=["Avaliação", "Marketing", "Vendas"], dur=4.0),
    CTA("clicar"), FORM("dois"), DIAG("apto")], []),
- ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 41.95, "exato"]],
+ ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 38.62, "exato"]],
   [G("Quer aumentar sua *conversão*?", "Fica neste vídeo"),
    C("metodologia", "Avaliação, marketing e *vendas*", "Pela primeira vez", dur=3.6),
    CTA("clicar"), FORM("dois"), DIAG("avaliação com")], []),
@@ -207,11 +207,9 @@ AJUSTES = {
     15: {"zoom": [1.6, 0.5, 0.36], "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-f6430b0f.wav", "trilha_db": -20},
     # final: "completa o formulário que a gente vai te esperar" numa tacada só, com respiro de 0,8 s
-    # final (Keila 11/11): "completa o formulário que a gente vai te esperar" inteiro; o "esperar"
-    # vai de 41,50 a 41,75 s (medido no áudio e em janela curta; a transcrição longa errava o tempo
-    # e o corte em 41,42 comia a palavra); termina no silêncio antes do "na..." + respiro de 0,8 s
-    16: {"cauda": 0.8, "remover_legenda": [["IMG_9145", 41.45, 43.2]],
-         "inserir_legenda": [["IMG_9145", 41.5, 41.76, "esperar"]], "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
+    # final (Keila 11/11): termina em "então clica em Saiba Mais" (o fim do bruto tem tropeço
+    # "te esperar na... a gente vai te esperar, ponto"), com respiro de 0,8 s
+    16: {"cauda": 0.8, "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-c0b952be.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
