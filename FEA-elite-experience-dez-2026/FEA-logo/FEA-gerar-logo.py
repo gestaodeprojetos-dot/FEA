@@ -82,3 +82,53 @@ svg('FEA-elite-experience-B-dourado', '#4d5e65', '#b8913f', ('#ecd08a', '#a87b2c
 # C: dourado sobre fundo escuro (backdrop, telão, credencial)
 svg('FEA-elite-experience-C-dourado-fundo-escuro', '#f2efe8', '#d4b06a', ('#f3dc9e', '#b48836'), fundo='#16202a')
 print('ok', round(k, 4))
+
+
+# ================= Rodada 2: mais opções =================
+simbolo = [e for e in manter if re.search(r'cls-[234]', e)]
+elite   = [e for e in manter if 'cls-1' in e]
+
+def svg2(nome, cor_elite, cor_exp, simb, fundo=None, vertical=False, titulo='Elite Experience'):
+    """simb: ('grad', c1, c2) para degradê ou ('solido', cor) para cor única."""
+    if simb[0] == 'grad':
+        d = re.sub(r'stop-color="#85f9f7"', f'stop-color="{simb[1]}"', defs)
+        d = re.sub(r'stop-color="#2db9b3"', f'stop-color="{simb[2]}"', d)
+        st = '.cls-2{fill:url(#linear-gradient-3);}.cls-3{fill:url(#linear-gradient-2);}.cls-4{fill:url(#linear-gradient);}'
+    else:
+        d = ''
+        st = f'.cls-2,.cls-3,.cls-4{{fill:{simb[1]};}}'
+    style = f'.cls-1{{fill:{cor_elite};}}.cls-5{{fill:{cor_exp};}}' + st
+    exp = letras('cls-5')
+    if not vertical:
+        vb_w, vb_h = 469.14, 119.88
+        corpo = ''.join(simbolo + elite + exp)
+    else:
+        # empilhada: símbolo centralizado em cima, ELITE + EXPERIENCE embaixo
+        larg_txt = 469.14 - 155.73
+        esc = 0.95
+        simb_w = 123.0 * esc
+        vb_w = larg_txt
+        sx = (larg_txt - simb_w) / 2
+        corpo = (f'<g transform="translate({sx:.2f},0) scale({esc})">' + ''.join(simbolo) + '</g>'
+                 f'<g transform="translate(-155.73,{119.88*esc + 18:.2f})">' + ''.join(elite + exp) + '</g>')
+        vb_h = 119.88 * esc + 18 + 119.22
+    pad = 30 if fundo else 0
+    bg = f'<rect x="{-pad}" y="{-pad}" width="{vb_w+2*pad:.2f}" height="{vb_h+2*pad:.2f}" fill="{fundo}"/>' if fundo else ''
+    s = (f'<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+         f'viewBox="{-pad} {-pad} {vb_w+2*pad:.2f} {vb_h+2*pad:.2f}"><title>{titulo}</title><defs><style>{style}</style>{d}</defs>{bg}'
+         f'<g id="logo">{corpo}</g></svg>')
+    (AQUI / f'{nome}.svg').write_text(s)
+
+# D: monocromática petróleo (sóbria, 1 cor + tom)
+svg2('FEA-elite-experience-D-monocromatica-petroleo', '#2f3f47', '#5f7680', ('grad', '#7d939c', '#2f3f47'))
+# E: azul-marinho + dourado
+svg2('FEA-elite-experience-E-marinho-dourado', '#1c2b44', '#b8913f', ('grad', '#ecd08a', '#a87b2c'))
+# F: vinho + champanhe
+svg2('FEA-elite-experience-F-vinho-champanhe', '#5a1f2c', '#b89a6a', ('grad', '#e6cfa4', '#9c7a45'))
+# G: empilhada dourada (perfil, selo, avatar, credencial)
+svg2('FEA-elite-experience-G-empilhada-dourado', '#4d5e65', '#b8913f', ('grad', '#ecd08a', '#a87b2c'), vertical=True)
+# H: branca sobre dourado (aplicação em fundo de cor)
+svg2('FEA-elite-experience-H-branca-sobre-dourado', '#ffffff', '#ffffff', ('solido', '#ffffff'), fundo='#b08a3e')
+# I: preta 1 cor (impressão, gravação, carimbo)
+svg2('FEA-elite-experience-I-preta-1-cor', '#111111', '#111111', ('solido', '#111111'))
+print('rodada 2 ok')
