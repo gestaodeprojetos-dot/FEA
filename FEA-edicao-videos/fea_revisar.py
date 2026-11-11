@@ -168,7 +168,8 @@ def ler_ass(caminho):
             continue
         p = linha.rstrip("\n").split(",", 9)
         s, e, estilo = ts(p[1]), ts(p[2]), p[3]
-        txt = re.sub(r"\{[^}]*\}", "", p[9]).replace("\\N", " ").strip()
+        corpo = re.sub(r"\{[^}]*\\p1[^}]*\}.*?(\{\\p0\}|$)", "", p[9])   # desenho (cartão) não é texto
+        txt = re.sub(r"\{[^}]*\}", "", corpo).replace("\\N", " ").strip()
         if estilo == "Caixa" and not txt:      # desenho da caixa do título dos anúncios (\\p1)
             continue
         (titulo if estilo in ("Titulo", "Caixa") else legendas).append((s, e, txt))
@@ -196,8 +197,9 @@ def revisar(cfg, v, folhas=None):
     titulo, legendas = ler_ass(ass)
     txt_tit = " ".join(t for s, e, t in titulo if s < 1)
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
-    if v.get("estilo") == "ads":   # anúncio: caixa preta (subtítulo) é desenhada antes do gancho
-        txt_tit = " ".join(t for s, e, t in titulo if s < 1 and t == v["titulo"])
+    if v.get("estilo") == "ads":   # anúncio: cartão com sobretítulo + headline (*destaque*)
+        esperado = re.sub(r"\s+", " ", v["titulo"].replace("*", ""))
+        txt_tit = " ".join(t for s, e, t in titulo if s < 1 and t != v.get("subtitulo", "").upper())
     if re.sub(r"\s+", " ", txt_tit) != esperado:
         erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
     if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:

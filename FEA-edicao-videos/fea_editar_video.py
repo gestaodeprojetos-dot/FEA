@@ -417,7 +417,7 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito="", legenda_y=None):
             y += h
         return saida
     base = (legenda_y or LEGENDA_Y) + 20
-    h = ADS_LEGENDA_LINHA if legenda_y else LEGENDA_TAM * ENTRELINHA_LEGENDA
+    h = LEGENDA_TAM * ENTRELINHA_LEGENDA
     n = len(partes)
     return [f"Dialogue: {camada},{ts(s)},{ts(e)},Legenda,,0,0,0,,"
             f"{{\\an2\\pos({W // 2},{base - (n - 1 - i) * h:.0f})}}{p}\n" for i, p in enumerate(partes)]
@@ -469,24 +469,27 @@ def formatar_titulo(v):
     return titulo
 
 
-# Estilo "ads" (anúncio do Dr. falando para a câmera, padrão do Ads 46 - MPL, medido em pixels em
-# 11/11/2026): gancho curto em caixa branca arredondada com texto preto e, logo abaixo, a caixa preta
-# com o nome da masterclass em branco, as duas no terço inferior (sobre a camiseta, nunca no rosto),
-# por 3 s. A legenda entra depois, maior e mais alta que nos Reels, igual à do Ads 46.
+# Estilo "ads" (anúncios de Masterclass). Keila 11/11/2026: a caixa branca + caixa preta do Ads 46
+# não se usa mais; headline "mais tecnológica", como nos criativos do Elite e da Black, na paleta da
+# masterclass: painel escuro translúcido com filete de cor no topo, sobretítulo pequeno espaçado em
+# caixa alta e a headline com a palavra-chave destacada (*entre asteriscos* no projeto.json).
+# A legenda é a mesma dos conteúdos (Reels), sem estilo próprio.
 # Medidas em px de verdade; no ASS o tamanho da fonte rende ~0,62 disso (Montserrat), por isso K.
 K_ASS = 0.6234
-ADS_GANCHO_PX, ADS_GANCHO_PAD = 68, 40           # "É hoje": 220 px de texto, caixa 410-711
-ADS_GANCHO_Y0, ADS_GANCHO_Y1 = 1182, 1349
-ADS_CAIXA_PX, ADS_CAIXA_PAD = 62, 52             # "preenchimento labial": 697 px, caixa 164-966
-ADS_CAIXA_Y0, ADS_CAIXA_1A, ADS_CAIXA_LINHA, ADS_CAIXA_FIM = 1321, 74, 80, 73
-ADS_RAIO = 30
-ADS_LEGENDA_PX, ADS_LEGENDA_LINHA, ADS_LEGENDA_Y = 53, 75, 1340   # "vamos mostrar técnicas com": 796 px
+ADS_PALETAS = {
+    # Masterclass em Preenchimento Labial: vermelho e petróleo da logo (medidos no CTA do Ads 54)
+    "MPL": {"painel": (6, 44, 52), "destaque": (234, 0, 55), "texto": (249, 249, 249), "sobre": (164, 190, 195)},
+}
+ADS_CARD_X0, ADS_CARD_X1, ADS_CARD_Y0 = 90, 990, 1130
+ADS_CARD_PAD, ADS_CARD_BARRA, ADS_RAIO = 44, 7, 28
+ADS_SOBRE_PX, ADS_SOBRE_ESP = 25, 0.3
+ADS_HEAD_PX, ADS_HEAD_LINHA = 84, 98
 
 
-def _largura(texto, px):
+def _largura(texto, px, peso="Bold"):
     import os
     from PIL import ImageFont
-    fonte = os.path.join(_FONTSDIR[0], "Montserrat-Bold.ttf")
+    fonte = os.path.join(_FONTSDIR[0], f"Montserrat-{peso}.ttf")
     return ImageFont.truetype(fonte, px).getlength(texto)
 
 
@@ -495,6 +498,11 @@ _FONTSDIR = ["fonts"]
 
 def _fs(px):
     return round(px / K_ASS)
+
+
+def _cor(rgb):
+    r, g, b = rgb
+    return f"&H{b:02X}{g:02X}{r:02X}&"
 
 
 def _ret_arredondado(x0, y0, x1, y1, r):
@@ -506,42 +514,50 @@ def _ret_arredondado(x0, y0, x1, y1, r):
             f"l {x0} {y0 + r} b {x0} {y0 + r - k} {x0 + r - k} {y0} {x0 + r} {y0}")
 
 
+def _linhas_headline(texto, largura):
+    ps = texto.split()
+    larg = lambda t: _largura(t.replace("*", ""), ADS_HEAD_PX, "ExtraBold")
+    if larg(texto) <= largura:
+        return [texto]
+    melhor = min(([" ".join(ps[:i]), " ".join(ps[i:])] for i in range(1, len(ps))),
+                 key=lambda ls: max(larg(l) for l in ls))
+    return melhor
+
+
 def titulo_ads(v):
-    """Eventos ASS do título no estilo dos anúncios: "titulo" = gancho (caixa branca),
-    "subtitulo" = nome da masterclass (caixa preta, quebra em 2 linhas equilibradas)."""
+    """Eventos ASS do cartão de headline dos anúncios: "subtitulo" = sobretítulo (caixa alta,
+    espaçado) e "titulo" = headline, com *palavra* na cor de destaque. Entra com fade, 3 s."""
+    pal = ADS_PALETAS[v.get("paleta", "MPL")]
     saida = []
     ev = lambda camada, txt: saida.append(
-        f"Dialogue: {camada},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,{{\\fad(0,250)}}{txt}\n")
-    sub = v.get("subtitulo", "")
-    if sub:
-        ps = sub.split()
-        linhas = [sub] if len(ps) < 3 else min(
-            ([" ".join(ps[:i]), " ".join(ps[i:])] for i in range(1, len(ps))),
-            key=lambda ls: max(_largura(l, ADS_CAIXA_PX) for l in ls))
-        larg = max(_largura(l, ADS_CAIXA_PX) for l in linhas) + 2 * ADS_CAIXA_PAD
-        x0, x1 = round(W / 2 - larg / 2), round(W / 2 + larg / 2)
-        y1 = ADS_CAIXA_Y0 + ADS_CAIXA_1A + ADS_CAIXA_LINHA * (len(linhas) - 1) + ADS_CAIXA_FIM
-        ev(2, f"{{\\an7\\pos(0,0)\\1c&H000000&\\bord0\\shad0\\p1}}{_ret_arredondado(x0, ADS_CAIXA_Y0, x1, y1, ADS_RAIO)}{{\\p0}}")
-        for i, l in enumerate(linhas):
-            y = ADS_CAIXA_Y0 + ADS_CAIXA_1A + ADS_CAIXA_LINHA * i
-            ev(3, f"{{\\an5\\pos({W // 2},{y})\\fs{_fs(ADS_CAIXA_PX)}\\1c&HFFFFFF&}}{l}")
-    gancho = v.get("titulo", "")
-    if gancho:
-        larg = _largura(gancho, ADS_GANCHO_PX) + 2 * ADS_GANCHO_PAD
-        x0, x1 = round(W / 2 - larg / 2), round(W / 2 + larg / 2)
-        y0, y1 = ADS_GANCHO_Y0, ADS_GANCHO_Y1
-        ev(4, f"{{\\an7\\pos(0,0)\\1c&HFFFFFF&\\bord0\\shad0\\p1}}{_ret_arredondado(x0, y0, x1, y1, ADS_RAIO)}{{\\p0}}")
-        ev(5, f"{{\\an5\\pos({W // 2},{(y0 + y1) // 2})\\fs{_fs(ADS_GANCHO_PX)}\\1c&H000000&}}{gancho}")
+        f"Dialogue: {camada},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,{{\\fad(200,250)}}{txt}\n")
+    linhas = _linhas_headline(v.get("titulo", ""), ADS_CARD_X1 - ADS_CARD_X0 - 2 * ADS_CARD_PAD)
+    sobre = v.get("subtitulo", "").upper()
+    y0 = ADS_CARD_Y0
+    y_sobre = y0 + ADS_CARD_PAD + 6
+    y_head = y_sobre + (52 if sobre else 0)
+    y1 = y_head + ADS_HEAD_LINHA * len(linhas) + ADS_CARD_PAD - 10
+    desenho = lambda x0, ya, x1, yb, r: f"{{\\p1}}{_ret_arredondado(x0, ya, x1, yb, r)}{{\\p0}}"
+    ev(2, f"{{\\an7\\pos(0,0)\\1c{_cor(pal['painel'])}\\1a&H14&\\bord0\\shad0}}"
+          + desenho(ADS_CARD_X0, y0, ADS_CARD_X1, y1, ADS_RAIO))
+    ev(3, f"{{\\an7\\pos(0,0)\\1c{_cor(pal['destaque'])}\\bord0\\shad0}}"
+          + desenho(ADS_CARD_X0, y0, ADS_CARD_X1, y0 + ADS_CARD_BARRA, 3))
+    if sobre:
+        esp = ADS_SOBRE_PX * ADS_SOBRE_ESP
+        ev(4, f"{{\\an8\\pos({W // 2},{y_sobre})\\fnMontserrat SemiBold\\fs{_fs(ADS_SOBRE_PX)}"
+              f"\\fsp{esp:.0f}\\1c{_cor(pal['sobre'])}\\bord0\\shad0}}{sobre}")
+    for i, ln in enumerate(linhas):
+        txt = re.sub(r"\*([^*]+)\*", lambda m: f"{{\\1c{_cor(pal['destaque'])}}}{m.group(1)}{{\\1c{_cor(pal['texto'])}}}", ln)
+        ev(5, f"{{\\an8\\pos({W // 2},{y_head + ADS_HEAD_LINHA * i})\\fnMontserrat ExtraBold"
+              f"\\fs{_fs(ADS_HEAD_PX)}\\1c{_cor(pal['texto'])}\\bord0\\shad0}}{txt}")
     return saida
 
 
 def gerar_ass(v, palavras, duracao, caminho):
     ads = v.get("estilo") == "ads"
-    legenda_y = ADS_LEGENDA_Y if ads else None
+    legenda_y = None   # anúncios usam a mesma legenda dos conteúdos (Keila, 11/11/2026)
     linhas = [ass_header()]
     if ads:
-        linhas[0] = linhas[0].replace(f"Style: Legenda,Montserrat Bold,{LEGENDA_TAM},",
-                                      f"Style: Legenda,Montserrat Bold,{_fs(ADS_LEGENDA_PX)},")
         linhas[0] = linhas[0].replace("[Events]", "Style: Caixa,Montserrat Bold,66,&H00FFFFFF,&H00FFFFFF,"
                                       "&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]")
         linhas += titulo_ads(v)
@@ -811,7 +827,13 @@ def renderizar(cfg, v, previa=False):
     # e a legenda fica por cima (pedido da Keila, 11/11/2026, nos anúncios da Masterclass)
     entradas, ultimo = [], "vc"
     ins_f = []
-    for k, (a, b, arq, src) in enumerate(v.get("inserts", [])):
+    lista_ins = v.get("inserts", [])
+    for k, (a, b, arq, src) in enumerate(lista_ins):
+        # insert seguido de outro (fim de um = início do outro): o de baixo vai até um pouco depois
+        # do início do próximo, senão escapava 1 quadro do Dr. entre os dois (Keila, 11/11/2026)
+        prox = lista_ins[k + 1][0] if k + 1 < len(lista_ins) else None
+        if prox is not None and prox - b < 0.2:
+            b = prox + 0.1
         entradas += ["-ss", str(src), "-i", arq]   # busca rápida no bruto longo
         ins_f.append(f"[{k + 1}:v]trim=0:{b - a},setpts=PTS-STARTPTS+{a}/TB,"
                      f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[ins{k}];"
