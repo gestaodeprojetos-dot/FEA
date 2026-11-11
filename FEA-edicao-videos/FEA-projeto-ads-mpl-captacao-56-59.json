@@ -1,0 +1,86 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9223.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9223.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 56 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Aula gratuita",
+   "titulo_origem": "inventado",
+   "subtitulo": "Masterclass em preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.1,
+     24.0,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9224.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9224.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 57 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Agulha ou cânula?",
+   "titulo_origem": "inventado",
+   "subtitulo": "Masterclass em preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.2,
+     28.9,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9225.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9225.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 58 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Não é tudo igual",
+   "titulo_origem": "inventado",
+   "subtitulo": "Masterclass em preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.3,
+     23.2,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9226.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9226.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 59 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Medo da anatomia?",
+   "titulo_origem": "inventado",
+   "subtitulo": "Masterclass em preenchimento labial",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.3,
+     34.0,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": []
+  }
+ ]
+}

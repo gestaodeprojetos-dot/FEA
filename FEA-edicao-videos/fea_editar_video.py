@@ -400,7 +400,7 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
-def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
+def dialogos_linhas(camada, s, e, estilo, texto, efeito="", legenda_y=None):
     """Uma linha de texto por evento, posicionada à mão, para controlar a entrelinha."""
     partes = texto.split(r"\N")
     if estilo == "Titulo":
@@ -416,8 +416,8 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
                          f"{{\\an5\\pos({W // 2},{y + h / 2:.0f}){efeito}}}{p}\n")
             y += h
         return saida
-    base = LEGENDA_Y + 20
-    h = LEGENDA_TAM * ENTRELINHA_LEGENDA
+    base = (legenda_y or LEGENDA_Y) + 20
+    h = ADS_LEGENDA_LINHA if legenda_y else LEGENDA_TAM * ENTRELINHA_LEGENDA
     n = len(partes)
     return [f"Dialogue: {camada},{ts(s)},{ts(e)},Legenda,,0,0,0,,"
             f"{{\\an2\\pos({W // 2},{base - (n - 1 - i) * h:.0f})}}{p}\n" for i, p in enumerate(partes)]
@@ -469,10 +469,85 @@ def formatar_titulo(v):
     return titulo
 
 
+# Estilo "ads" (anúncio do Dr. falando para a câmera, padrão do Ads 46 - MPL, medido em pixels em
+# 11/11/2026): gancho curto em caixa branca arredondada com texto preto e, logo abaixo, a caixa preta
+# com o nome da masterclass em branco, as duas no terço inferior (sobre a camiseta, nunca no rosto),
+# por 3 s. A legenda entra depois, maior e mais alta que nos Reels, igual à do Ads 46.
+# Medidas em px de verdade; no ASS o tamanho da fonte rende ~0,62 disso (Montserrat), por isso K.
+K_ASS = 0.6234
+ADS_GANCHO_PX, ADS_GANCHO_PAD = 68, 40           # "É hoje": 220 px de texto, caixa 410-711
+ADS_GANCHO_Y0, ADS_GANCHO_Y1 = 1182, 1349
+ADS_CAIXA_PX, ADS_CAIXA_PAD = 62, 52             # "preenchimento labial": 697 px, caixa 164-966
+ADS_CAIXA_Y0, ADS_CAIXA_1A, ADS_CAIXA_LINHA, ADS_CAIXA_FIM = 1321, 74, 80, 73
+ADS_RAIO = 30
+ADS_LEGENDA_PX, ADS_LEGENDA_LINHA, ADS_LEGENDA_Y = 53, 75, 1340   # "vamos mostrar técnicas com": 796 px
+
+
+def _largura(texto, px):
+    import os
+    from PIL import ImageFont
+    fonte = os.path.join(_FONTSDIR[0], "Montserrat-Bold.ttf")
+    return ImageFont.truetype(fonte, px).getlength(texto)
+
+
+_FONTSDIR = ["fonts"]
+
+
+def _fs(px):
+    return round(px / K_ASS)
+
+
+def _ret_arredondado(x0, y0, x1, y1, r):
+    """Desenho ASS (\\p1) de retângulo de cantos arredondados (curvas de Bézier)."""
+    k = r * 0.5523
+    return (f"m {x0 + r} {y0} l {x1 - r} {y0} b {x1 - r + k} {y0} {x1} {y0 + r - k} {x1} {y0 + r} "
+            f"l {x1} {y1 - r} b {x1} {y1 - r + k} {x1 - r + k} {y1} {x1 - r} {y1} "
+            f"l {x0 + r} {y1} b {x0 + r - k} {y1} {x0} {y1 - r + k} {x0} {y1 - r} "
+            f"l {x0} {y0 + r} b {x0} {y0 + r - k} {x0 + r - k} {y0} {x0 + r} {y0}")
+
+
+def titulo_ads(v):
+    """Eventos ASS do título no estilo dos anúncios: "titulo" = gancho (caixa branca),
+    "subtitulo" = nome da masterclass (caixa preta, quebra em 2 linhas equilibradas)."""
+    saida = []
+    ev = lambda camada, txt: saida.append(
+        f"Dialogue: {camada},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,{{\\fad(0,250)}}{txt}\n")
+    sub = v.get("subtitulo", "")
+    if sub:
+        ps = sub.split()
+        linhas = [sub] if len(ps) < 3 else min(
+            ([" ".join(ps[:i]), " ".join(ps[i:])] for i in range(1, len(ps))),
+            key=lambda ls: max(_largura(l, ADS_CAIXA_PX) for l in ls))
+        larg = max(_largura(l, ADS_CAIXA_PX) for l in linhas) + 2 * ADS_CAIXA_PAD
+        x0, x1 = round(W / 2 - larg / 2), round(W / 2 + larg / 2)
+        y1 = ADS_CAIXA_Y0 + ADS_CAIXA_1A + ADS_CAIXA_LINHA * (len(linhas) - 1) + ADS_CAIXA_FIM
+        ev(2, f"{{\\an7\\pos(0,0)\\1c&H000000&\\bord0\\shad0\\p1}}{_ret_arredondado(x0, ADS_CAIXA_Y0, x1, y1, ADS_RAIO)}{{\\p0}}")
+        for i, l in enumerate(linhas):
+            y = ADS_CAIXA_Y0 + ADS_CAIXA_1A + ADS_CAIXA_LINHA * i
+            ev(3, f"{{\\an5\\pos({W // 2},{y})\\fs{_fs(ADS_CAIXA_PX)}\\1c&HFFFFFF&}}{l}")
+    gancho = v.get("titulo", "")
+    if gancho:
+        larg = _largura(gancho, ADS_GANCHO_PX) + 2 * ADS_GANCHO_PAD
+        x0, x1 = round(W / 2 - larg / 2), round(W / 2 + larg / 2)
+        y0, y1 = ADS_GANCHO_Y0, ADS_GANCHO_Y1
+        ev(4, f"{{\\an7\\pos(0,0)\\1c&HFFFFFF&\\bord0\\shad0\\p1}}{_ret_arredondado(x0, y0, x1, y1, ADS_RAIO)}{{\\p0}}")
+        ev(5, f"{{\\an5\\pos({W // 2},{(y0 + y1) // 2})\\fs{_fs(ADS_GANCHO_PX)}\\1c&H000000&}}{gancho}")
+    return saida
+
+
 def gerar_ass(v, palavras, duracao, caminho):
+    ads = v.get("estilo") == "ads"
+    legenda_y = ADS_LEGENDA_Y if ads else None
     linhas = [ass_header()]
-    titulo = formatar_titulo(v)
-    linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
+    if ads:
+        linhas[0] = linhas[0].replace(f"Style: Legenda,Montserrat Bold,{LEGENDA_TAM},",
+                                      f"Style: Legenda,Montserrat Bold,{_fs(ADS_LEGENDA_PX)},")
+        linhas[0] = linhas[0].replace("[Events]", "Style: Caixa,Montserrat Bold,66,&H00FFFFFF,&H00FFFFFF,"
+                                      "&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]")
+        linhas += titulo_ads(v)
+    else:
+        titulo = formatar_titulo(v)
+        linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
@@ -509,7 +584,7 @@ def gerar_ass(v, palavras, duracao, caminho):
                 continue
             e = min(s + minimo, fim_legendas)
             livre = e
-        linhas += dialogos_linhas(0, s, e, "Legenda", texto)
+        linhas += dialogos_linhas(0, s, e, "Legenda", texto, legenda_y=legenda_y)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
@@ -655,6 +730,7 @@ def encaixar_cortes(manter, db, passo, palavras=None):
 
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
+    _FONTSDIR[0] = cfg.get("fontsdir", "fonts")
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
