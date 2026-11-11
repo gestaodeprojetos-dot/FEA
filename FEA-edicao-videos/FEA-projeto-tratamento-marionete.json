@@ -1,0 +1,249 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7922.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7922.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/1- 3 melhores tratamentos para a linha de marionete.mp4",
+    "titulo": "3 melhores tratamentos para a linha de marionete",
+    "headline": [
+      "Os 3 melhores",
+      "tratamentos para a",
+      "linha de marionete"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.3,
+        87.25
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\balurônico\\b",
+        "hialurônico"
+      ],
+      [
+        "\\brinco\\b",
+        "vinco"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7922.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 0.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c1.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 3.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c2.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 5.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7683.MOV",
+        "src": 8.8,
+        "cx": 0.78,
+        "cy": 0.6,
+        "zoom": 1.4
+      },
+      {
+        "ini": 8.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 12.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c34.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 16.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 18.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7684.MOV",
+        "src": 14.5,
+        "cx": 0.6,
+        "cy": 0.55,
+        "zoom": 1.3
+      },
+      {
+        "ini": 21.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7685.MOV",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.3,
+        "zoom": 1.15
+      },
+      {
+        "ini": 25.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 78.4,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 31.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/IMG_8293.MOV",
+        "src": 4.0,
+        "cx": 0.55,
+        "cy": 0.6,
+        "zoom": 1.25
+      },
+      {
+        "ini": 35.1,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 41.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat/t1.png"
+      },
+      {
+        "ini": 43.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 88.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 46.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 104.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 50.8,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat/t2.png"
+      },
+      {
+        "ini": 53.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/mar2.mov",
+        "src": 47.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.15
+      },
+      {
+        "ini": 56.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/live.mp4",
+        "src": 89.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 60.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/mar2.mov",
+        "src": 64.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 64.5,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat/t3.png"
+      },
+      {
+        "ini": 66.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/trat/IMG_4718.MOV",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 71.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/trat/IMG_4718.MOV",
+        "src": 36.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 74.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/trat/IMG_4714.MOV",
+        "src": 33.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 76.95,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/trat/IMG_4730.MOV",
+        "src": 40.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.1
+      },
+      {
+        "ini": 79.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 82.6,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat/t_todos.png"
+      },
+      {
+        "ini": 85.5,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
