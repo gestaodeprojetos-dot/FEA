@@ -93,9 +93,9 @@ INS_DIR = f"{S}/lp"
 REGRAS = [  # (insert, gatilhos: início da palavra, minúsculo)
     ("bonus", ("bônus", "congresso", "pós-graduação", "presencial", "presente")),
     ("emais", ("cursos", "aulas", "livros", "curso")),
-    ("comp", ("centavo", "gastar", "pagar", "pagando", "recorrência", "comprar")),
-    ("lotes", ("valor", "barato", "valores", "preço")),
-    ("forte", ("vitalícias", "vitalício", "imperdível", "loucura", "oportunidade")),
+    # sem preço na tela (Keila, 11/11/2026): nada de tabela de lotes nem "comprar tudo separado"
+    ("forte", ("centavo", "gastar", "pagar", "pagando", "recorrência", "vitalícias", "vitalício",
+               "imperdível", "loucura", "oportunidade")),
     ("hero", ("inscrever", "inscreve", "inscrevendo")),
 ]
 DUR_INS, WIN_W, WIN_H, Y_INS = 3.4, 900, 1060, 150
