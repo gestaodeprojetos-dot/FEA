@@ -62,8 +62,7 @@ BROLL = {
     # Keila 11/11: nada de paciente parada; cenas do Dr. marcando a testa com caneta dermográfica
     15: [B("avaliações", P("IMG_1077", 25.8, 50, dur=2.6), 8)],
     16: [B("avaliação", P("IMG_2640", 10.5, 16.5), 4)],
-    # 17: marcação com caneta cobrindo o corte do tropeço "vai completar aqui uma avaliação..."
-    17: [B("tratamentos", P("IMG_8318", 18.5), 4), B("gratuito", P("IMG_8318", 0.5, 5.5), 25)],
+    # 17: sem B-roll, só o Dr. (Keila 11/11: "não precisa de inserts, só esse")
     18: [B("metodologia", P("IMG_7285", 44, 48, 52), 9)],
     19: [B("avaliação", P("IMG_2485", 0.5), 12)],
     20: [B("roteiro", P("IMG_8311", 1)), B("planejamento", P("IMG_8311", 6), 9), B("individual", P("IMG_8311", 12))],
@@ -212,7 +211,8 @@ AJUSTES = {
     # "te esperar na... a gente vai te esperar, ponto"), com respiro de 0,8 s
     16: {"cauda": 0.8, "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-c0b952be.wav", "trilha_db": -20},
-    17: {"cauda": 0.8, "remover_legenda": [["IMG_9147", 31.4, 35.71]],
+    # corte do tropeço disfarçado por troca leve de enquadramento (sem B-roll por cima)
+    17: {"zoom": [1.0, 0.5, 0.40], "zoom_alterna": 1.12, "cauda": 0.8, "remover_legenda": [["IMG_9147", 31.4, 35.71]],
          "inserir_legenda": [["IMG_9147", 35.8, 35.99, "Você"]],
          "trilha": f"{T}/assets/FEA-trilha-hg-01932a72.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
