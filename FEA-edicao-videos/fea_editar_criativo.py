@@ -383,6 +383,10 @@ def montar(cfg, v):
             fim = ini + c["dur"]
         fim = min(fim, duracao)
         png = f"{base}.cart{k}.png"
+        # "cartelas_y": posição das cartelas no vídeo (com zoom o rosto desce no quadro e a cartela
+        # no peito cobria o queixo e a boca; Keila 11/11: "coloca em cima do rosto dele")
+        if v.get("cartelas_y") and c["tipo"] in ("card", "gancho", "cta") and "y" not in c:
+            c = dict(c, y=v["cartelas_y"])
         cartela_png(cfg, c, png)
         cartelas.append((png, ini, fim))
     broll = []

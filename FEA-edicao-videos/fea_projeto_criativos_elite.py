@@ -202,7 +202,7 @@ AJUSTES = {
     14: {"remover_legenda": [["IMG_9082", 11.9, 13.11], ["IMG_9082", 25.9, 27.19]],
          "inserir_legenda": [["IMG_9082", 12.95, 13.1, "você"], ["IMG_9082", 27.0, 27.18, "Você"]]},
     # Dr. de corpo inteiro, em pé: zoom para não aparecer as pernas (padrão pedido nos vídeos 1 e 2)
-    15: {"zoom": [1.6, 0.5, 0.36]},
+    15: {"zoom": [1.6, 0.5, 0.36], "cartelas_y": 175},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
