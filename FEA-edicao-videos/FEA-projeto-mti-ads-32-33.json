@@ -23,7 +23,29 @@
      "intercorrências"
     ]
    ],
-   "titulo_y": 1250
+   "titulo_y": 1250,
+   "inserts": [
+    [
+     4.85,
+     6.2,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_0.png"
+    ],
+    [
+     6.05,
+     7.25,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_4.png"
+    ],
+    [
+     17.97,
+     19.3,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_2.png"
+    ],
+    [
+     19.15,
+     20.4,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_5.png"
+    ]
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/brutos/IMG_9209.MOV",
@@ -46,7 +68,34 @@
      "intercorrências"
     ]
    ],
-   "titulo_y": 1250
+   "titulo_y": 1250,
+   "inserts": [
+    [
+     4.9,
+     6.15,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_1.png"
+    ],
+    [
+     6.0,
+     7.3,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_3.png"
+    ],
+    [
+     7.15,
+     8.5,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_6.png"
+    ],
+    [
+     13.15,
+     14.5,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_5.png"
+    ],
+    [
+     14.35,
+     15.8,
+     "/tmp/claude-0/-home-user-FEA/a57c6c74-5996-5e41-9003-0a07742ee59d/scratchpad/mti/ins/ins_2.png"
+    ]
+   ]
   }
  ]
 }
