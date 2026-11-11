@@ -1,0 +1,11 @@
+{
+ "9199": {"faixa_ate": 5.76, "nome": "FEA-BFV-Virada-de-lote-01-faltam-5-dias"},
+ "9200": {"faixa_ate": 5.41, "nome": "FEA-BFV-Virada-de-lote-02-faltam-4-dias"},
+ "9201": {"faixa_ate": 6.64, "nome": "FEA-BFV-Virada-de-lote-03-faltam-3-dias"},
+ "9202": {"faixa_ate": 5.17, "nome": "FEA-BFV-Virada-de-lote-04-faltam-2-dias"},
+ "9203": {"faixa_ate": 4.14, "cortar": [[46.02, 48.56]], "nome": "FEA-BFV-Virada-de-lote-05-vira-amanha"},
+ "9204": {"faixa_ate": 5.14, "nome": "FEA-BFV-Virada-de-lote-06-vira-hoje"},
+ "9205": {"faixa_ate": 7.88, "nome": "FEA-BFV-50-vagas-especiais"},
+ "9206": {"faixa_ate": 4.38, "nome": "FEA-BFV-funcionario-para-o-resto-da-vida"},
+ "9207": {"faixa_ate": 7.64, "nome": "FEA-BFV-livros-e-1300-aulas"}
+}
