@@ -69,7 +69,8 @@ BROLL = {
     # 19: a IMG_2485 tem agulha em quase todo quadro, trocada pela IMG_2826 (Dr. avaliando com a mão
     # no queixo, girando o rosto; conferido de 4 a 14 s sem agulha)
     19: [B("melhorar", P("IMG_2826", 7.0, 23.2))],   # Keila 11/11: sem a careta do fim (11 a 13 s), só sorriso
-    20: [B("roteiro", P("IMG_8311", 1)), B("planejamento", P("IMG_8311", 6), 9), B("individual", P("IMG_8311", 12))],
+    # 20: luva aplicando e limpando a espuma de assepsia (sem agulha, sem careta), na parte sem cartela
+    20: [B("sutis", P("IMG_8311", 1.0, 4.3, 8.6))],
 }
 
 def FORM(ancora, **kw):
@@ -173,7 +174,7 @@ V = [
    WHATS("dificuldade", depois=5), C("captação", "Onde a venda *escapa*", "Os passos da jornada", chips=["Captação", "Avaliação", "Planejamento"], seta=True, dur=4.4),
    C("método", "Existe *um método*", "", dur=3.2),
    CTA("clicar"), DIAG("selecionadas")], []),
- ("20- Quase 100% de conversão, nem sempre foi assim", [["IMG_9150", 0.0, 10.95], ["IMG_9150", 14.35, 68.5]],
+ ("20- Quase 100% de conversão, nem sempre foi assim", [["IMG_9150", 0.0, 10.95, "exato"], ["IMG_9150", 14.35, 47.62, "exato"], ["IMG_9150", 49.62, 68.6, "exato"]],
   [G("Conversão de *quase 100%*", "Nem sempre foi assim"),
    C("roteiro", "O que não pode faltar *na avaliação*", "A metodologia", chips=["Roteiro", "Planejamento", "Opções"], dur=4.4),
    C("individual", "Cada paciente *é individual*", "", dur=3.2),
@@ -226,6 +227,11 @@ AJUSTES = {
     # Keila 11/11: gancho em cima do rosto (Dr. descido no quadro) e final sem imagem parada (sem cauda)
     19: {"zoom": [1.5, 0.5, 0.24], "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-b97ad2d8.wav", "trilha_db": -20},
+    # 20: sai o tropeço "Então a minha equipe de especialista," (corte no silêncio antes e depois);
+    # final sem imagem parada (Keila 11/11, vídeo 19): corta logo depois de "com o meu time"
+    20: {"zoom": [1.3, 0.5, 0.30], "zoom_alterna": 1.1, "cartelas_y": 175,
+         "remover_legenda": [["IMG_9150", 47.6, 49.6]],
+         "trilha": f"{T}/assets/FEA-trilha-hg-2f07f18c.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
