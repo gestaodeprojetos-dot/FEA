@@ -1,0 +1,298 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7942.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7942.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/5- Os 3 melhores produtos para as têmporas.mp4",
+    "titulo": "Os 3 melhores produtos para as têmporas",
+    "headline": [
+      "Os 3 melhores",
+      "produtos para",
+      "as têmporas"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        5.4,
+        88.55
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bRechilane\\b",
+        "Restylane"
+      ],
+      [
+        "\\bRestylane Refine\\b",
+        "Restylane Refyne"
+      ],
+      [
+        "\\bRestylane Volime\\b",
+        "Restylane Volyme"
+      ],
+      [
+        "\\bEpetique\\b",
+        "e.p.t.q."
+      ],
+      [
+        "\\b[Bb]elotero intenso\\b",
+        "Belotero Intense"
+      ],
+      [
+        "\\b[Bb]elotero volume\\b",
+        "Belotero Volume"
+      ],
+      [
+        "\\b[Bb]iogelis global\\b",
+        "Biogelis Global"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7942.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 5.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 0.5,
+        "cx": 0.45,
+        "cy": 0.35,
+        "zoom": 1.15
+      },
+      {
+        "ini": 8.95,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 11.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 9.0,
+        "cx": 0.5,
+        "cy": 0.35,
+        "zoom": 1.1
+      },
+      {
+        "ini": 14.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 54.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 17.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 34.0,
+        "cx": 0.45,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 20.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/novos/IMG_3691.MOV",
+        "src": 19.0,
+        "cx": 0.5,
+        "cy": 0.36,
+        "zoom": 1.0
+      },
+      {
+        "ini": 26.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 76.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.05
+      },
+      {
+        "ini": 29.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 198.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 31.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 34.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 143.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.05
+      },
+      {
+        "ini": 37.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 38.35,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/neuramis_deep.png",
+        "nome": "Neuramis Deep"
+      },
+      {
+        "ini": 39.95,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/neuramis_volume.png",
+        "nome": "Neuramis Volume"
+      },
+      {
+        "ini": 42.15,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/restylane_refyne.png",
+        "nome": "Restylane Refyne"
+      },
+      {
+        "ini": 44.75,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/restylane_volyme.png",
+        "nome": "Restylane Volyme"
+      },
+      {
+        "ini": 46.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 40.0,
+        "cx": 0.45,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 48.4,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/eptq_s100.png",
+        "nome": "e.p.t.q. S100"
+      },
+      {
+        "ini": 49.7,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/eptq_s300.png",
+        "nome": "e.p.t.q. S300"
+      },
+      {
+        "ini": 50.65,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 54.2,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/neuramis_deep.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/restylane_refyne.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/eptq_s100.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/neuramis_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/restylane_volyme.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/eptq_s300.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 59.85,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 118.0,
+        "cx": 0.45,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 62.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 70.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 64.1,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 66.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1237.MOV",
+        "src": 24.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 69.15,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/belotero_intense.png",
+        "nome": "Belotero Intense"
+      },
+      {
+        "ini": 70.4,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/belotero_volume.png",
+        "nome": "Belotero Volume"
+      },
+      {
+        "ini": 71.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 72.55,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/biogelis_global.png",
+        "nome": "Biogelis Global"
+      },
+      {
+        "ini": 75.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/tem/IMG_1238.MOV",
+        "src": 23.0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.1
+      },
+      {
+        "ini": 77.0,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/belotero_intense.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/belotero_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/tem/biogelis_global.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 80.2,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}

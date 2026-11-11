@@ -7,7 +7,7 @@ description: Edita vídeos verticais da FEA (Dr. João Pithon) no modelo "notíc
 
 **Quem pede e aprova as edições é a Gabi, Gabriela Costa (editora)** (06/11/2026), na conta compartilhada de gestão de projetos. Os feedbacks registrados abaixo como "Keila" vieram dessa mesma conversa de edição. Responder e chamar pelo nome dela.
 
-**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: a partir de novembro, pasta `11- Novembro/7- Produtos` (1vo-nXLJK_oEEPV684Mst0DVk5K0KBWAZ), numeração `1-`, `2-`... dentro dela (Keila, 03/11: vídeo do mês vai para a pasta do mês, na sequência das pastas já criadas); outubro ficou em `10- Outubro/26- Produtos`. Linha na planilha EDIÇÕES. Próximos: os outros brutos de `00 - Brutos/Melhores produtos` (IMG_7935 olheiras aprovado; IMG_7936 linha de marionete feito em 03/11; faltam IMG_7937, 7938, 7941, 7942). Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
+**Aprovado pela Keila em 28/10/2026** (vídeo IMG_7934, versão Dr. direto). Entrega: a partir de novembro, pasta `11- Novembro/7- Produtos` (1vo-nXLJK_oEEPV684Mst0DVk5K0KBWAZ), numeração `1-`, `2-`... dentro dela (Keila, 03/11: vídeo do mês vai para a pasta do mês, na sequência das pastas já criadas); outubro ficou em `10- Outubro/26- Produtos`. Linha na planilha EDIÇÕES. Pasta `00 - Brutos/Melhores produtos` concluída em 11/11/2026: IMG_7934 lábios, 7935 olheiras, 7936 marionete, 7937 mandíbula, 7938 mento, 7941 bigode chinês, 7942 têmporas. Script: `FEA-edicao-videos/fea_editar_noticia.py` (usa as funções de corte e legenda do `fea_editar_video.py`). Projeto de exemplo: `FEA-edicao-videos/FEA-projeto-noticia-melhores-labios.json`.
 
 ## Entrada
 
@@ -61,6 +61,10 @@ Projeto `FEA-projeto-noticia-mento.json`. Produtos: Restylane Shaype (grafia ofi
 ## Bigode chinês (IMG_7941, 10/11/2026)
 
 Projeto `FEA-projeto-noticia-bigode.json`. Produtos: Neauvia Stimulate, Biogelis Volume, Neuramis Volume (os 3, grade numerada em "três indicações legais") e Restylane Defyne e Singderm (extras; grade de 5 sem número em "cinco produtos fantásticos"; com 5 a numeração fica sobreposta, não usar). Fotos Neuramis Volume e Defyne na pasta de imagens de produtos do Drive. Takes: `B roll bigode chinês/IMG_8293` (paciente segurando o queixo, sulco nasolabial e marionete, abertura) e "5- Neauvia intense para sulconasolabial" (sulco marcado em vermelho e agulha, 15 s, 25 s, 72 s, 121 s). Esse segundo é editado, com legenda gravada a ~78% da altura: usar só com `cy` 0,57 e `zoom` 1,6, para a legenda ficar fora do quadro.
+
+## Têmporas (IMG_7942, 11/11/2026)
+
+Projeto `FEA-projeto-noticia-temporas.json`, 75 s. Começa em "Têmporas." (pergunta da moça cortada). O Dr. cita 3 pares (Neuramis Deep/Volume, Restylane Refyne/Volyme, e.p.t.q. S100/S300) e 3 extras (Belotero Intense, Belotero Volume, Biogelis Global): produto a produto na hora do nome, grade de 6 em "dentro dessas duas opções" (colunas = pares, de cima o de menor volumização) e grade dos 3 extras em "essas são algumas das opções". Todas as fotos vieram da pasta de imagens de produtos do Drive. Takes: `45.OK- Preenchimento de têmporas` IMG_1237 (marcação azul em leque 0,5 s; agulha 54 s, 118 s, 143 s; resultado 198 s) e IMG_1238 (agulha com a mão tracionando 9 s, 23 s, 34 s, 40 s, 70 s; rosto 76 s).
 
 ## Primeiros inserts de impacto (Keila, 04/11/2026)
 
