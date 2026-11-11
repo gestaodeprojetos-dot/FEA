@@ -61,7 +61,7 @@ BROLL = {
     14: [B("saiba", P("IMG_9026", 0.5, 6)), B("gratuita", P("IMG_9026", 12.5), 12)],
     # Keila 11/11: nada de paciente parada; cenas do Dr. marcando a testa com caneta dermográfica
     15: [B("avaliações", P("IMG_1077", 25.8, 50, dur=2.6), 8)],
-    16: [B("avaliação", P("IMG_2640", 0.5), 4)],
+    16: [B("avaliação", P("IMG_2640", 10.5, 16.5), 4)],
     17: [B("tratamentos", P("IMG_8318", 0.5, 13, 18.5), 4)],
     18: [B("metodologia", P("IMG_7285", 44, 48, 52), 9)],
     19: [B("avaliação", P("IMG_2485", 0.5), 12)],
@@ -152,7 +152,7 @@ V = [
   [G("Você sonha com uma clínica *de alto padrão*?", "A minha trajetória"),
    C("marketing", "Marketing, vendas e *conversão*", "O que mudou", chips=["Avaliação", "Marketing", "Vendas"], dur=4.0),
    CTA("clicar"), FORM("dois"), DIAG("apto")], []),
- ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 41.0], ["IMG_9145", 43.6, 44.6]],
+ ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 40.84, "exato"], ["IMG_9145", 44.02, 44.7, "exato"]],
   [G("Quer aumentar sua *conversão*?", "Fica neste vídeo"),
    C("metodologia", "Avaliação, marketing e *vendas*", "Pela primeira vez", dur=3.6),
    CTA("clicar"), FORM("dois"), DIAG("avaliação com")], []),
@@ -206,6 +206,8 @@ AJUSTES = {
     # trilha sofisticada e baixa (Keila 11/11): banco de músicas do HeyGen, piano e cordas
     15: {"zoom": [1.6, 0.5, 0.36], "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-f6430b0f.wav", "trilha_db": -20},
+    16: {"zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
+         "trilha": f"{T}/assets/FEA-trilha-hg-c0b952be.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],
                             ["IMG_9059", 41.52, 41.68, "tua"]]},
