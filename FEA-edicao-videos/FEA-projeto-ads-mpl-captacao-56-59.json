@@ -1,0 +1,169 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9223.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9223.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 56 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Sua técnica labial está atualizada?",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.1,
+     24.0,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [],
+   "inserts": [
+    [
+     5.9,
+     7.7,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     108.5
+    ],
+    [
+     7.7,
+     9.3,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ],
+   "paleta": "MPL",
+   "faixas": [
+    "Sua técnica labial está atualizada?",
+    "Agulha ou cânula: quando usar cada uma"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9224.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9224.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 57 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Qual produto para cada lábio?",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.2,
+     28.9,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [],
+   "inserts": [
+    [
+     11.0,
+     12.9,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     108.5
+    ],
+    [
+     12.9,
+     14.4,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ],
+   "paleta": "MPL",
+   "faixas": [
+    "Qual produto para cada lábio?",
+    "Mais projeção ou menos projeção?"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9225.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9225.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 58 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Você faz o mesmo lábio em todas?",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.3,
+     23.2,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [],
+   "inserts": [
+    [
+     5.6,
+     7.3,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     99.5
+    ],
+    [
+     7.3,
+     8.6,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ],
+   "paleta": "MPL",
+   "faixas": [
+    "Você faz o mesmo lábio em todas?",
+    "Cada paciente pede uma técnica"
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9226.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9226.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 59 - MPL.mp4",
+   "estilo": "ads",
+   "titulo": "Onde passa a artéria labial?",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.3,
+     34.0,
+     "exato"
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bsecções\\b",
+     "dissecções"
+    ]
+   ],
+   "inserts": [
+    [
+     14.6,
+     17.2,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     109.0
+    ],
+    [
+     24.4,
+     25.5,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     99.5
+    ],
+    [
+     25.5,
+     26.9,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     21.0
+    ]
+   ],
+   "paleta": "MPL",
+   "faixas": [
+    "Onde passa a artéria labial?",
+    "Anatomia em cadáver fresco"
+   ]
+  }
+ ]
+}

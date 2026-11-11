@@ -168,8 +168,11 @@ def ler_ass(caminho):
             continue
         p = linha.rstrip("\n").split(",", 9)
         s, e, estilo = ts(p[1]), ts(p[2]), p[3]
-        txt = re.sub(r"\{[^}]*\}", "", p[9]).replace("\\N", " ").strip()
-        (titulo if estilo == "Titulo" else legendas).append((s, e, txt))
+        corpo = re.sub(r"\{[^}]*\\p1[^}]*\}.*?(\{\\p0\}|$)", "", p[9])   # desenho (cartão) não é texto
+        txt = re.sub(r"\{[^}]*\}", "", corpo).replace("\\N", " ").strip()
+        if estilo == "Caixa" and not txt:      # desenho da caixa do título dos anúncios (\\p1)
+            continue
+        (titulo if estilo in ("Titulo", "Caixa") else legendas).append((s, e, txt))
     return titulo, legendas
 
 
@@ -194,6 +197,11 @@ def revisar(cfg, v, folhas=None):
     titulo, legendas = ler_ass(ass)
     txt_tit = " ".join(t for s, e, t in titulo if s < 1)
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
+    if v.get("estilo") == "ads":   # anúncio: cartão com sobretítulo + headline (*destaque*)
+        faixas = v.get("faixas") or [v["titulo"].replace("*", "")]
+        esperado = " | ".join(f.upper() for f in faixas)
+        textos = " ".join(t for s, e, t in titulo if s < 1)
+        txt_tit = " | ".join(f.upper() for f in faixas if f.upper() in textos)
     if re.sub(r"\s+", " ", txt_tit) != esperado:
         erros.append(f"título \"{txt_tit}\" diferente de \"{esperado}\"")
     if titulo and max(e for s, e, t in titulo if s < 1) > fe.TITULO_DUR + 0.01:

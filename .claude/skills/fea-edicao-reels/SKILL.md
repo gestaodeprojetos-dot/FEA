@@ -76,6 +76,19 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
     - A planilha vai para quem posta nas redes sociais: sem link, a pessoa não acha os vídeos
     - Se a numeração de pastas ficou com buraco (ex.: 1, 2, 4 sem o 3), renomear para ficar sequencial ao criar a próxima pasta, ou criar a pasta com o número faltante
 
+## Anúncios de Masterclass (Ads de captação, padrão de 11/11/2026)
+
+Quando os brutos são o Dr. falando para a câmera convidando para uma Masterclass (ex.: "clica aqui em Saiba Mais"), não é Reels de procedimento: é **criativo de anúncio**.
+
+- **Pasta de destino**: a pasta da masterclass tem as fases `1. CAPTAÇÃO`, `2. ANTECIPAÇÃO`, `3. LEMBRETE`, `4. VENDAS`. Classificar pelo que o Dr. fala (convite para se inscrever = captação; "faltam X dias" = lembrete; "é hoje" = lembrete; carrinho aberto = vendas) e salvar na fase certa, sem perguntar.
+- **Nomenclatura**: `Ads N - SIGLA.mp4` (ex.: `Ads 56 - MPL.mp4`), N contínuo depois do maior número já usado em **todas** as fases e em ESTÁTICOS. Siglas conhecidas: MPL (Masterclass em Preenchimento Labial), MTI (Masterclass de Intercorrências).
+- **Gancho** (`"estilo": "ads"`, Keila 11/11/2026): **duas faixas cruzadas no peito**, como nos criativos da Black, na paleta da masterclass (`"paleta": "MPL"`: faixa vermelha por cima com o gancho, faixa petróleo com o complemento), texto em caixa alta correndo em sentidos opostos, 3 s. `"faixas": ["Qual produto para cada lábio?", "Mais projeção ou menos projeção?"]`. O texto da faixa é gancho de verdade (dor, dúvida ou curiosidade do profissional, tirada da fala do Dr.), nunca rótulo do assunto ("Aula gratuita" e "Agulha ou cânula?" foram reprovados em 11/11); a frase inteira cabe na tela e fica centrada. **Não usar**: caixa branca + caixa preta (Ads 46) nem cartão com sobretítulo "Masterclass em preenchimento labial" (ficou estranho); nunca escrever o nome da masterclass no gancho, a logo já aparece no CTA.
+- **Legenda**: a mesma dos conteúdos (Reels), sem estilo próprio.
+- **Corte**: vídeo inteiro, do início da voz (0,25 s antes) ao "Até lá!".
+- **Inserts de procedimento** (Keila, 11/11/2026: "se encaixa, põe"): quando o Dr. fala de técnica, agulha, cânula ou segurança, cobrir a tela com 1,5 a 2,5 s do Dr. fazendo o procedimento, casando a imagem com a palavra (agulha na tela quando ele diz "agulha"). Inserts encostados vão direto de um para o outro (o editor sobrepõe; nunca deixar 1 quadro do Dr. entre eles, Keila 11/11). Nunca no título (0 a 3 s), na chamada "clica em Saiba Mais" nem sobre "cadáver". Fonte: **bruto** (o editado tem legenda gravada), só tomada limpa (sem sangue, sem cara de dor). `"inserts": [[ini, fim, "bruto.MOV", ini_no_bruto]]` no projeto.json, tempos na linha editada; o áudio do Dr. segue e a legenda fica por cima. Tomadas limpas de lábio: bruto IMG_7468 (pasta `1ThLKlDtPxMYNwWcK1RHyTPXy4MSQk4v8`): cânula de lado 14,5 a 24,5 s; agulha de perfil 99,5 a 106 s e 108,5 a 115 s.
+- **CTA final de 5 s** (obrigatório nos Ads): `python3 FEA-edicao-videos/fea_cta_masterclass.py LOGO.png FEA-edicao-videos/FEA-som-digitacao-cta.wav fonts/Montserrat-Bold.ttf FFMPEG CTA.mp4` gera o quadro off-white com a logo da masterclass (fade) e "Toque em Saiba Mais" digitado com som de digitação, medido quadro a quadro no Ads 54. Depois `fea_render_com_cta.py projeto.json CTA.mp4`.
+- Projeto de referência: `FEA-edicao-videos/FEA-projeto-ads-mpl-captacao-56-59.json`.
+
 ## Pontos para sempre levar à Keila antes de finalizar
 
 - Marcas faladas (ácido hialurônico, toxina, bioestimulador, distribuidoras). Ela aprovou manter nos lotes de setembro, mas confirmar grafia. Confirmadas: Neuramis Volume, Revanesse Kiss, Neauvia Stimulate, Yvoire Contour, Letybo, Seryntox, Vietri.

@@ -400,7 +400,7 @@ def limpar(texto):
     return texto[:1].lower() + texto[1:]
 
 
-def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
+def dialogos_linhas(camada, s, e, estilo, texto, efeito="", legenda_y=None):
     """Uma linha de texto por evento, posicionada à mão, para controlar a entrelinha."""
     partes = texto.split(r"\N")
     if estilo == "Titulo":
@@ -416,7 +416,7 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
                          f"{{\\an5\\pos({W // 2},{y + h / 2:.0f}){efeito}}}{p}\n")
             y += h
         return saida
-    base = LEGENDA_Y + 20
+    base = (legenda_y or LEGENDA_Y) + 20
     h = LEGENDA_TAM * ENTRELINHA_LEGENDA
     n = len(partes)
     return [f"Dialogue: {camada},{ts(s)},{ts(e)},Legenda,,0,0,0,,"
@@ -469,10 +469,117 @@ def formatar_titulo(v):
     return titulo
 
 
+# Estilo "ads" (anúncios de Masterclass). Keila 11/11/2026: a caixa branca + caixa preta do Ads 46
+# não se usa mais; headline "mais tecnológica", como nos criativos do Elite e da Black, na paleta da
+# masterclass: painel escuro translúcido com filete de cor no topo, sobretítulo pequeno espaçado em
+# caixa alta e a headline com a palavra-chave destacada (*entre asteriscos* no projeto.json).
+# A legenda é a mesma dos conteúdos (Reels), sem estilo próprio.
+# Medidas em px de verdade; no ASS o tamanho da fonte rende ~0,62 disso (Montserrat), por isso K.
+K_ASS = 0.6234
+ADS_PALETAS = {
+    # Masterclass em Preenchimento Labial: vermelho e petróleo da logo (medidos no CTA do Ads 54)
+    "MPL": {"painel": (6, 44, 52), "destaque": (234, 0, 55), "texto": (249, 249, 249), "sobre": (164, 190, 195)},
+}
+ADS_CARD_X0, ADS_CARD_X1, ADS_CARD_Y0 = 90, 990, 1130
+ADS_CARD_PAD, ADS_CARD_BARRA, ADS_RAIO = 44, 7, 28
+ADS_SOBRE_PX, ADS_SOBRE_ESP = 25, 0.3
+ADS_HEAD_PX, ADS_HEAD_LINHA = 84, 98
+
+
+def _largura(texto, px, peso="Bold"):
+    import os
+    from PIL import ImageFont
+    fonte = os.path.join(_FONTSDIR[0], f"Montserrat-{peso}.ttf")
+    return ImageFont.truetype(fonte, px).getlength(texto)
+
+
+_FONTSDIR = ["fonts"]
+
+
+def _fs(px):
+    return round(px / K_ASS)
+
+
+def _cor(rgb):
+    r, g, b = rgb
+    return f"&H{b:02X}{g:02X}{r:02X}&"
+
+
+def _ret_arredondado(x0, y0, x1, y1, r):
+    """Desenho ASS (\\p1) de retângulo de cantos arredondados (curvas de Bézier)."""
+    k = r * 0.5523
+    return (f"m {x0 + r} {y0} l {x1 - r} {y0} b {x1 - r + k} {y0} {x1} {y0 + r - k} {x1} {y0 + r} "
+            f"l {x1} {y1 - r} b {x1} {y1 - r + k} {x1 - r + k} {y1} {x1 - r} {y1} "
+            f"l {x0 + r} {y1} b {x0 + r - k} {y1} {x0} {y1 - r + k} {x0} {y1 - r} "
+            f"l {x0} {y0 + r} b {x0} {y0 + r - k} {x0 + r - k} {y0} {x0 + r} {y0}")
+
+
+def _linhas_headline(texto, largura):
+    ps = texto.split()
+    larg = lambda t: _largura(t.replace("*", ""), ADS_HEAD_PX, "ExtraBold")
+    if larg(texto) <= largura:
+        return [texto]
+    melhor = min(([" ".join(ps[:i]), " ".join(ps[i:])] for i in range(1, len(ps))),
+                 key=lambda ls: max(larg(l) for l in ls))
+    return melhor
+
+
+ADS_FAIXA_CY, ADS_FAIXA_ALT, ADS_FAIXA_ANG = 1470, 118, 16
+ADS_FAIXA_PX, ADS_FAIXA_VEL = 54, 50        # texto (px reais) e rolagem (px/s)
+
+
+def titulo_ads(v):
+    """Gancho dos anúncios (Keila, 11/11/2026: o cartão com "Masterclass em preenchimento labial" ficou
+    estranho; modelo que chame atenção, sem escrever a logo): duas faixas cruzadas no peito, como nos
+    criativos da Black, na paleta da masterclass. "faixas": [texto_da_vermelha, texto_da_petroleo];
+    o texto se repete e corre em sentidos opostos, 3 s, com fade."""
+    pal = ADS_PALETAS[v.get("paleta", "MPL")]
+    faixas = v.get("faixas") or [v.get("titulo", "").replace("*", "")]
+    saida = []
+    cx, cy = W // 2, ADS_FAIXA_CY
+    meia, h2 = 1500, ADS_FAIXA_ALT // 2
+    escuro = tuple(max(0, int(c * 0.55)) for c in pal["destaque"])
+    cores = [(pal["destaque"], escuro), (pal["painel"], (2, 18, 22))]
+    angulos = [-ADS_FAIXA_ANG, ADS_FAIXA_ANG]
+    for k, texto in enumerate(faixas[:2]):
+        fundo, borda = cores[k]
+        ang = angulos[k]
+        dy = 34 if k == 0 else -34          # as duas cruzam um pouco abaixo/acima do centro
+        camada_f, camada_t = 4 - 2 * k, 5 - 2 * k   # a vermelha (gancho) fica por cima no cruzamento
+        base = f"{{\\fad(150,250)\\org({cx},{cy + dy})\\frz{ang}"
+        desenho = (f"m {cx - meia} {cy + dy - h2} l {cx + meia} {cy + dy - h2} l {cx + meia} {cy + dy + h2} "
+                   f"l {cx - meia} {cy + dy + h2}")
+        saida.append(f"Dialogue: {camada_f},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
+                     f"{base}\\an7\\pos(0,0)\\1c{_cor(fundo)}\\3c{_cor(borda)}\\bord5\\shad0}}"
+                     f"{{\\p1}}{desenho}{{\\p0}}\n")
+        # a frase inteira tem que caber na parte visível da faixa (~940 px): fonte se adapta, e no meio
+        # dos 3 s a 2ª repetição fica centrada na tela (antes o gancho longo cortava nas bordas)
+        frase = texto.upper()
+        px = min(ADS_FAIXA_PX, ADS_FAIXA_PX * 860 / max(1, _largura(frase, ADS_FAIXA_PX, "ExtraBold")))
+        sep = "   \u2022   "
+        # texto simétrico (repetições iguais dos dois lados): com \\an5 a frase do meio fica sempre
+        # centrada, sem depender da largura estimada (a estimativa deslocava o gancho para a direita)
+        linha = (frase + sep) * 2 + frase + (sep + frase) * 2
+        sentido = -1 if k == 0 else 1
+        desl = sentido * ADS_FAIXA_VEL * TITULO_DUR / 2
+        saida.append(f"Dialogue: {camada_t},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
+                     f"{base}\\an5\\move({cx - desl:.0f},{cy + dy},{cx + desl:.0f},{cy + dy})"
+                     f"\\fnMontserrat ExtraBold\\fs{_fs(px)}\\fsp2\\1c{_cor(pal['texto'])}\\bord0\\shad0}}"
+                     f"{linha}\n")
+    return saida
+
+
 def gerar_ass(v, palavras, duracao, caminho):
+    ads = v.get("estilo") == "ads"
+    legenda_y = None   # anúncios usam a mesma legenda dos conteúdos (Keila, 11/11/2026)
     linhas = [ass_header()]
-    titulo = formatar_titulo(v)
-    linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
+    if ads:
+        linhas[0] = linhas[0].replace("[Events]", "Style: Caixa,Montserrat Bold,66,&H00FFFFFF,&H00FFFFFF,"
+                                      "&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,0,0,0,1\n\n[Events]")
+        linhas += titulo_ads(v)
+    else:
+        titulo = formatar_titulo(v)
+        linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
     fim_legendas = duracao
     if v.get("cartela_final"):
         ini = duracao - CARTELA_DUR
@@ -509,7 +616,7 @@ def gerar_ass(v, palavras, duracao, caminho):
                 continue
             e = min(s + minimo, fim_legendas)
             livre = e
-        linhas += dialogos_linhas(0, s, e, "Legenda", texto)
+        linhas += dialogos_linhas(0, s, e, "Legenda", texto, legenda_y=legenda_y)
     open(caminho, "w", encoding="utf-8").write("".join(linhas))
 
 
@@ -655,6 +762,7 @@ def encaixar_cortes(manter, db, passo, palavras=None):
 
 def renderizar(cfg, v, previa=False):
     ff = cfg["ffmpeg"]
+    _FONTSDIR[0] = cfg.get("fontsdir", "fonts")
     ganho = v.get("volume_db", 0)
     db_voz = perfil_voz(ff, v["entrada"], ganho_db=ganho)
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
@@ -730,9 +838,27 @@ def renderizar(cfg, v, previa=False):
             partes.append(f + f",setsar=1[v{i}_{j}]")
             vrot.append(f"[v{i}_{j}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
+    # "inserts": [[ini, fim, "bruto_do_procedimento.MOV", ini_no_bruto], ...] com ini/fim na linha do
+    # tempo JÁ EDITADA: o quadro do procedimento cobre a tela inteira enquanto o áudio do Dr. segue,
+    # e a legenda fica por cima (pedido da Keila, 11/11/2026, nos anúncios da Masterclass)
+    entradas, ultimo = [], "vc"
+    ins_f = []
+    lista_ins = v.get("inserts", [])
+    for k, (a, b, arq, src) in enumerate(lista_ins):
+        # insert seguido de outro (fim de um = início do outro): o de baixo vai até um pouco depois
+        # do início do próximo, senão escapava 1 quadro do Dr. entre os dois (Keila, 11/11/2026)
+        prox = lista_ins[k + 1][0] if k + 1 < len(lista_ins) else None
+        if prox is not None and prox - b < 0.2:
+            b = prox + 0.1
+        entradas += ["-ss", str(src), "-i", arq]   # busca rápida no bruto longo
+        ins_f.append(f"[{k + 1}:v]trim=0:{b - a},setpts=PTS-STARTPTS+{a}/TB,"
+                     f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[ins{k}];"
+                     f"[{ultimo}][ins{k}]overlay=enable='between(t,{a},{b})':eof_action=pass[vi{k}]")
+        ultimo = f"vi{k}"
     filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
-              f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+              + "".join(f + ";" for f in ins_f)
+              + f"[{ultimo}]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -748,7 +874,7 @@ def renderizar(cfg, v, previa=False):
     else:
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
