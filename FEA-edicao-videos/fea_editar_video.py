@@ -525,7 +525,7 @@ def _linhas_headline(texto, largura):
 
 
 ADS_FAIXA_CY, ADS_FAIXA_ALT, ADS_FAIXA_ANG = 1470, 118, 16
-ADS_FAIXA_PX, ADS_FAIXA_VEL = 54, 110        # texto (px reais) e rolagem (px/s)
+ADS_FAIXA_PX, ADS_FAIXA_VEL = 54, 50        # texto (px reais) e rolagem (px/s)
 
 
 def titulo_ads(v):
@@ -552,15 +552,20 @@ def titulo_ads(v):
         saida.append(f"Dialogue: {camada_f},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
                      f"{base}\\an7\\pos(0,0)\\1c{_cor(fundo)}\\3c{_cor(borda)}\\bord5\\shad0}}"
                      f"{{\\p1}}{desenho}{{\\p0}}\n")
-        unidade = texto.upper() + "   \u2022   "
-        rep = unidade * 8
-        larg_un = _largura(unidade, ADS_FAIXA_PX, "ExtraBold")
+        # a frase inteira tem que caber na parte visível da faixa (~940 px): fonte se adapta, e no meio
+        # dos 3 s a 2ª repetição fica centrada na tela (antes o gancho longo cortava nas bordas)
+        frase = texto.upper()
+        px = min(ADS_FAIXA_PX, ADS_FAIXA_PX * 860 / max(1, _largura(frase, ADS_FAIXA_PX, "ExtraBold")))
+        sep = "   \u2022   "
+        # texto simétrico (repetições iguais dos dois lados): com \\an5 a frase do meio fica sempre
+        # centrada, sem depender da largura estimada (a estimativa deslocava o gancho para a direita)
+        linha = (frase + sep) * 2 + frase + (sep + frase) * 2
         sentido = -1 if k == 0 else 1
-        x0 = cx - (0 if k == 0 else larg_un)
-        x1 = x0 + sentido * ADS_FAIXA_VEL * TITULO_DUR
+        desl = sentido * ADS_FAIXA_VEL * TITULO_DUR / 2
         saida.append(f"Dialogue: {camada_t},{ts(0)},{ts(TITULO_DUR)},Caixa,,0,0,0,,"
-                     f"{base}\\an5\\move({x0:.0f},{cy + dy},{x1:.0f},{cy + dy})\\fnMontserrat ExtraBold"
-                     f"\\fs{_fs(ADS_FAIXA_PX)}\\fsp2\\1c{_cor(pal['texto'])}\\bord0\\shad0}}{rep}\n")
+                     f"{base}\\an5\\move({cx - desl:.0f},{cy + dy},{cx + desl:.0f},{cy + dy})"
+                     f"\\fnMontserrat ExtraBold\\fs{_fs(px)}\\fsp2\\1c{_cor(pal['texto'])}\\bord0\\shad0}}"
+                     f"{linha}\n")
     return saida
 
 

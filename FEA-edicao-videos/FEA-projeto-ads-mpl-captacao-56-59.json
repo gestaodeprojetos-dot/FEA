@@ -7,7 +7,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9223.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 56 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Aula gratuita",
+   "titulo": "Sua técnica labial está atualizada?",
    "titulo_origem": "inventado",
    "parte": null,
    "cartela_final": null,
@@ -36,8 +36,8 @@
    ],
    "paleta": "MPL",
    "faixas": [
-    "Aula gratuita",
-    "Agulha e cânula"
+    "Sua técnica labial está atualizada?",
+    "Agulha ou cânula: quando usar cada uma"
    ]
   },
   {
@@ -45,7 +45,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9224.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 57 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Agulha ou cânula?",
+   "titulo": "Qual produto para cada lábio?",
    "titulo_origem": "inventado",
    "parte": null,
    "cartela_final": null,
@@ -74,8 +74,8 @@
    ],
    "paleta": "MPL",
    "faixas": [
-    "Agulha ou cânula?",
-    "Qual produto escolher?"
+    "Qual produto para cada lábio?",
+    "Mais projeção ou menos projeção?"
    ]
   },
   {
@@ -83,7 +83,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9225.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 58 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Não é tudo igual",
+   "titulo": "Você faz o mesmo lábio em todas?",
    "titulo_origem": "inventado",
    "parte": null,
    "cartela_final": null,
@@ -112,8 +112,8 @@
    ],
    "paleta": "MPL",
    "faixas": [
-    "Não é tudo igual",
-    "Agulha ou cânula"
+    "Você faz o mesmo lábio em todas?",
+    "Cada paciente pede uma técnica"
    ]
   },
   {
@@ -121,7 +121,7 @@
    "transcricao": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/tr/IMG_9226.json",
    "saida": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/out/Ads 59 - MPL.mp4",
    "estilo": "ads",
-   "titulo": "Medo da anatomia?",
+   "titulo": "Onde passa a artéria labial?",
    "titulo_origem": "inventado",
    "parte": null,
    "cartela_final": null,
@@ -161,8 +161,8 @@
    ],
    "paleta": "MPL",
    "faixas": [
-    "Medo da anatomia?",
-    "Cadáver fresco"
+    "Onde passa a artéria labial?",
+    "Anatomia em cadáver fresco"
    ]
   }
  ]
