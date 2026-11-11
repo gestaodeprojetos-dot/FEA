@@ -152,7 +152,7 @@ V = [
   [G("Você sonha com uma clínica *de alto padrão*?", "A minha trajetória"),
    C("marketing", "Marketing, vendas e *conversão*", "O que mudou", chips=["Avaliação", "Marketing", "Vendas"], dur=4.0),
    CTA("clicar"), FORM("dois"), DIAG("apto")], []),
- ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 40.84, "exato"], ["IMG_9145", 44.02, 44.7, "exato"]],
+ ("16- Aumente sua conversão em harmonização", [["IMG_9145", 0.5, 41.42, "exato"]],
   [G("Quer aumentar sua *conversão*?", "Fica neste vídeo"),
    C("metodologia", "Avaliação, marketing e *vendas*", "Pela primeira vez", dur=3.6),
    CTA("clicar"), FORM("dois"), DIAG("avaliação com")], []),
@@ -206,7 +206,9 @@ AJUSTES = {
     # trilha sofisticada e baixa (Keila 11/11): banco de músicas do HeyGen, piano e cordas
     15: {"zoom": [1.6, 0.5, 0.36], "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-f6430b0f.wav", "trilha_db": -20},
-    16: {"zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
+    # final: "completa o formulário que a gente vai te esperar" numa tacada só, com respiro de 0,8 s
+    16: {"cauda": 0.8, "remover_legenda": [["IMG_9145", 41.45, 42.0]],
+         "inserir_legenda": [["IMG_9145", 41.26, 41.4, "esperar"]], "zoom": [1.3, 0.5, 0.38], "zoom_alterna": 1.1, "cartelas_y": 175,
          "trilha": f"{T}/assets/FEA-trilha-hg-c0b952be.wav", "trilha_db": -20},
     3: {"zoom_alterna": 1.0, "remover_legenda": [["IMG_9059", 38.4, 41.68]],
         "inserir_legenda": [["IMG_9059", 41.25, 41.42, "para"], ["IMG_9059", 41.42, 41.52, "a"],

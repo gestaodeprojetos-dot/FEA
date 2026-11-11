@@ -355,7 +355,9 @@ def montar(cfg, v):
             ps[0]["ini"] = ps[0]["w"].strip()[:1].isupper() or fim_ant in ".?!"
         todas += ps
         offset += dur
-    duracao = offset
+    # "cauda": segundos de respiro no fim (imagem parada e silêncio), para o vídeo não acabar
+    # no mesmo instante da última palavra (Keila 11/11, vídeo 16: "ficou muito rápido")
+    duracao = offset + v.get("cauda", 0.0)
     base = v["saida"].rsplit(".", 1)[0]
     ass = base + ".ass"
     vv = dict(v, titulo="-")
@@ -450,8 +452,11 @@ def renderizar(cfg, v, so_legenda=False):
                       f"afade=t=in:d=0.02,afade=t=out:st={max(0, b - a - 0.03):.3f}:d=0.03[a{i}]")
         vr.append(f"[v{i}]")
         ar.append(f"[a{i}]")
-    partes.append("".join(vr) + f"concat=n={len(vr)}:v=1:a=0[vc]")
-    partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1[ac0]")
+    cauda = v.get("cauda", 0.0)
+    partes.append("".join(vr) + f"concat=n={len(vr)}:v=1:a=0" +
+                  (f",tpad=stop_mode=clone:stop_duration={cauda:.3f}" if cauda else "") + "[vc]")
+    partes.append("".join(ar) + f"concat=n={len(ar)}:v=0:a=1" +
+                  (f",apad=pad_dur={cauda:.3f}" if cauda else "") + "[ac0]")
     if trilha:
         tdb = v.get("trilha_db", cfg.get("trilha_db", -24))
         # a trilha abaixa sozinha quando o Dr. fala (sidechain) e some no fim
