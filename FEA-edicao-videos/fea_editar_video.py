@@ -806,9 +806,21 @@ def renderizar(cfg, v, previa=False):
             partes.append(f + f",setsar=1[v{i}_{j}]")
             vrot.append(f"[v{i}_{j}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
+    # "inserts": [[ini, fim, "bruto_do_procedimento.MOV", ini_no_bruto], ...] com ini/fim na linha do
+    # tempo JÁ EDITADA: o quadro do procedimento cobre a tela inteira enquanto o áudio do Dr. segue,
+    # e a legenda fica por cima (pedido da Keila, 11/11/2026, nos anúncios da Masterclass)
+    entradas, ultimo = [], "vc"
+    ins_f = []
+    for k, (a, b, arq, src) in enumerate(v.get("inserts", [])):
+        entradas += ["-ss", str(src), "-i", arq]   # busca rápida no bruto longo
+        ins_f.append(f"[{k + 1}:v]trim=0:{b - a},setpts=PTS-STARTPTS+{a}/TB,"
+                     f"scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},setsar=1[ins{k}];"
+                     f"[{ultimo}][ins{k}]overlay=enable='between(t,{a},{b})':eof_action=pass[vi{k}]")
+        ultimo = f"vi{k}"
     filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
-              f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+              + "".join(f + ";" for f in ins_f)
+              + f"[{ultimo}]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -824,7 +836,7 @@ def renderizar(cfg, v, previa=False):
     else:
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao

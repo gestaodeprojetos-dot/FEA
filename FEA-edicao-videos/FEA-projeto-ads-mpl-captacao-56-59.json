@@ -20,7 +20,21 @@
     ]
    ],
    "remover_legenda": [],
-   "correcoes": []
+   "correcoes": [],
+   "inserts": [
+    [
+     5.9,
+     7.7,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     108.5
+    ],
+    [
+     7.7,
+     9.3,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9224.MOV",
@@ -40,7 +54,21 @@
     ]
    ],
    "remover_legenda": [],
-   "correcoes": []
+   "correcoes": [],
+   "inserts": [
+    [
+     11.0,
+     12.9,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     108.5
+    ],
+    [
+     12.9,
+     14.4,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9225.MOV",
@@ -60,7 +88,21 @@
     ]
    ],
    "remover_legenda": [],
-   "correcoes": []
+   "correcoes": [],
+   "inserts": [
+    [
+     5.6,
+     7.3,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     99.5
+    ],
+    [
+     7.3,
+     8.6,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     14.6
+    ]
+   ]
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/brutos/IMG_9226.MOV",
@@ -80,7 +122,27 @@
     ]
    ],
    "remover_legenda": [],
-   "correcoes": []
+   "correcoes": [],
+   "inserts": [
+    [
+     14.6,
+     17.2,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     109.0
+    ],
+    [
+     24.4,
+     25.5,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     99.5
+    ],
+    [
+     25.5,
+     26.9,
+     "/tmp/claude-0/-home-user-FEA/4b45dd05-0fcd-5d23-8ae8-f94e33e1d588/scratchpad/labio/IMG_7468.MOV",
+     21.0
+    ]
+   ]
   }
  ]
 }
