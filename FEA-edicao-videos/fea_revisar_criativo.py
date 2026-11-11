@@ -46,6 +46,14 @@ def revisar(cfg, v):
     i = int(ini / passo)
     while i > 0 and db[i - 1] >= lim - 10:   # a 1ª sílaba costuma ser mais baixa
         i -= 1
+    j = i - 1                                  # palavra baixa antes de micropausa ("Eu... sempre")
+    while j > max(0, i - int(0.5 / passo)):
+        if db[j] >= lim and db[j - 1] >= lim - 4:
+            while j > 0 and db[j - 1] >= lim - 10:
+                j -= 1
+            i = j
+            break
+        j -= 1
     ini = i * passo
     if ini > 0.2:
         probs.append(("ERRO", f"respiro no começo: voz só aos {ini:.2f} s"))

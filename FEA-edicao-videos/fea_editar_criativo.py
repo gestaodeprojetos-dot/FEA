@@ -318,6 +318,17 @@ def montar(cfg, v):
                     # paciente" saía comido, Keila 09/11)
                     while i > i0 and db[i - 1] >= lim - 10:
                         i -= 1
+                    # palavra curta e baixa antes de uma micropausa ("Eu... sempre sonhei", Keila
+                    # 11/11 vídeo 17): até 0,5 s antes, um trecho de voz de 2+ janelas também entra
+                    j = i - 1
+                    while j > max(i0, i - int(0.5 / passo)):
+                        if db[j] >= lim and db[j - 1] >= lim - 4:
+                            k = j
+                            while k > i0 and db[k - 1] >= lim - 10:
+                                k -= 1
+                            i = k
+                            break
+                        j -= 1
                     a2 = max(a2, i * passo - 0.12)
                     break
         # pausa longa no meio da fala vira respiro curto (ritmo de anúncio)
