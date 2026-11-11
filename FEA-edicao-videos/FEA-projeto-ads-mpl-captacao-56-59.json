@@ -122,7 +122,12 @@
     ]
    ],
    "remover_legenda": [],
-   "correcoes": [],
+   "correcoes": [
+    [
+     "\\bsecções\\b",
+     "dissecções"
+    ]
+   ],
    "inserts": [
     [
      14.6,
