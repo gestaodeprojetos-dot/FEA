@@ -136,3 +136,11 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Criativos (Ads) da Masterclass em Intercorrências (MTI) (Keila, 11/11/2026)
+
+- Destino: pasta da fase (`1. CAPTAÇÃO`, `2. ANTECIPAÇÃO`, `3. LEMBRETE`, `4. VENDAS`) dentro da pasta de criativos que ela manda. Bruto de convite para a aula é **captação**. Nome segue a numeração da pasta: `Ads N - MTI.mp4` (continuar do último número).
+- **CTA de 5 s depois do vídeo** (corte seco): fundo azul-marinho, logo "MASTERCLASS EM INTERCORRÊNCIAS" e "Toque em Saiba Mais" digitando, com som de digitação. É idêntico em todos os Ads anteriores (são os últimos 5,0 s exatos de qualquer `Ads N - MTI`); recortar de um deles e recodificar em H.264 1080x1920 30 fps, AAC 192k 48 kHz estéreo, `-video_track_timescale 15360`, e colar com `fea_render_com_cta.py`.
+- Talking-head: usar `"titulo_y": 1250` no projeto.json para o título ficar na camisa e não cobrir o rosto. Título criado sem nome de produto.
+- Exemplo: `FEA-edicao-videos/FEA-projeto-mti-ads-32-33.json`.
+- **Inserts de intercorrência** (Keila, 11/11/2026): nos criativos MTI, entrar com fotos clínicas em tela cheia quando o Dr. fala de intercorrências (`"inserts": [[ini, fim, png]]`, segundos do vídeo final, ~1,2 s por foto, a seguinte começando 0,15 s antes da anterior acabar para fazer fusão). Fonte: Drive, pasta "capitudo do livro - ac hialuronico" (necrose, oclusão de glabela, recuperação pós-oclusão). Nunca usar pasta marcada "NÃO AUTORIZADO". **Tarja preta nos olhos em toda foto de paciente** (padrão dos Ads anteriores), conferida em tamanho cheio antes do render. Foto que não é 9:16 vai inteira no centro com fundo desfocado da própria foto.

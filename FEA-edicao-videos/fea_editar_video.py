@@ -18,7 +18,9 @@ O projeto.json descreve cada vídeo de saída:
       "titulo": "Planejamento full face 4mL",
       "parte": null,                            # 1, 2 ou null
       "manter": [[0.0, 12.4], [15.1, 40.0, "exato"]],  # trechos mantidos (s do bruto); "exato" = não encaixar
-      "cartela_final": null                     # ex.: "Parte 2 no perfil"
+      "cartela_final": null,                    # ex.: "Parte 2 no perfil"
+      "titulo_y": 1250,                         # opcional: centro vertical do título (padrão: meio do quadro)
+      "inserts": [[4.8, 6.0, "ins/1.png"]]      # opcional: imagem 1080x1920 em tela cheia (s do vídeo final)
     }
   ]
 }
@@ -50,6 +52,8 @@ MAX_PALAVRAS_BLOCO = 10
 ENTRELINHA_TITULO = 0.78   # linhas bem próximas, igual à referência (medido em pixels)
 ENTRELINHA_LEGENDA = 0.80  # idem, medido na referência de legenda
 PAUSA_QUEBRA = 0.45    # pausa (s) que força novo bloco de legenda
+TITULO_CY = H / 2      # centro vertical do título; "titulo_y" no projeto.json muda por vídeo
+                       # (talking-head: descer para a camisa e não cobrir o rosto, ex.: 1250)
 
 
 def ts(t):
@@ -386,7 +390,7 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA", "Masterclass", "WhatsApp"}
 
 
 def limpar(texto):
@@ -409,7 +413,7 @@ def dialogos_linhas(camada, s, e, estilo, texto, efeito=""):
             m = re.match(r"\{\\fs(\d+)\}", p)
             tams.append(int(m.group(1)) if m else TITULO_TAM)
         alturas = [t * ENTRELINHA_TITULO for t in tams]
-        y = H / 2 - sum(alturas) / 2
+        y = TITULO_CY - sum(alturas) / 2
         saida = []
         for p, h in zip(partes, alturas):
             saida.append(f"Dialogue: {camada},{ts(s)},{ts(e)},Titulo,,0,0,0,,"
@@ -470,6 +474,8 @@ def formatar_titulo(v):
 
 
 def gerar_ass(v, palavras, duracao, caminho):
+    global TITULO_CY
+    TITULO_CY = v.get("titulo_y", H / 2)
     linhas = [ass_header()]
     titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
@@ -730,9 +736,21 @@ def renderizar(cfg, v, previa=False):
             partes.append(f + f",setsar=1[v{i}_{j}]")
             vrot.append(f"[v{i}_{j}]")
     esc = ass.replace("\\", "\\\\").replace(":", "\\:").replace("'", "\\'")
-    filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc];"
+    # "inserts": [[inicio, fim, "imagem.png"], ...] em segundos do vídeo FINAL: imagem 1080x1920
+    # (já com tarja nos olhos) em tela cheia, com fade curto, por baixo do título e da legenda.
+    # O áudio do Dr. continua. Usado nos criativos da Masterclass em Intercorrências (11/11/2026).
+    inserts = v.get("inserts", [])
+    entradas_extra, sobrepor, ultimo = [], [], "[vc0]"
+    for k, (a, b, img) in enumerate(inserts, start=1):
+        entradas_extra += ["-loop", "1", "-t", f"{duracao + 1:.2f}", "-i", img]
+        sobrepor.append(f"[{k}:v]scale={W}:{H},setsar=1,format=rgba,"
+                        f"fade=t=in:st={a}:d=0.15:alpha=1,fade=t=out:st={b - 0.15}:d=0.15:alpha=1[im{k}];"
+                        f"{ultimo}[im{k}]overlay=0:0:shortest=1:enable='between(t,{a},{b})'[vi{k}]")
+        ultimo = f"[vi{k}]"
+    filtro = (";".join(partes) + ";" + "".join(vrot) + f"concat=n={len(vrot)}:v=1:a=0[vc0];"
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
-              f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
+              + "".join(x + ";" for x in sobrepor)
+              + f"{ultimo}ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
@@ -748,7 +766,7 @@ def renderizar(cfg, v, previa=False):
     else:
         codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], *entradas_extra, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
