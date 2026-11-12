@@ -147,10 +147,11 @@ def main():
     # fade, cortar ali engoliria o fim da palavra -> ERRO. Nos entregues de novembro o áudio do
     # trecho do fade já é silêncio digital, e a voz termina no máximo no primeiro quadro do fade.
     fim_voz = rc.fim_da_voz(ff, entregue, max(0.0, nq / FPS - 8), nq / FPS)
-    if fim_voz is not None and fim_voz > d + 0.02:
-        sys.exit(f"ERRO: a voz vai até {fim_voz:.2f} s e o fade começa em {d:.2f} s ({nome}): palavra dentro do fade")
-    if fim_voz is not None:
-        fim_voz = min(fim_voz, d)
+    # Se ainda há som depois do 1º quadro do fade (17-4: ~0,1 s), o áudio do entregue segue até o
+    # fim do som por baixo do último quadro estendido (tpad): nada audível é cortado. Só é ERRO se o
+    # som chega ao fim do arquivo (aí o entregue já cortava a fala).
+    if fim_voz is not None and fim_voz > nq / FPS - 0.05:
+        sys.exit(f"ERRO: a voz vai até o fim do arquivo ({fim_voz:.2f} s de {nq / FPS:.2f} s) em {nome}")
     ini_tr, pad = d - transicao, 0.0
     if fim_voz is not None and fim_voz + FOLGA_S > ini_tr:
         pad = float(np.ceil((fim_voz + FOLGA_S - ini_tr) * FPS - 1e-6) / FPS)
@@ -173,11 +174,11 @@ def main():
         # ---- áudio: entregue até o corte + CTA, com acrossfade (uma codificação AAC)
         fmt = "aformat=sample_rates=48000:channel_layouts=stereo"
         if abs(fade_in - transicao) < 1e-6:
-            fa = (f"[0:a]atrim=end={d:.6f},asetpts=PTS-STARTPTS,{fmt},apad=pad_dur={pad:.4f}[act];"
+            fa = (f"[0:a]atrim=end={d + pad:.6f},asetpts=PTS-STARTPTS,{fmt},apad=whole_dur={d + pad:.6f}[act];"
                   f"[1:a]{fmt}[acta];[act][acta]acrossfade=d={transicao}:c1=tri:c2=tri[ax]")
         else:
             ms = int(round(ini_tr * 1000))
-            fa = (f"[0:a]atrim=end={d:.6f},asetpts=PTS-STARTPTS,{fmt},apad=pad_dur={pad:.4f},"
+            fa = (f"[0:a]atrim=end={d + pad:.6f},asetpts=PTS-STARTPTS,{fmt},apad=whole_dur={d + pad:.6f},"
                   f"afade=t=out:st={ini_tr:.4f}:d={transicao}[act];"
                   f"[1:a]{fmt},afade=t=in:d={fade_in:.3f},adelay={ms}|{ms}[acta];"
                   f"[act][acta]amix=inputs=2:normalize=0:duration=longest[ax]")
