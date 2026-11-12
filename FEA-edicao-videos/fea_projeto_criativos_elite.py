@@ -171,7 +171,7 @@ V = [
    CTA("clicar"), DIAG("avaliação de diagnóstico")], []),
  ("19- A jornada do paciente começa no WhatsApp", [["IMG_9149", 0.1, 53.25, "exato"]],
   [G("A jornada do paciente *começa no WhatsApp*", "Do direct à conversão"),
-   WHATS("dificuldade", depois=5), C("captação", "Onde a venda *escapa*", "Os passos da jornada", chips=["Captação", "Avaliação", "Planejamento"], seta=True, dur=4.4),
+   WHATS("dificuldade", depois=5, y=175), C("captação", "Onde a venda *escapa*", "Os passos da jornada", chips=["Captação", "Avaliação", "Planejamento"], seta=True, dur=4.4),
    C("método", "Existe *um método*", "", dur=3.2),
    CTA("clicar"), DIAG("selecionadas")], []),
  ("20- Quase 100% de conversão, nem sempre foi assim", [["IMG_9150", 0.0, 10.95, "exato"], ["IMG_9150", 14.35, 47.62, "exato"], ["IMG_9150", 49.62, 68.6, "exato"]],
