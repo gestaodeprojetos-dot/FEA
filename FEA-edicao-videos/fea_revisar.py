@@ -386,7 +386,19 @@ def revisar(cfg, v, folhas=None, so_formato=False):
     while k < len(db) - 10 and (db[k:k + 10] >= max(lim - 4, 42)).mean() < 0.8:   # sala com ruído alto: voz baixa fica só ~8 dB acima
         k += 1
     if k * ps > 0.8:
-        erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+        # fala picada no começo ("Vamos para a técnica...", sílabas com vales de 10 a 15 dB) não
+        # passa na régua de 0,5 s de voz forte contínua: confere o ataque da voz em janelas de 10 ms
+        # (onset_voz, a mesma medição da checagem de início) antes de acusar silêncio (12/11/2026)
+        pcm0 = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", "20", "-vn", "-ac", "1",
+                               "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+        a0 = np.frombuffer(pcm0, np.int16).astype(float)
+        n0 = len(a0) // 160
+        voz0 = onset_voz(20 * np.log10(np.sqrt((a0[:n0 * 160].reshape(n0, 160) ** 2).mean(axis=1)) + 1))[0]
+        if voz0 is not None and voz0 <= 0.8:
+            aten.append(f"começo com fala picada: voz forte contínua só em {k * ps:.1f} s, mas o ataque da voz "
+                        f"é em {voz0:.2f} s (onset_voz): ouvir o primeiro segundo")
+        else:
+            erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
     # 4a. início que prende e primeira palavra inteira (Keila, 05/11/2026)
     trans_ini = json.load(open(v["transcricao"], encoding="utf-8"))
     a_ini = v["manter"][0][0]

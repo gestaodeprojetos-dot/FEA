@@ -108,7 +108,8 @@
    "manter": [
     [
      0.0,
-     98.6
+     98.9,
+     "exato"
     ]
    ],
    "correcoes": [
@@ -191,13 +192,18 @@
    "manter": [
     [
      0.4,
-     85.0
+     83.62,
+     "exato"
     ]
    ],
    "remover_legenda": [
     [
      35.0,
      36.8
+    ],
+    [
+     83.1,
+     84.1
     ]
    ],
    "correcoes": [
@@ -272,6 +278,10 @@
     [
      "\\bpós bioestimuladora?\\b",
      "pós-bioestimulador"
+    ],
+    [
+     "textura, disso",
+     "textura disso"
     ]
    ]
   }

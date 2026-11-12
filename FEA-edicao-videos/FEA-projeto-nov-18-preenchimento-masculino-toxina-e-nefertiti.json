@@ -190,14 +190,9 @@
    "fade_final": 0.3,
    "manter": [
     [
-     0.4,
-     49.85
-    ]
-   ],
-   "silenciar": [
-    [
-     49.5,
-     49.85
+     0.38,
+     47.5,
+     "exato"
     ]
    ],
    "remover_legenda": [
@@ -474,10 +469,6 @@
    "manter": [
     [
      1.6,
-     26.2
-    ],
-    [
-     39.6,
      46.25
     ]
    ],
@@ -549,6 +540,10 @@
     [
      "\\b[Cc]omunidade\\b",
      "uma unidade"
+    ],
+    [
+     "\\buma vez o falou que tem que ter uma cuidado\\b",
+     "uma vez falou que tem que ter um cuidado"
     ]
    ]
   },
