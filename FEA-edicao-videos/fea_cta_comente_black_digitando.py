@@ -30,6 +30,12 @@ Variante MTB (Masterclass em Toxina Botulínica, "Comente BOTOX", 03/11/2026):
         --logo FEA-cta-digitando/FEA-MTB-logo.png
     Logo = "logo---mtb.png" oficial (Drive 184qPwr5q6RoPz5gh5-b_Y9_cFz99WaB7), sem alteração.
     Verde #00D45A = verde de destaque das peças MTB sobre fundo preto (Ads 33 Story - MTB).
+Variante MIC (Masterclass em Intercorrências, "Comente AULA", 12/11/2026):
+    python3 fea_cta_comente_black_digitando.py FEA-CTA-digitando-comente-aula-MIC.mp4 \
+        --texto "Comente AULA" --destaque AULA --cor-destaque EDA837 \
+        --logo FEA-cta-digitando/FEA-MTI-logo.png
+    Logo = "Logo MTI 3 [Vectorized].svg" oficial (Drive 1xDGoYy_-YlFLAahkRb9vqRYiB1BbOHjg), sem
+    alteração, rasterizado em 2400 px (cairosvg). Dourado #EDA837 = dourado do próprio logo.
 Logo padrão: FEA-cta-digitando/FEA-BFV-logo-Asset15.png = "02 - LOGOTIPO/PNG/Black Vitalícia/
 BFV_Asset 15@4x.png" da pasta oficial Black Vitalícia (1s1hs4Pmy4BZCUj5q82IeUQFcDyzfipoU), sem
 redesenho e sem IA.
