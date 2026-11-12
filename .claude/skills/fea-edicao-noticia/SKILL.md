@@ -78,6 +78,8 @@ Seis brutos (IMG_7922, 7923, 7924, 7927, 7928, 7929), entrega em `11- Novembro/1
 
 **Final do vídeo** (Gabi, 10/11/2026: "o final ficou cortado, 'na sua prática cli'"): o último `manter` termina no fim de uma frase completa. Se a gravação para no meio da última palavra, cortar antes, na frase inteira anterior (ex.: "...para o bigode chinês"), e conferir o áudio dos últimos 3 s transcrevendo o trecho do MP4 final (não do bruto). O render segura o último quadro e deixa 0,4 s de respiro depois da última sílaba (`tpad` + `apad`); antes o `-shortest` cortava ~0,2 s e o vídeo terminava em "bigode chinê" (Gabi, 11/11/2026).
 
+**Chiado no bruto** (Gabi, 12/11/2026, IMG_7922: "chiado muito grande, desconfortável"): o ruído vem do próprio bruto (nas pausas, 1-6 kHz ~15 dB acima de um bruto limpo). Conferir todo bruto novo medindo o nível por banda nas pausas entre palavras; se houver chiado, ligar `"limpar_ruido": "<caminho do modelo>"` no projeto (highpass 70 Hz + RNNoise `arnndn`). Modelo: `curl -o sh.rnnn https://raw.githubusercontent.com/GregorR/rnnoise-models/master/somnolent-hogwash-2018-09-01/sh.rnnn`. O `afftdn` do ffmpeg não resolveu (não baixou nada). Depois, transcrever um trecho do MP4 final para garantir que a voz ficou clara.
+
 ## Fluxo
 
 1. Ambiente e transcrição como na skill `fea-edicao-reels` (passos 1 a 3). Se o `faster-whisper` falhar com `metadata_errors`, instalar `pip install --only-binary :all: "av>=12,<15"`.

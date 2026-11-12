@@ -244,6 +244,7 @@
         "ini": 85.5,
         "tipo": "cheio"
       }
-    ]
+    ],
+    "limpar_ruido": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/models/rnn/sh.rnnn"
   }
 }

@@ -469,6 +469,14 @@ def main():
     voz = os.path.join(tmpdir, "_voz.wav")
     subprocess.run([ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", fc_a, "-map", "[ac]",
                     "-ar", "48000", "-ac", "2", voz], check=True)
+    if v.get("limpar_ruido"):
+        # bruto com chiado de fundo (Gabi, 12/11/2026, IMG_7922: "chiado muito grande, deixa só a voz do
+        # doutor"): RNNoise (arnndn) tira o que não é fala; o modelo é baixado uma vez (ver skill)
+        limpa = os.path.join(tmpdir, "_voz_limpa.wav")
+        modelo = v["limpar_ruido"].replace("\\", "/").replace(":", "\\:")
+        subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-af", f"highpass=f=70,arnndn=m={modelo}",
+                        "-ar", "48000", "-ac", "2", limpa], check=True)
+        voz = limpa
     dr_pipe = subprocess.Popen([ff, "-v", "error", "-i", v["entrada"], "-filter_complex", fc_v, "-map", "[vc]",
                                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
 
