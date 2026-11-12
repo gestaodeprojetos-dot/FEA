@@ -25,7 +25,9 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 
 **Transição antes do CTA (05/11/2026):** a checagem `checar_emenda` roda na revisão completa e no `--so-formato`. ERRO se a emenda conteúdo->CTA for corte seco.
 
-**Sem CTA (09/11/2026, em vigor):** os conteúdos vão sem CTA até a Keila pedir de novo. Vídeo com `"sem_cta": true` (ou `"fade_final"`) não dá ERRO por falta de emenda: a revisora confere o final (respiro de 0,3 a 0,5 s depois da última fala) e o limite de 180 s vale para o vídeo inteiro.
+**CTA de volta (12/11/2026, em vigor):** os conteúdos voltam a ter CTA, `Ads 22 - MTI - CTA Comente AULA.mp4` (39,50 s) com transição de 0,5 s; vale de novo a checagem de emenda (`.emenda.json` obrigatório, sem corte seco). Em vídeo já entregue que recebeu o CTA pelo `fea_aplicar_cta_entregue.py`, rodar `--so-formato` com um projeto cujo `saida` aponta para os vídeos novos e sem `sem_cta`/`fade_final`. Os 180 s valem para o conteúdo; total acima disso sai como ATENÇÃO e entra na lista do PR.
+
+**Sem CTA (histórico, 09/11 a 12/11/2026):** os conteúdos foram sem CTA nesse período. Vídeo com `"sem_cta": true` (ou `"fade_final"`) não dá ERRO por falta de emenda: a revisora confere o final (respiro de 0,3 a 0,5 s depois da última fala) e o limite de 180 s vale para o vídeo inteiro.
 
 **Régua de voz com trecho silenciado (05/11/2026, pasta 11 de novembro):** o piso de ruído do `perfil_voz` ignora janelas de silêncio digital (trecho silenciado no render, fim mudo da cartela). Antes, 6 s silenciados derrubavam o piso do arquivo inteiro e ruído de sala virava "voz": 4 ERRO falsos de legenda atrasada no vídeo 6 com o áudio medido em 0 ms de deslocamento.
 
