@@ -797,7 +797,7 @@ def revisar_formato(ff, v, mp4, folhas=None):
         aten.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: passa de 3 min (conteúdo é o aprovado; listar para a Keila)")
     nome = os.path.basename(mp4).rsplit(".", 1)[0]
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
-    if not re.sub(r"\s+", " ", nome).replace(":", "").endswith(esperado.replace(":", "").replace("?", "")):
+    if not re.sub(r"\s+", " ", nome).replace(":", "").replace("?", "").endswith(esperado.replace(":", "").replace("?", "")):
         erros.append(f"nome do arquivo \"{nome}\" não bate com o título \"{esperado}\"")
     larg_px, n_linhas, _ = medir_titulo_px(fe.formatar_titulo(v))
     if larg_px > LARGURA_SEGURA:

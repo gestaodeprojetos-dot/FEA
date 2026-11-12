@@ -19,9 +19,19 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 **Atenção à ordem (pedido da Keila, 26/09/2026):** a imagem de títulos às vezes está na **ordem de postagem**, e não na ordem dos arquivos. Nunca casar título e vídeo só pela posição. Para cada vídeo, ler a transcrição (o que o Dr. fala e faz) e escolher o título que descreve aquele conteúdo. Montar uma tabela `arquivo -> título -> motivo (frase do Dr. que confirma)` e conferir que cada título foi usado uma vez só. A numeração da saída (`1-`, `2-`...) segue a ordem da imagem, a de postagem. Vídeos sem título correspondente, ou títulos sem vídeo, vão para a Keila decidir antes de renderizar.
 
-## SEM CTA (regra em vigor)
+## CTA Masterclass Intercorrências "Comente AULA" (regra em vigor)
 
-**Desde 09/11/2026, por enquanto, os conteúdos vão SEM CTA (Keila). Só voltar a colocar CTA quando ela pedir.** Pedido literal: "pode fazer os de hoje, mas sem cta, não precisamos mais, por enquanto".
+**Desde 12/11/2026 os conteúdos voltam a ter CTA: transição de 0,5 s mais `Ads 22 - MTI - CTA Comente AULA.mp4` (Masterclass Intercorrências: Ads 22 sem o saiba mais, seguido do card Comente AULA). Isso substitui a regra SEM CTA de 09/11.** Pedido da Keila sobre o lote das pastas 17 a 20 de novembro, entregue sem CTA: "ué, esses precisam ter o cta que criamos" (o CTA MTI foi aprovado por ela no mesmo dia: "ficou ótimo").
+
+- Arquivo: `Ads 22 - MTI - CTA Comente AULA.mp4` (Drive `16pjo1zYEkX4HbiaYWWiE7mNH-UCVK1Fv`, pasta `1m1ShWBbR_ZzuohshnPh6vDUX6FUsF9UG`, MD5 `ccbf95a05438e22700091df906e28346`), **39,50 s** (1185 quadros), 1080x1920, 30 fps, H.264 High, AAC 48 kHz. Duas partes: o criativo Ads 22 com o anúncio completo da masterclass gratuita e ao vivo, sem o pedido de "saiba mais", e o card de 5 s "Comente AULA" (`FEA-CTA-digitando-comente-aula-MIC.mp4`, Drive `1Cc9sYHbUEg078KR0Jr_mkc-KcmfDZLr1`). Mesmo padrão do MTB de novembro (Ads 12 + card). Entra **inteiro** no fim de cada conteúdo.
+- **Lote novo**: sem `sem_cta` e sem `fade_final` no projeto; render `python3 FEA-edicao-videos/fea_render_com_cta.py projeto.json "Ads 22 - MTI - CTA Comente AULA.mp4"` (transição de 0,5 s ligada por padrão). Deixar ~0,6 s de imagem real depois da última palavra no `manter`, para a transição cair em movimento e não em quadro congelado.
+- **Vídeo já entregue sem CTA** (fade_final de 0,3 s no fim): `python3 FEA-edicao-videos/fea_aplicar_cta_entregue.py FFMPEG ENTREGUE.mp4 "Ads 22 - MTI - CTA Comente AULA.mp4" SAIDA.mp4`, sem retranscrever (a legenda aprovada fica queimada como está). O script mede o fade nos quadros (luminância) e corta no último quadro antes dele, mede o fim da voz no áudio, faz a transição 0,10 s depois da última palavra (tpad clone se o respiro que sobrou for curto) e cola o CTA inteiro. Vídeo: o entregue por stream copy até o último quadro-chave antes da transição e só a cauda recodificada (x264 medium CRF 18, mesmos parâmetros), conferindo SPS/PPS, DTS crescente e framemd5; se a emenda por cópia falhar, recodifica o vídeo inteiro com CRF 16. Áudio: uma codificação AAC 192k. Grava o `.emenda.json` para a revisora. Usado nas pastas 17 a 20 de novembro (26 vídeos, 12/11/2026).
+- **Limite de 180 s vale para o conteúdo**; o total com o CTA de 39,5 s pode passar de 3 min: listar no PR e entregar mesmo assim.
+- Chamada falada pelo Dr. para outro curso, ebook, live ou "comenta X" continua saindo do conteúdo: o CTA é o da masterclass.
+
+## SEM CTA (histórico, valeu de 09/11 a 12/11/2026)
+
+**De 09/11/2026 a 12/11/2026 os conteúdos foram SEM CTA (Keila).** Pedido literal: "pode fazer os de hoje, mas sem cta, não precisamos mais, por enquanto". Substituída pela regra do CTA MTI acima.
 
 - Nada de Ads 12, cartela "Comente BOTOX" ou transição para CTA. O vídeo termina no fim do conteúdo.
 - O vídeo termina numa **frase completa do Dr.**, sem cortar a última palavra, com **~0,3 a 0,5 s de respiro** depois da fala (medir no áudio, janelas de 10 ms; o Whisper erra o fim da palavra).
@@ -29,11 +39,11 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - Se o respiro natural for curto porque a próxima fala vem colada (ou há ruído de sala logo depois), estender o `manter` e pôr o trecho depois da última palavra em `silenciar`, para o respiro ficar limpo.
 - **Fala colada sem pausa** (pasta 18 e 19 de novembro, 12/11/2026): `silenciar` só serve para a palavra seguinte que começa depois de um respiro curto. Se a fala continua sem pausa ("...refinando porque vai dar", "...essa região e eu ensino"), o mudo cai no meio da voz e a revisora acusa "voz falhando". Nesse caso, terminar na pausa real anterior (medir no áudio, janelas de 50 a 100 ms) com `"exato"` no trecho, para o `encaixar_cortes` não empurrar o fim de volta para dentro da fala. Bruto que termina colado na última palavra ("perfeito" no último quadro) também não tem respiro: terminar na frase anterior.
 - **O limite de 180 s vale para o vídeo inteiro** (não há mais CTA somando).
-- Render: `python3 FEA-edicao-videos/fea_editar_video.py projeto.json --entrega` (não usar o `fea_render_com_cta.py` enquanto a regra valer).
+- Render (quando valia): `python3 FEA-edicao-videos/fea_editar_video.py projeto.json --entrega`.
 - A revisora (`checar_final_sem_cta`) não exige `.emenda.json` em vídeo sem CTA: confere o respiro no fim (ERRO abaixo de 0,20 s, ATENÇÃO acima de 1,0 s).
 - Chamada falada pelo Dr. para curso, ebook, live, congresso ou "comenta X" também sai: sem CTA vale para a fala dele.
 
-As seções de CTA mais abaixo ficam como histórico, para quando a Keila pedir CTA de novo.
+As seções de CTA mais abaixo são o histórico dos CTAs anteriores (Black, WhatsApp, MTB); o vigente é o MTI acima.
 
 ## Padrão visual (não mudar sem pedido)
 
