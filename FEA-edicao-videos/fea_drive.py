@@ -8,6 +8,7 @@ Uso:
     python3 fea_drive.py upload PASTA_ID video1.mp4 [video2.mp4 ...] [--substituir]
     python3 fea_drive.py pasta PASTA_PAI_ID "9- Espasmos"      # imprime o ID (reaproveita se já existe)
     python3 fea_drive.py renomear ARQUIVO_ID "OK. Espasmos"
+    python3 fea_drive.py mover ARQUIVO_ID PASTA_DESTINO_ID ["novo nome.mp4"]  # sai da pasta atual
     python3 fea_drive.py testar                                 # confere chave e escopos
     python3 fea_drive.py baixar PASTA_OU_ARQUIVO_ID DESTINO     # baixa a pasta inteira (ou 1 arquivo)
     python3 fea_drive.py listar PASTA_ID                        # id | nome | MB | duração
@@ -121,6 +122,18 @@ def cmd_renomear(args):
     print(f"OK: {nome}")
 
 
+def cmd_mover(args):
+    """Move o arquivo para outra pasta (sai da pasta atual) e, se pedido, renomeia."""
+    fid, destino = args[0], args[1]
+    tk, _ = token()
+    atual = json.load(chamar(tk, "GET", f"{API}/{fid}?fields=parents,name&supportsAllDrives=true"))
+    corpo = {"name": args[2]} if len(args) > 2 else {}
+    url = (f"{API}/{fid}?supportsAllDrives=true&addParents={destino}"
+           f"&removeParents={','.join(atual.get('parents', []))}")
+    chamar(tk, "PATCH", url, corpo=corpo)
+    print(f"OK: {atual['name']} -> {args[2] if len(args) > 2 else atual['name']}")
+
+
 def filhos(tk, pasta):
     url = API + "?" + urllib.parse.urlencode({
         "q": f"'{pasta}' in parents and trashed = false", "pageSize": "1000", "orderBy": "name",
@@ -191,7 +204,7 @@ def cmd_testar(_):
 
 
 if __name__ == "__main__":
-    cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "testar": cmd_testar,
+    cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "mover": cmd_mover, "testar": cmd_testar,
             "baixar": cmd_baixar, "listar": cmd_listar}
     if len(sys.argv) < 2 or sys.argv[1] not in cmds:
         sys.exit(__doc__)

@@ -136,3 +136,14 @@ Atualizar com `python3 FEA-edicao-videos/fea_atualizar_planilha.py append ...` (
 - Transcrição sem VAD inventa "tchau"/"obrigado" em trechos silenciosos. Com VAD, palavras podem ficar "esticadas"; o script já limita a 1,2 s e quebra a legenda no início de cada frase.
 - Renderizar leva cerca de 1 min por minuto de vídeo nesta máquina (4 CPUs). Avisar a Keila do tempo estimado e usar tarefas em segundo plano.
 - Os 8 vídeos do lote "20- Full face 4mL" estão encerrados: não editar mais (pedido da Keila em 23/09/2026).
+
+## Criativos de anúncio Elite Mentoring (07/11/2026)
+
+Brutos de anúncio (roteiro "Roteiros dos criativos", Elite Mentoring) **não** seguem o padrão de procedimento: sem título de 3 s (o gancho é a fala do primeiro quadro), legenda desde o 0 s, sem CTA concatenado (o botão do anúncio é "Saiba mais"). Script: `FEA-edicao-videos/fea_editar_criativo.py` (projeto gerado por `fea_projeto_criativos_elite.py`).
+
+- Identidade Elite: fundo petróleo `#011A24`, aqua `#86F9F8`, teal `#62B9B4`; Gloock (títulos) + Urbanist (rótulos); logo horizontal no topo, barra de progresso aqua, cartelas no peito (y 1000, rosto livre), botão "SAIBA MAIS" embaixo a partir do 1º "clica/clicar".
+- Cada bruto foi gravado de improviso como criativo completo: 1 bruto = 1 vídeo; cortar gaguejos, falas de bastidor ("não precisa falar da mentoria") e repetições do CTA.
+- Keila pediu (07/11): editar **todos** os brutos, mesmo os já editados antes, e subir em **pasta nova**.
+- Gloock não tem o glifo "×": não usar em cartela.
+- **Correção de 07/11 (Keila):** o roteiro pede imagens de apoio e tela dividida; não entregar só cartelas de texto. B-roll real das pastas "B roll ..." do Drive (avaliação com luva, marcação de planejamento; sem agulha, sangue ou dor), cortes de 2 a 3 s; "B roll tiktok" é conteúdo de terceiros, não usar. Tela dividida (`"tipo": "dividida"`) no trecho do diagnóstico: Dr. em cima, "Sua venda hoje × O método" embaixo. Conversa de direct (`"tipo": "whats"`) quando ele fala de preço por mensagem.
+- **Abertura sem respiro:** o vídeo começa com o Dr. já falando (o script corta até 0,06 s antes da voz) e pausa longa no meio vira respiro curto. Antes de entregar, rodar `python3 fea_revisar_criativo.py projeto.json` (0 ERRO).
