@@ -82,6 +82,21 @@ def remapear_palavras(palavras, manter):
     """Converte tempos do bruto para a linha do tempo editada e descarta o que foi cortado."""
     saida = []
     offset = 0.0
+    # corte rápido (respiro de menos de 1 s tirado, modelo notícia): a palavra com tempo adiantado
+    # pela transcrição cai no respiro cortado, mas a voz dela está no trecho seguinte ou anterior;
+    # ela vai para o trecho mais perto em vez de sumir da legenda (Keila, 27/10/2026)
+    trechos = [(t[0], t[1]) for t in manter]
+    for p in palavras:
+        meio = (p["s"] + p["e"]) / 2
+        if any(a <= meio < b for a, b in trechos):
+            continue
+        for (a0, b0), (a1, b1) in zip(trechos, trechos[1:]):
+            if b0 <= meio < a1 and a1 - b0 < 1.0:
+                if meio - b0 < a1 - meio:
+                    p["s"], p["e"] = min(p["s"], b0 - 0.05), b0 - 0.01
+                else:
+                    p["s"], p["e"] = a1, max(p["e"], a1 + 0.05)
+                break
     for a, b in manter:
         for p in palavras:
             meio = (p["s"] + p["e"]) / 2
@@ -323,6 +338,13 @@ CORRECOES = [
     # caso a caso, em "correcoes" do vídeo (Keila pediu em 02/10; conferir o contexto).
     (r"\b([Cc]omo (?:foi|ficou|está|tá) a) parestesia\b", r"\1 anestesia"),
     (r"\bdescimento\b", "desse mento"),
+    # preenchedores labiais (26/10/2026), grafia do fabricante: Restylane Refyne e Kysse (Galderma),
+    # e.p.t.q. S100 (Jetema), Belotero Intense (Merz); o Whisper ouve "Refine", "Hestlanikis", "Epetic"
+    (r"\b(Restylane) [Rr]ef[iy]ne?\b", r"\1 Refyne"),
+    (r"\b(?:[Hh]estlanikis|[Rr]estylane [Kk]i(?:ss|s)e?)\b", "Restylane Kysse"),
+    (r"\b[Ee]\.? ?[Pp]\.? ?[Tt]\.? ?[Qq]\.?(?= ?S ?\d)", "e.p.t.q."), (r"\b[Ee]petic\b", "e.p.t.q."),
+    (r"\b(e\.p\.t\.q\.) ?S ?(\d00)\b", r"\1 S\2"),
+    (r"\b[Bb]elotero [Ii]ntense\b", "Belotero Intense"),
 ]
 
 
@@ -386,7 +408,8 @@ def pontuar(texto):
 
 NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
-                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
+                  "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Belotero", "Refyne", "Kysse", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA",
+                  "CeraVe", "Toleriane", "Dermo-Cleanser", "Bioderma", "Sensibio", "Roche-Posay"}
 
 
 def limpar(texto):

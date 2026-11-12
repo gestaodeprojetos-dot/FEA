@@ -1,0 +1,96 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto10/A38CEB72-24E3-441D-BEFD-2E593852B18F.mp4",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/dupla.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_dupla/13- A dupla que transforma a pele da noite para o dia.mp4",
+    "titulo": "A dupla que transforma a pele da noite para o dia",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "A dupla que transforma",
+      "a pele da noite para o dia"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.52,
+        9.57,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bcicaplaste?\\b",
+        "Cicaplast"
+      ],
+      [
+        "\\bvitacide?\\b",
+        "Vitacid"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt25.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 3.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt29.mp4",
+        "src": 31,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.9,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod13/png/lrp_cicaplast_b5.png",
+        "nome": "1. La Roche-Posay Cicaplast Baume B5+"
+      },
+      {
+        "ini": 5.95,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt25.mp4",
+        "src": 5.5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "2. Vitacid: uso sob prescrição médica"
+      },
+      {
+        "ini": 7.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/broll_novo/IMG_8338.MOV",
+        "src": 35,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_288.mp3",
+      "ini": 5,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    },
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/an/gel10.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    }
+  }
+}

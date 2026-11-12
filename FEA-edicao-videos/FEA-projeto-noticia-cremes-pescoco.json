@@ -1,0 +1,191 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto9/17887578-EA66-4AAF-B678-CB4149A91BD8.mp4",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/pescoco.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_pescoco/11- 3 cremes para rejuvenescer o pescoço.mp4",
+    "titulo": "3 cremes para rejuvenescer o pescoço",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "Seu pescoço está mais",
+      "envelhecido que o rosto?"
+    ],
+    "headline_fim": 3.3,
+    "manter": [
+      [
+        0.37,
+        9.87,
+        "exato"
+      ],
+      [
+        10.62,
+        12.57,
+        "exato"
+      ],
+      [
+        12.82,
+        13.97,
+        "exato"
+      ],
+      [
+        14.77,
+        16.57,
+        "exato"
+      ],
+      [
+        16.82,
+        18.02,
+        "exato"
+      ],
+      [
+        18.32,
+        30.85,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bEID REVERSE\\b",
+        "Age Reverse"
+      ],
+      [
+        "\\bIALO B5\\b",
+        "Hyalu B5"
+      ],
+      [
+        "\\bNivea celular\\b",
+        "Nivea Cellular"
+      ],
+      [
+        "\\bskin ?care\\b",
+        "skincare"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt39.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 3.4,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/isdin_age_reverse.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/lrp_hyalu_b5.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/nivea_cellular.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 8.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt37.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.38,
+        "zoom": 1.0
+      },
+      {
+        "ini": 10.1,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/isdin_age_reverse.png",
+        "nome": "1. ISDIN Age Reverse"
+      },
+      {
+        "ini": 12.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.66,
+        "zoom": 1.0
+      },
+      {
+        "ini": 14.8,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/lrp_hyalu_b5.png",
+        "nome": "2. La Roche-Posay Hyalu B5"
+      },
+      {
+        "ini": 16.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt37.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.38,
+        "zoom": 1.0
+      },
+      {
+        "ini": 18.0,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/nivea_cellular.png",
+        "nome": "3. Nivea Cellular Expert Filler"
+      },
+      {
+        "ini": 19.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724793.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 23.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt39.mp4",
+        "src": 3.5,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 25.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt35.mp4",
+        "src": 2.5,
+        "cx": 0.5,
+        "cy": 0.66,
+        "zoom": 1.0
+      },
+      {
+        "ini": 26.9,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/isdin_age_reverse.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/lrp_hyalu_b5.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod11/png/nivea_cellular.png"
+        ],
+        "numerar": true
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_471.mp3",
+      "ini": 8,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    },
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/an/gel10.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    }
+  }
+}

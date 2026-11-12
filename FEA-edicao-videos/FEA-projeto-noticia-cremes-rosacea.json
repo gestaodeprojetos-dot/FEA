@@ -1,0 +1,271 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto7/IMG_8141.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/rosacea.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_rosacea/9- 3 cremes para pacientes com rosácea.mp4",
+    "titulo": "3 cremes para pacientes com rosácea",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "3 cremes para",
+      "pacientes com rosácea"
+    ],
+    "headline_fim": 4.4,
+    "manter": [
+      [
+        1.37,
+        4.17,
+        "exato"
+      ],
+      [
+        4.37,
+        5.72,
+        "exato"
+      ],
+      [
+        5.87,
+        7.12,
+        "exato"
+      ],
+      [
+        7.42,
+        10.37,
+        "exato"
+      ],
+      [
+        10.67,
+        12.27,
+        "exato"
+      ],
+      [
+        13.17,
+        17.72,
+        "exato"
+      ],
+      [
+        18.12,
+        21.17,
+        "exato"
+      ],
+      [
+        21.42,
+        24.62,
+        "exato"
+      ],
+      [
+        24.97,
+        25.87,
+        "exato"
+      ],
+      [
+        25.97,
+        29.47,
+        "exato"
+      ],
+      [
+        30.17,
+        31.82,
+        "exato"
+      ],
+      [
+        32.72,
+        35.57,
+        "exato"
+      ],
+      [
+        35.67,
+        38.92,
+        "exato"
+      ],
+      [
+        39.02,
+        42.57,
+        "exato"
+      ],
+      [
+        42.67,
+        45.12,
+        "exato"
+      ],
+      [
+        45.27,
+        51.62,
+        "exato"
+      ],
+      [
+        51.77,
+        53.32,
+        "exato"
+      ],
+      [
+        53.47,
+        54.77,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bSensibi[lo]?\\b",
+        "Sensibio"
+      ],
+      [
+        "\\bCetafil\\b",
+        "Cetaphil"
+      ],
+      [
+        "\\bCalme Control\\b",
+        "Calm Control"
+      ],
+      [
+        "\\bEpidrate? Calme\\b",
+        "Epidrat Calm"
+      ],
+      [
+        "\\bves[íi]culazinhas\\b",
+        "vesiculazinhas"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724826.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 2.3,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/bioderma_sensibio_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/cetaphil_pro_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/epidrat_calm.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 5.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 7.7,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/bioderma_sensibio_ar.png",
+        "nome": "1. Bioderma Sensibio AR+ Creme"
+      },
+      {
+        "ini": 10.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 13.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724830.mp4",
+        "src": 3,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 17.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/pexels/p6724833.mp4",
+        "src": 3.8,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 21.5,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 24.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/cetaphil_pro_ar.png",
+        "nome": "2. Cetaphil Pro AR Calm Control"
+      },
+      {
+        "ini": 30.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/epidrat_calm.png",
+        "nome": "3. Mantecorp Epidrat Calm"
+      },
+      {
+        "ini": 32.3,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/bioderma_sensibio_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/cetaphil_pro_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/epidrat_calm.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 35.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 37.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m52407.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 40.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/stock4/m32807.mp4",
+        "src": 4,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 42.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 46.6,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/bioderma_sensibio_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/cetaphil_pro_ar.png",
+          "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/prod7/png/epidrat_calm.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 50.4,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_132.mp3",
+      "ini": 10,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    },
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/an/gel10.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto3/38FD2FA5-896D-4E60-9E8A-704B3FEF7A5E.mp4",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/novo3.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_ativos/5- Notas de 0 a 10 em ativos de skincare.mp4",
+    "titulo": "Notas de 0 a 10 em ativos de skincare",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "Notas de 0 a 10",
+      "em ativos de skincare"
+    ],
+    "headline_fim": 4.3,
+    "manter": [
+      [
+        0.46,
+        4.41,
+        "exato"
+      ],
+      [
+        5.21,
+        6.66,
+        "exato"
+      ],
+      [
+        6.91,
+        12.26,
+        "exato"
+      ],
+      [
+        12.56,
+        14.66,
+        "exato"
+      ],
+      [
+        14.86,
+        18.61,
+        "exato"
+      ],
+      [
+        18.76,
+        20.26,
+        "exato"
+      ],
+      [
+        20.51,
+        23.41,
+        "exato"
+      ],
+      [
+        23.66,
+        26.36,
+        "exato"
+      ],
+      [
+        26.56,
+        28.36,
+        "exato"
+      ],
+      [
+        28.66,
+        31.21,
+        "exato"
+      ],
+      [
+        31.41,
+        32.76,
+        "exato"
+      ],
+      [
+        32.91,
+        35.76,
+        "exato"
+      ],
+      [
+        35.86,
+        38.31,
+        "exato"
+      ],
+      [
+        38.41,
+        41.8,
+        "exato"
+      ],
+      [
+        44.91,
+        48.41,
+        "exato"
+      ],
+      [
+        48.56,
+        51.36,
+        "exato"
+      ],
+      [
+        51.56,
+        53.46,
+        "exato"
+      ],
+      [
+        53.61,
+        58.06,
+        "exato"
+      ],
+      [
+        58.21,
+        60.36,
+        "exato"
+      ],
+      [
+        60.51,
+        65.06,
+        "exato"
+      ],
+      [
+        65.71,
+        72.26,
+        "exato"
+      ],
+      [
+        72.41,
+        75.71,
+        "exato"
+      ],
+      [
+        75.91,
+        77.41,
+        "exato"
+      ],
+      [
+        77.56,
+        81.46,
+        "exato"
+      ],
+      [
+        81.56,
+        83.96,
+        "exato"
+      ],
+      [
+        84.11,
+        85.91,
+        "exato"
+      ],
+      [
+        86.61,
+        88.91,
+        "exato"
+      ],
+      [
+        89.01,
+        90.16,
+        "exato"
+      ],
+      [
+        90.31,
+        97.36,
+        "exato"
+      ],
+      [
+        97.71,
+        99.11,
+        "exato"
+      ],
+      [
+        99.21,
+        102.66,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bskin ?care\\b",
+        "skincare"
+      ],
+      [
+        "\\bNiacinamida\\b",
+        "niacinamida"
+      ],
+      [
+        "\\bGlicólico\\b",
+        "glicólico"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt22.mp4",
+        "src": 12,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 2.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt14.mp4",
+        "src": 30,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt25.mp4",
+        "src": 5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "1. Retinol: nota 8"
+      },
+      {
+        "ini": 9.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 11.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt26.mp4",
+        "src": 14,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 13.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt29.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.38,
+        "zoom": 1.0
+      },
+      {
+        "ini": 17.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt26.mp4",
+        "src": 16.5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 20.4,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 28.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt14.mp4",
+        "src": 20,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0,
+        "rotulo": "2. PDRN: nota 3"
+      },
+      {
+        "ini": 32.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt14.mp4",
+        "src": 25,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 35.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 44.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt24.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "3. Niacinamida: nota 7"
+      },
+      {
+        "ini": 48.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt19.mp4",
+        "src": 1,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 52.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt20.mp4",
+        "src": 20.5,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 54.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt22.mp4",
+        "src": 22,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 56.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 65.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 16.4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "4. Protetor solar: nota 10"
+      },
+      {
+        "ini": 67.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt16.mp4",
+        "src": 19.8,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 71.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok/tt06.mp4",
+        "src": 8.4,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 75.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 87.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt20.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0,
+        "rotulo": "5. Ácido glicólico: nota 6"
+      },
+      {
+        "ini": 91.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt21.mp4",
+        "src": 2,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 94.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt17.mp4",
+        "src": 20,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 96.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok2/tt18.mp4",
+        "src": 0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 98.4,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_623.mp3",
+      "ini": 10,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    }
+  }
+}

@@ -148,7 +148,7 @@ Profissional médico-científico, com peso de autoridade clínica. Didático mas
 4. Nunca minimizar risco de procedimento ("é fácil", "qualquer um faz").
 5. Nunca direcionar conteúdo técnico-cirúrgico para leigo (risco de auto-aplicação).
 6. Nunca usar mídia de cadáver fresco em conteúdo público sem disclaimer (público técnico fechado é permitido).
-7. **Nunca gerar imagens via IA generativa** (Imagen, NanoBanana, Midjourney, DALL-E) em entregável final. Imagem médica ou clínica exige controle editorial humano: propor designer da equipe (Gabriela Costa ou André Vivas) ou ferramentas vetoriais com curadoria humana. IA pode gerar mockup interno de planejamento, nunca output final.
+7. **Nunca gerar imagens via IA generativa** (Imagen, NanoBanana, Midjourney, DALL-E) em entregável final. Imagem médica ou clínica exige controle editorial humano: propor designer da equipe (Gabriela Costa ou André Vivas) ou ferramentas vetoriais com curadoria humana. IA pode gerar mockup interno de planejamento, nunca output final. **Exceção aprovada pela Keila (28/10/2026): B-roll de skincare gerado por IA** (HeyGen ou Higgsfield) para os vídeos do modelo notícia, porque o Dr. quer o visual exagerado de pessoa se lambuzando de creme e os bancos gratuitos não têm. Condições: só creme, espuma, sérum ou protetor sendo aplicado no rosto ou no corpo; nada de procedimento, agulha, anatomia, paciente ou imagem clínica; nunca como antes e depois nem como resultado de tratamento; sem marca na embalagem; o post é marcado como "conteúdo gerado por IA" no Instagram. Conta usada: HeyGen do Luca Yu (lucayhi@gmail.com), confirmada pela Keila.
 
 ## Identidade visual (base FEP Experience)
 

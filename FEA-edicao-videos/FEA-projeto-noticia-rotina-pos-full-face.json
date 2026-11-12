@@ -1,0 +1,258 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/bruto12/IMG_8073.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tr/rot8073.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/out_rotina/12- Rotina de skincare depois do full face.mp4",
+    "titulo": "Rotina de skincare depois do full face",
+    "titulo_origem": "inventado",
+    "estilo": "referencia",
+    "headline": [
+      "A rotina de skincare",
+      "depois do full face"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        1.62,
+        9.77,
+        "exato"
+      ],
+      [
+        10.17,
+        17.22,
+        "exato"
+      ],
+      [
+        17.47,
+        28.57,
+        "exato"
+      ],
+      [
+        28.82,
+        44.72,
+        "exato"
+      ],
+      [
+        45.52,
+        53.17,
+        "exato"
+      ],
+      [
+        54.17,
+        71.42,
+        "exato"
+      ],
+      [
+        71.72,
+        76.17,
+        "exato"
+      ],
+      [
+        76.42,
+        84.62,
+        "exato"
+      ],
+      [
+        85.02,
+        97.67,
+        "exato"
+      ],
+      [
+        98.02,
+        126.8,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\binserum\\b",
+        "em sérum"
+      ],
+      [
+        "\\bserum\\b",
+        "sérum"
+      ],
+      [
+        "\\bskin ?care\\b",
+        "skincare"
+      ],
+      [
+        "\\btá\\b",
+        "está"
+      ]
+    ],
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 6.5,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.0
+      },
+      {
+        "ini": 4.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 24.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt31.mp4",
+        "src": 47,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "Manhã"
+      },
+      {
+        "ini": 28.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 31.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt42.mp4",
+        "src": 6,
+        "cx": 0.5,
+        "cy": 0.6,
+        "zoom": 1.0,
+        "rotulo": "1. Ácido salicílico"
+      },
+      {
+        "ini": 36.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 45.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 13,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0,
+        "rotulo": "2. Niacinamida em sérum"
+      },
+      {
+        "ini": 49.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 45,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 54.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt41.mp4",
+        "src": 29,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0,
+        "rotulo": "3. Protetor solar com cor"
+      },
+      {
+        "ini": 58.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt41.mp4",
+        "src": 47,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0
+      },
+      {
+        "ini": 64.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 22,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.0,
+        "rotulo": "Noite: gel de limpeza"
+      },
+      {
+        "ini": 68.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 28,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 71.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt31.mp4",
+        "src": 50,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0,
+        "rotulo": "4. Retinol em dias alternados"
+      },
+      {
+        "ini": 76.5,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 84.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt30.mp4",
+        "src": 42,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 89.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 95.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok4/tt42.mp4",
+        "src": 13,
+        "cx": 0.5,
+        "cy": 0.6,
+        "zoom": 1.0,
+        "rotulo": "5. Hidratante"
+      },
+      {
+        "ini": 99.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt34.mp4",
+        "src": 20,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 104.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 109.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/tiktok3/tt32.mp4",
+        "src": 15.3,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.0
+      },
+      {
+        "ini": 113.0,
+        "tipo": "cheio"
+      }
+    ],
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/99580e20-9272-5851-8adf-62c2c073b7e8/scratchpad/musica/mixkit_181.mp3",
+      "ini": 20,
+      "abaixo_da_voz_db": 22,
+      "nivelar": true
+    }
+  }
+}
