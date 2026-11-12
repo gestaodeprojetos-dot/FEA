@@ -293,7 +293,7 @@ def renderizar(cfg, v, so_legenda=False):
     total = duracao + dc - xf
     mus_db = v.get("musica_db", -19)
     partes, vrot, arot = [], [], []
-    for i, (a, b) in enumerate(manter):
+    for i, (a, b) in enumerate((t[0], t[1]) for t in manter):
         partes.append(f"[0:a]atrim={a}:{b},asetpts=PTS-STARTPTS,afade=t=in:d=0.02,"
                       f"afade=t=out:st={max(0, b - a - 0.02)}:d=0.02[a{i}]")
         partes.append(f"[0:v]trim={a}:{b},setpts=PTS-STARTPTS,scale={W}:{H}:force_original_aspect_ratio=increase,"
