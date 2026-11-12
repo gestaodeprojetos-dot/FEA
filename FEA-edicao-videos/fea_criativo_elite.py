@@ -203,8 +203,9 @@ def logo(nome, larg):
     return im.resize((larg, int(im.height * larg / im.width)), Image.LANCZOS)
 
 
-def camada_video(caminho, sel, pasta_fontes):
-    """Camada fixa: degradês escuros (contraste), logotipo horizontal e data/cidade no topo."""
+def camada_video(caminho, sel, pasta_fontes, esfumado=True):
+    """Camada fixa: degradês escuros (contraste), logotipo horizontal e data/cidade no topo.
+    esfumado=False: sem os degradês de cima e de baixo (versão 2, Keila 12/11/2026)."""
     import numpy as np
     from PIL import Image, ImageDraw
     a = np.zeros(H, float)
@@ -213,16 +214,45 @@ def camada_video(caminho, sel, pasta_fontes):
     a[y < 640] = 230 * ((640 - y[y < 640]) / 640) ** 0.9
     arr = np.zeros((H, W, 4), "uint8")
     arr[..., :3] = rgb(FUNDO)
-    arr[..., 3] = a[:, None].astype("uint8")
+    arr[..., 3] = (a[:, None] if esfumado else 0 * a[:, None]).astype("uint8")
     img = Image.fromarray(arr, "RGBA")
-    lg = logo("EE_Horizontal_Principal.png", sel.get("logo_larg", 380))   # mínimo do manual: 140 px
+    # sem esfumado o topo é a parede clara: versão Granada do logotipo (manual, fundos claros)
+    selo(img, sel, pasta_fontes, claro=not esfumado)
+    img.save(caminho)
+
+
+def selo(img, sel, pasta_fontes, claro=False):
+    """Logotipo horizontal e data/cidade no topo (claro=True: versão Granada para fundo claro)."""
+    from PIL import ImageDraw
+    lg = logo("EE_Horizontal_Granada.png" if claro else "EE_Horizontal_Principal.png",
+              sel.get("logo_larg", 380))                                  # mínimo do manual: 140 px
     topo = sel.get("topo", 235)                                           # abaixo da interface do Reels
     img.alpha_composite(lg, ((W - lg.width) // 2, topo))
     d = ImageDraw.Draw(img)
     x_alt = lg.height * 0.16                     # altura de EXPERIENCE no logotipo (x do respiro)
     yy = topo + lg.height + int(2 * x_alt) + 6   # respiro de 2x
     texto_espacado(d, (W / 2, yy + 16), sel.get("data", "4 E 5 DE DEZEMBRO  ·  SÃO PAULO"),
-                   fonte(pasta_fontes, "Urbanist-500.ttf", 30), rgb(CLARO) + (255,), 30 * 0.3)
+                   fonte(pasta_fontes, "Urbanist-600.ttf" if claro else "Urbanist-500.ttf", 30),
+                   rgb(GRANADA if claro else CLARO) + (255,), 30 * 0.3)
+
+
+def cartao_print(caminho, pr):
+    """Print (ex.: insights do Instagram) como cartão com cantos arredondados e sombra suave."""
+    from PIL import Image, ImageDraw, ImageFilter
+    im = Image.open(pr["img"]).convert("RGBA")
+    larg = pr.get("larg", 900)
+    im = im.resize((larg, int(im.height * larg / im.width)), Image.LANCZOS)
+    m = Image.new("L", im.size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([0, 0, im.width - 1, im.height - 1], radius=pr.get("raio", 32), fill=255)
+    im.putalpha(m)
+    img = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    x, y = (W - im.width) // 2, pr.get("y", 900)
+    sombra = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    sm = Image.new("L", (W, H), 0)
+    sm.paste(m.point(lambda v: int(v * 0.55)), (x, y + 18))
+    sombra.putalpha(sm.filter(ImageFilter.GaussianBlur(28)))
+    img = Image.alpha_composite(img, sombra)
+    img.alpha_composite(im, (x, y))
     img.save(caminho)
 
 
@@ -240,7 +270,9 @@ def abertura(caminho, v, pasta_fontes):
         if t.width <= W * 0.84 or tam <= 70:
             break
         tam -= 4
-    img.alpha_composite(t, ((W - t.width) // 2, int(H * 0.5 - t.height / 2)))
+    img.alpha_composite(t, ((W - t.width) // 2, int(v.get("titulo_y", H * 0.5) - t.height / 2)))
+    if not v.get("esfumado", True):
+        selo(img, v.get("selo", {}), pasta_fontes)
     img.save(caminho)
 
 
@@ -284,7 +316,10 @@ def renderizar(cfg, v, so_legenda=False):
     manter = CAPTURA["manter"]
     base = os.path.dirname(v["saida"]) or "."
     over, ab, card = f"{base}/_camada.png", f"{base}/_abertura.png", f"{base}/_cartela.png"
-    camada_video(over, v.get("selo", {}), cfg["fontsdir"])
+    camada_video(over, v.get("selo", {}), cfg["fontsdir"], v.get("esfumado", True))
+    pr = v.get("print")
+    if pr:
+        cartao_print(f"{base}/_print.png", pr)
     abertura(ab, v, cfg["fontsdir"])
     cartela(v.get("cartela", {}), cfg["fontsdir"], card)
     td = fea.TITULO_DUR
@@ -306,8 +341,12 @@ def renderizar(cfg, v, so_legenda=False):
         + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1,apad=whole_dur={total:.3f}[voz];" \
         f"[vc]eq=contrast=1.04:saturation=0.95,colorbalance=rs=0.03:bs=-0.02[vg];" \
         f"[2:v]format=rgba,fade=t=in:st=0:d=0.35:alpha=1,fade=t=out:st={td - 0.2:.2f}:d=0.5:alpha=1[ab];" \
-        f"[vg][ab]overlay=0:0:eof_action=pass[vo0];" \
-        f"[vo0][1:v]overlay=0:0[vo1];" \
+        + (f"[vg][1:v]overlay=0:0[vgc];[vgc][ab]overlay=0:0:eof_action=pass[vo0];"
+           if not v.get("esfumado", True) else f"[vg][ab]overlay=0:0:eof_action=pass[vo0];") + \
+        (f"[5:v]format=rgba,fade=t=in:st={pr['ini']}:d=0.3:alpha=1,"
+           f"fade=t=out:st={pr['fim'] - 0.3}:d=0.3:alpha=1[pr];[vo0][pr]overlay=0:0:eof_action=pass[vo0p];"
+           + ("[vo0p]null[vo1];" if not v.get("esfumado", True) else "[vo0p][1:v]overlay=0:0[vo1];")
+           if pr else ("[vo0]null[vo1];" if not v.get("esfumado", True) else "[vo0][1:v]overlay=0:0[vo1];")) + \
         f"[vo1]ass='{esc}':fontsdir='{fd}',format=yuv420p[vt];" \
         f"[3:v]scale={W}:{H},zoompan=z='min(1.0+0.0007*on,1.04)':d={int(dc * 30)}:s={W}x{H}:fps=30," \
         f"format=yuv420p,setsar=1[vk];" \
@@ -321,6 +360,7 @@ def renderizar(cfg, v, so_legenda=False):
     cmd = [cfg["ffmpeg"], "-y", "-v", "error", "-i", v["entrada"], "-i", over,
            "-loop", "1", "-framerate", "30", "-t", f"{td + 0.4}", "-i", ab,
            "-loop", "1", "-t", f"{dc}", "-i", card, "-i", v["musica"],
+           *(["-loop", "1", "-framerate", "30", "-t", f"{pr['fim']}", "-i", f"{base}/_print.png"] if pr else []),
            "-filter_complex", filtro, "-map", "[vfin]", "-map", "[afin]",
            "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-profile:v", "high", "-pix_fmt", "yuv420p",
            "-r", "30", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2",

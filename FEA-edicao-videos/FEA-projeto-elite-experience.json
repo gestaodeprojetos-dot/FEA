@@ -240,7 +240,15 @@
           "(?i)\\bsaber mais\\b",
           "Saiba Mais"
         ]
-      ]
+      ],
+      "print": {
+        "img": "FEA-edicao-videos/FEA-elite-marca/FEA-print-insights-instagram.webp",
+        "ini": 0.35,
+        "fim": 2.9,
+        "y": 930,
+        "larg": 860
+      },
+      "titulo_y": 700
     },
     {
       "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9349.MOV",
@@ -361,6 +369,404 @@
           "Saiba Mais"
         ]
       ]
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9344.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9344.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 007 - Elite Experience.mp4",
+      "titulo": "Dois dias comigo em São Paulo?",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Dois dias",
+        "comigo em",
+        "São Paulo?"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.5,
+          35.825,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9345.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9345.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 008 - Elite Experience.mp4",
+      "titulo": "Meus mecanismos de vendas, ao vivo",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Meus mecanismos",
+        "de vendas,",
+        "ao vivo"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.38,
+          40.85,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9346.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9346.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 009 - Elite Experience.mp4",
+      "titulo": "Sua agenda depende de promoção?",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Sua agenda",
+        "depende de",
+        "promoção?"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.45,
+          33.75,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9347.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9347.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 010 - Elite Experience.mp4",
+      "titulo": "Como atraio pacientes pelo Instagram",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Como atraio",
+        "pacientes pelo",
+        "Instagram"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.4,
+          31.85,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "print": {
+        "img": "FEA-edicao-videos/FEA-elite-marca/FEA-print-insights-instagram.webp",
+        "ini": 0.35,
+        "fim": 2.9,
+        "y": 930,
+        "larg": 860
+      },
+      "titulo_y": 700,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9349.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9349.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 011 - Elite Experience.mp4",
+      "titulo": "Curso presencial e gratuito de dois dias",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Curso presencial",
+        "e gratuito",
+        "de dois dias"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.55,
+          26.4,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9350.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9350.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/out/Ads 012 - Elite Experience.mp4",
+      "titulo": "Dois dias de imersão comigo",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Dois dias",
+        "de imersão",
+        "comigo"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "manter": [
+        [
+          0.45,
+          34.5,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
     }
   ]
 }
