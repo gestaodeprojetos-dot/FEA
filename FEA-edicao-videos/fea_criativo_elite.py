@@ -253,30 +253,25 @@ def cartela(c, pasta_fontes, caminho):
     img.alpha_composite(vd, (-int(vd.width * 0.62), 40))
     img = veludo(img)
     d = ImageDraw.Draw(img)
-    lg = logo("EE_Vertical_Principal.png", c.get("logo_larg", 560))
-    y = 330
+    # Keila, 12/11/2026: cartela enxuta, só logotipo, data e botão "clique em saiba mais"
+    lg = logo("EE_Vertical_Principal.png", c.get("logo_larg", 640))
+    t = bloco_titulo([c.get("data", "4 e 5 de dezembro")], fonte(pasta_fontes, "Gloock-Regular.ttf", 110))
+    fb = fonte(pasta_fontes, "Urbanist-600.ttf", 38)
+    txt = c.get("cta", "CLIQUE EM SAIBA MAIS")
+    esp = 38 * 0.18
+    alt_bt = 120
+    gap1, gap2 = 130, 110                          # respiro do logo bem acima de 2x
+    total = lg.height + gap1 + t.height + gap2 + alt_bt
+    y = int((H - total) / 2) - 40
     img.alpha_composite(lg, ((W - lg.width) // 2, y))
-    y += lg.height + 120                                        # respiro bem acima de 2x
-    texto_espacado(d, (W / 2, y), c.get("rotulo", "COM DR. JOÃO PITHON"),
-                   fonte(pasta_fontes, "Urbanist-500.ttf", 30), rgb(ROSE), 30 * 0.35)
-    y += 70
-    t = bloco_titulo([c.get("data", "4 e 5 de dezembro")], fonte(pasta_fontes, "Gloock-Regular.ttf", 104))
+    y += lg.height + gap1
     img.alpha_composite(t, ((W - t.width) // 2, y))
-    y += t.height + 10
-    d.text((W / 2, y), c.get("local", "São Paulo  ·  MC Hall"), font=fonte(pasta_fontes, "Urbanist-300.ttf", 50),
-           fill=rgb(CLARO), anchor="mt")
-    y += 80
-    texto_espacado(d, (W / 2, y + 16), c.get("apoio", "PRESENCIAL E GRATUITO  ·  VAGAS POR APLICAÇÃO"),
-                   fonte(pasta_fontes, "Urbanist-500.ttf", 27), rgb(CLARO), 27 * 0.28)
-    y += 130
-    fb = fonte(pasta_fontes, "Urbanist-600.ttf", 34)
-    txt = c.get("cta", "QUERO APLICAR PARA A MINHA VAGA")
-    esp = 34 * 0.16
+    y += t.height + gap2
     lt = sum(d.textlength(ch, font=fb) for ch in txt) + esp * (len(txt) - 1)
-    lb = lt + 130
+    lb = lt + 150
     x0 = (W - lb) / 2
-    d.rounded_rectangle([x0, y, x0 + lb, y + 108], radius=54, fill=rgb(ROSE))
-    texto_espacado(d, (W / 2, y + 54), txt, fb, rgb(FUNDO), esp)
+    d.rounded_rectangle([x0, y, x0 + lb, y + alt_bt], radius=alt_bt // 2, fill=rgb(ROSE))
+    texto_espacado(d, (W / 2, y + alt_bt / 2), txt, fb, rgb(FUNDO), esp)
     img.convert("RGB").save(caminho)
 
 
