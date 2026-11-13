@@ -1,0 +1,252 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7923.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7923.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/2- 3 melhores tratamentos para a flacidez do pescoço.mp4",
+    "titulo": "3 melhores tratamentos para a flacidez do pescoço",
+    "headline": [
+      "Os 3 melhores",
+      "tratamentos para a",
+      "flacidez do pescoço"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.3,
+        13.98,
+        "exato"
+      ],
+      [
+        15.72,
+        76.74,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\b[Nn]efertite\\b",
+        "Nefertiti"
+      ],
+      [
+        "\\bsmas\\b",
+        "SMAS"
+      ],
+      [
+        "\\bnossa opinião\\b",
+        "sua opinião"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7923.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 0.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 4.0,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.15
+      },
+      {
+        "ini": 3.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c2.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 5.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7684.MOV",
+        "src": 14.5,
+        "cx": 0.6,
+        "cy": 0.55,
+        "zoom": 1.3
+      },
+      {
+        "ini": 7.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 12.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7683.MOV",
+        "src": 8.8,
+        "cx": 0.78,
+        "cy": 0.6,
+        "zoom": 1.4
+      },
+      {
+        "ini": 15.9,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 18.5,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat2/t1.png"
+      },
+      {
+        "ini": 21.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.15
+      },
+      {
+        "ini": 24.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 22.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.1
+      },
+      {
+        "ini": 27.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 45.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.1
+      },
+      {
+        "ini": 30.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 95.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.1
+      },
+      {
+        "ini": 33.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/IMG_2042.MOV",
+        "src": 55.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.1
+      },
+      {
+        "ini": 36.2,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 37.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat2/t2.png"
+      },
+      {
+        "ini": 39.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/bio4.mov",
+        "src": 7.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 42.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/bio4.mov",
+        "src": 47.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 46.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/caha3.mov",
+        "src": 12.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 48.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/caha3.mov",
+        "src": 32.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 51.7,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat2/t3.png"
+      },
+      {
+        "ini": 54.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 59.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/pesc/caha3.mov",
+        "src": 64.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 62.5,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 64.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_7683.MOV",
+        "src": 9.5,
+        "cx": 0.78,
+        "cy": 0.6,
+        "zoom": 1.4
+      },
+      {
+        "ini": 67.8,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 70.3,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/trat2/t_todos.png"
+      },
+      {
+        "ini": 73.9,
+        "tipo": "cheio"
+      }
+    ],
+    "limpar_ruido": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/models/rnn/sh.rnnn",
+    "limpar_ruido_forte": true,
+    "limpar_ruido_suave_depois": 67.65
+  }
+}

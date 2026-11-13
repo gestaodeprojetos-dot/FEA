@@ -1,0 +1,203 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7941.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7941.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/4- Os 3 melhores produtos para o bigode chinês.mp4",
+    "titulo": "Os 3 melhores produtos para o bigode chinês",
+    "headline": [
+      "Os 3 melhores",
+      "produtos para o",
+      "bigode chinês"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        6.35,
+        58.4
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\b[Tt]andel\\b",
+        "tan delta"
+      ],
+      [
+        "\\bgelinha\\b",
+        "G'"
+      ],
+      [
+        "\\b[Nn]uvia\\b",
+        "Neauvia"
+      ],
+      [
+        "\\bRestylane Define\\b",
+        "Restylane Defyne"
+      ],
+      [
+        "\\bsuco naslobial\\b",
+        "sulco nasolabial"
+      ],
+      [
+        "\\bpro\\b",
+        "para o"
+      ],
+      [
+        "\\b[Ss]ing ?derm\\b",
+        "Singderm"
+      ],
+      [
+        "\\bBio ?gelis\\b",
+        "Biogelis"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7941.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 6.35,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/IMG_8293.MOV",
+        "src": 4.0,
+        "cx": 0.55,
+        "cy": 0.6,
+        "zoom": 1.25
+      },
+      {
+        "ini": 9.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/ni.mov",
+        "src": 15.0,
+        "cx": 0.55,
+        "cy": 0.57,
+        "zoom": 1.6
+      },
+      {
+        "ini": 12.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/ni.mov",
+        "src": 72.0,
+        "cx": 0.55,
+        "cy": 0.57,
+        "zoom": 1.6
+      },
+      {
+        "ini": 17.1,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/novos/IMG_3691.MOV",
+        "src": 19.0,
+        "cx": 0.5,
+        "cy": 0.36,
+        "zoom": 1.0
+      },
+      {
+        "ini": 23.6,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/neauvia_stimulate.png",
+        "nome": "Neauvia Stimulate"
+      },
+      {
+        "ini": 25.85,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/biogelis_volume.png",
+        "nome": "Biogelis Volume"
+      },
+      {
+        "ini": 27.45,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/big/neuramis_volume.png",
+        "nome": "Neuramis Volume"
+      },
+      {
+        "ini": 28.5,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/neauvia_stimulate.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/biogelis_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/big/neuramis_volume.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 30.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/ni.mov",
+        "src": 25.0,
+        "cx": 0.55,
+        "cy": 0.57,
+        "zoom": 1.6
+      },
+      {
+        "ini": 33.3,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 42.65,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/big/restylane_defyne.png",
+        "nome": "Restylane Defyne"
+      },
+      {
+        "ini": 44.15,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png",
+        "nome": "Singderm"
+      },
+      {
+        "ini": 44.95,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/neauvia_stimulate.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/biogelis_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/big/neuramis_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/big/restylane_defyne.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png"
+        ],
+        "numerar": false
+      },
+      {
+        "ini": 46.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/ni.mov",
+        "src": 121.0,
+        "cx": 0.55,
+        "cy": 0.57,
+        "zoom": 1.6
+      },
+      {
+        "ini": 49.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/big/IMG_8293.MOV",
+        "src": 0.5,
+        "cx": 0.55,
+        "cy": 0.6,
+        "zoom": 1.25
+      },
+      {
+        "ini": 52.6,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
