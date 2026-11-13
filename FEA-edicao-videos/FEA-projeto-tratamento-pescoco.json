@@ -16,7 +16,13 @@
     "manter": [
       [
         0.3,
-        79.15
+        13.98,
+        "exato"
+      ],
+      [
+        15.72,
+        76.74,
+        "exato"
       ]
     ],
     "remover_legenda": [],
@@ -28,6 +34,10 @@
       [
         "\\bsmas\\b",
         "SMAS"
+      ],
+      [
+        "\\bnossa opinião\\b",
+        "sua opinião"
       ]
     ],
     "fundo_produto": {
@@ -234,6 +244,9 @@
         "ini": 73.9,
         "tipo": "cheio"
       }
-    ]
+    ],
+    "limpar_ruido": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/models/rnn/sh.rnnn",
+    "limpar_ruido_forte": true,
+    "limpar_ruido_suave_depois": 67.65
   }
 }

@@ -474,8 +474,23 @@ def main():
         # doutor"): RNNoise (arnndn) tira o que não é fala; o modelo é baixado uma vez (ver skill)
         limpa = os.path.join(tmpdir, "_voz_limpa.wav")
         modelo = v["limpar_ruido"].replace("\\", "/").replace(":", "\\:")
-        subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-af", f"highpass=f=70,arnndn=m={modelo}",
-                        "-ar", "48000", "-ac", "2", limpa], check=True)
+        filtro = f"highpass=f=70,arnndn=m={modelo}"
+        if v.get("limpar_ruido_forte"):
+            # chiado também durante a fala (Gabi, 13/11/2026, IMG_7923: "isola mais a voz"): segunda passada
+            # parcial do RNNoise e corte acima de 11 kHz, onde não há voz útil
+            filtro = f"highpass=f=80,arnndn=m={modelo},arnndn=m={modelo}:mix=0.7,lowpass=f=11000"
+        if v.get("limpar_ruido_suave_depois") is not None:
+            # trecho final falado baixo (pergunta de engajamento): o filtro forte apagava a voz; dali em diante
+            # passa só uma vez o RNNoise a 50%, emendado com crossfade curto
+            t = float(v["limpar_ruido_suave_depois"])
+            filtro = (f"asplit=2[f][s];[f]{filtro},atrim=0:{t + 0.05},asetpts=PTS-STARTPTS[a];"
+                      f"[s]highpass=f=80,arnndn=m={modelo}:mix=0.5,atrim={t - 0.05},asetpts=PTS-STARTPTS[b];"
+                      f"[a][b]acrossfade=d=0.1")
+            subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-filter_complex", filtro,
+                            "-ar", "48000", "-ac", "2", limpa], check=True)
+        else:
+            subprocess.run([ff, "-y", "-v", "error", "-i", voz, "-af", filtro,
+                            "-ar", "48000", "-ac", "2", limpa], check=True)
         voz = limpa
     dr_pipe = subprocess.Popen([ff, "-v", "error", "-i", v["entrada"], "-filter_complex", fc_v, "-map", "[vc]",
                                 "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], stdout=subprocess.PIPE)
