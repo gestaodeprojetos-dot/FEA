@@ -78,6 +78,15 @@ Evento novo sem lançamento anterior parecido: montar a partir do briefing e diz
 - **Copys:** copiar do lançamento base, trocar datas pelo mesmo número de dias antes da live (marcar em amarelo), deixar preço e oferta antigos em azul até a oferta nova existir, aplicar "para", sem travessão. Conferir **cabeçalho de cada mensagem** (dia da semana, data, hora) contra o texto ("amanhã", "é hoje") e contra a planilha de disparos.
 - **Criativos estáticos:** trocar só o datado (data, dia, "pela primeira vez"). Erro pequeno de legenda não justifica reeditar.
 - **Criativos em vídeo de edição anterior:** trocar o cartão final pelo cartão atual da pasta (achar o início do cartão pela luminância), cortar falas datadas ou de mecânica antiga ("comente 0903", "comenta camada"), terminar em frase completa. Falar "imersão" pode. Conferir com OCR quadro a quadro e transcrição final antes de subir. Numerar a partir do maior `Ads N` da pasta.
+- **Traduzir vídeo de anúncio para LATAM (Keila, 13/11/2026: "pegar o arquivo bruto, dublar e depois legendar"):** nunca dublar o editado com legenda em português gravada na imagem, porque cobrir a legenda deixa tarja. Caminho padrão:
+  1. Achar os brutos no Drive do produto (`4. Tráfego / 1. CRIATIVOS / 1. Brutos ...`).
+  2. Ligar cada editado ao bruto dele pela transcrição (faster-whisper).
+  3. Remontar a mesma edição a partir do bruto, sem legenda, título nem cartão. Os cortes saem do casamento de quadros e palavras; os brutos MOV de câmera sem tag de rotação levam `transpose=1`; gravação de tela vai para 886x1920.
+  4. Dublar no HeyGen (`precision`, Spanish).
+  5. Transcrever o áudio dublado e aplicar o título traduzido e a legenda em espanhol.
+  6. Anexar o cartão final em espanhol (3 s).
+
+  Scripts de referência: `cutmap.py`, `segs.py`, `mkclean.py` e `build2.py` (pasta `olh_vid` do scratchpad da sessão do Ebook Olheiras LATAM).
 - **Doc de informações do ingresso** (para a automação): evento, palavra-chave, arte do ingresso (link do arquivo, não da pasta), presente (link do vídeo; conferir título pelo oEmbed do YouTube), data com o dia da semana certo, link da aula (redirecionamento da live certa), início dos disparos, data de teste em dia útil.
 
 ## 5. Registrar material (planilha de links úteis)
