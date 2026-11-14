@@ -54,6 +54,7 @@ Se a mensagem é ambígua e a escolha muda o resultado (por exemplo, qual link �
 
 **Planilhas compartilhadas da equipe:**
 - Criativos para Tráfego `1Uj9doFiSNDTOn9z3weT83NdQHvEB-y3e` (aba do mês, uma linha por fase apontando para a pasta).
+- **Criativos para Tráfego - Perpétuo** `11ErrlqpqoSE2a3e0kX1PWhRacc7pFDC1` (1. Gestão FEA / 14. Tráfego): é a planilha de tráfego de todo **perpétuo** (ebooks, CTX, CPX, PLX), abas `Perpétuo - BRASIL` e `Perpétuo - LATAM`, uma linha por campanha (Status, Campanha, Fase, Legenda, Link de Criativos, Páginas, Links Úteis). **Nunca criar planilha de tráfego separada para perpétuo** (Keila, 14/11/2026: "não é essa planilha, nada a ver"). O .xlsx tem extensões que o openpyxl apaga ao salvar: editar o XML da aba direto (zip sem entradas de pasta, `zip -X -D`) e conferir o `modifiedTime` antes de subir.
 - Disparos - João Pithon `1GMOXAPAiPi8I1YBZIP3EC8Fii0lX-2wc`: **a equipe monta; eu não incluo, apago nem mudo status sem pedido explícito** (Keila, 11/11/2026). Erro ou falta: só reportar.
 - Links de redirecionamento `1BRUUiY-mkjiMftOiF93G4shX1OpPemo2ScLgNL7fOsk`.
 
