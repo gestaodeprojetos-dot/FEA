@@ -111,6 +111,8 @@ Tudo o que a Keila ou a equipe manda (copy, arte, link de grupo, webhook, lista 
 
 ## 8. Armadilhas já vividas
 
+- **Nunca mover planilha** (Keila, 14/11/2026), de nenhum time e por nenhum motivo, nem pedir a alguém que mova: pode quebrar integrações (formulário, webhook, Listboss, automações). Planilha fora do Drive da empresa vai para a tarefa da Gabi de cobrar os times, e o time dono decide como resolver. Planilha nova nasce dentro da pasta do lançamento no Drive da empresa.
+
 - `python3 - <<'EOF' </dev/null` não roda nada: o `</dev/null` substitui o heredoc. Usar arquivo `.py` e `python3 arquivo.py </dev/null`.
 - `cat > /dev/null` sem entrada trava o comando.
 - Docs API dá 403 com esta chave: editar Google Doc por ida e volta em `.docx` (`trocar_texto_doc`), e cada ida e volta **duplica comentários abertos** (fechar as cópias).

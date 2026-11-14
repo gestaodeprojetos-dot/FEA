@@ -54,7 +54,7 @@ Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras du
    - comentar atribuído ao responsável o que foi encontrado e onde;
    - registrar na planilha de links úteis o que estava só no Drive.
 
-   Se havia cobrança errada, o comentário reconhece o engano. Arquivo fora do Drive da empresa (Drive pessoal) não conta como entregue: a planilha de lançamento precisa estar obrigatoriamente dentro da pasta do lançamento no workspace da empresa (Keila, 14/11/2026), então abrir tarefa para mover.
+   Se havia cobrança errada, o comentário reconhece o engano. Planilha fora do Drive da empresa (Drive pessoal): registrar no relatório e na tarefa da Gabi de cobrança das planilhas (a planilha precisa estar no Drive da empresa, Keila, 14/11/2026). **Nunca mover planilha, nem pedir a alguém que mova** (Keila, 14/11/2026: mover pode interferir nas integrações). Quem resolve é o time dono da planilha.
 
    Só depois dessa conferência, sem nada encontrado, a tarefa pode ser cobrada.
 7. **Vencidas, só na rodada das 7h52** (Keila, 20/10/2026: cobrar 1 vez por dia, nunca 2). Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. Antes de comentar, ler os comentários e não cobrar se já houver cobrança de hoje (minha ou da ronda antiga). As rodadas das 11h52 e das 16h52 **não cobram**: só recebem entregas, conferem, passam o bastão e mudam para `atrasado` o que venceu, sem comentar.
