@@ -42,10 +42,25 @@ Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras du
 3. **Status da tarefa-mãe (setor) acompanha o andamento** (Keila, 12/11/2026). Se qualquer subtarefa de um setor (Gestão, Copy, Design, Webdesigner, Automação, Tráfego, Suporte) já andou (`fazendo`, `em revisão`, `em ajuste`, `aprovado` ou `feito`), a tarefa-mãe vai para `fazendo`, nunca fica em `a fazer`. Conferir em toda rodada, em todas as sprints das pastas de lançamento ativas, com `FEA-gestao-clickup/fea_status_maes.py (com --dry para simular)` ou o mesmo critério. A mãe só vai para `feito` pela Keila.
 4. **Passagem de bastão.** Quando uma tarefa vira `aprovado` ou `feito`, procurar a próxima da corrente (Gestão → Copy → Design → Web → Automação → Tráfego) que depende dela e comentar lá, atribuindo o comentário ao responsável: "A etapa anterior foi aprovada: [link]. Pode seguir, o prazo é dd/mm."
 5. **Antes de cobrar, conferir se a tarefa tem o que a pessoa precisa** (Keila, 06/11/2026: "como ele vai fazer se não tem informação?"). Descrição vazia, sem copy, sem título, sem vídeo ou sem pasta: **não marcar `atrasado` e não cobrar**. Primeiro procurar o material no Drive e na planilha de links úteis e completar a descrição (aí o prazo recomeça, no mínimo próximo dia útil). Se não existir, deixar em `a fazer` e listar para a Keila como "falta informação". Tarefa que depende de insumo de outra pessoa (títulos da social media, print, copy) também não é cobrada de quem executa.
-6. **Vencidas, só na rodada das 7h52** (Keila, 20/10/2026: cobrar 1 vez por dia, nunca 2). Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. Antes de comentar, ler os comentários e não cobrar se já houver cobrança de hoje (minha ou da ronda antiga). As rodadas das 11h52 e das 16h52 **não cobram**: só recebem entregas, conferem, passam o bastão e mudam para `atrasado` o que venceu, sem comentar.
-7. **Vence amanhã.** Subtarefa aberta com prazo no próximo dia útil: um lembrete por tarefa, só na rodada das 7h52.
-8. **Sem prazo ou sem responsável.** Não inventar: listar no relatório para a Keila decidir. Se houver padrão na skill `fea-distribuir-datas`, sugerir a data.
-9. **Relatório para a Keila** no fim da rodada, curto e em português:
+6. **Antes de cobrar, marcar `atrasado` ou virar a tarefa de sprint, procurar a entrega fora do ClickUp** (Keila, 14/11/2026). A equipe às vezes entrega sem comentar na tarefa e sem atualizar a planilha. Erro já cometido: em 13/11 cobrei a IAutomate pela planilha de respostas e pelo formulário de matrícula da BF Vitalícia, que já estavam publicados e registrados na planilha de links úteis desde 06/11.
+
+   Conferir sempre nos dois lugares:
+   1. **Planilha de links úteis do lançamento**, na aba da área (GERAL para formulário, planilha, lista, webhook; COPY; ARTES; WEB DESIGNER; TRÁFEGO). Procurar pelo nome da tarefa e por palavras-chave (respostas, matrícula, compradores, formulário).
+   2. **Drive do lançamento:** a pasta de `Pasta para salvar:` da tarefa e a pasta da área (AUTOMAÇÃO, COPY, ARTES, TRÁFEGO). Listar a pasta e olhar arquivos criados ou alterados depois do início da tarefa. Página ou formulário: abrir a URL pública.
+
+   Achou a entrega:
+   - conferir (abre, está no lugar certo, está funcionando: formulário publicado, planilha recebendo respostas);
+   - mudar para `aprovado` (ou `em revisão` quando a Keila precisa dar o ok de conteúdo);
+   - comentar atribuído ao responsável o que foi encontrado e onde;
+   - registrar na planilha de links úteis o que estava só no Drive.
+
+   Se havia cobrança errada, o comentário reconhece o engano. Arquivo fora do Drive da empresa (Drive pessoal) não conta como entregue: a planilha de lançamento precisa estar obrigatoriamente dentro da pasta do lançamento no workspace da empresa (Keila, 14/11/2026), então abrir tarefa para mover.
+
+   Só depois dessa conferência, sem nada encontrado, a tarefa pode ser cobrada.
+7. **Vencidas, só na rodada das 7h52** (Keila, 20/10/2026: cobrar 1 vez por dia, nunca 2). Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. Antes de comentar, ler os comentários e não cobrar se já houver cobrança de hoje (minha ou da ronda antiga). As rodadas das 11h52 e das 16h52 **não cobram**: só recebem entregas, conferem, passam o bastão e mudam para `atrasado` o que venceu, sem comentar.
+8. **Vence amanhã.** Subtarefa aberta com prazo no próximo dia útil: um lembrete por tarefa, só na rodada das 7h52.
+9. **Sem prazo ou sem responsável.** Não inventar: listar no relatório para a Keila decidir. Se houver padrão na skill `fea-distribuir-datas`, sugerir a data.
+10. **Relatório para a Keila** no fim da rodada, curto e em português:
    - O que andou: entregue, aprovado, passado adiante.
    - O que voltou para ajuste.
    - O que está atrasado, com o responsável e há quantos dias.
@@ -57,16 +72,17 @@ Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras du
 
 Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/2026). Antes de virar, receber as entregas comentadas até a hora da virada.
 
-1. Toda subtarefa da sprint atual que não esteja em `feito` vai para a sprint seguinte. Se a sprint seguinte não existir, criar no padrão de nome da pasta, de segunda a sexta, nunca passando da data do evento.
-2. Como o ClickUp não move subtarefa sozinha, recriar na sprint seguinte, dentro da tarefa-mãe da mesma área (criar a mãe se não existir, com as datas da sprint):
+1. Antes de virar qualquer tarefa, fazer a conferência do item 6 (planilha de links úteis e Drive): o que já foi entregue vai para `aprovado` e não vira.
+2. Toda subtarefa da sprint atual que não esteja em `feito` vai para a sprint seguinte. Se a sprint seguinte não existir, criar no padrão de nome da pasta, de segunda a sexta, nunca passando da data do evento.
+3. Como o ClickUp não move subtarefa sozinha, recriar na sprint seguinte, dentro da tarefa-mãe da mesma área (criar a mãe se não existir, com as datas da sprint):
    - mesmo nome, responsável, status e descrição;
    - novo prazo no mesmo dia da semana da semana seguinte, sem passar da data do evento;
    - se a tarefa estava `atrasado`, o prazo vai para segunda às 18h.
 
    Depois arquivar a original (`task.archive`). Arquivar dá para desfazer; apagar, nunca.
-3. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
-4. **Nunca arquivar sprint encerrada** (Keila, 05/11/2026): as sprints passadas ficam visíveis na pasta até o fim do lançamento. O arquivamento é de tudo de uma vez, quando o lançamento acabar, e só com o ok da Keila. A bagunça que ela quer evitar são as pastas de lançamentos futuros, não as sprints antigas.
-5. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
+4. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
+5. **Nunca arquivar sprint encerrada** (Keila, 05/11/2026): as sprints passadas ficam visíveis na pasta até o fim do lançamento. O arquivamento é de tudo de uma vez, quando o lançamento acabar, e só com o ok da Keila. A bagunça que ela quer evitar são as pastas de lançamentos futuros, não as sprints antigas.
+6. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
 
 ## Material recebido vai para a planilha de links úteis (Keila, 29/10/2026)
 
