@@ -209,8 +209,10 @@ def checar_numero_unidade(legendas):
                 erros.append(f"[{s:5.1f}s] \"{t}\": bloco começa com a unidade sozinha, sem o número")
             else:
                 aten.append(f"[{s:5.1f}s] \"{t}\": bloco começa com \"{primeira}\": conferir se o número ficou no bloco anterior")
+        # contagem com pausa longa entre os blocos ("três" ... 4 s depois "e duas aqui", pasta 7 de
+        # dezembro) não é quantidade partida: "1 e meio" é falado de uma vez, sem pausa
         elif num_antes and primeira.lower() in ("e", "vírgula", "meio", "meia") and len(ps) > 1 and \
-                (fe.eh_unidade(ps[1]) or fe.eh_numero(ps[1])):
+                (fe.eh_unidade(ps[1]) or fe.eh_numero(ps[1])) and s - legendas[k - 1][1] < 1.5:
             erros.append(f"[{s:5.1f}s] \"{ant[-1]}\" | \"{t}\": quantidade partida entre dois blocos")
         # quantidade quebrada entre as 2 linhas do mesmo bloco também não pode
     return erros, aten
@@ -597,6 +599,23 @@ def revisar(cfg, v, folhas=None, so_formato=False):
         for m in re.finditer(rx, frase):
             trecho = frase[max(0, m.start() - 40):m.end() + 30].replace("\n", " ")
             aten.append(f"fala mantida \"...{trecho}...\": {motivo}")
+
+    # 7b. demonstração anunciada (Keila, 16/11/2026): quando o Dr. anuncia um gesto ("olha que
+    # musculatura forte", "olha aqui", "vê como", "repara"), o gesto mostrado (apertar a testa, paciente
+    # contraindo, resultado) aparece INTEIRO logo depois; corte até 3 s depois do anúncio = ATENÇÃO
+    # (conferir nos quadros que o gesto terminou antes do corte).
+    seq = [w for w in palavras if any(a <= (w["s"] + w["e"]) / 2 < b for a, b in manter)]
+    for i, w in enumerate(seq):
+        par = " ".join(re.sub(r"[^\wà-ú]", "", x["w"].lower()) for x in seq[i:i + 2])
+        if not re.match(r"^(olha|olhe|olhem|vê|veja|vejam|repara|reparem|observa|observem)\b", par):
+            continue
+        fim_seg = next((b for a, b in manter if a <= w["s"] < b), None)
+        if fim_seg is not None and fim_seg - w["s"] <= 3.0:
+            idx = [b for _, b in manter].index(fim_seg)
+            ultimo = idx == len(manter) - 1
+            aten.append(f"demonstração anunciada \"{par}\" em {w['s']:.1f}s do bruto e corte em {fim_seg:.1f}s "
+                        f"({fim_seg - w['s']:.1f} s depois){' no fim do vídeo' if ultimo else ''}: conferir nos quadros "
+                        "que o gesto mostrado aparece inteiro antes do corte")
 
     # 8. folha de contato para a revisão visual
     if folhas:
