@@ -590,6 +590,17 @@ def revisar(cfg, v, folhas=None, so_formato=False):
         if a2 - b1 > 6:
             aten.append(f"corte de {a2 - b1:.0f} s no bruto ({b1:.1f}s a {a2:.1f}s): o Dr. estava parado? se fazia técnica, devolver")
 
+    # 6c. demonstração anunciada (Keila 16/11/2026): "olha que musculatura forte", "olha aqui", "vê como",
+    # "repara": o gesto mostrado (apertar a testa, contrair, mostrar o resultado) tem que aparecer inteiro.
+    # Todo fim de trecho até 3 s depois dessas palavras vai para conferência nos quadros.
+    anuncio = re.compile(r"^(olha|olhe|olhem|olhando|vê|veja|vejam|repara|reparem|vendo)\b", re.I)
+    for a1, b1 in manter:
+        for w in palavras:
+            if b1 - 3.0 <= w["s"] < b1 and anuncio.match(w["w"].strip().strip(",.?!")):
+                aten.append(f"corte em {b1:.2f}s do bruto {b1 - w['s']:.1f} s depois de \"{w['w'].strip()}\" "
+                            "(demonstração anunciada): conferir nos quadros se o gesto aparece inteiro")
+                break
+
     # 7. falas que as regras mandam cortar
     texto_mantido = [(w["s"], w["w"]) for w in palavras if any(a <= (w["s"] + w["e"]) / 2 < b for a, b in manter)]
     frase = " ".join(w for _, w in texto_mantido).lower()
