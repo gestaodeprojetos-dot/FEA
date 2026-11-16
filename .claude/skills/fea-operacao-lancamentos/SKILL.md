@@ -41,14 +41,14 @@ Se a mensagem é ambígua e a escolha muda o resultado (por exemplo, qual link �
 | Pessoa | Papel | ID |
 |---|---|---|
 | Keila | gestora, decide e marca feito | 99934269 |
-| Gabriela Borges | assistente de projetos | 118026144 |
+| Gabriela Borges | assistente de projetos; **Zoom das lives desde 16/11/2026** (criar sala, link e conferir no dia) | 118026144 |
 | Adriane Möbbs (Adri/Dri) | copy | 55090440 |
 | Matheus van der Ham | copy (par da Adri) | 82063965 |
 | Leo Quirino | design, criativos | 44232914 |
 | André Vivas | páginas e redirecionamentos (WordPress/Elementor) | 81993945 |
 | Equipe IAutomate (Júlio Couto) | automação, Send Flow, Active, webhooks | 194479496 |
 | Matheus Saar | tráfego, UTMs, campanhas | 82024913 |
-| Graziele | suporte, Zoom | 44313083 |
+| Graziele | suporte (o Zoom passou para a Gabi em 16/11/2026) | 44313083 |
 
 **Drive:** lançamentos de 2026 em `18ZDI9-zJwkiO7eCPyjJ-Og6gv5hLCFYH` (pastas numeradas: `8. MASTERCLASS INTERCORRÊNCIAS 11/26`, `9. MASTERCLASS PREENCHIMENTO LABIAL 11/26`, `10. ELITE EXPERIENCE 12/26`).
 

@@ -228,6 +228,7 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 | Conteúdo médico e científico | Francine Almeida e equipe médica |
 | Comercial e vendas | Sabrina Ullrich |
 | Suporte do aluno | Graziele Almeida |
+| Zoom das lives (criar sala, link, conferir no dia) | Gabriela Borges (desde 16/11/2026, antes era a Grazi) |
 | Eventos presenciais | Erika Cabral (freela) |
 | RH e financeiro | Leticia Moura |
 
