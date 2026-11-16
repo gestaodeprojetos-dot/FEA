@@ -1,0 +1,876 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9431.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9431.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/1- Planejamento Nefertiti.mp4",
+   "titulo": "Planejamento Nefertiti",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     11.75,
+     64.2,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     27.9,
+     31.8
+    ]
+   ],
+   "silenciar": [
+    [
+     63.98,
+     64.3
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9432.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9432.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/2- Glabela.mp4",
+   "titulo": "Glabela",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.22,
+     47.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ],
+   "silenciar": [
+    [
+     47.4,
+     47.75
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9433.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9433.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/3- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     13.4,
+     54.2,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9435.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9435.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/4- Não tenha medo do nasal.mp4",
+   "titulo": "Não tenha medo do nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.62,
+     25.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ],
+   "silenciar": [
+    [
+     1.62,
+     1.93
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9434.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9434.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/5- Nefertiti.mp4",
+   "titulo": "Nefertiti",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.1,
+     6.8,
+     "exato"
+    ],
+    [
+     50.62,
+     92.15,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/b/c26/IMG_9430.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/tr/IMG_9430.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/11513900-9d42-5ada-b11b-c53c45095ed3/scratchpad/out/n26/6- Planejamento da glabela e do frontal.mp4",
+   "titulo": "Planejamento da glabela e do frontal",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.9,
+     21.95,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ],
+   "remover_legenda": []
+  }
+ ]
+}

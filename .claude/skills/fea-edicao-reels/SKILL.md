@@ -29,6 +29,13 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **Limite de 180 s vale para o conteúdo**; o total com o CTA de 39,5 s pode passar de 3 min: listar no PR e entregar mesmo assim.
 - Chamada falada pelo Dr. para outro curso, ebook, live ou "comenta X" continua saindo do conteúdo: o CTA é o da masterclass.
 
+## ESTOQUE dez/jan SEM CTA (Keila, 16/11/2026)
+
+Lote de estoque para dezembro e a 1ª semana de janeiro: vídeos **sem CTA** (fade_final 0,3, `sem_cta`), prontos para receber o CTA depois com `fea_aplicar_cta_entregue.py`. Conteúdo de **no máximo 135 s** (para caber qualquer CTA sem passar de 3:00). **Abrir com o Dr. já falando**: a voz começa entre 0,25 e 0,60 s (mirar 0,40 s, `fea_revisar.onset_voz`); bruto que começa no meio da fala abre na próxima frase técnica forte. Aprendido nas pastas 25 a 27 de novembro:
+- **Conferir duplicata entre pastas brutas antes de editar** (MD5 pelo `fea_drive.py md5`): o IMG_9409 da pasta "2mL e botox" era o mesmo arquivo da pasta "Fios filler pálpebra inferior", já entregue por outra sessão como "24-".
+- **Não silenciar som de fala no fim para ganhar respiro**: a revisora acusa "voz falhando" se o bruto tem voz forte na janela muda (pasta 26, vídeo 3: o mudo caía no começo da palavra seguinte). Terminar na pausa real anterior com `"exato"`; mudo no fim só sobre ruído fraco.
+- Medir o fim de cada vídeo no áudio (janelas de 10 a 50 ms) antes do render: o `encaixar_cortes` deixava respiro de 0,07 a 0,19 s em 6 de 8 vídeos.
+
 ## SEM CTA (histórico, valeu de 09/11 a 12/11/2026)
 
 **De 09/11/2026 a 12/11/2026 os conteúdos foram SEM CTA (Keila).** Pedido literal: "pode fazer os de hoje, mas sem cta, não precisamos mais, por enquanto". Substituída pela regra do CTA MTI acima.
