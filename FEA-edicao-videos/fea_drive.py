@@ -150,6 +150,11 @@ def baixar_arquivo(tk, fid, destino, tamanho=None, tentativas=5):
         try:
             with chamar(tk, "GET", f"{API}/{fid}?alt=media&supportsAllDrives=true", cabecalhos=h) as r, \
                     open(tmp, "ab") as f:
+                # o Drive às vezes ignora o Range e devolve o arquivo inteiro (200 em vez de 206):
+                # anexar duplicava o começo (16/11/2026: 473 MB de 255 MB). Recomeça do zero.
+                if feito and r.status != 206:
+                    f.truncate(0)
+                    f.seek(0)
                 while True:
                     bloco = r.read(1024 * 1024)
                     if not bloco:
