@@ -95,7 +95,20 @@
      "\\bpara região\\b",
      "para a região"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.0,
+    "cortes_s_do_entregue": [
+     [
+      112.1,
+      140.93333333333334
+     ]
+    ],
+    "voz_s": 0.44,
+    "total_s": 154.73
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3180.MOV",
@@ -182,7 +195,15 @@
      "\\bPróscero\\b",
      "Prócero"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.36666666666666664,
+    "cortes_s_do_entregue": [],
+    "voz_s": 0.37,
+    "total_s": 93.13
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3181.MOV",
@@ -282,7 +303,40 @@
      "\\b02 mL\\b",
      "0,2 mL"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.0,
+    "cortes_s_do_entregue": [
+     [
+      23.866666666666667,
+      28.4
+     ],
+     [
+      48.4,
+      63.6
+     ],
+     [
+      79.1,
+      91.2
+     ],
+     [
+      115.0,
+      128.6
+     ],
+     [
+      150.5,
+      157.9
+     ],
+     [
+      164.9,
+      167.53333333333333
+     ]
+    ],
+    "voz_s": 0.4,
+    "total_s": 156.63
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3182.MOV",
@@ -381,7 +435,15 @@
      "\\bcontour\\b",
      "Contour"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.5666666666666667,
+    "cortes_s_do_entregue": [],
+    "voz_s": 0.35,
+    "total_s": 89.33
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3183.MOV",
@@ -474,7 +536,8 @@
      "\\bvenhas\\b",
      "veinhas"
     ]
-   ]
+   ],
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3184.MOV",
@@ -582,7 +645,15 @@
      "\\bsupercilho\\b",
      "supercílio"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.4,
+    "cortes_s_do_entregue": [],
+    "voz_s": 0.36,
+    "total_s": 95.17
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3186.MOV",
@@ -679,7 +750,8 @@
      "superior à força",
      "superior a força"
     ]
-   ]
+   ],
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/b1cb8e9f-80d4-51cf-91d3-1cacdc30fc50/scratchpad/b/c3/IMG_3188.MOV",
@@ -762,7 +834,15 @@
      "\\bpara região\\b",
      "para a região"
     ]
-   ]
+   ],
+   "ajuste_16_11_2026": {
+    "fonte": "vídeo entregue com CTA (fea_recortar_entregue.py)",
+    "inicio_cortado_s": 0.36666666666666664,
+    "cortes_s_do_entregue": [],
+    "voz_s": 0.36,
+    "total_s": 86.83
+   },
+   "cta": "Ads 22 - MTI - CTA Comente AULA.mp4 (aplicado em 12/11/2026 pelo fea_aplicar_cta_entregue.py)"
   }
  ]
 }
