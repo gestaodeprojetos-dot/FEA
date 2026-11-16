@@ -1,0 +1,674 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/b8/IMG_9115.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/tr/IMG_9115.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d8/1- Técnica da coroa sem Wi-Fi.mp4",
+   "titulo": "Técnica da coroa sem Wi-Fi",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.333,
+     13.2,
+     "exato"
+    ],
+    [
+     16.225,
+     55.4,
+     "exato"
+    ],
+    [
+     59.4,
+     93.17,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Aa] gente tá acostumado com essa fala\\b",
+     "ela já tá acostumada com essa fala"
+    ],
+    [
+     "\\b[Ww]i ?-[Ff]i(zinho)?\\b",
+     "Wi-Fi\\1"
+    ],
+    [
+     "\\bconstituição molhada\\b",
+     "reconstituição molhada"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_9116p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_9116p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d8/2- Orbiculares.mp4",
+   "titulo": "Orbiculares",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.233,
+     12.275,
+     "exato"
+    ],
+    [
+     13.97,
+     24.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Aa] gente tá acostumado com essa fala\\b",
+     "ela já tá acostumada com essa fala"
+    ],
+    [
+     "\\b[Ww]i ?-[Ff]i(zinho)?\\b",
+     "Wi-Fi\\1"
+    ],
+    [
+     "\\bconstituição molhada\\b",
+     "reconstituição molhada"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_9117p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_9117p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d8/3- Nasal forte.mp4",
+   "titulo": "Nasal forte",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     17.325,
+     "exato"
+    ],
+    [
+     29.125,
+     89.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Aa] gente tá acostumado com essa fala\\b",
+     "ela já tá acostumada com essa fala"
+    ],
+    [
+     "\\b[Ww]i ?-[Ff]i(zinho)?\\b",
+     "Wi-Fi\\1"
+    ],
+    [
+     "\\bconstituição molhada\\b",
+     "reconstituição molhada"
+    ]
+   ]
+  }
+ ]
+}

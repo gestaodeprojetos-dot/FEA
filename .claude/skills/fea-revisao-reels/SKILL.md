@@ -66,6 +66,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 13 | Corte no respiro, sem pedaço de palavra | voz dos dois lados do ponto, no bruto | ATENÇÃO (ouvir) |
 | 14 | Só corta quando o Dr. não está fazendo nada: técnica sem fala fica | trecho de mais de 8 s sem fala (conferir se é parado ou técnica) e total cortado do bruto | ATENÇÃO |
 | 14b | Vídeo não pode ficar picotado: técnica cortada é reprovação | proporção do bruto mantida (abaixo de 60% = conferir cada corte nos quadros) | ATENÇÃO |
+| 14c | **Demonstração anunciada aparece inteira** (Keila 16/11/2026): depois de "olha que musculatura forte", "olha aqui", "vê como", "repara", o gesto mostrado (apertar a testa, paciente contraindo, resultado) não pode ser cortado no meio | corte do `manter` até 3 s depois da palavra de anúncio (checagem 7b); conferir nos quadros | ATENÇÃO |
 | 15 | Cortar espelho, "fecha o olho", conversa pessoal e histórico da paciente, dor e medo fora de contexto técnico, falas que atacam colegas | palavras-chave nas falas mantidas | ATENÇÃO |
 | 16 | Tudo que dá errado sai: sangue escorrendo, agulha estourando, intercorrência | folha de contato (visual) | revisão visual |
 | 17 | Cara ou gemido de dor: cortar, silenciar ou dar zoom | folha de contato e som sem fala | revisão visual |
