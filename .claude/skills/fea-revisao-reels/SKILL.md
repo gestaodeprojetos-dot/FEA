@@ -53,6 +53,7 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 6c | Nenhuma palavra falada faltando na legenda (buraco = fora de sincronia) | palavras da legenda contra palavras faladas nos trechos mantidos (mínimo 90%) | ERRO |
 | 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
 | 6e | **Número e unidade juntos** (Keila 05/10, pasta 2 vídeo 2): "0,3 mL", "1,5 mL", "dois mL", "meio mL", "1 e meio mL", "duas unidades", "20 mg" nunca em blocos diferentes nem em linhas diferentes do mesmo bloco; bloco nunca começa com a unidade sozinha ("mL de lido"); o número entra junto com a fala, nunca antes | blocos e linhas do .ass (`checar_numero_unidade`); sincronia ouvindo cada quantidade | ERRO |
+| 6e' | Contagem com pausa longa ("três" e, 4 s depois, "e duas aqui") não é quantidade partida: a checagem só vale com menos de 1,5 s entre os blocos (pasta 7 de dezembro) | `checar_numero_unidade` | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
 | 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |
