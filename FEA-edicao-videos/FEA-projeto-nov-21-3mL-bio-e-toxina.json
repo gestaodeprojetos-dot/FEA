@@ -1,0 +1,2450 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9361.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9361.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/1- Planejamento bioestimulador.mp4",
+   "titulo": "Planejamento bioestimulador",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.15,
+     38.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.0,
+     0.45
+    ],
+    [
+     37.84,
+     38.3
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9363.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9363.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/2- Hidroxiapatita para face.mp4",
+   "titulo": "Hidroxiapatita para face",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.333,
+     8.9,
+     "exato"
+    ],
+    [
+     20.275,
+     80.3,
+     "exato"
+    ],
+    [
+     105.4,
+     143.15,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9364.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9364.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/3- PLLA para face lateral.mp4",
+   "titulo": "PLLA para face lateral",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     6.467,
+     52.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     16.61,
+     18.2
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9354.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9354.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/4- Planejamento toxina Nefertiti.mp4",
+   "titulo": "Planejamento toxina Nefertiti",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.633,
+     44.32,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     43.92,
+     44.32
+    ]
+   ],
+   "remover_legenda": [
+    [
+     43.85,
+     44.9
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9365.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9365.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/5- Aplicação Nefertiti.mp4",
+   "titulo": "Aplicação Nefertiti",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.7,
+     15.4,
+     "exato"
+    ],
+    [
+     33.6,
+     123.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     123.35,
+     123.75
+    ]
+   ],
+   "mover_palavra": [
+    [
+     115.82,
+     121.72
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9367.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9367.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/6- Orbiculares avançado.mp4",
+   "titulo": "Orbiculares avançado",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.067,
+     53.0,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9368.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9368.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/7- Por que ninguém paralisa o nasal dela?.mp4",
+   "titulo": "Por que ninguém paralisa o nasal dela?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.933,
+     34.82,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.6,
+     0.97
+    ],
+    [
+     34.5,
+     34.82
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9355.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9355.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/8- Planejamento 3mL.mp4",
+   "titulo": "Planejamento 3mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.767,
+     28.45,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9356p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9356p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/9- Anestesia sem dor.mp4",
+   "titulo": "Anestesia sem dor",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     53.22,
+     "exato"
+    ],
+    [
+     65.67,
+     115.35,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     115.07,
+     115.37
+    ]
+   ],
+   "mover_palavra": [
+    [
+     65.31,
+     65.8
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9357.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9357.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/10- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.333,
+     22.375,
+     "exato"
+    ],
+    [
+     24.775,
+     57.5,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9358.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9358.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/11- Bigode chinês.mp4",
+   "titulo": "Bigode chinês",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.133,
+     6.525,
+     "exato"
+    ],
+    [
+     17.15,
+     45.65,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     34.06,
+     38.4
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9359p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9359p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/12- Mento com cânula.mp4",
+   "titulo": "Mento com cânula",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     38.4,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b21/IMG_9360.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9360.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n21/13- Volumax na mandíbula.mp4",
+   "titulo": "Volumax na mandíbula",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.8,
+     35.1,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Bb]iogeli[sz]\\b",
+     "Biogelis"
+    ],
+    [
+     "\\b[Mm] face\\b",
+     "hemiface"
+    ],
+    [
+     "\\b[Ff]arm[ae]sthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b02 para 03 m[lL]\\b",
+     "0,2 para 0,3 mL"
+    ],
+    [
+     "\\b04 no mento\\b",
+     "0,4 no mento"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Pp]iscos\\b",
+     "pescoço"
+    ],
+    [
+     "\\bhiper ?diluíd([oa])\\b",
+     "hiperdiluíd\\1"
+    ],
+    [
+     "\\bhiper ?diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bhomogenizar\\b",
+     "homogeneizar"
+    ],
+    [
+     "\\bpoli[ae]?lil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpolialil[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22G de 70 mm"
+    ],
+    [
+     "\\b[Aa] base que a gente fez\\b",
+     "a SANEP que a gente fez"
+    ],
+    [
+     "\\b[Gg]anha mais\\b",
+     "doía mais"
+    ],
+    [
+     "\\bpara parte\\b",
+     "para a parte"
+    ],
+    [
+     "\\bpara face\\b",
+     "para a face"
+    ],
+    [
+     "\\blateral a linha\\b",
+     "lateral à linha"
+    ],
+    [
+     "\\bBiogelis volume\\b",
+     "Biogelis Volume"
+    ],
+    [
+     "\\b[Ss]orrir, morde\\b",
+     "sorri, morde"
+    ],
+    [
+     "\\bpara comissura\\b",
+     "para a comissura"
+    ],
+    [
+     "\\b[Cc]om produto rende\\b",
+     "como o produto rende"
+    ]
+   ],
+   "silenciar": [
+    [
+     34.8,
+     35.1
+    ]
+   ]
+  }
+ ]
+}
