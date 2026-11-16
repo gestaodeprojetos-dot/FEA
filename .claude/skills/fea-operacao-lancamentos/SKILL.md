@@ -94,6 +94,14 @@ Evento novo sem lançamento anterior parecido: montar a partir do briefing e diz
 
 Tudo o que a Keila ou a equipe manda (copy, arte, link de grupo, webhook, lista e tags do Active, planilha de respostas, Zoom, redirecionamento, checkout) vai na hora para a aba certa: GERAL, COPY, ARTES, WEB DESIGNER ou TRÁFEGO. Usar `editar_xlsx` (confere `modifiedTime` antes de subir), hiperlink com o nome do arquivo, nunca apagar linha. Linha com recado meu desatualizado: avisar, não sobrescrever sem ok.
 
+**Planilha de links úteis sempre completa (Keila, 16/11/2026: "precisam ter todas as informações certinhas, vi que você não está preenchendo tudo").** Ao montar ou adaptar um lançamento, varrer o Drive inteiro do lançamento e preencher toda linha cujo material já exista. Nenhuma célula de link fica vazia: o que ainda não existe leva "(a criar: responsável, prazo dd/mm)", tirado da tarefa do ClickUp, e o que não vale para a edição leva "(não se aplica nesta edição)". Conferir de novo a cada entrega.
+
+**Planilha de tráfego sempre atualizada (Keila, 16/11/2026: "SEMPRE atualiza a planilha de tráfego").** Todo lançamento ou perpétuo com criativo pronto entra na planilha compartilhada Criativos para Tráfego (perpétuo na Criativos para Tráfego - Perpétuo), na aba do mês da fase: uma linha por fase com status, data, link da legenda, link da pasta da fase e a planilha de links úteis na primeira linha. Se a aba do mês não existir, criar no padrão da anterior (edição do XML, `zip -X -D`). Criativo novo, pasta trocada ou data mudada: atualizar na mesma hora, sem esperar pedido.
+
+**Criativo que não pode ir para o ar fica fora da pasta de criativos (Keila, 16/11/2026).** Original com data antiga (depois de adaptado) e criativo com preço que não vale na edição saem de CRIATIVOS PRONTOS e vão para `4. TRÁFEGO/BRUTOS/FORA DO TRÁFEGO (não usar nos anúncios)`. Não apagar e não deixar pasta "NÃO USAR" dentro da pasta de criativos: na pasta de criativos só fica o que o tráfego pode subir.
+
+**Dar check no que o Claude fez (Keila, 16/11/2026).** Tarefa do ClickUp cuja entrega o próprio Claude fez e que está comprovada no Drive (ex.: adaptação de criativos de edição anterior) vai para `feito` com comentário da evidência. Entrega da equipe continua na regra da ronda (`aprovado`, e `feito` só pela Keila); copy e conteúdo continuam esperando o ok dela.
+
 ## 6. Testar página e fluxo (ponta a ponta)
 
 1. `curl` da página: HTTP 200, data e dia da semana certos, formulário presente.
