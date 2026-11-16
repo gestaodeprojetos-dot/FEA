@@ -611,8 +611,12 @@ def revisar(cfg, v, folhas=None, so_formato=False):
 # Início que prende (Keila e quem posta os vídeos, 05/11/2026): "tô cortando uns começos porque está
 # meio ruim o início, às vezes ele demora para falar, ou não está iniciando num momento que prende";
 # e a Keila: "você tem cortado um pouco as palavras no começo dos vídeos".
-INICIO_MIN_S = 0.30      # voz antes disso = primeira palavra cortada (a edição mira 0,40 s)
-INICIO_MAX_S = 1.5       # voz depois disso = o Dr. demora para falar
+INICIO_MIN_S = 0.25      # voz antes disso = primeira palavra cortada (Keila 16/11/2026: mirar 0,25 a 0,40 s)
+INICIO_MAX_S = 1.5       # voz depois disso = o Dr. demora para falar (ATENÇÃO, regra de 05/11)
+# Keila, 16/11/2026 ("o dr não inicia falando, precisa iniciar falando, não ter um silêncio na hora
+# que ele fala"): o vídeo abre já com o Dr. falando. Voz depois de 0,60 s do primeiro quadro = ERRO.
+# A edição mira o começo 0,25 a 0,40 s antes do ataque da voz.
+INICIO_ERRO_S = 0.60
 AQUECIMENTO = ["deixa eu ver", "deixa eu", "vamos lá", "vamos ver", "olha só", "então", "bom", "ó",
                "pronto", "beleza", "ok", "ah", "hum", "bora"]
 
@@ -668,8 +672,9 @@ def checar_inicio(ff, mp4, transcrever=True, palavras=None):
     elif voz < INICIO_MIN_S:
         erros.append(f"início: a voz começa em {voz:.2f} s, primeira palavra cortada (mínimo {INICIO_MIN_S:.2f} s; "
                      "a edição deixa 0,40 s antes do ataque da voz)")
-    elif voz > INICIO_MAX_S:
-        aten.append(f"início: o Dr. demora {voz:.2f} s para falar (máximo {INICIO_MAX_S} s): começar mais perto da fala")
+    elif voz > INICIO_ERRO_S:
+        erros.append(f"início: a voz começa em {voz:.2f} s, silêncio antes do Dr. falar (máximo {INICIO_ERRO_S:.2f} s; "
+                     "Keila, 16/11/2026: o vídeo abre já com o Dr. falando, começar 0,25 a 0,40 s antes da voz)")
     if palavras is None and transcrever:
         palavras = primeiras_palavras(ff, mp4)
     texto = " ".join(palavras or [])
@@ -793,8 +798,10 @@ def revisar_formato(ff, v, mp4, folhas=None):
         erros.append("áudio tem que ser AAC 48 kHz")
     if not re.search(r"(29\.9\d|30) fps", err):
         erros.append("vídeo tem que ser 30 fps")
+    # Keila, 16/11/2026 ("o vídeo 1 deu 3 min e 4, não pode"): o TOTAL com CTA nunca passa de 3:00
     if dur > LIMITE_S + 0.05:
-        aten.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: passa de 3 min (conteúdo é o aprovado; listar para a Keila)")
+        erros.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: total passa de 3:00 (Keila, 16/11/2026: "
+                     "total com CTA nunca acima de 180 s; cortar generoso, meta 2:30 a 2:45)")
     nome = os.path.basename(mp4).rsplit(".", 1)[0]
     esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
     if not re.sub(r"\s+", " ", nome).replace(":", "").replace("?", "").endswith(esperado.replace(":", "").replace("?", "")):
