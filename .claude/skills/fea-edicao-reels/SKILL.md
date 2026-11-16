@@ -40,6 +40,11 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **Conferir duplicata entre pastas brutas antes de editar** (MD5 pelo `fea_drive.py md5`): o IMG_9409 da pasta "2mL e botox" era o mesmo arquivo da pasta "Fios filler pálpebra inferior", já entregue por outra sessão como "24-".
 - **Não silenciar som de fala no fim para ganhar respiro**: a revisora acusa "voz falhando" se o bruto tem voz forte na janela muda (pasta 26, vídeo 3: o mudo caía no começo da palavra seguinte). Terminar na pausa real anterior com `"exato"`; mudo no fim só sobre ruído fraco.
 - Medir o fim de cada vídeo no áudio (janelas de 10 a 50 ms) antes do render: o `encaixar_cortes` deixava respiro de 0,07 a 0,19 s em 6 de 8 vídeos.
+- **Bruto que termina colado na última fala** (pasta 29 de novembro, vídeos 4 e 5): sem quadro depois da voz não há respiro; terminar na contagem ou frase anterior com pausa real.
+- **Contagem de unidades ("uma... uma... uma")**: o Whisper estica e desloca cada "uma" e a legenda sai sem voz (ERRO). Achar as rajadas de voz no áudio (janelas de 50 ms, acima de -40 dB) e mover cada palavra para a sua rajada no JSON da transcrição. "uma," sozinha num bloco some da legenda (é palavra de ligação); escrever "uma." quando ela é a contagem inteira (pasta 29, vídeos 3 e 5).
+- **Bruto sem áudio** (IMG_8999, pasta "3mL": -91 dB do começo ao fim): não entra; avisar a Keila no PR.
+- **Pedido de "reação/antes e depois primeiro" na imagem de títulos** (dezembro 1, comissura): `manter` com o trecho do resultado primeiro e o procedimento depois.
+- **Abertura vs. sangue**: gaze encharcada ou filete escorrendo logo depois de um corte interno também sai; conferir os quadros a 10 fps nos 0,5 s depois de cada emenda (pasta 28, vídeo 4: a gaze ainda aparecia no 1º quadro do trecho seguinte).
 
 ## SEM CTA (histórico, valeu de 09/11 a 12/11/2026)
 
