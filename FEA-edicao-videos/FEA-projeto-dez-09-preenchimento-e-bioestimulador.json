@@ -3,299 +3,9 @@
  "fontsdir": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/b9/IMG_8718.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/tr/IMG_8718.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/1- Biofiller com aminoácidos.mp4",
-   "titulo": "Biofiller com aminoácidos",
-   "titulo_origem": "inventado",
-   "parte": null,
-   "cartela_final": null,
-   "sem_cta": true,
-   "fade_final": 0.3,
-   "manter": [
-    [
-     2.3,
-     25.8,
-     "exato"
-    ],
-    [
-     33.525,
-     40.525,
-     "exato"
-    ],
-    [
-     74.2,
-     87.467,
-     "exato"
-    ]
-   ],
-   "correcoes": [
-    [
-     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
-     "pertuito\\1"
-    ],
-    [
-     "\\b(\\w+) -(se|la|lo)\\b",
-     "\\1-\\2"
-    ],
-    [
-     "\\bpra\\b",
-     "para"
-    ],
-    [
-     "\\bpro\\b",
-     "para o"
-    ],
-    [
-     "\\bPro\\b",
-     "Para o"
-    ],
-    [
-     "\\bPra\\b",
-     "Para"
-    ],
-    [
-     "\\bHidroxapatita",
-     "Hidroxiapatita"
-    ],
-    [
-     "\\bhidroxapatita",
-     "hidroxiapatita"
-    ],
-    [
-     "\\b([Pp])ara gente\\b",
-     "\\1ara a gente"
-    ],
-    [
-     "\\b[Hh]umanidade\\b",
-     "uma unidade"
-    ],
-    [
-     "\\b(?:a )?[Aa]pitose\\b",
-     "a ptose"
-    ],
-    [
-     "\\b[Pp]itose\\b",
-     "ptose"
-    ],
-    [
-     "\\bpré ?-?ter[çcs]a(is|l)\\b",
-     "pré-tarsa\\1"
-    ],
-    [
-     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
-     "pertuito"
-    ],
-    [
-     "\\bcem por cento\\b",
-     "100%"
-    ],
-    [
-     "\\bpara região\\b",
-     "para a região"
-    ],
-    [
-     "\\b[Mm]aciater\\b",
-     "masseter"
-    ],
-    [
-     "\\b[Mm]asseter(?:e)?\\b",
-     "masseter"
-    ],
-    [
-     "\\b[Pp]rédio\\b",
-     "pré-jowl"
-    ],
-    [
-     "\\b[Mm]andíbulo\\b",
-     "mandíbula"
-    ],
-    [
-     "\\b[Ss]ingderm\\b",
-     "Singderm"
-    ],
-    [
-     "\\bfazer o que\\?",
-     "fazer o quê?"
-    ],
-    [
-     "\\b02 ?m[lL]\\b",
-     "0,2 mL"
-    ],
-    [
-     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
-     "Hyafilia"
-    ],
-    [
-     "\\bUFACE\\b",
-     "full face"
-    ],
-    [
-     "\\bsuco nasolabial\\b",
-     "sulco nasolabial"
-    ],
-    [
-     "\\b[Tt]indle\\b",
-     "Tyndall"
-    ],
-    [
-     "\\bsapatita\\b",
-     "hidroxiapatita"
-    ],
-    [
-     "\\bhiper diluída\\b",
-     "hiperdiluída"
-    ],
-    [
-     "\\b[Pp]icadinho\\b",
-     "picadinha"
-    ],
-    [
-     "\\bG linha\\b",
-     "G'"
-    ],
-    [
-     "\\bde gelinha\\b",
-     "de G'"
-    ],
-    [
-     "\\b(\\d+) ?ml\\b",
-     "\\1 mL"
-    ],
-    [
-     "\\bum ml\\b",
-     "1 mL"
-    ],
-    [
-     "\\bda sacovinha\\b",
-     "dessa covinha"
-    ],
-    [
-     "\\belas tem\\b",
-     "elas têm"
-    ],
-    [
-     "\\bfica, mais fácil\\b",
-     "fica mais fácil"
-    ],
-    [
-     "\\b[Ss]orrent\\b",
-     "sorri"
-    ],
-    [
-     "\\bé uma setter\\b",
-     "é o masseter"
-    ],
-    [
-     "\\bpertudes\\b",
-     "pertuitos"
-    ],
-    [
-     "\\b[Uu]ma Uma\\b",
-     "uma, uma"
-    ],
-    [
-     "\\b[Uu]ma Um unidade\\b",
-     "uma, uma unidade"
-    ],
-    [
-     ", Uma\\b",
-     ", uma"
-    ],
-    [
-     ", Picadinha\\b",
-     ", picadinha"
-    ],
-    [
-     "\\. maravilha\\b",
-     ", maravilha"
-    ],
-    [
-     "\\bno meio E\\b",
-     "no meio e"
-    ],
-    [
-     "\\b[Nn]uvia\\b",
-     "Neauvia"
-    ],
-    [
-     "\\bBDD\\b",
-     "BDDE"
-    ],
-    [
-     "\\bbagente\\b",
-     "agente"
-    ],
-    [
-     "\\banestesihei\\b",
-     "anestesiei"
-    ],
-    [
-     "\\bpolietileno glicol\\b",
-     "polietilenoglicol"
-    ],
-    [
-     "\\bL -prolina\\b",
-     "L-prolina"
-    ],
-    [
-     "\\bautoimune\\b",
-     "autoimunes"
-    ],
-    [
-     "\\b22G 70 ?mm\\b",
-     "22x70"
-    ],
-    [
-     "\\b[Hh]idroxapatita\\b",
-     "hidroxiapatita"
-    ],
-    [
-     "\\btempra\\b",
-     "têmpora"
-    ],
-    [
-     "\\b[Ee]sculptor\\b",
-     "Sculptra"
-    ],
-    [
-     "\\bpolilático\\b",
-     "poli-L-lático"
-    ],
-    [
-     "\\bpoliel[ií]?l?ático\\b",
-     "poli-L-lático"
-    ],
-    [
-     "\\b[Pp]redio\\b",
-     "pré-jowl"
-    ],
-    [
-     "\\bzygomático\\b",
-     "zigomático"
-    ],
-    [
-     "\\bdivulcionar\\b",
-     "divulsionar"
-    ],
-    [
-     "\\bregulazinha\\b",
-     "reguazinha"
-    ],
-    [
-     "\\b0 ,2\\b",
-     "0,2"
-    ],
-    [
-     "\\bbiofiller\\b",
-     "biofiller"
-    ]
-   ]
-  },
-  {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8734p.mov",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8734p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/2- Preenchimento de têmpora.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/1- Preenchimento de têmpora.mp4",
    "titulo": "Preenchimento de têmpora",
    "titulo_origem": "inventado",
    "parte": null,
@@ -595,7 +305,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8735p.mov",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8735p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/3- Comissura labial e pré-jowl.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/2- Comissura labial e pré-jowl.mp4",
    "titulo": "Comissura labial e pré-jowl",
    "titulo_origem": "inventado",
    "parte": null,
@@ -880,7 +590,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8736p.mov",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8736p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/4- Preenchimento de glabela com cânula.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/3- Preenchimento de glabela com cânula.mp4",
    "titulo": "Preenchimento de glabela com cânula",
    "titulo_origem": "inventado",
    "parte": null,
@@ -1165,7 +875,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/b9/IMG_8739_8740.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/tr/IMG_8739_8740.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/5- Bioestimulador no pescoço.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/4- Bioestimulador no pescoço.mp4",
    "titulo": "Bioestimulador no pescoço",
    "titulo_origem": "inventado",
    "parte": null,
@@ -1455,7 +1165,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8742p.mov",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8742p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/6- Planejar junto com o paciente.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/5- Planejar junto com o paciente.mp4",
    "titulo": "Planejar junto com o paciente",
    "titulo_origem": "inventado",
    "parte": null,
@@ -1735,7 +1445,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/b9/IMG_8744.MOV",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/tr/IMG_8744.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/7- Crown lifting com bioestimulador.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/6- Crown lifting com bioestimulador.mp4",
    "titulo": "Crown lifting com bioestimulador",
    "titulo_origem": "inventado",
    "parte": null,
@@ -1745,7 +1455,7 @@
    "manter": [
     [
      30.933,
-     63.733,
+     63.42,
      "exato"
     ]
    ],
@@ -2015,7 +1725,7 @@
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8745p.mov",
    "transcricao": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/pad/IMG_8745p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/8- Full face com 6mL.mp4",
+   "saida": "/tmp/claude-0/-home-user-FEA/af529b60-9221-5244-96ad-255bd5758afc/scratchpad/out/d9/7- Full face com 6mL.mp4",
    "titulo": "Full face com 6mL",
    "titulo_origem": "inventado",
    "parte": null,
@@ -2025,12 +1735,12 @@
    "manter": [
     [
      0.033,
-     22.025,
+     21.07,
      "exato"
     ],
     [
-     70.07,
-     86.55,
+     69.77,
+     87.12,
      "exato"
     ]
    ],
@@ -2294,12 +2004,6 @@
     [
      "\\bbiofiller\\b",
      "biofiller"
-    ]
-   ],
-   "silenciar": [
-    [
-     85.84,
-     86.62
     ]
    ]
   }
