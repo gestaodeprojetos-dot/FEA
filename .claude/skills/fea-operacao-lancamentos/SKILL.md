@@ -69,8 +69,9 @@ Critério de sucesso: Drive, planilha de links, ClickUp com sprints e tarefas da
 3. **Planilha de links úteis** `Links úteis - <Lançamento>.xlsx` na raiz: copiar a do último lançamento já no padrão (MEI 11/26 `1NlNFbaVHU2Gy7gMo70QbnuHhOoVJguey`), limpar a coluna B, preencher o que já existe, marcar "(a criar)" no resto. Só `Nome | Link`, sem "Fase". Aba TRÁFEGO tem células mescladas: pular `MergedCell` ao limpar.
 4. **ClickUp:** uma pasta por lançamento; sprints semanais `Sprint N (dd/mm - dd/mm)`; tarefas-mãe por setor (Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, e Comercial ou Produção do Evento quando houver); subtarefas com início 8h e prazo 18h. Status padrão FEA e visualização "Modelo de Sprint" em toda lista. Incluir as tarefas obrigatórias (planilha de respostas dos compradores e formulário de matrícula).
 5. **Responsáveis:** padrão por área (Copy → Adri + Matheus van der Ham; Design → Leo; Web → André; Automação → IAutomate; Tráfego → Matheus Saar). Gestão, Comercial, Produção de evento: perguntar à Keila. Nenhuma tarefa fica sem responsável.
-6. **Guia de Informações** (doc do ClickUp na pasta): páginas Links úteis, Datas, Planilha com link dos setores.
-7. Relatório: links, o que trava a data de abertura, o que depende dela, e oferecer incluir a pasta na ronda (a ronda só olha pasta nova com o ok dela).
+6. **Briefing no padrão da equipe (Keila, 17/11/2026: "deixa só o que a gente usa").** Usar só os blocos que a equipe preenche nos briefings de verdade (base: Briefing MasterClass em Preenchimento Labial 07/26): Sobre o produto, Informações do lançamento, Bônus, Aula (só o nome de cada aula), Tráfego (verba, meta de leads, CPL, meta de venda e de faturamento) e Informações Extras quando houver conteúdo. Nunca incluir "Sobre o projeto" (objetivo, marcos, cronograma de entrega, cronograma de divulgação, métricas de sucesso, time), Big Idea, metas de engajamento ou de conversão, nem campo com ✏️ sem resposta. Não inventar campo novo.
+7. **Guia de Informações** (doc do ClickUp na pasta): páginas Links úteis, Datas, Planilha com link dos setores.
+8. Relatório: links, o que trava a data de abertura, o que depende dela, e oferecer incluir a pasta na ronda (a ronda só olha pasta nova com o ok dela).
 
 Evento novo sem lançamento anterior parecido: montar a partir do briefing e dizer isso no relatório.
 
