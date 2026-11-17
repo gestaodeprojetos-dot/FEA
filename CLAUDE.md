@@ -220,6 +220,15 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **Médicos (5)** Francine Maria de Almeida (Diretora Científica) · Amanda Araujo Reis, Giancarlo Desiderio Ferreira Pinto, Gabriela Ducioni Matos, Lais Claus Leme Sampaio (freela)
 
+### WhatsApp: grupo Gestão FEA e números para menção
+
+Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA (Atendimento, admin, `551132804911`), Keila e Gabi. Para marcar alguém, usar `mencionar` no `enviar_texto` com o número abaixo.
+
+| Pessoa | Número (DDI, só dígitos) |
+|--------|--------------------------|
+| Keila Quaresma | `553191581433` |
+| Gabi | `5514991278094` |
+
 ### Quem chamar para cada coisa
 
 | Necessidade | Falar com |
