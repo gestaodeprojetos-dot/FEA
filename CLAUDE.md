@@ -229,6 +229,16 @@ Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA
 | Keila Quaresma | `553191581433` |
 | Gabi | `5514991278094` |
 
+### Regra fixa: toda informação vista nos grupos vai para o briefing (Keila, 17/11/2026)
+
+Obrigatório, sem esperar pedido: qualquer informação de lançamento que aparecer em grupo de WhatsApp, ClickUp ou conversa (data de carrinho, bônus novo, preço, link, mudança de oferta, decisão do Luca ou da Keila) é anotada **na hora** no briefing do lançamento correspondente (Google Doc), substituindo o "✏️ confirmar" do campo. Exemplo: o Luca fala num grupo que vai ter bônus novo, então o briefing é atualizado com o bônus. Depois de atualizar, avisar no grupo Gestão FEA o que mudou e tirar o item da lista de pendências. Para editar o Doc, o conector **Google Docs** precisa estar conectado; se não estiver, avisar a Keila na hora em vez de deixar a informação só no chat.
+
+Briefings ativos:
+
+| Lançamento | Briefing |
+|------------|----------|
+| MPL 11/26 (Masterclass Preenchimento Labial, live 19/11, 20h) | `1Cx9YhDnCcnVAFg70gvF5SBFq9ZMTjCWRN1TifbaYZxQ` |
+
 ### Quem chamar para cada coisa
 
 | Necessidade | Falar com |
