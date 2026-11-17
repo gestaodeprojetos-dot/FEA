@@ -178,6 +178,28 @@ def normalizar_numero(n: str) -> str:
     return digitos
 
 
+def resolver_mencoes(valor: str, texto: str) -> tuple[str, str]:
+    """Converte nomes da agenda (FEA-contatos-equipe.json) em números e garante o @número no texto,
+    que é o que faz o WhatsApp exibir a marcação. Aceita 'all', números ou nomes, separados por vírgula."""
+    if valor.strip().lower() == "all":
+        return "all", texto
+    agenda = {}
+    arq = AQUI / "FEA-contatos-equipe.json"
+    if arq.exists():
+        agenda = {k.lower(): v for k, v in json.loads(arq.read_text(encoding="utf-8")).items()
+                  if isinstance(v, dict)}
+    numeros = []
+    for item in [i.strip() for i in valor.split(",") if i.strip()]:
+        if item.lower() in agenda:
+            numeros.append(agenda[item.lower()]["numero"])
+        else:
+            numeros.append(normalizar_numero(item))
+    faltando = [n for n in numeros if f"@{n}" not in texto]
+    if faltando:
+        texto = " ".join(f"@{n}" for n in faltando) + " " + texto
+    return ",".join(numeros), texto
+
+
 def checar_regra_fea(texto: str) -> list[str]:
     """Regras de escrita FEA aplicáveis a qualquer mensagem do projeto."""
     alertas = []
@@ -220,7 +242,7 @@ def main(argv=None) -> int:
             s.add_argument("tipo", choices=TIPOS_MIDIA)
             s.add_argument("arquivo", help="URL pública ou caminho local")
             s.add_argument("--legenda", default="")
-        s.add_argument("--mencionar", help="números separados por vírgula, ou all (só grupos)")
+        s.add_argument("--mencionar", help="nomes da agenda (ex.: Keila,Luca), números, ou all (só grupos)")
         s.add_argument("--enviar", action="store_true", help="envia de verdade (sem isso: simulação)")
         s.add_argument("--forcar", action="store_true", help="ignora alertas de regra de escrita FEA")
 
@@ -258,13 +280,15 @@ def main(argv=None) -> int:
             imprimir(api.verificar_numeros([normalizar_numero(n) for n in a.numeros]))
         elif a.cmd in ("texto", "midia"):
             numero = normalizar_numero(a.numero)
-            extras = {"mentions": a.mencionar} if a.mencionar else {}
             if a.cmd == "texto":
                 texto = a.mensagem
-                if texto.startswith("@"):
+                if texto.startswith("@") and Path(texto[1:]).is_file():
                     texto = Path(texto[1:]).read_text(encoding="utf-8")
             else:
                 texto = a.legenda
+            extras = {}
+            if a.mencionar:
+                extras["mentions"], texto = resolver_mencoes(a.mencionar, texto)
             alertas = checar_regra_fea(texto)
             for al in alertas:
                 print(f"[ALERTA FEA] {al}", file=sys.stderr)

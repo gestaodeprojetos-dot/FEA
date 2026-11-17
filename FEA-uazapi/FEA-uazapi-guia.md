@@ -22,6 +22,15 @@ Cliente Python sem dependências externas para a API da uazapi (contrato 2.6.9, 
 | `conectar [--telefone N]` | Gera QR code ou código de pareamento | Só com `--enviar` |
 | `instancias` | Lista instâncias do servidor (exige admintoken) | Não |
 
+## Marcar pessoas
+
+`--mencionar` aceita nomes da agenda `FEA-contatos-equipe.json` (Keila, Gabi, Luca), números ou `all`.
+O script coloca o `@número` no texto sozinho, que é o que faz o WhatsApp exibir a marcação.
+
+```bash
+python3 fea_uazapi.py texto 120363432442225090@g.us "Keila, o report do funil está encaminhado." --mencionar Keila --enviar
+```
+
 ## Travas de segurança
 
 - **Simulação por padrão:** envio e configuração só acontecem com `--enviar`; sem a flag, o script mostra o que faria.
