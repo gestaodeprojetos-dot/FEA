@@ -238,6 +238,8 @@ Obrigatório, sem esperar pedido: qualquer informação de lançamento que apare
 
 Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a sáb, 8h07 às 19h07 (Brasília). Em todos os grupos da FEA, quando alguém pede link, material ou informação, o Claude vai atrás (Drive, ClickUp, briefings, histórico dos grupos) e manda no grupo Gestão FEA uma mensagem pronta para encaminhar: "[Pessoa] pediu X · aqui o material · encaminhar para [pessoa]". Pedido do Luca é urgente e vai na mesma rodada, marcando a Keila. O número da FEA só lê os outros grupos; quem encaminha é a Keila ou a Gabi.
 
+**Prioridade do Luca (Keila, 17/11/2026):** 🚨 muito urgente quando o Luca **menciona a Keila ou a Gabi** (é demanda direta para a gestão), em qualquer grupo: alerta na hora marcando as duas. ⚠️ Atenção (um pouco urgente) para pedido do Luca nos grupos **Coordenação, Edição, Artes, Web e The Tracker (tráfego)**: alerta na mesma vigia, sem marcar ninguém. Nos demais grupos (Copy, Automações, Comercial etc.) **sem alarde**: o time é responsável; só reportar se ninguém responder no próprio grupo em uns 30 minutos.
+
 **Criativos do Elite Experience (Keila, 17/11/2026):** quando o Dr. João (ou o Dr Joao Vitor) mandar em qualquer grupo uma pasta ou vídeos de criativos do Elite Experience, pegar o link, listar os arquivos e mandar direto (send_message) para a sessão do Claude "Edição Criativos Elite Experience" (`session_0117TgWTukdoZrzBap5FqCsq`) para ela já editar no padrão de lá. Depois avisar no Gestão FEA que foi para edição.
 
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
