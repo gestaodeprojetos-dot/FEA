@@ -1,0 +1,365 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/fonts",
+  "videos": [
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9449.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9449.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/out/Ads 013 - Elite Experience.mp4",
+      "titulo": "Trabalha com harmonização facial?",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Trabalha com",
+        "harmonização",
+        "facial?"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "manter": [
+        [
+          0.3,
+          33.35,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9451.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9451.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/out/Ads 014 - Elite Experience.mp4",
+      "titulo": "Uma clínica que funciona sem você",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Uma clínica",
+        "que funciona",
+        "sem você"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "manter": [
+        [
+          0.2,
+          41.85,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9452.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9452.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/out/Ads 015 - Elite Experience.mp4",
+      "titulo": "Seu consultório depende só da sua mão?",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Seu consultório",
+        "depende só",
+        "da sua mão?"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "manter": [
+        [
+          0.3,
+          30.4,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9453.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9453.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/out/Ads 016 - Elite Experience.mp4",
+      "titulo": "Seu consultório para quando você para?",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Seu consultório",
+        "para quando",
+        "você para?"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "manter": [
+        [
+          0.25,
+          37.05,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9454.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9454.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/out/Ads 017 - Elite Experience.mp4",
+      "titulo": "Não é só sobre técnica",
+      "titulo_origem": "imagem",
+      "titulo_linhas": [
+        "Não é só",
+        "sobre técnica"
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "manter": [
+        [
+          0.1,
+          30.95,
+          "exato"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/piano_strings_113s.wav",
+      "musica_db": -19,
+      "cartela": {},
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "esfumado": false,
+      "selo": {
+        "topo": 185,
+        "logo_larg": 340
+      }
+    }
+  ]
+}
