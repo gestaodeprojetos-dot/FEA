@@ -238,6 +238,15 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **Regra geral de equipe:** nomes e cargos mudam com o tempo. Antes de atribuir tarefa ou crédito a alguém específico, confirmar se a pessoa ainda está na função.
 
+### Mensagens nos grupos de WhatsApp da equipe (regra fixa, Keila, 17/11/2026)
+
+- **Toda mensagem em grupo precisa marcar a(s) pessoa(s) a quem se dirige.** Mensagem sem marcação não fala com ninguém. Marcação válida é a que notifica (nome em azul, enviada com o número no campo de menção), nunca "@Nome" digitado como texto comum.
+- Se a ferramenta de envio não conseguir marcar pessoas específicas, **avisar a Keila antes de enviar**. Não mandar com marcação falsa e não trocar por "marcar todos" sem ela pedir.
+- **Não mandar mensagem no privado** de ninguém como substituto da marcação no grupo, a menos que a Keila peça isso explicitamente.
+- Para marcar, é preciso o número da pessoa. A lista de membros do grupo traz só números; se o nome não estiver mapeado, pedir o número à Keila.
+- Números já confirmados (grupo Edição | FEA): Isabela Naomi `+55 11 96414-3232` · Jaqui `+55 17 99175-3479`.
+- **Limitação atual (17/11/2026):** a ferramenta do WhatsApp FEA (uazapi) só envia texto e mídia, com opção de marcar o grupo inteiro. Não marca pessoas específicas, não edita e não apaga mensagens. A uazapi aceita essas funções; falta a integração repassá-las.
+
 ## Persona e estágio de consciência (usar em toda copy)
 
 Cinco perfis dominantes: (1) médico recém-formado buscando entrada na estética, (2) médico em transição de especialidade, (3) dentista em harmonização orofacial (escopo CFO, usar "harmonização orofacial", não "facial"), (4) biomédica esteta (escopo CFBM), (5) profissional avançado buscando atualização ou imersão.
