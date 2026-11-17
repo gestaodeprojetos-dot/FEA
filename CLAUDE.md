@@ -228,6 +228,7 @@ Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA
 |--------|--------------------------|
 | Keila Quaresma | `553191581433` |
 | Gabi | `5514991278094` |
+| Luca Yu (não está no Gestão FEA; mensagem dele em qualquer grupo é **urgente**) | `5511960759355` |
 
 ### Regra fixa: toda informação vista nos grupos vai para o briefing (Keila, 17/11/2026)
 
