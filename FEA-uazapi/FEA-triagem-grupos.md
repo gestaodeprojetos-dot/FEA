@@ -9,6 +9,10 @@ Ferramenta: conector WhatsApp FEA (uazapi), número da gestão FEA.
 - **Nunca** enviar, responder, reagir ou marcar alguém em qualquer outro grupo ou contato.
 - Sem pedido novo na janela: **não enviar nada**.
 
+## Regra do link direto (17/11, pedido da gestão)
+
+Toda pendência que exige ação de alguém (preencher briefing, aprovar copy, confirmar oferta) leva **o link direto do documento ou da tarefa** na própria linha, já apontando a seção a preencher. Ninguém (principalmente o Luca) deve precisar procurar arquivo. Se o link não for encontrado, escrever "🔎 link não encontrado" em vez de citar só o nome do arquivo.
+
 ## Grupos monitorados (15)
 
 | Grupo | JID |
@@ -68,7 +72,7 @@ Google Drive / Google Sheets e ClickUp (só leitura).
    Resumo do pedido em 1 ou 2 frases.
    📨 *Mensagem pronta para encaminhar:*
    (texto pronto, curto, com os links/dados encontrados)
-   📄 Fonte: nome do arquivo
+   📄 Fonte: nome do arquivo + link direto (docs.google.com/... ou app.clickup.com/t/...)
    👉 Encaminhar para: pessoa/grupo
 
    🎧 áudios sem texto: ...
