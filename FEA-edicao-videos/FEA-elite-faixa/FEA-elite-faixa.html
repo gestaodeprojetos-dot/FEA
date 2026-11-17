@@ -1,20 +1,21 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
-@font-face{font-family:M;font-weight:500;src:url(../../fonts/Montserrat-Medium.ttf)}
-@font-face{font-family:M;font-weight:700;src:url(../../fonts/Montserrat-SemiBold.ttf)}
-@font-face{font-family:M;font-weight:800;src:url(../../fonts/Montserrat-ExtraBold.ttf)}
-@font-face{font-family:M;font-weight:900;src:url(../../fonts/Montserrat-Black.ttf)}
+@font-face{font-family:G;font-weight:300;src:url(fonts/Galano-Regular.otf)}
+@font-face{font-family:G;font-weight:500;src:url(fonts/Galano-Medium.otf)}
+@font-face{font-family:G;font-weight:600;src:url(fonts/Galano-SemiBold.otf)}
+@font-face{font-family:C;src:url(fonts/CanelaDeck-Medium.otf)}
 html,body{margin:0;background:transparent}
-.faixa{width:1080px;height:150px;background:#fff;display:flex;align-items:center;justify-content:center;gap:22px;font-family:M;position:relative;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-.faixa:before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,#ecd08a,#a87b2c)}
-.txt{color:#1c2b44;font-size:31px;line-height:1.08;text-align:right;font-weight:500}
-.txt b{font-weight:800}
-.box{background:#1c2b44;color:#fff;border-radius:10px;padding:10px 22px 12px;display:flex;align-items:baseline;gap:8px;border:3px solid #b8913f}
-.box .v{font-weight:900;font-size:58px;letter-spacing:-1px;color:#fff}
-.box .v span{color:#ecd08a}
-.box .m{font-weight:700;font-size:24px;color:#ecd08a}
-.sep{width:3px;height:84px;background:#b8913f;border-radius:2px}
-.ic{height:86px}
+.faixa{width:1080px;height:156px;display:flex;align-items:center;justify-content:center;gap:24px;position:relative;
+ background:radial-gradient(120% 220% at 0% 50%,#9B2F4B 0%,#5a1328 35%,#1a070c 75%,#0F0507 100%)}
+.faixa:before,.faixa:after{content:"";position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,#c9677f,#FFE3EA 45%,#E48AA0 70%,#9B2F4B)}
+.faixa:before{top:0}.faixa:after{bottom:0}
+.txt{color:#FFE3EA;font-family:G;font-weight:300;font-size:30px;line-height:1.12;text-align:right}
+.txt b{font-weight:600;color:#fff}
+.box{display:flex;align-items:baseline;gap:10px;padding:6px 26px 12px;border-radius:12px;border:2px solid #E48AA0;background:rgba(15,5,7,.55)}
+.v{font-family:C;font-size:74px;letter-spacing:-1px;line-height:1;background:linear-gradient(100deg,#E48AA0 0%,#FFE3EA 45%,#E48AA0 70%,#b85a74 100%);-webkit-background-clip:text;color:transparent}
+.m{font-family:G;font-weight:500;font-size:24px;color:#FFE3EA;letter-spacing:1px}
+.sep{width:2px;height:86px;background:linear-gradient(#E48AA0,#9B2F4B)}
+.ic{height:84px}
 </style></head><body>
 <div class="faixa" id="f"><div class="txt">Para injetores que<br><b>faturam mais de</b></div>
 <div class="box"><div class="v">R$ 15 MIL</div><div class="m">/ mês</div></div>
-<div class="sep"></div><img class="ic" src="icone.svg"></div></body></html>
+<div class="sep"></div><img class="ic" src="EE_Simbolo_Principal.svg"></div></body></html>
