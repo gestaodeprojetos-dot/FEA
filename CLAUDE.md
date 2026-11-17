@@ -234,6 +234,10 @@ Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA
 
 Obrigatório, sem esperar pedido: qualquer informação de lançamento que aparecer em grupo de WhatsApp, ClickUp ou conversa (data de carrinho, bônus novo, preço, link, mudança de oferta, decisão do Luca ou da Keila) é anotada **na hora** no briefing do lançamento correspondente (Google Doc), substituindo o "✏️ confirmar" do campo. Exemplo: o Luca fala num grupo que vai ter bônus novo, então o briefing é atualizado com o bônus. Depois de atualizar, avisar no grupo Gestão FEA o que mudou e tirar o item da lista de pendências. Para editar o Doc, o conector **Google Docs** precisa estar conectado; se não estiver, avisar a Keila na hora em vez de deixar a informação só no chat.
 
+### Regra fixa: ronda dos grupos FEA com material pronto para encaminhar (Keila, 17/11/2026)
+
+Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a sáb, 8h07 às 19h07 (Brasília). Em todos os grupos da FEA, quando alguém pede link, material ou informação, o Claude vai atrás (Drive, ClickUp, briefings, histórico dos grupos) e manda no grupo Gestão FEA uma mensagem pronta para encaminhar: "[Pessoa] pediu X · aqui o material · encaminhar para [pessoa]". Pedido do Luca é urgente e vai na mesma rodada, marcando a Keila. O número da FEA só lê os outros grupos; quem encaminha é a Keila ou a Gabi.
+
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
 
 Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de sugerir cobrar alguém), pedir para a **Gabi** conferir. Fluxo obrigatório: verificar, conferir, revisar e só então liberar o status. Ausência de registro no ClickUp não prova que a tarefa não foi feita (erro de 17/11: o Claude mandou cobrar a Adri, mas a parte dela estava pronta e a pendência era a revisão da Grazi).
