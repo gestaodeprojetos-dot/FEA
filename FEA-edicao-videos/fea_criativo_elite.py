@@ -270,7 +270,12 @@ def abertura(caminho, v, pasta_fontes):
         if t.width <= W * 0.84 or tam <= 70:
             break
         tam -= 4
-    img.alpha_composite(t, ((W - t.width) // 2, int(v.get("titulo_y", H * 0.5) - t.height / 2)))
+    ty = int(v.get("titulo_y", H * 0.5) - t.height / 2)
+    img.alpha_composite(t, ((W - t.width) // 2, ty))
+    if v.get("rotulo_abertura"):   # chamada de público acima do título (versões "B", pedido do Luca 17/11)
+        from PIL import ImageDraw
+        texto_espacado(ImageDraw.Draw(img), (W / 2, ty - 40), v["rotulo_abertura"],
+                       fonte(pasta_fontes, "Urbanist-600.ttf", 46), rgb(CLARO), 46 * 0.22)
     if not v.get("esfumado", True):
         selo(img, v.get("selo", {}), pasta_fontes)
     img.save(caminho)
