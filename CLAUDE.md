@@ -238,6 +238,8 @@ Obrigatório, sem esperar pedido: qualquer informação de lançamento que apare
 
 Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a sáb, 8h07 às 19h07 (Brasília). Em todos os grupos da FEA, quando alguém pede link, material ou informação, o Claude vai atrás (Drive, ClickUp, briefings, histórico dos grupos) e manda no grupo Gestão FEA uma mensagem pronta para encaminhar: "[Pessoa] pediu X · aqui o material · encaminhar para [pessoa]". Pedido do Luca é urgente e vai na mesma rodada, marcando a Keila. O número da FEA só lê os outros grupos; quem encaminha é a Keila ou a Gabi.
 
+**Criativos do Elite Experience (Keila, 17/11/2026):** quando o Dr. João (ou o Dr Joao Vitor) mandar em qualquer grupo uma pasta ou vídeos de criativos do Elite Experience, pegar o link, listar os arquivos e mandar direto (send_message) para a sessão do Claude "Edição Criativos Elite Experience" (`session_0117TgWTukdoZrzBap5FqCsq`) para ela já editar no padrão de lá. Depois avisar no Gestão FEA que foi para edição.
+
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
 
 Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de sugerir cobrar alguém), pedir para a **Gabi** conferir. Fluxo obrigatório: verificar, conferir, revisar e só então liberar o status. Ausência de registro no ClickUp não prova que a tarefa não foi feita (erro de 17/11: o Claude mandou cobrar a Adri, mas a parte dela estava pronta e a pendência era a revisão da Grazi).
