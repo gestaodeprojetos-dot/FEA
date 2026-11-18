@@ -483,6 +483,11 @@
         ],
         [
           10.62,
+          19.28,
+          "exato"
+        ],
+        [
+          20.38,
           37.05,
           "exato"
         ]
@@ -554,8 +559,8 @@
         },
         {
           "tipo": "split",
-          "ini": 17.08,
-          "fim": 25.78,
+          "ini": 17.21,
+          "fim": 24.68,
           "titulo": "O que você vai viver",
           "itens": [
             {
@@ -589,8 +594,8 @@
         {
           "tipo": "card",
           "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
-          "ini": 27.68,
-          "fim": 30.98,
+          "ini": 26.58,
+          "fim": 29.88,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
           "y": 1110,
           "larg": 600,
