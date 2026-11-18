@@ -67,7 +67,8 @@ def subir(tk, pasta, caminho):
     tam = os.path.getsize(caminho)
     r = chamar(tk, "POST", UPLOAD + "?uploadType=resumable&supportsAllDrives=true&fields=id",
                corpo={"name": nome, "parents": [pasta]},
-               cabecalhos={"X-Upload-Content-Type": "video/mp4", "X-Upload-Content-Length": str(tam)})
+               cabecalhos={"X-Upload-Content-Type": __import__("mimetypes").guess_type(nome)[0] or "video/mp4",
+                           "X-Upload-Content-Length": str(tam)})
     sessao = r.headers["Location"]
     print(f"  subindo {tam / 1024 / 1024:.1f} MB...", flush=True)
     with open(caminho, "rb") as f:
