@@ -227,7 +227,7 @@ def renderizar(cfg, v):
     f += ("[voz]asplit=2[voz1][vozk];"
           f"[3:a]atrim=0:{duracao:.3f},asetpts=PTS-STARTPTS,aresample=48000,volume={mus_db}dB,"
           f"afade=t=in:d=0.4,afade=t=out:st={duracao - 1.2:.3f}:d=1.2[mus];"
-          "[mus][vozk]sidechaincompress=threshold=0.04:ratio=2.5:attack=30:release=350[musd];"
+          "[mus][vozk]sidechaincompress=threshold=0.025:ratio=6:attack=20:release=350[musd];"
           "[voz1][musd]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[afin]")
     cmd = [cfg["ffmpeg"], "-y", "-v", "error", "-i", v["entrada"],
            "-loop", "1", "-framerate", "30", "-t", f"{t_fim}", "-i", tj,

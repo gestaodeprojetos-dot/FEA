@@ -252,6 +252,16 @@
       "manter": [
         [
           0.25,
+          8.8,
+          "exato"
+        ],
+        [
+          10.62,
+          19.28,
+          "exato"
+        ],
+        [
+          20.38,
           37.05,
           "exato"
         ]
@@ -303,8 +313,8 @@
       ],
       "titulo": "Seu consultório para quando você para?",
       "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite3/out/Ads 027 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/corporate_upbeat_50s.wav",
-      "musica_db": -16,
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m027_luxpulse60.wav",
+      "musica_db": -25,
       "origem": "Ads 016 - Elite Experience.mp4"
     },
     {
