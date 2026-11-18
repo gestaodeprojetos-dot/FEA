@@ -244,7 +244,9 @@ Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a s
 
 ### Regra fixa: enviar ao Luca antes de ele pedir (Keila, 18/11/2026)
 
-Todo pedido em grupo que a gestão precisa responder com informação ou link (exemplo: Luca pedindo o link da página "estou ao vivo") vira **demanda no ClickUp** e passa a ser enviado **antes de ele pedir** nos próximos eventos. Cada lançamento tem um pacote "Enviar ao Luca" com dois blocos: **antes do início da captação** e **antes do CPL/aula** (Zoom e máscara, página do Zoom, páginas de captura e vendas, checkouts, grupo de WhatsApp, briefing, slides finais). O pacote fica como aba na planilha de Links úteis do evento; se ela for .xlsx (não editável pelo Claude), criar planilha Google "FEA - Enviar ao Luca · [evento]" na pasta do lançamento. Modelo: MPL 11/26 (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`).
+Todo pedido em grupo que a gestão precisa responder com informação ou link (exemplo: Luca pedindo o link da página "estou ao vivo") vira **demanda no ClickUp** e passa a ser enviado **antes de ele pedir** nos próximos eventos. Cada lançamento tem um pacote "Enviar ao Luca" com dois blocos: **antes do início da captação** e **antes do CPL/aula** (Zoom e máscara, página do Zoom, páginas de captura e vendas, checkouts, grupo de WhatsApp, briefing, slides finais). O pacote fica como aba **na própria planilha de Links úteis do evento**. Mensagem pronta para encaminhar ao Luca (o que enviamos e o que precisamos dele) sai no Gestão FEA no início da tarde.
+
+**Regra fixa (Keila, 18/11/2026): nunca criar planilha ou documento novo, nem trocar o link de planilha ou documento existente.** Todo pedido relacionado a planilha é feito na mesma planilha. Se o arquivo for .xlsx (o Claude não edita), levar à Keila as soluções de acesso para edição em vez de criar arquivo paralelo. A planilha "FEA - Enviar ao Luca · MPL 11/26" (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`) foi criada antes dessa regra e é exceção, não modelo.
 
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
 
