@@ -1,0 +1,747 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/fonts",
+  "videos": [
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/brutos/IMG_9347.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite/tr/IMG_9347.json",
+      "manter": [
+        [
+          0.4,
+          31.85,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b"
+      ],
+      "titulo": "Como atraio pacientes pelo Instagram",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 029 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 010 - Elite Experience.mp4",
+      "print": {
+        "img": "FEA-edicao-videos/FEA-elite-marca/FEA-print-insights-instagram.webp",
+        "ini": 0.35,
+        "fim": 2.9,
+        "y": 430,
+        "larg": 860
+      },
+      "origem_v2": "Ads 023 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/prova-story-92-mil.webp",
+          "ini": 5.4,
+          "fim": 8.6,
+          "rotulo": "BASTIDORES DO INSTAGRAM",
+          "y": 720,
+          "larg": 640,
+          "foco_y": 0.35
+        },
+        {
+          "tipo": "split",
+          "ini": 14.0,
+          "fim": 20.6,
+          "titulo": "O que você vai viver",
+          "itens": [
+            {
+              "txt": "2 dias práticos em São Paulo",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp"
+            },
+            {
+              "txt": "Avaliação ao vivo com o Dr. João",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-2-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Marketing, vendas e técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Networking com quem atende",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp"
+            },
+            {
+              "txt": "Certificado de participação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-6-certificado.webp"
+            },
+            {
+              "txt": "Gratuito, só com aplicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/monograma-elite-experience.webp",
+              "tag": "4 E 5/12"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 23.9,
+          "fim": 27.6,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        }
+      ],
+      "tarja_fim": 6.5
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9449.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9449.json",
+      "manter": [
+        [
+          0.3,
+          33.35,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "titulo": "Trabalha com harmonização facial?",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 030 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 013 - Elite Experience.mp4",
+      "origem_v2": "Ads 024 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "split",
+          "ini": 6.0,
+          "fim": 12.8,
+          "titulo": "O que você vai viver",
+          "itens": [
+            {
+              "txt": "2 dias práticos em São Paulo",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp"
+            },
+            {
+              "txt": "Avaliação ao vivo com o Dr. João",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-2-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Marketing, vendas e técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Networking com quem atende",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp"
+            },
+            {
+              "txt": "Certificado de participação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-6-certificado.webp"
+            },
+            {
+              "txt": "Gratuito, só com aplicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/monograma-elite-experience.webp",
+              "tag": "4 E 5/12"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 16.9,
+          "fim": 20.8,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
+          "ini": 21.0,
+          "fim": 24.6,
+          "rotulo": "MARKETING, VENDAS E TÉCNICA",
+          "y": 700,
+          "larg": 700,
+          "foco_y": 0.2
+        }
+      ],
+      "tarja_fim": 5.95
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9451.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9451.json",
+      "manter": [
+        [
+          0.2,
+          41.85,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "titulo": "Uma clínica que funciona sem você",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 031 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 014 - Elite Experience.mp4",
+      "origem_v2": "Ads 025 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
+          "ini": 8.3,
+          "fim": 11.6,
+          "rotulo": "AVALIAÇÃO AO VIVO",
+          "y": 700,
+          "larg": 700,
+          "foco_y": 0.35
+        },
+        {
+          "tipo": "split",
+          "ini": 20.1,
+          "fim": 27.2,
+          "titulo": "O que você vai viver",
+          "itens": [
+            {
+              "txt": "2 dias práticos em São Paulo",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp"
+            },
+            {
+              "txt": "Avaliação ao vivo com o Dr. João",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-2-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Marketing, vendas e técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Networking com quem atende",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp"
+            },
+            {
+              "txt": "Certificado de participação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-6-certificado.webp"
+            },
+            {
+              "txt": "Gratuito, só com aplicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/monograma-elite-experience.webp",
+              "tag": "4 E 5/12"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 28.2,
+          "fim": 31.6,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp",
+          "ini": 33.7,
+          "fim": 37.2,
+          "rotulo": "NETWORKING NO EVENTO",
+          "y": 700,
+          "larg": 760,
+          "foco_y": 0.35
+        }
+      ],
+      "tarja_fim": 6.5
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9452.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9452.json",
+      "manter": [
+        [
+          0.3,
+          30.4,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "titulo": "Seu consultório depende só da sua mão?",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 032 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 015 - Elite Experience.mp4",
+      "origem_v2": "Ads 026 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "split",
+          "ini": 7.0,
+          "fim": 13.6,
+          "titulo": "O que você vai viver",
+          "itens": [
+            {
+              "txt": "2 dias práticos em São Paulo",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp"
+            },
+            {
+              "txt": "Avaliação ao vivo com o Dr. João",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-2-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Marketing, vendas e técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Networking com quem atende",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp"
+            },
+            {
+              "txt": "Certificado de participação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-6-certificado.webp"
+            },
+            {
+              "txt": "Gratuito, só com aplicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/monograma-elite-experience.webp",
+              "tag": "4 E 5/12"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 18.5,
+          "fim": 23.6,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        }
+      ],
+      "tarja_fim": 6.5
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9453.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9453.json",
+      "manter": [
+        [
+          0.25,
+          37.05,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "titulo": "Seu consultório para quando você para?",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 033 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 016 - Elite Experience.mp4",
+      "origem_v2": "Ads 027 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
+          "ini": 4.3,
+          "fim": 8.0,
+          "rotulo": "ELITE EXPERIENCE · 4 E 5/12",
+          "y": 700,
+          "larg": 840,
+          "foco_y": 0.4
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp",
+          "ini": 10.0,
+          "fim": 14.4,
+          "rotulo": "OUTROS PROFISSIONAIS ATENDENDO",
+          "y": 700,
+          "larg": 760,
+          "foco_y": 0.35
+        },
+        {
+          "tipo": "split",
+          "ini": 18.9,
+          "fim": 27.6,
+          "titulo": "O que você vai viver",
+          "itens": [
+            {
+              "txt": "2 dias práticos em São Paulo",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp"
+            },
+            {
+              "txt": "Avaliação ao vivo com o Dr. João",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-2-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Marketing, vendas e técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+            },
+            {
+              "txt": "Networking com quem atende",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp"
+            },
+            {
+              "txt": "Certificado de participação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-6-certificado.webp"
+            },
+            {
+              "txt": "Gratuito, só com aplicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/monograma-elite-experience.webp",
+              "tag": "4 E 5/12"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 29.5,
+          "fim": 32.8,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        }
+      ],
+      "tarja_fim": 6.5
+    },
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_9454.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_9454.json",
+      "manter": [
+        [
+          0.1,
+          30.95,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite experience\\b",
+          "Elite Experience"
+        ],
+        [
+          "(?i)\\bexperience\\b",
+          "Experience"
+        ],
+        [
+          "(?i)\\belite\\b",
+          "Elite"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaber mais\\b",
+          "Saiba Mais"
+        ],
+        [
+          "(?i)\\bsaba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bdois dias\\b",
+        "\\b2 dias\\b",
+        "\\b200\\b",
+        "\\bgratuit[oa]\\b",
+        "\\bpresencial\\b",
+        "\\binédito\\b",
+        "\\bSão Paulo\\b",
+        "\\bmarketing\\b",
+        "\\bposicionamento\\b",
+        "\\bInstagram\\b",
+        "\\b30 milhões\\b",
+        "\\bElite Experience\\b",
+        "\\bimersão\\b",
+        "\\bvendas\\b",
+        "\\bgestão\\b",
+        "\\bequipe\\b",
+        "\\b15 mil\\b"
+      ],
+      "titulo": "Não é só sobre técnica",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 034 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "musica_db": -13,
+      "origem": "Ads 017 - Elite Experience.mp4",
+      "origem_v2": "Ads 028 - Elite Experience.mp4",
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "elementos": [
+        {
+          "tipo": "split",
+          "ini": 6.1,
+          "fim": 15.8,
+          "titulo": "Quem vai estar no palco",
+          "itens": [
+            {
+              "txt": "Dr. João Pithon · técnica",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-joao-pithon.webp"
+            },
+            {
+              "txt": "Luca Yu · estratégia",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-luca-yu.webp"
+            },
+            {
+              "txt": "Priscilla Toledo · vendas",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-priscilla-toledo.webp"
+            },
+            {
+              "txt": "Dr. Vitor Natal · comunicação",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-vitor-natal.webp"
+            },
+            {
+              "txt": "Dra. Alessandra Heinzen · planejamento",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-alessandra-heinzen.webp"
+            },
+            {
+              "txt": "Flávio Gonssa · marketing",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-flavio-gonssa.webp"
+            }
+          ],
+          "crop_y": 260
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
+          "ini": 16.0,
+          "fim": 18.9,
+          "rotulo": "2 DIAS PRESENCIAIS",
+          "y": 700,
+          "larg": 760,
+          "foco_y": 0.35
+        },
+        {
+          "tipo": "card",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "ini": 21.0,
+          "fim": 24.4,
+          "rotulo": "SÓ COM APLICAÇÃO APROVADA",
+          "y": 700,
+          "larg": 900,
+          "foco_y": 0.5,
+          "alt": 650
+        }
+      ],
+      "tarja_fim": 6.05
+    }
+  ]
+}
