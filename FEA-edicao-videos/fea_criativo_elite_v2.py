@@ -126,12 +126,19 @@ def tarja(caminho, c, pasta):
     fm = fonte(pasta, "Urbanist-600.ttf", 26)
     l1, l2 = c.get("linha1", "Para injetores que"), c.get("linha2", "faturam mais de")
     valor, sufixo = c.get("valor", "R$ 15 MIL"), c.get("sufixo", "/mês")
-    w_txt = max(d.textlength(l1, font=f1), d.textlength(l2, font=f1))
-    w_val, w_suf = d.textlength(valor, font=fv), d.textlength(sufixo, font=fm)
-    w_pil = w_val + w_suf + 64
     simb = simbolo_granada(78)
     gap = 26
-    total = w_txt + gap + w_pil + gap + 2 + gap + simb.width
+    tv = 58
+    while True:   # cabe na largura (chamadas mais longas, ex.: "DIAGNÓSTICO gratuito")
+        w_txt = max(d.textlength(l1, font=f1), d.textlength(l2, font=f1))
+        w_val, w_suf = d.textlength(valor, font=fv), d.textlength(sufixo, font=fm)
+        w_pil = w_val + w_suf + 64
+        total = w_txt + gap + w_pil + gap + 2 + gap + simb.width
+        if total <= W - 70 or tv <= 36:
+            break
+        tv -= 4
+        fv = fonte(pasta, "Urbanist-800.ttf", tv)
+        f1 = fonte(pasta, "Urbanist-600.ttf", max(28, int(34 * tv / 58)))
     x = (W - total) / 2
     cy = y0 + alt / 2
     d.text((x + w_txt, cy - 4), l1, font=f1, fill=rgb(GRANADA), anchor="rs")

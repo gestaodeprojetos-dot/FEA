@@ -197,7 +197,7 @@ def split_pngs(base, el):
         y = y_ini + k * (alt_item + 12)
         x0, x1 = 70, W - 70
         d = ImageDraw.Draw(img)
-        d.rounded_rectangle([x0, y, x1, y + alt_item], radius=18, fill=(58, 18, 30, 235),
+        d.rounded_rectangle([x0, y, x1, y + alt_item], radius=18, fill=rgb(BORDO) + (235,),
                             outline=rgb(ROSE) + (110,), width=2)
         tx = x0 + 28
         if it.get("img"):
