@@ -29,6 +29,17 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **Limite de 180 s vale para o conteúdo**; o total com o CTA de 39,5 s pode passar de 3 min: listar no PR e entregar mesmo assim.
 - Chamada falada pelo Dr. para outro curso, ebook, live ou "comenta X" continua saindo do conteúdo: o CTA é o da masterclass.
 
+## CTA Masterclass em Preenchimento Labial "Comente AULA" (criado 18/11/2026, AGUARDANDO aprovação da Keila)
+
+**Ainda NÃO aplicar em nenhum Reels: a Keila aprova antes.** Enquanto isso, o CTA em vigor continua o MTI acima.
+
+- Pedido da Keila (18/11/2026): pegar o criativo do post https://www.instagram.com/p/DfnLVf-gRSv/, cortar no pedido de "saiba mais" e fechar com 5 s de logo da Masterclass + "Comente AULA", igual ao MTI.
+- Criativo: `Ads 55 - MPL.mp4` (Drive `114q_NMpomSWPvzJAs2WyF7hHiirJNvUj`, pasta `4. TRÁFEGO/CRIATIVOS PRONTOS/1. CAPTAÇÃO`), identificado pelo vídeo do próprio post (correlação de quadros 0,995, 25,913 s). Neste criativo o Dr. **não fala** "toque em saiba mais": a fala termina em "...para também ter acesso a uma masterclass gratuito em preenchimento labial." (~20,76 s) e o pedido de clique é a vinheta final (logo + "Toque em Saiba Mais", quadro 625 em diante), que sai inteira.
+- Card: `FEA-CTA-digitando-comente-aula-MPL.mp4` (Drive `11T9UV5s95nLKhYSdqmSWjc58afAEFm1I`, 5,00 s), logo oficial `5. LOGO/Logo-MPL.png` (Drive `1rS1HuohV94seKgewliHyTTI9Qelc4Aj7`) com só a linha "MASTERCLASS EM" em negativo para ler no preto (`FEA-cta-digitando/FEA-MPL-logo-fundo-escuro.png`), "AULA" no vermelho da logo `#FF1A38`.
+- CTA: `Ads 55 - MPL - CTA Comente AULA.mp4` (Drive `1dtLtRVSeSUFdIT57Q0xmuf4s-fxnHQX5`, pasta da masterclass `138Q-yhMe7i5VaALx6bQlOvzZ0j70kJv4`, MD5 `0ed25b26e377d1646ba51ba9982ce975`), **25,87 s** (776 quadros), H.264 High CRF 18, AAC 192k 48 kHz. Ads 55 de 0 a 20,833 s + 16 quadros congelados da última página (folga depois da voz) + xfade de 0,5 s a partir de 20,867 s + card.
+- Script: `python3 FEA-edicao-videos/fea_cta_mpl_comente_aula.py {logo-escuro|card|cta} ...` (genérico: serve para outra masterclass trocando logo, cor, criativo, `--trechos` e `--fim-voz`).
+- Quando aprovado, aplicar como o MTI: `fea_render_com_cta.py projeto.json "Ads 55 - MPL - CTA Comente AULA.mp4"` (lote novo) ou `fea_aplicar_cta_entregue.py` (já entregue).
+
 ## ESTOQUE dez/jan SEM CTA e abertura com o Dr. já falando (Keila, 16/11/2026)
 
 - **Estoque**: lotes marcados como estoque saem SEM CTA (`"sem_cta": true`, `"fade_final": 0.3`), com **conteúdo de no máximo 135 s**, para receber qualquer CTA depois com `fea_aplicar_cta_entregue.py` sem passar de 3:00.
