@@ -309,7 +309,7 @@ def renderizar(cfg, v):
     f += ("[voz]asplit=2[voz1][vozk];"
           f"[3:a]atrim=0:{duracao:.3f},asetpts=PTS-STARTPTS,aresample=48000,volume={mus_db}dB,"
           f"afade=t=in:d=0.3,afade=t=out:st={duracao - 1.0:.3f}:d=1.0[mus];"
-          "[mus][vozk]sidechaincompress=threshold=0.035:ratio=3:attack=25:release=300[musd];")
+          "[mus][vozk]sidechaincompress=threshold=0.025:ratio=6:attack=20:release=350[musd];")
     cont = {4: 0, 5: 0}
     usos = {4: sum(1 for e, _ in sfx if e == 4), 5: sum(1 for e, _ in sfx if e == 5)}
     for e, u in usos.items():
