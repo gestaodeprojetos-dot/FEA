@@ -51,16 +51,16 @@
         "\\bvendas\\b"
       ],
       "titulo": "Como atraio pacientes pelo Instagram",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 029 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 029 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m029_action32.wav",
       "musica_db": -13,
       "origem": "Ads 010 - Elite Experience.mp4",
       "print": {
         "img": "FEA-edicao-videos/FEA-elite-marca/FEA-print-insights-instagram.webp",
         "ini": 0.35,
         "fim": 2.9,
-        "y": 430,
-        "larg": 860
+        "y": 930,
+        "larg": 440
       },
       "origem_v2": "Ads 023 - Elite Experience.mp4",
       "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
@@ -72,9 +72,10 @@
           "ini": 5.4,
           "fim": 8.6,
           "rotulo": "BASTIDORES DO INSTAGRAM",
-          "y": 720,
-          "larg": 640,
-          "foco_y": 0.35
+          "y": 1110,
+          "larg": 500,
+          "alt": 300,
+          "foco_y": 0.0
         },
         {
           "tipo": "split",
@@ -92,7 +93,7 @@
             },
             {
               "txt": "Marketing, vendas e técnica",
-              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/03-o-problema.webp"
             },
             {
               "txt": "Networking com quem atende",
@@ -108,18 +109,18 @@
               "tag": "4 E 5/12"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
           "ini": 23.9,
           "fim": 27.6,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         }
       ],
       "tarja_fim": 6.5
@@ -180,7 +181,7 @@
         "\\b15 mil\\b"
       ],
       "titulo": "Trabalha com harmonização facial?",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 030 - Elite Experience.mp4",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 030 - Elite Experience.mp4",
       "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
       "musica_db": -13,
       "origem": "Ads 013 - Elite Experience.mp4",
@@ -204,7 +205,7 @@
             },
             {
               "txt": "Marketing, vendas e técnica",
-              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/03-o-problema.webp"
             },
             {
               "txt": "Networking com quem atende",
@@ -220,28 +221,18 @@
               "tag": "4 E 5/12"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
           "ini": 16.9,
           "fim": 20.8,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
-        },
-        {
-          "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
-          "ini": 21.0,
-          "fim": 24.6,
-          "rotulo": "MARKETING, VENDAS E TÉCNICA",
-          "y": 700,
-          "larg": 700,
-          "foco_y": 0.2
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         }
       ],
       "tarja_fim": 5.95
@@ -302,24 +293,14 @@
         "\\b15 mil\\b"
       ],
       "titulo": "Uma clínica que funciona sem você",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 031 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 031 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m031_motiv51.wav",
       "musica_db": -13,
       "origem": "Ads 014 - Elite Experience.mp4",
       "origem_v2": "Ads 025 - Elite Experience.mp4",
       "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
       "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
       "elementos": [
-        {
-          "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
-          "ini": 8.3,
-          "fim": 11.6,
-          "rotulo": "AVALIAÇÃO AO VIVO",
-          "y": 700,
-          "larg": 700,
-          "foco_y": 0.35
-        },
         {
           "tipo": "split",
           "ini": 20.1,
@@ -336,7 +317,7 @@
             },
             {
               "txt": "Marketing, vendas e técnica",
-              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/03-o-problema.webp"
             },
             {
               "txt": "Networking com quem atende",
@@ -352,18 +333,18 @@
               "tag": "4 E 5/12"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
           "ini": 28.2,
           "fim": 31.6,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         },
         {
           "tipo": "card",
@@ -371,8 +352,9 @@
           "ini": 33.7,
           "fim": 37.2,
           "rotulo": "NETWORKING NO EVENTO",
-          "y": 700,
-          "larg": 760,
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
           "foco_y": 0.35
         }
       ],
@@ -434,8 +416,8 @@
         "\\b15 mil\\b"
       ],
       "titulo": "Seu consultório depende só da sua mão?",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 032 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 032 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m032_build75.wav",
       "musica_db": -13,
       "origem": "Ads 015 - Elite Experience.mp4",
       "origem_v2": "Ads 026 - Elite Experience.mp4",
@@ -458,7 +440,7 @@
             },
             {
               "txt": "Marketing, vendas e técnica",
-              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/03-o-problema.webp"
             },
             {
               "txt": "Networking com quem atende",
@@ -474,18 +456,18 @@
               "tag": "4 E 5/12"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
           "ini": 18.5,
           "fim": 23.6,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         }
       ],
       "tarja_fim": 6.5
@@ -546,8 +528,8 @@
         "\\b15 mil\\b"
       ],
       "titulo": "Seu consultório para quando você para?",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 033 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 033 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m033_orch56.wav",
       "musica_db": -13,
       "origem": "Ads 016 - Elite Experience.mp4",
       "origem_v2": "Ads 027 - Elite Experience.mp4",
@@ -556,22 +538,13 @@
       "elementos": [
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp",
-          "ini": 4.3,
-          "fim": 8.0,
-          "rotulo": "ELITE EXPERIENCE · 4 E 5/12",
-          "y": 700,
-          "larg": 840,
-          "foco_y": 0.4
-        },
-        {
-          "tipo": "card",
           "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp",
           "ini": 10.0,
           "fim": 14.4,
           "rotulo": "OUTROS PROFISSIONAIS ATENDENDO",
-          "y": 700,
-          "larg": 760,
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
           "foco_y": 0.35
         },
         {
@@ -590,7 +563,7 @@
             },
             {
               "txt": "Marketing, vendas e técnica",
-              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/04-avaliacao-ao-vivo.webp"
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/03-o-problema.webp"
             },
             {
               "txt": "Networking com quem atende",
@@ -606,18 +579,18 @@
               "tag": "4 E 5/12"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-1-dois-dias.webp",
           "ini": 29.5,
           "fim": 32.8,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         }
       ],
       "tarja_fim": 6.5
@@ -678,8 +651,8 @@
         "\\b15 mil\\b"
       ],
       "titulo": "Não é só sobre técnica",
-      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite4/out/Ads 034 - Elite Experience.mp4",
-      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/epic_60s.wav",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite5/out/Ads 034 - Elite Experience.mp4",
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m034_action66.wav",
       "musica_db": -13,
       "origem": "Ads 017 - Elite Experience.mp4",
       "origem_v2": "Ads 028 - Elite Experience.mp4",
@@ -717,7 +690,7 @@
               "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/palestrante-flavio-gonssa.webp"
             }
           ],
-          "crop_y": 260
+          "crop_y": 200
         },
         {
           "tipo": "card",
@@ -725,20 +698,21 @@
           "ini": 16.0,
           "fim": 18.9,
           "rotulo": "2 DIAS PRESENCIAIS",
-          "y": 700,
-          "larg": 760,
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
           "foco_y": 0.35
         },
         {
           "tipo": "card",
-          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/mural-05.webp",
+          "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/inclui-7-networking.webp",
           "ini": 21.0,
           "fim": 24.4,
           "rotulo": "SÓ COM APLICAÇÃO APROVADA",
-          "y": 700,
-          "larg": 900,
-          "foco_y": 0.5,
-          "alt": 650
+          "y": 1110,
+          "larg": 600,
+          "alt": 300,
+          "foco_y": 0.3
         }
       ],
       "tarja_fim": 6.05

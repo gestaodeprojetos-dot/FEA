@@ -91,7 +91,7 @@ def gerar_ass(v, palavras, duracao, caminho):
                     tam = min(150, int(1700 / max(len(grande), 1)))
                     partes = cab.split(",")
                     ini, fim = partes[1], partes[2]
-                    ln = (f"Dialogue: 1,{ini},{fim},Destaque,,0,0,0,,{{\\an2\\pos({W // 2},1310)\\fs{tam}"
+                    ln = (f"Dialogue: 1,{ini},{fim},Destaque,,0,0,0,,{{\\an2\\pos({W // 2},{fea.LEGENDA_Y + 30})\\fs{tam}"
                           f"\\fscx80\\fscy80\\t(0,120,\\fscx100\\fscy100)}}{grande}\n")
                     break
             else:

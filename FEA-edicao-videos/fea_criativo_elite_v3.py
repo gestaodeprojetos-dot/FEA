@@ -54,6 +54,7 @@ def gal(peso, tam):
 
 
 # ---------- legenda em Galano ----------
+fea.LEGENDA_Y = 1345   # base em 1365: abaixo dos cards (zona do peito), acima da tarja/CTA
 def ass_header():
     c = ass_cor("#FFFFFF")
     return f"""[Script Info]
@@ -66,6 +67,7 @@ ScaledBorderAndShadow: yes
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Legenda,Galano Grotesque SemiBold,64,{c},{c},{ass_cor(FUNDO, 0x40)},{ass_cor(FUNDO, 0x50)},0,0,0,0,100,100,0,0,1,2.4,3,2,60,60,0,1
+Style: LegSplit,Galano Grotesque SemiBold,58,{c},{c},{ass_cor(GRANADA, 0x10)},{ass_cor(GRANADA, 0x10)},0,0,0,0,100,100,0,0,3,14,0,5,60,60,0,1
 Style: Destaque,Galano Grotesque Heavy,150,{c},{c},{ass_cor(FUNDO, 0x30)},{ass_cor(FUNDO, 0x40)},0,0,0,0,96,100,-2,0,1,2.6,6,2,40,40,0,1
 
 [Events]
@@ -96,7 +98,13 @@ def gerar_ass(v, palavras, duracao, caminho):
             em_split = any(i <= meio < f for i, f, t in JANELAS if t == "split")
             em_card = any(i - 0.2 <= meio < f + 0.2 for i, f, t in JANELAS if t == "card")
             if em_split:
-                continue                      # tela dividida: sem legenda, como no modelo
+                # tela dividida: legenda no meio, sobre a linha de divisão (Keila 18/11: nunca no rosto)
+                if ",Destaque," in ln:
+                    continue
+                cab, txt = ln.rsplit("}", 1)
+                txt = re.sub(r"\{\\c&H[0-9A-F]+&\}", "", txt)
+                ln = (",".join(p[:3]) + ",LegSplit,,0,0,0,,{\\an5\\pos(" + str(W // 2) + "," + str(H // 2) + ")}"
+                      + txt.strip() + "\n")
             if ",Destaque," in ln and em_card:
                 continue                      # não disputa a tela com o card
         saida.append(ln)
@@ -226,6 +234,7 @@ def renderizar(cfg, v):
     v2.cta(ct, v.get("cta", {}), PASTA_FONTES)
     t_fim = v.get("tarja_fim", 6.5)
     c_ini = max(duracao - v.get("cta_dur", 6.5), t_fim + 1)
+    c_ini = max([c_ini] + [e["fim"] + 0.1 for e in v.get("elementos", []) if e["tipo"] == "card" and e["fim"] > c_ini])
 
     entradas = [["-i", v["entrada"]],
                 ["-loop", "1", "-framerate", "30", "-t", f"{t_fim}", "-i", tj],
