@@ -41,6 +41,19 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **v2 (18/11/2026, também AGUARDANDO aprovação):** a Keila achou o v1 estranho (o Dr. diz "...masterclass gratuita em preenchimento labial" e já entra o card, sem continuação) e mandou outro post para testar: https://www.instagram.com/p/DfnLPyBAI4d/. Criativo: `Ads 49 - MPL.mp4` (Drive `1y6cUZk4CtxSe0HDHlHjW_fcoo604ihyt`, pasta `10H7Ve9Cyev9KeTgwzGOqCU9gp6pj3eSG`, 48,71 s), identificado pelo vídeo do post (correlação de quadros 1,000; Ads 3 e Ads 47, de duração parecida, deram ~0,0). Cortes: sai SÓ "toque em saiba mais" (38,333 a 39,400 s do criativo, com a legenda queimada "toque em SAIBA MAIS.") e a vinheta branca (quadro 1310 = 43,667 s em diante). CTA `Ads 49 - MPL - CTA Comente AULA.mp4` (Drive `1SAbN32htpisfL4KypYcVHDBosowgDdxj`, MD5 `cc71a5cee5961ae614618ddb3a5e4d4b`), **47,60 s** (1428 quadros): `--trechos 0-38.3333,39.4-43.6667 --fim-voz 42.50` (15 quadros congelados depois de "Te vejo lá!"). Atenção: neste criativo o Dr. chama de "imersão avançada no preenchimento labial" (não masterclass) e não cita data.
 - Quando aprovado, aplicar como o MTI: `fea_render_com_cta.py projeto.json "Ads 55 - MPL - CTA Comente AULA.mp4"` (lote novo) ou `fea_aplicar_cta_entregue.py` (já entregue).
 
+## Formato "artigo comentado" estilo notícia (PROTÓTIPO 18/11/2026, aguardando aprovação da Keila)
+
+Pedido da Keila e do Dr. João (18/11/2026) para os brutos em que o Dr. comenta um artigo científico ("Nódulos artigo", "Toxina em pálpebra artigo", "Padrão de força artigo"). Reproduz a entrada dos vídeos "Skincare" e "Melhores produtos" (pastas 10- Outubro e 11- Novembro): tela dividida, mídia em cima e o Dr. embaixo, título em faixas brancas com texto preto na costura.
+
+- Script: `python3 FEA-edicao-videos/fea_artigo_noticia.py FEA-projeto-dez-12-artigo-nodulos.json` (modelo de projeto; `--quadros b12.5,40` gera PNGs de conferência, `b` = segundos do bruto; `--so-legenda` só o .ass).
+- Gancho (2 a 4 s): foto clínica forte do próprio artigo em tela cheia, zoom lento, selo roxo "ARTIGO CIENTÍFICO", título em faixas brancas, crédito "Fonte: Autor et al., Revista Ano" e aviso "Imagens de publicação científica", trilha mais alta (`pre` = 0,5 s de trilha antes da 1ª palavra). O Dr. já fala por cima do gancho.
+- Depois: tela dividida quando ele cita o artigo (página online rolando, PDF com realce lavanda e borda roxa achado pela frase com `pdftotext -bbox`, figuras com `encaixar` para não ampliar além do original), tela cheia quando é raciocínio dele. Rótulo roxo na costura (como "1. Retinol: nota 8" das referências).
+- Legenda: estilo padrão da skill; na tela dividida sobe para logo abaixo da costura (`legenda_dividida_y`, 1120), porque no lugar padrão cairia na boca do Dr.
+- Trilha: sem trilha licenciada no Drive da FEA (só gravações de tela do Instagram, sem licença), o script gera base instrumental original (`gerar_trilha`); com arquivo da FEA, `trilha.arquivo`. Ducking: fundo 26 dB abaixo da voz, gancho 12 dB abaixo.
+- Captura online: Wiley e PubMed bloqueiam navegador automatizado (Cloudflare/reCAPTCHA); a UNESP abre (Playwright, 1080 de largura, deviceScaleFactor 2).
+- A revisora (`fea_revisar.py`) ainda não conhece o gancho: acusa título ausente (o título é a faixa desenhada, não o .ass) e "voz falhando" pelo deslocamento de `pre`; conferir a voz com o deslocamento certo (0 quedas no protótipo).
+- Nunca imagem gerada por IA; imagem de paciente só do artigo publicado ou de material FEA já publicado; não borrar o artigo (Keila: "não precisa borrar nada").
+
 ## ESTOQUE dez/jan SEM CTA e abertura com o Dr. já falando (Keila, 16/11/2026)
 
 - **Estoque**: lotes marcados como estoque saem SEM CTA (`"sem_cta": true`, `"fade_final": 0.3`), com **conteúdo de no máximo 135 s**, para receber qualquer CTA depois com `fea_aplicar_cta_entregue.py` sem passar de 3:00.

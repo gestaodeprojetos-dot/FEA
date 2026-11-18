@@ -1,0 +1,349 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/bruto/IMG_9455.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/tr/IMG_9455.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/out/1- Nódulos de bioestimulador: o que diz o artigo.mp4",
+   "titulo": "Nódulos de bioestimulador: o que diz o artigo",
+   "titulo_origem": "inventado",
+   "manter": [
+    [
+     0.0,
+     11.48,
+     "exato"
+    ],
+    [
+     12.46,
+     15.01,
+     "exato"
+    ],
+    [
+     16.84,
+     18.875,
+     "exato"
+    ],
+    [
+     19.8,
+     27.975,
+     "exato"
+    ],
+    [
+     46.92,
+     123.28,
+     "exato"
+    ]
+   ],
+   "sem_cta": true,
+   "fade_final": 0.4,
+   "correcoes": [],
+   "remover_legenda": []
+  }
+ ],
+ "noticia": {
+  "trabalho": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad",
+  "titulo_linhas": [
+   "Nódulos de",
+   "bioestimulador:",
+   "o que diz o artigo"
+  ],
+  "selo": "ARTIGO CIENTÍFICO",
+  "credito": "Fonte: Ianhez et al., J Cosmet Dermatol 2024",
+  "aviso": "Imagens de publicação científica",
+  "pre": 0.5,
+  "pos": 0.3,
+  "titulo_ate": 3.15,
+  "dr_recorte_y": 180,
+  "trilha": {
+   "arquivo": null,
+   "gancho_db": -12,
+   "fundo_db": -26,
+   "semente": 7
+  },
+  "fontes": {
+   "fig1a": {
+    "img": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/pdf/fig-001.jpg",
+    "recorte": [
+     0.012,
+     0.035,
+     0.284,
+     1
+    ]
+   },
+   "fig1b": {
+    "img": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/pdf/fig-001.jpg",
+    "recorte": [
+     0.288,
+     0,
+     1,
+     1
+    ]
+   },
+   "fig2a": {
+    "img": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/pdf/fig-002.jpg",
+    "recorte": [
+     0.02,
+     0.04,
+     0.278,
+     1
+    ]
+   },
+   "fig3a": {
+    "img": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/pdf/fig-004.jpg",
+    "recorte": [
+     0,
+     0,
+     0.41,
+     1
+    ]
+   },
+   "web": {
+    "img": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/web/unesp_top.png"
+   },
+   "p1": {
+    "pdf": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/bruto/artigo.pdf",
+    "pagina": 1,
+    "dpi": 300
+   },
+   "p3": {
+    "pdf": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/bruto/artigo.pdf",
+    "pagina": 3,
+    "dpi": 300
+   },
+   "recon": {
+    "video": "/tmp/claude-0/-home-user-FEA/b1e2a4fe-7685-5d81-b284-3a59c73de0f3/scratchpad/ilus/1- Reconstituição do ácido poli-L-láctico.mp4",
+    "de": 28.4,
+    "velocidade": 0.75,
+    "recorte_y": 470
+   }
+  },
+  "cenas": [
+   {
+    "de": -0.5,
+    "ate": 1.95,
+    "modo": "cheia",
+    "fonte": "fig1a",
+    "zoom": [
+     1.0,
+     1.1
+    ],
+    "foco": [
+     0.5,
+     0.55
+    ],
+    "aviso": true
+   },
+   {
+    "de": 1.95,
+    "ate": 3.15,
+    "modo": "cheia",
+    "fonte": "fig3a",
+    "zoom": [
+     1.05,
+     1.15
+    ],
+    "foco": [
+     0.5,
+     0.62
+    ],
+    "aviso": true
+   },
+   {
+    "de": 3.15,
+    "ate": 5.55,
+    "fonte": "fig1b",
+    "zoom": [
+     1.0,
+     1.08
+    ],
+    "foco": [
+     0.42,
+     0.45
+    ],
+    "rotulo": "Fig. 1: nódulo de PLLA no ultrassom"
+   },
+   {
+    "de": 5.55,
+    "ate": 7.6,
+    "fonte": "web",
+    "janela": [
+     0.04,
+     0.96
+    ],
+    "zoom_lento": 0.0,
+    "marcas": [
+     [
+      5.55,
+      [
+       0.06,
+       0.062,
+       0.94,
+       0.11
+      ]
+     ]
+    ],
+    "rotulo": "J Cosmet Dermatol, 2024"
+   },
+   {
+    "de": 7.6,
+    "ate": 11.48,
+    "fonte": "web",
+    "janela": [
+     0.345,
+     0.95
+    ],
+    "zoom_lento": 0.03,
+    "marcas": [
+     [
+      7.6,
+      [
+       0.355,
+       0.185,
+       0.94,
+       0.475
+      ]
+     ]
+    ],
+    "realce_y": 0.5,
+    "rotulo": "Resumo do artigo"
+   },
+   {
+    "de": 12.46,
+    "ate": 15.01,
+    "fonte": "p1",
+    "janela": [
+     0.06,
+     0.34
+    ],
+    "realces": [
+     [
+      12.46,
+      "Universidade Federal de Goiás, Goiânia,|Medicina da USP, São Paulo, Brazil|Universidade Federal de São Paulo|Universidade Estadual Paulista Júlio de"
+     ]
+    ],
+    "rotulo": "Estudo brasileiro: 55 casos"
+   },
+   {
+    "de": 16.84,
+    "ate": 18.875,
+    "fonte": "p3",
+    "janela": [
+     0.5,
+     0.94
+    ],
+    "realces": [
+     [
+      16.84,
+      "The precise mechanism of|its development has not yet been fully defined,"
+     ]
+    ],
+    "rotulo": "Discussão do artigo"
+   },
+   {
+    "de": 51.39,
+    "ate": 64.1,
+    "fonte": "p3",
+    "janela": [
+     0.5,
+     0.94
+    ],
+    "realces": [
+     [
+      51.39,
+      "particle size,"
+     ],
+     [
+      59.77,
+      "excess product, lack of massage|with consequent “trapping” of the product in a certain region,"
+     ]
+    ],
+    "rotulo": "Discussão do artigo"
+   },
+   {
+    "de": 64.1,
+    "ate": 72.23,
+    "fonte": "recon",
+    "credito": false,
+    "rotulo": "Reconstituição do bioestimulador"
+   },
+   {
+    "de": 82.59,
+    "ate": 93.15,
+    "fonte": "p3",
+    "janela": [
+     0.06,
+     0.48
+    ],
+    "realces": [
+     [
+      82.59,
+      "Nodule 49 (89.1%)"
+     ],
+     [
+      85.57,
+      "PLLA–Elleva® 27 (49.1%)|PLLA–Sculptra® 11 (20.0%)"
+     ],
+     [
+      90.05,
+      "CaHA–Calcium hydroxyapatite 10 (18.2%)|Polycaprolactone–Ellanse® 4 (7.3%)"
+     ]
+    ],
+    "rotulo": "Tabela 1: 55 casos"
+   },
+   {
+    "de": 93.15,
+    "ate": 102.63,
+    "fonte": "p3",
+    "janela": [
+     0.5,
+     0.94
+    ],
+    "realces": [
+     [
+      95.59,
+      "incorrect dilution of these products can cause nodule|formation, as previously reported"
+     ],
+     [
+      98.39,
+      "excess product, lack of massage|with consequent “trapping” of the product in a certain region,"
+     ]
+    ],
+    "rotulo": "Discussão do artigo"
+   },
+   {
+    "de": 110.73,
+    "ate": 113.39,
+    "fonte": "fig2a",
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "aviso": true,
+    "rotulo": "Fig. 2: nódulos de PLLA na têmpora",
+    "encaixar": true
+   },
+   {
+    "de": 113.39,
+    "ate": 116.45,
+    "fonte": "fig1a",
+    "zoom": [
+     1.0,
+     1.04
+    ],
+    "foco": [
+     0.5,
+     0.5
+    ],
+    "aviso": true,
+    "rotulo": "Fig. 1: nódulos de PLLA no pescoço",
+    "encaixar": true
+   }
+  ],
+  "legenda_dividida_y": 1120
+ }
+}
