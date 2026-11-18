@@ -1,0 +1,97 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/fonts",
+  "videos": [
+    {
+      "entrada": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/brutos/IMG_94096E50.MOV",
+      "transcricao": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/elite2/tr/IMG_94096E50.json",
+      "saida": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/mentoring/out/15- Uma clínica que não depende só da sua mão.mp4",
+      "titulo": "Uma clínica que não depende só da sua mão",
+      "manter": [
+        [
+          0.28,
+          55.15,
+          "exato"
+        ]
+      ],
+      "correcoes": [
+        [
+          "(?i)\\belite mentoring\\b",
+          "Elite Mentoring"
+        ],
+        [
+          "(?i)\\bsaiba mais\\b",
+          "Saiba Mais"
+        ]
+      ],
+      "destaques": [
+        "\\bmarketing\\b",
+        "\\bvendas\\b",
+        "\\bmentoria\\b",
+        "\\balto padrão\\b"
+      ],
+      "destaques_grandes": [
+        [
+          "\\balto padrão\\b",
+          "ALTO PADRÃO"
+        ],
+        [
+          "\\bgerenciar o teu espaço\\b",
+          null
+        ],
+        [
+          "\\bElite Mentoring\\b",
+          "ELITE MENTORING"
+        ]
+      ],
+      "musica": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/m031_motiv51.wav",
+      "musica_db": -24,
+      "sfx_whoosh": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/whoosh.mp3",
+      "sfx_boom": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/musica/boom.mp3",
+      "tarja": {
+        "linha1": "Para donos de clínica",
+        "linha2": "de harmonização",
+        "valor": "DIAGNÓSTICO",
+        "sufixo": "gratuito"
+      },
+      "cta": {
+        "evento": "ELITE MENTORING  ·  DIAGNÓSTICO GRATUITO"
+      },
+      "elementos": [
+        {
+          "tipo": "split",
+          "ini": 30.4,
+          "fim": 39.0,
+          "titulo": "O que a mentoria entrega",
+          "crop_y": 450,
+          "itens": [
+            {
+              "txt": "6 meses com Dr. João e Luca Yu",
+              "img": "/tmp/claude-0/-home-user-FEA/3dafa4e2-5801-502c-b0d3-c0dda03585fd/scratchpad/lp/img/topo-dupla-desktop.webp"
+            },
+            {
+              "txt": "Especialistas em vendas e gestão",
+              "img": "FEA-edicao-videos/FEA-mentoring-marca/EE_Simbolo_Principal.png"
+            },
+            {
+              "txt": "Diagnóstico da clínica nos 4 pilares",
+              "img": "FEA-edicao-videos/FEA-mentoring-marca/EE_Simbolo_Principal.png"
+            },
+            {
+              "txt": "8 calls individuais com especialistas",
+              "img": "FEA-edicao-videos/FEA-mentoring-marca/EE_Simbolo_Principal.png"
+            },
+            {
+              "txt": "Aula ao vivo com hot seat semanal",
+              "img": "FEA-edicao-videos/FEA-mentoring-marca/EE_Simbolo_Principal.png"
+            },
+            {
+              "txt": "Todos os cursos online por 12 meses",
+              "img": "FEA-edicao-videos/FEA-mentoring-marca/EE_Simbolo_Principal.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

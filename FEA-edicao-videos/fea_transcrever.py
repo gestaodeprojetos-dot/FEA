@@ -168,7 +168,8 @@ def main():
         if so_complemento:
             out = [s for s in json.load(open(destino, encoding="utf-8")) if not s.get("complemento")]
         else:
-            segs, _ = modelo.transcribe(wav, language="pt", word_timestamps=True, initial_prompt=PROMPT,
+            # áudio já carregado: o PyAV 15+ recusa o argumento metadata_errors que o faster-whisper passa
+            segs, _ = modelo.transcribe(carregar_audio(wav), language="pt", word_timestamps=True, initial_prompt=PROMPT,
                                         vad_filter=True, condition_on_previous_text=False)
             out = [{"start": s.start, "end": s.end, "text": s.text,
                     "words": [{"s": x.start, "e": x.end, "w": x.word} for x in s.words]} for s in segs]
