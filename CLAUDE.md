@@ -242,6 +242,10 @@ Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a s
 
 **Criativos do Elite Experience (Keila, 17/11/2026):** quando o Dr. João (ou o Dr Joao Vitor) mandar em qualquer grupo uma pasta ou vídeos de criativos do Elite Experience, pegar o link, listar os arquivos e mandar direto (send_message) para a sessão do Claude "Edição Criativos Elite Experience" (`session_0117TgWTukdoZrzBap5FqCsq`) para ela já editar no padrão de lá. Depois avisar no Gestão FEA que foi para edição.
 
+### Regra fixa: enviar ao Luca antes de ele pedir (Keila, 18/11/2026)
+
+Todo pedido em grupo que a gestão precisa responder com informação ou link (exemplo: Luca pedindo o link da página "estou ao vivo") vira **demanda no ClickUp** e passa a ser enviado **antes de ele pedir** nos próximos eventos. Cada lançamento tem um pacote "Enviar ao Luca" com dois blocos: **antes do início da captação** e **antes do CPL/aula** (Zoom e máscara, página do Zoom, páginas de captura e vendas, checkouts, grupo de WhatsApp, briefing, slides finais). O pacote fica como aba na planilha de Links úteis do evento; se ela for .xlsx (não editável pelo Claude), criar planilha Google "FEA - Enviar ao Luca · [evento]" na pasta do lançamento. Modelo: MPL 11/26 (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`).
+
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
 
 Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de sugerir cobrar alguém), pedir para a **Gabi** conferir. Fluxo obrigatório: verificar, conferir, revisar e só então liberar o status. Ausência de registro no ClickUp não prova que a tarefa não foi feita (erro de 17/11: o Claude mandou cobrar a Adri, mas a parte dela estava pronta e a pendência era a revisão da Grazi).
