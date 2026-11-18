@@ -220,6 +220,44 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **Médicos (5)** Francine Maria de Almeida (Diretora Científica) · Amanda Araujo Reis, Giancarlo Desiderio Ferreira Pinto, Gabriela Ducioni Matos, Lais Claus Leme Sampaio (freela)
 
+### WhatsApp: grupo Gestão FEA e números para menção
+
+Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA (Atendimento, admin, `551132804911`), Keila e Gabi. Para marcar alguém, usar `mencionar` no `enviar_texto` com o número abaixo.
+
+| Pessoa | Número (DDI, só dígitos) |
+|--------|--------------------------|
+| Keila Quaresma | `553191581433` |
+| Gabi | `5514991278094` |
+| Luca Yu (não está no Gestão FEA; mensagem dele em qualquer grupo é **urgente**) | `5511960759355` |
+
+### Regra fixa: toda informação vista nos grupos vai para o briefing (Keila, 17/11/2026)
+
+Obrigatório, sem esperar pedido: qualquer informação de lançamento que aparecer em grupo de WhatsApp, ClickUp ou conversa (data de carrinho, bônus novo, preço, link, mudança de oferta, decisão do Luca ou da Keila) é anotada **na hora** no briefing do lançamento correspondente (Google Doc), substituindo o "✏️ confirmar" do campo. Exemplo: o Luca fala num grupo que vai ter bônus novo, então o briefing é atualizado com o bônus. Depois de atualizar, avisar no grupo Gestão FEA o que mudou e tirar o item da lista de pendências. Para editar o Doc, o conector **Google Docs** precisa estar conectado; se não estiver, avisar a Keila na hora em vez de deixar a informação só no chat.
+
+### Regra fixa: ronda dos grupos FEA com material pronto para encaminhar (Keila, 17/11/2026)
+
+Rotina agendada "Ronda grupos FEA (Gestão + triagem)", de hora em hora, seg a sáb, 8h07 às 19h07 (Brasília). Em todos os grupos da FEA, quando alguém pede link, material ou informação, o Claude vai atrás (Drive, ClickUp, briefings, histórico dos grupos) e manda no grupo Gestão FEA uma mensagem pronta para encaminhar: "[Pessoa] pediu X · aqui o material · encaminhar para [pessoa]". Pedido do Luca é urgente e vai na mesma rodada, marcando a Keila. O número da FEA só lê os outros grupos; quem encaminha é a Keila ou a Gabi.
+
+**Prioridade do Luca (Keila, 17/11/2026):** 🚨 muito urgente quando o Luca **menciona a Keila ou a Gabi** (é demanda direta para a gestão), em qualquer grupo: alerta na hora marcando as duas. ⚠️ Atenção (um pouco urgente) para pedido do Luca nos grupos **Coordenação, Edição, Artes, Web e The Tracker (tráfego)**: alerta na mesma vigia, sem marcar ninguém. Nos demais grupos (Copy, Automações, Comercial etc.) **sem alarde**: o time é responsável; só reportar se ninguém responder no próprio grupo em uns 30 minutos.
+
+**Criativos do Elite Experience (Keila, 17/11/2026):** quando o Dr. João (ou o Dr Joao Vitor) mandar em qualquer grupo uma pasta ou vídeos de criativos do Elite Experience, pegar o link, listar os arquivos e mandar direto (send_message) para a sessão do Claude "Edição Criativos Elite Experience" (`session_0117TgWTukdoZrzBap5FqCsq`) para ela já editar no padrão de lá. Depois avisar no Gestão FEA que foi para edição.
+
+### Regra fixa: enviar ao Luca antes de ele pedir (Keila, 18/11/2026)
+
+Todo pedido em grupo que a gestão precisa responder com informação ou link (exemplo: Luca pedindo o link da página "estou ao vivo") vira **demanda no ClickUp** e passa a ser enviado **antes de ele pedir** nos próximos eventos. Cada lançamento tem um pacote "Enviar ao Luca" com dois blocos: **antes do início da captação** e **antes do CPL/aula** (Zoom e máscara, página do Zoom, páginas de captura e vendas, checkouts, grupo de WhatsApp, briefing, slides finais). O pacote fica como aba **na própria planilha de Links úteis do evento**. Mensagem pronta para encaminhar ao Luca (o que enviamos e o que precisamos dele) sai no Gestão FEA no início da tarde.
+
+**Regra fixa (Keila, 18/11/2026): nunca criar planilha ou documento novo, nem trocar o link de planilha ou documento existente.** Todo pedido relacionado a planilha é feito na mesma planilha. Se o arquivo for .xlsx (o Claude não edita), levar à Keila as soluções de acesso para edição em vez de criar arquivo paralelo. A planilha "FEA - Enviar ao Luca · MPL 11/26" (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`) foi criada antes dessa regra e é exceção, não modelo.
+
+### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
+
+Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de sugerir cobrar alguém), pedir para a **Gabi** conferir. Fluxo obrigatório: verificar, conferir, revisar e só então liberar o status. Ausência de registro no ClickUp não prova que a tarefa não foi feita (erro de 17/11: o Claude mandou cobrar a Adri, mas a parte dela estava pronta e a pendência era a revisão da Grazi).
+
+Briefings ativos:
+
+| Lançamento | Briefing |
+|------------|----------|
+| MPL 11/26 (Masterclass Preenchimento Labial, live 19/11, 20h) | `1Cx9YhDnCcnVAFg70gvF5SBFq9ZMTjCWRN1TifbaYZxQ` |
+
 ### Quem chamar para cada coisa
 
 | Necessidade | Falar com |
