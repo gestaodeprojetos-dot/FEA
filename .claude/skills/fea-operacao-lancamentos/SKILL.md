@@ -121,6 +121,8 @@ Tudo o que a Keila ou a equipe manda (copy, arte, link de grupo, webhook, lista 
 
 ## 8. Armadilhas já vividas
 
+- **Informação nova de uma demanda que já existe: atualizar a tarefa existente, nunca criar outra** (Keila, 18/11/2026). Em 18/11 criei uma tarefa nova para o Leo com o que o Luca mandou no grupo Copy e deixei a antiga aberta: ele ficou com três tarefas do mesmo slide. Regra: uma demanda, uma tarefa. Reescrever a descrição da tarefa que a pessoa já tem (com tudo, inclusive o que mudou), ajustar nome e prazo, comentar atribuído ao responsável o que mudou. Se já existir duplicada, juntar tudo numa só e arquivar as outras com comentário apontando para a que ficou.
+
 - **Nunca mover planilha** (Keila, 14/11/2026), de nenhum time e por nenhum motivo, nem pedir a alguém que mova: pode quebrar integrações (formulário, webhook, Listboss, automações). Planilha fora do Drive da empresa vai para a tarefa da Gabi de cobrar os times, e o time dono decide como resolver. Planilha nova nasce dentro da pasta do lançamento no Drive da empresa.
 
 - `python3 - <<'EOF' </dev/null` não roda nada: o `</dev/null` substitui o heredoc. Usar arquivo `.py` e `python3 arquivo.py </dev/null`.
