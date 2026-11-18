@@ -14,6 +14,15 @@ As rotinas abaixo disparam na conversa antiga (`session_0125nVqC5NDfivtJj47LCFVf
 
 A ronda cobre as pastas BF Vitalícia 10/26, BF Total Latam, Masterclass Anatomia 12/26 (incluída em 16/11), FEA-MTB 11/26 (em espera), lista YouTube e tarefas avulsas (skill `fea-clickup-ronda`).
 
+**Transferência feita em 18/11 (10h26).** Rotinas ativas agora na conversa `session_0117TgWTiNmvkVzC98pJYBHV` (branch `claude/gracious-cray-ctv7wn`):
+
+| Rotina | ID novo |
+|---|---|
+| FEA · Ronda ClickUp (dias úteis) | `trig_013NE2NcdNRee3XSLH43azRN` |
+| FEA · Virada de sprint (sexta à noite) | `trig_012SNDRSoNbvP3T2GqneFDAM` |
+
+As antigas (`trig_01PDE8E29NDkvo8GqzHWTPBk` e `trig_012Dr2vkYh9456LQhAkUeX4C`) estão desligadas, não apagadas. A aula-zoom MPL já disparou em 18/11: a página do MPL usa `joaopithon.com.br/aula-zoom-2`, que leva à sala 858 6669 3966 (certa).
+
 ## 2. Permissões
 
 `.claude/settings.json` libera ClickUp, Drive e Sheets sem confirmação (autorização da Keila, 17/11). Só vale em conversa nova.
