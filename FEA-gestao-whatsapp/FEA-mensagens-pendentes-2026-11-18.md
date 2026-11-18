@@ -1,6 +1,6 @@
 # FEA · Mensagens prontas para o Gestão FEA (18/11/2026)
 
-Status: NÃO ENVIADAS. Nesta sessão o conector "WhatsApp FEA (uazapi)" não expõe a ferramenta enviar_texto (só ler, listar, transcrever e enviar_midia). Enviar assim que o conector for reconectado.
+Status: Mensagens 1 e 2 ENVIADAS no Gestão FEA em 18/11 às 10h34 (pela sessão com enviar_texto). Mensagem 3 fica com a sessão nova, às 13h.
 
 Destino: Gestão FEA (120363432442225090@g.us)
 
@@ -71,3 +71,8 @@ Para fechar, precisamos de 3 pontos seus:
 1. Slides finais da MPL: usamos os que já foram ajustados ou vem outra versão?
 2. O parcelado Lote Especial vale para a oferta da MPL? Com a virada para o Primeiro Lote, quais checkouts entram?
 3. Podemos colocar CTA da MPL nos conteúdos, mantendo o "comente Aula"?
+
+---
+
+## Alerta visto pela vigia às 10h33 (não enviado por esta sessão)
+Automações | FEA · Vivianne marcou a Keila e a Gabi: o limite de envios de e-mail do ActiveCampaign foi atingido. Opções dela: esperar virar o mês ou aumentar o plano. Decisão da Keila.
