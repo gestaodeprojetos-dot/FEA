@@ -134,3 +134,5 @@ Adicionar a regra nos 3 lugares, para nenhuma ficar só na conversa:
 ## Conferência por amostragem de sincronia
 
 Além do script, conferir em 3 pontos de cada vídeo (começo, meio e fim) se o texto na tela é o que o Dr. está falando naquele instante: extrair 1 quadro no início de 3 legendas e comparar o texto com a transcrição do mesmo segundo.
+
+**Fonte do título na máquina nova (18/11/2026):** a medida da headline (`medir_titulo_px`) procura `Montserrat-ExtraBold.ttf` na pasta do script, em `fonts/` e em `/tmp/claude-0`. Se não achar, estima por caracteres e acusa ERRO falso de "headline estoura a margem" (pasta 21-7 de novembro: 1404 px). Antes de rodar a revisora numa sessão nova, baixar a fonte (`https://raw.githubusercontent.com/JulietaUla/Montserrat/master/fonts/ttf/Montserrat-ExtraBold.ttf`) para o scratchpad.

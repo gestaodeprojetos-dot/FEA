@@ -21,6 +21,8 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 
 ## CTA Masterclass Intercorrências "Comente AULA" (regra em vigor)
 
+**CTA MPL (18/11/2026):** na pasta 21 de novembro, vídeos 7 a 13, o CTA MTI foi trocado por `Ads 55 - MPL - CTA Comente AULA.mp4` (Masterclass em Preenchimento Labial, Drive `1dtLtRVSeSUFdIT57Q0xmuf4s-fxnHQX5`, 25,87 s), aplicado sobre as versões SEM CTA com `fea_aplicar_cta_entregue.py`. IDs em `FEA-edicao-videos/FEA-nov-21-cta-mpl-ids.md`. Qual CTA vale para os próximos lotes: confirmar com a Keila.
+
 **Desde 12/11/2026 os conteúdos voltam a ter CTA: transição de 0,5 s mais `Ads 22 - MTI - CTA Comente AULA.mp4` (Masterclass Intercorrências: Ads 22 sem o saiba mais, seguido do card Comente AULA). Isso substitui a regra SEM CTA de 09/11.** Pedido da Keila sobre o lote das pastas 17 a 20 de novembro, entregue sem CTA: "ué, esses precisam ter o cta que criamos" (o CTA MTI foi aprovado por ela no mesmo dia: "ficou ótimo").
 
 - Arquivo: `Ads 22 - MTI - CTA Comente AULA.mp4` (Drive `16pjo1zYEkX4HbiaYWWiE7mNH-UCVK1Fv`, pasta `1m1ShWBbR_ZzuohshnPh6vDUX6FUsF9UG`, MD5 `ccbf95a05438e22700091df906e28346`), **39,50 s** (1185 quadros), 1080x1920, 30 fps, H.264 High, AAC 48 kHz. Duas partes: o criativo Ads 22 com o anúncio completo da masterclass gratuita e ao vivo, sem o pedido de "saiba mais", e o card de 5 s "Comente AULA" (`FEA-CTA-digitando-comente-aula-MIC.mp4`, Drive `1Cc9sYHbUEg078KR0Jr_mkc-KcmfDZLr1`). Mesmo padrão do MTB de novembro (Ads 12 + card). Entra **inteiro** no fim de cada conteúdo.
