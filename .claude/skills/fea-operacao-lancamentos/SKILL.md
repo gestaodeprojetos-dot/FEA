@@ -139,6 +139,10 @@ Tudo o que a Keila ou a equipe manda (copy, arte, link de grupo, webhook, lista 
 - Link de Zoom: confirmar com a planilha de links do lançamento de qual evento é a sala antes de trocar qualquer coisa; nunca deduzir pela ordem das mensagens.
 - Vídeo do Drive grande: baixar em blocos para o scratchpad; subir com upload resumível (`fea_drive.subir`).
 
+## 8b. Guia de padrões para os outros Claudes (Keila, 19/11/2026)
+
+O Claude do WhatsApp e outras conversas também mexem no ClickUp, Drive e planilhas e não conhecem estas skills ("essa bagunça porque o Claude do WhatsApp começou a organizar tudo e ele não sabe o padrão"). O resumo dos padrões fica em `FEA-gestao-clickup/FEA-padroes-operacao-equipe.md`, publicado no Google Doc `1NkbIawRhO-oWpVTz-6o1JImPcU_cKHFZzM7QliDDhLQ` (pasta de lançamentos 2026). **Toda regra nova gravada numa skill entra também nesse arquivo e no Doc, no mesmo dia** (reenviar o .md por `files/{id}` PATCH com upload `text/markdown`, que regrava o Doc).
+
 ## 9. Formato das respostas para a Keila
 
 - Português, sem preâmbulo, sem travessão, "para" sempre.
