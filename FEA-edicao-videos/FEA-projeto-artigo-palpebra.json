@@ -16,7 +16,7 @@
     "manter": [
       [
         0.0,
-        84.1,
+        84.8,
         "exato"
       ]
     ],
@@ -130,6 +130,24 @@
       {
         "ini": 44.0,
         "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/palp/clips/v_ptose_olhos.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 46.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/palp/clips/v_inchado.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 48.6,
+        "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/palp/clips/s_resumo.mp4",
         "src": 0.0,
         "cx": 0.5,
@@ -138,6 +156,15 @@
       },
       {
         "ini": 51.7,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/palp/clips/v_ptose_sorriso.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 57.7,
         "tipo": "cheio"
       },
       {
