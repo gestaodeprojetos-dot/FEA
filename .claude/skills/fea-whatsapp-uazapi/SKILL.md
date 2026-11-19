@@ -83,8 +83,9 @@ Confirmar com a lista do time antes de contato novo: números foram deduzidos da
 
 ## 5. Rotinas automáticas
 
-- **Vigia rápida (a cada 2 min):** `CronCreate` recorrente, cron em UTC: `*/2 11-22 * * 1-6` (8h às 19h59 de Brasília, seg a sáb). Extensão até 20h30: `1-31/2 23 * * 1-6`. O prompt da vigia lista os itens da seção 4. **CronCreate vive só na sessão** e some quando o worker reinicia ou após 7 dias.
-- **Ronda de reserva (de hora em hora):** scheduled task do Claude Code Remote (`create_trigger`), `CRON_TZ=America/Sao_Paulo 7 8-20 * * 1-6`, ligada à sessão. Ela sobrevive a reinícios e, no passo 0, confere com `CronList` se a vigia existe; se não, recria.
+- **Vigia rápida (a cada 2 min), 24h por dia, seg a sáb (Keila, 19/11):** `CronCreate` recorrente em UTC, em dois jobs para cobrir Brasília: `*/2 3-23 * * 1-6` e `*/2 0-2 * * 0,2-6`. **CronCreate vive só na sessão**: some quando o worker reinicia ou após 7 dias.
+- **Madrugada (22h às 8h):** no Gestão FEA só o urgente (Luca mencionando Keila ou Gabi, ou algo quebrando no ar); o resto vira um resumo único às 8h. Nunca falar com o time de noite.
+- **Ronda de reserva (de hora em hora, 24h):** scheduled task do Claude Code Remote (`create_trigger`), `CRON_TZ=America/Sao_Paulo 7 * * * 1-6`, ligada à sessão. Ela sobrevive a reinícios e, no passo 0, confere com `CronList` se os dois jobs da vigia existem; se não, recria. A rodada das 8h07 manda o resumo da madrugada.
 - **Avisos com horário marcado** (ex.: aviso ao Saar às 17h, lembrete 1h antes da live): `send_later` (sobrevive a reinício). Se a Keila mandar enviar antes, enviar e **desligar** o agendado com `update_trigger enabled=false`, para não duplicar.
 - Quando houver reinício da sessão, avisar a Keila que pode ter havido atraso e recriar a vigia.
 
