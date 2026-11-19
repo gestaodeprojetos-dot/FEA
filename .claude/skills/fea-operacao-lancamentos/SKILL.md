@@ -62,7 +62,7 @@ Se a mensagem é ambígua e a escolha muda o resultado (por exemplo, qual link �
 
 ## 3. Montar um lançamento a partir do briefing
 
-Critério de sucesso: Drive, planilha de links, ClickUp com sprints e tarefas datadas e com responsável, Guia de Informações, tudo linkado entre si.
+Critério de sucesso: Drive, planilha de links, ClickUp com sprints e tarefas datadas e com responsável, **status do modelo FEA em todas as listas** (a fazer · fazendo · em revisão · em ajuste · atrasado · aprovado · pausado · sprint · feito; ver `fea-distribuir-datas`), Guia de Lançamento na pasta, tudo linkado entre si. Lançamento que substitui outro (ex.: Bio no lugar da Anatomia, 19/11/2026) passa pela mesma conferência: status e guia já faltaram uma vez.
 
 1. **Conferir o que já existe** (ClickUp: pastas do espaço; Drive: busca pelo nome). Não duplicar.
 2. **Drive** no padrão de lançamento (estrutura em `fea-distribuir-datas`), com `mkdir` de `scripts/fea_gdrive.py`. Em `4. TRÁFEGO/CRIATIVOS PRONTOS`, uma pasta por fase (1. CAPTAÇÃO, 2. ANTECIPAÇÃO, 3. LEMBRETE, 4. VENDAS e as demais do lançamento) e **ESTÁTICOS dentro de cada fase**.
