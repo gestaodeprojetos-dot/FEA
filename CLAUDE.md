@@ -266,6 +266,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Todo retorno ganha resposta (Keila, 19/11):** quando alguém do time responde em um grupo, a gestão mostra que viu: reação 👍🏾 ou "obrigada" quando não pede nada; pedido do próximo passo quando há entrega (ex.: "quando o grupo estiver pronto, me envia o link de convite"); ou demanda nova no ClickUp.
 - **Sempre marcar o @ da pessoa (Keila, 19/11):** toda resposta ou pedido a alguém do time vai com `mencionar`. Editar mensagem não cria marcação: se esquecer, reenviar marcando. Danielly Agrela "Dani" (automação): `5514996197964` (confirmado pela Keila, 19/11).
 - **Entregas da automação (Keila, 19/11):** a equipe de automação (Vivi, Dani) registra links e entregas no ClickUp e na planilha, não no grupo. Não pedir que enviem link no WhatsApp; buscar no ClickUp e na planilha. Agradecer só com "obrigada" marcando a pessoa.
+- **Link do ClickUp em toda demanda (Keila, 19/11):** toda mensagem ao time com demanda leva, obrigatoriamente, o link da tarefa no ClickUp.
+- **Brasil e Latam andam juntos (Keila, 19/11):** tudo o que for feito para um produto no Brasil (copy, artes, páginas, onboarding, automação) é feito também para a versão Latam, sem precisar pedir.
 - **Emoji e espaço (Adri, 18/11):** emoji de mão do Dr. João sempre no tom 🏾 (ex.: 👇🏾, 👉🏾), nunca 🏽 ou amarelo. Nunca dois espaços seguidos em copy ou mensagem.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
