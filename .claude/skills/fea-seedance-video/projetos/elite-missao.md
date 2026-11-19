@@ -25,6 +25,8 @@
 
 - Fotos do Luca Yu (19/11): pasta de fotos de evento (id 1rDAmQz10RopCEVD9IsI1QwBVTAspNzJp, 43 fotos, quase todas em grupo; recortar o rosto, arquivos de 5000 px); pasta "Luca" com 57 takes de iPhone 1080p (id 1eEDIbXxmvgYH9pjMEgyQxucw6dMe5UFU, servem para perfil e voz); pasta com luca.png e 0P6A0629.jpg (id 1FNIoceqUnNYu2B9l3jsGqFu62ZW3sLUI). Melhores: luca.png (frente), 0P6A0629 (três quartos sorrindo), ROMA0182 (frente sério), IMG_9796 (frente sorrindo), IMG_4972 (três quartos), ROMA9257 (corpo inteiro, já de terno preto e camisa preta: referência de porte). Perfil-Luca convertido para JPG e salvo na pasta de materiais (id 1iiNNc46C5znR5PruYUiNdulQ3xTfi3xx): estúdio, fundo escuro, de frente, gola alta preta. É a foto principal do Luca
 
+- Dr. João, visual atual (19/11): pasta 1xiI-Wp47DEc3UnZenFNPW_2-JF2VyAkX, 8 fotos do Elite Injectors Congress (03/11). Barba curta, cabelo penteado para trás. As sessões antigas (barba cheia) ficam fora. Card em personagens/dr-joao/card.md
+
 ## Cenários (mesma ideia do Vinhas, na identidade do Elite)
 - Referências do reel do Vinhas no Drive: pasta "Referencias do video do Vinhas (cenarios)" (id 15oMIp46NLrFqvZTU7VusbMZv7Mp0zmKn), 6 quadros 720x1280
 - C1 escritório clássico à noite (biblioteca, mesa com tampo de couro, luminária, poltrona bordô, janela com São Paulo à noite)
@@ -36,7 +38,6 @@
 
 ## Pendências (19/11/2026)
 - Fala 1 (sugestão da Adriane: "Essa está fácil, tenho o time perfeito para isso!")
-- Qual cabelo o Dr. João usa hoje (define quais sessões entram)
 - Parecer do Luca
 - Fotos reais dos 4, autorizações de imagem, áudios do Dr. João
 - Acesso de geração: login do Higgsfield não funciona pela sessão na nuvem
