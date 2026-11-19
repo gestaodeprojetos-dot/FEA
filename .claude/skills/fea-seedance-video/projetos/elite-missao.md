@@ -95,3 +95,11 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 | Parede de mármore azul sem emblema.png (10xCyYSE0DGb-xV_AUurXX5P803oq_X3V) | Não | Descartar (enquadramento torto, menos fiel) |
 - Ajuste pendente nas duas escolhidas: o símbolo da Apple na tampa do notebook (marca de terceiro). Pedir no mesmo chat do ChatGPT para tirar e deixar a tampa lisa
 - No prompt do Seedance do clipe 1: câmera quase parada, logo ao fundo e fora de foco leve, e a frase "the emblem on the marble wall stays fixed and unchanged"
+
+## Clipe 1 · prompt v1 (19/11/2026)
+- Cenário: "Logo metálica da clínica no mármore" com o símbolo da Apple mantido (decisão da Keila)
+- 13 s, 3 takes: mão de manga preta deixa o envelope / close das mãos abrindo, cartão de costas / ele lê, guarda no bolso, meio sorriso e fala
+- Fala usada: "Essa está fácil. Tenho o time perfeito para isso." (sugestão da Adriane com "para" no lugar de "pra")
+- O texto do cartão aparece só no insert da edição (imagem O2), nunca no vídeo
+- Voz sintetizada só para a boca e o ritmo; trocar pelo áudio gravado do Dr. João na edição
+- Risco: o Higgsfield pode recusar por causa do símbolo da Apple ("copyright restrictions"). Plano B: apagar o símbolo da imagem e regerar
