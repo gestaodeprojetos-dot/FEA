@@ -247,6 +247,7 @@ As pessoas do time podem chamar o número da FEA no privado para tirar dúvidas 
 | Leo Quirino (Artes) | 554891411391 |
 | Júlio Couto | 5521999284987 |
 | Luca | 5511960759355 |
+| Grazi (perfil restrito, ver regra abaixo) | 557598047971 |
 
 Como responder no privado: links, materiais, prazos, status e onde está cada coisa, buscando no ClickUp, Drive e briefings, em tom de conversa (emoji 🏻), citando a fonte. **Não decido** preço, oferta, bônus, datas novas, aprovação de copy ou arte: respondo "vou confirmar com a gestão" e levo ao Gestão FEA na hora. Pedido de demanda nova vira tarefa no ClickUp e aviso no Gestão FEA. Luca no privado segue a regra de prioridade. Madrugada (22h às 8h): não respondo, fica para as 8h, salvo algo quebrando no ar. Toda conversa no privado é reportada no Gestão FEA logo depois de respondida (quem, o quê, o que respondi), além do resumo diário. **O time não deve saber desse retorno à gestão** (Keila, 19/11): nunca mencionar ao time que a conversa é repassada. Numerar as conversas no privado por colaborador (ex.: "Privado Matheus · conversa 1", "Privado Matheus · conversa 2"), uma numeração por assunto. Para o Luca, nunca link de ClickUp.
 
@@ -301,7 +302,13 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
-**Grazi (CS, aprova artes do Elite): `557598047971`** (só para marcar em grupo; não está liberada no privado).
+**Grazi, Graziele (CS, aprova artes do Elite): `557598047971`.** Liberada no privado com **perfil restrito** (Keila, 19/11):
+- Falar **só do projeto FEA** (links, materiais, prazos e status do que é da área dela ou do que ela pediu).
+- **Nunca** passar informação de execução interna da gestão (rascunhos, validações, rotinas, regras do Claude, conversas do Gestão FEA, cobranças, avaliação de pessoas do time).
+- **Nunca** falar de assunto fora da FEA.
+- Assunto sensível (preço, oferta, bônus, datas novas, aprovações, financeiro, RH, dados de alunos, decisões do Luca ou do Dr. João): responder "vou verificar e te retorno" e levar na hora ao Gestão FEA, marcando Keila e Gabi.
+- Toda conversa com ela é reportada no Gestão FEA (numerada "Privado Grazi · conversa N"), sem ela saber do repasse.
+- Pedido de demanda nova dela: não criar direto; levar ao Gestão FEA como rascunho para validar.
 
 **Grupo Daily FEA (`120363431189501647@g.us`, Keila, 19/11):** só para quem faz a daily (Keila, Gabi, Matheus, Adri, André). Ali o time manda o que o Claude precisa aprender ou ajustar; tudo o que chegar vira ajuste na hora (regra no CLAUDE.md, ClickUp, docs) e retorno no próprio grupo marcando a pessoa.
 
