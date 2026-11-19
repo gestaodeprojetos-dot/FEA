@@ -10,7 +10,21 @@
       "mcp__HeyGen",
       "mcp__github",
       "mcp__claude-code-remote",
-      "mcp__Claude_Code_Remote__read_documentation"
+      "mcp__Claude_Code_Remote__read_documentation",
+      "mcp__ClickUp__*",
+      "mcp__WhatsApp_FEA_uazapi",
+      "mcp__WhatsApp_FEA_uazapi__*",
+      "mcp__Google_Docs",
+      "mcp__Google_Docs__*",
+      "mcp__Google_Sheets",
+      "mcp__Google_Sheets__*",
+      "mcp__Google_Drive__*",
+      "mcp__claude-code-remote__*",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "ReadNotifications",
+      "ToolSearch"
     ]
   }
 }
