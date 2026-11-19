@@ -76,6 +76,7 @@ Confirmar com a lista do time antes de contato novo: números foram deduzidos da
 7. **Nunca afirmar que uma demanda foi ou não feita** só pela falta de registro: pedir para a Gabi conferir.
 8. **Nunca inventar dado** (duração de reunião, preço, data). Se não foi definido, não escrever.
 9. **Mensagem para a Vivi:** nunca indicar quem será admin de grupo.
+10b. **Demanda nunca fica parada** (Keila, 19/11): validou, entregou ou comentou, a próxima etapa sai na hora (correções, ClickUp, Links úteis, demanda e mensagem para o próximo responsável) e vem ao Gestão FEA para validar.
 10a. **Emoji de mão do Dr. João no tom 🏾** (👇🏾, 👉🏾) e **nunca dois espaços seguidos** (Adri, 18/11). Ler também o grupo Gestão Keila.
 10. **Erro de conexão no envio:** reler o grupo antes de reenviar, para não duplicar.
 11. **Toda informação nova vai para o lugar certo:** briefing do lançamento, ClickUp (tarefa e caminho citados), planilha. Nada fica só no chat.
