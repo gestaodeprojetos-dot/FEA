@@ -15,7 +15,7 @@
     "headline_fim": 4.6,
     "manter": [
       [
-        0.2,
+        0.38,
         45.8,
         "exato"
       ]
@@ -53,7 +53,7 @@
     },
     "cenas": [
       {
-        "ini": 0.2,
+        "ini": 0.38,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/v_glabela_clin.mp4",
         "src": 0.0,

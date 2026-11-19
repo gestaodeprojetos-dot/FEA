@@ -151,8 +151,8 @@ def mapa_tempo(manter):
 
 def render_headline(linhas, fonte):
     """Bloco centralizado no vídeo (Gabi, 10/11/2026: "a linha do meio precisa estar no meio e toda a
-    headline no meio do vídeo"): cada linha centrada na coluna do texto, barra dourada à esquerda da
-    linha mais larga, bloco centrado na vertical (a linha do meio cai no centro da tela)."""
+    headline no meio do vídeo"), com as linhas alinhadas à esquerda, encostadas na barra dourada
+    (Gabi, 19/11/2026: "mantém o título todo à esquerda"); bloco centrado na vertical."""
     global HL_CAIXA_X, HL_BARRA_X, HL_Y
     ft = ImageFont.truetype(fonte, HL_FONTE)
     camadas = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -170,7 +170,7 @@ def render_headline(linhas, fonte):
     HL_Y = H // 2 - alt // 2
     y = HL_Y
     for ln, larg, l, t, b in caixas:
-        x0 = int(round(centro - larg / 2))
+        x0 = HL_CAIXA_X                                 # alinhado à esquerda
         d.rectangle([x0, y, x0 + larg, y + HL_LINHA_H], fill=(255, 255, 255, 255))
         ty = y + (HL_LINHA_H - (b - t)) / 2 - t
         d.text((x0 + 16 - l, ty), ln, font=ft, fill=(0, 0, 0, 255))
