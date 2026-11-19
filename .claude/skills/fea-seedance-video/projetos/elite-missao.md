@@ -74,7 +74,7 @@ Remove completely: any person, sharps container, syringes, needles, gloves, medi
 | C1 clínica | FEA-ref-clinica-mesa-computador.jpg (11PrVfFjwtN1BEGeSHYJoSoHkqMmjYu4P), foto real da mesa enviada pela Keila (19/11): recepção/mesa com parede de mármore azul, pendentes dourados, mesa branca com frente de blocos de vidro, cadeira creme, notebooks | Prompt pronto abaixo. Logo octogonal da parede sai do cenário |
 
 ## Prompt ChatGPT · C1 clínica v2, com a foto da mesa (19/11/2026)
-Anexar: 1) FEA-ref-clinica-mesa-computador.jpg (pasta de materiais) · 2) WhatsApp Image 2026-11-06 at 17.25.02.jpeg (parede estofada, só como apoio de material)
+Anexar: 1) FEA-ref-clinica-mesa-computador.jpg (pasta de materiais) (só ela: a parede estofada da sala de procedimento misturaria dois ambientes)
 
 ```
 Use the first photo as the exact reference for this real clinic office: the wall of dark blue marble with gold and white veins, the taupe plaster wall on the left, the cluster of slim brushed-gold cylinder pendant lights hanging from the white ceiling, the white desk with a front panel of glass blocks, and the cream-white office chair with perforated back. Keep the same materials, colours and layout. Recreate it as an EMPTY scene with no people.
