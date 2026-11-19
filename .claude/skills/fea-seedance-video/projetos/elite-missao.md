@@ -111,3 +111,13 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 - 4b Priscilla, 4c Dr. Vitor e 5 (palco) aguardam fotos
 - Fala do clipe 1 aprovada (19/11): v3 "Essa tá fácil. Eu tenho um time perfeito pra isso." (exceção pedida pela Keila: "pra" só nesta fala falada). Arquivo FEA-elite-clip1-fala-dr-joao-v3.mp3 (Drive 16JySmPKv_Ygkf2A9Bov9G4a-iemBBQu-). Prompts atualizados no doc "...rascunhos-Seedance v2" (1lxsWCn1_nmebQpcJ93bN024eFRUBRJLPnbW0Ff7EBPQ); o doc antigo ficou marcado como substituído
 - CTA final: v1 a v3 reprovadas (animadas). v4 gerada frase a frase, aguardando a Keila
+
+## Falas finais aprovadas (Keila, 19/11/2026)
+| Fala | Arquivo | Drive id |
+|---|---|---|
+| Clipe 1 "Essa tá fácil. Eu tenho um time perfeito pra isso." | FEA-elite-clip1-fala-dr-joao-v3.mp3 (3,6 s) | 16JySmPKv_Ygkf2A9Bov9G4a-iemBBQu- |
+| Clipe 2 "Monta o time." | FEA-elite-clip2-fala-monta-o-time-v3.mp3 (1,5 s) | 1546ryOWEPO2AMMnyltMvRotSFuWVoOoE |
+| Narração palco "Marketing, vendas e técnica no mesmo palco." | FEA-elite-narracao-palco.mp3 (3,6 s) | 1OonlgVuIMrUc8kTO8imiED9mt_vXR0PO |
+| CTA "Missão aceita. Aplique para a sua vaga. Toque em Saiba Mais." | FEA-elite-narracao-cta-final-v5.mp3 (4,5 s) | 1BIA8xjIDNelUth4Sge-qeEbC0hO6l9oy |
+- Receita aprovada: clone instant, `expressivenessBoost: 0`, frase inteira de uma vez, ritmo normal (frase a frase com pausa ficou lenta demais)
+- Prompts atualizados: doc "FEA-Elite-missao-prompts-rascunhos-Seedance v3" (1RpFiiVgqALLHUpiTUzdDsXPeUe-H9mAtYCdTWDYRdQg)
