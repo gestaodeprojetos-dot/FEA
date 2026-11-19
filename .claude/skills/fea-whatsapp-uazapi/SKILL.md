@@ -76,6 +76,7 @@ Confirmar com a lista do time antes de contato novo: números foram deduzidos da
 7. **Nunca afirmar que uma demanda foi ou não feita** só pela falta de registro: pedir para a Gabi conferir.
 8. **Nunca inventar dado** (duração de reunião, preço, data). Se não foi definido, não escrever.
 9. **Mensagem para a Vivi:** nunca indicar quem será admin de grupo.
+10a. **Emoji de mão do Dr. João no tom 🏾** (👇🏾, 👉🏾) e **nunca dois espaços seguidos** (Adri, 18/11). Ler também o grupo Gestão Keila.
 10. **Erro de conexão no envio:** reler o grupo antes de reenviar, para não duplicar.
 11. **Toda informação nova vai para o lugar certo:** briefing do lançamento, ClickUp (tarefa e caminho citados), planilha. Nada fica só no chat.
 12. **Planilhas .xlsx no Drive não são editáveis** pelo conector do Sheets (erro "must not be an Office file"). Mandar à Gabi o bloco pronto para colar; nunca criar planilha nova nem trocar link.
