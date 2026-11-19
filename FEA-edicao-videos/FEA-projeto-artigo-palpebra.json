@@ -15,7 +15,7 @@
     "headline_fim": 4.6,
     "manter": [
       [
-        0.1,
+        0.0,
         84.1,
         "exato"
       ]
@@ -57,7 +57,7 @@
     },
     "cenas": [
       {
-        "ini": 0.1,
+        "ini": 0.0,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/palp/clips/v_olhos.mp4",
         "src": 0.0,
