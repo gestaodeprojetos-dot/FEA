@@ -276,6 +276,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
+Matheus van der Ham (Copy) tem um segundo número, liberado pela Keila para falar comigo no privado: `555592045105` (19/11).
+
 Números deduzidos pelas marcações nos grupos (confirmar com a lista do time): Saar `555191521964` · Matheus van der Ham (Copy) `555481097142` · Adri `555384841867` · Vivianne (Automações) `558182309754` · Júlio Couto `5521999284987`.
 
 Briefings ativos:
