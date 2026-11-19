@@ -103,3 +103,9 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 - O texto do cartão aparece só no insert da edição (imagem O2), nunca no vídeo
 - Voz sintetizada só para a boca e o ritmo; trocar pelo áudio gravado do Dr. João na edição
 - Risco: o Higgsfield pode recusar por causa do símbolo da Apple ("copyright restrictions"). Plano B: apagar o símbolo da imagem e regerar
+
+## Rascunhos (19/11/2026, Keila: "criar rascunhos de todos os clipes primeiro")
+- Voz: o Dr. João não grava. Falas geradas com o clone do HeyGen (ver vozes.md) e salvas no Drive e em FEA-elite-experience-video-ia/audios/: clip1 (3,4 s), clip2 "Monta o time." (1,1 s), narração do palco (3,6 s), CTA final (4,5 s)
+- Prompts dos clipes 1, 2, 3 e 4a no Google Doc "FEA-Elite-missao-prompts-rascunhos-Seedance" (1ocmL6n9y4O1bFVmo2LI7E5ah5ADo-hEC-u1r64Wa3JI), na pasta de materiais
+- Clipe 1 virou 14 s (fala às 9,4 s com @Audio1)
+- 4b Priscilla, 4c Dr. Vitor e 5 (palco) aguardam fotos
