@@ -109,3 +109,5 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 - Prompts dos clipes 1, 2, 3 e 4a no Google Doc "FEA-Elite-missao-prompts-rascunhos-Seedance" (1ocmL6n9y4O1bFVmo2LI7E5ah5ADo-hEC-u1r64Wa3JI), na pasta de materiais
 - Clipe 1 virou 14 s (fala às 9,4 s com @Audio1)
 - 4b Priscilla, 4c Dr. Vitor e 5 (palco) aguardam fotos
+- Fala do clipe 1 aprovada (19/11): v3 "Essa tá fácil. Eu tenho um time perfeito pra isso." (exceção pedida pela Keila: "pra" só nesta fala falada). Arquivo FEA-elite-clip1-fala-dr-joao-v3.mp3 (Drive 16JySmPKv_Ygkf2A9Bov9G4a-iemBBQu-). Prompts atualizados no doc "...rascunhos-Seedance v2" (1lxsWCn1_nmebQpcJ93bN024eFRUBRJLPnbW0Ff7EBPQ); o doc antigo ficou marcado como substituído
+- CTA final: v1 a v3 reprovadas (animadas). v4 gerada frase a frase, aguardando a Keila
