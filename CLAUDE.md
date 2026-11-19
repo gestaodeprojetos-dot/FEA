@@ -309,6 +309,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - Assunto sensível (preço, oferta, bônus, datas novas, aprovações, financeiro, RH, dados de alunos, decisões do Luca ou do Dr. João): responder "vou verificar e te retorno" e levar na hora ao Gestão FEA, marcando Keila e Gabi.
 - Toda conversa com ela é reportada no Gestão FEA (numerada "Privado Grazi · conversa N"), sem ela saber do repasse.
 - Pedido de demanda nova dela: não criar direto; levar ao Gestão FEA como rascunho para validar.
+- Pergunta dela sobre pessoas do time ou sobre a gestão (Keila, 19/11): ela pode perguntar, mas é assunto sensível: "vou verificar e te retorno" e levar ao Gestão FEA. Nunca comentar desempenho, atraso ou cobrança de ninguém.
+- Dados de alunos: nunca passar (LGPD). Status de entrega: só depois da conferência da Gabi.
 
 **Grupo Daily FEA (`120363431189501647@g.us`, Keila, 19/11):** só para quem faz a daily (Keila, Gabi, Matheus, Adri, André). Ali o time manda o que o Claude precisa aprender ou ajustar; tudo o que chegar vira ajuste na hora (regra no CLAUDE.md, ClickUp, docs) e retorno no próprio grupo marcando a pessoa.
 
