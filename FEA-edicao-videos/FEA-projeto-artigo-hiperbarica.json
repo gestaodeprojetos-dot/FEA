@@ -15,8 +15,8 @@
     "headline_fim": 4.6,
     "manter": [
       [
-        1.38,
-        92.2,
+        1.66,
+        91.35,
         "exato"
       ]
     ],
@@ -57,9 +57,9 @@
     },
     "cenas": [
       {
-        "ini": 1.38,
+        "ini": 1.66,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_paciente_camara.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_a.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -68,7 +68,7 @@
       {
         "ini": 3.9,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camaras.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_d.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -108,7 +108,7 @@
       {
         "ini": 21.98,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_controle.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_b.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -117,7 +117,7 @@
       {
         "ini": 24.28,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camaras.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_d.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -126,7 +126,7 @@
       {
         "ini": 27.98,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_multiplace.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_c.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -157,7 +157,7 @@
       {
         "ini": 42.36,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_multiplace2.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_a.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -179,7 +179,7 @@
       {
         "ini": 50.7,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/s_titulo.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_b.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -190,18 +190,9 @@
         "tipo": "cheio"
       },
       {
-        "ini": 58.18,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/s_protocolo.mp4",
-        "src": 0.0,
-        "cx": 0.5,
-        "cy": 0.5,
-        "zoom": 1.0
-      },
-      {
         "ini": 64.3,
         "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_paciente_camara.mp4",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_camara_c.mp4",
         "src": 0.0,
         "cx": 0.5,
         "cy": 0.5,
@@ -222,24 +213,6 @@
       },
       {
         "ini": 76.0,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/v_graficos.mp4",
-        "src": 0.0,
-        "cx": 0.5,
-        "cy": 0.5,
-        "zoom": 1.0
-      },
-      {
-        "ini": 80.0,
-        "tipo": "broll",
-        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/hiper/clips/s_melhora.mp4",
-        "src": 0.0,
-        "cx": 0.5,
-        "cy": 0.5,
-        "zoom": 1.0
-      },
-      {
-        "ini": 86.2,
         "tipo": "cheio"
       }
     ]
