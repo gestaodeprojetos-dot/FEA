@@ -326,6 +326,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 
 **Grupo Daily FEA (`120363431189501647@g.us`, Keila, 19/11):** só para quem faz a daily (Keila, Gabi, Matheus, Adri, André). Ali o time manda o que o Claude precisa aprender ou ajustar; tudo o que chegar vira ajuste na hora (regra no CLAUDE.md, ClickUp, docs) e retorno no próprio grupo marcando a pessoa. **No Daily FEA respondo direto, sem rascunho e sem aprovação prévia** (Keila, 19/11), inclusive preço, oferta, bônus, datas, aprovações e status de demanda (Keila liberou esses pontos, 19/11), seguindo as regras de escrita.
 
+**Ebooks Latam (Keila, 19/11):** a versão Latam dos ebooks (ex.: Intercorrências em espanhol) é única e exclusivamente com a Keila, não com o Gerson nem com a diagramação. Nunca pedir ao Gerson ajuste no Latam; o Claude tem autorização para resolver o Latam direto e entregar pronto à Keila. PDF Latam do Intercorrências: pasta "0. PDF" `110w-cfIPH49qPCyHa6kFzUjJ1UoMIMfY`.
+
 **Grupo Ebooks (`120363257863452363@g.us`, Keila, 19/11):** não é só para acompanhar. Todo pedido ou entrega que aparecer lá (Gerson e equipe de diagramação) vem ao Gestão FEA com resposta pronta para validar; depois do ok, respondo no grupo marcando a pessoa.
 
 **Marcação do número da FEA nos grupos (19/11):** nos grupos, o número da FEA aparece como `@61857008238750` (LID). Toda marcação nesse LID é pedido direto para o Claude. LIDs úteis: Keila `7262840049830`, Gabi `184133955416067`, Luca `162092216795158`.
