@@ -274,7 +274,7 @@ Todo pedido em grupo que a gestão precisa responder com informação ou link (e
 Doc oficial: "FEA · Padrões de operação de lançamentos" (`1NkbIawRhO-oWpVTz-6o1JImPcU_cKHFZzM7QliDDhLQ`). Ler antes de mexer em ClickUp, Drive ou planilhas de lançamento; em dúvida, copiar o padrão do FEA-MTB 11/26. Pontos que mais pegam:
 - Procurar antes de criar; uma demanda, uma tarefa; informação nova atualiza a tarefa existente.
 - **Nunca apagar** tarefa, lista, comentário ou linha de planilha; nunca mover planilha; nunca mexer em permissão, automação nativa ou configuração.
-- **Nunca marcar "feito" no ClickUp sem a Keila mandar**: entrega conferida vai para "aprovado" ou "em revisão".
+- **Nunca marcar "feito" no ClickUp** (Keila, 19/11): entrega conferida vai para "aprovado" ou "em revisão"; vale também para tarefas agendadas que digam "concluir".
 - Status FEA: a fazer · fazendo · em revisão · em ajuste · atrasado · aprovado · pausado · sprint · feito.
 - Toda tarefa é subtarefa da mãe da área na sprint certa (mães: Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, Suporte/CS, Operação do dia). Subtarefa: início 8h, prazo 18h, responsável, descrição com lançamento, briefing, Drive e entrega; tarefa do Leo leva "Pasta para salvar:" com a pasta ESTÁTICOS da fase.
 - Comentário do Claude no ClickUp começa com "🤖 Claude:".
