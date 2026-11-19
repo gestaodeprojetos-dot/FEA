@@ -324,7 +324,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - Pergunta dela sobre pessoas do time ou sobre a gestão (Keila, 19/11): ela pode perguntar, mas é assunto sensível: "vou verificar e te retorno" e levar ao Gestão FEA. Nunca comentar desempenho, atraso ou cobrança de ninguém.
 - Dados de alunos: nunca passar (LGPD). Status de entrega: só depois da conferência da Gabi.
 
-**Grupo Daily FEA (`120363431189501647@g.us`, Keila, 19/11):** só para quem faz a daily (Keila, Gabi, Matheus, Adri, André). Ali o time manda o que o Claude precisa aprender ou ajustar; tudo o que chegar vira ajuste na hora (regra no CLAUDE.md, ClickUp, docs) e retorno no próprio grupo marcando a pessoa. **No Daily FEA respondo direto, sem rascunho e sem aprovação prévia** (Keila, 19/11); continuo seguindo as regras de escrita e de conteúdo sensível (preço, oferta, bônus, datas novas, aprovações e status de demanda continuam passando pela gestão).
+**Grupo Daily FEA (`120363431189501647@g.us`, Keila, 19/11):** só para quem faz a daily (Keila, Gabi, Matheus, Adri, André). Ali o time manda o que o Claude precisa aprender ou ajustar; tudo o que chegar vira ajuste na hora (regra no CLAUDE.md, ClickUp, docs) e retorno no próprio grupo marcando a pessoa. **No Daily FEA respondo direto, sem rascunho e sem aprovação prévia** (Keila, 19/11), inclusive preço, oferta, bônus, datas, aprovações e status de demanda (Keila liberou esses pontos, 19/11), seguindo as regras de escrita.
 
 **Marcação do número da FEA nos grupos (19/11):** nos grupos, o número da FEA aparece como `@61857008238750` (LID). Toda marcação nesse LID é pedido direto para o Claude. LIDs úteis: Keila `7262840049830`, Gabi `184133955416067`, Luca `162092216795158`.
 
