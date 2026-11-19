@@ -19,8 +19,13 @@
 5. Time reunido no palco do auditório vazio (~6 a 8 s)
 - Cartela final com logo: só na edição, sem IA
 
+## Decisões
+- Cartão da missão (Keila, 19/11): "Missão: atrair, converter e fechar o full face para faturar R$ 300 mil por mês em 2027. Prazo: 4 e 5 de dezembro." Texto longo: vira imagem do objeto (cartão já escrito), nunca texto gerado no vídeo.
+- Fotos do Dr. João: pasta do Drive "IMAGENS DR JOÃO" (id 1TT78tATFEwsAcQ7XqSgnN3PyMgG7wMnO), ~100 fotos de 6 sessões. Melhores para rosto: estúdio fundo preto (0P6A89xx, terno vinho) e @danylomarttins (0P6A54xx/55xx, camisa branca e colete preto). Cabelo muda entre sessões (curto em 0P6A29xx; comprido preso em IMG_134x e 0P6A65xx)
+
 ## Pendências (19/11/2026)
-- Texto final do cartão e da fala 1 (sugestões da Adriane nos comentários do doc)
+- Fala 1 (sugestão da Adriane: "Essa está fácil, tenho o time perfeito para isso!")
+- Qual cabelo o Dr. João usa hoje (define quais sessões entram)
 - Parecer do Luca
 - Fotos reais dos 4, autorizações de imagem, áudios do Dr. João
 - Acesso de geração: login do Higgsfield não funciona pela sessão na nuvem
