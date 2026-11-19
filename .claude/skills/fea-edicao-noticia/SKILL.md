@@ -109,3 +109,7 @@ Neuramis Deep (Medytox), Revanesse Kiss (Prollenium, caixa "KISS+"), Restylane R
 - Marca de ácido hialurônico na tela (linha vermelha 3 do CLAUDE.md): o pedido dela é mostrar os produtos, mas confirmar se pode publicar com as marcas.
 - Origem das fotos de produto (site de distribuidor ou quadro de edição anterior da equipe).
 - Música escolhida (estilo e volume).
+
+## Vídeo de artigo (IMG_9457, padrões de força, 19/11/2026)
+
+Projeto `FEA-projeto-artigo-forca.json`, entrega `12- Dezembro/16- Artigo: padrões de força` (1rmJN6q4ggH-0qxBNI-7nP6P6H74WX8KG). Artigo Lima AS et al., Surg Cosmet Dermatol 2022;14:e20220024 (CC BY, selo na p. 1). `FEA-edicao-videos/fea_artigo_forca_clipes.py`: Fig. 7 (6 padrões glabelares clínicos) inteira na abertura; figuras em faixa (A, B, C lado a lado) viram clipe `faixa` na altura do painel deslizando da esquerda para a direita (Fig. 6 periocular, Fig. 1 frontal, Fig. 4 glabelar, Fig. 2 periorbital), sincronizadas com "no frontal, na glabela, nos orbiculares"; resumo com destaque nos resultados (padrões mais comuns) e na conclusão (uso mais seguro, evita complicações). Fig. 5 (frontal clínico) ficou borrada ao ampliar (imagem de baixa resolução no PDF): no lugar, testa marcada do take "Aplicação em pápulas" (9 s, cy 0,3, zoom 1,5). Bruto sem chiado (74,8): sem `limpar_ruido`.

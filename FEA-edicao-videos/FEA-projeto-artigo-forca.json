@@ -1,0 +1,159 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/forca/IMG_9457.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_9457.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/1- Padrões de força: o que diz o artigo.mp4",
+    "titulo": "Padrões de força: o que diz o artigo",
+    "headline": [
+      "Padrões de força",
+      "da toxina:",
+      "o que diz o artigo"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.2,
+        45.8,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bpra\\b",
+        "para"
+      ],
+      [
+        "\\bo Quero\\b",
+        "QUERO"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw9457.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_747.mp3",
+      "ini": 0,
+      "abaixo_da_voz_db": 30,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 0.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/v_glabela_clin.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 3.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/f_periocular_clin.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 6.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/s_titulo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 9.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/palpb/papulas.mp4",
+        "src": 9.0,
+        "cx": 0.5,
+        "cy": 0.3,
+        "zoom": 1.5
+      },
+      {
+        "ini": 11.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 15.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/s_resumo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 20.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/f_frontal.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 23.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/f_glabela.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 27.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/f_periorbital.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 29.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/palpb/meso4.mp4",
+        "src": 16.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.2
+      },
+      {
+        "ini": 33.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 36.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/forca/clips/s_titulo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 40.6,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
