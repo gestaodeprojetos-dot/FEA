@@ -1,0 +1,132 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b31/IMG_8213.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8213.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e31/1- Preenchimento de mão.mp4",
+   "titulo": "Preenchimento de mão",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.6,
+     85.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     22.0,
+     23.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b31/IMG_8215_8216.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8215_8216.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e31/2- Preenchimento de pé.mp4",
+   "titulo": "Preenchimento de pé",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.9,
+     140.47
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Rr]enn?ova [Ll]ift [Ss]hape [Pp]lus [Ll]id[lo]\\b",
+     "Rennova Lift Shape Plus Lido"
+    ],
+    [
+     "\\b22 sete (?:2270|22x70)\\b",
+     "22x70"
+    ],
+    [
+     "\\ba preenchedora base de aço (?:hi)?alurônico\\b",
+     "o preenchedor à base de ácido hialurônico"
+    ],
+    [
+     "\\ba preenchedora base de ácido hialurônico\\b",
+     "o preenchedor à base de ácido hialurônico"
+    ],
+    [
+     "\\bvem que é quem\\b",
+     "quem"
+    ],
+    [
+     "\\banestesia,? E aqui é completamente\\b",
+     "anestesia vê que é completamente"
+    ]
+   ],
+   "silenciar": [
+    [
+     111.77000000000001,
+     113.87
+    ]
+   ]
+  }
+ ]
+}
