@@ -61,3 +61,14 @@ It is night and the clinic is closed: the only light comes from the laptop scree
 
 Remove completely: any person, sharps container, syringes, needles, gloves, medicine vials, brand names, logos and any written text.
 ```
+
+## Kit pronto no Drive (pasta de materiais, conferido em 19/11/2026)
+| Peça | Arquivo (id) | Status |
+|---|---|---|
+| C1 antigo, escritório biblioteca | Biblioteca clássica, São Paulo à noite.png (17qgcamxwsZ76yeI4DC2vQfCujrQG9ehi) | Reserva: a C1 agora é a clínica real |
+| C2 corredor com elevador | Corredor noturno com elevador fechado.png (1cizur-W4rSZxdf-I1udpbZS5ddAP0m0e) | Aprovado, LED rosé no rodapé |
+| C3 auditório | Auditório corporativo intimista com palco compacto.png (1rngdY7vCynsB9US0m2R1QqMERnswAkJz) | Aprovado, com uma ressalva: o logo no telão foi redesenhado pela IA. Nos closes, deixar o telão desfocado e aplicar o logo oficial na edição |
+| O1 envelope | Envelope creme Missão Elite.png (1gO7jx1y_VJ1IRkeTk8yKOafwkbcmdPoQ) | Aprovado |
+| Figurino | Terno preto em três vistas.png (15xnctdTVEG_DuKP8FG8Napw0GZxaA6_m) | Aprovado para o Dr. João (relógio quadrado de aço e aliança batem com o card). Para o Luca: mesmo terno, sem a aliança e com o relógio dele (mostrador preto), descritos no prompt |
+| O2 cartão com o texto da missão | (falta) | A gerar |
+| C1 clínica | (falta) | Aguardando a foto da mesa |
