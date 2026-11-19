@@ -21,7 +21,12 @@
       ],
       [
         46.6,
-        130.75,
+        82.78,
+        "exato"
+      ],
+      [
+        85.75,
+        131.45,
         "exato"
       ]
     ],
@@ -54,9 +59,9 @@
       ]
     },
     "musica": {
-      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
-      "ini": 12,
-      "abaixo_da_voz_db": 28,
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_747.mp3",
+      "ini": 0,
+      "abaixo_da_voz_db": 30,
       "nivelar": true
     },
     "tirar_silencios": {
@@ -195,7 +200,7 @@
         "tipo": "cheio"
       },
       {
-        "ini": 82.7,
+        "ini": 85.85,
         "tipo": "broll",
         "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/nod/clips/s_tabela.mp4",
         "src": 0.0,
