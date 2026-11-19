@@ -269,6 +269,12 @@ Todo pedido em grupo que a gestão precisa responder com informação ou link (e
 
 **Regra fixa (Keila, 18/11/2026): nunca criar planilha ou documento novo, nem trocar o link de planilha ou documento existente.** Todo pedido relacionado a planilha é feito na mesma planilha. Se o arquivo for .xlsx (o Claude não edita), levar à Keila as soluções de acesso para edição em vez de criar arquivo paralelo. A planilha "FEA - Enviar ao Luca · MPL 11/26" (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`) foi criada antes dessa regra e é exceção, não modelo.
 
+### Regra fixa: linha de produção (Keila, 19/11/2026)
+
+Toda entrega dispara a próxima etapa, automaticamente e sempre, sem esperar pedido. Exemplo: a Adri entrega a copy dos criativos de captação, então na hora eu (1) marco a tarefa da copy como aprovado, (2) crio no ClickUp a subtarefa do Leo para as artes (embaixo da mãe Design da sprint certa, com datas, responsável, link da copy e "Pasta para salvar:" da pasta ESTÁTICOS da fase) e (3) trago ao Gestão FEA o rascunho para o grupo Artes. Vale para toda a cadeia: copy, artes, vídeo, páginas, automação, tráfego, teste do caminho do lead.
+
+"Monta um lançamento" ou "monta uma masterclass" significa montar, no mínimo e sempre: ClickUp (pasta, backlog, sprints e mães), Drive (estrutura padrão), planilha de Links úteis e aba da planilha Criativos para Tráfego, tudo no padrão do MTB 11/26.
+
 ### Guia de operações de lançamentos (Keila, 19/11/2026, obrigatório)
 
 Doc oficial: "FEA · Padrões de operação de lançamentos" (`1NkbIawRhO-oWpVTz-6o1JImPcU_cKHFZzM7QliDDhLQ`). Ler antes de mexer em ClickUp, Drive ou planilhas de lançamento; em dúvida, copiar o padrão do FEA-MTB 11/26. Pontos que mais pegam:
