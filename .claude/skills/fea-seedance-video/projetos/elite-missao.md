@@ -85,3 +85,13 @@ Remove completely: the octagonal steel logo on the marble wall (leave the marble
 
 It is night and the clinic is closed: the gold pendant lights glow warm and dim, the laptop screen is the main light on the desk, and a faint rosé glow (#E48AA0) grazes the marble from one side, with deep shadows (#0F0507) in the corners. Cinematic spy-film suspense, quiet, photorealistic, 35mm lens, shallow depth of field.
 ```
+
+## C1 gerado (Keila, 19/11/2026): 4 versões na pasta de materiais
+| Arquivo (id) | Logo da clínica | Avaliação |
+|---|---|---|
+| Logo metálica da clínica no mármore.png (1Yq1vkXyYxUa4CNWRI9XHmIor6HRY2rw9) | Sim, fiel: octógono duplo, traço em "V", gota no alto à direita, peça pequena embaixo à esquerda | **Escolhida (versão com logo)** |
+| MacBook com logo prateada em mesa branca.png (1mrr6ZNmOhwWEhcpyMr1FvG--yS7NpowR) | Sim, mas a gota virou losango e a peça de baixo mudou | Descartar |
+| Notebook com maçã prateada em mesa iluminada.png (11rrS03p3UiCLaa-XMRoslDRum_0exc3q) | Não | **Reserva (versão sem logo)**: mesmo enquadramento da escolhida, serve de plano B se o logo deformar no Seedance |
+| Parede de mármore azul sem emblema.png (10xCyYSE0DGb-xV_AUurXX5P803oq_X3V) | Não | Descartar (enquadramento torto, menos fiel) |
+- Ajuste pendente nas duas escolhidas: o símbolo da Apple na tampa do notebook (marca de terceiro). Pedir no mesmo chat do ChatGPT para tirar e deixar a tampa lisa
+- No prompt do Seedance do clipe 1: câmera quase parada, logo ao fundo e fora de foco leve, e a frase "the emblem on the marble wall stays fixed and unchanged"
