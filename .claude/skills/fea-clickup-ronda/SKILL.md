@@ -115,3 +115,7 @@ O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo 
 - Nunca apagar tarefa, lista ou comentário.
 - Nunca mexer em configuração do workspace, automações nativas ou permissões.
 - Se algo sair do padrão (lista sumiu, centenas de tarefas vencidas de uma vez, erro de permissão), não agir em massa: só reportar à Keila.
+
+## Conferência de tarefa órfã (toda rodada)
+
+Em toda rodada, listar as tarefas de topo das sprints e do Backlog das pastas do escopo. Qualquer tarefa que não seja uma mãe de área (Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, Suporte/CS, Operação do dia) é órfã: mover para baixo da mãe da área certa na mesma lista (`PUT /task/{id}` com `parent`), criando a mãe se faltar, e citar no relatório. Regra da Keila, 19/11/2026: "não pode acontecer isso".
