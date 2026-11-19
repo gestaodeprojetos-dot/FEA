@@ -1,0 +1,425 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Planejamento 6mL",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     118.4
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7262.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7262.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/1- Planejamento 6mL.mp4"
+  },
+  {
+   "titulo": "Técnica anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     37.6,
+     53.55
+    ],
+    [
+     0.0,
+     30.9
+    ],
+    [
+     62.6,
+     119.9
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7264.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7264.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/2- Técnica anestesia com SANEP Parte 1.mp4",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "correcoes": [
+    [
+     "\\bgasezinha\\b",
+     "gazezinha"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     94.3,
+     94.75
+    ],
+    [
+     17.4,
+     25.8
+    ]
+   ]
+  },
+  {
+   "titulo": "Técnica anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     119.9,
+     224.8
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7264.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7264.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/2- Técnica anestesia com SANEP Parte 2.mp4",
+   "parte": 2,
+   "remover_legenda": [
+    [
+     123.7,
+     124.6
+    ],
+    [
+     147.9,
+     149.3
+    ],
+    [
+     178.5,
+     179.4
+    ]
+   ],
+   "mover_palavra": [
+    [
+     141.03,
+     144.35
+    ]
+   ]
+  },
+  {
+   "titulo": "Preenchimento das olheiras",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     77.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7265.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7265.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/3- Preenchimento das olheiras Parte 1.mp4",
+   "parte": 1,
+   "cartela_final": "Parte 2 no perfil",
+   "remover_legenda": [
+    [
+     0,
+     4.5
+    ]
+   ]
+  },
+  {
+   "titulo": "Preenchimento das olheiras",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     77.6,
+     148.45
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7265.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7265.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/3- Preenchimento das olheiras Parte 2.mp4",
+   "parte": 2,
+   "correcoes": [
+    [
+     "\\b[Mm]icro ?b[oó]l(?:o|u)s\\b",
+     "microbolus"
+    ],
+    [
+     "(\\d) ?\\. ?(\\d)",
+     "\\1,\\2"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     142.2,
+     143.6
+    ]
+   ]
+  },
+  {
+   "titulo": "Mento retraído",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     93.95
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7266.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7266.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/4- Mento retraído.mp4",
+   "correcoes": [
+    [
+     "\\bum mL inteiro\\b",
+     "1 mL inteiro"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     18.9,
+     19.9
+    ]
+   ]
+  },
+  {
+   "titulo": "Comissura labial estruturada",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     67.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7267.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7267.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/5- Comissura labial estruturada.mp4",
+   "correcoes": [
+    [
+     "\\bsubskin\\b",
+     "Subskin"
+    ]
+   ]
+  },
+  {
+   "titulo": "Preenchimento de bigode chinês",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.5,
+     45.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7268.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7268.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/6- Preenchimento de bigode chinês.mp4",
+   "correcoes": [
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     0,
+     4.2
+    ]
+   ]
+  },
+  {
+   "titulo": "Mandíbula com 0,5mL",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     79.0
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7269.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7269.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/7- Mandíbula com 0,5mL.mp4",
+   "correcoes": [
+    [
+     "\\bmicro ?b[oó]l(?:o|u)s\\b",
+     "microbolus"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b05\\b",
+     "0,5"
+    ]
+   ]
+  },
+  {
+   "titulo": "Pertuitos labiais",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     28.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7270.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7270.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/8- Pertuitos labiais.mp4",
+   "remover_legenda": [
+    [
+     11.2,
+     15.1
+    ]
+   ]
+  },
+  {
+   "titulo": "Preenchimento labial",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.1,
+     117.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7271.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7271.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/9- Preenchimento labial.mp4",
+   "correcoes": [
+    [
+     "\\bNeuromys Deep\\b",
+     "Neuramis Deep"
+    ],
+    [
+     "\\b03 ?ml\\b",
+     "0,3 mL"
+    ],
+    [
+     "\\b03 mL\\b",
+     "0,3 mL"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     80.1,
+     80.35
+    ],
+    [
+     62.7,
+     71.6
+    ]
+   ]
+  },
+  {
+   "titulo": "Planejamento toxina estética",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     31.6
+    ],
+    [
+     33.25,
+     112.66
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7263.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7263.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/10- Planejamento toxina estética.mp4",
+   "remover_legenda": []
+  },
+  {
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.4,
+     30.9
+    ],
+    [
+     41.75,
+     124.8
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7272.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7272.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/11- Técnica da coroa.mp4",
+   "remover_legenda": [
+    [
+     55.9,
+     57.8
+    ],
+    [
+     103.0,
+     103.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bolhinha entra\\b",
+     "agulhinha entra"
+    ]
+   ]
+  },
+  {
+   "titulo": "Pontos em glabela",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.5,
+     52.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7273.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7273.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/12- Pontos em glabela.mp4"
+  },
+  {
+   "titulo": "Orbiculares dos olhos",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     50.0
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7274.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7274.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/13- Orbiculares dos olhos.mp4",
+   "remover_legenda": [
+    [
+     11.6,
+     14.3
+    ]
+   ]
+  },
+  {
+   "titulo": "Nasal",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     43.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c12/IMG_7275.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c12/IMG_7275.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e14/14- Nasal.mp4",
+   "remover_legenda": [
+    [
+     8.8,
+     9.4
+    ],
+    [
+     12.7,
+     13.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Uu]as\\b",
+     "duas"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     7.7,
+     6.7
+    ],
+    [
+     9.94,
+     8.5
+    ],
+    [
+     13.44,
+     10.8
+    ],
+    [
+     15.08,
+     14.4
+    ]
+   ]
+  }
+ ]
+}

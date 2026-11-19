@@ -21,26 +21,46 @@ python3 FEA-edicao-videos/fea_revisar.py projeto1.json [projeto2.json ...] --fol
 
 O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saída). Ele imprime, por vídeo, `OK` ou `REPROVADO`, com a lista de ERRO e ATENÇÃO. Com `--folhas`, gera uma folha de contato de cada vídeo final, com 1 quadro a cada 2 segundos.
 
+Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos de uma vez): `python3 FEA-edicao-videos/fea_revisar.py FEA-projeto-*.json --so-legenda`. Gera o .ass de cada vídeo e acusa número e unidade separados.
+
+**Transição antes do CTA (05/11/2026):** a checagem `checar_emenda` roda na revisão completa e no `--so-formato`. ERRO se a emenda conteúdo->CTA for corte seco.
+
+**CTA de volta (12/11/2026, em vigor):** os conteúdos voltam a ter CTA, `Ads 22 - MTI - CTA Comente AULA.mp4` (39,50 s) com transição de 0,5 s; vale de novo a checagem de emenda (`.emenda.json` obrigatório, sem corte seco). Em vídeo já entregue que recebeu o CTA pelo `fea_aplicar_cta_entregue.py`, rodar `--so-formato` com um projeto cujo `saida` aponta para os vídeos novos e sem `sem_cta`/`fade_final`. Os 180 s valem para o conteúdo; total acima disso sai como ATENÇÃO e entra na lista do PR.
+
+**Sem CTA (histórico, 09/11 a 12/11/2026):** os conteúdos foram sem CTA nesse período. Vídeo com `"sem_cta": true` (ou `"fade_final"`) não dá ERRO por falta de emenda: a revisora confere o final (respiro de 0,3 a 0,5 s depois da última fala) e o limite de 180 s vale para o vídeo inteiro.
+
+**Régua de voz com trecho silenciado (05/11/2026, pasta 11 de novembro):** o piso de ruído do `perfil_voz` ignora janelas de silêncio digital (trecho silenciado no render, fim mudo da cartela). Antes, 6 s silenciados derrubavam o piso do arquivo inteiro e ruído de sala virava "voz": 4 ERRO falsos de legenda atrasada no vídeo 6 com o áudio medido em 0 ms de deslocamento.
+
+**Começo com fala picada (12/11/2026, pasta 19 de novembro, vídeo 3):** a régua "começa com X s de silêncio" exige 0,5 s de voz forte contínua; "Vamos para a técnica..." tem vales de 10 a 15 dB entre as sílabas e dava ERRO com a voz começando em 0,40 s. Agora, antes do ERRO, a revisora mede o ataque da voz em janelas de 10 ms (`onset_voz`, a mesma da checagem de início): se o ataque está em até 0,8 s, vira ATENÇÃO ("começo com fala picada"); silêncio de verdade continua ERRO.
+
+**Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
+
+**Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.
+
 ## Checklist completo (o que cada regra exige)
 
 | # | Regra da Keila | Como é conferida | Nível |
 |---|---|---|---|
 | 1 | H.264, nunca HEVC (tela preta no computador dela) | codec do arquivo | ERRO |
 | 2 | 1080x1920, sem limite de tamanho (qualidade total) | resolução | ERRO |
-| 3 | **Máximo 3 min no total (conteúdo + CTA concatenado)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
+| 3 | **Máximo 3 min no total (conteúdo + CTA concatenado; sem CTA, o vídeo inteiro)**, senão Parte 1 e Parte 2 com a cartela "Parte 2 no perfil". Como o CTA tem ~60 s, conteúdo ≤ ~120 s | duração final do .mp4 | ERRO |
 | 4 | Título exatamente o da imagem, nos 3 primeiros segundos, Montserrat ExtraBold 116 | texto do .ass contra o projeto | ERRO |
 | 4b | Título certo para o conteúdo: a imagem pode estar na ordem de postagem e não na dos arquivos | conferir a tabela arquivo -> título -> frase do Dr. | revisão manual |
 | 5 | Legenda só depois do título, nunca duas ao mesmo tempo | tempos do .ass | ERRO |
 | 6 | Nada de palavra solta na legenda sem o Dr. falando | voz no áudio durante cada legenda | ERRO |
 | 6b | **Legenda sincronizada com o áudio** (Keila 26/09): entra quando o Dr. fala, sem atraso nem adiantamento | voz no áudio antes e depois do início de cada legenda | ERRO |
+| 6b' | **Legenda nunca atrasada** (Keila 05/10): o bloco entra ~0,15 s antes da voz; conferir com `lag` (início do bloco x começo da voz no áudio), nenhum bloco depois do começo da fala | tempos do .ass x voz | ERRO |
 | 6c | Nenhuma palavra falada faltando na legenda (buraco = fora de sincronia) | palavras da legenda contra palavras faladas nos trechos mantidos (mínimo 90%) | ERRO |
 | 6d | Números completos: "0,2", "1%", "0,27" (nunca "0" sozinho ou "%" sem o número) | texto da legenda | ERRO |
+| 6e | **Número e unidade juntos** (Keila 05/10, pasta 2 vídeo 2): "0,3 mL", "1,5 mL", "dois mL", "meio mL", "1 e meio mL", "duas unidades", "20 mg" nunca em blocos diferentes nem em linhas diferentes do mesmo bloco; bloco nunca começa com a unidade sozinha ("mL de lido"); o número entra junto com a fala, nunca antes | blocos e linhas do .ass (`checar_numero_unidade`); sincronia ouvindo cada quantidade | ERRO |
 | 7 | Palavra curta piscando sozinha | duração da legenda de 1 palavra | ATENÇÃO |
 | 8 | Nunca "pra" ou "pro" (sempre "para"); sem a interjeição "ó" | texto da legenda | ERRO |
 | 9b | Todo nome de produto conferido na grafia oficial (pesquisar se novo) | lista de marcas na legenda | revisão manual |
 | 9 | Grafias (lista completa em `fea-edicao-reels`, inclusive o lote de outubro: Letybo, pré-jowl, Perfectha, Biogelis Volumax, ptose, Dysport, DAO, **Biofils** (nunca "biofios")): Kirialys, Volyme, ácido hialurônico, bolus, Neauvia (nunca "Nuvia"), tear trough (nunca "tier trough"), G' (nunca "gelinho"), pré-jowl (nunca "prédio"), cânula 22x70, G' e G'', mL, "ideia", swelling factor, submento (nunca "subimento"), Neuramis (nunca "Neuramiz"), Yvoire (nunca "Evoar"), miomodular (nunca "meomodular"), lábio inferior/superior (nunca "lado inferior/superior" em contexto labial), **pertuito** (nunca "hipertuito"), **picadinha** (nunca "picadinho"), **anestesia** (nunca "parestesia"), **desse mento** (nunca "descimento" junto) | texto da legenda | ERRO |
 | 9c | Pontuação: vírgulas antes de conjunções (mas, porém, porque, pois, então) e marcadores (né, tá, viu) | texto da legenda | ERRO |
-| 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s) | ERRO |
+| 10 | Começa quando o Dr. começa a falar | silêncio no início (máx. 0,8 s); fala picada com ataque da voz (`onset_voz`) até 0,8 s vira ATENÇÃO | ERRO |
+| 10b | **Primeira palavra inteira** (Keila 05/11): o vídeo começa pelo menos 0,40 s antes do ataque da voz | `checar_inicio`: ataque da voz medido no áudio (janelas de 10 ms) a menos de 0,30 s do início | ERRO |
+| 10c | **Início que prende** (quem posta, 05/11): o Dr. não demora para falar e a primeira frase não é aquecimento ("então", "bom", "deixa eu ver", "vamos lá", "ó", "olha só"...) | `checar_inicio`: voz depois de 1,5 s, ou primeira palavra (Whisper nos 6 s iniciais) da lista `AQUECIMENTO`; olhar os quadros do 1º segundo (fala de impacto ou ação) | ATENÇÃO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
 | 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
 | 13 | Corte no respiro, sem pedaço de palavra | voz dos dois lados do ponto, no bruto | ATENÇÃO (ouvir) |
@@ -49,6 +69,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 15 | Cortar espelho, "fecha o olho", conversa pessoal e histórico da paciente, dor e medo fora de contexto técnico, falas que atacam colegas | palavras-chave nas falas mantidas | ATENÇÃO |
 | 16 | Tudo que dá errado sai: sangue escorrendo, agulha estourando, intercorrência | folha de contato (visual) | revisão visual |
 | 17 | Cara ou gemido de dor: cortar, silenciar ou dar zoom | folha de contato e som sem fala | revisão visual |
+| 17b | **Som de dor da paciente no procedimento: silenciar sem cortar** (Keila 28/10): cada janela de `silenciar` tem que estar muda no vídeo final, e a duração e a imagem não mudam. Gemido não aparece na transcrição: procurar pelo pitch (voz mais aguda e fraca que a do Dr.) e pelo rosto | volume do final em cada janela (`trecho silenciado com som`) | ERRO |
 | 18 | Conversa de fundo: cortar ou silenciar | voz sem fala transcrita | revisão visual e de áudio |
 | 19 | **Fala do paciente legendada** (Keila, 02/10): quando o Dr. pergunta e o paciente responde, a resposta precisa aparecer na legenda | conferir trechos de diálogo na transcrição | ERRO |
 | 20 | **Título sem nome de produto** quando inventado (sem imagem de títulos). Ex.: "mento feminino" sim, "mento feminino com Volumax" não. Se o título veio da imagem, manter como está | conferir título contra lista de produtos | ERRO |
@@ -56,13 +77,19 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
 | 22 | **Duração total com CTA ≤ 180 s**: o vídeo final (conteúdo + CTA concatenado) não pode passar de 3 minutos, **cada parte também** (antes a Parte 1/2 passava sem conferir) | duração do .mp4 final | ERRO |
 | 23 | **Palavra a palavra** (02/10): fala transcrita (com as mesmas correções) contra o texto da legenda; número de enumeração faltando ou 3+ palavras faladas sem legenda | alinhamento das palavras | ERRO |
 | 24 | **Voz sem legenda**: 1 s ou mais de voz no áudio sem legenda nem palavra transcrita (fala baixa, resposta do paciente) | volume do áudio x legendas | ATENÇÃO (ouvir) |
+| 24b | **Fala curta solta sem legenda** (Keila 05/10, "duas, duas, duas" na aplicação nasal): rajada de voz de 0,35 s ou mais, com silêncio antes, sem legenda no ar. Contagem repetida ("duas... duas...") tem que ter uma legenda por fala, cada uma na hora da voz | volume do áudio x legendas | ATENÇÃO (ouvir; se for fala do Dr., é ERRO) |
 | 25 | **Voz falhando/picotando** (02/10, pasta 7): volume do vídeo final cai 12 dB ou mais abaixo do bruto onde o bruto tem voz forte (com alinhamento fino de ±4 quadros por trecho) | volume final x bruto, trecho a trecho | ERRO |
 | 26 | "parestesia" na legenda: conferir no áudio se é o termo certo (complicação) ou "anestesia" trocada; "como foi a parestesia" é sempre erro | texto | ATENÇÃO / ERRO |
 | 27 | Afirmação absoluta de segurança ("sem nenhuma intercorrência", "zero necrose"): compliance CFM, levar para a Keila | texto mantido | ATENÇÃO |
 | 28 | Título da imagem exato, sem abreviação ("Técn.", "Result."), com "?" e ":" | texto do .ass | ERRO |
+| 29b | **Sem CTA** (Keila, 09/11/2026: "sem cta, não precisamos mais, por enquanto"): vídeo marcado com `"sem_cta": true` ou `"fade_final"` não tem emenda; termina numa frase completa do Dr. com ~0,3 a 0,5 s de respiro (fade-out de ~0,3 s permitido) | `checar_emenda` chama `checar_final_sem_cta`: sem `.emenda.json` não é erro; mede o fim da voz no .mp4 final (janelas de 10 ms): respiro abaixo de 0,20 s = ERRO (última palavra cortada), acima de 1,0 s = ATENÇÃO (final arrastado); `.emenda.json` antigo ao lado = ATENÇÃO | ERRO |
+| 29 | **Transição antes do CTA** (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"): crossfade de ~0,5 s (vídeo e áudio), nunca corte seco, e a transição começa depois do fim da fala do Dr. | `checar_emenda`: lê `NOME.emenda.json` do render (sem ele = ERRO) e mede os quadros da emenda a 30 fps: se mais da metade da mudança de imagem cai num quadro só, é corte seco (ERRO); transição começando antes do fim da voz = ERRO; duração fora de 0,3 a 1,0 s = ATENÇÃO. Com `--folhas`, salva `NOME-emenda.png` (antes, meio e fim da transição) para olhar | ERRO |
+
+**Troca de CTA por stream copy** (`fea_trocar_cta.py`, 03/11/2026): o conteúdo é o mesmo arquivo que já passou na revisora na entrega, mas a revisora recalcula a legenda pela transcrição refeita (o JSON ajustado à mão da edição original fica só na máquina antiga). ERRO de legenda nesse caso não é do vídeo: conferir o quadro do arquivo final no instante acusado. O que vale ali é a conferência do próprio script (conteúdo idêntico quadro a quadro ao entregue, CTA novo idêntico quadro a quadro) mais formato, duração e a emenda olhada nos quadros. Desde 04/11/2026 há o modo `python3 FEA-edicao-videos/fea_revisar.py projeto.json --so-formato --folhas PASTA` (com `saida` apontando para os vídeos trocados): confere só codec H.264, 1080x1920, 30 fps, AAC 48 kHz, duração, nome do arquivo igual ao título e a headline, sem precisar da transcrição. Áudio do CTA: comparar pacote a pacote (framemd5 com `-c copy`, campo do hash, não o último campo da linha, porque o 1º pacote traz dado extra); comparar o áudio decodificado dá diferença falsa, porque o ruído sintético do AAC (PNS) é sorteado no decodificador e muda conforme o que veio antes.
 
 ## Revisão visual (obrigatória, não pular)
 
+0. Vídeo sem CTA: ouvir os 2 últimos segundos (a frase termina inteira e o fade não engole a palavra). Vídeo com CTA: abrir a `NOME-emenda.png`: o quadro do meio tem que mostrar o conteúdo e o CTA misturados (crossfade), sem efeito chamativo, e o primeiro quadro não pode ter o Dr. no meio de uma palavra.
 1. Abrir a folha de contato de cada vídeo final (em `--folhas`).
 2. Procurar:
    - sangue **escorrendo** (gota que desce pelo queixo ou lábio, gaze ou cotonete encharcado em primeiro plano);
@@ -71,6 +98,7 @@ O script usa o `projeto.json` da edição (brutos, transcrição, cortes e saíd
    - luva tapando a imagem por muito tempo;
    - agulha ou cânula com problema;
    - outra pessoa falando ou aparecendo sem motivo.
+   - **tablet ou celular com foto de outro paciente** (galeria de antes e depois passando): sai com `zoom` ou corte (15/10/2026, pasta 18 de outubro).
 3. Gotinha pequena no ponto da picada **fica** (decisão da Keila em 24/09/2026). Só sai o que escorre.
 4. Achou algo: extrair 1 quadro por segundo do trecho (`-ss INICIO -t DUR -vf fps=1,scale=120:213,tile=15x2`) para achar início e fim exatos, cortar no projeto e gerar o vídeo de novo.
 5. A marcação de caneta vermelha na pele **não é sangue**: conferir antes de cortar.

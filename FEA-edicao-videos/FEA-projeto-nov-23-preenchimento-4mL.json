@@ -1,0 +1,717 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b23/IMG_9403.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9403.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n23/1- Planejamento 4mL.mp4",
+   "titulo": "Planejamento 4mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.767,
+     40.6,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bvem para trás, para mandíbula\\b",
+     "vamos bem para trás, para a mandíbula"
+    ],
+    [
+     "\\bSANEP, ela\\b",
+     "a SANEP, ela"
+    ],
+    [
+     "\\btrabalhar, o padrão\\b",
+     "trabalhar o padrão"
+    ],
+    [
+     "\\bna hora, SANEP\\b",
+     "na hora, a SANEP"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b23/IMG_9404.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9404.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n23/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     10.667,
+     17.225,
+     "exato"
+    ],
+    [
+     23.025,
+     45.825,
+     "exato"
+    ],
+    [
+     47.8,
+     68.1,
+     "exato"
+    ],
+    [
+     70.6,
+     78.3,
+     "exato"
+    ],
+    [
+     85.375,
+     99.38,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bvem para trás, para mandíbula\\b",
+     "vamos bem para trás, para a mandíbula"
+    ],
+    [
+     "\\bSANEP, ela\\b",
+     "a SANEP, ela"
+    ],
+    [
+     "\\btrabalhar, o padrão\\b",
+     "trabalhar o padrão"
+    ],
+    [
+     "\\bna hora, SANEP\\b",
+     "na hora, a SANEP"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     48.06,
+     48.18
+    ],
+    [
+     86.49,
+     86.85
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b23/IMG_9405.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9405.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n23/3- Estruturação terço inferior: comissura, pré-jowl e mento.mp4",
+   "titulo": "Estruturação terço inferior: comissura, pré-jowl e mento",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.3,
+     27.9,
+     "exato"
+    ],
+    [
+     43.9,
+     67.275,
+     "exato"
+    ],
+    [
+     73.775,
+     138.95,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bvem para trás, para mandíbula\\b",
+     "vamos bem para trás, para a mandíbula"
+    ],
+    [
+     "\\bSANEP, ela\\b",
+     "a SANEP, ela"
+    ],
+    [
+     "\\btrabalhar, o padrão\\b",
+     "trabalhar o padrão"
+    ],
+    [
+     "\\bna hora, SANEP\\b",
+     "na hora, a SANEP"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     103.63,
+     113.75
+    ],
+    [
+     38.42,
+     44.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b23/IMG_9406.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9406.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n23/4- Sulco nasolabial: superficial.mp4",
+   "titulo": "Sulco nasolabial: superficial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.45,
+     38.5,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bvem para trás, para mandíbula\\b",
+     "vamos bem para trás, para a mandíbula"
+    ],
+    [
+     "\\bSANEP, ela\\b",
+     "a SANEP, ela"
+    ],
+    [
+     "\\btrabalhar, o padrão\\b",
+     "trabalhar o padrão"
+    ],
+    [
+     "\\bna hora, SANEP\\b",
+     "na hora, a SANEP"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.9,
+     1.78
+    ],
+    [
+     38.08,
+     38.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b23/IMG_9407.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9407.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n23/5- Mandíbula com 1mL.mp4",
+   "titulo": "Mandíbula com 1mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.267,
+     13.25,
+     "exato"
+    ],
+    [
+     15.35,
+     36.5,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bvem para trás, para mandíbula\\b",
+     "vamos bem para trás, para a mandíbula"
+    ],
+    [
+     "\\bSANEP, ela\\b",
+     "a SANEP, ela"
+    ],
+    [
+     "\\btrabalhar, o padrão\\b",
+     "trabalhar o padrão"
+    ],
+    [
+     "\\bna hora, SANEP\\b",
+     "na hora, a SANEP"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ]
+   ],
+   "silenciar": [
+    [
+     36.28,
+     36.5
+    ]
+   ]
+  }
+ ]
+}
