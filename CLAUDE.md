@@ -214,7 +214,7 @@ Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **Copy (1)** Adriane da Silva Machado Möbbs
 
-**Marketing (7)** Julio Cesar de Souza Couto (Automações Send Flow) · Matheus da Rosa Luvier, "Matheus Saar", agência The Trinity (Tráfego) · André Luiz Vivas (Webdesigner) · Gabriel Napoli (Gravação) · Gabriela Borges Costa (Editor) · Weslei Eduardo Torres da Silva Sousa (Videomaker) · Isabela Naomi Kuroda Costa (Social Media)
+**Marketing (7)** Julio Cesar de Souza Couto (Automações Send Flow) · Matheus da Rosa Luvier, "Matheus Saar", agência The Trinity (Tráfego) · André Luiz Vivas (Webdesigner) · Gabriel Napoli (Gravação) · Gabriela Borges Costa (Editor) · Isabela Naomi Kuroda Costa (Social Media)
 
 **RH e ADM (1)** Leticia Gabriella da Silva Mendonça Moura
 
@@ -312,6 +312,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Criação de grupo exige o doc de automação (Keila, 19/11):** todo pedido de grupo de WhatsApp à automação sai com o "Doc para captação - Automação" do evento preenchido (modelo: MPL 11/26, `1LQVv8rRnH39kPQ7RKBKCRNrAuXJPFnxcGD00gh4Vbno`), com nome do grupo, capa, descrição, boas-vindas, admins, onboarding, listboss e o que a automação devolve.
 - **Identidade visual do evento em todo documento (Keila, 19/11):** todo documento criado para um lançamento leva a identidade visual daquele evento (ex.: Master Bio).
 - **Leitura fácil em toda mensagem (Keila, 19/11):** linha em branco entre cada item (datas, links, blocos); rótulo de link em negrito numa linha e o link na linha de baixo (ex.: "📄 *Briefing:*" e o link abaixo); datas em negrito. Nada embolado.
+- **Brutos do evento anterior (Keila, 19/11):** ao abrir um evento, copiar para a pasta de BRUTOS do evento atual todas as artes estáticas e os vídeos de criativos do evento anterior, mais a pasta de depoimentos e a pasta de logo. Sempre.
+- **Edição de criativos é do Claude (Keila, 19/11):** troca de data em arte e corte de vídeo eu mesma faço (sem IA generativa), salvando em pasta própria do evento; não pedir à Edição.
 - **Brasil e Latam andam juntos (Keila, 19/11):** tudo o que for feito para um produto no Brasil (copy, artes, páginas, onboarding, automação) é feito também para a versão Latam, sem precisar pedir.
 - **Emoji e espaço (Adri, 18/11; Keila, 19/11):** o tom 🏾 (ex.: 👇🏾, 👉🏾) é só para as **copys de envio** (textos na voz do Dr. João), nunca 🏽 ou amarelo. Nas **conversas dos grupos** (mensagens da gestão ao time e no Gestão FEA), usar o tom claro 🏻 (ex.: 👉🏻, 👍🏻, 👏🏻). Nunca dois espaços seguidos em copy ou mensagem.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
@@ -349,7 +351,7 @@ Briefings ativos:
 
 | Necessidade | Falar com |
 |-------------|-----------|
-| Edição de vídeo | Gabriela Costa (Editor) · Weslei Sousa (Videomaker) |
+| Edição de vídeo | Gabriela Costa (Editor) |
 | Tráfego pago e pixels | Matheus Saar (The Trinity) |
 | Páginas e web | André Vivas |
 | Automações de email e SMS (Send Flow) | Julio Cesar de Souza Couto ("Júlio Couto") |
