@@ -1,0 +1,121 @@
+---
+name: fea-clickup-ronda
+description: Ronda diária das demandas FEA no ClickUp feita pelo Claude. Cobra tarefas vencidas, avisa o que vence amanhã, confere o que está em revisão, recebe entregas comentadas pela equipe e, na sexta, passa para a sprint seguinte o que não foi concluído. Usar quando a Routine diária disparar ou quando a Keila pedir ronda, cobrança, acompanhamento das demandas ou para virar a sprint.
+---
+
+# FEA: ronda diária no ClickUp
+
+O Claude é quem opera o ClickUp dos lançamentos (Keila, 20/10/2026). A equipe só faz duas coisas:
+1. **entregar:** comentar na tarefa com o link ou anexo e a palavra "entregue";
+2. **responder** às cobranças nos comentários.
+
+Datas, status, sprints, responsáveis e criação de tarefas são só comigo. Quem decide e aprova é a Keila.
+
+## Escopo
+
+- Workspace `9013080622`.
+- Pastas monitoradas: as pastas de lançamento ativas no espaço Marketing Brasil (`90130517360`) e no espaço Marketing Latam (`901314001225`). Hoje são **Black Friday Vitalícia 10/26** (`901318759044`), **Black Friday Total - Latam** (`901318793839`) e **FEA-MTB 11/26** (`1400270000003387`, sprints S1 a S4 no formato `S2 (26/10 - 30/10)`, incluída em 28/10/2026) e **Masterclass Bioestimuladores 12/26** (`1400270000005966`, Sprints 1 a 5 de 16/11 a 18/12 no formato `Sprint 1 (16/11 - 20/11)`; captação 30/11, aula 08/12 às 20h, carrinho 08 a 15/12; incluída em 19/11/2026, quando a Keila pediu o lançamento pronto). A Masterclass Anatomia 12/26 foi cancelada (Keila, 19/11/2026): tarefas arquivadas, pasta `1400270000003731` fora da ronda. **Em espera (Keila, 29/10/2026):** não cobrar, não lembrar e não reprogramar as tarefas da MTB de outras pessoas (só as do André já foram para a semana seguinte) até ela decidir; listar no relatório só as entregas comentadas.
+- Demandas contínuas, fora de lançamento: pasta **Redes Sociais** (`1400270000003670`) no espaço Marketing Brasil, uma lista por canal (hoje só **YouTube**, `1400270000004568`). Não tem sprint: a ronda olha a lista inteira, pelo prazo de cada tarefa (Keila, 27/10/2026).
+- Tarefas avulsas criadas pelo Claude a pedido da Keila fora das sprints também entram na ronda até serem concluídas. Hoje: [Página de Pré-venda Elite Injectors Congress 2027](https://app.clickup.com/t/17th71z85hv) (`17th71z85hv`, André, prazo 30/10 18h) e [Página de Vendas Elite Mentoring](https://app.clickup.com/t/17th71z88k8) (`17th71z88k8`, André, prazo 30/10 18h), na lista Pré produção Congresso (`901325815294`).
+- Dentro de cada pasta de lançamento, a **sprint atual** é a lista cujo intervalo no nome contém a data de hoje. A Brasil usa `dd/mm`, a Latam usa `m/d`.
+- Incluir pasta nova só com o ok da Keila (regra do CLAUDE.md).
+
+## Em cada rodada (dias úteis: 7h52, 11h52 e 16h52, horário de Brasília)
+
+Cobrança e lembrete acontecem uma vez por dia, na rodada das 7h52. As outras duas rodadas existem para a entrega da equipe não esperar até o dia seguinte para andar.
+
+1. **Entregas comentadas.** Em toda subtarefa aberta da sprint atual, ler os comentários desde a última rodada. Comentário da equipe com link, anexo ou a palavra "entregue": mudar para `em revisão` e responder "Recebido, vou conferir.".
+2. **Conferência** de cada tarefa em `em revisão`:
+   - Objetiva (link abre, página no ar com HTTP 200, UTM presente, arquivo no Drive com o nome certo, QR abre a URL certa): se passou, mudar para `aprovado` e comentar o que foi conferido. Se não passou, mudar para `em ajuste` com a lista exata do que corrigir.
+   - Copy: conferir as regras FEA ("para", sem travessão, linha vermelha) e comentar a nota. Copy, conteúdo médico e peça de anúncio vão para `aprovado` só como pré-revisão: a Keila dá o ok final.
+   - **`feito` é só a Keila quem marca.** Até ela autorizar outra coisa, eu nunca fecho tarefa.
+   - **Web (André não atualiza o ClickUp, Keila 20/10/2026):** não esperar o status. Em toda rodada, para cada tarefa de Webdesigner aberta, abrir a URL da página, que vem da **planilha de links úteis** do lançamento (Keila, 20/10/2026: não pedir URL na descrição). Caminho: na pasta do lançamento, o doc do ClickUp **Guia de Lançamento** (`clickup_search` por "Guia de Lançamento" com a pasta, depois `clickup_get_document_pages`) tem os links do Drive, da planilha de links úteis e do briefing. Na planilha, a aba WEB DESIGNER lista as páginas, a aba COPY lista a copy de cada página e a aba TRÁFEGO lista as UTMs. Para ler: `curl -sL "https://drive.google.com/uc?export=download&id={ID}"` e openpyxl (os links reais estão em `cell.hyperlink.target`, o texto da célula pode estar diferente); se o download pedir login, usar `mcp__Google_Drive__read_file_content`, que traz o texto (aí o doc de copy se acha pelo título com `search_files`). Ligar cada tarefa à página pelo nome. Abrir a página, com `curl -sL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128 Safari/537.36"` (sem esse agente de navegador o site responde 403). Conferir: HTTP 200; frases-chave da copy (linha `Copy:` da descrição, lida com `curl -sL "https://docs.google.com/document/d/{ID}/export?format=txt"`) presentes na página; botões e links de CTA abrindo; quando a tarefa pede, código da VK Metrics no HTML e UTM nos links. Se a página já está no ar com a copy certa, mudar para `aprovado` e comentar para o André o que foi conferido ("🤖 Claude: conferi no ar, está certo, marquei como aprovado."). Se está no ar mas diferente da copy, mudar para `em ajuste` com a lista. Se ainda não mudou, não fazer nada. Página que não está na planilha: listar no relatório para a Keila.
+   - **Design (Leo coloca `em revisão`):** conferir contra o briefing da descrição. Ler a copy (`Copy:`, export txt do Google Doc), listar a pasta (`Pasta para salvar:`) com `mcp__Google_Drive__search_files` (`parentId = 'ID'`) e baixar cada arte com `curl -sL "https://drive.google.com/uc?export=download&id={ID}"` para uma pasta nova no scratchpad (nunca baixar em base64 pela ferramenta do Drive, estoura o contexto). Abrir cada imagem com Read e conferir peça por peça:
+     1. todas as peças pedidas existem (inclusive as versões COM e SEM CTA quando a copy pede);
+     2. o texto da arte bate com a copy, palavra por palavra (data, horário, nome do produto, CTA, acento);
+     3. a ordem e a hierarquia pedidas;
+     4. a medida e o formato (`file` mostra a resolução);
+     5. o nome do arquivo no padrão da pasta;
+     6. as regras FEA (sem "pra", sem promessa de resultado, sem marca de ácido ou toxina).
+
+     Passou em tudo: `aprovado` e comentário com o checklist conferido. Faltou algo: `em ajuste` e comentário para o Leo com a lista exata ("peça 01 não está na pasta", "na 03 falta o acento em ..."). Julgamento estético (se ficou bonito, se a foto é a melhor) fica com a Keila: só sinalizar, nunca reprovar por gosto. Cada lançamento tem identidade visual própria (a Black Friday Vitalícia é preto e dourado): conferir a arte contra a identidade da campanha, nunca contra a paleta FEA institucional.
+3. **Status da tarefa-mãe (setor) acompanha o andamento** (Keila, 12/11/2026). Se qualquer subtarefa de um setor (Gestão, Copy, Design, Webdesigner, Automação, Tráfego, Suporte) já andou (`fazendo`, `em revisão`, `em ajuste`, `aprovado` ou `feito`), a tarefa-mãe vai para `fazendo`, nunca fica em `a fazer`. Conferir em toda rodada, em todas as sprints das pastas de lançamento ativas, com `FEA-gestao-clickup/fea_status_maes.py (com --dry para simular)` ou o mesmo critério. A mãe só vai para `feito` pela Keila.
+4. **Passagem de bastão.** Quando uma tarefa vira `aprovado` ou `feito`, procurar a próxima da corrente (Gestão → Copy → Design → Web → Automação → Tráfego) que depende dela e comentar lá, atribuindo o comentário ao responsável: "A etapa anterior foi aprovada: [link]. Pode seguir, o prazo é dd/mm."
+5. **Antes de cobrar, conferir se a tarefa tem o que a pessoa precisa** (Keila, 06/11/2026: "como ele vai fazer se não tem informação?"). Descrição vazia, sem copy, sem título, sem vídeo ou sem pasta: **não marcar `atrasado` e não cobrar**. Primeiro procurar o material no Drive e na planilha de links úteis e completar a descrição (aí o prazo recomeça, no mínimo próximo dia útil). Se não existir, deixar em `a fazer` e listar para a Keila como "falta informação". Tarefa que depende de insumo de outra pessoa (títulos da social media, print, copy) também não é cobrada de quem executa.
+6. **Antes de cobrar, marcar `atrasado` ou virar a tarefa de sprint, procurar a entrega fora do ClickUp** (Keila, 14/11/2026). A equipe às vezes entrega sem comentar na tarefa e sem atualizar a planilha. Erro já cometido: em 13/11 cobrei a IAutomate pela planilha de respostas e pelo formulário de matrícula da BF Vitalícia, que já estavam publicados e registrados na planilha de links úteis desde 06/11.
+
+   Conferir sempre nos dois lugares:
+   1. **Planilha de links úteis do lançamento**, na aba da área (GERAL para formulário, planilha, lista, webhook; COPY; ARTES; WEB DESIGNER; TRÁFEGO). Procurar pelo nome da tarefa e por palavras-chave (respostas, matrícula, compradores, formulário).
+   2. **Drive do lançamento:** a pasta de `Pasta para salvar:` da tarefa e a pasta da área (AUTOMAÇÃO, COPY, ARTES, TRÁFEGO). Listar a pasta e olhar arquivos criados ou alterados depois do início da tarefa. Página ou formulário: abrir a URL pública.
+
+   Achou a entrega:
+   - conferir (abre, está no lugar certo, está funcionando: formulário publicado, planilha recebendo respostas);
+   - mudar para `aprovado` (ou `em revisão` quando a Keila precisa dar o ok de conteúdo);
+   - comentar atribuído ao responsável o que foi encontrado e onde;
+   - registrar na planilha de links úteis o que estava só no Drive.
+
+   Se havia cobrança errada, o comentário reconhece o engano. Planilha fora do Drive da empresa (Drive pessoal): registrar no relatório e na tarefa da Gabi de cobrança das planilhas (a planilha precisa estar no Drive da empresa, Keila, 14/11/2026). **Nunca mover planilha, nem pedir a alguém que mova** (Keila, 14/11/2026: mover pode interferir nas integrações). Quem resolve é o time dono da planilha.
+
+   Só depois dessa conferência, sem nada encontrado, a tarefa pode ser cobrada.
+7. **Vencidas, só na rodada das 7h52** (Keila, 20/10/2026: cobrar 1 vez por dia, nunca 2). Subtarefa com prazo no passado e status fora de `feito`, `aprovado` ou `em revisão`: mudar para `atrasado` e comentar a cobrança, atribuída ao responsável. Antes de comentar, ler os comentários e não cobrar se já houver cobrança de hoje (minha ou da ronda antiga). As rodadas das 11h52 e das 16h52 **não cobram**: só recebem entregas, conferem, passam o bastão e mudam para `atrasado` o que venceu, sem comentar.
+8. **Vence amanhã.** Subtarefa aberta com prazo no próximo dia útil: um lembrete por tarefa, só na rodada das 7h52.
+8b. **Live patrocinada, lembrete no dia anterior** (Keila, 18/11/2026). Na rodada das 7h52, procurar no workspace inteiro (não só nas pastas monitoradas, porque os lançamentos futuros ficam no Backlog) as tarefas abertas com nome "Live patrocinada" cujo prazo (dia da live) é o próximo dia útil ou o dia seguinte. Comentar atribuído ao Matheus Saar (`82024913`): "🤖 Claude: Matheus, lembrete: a live de <lançamento> é amanhã, dd/mm, às hh. Se tiver live patrocinada, a campanha precisa estar configurada antes da live. Se não tiver, responda aqui "sem live patrocinada"." Live de segunda: lembrete na sexta. Resposta "sem live patrocinada": mudar para `aprovado` e avisar a Keila no relatório (o `feito` é dela).
+9. **Sem prazo ou sem responsável.** Não inventar: listar no relatório para a Keila decidir. Se houver padrão na skill `fea-distribuir-datas`, sugerir a data.
+10. **Relatório para a Keila** no fim da rodada, curto e em português:
+   - O que andou: entregue, aprovado, passado adiante.
+   - O que voltou para ajuste.
+   - O que está atrasado, com o responsável e há quantos dias.
+   - O que precisa de decisão dela.
+
+   Usar emoji e negrito, e um link para cada tarefa no formato `[nome](url)`.
+
+## Virada de sprint (sexta às 20h52, rotina própria)
+
+Roda depois do expediente da equipe, que costuma ir até as 18h (Keila, 20/10/2026). Antes de virar, receber as entregas comentadas até a hora da virada.
+
+1. Antes de virar qualquer tarefa, fazer a conferência do item 6 (planilha de links úteis e Drive): o que já foi entregue vai para `aprovado` e não vira.
+2. Toda subtarefa da sprint atual que não esteja em `feito` vai para a sprint seguinte. Se a sprint seguinte não existir, criar no padrão de nome da pasta, de segunda a sexta, nunca passando da data do evento.
+3. Como o ClickUp não move subtarefa sozinha, recriar na sprint seguinte, dentro da tarefa-mãe da mesma área (criar a mãe se não existir, com as datas da sprint):
+   - mesmo nome, responsável, status e descrição;
+   - novo prazo no mesmo dia da semana da semana seguinte, sem passar da data do evento;
+   - se a tarefa estava `atrasado`, o prazo vai para segunda às 18h.
+
+   Depois arquivar a original (`task.archive`). Arquivar dá para desfazer; apagar, nunca.
+4. Se a original tiver anexo ou comentário importante, comentar na nova: "Continuação de [link da original], o histórico está lá."
+5. **Nunca arquivar sprint encerrada** (Keila, 05/11/2026): as sprints passadas ficam visíveis na pasta até o fim do lançamento. O arquivamento é de tudo de uma vez, quando o lançamento acabar, e só com o ok da Keila. A bagunça que ela quer evitar são as pastas de lançamentos futuros, não as sprints antigas.
+6. No relatório de sexta, listar o que virou de sprint e quantas vezes cada tarefa já virou. Tarefa que virou 2 vezes ou mais é **risco**: sinalizar para a Keila com o motivo provável.
+
+## Material recebido vai para a planilha de links úteis (Keila, 29/10/2026)
+
+Todo material que a Keila enviar para uma demanda (copy, ID visual, pasta do Drive, vídeo, link de checkout, página, UTM) é registrado **na mesma hora** na planilha de links úteis do lançamento ou evento, junto com a criação da tarefa. A planilha é a fonte única que a equipe consulta; tarefa sem o material na planilha está incompleta.
+
+- **Onde fica:** na raiz da pasta do lançamento no Drive (`Links úteis - <lançamento>.xlsx`) ou pelo Guia de Lançamento no ClickUp.
+- **Em qual aba:** GERAL (checkout, grupos, listas, tags, webhooks) · COPY (docs de copy) · ARTE (ID visual, KV, pastas de arte) · WEB DESIGNER (páginas; deixar "(André cria até dd/mm)" enquanto não tiver URL) · TRÁFEGO (UTMs, criativos).
+- **Como gravar:** baixar o .xlsx pela API do Drive (`fea_drive.py`), acrescentar a linha depois da última preenchida da aba, copiando o estilo da linha de cima e colocando o link como hiperlink, conferir que o `modifiedTime` não mudou durante a edição e subir no mesmo arquivo (mesmo ID). Nunca apagar nem sobrescrever linha existente; se uma linha parecer errada, avisar a Keila.
+- No relatório, dizer o que foi registrado e em qual aba.
+
+## Thumbs semanais do YouTube (Keila, 27/10/2026)
+
+O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo faz as 3 thumbs da semana num dia só.
+
+- Na rodada das 7h52 de **segunda**, criar na lista YouTube a tarefa `Thumbs YouTube da semana dd/mm a dd/mm (seg, qua e sex)` da semana **seguinte**, para o Leo (`44232914`), com início sexta 8h e prazo **sexta da semana atual às 18h**. Copiar a descrição da última tarefa semanal (checklist dos 3 dias com título e vídeo em branco, formato 1280 x 720 px).
+- Toda tarefa de thumb leva a linha `Pasta para salvar:` com a pasta **FEA-THUMBS YOUTUBE** (`1hDzlnSbOnPrjCTdbCaJrcqNZ3G8OhmcP`, dentro de Aulas Novas > YOUTUBE, ao lado de BRUTAS NÃO POSTADAS e POSTADAS). Os vídeos que a Keila manda ficam em BRUTAS NÃO POSTADAS.
+- Na quinta, se os 3 títulos e vídeos ainda não estiverem nos comentários, listar no relatório para a Keila (não cobrar o Leo por isso).
+- Semana com feriado ou postagem diferente: seguir o que a Keila disser e não criar no automático.
+
+## Textos padrão (regra FEA: sempre "para", nunca "pra", sem travessão)
+
+- Prefixo de todo comentário: `🤖 Claude:` (o conector comenta com a conta da Keila, e o prefixo deixa claro quem escreveu).
+- Cobrança: "🤖 Claude: esta tarefa venceu em dd/mm e ainda não foi concluída. Se já entregou, coloque o link aqui nos comentários com a palavra entregue. Se precisa de mais prazo, responda com a nova data possível."
+- Lembrete: "🤖 Claude: lembrete, esta tarefa vence amanhã (dd/mm) às 18h. Se tiver algum impedimento, responda aqui."
+- O comentário vai **atribuído ao responsável** (campo `assignee` de `clickup_create_task_comment`), que é o que gera o aviso no celular dele pelo app do ClickUp.
+
+## Segurança
+
+- Nunca apagar tarefa, lista ou comentário.
+- Nunca mexer em configuração do workspace, automações nativas ou permissões.
+- Se algo sair do padrão (lista sumiu, centenas de tarefas vencidas de uma vez, erro de permissão), não agir em massa: só reportar à Keila.
+
+## Conferência de tarefa órfã (toda rodada)
+
+Em toda rodada, listar as tarefas de topo das sprints e do Backlog das pastas do escopo. Qualquer tarefa que não seja uma mãe de área (Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, Suporte/CS, Operação do dia) é órfã: mover para baixo da mãe da área certa na mesma lista (`PUT /task/{id}` com `parent`), criando a mãe se faltar, e citar no relatório. Regra da Keila, 19/11/2026: "não pode acontecer isso".
