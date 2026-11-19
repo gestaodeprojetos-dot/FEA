@@ -71,7 +71,7 @@ Remove completely: any person, sharps container, syringes, needles, gloves, medi
 | O1 envelope | Envelope creme Missão Elite.png (1gO7jx1y_VJ1IRkeTk8yKOafwkbcmdPoQ) | Aprovado |
 | Figurino | Terno preto em três vistas.png (15xnctdTVEG_DuKP8FG8Napw0GZxaA6_m) | Aprovado para o Dr. João (relógio quadrado de aço e aliança batem com o card). Para o Luca: mesmo terno, sem a aliança e com o relógio dele (mostrador preto), descritos no prompt |
 | O2 cartão com o texto da missão | (falta) | A gerar |
-| C1 clínica | FEA-ref-clinica-mesa-computador.jpg (11PrVfFjwtN1BEGeSHYJoSoHkqMmjYu4P), foto real da mesa enviada pela Keila (19/11): recepção/mesa com parede de mármore azul, pendentes dourados, mesa branca com frente de blocos de vidro, cadeira creme, notebooks | Prompt pronto abaixo. Logo octogonal da parede sai do cenário |
+| C1 clínica | FEA-ref-clinica-mesa-computador.jpg (11PrVfFjwtN1BEGeSHYJoSoHkqMmjYu4P), foto real da mesa da clínica do Dr. João (confirmado pela Keila em 19/11): recepção/mesa com parede de mármore azul, pendentes dourados, mesa branca com frente de blocos de vidro, cadeira creme, notebooks | Prompt pronto abaixo. Logo octogonal da parede sai do cenário |
 
 ## Prompt ChatGPT · C1 clínica v2, com a foto da mesa (19/11/2026)
 Anexar: 1) FEA-ref-clinica-mesa-computador.jpg (pasta de materiais) (só ela: a parede estofada da sala de procedimento misturaria dois ambientes)
