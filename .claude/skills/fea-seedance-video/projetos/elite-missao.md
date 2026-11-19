@@ -71,4 +71,17 @@ Remove completely: any person, sharps container, syringes, needles, gloves, medi
 | O1 envelope | Envelope creme Missão Elite.png (1gO7jx1y_VJ1IRkeTk8yKOafwkbcmdPoQ) | Aprovado |
 | Figurino | Terno preto em três vistas.png (15xnctdTVEG_DuKP8FG8Napw0GZxaA6_m) | Aprovado para o Dr. João (relógio quadrado de aço e aliança batem com o card). Para o Luca: mesmo terno, sem a aliança e com o relógio dele (mostrador preto), descritos no prompt |
 | O2 cartão com o texto da missão | (falta) | A gerar |
-| C1 clínica | (falta) | Aguardando a foto da mesa |
+| C1 clínica | foto real da mesa enviada pela Keila no chat (19/11): recepção/mesa com parede de mármore azul, pendentes dourados, mesa branca com frente de blocos de vidro, cadeira creme, notebooks | Prompt pronto abaixo. Logo octogonal da parede sai do cenário |
+
+## Prompt ChatGPT · C1 clínica v2, com a foto da mesa (19/11/2026)
+Anexar: 1) foto da mesa (enviada pela Keila) · 2) WhatsApp Image 2026-11-06 at 17.25.02.jpeg (parede estofada, só como apoio de material)
+
+```
+Use the first photo as the exact reference for this real clinic office: the wall of dark blue marble with gold and white veins, the taupe plaster wall on the left, the cluster of slim brushed-gold cylinder pendant lights hanging from the white ceiling, the white desk with a front panel of glass blocks, and the cream-white office chair with perforated back. Keep the same materials, colours and layout. Recreate it as an EMPTY scene with no people.
+
+Recompose it as a vertical 9:16 frame, eye level, seen from the visitor side of the desk: the desk across the lower third facing the camera, the cream chair empty behind it, the marble wall filling the background. On the desk: one open dark laptop facing the empty chair (its screen glowing softly toward the chair, back of the laptop plain with no logo), a black keyboard, and nothing else.
+
+Remove completely: the octagonal steel logo on the marble wall (leave the marble clean and continuous), the second laptop, headphones, phone, papers, the coat on the chair, the plant, every logo, brand name and written text, and any person.
+
+It is night and the clinic is closed: the gold pendant lights glow warm and dim, the laptop screen is the main light on the desk, and a faint rosé glow (#E48AA0) grazes the marble from one side, with deep shadows (#0F0507) in the corners. Cinematic spy-film suspense, quiet, photorealistic, 35mm lens, shallow depth of field.
+```
