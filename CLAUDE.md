@@ -269,6 +269,20 @@ Todo pedido em grupo que a gestão precisa responder com informação ou link (e
 
 **Regra fixa (Keila, 18/11/2026): nunca criar planilha ou documento novo, nem trocar o link de planilha ou documento existente.** Todo pedido relacionado a planilha é feito na mesma planilha. Se o arquivo for .xlsx (o Claude não edita), levar à Keila as soluções de acesso para edição em vez de criar arquivo paralelo. A planilha "FEA - Enviar ao Luca · MPL 11/26" (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`) foi criada antes dessa regra e é exceção, não modelo.
 
+### Guia de operações de lançamentos (Keila, 19/11/2026, obrigatório)
+
+Doc oficial: "FEA · Padrões de operação de lançamentos" (`1NkbIawRhO-oWpVTz-6o1JImPcU_cKHFZzM7QliDDhLQ`). Ler antes de mexer em ClickUp, Drive ou planilhas de lançamento; em dúvida, copiar o padrão do FEA-MTB 11/26. Pontos que mais pegam:
+- Procurar antes de criar; uma demanda, uma tarefa; informação nova atualiza a tarefa existente.
+- **Nunca apagar** tarefa, lista, comentário ou linha de planilha; nunca mover planilha; nunca mexer em permissão, automação nativa ou configuração.
+- **Nunca marcar "feito" no ClickUp sem a Keila mandar**: entrega conferida vai para "aprovado" ou "em revisão".
+- Status FEA: a fazer · fazendo · em revisão · em ajuste · atrasado · aprovado · pausado · sprint · feito.
+- Toda tarefa é subtarefa da mãe da área na sprint certa (mães: Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, Suporte/CS, Operação do dia). Subtarefa: início 8h, prazo 18h, responsável, descrição com lançamento, briefing, Drive e entrega; tarefa do Leo leva "Pasta para salvar:" com a pasta ESTÁTICOS da fase.
+- Comentário do Claude no ClickUp começa com "🤖 Claude:".
+- Drive: criativos prontos em 4. TRÁFEGO / CRIATIVOS PRONTOS / fase (estáticos em ESTÁTICOS); brutos em 4. TRÁFEGO / BRUTOS; o que não pode ir ao ar em BRUTOS / FORA DO TRÁFEGO; imagens de API em 2. ARTES / 1. WHATSAPP / IMAGENS API. Nada de pasta solta.
+- Links úteis: abas GERAL, COPY, ARTES, WEB DESIGNER, TRÁFEGO, CPL; colunas Nome | Link; link vazio vira "(a criar: responsável, prazo dd/mm)".
+- Criativos para Tráfego: lançamento inteiro num bloco na aba do mês do evento; status só pela lista suspensa.
+- Antes de dizer "pronto", passar o checklist da seção 6 do doc e avisar a Keila com os links.
+
 ### Regra fixa: conferência humana antes de afirmar status (Keila, 17/11/2026)
 
 Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de sugerir cobrar alguém), pedir para a **Gabi** conferir. Fluxo obrigatório: verificar, conferir, revisar e só então liberar o status. Ausência de registro no ClickUp não prova que a tarefa não foi feita (erro de 17/11: o Claude mandou cobrar a Adri, mas a parte dela estava pronta e a pendência era a revisão da Grazi).
