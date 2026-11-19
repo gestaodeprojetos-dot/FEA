@@ -54,7 +54,7 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 
 - Modelo: `Links úteis` do FEA-MTB 11/26. Abas **GERAL, COPY, ARTES, WEB DESIGNER, TRÁFEGO, CPL**. Colunas só `Nome | Link`. Nome do produto (sigla) no A1 da GERAL. Linhas zebradas. Link sempre com o nome do arquivo como texto.
 - **Do lançamento anterior entra só o Drive anterior, para referência** (primeira linha da GERAL). Nada de copy, checkout, planilha, lista ou observação do lançamento anterior.
-- Nenhuma célula de link vazia: o que ainda não existe leva `(a criar: responsável, prazo dd/mm)`, tirado da tarefa do ClickUp.
+- O que ainda não existe fica **em branco** (link do Zoom, coisas da automação, copy que falta). Nada de "(a criar...)" ou observação na célula.
 - Todo material que chega (copy, arte, link de grupo, webhook, lista e tags do Active, Zoom, checkout) vai na hora para a aba certa.
 - Sem observações longas dentro das células.
 
