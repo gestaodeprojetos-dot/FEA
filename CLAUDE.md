@@ -270,7 +270,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Só sugerir envio executável (Keila, 19/11):** rascunho de mensagem ao time só é trazido quando a pessoa consegue executar 100% da demanda. Demanda que ainda depende de outra entrega (revisão de copy, preço, checkout) fica no ClickUp e só vira mensagem quando for liberada.
 - **Número do rascunho na confirmação (Keila, 19/11):** ao confirmar no Gestão FEA que uma mensagem foi enviada, citar sempre o número do rascunho (ex.: "13a enviada"), para não perder a referência.
 - **Brasil e Latam andam juntos (Keila, 19/11):** tudo o que for feito para um produto no Brasil (copy, artes, páginas, onboarding, automação) é feito também para a versão Latam, sem precisar pedir.
-- **Emoji e espaço (Adri, 18/11):** emoji de mão do Dr. João sempre no tom 🏾 (ex.: 👇🏾, 👉🏾), nunca 🏽 ou amarelo. Nunca dois espaços seguidos em copy ou mensagem.
+- **Emoji e espaço (Adri, 18/11; Keila, 19/11):** o tom 🏾 (ex.: 👇🏾, 👉🏾) é só para as **copys de envio** (textos na voz do Dr. João), nunca 🏽 ou amarelo. Nas **conversas dos grupos** (mensagens da gestão ao time e no Gestão FEA), usar o tom claro 🏻 (ex.: 👉🏻, 👍🏻, 👏🏻). Nunca dois espaços seguidos em copy ou mensagem.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
