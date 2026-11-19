@@ -269,6 +269,10 @@ Todo pedido em grupo que a gestão precisa responder com informação ou link (e
 
 **Regra fixa (Keila, 18/11/2026): nunca criar planilha ou documento novo, nem trocar o link de planilha ou documento existente.** Todo pedido relacionado a planilha é feito na mesma planilha. Se o arquivo for .xlsx (o Claude não edita), levar à Keila as soluções de acesso para edição em vez de criar arquivo paralelo. A planilha "FEA - Enviar ao Luca · MPL 11/26" (`10gJzme_2Q6gVCFY29fSJ1fL794-21L0TVgE7KLHMtXg`) foi criada antes dessa regra e é exceção, não modelo.
 
+### Regra fixa: não responder demanda de outro responsável (Keila, 19/11/2026)
+
+Quando o pedido (inclusive do Luca) é para outra pessoa responsável pela tarefa (ex.: Luca pede disparo à automação), **nunca** responder no lugar dela nem sugerir resposta da gestão. Só acompanhar e avaliar a urgência; se a pessoa não responder e a urgência piorar, trazer ao Gestão FEA um lembrete para ela, perguntando se está tudo ok com a demanda.
+
 ### Regra fixa: linha de produção (Keila, 19/11/2026)
 
 Toda entrega dispara a próxima etapa, automaticamente e sempre, sem esperar pedido. Exemplo: a Adri entrega a copy dos criativos de captação, então na hora eu (1) marco a tarefa da copy como aprovado, (2) crio no ClickUp a subtarefa do Leo para as artes (embaixo da mãe Design da sprint certa, com datas, responsável, link da copy e "Pasta para salvar:" da pasta ESTÁTICOS da fase) e (3) trago ao Gestão FEA o rascunho para o grupo Artes. Vale para toda a cadeia: copy, artes, vídeo, páginas, automação, tráfego, teste do caminho do lead.
