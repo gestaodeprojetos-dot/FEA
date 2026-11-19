@@ -319,6 +319,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Código certo (Keila, 19/11):** usar o código do produto ou evento (ELITE-n, BIO-n, MPL-n, PLX-n, BFV-n, ANA-n); sem produto específico, o nome do grupo (COPY-n, ARTES-n, WEB-n...). GERAL-n só para assunto realmente geral.
 - **Urgência de copy (Adri, 19/11):** toda urgência de copy é avisada no grupo Daily FEA, marcando a Adri e o Matheus van der Ham.
 - **Vídeo é com a Gabriela (Edição), não com o Leo (Keila, 19/11):** criação e edição de vídeo de criativo vão para a Gabriela (grupo Edição); o Leo faz só arte estática.
+- **Copy revisa tudo o que eu atualizo (Keila, 19/11):** toda copy que eu entregar pronta ou atualizar (troca de link, data, oferta) vai para revisão da Copy (Matheus e Adri), com rascunho no Gestão FEA.
 - **Brasil e Latam andam juntos (Keila, 19/11):** tudo o que for feito para um produto no Brasil (copy, artes, páginas, onboarding, automação) é feito também para a versão Latam, sem precisar pedir.
 - **Emoji e espaço (Adri, 18/11; Keila, 19/11):** o tom 🏾 (ex.: 👇🏾, 👉🏾) é só para as **copys de envio** (textos na voz do Dr. João), nunca 🏽 ou amarelo. Nas **conversas dos grupos** (mensagens da gestão ao time e no Gestão FEA), usar o tom claro 🏻 (ex.: 👉🏻, 👍🏻, 👏🏻). Nunca dois espaços seguidos em copy ou mensagem.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
