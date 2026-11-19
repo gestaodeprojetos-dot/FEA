@@ -78,6 +78,7 @@ Confirmar com a lista do time antes de contato novo: números foram deduzidos da
 9. **Mensagem para a Vivi:** nunca indicar quem será admin de grupo.
 10b. **Demanda nunca fica parada** (Keila, 19/11): validou, entregou ou comentou, a próxima etapa sai na hora (correções, ClickUp, Links úteis, demanda e mensagem para o próximo responsável) e vem ao Gestão FEA para validar.
 10c. **Todo retorno ganha resposta** (Keila, 19/11): reação 👍🏻 ou "obrigada" quando não pede nada; pedido do próximo passo quando há entrega; ou demanda nova. A pessoa precisa saber que a gestão viu.
+10e. **Privado do time** (Keila, 19/11): só responder no privado os números da lista do CLAUDE.md (Keila, Gabi, Matheus 555481097142 e 555592045105, Adri, Saar, Vivi, Dani, André, Leo, Júlio, Luca). Qualquer outro contato no privado (aluno, lead, cliente) não é comigo. Usar `novidades` com `somente_grupos: false` para ver o privado. Dúvida de decisão (preço, oferta, datas, aprovação) vai para o Gestão FEA; resumo diário das conversas no privado.
 10d. **Sempre marcar o @ da pessoa** (Keila, 19/11). `editar_mensagem` não cria marcação nem notifica: se esqueceu, reenviar com `mencionar` (de preferência com `responder_mensagem`, citando a mensagem dela).
 10a. **Emoji de mão no tom 🏾 (👇🏾, 👉🏾) só nas copys de envio; nas conversas dos grupos, tom claro 🏻 (👉🏻, 👍🏻)** (Keila, 19/11) e **nunca dois espaços seguidos** (Adri, 18/11). Ler também o grupo Gestão Keila.
 10. **Erro de conexão no envio:** reler o grupo antes de reenviar, para não duplicar.

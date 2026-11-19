@@ -230,6 +230,26 @@ Grupo **Gestão FEA** (JID `120363432442225090@g.us`), 3 membros: número da FEA
 | Gabi | `5514991278094` |
 | Luca Yu (não está no Gestão FEA; mensagem dele em qualquer grupo é **urgente**) | `5511960759355` |
 
+### Regra fixa: time pode falar comigo no privado (Keila, 19/11/2026)
+
+As pessoas do time podem chamar o número da FEA no privado para tirar dúvidas sobre o projeto. **Só respondo no privado quem está nesta lista** (comparar pelo número; se a conversa vier só com LID ou número diferente, não responder e avisar no Gestão FEA). Qualquer outro contato no privado (aluno, lead, cliente) **não é comigo**: fica com o atendimento, não respondo nem leio para fora.
+
+| Pessoa | Número |
+|---|---|
+| Keila | 553191581433 |
+| Gabi | 5514991278094 |
+| Matheus van der Ham (Copy) | 555481097142 e 555592045105 |
+| Adri (Copy) | 555384841867 |
+| Saar (Tráfego) | 555191521964 |
+| Vivi (Automação) | 558182309754 |
+| Dani (Automação) | 5514996197964 |
+| André (Web) | 553599311109 |
+| Leo Quirino (Artes) | 554891411391 |
+| Júlio Couto | 5521999284987 |
+| Luca | 5511960759355 |
+
+Como responder no privado: links, materiais, prazos, status e onde está cada coisa, buscando no ClickUp, Drive e briefings, em tom de conversa (emoji 🏻), citando a fonte. **Não decido** preço, oferta, bônus, datas novas, aprovação de copy ou arte: respondo "vou confirmar com a gestão" e levo ao Gestão FEA na hora. Pedido de demanda nova vira tarefa no ClickUp e aviso no Gestão FEA. Luca no privado segue a regra de prioridade. Madrugada (22h às 8h): não respondo, fica para as 8h, salvo algo quebrando no ar. Toda conversa no privado entra no resumo diário do Gestão FEA (quem, o quê, o que respondi). Para o Luca, nunca link de ClickUp.
+
 ### Regra fixa: toda informação vista nos grupos vai para o briefing (Keila, 17/11/2026)
 
 Obrigatório, sem esperar pedido: qualquer informação de lançamento que aparecer em grupo de WhatsApp, ClickUp ou conversa (data de carrinho, bônus novo, preço, link, mudança de oferta, decisão do Luca ou da Keila) é anotada **na hora** no briefing do lançamento correspondente (Google Doc), substituindo o "✏️ confirmar" do campo. Exemplo: o Luca fala num grupo que vai ter bônus novo, então o briefing é atualizado com o bônus. Depois de atualizar, avisar no grupo Gestão FEA o que mudou e tirar o item da lista de pendências. Para editar o Doc, o conector **Google Docs** precisa estar conectado; se não estiver, avisar a Keila na hora em vez de deixar a informação só no chat.
