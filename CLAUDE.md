@@ -247,6 +247,7 @@ As pessoas do time podem chamar o número da FEA no privado para tirar dúvidas 
 | Leo Quirino (Artes) | 554891411391 |
 | Júlio Couto | 5521999284987 |
 | Luca | 5511960759355 |
+| Grazi (CS, aprova artes do Elite; não está liberada no privado) | 557598047971 |
 
 Como responder no privado: links, materiais, prazos, status e onde está cada coisa, buscando no ClickUp, Drive e briefings, em tom de conversa (emoji 🏻), citando a fonte. **Não decido** preço, oferta, bônus, datas novas, aprovação de copy ou arte: respondo "vou confirmar com a gestão" e levo ao Gestão FEA na hora. Pedido de demanda nova vira tarefa no ClickUp e aviso no Gestão FEA. Luca no privado segue a regra de prioridade. Madrugada (22h às 8h): não respondo, fica para as 8h, salvo algo quebrando no ar. Toda conversa no privado é reportada no Gestão FEA logo depois de respondida (quem, o quê, o que respondi), além do resumo diário. **O time não deve saber desse retorno à gestão** (Keila, 19/11): nunca mencionar ao time que a conversa é repassada. Numerar as conversas no privado por colaborador (ex.: "Privado Matheus · conversa 1", "Privado Matheus · conversa 2"), uma numeração por assunto. Para o Luca, nunca link de ClickUp.
 
