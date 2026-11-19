@@ -25,6 +25,15 @@
 
 - Fotos do Luca Yu (19/11): pasta de fotos de evento (id 1rDAmQz10RopCEVD9IsI1QwBVTAspNzJp, 43 fotos, quase todas em grupo; recortar o rosto, arquivos de 5000 px); pasta "Luca" com 57 takes de iPhone 1080p (id 1eEDIbXxmvgYH9pjMEgyQxucw6dMe5UFU, servem para perfil e voz); pasta com luca.png e 0P6A0629.jpg (id 1FNIoceqUnNYu2B9l3jsGqFu62ZW3sLUI). Melhores: luca.png (frente), 0P6A0629 (três quartos sorrindo), ROMA0182 (frente sério), IMG_9796 (frente sorrindo), IMG_4972 (três quartos), ROMA9257 (corpo inteiro, já de terno preto e camisa preta: referência de porte). Perfil-Luca.HEIC não abre aqui: pedir em JPG
 
+## Cenários (mesma ideia do Vinhas, na identidade do Elite)
+- Referências do reel do Vinhas no Drive: pasta "Referencias do video do Vinhas (cenarios)" (id 15oMIp46NLrFqvZTU7VusbMZv7Mp0zmKn), 6 quadros 720x1280
+- C1 escritório clássico à noite (biblioteca, mesa com tampo de couro, luminária, poltrona bordô, janela com São Paulo à noite)
+- C2 corredor escuro de centro de eventos com elevador de aço escuro ao fundo (faixa de LED rosé no rodapé)
+- C3 auditório vazio visto do fundo (cadeiras bordô, palco baixo, telão com brilho rosé). Se houver foto real do MC Hall, ela vira a referência
+- Closes dos palestrantes: no próprio C3, perto do palco, telão desfocado ao fundo
+- Objetos: O1 envelope fechado com "Missão Elite" datilografado em bordô; O2 cartão com o texto da missão
+- Paleta do Elite: base #0F0507, granada #8E1F3A, bordô #9B2F4B, rosé #E48AA0, rosé claro #FFE3EA
+
 ## Pendências (19/11/2026)
 - Fala 1 (sugestão da Adriane: "Essa está fácil, tenho o time perfeito para isso!")
 - Qual cabelo o Dr. João usa hoje (define quais sessões entram)
