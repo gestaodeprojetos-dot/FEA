@@ -354,6 +354,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Fonte de todo link (Keila, 20/11):** todo link que eu trouxer ao Gestão FEA vem com a fonte: planilha (nome e aba), grupo e quem enviou, ou "deduzido" (testado no site, sem fonte oficial). Link deduzido precisa ser registrado na planilha do produto para virar referência.
 - **Erro apontado vira aprendizado (Keila, 20/11):** quando a gestão aponta um link ou dado errado, identificar por que errou (fonte errada, edição errada, dado desatualizado) e, quando o mesmo cenário se repetir, dar alerta antes de enviar.
 - **Pedido de planilha de respostas do Luca = dash completo (Keila, 20/11):** toda vez que o Luca pedir planilha de respostas (pesquisa de leads, alunos, formulários), entregar obrigatoriamente: (1) dash HTML de análise de dados com a identidade visual do produto, (2) planilha diagramada e (3) análise com insights para copy e oferta, sem dados pessoais. Agentes em paralelo, velocidade máxima. Mensagem ao Luca leva os links do dash e da planilha.
+- **Privado só com validação (Keila, 20/11):** nenhuma mensagem no privado de ninguém (inclusive o Luca) sai sem a Keila validar o texto antes no Gestão FEA. O único lugar onde envio sem validação é o grupo Daily FEA.
+- **Luca é o estrategista dono do projeto (Keila, 20/11):** ele toma as decisões; posso dar suporte direto a ele como faço com o time no privado (sempre com validação). Em toda entrega para ele, buscar saber o que ele acessou e usou para melhorar a próxima.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
