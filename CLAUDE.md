@@ -361,6 +361,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Demanda do Luca = máximo de agentes (Keila, 20/11):** toda demanda do Luca é executada com o máximo de agentes em paralelo possível, para entregar o mais rápido possível, sem esperar confirmação para abrir a frente seguinte. Vale igual para pedidos dele no privado (Keila, 20/11). Depoimentos para o Luca: só Brasil, excluir Latam, salvo pedido contrário.
 - **Atendimento ao Luca no privado (Keila, 20/11):** todo pedido dele recebe na hora um "ok, vou verificar". Se houver dúvida que muda a entrega, perguntar a ele (ex.: qual página, captura ou vendas). Sempre perguntar "Brasil ou Latam?" quando o produto tiver versão Latam e ele não disser. Se ele não responder, entregar completo (todas as páginas do produto, Brasil e Latam).
 - **Diagramação de links (Keila, 20/11):** toda mensagem com vários links traz cada link numerado (1, 2, 3...), com linha em branco entre um e outro; nunca listas de links soltos sem número, nem blocos misturados.
+- **Versão da Keila para o Luca (Keila, 20/11):** quando a Keila também precisa mandar ao Luca, entregar a ela uma segunda versão no tom dela: abre só com o nome do que ele pediu (ex.: "Depoimentos preenchimento labial"), sem saudação, e os links só com linha em branco entre eles, sem número e sem título de introdução.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
