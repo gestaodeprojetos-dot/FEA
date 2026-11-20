@@ -367,6 +367,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Espaçamento em toda mensagem (Keila, 20/11, vale para qualquer pessoa, inclusive a Keila):** linha em branco entre as linhas e blocos de toda mensagem; nada embolado.
 - **Ajustes das respostas rápidas ao Luca (Keila, 20/11):** no privado dele usar "aqui" e nunca "aí" ("já já está aqui", nunca "chega aí"); chamar pelo nome "Luca" com frequência; intercalar o arsenal todo, sem repetir em seguida. Pergunta de dúvida: sempre dizer que já estou buscando e dar as opções com referência (ex.: "Já estou buscando, Luca. É a página de captura, a de vendas ou as duas?").
 - **Título na versão da Keila (Keila, 20/11):** a versão no tom dela tem um título, que é o pedido do Luca (ex.: "Depoimentos preenchimento labial"); só os links ficam sem título, com espaço entre eles.
+- **Dossiê de respostas ao Luca (Keila, 20/11, GERAL-140):** 29 respostas rápidas validadas (lista 136, lista 81a com "aqui" no lugar de "aí", e as 5 com o nome dele da 138) e 7 modelos de dúvida (Brasil ou Latam; captura ou vendas avisando que já busca as duas; lançamento com datas; pasta inteira ou arquivos principais; e os modelos A, B e C com opções entre colchetes). Texto completo na mensagem GERAL-140 do Gestão FEA. Intercalar tudo, sem repetir em seguida.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
