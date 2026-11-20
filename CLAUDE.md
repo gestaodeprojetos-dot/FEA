@@ -350,6 +350,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Daily FEA só para assuntos da daily (Keila, 19/11):** retorno de evento, lançamento ou projeto para a Copy vai no grupo Copy, nunca no Daily FEA.
 - **Brasil e Latam andam juntos (Keila, 19/11):** tudo o que for feito para um produto no Brasil (copy, artes, páginas, onboarding, automação) é feito também para a versão Latam, sem precisar pedir.
 - **Emoji e espaço (Adri, 18/11; Keila, 19/11):** o tom 🏾 (ex.: 👇🏾, 👉🏾) é só para as **copys de envio** (textos na voz do Dr. João), nunca 🏽 ou amarelo. Nas **conversas dos grupos** (mensagens da gestão ao time e no Gestão FEA), usar o tom claro 🏻 (ex.: 👉🏻, 👍🏻, 👏🏻). Nunca dois espaços seguidos em copy ou mensagem.
+- **Link ou informação entregue: atualizar e mostrar onde (Keila, 20/11):** quando alguém do time entrega um link ou informação (ex.: Saar entrega link de bio traqueado), não basta reagir e avisar: (1) fazer chegar a quem pediu (ex.: confirmar ao Luca), (2) atualizar todas as planilhas e docs relacionados (Links úteis do evento, planilhas de perpétuo, ClickUp, briefing) e (3) trazer ao Gestão FEA *onde* foi atualizado, com os links. Se não der para editar (.xlsx ou sem permissão), dizer qual arquivo e por quê.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
