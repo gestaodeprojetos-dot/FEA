@@ -51,4 +51,21 @@ function xt(o,cols,rows){let h='<table><tr><th></th>'+cols.map(c=>`<th>${c.repla
 const grads=A.grad.map(r=>r[0]);
 document.getElementById('x1').innerHTML=xt(A.gt,tox,grads);document.getElementById('x2').innerHTML=xt(A.rg,grads,ren);
 document.getElementById('orig').innerHTML=block('utm_source (top 10)',A.src,N)+block('utm_medium',A.med,N)+block('utm_campaign',A.camp,N);
-</script></body></html>
+</script><script>
+/* FEA: registro leve de acesso (db: acessos/<viewerId>/sessoes/<sessao>). Falha silenciosa. */
+(function(){try{
+var DASH=document.title||location.pathname,t0=Date.now(),secs=[],cur=null,doc=null,busy=false,B={};
+function sid(){return t0.toString(36)+Math.random().toString(36).slice(2,8)}
+var S=sid();
+function save(extra){if(!doc||busy)return;busy=true;var d={dash:DASH,abertura:new Date(t0).toISOString(),ultimo:new Date().toISOString(),segundos:Math.round((Date.now()-t0)/1000),secaoAtual:cur,secoes:secs.slice(-200)};if(extra)for(var k in extra)B[k]=extra[k];for(var j in B)d[j]=B[j];
+try{doc.set(d).catch(function(){}).finally(function(){busy=false})}catch(e){busy=false}}
+function mark(name){try{if(!name||name===cur)return;cur=name;secs.push({secao:name,em:new Date().toISOString()});save()}catch(e){}}
+try{var hs=document.querySelectorAll('h2');if('IntersectionObserver' in window&&hs.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)mark(e.target.textContent.trim().slice(0,80))})},{rootMargin:'0px 0px -60% 0px'});hs.forEach(function(h){io.observe(h)})}}catch(e){}
+setInterval(function(){if(!document.hidden)save()},30000);
+document.addEventListener('visibilitychange',function(){if(document.hidden)save({saida:new Date().toISOString()})});
+window.addEventListener('pagehide',function(){save({saida:new Date().toISOString()})});
+if(!window.claude||!claude.use)return;
+Promise.all([claude.use('db'),claude.use('user')]).then(function(r){var db=r[0],u=r[1];if(!db||!u)return;return u.id().then(function(id){if(!id)return;doc=db.doc('acessos/'+id+'/sessoes/'+S);mark('Topo');save({quemId:id,eDona:!!(u.isOwner&&u.isOwner())})})}).catch(function(){});
+}catch(e){}})();
+</script>
+</body></html>
