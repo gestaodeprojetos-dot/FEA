@@ -392,6 +392,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Rascunho vivo (Keila, 21/11):** rascunho que espera ok é atualizado se um fato muda: nova versão no Gestão FEA, dizendo o que mudou.
 - **Áudio com várias orientações (Keila, 21/11):** vira lista numerada "Anotado do seu áudio", item por item, antes de executar.
 - **Pedido discreto (Keila, 21/11):** quando alguém pede algo com discrição, a cobrança no grupo sai sem citar quem pediu.
+- **Privado só quando a pessoa chama (Keila, 21/11):** conversa no privado é única e exclusivamente quando a pessoa me chama no privado; fora isso, falo nos grupos. Dúvida sobre em qual grupo mandar uma mensagem: trazer antes ao Gestão FEA. (O aviso de disparo ao Matheus no privado foi pedido por ele.)
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
