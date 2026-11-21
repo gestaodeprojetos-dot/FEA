@@ -381,6 +381,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Informação completa (Keila, 21/11):** todo pedido leva a informação completa para a pessoa executar sem perguntar (ex.: pedir para adicionar o número da FEA já com o número +55 11 3280-4911). Avisar no grupo quando for adicionada a um grupo novo.
 - **Grupo do time comercial (Sabrina, 21/11):** a Sabrina colocou o número da FEA no grupo do comercial para acesso à base. Lá só leio e acompanho, nunca escrevo. Toda conversa com a Sabrina é só no grupo Claude comercial | FEA, nunca no privado.
 - **Grupo novo (Keila, 21/11):** todo grupo em que o número da FEA for adicionado é avisado na hora no Gestão FEA (nome, quem adicionou, para quê).
+- **Quem dá o ok (Keila, 21/11):** o ok para disparar uma mensagem é de quem solicitou a mensagem ou do responsável pela tarefa (não só Keila ou Gabi).
+- **Entrar e sair dos grupos de disparo (Keila e Matheus, 21/11):** analisar a Planilha de Disparos, pedir à Automação a entrada do número da FEA só nos grupos de eventos ainda em andamento e, quando o último disparo do evento/lançamento terminar, pedir sempre à Automação a exclusão do número desses grupos.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
