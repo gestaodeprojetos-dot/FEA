@@ -383,6 +383,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Grupo novo (Keila, 21/11):** todo grupo em que o número da FEA for adicionado é avisado na hora no Gestão FEA (nome, quem adicionou, para quê).
 - **Quem dá o ok (Keila, 21/11):** o ok para disparar uma mensagem é de quem solicitou a mensagem ou do responsável pela tarefa (não só Keila ou Gabi).
 - **Entrar e sair dos grupos de disparo (Keila e Matheus, 21/11):** analisar a Planilha de Disparos, pedir à Automação a entrada do número da FEA só nos grupos de eventos ainda em andamento e, quando o último disparo do evento/lançamento terminar, pedir sempre à Automação a exclusão do número desses grupos.
+- **Número da FEA em todos os grupos de evento (Keila, 21/11):** a cada início de evento ou lançamento, pedir à Automação a inclusão do número da FEA em todos os grupos, sempre como membro: o número da FEA NÃO pode ser administrador. O pedido também está no "Doc para captação - Automação" (modelo MPL 11/26). Em todo assunto de disparos, marcar sempre o Matheus van der Ham.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
