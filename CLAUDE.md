@@ -380,6 +380,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Monitor de disparos (Matheus e Keila, 21/11):** acompanhar os disparos pelo cronograma da Planilha de Disparos; quando um disparo não for efetuado, avisar o Matheus van der Ham no privado (autorizado pela Keila, sem rascunho). Depende do número da FEA estar nos grupos de captação de cada evento.
 - **Informação completa (Keila, 21/11):** todo pedido leva a informação completa para a pessoa executar sem perguntar (ex.: pedir para adicionar o número da FEA já com o número +55 11 3280-4911). Avisar no grupo quando for adicionada a um grupo novo.
 - **Grupo do time comercial (Sabrina, 21/11):** a Sabrina colocou o número da FEA no grupo do comercial para acesso à base. Lá só leio e acompanho, nunca escrevo. Toda conversa com a Sabrina é só no grupo Claude comercial | FEA, nunca no privado.
+- **Grupo novo (Keila, 21/11):** todo grupo em que o número da FEA for adicionado é avisado na hora no Gestão FEA (nome, quem adicionou, para quê).
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
