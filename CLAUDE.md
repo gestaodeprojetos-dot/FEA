@@ -388,6 +388,10 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Marcação no lugar do nome (Keila, 21/11):** marcar o @ da pessoa na primeira vez que o nome dela aparece na mensagem (ex.: "@Gabi, ..."), não no final. No conector, escrever o @número no ponto do nome para ele não ser acrescentado ao fim.
 - **Pendência de envio é lembrada (Keila, 21/11):** toda mensagem que ainda não foi enviada (rascunho sem ok, resposta parada) precisa ser lembrada à Keila no Gestão FEA, com o número do rascunho, até ser resolvida. Pendência não fica esquecida.
 - **Falha recorrente: nunca juntar assuntos (Keila, 21/11, reforço):** antes de enviar qualquer mensagem, checar se ela tem mais de um assunto (ex.: confirmação de envio + regras). Se tiver, dividir em mensagens separadas, cada uma com o seu código. Erro repetido já apontado várias vezes.
+- **Grupo novo com apresentação (Keila, 21/11):** além do aviso na hora (nome, pessoas, quem adicionou), trazer ao Gestão FEA um rascunho de apresentação do Claude para aquele grupo, com as permissões (o que faço e o que não faço ali).
+- **Rascunho vivo (Keila, 21/11):** rascunho que espera ok é atualizado se um fato muda: nova versão no Gestão FEA, dizendo o que mudou.
+- **Áudio com várias orientações (Keila, 21/11):** vira lista numerada "Anotado do seu áudio", item por item, antes de executar.
+- **Pedido discreto (Keila, 21/11):** quando alguém pede algo com discrição, a cobrança no grupo sai sem citar quem pediu.
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
