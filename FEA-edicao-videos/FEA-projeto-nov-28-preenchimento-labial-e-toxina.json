@@ -1,11 +1,11 @@
 {
  "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8910p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8910p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/1- Planejamento 2mL.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8910p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8910p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/1- Planejamento 2mL.mp4",
    "titulo": "Planejamento 2mL",
    "titulo_origem": "imagem",
    "parte": null,
@@ -15,7 +15,7 @@
    "manter": [
     [
      0.033,
-     34.84,
+     28.26,
      "exato"
     ]
    ],
@@ -152,12 +152,18 @@
      "\\bcódigo de barra\\b",
      "código de barras"
     ]
+   ],
+   "remover_legenda": [
+    [
+     28.0,
+     28.3
+    ]
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/b28/IMG_8911.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8911.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/2- Anestesia de bloqueio com SANEP.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8911.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8911.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/2- Anestesia de bloqueio com SANEP.mp4",
    "titulo": "Anestesia de bloqueio com SANEP",
    "titulo_origem": "imagem",
    "parte": null,
@@ -320,9 +326,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8912p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8912p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/3- Anestesia para comissura labial.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8912p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8912p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/3- Anestesia para comissura labial.mp4",
    "titulo": "Anestesia para comissura labial",
    "titulo_origem": "imagem",
    "parte": null,
@@ -332,7 +338,7 @@
    "manter": [
     [
      0.033,
-     30.8,
+     30.45,
      "exato"
     ]
    ],
@@ -480,9 +486,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8913p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8913p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/4- Pertuitos para lábios.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8913p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8913p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/4- Pertuitos para lábios.mp4",
    "titulo": "Pertuitos para lábios",
    "titulo_origem": "imagem",
    "parte": null,
@@ -492,12 +498,12 @@
    "manter": [
     [
      0.033,
-     13.55,
+     13.4,
      "exato"
     ],
     [
-     23.0,
-     30.933,
+     22.85,
+     33.77,
      "exato"
     ]
    ],
@@ -645,9 +651,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8914p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8914p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/5- Preenchimento de comissura.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8914p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8914p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/5- Preenchimento de comissura.mp4",
    "titulo": "Preenchimento de comissura",
    "titulo_origem": "imagem",
    "parte": null,
@@ -657,7 +663,7 @@
    "manter": [
     [
      0.133,
-     48.0,
+     53.57,
      "exato"
     ]
    ],
@@ -805,9 +811,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/b28/IMG_8915.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8915.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/6- Preenchimento labial.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8915.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8915.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/6- Preenchimento labial.mp4",
    "titulo": "Preenchimento labial",
    "titulo_origem": "imagem",
    "parte": null,
@@ -970,9 +976,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8917p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8917p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/7- Código de barras.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8917.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8917.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/7- Código de barras.mp4",
    "titulo": "Código de barras",
    "titulo_origem": "imagem",
    "parte": null,
@@ -981,8 +987,8 @@
    "fade_final": 0.3,
    "manter": [
     [
-     0.033,
-     44.2,
+     4.47,
+     43.83,
      "exato"
     ]
    ],
@@ -1130,9 +1136,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8909p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8909p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/8- Planejamento toxina.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8909p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8909p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/8- Planejamento toxina.mp4",
    "titulo": "Planejamento toxina",
    "titulo_origem": "imagem",
    "parte": null,
@@ -1142,7 +1148,7 @@
    "manter": [
     [
      0.033,
-     56.3,
+     39.01,
      "exato"
     ]
    ],
@@ -1290,9 +1296,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/b28/IMG_8918.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8918.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/9- Toxina em fronte.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8918.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8918.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/9- Toxina em fronte.mp4",
    "titulo": "Toxina em fronte",
    "titulo_origem": "imagem",
    "parte": null,
@@ -1456,9 +1462,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8919p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8919p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/10- Glabela padrão depressor.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8919p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/pad/IMG_8919p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/10- Glabela padrão depressor.mp4",
    "titulo": "Glabela padrão depressor",
    "titulo_origem": "imagem",
    "parte": null,
@@ -1631,9 +1637,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/b28/IMG_8920.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8920.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/11- Orbiculares.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8920.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8920.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/11- Orbiculares.mp4",
    "titulo": "Orbiculares",
    "titulo_origem": "imagem",
    "parte": null,
@@ -1791,9 +1797,9 @@
    ]
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/pad/IMG_8921p.mov",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/tr/IMG_8921p.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/2e4fcc78-c2d1-5078-b231-1e7332a3e698/scratchpad/out/n28/12- Nasal.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/b28/IMG_8921.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/tr/IMG_8921.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/23fb462c-128a-5f2e-bb5c-740fadbc5cad/scratchpad/out/n28/12- Nasal.mp4",
    "titulo": "Nasal",
    "titulo_origem": "imagem",
    "parte": null,
@@ -1802,8 +1808,8 @@
    "fade_final": 0.3,
    "manter": [
     [
-     0.033,
-     20.55,
+     2.13,
+     20.18,
      "exato"
     ]
    ],

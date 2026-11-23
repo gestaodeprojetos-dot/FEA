@@ -3,17 +3,19 @@
 
 ## 28- Preenchimento labial e toxina (13-bfnIcGFv0BsK3T52jUzp8YvwVay9m7)
 
-- 1- Planejamento 2mL.mp4: `1RId_TMgpROBYtETwh0yyElrhExjxiXLW`
+Brutos: OK. Preenchimento e toxina (`1Qzy1v7hqAS7nBKKYTXSGr9rkwTcoL5AG`). Revisado em 23/11/2026: vídeos 1, 3, 4, 5, 7, 8 e 12 substituídos (início e fim), IDs abaixo já atualizados.
+
+- 1- Planejamento 2mL.mp4: `11MwmrHX4AUnA3oXqln-X_gt-cf7ZOlN1`
 - 10- Glabela padrão depressor.mp4: `1KGWTT-S4mpWuWXJo-KIM5ra5ElJlrm5n`
 - 11- Orbiculares.mp4: `1PNGg_n7TKmOxFhEPvp68W0T1olvN4Wzv`
-- 12- Nasal.mp4: `1mnBg_f_X4Oz4RORMYfiUsMR1gaH1ZFwH`
+- 12- Nasal.mp4: `1cDWH1V9aJBH-BfXl9UusJJNz5LZwCbC8`
 - 2- Anestesia de bloqueio com SANEP.mp4: `1UJ0OmJNtWwwjOqA5h3oLcBO6XtNv0Eqq`
-- 3- Anestesia para comissura labial.mp4: `1yj3s1hSah2JKw7uTCI8AXz-_TYp8qJfg`
-- 4- Pertuitos para lábios.mp4: `1SQ2pUkJwHV1THGyzj-0cR8XpzPEFQK_H`
-- 5- Preenchimento de comissura.mp4: `1tfHqt_bJCk7EiA8B9mSKzABD7o9Qrckn`
+- 3- Anestesia para comissura labial.mp4: `1hi75NcMPfArrKJ8lwG2xkHnhmvSDe2zJ`
+- 4- Pertuitos para lábios.mp4: `1sJkIKjPMUxO_sJmayrzFaVOBeEeu4H8s`
+- 5- Preenchimento de comissura.mp4: `1lBMCtPXZxEkoMoQJl3q_LO9Q4O1UXvSq`
 - 6- Preenchimento labial.mp4: `1a6KV7N2CLJx5_R749zXJGwbbujx69cxn`
-- 7- Código de barras.mp4: `1OUPo9SDOT5d_Wr_3sLgCSvVydcXSOD_5`
-- 8- Planejamento toxina.mp4: `1FfjR35wQjDGT0cPVqNQ0ICJbi1dIkHAS`
+- 7- Código de barras.mp4: `1F612G-WaAlKLtuonXSLUvoL-PVMrVEXo`
+- 8- Planejamento toxina.mp4: `1ZdT09jiRW-GYi74L4esKhQiIA4ljptAB`
 - 9- Toxina em fronte.mp4: `1FHKQhc7sYwjfv17_Z4NmqmF0kzHnC8D4`
 
 ## 29- Toxina e full face 7mL (10KEQfLHqeD0hIkGRMBDbPnlfWODA_2pP)
