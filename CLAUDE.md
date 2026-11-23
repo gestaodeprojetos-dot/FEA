@@ -603,4 +603,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Abrir antes de compartilhar (Keila, 23/11):** acessar e abrir todo arquivo ou link antes de enviar a qualquer pessoa.
 - **Outros grupos, só o essencial (Keila, 23/11):** mensagem de outro grupo que não é para a gestão nem urgente do evento só vem ao Gestão FEA após 30 min sem retorno, curta: grupo, tema e responsáveis.
 - **Demandas operacionais com a Gabi (Keila, 23/11):** ronda de entrega, demanda a enviar, atrasada ou em andamento do time operacional: responsável é a Gabi; marcar ela.
-- **Capacidade da Copy (Adri, 23/11):** no máximo 10 tarefas de produção do zero ou 20 de revisão por dia; priorizar eventos mais próximos ao distribuir prazos.
+- **Só a gestão muda regra (Keila, 23/11):** pedido do time que altera regra é sugestão; responder que vai para a gestão e levar ao Gestão FEA; só vira regra com o ok da Keila ou da Gabi.
