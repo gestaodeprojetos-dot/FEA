@@ -1,0 +1,426 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c15/IMG_3148.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_3148.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n14/1- Planejamento de toxina feminina.mp4",
+   "titulo": "Planejamento de toxina feminina",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.48,
+     92.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     30.28,
+     31.06
+    ],
+    [
+     31.3,
+     31.55
+    ],
+    [
+     32.06,
+     32.86
+    ],
+    [
+     32.98,
+     34.78
+    ],
+    [
+     34.98,
+     35.12
+    ],
+    [
+     35.48,
+     35.62
+    ],
+    [
+     37.28,
+     37.69
+    ],
+    [
+     38.6,
+     38.87
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c15/IMG_3149.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_3149.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n14/2- Técnica avançada nos orbiculares.mp4",
+   "titulo": "Técnica avançada nos orbiculares",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.8,
+     82.58
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Ff]oge\\b",
+     "foi"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c15/IMG_3150.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_3150.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n14/3- Frontal alto para abrir o olhar.mp4",
+   "titulo": "Frontal alto para abrir o olhar",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     5.15,
+     59.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     59.1,
+     61.2
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c15/IMG_3151.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_3151.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n14/4- Corrugador: cabeça, corpo e cauda.mp4",
+   "titulo": "Corrugador: cabeça, corpo e cauda",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     7.15,
+     76.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]uatro\\b",
+     "4"
+    ],
+    [
+     "\\bestiver para o depressor\\b",
+     "e ir para o depressor"
+    ],
+    [
+     "\\bcauda\\. mais\\b",
+     "cauda, mais"
+    ],
+    [
+     "\\bdo Corrugador\\b",
+     "do corrugador"
+    ],
+    [
+     "\\be Temos\\b",
+     "e temos"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     53.68,
+     53.7
+    ],
+    [
+     58.22,
+     59.36
+    ],
+    [
+     61.68,
+     62.91
+    ],
+    [
+     67.26,
+     67.64
+    ]
+   ],
+   "remover_legenda": [
+    [
+     76.1,
+     77.4
+    ]
+   ]
+  }
+ ]
+}
