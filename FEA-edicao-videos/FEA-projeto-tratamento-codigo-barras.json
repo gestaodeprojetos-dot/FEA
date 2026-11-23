@@ -1,0 +1,232 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/trat2/IMG_7924.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7924.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/3- 3 melhores tratamentos para o código de barras.mp4",
+    "titulo": "3 melhores tratamentos para o código de barras",
+    "headline": [
+      "Os 3 melhores",
+      "tratamentos para o",
+      "código de barras"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.76,
+        70.78,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bácido alurônico\\b",
+        "ácido hialurônico"
+      ],
+      [
+        "\\bpra\\b",
+        "para"
+      ],
+      [
+        "\\bcódigos de barra\\b",
+        "códigos de barras"
+      ],
+      [
+        "\\bcódigo de barra\\b",
+        "código de barras"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/raw7924.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 0.76,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/broll_boca.MOV",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.62,
+        "zoom": 1.7
+      },
+      {
+        "ini": 3.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/broll_boca.MOV",
+        "src": 10.5,
+        "cx": 0.5,
+        "cy": 0.62,
+        "zoom": 1.6
+      },
+      {
+        "ini": 6.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/broll_boca.MOV",
+        "src": 4.5,
+        "cx": 0.5,
+        "cy": 0.6,
+        "zoom": 1.5
+      },
+      {
+        "ini": 10.1,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 14.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/broll_boca.MOV",
+        "src": 7.0,
+        "cx": 0.5,
+        "cy": 0.62,
+        "zoom": 1.6
+      },
+      {
+        "ini": 17.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 12.0,
+        "cx": 0.5,
+        "cy": 0.6,
+        "zoom": 1.4
+      },
+      {
+        "ini": 21.25,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/cod/t1.png"
+      },
+      {
+        "ini": 25.5,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 1.0,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.3
+      },
+      {
+        "ini": 28.35,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 1.5,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.4
+      },
+      {
+        "ini": 31.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 6.0,
+        "cx": 0.5,
+        "cy": 0.55,
+        "zoom": 1.4
+      },
+      {
+        "ini": 35.47,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 24.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.4
+      },
+      {
+        "ini": 38.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/preench_agulha.mp4",
+        "src": 48.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.4
+      },
+      {
+        "ini": 42.29,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/cod/t2.png"
+      },
+      {
+        "ini": 46.0,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 47.97,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/fios_perioral.mp4",
+        "src": 20.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.4
+      },
+      {
+        "ini": 50.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/cod/fios_perioral.mp4",
+        "src": 32.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.4
+      },
+      {
+        "ini": 53.89,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/cod/t3.png"
+      },
+      {
+        "ini": 57.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/broll/10222560-uhd_4096_2160_25fps.mp4",
+        "src": 2.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 59.77,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/broll/7582851-uhd_4096_2160_25fps.mp4",
+        "src": 3.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 62.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/broll/10222560-uhd_4096_2160_25fps.mp4",
+        "src": 20.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 65.49,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/cod/t_todos.png"
+      },
+      {
+        "ini": 68.0,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
