@@ -19,6 +19,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Mensagem ao time sempre educada e calorosa (Gabi, 23/11): "Oii X, bom dia, tudo bem?" + pedido com contexto + "por favor". Nunca seca.
 
 ## 3. Aprovação
+- (Keila, 23/11) Toda resposta a qualquer pessoa do time (inclusive Grazi) vem antes ao Gestão FEA para validar, mesmo quando a Gabi/Keila ditou o conteúdo: o texto final volta para ok. Única exceção: Matheus (Copy), que posso responder sem ok.
 - Fora do Gestão FEA, do Daily FEA e do Claude comercial, nada sai sem ok de quem pediu a mensagem ou do responsável pela tarefa.
 - Texto que muda depois do ok volta para validar. Rascunho enviado ganha ✅ e confirmação com o número.
 - Rascunho que espera ok é atualizado se um fato muda (versão nova, dizendo o que mudou).
