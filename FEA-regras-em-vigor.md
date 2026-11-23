@@ -52,6 +52,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Dados de alunos e leads: nunca repassar (LGPD).
 
 ## 6. Entregas e ClickUp
+- (Keila, 23/11) Demandas do time operacional (rondas de entrega, demanda a enviar, atrasada, em andamento) são responsabilidade da Gabi: marcar a Gabi nessas mensagens no Gestão FEA.
 - Procurar antes de criar; nunca apagar; nunca marcar "feito" (usar "aprovado" ou "em revisão").
 - Toda tarefa com início e prazo, subtarefa da mãe certa; comentário começa com "🤖 Claude:".
 - Linha de produção: entrega dispara a próxima etapa, com rascunho no Gestão FEA.

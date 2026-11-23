@@ -602,3 +602,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Copy encerra 23h59 (Adri, 23/11):** tarefas de copy no ClickUp com vencimento às 23h59 do dia de entrega.
 - **Abrir antes de compartilhar (Keila, 23/11):** acessar e abrir todo arquivo ou link antes de enviar a qualquer pessoa.
 - **Outros grupos, só o essencial (Keila, 23/11):** mensagem de outro grupo que não é para a gestão nem urgente do evento só vem ao Gestão FEA após 30 min sem retorno, curta: grupo, tema e responsáveis.
+- **Demandas operacionais com a Gabi (Keila, 23/11):** ronda de entrega, demanda a enviar, atrasada ou em andamento do time operacional: responsável é a Gabi; marcar ela.
