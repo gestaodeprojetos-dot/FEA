@@ -614,3 +614,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Pedido do Luca de copy/API/vídeo (Keila, 23/11):** transcrever o vídeo, criar doc com variações no padrão, atualizar Planilha de Disparos e Links úteis, avisar o Matheus no grupo Copy com link, número de variações e o que revisar.
 - **Aprendizado diário com a Copy (Keila, 23/11):** às 23h, conferir as alterações do Matheus nas copys e reportar no Daily o que aprendi. Docs de API na pasta 1. API, de WhatsApp na 2. WPP.
 - **Copy: divergências antes, mensagem à automação depois (Keila, 23/11):** conferir briefing x pedido x vídeo e levar divergências ao Matheus antes de escrever; depois sugerir ao Matheus a mensagem para a Automação, com oferta de enviar.
+- **Lembrete de quem espera resposta (Keila, 23/11):** de 5 em 5 minutos no Gestão FEA até a gestão responder; lista em FEA-pendencias-resposta.md.
