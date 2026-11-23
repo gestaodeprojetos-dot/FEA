@@ -255,11 +255,20 @@
     [
      "\\b([Uu])ma Para ver\\b",
      "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
     ]
    ],
    "silenciar": [],
    "bordas_conferidas": {
-    "inicio": "'Faz cara de brava? Faz força no pescoço? Isso.' são instruções de avaliação para a paciente; 'Mais um caso aqui de uma paralisia facial...' abre o relato."
+    "inicio": "'Faz cara de brava? Faz força no pescoço? Isso.' são instruções de avaliação para a paciente; 'Mais um caso aqui de uma paralisia facial...' abre o relato.",
+    "fim": "Termina em 'vai dar tudo certo.' (decisão da Keila pendente no PR #132, não mexi). O 'Vamos lá?' de 226,45 s chama o procedimento, que está nos vídeos 2 a 5; antes ele ficava mudo por baixo do fim (mudo sobre voz), agora o corte é na pausa (226,30 s)."
    }
   },
   {
