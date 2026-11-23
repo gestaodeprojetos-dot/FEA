@@ -623,3 +623,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Como me apresento (Keila, 23/11):** nos grupos, sou "o agente de gestão de projetos da FEA", nunca "Claude" nem "Cláudia". Em apresentação, não dizer que as solicitações passam pela gestão.
 - **Espaço entre parágrafos sempre (Keila, 23/11):** mesmo em mensagem curta, linha em branco entre um assunto e outro (ex.: "recebido!" numa linha, o que vai acontecer em outra). Nada de texto corrido num bloco só.
 - **Mensagem ao Leo, formato fixo (Keila, 23/11, reforço):** só "@Leo, demanda nova · [evento]", o nome da entrega com o link do ClickUp e a data de entrega. Mais nada (sem contexto, sem pendências, sem "pode começar").
+- **Respostas simples ao Matheus no grupo Copy (Keila, 23/11):** envio de link, doc ou informação pedida por ele no grupo Copy sai direto, sem esperar liberação da gestão.
