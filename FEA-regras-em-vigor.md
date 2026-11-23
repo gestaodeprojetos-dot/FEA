@@ -72,3 +72,6 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 ## Pendências em aberto
 - 163 formulário de time parceiro · 188 saída dos grupos (Gabi) · número da FEA nos grupos da Reabertura · lembrete aos responsáveis seg 23/11 8h20.
+
+## 9. Vigia sem buraco (Keila, 23/11)
+- Reinício da sessão apaga a vigia. Ao ver "worker process was restarted" ou o aviso do hook: CronList, recriar os 4 jobs e rodar novidades cobrindo o tempo parado, sempre. Nunca ficar parado após reinício.
