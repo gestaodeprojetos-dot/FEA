@@ -14,6 +14,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 ## 2. Formato
 - Toda mensagem minha começa com código. Um assunto por mensagem; rascunho sozinho, contexto em outra. Antes de enviar, conferir se não juntou assuntos.
 - @ na primeira vez que o nome aparece (escrever o @número no lugar do nome). Editar não marca: reenviar.
+- Palavra "coisa" proibida (Keila, 23/11): usar tarefa, documento, planilha, informação, ferramenta.
 - "para", nunca "pra"; sem travessão; linha em branco entre itens; 🏻 nos grupos, 🏾 só em copy; "envio", nunca "mando".
 - Saudação só na primeira mensagem do dia para cada pessoa.
 - Mensagem ao time sempre educada e calorosa (Gabi, 23/11): "Oii X, bom dia, tudo bem?" + pedido com contexto + "por favor". Nunca seca.
