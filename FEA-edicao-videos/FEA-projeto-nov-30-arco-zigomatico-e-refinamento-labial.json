@@ -1,0 +1,414 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br30/IMG_9002.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9002.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n30/1- Arco zigomático não é tudo igual.mp4",
+   "titulo": "Arco zigomático não é tudo igual",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.2,
+     38.25,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.2,
+     0.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br30/IMG_9005.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9005.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n30/2- Refinamento labial.mp4",
+   "titulo": "Refinamento labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     5.41,
+     17.6,
+     "exato"
+    ],
+    [
+     23.3,
+     48.5,
+     "exato"
+    ],
+    [
+     59.13,
+     72.3,
+     "exato"
+    ],
+    [
+     75.7,
+     126.5,
+     "exato"
+    ],
+    [
+     154.8,
+     179.963,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b([Ee])sse, lado\\b",
+     "\\1sse lado"
+    ],
+    [
+     "\\b[Ff]oi pronto\\b",
+     "foi quanto?"
+    ],
+    [
+     "\\b06\\b",
+     "0,6"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     121.45,
+     121.99
+    ],
+    [
+     125.7,
+     126.5
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2517 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/pad/IMG_9249pf.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9249p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/1- Planejamento toxina.mp4",
+   "titulo": "Planejamento toxina",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.2,
+     46.73,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     46.1,
+     46.6
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/pad/IMG_9259e.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9259.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/2- Glabela.mp4",
+   "titulo": "Glabela",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.25,
+     57.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9260.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9260.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/3- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.3,
+     52.2,
+     "exato"
+    ],
+    [
+     53.4,
+     69.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/pad/IMG_9261pe.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9261p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/4- Orbiculares avançado.mp4",
+   "titulo": "Orbiculares avançado",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     50.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ],
+    [
+     "(?i)\\buma,? duas\\b",
+     "uma, duas"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/pad/IMG_9262pe.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9262p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/5- Nasal.mp4",
+   "titulo": "Nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.133,
+     38.92,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ],
+    [
+     "\\b([Vv])amo lá\\b",
+     "\\1amos lá"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     37.83,
+     37.91
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9248.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9248.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/6- Planejamento de 7mL.mp4",
+   "titulo": "Planejamento de 7mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     16.7,
+     36.775,
+     "exato"
+    ],
+    [
+     67.5,
+     74.433,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/pad/IMG_9251p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9251p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/7- Preenchimento de base.mp4",
+   "titulo": "Preenchimento de base",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.067,
+     18.825,
+     "exato"
+    ],
+    [
+     24.87,
+     110.35,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9252.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9252.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/8- Olheiras propriamente dita.mp4",
+   "titulo": "Olheiras propriamente dita",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.35,
+     44.78,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     3.0,
+     7.1
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9253.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9253.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/9- Comissura: pouco produto.mp4",
+   "titulo": "Comissura: pouco produto",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.2,
+     52.15,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9255.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9255.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/10- Sulco nasolabial: superficial.mp4",
+   "titulo": "Sulco nasolabial: superficial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.9,
+     38.267,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9256.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9256.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/11- Mandíbula com menos de 1mL.mp4",
+   "titulo": "Mandíbula com menos de 1mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     34.72,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9257.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9257.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/12- Mento com 0,3 mL.mp4",
+   "titulo": "Mento com 0,3 mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.2,
+     74.6,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ],
+    [
+     "\\bque 0,3 mL",
+     "com 0,3 mL"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.2,
+     0.5
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/br29/IMG_9250.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/tr/IMG_9250.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/21e46f70-305a-50c5-a64b-6030f4200ccc/scratchpad/out/n29/13- Anestesia superficial no terço inferior.mp4",
+   "titulo": "Anestesia superficial no terço inferior",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     62.74,
+     108.6,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\bteiroce\\b",
+     "terço"
+    ],
+    [
+     "\\b[Ee]stileje\\b",
+     "Stylage"
+    ],
+    [
+     "\\bnão vai ficar legal, olha\\b",
+     "não vai ficar legal. Olha"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     100.79,
+     101.8
+    ]
+   ],
+   "silenciar": [
+    [
+     108.47,
+     108.6
+    ]
+   ]
+  }
+ ]
+}
