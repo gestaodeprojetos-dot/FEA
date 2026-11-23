@@ -49,7 +49,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 ## 7. Luca
 - Prioridade máxima em qualquer grupo; tudo dele vem na hora ao Gestão FEA com resposta pronta.
-- Sem saudação, sem "Obrigada!", nunca link do ClickUp, links numerados. Bom dia ao Luca: rascunho às 8h todo dia.
+- Sem saudação, sem "Obrigada!", nunca link do ClickUp, links numerados. Bom dia ao Luca: PAUSADO pela Keila em 23/11 (rotina das 8h desativada).
 
 ## 8. Disparos
 - Em assunto de disparos, marcar o Matheus. Avisar o Matheus no privado quando um disparo ficar em "Agendar" ou um "Agendado" não sair; prioridade nos lembretes; no grupo só se urgente.
