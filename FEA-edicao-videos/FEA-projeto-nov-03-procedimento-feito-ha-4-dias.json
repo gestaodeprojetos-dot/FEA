@@ -1,0 +1,31 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c3/brutos/IMG_0076.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c3/tr/IMG_0076.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n3/1- Hialuronidase, preenchimento e toxina.mp4",
+   "titulo": "Hialuronidase, preenchimento e toxina",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     39.85
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ]
+   ]
+  }
+ ]
+}

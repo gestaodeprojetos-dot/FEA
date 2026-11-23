@@ -1,0 +1,204 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/fonts",
+ "videos": [
+  {
+   "titulo": "Planejamento toxina estética",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     76.9
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7242.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7242.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/1- Planejamento toxina estética.mp4",
+   "correcoes": [
+    [
+     "\\b[Pp]róstero\\b",
+     "prócero"
+    ],
+    [
+     "\\bsuperorbitário\\b",
+     "supraorbitário"
+    ]
+   ]
+  },
+  {
+   "titulo": "Anestesia para toxina: como eu faço quando meus pacientes pedem?",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     73.3
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7244.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7244.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/2- Anestesia para toxina como eu faço quando meus pacientes pedem.mp4",
+   "correcoes": [
+    [
+     "\\bsupra ?-orbitário\\b",
+     "supraorbitário"
+    ],
+    [
+     "\\bsupratrocleário\\b",
+     "supratroclear"
+    ]
+   ]
+  },
+  {
+   "titulo": "Toxina sem dor",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     64.6
+    ],
+    [
+     67.46,
+     78.3,
+     "exato"
+    ],
+    [
+     88.4,
+     90.1
+    ],
+    [
+     107.9,
+     122.6
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7246.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7246.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/3- Toxina sem dor.mp4",
+   "remover_legenda": [
+    [
+     15.7,
+     16.2
+    ],
+    [
+     64.5,
+     67.45
+    ],
+    [
+     122.3,
+     122.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bsuperbitários\\b",
+     "supraorbitários"
+    ],
+    [
+     "\\blevanta o sobrancelho\\b",
+     "levanta a sobrancelha"
+    ]
+   ]
+  },
+  {
+   "titulo": "Toxina nos orbiculares",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.0,
+     31.8
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7247.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7247.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/4- Toxina nos orbiculares.mp4"
+  },
+  {
+   "titulo": "Músculo nasal",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     1.3,
+     28.45
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7248.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7248.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/5- Músculo nasal.mp4",
+   "correcoes": [
+    [
+     "\\be 0 a nenhuma dor\\b",
+     "e 0 é nenhuma dor"
+    ],
+    [
+     "\\b10 a pior dor\\b",
+     "10 é a pior dor"
+    ]
+   ]
+  },
+  {
+   "titulo": "Planejamento estratégico de olheiras",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.5,
+     43.1
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7243.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7243.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/6- Planejamento estratégico de olheiras.mp4",
+   "correcoes": [
+    [
+     "\\b[Mm]al+ar ?[Mm]ound\\b",
+     "malar mound"
+    ],
+    [
+     "\\b[Ff]estum\\b",
+     "festoon"
+    ],
+    [
+     "\\bpré -maxila\\b",
+     "pré-maxila"
+    ]
+   ]
+  },
+  {
+   "titulo": "Técnica tridimensional de olheiras sem dor",
+   "titulo_origem": "imagem",
+   "manter": [
+    [
+     0.1,
+     29.7
+    ],
+    [
+     35.3,
+     64.65
+    ],
+    [
+     77.4,
+     127.2
+    ]
+   ],
+   "entrada": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/b/c11/IMG_7245.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/tr/c11/IMG_7245.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0fdfc79e-3b55-513b-a44d-76b4ca5abc71/scratchpad/out/e13/7- Técnica tridimensional de olheiras sem dor.mp4",
+   "correcoes": [
+    [
+     "\\b[Mm]alar [Mm]ound\\b",
+     "malar mound"
+    ],
+    [
+     "\\b[Ss]uelen [Ff]actor\\b",
+     "swelling factor"
+    ],
+    [
+     "\\bsanep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bcanoa\\b",
+     "cânula"
+    ]
+   ]
+  }
+ ]
+}

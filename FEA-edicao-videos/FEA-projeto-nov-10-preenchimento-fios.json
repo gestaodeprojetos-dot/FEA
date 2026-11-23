@@ -1,0 +1,551 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/fios/IMG_2838.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2838.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n10/1- Preenchimento de suporte, não de volume.mp4",
+   "titulo": "Preenchimento de suporte, não de volume",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.9,
+     121.4
+    ],
+    [
+     124.3,
+     129.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn]euromis [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\b0, 1, 0, 1\\b",
+     "0,1, 0,1"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b[Nn]o pré\\b",
+     "no pré-jowl"
+    ],
+    [
+     "\\b[Bb]io ?fios\\b",
+     "Biofils"
+    ],
+    [
+     "\\bpólica ?prolactona\\b",
+     "policaprolactona"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\bgás estéril\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\b([Gg])ase\\b",
+     "\\1aze"
+    ],
+    [
+     "\\b[Ee]ntrou a funda\\b",
+     "entra, afunda"
+    ],
+    [
+     "\\bna própria fio\\b",
+     "no próprio fio"
+    ],
+    [
+     "\\bmio ?modula",
+     "miomodula"
+    ],
+    [
+     "\\b0, 1\\b",
+     "0,1"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está)\\b",
+     "a gente \\1"
+    ]
+   ],
+   "silenciar": [
+    [
+     51.1,
+     52.1
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/fios/IMG_2840.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2840.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n10/2- Têmpora no plano subcutâneo.mp4",
+   "titulo": "Têmpora no plano subcutâneo",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     26.75,
+     103.65
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn]euromis [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\b0, 1, 0, 1\\b",
+     "0,1, 0,1"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b[Nn]o pré\\b",
+     "no pré-jowl"
+    ],
+    [
+     "\\b[Bb]io ?fios\\b",
+     "Biofils"
+    ],
+    [
+     "\\bpólica ?prolactona\\b",
+     "policaprolactona"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\bgás estéril\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\b([Gg])ase\\b",
+     "\\1aze"
+    ],
+    [
+     "\\b[Ee]ntrou a funda\\b",
+     "entra, afunda"
+    ],
+    [
+     "\\bna própria fio\\b",
+     "no próprio fio"
+    ],
+    [
+     "\\bmio ?modula",
+     "miomodula"
+    ],
+    [
+     "\\b0, 1\\b",
+     "0,1"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está)\\b",
+     "a gente \\1"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/fios/IMG_2843.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2843.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n10/3- Fio filler no bigode chinês.mp4",
+   "titulo": "Fio filler no bigode chinês",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     9.95,
+     64.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn]euromis [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\b0, 1, 0, 1\\b",
+     "0,1, 0,1"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b[Nn]o pré\\b",
+     "no pré-jowl"
+    ],
+    [
+     "\\b[Bb]io ?fios\\b",
+     "Biofils"
+    ],
+    [
+     "\\bpólica ?prolactona\\b",
+     "policaprolactona"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\bgás estéril\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\b([Gg])ase\\b",
+     "\\1aze"
+    ],
+    [
+     "\\b[Ee]ntrou a funda\\b",
+     "entra, afunda"
+    ],
+    [
+     "\\bna própria fio\\b",
+     "no próprio fio"
+    ],
+    [
+     "\\bmio ?modula",
+     "miomodula"
+    ],
+    [
+     "\\b0, 1\\b",
+     "0,1"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está)\\b",
+     "a gente \\1"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/fios/IMG_2844.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2844.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n10/4- Fios lisos no acordeon.mp4",
+   "titulo": "Fios lisos no acordeon",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.2,
+     98.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn]euromis [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\b0, 1, 0, 1\\b",
+     "0,1, 0,1"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b[Nn]o pré\\b",
+     "no pré-jowl"
+    ],
+    [
+     "\\b[Bb]io ?fios\\b",
+     "Biofils"
+    ],
+    [
+     "\\bpólica ?prolactona\\b",
+     "policaprolactona"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\bgás estéril\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\b([Gg])ase\\b",
+     "\\1aze"
+    ],
+    [
+     "\\b[Ee]ntrou a funda\\b",
+     "entra, afunda"
+    ],
+    [
+     "\\bna própria fio\\b",
+     "no próprio fio"
+    ],
+    [
+     "\\bmio ?modula",
+     "miomodula"
+    ],
+    [
+     "\\b0, 1\\b",
+     "0,1"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está)\\b",
+     "a gente \\1"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/fios/IMG_2845.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2845.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n10/5- Fios de tração na técnica reversa.mp4",
+   "titulo": "Fios de tração na técnica reversa",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     14.36,
+     50.2,
+     "exato"
+    ],
+    [
+     62.3,
+     99.4
+    ],
+    [
+     110.5,
+     122.15,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn]euromis [Vv]olume\\b",
+     "Neuramis Volume"
+    ],
+    [
+     "\\b0, 1, 0, 1\\b",
+     "0,1, 0,1"
+    ],
+    [
+     "\\b04\\b",
+     "0,4"
+    ],
+    [
+     "\\b[Nn]o pré\\b",
+     "no pré-jowl"
+    ],
+    [
+     "\\b[Bb]io ?fios\\b",
+     "Biofils"
+    ],
+    [
+     "\\bpólica ?prolactona\\b",
+     "policaprolactona"
+    ],
+    [
+     "\\bestéreo\\b",
+     "estéril"
+    ],
+    [
+     "\\bgás estéril\\b",
+     "gaze estéril"
+    ],
+    [
+     "\\b([Gg])ase\\b",
+     "\\1aze"
+    ],
+    [
+     "\\b[Ee]ntrou a funda\\b",
+     "entra, afunda"
+    ],
+    [
+     "\\bna própria fio\\b",
+     "no próprio fio"
+    ],
+    [
+     "\\bmio ?modula",
+     "miomodula"
+    ],
+    [
+     "\\b0, 1\\b",
+     "0,1"
+    ],
+    [
+     "(?<![Aa] )\\bgente (vai|pode|vem|coloca|quer|chama|faz|tá|está)\\b",
+     "a gente \\1"
+    ]
+   ]
+  }
+ ]
+}
