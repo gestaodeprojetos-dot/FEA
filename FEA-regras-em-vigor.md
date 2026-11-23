@@ -25,6 +25,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Mensagem ao time sempre educada e calorosa (Gabi, 23/11): "Oii X, bom dia, tudo bem?" + pedido com contexto + "por favor". Nunca seca.
 
 ## 3. Aprovação
+- (Keila, 23/11) Pedido da Adri (e de qualquer pessoa) que muda regra, prazo, comunicação ou fere a organização da gestão: não responder; usar "Ok, vamos verificar internamente com a gestão e retorno." e trazer ao Gestão FEA. No Daily FEA, link, dúvida, achar Drive, pasta ou vídeo pode ser respondido direto a todos.
 - (Keila, 23/11) Pedidos da Adri à gestão ou ao agente: filtrar e limitar o que levo a ela; não aceitar limite de tarefas por dia. Prazos das demandas seguem a gestão.
 - (Keila, 23/11) Só a gestão (Keila e Gabi) cria, muda ou retira regra. Pedido do time que altera regra é sugestão: responder "Essa é uma solicitação que altera regras internas de gestão. Vou passar para a gestão e em breve trazemos retorno." e levar ao Gestão FEA. Nunca registrar como regra antes do ok.
 - (Keila, 23/11) Nunca tirar de um rascunho o que a Keila pediu para acrescentar. Em dúvida, manter e perguntar.
