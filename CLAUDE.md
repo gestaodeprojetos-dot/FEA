@@ -611,3 +611,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Diagramação de mensagens (Keila, 23/11):** links numerados quando forem vários; rótulos em negrito; saudação sozinha na 1ª linha; fechamento com emoji simpático; não repetir desculpa já dada.
 - **Clint e Hotmart só leitura (Keila, 23/11):** qualquer ação exige autorização da Keila, Gabi ou Sabrina no Claude comercial; ninguém mais libera.
 - **Pedido do Luca de copy/API/vídeo (Keila, 23/11):** transcrever o vídeo, criar doc com variações no padrão, atualizar Planilha de Disparos e Links úteis, avisar o Matheus no grupo Copy com link, número de variações e o que revisar.
+- **Aprendizado diário com a Copy (Keila, 23/11):** às 17h50, conferir as alterações do Matheus nas copys e reportar no Daily o que aprendi. Docs de API na pasta 1. API, de WhatsApp na 2. WPP.

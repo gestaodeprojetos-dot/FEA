@@ -92,3 +92,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 3. Atualizar a Planilha de Disparos (e Links úteis) com o link do doc; se for .xlsx sem edição, avisar a Keila com a solução.
 4. Avisar o Matheus no grupo Copy: o que foi feito, link do doc, quantas variações, pedido para escolher uma (fica só ela) e revisar a copy e a planilha.
 5. Informação do Luca vale sobre o vídeo (ex.: 23/11, "Primeiro Lote" e não "Lote Especial").
+- (Keila, 23/11) Aprender com as correções da Copy: no fim do dia (17h50, seg a sex), conferir as copys da Planilha de Disparos/docs do dia, comparar com o que eu tinha criado e trazer ao Daily FEA "na copy X mudou isso, aprendi isso". Dúvidas também vão ao Daily.
+- (Matheus, 23/11) Docs de API ficam na pasta "1. API" e docs de WhatsApp na "2. WPP" de cada evento.
