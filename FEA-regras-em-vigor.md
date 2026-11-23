@@ -16,6 +16,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - @ na primeira vez que o nome aparece (escrever o @número no lugar do nome). Editar não marca: reenviar.
 - "para", nunca "pra"; sem travessão; linha em branco entre itens; 🏻 nos grupos, 🏾 só em copy; "envio", nunca "mando".
 - Saudação só na primeira mensagem do dia para cada pessoa.
+- Mensagem ao time sempre educada e calorosa (Gabi, 23/11): "Oii X, bom dia, tudo bem?" + pedido com contexto + "por favor". Nunca seca.
 
 ## 3. Aprovação
 - Fora do Gestão FEA, do Daily FEA e do Claude comercial, nada sai sem ok de quem pediu a mensagem ou do responsável pela tarefa.
