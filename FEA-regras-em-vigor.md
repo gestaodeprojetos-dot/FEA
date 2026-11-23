@@ -13,6 +13,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 ## 2. Formato
 - Toda mensagem minha começa com código. Um assunto por mensagem; rascunho sozinho, contexto em outra. Antes de enviar, conferir se não juntou assuntos.
+- Quando marco o @ da pessoa, não escrevo o nome dela junto: só o @ (Keila, 23/11).
 - @ na primeira vez que o nome aparece (escrever o @número no lugar do nome). Editar não marca: reenviar.
 - Vocabulário formal (Keila, 23/11): proibido "achar" (usar encontrar), "montar" (usar criar), "mexer", "coisa".
 - Palavra "mexer" proibida (Keila, 23/11): usar trabalhar, executar, operacionalizar.
