@@ -607,3 +607,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Pedidos da Adri (Keila, 23/11):** filtrar o que levo à Adri; sem limite de tarefas por dia; prazos definidos pela gestão.
 - **Pedidos que mexem na organização (Keila, 23/11):** mudança de regra, prazo ou comunicação: responder só "Ok, vamos verificar internamente com a gestão e retorno." e levar à gestão. Informação (link, dúvida, pasta, vídeo) no Daily pode ser respondida direto.
 - **Dados comerciais em planilha (Keila, 23/11):** no Claude comercial, só o ok; números e análises ficam em planilha ou dash.
+- **Sem título para o time (Keila, 23/11):** mensagem enviada a alguém vai só com o @ e o texto; código/título só nos rascunhos do Gestão FEA.
