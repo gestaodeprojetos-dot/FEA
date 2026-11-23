@@ -54,3 +54,6 @@ scroll("s_protocolo", r, 0, 160, 7)
 inteira("v_graficos", p3.crop((120, 330, 1700, 1180)), 5)
 r = realce(p3, [(940, 1165, 1690, 1251)]).crop((925, 900, 1700, 1900))
 scroll("s_melhora", r, 0, 200, 7)
+# resumo com a conclusão (oclusão da artéria da retina, perda de visão) em destaque
+r = realce(p1, [(255, 1458, 1690, 1570)]).crop((240, 600, 1700, 2300))
+scroll("s_resumo", r, 60, 250, 7)
