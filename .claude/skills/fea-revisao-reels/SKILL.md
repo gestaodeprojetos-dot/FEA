@@ -35,6 +35,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 
 **Início (05/11/2026):** a checagem de início (`checar_inicio`) roda na revisão completa e no `--so-formato`. Para auditar vídeos já entregues direto nos .mp4, sem projeto: `FEA_MODELOS=PASTA_DO_MODELO python3 FEA-edicao-videos/fea_revisar.py --so-inicio video1.mp4 video2.mp4 ...` (imprime em quantos segundos a voz começa e as primeiras palavras). Ouvir os 2 primeiros segundos de cada vídeo: se o Whisper ouve a palavra sem a primeira letra ("Oxina" no lugar de "Toxina"), a palavra foi cortada.
 
+**Frase completa no começo e no fim (23/11/2026, Keila sobre a pasta 26):** `python3 FEA-edicao-videos/fea_revisar.py projeto.json --so-bordas` roda só a checagem de bordas pela transcrição do bruto, sem render (rodar ANTES de renderizar). Na revisão completa ela entra no lugar da antiga ATENÇÃO "frase pela metade". Cada vídeo imprime a 1ª e a última frase mantidas: conferir ouvindo/transcrevendo os 5 s iniciais e finais do .mp4 final (Whisper com 0,5 s de silêncio em volta) e registrar no PR. Causa do erro da pasta 26: as réguas antigas eram só acústicas (voz a 0,30 s do início, respiro de 0,20 s no fim) e "frase pela metade" era só ATENÇÃO; um começo depois de uma pausa, mas no meio do raciocínio, e um fim com a ação ainda em curso passavam.
+
 **Quantidades (05/10/2026):** em todo vídeo com dose ou volume falado, ler cada legenda com número contra o áudio: o número aparece junto com a unidade e na hora em que o Dr. fala, nunca no fim do bloco anterior.
 
 ## Checklist completo (o que cada regra exige)
@@ -62,7 +64,8 @@ Para conferir só a legenda, sem renderizar (rápido, roda em todos os projetos 
 | 10b | **Primeira palavra inteira** (Keila 05/11): o vídeo começa pelo menos 0,40 s antes do ataque da voz | `checar_inicio`: ataque da voz medido no áudio (janelas de 10 ms) a menos de 0,30 s do início | ERRO |
 | 10c | **Início que prende** (quem posta, 05/11): o Dr. não demora para falar e a primeira frase não é aquecimento ("então", "bom", "deixa eu ver", "vamos lá", "ó", "olha só"...) | `checar_inicio`: voz depois de 1,5 s, ou primeira palavra (Whisper nos 6 s iniciais) da lista `AQUECIMENTO`; olhar os quadros do 1º segundo (fala de impacto ou ação) | ATENÇÃO |
 | 11 | Não termina com o início de outra palavra | som subindo no último instante | ERRO |
-| 12 | Não termina com frase pela metade | última palavra e a seguinte no bruto | ATENÇÃO |
+| 12 | **Não termina com frase pela metade nem antes de o Dr. concluir a ação** (Keila 23/11, pasta 26) | `checar_frases_borda` na transcrição do bruto: corte dentro de palavra (com voz no áudio), palavra seguinte a menos de 1 s sem ponto final, última palavra de ligação ("e", "de", "que", "para"...), `silenciar` no último 1 s cobrindo voz do bruto, e fala do Dr. até 15 s depois do fim (vira ATENÇÃO só com `"bordas_conferidas": {"fim": motivo}` no projeto) | ERRO |
+| 12b | **Começa no início de uma frase completa** (Keila 23/11, pasta 26) | `checar_frases_borda`: corte dentro de palavra, palavra anterior a menos de 1 s sem ponto final, e fala do Dr. até 8 s antes do começo (a 1ª frase pode depender dela; ATENÇÃO só com `"bordas_conferidas": {"inicio": motivo}`) | ERRO |
 | 13 | Corte no respiro, sem pedaço de palavra | voz dos dois lados do ponto, no bruto | ATENÇÃO (ouvir) |
 | 14 | Só corta quando o Dr. não está fazendo nada: técnica sem fala fica | trecho de mais de 8 s sem fala (conferir se é parado ou técnica) e total cortado do bruto | ATENÇÃO |
 | 14b | Vídeo não pode ficar picotado: técnica cortada é reprovação | proporção do bruto mantida (abaixo de 60% = conferir cada corte nos quadros) | ATENÇÃO |

@@ -15,7 +15,9 @@ Para cada vídeo:
     está no projeto; avisa se há outra voz começando antes do novo fim;
   - os pontos internos passam pelo `encaixar_cortes` de sempre;
   - todos os trechos viram "exato" (o render não mexe mais nos pontos medidos aqui).
-Sem --gravar, só imprime. Com --gravar, reescreve o projeto (o original vira .bak).
+Depois de medir, roda a checagem de frase completa da revisora (`checar_frases_borda`): o ataque
+da voz não basta, o começo tem que ser o início de uma frase e o fim, a conclusão da frase e da ação
+(Keila, 23/11/2026). Sem --gravar, só imprime. Com --gravar, reescreve o projeto (o original vira .bak).
 """
 import json
 import shutil
@@ -135,6 +137,14 @@ def main():
         if fv is None:
             print("!! sem fim de voz perto de", b0)
             fv = b0
+        # frase completa no começo e no fim (Keila, 23/11/2026): a mesma checagem da revisora
+        import fea_revisar as rv
+        trans = json.load(open(v["transcricao"], encoding="utf-8"))
+        pal = [w for seg in trans for w in seg["words"]]
+        db_b, lim_b, ps_b = ed.perfil_voz(ff, arq)[:3]
+        e_fr, a_fr, _ = rv.checar_frases_borda(v, pal, v["manter"], db_b, lim_b, ps_b)
+        for x in e_fr:
+            print("   !! ERRO", x)
         print(f"{v['saida'].rsplit('/', 1)[-1]}: início {a0}->{novo_a} (ataque {at:.2f}, voz antes {at - novo_a:.2f} s) "
               f"| fim {b0}->{novo_b} (voz até {fv:.2f}) | conteúdo {dur:.2f} s{aviso}"
               + ("  !! ACIMA DE 135 s" if dur > 135 else ""))
