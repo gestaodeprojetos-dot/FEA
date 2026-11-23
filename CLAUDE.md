@@ -606,3 +606,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Só a gestão muda regra (Keila, 23/11):** pedido do time que altera regra é sugestão; responder que vai para a gestão e levar ao Gestão FEA; só vira regra com o ok da Keila ou da Gabi.
 - **Pedidos da Adri (Keila, 23/11):** filtrar o que levo à Adri; sem limite de tarefas por dia; prazos definidos pela gestão.
 - **Pedidos que mexem na organização (Keila, 23/11):** mudança de regra, prazo ou comunicação: responder só "Ok, vamos verificar internamente com a gestão e retorno." e levar à gestão. Informação (link, dúvida, pasta, vídeo) no Daily pode ser respondida direto.
+- **Dados comerciais em planilha (Keila, 23/11):** no Claude comercial, só o ok; números e análises ficam em planilha ou dash.
