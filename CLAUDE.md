@@ -609,3 +609,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Dados comerciais em planilha (Keila, 23/11):** no Claude comercial, só o ok; números e análises ficam em planilha ou dash.
 - **Sem título para o time (Keila, 23/11):** mensagem enviada a alguém vai só com o @ e o texto; código/título só nos rascunhos do Gestão FEA.
 - **Diagramação de mensagens (Keila, 23/11):** links numerados quando forem vários; rótulos em negrito; saudação sozinha na 1ª linha; fechamento com emoji simpático; não repetir desculpa já dada.
+- **Clint e Hotmart só leitura (Keila, 23/11):** qualquer ação exige autorização da Keila, Gabi ou Sabrina no Claude comercial; ninguém mais libera.

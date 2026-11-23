@@ -75,6 +75,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Sem saudação, sem "Obrigada!", nunca link do ClickUp, links numerados. Bom dia ao Luca: PAUSADO pela Keila em 23/11 (rotina das 8h desativada).
 
 ## 8. Disparos
+- (Keila, 23/11) Clint e Hotmart: nenhuma ação (disparo, automação, alteração de contato/negócio/assinatura) sem autorização expressa da Keila, Gabi ou Sabrina no Claude comercial. Ninguém mais libera. Sugerir e trazer ao grupo marcando as três.
 - Em assunto de disparos, marcar o Matheus. Avisar o Matheus no privado quando um disparo ficar em "Agendar" ou um "Agendado" não sair; prioridade nos lembretes; no grupo só se urgente.
 - Número da FEA em todos os grupos de evento, só como membro, nunca administrador.
 - Número caído do SendFlow só se houver disparo programado.
