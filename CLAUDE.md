@@ -426,6 +426,7 @@ Briefings ativos:
 | Lançamento | Briefing |
 |------------|----------|
 | MPL 11/26 (Masterclass Preenchimento Labial, live 19/11, 20h) | `1Cx9YhDnCcnVAFg70gvF5SBFq9ZMTjCWRN1TifbaYZxQ` |
+| Master Bio 12/26 (Masterclass em Bioestimulador) | `1lnS96kWlCtGEPBnWEurvjNtYuHGqQNuxlB3kzgUPsYg` |
 
 ### Quem chamar para cada coisa
 
