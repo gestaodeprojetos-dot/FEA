@@ -7,13 +7,27 @@ description: Criar, ajustar, publicar e conferir páginas de captura e de vendas
 
 Playbook validado na prática em 03/11/2026, no ajuste da página da Masterclass em Toxina (feb.joaopithon.com.br/mtb) para a live de 9/11. Escreva sempre em português, sem travessão (em-dash), sempre "para" e nunca "pra", e explique qualquer termo técnico em 1 ou 2 frases simples: quem pede não é técnico.
 
+## 0. Processo oficial (vale acima deste playbook)
+
+Desde 23/11/2026 existe o processo oficial do André, resumido em `referencias/FEA-processo-oficial-paginas.md`. **Ler esse arquivo antes de criar ou alterar qualquer página.** Pontos que mandam em tudo:
+
+- Páginas novas e as já migradas vivem no repositório `andrevivas/lp-joaopithon` (Astro). Ler o CLAUDE.md e o AGENTS.md do repositório antes de mexer; eles têm prioridade sobre este arquivo.
+- Envio para a branch principal publica sozinho em 4 a 7 min. Por isso: **sempre branch + pull request + prévia**, nunca publicar pelo terminal, e só publicar com ordem do André (exceto troca de risco baixo: link, data, WhatsApp, Zoom, texto curto).
+- Classificar o pedido pela tabela de risco antes de começar e dizer a classificação para quem pediu.
+- Mudança visual ou de layout em página com design aprovado volta ao design (Claude Design + André + Luca); no código só entram bug, texto, número, link e data.
+- Briefing incompleto: listar o que falta pelo checklist do processo e perguntar, nunca inventar oferta, código da Hotmart, data ou número.
+- Testes antes de entregar: 7 a 11 larguras, sem rolagem lateral, sem a página pular, botões e UTMs, eventos, velocidade, resto do site inalterado, prints e relatório para o André.
+- Depois de publicar: testar o botão principal sem enviar formulário de teste e lembrar a etapa 11 (GTM, anúncios, Clarity).
+
+As seções abaixo continuam valendo para as páginas que ainda estão no WordPress/Elementor.
+
 ## 1. Mapa técnico do ecossistema (auditado em 03/11/2026, reconfirmar se mudar)
 
 | Endereço | O que é |
 |---|---|
 | `joaopithon.com.br` | WordPress principal (separado dos subdomínios) |
 | `feb.`, `fep.`, `iff.`, `fef.joaopithon.com.br` | Cada um é um WordPress próprio: Elementor + PRO Elements, tema Hello Elementor, cache WP Rocket, PHP 8.2, hospedagem LiteSpeed (Núcleo Brasil Servidores) |
-| `lp.joaopithon.com.br` | Site estático no Cloudflare, mantido pelo André Vivas (webdesigner) |
+| `lp.joaopithon.com.br` | Site em Astro no repositório `andrevivas/lp-joaopithon`, publicado no Cloudflare a cada envio à branch principal, mantido pelo André Vivas (webdesigner). Processo na seção 0 |
 | Cloudflare | Fica na frente de tudo: DNS, segurança, CDN e SSL. O HTML das páginas WordPress NÃO fica em cache nele (`cf-cache-status: DYNAMIC`), então não precisa purgar depois de editar |
 
 Fatos que mudam a estratégia:
@@ -78,6 +92,8 @@ Página duplicada de outra (Elementor > Salvar como modelo > Inserir na página 
 Sugestão estrutural: manter uma página modelo vazia (`FEA-modelo-base-captura`) com o esqueleto técnico testado (formulário, UTMs, redirecionamento, pixel, tarja com contagem).
 
 ## 7. Caminho mais rápido: Cloudflare Pages
+
+Preferência atual: página nova em código vai para o repositório do André pelo processo da seção 0 (sem token do Cloudflare, com prévia e desfazer). O caminho abaixo só vale para página que, por decisão combinada, fique fora desse repositório.
 
 Página estática em código, publicada direto pelo Claude, sem Elementor nem captcha. Mais rápida de entregar e de carregar; a contrapartida é que o time não edita sozinho.
 - Precisa de um API token do Cloudflare criado pela pessoa: `Account > Cloudflare Pages > Edit`, `Account > Account Settings > Read`, `Zone > DNS > Edit` restrito à zona `joaopithon.com.br`, mais o Account ID.
