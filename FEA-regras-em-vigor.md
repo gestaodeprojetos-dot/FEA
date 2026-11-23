@@ -85,3 +85,10 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 ## 9. Vigia sem buraco (Keila, 23/11)
 - Reinício da sessão apaga a vigia. Ao ver "worker process was restarted" ou o aviso do hook: CronList, recriar os 4 jobs e rodar novidades cobrindo o tempo parado, sempre. Nunca ficar parado após reinício.
+
+## 10. Pedido do Luca de API, copy nova ou vídeo para disparo (Keila, 23/11)
+1. Pegar o material que o Luca enviou; se for vídeo, transcrever e usar o conteúdo dele como base.
+2. Criar as variações de copy num doc no padrão de copy do projeto (pasta do evento, Montserrat, títulos das variações com marca-texto amarelo, status 👀 Em revisão).
+3. Atualizar a Planilha de Disparos (e Links úteis) com o link do doc; se for .xlsx sem edição, avisar a Keila com a solução.
+4. Avisar o Matheus no grupo Copy: o que foi feito, link do doc, quantas variações, pedido para escolher uma (fica só ela) e revisar a copy e a planilha.
+5. Informação do Luca vale sobre o vídeo (ex.: 23/11, "Primeiro Lote" e não "Lote Especial").
