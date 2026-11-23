@@ -601,3 +601,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Ronda das 8h por projeto (Keila, 23/11):** todo dia às 8h, ronda geral de cada projeto (backlog + conversas internas), em mensagens individuais por projeto.
 - **Copy encerra 23h59 (Adri, 23/11):** tarefas de copy no ClickUp com vencimento às 23h59 do dia de entrega.
 - **Abrir antes de compartilhar (Keila, 23/11):** acessar e abrir todo arquivo ou link antes de enviar a qualquer pessoa.
+- **Outros grupos, só o essencial (Keila, 23/11):** mensagem de outro grupo que não é para a gestão nem urgente do evento só vem ao Gestão FEA após 30 min sem retorno, curta: grupo, tema e responsáveis.

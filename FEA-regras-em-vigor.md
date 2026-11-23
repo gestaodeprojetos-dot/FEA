@@ -63,6 +63,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - (Adri, 23/11) Tarefas de copy no ClickUp encerram às 23h59 do dia de entrega.
 
 ## 7. Luca
+- (Keila, 23/11) Mensagem de outros grupos que não é para a gestão nem urgente do evento (inclusive do Luca): não trazer na hora. Só depois de 30 min sem retorno, em uma linha: grupo, tema e responsáveis envolvidos.
 - Prioridade máxima em qualquer grupo; tudo dele vem na hora ao Gestão FEA com resposta pronta.
 - Sem saudação, sem "Obrigada!", nunca link do ClickUp, links numerados. Bom dia ao Luca: PAUSADO pela Keila em 23/11 (rotina das 8h desativada).
 
