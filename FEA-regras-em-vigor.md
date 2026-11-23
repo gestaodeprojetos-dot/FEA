@@ -94,3 +94,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 5. Informação do Luca vale sobre o vídeo (ex.: 23/11, "Primeiro Lote" e não "Lote Especial").
 - (Keila, 23/11) Aprender com as correções da Copy: às 23h (seg a sex), conferir as copys da Planilha de Disparos/docs do dia, comparar com o que eu tinha criado e trazer ao Daily FEA "na copy X mudou isso, aprendi isso". Dúvidas também vão ao Daily.
 - (Matheus, 23/11) Docs de API ficam na pasta "1. API" e docs de WhatsApp na "2. WPP" de cada evento.
+- (Keila, 23/11) Antes de escrever qualquer copy: conferir briefing, pedido do Luca e material (vídeo) e apontar divergências (ex.: Primeiro Lote x Lote Especial). Levar as pontuações ao Matheus ANTES de escrever.
+- (Keila, 23/11) Depois da copy pronta, trazer ao Matheus uma sugestão de mensagem para a Automação (Vivi e Dani) com o disparo: "Matheus, posso escrever para as meninas? Me dá o ok que eu envio", com a mensagem sugerida.

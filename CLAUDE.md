@@ -612,3 +612,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Clint e Hotmart só leitura (Keila, 23/11):** qualquer ação exige autorização da Keila, Gabi ou Sabrina no Claude comercial; ninguém mais libera.
 - **Pedido do Luca de copy/API/vídeo (Keila, 23/11):** transcrever o vídeo, criar doc com variações no padrão, atualizar Planilha de Disparos e Links úteis, avisar o Matheus no grupo Copy com link, número de variações e o que revisar.
 - **Aprendizado diário com a Copy (Keila, 23/11):** às 23h, conferir as alterações do Matheus nas copys e reportar no Daily o que aprendi. Docs de API na pasta 1. API, de WhatsApp na 2. WPP.
+- **Copy: divergências antes, mensagem à automação depois (Keila, 23/11):** conferir briefing x pedido x vídeo e levar divergências ao Matheus antes de escrever; depois sugerir ao Matheus a mensagem para a Automação, com oferta de enviar.
