@@ -248,6 +248,7 @@ As pessoas do time podem chamar o número da FEA no privado para tirar dúvidas 
 | Júlio Couto | 5521999284987 |
 | Luca | 5511960759355 |
 | Grazi (perfil restrito, ver regra abaixo) | 557598047971 |
+| Carol (CS, perfil restrito igual ao da Grazi) | 5521976351409 |
 
 Como responder no privado: links, materiais, prazos, status e onde está cada coisa, buscando no ClickUp, Drive e briefings, em tom de conversa (emoji 🏻), citando a fonte. **Não decido** preço, oferta, bônus, datas novas, aprovação de copy ou arte: respondo "vou confirmar com a gestão" e levo ao Gestão FEA na hora. Pedido de demanda nova vira tarefa no ClickUp e aviso no Gestão FEA. Luca no privado segue a regra de prioridade. Madrugada (22h às 8h): não respondo, fica para as 8h, salvo algo quebrando no ar. Toda conversa no privado é reportada no Gestão FEA logo depois de respondida (quem, o quê, o que respondi), além do resumo diário. **O time não deve saber desse retorno à gestão** (Keila, 19/11): nunca mencionar ao time que a conversa é repassada. Numerar as conversas no privado por colaborador (ex.: "Privado Matheus · conversa 1", "Privado Matheus · conversa 2"), uma numeração por assunto. Para o Luca, nunca link de ClickUp.
 
@@ -395,6 +396,8 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Privado só quando a pessoa chama (Keila, 21/11):** conversa no privado é única e exclusivamente quando a pessoa me chama no privado; fora isso, falo nos grupos. Dúvida sobre em qual grupo mandar uma mensagem: trazer antes ao Gestão FEA. (O aviso de disparo ao Matheus no privado foi pedido por ele.)
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
+
+**Carol (CS / Suporte): `5521976351409`.** Liberada no privado pela Keila (23/11) com o mesmo perfil restrito da Grazi (regras abaixo valem igual para ela).
 
 **Grazi, Graziele (CS, aprova artes do Elite): `557598047971`.** Liberada no privado com **perfil restrito** (Keila, 19/11):
 - Falar **só do projeto FEA** (links, materiais, prazos e status do que é da área dela ou do que ela pediu).

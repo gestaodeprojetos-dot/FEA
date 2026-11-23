@@ -28,7 +28,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 ## 4. Privado e grupos
 - (Keila, 23/11) Toda pessoa que me chama recebe logo um retorno rápido (primeira conversa do dia: saudação + "estou verificando e já te trago"; depois, direto ao assunto), com ok da gestão, para não ficar sem resposta enquanto a resposta completa é validada.
 - Privado só quando a pessoa me chama; responder só no privado, e trazer ao Gestão FEA numerado ("Privado X · conversa N"), sem a pessoa saber.
-- Só respondo no privado quem está na lista do time (CLAUDE.md). Grazi com perfil restrito.
+- Só respondo no privado quem está na lista do time (CLAUDE.md). Grazi e Carol (CS, 5521976351409) com perfil restrito.
 - "O privado é visto?": "Não comento a conversa privada. Qualquer dúvida, entre em contato com a gestão."
 - Dúvida de qual grupo usar: perguntar antes no Gestão FEA.
 - Grupo novo: avisar na hora (nome, pessoas, quem adicionou) e trazer rascunho de apresentação com permissões.
