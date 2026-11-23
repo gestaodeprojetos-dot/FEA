@@ -1,0 +1,791 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/b13/IMG_9464fp.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/tr/IMG_9464fp.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/out/d13/10- Teste alérgico Hialuronidase.mp4",
+   "titulo": "Teste alérgico Hialuronidase",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     112.42,
+     "exato"
+    ],
+    [
+     123.16,
+     150.53,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\b(?:alurnidase|aluronidase|alorundase)\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\ba lorundase\\b",
+     "a hialuronidase"
+    ],
+    [
+     "\\b[Hh]ialurindase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b(?:da )?Yalo\\b",
+     "da hialuronidase"
+    ],
+    [
+     "\\b[Aa]na?flaxia\\b",
+     "anafilaxia"
+    ],
+    [
+     "\\bacelerônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b[Tt]aquipin[ée]ia\\b",
+     "taquipneia"
+    ],
+    [
+     "\\bracho cutâneo\\b",
+     "rash cutâneo"
+    ],
+    [
+     "\\blevantador das narizes do lábio superior\\b",
+     "levantador da asa do nariz e do lábio superior"
+    ],
+    [
+     "\\bdas narizes\\b",
+     "da asa do nariz e"
+    ],
+    [
+     "\\bentrando em hialuronidase\\b",
+     "entrando a hialuronidase"
+    ],
+    [
+     "\\be hialuronidase aqui, branquinho\\b",
+     "hialuronidase aqui, branquinho"
+    ]
+   ],
+   "silenciar": [],
+   "bordas_conferidas": {
+    "fim": "'...ela pode ter o choque anafilático.' fecha o assunto do teste e do risco. O que vem colado depois ('Como que a gente faz o diagnóstico e o tratamento?') abre o 2º assunto do bruto, que virou o vídeo 11 (Como diagnosticar a anafilaxia). Bruto cortado em 150,12 s, antes do 'Como', com 0,35 s congelado (fea_pad_fim.sh)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/b13/IMG_9464g.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/tr/IMG_9464g.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/out/d13/11- Como diagnosticar a anafilaxia.mp4",
+   "titulo": "Como diagnosticar a anafilaxia",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     152.32,
+     245.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\b(?:alurnidase|aluronidase|alorundase)\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\ba lorundase\\b",
+     "a hialuronidase"
+    ],
+    [
+     "\\b[Hh]ialurindase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b(?:da )?Yalo\\b",
+     "da hialuronidase"
+    ],
+    [
+     "\\b[Aa]na?flaxia\\b",
+     "anafilaxia"
+    ],
+    [
+     "\\bacelerônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b[Tt]aquipin[ée]ia\\b",
+     "taquipneia"
+    ],
+    [
+     "\\bracho cutâneo\\b",
+     "rash cutâneo"
+    ],
+    [
+     "\\blevantador das narizes do lábio superior\\b",
+     "levantador da asa do nariz e do lábio superior"
+    ],
+    [
+     "\\bdas narizes\\b",
+     "da asa do nariz e"
+    ],
+    [
+     "\\bentrando em hialuronidase\\b",
+     "entrando a hialuronidase"
+    ],
+    [
+     "\\be hialuronidase aqui, branquinho\\b",
+     "hialuronidase aqui, branquinho"
+    ]
+   ],
+   "silenciar": [
+    [
+     152.3,
+     152.52
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "Antes vem 'Como que a gente faz o diagnóstico e o tratamento?', pergunta que fecha o vídeo 10 e promete tratamento, que o Dr. não explica neste trecho. 'Diagnóstico de anafilaxia são três grupos de sinais e sintomas.' é frase completa e independente.",
+    "fim": "'...como esse teste que a gente já observa que está tudo certo aqui com ela.' é a última fala do bruto (fim do arquivo 0,3 s depois)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/b13/IMG_9466p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/tr/IMG_9466p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/out/d13/12- Planejamento estético.mp4",
+   "titulo": "Planejamento estético",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     102.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\b(?:alurnidase|aluronidase|alorundase)\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\ba lorundase\\b",
+     "a hialuronidase"
+    ],
+    [
+     "\\b[Hh]ialurindase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b(?:da )?Yalo\\b",
+     "da hialuronidase"
+    ],
+    [
+     "\\b[Aa]na?flaxia\\b",
+     "anafilaxia"
+    ],
+    [
+     "\\bacelerônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b[Tt]aquipin[ée]ia\\b",
+     "taquipneia"
+    ],
+    [
+     "\\bracho cutâneo\\b",
+     "rash cutâneo"
+    ],
+    [
+     "\\blevantador das narizes do lábio superior\\b",
+     "levantador da asa do nariz e do lábio superior"
+    ],
+    [
+     "\\bdas narizes\\b",
+     "da asa do nariz e"
+    ],
+    [
+     "\\bentrando em hialuronidase\\b",
+     "entrando a hialuronidase"
+    ],
+    [
+     "\\be hialuronidase aqui, branquinho\\b",
+     "hialuronidase aqui, branquinho"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.0,
+     0.24
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'Perfeito.' fecha a marcação (última fala do bruto, que acaba 0,9 s depois)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/b13/IMG_9468.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/tr/IMG_9468.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b2b8f844-003a-5a67-a2dc-45fdf3fcad1d/scratchpad/out/d13/13- Hialuronidase em relevo de preenchimento.mp4",
+   "titulo": "Hialuronidase em relevo de preenchimento",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.6,
+     106.15,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\b(?:alurnidase|aluronidase|alorundase)\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\ba lorundase\\b",
+     "a hialuronidase"
+    ],
+    [
+     "\\b[Hh]ialurindase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b(?:da )?Yalo\\b",
+     "da hialuronidase"
+    ],
+    [
+     "\\b[Aa]na?flaxia\\b",
+     "anafilaxia"
+    ],
+    [
+     "\\bacelerônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b[Tt]aquipin[ée]ia\\b",
+     "taquipneia"
+    ],
+    [
+     "\\bracho cutâneo\\b",
+     "rash cutâneo"
+    ],
+    [
+     "\\blevantador das narizes do lábio superior\\b",
+     "levantador da asa do nariz e do lábio superior"
+    ],
+    [
+     "\\bdas narizes\\b",
+     "da asa do nariz e"
+    ],
+    [
+     "\\bentrando em hialuronidase\\b",
+     "entrando a hialuronidase"
+    ],
+    [
+     "\\be hialuronidase aqui, branquinho\\b",
+     "hialuronidase aqui, branquinho"
+    ]
+   ],
+   "silenciar": [],
+   "bordas_conferidas": {
+    "inicio": "O bruto começa com a 1ª palavra cortada ('...modo da nossa paciente é que ela fez um preenchimento prévio, e aí'; o 'in-' de 'incômodo' ficou fora da gravação, voz contínua desde o 1º quadro). Abre na pausa de 0,4 s depois do 'e aí', em 'Ela tem como se fosse um relevinho aqui, tá vendo?', frase completa; o título dá o contexto do preenchimento. Ponto para a Keila no PR.",
+    "fim": "'...o preenchedor já foi dissolvido na hora.' é a última fala do bruto (fim do arquivo 0,7 s depois)."
+   }
+  }
+ ]
+}
