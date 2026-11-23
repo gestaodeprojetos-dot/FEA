@@ -1,0 +1,1199 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9238p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9238p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/1- Planejamento terço inferior com 2mL.mp4",
+   "titulo": "Planejamento terço inferior com 2mL",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.1,
+     30.533,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9239.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9239.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/2- Pré-jowl e comissura labial.mp4",
+   "titulo": "Pré-jowl e comissura labial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     6.367,
+     12.1,
+     "exato"
+    ],
+    [
+     15.45,
+     36.3,
+     "exato"
+    ],
+    [
+     38.625,
+     56.575,
+     "exato"
+    ],
+    [
+     60.775,
+     65.425,
+     "exato"
+    ],
+    [
+     84.0,
+     121.5,
+     "exato"
+    ],
+    [
+     130.0,
+     138.833,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9240.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9240.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/3- Mandíbula com bolus superficiais.mp4",
+   "titulo": "Mandíbula com bolus superficiais",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     37.2,
+     "exato"
+    ],
+    [
+     38.25,
+     38.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9241.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9241.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/4- Mento mais fino e feminino.mp4",
+   "titulo": "Mento mais fino e feminino",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     5.333,
+     36.133,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9242.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9242.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/5- Toxina no espasmo: pontos de aplicação.mp4",
+   "titulo": "Toxina no espasmo: pontos de aplicação",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     22.067,
+     95.7,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     27.5,
+     29.0
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9243.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9243.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/6- Glabela: unidades por ponto.mp4",
+   "titulo": "Glabela: unidades por ponto",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.4,
+     55.9,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9244p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9244p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/7- Técnica da coroa no frontal.mp4",
+   "titulo": "Técnica da coroa no frontal",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     52.033,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9246.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9246.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/8- Toxina nas linhas nasais.mp4",
+   "titulo": "Toxina nas linhas nasais",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.833,
+     20.867,
+     "exato"
+    ],
+    [
+     21.7,
+     21.933,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\bmolheira\\b",
+     "olheira"
+    ],
+    [
+     "\\bbem em funda\\b",
+     "bem fundo"
+    ],
+    [
+     "\\bVacuumo melhorar\\b",
+     "Olha como melhora"
+    ],
+    [
+     "\\bmandíbulosinha\\b",
+     "mandibulazinha"
+    ],
+    [
+     "\\bbolos pequenos\\b",
+     "bolus pequenos"
+    ],
+    [
+     "\\btipo 01\\b",
+     "tipo 0,1"
+    ],
+    [
+     "\\b03\\b",
+     "0,3"
+    ],
+    [
+     "\\bPonte anestesia a mais\\b",
+     "Vou te anestesiar mais"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\bjoque\\b",
+     "jowl"
+    ],
+    [
+     "\\btessidual\\b",
+     "tecidual"
+    ],
+    [
+     "\\bpré -jowl\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bprédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bbolos\\b",
+     "bolus"
+    ]
+   ]
+  }
+ ]
+}
