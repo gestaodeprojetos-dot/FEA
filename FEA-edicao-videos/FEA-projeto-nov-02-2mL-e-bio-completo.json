@@ -1,0 +1,913 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8369.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8369.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/1- Como planejar uma bioestimulação completa.mp4",
+   "titulo": "Como planejar uma bioestimulação completa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     90.8
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8370.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8370.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/2- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.05,
+     84.35,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8371.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8371.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/3- Rinomodelação com cânula.mp4",
+   "titulo": "Rinomodelação com cânula",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     17.0,
+     "exato"
+    ],
+    [
+     25.2,
+     143.6,
+     "exato"
+    ],
+    [
+     145.4,
+     151.0,
+     "exato"
+    ],
+    [
+     155.7,
+     157.0,
+     "exato"
+    ],
+    [
+     161.9,
+     167.13,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8372.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8372.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/4- Hidroxiapatita de cálcio em face.mp4",
+   "titulo": "Hidroxiapatita de cálcio em face",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.4,
+     16.2
+    ],
+    [
+     49.5,
+     110.2
+    ],
+    [
+     121.0,
+     184.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8373.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8373.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/5- Hidroxiapatita de cálcio no pescoço.mp4",
+   "titulo": "Hidroxiapatita de cálcio no pescoço",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     79.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8381.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8381.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/6- PLLA em face lateral e crown lifting.mp4",
+   "titulo": "PLLA em face lateral e crown lifting",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     42.9,
+     "exato"
+    ],
+    [
+     52.5,
+     151.4
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8385.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8385.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/7- Fios em pálpebra inferior: qual a tecnologia por trás.mp4",
+   "titulo": "Fios em pálpebra inferior: qual a tecnologia por trás",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.5,
+     92.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/brutos/IMG_8386.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/c2/tr/IMG_8386.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/b8c37b39-a8cb-5608-a9ea-551d8a0c312c/scratchpad/out/n2/8- Aplicação ideal dos fios em pálpebra inferior.mp4",
+   "titulo": "Aplicação ideal dos fios em pálpebra inferior",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     1.3,
+     61.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelis"
+    ],
+    [
+     "\\b[Cc]riales\\b",
+     "Kirialys"
+    ],
+    [
+     "\\bhidroxapatida\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bpoli(?:li|ali)l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bhiper dilu[ií]da\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b(?:reno|rindo|rino) modelação\\b",
+     "rinomodelação"
+    ],
+    [
+     "\\bcolomela\\b",
+     "columela"
+    ],
+    [
+     "\\bBiogeliz\\b",
+     "Biogelis"
+    ],
+    [
+     "\\bm[Ff]ace\\b",
+     "hemiface"
+    ],
+    [
+     "\\bexigomático cutâneo\\b",
+     "e zigomático-cutâneo"
+    ],
+    [
+     "\\bmais existente\\b",
+     "mais resistente"
+    ],
+    [
+     "\\ba paz de PLA\\b",
+     "à base de PLA"
+    ],
+    [
+     "\\bPLA -PCL\\b",
+     "PLA-PCL"
+    ],
+    [
+     "\\b(pós|pré) -",
+     "\\1-"
+    ],
+    [
+     "\\bos rios\\b",
+     "os fios"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bum dos partes\\b",
+     "uma das partes"
+    ],
+    [
+     "\\bFarma\\b",
+     "Pharma"
+    ],
+    [
+     "\\ba paz de\\b",
+     "à base de"
+    ],
+    [
+     "\\bmesmo região\\b",
+     "mesma região"
+    ]
+   ]
+  }
+ ]
+}

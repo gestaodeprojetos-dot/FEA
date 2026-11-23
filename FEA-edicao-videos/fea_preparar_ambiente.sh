@@ -6,7 +6,8 @@
 set -euo pipefail
 TRAB="${1:?informe a pasta de trabalho}"
 mkdir -p "$TRAB/fonts"
-pip install -q imageio-ffmpeg faster-whisper pillow numpy scipy 2>&1 | grep -v WARNING || true
+# av < 16: o faster-whisper 1.2 chama av.open(metadata_errors=...), que o PyAV 16+ não aceita (07/10/2026)
+pip install -q imageio-ffmpeg faster-whisper "av>=12,<16" pillow numpy scipy 2>&1 | grep -v WARNING || true
 FF=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
 echo "F=$FF" > "$TRAB/env.sh"
 for p in ExtraBold Bold SemiBold Medium; do

@@ -1,0 +1,1516 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8221.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8221.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/1- Planejamento 3mL.mp4",
+   "titulo": "Planejamento 3mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     63.95
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\blindo que, tá\\b",
+     "lindo que tá"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8222.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8222.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/2- Anestesia com SANEP.mp4",
+   "titulo": "Anestesia com SANEP",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.8,
+     58.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ],
+   "silenciar": [
+    [
+     25.52,
+     26.2
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8223.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8223.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/3- Preenchimento de olheiras.mp4",
+   "titulo": "Preenchimento de olheiras",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     79.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ],
+   "silenciar": [
+    [
+     16.78,
+     17.08
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8225.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8225.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/4- Não é lifting, é conectar.mp4",
+   "titulo": "Não é lifting, é conectar",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     55.1
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8227.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8227.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/5- Conecte os vazios.mp4",
+   "titulo": "Conecte os vazios",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.4,
+     120.15
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8228.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8228.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/6- Contorno com 0,3mL.mp4",
+   "titulo": "Contorno com 0,3mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     49.75
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bum,? [Ii]a trabalhar\\b",
+     "um, ia trabalhar"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8229.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8229.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/7- Planejamento toxina estética.mp4",
+   "titulo": "Planejamento toxina estética",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.15,
+     80.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Uu]m, dois, três\\b",
+     "1, 2, 3"
+    ],
+    [
+     "\\b[Uu]m, dois\\b",
+     "1, 2"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8236.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8236.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/8- Orbiculares.mp4",
+   "titulo": "Orbiculares",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     30.0
+    ],
+    [
+     68.35,
+     72.3
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8237.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8237.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/9- Glabela técnica dos 9 pontos.mp4",
+   "titulo": "Glabela técnica dos 9 pontos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     78.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Qq]uatro\\b",
+     "4"
+    ],
+    [
+     "\\btrês\\b",
+     "3"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8238.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8238.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/10- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     74.6
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8239.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8239.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/11- Nasal.mp4",
+   "titulo": "Nasal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     41.9
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8230.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8230.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/12- Planejamento bioestimulador padrão ouro.mp4",
+   "titulo": "Planejamento bioestimulador padrão ouro",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     27.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8233.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8233.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/13- Hidroxiapatita de cálcio em face.mp4",
+   "titulo": "Hidroxiapatita de cálcio em face",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     73.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/b30/IMG_8235.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/tr/IMG_8235.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/2126829a-51a4-5682-955e-2963b702e743/scratchpad/out/e30/14- Ácido poli-L-lático em face lateral.mp4",
+   "titulo": "Ácido poli-L-lático em face lateral",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.0,
+     48.65
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bML\\b",
+     "mL"
+    ],
+    [
+     "\\b[Tt]ear [Tt]roph?y\\b",
+     "tear trough"
+    ],
+    [
+     "\\b(?:meia-?|meu )?l?[oua]?r[oô]n?idase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bmeialuronidase\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\b[Ll]uronidas[ea]?\\b",
+     "hialuronidase"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\b[Dd]roxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[aá]cido poli[aoe]?l?[ia]l[aá]tico\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\bpoli[aoe]?l?[ia]l[aá]tico\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Aa]ngel[iy]s\\b",
+     "Angelys"
+    ],
+    [
+     "\\b[ZzXx][eé]u?min\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Tt]rajamento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]ra[jg]e?amento\\b",
+     "Planejamento"
+    ],
+    [
+     "\\b[Tt]irtrof+\\b",
+     "tear trough"
+    ],
+    [
+     "\\bcara lacrimal\\b",
+     "calha lacrimal"
+    ],
+    [
+     "\\b[Cc]hlorex\\b",
+     "clorex"
+    ],
+    [
+     "\\bdiolzinho\\b",
+     "jowlzinho"
+    ],
+    [
+     "\\besse 015\\b",
+     "esse 0,15 mL"
+    ],
+    [
+     "\\b3 3 ?ml\\b",
+     "3, 3 mL"
+    ],
+    [
+     "\\b3ml\\b",
+     "3 mL"
+    ]
+   ]
+  }
+ ]
+}
