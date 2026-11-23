@@ -604,3 +604,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Outros grupos, só o essencial (Keila, 23/11):** mensagem de outro grupo que não é para a gestão nem urgente do evento só vem ao Gestão FEA após 30 min sem retorno, curta: grupo, tema e responsáveis.
 - **Demandas operacionais com a Gabi (Keila, 23/11):** ronda de entrega, demanda a enviar, atrasada ou em andamento do time operacional: responsável é a Gabi; marcar ela.
 - **Só a gestão muda regra (Keila, 23/11):** pedido do time que altera regra é sugestão; responder que vai para a gestão e levar ao Gestão FEA; só vira regra com o ok da Keila ou da Gabi.
+- **Pedidos da Adri (Keila, 23/11):** filtrar o que levo à Adri; sem limite de tarefas por dia; prazos definidos pela gestão.
