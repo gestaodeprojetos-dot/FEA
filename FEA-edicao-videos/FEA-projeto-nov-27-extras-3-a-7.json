@@ -1,0 +1,851 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/b/IMG_9423f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/tr/IMG_9423f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/out/n27/3- Marcação e assimetria no preenchimento.mp4",
+   "titulo": "Marcação e assimetria no preenchimento",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     29.14,
+     71.62,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ],
+    [
+     "\\bum superior\\b",
+     "o superior"
+    ],
+    [
+     "\\bVORV\\b",
+     "Vorv"
+    ],
+    [
+     "\\b50mm\\b",
+     "50 mm"
+    ],
+    [
+     "\\bbolheira\\b",
+     "olheira"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "\"Sorri, relaxa.\" (19,3 a 21,7 s do bruto) é instrução para a paciente; \"Vamos ver os pontinhos.\" abre a marcação dos pontos e não depende dela. A frase de 9 a 14 s (\"Vamos fazer um preenchimento em um labial...\") ficou fora porque a transcrição não é confiável (3 leituras diferentes da 2ª metade)"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/b/IMG_9424p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/tr/IMG_9424p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/out/n27/4- Anestesia intraoral com SANEP.mp4",
+   "titulo": "Anestesia intraoral com SANEP",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     93.62,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ],
+    [
+     "\\bum superior\\b",
+     "o superior"
+    ],
+    [
+     "\\bVORV\\b",
+     "Vorv"
+    ],
+    [
+     "\\b50mm\\b",
+     "50 mm"
+    ],
+    [
+     "\\bbolheira\\b",
+     "olheira"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "bruto intermediário IMG_9424p.mov = IMG_9424 a partir de 47,45 s + 0,37 s congelado (fea_pad_inicio.sh): a respiração antes de \"Agora\" (46,8 a 47,5 s) emendava no fim de \"Perfeito,\" e não deixava 0,30 s limpos antes da voz. \"Perfeito,\" fecha a anestesia do lado superior; \"Agora no mentoniano. Tranquilo?\" abre a etapa nova e não depende dele. \"Agora no mentoniano. Tranquilo?\" fica embaixo do título (remover_legenda só nessa janela, para a pergunta não dividir bloco com o \"Uhum\" da paciente)"
+   },
+   "remover_legenda": [
+    [
+     0.4,
+     3.04
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/b/IMG_9425.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/tr/IMG_9425.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/out/n27/5- Terço médio e base da olheira.mp4",
+   "titulo": "Terço médio e base da olheira",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     13.7,
+     88.45,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ],
+    [
+     "\\bum superior\\b",
+     "o superior"
+    ],
+    [
+     "\\bVORV\\b",
+     "Vorv"
+    ],
+    [
+     "\\b50mm\\b",
+     "50 mm"
+    ],
+    [
+     "\\bbolheira\\b",
+     "olheira"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "\"Uma bolinha aqui.\" (10,6 s do bruto) é narração isolada da aplicação anterior; \"Esse lado é um lado menor dela...\" abre a avaliação e não depende dela",
+    "fim": "termina em \"Nossa, maravilhoso, olha isso.\" com o resultado na tela (ação concluída); a fala seguinte é \"Vamos dar o espelho para ela\", espelho, que a regra corta"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/b/IMG_9427.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/tr/IMG_9427.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/out/n27/6- Preenchimento com cânula 25G.mp4",
+   "titulo": "Preenchimento com cânula 25G",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     10.08,
+     66.6,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ],
+    [
+     "\\bum superior\\b",
+     "o superior"
+    ],
+    [
+     "\\bVORV\\b",
+     "Vorv"
+    ],
+    [
+     "\\b50mm\\b",
+     "50 mm"
+    ],
+    [
+     "\\bbolheira\\b",
+     "olheira"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/b/IMG_9429.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/tr/IMG_9429.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/483f9093-4e81-5c42-ae94-76cb810ad3bf/scratchpad/out/n27/7- Preenchimento labial com cânula.mp4",
+   "titulo": "Preenchimento labial com cânula",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     43.15,
+     85.2,
+     "exato"
+    ],
+    [
+     86.75,
+     132.42,
+     "exato"
+    ],
+    [
+     158.7,
+     164.45,
+     "exato"
+    ],
+    [
+     166.4,
+     168.9,
+     "exato"
+    ],
+    [
+     177.3,
+     179.4,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ],
+    [
+     "\\bum superior\\b",
+     "o superior"
+    ],
+    [
+     "\\bVORV\\b",
+     "Vorv"
+    ],
+    [
+     "\\b50mm\\b",
+     "50 mm"
+    ],
+    [
+     "\\bbolheira\\b",
+     "olheira"
+    ]
+   ],
+   "zoom": [
+    [
+     116.3,
+     121.9,
+     2.4,
+     0.546,
+     0.417
+    ]
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "ffmpeg": "/usr/local/lib/python3.11/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
- "fontsdir": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/fonts",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/fonts",
  "videos": [
   {
    "titulo": "Relato de caso: espasmos faciais",
@@ -22,9 +22,9 @@
      24.2
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7256.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7256.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/1- Relato de caso espasmos faciais.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p8/IMG_7256.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p8/IMG_7256.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e8/1- Relato de caso espasmos faciais.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -45,9 +45,9 @@
      78.5
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7259.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7259.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/2- Planejamento para espasmos.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p8/IMG_7259.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p8/IMG_7259.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e8/2- Planejamento para espasmos.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -96,9 +96,9 @@
      "mentoniano"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7260.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7260.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/3- Aplicação toxina de espasmos Parte 1.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p8/IMG_7260.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p8/IMG_7260.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e8/3- Aplicação toxina de espasmos Parte 1.mp4",
    "titulo_origem": "imagem"
   },
   {
@@ -131,9 +131,9 @@
      "intraoral"
     ]
    ],
-   "entrada": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/b/p8/IMG_7260.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/tr/p8/IMG_7260.json",
-   "saida": "/tmp/claude-0/-home-user-FEA/eed20d2b-5adb-5f38-9a0a-4aeae05ab58d/scratchpad/out/e8/4- Aplicação toxina de espasmos Parte 2.mp4",
+   "entrada": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/b/p8/IMG_7260.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/tr/p8/IMG_7260.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c621876a-f188-54a9-8915-aa5784f1510f/scratchpad/out/e8/4- Aplicação toxina de espasmos Parte 2.mp4",
    "titulo_origem": "imagem"
   }
  ]

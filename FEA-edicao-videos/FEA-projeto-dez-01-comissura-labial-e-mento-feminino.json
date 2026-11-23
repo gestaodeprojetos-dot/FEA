@@ -1,0 +1,391 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8785.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8785.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d1/1- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     41.033,
+     55.8,
+     "exato"
+    ],
+    [
+     10.1,
+     39.8,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: o vídeo abre no antes e depois (41,0 s do bruto, \"Olha só, como já alinhou isso aqui.\"), como pede a imagem de títulos; a fala anterior no bruto (\"Show.\", 1,6 s antes) fecha o procedimento",
+    "fim": "revisão 23/11: termina em \"Show.\" com a limpeza da gaze concluída (39,8 s do bruto); a fala seguinte é o antes e depois que já abre o vídeo. O 2º trecho (procedimento) começa agora em 10,1 s do bruto, depois de \"Sim.\": antes ele abria no meio da frase \"trabalhando, aqui vai ter uns pontinhos que vai sentir mesmo, tá?\" (conversa com o paciente); a mesma aplicação continua na imagem de 10 a 18 s"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8786f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8786f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d1/2- Mento feminino.mp4",
+   "titulo": "Mento feminino",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.1,
+     60.87,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bRevaneskis\\b",
+     "Revanesse Kiss"
+    ],
+    [
+     "\\b[Ee]stilage[mn]?\\b",
+     "Stylage"
+    ],
+    [
+     "\\bStylage\\.\\s+L\\b",
+     "Stylage L"
+    ],
+    [
+     "\\b[Ss]anep\\b",
+     "SANEP"
+    ],
+    [
+     "\\bpr[ée]dio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bum pápula\\b",
+     "uma pápula"
+    ],
+    [
+     "\\bPõe pra isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bPõe para isso\\b",
+     "Para isso"
+    ],
+    [
+     "\\bperióstico\\b",
+     "periósteo"
+    ],
+    [
+     "\\breola de MEP\\b",
+     "Rheology Map"
+    ],
+    [
+     "\\bcódigo de barra\\b",
+     "código de barras"
+    ],
+    [
+     "\\b[Cc]alda\\b",
+     "cauda"
+    ],
+    [
+     "\\bmalarmound\\b",
+     "malar mound"
+    ],
+    [
+     "\\bmalarmalde\\b",
+     "malar mound"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\balto gelinha\\b",
+     "alto G'"
+    ],
+    [
+     "\\b[Tt]eleinjectasia\\b",
+     "telangiectasia"
+    ],
+    [
+     "\\bvazinhos\\b",
+     "vasinhos"
+    ],
+    [
+     "\\bbolosinhos\\b",
+     "bolinhos"
+    ],
+    [
+     "muda, Tá vendo",
+     "muda, tá vendo"
+    ]
+   ]
+  }
+ ]
+}

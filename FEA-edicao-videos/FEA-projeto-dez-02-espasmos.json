@@ -1,0 +1,1563 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8863f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8863f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/1- História clínica do espasmo facial.mp4",
+   "titulo": "História clínica do espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.66,
+     48.62,
+     "exato"
+    ],
+    [
+     50.78,
+     53.38,
+     "exato"
+    ],
+    [
+     59.28,
+     62.77,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "silenciar": [
+    [
+     1.66,
+     1.8
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: o bruto começa com o Dr. já falando \"Com o caso de espasmo facial.\" (fragmento, a frase começou antes da gravação); o vídeo abre na frase completa seguinte, \"Então, sorri bastante.\", que não depende dela (o título já diz que é espasmo facial); o rabo de \"facial\" antes do início ficou mudo"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8859_8858_8860.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8859_8858_8860.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/2- Avaliação do espasmo facial.mp4",
+   "titulo": "Avaliação do espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.467,
+     41.05,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "silenciar": [
+    [
+     40.9,
+     41.05
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8864.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8864.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/3- Equilíbrio de forças no espasmo facial.mp4",
+   "titulo": "Equilíbrio de forças no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.633,
+     110.5,
+     "exato"
+    ],
+    [
+     144.125,
+     154.85,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.0,
+     0.85
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8865f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8865f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/4- Toxina na pálpebra no espasmo facial.mp4",
+   "titulo": "Toxina na pálpebra no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     30.333,
+     40.675,
+     "exato"
+    ],
+    [
+     46.2,
+     71.35,
+     "exato"
+    ],
+    [
+     76.3,
+     117.75,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: antes do início só há comandos para a paciente durante a demonstração (\"Olhando aqui, isso, relaxa, começou, sorri bastante?\"); \"A gente vai mostrar a técnica de aplicação para essa pálpebra aqui.\" abre o assunto sozinha"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8865.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8865.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/5- Orbiculares e nasal no espasmo facial.mp4",
+   "titulo": "Orbiculares e nasal no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     120.833,
+     205.85,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     153.7,
+     154.19
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: a fala anterior fecha o vídeo 4 (\"...usei quase uma unidade por ponto, pode relaxar um pouquinho, esses pontinhos mais chatinhos acabaram, tá?\"); \"Agora eu [vou] fazer uma toxina como se fosse normal.\" abre a etapa seguinte sem depender dela"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8866.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8866.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/6- Frontal e glabela no espasmo facial.mp4",
+   "titulo": "Frontal e glabela no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.6,
+     33.36,
+     "exato"
+    ],
+    [
+     64.2,
+     116.45,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     11.6,
+     12.66
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: termina em \"Fechou, relaxa.\", no fim da aplicação do frontal e do próprio bruto (116,5 s)"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8867p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8867p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/7- Mentoniano no espasmo facial.mp4",
+   "titulo": "Mentoniano no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     28.55,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: termina na demonstração anunciada \"E agora, consegue ver que ela contrai aqui esse lado?\", com a contração mostrada inteira (26 a 28 s); a fala seguinte, \"Recomeça aqui e vamos pra cá.\", já passa para outra região"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8868f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8868f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d2/8- Platisma no espasmo facial.mp4",
+   "titulo": "Platisma no espasmo facial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.6,
+     30.675,
+     "exato"
+    ],
+    [
+     36.6,
+     63.375,
+     "exato"
+    ],
+    [
+     147.2,
+     164.4,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\b[Mm]odo esquerdo\\b",
+     "o olho esquerdo"
+    ],
+    [
+     "\\b[Zz]eumin\\b",
+     "Xeomin"
+    ],
+    [
+     "\\b[Ss]ubar superficial\\b",
+     "supra superficial"
+    ]
+   ]
+  }
+ ]
+}

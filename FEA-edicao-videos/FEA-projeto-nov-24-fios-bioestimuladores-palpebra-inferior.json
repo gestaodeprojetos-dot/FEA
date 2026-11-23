@@ -1,0 +1,118 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/b24/IMG_9409.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/tr/IMG_9409.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/261c0d7a-f383-5cde-b6d6-ea213313dba2/scratchpad/out/n24/1- Fios bioestimuladores na pálpebra inferior.mp4",
+   "titulo": "Fios bioestimuladores na pálpebra inferior",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     7.7,
+     78.2,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b100% cento\\b",
+     "100%"
+    ],
+    [
+     "\\b[Pp]olielilático\\b",
+     "polilático"
+    ]
+   ],
+   "silenciar": [
+    [
+     77.88,
+     78.2
+    ]
+   ],
+   "remover_legenda": [
+    [
+     7.7,
+     11.2
+    ]
+   ]
+  }
+ ]
+}

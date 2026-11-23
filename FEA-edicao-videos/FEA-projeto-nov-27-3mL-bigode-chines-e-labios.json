@@ -1,0 +1,313 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_9426.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_9426.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/n27/1- Bigode chinês com pouca quantidade.mp4",
+   "titulo": "Bigode chinês com pouca quantidade",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.98,
+     31.35,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ],
+    [
+     "\\bjá gosta do que eu\\b",
+     "já gosto do que eu"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: termina em \"já gosta do que eu tô vendo.\" com a modelagem com gaze concluída (31 s do bruto); a fala seguinte, 1,8 s depois, é a chamada \"Agora a gente vai para um detalhezinho aqui.\", que abre outra área"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_9428.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_9428.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/n27/2- Pertuito e cânula no preenchimento labial.mp4",
+   "titulo": "Pertuito e cânula no preenchimento labial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.1,
+     24.7,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Cc]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bplatismo\\b",
+     "platisma"
+    ],
+    [
+     "\\bcorrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\bPr[óo]scero\\b",
+     "Prócero"
+    ],
+    [
+     "\\bpolielilático\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\biminência\\b",
+     "eminência"
+    ],
+    [
+     "\\b2mlzinho\\b",
+     "2 mL"
+    ],
+    [
+     "\\bEntão ela não\\b",
+     "Ela não"
+    ],
+    [
+     "\\bdeixar o chão\\b",
+     "pode relaxar"
+    ],
+    [
+     "\\b02, mL 03\\b",
+     "0,2 mL, 0,3"
+    ],
+    [
+     "\\bVzinho\\b",
+     "V-zinho"
+    ],
+    [
+     "\\bnesse lab o\\b",
+     "nesse lábio o"
+    ],
+    [
+     "\\bdois unidades\\b",
+     "duas unidades"
+    ],
+    [
+     "\\bmas menos média\\b",
+     "mas, em média,"
+    ]
+   ],
+   "zoom": [
+    [
+     12.35,
+     13.85,
+     1.8,
+     0.45,
+     0.28
+    ],
+    [
+     14.85,
+     15.95,
+     1.8,
+     0.45,
+     0.3
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: \"Tá meio durinha.\" (0 a 0,9 s do bruto) é comentário solto antes da 1ª frase técnica; \"Faço o pertuito no ponto mais alto\" não depende dele",
+    "fim": "revisão 23/11: termina em \"produzido no Canadá.\" (frase completa, respiro de 0,58 s, 'Que' entra em 24,84 s, medido no áudio); o resto do bruto é a frase comercial \"Que realmente é um produto fantástico\" e uma frase que o bruto corta no meio (\"...o resultado que ela já tem\"), então não há frase completa depois"
+   }
+  }
+ ]
+}
