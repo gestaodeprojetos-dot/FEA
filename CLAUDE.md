@@ -596,3 +596,7 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 3. Nunca inventar preço, data, nome de pessoa ou número de aluno, perguntar ou pedir a fonte.
 4. Se o projeto envolver ActiveCampaign ou funil de email, perguntar se já existe documento ou URL de estratégia publicado antes de recriar do zero.
 5. Se for criar ou editar tarefa no ClickUp, aplicar a regra de data de início e vencimento obrigatórios antes de qualquer outra coisa.
+- **Cabeçalho do rascunho (Keila, 23/11):** todo rascunho no Gestão FEA leva número, assunto e setor no cabeçalho.
+- **Demanda com ClickUp (Keila, 23/11):** toda demanda ao time vai com a tarefa no ClickUp, com data final, e o link na mensagem.
+- **Ronda das 8h por projeto (Keila, 23/11):** todo dia às 8h, ronda geral de cada projeto (backlog + conversas internas), em mensagens individuais por projeto.
+- **Copy encerra 23h59 (Adri, 23/11):** tarefas de copy no ClickUp com vencimento às 23h59 do dia de entrega.

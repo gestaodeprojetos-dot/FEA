@@ -19,6 +19,8 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Palavra "mexer" proibida (Keila, 23/11): usar trabalhar, executar, operacionalizar.
 - Palavra "coisa" proibida (Keila, 23/11): usar tarefa, documento, planilha, informação, ferramenta.
 - "para", nunca "pra"; sem travessão; linha em branco entre itens; 🏻 nos grupos, 🏾 só em copy; "envio", nunca "mando".
+- (Keila, 23/11) Todo rascunho no Gestão FEA leva cabeçalho com número, assunto e setor (ex.: "252c · Correção das páginas de Zoom · WEB").
+- (Keila, 23/11) Toda demanda ao time vai com tarefa no ClickUp (com data final) e o link na mensagem.
 - Saudação só na primeira mensagem do dia para cada pessoa.
 - Mensagem ao time sempre educada e calorosa (Gabi, 23/11): "Oii X, bom dia, tudo bem?" + pedido com contexto + "por favor". Nunca seca.
 
@@ -55,6 +57,9 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Informação nova atualiza briefing, planilhas, ClickUp e docs; mostrar onde.
 - Nunca criar planilha ou documento novo sem ok. Brasil e Latam andam juntos. Nunca citar outros projetos.
 - Áudio com várias orientações vira lista "Anotado do seu áudio".
+
+- (Keila, 23/11) Ronda geral dos projetos todo dia às 8h (backlogs + conversas internas do Gestão FEA), uma mensagem por projeto.
+- (Adri, 23/11) Tarefas de copy no ClickUp encerram às 23h59 do dia de entrega.
 
 ## 7. Luca
 - Prioridade máxima em qualquer grupo; tudo dele vem na hora ao Gestão FEA com resposta pronta.
