@@ -1,6 +1,6 @@
 # FEA · Padrões de operação de lançamentos (para todo Claude que mexe no ClickUp, Drive e planilhas)
 
-Versão de 19/11/2026. Fonte: regras que a Keila definiu e que o Claude Code segue (skills `fea-operacao-lancamentos`, `fea-distribuir-datas` e `fea-clickup-ronda`). Quando houver dúvida entre este documento e o que já está feito, **copiar o padrão de um lançamento recente que está certo** (modelo atual: FEA-MTB 11/26) em vez de inventar.
+Versão de 23/11/2026. Fonte: regras que a Keila definiu e que o Claude Code segue (skills `fea-operacao-lancamentos`, `fea-distribuir-datas` e `fea-clickup-ronda`). Quando houver dúvida entre este documento e o que já está feito, **copiar o padrão de um lançamento recente que está certo** (modelo atual: FEA-MTB 11/26) em vez de inventar.
 
 ## 0. Regras de ouro
 
@@ -21,7 +21,7 @@ Versão de 19/11/2026. Fonte: regras que a Keila definiu e que o Claude Code seg
 
 **Toda tarefa é subtarefa da mãe da área, na sprint certa.** Nunca deixar tarefa solta no topo da lista. Se a sprint não tem a mãe daquela área, criar a mãe primeiro e depois a subtarefa.
 
-**Toda subtarefa precisa de:** data de início (8h) e prazo (18h), responsável, descrição com o lançamento, o link do briefing e do Drive, e o que entregar. Tarefa de criativo para o Leo leva a linha `Pasta para salvar:` com o link da pasta ESTÁTICOS da fase.
+**Toda subtarefa precisa de:** data de início (8h) e prazo (18h), responsável e descrição **enxuta**, só com três linhas: `Briefing:` (link), `Referência:` (peça ou pasta específica do lançamento anterior, se houver) e `Pasta para salvar:` com a **subpasta exata** da entrega, nunca a pasta geral (ingresso em 2. ARTES > 6. INGRESSO, capa do grupo em 2. ARTES > 1. WHATSAPP, imagens de API em 1. WHATSAPP > IMAGENS API, capa de formulário em 5. FORMS, estáticos em 4. TRÁFEGO > CRIATIVOS PRONTOS > fase > ESTÁTICOS, links na aba certa da planilha de links úteis). Nada de parágrafo de contexto, "espelhado de", datas a confirmar ou Drive geral.
 
 **Responsáveis padrão:** Copy: Adriane Möbbs e Matheus van der Ham · Design: Leo Quirino (só criativo novo, criado do zero; ajuste de data em criativo reaproveitado é do Claude) · Páginas e redirecionamentos: André Vivas · Automação: Equipe IAutomate · Tráfego e UTMs: Matheus Saar · Zoom das lives: Gabriela Borges · Gestão: Gabriela Borges ou Keila (perguntar).
 
