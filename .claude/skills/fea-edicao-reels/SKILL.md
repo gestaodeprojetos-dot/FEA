@@ -29,12 +29,16 @@ Os títulos são **exatamente** os da imagem (ler com `read_file_content` do Dri
 - **Limite de 180 s vale para o conteúdo**; o total com o CTA de 39,5 s pode passar de 3 min: listar no PR e entregar mesmo assim.
 - Chamada falada pelo Dr. para outro curso, ebook, live ou "comenta X" continua saindo do conteúdo: o CTA é o da masterclass.
 
-## ESTOQUE dez/jan SEM CTA (Keila, 16/11/2026)
+## ESTOQUE dez/jan SEM CTA e abertura com o Dr. já falando (Keila, 16/11/2026)
 
-Lote de estoque para dezembro e a 1ª semana de janeiro: vídeos **sem CTA** (fade_final 0,3, `sem_cta`), prontos para receber o CTA depois com `fea_aplicar_cta_entregue.py`. Conteúdo de **no máximo 135 s** (para caber qualquer CTA sem passar de 3:00). **Abrir com o Dr. já falando**: a voz começa entre 0,25 e 0,60 s (mirar 0,40 s, `fea_revisar.onset_voz`); bruto que começa no meio da fala abre na próxima frase técnica forte. Aprendido nas pastas 25 a 27 de novembro:
-- **Conferir duplicata entre pastas brutas antes de editar** (MD5 pelo `fea_drive.py md5`): o IMG_9409 da pasta "2mL e botox" era o mesmo arquivo da pasta "Fios filler pálpebra inferior", já entregue por outra sessão como "24-".
-- **Não silenciar som de fala no fim para ganhar respiro**: a revisora acusa "voz falhando" se o bruto tem voz forte na janela muda (pasta 26, vídeo 3: o mudo caía no começo da palavra seguinte). Terminar na pausa real anterior com `"exato"`; mudo no fim só sobre ruído fraco.
-- Medir o fim de cada vídeo no áudio (janelas de 10 a 50 ms) antes do render: o `encaixar_cortes` deixava respiro de 0,07 a 0,19 s em 6 de 8 vídeos.
+- **Estoque**: lotes marcados como estoque saem SEM CTA (`"sem_cta": true`, `"fade_final": 0.3`), com **conteúdo de no máximo 135 s**, para receber qualquer CTA depois com `fea_aplicar_cta_entregue.py` sem passar de 3:00.
+- **Abertura**: o vídeo começa **0,25 a 0,40 s antes do ataque da voz** (a revisora exige pelo menos 0,30 s e o alvo de conferência é até 0,60 s), sem silêncio inicial e sem cortar a 1ª palavra. `python3 FEA-edicao-videos/fea_bordas.py projeto.json [--gravar]` mede o ataque no áudio (janelas de 10 ms, mesmo critério do `onset_voz`) a partir do início escolhido e põe o 1º trecho em (ataque - 0,35 s), passando os pontos internos pelo `encaixar_cortes` e marcando tudo como `"exato"`. O fim que ele sugere é só referência: conferir cada final no áudio (fala colada, ruído, fim do bruto) e ajustar à mão.
+- **Bruto que já começa com o Dr. falando a frase-gancho** (sem 0,30 s antes da voz): se a melhor abertura é essa frase, `bash FEA-edicao-videos/fea_pad_inicio.sh FFMPEG BRUTO.MOV TR.json 0.37 BRUTOp.mov TRp.json` cria um bruto intermediário com 0,37 s de 1º quadro congelado e silêncio (H.264 CRF 10, PCM) e a transcrição deslocada; o quadro parado fica embaixo do título. Usado nas pastas 21-9 e 21-12 de novembro.
+- Interjeição colada antes do gancho ("Ó, Isso aqui..."): `silenciar` só o pedaço da interjeição antes do início, se ela estiver separada da palavra seguinte por pausa; se estiver colada ou se não der para saber onde começa a palavra (22-3, "Ó, agulha inteira"), deixar a interjeição (não aparece na legenda).
+- Aprendido nas pastas 25 a 27 de novembro:
+  - **Conferir duplicata entre pastas brutas antes de editar** (MD5 pelo `fea_drive.py md5`): o IMG_9409 da pasta "2mL e botox" era o mesmo arquivo da pasta "Fios filler pálpebra inferior", já entregue por outra sessão como "24-".
+  - **Não silenciar som de fala no fim para ganhar respiro**: a revisora acusa "voz falhando" se o bruto tem voz forte na janela muda (pasta 26, vídeo 3: o mudo caía no começo da palavra seguinte). Terminar na pausa real anterior com `"exato"`; mudo no fim só sobre ruído fraco.
+  - Medir o fim de cada vídeo no áudio (janelas de 10 a 50 ms) antes do render: o `encaixar_cortes` deixava respiro de 0,07 a 0,19 s em 6 de 8 vídeos.
 
 ## SEM CTA (histórico, valeu de 09/11 a 12/11/2026)
 
