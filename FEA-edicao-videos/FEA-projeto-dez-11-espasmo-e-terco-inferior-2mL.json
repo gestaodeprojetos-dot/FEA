@@ -15,7 +15,7 @@
    "manter": [
     [
      0.1,
-     30.533,
+     39.67,
      "exato"
     ]
    ],
@@ -144,7 +144,10 @@
      "\\bbolos\\b",
      "bolus"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "fim": "Termina em 'esse vai ser nosso planejamento.' A fala seguinte ('A gente vai usar aqui, no caso dela, Ami Define e Lift') é a marca, cortada até a Keila confirmar a grafia (PR #112)."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9239.MOV",
@@ -606,11 +609,15 @@
      "\\bbolos\\b",
      "bolus"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "Antes, só 'Para dar um ajustezinho nesse mento, eu vou usar o Ami Lift, que ele tem capacidade de projeção, então ó' (marca cortada até a grafia ser confirmada, fala contínua sem respiro para cortar só a marca); 'Vem aqui bem nesse buraquinho, que vai dar uma afinadinha no rosto dela' não depende dela.",
+    "fim": "'Olha, 0,2 e a gente consegue isso.' fecha o mento; depois de 0,7 s vem só instrução para a paciente ('vira pra mim pra cá, vou refinar, consegue vir?') e o bruto acaba em 39,5 s, sem o refinamento."
+   }
   },
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9242.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9242.json",
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9242f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9242f.json",
    "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d11/5- Toxina no espasmo: pontos de aplicação.mp4",
    "titulo": "Toxina no espasmo: pontos de aplicação",
    "titulo_origem": "inventado",
@@ -621,7 +628,7 @@
    "manter": [
     [
      22.067,
-     95.7,
+     98.85,
      "exato"
     ]
    ],
@@ -756,7 +763,10 @@
      27.5,
      29.0
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Maravilha!' fecha a etapa anterior (outro vídeo); 'E agora os pontos mais complexos.' abre esta."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9243.MOV",
@@ -900,7 +910,10 @@
      "\\bbolos\\b",
      "bolus"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Relaxa,' (3,2 s antes) é instrução para a paciente."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b11/IMG_9244p.mov",
@@ -1058,7 +1071,7 @@
    "fade_final": 0.3,
    "manter": [
     [
-     2.833,
+     1.3,
      20.867,
      "exato"
     ],
@@ -1193,7 +1206,11 @@
      "\\bbolos\\b",
      "bolus"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Relaxa.' (0 a 1,0 s) é instrução para a paciente; o vídeo abre em 'Então, olha só, vou chegar aqui...'.",
+    "fim": "'dá uma segurada a mais.' fecha a aplicação nasal; 'acho que não tem problema' é cortado pelo fim do bruto (67 dB no último quadro)."
+   }
   }
  ]
 }

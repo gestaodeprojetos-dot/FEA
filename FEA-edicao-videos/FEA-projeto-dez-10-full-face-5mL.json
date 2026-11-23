@@ -3,8 +3,8 @@
  "fontsdir": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/fonts",
  "videos": [
   {
-   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8949.MOV",
-   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_8949.json",
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8949f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_8949f.json",
    "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d10/1- Planejamento 5mL.mp4",
    "titulo": "Planejamento 5mL",
    "titulo_origem": "imagem",
@@ -21,6 +21,11 @@
     [
      58.6,
      60.233,
+     "exato"
+    ],
+    [
+     66.0,
+     68.15,
      "exato"
     ]
    ],
@@ -158,7 +163,7 @@
     ],
     [
      34.8,
-     63.767,
+     91.2,
      "exato"
     ]
    ],
@@ -276,8 +281,15 @@
     [
      55.1,
      56.3
+    ],
+    [
+     63.3,
+     63.8
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "fim": "Termina com a anestesia do mentoniano concluída (agulha sai em 90,8 s do bruto, corte em 91,2 s). O 'Vamos lá' de 92,9 s chama a etapa seguinte, que não está neste bruto."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8952.MOV",
@@ -410,7 +422,10 @@
      "\\besse é uma olheira",
      "essa é uma olheira"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Vamos ver como é que vai ser a entrega aqui, começar pelas olheiras' (0 a 3,2 s) é aquecimento, separado por 5,7 s de pausa. 'Um dos pontos principais desse caso clínico está bem fundo' é frase completa e o tema (olheiras) vem do título."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8953p.mov",
@@ -809,7 +824,10 @@
      "\\bconsegue fazer tanto aí\\b",
      "consegue fazer tanto"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'Olha como com tão pouco a gente consegue fazer tanto.' fecha a mandíbula. A fala seguinte ('E aí, já que eu estou ousado mesmo, não vou parar aqui') anuncia outro procedimento, fora deste bruto (acaba em 78 s)."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8957.MOV",
@@ -945,7 +963,10 @@
      0.567,
      0.64
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "O bruto começa com uma palavra cortada (70 dB no 1º quadro) e a interjeição 'ó' (silenciada); 'Ponto mais alto, não é esse aqui?' é o início da fala. A transcrição da janela escreve a interjeição como 'Ainda aqui'."
+   }
   },
   {
    "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b10/IMG_8958.MOV",
@@ -1099,7 +1120,10 @@
      "\\bcódigo de barra\\b",
      "código de barras"
     ]
-   ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Essa aí é a versãozinha do lábio.' (0 a 1,6 s) fecha a etapa anterior; depois de 2,4 s de pausa, 'E agora o lábio dela é meio curtinho...' abre a etapa nova."
+   }
   }
  ]
 }
