@@ -608,3 +608,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Pedidos que mexem na organização (Keila, 23/11):** mudança de regra, prazo ou comunicação: responder só "Ok, vamos verificar internamente com a gestão e retorno." e levar à gestão. Informação (link, dúvida, pasta, vídeo) no Daily pode ser respondida direto.
 - **Dados comerciais em planilha (Keila, 23/11):** no Claude comercial, só o ok; números e análises ficam em planilha ou dash.
 - **Sem título para o time (Keila, 23/11):** mensagem enviada a alguém vai só com o @ e o texto; código/título só nos rascunhos do Gestão FEA.
+- **Diagramação de mensagens (Keila, 23/11):** links numerados quando forem vários; rótulos em negrito; saudação sozinha na 1ª linha; fechamento com emoji simpático; não repetir desculpa já dada.

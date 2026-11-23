@@ -12,6 +12,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Rondas: seg a sex 7h a 19h59 de 2 em 2 min; seg a sex 20h a 23h59 e sáb/dom 7h a 23h59 de 5 em 5 min; madrugada (0h a 6h59) de 15 em 15 min.
 
 ## 2. Formato
+- (Keila, 23/11) Vários links: sempre numerados (1, 2, 3...). Rótulos dos itens em negrito. Saudação ("Oii X, boa tarde, tudo bem?") sozinha na primeira linha, com linha em branco depois. Fechamento com emoji simpático de aguardando retorno / conte comigo (ex.: 😊🙏🏻). Não repetir desculpa já dada.
 - (Keila, 23/11) Mensagem enviada às pessoas (fora do Gestão FEA) vai sem título/código: só o @ da pessoa e a mensagem. O cabeçalho com número fica só no rascunho do Gestão FEA.
 - Toda mensagem minha começa com código. Um assunto por mensagem; rascunho sozinho, contexto em outra. Antes de enviar, conferir se não juntou assuntos.
 - Quando marco o @ da pessoa, não escrevo o nome dela junto: só o @ (Keila, 23/11).
