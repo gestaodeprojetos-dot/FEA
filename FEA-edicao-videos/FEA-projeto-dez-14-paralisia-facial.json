@@ -1062,7 +1062,7 @@
     ],
     [
      60.35,
-     98.6,
+     97.45,
      "exato"
     ]
    ],
@@ -1301,7 +1301,8 @@
     ]
    ],
    "bordas_conferidas": {
-    "inicio": "'Relaxa' (mudo) é instrução para a paciente; 'É uma quantidade menor' abre a aplicação do platisma."
+    "inicio": "'Relaxa' (mudo) é instrução para a paciente; 'É uma quantidade menor' abre a aplicação do platisma.",
+    "fim": "Termina em 'Foi.', depois da última aplicação do platisma (agulha sai em 96,8 s). A palavra seguinte (97,55 a 98,17 s) não dá para entender com segurança ('acabamos' ou 'vamos', três passadas do Whisper) e o bruto acaba em 98,66 s."
    }
   }
  ]
