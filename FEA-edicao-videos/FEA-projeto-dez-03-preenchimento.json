@@ -1,0 +1,1456 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8711f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8711f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/1- Planejamento 5mL.mp4",
+   "titulo": "Planejamento 5mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     36.6,
+     "exato"
+    ],
+    [
+     40.225,
+     51.35,
+     "exato"
+    ],
+    [
+     62.8,
+     75.21,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8713p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8713p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/2- Anestesia região temporal.mp4",
+   "titulo": "Anestesia região temporal",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     38.17,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8714.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8714.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/3- Preenchimento região temporal anterior.mp4",
+   "titulo": "Preenchimento região temporal anterior",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     15.0,
+     32.9,
+     "exato"
+    ],
+    [
+     38.5,
+     49.5,
+     "exato"
+    ],
+    [
+     53.675,
+     79.9,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: termina em \"Nossa capacidade de espalhar esse produto.\" (frase completa). A aplicação na têmpora continua até ~2:05 do bruto, mas toda a fala depois dela é conversa fora do tema (\"Bom dia.\", alunos e pacientes que vêm do Sul, cortada na edição); não há frase técnica que feche a ação. Ponto para a Keila no PR"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/bx/IMG_8716f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8716f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/4- Refinamento do arco zigomático.mp4",
+   "titulo": "Refinamento do arco zigomático",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.833,
+     22.975,
+     "exato"
+    ],
+    [
+     29.7,
+     50.26,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "para trás, [Oo]lha\\b",
+     "para trás"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     4.3,
+     4.95
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8718.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8718.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/5- Comissura labial.mp4",
+   "titulo": "Comissura labial",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.62,
+     25.6,
+     "exato"
+    ],
+    [
+     33.525,
+     40.575,
+     "exato"
+    ],
+    [
+     66.8,
+     87.467,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8720.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8720.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/6- Mento feminino.mp4",
+   "titulo": "Mento feminino",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.0,
+     44.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: o vídeo ia até 29,3 s com a cânula ainda trabalhando; agora vai até 44,3 s, com a 2ª seringa aplicada no mento e a modelagem concluída, antes de o Dr. pedir \"Clorex\". Entre 19 s e o fim não há fala (técnica). O \"Então, vamos lá.\" da transcrição em 30 s é invenção do Whisper (não há voz)"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8722.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8722.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/7- Mandíbula.mp4",
+   "titulo": "Mandíbula",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     50.933,
+     59.6,
+     "exato"
+    ],
+    [
+     0.0,
+     33.84,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     26.8,
+     27.6
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "revisão 23/11: termina em \"...0,3 do outro, só para dar aquele detalhe.\" na pausa real (33,84 s; antes havia mudo por cima de um som de 50 dB logo depois); a aplicação na mandíbula já acabou e a fala seguinte, 3 s depois, é \"Perfeito, perfeito, tudo bem?\" para a paciente. O vídeo abre no resultado (\"Olha como esticou o tecido...\"), como pede a imagem de títulos"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/b/IMG_8723.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/tr/IMG_8723.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/877b6c76-e3d6-5186-b2ec-1183a4f7a0ef/scratchpad/out/d3/8- Preenchimento do couro cabeludo.mp4",
+   "titulo": "Preenchimento do couro cabeludo",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     6.067,
+     57.08,
+     "exato"
+    ],
+    [
+     97.29,
+     100.45,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b[Hh]idroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b[Qq]uiriali[sz]\\b",
+     "Kirialys"
+    ],
+    [
+     "\\b[Ff]armesthetics\\b",
+     "Pharmaesthetics"
+    ],
+    [
+     "\\b[Nn]efertite\\b",
+     "Nefertiti"
+    ],
+    [
+     "\\b[Cc]inguiderme\\b",
+     "Singderm"
+    ],
+    [
+     "\\b[Ss]ubs?kin\\b",
+     "Subskin"
+    ],
+    [
+     "\\b[Ii]minência\\b",
+     "eminência"
+    ],
+    [
+     "\\bjaw\\b",
+     "jowl"
+    ],
+    [
+     "\\bsuco noz labial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Bb]igotinês\\b",
+     "bigode chinês"
+    ],
+    [
+     "\\b02, 03 ml\\b",
+     "0,2, 0,3 mL"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bmenton\\b",
+     "mento"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "revisão 23/11: antes do início só há \"sente, peguei ela de surpresa, mas vamos lá, ó.\" (conversa com a paciente, com o bruto já começando no meio da palavra); \"Preenchimento do couro cabeludo é interessante para fazer lifting facial...\" abre o assunto sozinha",
+    "fim": "revisão 23/11: termina em \"Olha esse contorno aqui, olha isso aqui.\" com 0,4 s de respiro ('Quem' entra em 100,98 s, medido no áudio); o que vem depois (\"Quem não sonha em ter um resultado desse\", idade da paciente, \"pode sonhar que é possível\") é promessa de resultado e saiu pela linha vermelha"
+   }
+  }
+ ]
+}
