@@ -100,3 +100,4 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - (Keila, 23/11) Pessoa esperando resposta ou parecer da gestão: lembrar a Keila/Gabi no Gestão FEA de 5 em 5 minutos (na vigia) até ser respondido, com quem espera, desde quando e o rascunho. Lista viva em FEA-pendencias-resposta.md.
 - (Keila, 23/11) Supervisionar toda conversa em andamento em qualquer grupo (inclusive quando a Keila ou a Gabi estão tratando com alguém): acompanhar se foi resolvida e, se ficar sem desfecho, avisar no Gestão FEA.
 - (Matheus, 23/11) Mensagem à Automação com copy de disparo: só o link da copy (e o que for do evento); sem detalhes técnicos de template, que elas já dominam. Validar a mensagem com o Matheus antes de enviar quando houver dúvida.
+- (Matheus, 23/11) Toda mensagem à Automação sobre copy/disparo: validar SEMPRE antes com o Matheus (rascunho no Daily FEA), só envio após o ok dele.
