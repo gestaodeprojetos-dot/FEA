@@ -46,6 +46,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Pedido discreto: cobrança no grupo sem citar quem pediu.
 
 ## 5. Conferência e fontes
+- (Keila, 23/11) Acessar e abrir todo arquivo ou link antes de compartilhar; nunca indicar link só pelo nome ou tamanho.
 - Todo link com fonte. Antes de afirmar que algo foi ou não feito, a Gabi confere.
 - Credencial enviada em grupo: não guardar nem usar; avisar a Keila e sugerir apagar e trocar.
 - Dados de alunos e leads: nunca repassar (LGPD).

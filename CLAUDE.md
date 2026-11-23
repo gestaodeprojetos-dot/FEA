@@ -600,3 +600,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Demanda com ClickUp (Keila, 23/11):** toda demanda ao time vai com a tarefa no ClickUp, com data final, e o link na mensagem.
 - **Ronda das 8h por projeto (Keila, 23/11):** todo dia às 8h, ronda geral de cada projeto (backlog + conversas internas), em mensagens individuais por projeto.
 - **Copy encerra 23h59 (Adri, 23/11):** tarefas de copy no ClickUp com vencimento às 23h59 do dia de entrega.
+- **Abrir antes de compartilhar (Keila, 23/11):** acessar e abrir todo arquivo ou link antes de enviar a qualquer pessoa.
