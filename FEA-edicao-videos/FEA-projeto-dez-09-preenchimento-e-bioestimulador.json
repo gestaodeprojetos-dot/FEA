@@ -1,0 +1,2020 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/trab/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8734p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8734p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/1- Preenchimento de têmpora.mp4",
+   "titulo": "Preenchimento de têmpora",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     12.12,
+     "exato"
+    ],
+    [
+     19.125,
+     61.925,
+     "exato"
+    ],
+    [
+     88.725,
+     116.725,
+     "exato"
+    ],
+    [
+     122.27,
+     123.225,
+     "exato"
+    ],
+    [
+     140.125,
+     144.133,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8735p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8735p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/2- Comissura labial e pré-jowl.mp4",
+   "titulo": "Comissura labial e pré-jowl",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.3,
+     16.37,
+     "exato"
+    ],
+    [
+     23.37,
+     93.2,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'Olha isso como melhorou a linha.' mostra o resultado; depois vem 'puxa vida, espelho pra ela ver' (espelho sai pela regra)"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8736p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8736p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/3- Preenchimento de glabela com cânula.mp4",
+   "titulo": "Preenchimento de glabela com cânula",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     45.17,
+     "exato"
+    ],
+    [
+     46.67,
+     103.333,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/b9/IMG_8739_8740.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/tr/IMG_8739_8740.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/4- Bioestimulador no pescoço.mp4",
+   "titulo": "Bioestimulador no pescoço",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.8,
+     56.025,
+     "exato"
+    ],
+    [
+     58.425,
+     77.1,
+     "exato"
+    ],
+    [
+     77.9,
+     89.867,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8742pf.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8742pf.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/5- Planejar junto com o paciente.mp4",
+   "titulo": "Planejar junto com o paciente",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     11.15,
+     38.49,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "a 1ª fala do bruto ('...formato de aplicação para face, 100%, mas acho que eu não podia deixar de dar uma atenção em algo que para ela era muito importante') chega truncada: o Whisper ouve só 'o formato de aplicação' e a frase fica sem começo; abre em 'Se eu pudesse usar tudo no pescoço, usava tudo no pescoço.', frase completa depois de 0,6 s de pausa"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/b9/IMG_8744.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/tr/IMG_8744.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/6- Crown lifting com bioestimulador.mp4",
+   "titulo": "Crown lifting com bioestimulador",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     30.933,
+     63.42,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'...colocar um pouquinho desse polilático.' fecha a aplicação; depois só conversa com a paciente ('Mas ainda eu não tenho ruga aí, não, né?')"
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8745p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/pad/IMG_8745p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/bb3c4f90-cefc-5a53-9f63-ee50838e7e63/scratchpad/out/d9/7- Full face com 6mL.mp4",
+   "titulo": "Full face com 6mL",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.033,
+     21.07,
+     "exato"
+    ],
+    [
+     69.77,
+     87.12,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Pp]rédio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\b[Mm]andíbulo\\b",
+     "mandíbula"
+    ],
+    [
+     "\\b[Ss]ingderm\\b",
+     "Singderm"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b02 ?m[lL]\\b",
+     "0,2 mL"
+    ],
+    [
+     "\\b(?:[Rr]aya|[Rr]aia|[Rr]aio)[ -]?[Ff]ilha\\b",
+     "Hyafilia"
+    ],
+    [
+     "\\bUFACE\\b",
+     "full face"
+    ],
+    [
+     "\\bsuco nasolabial\\b",
+     "sulco nasolabial"
+    ],
+    [
+     "\\b[Tt]indle\\b",
+     "Tyndall"
+    ],
+    [
+     "\\bsapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bhiper diluída\\b",
+     "hiperdiluída"
+    ],
+    [
+     "\\b[Pp]icadinho\\b",
+     "picadinha"
+    ],
+    [
+     "\\bG linha\\b",
+     "G'"
+    ],
+    [
+     "\\bde gelinha\\b",
+     "de G'"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bum ml\\b",
+     "1 mL"
+    ],
+    [
+     "\\bda sacovinha\\b",
+     "dessa covinha"
+    ],
+    [
+     "\\belas tem\\b",
+     "elas têm"
+    ],
+    [
+     "\\bfica, mais fácil\\b",
+     "fica mais fácil"
+    ],
+    [
+     "\\b[Ss]orrent\\b",
+     "sorri"
+    ],
+    [
+     "\\bé uma setter\\b",
+     "é o masseter"
+    ],
+    [
+     "\\bpertudes\\b",
+     "pertuitos"
+    ],
+    [
+     "\\b[Uu]ma Uma\\b",
+     "uma, uma"
+    ],
+    [
+     "\\b[Uu]ma Um unidade\\b",
+     "uma, uma unidade"
+    ],
+    [
+     ", Uma\\b",
+     ", uma"
+    ],
+    [
+     ", Picadinha\\b",
+     ", picadinha"
+    ],
+    [
+     "\\. maravilha\\b",
+     ", maravilha"
+    ],
+    [
+     "\\bno meio E\\b",
+     "no meio e"
+    ],
+    [
+     "\\b[Nn]uvia\\b",
+     "Neauvia"
+    ],
+    [
+     "\\bBDD\\b",
+     "BDDE"
+    ],
+    [
+     "\\bbagente\\b",
+     "agente"
+    ],
+    [
+     "\\banestesihei\\b",
+     "anestesiei"
+    ],
+    [
+     "\\bpolietileno glicol\\b",
+     "polietilenoglicol"
+    ],
+    [
+     "\\bL -prolina\\b",
+     "L-prolina"
+    ],
+    [
+     "\\bautoimune\\b",
+     "autoimunes"
+    ],
+    [
+     "\\b22G 70 ?mm\\b",
+     "22x70"
+    ],
+    [
+     "\\b[Hh]idroxapatita\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\btempra\\b",
+     "têmpora"
+    ],
+    [
+     "\\b[Ee]sculptor\\b",
+     "Sculptra"
+    ],
+    [
+     "\\bpolilático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\bpoliel[ií]?l?ático\\b",
+     "poli-L-lático"
+    ],
+    [
+     "\\b[Pp]redio\\b",
+     "pré-jowl"
+    ],
+    [
+     "\\bzygomático\\b",
+     "zigomático"
+    ],
+    [
+     "\\bdivulcionar\\b",
+     "divulsionar"
+    ],
+    [
+     "\\bregulazinha\\b",
+     "reguazinha"
+    ],
+    [
+     "\\b0 ,2\\b",
+     "0,2"
+    ],
+    [
+     "\\bbiofiller\\b",
+     "biofiller"
+    ]
+   ]
+  }
+ ]
+}
