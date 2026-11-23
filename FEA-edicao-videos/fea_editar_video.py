@@ -2,7 +2,9 @@
 """FEA: edição automática de vídeos verticais (Reels) no padrão da equipe.
 
 Uso:
-    python3 fea_editar_video.py projeto.json [--previa | --entrega | --so-legenda] [trecho_do_nome ...]
+    python3 fea_editar_video.py projeto.json [--previa | --entrega | --so-legenda] [--cta CTA.mp4 --transicao 0.5] [trecho_do_nome ...]
+
+--cta cola o CTA no mesmo render, com crossfade de vídeo e áudio antes dele (use o fea_render_com_cta.py).
 
 --so-legenda gera só o .ass (rápido), para ler e conferir o texto antes do render.
 
@@ -157,8 +159,15 @@ def quebrar_linhas(texto):
     palavras = texto.split()
     melhor, dif = texto, 10 ** 9
     for i in range(1, len(palavras)):
+        # quantidade nunca quebra de linha no meio ("2" numa linha e "mL" na outra)
+        if eh_unidade(palavras[i]) and eh_numero(palavras[i - 1]) or \
+                palavras[i].strip(",").lower() in ("e", "vírgula", "meio", "meia") and eh_numero(palavras[i - 1]) or \
+                eh_numero(palavras[i]) and palavras[i - 1].lower() in ("e", "vírgula") and i > 1 and eh_numero(palavras[i - 2]):
+            continue
         l1, l2 = " ".join(palavras[:i]), " ".join(palavras[i:])
         d = abs(len(l1) - len(l2)) + (0 if len(l1) <= len(l2) + 4 else 3)
+        # linha não termina em preposição ou artigo ("1,2 mL de / lidocaína")
+        d += 8 if re.sub(r"[^\w]", "", palavras[i - 1]).lower() in LIGACAO else 0
         if d < dif:
             melhor, dif = l1 + r"\N" + l2, d
     return melhor
@@ -310,6 +319,9 @@ CORRECOES = [
     (r"\b(?:acil|acel)[uoeé]r[oô]nico\b", "ácido hialurônico"),
     (r"\b[Ww]i-?[Ff]i(zinho)?\b", r"Wi-Fi\1"), (r"\b[Nn]efertit[ei]\b", "Nefertiti"),
     (r"\b[Ll]etbo\b", "Letybo"),
+    # lote 07/10/2026 ("4 unidades de letboa", "dilete boa")
+    (r"\b[Ll]etboa\b", "Letybo"), (r"\bdilete ?boa\b", "de Letybo"),
+    (r"\b[Ff]ace do (músculo )?frontal\b", r"fáscia do \1frontal"),
     (r"\b(?:[Hh]ip|[Pp]i)tose\b", "ptose"), (r"\b[Hh]iptose\b", "ptose"),
     # Biofils: marca de fios (Keila, 03/10/2026); o Whisper ouve "biofios"
     (r"\b[Bb]io ?f[ií](?:l|o)s\b", "Biofils"), (r"\b[Bb]io ?fil\b", "Biofils"),
@@ -361,6 +373,101 @@ def numerar_enumeracao(palavras):
     return palavras
 
 
+# Quantidade = número + unidade ("2 mL", "meio mL", "1,5 mL", "1 e meio mL", "duas unidades", "20 mg",
+# "1%"). Nunca se separa na legenda (Keila, 05/10/2026, pasta 2 vídeo 2: o "2" entrava antes de o Dr.
+# falar, no fim do bloco anterior, e quando ele falava aparecia só "mL"). O Whisper dá ao número um
+# tempo adiantado; a unidade e a voz medida no áudio é que dizem quando a quantidade é falada.
+NUM_EXTENSO = set(NUMEROS) | {"uma", "duas", "meio", "meia", "zero", "treze", "quatorze", "catorze", "quinze",
+                              "dezesseis", "dezessete", "dezoito", "dezenove", "vinte", "trinta", "quarenta",
+                              "cinquenta", "cem", "cento", "duzentos", "duzentas"}
+UNIDADE_RX = re.compile(r"^(?:m[lL]|mL|ML|mg|mgs|U|UI|ui|%|cm|mm|mililitros?|miligramas?|unidades?|"
+                        r"centímetros?|milímetros?|seringas?|ampolas?)$")
+
+
+def _chave_qtd(w):
+    return re.sub(r"[^\w,%]", "", w).strip(",").lower() if w.strip() != "%" else "%"
+
+
+def eh_numero(w):
+    k = _chave_qtd(w)
+    return bool(re.fullmatch(r"\d+(?:[.,]\d+)?%?", k)) or k in NUM_EXTENSO
+
+
+def eh_unidade(w):
+    k = re.sub(r"[^\w%]", "", w)
+    return bool(UNIDADE_RX.match(k)) or bool(UNIDADE_RX.match(k.lower()))
+
+
+def juntar_quantidades(palavras, db=None, limiar=None, passo=0.05):
+    """Junta número e unidade num item só ("2" + "mL" = "2 mL", "1" + "e" + "meio" + "mL"), com o
+    início ancorado no tempo real da fala: quando o número vem colado na unidade na transcrição, vale
+    o tempo do número; quando vem descolado (tempo adiantado do Whisper), o início é a voz medida no
+    áudio logo antes da unidade, no máximo o tempo de falar o número."""
+    saida, i = [], 0
+    while i < len(palavras):
+        p = palavras[i]
+        if not eh_numero(p["w"]):
+            saida.append(p)
+            i += 1
+            continue
+        j = i
+        # "1 e meio", "um vírgula cinco", "0 ,2"
+        while j + 2 < len(palavras) and _chave_qtd(palavras[j + 1]["w"]) in ("e", "vírgula", "virgula") \
+                and eh_numero(palavras[j + 2]["w"]) and palavras[j + 2]["s"] - palavras[j]["e"] < 1.0:
+            j += 2
+        u = j + 1
+        # número sem voz no próprio tempo (Whisper adiantou ou esticou: "3" em 45,3 s e "unidades" em
+        # 49,4 s, fala real "3 unidades" em 49,2 s; lote de 07/10/2026) aceita a unidade até 6 s depois
+        folga = 2.5
+        if db is not None and u < len(palavras):
+            k0, k1 = int(p["s"] / passo), max(int(p["s"] / passo) + 1, int(palavras[j]["e"] / passo))
+            if k1 <= len(db) and sum(db[x] >= limiar for x in range(k0, k1)) < 0.3 * (k1 - k0):
+                folga = 6.0
+        if u >= len(palavras) or not eh_unidade(palavras[u]["w"]) or palavras[u]["s"] - palavras[j]["e"] > folga:
+            saida.append(p)
+            i += 1
+            continue
+        fim = u
+        # "2 mL e meio"
+        if fim + 2 < len(palavras) and _chave_qtd(palavras[fim + 1]["w"]) == "e" \
+                and _chave_qtd(palavras[fim + 2]["w"]) in ("meio", "meia") and palavras[fim + 2]["s"] - palavras[fim]["e"] < 0.8:
+            fim += 2
+        grupo = palavras[i:fim + 1]
+        un = palavras[u]
+        texto = " ".join(re.sub(r"[.?!]+$", "", g["w"].strip()) if k < len(grupo) - 1 else g["w"].strip()
+                         for k, g in enumerate(grupo))
+        # tempo de falar o número: "dois" ~0,4 s; "zero vírgula três" ~0,85 s
+        dur_num = 0.0
+        for g in palavras[i:u]:
+            k = _chave_qtd(g["w"])
+            dur_num += 0.15 if k in ("e", "vírgula", "virgula") else \
+                0.4 + 0.45 * len(re.findall(r"[.,]\d", k)) + 0.1 * max(0, len(re.sub(r"\D", "", k)) - 2)
+        dur_num = min(1.4, dur_num)
+        ant_e = saida[-1]["e"] if saida else -9.0
+        s = p["s"]
+        if un["s"] - palavras[j]["e"] > 0.25 or un["s"] - p["s"] > dur_num + 0.6:
+            # número descolado da unidade (tempo adiantado ou esticado pelo Whisper): o início é
+            # a voz que volta depois do último silêncio antes da unidade
+            s = un["s"] - dur_num
+            if db is not None:
+                k1 = int(un["s"] / passo)
+                k0 = max(0, int((un["s"] - dur_num - 0.3) / passo))
+                mudo = [x for x in range(k0, k1) if db[x] < limiar - 6]
+                ult = None
+                for x in mudo:
+                    if x + 1 < k1 and x - 2 >= 0 and all(db[y] < limiar - 6 for y in range(x - 2, x + 1)):
+                        ult = x
+                if ult is not None:
+                    s = (ult + 1) * passo - 0.05
+            s = max(s, ant_e)
+        novo = dict(p, w=(" " if p["w"].startswith(" ") else "") + texto, s=min(s, un["s"]),
+                    e=grupo[-1]["e"], e0=grupo[-1].get("e0", grupo[-1]["e"]), ini=p.get("ini", False),
+                    qtd=True)
+        saida.append(novo)
+        i = fim + 1
+    return saida
+
+
 def corrigir(texto, extras=()):
     for padrao, novo in list(CORRECOES) + [tuple(x) for x in extras]:
         texto = re.sub(padrao, novo, texto)
@@ -378,13 +485,14 @@ def pontuar(texto):
     # antes de "né" (marcador) e de "tá"/"viu" só no fim da frase ("..., tá?"): no meio, "tá" é o
     # verbo ("a minha agulha tá de cima para baixo" ficava "agulha, tá de cima")
     texto = re.sub(r"(\w) (né)([.,?!\s]|$)", r"\1, \2\3", texto)
-    texto = re.sub(r"(\w) (tá|viu)([.,?!])", r"\1, \2\3", texto)   # sem "$": "a gente ainda tá / começando"
+    # depois de "que"/"como", "tá" é o verbo ("que lindo que tá", lote 30 de outubro): sem vírgula
+    texto = re.sub(r"\b(?!(?:que|como)\b)(\w+) (tá|viu)([.,?!])", r"\1, \2\3", texto)   # sem "$": "a gente ainda tá / começando"
     # evitar vírgula duplicada
     texto = re.sub(r",\s*,", ",", texto)
     return texto
 
 
-NOMES_PROPRIOS = {"Neuramis", "Revanesse", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
+NOMES_PROPRIOS = {"Instagram", "Stylage", "Subskin", "Neuramis", "Revanesse", "Rennova", "Plus", "Lido", "Neauvia", "Letybo", "Vietri", "Yvoire", "Seryntox", "Rai", "Raina", "Rainá", "João", "Pithon",
                   "Nefertiti", "Botox", "Volumax", "Biogelis", "Subskin", "Perfectha", "Dysport", "Kiss", "Wi", "Dani",
                   "Kirialys", "Restylane", "Biofils", "Volyme", "Contour", "Nike", "FEB", "FEA", "FEP", "FEF", "DAO", "PLA"}
 
@@ -469,7 +577,29 @@ def formatar_titulo(v):
     return titulo
 
 
-def gerar_ass(v, palavras, duracao, caminho):
+ANTECIPA = 0.15   # legenda entra um pouco antes da voz: entrar no instante exato já parece atrasado
+
+
+def gerar_ass(v, palavras, duracao, caminho, voz=None):
+    """voz = (db, limiar, passo) do áudio na linha do tempo editada: o início de cada bloco vai
+    para o começo real da voz (a transcrição às vezes marca a 1ª palavra até 0,5 s depois) e a
+    legenda entra ANTECIPA s antes (Keila, 05/10/2026: "legendas um pouco atrasadas")."""
+    anterior = {}
+    for k, p in enumerate(palavras):
+        anterior[id(p)] = palavras[k - 1]["e"] if k else 0.0
+
+    def inicio(bloco):
+        s0 = bloco[0]["s"]
+        if voz is not None:
+            db, lim, ps = voz
+            i = k = min(len(db) - 1, int(s0 / ps))
+            while k > 0 and (i - k) * ps < 0.6 and any(db[j] >= lim - 3 for j in range(max(0, k - 3), k)):
+                k -= 1
+            if k * ps < s0 - 0.1 and k * ps >= anterior.get(id(bloco[0]), 0.0):
+                s0 = k * ps
+        # antecipa, mas sem tirar da tela a fala anterior antes de ela terminar
+        return max(s0 - ANTECIPA, min(s0, anterior.get(id(bloco[0]), 0.0)))
+
     linhas = [ass_header()]
     titulo = formatar_titulo(v)
     linhas += dialogos_linhas(1, 0, TITULO_DUR, "Titulo", titulo, r"\fad(0,250)")
@@ -488,14 +618,16 @@ def gerar_ass(v, palavras, duracao, caminho):
             carry = []
         if bloco[-1]["e"] <= TITULO_DUR:       # fala debaixo do título (padrão: sem legenda)
             continue
-        s, e = max(bloco[0]["s"], TITULO_DUR, livre), bloco[-1]["e"] + 0.15
+        s, e = max(inicio(bloco), TITULO_DUR, livre), bloco[-1]["e"] + 0.15
         prox = blocos[i + 1] if i + 1 < len(blocos) else None
         if prox:
-            e = min(e, prox[0]["s"])
+            e = min(e, inicio(prox))
         if s >= fim_legendas:
             continue
         e = min(e, fim_legendas)
-        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"}:
+        # conectivo solto não aparece, mas "Uma." falado sozinho é contagem (uma unidade), fica
+        if len(bloco) == 1 and re.sub(r"[^\w]", "", bloco[0]["w"]).lower() in LIGACAO | {"é", "eu"} \
+                and not (bloco[0]["w"].strip()[-1:] in ".?!" and eh_numero(bloco[0]["w"])):
             continue
         texto = quebrar_linhas(limpar(pontuar(corrigir(juntar_texto(bloco), v.get("correcoes", ())))))
         minimo = max(0.2, 0.02 * len(texto), 0.45 if len(bloco) == 1 else 0)
@@ -527,7 +659,10 @@ def perfil_voz(ff, entrada, passo=0.05, ganho_db=0):
     h = int(16000 * passo)
     n = len(a) // h
     db = 20 * np.log10(np.sqrt((a[:n * h].reshape(n, h) ** 2).mean(axis=1)) + 1)
-    return db, max(38.0, float(np.percentile(db, 5)) + 12), passo
+    # silêncio digital (trecho silenciado no render, fim da cartela do CTA) não é ruído de fundo: fora
+    # do percentil, senão o piso despenca e ruído de sala vira "voz" (pasta 11 de novembro, 05/11/2026)
+    vivo = db[db > 3]
+    return db, max(38.0, float(np.percentile(vivo if len(vivo) > 20 else db, 5)) + 12), passo
 
 
 def ancorar_na_voz(palavras, db, limiar, passo):
@@ -660,6 +795,14 @@ def renderizar(cfg, v, previa=False):
     trans = json.load(open(v["transcricao"], encoding="utf-8"))
     v = dict(v, manter=encaixar_cortes(v["manter"], db_voz[0], db_voz[2],
                                        [w for seg in trans for w in seg["words"]]))
+    # a legenda não se ancora em som que vai ser silenciado (pasta 27 de outubro, 28/10/2026:
+    # "foi" e "passou" do Dr. entravam no gemido da paciente, 1,5 s e 0,6 s antes da fala dele).
+    # Só para a legenda: os cortes acima continuam medidos no áudio original.
+    if v.get("silenciar"):
+        mascarado = db_voz[0].copy()
+        for a, b in v["silenciar"]:
+            mascarado[int(a / db_voz[2]):int(b / db_voz[2]) + 1] = 0
+        db_voz = (mascarado,) + tuple(db_voz[1:])
     if "legendas" in v:          # palavras já revisadas manualmente
         palavras = v["legendas"]
     else:
@@ -693,6 +836,10 @@ def renderizar(cfg, v, previa=False):
                 p.update(s=s1, e=s1 + d, e0=s1 + d)
     palavras.sort(key=lambda p: p["s"])
     palavras = numerar_enumeracao(palavras)
+    # número e unidade viram um item só, antes de ancorar na voz: sozinho, o número com tempo
+    # adiantado saía no fim do bloco anterior (ou sumia no silêncio) e a unidade ficava só
+    if "legendas" not in v:
+        palavras = juntar_quantidades(palavras, *db_voz)
     # trechos sem fala real (ruído que a transcrição "inventou"), em segundos do bruto
     for a, b in v.get("remover_legenda", []) + v.get("silenciar", []):
         palavras = [p for p in palavras if not (a <= (p["s"] + p["e"]) / 2 < b)]
@@ -703,14 +850,22 @@ def renderizar(cfg, v, previa=False):
         palavras = ancorar_na_voz(palavras, *db_voz)
     palavras, duracao = remapear_palavras(palavras, v["manter"])
     ass = v["saida"].rsplit(".", 1)[0] + ".ass"
-    gerar_ass(v, palavras, duracao, ass)
+    import numpy as np
+    db_ed = np.concatenate([db_voz[0][int(a / db_voz[2]):int(b / db_voz[2])] for a, b in v["manter"]])
+    gerar_ass(v, palavras, duracao, ass, voz=(db_ed, db_voz[1], db_voz[2]))
     if previa == "legenda":   # só o .ass, para revisar o texto antes de renderizar
         return duracao
 
     # "silenciar": [[a, b], ...] em segundos do bruto (conversa de fundo, gemido ou som de dor
     # no meio do procedimento). "zoom": [[a, b, fator, cx, cy], ...] aproxima o quadro no ponto
     # (cx, cy), frações da largura/altura, para não mostrar a paciente com expressão de dor.
-    mudo = "".join(f",volume=0:enable='between(t,{a},{b})'" for a, b in v.get("silenciar", []))
+    # O mudo tem rampa de 40 ms por fora da janela (Keila, 28/10/2026: silenciar o som de dor sem
+    # estalo), e a janela inteira fica em silêncio. Quadros de 256 amostras para a rampa ser suave.
+    rampa = v.get("silenciar_rampa", 0.04)
+    mudo = ""
+    if v.get("silenciar"):
+        ganho_mudo = "*".join(f"clip(max({a}-t,t-{b})/{rampa},0,1)" for a, b in v["silenciar"])
+        mudo = f",asetnsamples=n=256,volume='{ganho_mudo}':eval=frame"
     ganho = f",volume={v['volume_db']}dB" if v.get("volume_db") else ""
     zooms = v.get("zoom", [])
     partes, vrot, arot = [], [], []
@@ -734,21 +889,39 @@ def renderizar(cfg, v, previa=False):
               + "".join(arot) + f"concat=n={len(arot)}:v=0:a=1[ac];"
               f"[vc]ass='{esc}':fontsdir='{cfg['fontsdir']}'[vo]")
     saida = v["saida"]
+    mapa_v, mapa_a, entradas = "[vo]", "[ac]", ["-i", v["entrada"]]
+    # CTA com transição (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"): o CTA entra como
+    # 2ª entrada do mesmo render, com crossfade de vídeo e de áudio (fea_render_com_cta.py)
+    if cfg.get("_cta") and not v.get("sem_cta"):
+        import fea_render_com_cta as rc
+        info = rc.plano_emenda(ff, v, v["manter"], cfg["_cta"], cfg["_transicao"])
+        filtro += ";" + rc.filtro_emenda(info, W, H)
+        mapa_v, mapa_a, entradas = "[vx]", "[ax]", entradas + ["-i", cfg["_cta"]]
+        json.dump(info, open(saida.rsplit(".", 1)[0] + ".emenda.json", "w", encoding="utf-8"), indent=1)
+    elif v.get("fade_final"):
+        # SEM CTA (Keila, 09/11/2026: "sem cta, não precisamos mais, por enquanto"): o vídeo termina
+        # no fim da frase do Dr., com ~0,3 a 0,5 s de respiro no `manter`, e um fade-out curto de
+        # vídeo e áudio (padrão 0,3 s) dentro desse respiro, para o final não ficar seco.
+        f = float(v["fade_final"])
+        st = max(0.0, duracao - f)
+        filtro = filtro.replace("[vo]", "[vf0]", 1) + f";[vf0]fade=t=out:st={st:.3f}:d={f}[vo]"
+        filtro = filtro.replace(f"concat=n={len(arot)}:v=0:a=1[ac]", f"concat=n={len(arot)}:v=0:a=1[ac0]", 1)
+        filtro += f";[ac0]afade=t=out:st={st:.3f}:d={f}[ac]"
     if previa == "entrega":   # qualidade total, sem limite de tamanho (nunca HEVC: abre com tela preta)
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", mapa_v, "-map", mapa_a, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-ac", "2"]
     elif previa:   # cabe no limite de 30 MB para envio na conversa
         vb = int(min(4000, 26 * 8 * 1000 / duracao - 96))
-        filtro += ";[vo]scale=720:1280[vp]"
-        codec = ["-map", "[vp]", "-map", "[ac]", "-c:v", "libx264", "-preset", "fast",
+        filtro += f";{mapa_v}scale=720:1280[vp]"
+        codec = ["-map", "[vp]", "-map", mapa_a, "-c:v", "libx264", "-preset", "fast",
                  "-b:v", f"{vb}k", "-maxrate", f"{vb * 3 // 2}k", "-bufsize", f"{vb * 2}k",
                  "-c:a", "aac", "-b:a", "96k"]
         pasta, nome = saida.rsplit("/", 1)
         saida = f"{pasta}/PREVIA {nome}"
     else:
-        codec = ["-map", "[vo]", "-map", "[ac]", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
+        codec = ["-map", mapa_v, "-map", mapa_a, "-c:v", "libx264", "-preset", "medium", "-crf", "18",
                  "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"]
-    cmd = [ff, "-y", "-v", "error", "-i", v["entrada"], "-filter_complex", filtro, *codec,
+    cmd = [ff, "-y", "-v", "error", *entradas, "-filter_complex", filtro, *codec,
            "-pix_fmt", "yuv420p", "-r", "30", "-movflags", "+faststart", saida]
     subprocess.run(cmd, check=True)
     return duracao
@@ -758,8 +931,19 @@ def main():
     args = sys.argv[1:]
     previa = ("entrega" if "--entrega" in args else "legenda" if "--so-legenda" in args
               else ("--previa" in args))
+    cta, transicao = None, 0.5
+    if "--cta" in args:      # CTA com transição (chamado pelo fea_render_com_cta.py)
+        i = args.index("--cta")
+        cta = args[i + 1]
+        args = args[:i] + args[i + 2:]
+    if "--transicao" in args:
+        i = args.index("--transicao")
+        transicao = float(args[i + 1])
+        args = args[:i] + args[i + 2:]
     args = [a for a in args if a not in ("--previa", "--entrega", "--so-legenda")]
     cfg = json.load(open(args[0], encoding="utf-8"))
+    if cta:
+        cfg.update(_cta=cta, _transicao=transicao)
     so = args[1:] or None
     for v in cfg["videos"]:
         if so and not any(x in v["saida"] for x in so):

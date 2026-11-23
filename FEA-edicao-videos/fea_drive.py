@@ -11,6 +11,8 @@ Uso:
     python3 fea_drive.py testar                                 # confere chave e escopos
     python3 fea_drive.py baixar PASTA_OU_ARQUIVO_ID DESTINO     # baixa a pasta inteira (ou 1 arquivo)
     python3 fea_drive.py listar PASTA_ID                        # id | nome | MB | duração
+    python3 fea_drive.py md5 PASTA_OU_ARQUIVO_ID ...             # id | nome | md5 | bytes | criação
+    python3 fea_drive.py lixeira ID ...                          # manda para a lixeira (recuperável)
 
 --substituir manda para a lixeira o arquivo de mesmo nome na pasta antes de subir.
 """
@@ -148,6 +150,11 @@ def baixar_arquivo(tk, fid, destino, tamanho=None, tentativas=5):
         try:
             with chamar(tk, "GET", f"{API}/{fid}?alt=media&supportsAllDrives=true", cabecalhos=h) as r, \
                     open(tmp, "ab") as f:
+                # o Drive às vezes ignora o Range e devolve o arquivo inteiro (200 em vez de 206):
+                # anexar duplicava o começo (16/11/2026: 473 MB de 255 MB). Recomeça do zero.
+                if feito and r.status != 206:
+                    f.truncate(0)
+                    f.seek(0)
                 while True:
                     bloco = r.read(1024 * 1024)
                     if not bloco:
@@ -160,6 +167,31 @@ def baixar_arquivo(tk, fid, destino, tamanho=None, tentativas=5):
     if tamanho is not None and os.path.getsize(tmp) != tamanho:
         raise RuntimeError(f"download incompleto: {destino} ({os.path.getsize(tmp)} de {tamanho} bytes)")
     os.replace(tmp, destino)
+
+
+def cmd_md5(args):
+    """Lista id | nome | md5 | bytes dos arquivos de uma pasta (ou de um arquivo), para conferir upload."""
+    tk, _ = token()
+    for alvo in args:
+        meta = json.load(chamar(tk, "GET", f"{API}/{alvo}?supportsAllDrives=true&fields=id,name,mimeType,md5Checksum,size"))
+        itens = [meta]
+        if meta["mimeType"] == PASTA_MIME:
+            url = API + "?" + urllib.parse.urlencode({
+                "q": f"'{alvo}' in parents and trashed = false", "pageSize": "1000", "orderBy": "name",
+                "fields": "files(id,name,mimeType,md5Checksum,size,createdTime)", "supportsAllDrives": "true",
+                "includeItemsFromAllDrives": "true"})
+            itens = json.load(chamar(tk, "GET", url))["files"]
+        for f in itens:
+            if f["mimeType"] != PASTA_MIME:
+                print(f"{f['id']} | {f['name']} | {f.get('md5Checksum', '-')} | {f.get('size', '-')} | {f.get('createdTime', '')}")
+
+
+def cmd_lixeira(args):
+    """Manda arquivos para a lixeira do Drive (trashed=true, recuperável por 30 dias)."""
+    tk, _ = token()
+    for fid in args:
+        chamar(tk, "PATCH", f"{API}/{fid}?supportsAllDrives=true", corpo={"trashed": True})
+        print(f"lixeira: {fid}")
 
 
 def cmd_baixar(args):
@@ -192,7 +224,8 @@ def cmd_testar(_):
 
 if __name__ == "__main__":
     cmds = {"upload": cmd_upload, "pasta": cmd_pasta, "renomear": cmd_renomear, "testar": cmd_testar,
-            "baixar": cmd_baixar, "listar": cmd_listar}
+            "baixar": cmd_baixar, "listar": cmd_listar, "md5": cmd_md5,
+            "lixeira": cmd_lixeira}
     if len(sys.argv) < 2 or sys.argv[1] not in cmds:
         sys.exit(__doc__)
     cmds[sys.argv[1]](sys.argv[2:])

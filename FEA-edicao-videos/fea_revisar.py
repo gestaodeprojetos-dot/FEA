@@ -3,6 +3,13 @@
 
 Uso:
     python3 fea_revisar.py projeto.json [projeto2.json ...] [--folhas PASTA]
+    python3 fea_revisar.py projeto.json ... --so-legenda   # sem render: só número e unidade no .ass
+    python3 fea_revisar.py projeto.json ... --so-formato [--folhas PASTA]
+    python3 fea_revisar.py --so-inicio video1.mp4 [video2.mp4 ...]
+        # só o início (voz a menos de 0,30 s = ERRO; demora de mais de 1,5 s ou aquecimento = ATENÇÃO),
+        # direto nos .mp4: auditoria de vídeos já entregues
+        # troca de CTA por stream copy (fea_trocar_cta.py): o conteúdo é o aprovado, bit a bit, e a
+        # transcrição da edição não existe mais; confere só formato, duração e título (headline)
 
 Para cada vídeo do projeto confere o arquivo final (.mp4 + .ass) contra todas as regras
 pedidas pela Keila e imprime um relatório com ERRO (reprovado, refazer) e ATENÇÃO (conferir
@@ -64,7 +71,6 @@ PROIBIDO_LEGENDA = [
     (r"\binterfacial\b", "é interfascial"),
     (r"\bcarpulha\b|\b[Cc]arpulli\b", "é carpule"),
     (r"\btempra\b", "é têmpora"),
-    (r"\bsubi?mento\b", "é submento"),
     (r"\bmanejamento\b", "é planejamento"),
     (r"\bintercorrente\b", "é intercorrência"),
     (r"\b[Hh]iper ?tu[ií]tos?\b|\bpertuíto", "\"hipertuito\": é pertuito"),
@@ -173,11 +179,77 @@ def ler_ass(caminho):
     return titulo, legendas
 
 
-def revisar(cfg, v, folhas=None):
+def checar_numero_unidade(legendas):
+    """Número e unidade nunca em blocos diferentes; bloco nunca começa com a unidade sozinha
+    (Keila, 05/10/2026, pasta 2 vídeo 2: o "2" entrava antes de o Dr. falar e depois só "mL").
+    Vale para algarismo e por extenso ("dois mL", "meio mL", "1,5 mL", "1 e meio mL")."""
+    erros, aten = [], []
+    # o .ass tem um evento por linha: as linhas do mesmo bloco (mesmo início e fim) viram um bloco só
+    blocos = []
+    for s, e, t in legendas:
+        if blocos and (blocos[-1][0], blocos[-1][1]) == (s, e):
+            blocos[-1] = (s, e, blocos[-1][2] + " " + t)
+        else:
+            blocos.append((s, e, t))
+    legendas = blocos
+    for k, (s, e, t) in enumerate(legendas):
+        ps = t.split()
+        if not ps:
+            continue
+        ant = legendas[k - 1][2].split() if k else []
+        num_antes = bool(ant) and (fe.eh_numero(ant[-1]) or (ant[-1].lower().strip(",") in ("e", "vírgula")
+                                                              and len(ant) > 1 and fe.eh_numero(ant[-2])))
+        primeira = ps[0]
+        if fe.eh_unidade(primeira):
+            sozinha = re.sub(r"[^\w%]", "", primeira).lower().startswith(("unidade", "seringa", "ampola"))
+            if num_antes:
+                erros.append(f"[{s:5.1f}s] \"{ant[-1]}\" | \"{t}\": número e unidade em blocos diferentes "
+                             "(o número aparece antes da fala e a unidade fica sozinha)")
+            elif not sozinha:
+                erros.append(f"[{s:5.1f}s] \"{t}\": bloco começa com a unidade sozinha, sem o número")
+            else:
+                aten.append(f"[{s:5.1f}s] \"{t}\": bloco começa com \"{primeira}\": conferir se o número ficou no bloco anterior")
+        elif num_antes and primeira.lower() in ("e", "vírgula", "meio", "meia") and len(ps) > 1 and \
+                (fe.eh_unidade(ps[1]) or fe.eh_numero(ps[1])):
+            erros.append(f"[{s:5.1f}s] \"{ant[-1]}\" | \"{t}\": quantidade partida entre dois blocos")
+        # quantidade quebrada entre as 2 linhas do mesmo bloco também não pode
+    return erros, aten
+
+
+def checar_linhas_quantidade(caminho_ass):
+    """Linha da legenda que termina com número e a linha seguinte (mesmo bloco) começa com a unidade."""
+    erros, aten, blocos = [], [], {}
+    for linha in open(caminho_ass, encoding="utf-8"):
+        if linha.startswith("Dialogue:") and ",Legenda," in linha:
+            p = linha.rstrip("\n").split(",", 9)
+            blocos.setdefault((p[1], p[2]), []).append(re.sub(r"\{[^}]*\}", "", p[9]).strip())
+    for (s, _), ls in blocos.items():
+        for l1, l2 in zip(ls, ls[1:]):
+            if l1.split() and l2.split() and fe.eh_numero(l1.split()[-1]) and fe.eh_unidade(l2.split()[0]):
+                # unidade de medida (mL, mg, %, U) é ERRO; contagem ("uma / seringa") só ATENÇÃO
+                contagem = re.sub(r"[^\w]", "", l2.split()[0]).lower().startswith(("seringa", "ampola", "unidade"))
+                (aten if contagem else erros).append(
+                    f"[{ts(s):5.1f}s] \"{l1} / {l2}\": número e unidade em linhas diferentes")
+    return erros, aten
+
+
+def revisar_so_legenda(cfg, v):
+    """Sem renderizar: gera o .ass com o fea_editar_video e confere número e unidade nos blocos."""
+    fe.renderizar(cfg, v, "legenda")
+    ass = v["saida"].rsplit(".", 1)[0] + ".ass"
+    _, legendas = ler_ass(ass)
+    erros, aten = checar_numero_unidade(legendas)
+    e_l, a_l = checar_linhas_quantidade(ass)
+    return erros + e_l, aten + a_l
+
+
+def revisar(cfg, v, folhas=None, so_formato=False):
     ff, erros, aten = cfg["ffmpeg"], [], []
     mp4, ass = v["saida"], v["saida"].rsplit(".", 1)[0] + ".ass"
     if not os.path.exists(mp4):
         return [f"arquivo final não existe: {mp4}"], []
+    if so_formato:
+        return revisar_formato(ff, v, mp4, folhas)
 
     # 1. formato de entrega
     codec, res, dur = sonda(ff, mp4)
@@ -187,8 +259,12 @@ def revisar(cfg, v, folhas=None):
         erros.append(f"resolução {res}: tem que ser 1080x1920")
     # limite vale para cada parte também (antes a Parte 1/2 passava sem conferir)
     if dur > LIMITE_S + 0.05:
-        erros.append(f"{dur:.1f} s com CTA: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
+        erros.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: passa de 3 min" + (" (cada parte também tem que caber)" if v.get("parte") else
                      ", cortar o que é parado ou dividir em Parte 1/2"))
+    # 1b. transição antes do CTA (Keila, 05/11/2026): corte seco é erro
+    e_em, a_em = checar_emenda(ff, v, mp4, folhas)
+    erros += e_em
+    aten += a_em
 
     # 2. título: exatamente o da imagem, nos 3 primeiros segundos
     titulo, legendas = ler_ass(ass)
@@ -260,6 +336,20 @@ def revisar(cfg, v, folhas=None):
             erros.append(f"[{s:5.1f}s] \"{t}\": legenda sem o Dr. falando (palavra solta)")
         elif len(t.split()) == 1 and e - s < 0.35:
             aten.append(f"[{s:5.1f}s] \"{t}\": palavra sozinha piscando ({e - s:.2f} s)")
+    # 3a. "silenciar" (gemido ou som de dor da paciente, Keila 28/10/2026: silenciar sem cortar):
+    # o trecho tem que estar mudo no vídeo final. A régua é o ruído de fundo (lim - 12).
+    if v.get("silenciar"):
+        _mc = fe.encaixar_cortes(v["manter"], *fe.perfil_voz(ff, v["entrada"])[::2])
+        for a, b in v["silenciar"]:
+            off = 0.0
+            for m0, m1 in _mc:
+                x0, x1 = max(a, m0) + 0.05, min(b, m1) - 0.05
+                if x1 > x0:
+                    seg = db[int((off + x0 - m0) / ps):int((off + x1 - m0) / ps) + 1]
+                    if len(seg) and seg.max() > lim - 12 + 6:
+                        erros.append(f"[{off + x0 - m0:5.1f}s] trecho silenciado ({a}-{b} s do bruto) com som "
+                                     f"({seg.max():.0f} dB, ruído {lim - 12:.0f} dB)")
+                off += m1 - m0
     # 3b. sincronia com o áudio (Keila 26/09 e 01/10: "legendas não estão sincronizadas")
     for k, (s, e, t) in enumerate(legendas):
         if s < fe.TITULO_DUR + 0.5:
@@ -279,6 +369,11 @@ def revisar(cfg, v, folhas=None):
         antes_fim = db[max(0, j - int(0.8 / ps)):j]
         if e - s > 1.5 and len(antes_fim) and (antes_fim >= lim - 6).mean() < 0.15:
             aten.append(f"[{s:5.1f}s] \"{t}\": legenda fica na tela {e - s:.1f} s depois da fala acabar")
+    # 3c. número e unidade juntos (Keila, 05/10/2026)
+    e_q, a_q = checar_numero_unidade(legendas)
+    e_l, a_l = checar_linhas_quantidade(ass)
+    erros += e_q + e_l
+    aten += a_q + a_l
     texto_todo = " ".join(t for _, _, t in legendas)
     if re.search(r"(?<!ácido )\bhialurônico", texto_todo):
         erros.append("\"hialurônico\" sem \"ácido\" na frente: é ácido hialurônico")
@@ -291,7 +386,29 @@ def revisar(cfg, v, folhas=None):
     while k < len(db) - 10 and (db[k:k + 10] >= max(lim - 4, 42)).mean() < 0.8:   # sala com ruído alto: voz baixa fica só ~8 dB acima
         k += 1
     if k * ps > 0.8:
-        erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+        # fala picada no começo ("Vamos para a técnica...", sílabas com vales de 10 a 15 dB) não
+        # passa na régua de 0,5 s de voz forte contínua: confere o ataque da voz em janelas de 10 ms
+        # (onset_voz, a mesma medição da checagem de início) antes de acusar silêncio (12/11/2026)
+        pcm0 = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", "20", "-vn", "-ac", "1",
+                               "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+        a0 = np.frombuffer(pcm0, np.int16).astype(float)
+        n0 = len(a0) // 160
+        voz0 = onset_voz(20 * np.log10(np.sqrt((a0[:n0 * 160].reshape(n0, 160) ** 2).mean(axis=1)) + 1))[0]
+        if voz0 is not None and voz0 <= 0.8:
+            aten.append(f"começo com fala picada: voz forte contínua só em {k * ps:.1f} s, mas o ataque da voz "
+                        f"é em {voz0:.2f} s (onset_voz): ouvir o primeiro segundo")
+        else:
+            erros.append(f"começa com {k * ps:.1f} s de silêncio (tem que começar quando o Dr. fala)")
+    # 4a. início que prende e primeira palavra inteira (Keila, 05/11/2026)
+    trans_ini = json.load(open(v["transcricao"], encoding="utf-8"))
+    a_ini = v["manter"][0][0]
+    # palavra silenciada no começo (aquecimento mudo, ex.: "Então" colado no gancho) não conta
+    mudos_ini = v.get("silenciar", [])
+    pal_ini = [w["w"].strip() for seg in trans_ini for w in seg["words"] if a_ini - 0.2 <= w["s"] < a_ini + 6
+               and not any(x <= (w["s"] + w["e"]) / 2 <= y for x, y in mudos_ini)]
+    e_i, a_i, _ = checar_inicio(ff, mp4, palavras=pal_ini)
+    erros += e_i
+    aten += a_i
     # fim: som subindo no último instante = começo de outra palavra (o bruto às vezes acaba assim)
     if len(db) > 6 and db[-2:].max() >= lim + 6 and db[-2:].mean() > db[-6:-3].mean() + 6:
         erros.append("som subindo no último instante: começo de outra palavra no fim")
@@ -363,7 +480,10 @@ def revisar(cfg, v, folhas=None):
         ts_ = t_saida(m)
         if ts_ > fe.TITULO_DUR + 0.3 and ts_ < mantido_total - 0.3:
             falado += [(t, ts_) for t in _tok(fe.corrigir(w["w"], v.get("correcoes", ())))]
-    leg = [t for _, _, txt in legendas for t in _tok(txt)]
+    # trechos fora da ordem do bruto (ex.: reação do paciente primeiro, Keila 07/10/2026): a fala
+    # segue a ordem do vídeo final, não a do bruto
+    falado.sort(key=lambda x: x[1])
+    leg =[t for _, _, txt in legendas for t in _tok(txt)]
     sm = difflib.SequenceMatcher(None, [t for t, _ in falado], leg, autojunk=False)
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op not in ("delete", "replace"):
@@ -393,6 +513,24 @@ def revisar(cfg, v, folhas=None):
             k = j
         k += 1
 
+    # 5d'. fala curta e solta sem legenda (Keila 05/10, "duas, duas, duas" contando unidades: a
+    # transcrição esticava uma palavra por cima das outras e 3 das 6 ficavam sem legenda). Rajada de
+    # voz de 0,35 s ou mais, com silêncio dos dois lados, sem legenda nenhuma no ar: ouvir.
+    k = int((fe.TITULO_DUR + 0.3) / ps)
+    while k < min(fim_conteudo, len(db)):
+        if voz[k]:
+            j, ult = k, k
+            while j < len(db) and (j - ult) * ps < 0.5:
+                if voz[j]:
+                    ult = j
+                j += 1
+            antes_ok = not voz[max(0, k - int(0.5 / ps)):k].any()
+            if antes_ok and (ult - k + 1) * ps >= 0.35 and not no_ar[k:ult + 1].any():
+                aten.append(f"[{k * ps:5.1f}s a {(ult + 1) * ps:5.1f}s] fala curta solta sem legenda: ouvir "
+                            "(palavra que a transcrição pulou? repetição como \"duas, duas\"?)")
+            k = j
+        k += 1
+
     # 5e. voz falhando/picotando (Keila, 02/10/2026, pasta 7 vídeo 1): o áudio final, trecho a trecho,
     # tem que ter o mesmo volume do bruto. Queda forte onde o bruto tem a voz do Dr. = corte, silêncio
     # ou concat comendo a fala. Compara o volume do .mp4 com o do bruto nos trechos mantidos.
@@ -400,7 +538,14 @@ def revisar(cfg, v, folhas=None):
     # (priming do AAC) e, em janelas de 50 ms, isso parecia queda de voz (falso alarme)
     db5, _, p5 = fe.perfil_voz(ff, mp4, passo=0.005)
     db5b, lim5b, _ = fe.perfil_voz(ff, v["entrada"], passo=0.005)
-    mudo_int = [(t_saida(a), t_saida(b)) for a, b in v.get("silenciar", [])]
+    # a janela silenciada inclui a rampa de 40 ms por fora (silenciar_rampa), que também é mudo de propósito
+    _r = v.get("silenciar_rampa", 0.04)
+    def _ts_mudo(a, b):   # janela que começa antes do 1º trecho mantido (aquecimento mudo no começo)
+        xa = t_saida(a)
+        if xa < 0 and a <= manter[0][0] <= b:
+            xa = 0.0
+        return xa, t_saida(b)
+    mudo_int = [(x - _r if x > 0 else x, y + _r) for x, y in (_ts_mudo(a, b) for a, b in v.get("silenciar", []))]
     quedas, off = [], 0.0
     for a, b in manter:
         esp = db5b[int(a / p5):int(b / p5)]
@@ -463,6 +608,238 @@ def revisar(cfg, v, folhas=None):
     return erros, aten
 
 
+# Início que prende (Keila e quem posta os vídeos, 05/11/2026): "tô cortando uns começos porque está
+# meio ruim o início, às vezes ele demora para falar, ou não está iniciando num momento que prende";
+# e a Keila: "você tem cortado um pouco as palavras no começo dos vídeos".
+INICIO_MIN_S = 0.25      # voz antes disso = primeira palavra cortada (Keila 16/11/2026: mirar 0,25 a 0,40 s)
+INICIO_MAX_S = 1.5       # voz depois disso = o Dr. demora para falar (ATENÇÃO, regra de 05/11)
+# Keila, 16/11/2026 ("o dr não inicia falando, precisa iniciar falando, não ter um silêncio na hora
+# que ele fala"): o vídeo abre já com o Dr. falando. Voz depois de 0,60 s do primeiro quadro = ERRO.
+# A edição mira o começo 0,25 a 0,40 s antes do ataque da voz.
+INICIO_ERRO_S = 0.60
+AQUECIMENTO = ["deixa eu ver", "deixa eu", "vamos lá", "vamos ver", "olha só", "então", "bom", "ó",
+               "pronto", "beleza", "ok", "ah", "hum", "bora"]
+
+
+def onset_voz(db, passo=0.01):
+    """Ataque da primeira fala: primeiro trecho com voz sustentada (média de 50 ms acima de
+    piso + 12 dB, mínimo 38 dB, em 70% de 150 ms) e, dali, volta enquanto o som está acima de
+    piso + 6 dB (o começo da sílaba é mais fraco que o meio). Medido no áudio, nunca pelo Whisper."""
+    piso = float(np.percentile(db, 5))
+    lim = max(38.0, piso + 12)
+    sm = np.convolve(db, np.ones(5) / 5, "same")
+    on = sm >= lim
+    for i in range(len(db)):
+        if on[i] and on[i:i + 15].mean() >= 0.7:
+            k = i
+            while k > 0 and db[k - 1] > piso + 6 and i - k < 40:
+                k -= 1
+            return k * passo, piso, lim
+    return None, piso, lim
+
+
+def primeiras_palavras(ff, mp4, ate=6.0):
+    """Primeiras palavras faladas (Whisper nos primeiros segundos), só para achar aquecimento."""
+    try:
+        from faster_whisper import WhisperModel
+    except ImportError:
+        return None
+    global _MODELO
+    if "_MODELO" not in globals():
+        _MODELO = WhisperModel("large-v3-turbo", device="cpu", compute_type="int8",
+                               download_root=os.environ.get("FEA_MODELOS", "models"))
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", str(ate), "-vn", "-ac", "1",
+                          "-ar", "16000", "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    audio = np.frombuffer(pcm, np.int16).astype(np.float32) / 32768
+    segs, _ = _MODELO.transcribe(audio, language="pt", word_timestamps=True, vad_filter=False)
+    return [w.word.strip() for s in segs for w in s.words]
+
+
+def checar_inicio(ff, mp4, transcrever=True, palavras=None):
+    """ERRO se a voz começa a menos de 0,30 s do início (palavra cortada); ATENÇÃO se o Dr. demora
+    mais de 1,5 s para falar ou se a primeira frase é aquecimento ("então", "bom", "vamos lá"...).
+    Retorna (erros, atenções, {"voz": s, "palavras": texto})."""
+    erros, aten = [], []
+    pcm = subprocess.run([ff, "-nostdin", "-v", "error", "-i", mp4, "-t", "20", "-vn", "-ac", "1", "-ar", "16000",
+                          "-f", "s16le", "-"], capture_output=True, check=True).stdout
+    a = np.frombuffer(pcm, np.int16).astype(float)
+    n = len(a) // 160
+    db = 20 * np.log10(np.sqrt((a[:n * 160].reshape(n, 160) ** 2).mean(axis=1)) + 1)
+    voz, piso, lim = onset_voz(db)
+    if voz is None:
+        aten.append("sem fala nos primeiros 20 s: conferir se o começo prende (ação do procedimento)")
+        voz = 99.0
+    elif voz < INICIO_MIN_S:
+        erros.append(f"início: a voz começa em {voz:.2f} s, primeira palavra cortada (mínimo {INICIO_MIN_S:.2f} s; "
+                     "a edição deixa 0,40 s antes do ataque da voz)")
+    elif voz > INICIO_ERRO_S:
+        erros.append(f"início: a voz começa em {voz:.2f} s, silêncio antes do Dr. falar (máximo {INICIO_ERRO_S:.2f} s; "
+                     "Keila, 16/11/2026: o vídeo abre já com o Dr. falando, começar 0,25 a 0,40 s antes da voz)")
+    if palavras is None and transcrever:
+        palavras = primeiras_palavras(ff, mp4)
+    texto = " ".join(palavras or [])
+    norm = re.sub(r"[^\w\s]", "", texto.lower()).split()
+    for exp in AQUECIMENTO:
+        e = exp.split()
+        if norm[:len(e)] == e:
+            aten.append(f"início: primeira frase começa com aquecimento (\"{' '.join(norm[:6])}...\"): "
+                        "começar na fala de impacto ou na ação")
+            break
+    return erros, aten, {"voz": voz, "palavras": texto}
+
+
+def sem_cta(v):
+    """Vídeo sem CTA: desde 09/11/2026 (Keila: "sem cta, não precisamos mais, por enquanto") os
+    conteúdos vão sem CTA. Marcado no projeto com "sem_cta": true (ou "fade_final", que só existe
+    no final sem CTA)."""
+    return bool(v.get("sem_cta") or v.get("fade_final"))
+
+
+RESPIRO_MIN_S = 0.20     # menos que isso depois da última fala = palavra cortada no fim
+RESPIRO_MAX_S = 1.0      # mais que isso = final arrastado (a edição mira 0,3 a 0,5 s)
+
+
+def checar_final_sem_cta(ff, v, mp4):
+    """Final sem CTA (09/11/2026): o vídeo acaba numa frase completa do Dr., com ~0,3 a 0,5 s de
+    respiro depois da fala (fade-out de ~0,3 s permitido). Sem CTA não há emenda: nada de ERRO por
+    falta de .emenda.json. ERRO se a voz vai até menos de 0,20 s do fim (última palavra cortada);
+    ATENÇÃO se o respiro passa de 1,0 s ou se sobrou .emenda.json de um render antigo com CTA."""
+    import fea_render_com_cta as rc
+    erros, aten = [], []
+    _, _, dur = sonda(ff, mp4)
+    if os.path.exists(mp4.rsplit(".", 1)[0] + ".emenda.json"):
+        aten.append("vídeo sem CTA com .emenda.json de render antigo: conferir se o arquivo final é o novo, sem CTA")
+    fim = rc.fim_da_voz(ff, mp4, max(0.0, dur - 8), dur)
+    if fim is None:
+        aten.append("final sem CTA: sem fala nos últimos 8 s, conferir se termina numa frase do Dr.")
+        return erros, aten
+    resp = dur - fim
+    if resp < RESPIRO_MIN_S:
+        erros.append(f"final sem CTA: a voz vai até {fim:.2f} s de {dur:.2f} s (respiro {resp:.2f} s): "
+                     f"última palavra cortada, deixar ~0,3 a 0,5 s depois da fala")
+    elif resp > RESPIRO_MAX_S:
+        aten.append(f"final sem CTA: {resp:.2f} s depois da última fala (mira 0,3 a 0,5 s): conferir se não arrasta")
+    else:
+        aten.append(f"final sem CTA: respiro de {resp:.2f} s depois da última fala"
+                    + (f", fade-out de {v['fade_final']} s" if v.get("fade_final") else ""))
+    return erros, aten
+
+
+def checar_emenda(ff, v, mp4, folhas=None):
+    """Transição antes do CTA (Keila, 05/11/2026: "do nada aparece o cta, fica ruim"). ERRO se a
+    emenda conteúdo->CTA for corte seco ou se a transição começa antes do fim da fala do Dr.
+    Lê NOME.emenda.json (gravado pelo render) e mede nos quadros: num crossfade a imagem muda aos
+    poucos (cada quadro ~1/15 da mudança total em 0,5 s); num corte seco, a mudança inteira cai
+    num quadro só. Com --folhas, salva NOME-emenda.png (antes, meio e fim da transição)."""
+    erros, aten = [], []
+    if sem_cta(v):
+        return checar_final_sem_cta(ff, v, mp4)
+    caminho = mp4.rsplit(".", 1)[0] + ".emenda.json"
+    if not os.path.exists(caminho):
+        erros.append("emenda conteúdo->CTA sem transição registrada (sem .emenda.json): renderizar com "
+                     "fea_render_com_cta.py, que faz o crossfade de ~0,5 s antes do CTA (corte seco é erro)")
+        return erros, aten
+    info = json.load(open(caminho, encoding="utf-8"))
+    t, ini, fim = info["transicao_s"], info["inicio_transicao_s"], info["fim_transicao_s"]
+    if not t:
+        erros.append("emenda conteúdo->CTA em corte seco (transição 0): tem que ter crossfade de ~0,5 s")
+        return erros, aten
+    if not 0.3 <= t <= 1.0:
+        aten.append(f"transição de {t} s: o padrão é ~0,5 s")
+    fv = info.get("fim_voz_conteudo_s")
+    if fv is not None and fv + 0.05 > ini:
+        erros.append(f"transição começa em {ini:.2f} s e a fala do Dr. termina em {fv:.2f} s: engole a última palavra")
+    # quadros da emenda: 30 fps, cinza 54x96, de 0,5 s antes a 0,5 s depois da transição
+    a0 = max(0.0, ini - 0.5)
+    raw = subprocess.run([ff, "-nostdin", "-v", "error", "-ss", f"{a0:.3f}", "-i", mp4, "-t", f"{fim - a0 + 0.5:.3f}",
+                          "-vf", "fps=30,scale=54:96,format=gray", "-f", "rawvideo", "-"],
+                         capture_output=True, check=True).stdout
+    q = np.frombuffer(raw, np.uint8).reshape(-1, 96, 54).astype(float)
+    if len(q) < 10:
+        erros.append("não consegui ler os quadros da emenda")
+        return erros, aten
+    i0 = int(round((ini - a0) * 30)) - 1
+    i1 = min(len(q) - 1, int(round((fim - a0) * 30)) + 1)
+    total = np.abs(q[i1] - q[max(0, i0)]).mean()
+    passos = np.abs(np.diff(q[max(0, i0 - 3):i1 + 4], axis=0)).mean(axis=(1, 2))
+    maior = float(passos.max())
+    if total >= 8 and maior > 0.5 * total:
+        erros.append(f"emenda conteúdo->CTA em corte seco: {maior:.0f} de {total:.0f} níveis de cinza mudam num "
+                     "quadro só (tem que ser crossfade de ~0,5 s)")
+    elif total < 8:
+        aten.append("emenda: conteúdo e CTA muito parecidos na imagem, conferir a transição nos quadros")
+    aten.append(f"transição de {t} s em {ini:.2f} s (voz do Dr. termina em {fv} s; tpad {info.get('pad_s', 0)} s; "
+                f"maior salto entre quadros {maior:.1f} de {total:.1f})")
+    if folhas:
+        os.makedirs(folhas, exist_ok=True)
+        nome = os.path.basename(mp4).rsplit(".", 1)[0]
+        png = os.path.join(folhas, nome + "-emenda.png")
+        tempos = [ini - 0.1, ini + t / 2, fim + 0.1]
+        entradas = []
+        for x in tempos:
+            entradas += ["-ss", f"{x:.3f}", "-i", mp4]
+        filtro = "".join(f"[{i}:v]scale=360:640,setsar=1[f{i}];" for i in range(3)) + "[f0][f1][f2]hstack=3"
+        subprocess.run([ff, "-nostdin", "-v", "error", "-y", *entradas, "-filter_complex", filtro,
+                        "-frames:v", "1", png], check=False)
+        aten.append(f"emenda (antes, meio e fim da transição): {png}")
+    return erros, aten
+
+
+def revisar_formato(ff, v, mp4, folhas=None):
+    """Formato de entrega, duração e headline (sem .ass nem transcrição): para troca de CTA."""
+    erros, aten = [], []
+    codec, res, dur = sonda(ff, mp4)
+    if codec != "h264":
+        erros.append(f"codec {codec}: tem que ser H.264 (HEVC abre com tela preta)")
+    if res != (1080, 1920):
+        erros.append(f"resolução {res}: tem que ser 1080x1920")
+    err = subprocess.run([ff, "-hide_banner", "-i", mp4], capture_output=True, text=True).stderr
+    if "48000 Hz" not in err or "aac" not in err:
+        erros.append("áudio tem que ser AAC 48 kHz")
+    if not re.search(r"(29\.9\d|30) fps", err):
+        erros.append("vídeo tem que ser 30 fps")
+    # Keila, 16/11/2026 ("o vídeo 1 deu 3 min e 4, não pode"): o TOTAL com CTA nunca passa de 3:00
+    if dur > LIMITE_S + 0.05:
+        erros.append(f"{dur:.1f} s{'' if sem_cta(v) else ' com CTA'}: total passa de 3:00 (Keila, 16/11/2026: "
+                     "total com CTA nunca acima de 180 s; cortar generoso, meta 2:30 a 2:45)")
+    nome = os.path.basename(mp4).rsplit(".", 1)[0]
+    esperado = re.sub(r"\s+", " ", v["titulo"] + (f" Parte {v['parte']}" if v.get("parte") else ""))
+    if not re.sub(r"\s+", " ", nome).replace(":", "").replace("?", "").endswith(esperado.replace(":", "").replace("?", "")):
+        erros.append(f"nome do arquivo \"{nome}\" não bate com o título \"{esperado}\"")
+    larg_px, n_linhas, _ = medir_titulo_px(fe.formatar_titulo(v))
+    if larg_px > LARGURA_SEGURA:
+        erros.append(f"headline estoura a margem ({larg_px:.0f} px, máximo {LARGURA_SEGURA} px)")
+    if v.get("titulo_origem") != "imagem":
+        for marca in MARCAS_TITULO:
+            if re.search(rf"\b{marca}\b", v["titulo"], re.I):
+                erros.append(f"título \"{v['titulo']}\" com nome de produto ({marca})")
+    for rx, nome_certo, motivo in PRODUTOS_CONHECIDOS:
+        if any(m.group(0).strip() not in {nome_certo, *nome_certo.split()} for m in re.finditer(rx, v["titulo"])):
+            erros.append(f"título contém grafia errada de {nome_certo}: \"{v['titulo']}\"")
+    e_i, a_i, _ = checar_inicio(ff, mp4)
+    erros += e_i
+    aten += a_i
+    e_em, a_em = checar_emenda(ff, v, mp4, folhas)
+    erros += e_em
+    aten += a_em
+    aten.append(f"formato OK: {codec} {res[0]}x{res[1]}, {dur:.2f} s")
+    if folhas:
+        os.makedirs(folhas, exist_ok=True)
+        folha = os.path.join(folhas, nome + ".png")
+        subprocess.run([ff, "-nostdin", "-v", "error", "-y", "-i", mp4, "-vf",
+                        "fps=1/2,scale=120:213,tile=15x6", "-frames:v", "1", folha], check=False)
+        aten.append(f"revisão visual: {folha}")
+    return erros, aten
+
+
+def fe_ffmpeg():
+    try:
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
+    except ImportError:
+        return "ffmpeg"
+
+
 def main():
     args = sys.argv[1:]
     folhas = None
@@ -470,11 +847,28 @@ def main():
         i = args.index("--folhas")
         folhas = args[i + 1]
         args = args[:i] + args[i + 2:]
+    so_legenda = "--so-legenda" in args
+    so_formato = "--so-formato" in args
+    so_inicio = "--so-inicio" in args
+    args = [a for a in args if a not in ("--so-legenda", "--so-formato", "--so-inicio")]
     total_err = 0
+    if so_inicio:   # auditoria: só o início, direto nos .mp4 (sem projeto nem transcrição)
+        ff = os.environ.get("FEA_FFMPEG") or fe_ffmpeg()
+        for mp4 in args:
+            erros, aten, info = checar_inicio(ff, mp4)
+            total_err += len(erros)
+            status = "REPROVADO" if erros else ("ATENÇÃO" if aten else "OK")
+            print(f"\n## {os.path.basename(mp4)}: {status} | voz em {info['voz']:.2f} s | \"{info['palavras'][:70]}\"")
+            for x in erros:
+                print(f"  ERRO     {x}")
+            for x in aten:
+                print(f"  ATENÇÃO  {x}")
+        print(f"\nTotal de erros: {total_err}")
+        sys.exit(1 if total_err else 0)
     for proj in args:
         cfg = json.load(open(proj, encoding="utf-8"))
         for v in cfg["videos"]:
-            erros, aten = revisar(cfg, v, folhas)
+            erros, aten = revisar_so_legenda(cfg, v) if so_legenda else revisar(cfg, v, folhas, so_formato)
             total_err += len(erros)
             status = "REPROVADO" if erros else "OK"
             print(f"\n## {os.path.basename(v['saida'])}: {status}")
