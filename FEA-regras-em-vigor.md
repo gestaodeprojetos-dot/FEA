@@ -126,3 +126,4 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 - **Recebido rápido no privado sai direto (Keila, 24/11):** quando alguém do time chama no privado, o "recebido" (ex.: "Recebido! Já estou procurando X e te envio por aqui") sai na hora, sem validação. Só o conteúdo da resposta passa pelo Gestão FEA. (Erro de 24/11: o Leo esperou 40 min por um recebido.)
 - **Conversa do time em outros grupos não vem ao Gestão FEA (Keila, 24/11):** discussões do time entre si (ex.: Luca pedindo disparos à Copy, Saar e Luca falando de ROAS) só vêm ao Gestão FEA se forem urgentes ou se ficarem sem resposta por 30 minutos. Substitui o "Luca: prioridade máxima em qualquer grupo" para conversas que não envolvem a gestão nem o Claude.
+- **Sempre agradecer (Keila, 24/11):** toda entrega, link ou informação que alguém do time manda, a pedido meu ou da gestão, recebe na hora um "obrigada" marcando a pessoa, no mesmo grupo. Sem exceção.
