@@ -395,6 +395,7 @@ Antes de afirmar no grupo que uma demanda foi ou não foi executada (ou de suger
 - **Pedido discreto (Keila, 21/11):** quando alguém pede algo com discrição, a cobrança no grupo sai sem citar quem pediu.
 - **Privado só quando a pessoa chama (Keila, 21/11):** conversa no privado é única e exclusivamente quando a pessoa me chama no privado; fora isso, falo nos grupos. Dúvida sobre em qual grupo mandar uma mensagem: trazer antes ao Gestão FEA. (O aviso de disparo ao Matheus no privado foi pedido por ele.)
 - **Grupo Gestão Keila** (`120363311670705900@g.us`, com a Adri): ler junto com o Gestão FEA (Keila, 18/11).
+- **Retorno do que executei só no Gestão FEA (Keila, 24/11):** relato do que executei ou respondi (ex.: "respondi a Adri no ClickUp e arquivei as tasks") vai só no grupo Gestão FEA, nunca no Gestão Keila nem em outro grupo. No Gestão Keila, só respondo o que me perguntam ali.
 - **Envio com erro de conexão:** reler o grupo antes de reenviar, para não duplicar.
 
 **Carol (CS / Suporte): `5521976351409`.** Liberada no privado pela Keila (23/11) com o mesmo perfil restrito da Grazi (regras abaixo valem igual para ela).
