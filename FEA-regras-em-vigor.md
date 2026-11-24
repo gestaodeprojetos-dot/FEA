@@ -12,6 +12,8 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Mensagem da Keila ou da Gabi: no mínimo "recebido" dentro do intervalo da ronda. Trabalho longo vai para agente em segundo plano; a ronda nunca para.
 - Rondas: seg a sex 7h a 19h59 de 2 em 2 min; seg a sex 20h a 23h59 e sáb/dom 7h a 23h59 de 5 em 5 min; madrugada (0h a 6h59) de 15 em 15 min.
 
+- Nunca prometer "em instantes" se depende de validação: dar o prazo real; rascunho com alguém esperando = lembrete a cada 5 min; erro apontado = desculpa + causa + regra (Keila, 24/11).
+
 ## 2. Formato
 - (Keila, 23/11) Vários links: sempre numerados (1, 2, 3...). Rótulos dos itens em negrito. Saudação ("Oii X, boa tarde, tudo bem?") sozinha na primeira linha, com linha em branco depois. Fechamento com emoji simpático de aguardando retorno / conte comigo (ex.: 😊🙏🏻). Não repetir desculpa já dada.
 - (Keila, 23/11) Mensagem enviada às pessoas (fora do Gestão FEA) vai sem título/código: só o @ da pessoa e a mensagem. O cabeçalho com número fica só no rascunho do Gestão FEA.
