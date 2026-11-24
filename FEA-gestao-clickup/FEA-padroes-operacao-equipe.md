@@ -50,6 +50,8 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 - Imagens de API: `2. ARTES / 1. WHATSAPP / IMAGENS API`.
 - Nunca criar pasta solta fora dessa estrutura (ex.: "Captação · atualizadas", "BRUTOS" dentro de ARTES).
 
+- **Presente do ingresso é tarefa da Automação (Equipe IAutomate), nunca do Suporte/CS** (Keila, 24/11/2026). A Gestão só confirma qual é o presente.
+
 ## 3. Planilha de links úteis (uma por lançamento)
 
 - **Toda planilha nova de lançamento é Google Planilhas nativa, nunca arquivo .xlsx** (Keila, 24/11/2026), para todo mundo conseguir editar no navegador. As planilhas antigas em .xlsx ficam como estão, sem converter nem trocar o arquivo.

@@ -90,6 +90,7 @@ Evento novo sem lançamento anterior parecido: montar a partir do briefing e diz
   6. Anexar o cartão final em espanhol (3 s).
 
   Scripts de referência: `cutmap.py`, `segs.py`, `mkclean.py` e `build2.py` (pasta `olh_vid` do scratchpad da sessão do Ebook Olheiras LATAM).
+- **Tarefa "Presente do ingresso" é da Automação (Equipe IAutomate), nunca do Suporte/CS** (Keila, 24/11/2026): fica sob a tarefa-mãe Automação da sprint, junto com a configuração do fluxo do ingresso. A Gestão só confirma qual é o presente.
 - **Doc de informações do ingresso** (para a automação): evento, palavra-chave, arte do ingresso (link do arquivo, não da pasta), presente (link do vídeo; conferir título pelo oEmbed do YouTube), data com o dia da semana certo, link da aula (redirecionamento da live certa), início dos disparos, data de teste em dia útil.
 
 ## 5. Registrar material (planilha de links úteis)
