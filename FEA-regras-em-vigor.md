@@ -52,6 +52,8 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Erro meu num grupo: desculpas no privado e no grupo, com ok. Demora técnica: desculpa curta, com ok.
 - Pedido discreto: cobrança no grupo sem citar quem pediu.
 
+- Grupo Meninas Equipe comercial FEA: recebido automático; sugestão de resposta validada pela Sabrina no Claude comercial (marcar só ela); depois repostar dúvida e resposta no Claude comercial (Keila, 24/11).
+
 ## 5. Conferência e fontes
 - (Keila, 23/11) Acessar e abrir todo arquivo ou link antes de compartilhar; nunca indicar link só pelo nome ou tamanho.
 - Todo link com fonte. Antes de afirmar que algo foi ou não feito, a Gabi confere.
