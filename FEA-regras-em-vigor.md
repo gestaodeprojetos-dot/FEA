@@ -1,4 +1,5 @@
 # FEA · Regras em vigor (resumo do plantão, v1 21/11/2026)
+- **REGRA MÁXIMA (Keila, 23/11): nunca mudar a formatação original dos documentos em que eu atuar.** Fonte, cor, negritos, quebras, entrelinhas e estrutura ficam exatamente como o dono deixou; só o conteúdo pedido muda. Se a proposta precisar de destaque, seguir o padrão de proposta do Claude sem alterar o resto do doc.
 
 Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra nova validada pela Keila entra aqui e no CLAUDE.md.
 
