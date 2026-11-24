@@ -221,10 +221,10 @@ def center_line(page, text, cx, y, font, size, color):
     return round(cx - w / 2, 1), round(cx + w / 2, 1)
 
 
-# p28 - fonte da Fig. 10 (mantido ISOARES igual a v6)
+# p28 - fonte da Fig. 10 (SOARES, confirmado pela autora em 24/11/2026; a v6 trazia ISOARES)
 pg = e[27]
 redact(pg, [(283, 460.5, 401, 499)])
-r = draw_par(pg, toks("ISOARES, D. J. (2022), figura 13.", "hnr", "Fuente:"), 283.54, 399.8, 467.86, 7, 9.5,
+r = draw_par(pg, toks("SOARES, D. J. (2022), figura 13.", "hnr", "Fuente:"), 283.54, 399.8, 467.86, 7, 9.5,
              justify=False)
 log.append(f"p28: fonte da Fig. 10 -> {r}")
 
