@@ -1,6 +1,6 @@
 # FEA · Padrões de operação de lançamentos (para todo Claude que mexe no ClickUp, Drive e planilhas)
 
-Versão de 23/11/2026. Fonte: regras que a Keila definiu e que o Claude Code segue (skills `fea-operacao-lancamentos`, `fea-distribuir-datas` e `fea-clickup-ronda`). Quando houver dúvida entre este documento e o que já está feito, **copiar o padrão de um lançamento recente que está certo** (modelo atual: FEA-MTB 11/26) em vez de inventar.
+Versão de 24/11/2026. Fonte: regras que a Keila definiu e que o Claude Code segue (skills `fea-operacao-lancamentos`, `fea-distribuir-datas` e `fea-clickup-ronda`). Quando houver dúvida entre este documento e o que já está feito, **copiar o padrão de um lançamento recente que está certo** (modelo atual: FEA-MTB 11/26) em vez de inventar.
 
 ## 0. Regras de ouro
 
@@ -41,7 +41,7 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 - `3. PESQUISA`
 - `4. TRÁFEGO` com `BRUTOS` e `CRIATIVOS PRONTOS` (uma pasta por fase: 1. CAPTAÇÃO, 2. ANTECIPAÇÃO, 3. LEMBRETE, 4. VENDAS, 5. VENDAS RMK; dentro de cada fase a pasta `ESTÁTICOS`; vídeos ficam na raiz da fase)
 - `5. LOGO`, `6. PÁGINA DE VENDAS`, `7. URA + SMS`, `8. AUTOMAÇÃO`
-- Planilha `Links úteis - <lançamento>.xlsx` na raiz
+- Planilha `Links úteis - <lançamento>` na raiz, em Google Planilhas (nunca .xlsx)
 
 **Onde salvar cada coisa:**
 - Criativos de tráfego prontos: `4. TRÁFEGO / CRIATIVOS PRONTOS / <fase>` (estáticos em ESTÁTICOS). **Nunca em 2. ARTES.**
@@ -52,6 +52,7 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 
 ## 3. Planilha de links úteis (uma por lançamento)
 
+- **Toda planilha nova de lançamento é Google Planilhas nativa, nunca arquivo .xlsx** (Keila, 24/11/2026), para todo mundo conseguir editar no navegador. As planilhas antigas em .xlsx ficam como estão, sem converter nem trocar o arquivo.
 - Modelo: `Links úteis` do FEA-MTB 11/26. Abas **GERAL, COPY, ARTES, WEB DESIGNER, TRÁFEGO, CPL**. Colunas só `Nome | Link`. Nome do produto (sigla) no A1 da GERAL. Linhas zebradas. Link sempre com o nome do arquivo como texto.
 - **Do lançamento anterior entra só o Drive anterior, para referência** (primeira linha da GERAL). Nada de copy, checkout, planilha, lista ou observação do lançamento anterior.
 - O que ainda não existe fica **em branco** (link do Zoom, coisas da automação, copy que falta). Nada de "(a criar...)" ou observação na célula.
