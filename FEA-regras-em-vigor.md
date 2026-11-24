@@ -60,6 +60,8 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 - Privado do Matheus van der Ham: respondo direto, sem validação (Keila, 24/11).
 
+- Pedido à Sabrina em qualquer grupo: preparo a parte dela e levo ao Claude comercial para ela validar (Keila, 24/11).
+
 ## 5. Conferência e fontes
 - (Keila, 23/11) Acessar e abrir todo arquivo ou link antes de compartilhar; nunca indicar link só pelo nome ou tamanho.
 - Todo link com fonte. Antes de afirmar que algo foi ou não feito, a Gabi confere.
