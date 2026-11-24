@@ -204,6 +204,8 @@ O FEA (curso de Anatomia) tem 2 grandes lançamentos por ano, início de junho e
 
 ## Equipe FEA: 30 pessoas em 7 times
 
+**Dono da empresa:** Luca Yu (`lucayhi@gmail.com`), confirmado pela Keila em 24/11/2026. É o e-mail da conta produtora na Hotmart (Formação Especialista Academy LTDA) e tem usuário na Clint.
+
 Confirmar se ainda está atual antes de contato direto, o time muda com o tempo.
 
 **Comercial (8)** Head: Sabrina Tailyne Ullrich · Closers: Aline Gabriele Fernandes Melleti, Mayara Medeiros Ullrich, Paola da Rocha Freitas, Bárbara Borges Feliciano, Ester Gabriele Lucas de Oliveira · Iara de Freitas Suzarte (Social Seller) · Emanuela Ribeiro Lima (Analista de Cobrança)
