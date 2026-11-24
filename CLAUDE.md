@@ -624,3 +624,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Espaço entre parágrafos sempre (Keila, 23/11):** mesmo em mensagem curta, linha em branco entre um assunto e outro (ex.: "recebido!" numa linha, o que vai acontecer em outra). Nada de texto corrido num bloco só.
 - **Mensagem ao Leo, formato fixo (Keila, 23/11, reforço):** só "@Leo, demanda nova · [evento]", o nome da entrega com o link do ClickUp e a data de entrega. Mais nada (sem contexto, sem pendências, sem "pode começar").
 - **Respostas simples ao Matheus no grupo Copy (Keila, 23/11):** envio de link, doc ou informação pedida por ele no grupo Copy sai direto, sem esperar liberação da gestão.
+- **Produto do carrinho Master Bio 12/26 (Adri, 23/11):** o produto vendido é **Combo 2 em 1: FEB + FEBio Vitalício**, sempre com o nome em negrito; sem listboss nem menção à FEB ou à FEBio como produto isolado.
