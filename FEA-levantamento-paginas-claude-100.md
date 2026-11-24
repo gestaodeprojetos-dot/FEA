@@ -32,7 +32,7 @@ Objetivo: o Luca manda o briefing no grupo e o Claude entrega a página pronta p
 | 6 | Acesso ao GTM (contêiner das páginas) | Botão ou página nova cria evento novo, que só aparece nos relatórios depois que o gatilho é criado. Pela nuvem, o caminho é uma conta de serviço do Google com permissão de edição no contêiner, guardada nos segredos do ambiente; publicar no GTM só combinado com o tráfego. Alternativa: o Claude entrega a lista de eventos e o tráfego cria os gatilhos |
 | 7 | Acesso ao ActiveCampaign (endereço da conta + chave de API nos segredos do ambiente) | O conector está instalado mas sem configuração. Necessário para criar ou conferir formulário, lista e tags de cada evento |
 | 8 | Regra dos formulários | Quando usar ActiveCampaign, Respondi ou Google Apps Script em página nova |
-| 9 | Acesso ao Cloudflare (conta Suporte@joaopithon.com.br) | Ver prévias e usar o manual de desfazer. Pode ser dispensável se o link da prévia aparecer no pull request (a confirmar no primeiro teste) |
+| 9 | Cloudflare | Conectado em 24/11 (conector oficial, uso só de leitura). Prévias virão pelo GitHub; chave de publicação só se alguma página ficar fora do repositório |
 
 ## 4. Materiais (uma vez, depois só atualizar)
 
