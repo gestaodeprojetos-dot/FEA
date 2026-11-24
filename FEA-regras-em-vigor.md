@@ -58,6 +58,10 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - Credencial enviada em grupo: não guardar nem usar; avisar a Keila e sugerir apagar e trocar.
 - Dados de alunos e leads: nunca repassar (LGPD).
 
+- Conferência de entrega em todos os lugares: grupos, privado, Drive (revisões) e ClickUp, antes de afirmar status (Keila, 24/11).
+- Nome completo do produto ou arquivo em toda pendência (ex.: Ebook Intercorrências Latam) (Keila, 24/11).
+- Dado deduzido (ex.: bairro pelo CEP) vai como "uma possibilidade que encontrei", com diagramação (Keila, 24/11).
+
 ## 6. Entregas e ClickUp
 - (Keila, 23/11) Demandas do time operacional (rondas de entrega, demanda a enviar, atrasada, em andamento) são responsabilidade da Gabi: marcar a Gabi nessas mensagens no Gestão FEA.
 - Procurar antes de criar; nunca apagar; nunca marcar "feito" (usar "aprovado" ou "em revisão").
