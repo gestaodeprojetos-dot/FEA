@@ -163,3 +163,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Relatório de pagamentos sempre aberto para o login da Keila (Keila, 24/11):** a planilha 1OM6PA3M9BC1dHDbJciyDPQboa0tmIaxJjjV31GpV2Ew fica sempre liberada para o login dela (gestao@keilaquaresma.com.br). Ela pediu também "liberar para quem tiver o link"; alertei que tem dados de alunos.
 
 - **Criativo revisado vai direto ao Saar (Keila, 25/11 00h12):** a Grazi não aprova criativos de tráfego. Depois de eu revisar (quantidade, nomes, datas, pasta), a task vai para aprovado e o aviso vai direto ao Saar no The Tracker, sem passar pela Grazi.
+
+- **Duas Danis (erro de 25/11, Gabi):** Daniela Dantas (CS/Suporte, fotos e manual do Elite) = 5511996804277. Danielly Agrela "Dani" (Automação) = 5514996197964. Antes de marcar "Dani", conferir qual delas é a dona do assunto.
