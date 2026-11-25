@@ -335,13 +335,13 @@ async function abrir(browser, largura, altura, escala, rotulo) {
   for (const l of dados.links) {
     const href = l.href;
     const rotulo = l.texto || '(sem texto)';
-    if (l.tag === 'button' && !href) continue; // botão de interface (acordeão, carrossel)
+    if (l.tag !== 'a' && !href) continue; // botão de interface (play, acordeão, carrossel)
     if (href === null || href === '' || href === '#') {
       if (l.visivel) achado('BLOQUEIO', 'cta', `Botão/link sem destino (href ${href === null ? 'ausente' : '"' + href + '"'}): "${rotulo}"`);
       continue;
     }
     if (href.startsWith('#')) {
-      if (!dados.ids.includes(href.slice(1))) achado('ALERTA', 'cta', `Âncora sem alvo na página: ${href} ("${rotulo}")`);
+      if (!dados.ids.includes(href.slice(1))) achado('ALERTA', 'cta', `Âncora sem alvo na página: ${href} ("${rotulo}"). Se abre popup por script, clicar e conferir; se não, o botão não faz nada`);
       continue;
     }
     if (/^(mailto|tel):/.test(href)) continue;
