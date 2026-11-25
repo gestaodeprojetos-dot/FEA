@@ -54,3 +54,5 @@
 - (25/11 11h33) Keila: itens 8-10 da revisão Intercorrências ficam como estão. Tasks criadas (entrega 27/11 18h): Leo 17th71zb1mz (ajustes ads), André 17th71zb1n0 (páginas com conteúdo de Olheiras). Rascunhos 297 (Leo, Artes) e 298 (André, Web) aguardando ok. Confirmar se o designer do ebook é o Leo.
 
 - (25/11 11h37) GERAL-289 resolvido pela Gabi: 'Criativos para Tráfego' agora Google Sheets 1Zx5c1vNUqUqQBJyq7m5_9oYpex9mdePhLhL8qHUIGP8 e Perpétuo 1zIwANufWdM3PTTs_LNc-SWtlNxNBYShC19jjwEQyqeI; briefing Black ok. Rascunho 300 (Saar, links novos) aguardando ok da Gabi. Adri (Daily) não achou o doc da copy da página de obrigado do Combo: respondido que o doc não existe, a task é criar; referência Vitalício 2025.
+
+- (25/11 12h10) Sabrina pediu o Pix da empresa (Meninas comercial): recebido enviado; COMERCIAL-306 pergunta a ela onde está a chave (não achei registrada; não afirmar que é o CNPJ). Keila: vídeo do fornecedor recortado (só a bolha de vídeo), enviado a ela no app (GERAL-307).
