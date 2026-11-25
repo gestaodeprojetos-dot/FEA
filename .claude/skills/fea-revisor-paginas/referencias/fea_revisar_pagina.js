@@ -364,7 +364,9 @@ async function abrir(browser, largura, altura, escala, rotulo) {
     for (const u of vistos.keys()) {
       if (/googletagmanager|clarity|facebook\.net/.test(u)) continue;
       try {
-        const r = await api.fetch(u, { method: 'GET', maxRedirects: 8, timeout: 25000, headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36' } });
+        const opcoes = { method: 'GET', maxRedirects: 8, timeout: 25000, headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36' } };
+        let r = await api.fetch(u, opcoes);
+        if (r.status() >= 500) { await new Promise((ok) => setTimeout(ok, 3000)); r = await api.fetch(u, opcoes); } // 5xx pode ser instabilidade: 2ª tentativa
         let final = r.url();
         let obs = '';
         if (/pay\.hotmart\.com\/error/.test(final)) obs = 'checkout com erro na Hotmart (vendas encerradas ou oferta inválida)';
