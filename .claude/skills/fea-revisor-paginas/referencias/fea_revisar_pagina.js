@@ -18,7 +18,7 @@
  *   4. Registra erros de console, erros de página e pedidos que falharam.
  *   5. Lista todos os links e botões com destino e status HTTP (Hotmart, WhatsApp, Sendflow, Zoom...),
  *      href vazio ou "#", âncora sem alvo, target=_blank sem rel=noopener, checkout sem off=.
- *   6. Varre o texto visível: travessão (— e –), "pra ", marcas de toxina/AH/bioestimulador,
+ *   6. Varre o texto visível: travessão (U+2014) e meia-risca (U+2013), "pra ", marcas de toxina/AH/bioestimulador,
  *      palavras-tell, "Dr. João" sem "Pithon", números antigos de alunos, "R$" separado do número,
  *      promessa de resultado e urgência suspeita.
  *   7. Confere SEO e rastreamento: title, description, og:image, canonical, robots, lang, h1,
@@ -261,7 +261,7 @@ async function abrir(browser, largura, altura, escala, rotulo) {
 
   // SEO básico
   if (!dados.titulo) achado('ALERTA', 'técnico', 'Página sem <title>');
-  if (dados.titulo && /[—–]/.test(dados.titulo)) achado('ALERTA', 'copy', 'Travessão no <title>', dados.titulo);
+  if (dados.titulo && /[\u2014\u2013]/.test(dados.titulo)) achado('ALERTA', 'copy', 'Travessão no <title>', dados.titulo);
   if (!dados.descricao) achado('AVISO', 'técnico', 'Sem meta description');
   if (!dados.ogImage) achado('ALERTA', 'técnico', 'Sem og:image (link compartilhado no WhatsApp sai sem imagem)');
   if (!dados.canonical) achado('AVISO', 'técnico', 'Sem canonical');
@@ -302,8 +302,8 @@ async function abrir(browser, largura, altura, escala, rotulo) {
     while ((m = g.exec(texto)) && lista.length < 12) lista.push(contexto(texto, m.index));
     if (lista.length) achado(nivel, categoria, msg, lista);
   };
-  ocorrencias(/—/, 'ALERTA', 'copy', 'Travessão (—) no texto visível');
-  ocorrencias(/ – /, 'ALERTA', 'copy', 'Meia-risca usada como travessão ( – ) no texto visível');
+  ocorrencias(/\u2014/, 'ALERTA', 'copy', 'Travessão (U+2014) no texto visível');
+  ocorrencias(/ \u2013 /, 'ALERTA', 'copy', 'Meia-risca (U+2013) usada como travessão no texto visível');
   ocorrencias(/\bpra\b/i, 'ALERTA', 'copy', '"pra" no texto (sempre "para")');
   ocorrencias(/R\$ (?=\d)/, 'AVISO', 'visual', '"R$" com espaço comum antes do número (pode quebrar a linha: usar espaço que não quebra)');
   ocorrencias(/Dr\.? João(?! Pithon)/, 'AVISO', 'copy', '"Dr. João" sem "Pithon" (pedido do Luca: sempre "Dr. João Pithon")');
