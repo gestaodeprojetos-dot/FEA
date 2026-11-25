@@ -179,3 +179,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Correção e atualização sem perguntar (Keila, 25/11 11h04):** quando a ação é corrigir ou atualizar algo já combinado (ex.: incluir o redirecionamento das UTMs na mensagem ao André, atualizar Links úteis), executar direto, sem perguntar. Perguntar só o que é decisão nova.
 
 - **Quem é a Gabi (Gabi, 25/11 11h13):** Gabi = *Gabriela Borges* (ClickUp ID 118026144, gabrielaborgescos@gmail.com), que é ao mesmo tempo a Gabi da gestão e a Gabi da edição de vídeo. Não confundir com a antiga conta "Gabrielle Ineu Coradini" (fora do workspace). Tasks de gestão e de edição de vídeo atribuídas a Gabriela Borges estão corretas.
+
+- **Prazo é nosso (Keila, 25/11 11h15):** quando a data de entrega já existe (ClickUp ou briefing), não perguntar ao time "quando vai entregar". A gestão direciona: confirmar se a pessoa consegue entregar até a data definida (ex.: "precisamos até amanhã, 26/11, consegue?").

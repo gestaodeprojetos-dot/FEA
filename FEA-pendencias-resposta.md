@@ -42,3 +42,5 @@
 - (25/11 ~10h59) *257 enviada* ao Saar no The Tracker (conferido antes que não tinha saído). A pedido da Keila, todos os rascunhos pendentes foram reapresentados no Gestão FEA, um por mensagem: 212 (Leo, número novo, PLX Brasil movido para sexta), 258, 259, 225, 226, 253, 254, 255, 256, 210, 219.
 
 - (25/11 11h06) Links úteis Master Bio aba TRÁFEGO A14:A16 atualizada (UTMs de junho mantidas, ok do Saar). 258 reapresentado com redirecionamentos. Agente levantando demandas da Gabi e backlogs abertos (perpétuo x lançamento) para a Keila (GERAL-271).
+
+- (25/11 11h17) *258 enviada* ao André (captura Master Bio até 26/11 + redirecionamentos UTMs). GERAL-279: perguntei à Keila se a pergunta à Grazi no Coordenação é sobre antes e depois PLX (PLX-273) ou cordão/crachá (225).
