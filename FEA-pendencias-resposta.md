@@ -38,3 +38,5 @@
 - (25/11 ~10h17) ARTES-216 resolvido: número antigo do Leo fora de todos os grupos; novo (marcar como 554884289839) está em Artes, GERAL e FEA Academy. 252 reenviada marcando o novo; a mensagem que marcava o antigo foi apagada.
 
 - (25/11 10h43) André perguntou ao Luca no grupo Web se há imagem de antes e depois de paciente do PLX (bloco igual ao do CTX). Pergunta é para o Luca; se ninguém responder até ~11h15, levar ao Gestão FEA.
+
+- (25/11 ~10h59) *257 enviada* ao Saar no The Tracker (conferido antes que não tinha saído). A pedido da Keila, todos os rascunhos pendentes foram reapresentados no Gestão FEA, um por mensagem: 212 (Leo, número novo, PLX Brasil movido para sexta), 258, 259, 225, 226, 253, 254, 255, 256, 210, 219.
