@@ -169,3 +169,9 @@ O WordPress (subdomínios fep, feb, bio, eb, ctx e joaopithon.com.br, Elementor)
 6. Só leitura: nunca salvar, publicar ou restaurar revisão pelo agente.
 
 Até lá, a cópia fiel de uma migração é medida contra a página pública do WordPress (HTML e prints), como no método da FEP.
+
+## Regra do André para artefatos de design (Daily FEA, 25/11 17h18)
+
+- Prancheta desktop de **1920 px**, com largura útil de conteúdo de **1280 px ou mais** quando a seção pedir.
+- Mobile em **390 px**, mas **responsivo de verdade**: conferir em várias larguras (360, 390, 414, 768, 1024, 1280, 1440, 1920), nunca só numa tela fixa. Reprova se quebrar em qualquer largura intermediária.
+- Ao finalizar o artefato, avisar a Keila no Gestão FEA para ela compartilhar o link com o webdesign@joaopithon.com.br.
