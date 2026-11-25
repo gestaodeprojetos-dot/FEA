@@ -70,3 +70,5 @@
 - (25/11 12h31) Depoimentos ES enviados ao André (Web). PLX-326: Gabi tem o checkout em dólar do PLX Latam (Luca cria)? PLX-327/328: Grazi não entregou os links do PLX Latam (faltam área de membros, canal de alunos, WhatsApp ES); rascunho 328 de cobrança no Coordenação aguardando ok.
 
 - (25/11 12h31) Keila: às 16h perguntar de novo à Grazi (Coordenação) pela previsão dos links do PLX Latam, conferindo antes se ela entregou em algum lugar. Rascunho 329 (substitui 328) aguardando ok; agendamento de sessão 420aec52 às 19h UTC (16h BRT).
+
+- (25/11 12h40) GERAL-331 (pendências Grazi: planilha central Elite, 3 links PLX Latam, antes e depois PLX; Dani nada) e WEB-332 (5 páginas com formulário sem webhook). Rascunho 333 (André, confirmar páginas que precisam de webhook) aguardando ok. Daily: avisei que o repo lp-joaopithon está acessível e propus começar pela correção do Ebook Intercorrências; aguardando André.
