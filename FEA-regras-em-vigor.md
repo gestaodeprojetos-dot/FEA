@@ -165,3 +165,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Criativo revisado vai direto ao Saar (Keila, 25/11 00h12):** a Grazi não aprova criativos de tráfego. Depois de eu revisar (quantidade, nomes, datas, pasta), a task vai para aprovado e o aviso vai direto ao Saar no The Tracker, sem passar pela Grazi.
 
 - **Duas Danis (erro de 25/11, Gabi):** Daniela Dantas (CS/Suporte, fotos e manual do Elite) = 5511996804277. Danielly Agrela "Dani" (Automação) = 5514996197964. Antes de marcar "Dani", conferir qual delas é a dona do assunto.
+
+- **Título em negrito (Keila, 25/11 9h36, áudio):** todo título de mensagem vai em negrito (*...*), incluindo o cabeçalho com código no Gestão FEA (ex.: *GERAL-218 · Assunto*) e o título dos rascunhos.
