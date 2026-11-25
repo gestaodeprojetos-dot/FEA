@@ -52,6 +52,8 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 
 - **Presente do ingresso é tarefa da Automação (Equipe IAutomate), nunca do Suporte/CS** (Keila, 24/11/2026). A Gestão só confirma qual é o presente.
 
+- **URA + SMS em todo lançamento com live** (Keila, 25/11/2026): copy até D-10, cronograma e áudio da URA até D-7, créditos da Ligue Lead e agendamento até D-3 (sempre depois da copy e do áudio, com SMS de teste), conferência dos envios e report em D0 e D+1. SMS com no máximo 160 caracteres.
+
 ## 3. Planilha de links úteis (uma por lançamento)
 
 - **Toda planilha nova de lançamento é Google Planilhas nativa, nunca arquivo .xlsx** (Keila, 24/11/2026), para todo mundo conseguir editar no navegador. As planilhas antigas em .xlsx ficam como estão, sem converter nem trocar o arquivo.

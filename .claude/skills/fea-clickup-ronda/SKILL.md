@@ -119,3 +119,12 @@ O canal do Dr. João posta vídeo longo segunda, quarta e sexta, às 20h. O Leo 
 ## Conferência de tarefa órfã (toda rodada)
 
 Em toda rodada, listar as tarefas de topo das sprints e do Backlog das pastas do escopo. Qualquer tarefa que não seja uma mãe de área (Gestão, Copy, Design, Webdesigner, Automação, Gestão de Tráfego, Suporte/CS, Operação do dia) é órfã: mover para baixo da mãe da área certa na mesma lista (`PUT /task/{id}` com `parent`), criando a mãe se faltar, e citar no relatório. Regra da Keila, 19/11/2026: "não pode acontecer isso".
+
+## URA + SMS (lembrete fixo)
+
+**URA + SMS em todo lançamento com live (Keila, 25/11/2026: "seja mais rigoroso, tô deixando passar, todo lançamento me ajuda a lembrar").** Toda pasta de lançamento com live precisa das quatro tarefas, nesta ordem e com estes prazos (D = dia da live):
+1. Copy de URA + SMS (Copy), até D-10. Conferir SMS com até 160 caracteres, data e horário certos e "para" por extenso.
+2. Atualizar cronograma de URA + SMS e pedir o áudio da URA (Gestão), até D-7. Áudio do Dr. João gravado ou montado de áudios existentes, salvo em `7. URA + SMS` e na planilha de links úteis.
+3. Conferir créditos da Ligue Lead e agendar URA + SMS (Gestão), até D-3, só depois da copy e do áudio prontos, com SMS de teste enviado para os números do doc.
+4. Conferir os envios no dia e pedir os reports para a Ligue Lead (Gestão), D0 e D+1.
+Na montagem do lançamento, criar as quatro se faltarem e conferir que a ordem das datas faz sentido (agendar nunca antes da copy). Na ronda das 7h52, para todo lançamento com live nos próximos 14 dias, o relatório traz uma linha "URA + SMS" com o status das quatro etapas, e qualquer etapa que vence hoje, amanhã ou já venceu entra também no aviso do celular.
