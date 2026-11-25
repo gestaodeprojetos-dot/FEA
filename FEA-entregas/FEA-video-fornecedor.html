@@ -1,0 +1,21 @@
+<title>Vídeo do fornecedor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Montserrat:wght@400;500&display=swap">
+<style>
+/* Layout: uma coluna centrada, o vídeo redondo é o único elemento. */
+:root{--bg:#F9F9F9;--fg:#24203a;--muted:#5d5878;--accent:#5B4599;--line:#E9E9E9;
+--display:"Sora",system-ui,sans-serif;--body:"Montserrat",system-ui,sans-serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#17142a;--fg:#ecebf5;--muted:#b3aed0;--accent:#a996e6;--line:#2c2846;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17142a;--fg:#ecebf5;--muted:#b3aed0;--accent:#a996e6;--line:#2c2846;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);padding-block:40px;
+padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+main{max-width:520px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+h1{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--accent);margin:0;text-wrap:balance}
+p{margin:0;color:var(--muted);line-height:1.6}
+video{width:100%;max-width:420px;aspect-ratio:1;border-radius:50%;border:3px solid var(--accent);background:var(--line)}
+</style>
+<main>
+  <h1>Vídeo do fornecedor</h1>
+  <video id="v" src="FEA-video-fornecedor-recortado.mp4" controls playsinline preload="metadata"></video>
+  <p>Mensagem de vídeo recebida pela gestão, recortada para compartilhar com o time. 37 segundos, com áudio.</p>
+</main>
