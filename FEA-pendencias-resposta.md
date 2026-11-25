@@ -16,3 +16,5 @@
 - (25/11, 8h) Leo no privado às 22h04 de 24/11: entregou (1) Criativos remarketing Elite Experience ADS 075-094, 40 peças (https://app.clickup.com/t/17th71zae65) e (2) Master Bio, 5 artes de captação com data 08/12, 6 peças (https://app.clickup.com/t/17th71zaf5d), ambas em revisão. Às 8h: agradecer o Leo (privado), conferir no Drive, levar ao Gestão FEA a próxima etapa (aprovação da Grazi no Elite; Saar/tráfego no Master Bio).
 
 - (25/11 03h25 BRT) Gerson enviou no grupo Ebooks o link do formulário (https://forms.gle/jZkPPPJTP6BXPnBs5), marcando o Luca. NÃO lembrar o Gerson às 8h03; em vez disso, às 8h agradecer o Gerson no grupo Ebooks marcando-o, registrar o link onde couber (Links úteis / doc do ebook) e incluir no resumo da noite.
+
+- (25/11 8h03) Grazi já cobrada no Sucesso do Cliente (planilha central Elite + 4 links PLX Latam). No lembrete das 8h07, NÃO cobrar a Grazi de novo; só acompanhar a resposta.
