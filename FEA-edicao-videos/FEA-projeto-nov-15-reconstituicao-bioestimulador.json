@@ -1,0 +1,143 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/brutos/c16/IMG_3147.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/tr/IMG_3147.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/938dd735-3beb-58ce-9071-71181ba3e862/scratchpad/out/n15/1- Reconstituição do ácido poli-L-láctico.mp4",
+   "titulo": "Reconstituição do ácido poli-L-láctico",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     5.5,
+     127.32
+    ],
+    [
+     134.3,
+     149.95
+    ],
+    [
+     160.0,
+     171.9
+    ],
+    [
+     177.48,
+     184.1
+    ],
+    [
+     198.3,
+     206.65
+    ],
+    [
+     215.3,
+     224.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Pp]olielil[aá]tico\\b",
+     "poli-L-láctico"
+    ],
+    [
+     "\\b(\\d+) ?mg\\b",
+     "\\1 mg"
+    ],
+    [
+     "\\b(\\d+)ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bhomogeniz",
+     "homogeneiz"
+    ],
+    [
+     "\\bHomogeniz",
+     "Homogeneiz"
+    ],
+    [
+     "\\bhiper dilu[ií]do\\b",
+     "hiperdiluído"
+    ],
+    [
+     "\\bas vezes\\b",
+     "às vezes"
+    ]
+   ],
+   "remover_legenda": [
+    [
+     224.2,
+     224.9
+    ]
+   ]
+  }
+ ]
+}
