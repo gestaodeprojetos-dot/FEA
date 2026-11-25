@@ -212,3 +212,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Artefatos de design de página (André, 25/11 17h18):** prancheta desktop 1920 px com conteúdo de 1280 px ou mais; mobile 390 px e responsivo em todas as larguras (testar 360 a 1920); ao finalizar, avisar a Keila para compartilhar o link. Registrado no fea-revisor-paginas.
 
 - **Copy só vira "aprovado" com o ok da Copy (Adri, 25/11, erro):** o listboss da Master Bio estava como aprovado antes da Adri liberar. Status de task de copy só muda para aprovado depois do ok da Adri ou do Matheus.
+
+- **Demanda recebida nunca fica parada (Keila, 25/11 17h39, regra de gestão de projetos):** toda demanda recebida segue o fluxo completo na hora: verificar, revisar, atualizar o documento, criar a próxima demanda e enviar ao próximo colaborador.
