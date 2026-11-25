@@ -104,6 +104,27 @@ Página estática em código, publicada direto pelo Claude, sem Elementor nem ca
 
 Público B2B técnico (médicos, dentistas, biomédicos, farmacêuticos), nunca leigo. Tom médico-científico, foco em segurança. Nunca: prometer resultado estético, citar preço/lote/parcelas quando o briefing proíbe, revelar bônus "mistério", urgência falsa, nomear marca sem aprovação, travessão, "pra". Frases como "só para quem estiver ao vivo" só entram se confirmadas.
 
+## 8b. WordPress pela API (sem captcha)
+
+Testado em 25/11/2026: a API REST (`/wp-json/wp/v2/`) responde da nuvem, sem o captcha do login, nos 6 WordPress: joaopithon.com.br, feb, fep, iff, fef e pl. Acesso por usuário `claude-fea` (função Editor) com Senha de aplicativo, uma por site, lida destas variáveis de ambiente (nunca escrita em arquivo ou chat):
+
+| Site | Usuário | Senha |
+|---|---|---|
+| joaopithon.com.br | `WP_SITE_USER` | `WP_SITE_APP_PASSWORD` |
+| feb | `WP_FEB_USER` | `WP_FEB_APP_PASSWORD` |
+| fep | `WP_FEP_USER` | `WP_FEP_APP_PASSWORD` |
+| iff | `WP_IFF_USER` | `WP_IFF_APP_PASSWORD` |
+| fef | `WP_FEF_USER` | `WP_FEF_APP_PASSWORD` |
+| pl | `WP_PL_USER` | `WP_PL_APP_PASSWORD` |
+
+Teste de conexão (só leitura): `curl -s -u "$WP_FEB_USER:$WP_FEB_APP_PASSWORD" "https://feb.joaopithon.com.br/wp-json/wp/v2/users/me?context=edit&_fields=id,roles"`.
+
+Regras de uso:
+- Pode direto: listar páginas, status, revisões, criar página como rascunho.
+- Só com ok da Keila: publicar, despublicar, mudar slug ou excluir (muitas páginas têm tráfego pago).
+- Conteúdo de página Elementor (`_elementor_data`) não é exposto pela API por padrão: não forçar. Edição de Elementor continua pela extensão do Chrome (seção 4).
+- A API não limpa o cache do WP Rocket.
+
 ## 9. Segurança operacional
 
 - Credenciais: preferir usuário temporário com função Editor, apagado no fim; lembrar de trocar senha que tenha sido escrita em conversa.
