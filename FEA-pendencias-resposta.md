@@ -56,3 +56,5 @@
 - (25/11 11h37) GERAL-289 resolvido pela Gabi: 'Criativos para Tráfego' agora Google Sheets 1Zx5c1vNUqUqQBJyq7m5_9oYpex9mdePhLhL8qHUIGP8 e Perpétuo 1zIwANufWdM3PTTs_LNc-SWtlNxNBYShC19jjwEQyqeI; briefing Black ok. Rascunho 300 (Saar, links novos) aguardando ok da Gabi. Adri (Daily) não achou o doc da copy da página de obrigado do Combo: respondido que o doc não existe, a task é criar; referência Vitalício 2025.
 
 - (25/11 12h10) Sabrina pediu o Pix da empresa (Meninas comercial): recebido enviado; COMERCIAL-306 pergunta a ela onde está a chave (não achei registrada; não afirmar que é o CNPJ). Keila: vídeo do fornecedor recortado (só a bolha de vídeo), enviado a ela no app (GERAL-307).
+
+- (25/11 12h12) Enviados com ok: 212 (Leo privado), 297 (Leo Artes), 292 (Grazi Coordenação), 298 (André Web; copy certa, erro só na página). Pix enviado à Sabrina. Pendentes: 302, 259, 226, 253-256, 210, 219; GERAL-248, 290, BFV-283.

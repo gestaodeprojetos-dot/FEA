@@ -185,3 +185,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Planilha de criativos antes do Saar (Keila, 25/11 11h19):** antes de enviar ao Saar a mensagem de criativos liberados, atualizar a planilha de criativos do evento (Criativos para Tráfego / Perpétuo). Se o arquivo for .xlsx e eu não conseguir editar, levar à gestão a linha pronta e as soluções, antes de avisar o Saar.
 
 - **Página de obrigado = onboarding (Adri, 25/11):** nos lançamentos, a página de obrigado pós-compra é a mesma página de onboarding. Doc do Master Bio 12/26 (Combo): [DEZ/26 · Dri revisar] 3. Página de onboarding FEBio (1nMay3GUUryvZcqSi381C1CQFJhzt2ME6MTHjBq753Uc). Procurar por 'onboarding' antes de dizer que não existe.
+
+- **Dados bancários e Pix da empresa (Sabrina, 25/11 12h08):** a Sabrina enviou no grupo Claude comercial | FEA (mensagem de 25/11 às 12h08) e pediu para deixar salvo. Quando o comercial pedir, buscar essa mensagem no grupo e reenviar. Não versionar os dados bancários no repositório.
