@@ -1,0 +1,117 @@
+/* ===== INTL-TEL-INPUT — apenas DESKTOP ===== */
+@media (min-width: 768px) {
+  .iti,
+  .iti--allow-dropdown {
+    position: relative !important;
+    width: 100% !important;
+    display: block !important;
+  }
+  .iti__country-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    padding: 0 !important;
+  }
+  .iti__dropdown-content {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    min-width: 280px !important;
+    max-width: none !important;
+    z-index: 999999 !important;
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .iti__dropdown-content.iti__hide,
+  .iti__country-list.iti__hide {
+    display: none !important;
+  }
+  #_form_38_ .iti__search-input,
+  .iti__search-input {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    padding: 10px 12px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid #eee !important;
+    border-radius: 0 !important;
+    font-size: 16px !important;
+    height: auto !important;
+    float: none !important;
+  }
+  .iti__country-list {
+    display: block !important;
+    width: 100% !important;
+    max-height: 220px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: static !important;
+    background: #fff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .iti__country {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+  }
+  .iti__country:hover,
+  .iti__country.iti__highlight {
+    background: #f3f3f3 !important;
+  }
+}
+
+/* ===== MOBILE — deixa o comportamento nativo do iti ===== */
+@media (max-width: 767px) {
+  .iti--container,
+  .iti--fullscreen-popup {
+    position: fixed !important;
+    z-index: 999999 !important;
+  }
+}
+
+/* ===== Comum a todos ===== */
+.iti,
+.iti--allow-dropdown {
+  width: 100% !important;
+}
+.iti__country-name,
+.iti__dial-code,
+.iti__selected-dial-code {
+  font-size: 16px !important;
+}
+.iti__a11y-text {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+}
+.actc-form,
+.actc-form ._form-content,
+.actc-form ._field-wrapper,
+._form_element {
+  overflow: visible !important;
+}

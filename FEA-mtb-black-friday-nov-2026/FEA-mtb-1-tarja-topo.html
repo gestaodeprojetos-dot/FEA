@@ -1,0 +1,35 @@
+<div class="mtb-tarja">
+  <div class="mtb-tarja__eyebrow">MASTERCLASS GRATUITA + OFERTA DA BLACK FRIDAY VITALÍCIA</div>
+  <div class="mtb-tarja__data">9/11 às 20h</div>
+  <div class="mtb-tarja__cd" id="mtb-cd">&nbsp;</div>
+</div>
+<style>
+.elementor-element:has(> .elementor-widget-container > .mtb-tarja){width:100%;max-width:100%}
+.e-con:has(.mtb-tarja) > .e-con-inner{padding-top:6px;padding-bottom:6px}
+.mtb-tarja{width:100%;text-align:center;font-family:Inter,system-ui,-apple-system,sans-serif;color:#fff}
+.mtb-tarja__eyebrow{font-size:clamp(8.5px,2.7vw,12px);font-weight:700;letter-spacing:.03em;line-height:12px;white-space:nowrap;color:rgba(255,255,255,.92)}
+.mtb-tarja__data{font-size:17px;font-weight:800;line-height:19px;color:#fff}
+.mtb-tarja__cd{font-size:11px;font-weight:500;line-height:13px;color:rgba(255,255,255,.72);font-variant-numeric:tabular-nums}
+@media (min-width:768px){
+  .mtb-tarja__eyebrow{font-size:12px;line-height:14px;letter-spacing:.06em}
+  .mtb-tarja__data{font-size:19px;line-height:21px}
+  .mtb-tarja__cd{font-size:12px;line-height:14px}
+}
+</style>
+<script nowprocket>
+(function () {
+  var alvo = Date.UTC(2026, 10, 9, 23, 0, 0); /* 9/11/2026 20h Brasília */
+  function dd(n) { return n < 10 ? '0' + n : '' + n; }
+  function atualiza() {
+    var el = document.getElementById('mtb-cd');
+    if (!el) return;
+    var resto = alvo - Date.now();
+    if (resto <= 0) { el.textContent = 'ao vivo agora'; return; }
+    var m = Math.floor(resto / 60000);
+    var d = Math.floor(m / 1440), h = Math.floor((m % 1440) / 60), min = m % 60;
+    el.textContent = 'faltam ' + (d > 0 ? d + 'd ' : '') + dd(h) + 'h ' + dd(min) + 'min';
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', atualiza); } else { atualiza(); }
+  setInterval(atualiza, 20000);
+})();
+</script>
