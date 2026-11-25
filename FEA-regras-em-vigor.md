@@ -167,3 +167,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Duas Danis (erro de 25/11, Gabi):** Daniela Dantas (CS/Suporte, fotos e manual do Elite) = 5511996804277. Danielly Agrela "Dani" (Automação) = 5514996197964. Antes de marcar "Dani", conferir qual delas é a dona do assunto.
 
 - **Título em negrito (Keila, 25/11 9h36, áudio):** todo título de mensagem vai em negrito (*...*), incluindo o cabeçalho com código no Gestão FEA (ex.: *GERAL-218 · Assunto*) e o título dos rascunhos.
+
+- **REGRA MÁXIMA · Ronda conferida (Keila, 25/11 9h42, áudio):** antes de trazer ao Gestão FEA qualquer ronda, revisão ou pendência, conferir Drive, ClickUp, planilha de Links úteis e grupos, ver o que o time já entregou e atualizar o que já existe (status, planilha, docs). Só entra na ronda o que de fato está pendente. Informação sempre completa (ex.: "briefing do perpétuo do Elite Mentoring", nunca só "briefing do perpétuo"). Briefing de perpétuo é com o Luca, não com a Keila.
