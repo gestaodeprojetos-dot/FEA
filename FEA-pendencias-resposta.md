@@ -52,3 +52,5 @@
 - (25/11 11h30) Gabi converteu 'Criativos para Tráfego - Perpétuo' para Google Sheets: 1zIwANufWdM3PTTs_LNc-SWtlNxNBYShC19jjwEQyqeI (link novo; atualizar onde o xlsx antigo era citado). Linha Elite Mentoring incluída (Perpétuo - BRASIL, linhas 32-33), task 17th71z9857 aprovada. Falta: legenda EM (confirmar com Copy); Criativos para Tráfego.xlsx (lançamentos) ainda em Excel.
 
 - (25/11 11h33) Keila: itens 8-10 da revisão Intercorrências ficam como estão. Tasks criadas (entrega 27/11 18h): Leo 17th71zb1mz (ajustes ads), André 17th71zb1n0 (páginas com conteúdo de Olheiras). Rascunhos 297 (Leo, Artes) e 298 (André, Web) aguardando ok. Confirmar se o designer do ebook é o Leo.
+
+- (25/11 11h37) GERAL-289 resolvido pela Gabi: 'Criativos para Tráfego' agora Google Sheets 1Zx5c1vNUqUqQBJyq7m5_9oYpex9mdePhLhL8qHUIGP8 e Perpétuo 1zIwANufWdM3PTTs_LNc-SWtlNxNBYShC19jjwEQyqeI; briefing Black ok. Rascunho 300 (Saar, links novos) aguardando ok da Gabi. Adri (Daily) não achou o doc da copy da página de obrigado do Combo: respondido que o doc não existe, a task é criar; referência Vitalício 2025.
