@@ -108,16 +108,20 @@ Público B2B técnico (médicos, dentistas, biomédicos, farmacêuticos), nunca 
 
 Testado em 25/11/2026: a API REST (`/wp-json/wp/v2/`) responde da nuvem, sem o captcha do login, nos 6 WordPress: joaopithon.com.br, feb, fep, iff, fef e pl. Acesso por usuário `claude-fea` (função Editor) com Senha de aplicativo, uma por site, lida destas variáveis de ambiente (nunca escrita em arquivo ou chat):
 
-| Site | Usuário | Senha |
-|---|---|---|
-| joaopithon.com.br | `WP_SITE_USER` | `WP_SITE_APP_PASSWORD` |
-| feb | `WP_FEB_USER` | `WP_FEB_APP_PASSWORD` |
-| fep | `WP_FEP_USER` | `WP_FEP_APP_PASSWORD` |
-| iff | `WP_IFF_USER` | `WP_IFF_APP_PASSWORD` |
-| fef | `WP_FEF_USER` | `WP_FEF_APP_PASSWORD` |
-| pl | `WP_PL_USER` | `WP_PL_APP_PASSWORD` |
+Nomes das variáveis (padrão combinado em 25/11, o mesmo do Claude Code local da Keila): usuário único `WP_USER` (= `claude-fea`) e uma senha por site:
 
-Teste de conexão (só leitura): `curl -s -u "$WP_FEB_USER:$WP_FEB_APP_PASSWORD" "https://feb.joaopithon.com.br/wp-json/wp/v2/users/me?context=edit&_fields=id,roles"`.
+| Site | Senha | Status 25/11 |
+|---|---|---|
+| joaopithon.com.br | `WP_PASS_SITE` | usuário e senha criados |
+| feb | `WP_PASS_FEB` | usuário e senha criados |
+| iff | `WP_PASS_IFF` | usuário e senha criados |
+| fef | `WP_PASS_FEF` | usuário e senha criados |
+| pl | `WP_PASS_PL` | usuário e senha criados |
+| fep | `WP_PASS_FEP` | pendente (falta acesso de administrador) |
+
+No Claude Code local, as variáveis ficam num `.env` na pasta do projeto (já está no `.gitignore`). Na nuvem, ficam nas variáveis do ambiente. A senha tem espaços: sempre entre aspas. joaopithon.com.br tem o plugin Really Simple Security: se der 401, suspeitar dele primeiro.
+
+Teste de conexão (só leitura): `curl -s -u "$WP_USER:$WP_PASS_FEB" "https://feb.joaopithon.com.br/wp-json/wp/v2/users/me?context=edit&_fields=id,roles"`.
 
 Regras de uso:
 - Pode direto: listar páginas, status, revisões, criar página como rascunho.

@@ -34,7 +34,7 @@ Objetivo: o Luca manda o briefing no grupo e o Claude entrega a página pronta p
 | 8 | Regra dos formulários | Quando usar ActiveCampaign, Respondi ou Google Apps Script em página nova |
 | 9 | Cloudflare | Conectado em 24/11 (conector oficial, uso só de leitura). Prévias virão pelo GitHub; chave de publicação só se alguma página ficar fora do repositório |
 
-| 10 | WordPress (6 sites) | API responde da nuvem sem captcha (testado 25/11). Falta criar o usuário `claude-fea` (Editor) e a Senha de aplicativo em cada site e guardar nas variáveis `WP_<SITE>_USER` e `WP_<SITE>_APP_PASSWORD` do ambiente |
+| 10 | WordPress (6 sites) | API responde da nuvem sem captcha (testado 25/11). Usuário `claude-fea` e Senha de aplicativo criados em 5 sites em 25/11 (site, feb, iff, fef, pl); fep pendente. Falta guardar `WP_USER` e `WP_PASS_<SITE>` nas variáveis do ambiente da nuvem |
 
 ## 4. Materiais (uma vez, depois só atualizar)
 
