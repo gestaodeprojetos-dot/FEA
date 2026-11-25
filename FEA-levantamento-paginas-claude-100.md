@@ -19,7 +19,7 @@ Objetivo: o Luca manda o briefing no grupo e o Claude entrega a página pronta p
 
 | # | Falta | Detalhe |
 |---|---|---|
-| 1 | Acesso ao repositório `andrevivas/lp-joaopithon` | Teste de 24/11: recusado. Fazer, logada na conta GitHub `gestaodeprojetos-dot`: aceitar o convite do repositório; em github.com/settings/installations, conferir se o app Claude inclui o `lp-joaopithon`; reconectar em claude.ai/connect-github; abrir sessão nova com o repositório |
+| 1 | Acesso ao repositório `oandrevivas/lp-joaopithon` | Liberado em 25/11 (leitura e escrita, registrado no WEB-439). O nome certo do dono é `oandrevivas`; os testes anteriores falhavam por usar `andrevivas`. Ligar o repositório na sessão só quando houver demanda de página |
 | 2 | Combinado com o André: páginas criadas pelo Claude nascem no código, sem projeto no Claude Design | O próprio documento do André recomenda que o Claude Design fique só com ele. Sem projeto de design, não há o que sincronizar: o código é a única versão. Se um dia ele quiser redesenhar, traz a página do ar para o Claude Design, como já faz |
 | 3 | Quem dá a ordem de publicar as páginas criadas pelo Claude | Hoje o processo exige ordem do André. Proposta: aprovação do Luca na prévia + "pode publicar" da Keila; o André acompanha pelo alarme |
 | 4 | Qual grupo é o canal oficial de briefing | Provável "Web \| FEA". Confirmar, e combinar que o briefing chega em uma mensagem ou documento único |

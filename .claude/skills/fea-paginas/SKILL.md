@@ -11,7 +11,7 @@ Playbook validado na prática em 03/11/2026, no ajuste da página da Masterclass
 
 Desde 23/11/2026 existe o processo oficial do André, resumido em `referencias/FEA-processo-oficial-paginas.md`. **Ler esse arquivo antes de criar ou alterar qualquer página.** Pontos que mandam em tudo:
 
-- Páginas novas e as já migradas vivem no repositório `andrevivas/lp-joaopithon` (Astro). Ler o CLAUDE.md e o AGENTS.md do repositório antes de mexer; eles têm prioridade sobre este arquivo.
+- Páginas novas e as já migradas vivem no repositório `oandrevivas/lp-joaopithon` (Astro). Ler o CLAUDE.md e o AGENTS.md do repositório antes de mexer; eles têm prioridade sobre este arquivo.
 - Envio para a branch principal publica sozinho em 4 a 7 min. Por isso: **sempre branch + pull request + prévia**, nunca publicar pelo terminal, e só publicar com ordem do André (exceto troca de risco baixo: link, data, WhatsApp, Zoom, texto curto).
 - Classificar o pedido pela tabela de risco antes de começar e dizer a classificação para quem pediu.
 - Mudança visual ou de layout em página com design aprovado volta ao design (Claude Design + André + Luca); no código só entram bug, texto, número, link e data.
@@ -27,7 +27,7 @@ As seções abaixo continuam valendo para as páginas que ainda estão no WordPr
 |---|---|
 | `joaopithon.com.br` | WordPress principal (separado dos subdomínios) |
 | `feb.`, `fep.`, `iff.`, `fef.joaopithon.com.br` | Cada um é um WordPress próprio: Elementor + PRO Elements, tema Hello Elementor, cache WP Rocket, PHP 8.2, hospedagem LiteSpeed (Núcleo Brasil Servidores) |
-| `lp.joaopithon.com.br` | Site em Astro no repositório `andrevivas/lp-joaopithon`, publicado no Cloudflare a cada envio à branch principal, mantido pelo André Vivas (webdesigner). Processo na seção 0 |
+| `lp.joaopithon.com.br` | Site em Astro no repositório `oandrevivas/lp-joaopithon`, publicado no Cloudflare a cada envio à branch principal, mantido pelo André Vivas (webdesigner). Processo na seção 0 |
 | Cloudflare | Fica na frente de tudo: DNS, segurança, CDN e SSL. O HTML das páginas WordPress NÃO fica em cache nele (`cf-cache-status: DYNAMIC`), então não precisa purgar depois de editar |
 
 Fatos que mudam a estratégia:

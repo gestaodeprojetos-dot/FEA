@@ -4,7 +4,7 @@ Resumo do documento "Processo de criação de páginas · Mapa para a gestão". 
 
 ## Onde ficam as páginas
 
-- Repositório: `andrevivas/lp-joaopithon` (GitHub, privado, conta pessoal do André). Projeto em **Astro**.
+- Repositório: `oandrevivas/lp-joaopithon` (GitHub, privado, conta pessoal do André). Projeto em **Astro**.
 - Publicação: GitHub conectado ao Cloudflare. **Todo envio para a branch principal vai ao ar sozinho em 4 a 7 min, sem revisão.**
 - Prévia: cada branch ou pull request ganha um endereço de prévia no Cloudflare.
 - Acesso da gestão (desde 23/11/2026): conta `gestaodeprojetos-dot` com escrita no repositório; app do Claude instalado pelo André só nesse repositório. Cada pessoa liga a própria conta do Claude ao GitHub.

@@ -6,7 +6,7 @@ Versão de 23/11/2026. Dividido em três partes: o que se resolve uma vez só, o
 
 | # | O que falta | Quem resolve | Status |
 |---|---|---|---|
-| 1 | Acesso ao repositório `andrevivas/lp-joaopithon` nesta conta: aceitar o convite, reconectar o GitHub em claude.ai/connect-github e abrir sessão nova com o repositório | Keila | Pendente (a sessão atual ainda não enxerga) |
+| 1 | Acesso ao repositório `oandrevivas/lp-joaopithon` nesta conta: aceitar o convite, reconectar o GitHub em claude.ai/connect-github e abrir sessão nova com o repositório | Keila | Pendente (a sessão atual ainda não enxerga) |
 | 2 | Combinado com o André sobre o design: eu monto o design direto em código e a prévia vira a etapa 4, ou ele continua desenhando no Claude Design e eu só construo | Keila + André | Decidir |
 | 3 | Quem autoriza publicar quando o André não estiver disponível (o processo dele exige ordem dele) | Keila + André | Decidir |
 | 4 | Pasta de fotos do Dr. João em alta resolução e logos de cada produto (FEA, FEP, FEB, IFF, Elite) | Keila / André | Pedir link |
