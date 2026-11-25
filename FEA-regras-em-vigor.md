@@ -216,3 +216,6 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Demanda recebida nunca fica parada (Keila, 25/11 17h39, regra de gestão de projetos):** toda demanda recebida segue o fluxo completo na hora: verificar, revisar, atualizar o documento, criar a próxima demanda e enviar ao próximo colaborador.
 
 - **Lembrete de 5 em 5 minutos (Keila, 25/11 17h45):** mensagem liberada ou pedida que ainda não foi enviada gera alerta de lembrete no Gestão FEA a cada 5 minutos até sair. Quem faz: a vigia leve (lista em .vigia-lembretes.md).
+
+- **Código das mensagens no Gestão FEA (Keila, áudio 25/11 18h52):** nada de siglas genéricas (GERAL-n, CS-A, CS-B). Toda mensagem leva o número da mensagem e o nome completo do assunto (ex.: "403 · Diagnóstico de CS e Suporte Médico para a Grazi"). A numeração é única e sequencial, controlada pela vigia leve (CS-A virou 403, CS-B virou 404; próximo livre em 25/11 19h: 405). A Keila aprova com "ok 403".
+- **Agendamento de disparos é da Automação (Matheus, 25/11 18h52):** a Copy (Matheus e Adri) escreve a copy; quem agenda os disparos é a Automação (Dani, Vivi). Cobrança de agendamento vai à Automação, não à Copy.
