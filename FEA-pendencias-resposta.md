@@ -24,3 +24,5 @@
 - (25/11 ~9h55) Rondas conferidas enviadas: ELITE-229, BIO-232 (🚨 captura Master Bio 404), PLX-233. Rascunhos novos aguardando ok: *230* (Grazi, artes Elite Mentoring) e *231* (Luca, checkout Elite Mentoring). Relatório: FEA-ronda-conferida-2511.md.
 
 - (25/11 ~9h56) Keila perguntou se as rondas saíram ao time (não saíram) e pediu os rascunhos de cobrança. Enviados para validação: *235* (André, captura Master Bio), *236* (Saar, UTMs Master Bio dez), *237* (Matheus+Adri, copy imagens API Master Bio), *238* (Leo, 3 artes PLX Brasil). Erro corrigido no GERAL-234: o 404 da captura Master Bio é página ainda não publicada (André, prazo 26-27/11), não queda. Aprendizado: antes de alertar 🚨 página fora do ar, conferir se ela já foi publicada alguma vez.
+
+- (25/11 ~9h57) Rascunhos *230* e *231* CANCELADOS pela Keila. Perguntas à Sabrina no Claude comercial: COMERCIAL-241 (página Elite Mentoring: bônus congresso, vagas 80x30, preço 12x R$2.500) e COMERCIAL-242 (checkout especial). ELITE-240: Keila precisa dizer quem aprova as 3 artes do Elite Mentoring do Leo.
