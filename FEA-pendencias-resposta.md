@@ -46,3 +46,5 @@
 - (25/11 11h17) *258 enviada* ao André (captura Master Bio até 26/11 + redirecionamentos UTMs). GERAL-279: perguntei à Keila se a pergunta à Grazi no Coordenação é sobre antes e depois PLX (PLX-273) ou cordão/crachá (225).
 
 - (25/11 11h25) BFV 12, 13, 15 aprovados; BFV-283 explica item 14 (planilhas fora do Drive pessoal) e pergunta se fecha. Elite Mentoring: edição de criativos aprovada (20 vídeos); planilha Perpétuo.xlsx sem linha do Elite Mentoring, ELITE-284 pede escolha (Gabi inclui linha ou converter). Leo entregou template palestrantes (17th71zazup): ELITE-285 + rascunho 286 para a Grazi. Leo recebeu recebido no privado.
+
+- (25/11 11h25) Keila: revisar ads estáticos Ebook Intercorrências (agente rodando; task 86ahp5gxf). GERAL-288 Gabi avaliar 11 demandas vencidas; GERAL-289 pedido de acesso de edição (2 xlsx de criativos + briefing Black Vitalícia + Editor no Drive compartilhado); GERAL-290 lista de demandas da Gabi só no grupo (Sprint 2 Elite, pausar automação lembretes EM, antecipação Elite 491), perguntando se cria tasks.
