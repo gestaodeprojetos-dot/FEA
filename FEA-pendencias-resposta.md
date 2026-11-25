@@ -58,3 +58,5 @@
 - (25/11 12h10) Sabrina pediu o Pix da empresa (Meninas comercial): recebido enviado; COMERCIAL-306 pergunta a ela onde está a chave (não achei registrada; não afirmar que é o CNPJ). Keila: vídeo do fornecedor recortado (só a bolha de vídeo), enviado a ela no app (GERAL-307).
 
 - (25/11 12h12) Enviados com ok: 212 (Leo privado), 297 (Leo Artes), 292 (Grazi Coordenação), 298 (André Web; copy certa, erro só na página). Pix enviado à Sabrina. Pendentes: 302, 259, 226, 253-256, 210, 219; GERAL-248, 290, BFV-283.
+
+- (25/11 12h18) 259 enviada ao Luca (privado). 302 virou 315 (prazo 27/11) aguardando ok. 316 (Erika e Grazi, grupo Elite: artes aprovadas e pedido para a Grazi sempre avisar aprovação) aguardando ok. Luca pediu no Web a alguém (LID 69381153386655) imagem de antes e depois 'de um livro ou artigo' para o PLX.
