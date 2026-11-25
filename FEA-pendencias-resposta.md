@@ -50,3 +50,5 @@
 - (25/11 11h25) Keila: revisar ads estáticos Ebook Intercorrências (agente rodando; task 86ahp5gxf). GERAL-288 Gabi avaliar 11 demandas vencidas; GERAL-289 pedido de acesso de edição (2 xlsx de criativos + briefing Black Vitalícia + Editor no Drive compartilhado); GERAL-290 lista de demandas da Gabi só no grupo (Sprint 2 Elite, pausar automação lembretes EM, antecipação Elite 491), perguntando se cria tasks.
 
 - (25/11 11h30) Gabi converteu 'Criativos para Tráfego - Perpétuo' para Google Sheets: 1zIwANufWdM3PTTs_LNc-SWtlNxNBYShC19jjwEQyqeI (link novo; atualizar onde o xlsx antigo era citado). Linha Elite Mentoring incluída (Perpétuo - BRASIL, linhas 32-33), task 17th71z9857 aprovada. Falta: legenda EM (confirmar com Copy); Criativos para Tráfego.xlsx (lançamentos) ainda em Excel.
+
+- (25/11 11h33) Keila: itens 8-10 da revisão Intercorrências ficam como estão. Tasks criadas (entrega 27/11 18h): Leo 17th71zb1mz (ajustes ads), André 17th71zb1n0 (páginas com conteúdo de Olheiras). Rascunhos 297 (Leo, Artes) e 298 (André, Web) aguardando ok. Confirmar se o designer do ebook é o Leo.
