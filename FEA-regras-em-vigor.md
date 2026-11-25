@@ -192,4 +192,4 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 - **Produto ofertado em toda peça de venda (Adri, 25/11 12h19):** criativos de venda e remarketing, legendas e página de vendas são sempre do produto ofertado no evento (consta no briefing). Ex.: Masterclass em Bioestimulador 12/26 vende o *Combo 2 em 1: FEB + FEBio Vitalício*, nunca só a FEBio. Conferir antes de escrever ou revisar qualquer peça de venda.
 
-- **Quem aprova as artes do Elite Mentoring (Keila, 25/11 12h38):** a Gabi. (A Grazi aprova só material de evento do Elite Experience.)
+- **Quem aprova o quê (Keila, 25/11 12h50, substitui a de 12h38):** a Gabi aprova *criativos* (tráfego, diagnóstico, qualquer anúncio). As *demais artes* (capa de formulário, banner de checkout, cordão, crachá, credencial, template, material de evento) são aprovadas pela Grazi. Antes de perguntar, conferir se ela já aprovou (grupo Elite, Sucesso do Cliente, Artes, ClickUp); se aprovou, só atualizar a task.
