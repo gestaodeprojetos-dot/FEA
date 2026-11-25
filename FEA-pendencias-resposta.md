@@ -18,3 +18,5 @@
 - (25/11 03h25 BRT) Gerson enviou no grupo Ebooks o link do formulário (https://forms.gle/jZkPPPJTP6BXPnBs5), marcando o Luca. NÃO lembrar o Gerson às 8h03; em vez disso, às 8h agradecer o Gerson no grupo Ebooks marcando-o, registrar o link onde couber (Links úteis / doc do ebook) e incluir no resumo da noite.
 
 - (25/11 8h03) Grazi já cobrada no Sucesso do Cliente (planilha central Elite + 4 links PLX Latam). No lembrete das 8h07, NÃO cobrar a Grazi de novo; só acompanhar a resposta.
+
+- (25/11 ~9h45) Rascunhos novos aguardando ok no Gestão FEA: *225* (Grazi, grupo Elite: cordão e crachá ok ou ajuste?) e *226* (Luca, grupo Elite e privado: slides do evento e do pitch). GERAL-223 perguntou à Gabi sobre "Cobrar planilhas do lançamento" (17th71zakg9) e Sprint 2 vencida (17th71z9kmp). Seguem pendentes também 210, 212 (enviar ao número novo do Leo 5548984289839) e 219.
