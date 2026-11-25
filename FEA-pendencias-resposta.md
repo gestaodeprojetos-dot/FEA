@@ -64,3 +64,5 @@
 - (25/11 12h22) 226 enviada ao Luca (privado). 253 virou 318 (Vivi, link Links úteis PLX + linha 'Resposta dos Leads' vazia) aguardando ok. PLX-317: páginas do PLX Brasil ainda não existem (André, 27/11); proposta de pedir ao André o endereço final antes de enviar 254 (Saar) e 255 (Sabrina e Vivi). Aguardando: 315, 316, 318, 256, 210, 219.
 
 - (25/11 12h24) 219 enviada ao Luca. PLX-319: 210 (página de vendas PLX Latam não existe ainda; copy atualizada pela Adri 24/11 18h43) aguarda decisão se Luca valida. 320 (lista semanal do André, substitui 256) aguardando ok. BIO-321: aviso da Adri sobre copys de criativos do Master Bio sem o Combo.
+
+- (25/11 12h28) 316 enviada (Erika e Grazi, grupo Elite); Grazi respondeu 'Estão ok' (👍🏻). BIO-322: Gabi confirmar doc URA+SMS antes do 315. GERAL-323: Keila perguntou sobre emojis (aguardando preferência). Task 86ak4v8k2 (PLX Latam página de vendas, André) prazo 01/12. PLX-324: faltas da página Latam (checkout em dólar sem responsável, WhatsApp ES com Grazi, depoimentos ES pasta 1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN, antes/depois com Luca, URL André). Aguardando quem cria checkout em dólar.
