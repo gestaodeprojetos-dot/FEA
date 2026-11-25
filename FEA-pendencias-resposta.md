@@ -34,3 +34,5 @@
 - (25/11 ~10h12) Keila: ok 245 (já enviado no Daily), ok 246 com ajustes → versão final *257* (Saar, UTMs de junho podem ser usadas? sem prazo, sem task) voltou para validação. *250* substituído por *258* (André: qual a data de entrega da captura Master Bio, task 17th71zaqqt). *259* (Luca: bônus/vagas/preço Elite Mentoring; Sabrina pediu validar tudo com o Luca). Canceladas: 235, 236, 237, 244, 246, 250. GERAL-248 ainda sem resposta (qual mensagem "não saiu").
 
 - (25/11 ~10h15) *252 enviada* no Artes (marcando o número antigo do Leo 554891411391, o novo 5548984289839 ainda não está no grupo; ARTES-216 continua com a Keila). BIO-260 respondeu à Keila: captura Master Bio entrega 27/11 (17th71zaqqt), captação começa 30/11, live 08/12, carrinho 08-15/12 (briefing). Aguardando: 257, 258, 259, 253 (link da planilha), 254, 255, 256, 210, 212, 219, 225, 226; GERAL-248.
+
+- (25/11 ~10h17) ARTES-216 resolvido: número antigo do Leo fora de todos os grupos; novo (marcar como 554884289839) está em Artes, GERAL e FEA Academy. 252 reenviada marcando o novo; a mensagem que marcava o antigo foi apagada.
