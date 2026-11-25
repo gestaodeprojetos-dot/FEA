@@ -14,3 +14,5 @@
 | Keila (Gestão FEA) | 8h01 24/11 | Rascunhos aguardando ok: 380 (Matheus privado, Aula Zero), 382 (bom dia Luca), 383a/b/c (bom dia Copy, Saar, Leo), 372/374/375 (ronda 7h). Gabi: GERAL-381 (lista GERAL-360). Ainda falta: Latam (Fig. 53, PDF 41 MB), Planejamento 2027 | 380/382/383/372/374/375 | 8h05 24/11 |
 
 - (25/11, 8h) Leo no privado às 22h04 de 24/11: entregou (1) Criativos remarketing Elite Experience ADS 075-094, 40 peças (https://app.clickup.com/t/17th71zae65) e (2) Master Bio, 5 artes de captação com data 08/12, 6 peças (https://app.clickup.com/t/17th71zaf5d), ambas em revisão. Às 8h: agradecer o Leo (privado), conferir no Drive, levar ao Gestão FEA a próxima etapa (aprovação da Grazi no Elite; Saar/tráfego no Master Bio).
+
+- (25/11 03h25 BRT) Gerson enviou no grupo Ebooks o link do formulário (https://forms.gle/jZkPPPJTP6BXPnBs5), marcando o Luca. NÃO lembrar o Gerson às 8h03; em vez disso, às 8h agradecer o Gerson no grupo Ebooks marcando-o, registrar o link onde couber (Links úteis / doc do ebook) e incluir no resumo da noite.
