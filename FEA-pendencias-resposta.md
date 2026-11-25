@@ -40,3 +40,5 @@
 - (25/11 10h43) André perguntou ao Luca no grupo Web se há imagem de antes e depois de paciente do PLX (bloco igual ao do CTX). Pergunta é para o Luca; se ninguém responder até ~11h15, levar ao Gestão FEA.
 
 - (25/11 ~10h59) *257 enviada* ao Saar no The Tracker (conferido antes que não tinha saído). A pedido da Keila, todos os rascunhos pendentes foram reapresentados no Gestão FEA, um por mensagem: 212 (Leo, número novo, PLX Brasil movido para sexta), 258, 259, 225, 226, 253, 254, 255, 256, 210, 219.
+
+- (25/11 11h06) Links úteis Master Bio aba TRÁFEGO A14:A16 atualizada (UTMs de junho mantidas, ok do Saar). 258 reapresentado com redirecionamentos. Agente levantando demandas da Gabi e backlogs abertos (perpétuo x lançamento) para a Keila (GERAL-271).
