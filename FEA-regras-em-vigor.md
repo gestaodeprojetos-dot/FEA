@@ -214,3 +214,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Copy só vira "aprovado" com o ok da Copy (Adri, 25/11, erro):** o listboss da Master Bio estava como aprovado antes da Adri liberar. Status de task de copy só muda para aprovado depois do ok da Adri ou do Matheus.
 
 - **Demanda recebida nunca fica parada (Keila, 25/11 17h39, regra de gestão de projetos):** toda demanda recebida segue o fluxo completo na hora: verificar, revisar, atualizar o documento, criar a próxima demanda e enviar ao próximo colaborador.
+
+- **Lembrete de 5 em 5 minutos (Keila, 25/11 17h45):** mensagem liberada ou pedida que ainda não foi enviada gera alerta de lembrete no Gestão FEA a cada 5 minutos até sair. Quem faz: a vigia leve (lista em .vigia-lembretes.md).
