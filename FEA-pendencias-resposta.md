@@ -72,3 +72,5 @@
 - (25/11 12h31) Keila: às 16h perguntar de novo à Grazi (Coordenação) pela previsão dos links do PLX Latam, conferindo antes se ela entregou em algum lugar. Rascunho 329 (substitui 328) aguardando ok; agendamento de sessão 420aec52 às 19h UTC (16h BRT).
 
 - (25/11 12h40) GERAL-331 (pendências Grazi: planilha central Elite, 3 links PLX Latam, antes e depois PLX; Dani nada) e WEB-332 (5 páginas com formulário sem webhook). Rascunho 333 (André, confirmar páginas que precisam de webhook) aguardando ok. Daily: avisei que o repo lp-joaopithon está acessível e propus começar pela correção do Ebook Intercorrências; aguardando André.
+
+- (25/11 12h45) Páginas do Ebook Intercorrências são WordPress/Elementor (eb.joaopithon.com.br), fora do repo lp-joaopithon (que publica só lp.joaopithon.com.br, deploy automático na main via Cloudflare; push de outra pessoa abre issue de alerta ao André; nunca wrangler deploy). Lista de 11 correções na task 17th71zb1n0. Daily: perguntei ao André se ele faz no Elementor ou me passa acesso ao WP; pendentes checkout do ebook, WhatsApp de atendimento, nomes dos 3 casos clínicos.
