@@ -36,3 +36,5 @@
 - (25/11 ~10h15) *252 enviada* no Artes (marcando o número antigo do Leo 554891411391, o novo 5548984289839 ainda não está no grupo; ARTES-216 continua com a Keila). BIO-260 respondeu à Keila: captura Master Bio entrega 27/11 (17th71zaqqt), captação começa 30/11, live 08/12, carrinho 08-15/12 (briefing). Aguardando: 257, 258, 259, 253 (link da planilha), 254, 255, 256, 210, 212, 219, 225, 226; GERAL-248.
 
 - (25/11 ~10h17) ARTES-216 resolvido: número antigo do Leo fora de todos os grupos; novo (marcar como 554884289839) está em Artes, GERAL e FEA Academy. 252 reenviada marcando o novo; a mensagem que marcava o antigo foi apagada.
+
+- (25/11 10h43) André perguntou ao Luca no grupo Web se há imagem de antes e depois de paciente do PLX (bloco igual ao do CTX). Pergunta é para o Luca; se ninguém responder até ~11h15, levar ao Gestão FEA.
