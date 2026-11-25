@@ -2,7 +2,7 @@
 
 Atualizado em 20/11/2026. Fonte: validações da Keila no Gestão FEA (GERAL-136, GERAL-138, GERAL-140 e listas 81a/81).
 Uso: intercalar tudo, sem repetir em seguida; chamar de "Luca" com frequência; no privado dele usar "aqui", nunca "aí"; nunca "mando", sempre "envio".
-Resposta rápida e pergunta de dúvida saem direto para ele. A entrega (links, arquivos, informação) passa antes pela Keila no Gestão FEA.
+Resposta rápida e pergunta de dúvida saem direto para ele. A entrega (links, arquivos, informação) também pode ir direto ao Luca no privado, sem validação prévia (Keila, 24/11, 23h41, GERAL-181 "ok"); depois relatar no Gestão FEA. Variar sempre entre as respostas validadas.
 
 ## Respostas rápidas (29)
 
