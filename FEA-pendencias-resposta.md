@@ -68,3 +68,5 @@
 - (25/11 12h28) 316 enviada (Erika e Grazi, grupo Elite); Grazi respondeu 'Estão ok' (👍🏻). BIO-322: Gabi confirmar doc URA+SMS antes do 315. GERAL-323: Keila perguntou sobre emojis (aguardando preferência). Task 86ak4v8k2 (PLX Latam página de vendas, André) prazo 01/12. PLX-324: faltas da página Latam (checkout em dólar sem responsável, WhatsApp ES com Grazi, depoimentos ES pasta 1VUUHV9QHAe9XMHJc8QTjnS2JCHbP51wN, antes/depois com Luca, URL André). Aguardando quem cria checkout em dólar.
 
 - (25/11 12h31) Depoimentos ES enviados ao André (Web). PLX-326: Gabi tem o checkout em dólar do PLX Latam (Luca cria)? PLX-327/328: Grazi não entregou os links do PLX Latam (faltam área de membros, canal de alunos, WhatsApp ES); rascunho 328 de cobrança no Coordenação aguardando ok.
+
+- (25/11 12h31) Keila: às 16h perguntar de novo à Grazi (Coordenação) pela previsão dos links do PLX Latam, conferindo antes se ela entregou em algum lugar. Rascunho 329 (substitui 328) aguardando ok; agendamento de sessão 420aec52 às 19h UTC (16h BRT).
