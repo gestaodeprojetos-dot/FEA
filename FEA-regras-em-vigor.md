@@ -187,3 +187,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Página de obrigado = onboarding (Adri, 25/11):** nos lançamentos, a página de obrigado pós-compra é a mesma página de onboarding. Doc do Master Bio 12/26 (Combo): [DEZ/26 · Dri revisar] 3. Página de onboarding FEBio (1nMay3GUUryvZcqSi381C1CQFJhzt2ME6MTHjBq753Uc). Procurar por 'onboarding' antes de dizer que não existe.
 
 - **Dados bancários e Pix da empresa (Sabrina, 25/11 12h08):** a Sabrina enviou no grupo Claude comercial | FEA (mensagem de 25/11 às 12h08) e pediu para deixar salvo. Quando o comercial pedir, buscar essa mensagem no grupo e reenviar. Não versionar os dados bancários no repositório.
+
+- **Lista de pendências com contexto (Keila, 25/11 12h13):** todo lembrete de rascunhos ou perguntas leva, em cada número, o que é (quem, onde, assunto, o que falta), para ela entender sem voltar na mensagem original.
