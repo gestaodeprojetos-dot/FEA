@@ -181,3 +181,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Quem é a Gabi (Gabi, 25/11 11h13):** Gabi = *Gabriela Borges* (ClickUp ID 118026144, gabrielaborgescos@gmail.com), que é ao mesmo tempo a Gabi da gestão e a Gabi da edição de vídeo. Não confundir com a antiga conta "Gabrielle Ineu Coradini" (fora do workspace). Tasks de gestão e de edição de vídeo atribuídas a Gabriela Borges estão corretas.
 
 - **Prazo é nosso (Keila, 25/11 11h15):** quando a data de entrega já existe (ClickUp ou briefing), não perguntar ao time "quando vai entregar". A gestão direciona: confirmar se a pessoa consegue entregar até a data definida (ex.: "precisamos até amanhã, 26/11, consegue?").
+
+- **Planilha de criativos antes do Saar (Keila, 25/11 11h19):** antes de enviar ao Saar a mensagem de criativos liberados, atualizar a planilha de criativos do evento (Criativos para Tráfego / Perpétuo). Se o arquivo for .xlsx e eu não conseguir editar, levar à gestão a linha pronta e as soluções, antes de avisar o Saar.

@@ -44,3 +44,5 @@
 - (25/11 11h06) Links úteis Master Bio aba TRÁFEGO A14:A16 atualizada (UTMs de junho mantidas, ok do Saar). 258 reapresentado com redirecionamentos. Agente levantando demandas da Gabi e backlogs abertos (perpétuo x lançamento) para a Keila (GERAL-271).
 
 - (25/11 11h17) *258 enviada* ao André (captura Master Bio até 26/11 + redirecionamentos UTMs). GERAL-279: perguntei à Keila se a pergunta à Grazi no Coordenação é sobre antes e depois PLX (PLX-273) ou cordão/crachá (225).
+
+- (25/11 11h25) BFV 12, 13, 15 aprovados; BFV-283 explica item 14 (planilhas fora do Drive pessoal) e pergunta se fecha. Elite Mentoring: edição de criativos aprovada (20 vídeos); planilha Perpétuo.xlsx sem linha do Elite Mentoring, ELITE-284 pede escolha (Gabi inclui linha ou converter). Leo entregou template palestrantes (17th71zazup): ELITE-285 + rascunho 286 para a Grazi. Leo recebeu recebido no privado.
