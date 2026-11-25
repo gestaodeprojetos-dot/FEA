@@ -175,3 +175,7 @@ Até lá, a cópia fiel de uma migração é medida contra a página pública do
 - Prancheta desktop de **1920 px**, com largura útil de conteúdo de **1280 px ou mais** quando a seção pedir.
 - Mobile em **390 px**, mas **responsivo de verdade**: conferir em várias larguras (360, 390, 414, 768, 1024, 1280, 1440, 1920), nunca só numa tela fixa. Reprova se quebrar em qualquer largura intermediária.
 - Ao finalizar o artefato, avisar a Keila no Gestão FEA para ela compartilhar o link com o webdesign@joaopithon.com.br.
+
+## Links de páginas futuras (regra de 25/11, André + Keila)
+
+Quando alguém pedir o link de uma página ainda não criada: definir o caminho seguindo o guia de links do André (pasta do produto, minúsculas, hífen, barra no fim, `-latam` para a versão Latam, mesmo padrão das páginas irmãs), responder com o endereço avisando que só abre depois da publicação e marcar o André para revisar. Exemplo aprovado: `lp.joaopithon.com.br/plx-latam/obrigado/` e `/plx-latam/onboarding/`.
