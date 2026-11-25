@@ -20,3 +20,5 @@
 - (25/11 8h03) Grazi já cobrada no Sucesso do Cliente (planilha central Elite + 4 links PLX Latam). No lembrete das 8h07, NÃO cobrar a Grazi de novo; só acompanhar a resposta.
 
 - (25/11 ~9h45) Rascunhos novos aguardando ok no Gestão FEA: *225* (Grazi, grupo Elite: cordão e crachá ok ou ajuste?) e *226* (Luca, grupo Elite e privado: slides do evento e do pitch). GERAL-223 perguntou à Gabi sobre "Cobrar planilhas do lançamento" (17th71zakg9) e Sprint 2 vencida (17th71z9kmp). Seguem pendentes também 210, 212 (enviar ao número novo do Leo 5548984289839) e 219.
+
+- (25/11 ~9h55) Rondas conferidas enviadas: ELITE-229, BIO-232 (🚨 captura Master Bio 404), PLX-233. Rascunhos novos aguardando ok: *230* (Grazi, artes Elite Mentoring) e *231* (Luca, checkout Elite Mentoring). Relatório: FEA-ronda-conferida-2511.md.
