@@ -191,3 +191,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Lista de pendências com contexto (Keila, 25/11 12h13):** todo lembrete de rascunhos ou perguntas leva, em cada número, o que é (quem, onde, assunto, o que falta), para ela entender sem voltar na mensagem original.
 
 - **Produto ofertado em toda peça de venda (Adri, 25/11 12h19):** criativos de venda e remarketing, legendas e página de vendas são sempre do produto ofertado no evento (consta no briefing). Ex.: Masterclass em Bioestimulador 12/26 vende o *Combo 2 em 1: FEB + FEBio Vitalício*, nunca só a FEBio. Conferir antes de escrever ou revisar qualquer peça de venda.
+
+- **Quem aprova as artes do Elite Mentoring (Keila, 25/11 12h38):** a Gabi. (A Grazi aprova só material de evento do Elite Experience.)
