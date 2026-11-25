@@ -244,7 +244,7 @@ As pessoas do time podem chamar o número da FEA no privado para tirar dúvidas 
 | Vivi (Automação) | 558182309754 |
 | Dani (Automação) | 5514996197964 |
 | André (Web) | 553599311109 |
-| Leo Quirino (Artes) | 554891411391 |
+| Leo Quirino (Artes) | 5548984289839 (Business, desde 25/11; o antigo 554891411391 foi desativado pela Keila) |
 | Júlio Couto | 5521999284987 |
 | Luca | 5511960759355 |
 | Grazi (perfil restrito, ver regra abaixo) | 557598047971 |
