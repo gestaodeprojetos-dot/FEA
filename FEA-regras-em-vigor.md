@@ -189,3 +189,5 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 - **Dados bancários e Pix da empresa (Sabrina, 25/11 12h08):** a Sabrina enviou no grupo Claude comercial | FEA (mensagem de 25/11 às 12h08) e pediu para deixar salvo. Quando o comercial pedir, buscar essa mensagem no grupo e reenviar. Não versionar os dados bancários no repositório.
 
 - **Lista de pendências com contexto (Keila, 25/11 12h13):** todo lembrete de rascunhos ou perguntas leva, em cada número, o que é (quem, onde, assunto, o que falta), para ela entender sem voltar na mensagem original.
+
+- **Produto ofertado em toda peça de venda (Adri, 25/11 12h19):** criativos de venda e remarketing, legendas e página de vendas são sempre do produto ofertado no evento (consta no briefing). Ex.: Masterclass em Bioestimulador 12/26 vende o *Combo 2 em 1: FEB + FEBio Vitalício*, nunca só a FEBio. Conferir antes de escrever ou revisar qualquer peça de venda.
