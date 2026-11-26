@@ -437,7 +437,7 @@ Briefings ativos:
 | Tráfego pago e pixels | Matheus Saar (The Trinity) |
 | Páginas e web | André Vivas |
 | Automações de email e SMS (Send Flow) | Julio Cesar de Souza Couto ("Júlio Couto") |
-| **ActiveCampaign (conta)** | **Mariano** (sobrenome a confirmar). **Não é o Júlio Couto, são pessoas diferentes.** Erro já cometido antes nessa confusão, sempre checar antes de atribuir tarefa de ActiveCampaign a um ou a outro. |
+| **ActiveCampaign (conta, listas, tags, formulários)** | **Vivi, equipe de Automação** (Keila, 26/11: o Mariano não faz parte da empresa; nunca atribuir demanda a ele). |
 | Copy de campanha | Adriane Möbbs |
 | Conteúdo médico e científico | Francine Almeida e equipe médica |
 | Comercial e vendas | Sabrina Ullrich |
@@ -665,3 +665,4 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 - **Relatório de pagamentos sempre aberto para o login da Keila (Keila, 24/11):** a planilha 1OM6PA3M9BC1dHDbJciyDPQboa0tmIaxJjjV31GpV2Ew fica sempre liberada para o login dela (gestao@keilaquaresma.com.br). Ela pediu também "liberar para quem tiver o link"; alertei que tem dados de alunos.
 - **Demanda recebida nunca fica parada (Keila, 25/11):** verificar, revisar, atualizar o documento, criar a próxima demanda e enviar ao próximo colaborador, na hora, sem esperar pedido.
 - **Conferir tudo antes de perguntar (Keila, 26/11 9h02):** "vc confere tudo, revisa tudo e traz o retorno". Antes de levar dúvida à gestão, abrir os links, cruzar planilhas, briefing, ClickUp e histórico dos grupos e resolver sozinha o que der; ao Gestão FEA vai só o retorno pronto e o que de fato precisa de decisão.
+- **Sem demanda inventada (Keila, 26/11):** só pedir ao time o que foi pedido ou está no briefing/ClickUp. Ex.: gatilhos de GTM nunca foram pedidos; as UTMs já existem na pasta do evento. Antes de propor demanda nova, conferir se ela existe e se alguém pediu.
