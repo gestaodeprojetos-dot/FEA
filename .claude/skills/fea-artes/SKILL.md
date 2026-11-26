@@ -65,6 +65,12 @@ Arte feita pelo Claude no Claude Design entra no ClickUp como task normal (subta
 - Crachá "Mentorada Elite" e folheto premium criados a partir do briefing sem pedido (26/11): arquivados.
 - Erika pediu o CMYK do cordão (24/11) e ficou 37 minutos sem retorno: pergunta ao responsável (Leo) vai direto no grupo dele, na hora.
 
+
+### Execução pelo Claude Design (Keila, 26/11 15h40)
+- Toda arte que eu executaria vai para o Claude da outra conta: task no ClickUp com descrição completa, links de referência, datas de início e fim, "Pasta para salvar:", etiqueta `claude-design` e status "a fazer".
+- A vigia dele pega em até 2 minutos, entrega e passa para "em revisão". Eu confiro a entrega (abrir a arte) antes de levar à gestão.
+- Tarefas do Leo e do André continuam com eles.
+
 ## Atualização
 
 Toda regra nova, erro apontado ou padrão aprovado sobre artes e criativos entra aqui na hora, com data e autor, e também no `CLAUDE.md`, com commit.

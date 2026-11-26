@@ -60,6 +60,12 @@ Toda página da FEA é feita e corrigida no código, testada na prévia, revisad
 - **Diagnóstico x Patrocínio:** a Keila pediu carrossel na "página de diagnóstico", mas as fotos do congresso estavam na página de Patrocínio 2027. Quando o nome não bater com o conteúdo, confirmar a página antes de publicar, levando as candidatas com evidência.
 - **Página pronta tirada da estrutura:** tirei a caixa da oferta da página MTB 01/27 sem pedido. Regra: estrutura não muda; o que diverge vai ao André. Só se tira bloco com ok expresso da Keila (como em 26/11 15h27).
 
+
+### Execução pelo Claude Design (Keila, 26/11 15h40)
+- Toda página que eu executaria vai para o Claude da outra conta: task no ClickUp com descrição completa, links de referência, datas de início e fim, repositório lp-joaopithon, rota, branch nova e "PR draft, sem publicar", etiqueta `claude-design` e status "a fazer".
+- A vigia dele pega em até 2 minutos, entrega e passa para "em revisão". Eu confiro a entrega (prévia testada e fea-revisor-paginas) antes de levar à gestão.
+- Tarefas do Leo e do André continuam com eles.
+
 ## Atualização
 
 Toda regra nova, erro apontado ou direção do André e do Luca sobre páginas entra aqui na hora, com data e autor, e também no `CLAUDE.md` e no `fea-revisor-paginas` quando for critério de revisão, com commit.
