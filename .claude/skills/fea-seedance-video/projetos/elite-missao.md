@@ -121,3 +121,13 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 | CTA "Missão aceita. Aplique para a sua vaga. Toque em Saiba Mais." | FEA-elite-narracao-cta-final-v5.mp3 (4,5 s) | 1BIA8xjIDNelUth4Sge-qeEbC0hO6l9oy |
 - Receita aprovada: clone instant, `expressivenessBoost: 0`, frase inteira de uma vez, ritmo normal (frase a frase com pausa ficou lenta demais)
 - Prompts atualizados: doc "FEA-Elite-missao-prompts-rascunhos-Seedance v3" (1RpFiiVgqALLHUpiTUzdDsXPeUe-H9mAtYCdTWDYRdQg)
+
+## Roteiro v2 do Luca (26/11/2026), doc claude.ai/artifact/EmG2XzfvWVKWsjqyxZz7Bd (só leitura)
+- Conceito novo: vídeo do sold out, homenagem a Missão Impossível (mensagem gravada que se autodestrói, pavio). ~53 s, 8 cenas em 4 atos
+- Missão: "levar 300 profissionais da Harmonização Facial a faturar de R$ 100 mil a R$ 300 mil por mês". Prazo 4 e 5/12
+- Cena 1 volta ao escritório clássico (conflita com a decisão da Keila de usar a clínica: perguntar). Envelope pardo "CONFIDENCIAL" com gravador dentro
+- Falas do Dr. João: "Essa eu não faço sozinho." / "Tenho uma missão pra você." / "Marketing, vendas e técnica no mesmo palco." / "Sala cheia. A missão começa no dia 4." / "Quer estar na próxima? Comenta aqui."
+- Voz da missão: outra voz, grave e neutra. Gerada com "Afonso - Warm & Resonant" (9ce5f601f9e04382bb26141d5a3f839d), única voz masculina pt pública além do "Murilo"
+- Time agora com 6 palestrantes: Luca Yu, Priscilla Toledo, Dr. Vitor Natal, Dra. Alessandra Heinzen, Flávio Gonssa, Rodrigo Grossi (foto em baixa)
+- Problema de tempo: a fala da missão tem 10,7 s e a cena 2 só 7 s; a cena 3 tem 5 s para 8,7 s de falas
+- Falas v2 em FEA-elite-experience-video-ia/audios/roteiro-luca-v2/ (aguardando aprovação)
