@@ -78,6 +78,7 @@ Estrutura fixa (modelo: pasta do lançamento atual):
 - Trocar só o que está datado: data, dia da semana, mês, número de alunos, "pela primeira vez". Conferir o dia da semana no calendário.
 - Fala datada em vídeo ("teve Anvisa essa semana"): cortar o trecho, com a legenda junto.
 - Marca comercial (ácido hialurônico, toxina, bioestimulador) só com aprovação da Keila ou do Luca.
+- Nome de criativo em vídeo pronto: `VID_[MMAA]_[TAG]_[NNN]_[FORMATO].mp4` (exemplo: `VID_1226_MBIO_031_9x16.mp4`). Mês e ano sem barra, TAG igual à das UTMs, número de 3 dígitos igual ao `Ads N` original, formato pelas dimensões (9x16, 4x5, 1x1, 16x9). Brutos não são renomeados.
 - Nunca gerar imagem final com IA generativa.
 - Copy: "para" por extenso, sem travessão, tom médico-científico.
 
