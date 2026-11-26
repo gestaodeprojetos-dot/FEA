@@ -57,3 +57,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Não abrir arquivos grandes sem precisar; ler trechos.
 - Não lançar agentes (Agent). Trabalho longo vai para a sessão principal.
 - Mensagens curtas, com o padrão de escrita do CLAUDE.md.
+- Rascunho sem contexto (Keila 26/11 18h54): no Gestão FEA, só a mensagem a enviar + 'Para liberar, ok N'. Sem bloco de contexto.
