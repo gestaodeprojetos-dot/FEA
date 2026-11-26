@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 # FEA: teste de credenciais dos WordPress via API REST (somente leitura).
-# Lê WP_USER e WP_PASS_SITE / WP_PASS_FEB / WP_PASS_IFF / WP_PASS_FEF / WP_PASS_PL do ambiente.
+# Lê WP_USER e WP_PASS_MAIN (ou WP_PASS_SITE) / WP_PASS_FEB / WP_PASS_IFF / WP_PASS_FEF / WP_PASS_PL / WP_PASS_EB do ambiente.
 # Nunca grava nem imprime senha. Só faz GET em /wp-json/wp/v2/users/me.
 # O servidor tem WAF que devolve 406 para User-Agent genérico, por isso o UA de navegador.
+
+# O ambiente guarda a senha do site principal como WP_PASS_MAIN; WP_PASS_SITE fica como alternativa.
+WP_PASS_SITE="${WP_PASS_SITE:-$WP_PASS_MAIN}"
 
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 
@@ -12,6 +15,7 @@ sites=(
   "iff.joaopithon.com.br|WP_PASS_IFF"
   "fef.joaopithon.com.br|WP_PASS_FEF"
   "pl.joaopithon.com.br|WP_PASS_PL"
+  "eb.joaopithon.com.br|WP_PASS_EB"
 )
 
 printf "| Site | Variável | HTTP | Resultado |\n|------|----------|------|-----------|\n"
