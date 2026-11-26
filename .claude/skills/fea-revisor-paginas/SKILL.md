@@ -179,3 +179,7 @@ Até lá, a cópia fiel de uma migração é medida contra a página pública do
 ## Links de páginas futuras (regra de 25/11, André + Keila)
 
 Quando alguém pedir o link de uma página ainda não criada: definir o caminho seguindo o guia de links do André (pasta do produto, minúsculas, hífen, barra no fim, `-latam` para a versão Latam, mesmo padrão das páginas irmãs), responder com o endereço avisando que só abre depois da publicação e marcar o André para revisar. Exemplo aprovado: `lp.joaopithon.com.br/plx-latam/obrigado/` e `/plx-latam/onboarding/`.
+
+## Critérios confirmados pelo Luca (26/11/2026, 9h39, privado)
+
+Ao receber os 6 critérios (primeira dobra com foto, data e local, frase que tira a objeção, promessa e botão; celular sem quebra feia e sem rosto do Dr. João Pithon cortado; prova em print original com grifo antes do botão de compra; números oficiais 52.754 alunos e 44 países), o Luca respondeu "isso mesmo". Os pesos acima continuam valendo. Itens 5 (página de referência) e 6 (o que mais incomoda) ficaram sem resposta: perguntar de novo só quando houver página nova para ele revisar.
