@@ -27,6 +27,7 @@ mostrar como cada regra foi aprendida.
 | **Modelo e plataformas** | `references/seedance-2-5.md` | Como o Seedance e o Higgsfield se comportam |
 | **Diagnóstico** | `references/troubleshooting.md` | Quando o vídeo volta errado |
 | **Antes e depois do prompt** | `references/FEA-pre-producao.md` | Roteiro em cenas, kit de imagens (cenário, folha de rosto, figurino, objeto, pose), voz, edição, tempo e custo |
+| **Produção inteira** (roteiro do cliente, créditos, kit no ChatGPT, vozes no HeyGen, protocolo de geração, revisão) | skill `fea-video-ia-producao` | Tudo antes e depois do prompt nos vídeos da FEA. Esta skill continua dona do prompt |
 | **Exemplos da aula** | `references/FEA-exemplos-aula.md` | Dois prompts completos que a autora da skill aprovou, com o pedido que gerou cada um |
 
 As pastas `personagens/`, `projetos/` e `prompts-aprovados/` começam vazias. Elas se enchem com o uso.
