@@ -1,17 +1,20 @@
 #!/usr/bin/env bash
 # FEA: teste de credenciais dos WordPress via API REST (somente leitura).
-# Lê WP_USER e WP_PASS_SITE / WP_PASS_FEB / WP_PASS_IFF / WP_PASS_FEF / WP_PASS_PL do ambiente.
+# Lê WP_PASS_MAIN / WP_PASS_FEB / WP_PASS_IFF / WP_PASS_FEF / WP_PASS_PL / WP_PASS_EB do ambiente
+# (senhas de aplicação "IA Gestão", usuário Pithon; WP_USER sobrescreve o usuário se definido).
 # Nunca grava nem imprime senha. Só faz GET em /wp-json/wp/v2/users/me.
 # O servidor tem WAF que devolve 406 para User-Agent genérico, por isso o UA de navegador.
 
+WP_USER="${WP_USER:-Pithon}"
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36"
 
 sites=(
-  "joaopithon.com.br|WP_PASS_SITE"
+  "joaopithon.com.br|WP_PASS_MAIN"
   "feb.joaopithon.com.br|WP_PASS_FEB"
   "iff.joaopithon.com.br|WP_PASS_IFF"
   "fef.joaopithon.com.br|WP_PASS_FEF"
   "pl.joaopithon.com.br|WP_PASS_PL"
+  "eb.joaopithon.com.br|WP_PASS_EB"
 )
 
 printf "| Site | Variável | HTTP | Resultado |\n|------|----------|------|-----------|\n"
