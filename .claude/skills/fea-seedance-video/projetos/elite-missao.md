@@ -144,5 +144,6 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 | Dr. João Pithon | 1,70 m | referência |
 | Priscilla Toledo | 1,67 m | 3 cm mais baixa |
 | Dra. Alessandra Heinzen | 1,59 m | 11 cm mais baixa (a mais baixa) |
-| Rodrigo Grossi | a confirmar | |
+| Rodrigo Grossi | 1,81 m | 11 cm mais alto |
 - Uso: cena 6 (time no palco) e cena 4c (closes com colega fora de foco). Escrever no BLOCKING em comparação com quem está ao lado ("his eyes are level with X's brow"), nunca só o número
+- Gravador oficial do vídeo (26/11): o de FEA-elite-v2-envelope-aberto-gravador-v3.png (1PMzm9E7IBmkkwatH0kSFKVTNGTm5Fa3Q), cinco teclas com a primeira vermelha. Substitui o de gravador-cartao em todas as cenas. Prompts cena a cena no doc FEA-Elite-missao-v2-prompts-cena-a-cena
