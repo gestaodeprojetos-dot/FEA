@@ -134,3 +134,15 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 - Doc do Luca rev 13 (26/11): acrescentou "Prompts de geração" (image-to-video com 1 foto [REF], bloco de estilo com "Avoid:"). Usar como roteiro de tomadas e converter para o método da Ana. Novidades: Dr. João nas cenas 1 a 3 de blazer azul-marinho com camiseta branca (segundo figurino); escritório clássico com luminária verde de banqueiro; Priscilla e Alessandra de terno sem gravata, camisa aberta; corredor com painéis de madeira; porta preta com placa lisa; plateia cheia "majoritariamente mulheres"; fundo final é só edição. Palestrantes sem fala (confirmado). 17 tomadas; várias de 2 a 2,5 s (o Higgsfield cobra no mínimo 4 s): agrupar closes em clipes de 3 pessoas
 - Kit v2 no Drive (26/11): figurino blazer FEA-elite-v2-figurino-blazer-azul-marinho.png (1UhFNzDFxG3YH2-W7uJQIiMaAzIEzsenz, aprovado; a outra versão "Alfaiataria masculina" é igual, reserva); envelope fechado com volume FEA-elite-v2-envelope-confidencial.png (1x8UQXlp4gM8gQ6dbdrXXRfmQaLKdG-qD); gravador + cartão FEA-elite-v2-gravador-cartao.png (1_3w-J2pvbJqiFDzPk9ZrxdAUUnADimgZ); envelope aberto com gravador (1jpiMu1eUR4kpu8F4zy8DzmprKldoeatb): o gravador dele é diferente do outro, não usar junto
 - Cenas 1 e 2 num clipe só (10 s, sem fala, voz da missão entra na edição), no escritório biblioteca (recomendação; Keila ainda não confirmou)
+
+## Alturas reais (Keila, 26/11/2026) · altura relativa vem daqui, não do card
+| Pessoa | Altura | Em relação ao Dr. João |
+|---|---|---|
+| Luca Yu | 1,85 m | 15 cm mais alto (o mais alto do time) |
+| Dr. Vitor Natal | 1,80 m | 10 cm mais alto |
+| Flávio Gonssa | 1,73 m | 3 cm mais alto (quase a mesma altura) |
+| Dr. João Pithon | 1,70 m | referência |
+| Priscilla Toledo | 1,67 m | 3 cm mais baixa |
+| Dra. Alessandra Heinzen | 1,59 m | 11 cm mais baixa (a mais baixa) |
+| Rodrigo Grossi | a confirmar | |
+- Uso: cena 6 (time no palco) e cena 4c (closes com colega fora de foco). Escrever no BLOCKING em comparação com quem está ao lado ("his eyes are level with X's brow"), nunca só o número
