@@ -56,6 +56,10 @@ Toda página da FEA é feita e corrigida no código, testada na prévia, revisad
 - Alerta 🚨 de página fora do ar na captura Master Bio (25/11): era página ainda não publicada (André, prazo 26 e 27/11). Conferir se já foi publicada antes de alertar.
 - Página afirmada como pronta sem passar pelo revisor e sem testar os botões: proibido; revisor antes de qualquer link enviado.
 
+### Erros registrados em 26/11 (Keila)
+- **Diagnóstico x Patrocínio:** a Keila pediu carrossel na "página de diagnóstico", mas as fotos do congresso estavam na página de Patrocínio 2027. Quando o nome não bater com o conteúdo, confirmar a página antes de publicar, levando as candidatas com evidência.
+- **Página pronta tirada da estrutura:** tirei a caixa da oferta da página MTB 01/27 sem pedido. Regra: estrutura não muda; o que diverge vai ao André. Só se tira bloco com ok expresso da Keila (como em 26/11 15h27).
+
 ## Atualização
 
 Toda regra nova, erro apontado ou direção do André e do Luca sobre páginas entra aqui na hora, com data e autor, e também no `CLAUDE.md` e no `fea-revisor-paginas` quando for critério de revisão, com commit.

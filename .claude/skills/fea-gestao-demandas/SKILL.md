@@ -140,6 +140,11 @@ Recebido imediato (sem validação, para todos): "Recebido! Já estou verificand
 - Alerta 🚨 de página fora do ar na captura Master Bio (25/11): era página ainda não publicada. Conferir se já foi publicada antes de alertar.
 - Assuntos juntos na mesma mensagem (erro repetido, 21/11): dividir sempre.
 
+### Erros registrados em 26/11 (Keila)
+- **PROW:** registrei "PROW confirmada" na task e na planilha a partir de uma mensagem das 11h08, mas o Luca já tinha cancelado às 13h22. Antes de registrar uma decisão, ler o grupo até a última mensagem do assunto.
+- **Números 500/501:** numerei rascunhos sem pedir o número à vigia, e esses números já estavam em uso. O número de rascunho vem sempre da vigia (numeração única).
+- **Crachá e folheto:** tasks criadas a partir do briefing, sem pedido de ninguém. O crachá ficou duplicado com o cordão já aprovado. Arquivadas por orientação da Keila.
+
 ## Atualização
 
 Toda regra nova, erro apontado ou padrão aprovado sobre gestão de demandas entra aqui na hora, com data e autor (ex.: "Keila, 26/11 15h09"), e também no `CLAUDE.md`, com commit. Regra nova que substitui outra: dizer qual substitui.
