@@ -267,3 +267,12 @@ Rascunho da resposta à Grazi vem na mensagem seguinte, separado.
 - Faltam acessos: Drive da edição, artigos, contratos e ofertas, processos do CS, formulários e confirmação do grupo de depoimentos; comentários e transcrições da Hotmart não vêm pelo conector.
 - Conflitos com regras: dados de alunos (LGPD), perfil restrito da Grazi (financeiro, avaliação de pessoas), criação de planilha nova, fluxo de validação no grupo novo e rotinas novas.
 - Recomendação: Fase 1 focada em suporte médico e dúvidas operacionais (maior corte de retrabalho), dados de aluno só agregados até a Keila decidir.
+
+## Inventário de fontes (atualizado 26/11/2026)
+
+- **Artigos científicos (pasta do doc da Grazi):** https://drive.google.com/drive/folders/1Rw1cPA9-yqgtFkNRcbo0vfqEqYBkYXRR · acesso liberado pela Grazi em 26/11 10h48 · 100+ PDFs (preenchimento, bioestimuladores, fios, intercorrências, anatomia).
+- **Literatura complementar:** "João Pithon cientifico" 1rTRhyEUbltbIAEmcAZXuAOYKeS2VfjSN; 3. Conteúdos > LITERATURA ACADÊMICA 1EZE_ggYgxZmeC7J-UIdfQ2Mqpw2WOKhj.
+- **Aulas da edição:** AULAS > 2026 > 0. AULAS NOVAS 1CRtFu-iqGSFuQ1dUd-b38neh1M45KtgE ("AULAS ENTREGUES", "AULAS POR CURSO"); "1. Já subidas".
+- **Rotina do CS:** 1. Gestão FEA > 5. Suporte + CS 19Oq124w9f4rI9udfZTk8YDsbvWLu2U4P.
+- **Depoimentos:** grupo "Depoimentos | FEA" 120363336610912111@g.us; pasta Depoimentos (qualidade) 1hYCMsbYgdhsD7U07YVo9BLBIGA9VeFws.
+- **Pendentes com a Grazi:** formulários ativos por produto, scripts atuais do CS, endereço das áreas de membros Hotmart, etapa de aprovação das aulas.
