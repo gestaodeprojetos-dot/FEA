@@ -1,0 +1,682 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/neuvia/IMG_2801.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2801.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n8/1- Preenchedor com PEG e aminoácidos.mp4",
+   "titulo": "Preenchedor com PEG e aminoácidos",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     9.0,
+     43.75
+    ],
+    [
+     46.6,
+     53.4,
+     "exato"
+    ],
+    [
+     58.85,
+     126.45
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn](?:o|ó|u|ú)via\\b",
+     "Neauvia"
+    ],
+    [
+     "\\b[Ee]stimulate\\b",
+     "Stimulate"
+    ],
+    [
+     "(Neauvia) [Ee]stimulante\\b",
+     "\\1 Stimulate"
+    ],
+    [
+     "\\b[Bb]io ?-?remodela",
+     "biorremodela"
+    ],
+    [
+     "\\b[Bb]ioremodela",
+     "biorremodela"
+    ],
+    [
+     "\\btessidua",
+     "tecidua"
+    ],
+    [
+     "\\bdiacelerônico\\b",
+     "de ácido hialurônico"
+    ],
+    [
+     "\\bHarmonica\\b",
+     "HArmonyCa"
+    ],
+    [
+     "\\bcimento\\b",
+     "mento"
+    ],
+    [
+     "\\bmicro bolas\\b",
+     "microbolus"
+    ],
+    [
+     "\\bbol(?:as|os)\\b",
+     "bolus"
+    ],
+    [
+     "\\b[Cc]olocam bolus",
+     "coloco bolus"
+    ],
+    [
+     "\\bJogam\\b",
+     "Jogo"
+    ],
+    [
+     "\\binfra-orbitário",
+     "infraorbitário"
+    ],
+    [
+     "\\bL -prolina",
+     "L-prolina"
+    ],
+    [
+     "(Neauvia) intense\\b",
+     "\\1 Intense"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/neuvia/IMG_2802.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2802.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n8/2- Fratura dérmica perioral.mp4",
+   "titulo": "Fratura dérmica perioral",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     7.08,
+     61.2
+    ],
+    [
+     68.45,
+     73.45
+    ],
+    [
+     75.6,
+     116.3
+    ]
+   ],
+   "silenciar": [
+    [
+     6.96,
+     7.5
+    ]
+   ],
+   "zoom": [
+    [
+     7.08,
+     24.6,
+     2.0,
+     0.5,
+     0.66
+    ],
+    [
+     37.0,
+     61.2,
+     1.8,
+     0.5,
+     0.66
+    ],
+    [
+     100.0,
+     103.6,
+     2.0,
+     0.5,
+     0.66
+    ],
+    [
+     108.0,
+     112.0,
+     2.0,
+     0.5,
+     0.66
+    ]
+   ],
+   "remover_legenda": [
+    [
+     40.4,
+     41.0
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn](?:o|ó|u|ú)via\\b",
+     "Neauvia"
+    ],
+    [
+     "\\b[Ee]stimulate\\b",
+     "Stimulate"
+    ],
+    [
+     "(Neauvia) [Ee]stimulante\\b",
+     "\\1 Stimulate"
+    ],
+    [
+     "\\b[Bb]io ?-?remodela",
+     "biorremodela"
+    ],
+    [
+     "\\b[Bb]ioremodela",
+     "biorremodela"
+    ],
+    [
+     "\\btessidua",
+     "tecidua"
+    ],
+    [
+     "\\bdiacelerônico\\b",
+     "de ácido hialurônico"
+    ],
+    [
+     "\\bHarmonica\\b",
+     "HArmonyCa"
+    ],
+    [
+     "\\bcimento\\b",
+     "mento"
+    ],
+    [
+     "\\bmicro bolas\\b",
+     "microbolus"
+    ],
+    [
+     "\\bbol(?:as|os)\\b",
+     "bolus"
+    ],
+    [
+     "\\b[Cc]olocam bolus",
+     "coloco bolus"
+    ],
+    [
+     "\\bJogam\\b",
+     "Jogo"
+    ],
+    [
+     "\\binfra-orbitário",
+     "infraorbitário"
+    ],
+    [
+     "\\bL -prolina",
+     "L-prolina"
+    ],
+    [
+     "(Neauvia) intense\\b",
+     "\\1 Intense"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     55.08,
+     55.95
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/neuvia/IMG_2803.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2803.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n8/3- Levantando a comissura labial.mp4",
+   "titulo": "Levantando a comissura labial",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.52,
+     30.45
+    ],
+    [
+     38.0,
+     75.75
+    ]
+   ],
+   "zoom": [
+    [
+     5.0,
+     12.0,
+     2.0,
+     0.5,
+     0.7
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn](?:o|ó|u|ú)via\\b",
+     "Neauvia"
+    ],
+    [
+     "\\b[Ee]stimulate\\b",
+     "Stimulate"
+    ],
+    [
+     "(Neauvia) [Ee]stimulante\\b",
+     "\\1 Stimulate"
+    ],
+    [
+     "\\b[Bb]io ?-?remodela",
+     "biorremodela"
+    ],
+    [
+     "\\b[Bb]ioremodela",
+     "biorremodela"
+    ],
+    [
+     "\\btessidua",
+     "tecidua"
+    ],
+    [
+     "\\bdiacelerônico\\b",
+     "de ácido hialurônico"
+    ],
+    [
+     "\\bHarmonica\\b",
+     "HArmonyCa"
+    ],
+    [
+     "\\bcimento\\b",
+     "mento"
+    ],
+    [
+     "\\bmicro bolas\\b",
+     "microbolus"
+    ],
+    [
+     "\\bbol(?:as|os)\\b",
+     "bolus"
+    ],
+    [
+     "\\b[Cc]olocam bolus",
+     "coloco bolus"
+    ],
+    [
+     "\\bJogam\\b",
+     "Jogo"
+    ],
+    [
+     "\\binfra-orbitário",
+     "infraorbitário"
+    ],
+    [
+     "\\bL -prolina",
+     "L-prolina"
+    ],
+    [
+     "(Neauvia) intense\\b",
+     "\\1 Intense"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/neuvia/IMG_2804.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2804.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n8/4- Refinamento de mento com agulha.mp4",
+   "titulo": "Refinamento de mento com agulha",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.18,
+     38.8
+    ],
+    [
+     43.1,
+     74.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn](?:o|ó|u|ú)via\\b",
+     "Neauvia"
+    ],
+    [
+     "\\b[Ee]stimulate\\b",
+     "Stimulate"
+    ],
+    [
+     "(Neauvia) [Ee]stimulante\\b",
+     "\\1 Stimulate"
+    ],
+    [
+     "\\b[Bb]io ?-?remodela",
+     "biorremodela"
+    ],
+    [
+     "\\b[Bb]ioremodela",
+     "biorremodela"
+    ],
+    [
+     "\\btessidua",
+     "tecidua"
+    ],
+    [
+     "\\bdiacelerônico\\b",
+     "de ácido hialurônico"
+    ],
+    [
+     "\\bHarmonica\\b",
+     "HArmonyCa"
+    ],
+    [
+     "\\bcimento\\b",
+     "mento"
+    ],
+    [
+     "\\bmicro bolas\\b",
+     "microbolus"
+    ],
+    [
+     "\\bbol(?:as|os)\\b",
+     "bolus"
+    ],
+    [
+     "\\b[Cc]olocam bolus",
+     "coloco bolus"
+    ],
+    [
+     "\\bJogam\\b",
+     "Jogo"
+    ],
+    [
+     "\\binfra-orbitário",
+     "infraorbitário"
+    ],
+    [
+     "\\bL -prolina",
+     "L-prolina"
+    ],
+    [
+     "(Neauvia) intense\\b",
+     "\\1 Intense"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     26.64,
+     35.8
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/neuvia/IMG_2806.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2806.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n8/5- Técnica tridimensional na mandíbula.mp4",
+   "titulo": "Técnica tridimensional na mandíbula",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     7.72,
+     62.55
+    ],
+    [
+     68.42,
+     116.9
+    ],
+    [
+     125.9,
+     139.6
+    ]
+   ],
+   "zoom": [
+    [
+     114.5,
+     116.9,
+     1.8,
+     0.45,
+     0.75
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Nn](?:o|ó|u|ú)via\\b",
+     "Neauvia"
+    ],
+    [
+     "\\b[Ee]stimulate\\b",
+     "Stimulate"
+    ],
+    [
+     "(Neauvia) [Ee]stimulante\\b",
+     "\\1 Stimulate"
+    ],
+    [
+     "\\b[Bb]io ?-?remodela",
+     "biorremodela"
+    ],
+    [
+     "\\b[Bb]ioremodela",
+     "biorremodela"
+    ],
+    [
+     "\\btessidua",
+     "tecidua"
+    ],
+    [
+     "\\bdiacelerônico\\b",
+     "de ácido hialurônico"
+    ],
+    [
+     "\\bHarmonica\\b",
+     "HArmonyCa"
+    ],
+    [
+     "\\bcimento\\b",
+     "mento"
+    ],
+    [
+     "\\bmicro bolas\\b",
+     "microbolus"
+    ],
+    [
+     "\\bbol(?:as|os)\\b",
+     "bolus"
+    ],
+    [
+     "\\b[Cc]olocam bolus",
+     "coloco bolus"
+    ],
+    [
+     "\\bJogam\\b",
+     "Jogo"
+    ],
+    [
+     "\\binfra-orbitário",
+     "infraorbitário"
+    ],
+    [
+     "\\bL -prolina",
+     "L-prolina"
+    ],
+    [
+     "(Neauvia) intense\\b",
+     "\\1 Intense"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     108.71,
+     112.0
+    ]
+   ]
+  }
+ ]
+}

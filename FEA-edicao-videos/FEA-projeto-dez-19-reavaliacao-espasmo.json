@@ -1,0 +1,516 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/b19i/IMG_9589_9590a.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/tr/IMG_9589_9590a.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/out/d19/1- Reavaliação.mp4",
+   "titulo": "Reavaliação",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     1.22,
+     67.3,
+     "exato"
+    ],
+    [
+     69.3,
+     116.36,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "Termina em 'vai melhorar ainda mais.', que fecha a reavaliação (aplicação concluída, 'Foi.' 11 s antes). A fala seguinte, 'Mas assim, com certeza mais um sucesso, né? Mais uma paciente com um resultado incrível', é promessa de resultado e fica fora por compliance; o relato da paciente está no vídeo 2."
+   },
+   "fotos_antes": "Bruto intermediário IMG_9589_9590a.mov = IMG_9589 (68,2 s) + IMG_9590 (0 a 50 s) por concat decodificado, com cartões 'Antes' (fotos IMG_9845, IMG_9843, IMG_9847, IMG_9846 de 05/11, mesma paciente da pasta 2- Espasmo facial) no canto superior direito: 8,0 a 9,35 s brava, 9,35 a 13,3 s sobrancelha, 13,3 a 18,3 s sorriso, 24,6 a 27,4 s beijinho; H.264 CRF 10, PCM."
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/b19i/IMG_9590f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/tr/IMG_9590f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/c4f0a612-fadb-551e-bf62-2a9ab7cf3bf7/scratchpad/out/d19/2- Relato toxina.mp4",
+   "titulo": "Relato toxina",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     56.1,
+     105.14,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     56.1,
+     56.36
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "'Como que foi para você?' abre o relato da paciente. Antes dele: o resumo 'É isso, 12 unidades...' (fecha o vídeo 1) e 'com certeza mais um sucesso... resultado incrível', promessa cortada por compliance. A cauda do 'sorria.' (56,06 a 56,10 s) fica muda.",
+    "fim": "'...o objetivo do conhecimento que eu trago para vocês.' é a última fala; o bruto acaba 0,2 s depois (fea_pad_fim.sh 104,84 + 0,30 s)."
+   }
+  }
+ ]
+}
