@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""FEA WordPress: conexão via REST API + Application Passwords (sem plugin extra).
+"""FEA WordPress: acesso aos 5 sites pela REST API usando o usuário que já existe.
 
-Credenciais lidas do ambiente (nunca hardcoded). Para cada site, procura primeiro
-WP_USER_<SITE> / WP_APP_PASSWORD_<SITE> e depois o par genérico WP_USER / WP_APP_PASSWORD.
-SITE = MAIN, FEP, FEB, IFF, FEF.
+Login pelo wp-login.php (usuário e senha normais) + nonce da REST API, porque o
+servidor da FEA não repassa o cabeçalho Authorization para o WordPress.
+Credenciais lidas do ambiente, nunca hardcoded:
+  WP_USER (ou WP_USER_<SITE>) e WP_PASS_<CHAVE>, chaves: SITE (principal), FEP, FEB, IFF, FEF, PL.
 
 Uso:
   python3 fea_wp.py test                 # testa login em todos os sites
-  python3 fea_wp.py pages <site>         # lista páginas (id, status, slug, título)
+  python3 fea_wp.py pages <site>         # lista páginas
   python3 fea_wp.py posts <site>         # lista posts
   python3 fea_wp.py get <site> <page_id> # mostra uma página
 """
-import base64, json, os, sys, urllib.request, urllib.error
+import http.cookiejar, json, os, re, sys, urllib.parse, urllib.request, urllib.error
 
 SITES = {
     "MAIN": "https://joaopithon.com.br",
@@ -20,52 +21,63 @@ SITES = {
     "IFF": "https://iff.joaopithon.com.br",
     "FEF": "https://fef.joaopithon.com.br",
 }
+# ordem de tentativa das senhas por site
+PASS_KEYS = {"MAIN": ["SITE"], "FEP": ["FEP", "SITE", "PL"], "FEB": ["FEB"], "IFF": ["IFF"], "FEF": ["FEF"]}
+UA = "Mozilla/5.0 (fea-wp-client)"
 
-def load_dotenv():
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
-    if os.path.exists(path):
-        for line in open(path, encoding="utf-8"):
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, v = line.split("=", 1)
-                os.environ.setdefault(k.strip(), v.strip().strip('"'))
+class Session:
+    def __init__(self, site):
+        self.site, self.base = site, SITES[site]
+        self.jar = http.cookiejar.CookieJar()
+        self.op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.jar))
+        self.nonce = None
 
-def creds(site):
-    u = os.environ.get(f"WP_USER_{site}") or os.environ.get("WP_USER")
-    p = os.environ.get(f"WP_APP_PASSWORD_{site}") or os.environ.get("WP_APP_PASSWORD")
-    return u, p
+    def _open(self, url, data=None, headers=None, method=None):
+        req = urllib.request.Request(url, data=data, method=method, headers={"User-Agent": UA, **(headers or {})})
+        return self.op.open(req, timeout=40)
 
-def call(site, path, method="GET", data=None):
-    u, p = creds(site)
-    if not (u and p):
-        raise RuntimeError(f"sem credencial para {site}")
-    req = urllib.request.Request(SITES[site] + "/wp-json" + path, method=method,
-                                 data=json.dumps(data).encode() if data else None)
-    req.add_header("Authorization", "Basic " + base64.b64encode(f"{u}:{p}".encode()).decode())
-    req.add_header("Content-Type", "application/json")
-    req.add_header("User-Agent", "fea-wp-client")
-    with urllib.request.urlopen(req, timeout=30) as r:
+    def login(self):
+        user = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
+        keys = [k for k in PASS_KEYS[self.site] if os.environ.get(f"WP_PASS_{k}")]
+        if not (user and keys):
+            raise RuntimeError("sem credencial no ambiente")
+        self._open(self.base + "/wp-login.php").read()  # cookie de teste
+        for k in keys:
+            form = urllib.parse.urlencode({"log": user, "pwd": os.environ[f"WP_PASS_{k}"], "rememberme": "forever",
+                                           "wp-submit": "Log In", "redirect_to": self.base + "/wp-admin/", "testcookie": "1"}).encode()
+            self._open(self.base + "/wp-login.php", data=form).read()
+            if any(c.name.startswith("wordpress_logged_in") for c in self.jar):
+                n = self._open(self.base + "/wp-admin/admin-ajax.php?action=rest-nonce").read().decode().strip()
+                if re.fullmatch(r"[0-9a-f]{10}", n):
+                    self.nonce, self.key = n, k
+                    return self
+        raise RuntimeError("login recusado (usuário ou senha incorretos, ou 2FA/captcha no login)")
+
+    def call(self, path, method="GET", data=None):
+        r = self._open(self.base + "/wp-json" + path, method=method,
+                       data=json.dumps(data).encode() if data is not None else None,
+                       headers={"X-WP-Nonce": self.nonce, "Content-Type": "application/json"})
         return json.load(r)
 
 def main():
-    load_dotenv()
     cmd = sys.argv[1] if len(sys.argv) > 1 else "test"
     if cmd == "test":
         for s in SITES:
             try:
-                me = call(s, "/wp/v2/users/me?context=edit")
-                print(f"OK    {s:5} {SITES[s]}  usuário: {me.get('name')}  papéis: {me.get('roles')}")
+                ss = Session(s).login()
+                me = ss.call("/wp/v2/users/me?context=edit")
+                print(f"OK    {s:5} {SITES[s]}  usuário: {me.get('name')}  papéis: {me.get('roles')}  (senha WP_PASS_{ss.key})")
             except urllib.error.HTTPError as e:
-                print(f"ERRO  {s:5} {SITES[s]}  HTTP {e.code}: {e.read()[:200].decode(errors='ignore')}")
+                print(f"ERRO  {s:5} {SITES[s]}  HTTP {e.code}: {e.read()[:150].decode(errors='ignore')}")
             except Exception as e:
-                print(f"FALTA {s:5} {SITES[s]}  {e}")
+                print(f"ERRO  {s:5} {SITES[s]}  {e}")
     elif cmd in ("pages", "posts"):
-        site = sys.argv[2].upper()
-        for it in call(site, f"/wp/v2/{cmd}?per_page=100&status=any&context=edit&_fields=id,status,slug,title,modified"):
+        ss = Session(sys.argv[2].upper()).login()
+        for it in ss.call(f"/wp/v2/{cmd}?per_page=100&status=any&context=edit&_fields=id,status,slug,title,modified"):
             print(f"{it['id']:>6}  {it['status']:8} {it['modified'][:10]}  /{it['slug']}  {it['title']['raw']}")
     elif cmd == "get":
-        site, pid = sys.argv[2].upper(), sys.argv[3]
-        print(json.dumps(call(site, f"/wp/v2/pages/{pid}?context=edit"), ensure_ascii=False, indent=2)[:5000])
+        ss = Session(sys.argv[2].upper()).login()
+        print(json.dumps(ss.call(f"/wp/v2/pages/{sys.argv[3]}?context=edit"), ensure_ascii=False, indent=2)[:5000])
     else:
         print(__doc__)
 
