@@ -40,14 +40,21 @@ class Session:
         return self.op.open(req, timeout=40)
 
     def login(self):
-        # 1) senha de aplicativo (Basic Auth): WP_APP_PASSWORD_<SITE> ou WP_APP_PASSWORD
-        app = os.environ.get(f"WP_APP_PASSWORD_{self.site}") or os.environ.get("WP_APP_PASSWORD")
-        if app:
-            import base64
-            u = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
-            self.basic = "Basic " + base64.b64encode(f"{u}:{app}".encode()).decode()
-            self.key = "APP_PASSWORD"
-            return self
+        # 1) senha de aplicativo (Basic Auth): WP_APP_PASSWORD_<SITE>, WP_APP_PASSWORD, ou as WP_PASS_<CHAVE>
+        import base64
+        u = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
+        cands = [f"WP_APP_PASSWORD_{self.site}", "WP_APP_PASSWORD"] + [f"WP_PASS_{k}" for k in PASS_KEYS[self.site]]
+        for var in cands:
+            pw = os.environ.get(var)
+            if not (u and pw):
+                continue
+            self.basic = "Basic " + base64.b64encode(f"{u}:{pw}".encode()).decode()
+            try:
+                self.call("/wp/v2/users/me")
+                self.key = var
+                return self
+            except urllib.error.HTTPError:
+                self.basic = None
         # 2) login normal pelo wp-login.php (barrado por captcha da hospedagem a partir da nuvem)
         user = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
         keys = [k for k in PASS_KEYS[self.site] if os.environ.get(f"WP_PASS_{k}")]
@@ -61,7 +68,7 @@ class Session:
             if any(c.name.startswith("wordpress_logged_in") for c in self.jar):
                 n = self._open(self.base + "/wp-admin/admin-ajax.php?action=rest-nonce").read().decode().strip()
                 if re.fullmatch(r"[0-9a-f]{10}", n):
-                    self.nonce, self.key = n, k
+                    self.nonce, self.key = n, f"login WP_PASS_{k}"
                     return self
         raise RuntimeError("login recusado (usuário ou senha incorretos, ou 2FA/captcha no login)")
 
@@ -79,7 +86,7 @@ def main():
             try:
                 ss = Session(s).login()
                 me = ss.call("/wp/v2/users/me?context=edit")
-                print(f"OK    {s:5} {SITES[s]}  usuário: {me.get('name')}  papéis: {me.get('roles')}  (senha WP_PASS_{ss.key})")
+                print(f"OK    {s:5} {SITES[s]}  usuário: {me.get('name')}  papéis: {me.get('roles')}  (via {ss.key})")
             except urllib.error.HTTPError as e:
                 print(f"ERRO  {s:5} {SITES[s]}  HTTP {e.code}: {e.read()[:150].decode(errors='ignore')}")
             except Exception as e:
