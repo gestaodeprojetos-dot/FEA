@@ -5,6 +5,7 @@ Login pelo wp-login.php (usuário e senha normais) + nonce da REST API, porque o
 servidor da FEA não repassa o cabeçalho Authorization para o WordPress.
 Credenciais lidas do ambiente, nunca hardcoded:
   WP_USER (ou WP_USER_<SITE>) e WP_PASS_<CHAVE>, chaves: SITE (principal), FEP, FEB, IFF, FEF, PL.
+  Preferencial: WP_APP_PASSWORD_<SITE> (senha de aplicativo), SITE = MAIN, FEP, FEB, IFF, FEF, PL.
 
 Uso:
   python3 fea_wp.py test                 # testa login em todos os sites
@@ -20,9 +21,10 @@ SITES = {
     "FEB": "https://feb.joaopithon.com.br",
     "IFF": "https://iff.joaopithon.com.br",
     "FEF": "https://fef.joaopithon.com.br",
+    "PL": "https://pl.joaopithon.com.br",
 }
 # ordem de tentativa das senhas por site
-PASS_KEYS = {"MAIN": ["SITE"], "FEP": ["FEP", "SITE", "PL"], "FEB": ["FEB"], "IFF": ["IFF"], "FEF": ["FEF"]}
+PASS_KEYS = {"MAIN": ["SITE"], "FEP": ["FEP", "SITE", "PL"], "FEB": ["FEB"], "IFF": ["IFF"], "FEF": ["FEF"], "PL": ["PL"]}
 UA = "Mozilla/5.0 (fea-wp-client)"
 
 class Session:
@@ -31,12 +33,22 @@ class Session:
         self.jar = http.cookiejar.CookieJar()
         self.op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(self.jar))
         self.nonce = None
+        self.basic = None
 
     def _open(self, url, data=None, headers=None, method=None):
         req = urllib.request.Request(url, data=data, method=method, headers={"User-Agent": UA, **(headers or {})})
         return self.op.open(req, timeout=40)
 
     def login(self):
+        # 1) senha de aplicativo (Basic Auth): WP_APP_PASSWORD_<SITE> ou WP_APP_PASSWORD
+        app = os.environ.get(f"WP_APP_PASSWORD_{self.site}") or os.environ.get("WP_APP_PASSWORD")
+        if app:
+            import base64
+            u = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
+            self.basic = "Basic " + base64.b64encode(f"{u}:{app}".encode()).decode()
+            self.key = "APP_PASSWORD"
+            return self
+        # 2) login normal pelo wp-login.php (barrado por captcha da hospedagem a partir da nuvem)
         user = os.environ.get(f"WP_USER_{self.site}") or os.environ.get("WP_USER")
         keys = [k for k in PASS_KEYS[self.site] if os.environ.get(f"WP_PASS_{k}")]
         if not (user and keys):
@@ -56,7 +68,8 @@ class Session:
     def call(self, path, method="GET", data=None):
         r = self._open(self.base + "/wp-json" + path, method=method,
                        data=json.dumps(data).encode() if data is not None else None,
-                       headers={"X-WP-Nonce": self.nonce, "Content-Type": "application/json"})
+                       headers={**({"Authorization": self.basic} if self.basic else {"X-WP-Nonce": self.nonce}),
+                                "Content-Type": "application/json"})
         return json.load(r)
 
 def main():
