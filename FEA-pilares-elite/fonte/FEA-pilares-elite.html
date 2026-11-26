@@ -46,36 +46,29 @@ const R = [
   { cx: 786, cy: 621, rx: 320, ry: 178, a0: Math.PI * 0.55, dir: 1, dark: 'left' },
   { cx: 1132, cy: 621, rx: 320, ry: 178, a0: Math.PI * 0.45, dir: -1, dark: 'right' },
 ];
-const st = R.map(() => ({ p: 0, glow: 0 }));
+const st = R.map(() => ({ y: -760, o: 0, k: .55 }));   // y: deslocamento vertical; k: achatamento (perspectiva)
 const cv = document.getElementById('rings'), cx = cv.getContext('2d');
 
-function ringPath(r, p) {
+function ringPath(r, s) {
   cx.beginPath();
-  const a1 = r.a0 + r.dir * p * Math.PI * 2;
-  cx.ellipse(r.cx, r.cy, r.rx, r.ry, 0, r.a0, a1, r.dir < 0);
+  cx.ellipse(r.cx, r.cy + s.y, r.rx, r.ry * s.k, 0, 0, Math.PI * 2);
 }
 function draw() {
   cx.clearRect(0, 0, 1920, 1080);
   R.forEach((r, i) => {
-    const p = st[i].p;
-    if (p <= 0) return;
-    // sombra suave do anel (o "vidro" da arte original)
+    const s = st[i];
+    if (s.o <= 0) return;
+    cx.save(); cx.globalAlpha = s.o;
+    // sombra suave do anel: só "pousa" quando o anel chega perto do lugar
+    const near = Math.max(0, 1 - Math.abs(s.y) / 260);
     cx.save(); cx.filter = 'blur(14px)'; cx.translate(0, 26);
-    ringPath(r, p); cx.strokeStyle = 'rgba(165, 55, 90, .13)'; cx.lineWidth = 20; cx.stroke(); cx.restore();
-    // anel com gradiente vinho -> rosa
-    const g = cx.createLinearGradient(r.cx - r.rx, r.cy - r.ry, r.cx + r.rx, r.cy + r.ry);
+    ringPath(r, s); cx.strokeStyle = `rgba(165, 55, 90, ${.13 * near})`; cx.lineWidth = 20; cx.stroke(); cx.restore();
+    const g = cx.createLinearGradient(r.cx - r.rx, r.cy + s.y - r.ry, r.cx + r.rx, r.cy + s.y + r.ry);
     const dark = '#9a2449', light = '#f8dbe2';
     if (r.dark === 'left') { g.addColorStop(0, dark); g.addColorStop(.5, '#d0869b'); g.addColorStop(1, light); }
     else { g.addColorStop(0, light); g.addColorStop(.5, '#d0869b'); g.addColorStop(1, dark); }
-    ringPath(r, p); cx.strokeStyle = g; cx.lineWidth = 3.6; cx.lineCap = 'round'; cx.stroke();
-    // brilho na ponta do traço enquanto ele é desenhado
-    if (p < 1 || st[i].glow > 0) {
-      const a = r.a0 + r.dir * p * Math.PI * 2, x = r.cx + Math.cos(a) * r.rx, y = r.cy + Math.sin(a) * r.ry;
-      const k = p < 1 ? 1 : st[i].glow;
-      const rg = cx.createRadialGradient(x, y, 0, x, y, 46);
-      rg.addColorStop(0, `rgba(255,255,255,${.95 * k})`); rg.addColorStop(.3, `rgba(255,170,195,${.5 * k})`); rg.addColorStop(1, 'rgba(255,170,195,0)');
-      cx.fillStyle = rg; cx.beginPath(); cx.arc(x, y, 46, 0, 6.283); cx.fill();
-    }
+    ringPath(r, s); cx.strokeStyle = g; cx.lineWidth = 3.6; cx.stroke();
+    cx.restore();
   });
 }
 
@@ -86,29 +79,31 @@ const tl = gsap.timeline({ paused: true }), E = 'power3.out', IO = 'power2.inOut
 tl.to('#fade', { opacity: 0, duration: .6 }, 0);
 gsap.set(['#elite .ch', '#exp .ch'], { opacity: 0 });
 
-const RING_AT = [0.6, 2.4, 4.2], DRAW = 1.25;
+// cada círculo desce de cima, encaixa no lugar e então a palavra dele é escrita
+const RING_AT = [0.4, 2.5, 4.6], FALL = 1.3;
 RING_AT.forEach((t, i) => {
-  tl.to(st[i], { p: 1, duration: DRAW, ease: IO }, t);
-  tl.to(st[i], { glow: 1, duration: .01 }, t).to(st[i], { glow: 0, duration: .6 }, t + DRAW);
+  tl.to(st[i], { o: 1, duration: .5, ease: 'power1.out' }, t);
+  tl.to(st[i], { y: 0, duration: FALL, ease: 'back.out(1.15)' }, t);
+  tl.to(st[i], { k: 1, duration: FALL, ease: 'power2.out' }, t);
   const lab = `#l${i + 1}`;
-  tl.from(`${lab} .n`, { opacity: 0, y: 14, duration: .6, ease: E }, t + .55);
-  tl.from(`${lab} .t`, { opacity: 0, y: 28, filter: 'blur(8px)', duration: .8, ease: E }, t + .65);
+  tl.from(`${lab} .n`, { opacity: 0, y: 10, duration: .5, ease: E }, t + FALL - .15);
+  tl.fromTo(`${lab} .t`, { clipPath: 'inset(-20% 100% -20% 0)', opacity: .2 }, { clipPath: 'inset(-20% 0% -20% 0)', opacity: 1, duration: .85, ease: 'power2.inOut' }, t + FALL - .05);
 });
 
 // o Elite aparece
-const REVEAL = 6.1;
-tl.to('#halo', { opacity: 1, scale: 1.05, duration: .25, ease: 'power2.out' }, REVEAL - .05).to('#halo', { opacity: 0, scale: 1.25, duration: 1.4, ease: 'power2.out' }, REVEAL + .2);
-tl.fromTo('#sphereWrap', { scale: 0, rotate: -40 }, { scale: 1, rotate: 0, duration: 1.1, ease: 'back.out(1.7)' }, REVEAL);
+const REVEAL = 6.9;
+tl.to('#halo', { opacity: .55, scale: 1.05, duration: .8, ease: 'sine.out' }, REVEAL).to('#halo', { opacity: 0, scale: 1.2, duration: 1.6, ease: 'sine.inOut' }, REVEAL + .8);
+tl.fromTo('#sphereWrap', { scale: .6, opacity: 0, filter: 'blur(10px)' }, { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 1.4, ease: 'power3.out' }, REVEAL + .15);
 tl.fromTo('#sshadow', { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: 1, ease: E }, REVEAL + .1);
-tl.to('#elite .ch', { opacity: 1, duration: .9, stagger: .09, ease: 'power1.out' }, REVEAL + .25);
-tl.fromTo('#elite', { scale: 1.06 }, { scale: 1, duration: 2.4, ease: E }, REVEAL + .25);
+tl.to('#elite .ch', { opacity: 1, duration: 1.2, stagger: .1, ease: 'power1.out' }, REVEAL);
+tl.fromTo('#elite', { scale: 1.06 }, { scale: 1, duration: 3, ease: E }, REVEAL);
 tl.to('#exp .ch', { opacity: 1, duration: .7, stagger: .05, ease: 'power1.out' }, REVEAL + .7);
 tl.fromTo('#exp', { letterSpacing: '.7em' }, { letterSpacing: '.52em', duration: 2.4, ease: E }, REVEAL + .7);
 // respiração final
-tl.to('#sphereWrap', { y: -6, duration: 1.6, ease: 'sine.inOut', yoyo: true, repeat: 2 }, REVEAL + 1.3);
-tl.to('#stage', { scale: 1.02, duration: 11.6, ease: 'none' }, 0);
+tl.to('#sphereWrap', { y: -5, duration: 1.5, ease: 'sine.inOut', yoyo: true, repeat: 1 }, REVEAL + 1.5);
+tl.to('#stage', { scale: 1.02, duration: 12, ease: 'none' }, 0);
 
-window.DURATION = 11.6;
+window.DURATION = 12;
 window.seek = (t) => { tl.seek(t, false); draw(); };
 window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
 seek(0);
