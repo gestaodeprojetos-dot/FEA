@@ -38,6 +38,11 @@ Nenhuma demanda fica parada, nenhuma task nasce sem pedido, e toda mensagem ao t
 6. Comentário do Claude no ClickUp começa com **"🤖 Claude:"**.
 7. Executar direto, sem perguntar "posso criar?" (Keila, 24/11). Se a cota do conector acabar, usar a API direta (api.clickup.com).
 
+### 2b. Modelo de backlog de lançamento: itens fixos
+
+- **Desabilitar fluxos de aula (Keila, 26/11 17h42):** para cada CPL, masterclass ou aula ao vivo do lançamento, criar a subtarefa "Desabilitar fluxos que citam aula/aulão · [evento]" embaixo da mãe **Automação** da sprint que contém o dia seguinte à aula (se a sprint não tiver a mãe Automação, criar a mãe no padrão das outras: sem responsável, datas da sprint). Início 8h e prazo 18h do dia seguinte à aula; aulas em dias seguidos (ex.: Desafio de 3 dias) podem ficar numa task só, do dia seguinte à 1ª aula até o dia seguinte à última, com a ordem de desabilitar aula por aula. Responsável: Equipe IAutomate (Vivi e Dani não têm usuário próprio no ClickUp). Descrição: lançamento, data da aula, o que fazer (desabilitar no ActiveCampaign, API, WhatsApp/SendFlow, e-mail, URA e SMS tudo o que fala de aula, aulão, ao vivo, masterclass ou Zoom do evento, inclusive gatilhos de inscrição tardia e lembretes agendados), entrega (comentar os fluxos desabilitados e mudar para "em revisão") e a origem. Sem data da aula no backlog ou no briefing: não inventar, levar como pendência.
+- Procurar antes de criar (uma demanda, uma task) e conferir se a mãe da sprint já existe antes de criar outra.
+
 ### 3. Status
 
 - Status FEA: a fazer · fazendo · em revisão · em ajuste · atrasado · aprovado · pausado · sprint · feito.
@@ -141,6 +146,7 @@ Recebido imediato (sem validação, para todos): "Recebido! Já estou verificand
 - Assuntos juntos na mesma mensagem (erro repetido, 21/11): dividir sempre.
 
 ### Erros registrados em 26/11 (Keila)
+- **Mãe Automação em duplicidade (26/11, tarefa dos fluxos de aula):** o script de criação foi importado por outro script e rodou de novo, criando duas mães "Automação" em Master Bio Sprint 4 e MTB Sprint 5. As vazias foram arquivadas com comentário. Script de criação nunca é importado: cada criação roda uma vez só, e a lista é conferida logo depois.
 - **PROW:** registrei "PROW confirmada" na task e na planilha a partir de uma mensagem das 11h08, mas o Luca já tinha cancelado às 13h22. Antes de registrar uma decisão, ler o grupo até a última mensagem do assunto.
 - **Números 500/501:** numerei rascunhos sem pedir o número à vigia, e esses números já estavam em uso. O número de rascunho vem sempre da vigia (numeração única).
 - **Crachá e folheto:** tasks criadas a partir do briefing, sem pedido de ninguém. O crachá ficou duplicado com o cordão já aprovado. Arquivadas por orientação da Keila.
