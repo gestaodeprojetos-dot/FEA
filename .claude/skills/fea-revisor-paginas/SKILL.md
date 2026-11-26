@@ -33,6 +33,11 @@ Base de aprendizado (ler antes da primeira revisão da sessão): `referencias/FE
 4. **Larguras extras quando houver risco.** Topo, selos e títulos de 1 linha: conferir também 320, 360, 430 e 768 px e no WebKit (`require('playwright').webkit`), porque o Safari desenha a fonte cerca de 8% mais larga (pedido 23).
 5. **Comparar com a referência.** Migração: abrir o original do WordPress nas mesmas larguras e comparar print a print (mesma ordem, mesmo espaçamento, mesmo texto). Página nova: comparar com o artefato do Luca bloco a bloco.
 6. **Testar CTAs de verdade, sem comprar.** Abrir a página com `?utm_source=teste&utm_medium=teste&utm_campaign=teste&xcod=AB12` e conferir o href final de cada botão (checkout com `off=` certo, utm e sck repassados, sem `sck` fixo). Checkout da Hotmart: abrir no navegador e ver o produto e a oferta (o curl leva desafio anti-robô). WhatsApp: número e mensagem pronta. Grupo: abrir a campanha Sendflow e ver o nome do grupo atual. Formulário: nunca enviar (cria lead real); interceptar o envio.
+6b. **Varredura de marcadores (bloqueia, Keila 26/11 20h50, erro da página de patrocínio com "[número de parcelas]" no ar).** No HTML final (prévia e, depois de publicar, a URL pública):
+   ```
+   grep -n -o -i -E '.{0,60}(\[[^]]{1,60}\]|a confirmar|\btbd\b|lorem|\(a criar|a definir|placeholder|xxx).{0,40}' pagina.html
+   ```
+   Ignorar só seletores técnicos (`[hidden]`, `[data-...]`). Também `class="tbd"`/`class="placeholder"`. Qualquer achado bloqueia o pedido de publicação; faltando o dado, texto neutro e pergunta à gestão. Entrega para o Luca passa também pela skill `fea-revisor-luca`.
 7. **Pontuar o checklist abaixo**, aplicar os bloqueios automáticos e dar o veredito.
 8. **Corrigir e reavaliar** até chegar a 95 ou mais. Só então entregar, com a nota e o resumo do revisor.
 
@@ -121,6 +126,7 @@ Soma: A 20 + B 20 + C 12 + D 8 + E 15 + F 8 + G 7 + H 10 = 100.
 - Boleto ou pix em página Latam.
 - Migração com visual reinterpretado (princípio 1).
 - Imagem quebrada ou rolagem lateral na primeira dobra do celular.
+- Qualquer marcador no texto: `[ ]`, "A CONFIRMAR", "tbd", "lorem", "(a criar" (Keila, 26/11 20h50).
 
 ## Veredito
 
