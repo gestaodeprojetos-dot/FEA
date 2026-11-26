@@ -147,3 +147,5 @@ It is night and the clinic is closed: the gold pendant lights glow warm and dim,
 | Rodrigo Grossi | 1,81 m | 11 cm mais alto |
 - Uso: cena 6 (time no palco) e cena 4c (closes com colega fora de foco). Escrever no BLOCKING em comparação com quem está ao lado ("his eyes are level with X's brow"), nunca só o número
 - Gravador oficial do vídeo (26/11): o de FEA-elite-v2-envelope-aberto-gravador-v3.png (1PMzm9E7IBmkkwatH0kSFKVTNGTm5Fa3Q), cinco teclas com a primeira vermelha. Substitui o de gravador-cartao em todas as cenas. Prompts cena a cena no doc FEA-Elite-missao-v2-prompts-cena-a-cena
+- Regra de produção (Keila, 26/11): "não pode errar". Só rascunhos até tudo aprovado; 1080p só onde tem rosto (opção B). Protocolo: kit conferido por imagem antes, print do painel de anexos antes de cada geração, gesto difícil simplificado antes de gerar (cordão já solto na v3 das cenas 1 e 2), defeito pequeno resolvido na edição em vez de regerar
+- Doc ativo: FEA-Elite-missao-v2-prompts-cena-a-cena (v3), id 1Ni412TTvh_9ZJLyBPa7PsGSJGSG-RKbmPv0N52lAMSY
