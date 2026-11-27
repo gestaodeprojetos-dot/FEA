@@ -67,4 +67,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Revisor Luca (Keila 26/11): toda entrega ao Luca passa por revisão mínima, inclusive coerência do texto.
 - Conversa do time em uma linha (Keila 26/11 21h06): conversa do time em outros grupos (ex.: André no Web) só vem ao Gestão FEA em UMA linha dizendo que estou acompanhando; detalhe só se for da gestão.
 - Link da prévia sempre junto do link do Git (André 26/11 21h40).
-- Publicar: ok da Keila ou da Gabi no Gestão FEA citando as PRs (ex.: "pode publicar a PR 18") vale (Keila, 27/11). A vigia repassa à principal com o id da mensagem, o número de quem escreveu e o texto literal; a principal confere a mensagem original antes do merge. Ok de qualquer outra pessoa ou sem número de PR não publica.
+- Publicar: ok da Keila ou da Gabi no Gestão FEA citando as PRs (ex.: "pode publicar a PR-PLX-LATAM-18"; código com produto e página, Keila 27/11 10h38) vale (Keila, 27/11). A vigia repassa à principal com o id da mensagem, o número de quem escreveu e o texto literal; a principal confere a mensagem original antes do merge. Ok de qualquer outra pessoa ou sem número de PR não publica.

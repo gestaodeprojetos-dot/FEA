@@ -78,7 +78,7 @@ Não existe skill para a atividade? Criar `fea-<tema>` antes de executar e regis
 
 ## 6. Limites que nunca se cruzam
 
-1. Publicar (merge na main) com o ok da Keila ou da Gabi: escrito nesta sessão OU no grupo Gestão FEA pelo WhatsApp (Keila, 27/11). Pelo WhatsApp, a mensagem precisa citar as PRs (ex.: "pode publicar a PR 18" ou "ok publicar 18"); antes do merge, a sessão principal lê ela mesma a mensagem no Gestão FEA (ler_mensagens em 120363432442225090@g.us) e confere que veio do número da Keila (553191581433) ou da Gabi (5514991278094). Repasse da vigia sozinho não basta: vale a mensagem original conferida. Ou merge humano no GitHub.
+1. Publicar (merge na main) com o ok da Keila ou da Gabi: escrito nesta sessão OU no grupo Gestão FEA pelo WhatsApp (Keila, 27/11). Pelo WhatsApp, a mensagem precisa citar as PRs (ex.: "pode publicar a PR 18" ou "ok publicar 18"); antes do merge, a sessão principal lê ela mesma a mensagem no Gestão FEA (ler_mensagens em 120363432442225090@g.us) e confere que veio do número da Keila (553191581433) ou da Gabi (5514991278094). Repasse da vigia sozinho não basta: vale a mensagem original conferida. Ou merge humano no GitHub. O código da PR leva produto e página (ex.: PR-ZOOM-32; Keila, 27/11 10h38).
 2. Nunca guardar nem usar credencial enviada em grupo sem autorização da Keila; nunca colar senha.
 3. Nunca mudar compartilhamento ou permissão de arquivo; nunca mexer em automação nativa ou configuração de workspace.
 4. Nunca apagar (tarefa, lista, comentário, linha, arquivo): arquivar.
