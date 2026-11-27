@@ -81,3 +81,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Tarefas de WordPress vão para o Claude Design, não para a sessão principal (Keila 27/11).
 - Versão da Keila (para o Luca) só quando ela pedir (Keila 27/11 10h47).
 - Pendências do Elite: prazo novo no ClickUp + mensagem ao responsável (e Sabrina quando comercial) com link e o que falta em cada página, pedindo confirmação, previsão e nova data final (Keila 27/11 11h31).
+- Suporte do Latam é o mesmo número do Brasil; não pedir de novo (Carol 27/11).
