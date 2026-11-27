@@ -58,3 +58,9 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Não abrir arquivos grandes sem precisar; ler trechos.
 - Não lançar agentes (Agent). Trabalho longo vai para a sessão principal.
 - Mensagens curtas, com o padrão de escrita do CLAUDE.md.
+- Rascunho sem contexto (Keila 26/11 18h54): no Gestão FEA, só a mensagem a enviar + 'Para liberar, ok N'. Sem bloco de contexto.
+- Nada com marcador [ ] ou "A CONFIRMAR" vai ao ar; antes de levar prévia à gestão, procurar colchetes no texto (Keila 26/11, erro "[número de parcelas]" na página de patrocínio).
+- Revisor Luca (Keila 26/11): toda entrega ao Luca passa por revisão mínima, inclusive coerência do texto.
+- Conversa do time em uma linha (Keila 26/11 21h06): conversa do time em outros grupos (ex.: André no Web) só vem ao Gestão FEA em UMA linha dizendo que estou acompanhando; detalhe só se for da gestão.
+- Link da prévia sempre junto do link do Git (André 26/11 21h40).
+- Publicar exige ok escrito na conversa principal (Keila ou Gabi, citando as PRs) ou merge no GitHub; ok no WhatsApp não publica (26/11).
