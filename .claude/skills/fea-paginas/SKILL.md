@@ -29,7 +29,7 @@ Toda página da FEA é feita e corrigida no código, testada na prévia, revisad
 8. **Testar na prévia do Cloudflare** (toda branch e PR ganham endereço de prévia): 390 e 1440 px no mínimo, sem rolagem lateral, botões com href final certo e UTMs repassadas, `npm run build` sem erro.
 9. **Passar pelo revisor** (skill `fea-revisor-paginas`, critérios do Luca) até 95 ou mais.
 10. **Levar ao André e ao Luca** para a revisão final e a liberação, com o link da prévia, a nota do revisor e as divergências. Rascunho no Gestão FEA antes (skill `fea-gestao-demandas`). Ao Luca: link da página e do doc, nunca link do ClickUp.
-11. **Publicar só com ok direto da Keila na sessão ou com merge humano** (André). As páginas migradas e novas não são publicadas até o André corrigir e liberar.
+11. **Publicar só com ok da Keila ou da Gabi** (nesta sessão ou no Gestão FEA pelo WhatsApp, citando as PRs, com a mensagem original conferida pela sessão principal) **ou com merge humano** (André). As páginas migradas e novas não são publicadas até o André corrigir e liberar.
 12. **Conferência no ar** antes de avisar que "está no ar": status 200 da URL pública, headers de cache (`no-cache` nas pastas de landing, `public/_headers`), versão nova servida, cada botão e CTA clicado até o destino (checkout, WhatsApp, grupo), sem rolagem lateral no celular. Depois, atualizar Links úteis e ClickUp com o link e a fonte.
 
 ## WordPress
