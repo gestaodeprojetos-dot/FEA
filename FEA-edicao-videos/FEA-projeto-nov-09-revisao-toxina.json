@@ -1,0 +1,158 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/revtox/IMG_2807.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2807.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n9/1- Reavaliação de toxina.mp4",
+   "titulo": "Reavaliação de toxina",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     2.75,
+     62.6
+    ]
+   ],
+   "remover_legenda": [
+    [
+     14.9,
+     16.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\brefinamentinho\\b",
+     "refinamentinho"
+    ],
+    [
+     "\\bBrava\\b",
+     "brava"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/brutos/revtox/IMG_2808.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/tr/IMG_2808.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/0cba95bf-796c-55b5-9fb0-79b58b018881/scratchpad/out/n9/2- Reforço de toxina: orbiculares e nariz.mp4",
+   "titulo": "Reforço de toxina: orbiculares e nariz",
+   "titulo_origem": "inventado",
+   "parte": null,
+   "cartela_final": null,
+   "manter": [
+    [
+     0.82,
+     22.4
+    ],
+    [
+     24.4,
+     70.5
+    ],
+    [
+     72.9,
+     143.3
+    ]
+   ],
+   "silenciar": [
+    [
+     0.5,
+     1.22
+    ],
+    [
+     65.0,
+     66.2
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\brefinamentinho\\b",
+     "refinamentinho"
+    ],
+    [
+     "\\bBrava\\b",
+     "brava"
+    ]
+   ],
+   "mover_palavra": [
+    [
+     28.0,
+     31.4
+    ]
+   ]
+  }
+ ]
+}

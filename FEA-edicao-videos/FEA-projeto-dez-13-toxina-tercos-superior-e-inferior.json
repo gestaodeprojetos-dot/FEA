@@ -1,0 +1,1297 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9465p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9465p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/1- Como escolher a toxina certa.mp4",
+   "titulo": "Como escolher a toxina certa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     50.57,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.37,
+     0.45
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'...reduzindo essas linhas que incomodam ela.' fecha o raciocínio. Depois vêm o resumo e a chamada para o próximo vídeo ('Então, essa vai ser a minha seleção para essa paciente, e eu vou mostrar agora o planejamento'), uma frase só ligada por 'e' sem pausa para terminar antes da chamada."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9467p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9467p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/2- Planejamento terço inferior.mp4",
+   "titulo": "Planejamento terço inferior",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     74.55,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9469p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9469p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/3- Técnica da coroa.mp4",
+   "titulo": "Técnica da coroa",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     98.78,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9470p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9470p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/4- Glabela.mp4",
+   "titulo": "Glabela",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     72.88,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9471.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9471.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/5- Orbiculares.mp4",
+   "titulo": "Orbiculares",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.3,
+     42.73,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": []
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9473p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9473p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/6- Posição da agulha na toxina.mp4",
+   "titulo": "Posição da agulha na toxina",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     47.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.37,
+     0.445
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9474e.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9474e.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/7- Mentoniano e DAO.mp4",
+   "titulo": "Mentoniano e DAO",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     102.3,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [
+    [
+     62.0,
+     62.6
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9475f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9475f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/8- Platisma.mp4",
+   "titulo": "Platisma",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0,
+     89.9,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": [],
+   "bordas_conferidas": {
+    "fim": "Termina em 'Perfeito.', depois da última aplicação do lado (agulha sai em 88,8 s). 'Vamos para o outro lado' anuncia o outro lado, que não está no bruto (acaba em 90,9 s)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/b13/IMG_9476.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/tr/IMG_9476.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/45469567-6a95-5018-a80e-21da27da864e/scratchpad/out/d13/9- Unidade volumétrica ou internacional?.mp4",
+   "titulo": "Unidade volumétrica ou internacional?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.067,
+     66.53,
+     "exato"
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ]
+   ],
+   "silenciar": []
+  }
+ ]
+}
