@@ -73,6 +73,6 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Dúvida de copy (tom, emoji, texto): perguntar direto ao Matheus, não à gestão (Gabi, 27/11 10h03, 781).
 - Mensagens de grupo de evento (Matheus, Keila 27/11 10h21, regra): doc sempre em ordem cronológica de envio; tom caloroso e próximo, sem exagero, com base nos eventos anteriores; emoji 🏽 nessas mensagens (decisão do Matheus); uma mensagem por objetivo, sem duplicar (ex.: um só "Falta 1 hora").
 - Matheus liberado 100% no privado, inclusive madrugada, mesmo com vigia/atuação reduzida (Keila 27/11).
-- Antes de atribuir uma entrega a um setor, conferir quem faz; nunca deduzir (erro do formulário MTB/MPL, 27/11, 788).
+- Antes de atribuir uma entrega NOVA (sem registro de responsável) a um setor, conferir quem faz com a gestão; tarefa que já tem responsável registrado pode ser atribuída direto (Keila 27/11 10h29, confirmar com a Gabi).
 - Thumbs do YouTube: com a Gabi; marcar ela (Keila 27/11).
 - Abrir o arquivo/formulário no ar antes de afirmar o que ele contém; texto da task não é o arquivo (erro 767, 27/11).
