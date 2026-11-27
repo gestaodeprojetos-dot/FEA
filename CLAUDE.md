@@ -381,6 +381,7 @@ O bloco de código acima usa travessão como separador visual do gabarito impres
 # COMO RETOMAR CONTEXTO EM NOVA SESSÃO
 
 1. Ler este arquivo inteiro antes de qualquer produção para o cliente FEA.
+   Em seguida, a skill `fea-central` (`.claude/skills/fea-central/SKILL.md`) é o índice de tudo o que o Claude sabe fazer na FEA: diz qual skill usar para cada pedido e guarda as receitas e scripts que não têm skill própria.
 2. Confirmar com a Keila: calendário atualizado do ano corrente (as datas aqui são a última versão conhecida, não necessariamente as vigentes), equipe atual (nomes mudam), gaps pendentes de dados do comercial (histórico mostra pendências recorrentes em datas de vencimento aluno a aluno, tabela de preços e cupons, política de renovação).
 3. Nunca inventar preço, data, nome de pessoa ou número de aluno, perguntar ou pedir a fonte.
 4. Se o projeto envolver ActiveCampaign ou funil de email, perguntar se já existe documento ou URL de estratégia publicado antes de recriar do zero.
