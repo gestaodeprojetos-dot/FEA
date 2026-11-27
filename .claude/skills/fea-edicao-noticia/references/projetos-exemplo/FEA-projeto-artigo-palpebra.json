@@ -1,0 +1,213 @@
+{
+  "ffmpeg": "ffmpeg",
+  "fontsdir": "TRABALHO/fonts",
+  "fonte_headline": "TRABALHO/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "TRABALHO/dl/palp/IMG_9456.MOV",
+    "transcricao": "TRABALHO/tr/IMG_9456.json",
+    "saida": "TRABALHO/out/1- Toxina na pálpebra inferior: o que diz o artigo.mp4",
+    "titulo": "Toxina na pálpebra inferior: o que diz o artigo",
+    "headline": [
+      "Toxina na",
+      "pálpebra inferior:",
+      "o que diz o artigo"
+    ],
+    "headline_fim": 4.6,
+    "manter": [
+      [
+        0.0,
+        84.8,
+        "exato"
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\bempápulas\\b",
+        "em pápulas"
+      ],
+      [
+        "\\bpra\\b",
+        "para"
+      ],
+      [
+        "\\bcomenta quero\\b",
+        "comenta QUERO"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "TRABALHO/an/raw9456.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "TRABALHO/musica/mixkit_747.mp3",
+      "ini": 0,
+      "abaixo_da_voz_db": 30,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 0.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_olhos.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 3.3,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/dl/palpb/meso_mar.mp4",
+        "src": 1.0,
+        "cx": 0.5,
+        "cy": 0.42,
+        "zoom": 1.5
+      },
+      {
+        "ini": 6.56,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/dl/palpb/papulas.mp4",
+        "src": 7.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.4
+      },
+      {
+        "ini": 10.4,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/s_titulo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 13.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/dl/palpb/papulas.mp4",
+        "src": 13.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.4
+      },
+      {
+        "ini": 16.6,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/s_metodos.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 27.72,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 33.5,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_ad1.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 35.98,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 44.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_ptose_olhos.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 46.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_inchado.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 48.6,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/s_resumo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 51.7,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_ptose_sorriso.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 57.7,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 63.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_pontos.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 69.2,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/dl/palpb/papulas.mp4",
+        "src": 21.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.4
+      },
+      {
+        "ini": 74.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/v_ad2.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 76.0,
+        "tipo": "broll",
+        "arquivo": "TRABALHO/prod/palp/clips/s_titulo.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 79.7,
+        "tipo": "cheio"
+      }
+    ],
+    "limpar_ruido": "TRABALHO/models/rnn/sh.rnnn"
+  }
+}

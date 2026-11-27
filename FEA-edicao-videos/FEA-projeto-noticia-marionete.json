@@ -1,0 +1,210 @@
+{
+  "ffmpeg": "/usr/local/lib/python3.13/dist-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2",
+  "fontsdir": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts",
+  "fonte_headline": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/fonts/Sora-700.ttf",
+  "video": {
+    "entrada": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/bruto/IMG_7936.MOV",
+    "transcricao": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/tr/IMG_7936.json",
+    "saida": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/out/3- Os 3 melhores produtos para a linha de marionete.mp4",
+    "titulo": "Os 3 melhores produtos para a linha de marionete",
+    "headline": [
+      "Os 3 melhores",
+      "produtos para a",
+      "linha de marionete"
+    ],
+    "headline_fim": 3.3,
+    "manter": [
+      [
+        6.8,
+        56.2
+      ]
+    ],
+    "remover_legenda": [],
+    "correcoes": [
+      [
+        "\\b[Nn]uvia\\b",
+        "Neauvia"
+      ],
+      [
+        "\\bgelinha\\b",
+        "G'"
+      ],
+      [
+        "\\b[Tt]andelta\\b",
+        "tan delta"
+      ],
+      [
+        "\\bhidroxapatita\\b",
+        "hidroxiapatita"
+      ],
+      [
+        "\\b[Ss]ing ?derm\\b",
+        "Singderm"
+      ],
+      [
+        "\\bBio ?gelis\\b",
+        "Biogelis"
+      ]
+    ],
+    "fundo_produto": {
+      "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/an/mar/raw25.png",
+      "crop": [
+        0,
+        0,
+        1080,
+        460
+      ]
+    },
+    "musica": {
+      "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/musica/mixkit_cat_walk_371.mp3",
+      "ini": 12,
+      "abaixo_da_voz_db": 28,
+      "nivelar": true
+    },
+    "tirar_silencios": {
+      "minimo": 0.18,
+      "folga": 0.06,
+      "limiar_db": 50
+    },
+    "cenas": [
+      {
+        "ini": 6.8,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c1.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 9.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c2.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 11.0,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/neauvia_stimulate.png",
+        "nome": "Neauvia Stimulate"
+      },
+      {
+        "ini": 12.5,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 15.9,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/live.mp4",
+        "src": 89.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 19.0,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c34.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 22.6,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/biogelis_volume.png",
+        "nome": "Biogelis Volume"
+      },
+      {
+        "ini": 23.8,
+        "tipo": "produto",
+        "imagem": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png",
+        "nome": "Singderm"
+      },
+      {
+        "ini": 24.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/k4/clips/c_antesdepois.mp4",
+        "src": 0.0,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 28.2,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/mar2.mov",
+        "src": 64.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 32.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/novos/IMG_3691.MOV",
+        "src": 19.0,
+        "cx": 0.5,
+        "cy": 0.36,
+        "zoom": 1.0
+      },
+      {
+        "ini": 35.7,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 40.3,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/live.mp4",
+        "src": 102.5,
+        "cx": 0.5,
+        "cy": 0.5,
+        "zoom": 1.0
+      },
+      {
+        "ini": 43.6,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/mar2.mov",
+        "src": 70.0,
+        "cx": 0.5,
+        "cy": 0.45,
+        "zoom": 1.1
+      },
+      {
+        "ini": 46.6,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 49.1,
+        "tipo": "produtos",
+        "imagens": [
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/neauvia_stimulate.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/biogelis_volume.png",
+          "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/prod/mar2/singderm.png"
+        ],
+        "numerar": true
+      },
+      {
+        "ini": 51.1,
+        "tipo": "cheio"
+      },
+      {
+        "ini": 52.4,
+        "tipo": "broll",
+        "arquivo": "/tmp/claude-0/-home-user-FEA/6946a299-c3ce-59b0-b26a-a5b588b86739/scratchpad/dl/mar/pf/IMG_5563.MOV",
+        "src": 78.4,
+        "cx": 0.5,
+        "cy": 0.4,
+        "zoom": 1.0
+      },
+      {
+        "ini": 55.3,
+        "tipo": "cheio"
+      }
+    ]
+  }
+}
