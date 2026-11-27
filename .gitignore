@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .env
 FEA-novo-acesso-google*.txt
+FEA-entregas/*.mp4
+.vigia-ultimo

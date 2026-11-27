@@ -10,7 +10,33 @@
       "mcp__HeyGen",
       "mcp__github",
       "mcp__claude-code-remote",
-      "mcp__Claude_Code_Remote__read_documentation"
+      "mcp__Claude_Code_Remote__read_documentation",
+      "mcp__ClickUp__*",
+      "mcp__WhatsApp_FEA_uazapi",
+      "mcp__WhatsApp_FEA_uazapi__*",
+      "mcp__Google_Docs",
+      "mcp__Google_Docs__*",
+      "mcp__Google_Sheets",
+      "mcp__Google_Sheets__*",
+      "mcp__Google_Drive__*",
+      "mcp__claude-code-remote__*",
+      "CronCreate",
+      "CronDelete",
+      "CronList",
+      "ReadNotifications",
+      "ToolSearch"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"hookSpecificOutput\": {\"hookEventName\": \"SessionStart\", \"additionalContext\": \"VIGIA FEA: a sessao reiniciou e os agendamentos da vigia foram apagados. ANTES de qualquer outra coisa: rodar CronList; se vazio, recriar os 4 jobs (*/2 10-22 * * 1-5 minutos=4; */5 10-22 * * 0,6 minutos=7; */5 0-2,23 * * * minutos=7; */15 3-9 * * * minutos=17) com o prompt de vigia de /home/user/FEA/FEA-regras-em-vigor.md, e rodar novidades cobrindo o tempo parado. Nunca responder 'No response requested' apos reinicio.\"}}'"
+          }
+        ]
+      }
     ]
   }
 }
