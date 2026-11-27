@@ -84,3 +84,5 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Suporte do Latam é o mesmo número do Brasil; não pedir de novo (Carol 27/11).
 - Grupo Claude comercial: só processos de IA do comercial. Demandas de lançamento/evento envolvendo comercial vão ao grupo do tema (ex.: integração Clint → Automações, marcando Sabrina e Vivi) (Keila 27/11 11h58).
 - Disparos e comunicação de lançamento: validar com o Matheus (responsável), alerta pode ir no privado dele (Keila 27/11).
+- UTMs de tráfego apontam para a página de vendas, não para o checkout (uma UTM só) (Keila 27/11, sugestão do Saar).
+- Definição recebida (preço, vagas, bônus) = atualizar briefing, página e ClickUp na hora; não esperar pedido (Keila 27/11).
