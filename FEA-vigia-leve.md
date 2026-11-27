@@ -83,3 +83,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Pendências do Elite: prazo novo no ClickUp + mensagem ao responsável (e Sabrina quando comercial) com link e o que falta em cada página, pedindo confirmação, previsão e nova data final (Keila 27/11 11h31).
 - Suporte do Latam é o mesmo número do Brasil; não pedir de novo (Carol 27/11).
 - Grupo Claude comercial: só processos de IA do comercial. Demandas de lançamento/evento envolvendo comercial vão ao grupo do tema (ex.: integração Clint → Automações, marcando Sabrina e Vivi) (Keila 27/11 11h58).
+- Disparos e comunicação de lançamento: validar com o Matheus (responsável), alerta pode ir no privado dele (Keila 27/11).
