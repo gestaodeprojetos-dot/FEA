@@ -74,3 +74,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Mensagens de grupo de evento (Matheus, Keila 27/11 10h21, regra): doc sempre em ordem cronológica de envio; tom caloroso e próximo, sem exagero, com base nos eventos anteriores; emoji 🏽 nessas mensagens (decisão do Matheus); uma mensagem por objetivo, sem duplicar (ex.: um só "Falta 1 hora").
 - Matheus liberado 100% no privado, inclusive madrugada, mesmo com vigia/atuação reduzida (Keila 27/11).
 - Antes de atribuir uma entrega a um setor, conferir quem faz; nunca deduzir (erro do formulário MTB/MPL, 27/11, 788).
+- Thumbs do YouTube: com a Gabi; marcar ela (Keila 27/11).
