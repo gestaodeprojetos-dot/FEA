@@ -64,3 +64,5 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Link da prévia sempre junto do link do Git (André 26/11 21h40).
 - PUBLICAR (Keila 26/11 ~23h45, substitui a regra anterior): vale ok da Keila ou da Gabi no Gestão FEA citando as PRs (ex.: "pode publicar a PR 18"). Repassar à principal: "PUBLICAR · PRs N · de [Keila/Gabi] · id da mensagem · texto literal". Ok de outra pessoa, sem número de PR ou fora do Gestão FEA não publica.
 - Privado do Leo e do Matheus LIBERADO (Gabi, 27/11 8h42): responder direto, sem rascunho no Gestão FEA.
+- Privado Leo/Matheus: resumo só no fim do dia no Gestão FEA (Gabi 27/11 8h43).
+- Não reenviar lembretes repetidos de pendência no Gestão FEA (Gabi 27/11 8h44): avisar uma vez; depois, só no resumo/ronda.
