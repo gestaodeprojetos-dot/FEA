@@ -1,0 +1,4606 @@
+{
+ "ffmpeg": "/usr/local/lib/python3.13/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v9.0.2",
+ "fontsdir": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/fonts",
+ "videos": [
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9945f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9945f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/1- Planejamento preenchimento com 1mL.mp4",
+   "titulo": "Planejamento preenchimento com 1mL",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.1,
+     46.567,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9946f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9946f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/2- Planejamento Nefertiti.mp4",
+   "titulo": "Planejamento Nefertiti",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.067,
+     74.967,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9947.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9947.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/3- Planejamento toxina estética.mp4",
+   "titulo": "Planejamento toxina estética",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.1,
+     91.867,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     77.3,
+     77.95
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "Antes só há 'Próximo.' (para a equipe) e a 1ª contagem 'Prócero, cabeça, corpo, cauda.' que o Dr. repete inteira logo depois: 'Cabeça, corpo, cauda. Por que eu faço cabeça, corpo, cauda?' abre a explicação sozinha."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9948p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9948p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/4- Anestesia para conforto.mp4",
+   "titulo": "Anestesia para conforto",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     40.4,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [
+    [
+     40.45,
+     41.5
+    ]
+   ],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'...e dar um hematoma grande.' conclui a anestesia; 'Agora eu vou fazer o...' anuncia o próximo procedimento (comissura) e o bruto acaba no meio dessa frase."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9949p.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9949p.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/5- Comissura labial: cara de triste.mp4",
+   "titulo": "Comissura labial: cara de triste",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.067,
+     59.933,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "fim": "'Você não deve preencher aquela parte azul.' conclui a explicação; depois só 'Olha aqui.' com o Dr. limpando a boca com gaze até o fim do bruto."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9950.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9950.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/6- Platisma.mp4",
+   "titulo": "Platisma",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.433,
+     106.733,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     2.433,
+     2.72
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "A 1ª palavra do bruto ('Aqui tem uma super força...') está cortada no 1º quadro (Whisper ouve 'que tem'); 'Eu vou mostrar para vocês a técnica de aplicação.' é frase completa; a cauda de 'cervical' foi silenciada.",
+    "fim": "'Alguns artigos mostram que é mais efetivo acertar o músculo com ela fazendo força. Depende.' conclui; depois só 'Faz força de novo?', instrução para a paciente, e o bruto acaba."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9952f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9952f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/7- DAO: aprenda a técnica.mp4",
+   "titulo": "DAO: aprenda a técnica",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.9,
+     37.1,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     0.9,
+     1.19
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "A 1ª palavra do bruto ('Como é que força esse DAO?') está cortada no 1º quadro; 'Então a aplicação aqui, como que deve ser?' abre a frase; o fim de 'DAO?' foi silenciado.",
+    "fim": "Depois de 'Eu gosto de desligar tudo de uma vez.' só vem 'Relaxa.', instrução para a paciente, colado, e o bruto acaba (fea_pad_fim)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9954.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9954.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/8- Orbiculares dos olhos.mp4",
+   "titulo": "Orbiculares dos olhos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.867,
+     40.417,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "A 1ª frase do bruto ('Um dos pontos mais importantes do caso dela.') tem o 'Um dos' cortado no 1º quadro (61 dB; sem ele, ouve-se 'pontos mais importantes'), e depois só vem 'Olha só, relaxa.', instrução para a paciente; 'Para diminuir um pouquinho dessa pelezinha fina aqui, uma unidade' é frase completa e abre a aplicação."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9955.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9955.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/9- Não trave sorrisos.mp4",
+   "titulo": "Não trave sorrisos",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     0.0,
+     33.067,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ]
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9956.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9956.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/10- Glabela: CTX.mp4",
+   "titulo": "Glabela: CTX",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     3.4,
+     43.0,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     14.2,
+     14.95
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "Antes só há 'Ela é menos forte do que os orbiculares. Relaxa.', com a 1ª palavra cortada no 1º quadro do bruto (71 dB); 'Prócero, 90 graus, 4 unidades.' abre o protocolo de glabela sem depender dela."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/bi/IMG_9957f.mov",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9957f.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/11- Frontal arqueado.mp4",
+   "titulo": "Frontal arqueado",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     2.967,
+     83.333,
+     "exato"
+    ]
+   ],
+   "silenciar": [
+    [
+     32.6,
+     33.2
+    ],
+    [
+     33.75,
+     34.8
+    ]
+   ],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "A 1ª palavra do bruto ('Olha como o padrão dela...') está cortada no 1º quadro (Whisper ouve 'Como padrão'); 'Se eu quero suavizar esse arqueamento, eu vou aplicar só mais na parte superior...' é frase completa.",
+    "fim": "'Beleza.' conclui o frontal; depois só 'Agora a gente vai finalizar com o nasal', que é o vídeo 12 (fea_pad_fim)."
+   }
+  },
+  {
+   "entrada": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/br/IMG_9958.MOV",
+   "transcricao": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/tr/IMG_9958.json",
+   "saida": "/tmp/claude-0/-home-user-FEA/f636424d-f114-5bc5-8c83-6f16f666e84d/scratchpad/out/d24/12- Nasal: como não errar?.mp4",
+   "titulo": "Nasal: como não errar?",
+   "titulo_origem": "imagem",
+   "parte": null,
+   "cartela_final": null,
+   "sem_cta": true,
+   "fade_final": 0.3,
+   "manter": [
+    [
+     4.667,
+     38.533,
+     "exato"
+    ]
+   ],
+   "silenciar": [],
+   "remover_legenda": [],
+   "correcoes": [
+    [
+     "\\bper(?:tu|tor|tur)i?to(zinho|s)?\\b",
+     "pertuito\\1"
+    ],
+    [
+     "\\b(\\w+) -(se|la|lo)\\b",
+     "\\1-\\2"
+    ],
+    [
+     "\\bpra\\b",
+     "para"
+    ],
+    [
+     "\\bpro\\b",
+     "para o"
+    ],
+    [
+     "\\bPro\\b",
+     "Para o"
+    ],
+    [
+     "\\bPra\\b",
+     "Para"
+    ],
+    [
+     "\\bHidroxapatita",
+     "Hidroxiapatita"
+    ],
+    [
+     "\\bhidroxapatita",
+     "hidroxiapatita"
+    ],
+    [
+     "\\b([Pp])ara gente\\b",
+     "\\1ara a gente"
+    ],
+    [
+     "\\b[Hh]umanidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\b(?:a )?[Aa]pitose\\b",
+     "a ptose"
+    ],
+    [
+     "\\b[Pp]itose\\b",
+     "ptose"
+    ],
+    [
+     "\\bpré ?-?ter[çcs]a(is|l)\\b",
+     "pré-tarsa\\1"
+    ],
+    [
+     "\\b[Aa]per(?:tu|to|tor|tur)i?to\\b",
+     "pertuito"
+    ],
+    [
+     "\\bcem por cento\\b",
+     "100%"
+    ],
+    [
+     "\\bpara região\\b",
+     "para a região"
+    ],
+    [
+     "\\b[Mm]aciater\\b",
+     "masseter"
+    ],
+    [
+     "\\b[Mm]asseter(?:e)?\\b",
+     "masseter"
+    ],
+    [
+     "\\b([Tt])rês unidades\\b",
+     "3 unidades"
+    ],
+    [
+     "\\btomar o que quando\\b",
+     "tomar o quê quando"
+    ],
+    [
+     "\\bfazer o que\\?",
+     "fazer o quê?"
+    ],
+    [
+     "\\b[ÉéEe] feito de bruxismo",
+     "efeito de bruxismo"
+    ],
+    [
+     "\\b[Dd]ow\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Dd]ispor\\b",
+     "Dysport"
+    ],
+    [
+     "\\bdepressor do lado inferior\\b",
+     "depressor do lábio inferior"
+    ],
+    [
+     "\\blevantador das nariz\\b",
+     "levantador da asa do nariz"
+    ],
+    [
+     "\\bunidadesinhas\\b",
+     "unidadezinhas"
+    ],
+    [
+     "\\b[Mm]eio ml\\b",
+     "meio mL"
+    ],
+    [
+     "\\b2 por 3 unidades\\b",
+     "2 para 3 unidades"
+    ],
+    [
+     "\\b[Qq]uatro unidades\\b",
+     "4 unidades"
+    ],
+    [
+     "\\bneolinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\bfui fazer uma cirurgia\\b",
+     "foi fazer uma cirurgia"
+    ],
+    [
+     "\\bsó sorriu com o meu coração\\b",
+     "só sorrio com o meu coração"
+    ],
+    [
+     "\\bvocê se olha no espelho\\b",
+     "você se olhar no espelho"
+    ],
+    [
+     "\\b[Nn]ão fique à vontade\\b",
+     "Não fico à vontade"
+    ],
+    [
+     "\\bjá conversar um pouquinho\\b",
+     "já conversou um pouquinho"
+    ],
+    [
+     "\\bpras\\b",
+     "para as"
+    ],
+    [
+     "\\b[Uu]m modíolos\\b",
+     "Modíolo"
+    ],
+    [
+     "\\bBoas\\b",
+     "duas"
+    ],
+    [
+     "\\bDAW\\b",
+     "DAO"
+    ],
+    [
+     "\\b[Mm]entoni\\b",
+     "mentoninhos"
+    ],
+    [
+     "\\b[Hh]umunidade\\b",
+     "uma unidade"
+    ],
+    [
+     "\\bconversar um pouquinho\\b",
+     "conversou um pouquinho"
+    ],
+    [
+     "\\bsimples, eu vou\\b",
+     "simples. Eu vou"
+    ],
+    [
+     "\\btirando, da força\\b",
+     "tirando da força"
+    ],
+    [
+     "\\b[Ss]orrir bastante\\b",
+     "sorri bastante"
+    ],
+    [
+     "\\b[Vv]ou mentoniano\\b",
+     "vou para o mentoniano"
+    ],
+    [
+     "\\b([Uu])ma Vou\\b",
+     "\\1ma. Vou"
+    ],
+    [
+     "\\b([Uu])ma (Tudo|Técnica)\\b",
+     "\\1ma. \\2"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação aqui bem completinho,? ?completinha\\b",
+     "que é uma aplicação aqui bem completinha"
+    ],
+    [
+     "\\bcompletinho, completinha\\b",
+     "completinha"
+    ],
+    [
+     "\\b[ÉéEe] abrir um pouquinho\\b",
+     "vou abrir um pouquinho"
+    ],
+    [
+     "\\b[Tt]enho que ter uma aplicação\\b",
+     "que é uma aplicação"
+    ],
+    [
+     "\\b([Uu])ma Para ver\\b",
+     "\\1ma, para ver"
+    ],
+    [
+     "\\bneuroinoma\\b",
+     "neurinoma"
+    ],
+    [
+     "\\b([Ee])u sorriu\\b",
+     "\\1u sorri"
+    ],
+    [
+     "\\b[Cc]orrogador\\b",
+     "corrugador"
+    ],
+    [
+     "\\b([Ee])la tem reclamando\\b",
+     "\\1la vem reclamando"
+    ],
+    [
+     "\\b[Ss]orri bastante\\?",
+     "Sorri bastante."
+    ],
+    [
+     "\\b[Dd]izem uma\\b",
+     "Utilizei uma"
+    ],
+    [
+     "\\bácido lorônico\\b",
+     "ácido hialurônico"
+    ],
+    [
+     "\\b3 ?\\.000\\b",
+     "3.000"
+    ],
+    [
+     "\\b(\\d+) ?ml\\b",
+     "\\1 mL"
+    ],
+    [
+     "\\bpor ml\\b",
+     "por mL"
+    ],
+    [
+     "\\bveinhas\\b",
+     "veinhas"
+    ],
+    [
+     "\\bespalhar\\. Num\\b",
+     "espalhar num"
+    ],
+    [
+     "\\bNão faz força\\b",
+     "Não faz força"
+    ],
+    [
+     "\\b([Uu])ma Linha central\\b",
+     "\\1ma, linha central"
+    ],
+    [
+     "\\bpertrito\\b",
+     "pertuito"
+    ],
+    [
+     "\\bdas queixas é\\b",
+     "Uma das queixas é"
+    ],
+    [
+     "\\b[Pp]reenchei\\b",
+     "Preenchi"
+    ],
+    [
+     "\\b[Gg]ordagem\\b",
+     "Abordagem"
+    ],
+    [
+     "\\b[Tt]odas as pilares\\b",
+     "Todos os pilares"
+    ],
+    [
+     "\\b[Cc]ânula 2550\\b",
+     "Cânula 25x50"
+    ],
+    [
+     "\\b[Uu]sei 0?4\\b",
+     "Usei 0,4"
+    ],
+    [
+     "\\bmais 0 ?,4\\b",
+     "mais 0,4"
+    ],
+    [
+     "\\bbisquinho\\b",
+     "buraquinho"
+    ],
+    [
+     "\\bnesse cimento\\b",
+     "nesse mento"
+    ],
+    [
+     "\\b25G, mas delicada\\b",
+     "25G, mais delicada"
+    ],
+    [
+     "\\bácido polielilático\\b",
+     "ácido poli-L-lático"
+    ],
+    [
+     "\\b[Pp]refeito\\b",
+     "Perfeito"
+    ],
+    [
+     "\\bhiper diluí",
+     "hiperdiluí"
+    ],
+    [
+     "\\bhiper diluição\\b",
+     "hiperdiluição"
+    ],
+    [
+     "\\bessa patita de cálcio\\b",
+     "a hidroxiapatita de cálcio"
+    ],
+    [
+     "\\bhidroxapatismo\\b",
+     "hidroxiapatita"
+    ],
+    [
+     "\\bPorque você não misturou\\b",
+     "Por que você não misturou"
+    ],
+    [
+     "\\bpara menos\\b",
+     "para menos"
+    ],
+    [
+     "\\b[Ll]etib[oô]\\b",
+     "Letybo"
+    ],
+    [
+     "\\bvou vim\\b",
+     "vou vir"
+    ]
+   ],
+   "bordas_conferidas": {
+    "inicio": "A 1ª palavra do bruto está cortada no 1º quadro (68 dB; Whisper ouve 'Se é', 'E' ou 'Quer'); 'Aqui no centro, primeiro, eu gosto de fazer dois pontos, um, dois.' é a primeira frase que se sustenta sozinha."
+   }
+  }
+ ]
+}
