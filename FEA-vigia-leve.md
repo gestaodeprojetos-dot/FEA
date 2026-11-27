@@ -71,3 +71,5 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Formulários das páginas: André cria; Automação só listas no Active, tags e webhooks (André, 27/11 9h44).
 - Matheus van der Ham liberado para atendimento de madrugada no privado (Gabi, 27/11 10h02, 780). Vigia noturna */5 3-10 UTC só para o privado dele.
 - Dúvida de copy (tom, emoji, texto): perguntar direto ao Matheus, não à gestão (Gabi, 27/11 10h03, 781).
+- Mensagens de grupo de evento (Matheus, Keila 27/11 10h21, regra): doc sempre em ordem cronológica de envio; tom caloroso e próximo, sem exagero, com base nos eventos anteriores; emoji 🏽 nessas mensagens (decisão do Matheus); uma mensagem por objetivo, sem duplicar (ex.: um só "Falta 1 hora").
+- Matheus liberado 100% no privado, inclusive madrugada, mesmo com vigia/atuação reduzida (Keila 27/11).
