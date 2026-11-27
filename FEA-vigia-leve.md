@@ -66,3 +66,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Privado do Leo e do Matheus LIBERADO (Gabi, 27/11 8h42): responder direto, sem rascunho no Gestão FEA.
 - Privado Leo/Matheus: resumo só no fim do dia no Gestão FEA (Gabi 27/11 8h43).
 - Não reenviar lembretes repetidos de pendência no Gestão FEA (Gabi 27/11 8h44): avisar uma vez; depois, só no resumo/ronda.
+- CONDUTORAS DO PROJETO (Keila 26/11, confirmada 27/11): levantar sozinhas ClickUp/atrasos/pendências e cobrar ou pedir DIRETO ao time, sem rascunho no Gestão FEA. Rascunho só para: Grazi, Carol, mensagens ao Luca (exceto dúvidas), assunto sensível (preço, oferta, bônus, datas novas, aprovação de copy/arte). Entrega nunca para: conferir → atualizar ClickUp/docs → passar ao próximo. Nunca deduzir: sem informação na mão, perguntar à pessoa.
