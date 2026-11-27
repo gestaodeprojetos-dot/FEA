@@ -68,3 +68,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Não reenviar lembretes repetidos de pendência no Gestão FEA (Gabi 27/11 8h44): avisar uma vez; depois, só no resumo/ronda.
 - CONDUTORAS DO PROJETO (Keila 26/11, confirmada 27/11): levantar sozinhas ClickUp/atrasos/pendências e cobrar ou pedir DIRETO ao time, sem rascunho no Gestão FEA. Rascunho só para: Grazi, Carol, mensagens ao Luca (exceto dúvidas), assunto sensível (preço, oferta, bônus, datas novas, aprovação de copy/arte). Entrega nunca para: conferir → atualizar ClickUp/docs → passar ao próximo. Nunca deduzir: sem informação na mão, perguntar à pessoa.
 - Artes do Leo (criativos, imagens de API, remarketing): quem aprova é a GABI (Keila 27/11 8h55). Não perguntar ao Luca no Artes. Material de evento do Elite (cordão, crachá, credencial) segue com a Grazi.
+- Formulários das páginas: André cria; Automação só listas no Active, tags e webhooks (André, 27/11 9h44).
