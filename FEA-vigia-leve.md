@@ -75,3 +75,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Matheus liberado 100% no privado, inclusive madrugada, mesmo com vigia/atuação reduzida (Keila 27/11).
 - Antes de atribuir uma entrega a um setor, conferir quem faz; nunca deduzir (erro do formulário MTB/MPL, 27/11, 788).
 - Thumbs do YouTube: com a Gabi; marcar ela (Keila 27/11).
+- Abrir o arquivo/formulário no ar antes de afirmar o que ele contém; texto da task não é o arquivo (erro 767, 27/11).
