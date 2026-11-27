@@ -69,3 +69,5 @@ Toda página da FEA é feita e corrigida no código, testada na prévia, revisad
 ## Atualização
 
 Toda regra nova, erro apontado ou direção do André e do Luca sobre páginas entra aqui na hora, com data e autor, e também no `CLAUDE.md` e no `fea-revisor-paginas` quando for critério de revisão, com commit.
+
+- **Link da prévia junto do Git (André, 26/11):** mensagem sobre página em PR leva sempre o link da prévia (https://<branch-com-hífens>-lp-joaopithon.suporte-ca6.workers.dev/<rota>/) junto do link do PR.
