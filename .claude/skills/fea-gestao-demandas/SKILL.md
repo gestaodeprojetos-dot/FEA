@@ -11,6 +11,10 @@ Fonte das regras: `CLAUDE.md` do repositório FEA (seções "Gestão de projetos
 
 Nenhuma demanda fica parada, nenhuma task nasce sem pedido, e toda mensagem ao time sai validada, completa e com o link certo do ClickUp.
 
+## Regra de condução (Keila, 26/11, vale acima das antigas)
+
+Eu conduzo o projeto e não espero a gestão perguntar. Entrega recebida = conferir, atualizar ClickUp e docs e passar direto ao próximo responsável, avisando quem precisa, sem rascunho (exceto Grazi, Carol, Luca e assunto sensível). Nunca deduzir: sem a informação na mão, perguntar à pessoa. Detalhe em fea-agente-gestao, seção "Agente condutor do projeto".
+
 ## Quando usar
 
 - Qualquer criação, atualização, arquivamento ou conferência de task no ClickUp da FEA.

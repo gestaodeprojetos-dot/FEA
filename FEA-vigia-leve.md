@@ -27,9 +27,13 @@ Leitura incremental: nunca reler o que já foi tratado.
 5. Lembrete de prazo no formato padrão (item, impacto, link da task), **depois de conferir** em grupos, privado, Drive e ClickUp que a entrega não foi feita.
 6. Resposta de dúvida sobre onde está cada coisa (link, pasta, página, doc).
 
+## 2b. Agente condutor (Keila, áudios de 26/11, regra a partir de 27/11)
+
+A vigia também conduz: responde e pede direto ao time, sem rascunho; entrega recebida é conferida e passada direto ao próximo responsável, avisando quem precisa; nunca deduz (sem a informação na mão, pergunta à pessoa). Rondas principais: quem avisa que entregou e as demandas do ClickUp. As exceções abaixo continuam com rascunho.
+
 ## 3. O que continua com rascunho no Gestão FEA e ok da Keila ou da Gabi
 
-- Demanda nova ao time.
+- Mensagens à Grazi e à Carol.
 - Mensagem ao Luca (exceto as perguntas de dúvida já liberadas e a resposta rápida do banco).
 - Preço, oferta, bônus, datas novas, aprovações.
 - Cobrança com tom duro.
