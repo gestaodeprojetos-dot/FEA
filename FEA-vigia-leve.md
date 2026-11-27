@@ -76,3 +76,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Antes de atribuir uma entrega NOVA (sem registro de responsável) a um setor, conferir quem faz com a gestão; tarefa que já tem responsável registrado pode ser atribuída direto (Keila 27/11 10h29, confirmar com a Gabi).
 - Thumbs do YouTube: com a Gabi; marcar ela (Keila 27/11).
 - Abrir o arquivo/formulário no ar antes de afirmar o que ele contém; texto da task não é o arquivo (erro 767, 27/11).
+- Todo retorno à gestão diz: o que fiz, o próximo passo e para quem foi ("agora foi para fulano, mensagem enviada") (Keila 27/11 10h35, regra).
