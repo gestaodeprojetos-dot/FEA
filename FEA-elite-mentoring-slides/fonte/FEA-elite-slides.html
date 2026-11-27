@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elite Mentoring slides animados</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-italic.otf'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-semibold.otf'); font-weight: 600; }
+  :root { --navy: #011A24; --navy2: #06242f; --teal: #2DB9B3; --pool: #62B9B4; --cyan: #86F9F8; --ink: #F2FBFB; --muted: #8FB3B6; --dim: #3c5c62; --red: #E0605A; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--navy); }
+  body { font-family: 'Galano', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; }
+  #glow { position: absolute; inset: 0; background: radial-gradient(1000px 640px at 50% 46%, rgba(45,185,179,.20), transparent 70%), radial-gradient(1500px 900px at 50% 125%, rgba(134,249,248,.08), transparent 60%); }
+  #bigmark { position: absolute; left: 50%; top: 50%; width: 1500px; margin: -740px 0 0 -750px; opacity: .055; display: none; }
+  canvas { position: absolute; inset: 0; }
+  #content { position: absolute; inset: 0; }
+  #logo { position: absolute; right: 80px; bottom: 60px; height: 84px; display: none; }
+  #foot { position: absolute; left: 80px; bottom: 72px; font-size: 20px; color: #5f8589; letter-spacing: .02em; display: none; }
+  #flash { position: absolute; inset: 0; background: radial-gradient(800px 500px at 50% 55%, rgba(134,249,248,.5), transparent 70%); opacity: 0; mix-blend-mode: screen; pointer-events: none; }
+
+  .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .serif { font-family: 'Canela'; font-weight: 400; letter-spacing: -.02em; line-height: 1.05; }
+  .kicker { font-family: 'Galano'; font-weight: 500; font-size: 26px; letter-spacing: .32em; text-transform: uppercase; color: var(--pool); }
+  .cy { color: var(--cyan); }
+  .glowtxt { text-shadow: 0 0 80px rgba(134,249,248,.35); }
+  .w { display: inline-block; }
+  .t1 { font-size: 104px; }
+  .t2 { font-size: 72px; }
+  .t3 { font-size: 54px; }
+  .body { font-family: 'Galano'; font-size: 30px; color: var(--muted); line-height: 1.45; }
+
+  /* pilares */
+  .pillars { position: absolute; left: 0; right: 0; bottom: 150px; display: flex; justify-content: center; gap: 110px; align-items: flex-end; }
+  .pil { width: 230px; display: flex; flex-direction: column; align-items: center; }
+  .pil .col { position: relative; width: 230px; height: 430px; transform-origin: 50% 100%; }
+  .pil .cap { position: absolute; left: 0; right: 0; top: 0; height: 34px; background: linear-gradient(180deg, #a8fbfa, #4fc9c3); border-radius: 4px; box-shadow: 0 0 40px rgba(134,249,248,.25); }
+  .pil .cap2 { position: absolute; left: 18px; right: 18px; top: 34px; height: 14px; background: #3fb2ad; }
+  .pil .shaft { position: absolute; left: 30px; right: 30px; top: 48px; bottom: 48px; background: repeating-linear-gradient(90deg, rgba(134,249,248,.55) 0 3px, rgba(45,185,179,.22) 3px 34px); border-left: 2px solid rgba(134,249,248,.7); border-right: 2px solid rgba(134,249,248,.7); }
+  .pil .base2 { position: absolute; left: 18px; right: 18px; bottom: 34px; height: 14px; background: #3fb2ad; }
+  .pil .base { position: absolute; left: 0; right: 0; bottom: 0; height: 34px; background: linear-gradient(0deg, #2a9d98, #62d6d0); border-radius: 4px; }
+  .pil .lab { margin-top: 30px; font-family: 'Galano'; font-weight: 600; font-size: 30px; letter-spacing: .2em; text-transform: uppercase; }
+  .pil .score { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 190px; height: 130px; border-radius: 14px; background: rgba(1,26,36,.88); border: 2px solid var(--cyan); display: flex; align-items: center; justify-content: center; font-family: 'Canela'; font-size: 64px; color: var(--ink); box-shadow: 0 0 50px rgba(134,249,248,.3); }
+  .pil .score span { color: var(--muted); font-size: 40px; margin-left: 6px; }
+  .floor { position: absolute; left: 240px; right: 240px; bottom: 214px; height: 2px; background: linear-gradient(90deg, transparent, rgba(134,249,248,.6), transparent); }
+
+  /* faixas do diagnóstico */
+  .bands { position: absolute; left: 110px; right: 110px; top: 300px; display: flex; gap: 34px; }
+  .band { flex: 1; height: 600px; border-radius: 16px; border: 1.5px solid rgba(134,249,248,.18); background: rgba(6,36,47,.6); padding: 46px 38px; position: relative; overflow: hidden; }
+  .band .bar { position: absolute; left: 0; top: 0; height: 6px; width: 100%; background: var(--cyan); transform-origin: 0 50%; transform: scaleX(0); }
+  .band .rng { font-family: 'Canela'; font-size: 74px; letter-spacing: -.02em; color: var(--dim); }
+  .band .rng small { font-size: 30px; font-family: 'Galano'; letter-spacing: .1em; margin-left: 8px; }
+  .band .nm { font-family: 'Canela'; font-size: 46px; line-height: 1.1; margin-top: 30px; color: var(--dim); }
+  .band .ds { font-family: 'Galano'; font-size: 26px; line-height: 1.5; margin-top: 30px; color: var(--dim); }
+  .band .lit { position: absolute; inset: 0; border-radius: 16px; border: 2px solid var(--cyan); box-shadow: 0 0 70px rgba(134,249,248,.25), inset 0 0 90px rgba(134,249,248,.08); opacity: 0; }
+
+  /* cartões genéricos */
+  .card { border-radius: 16px; border: 1.5px solid rgba(134,249,248,.22); background: rgba(6,36,47,.72); }
+
+  /* recibo */
+  #rcpt { position: absolute; left: 930px; top: 80px; width: 860px; height: 790px; background: #F2FBFB; color: #0a2d38; border-radius: 6px; padding: 60px 64px; box-shadow: 0 60px 120px rgba(0,0,0,.5); }
+  #rcpt::after { content: ''; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: linear-gradient(-45deg, transparent 12px, #F2FBFB 0) 0 0 / 24px 18px repeat-x, linear-gradient(45deg, transparent 12px, #F2FBFB 0) 0 0 / 24px 18px repeat-x; }
+  #rcpt .hd { font-family: 'Galano'; font-weight: 600; font-size: 22px; letter-spacing: .3em; color: #2a8f8a; display: flex; justify-content: space-between; border-bottom: 2px dashed #b6d6d6; padding-bottom: 24px; }
+  .it { display: flex; align-items: baseline; gap: 14px; margin-top: 24px; font-size: 27px; font-family: 'Galano'; }
+  .it .nm { flex: 0 1 auto; max-width: 470px; line-height: 1.3; }
+  .it .dots { flex: 1; border-bottom: 3px dotted #9cc4c4; transform: translateY(-8px); }
+  .it .v { font-family: 'Canela'; font-size: 34px; white-space: nowrap; }
+  #tot { position: absolute; left: 64px; right: 64px; bottom: 44px; border-top: 3px solid #0a2d38; padding-top: 26px; display: flex; justify-content: space-between; align-items: baseline; }
+  #tot .l { font-family: 'Galano'; font-weight: 600; font-size: 28px; letter-spacing: .25em; }
+  #tot .v { font-family: 'Canela'; font-weight: 500; font-size: 80px; color: #1f9e98; letter-spacing: -.02em; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="glow"></div>
+  <img id="bigmark" src="assets/logo/em16.svg" alt="">
+  <canvas id="fx" width="1920" height="1080"></canvas>
+  <div id="content"></div>
+  <div id="flash"></div>
+  <img id="logo" src="assets/logo/em15.svg" alt="">
+  <div id="foot">Os resultados dependem da implementação de cada aluno.</div>
+</div>
+<script>
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const C = $('#content');
+const tl = gsap.timeline({ paused: true }), E = 'power3.out', IO = 'power2.inOut';
+const fxState = { boost: 0, portal: null, spot: 0 };
+
+// ---------- partículas periódicas: período P, para os loops fecharem sem salto ----------
+const P = 8, cv = $('#fx'), cx = cv.getContext('2d');
+let seed = 5; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const PT = Array.from({ length: 170 }, () => ({ x: rnd() * 1920, y: rnd() * 1300, r: .5 + rnd() * 1.8, v: 6 + rnd() * 16, a: .08 + rnd() * .32, off: rnd(), sw: rnd() * 6.28 }));
+// anel do portal: partículas em órbita, velocidades múltiplas de 2π/P
+const RING = Array.from({ length: 520 }, () => ({ a0: rnd() * 6.283, k: (rnd() < .5 ? 1 : 2) * (rnd() < .5 ? 1 : -1), dr: (rnd() - .5) * 2, w: 6 + rnd() * 34, r: .6 + rnd() * 2.2, al: .25 + rnd() * .75, ph: Math.floor(rnd() * 3) }));
+function drawFx(t) {
+  cx.clearRect(0, 0, 1920, 1080);
+  cx.fillStyle = '#86F9F8';
+  for (const p of PT) {
+    const ph = ((t / P) + p.off) % 1;
+    const y = p.y - p.v * ph * P * (1 + fxState.boost * 2), x = p.x + Math.sin(ph * 6.283 + p.sw) * 10;
+    cx.globalAlpha = p.a * Math.sin(Math.PI * ph) * (1 + fxState.boost);
+    cx.beginPath(); cx.arc(x, y, p.r, 0, 6.283); cx.fill();
+  }
+  const pr = fxState.portal;
+  if (pr && pr.s > 0) {
+    cx.globalCompositeOperation = 'lighter';
+    const R = 330 * pr.s, w = 2 * Math.PI / P;
+    // halo
+    const g = cx.createRadialGradient(pr.x, pr.y, R * .7, pr.x, pr.y, R * 1.35);
+    g.addColorStop(0, 'rgba(134,249,248,0)'); g.addColorStop(.33, `rgba(134,249,248,${.22 * pr.o})`); g.addColorStop(1, 'rgba(134,249,248,0)');
+    cx.globalAlpha = 1; cx.fillStyle = g; cx.beginPath(); cx.arc(pr.x, pr.y, R * 1.4, 0, 6.283); cx.fill();
+    cx.strokeStyle = `rgba(190,255,254,${.85 * pr.o})`; cx.lineWidth = 5; cx.shadowColor = '#86F9F8'; cx.shadowBlur = 40;
+    cx.beginPath(); cx.arc(pr.x, pr.y, R, 0, 6.283); cx.stroke(); cx.shadowBlur = 0;
+    cx.fillStyle = '#9ffcfb';
+    for (const q of RING) {
+      const a = q.a0 + q.k * w * t, rr = R + q.dr * q.w * (1 + .3 * Math.sin(w * t * (q.ph + 1) + q.a0));
+      cx.globalAlpha = q.al * pr.o * (.55 + .45 * Math.sin(w * t * (q.ph + 1) + q.a0 * 3));
+      cx.beginPath(); cx.arc(pr.x + Math.cos(a) * rr, pr.y + Math.sin(a) * rr, q.r, 0, 6.283); cx.fill();
+    }
+    cx.globalCompositeOperation = 'source-over';
+  }
+  cx.globalAlpha = 1;
+}
+
+// ---------- utilidades de texto ----------
+function splitWords(el) {
+  const walk = (node) => [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) {
+      const f = document.createDocumentFragment();
+      n.nodeValue.split(/([ \t\n]+)/).forEach(part => {
+        if (!part) return;
+        if (/^[ \t\n]+$/.test(part)) f.appendChild(document.createTextNode(part));
+        else { const s = document.createElement('span'); s.className = 'w'; s.textContent = part; f.appendChild(s); }
+      });
+      n.replaceWith(f);
+    } else if (n.nodeType === 1) walk(n);
+  });
+  walk(el); return $$('.w', el);
+}
+const wordsIn = (sel, at, o = {}) => tl.from(splitWords($(sel)), { opacity: 0, y: o.y ?? 40, filter: 'blur(8px)', duration: o.d ?? .7, stagger: o.st ?? .06, ease: E }, at);
+const brand = (foot) => { $('#bigmark').style.display = 'block'; $('#logo').style.display = 'block'; if (foot) $('#foot').style.display = 'block'; tl.from(['#logo', foot ? '#foot' : null].filter(Boolean), { opacity: 0, duration: .8 }, .2); };
+const fmt = (v) => Math.round(v).toLocaleString('pt-BR');
+const flash = (at) => { tl.to('#flash', { opacity: 1, duration: .1 }, at).to('#flash', { opacity: 0, duration: 1.1 }, at + .1); tl.to(fxState, { boost: 1.3, duration: .15 }, at).to(fxState, { boost: 0, duration: 1.8 }, at + .2); };
+
+// ---------- slides ----------
+const S = {};
+
+// 02 · Raio-X: um scanner varre a tela e revela o título
+S['02'] = () => {
+  C.innerHTML = `
+    <div id="grid" style="position:absolute;inset:0;background-image:linear-gradient(rgba(134,249,248,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(134,249,248,.06) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(900px 560px at 50% 50%,#000 20%,transparent 75%)"></div>
+    <div class="center" id="txt" style="clip-path:inset(0 0 100% 0)">
+      <div class="kicker">Exercício</div>
+      <div class="serif t1" style="margin-top:28px">Raio-X da <span class="cy glowtxt">Clínica Elite</span></div>
+      <div class="body" style="margin-top:34px;font-size:36px;color:var(--ink)">Dê uma nota de 0 a 10 para cada pilar da sua clínica</div>
+    </div>
+    <div id="scan" style="position:absolute;left:0;right:0;top:0;height:3px;background:var(--cyan);box-shadow:0 0 30px 6px rgba(134,249,248,.7),0 0 140px 30px rgba(134,249,248,.25)"></div>
+    <div id="scanbeam" style="position:absolute;left:0;right:0;top:0;height:220px;background:linear-gradient(0deg,rgba(134,249,248,.16),transparent);transform:translateY(-220px)"></div>`;
+  tl.from('#grid', { opacity: 0, duration: 1 }, 0);
+  const o = { p: 0 };
+  tl.to(o, { p: 1, duration: 2.6, ease: 'power1.inOut', onUpdate: () => {
+    const y = o.p * 1080;
+    $('#scan').style.transform = `translateY(${y}px)`; $('#scanbeam').style.transform = `translateY(${y - 220}px)`;
+    $('#txt').style.clipPath = `inset(0 0 ${100 - o.p * 100}% 0)`;
+  } }, .3);
+  tl.to(['#scan', '#scanbeam'], { opacity: 0, duration: .5 }, 2.9);
+  tl.fromTo('#txt .t1', { scale: 1.02 }, { scale: 1, duration: 1.2, ease: E }, 2.6);
+  return { steps: [4] };
+};
+
+// 03 · os 4 pilares sobem um a um
+const pillarsHTML = (score) => `
+  <div class="floor"></div>
+  <div class="pillars">${['Vendas', 'Financeiro', 'Marketing', 'Gestão'].map(n => `
+    <div class="pil"><div class="col"><div class="shaft"></div><div class="cap"></div><div class="cap2"></div><div class="base2"></div><div class="base"></div>${score ? '<div class="score">__<span>/10</span></div>' : ''}</div><div class="lab">${n}</div></div>`).join('')}
+  </div>`;
+S['03'] = () => {
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:130px;text-align:center">
+      <div class="serif t2" id="h" style="max-width:1500px;margin:0 auto">Toda clínica que fatura de R$&nbsp;100&nbsp;mil a R$&nbsp;300&nbsp;mil com lucro tem <span class="cy glowtxt">4 pilares em pé.</span></div></div>${pillarsHTML(false)}`;
+  wordsIn('#h', .2, { st: .045 });
+  tl.from('.floor', { scaleX: 0, duration: 1, ease: E }, 1.2);
+  $$('.pil').forEach((p, i) => {
+    tl.from($('.col', p), { scaleY: 0, duration: 1, ease: 'power4.out' }, 1.6 + i * .35);
+    tl.from($('.lab', p), { opacity: 0, y: 20, duration: .6, ease: E }, 2.1 + i * .35);
+  });
+  return { steps: [4.6] };
+};
+
+// 09 · os mesmos pilares, agora com o campo da nota
+S['09'] = () => {
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:130px;text-align:center">
+      <div class="serif t2" id="h">Some as 4 notas. <span class="cy glowtxt">Alguma ficou abaixo de 7?</span></div></div>${pillarsHTML(true)}`;
+  tl.from('.pillars, .floor', { opacity: 0, duration: .6 }, 0);
+  $$('.score').forEach((s, i) => tl.from(s, { opacity: 0, scale: .6, duration: .55, ease: 'back.out(1.7)' }, .4 + i * .2));
+  wordsIn('#h', 1.4);
+  return { steps: [3.4] };
+};
+
+// 10 · diagnóstico: as 4 faixas acendem uma a uma (1 clique por faixa)
+S['10'] = () => {
+  const B = [['0 a 15', 'Clínica no improviso', 'Você é a clínica inteira: atende, vende, cobra e administra. Trabalha muito e não sabe quanto sobra.'],
+    ['16 a 25', 'Fatura, mas não sobra', 'A agenda anda, mas o lucro e a equipe não acompanham. Cada mês é uma surpresa.'],
+    ['26 a 33', 'Pronta para escalar', 'A base está organizada, mas o crescimento ainda depende de você.'],
+    ['34 a 40', 'Clínica Elite', 'Os 4 pilares em pé. O desafio agora é escalar sem perder margem.']];
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:140px;text-align:center"><div class="serif t2" id="h">Qual é o momento da <span class="cy glowtxt">sua clínica?</span></div></div>
+    <div class="bands">${B.map(b => `<div class="band"><div class="lit"></div><div class="bar"></div><div class="rng">${b[0].replace(' a ', '<small>A</small> ')}<small>pts</small></div><div class="nm">${b[1]}</div><div class="ds">${b[2]}</div></div>`).join('')}</div>`;
+  $$('.band .rng').forEach(r => r.innerHTML = r.innerHTML.replace('<small>A</small> ', '–'));
+  wordsIn('#h', .2);
+  $$('.band').forEach((b, i) => tl.from(b, { opacity: 0, y: 60, duration: .7, ease: E }, .6 + i * .12));
+  const steps = [2.2];
+  $$('.band').forEach((b, i) => {
+    const a = steps[steps.length - 1] + .05;
+    tl.to($('.lit', b), { opacity: 1, duration: .5 }, a);
+    tl.to($('.bar', b), { scaleX: 1, duration: .6, ease: E }, a);
+    tl.to([$('.rng', b), $('.nm', b)], { color: i === 3 ? '#86F9F8' : '#F2FBFB', duration: .5 }, a);
+    tl.to($('.ds', b), { color: '#B9D3D5', duration: .5 }, a + .1);
+    tl.to(b, { y: -14, duration: .5, ease: E }, a);
+    if (i > 0) tl.to($$('.band')[i - 1], { y: 0, opacity: .55, duration: .5, ease: E }, a);
+    if (i === 3) { tl.to(b, { scale: 1.03, duration: .6, ease: E }, a); flash(a); }
+    steps.push(a + 1.3);
+  });
+  return { steps };
+};
+
+// 12 · três passos, com seta entre eles (1 clique por passo)
+S['12'] = () => {
+  const P3 = [['Diagnóstico', 'Descobrir em qual pilar a sua clínica perde dinheiro'], ['Plano', 'Atacar primeiro o pilar com a nota mais baixa'], ['Acompanhamento', 'Implementar toda semana, com quem já fez']];
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:150px;text-align:center"><div class="serif t2" id="h">Como virar uma <span class="cy glowtxt">Clínica Elite</span> e chegar aos 34 pontos</div></div>
+    <div style="position:absolute;left:120px;right:120px;top:420px;display:flex;align-items:center;justify-content:space-between">
+    ${P3.map((p, i) => `<div class="card st" style="width:460px;height:400px;padding:50px 44px;position:relative">
+        <div style="font-family:Canela;font-size:120px;line-height:1;color:var(--cyan)" class="glowtxt">${i + 1}</div>
+        <div class="serif" style="font-size:52px;margin-top:26px">${p[0]}</div>
+        <div class="body" style="margin-top:20px;font-size:28px">${p[1]}</div></div>${i < 2 ? `<svg class="ar" width="120" height="40" viewBox="0 0 120 40"><path d="M4 20H108M92 6l16 14-16 14" fill="none" stroke="#86F9F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>` : ''}`).join('')}</div>`;
+  wordsIn('#h', .2);
+  const st = $$('.st'), ar = $$('.ar path');
+  tl.from(st[0], { opacity: 0, y: 70, duration: .8, ease: E }, 1);
+  const steps = [2.4];
+  [1, 2].forEach(i => {
+    const a = steps[steps.length - 1] + .05;
+    tl.to(ar[i - 1], { strokeDashoffset: 0, duration: .5, ease: IO }, a);
+    tl.from(st[i], { opacity: 0, x: -50, duration: .8, ease: E }, a + .3);
+    steps.push(a + 1.5);
+  });
+  return { steps };
+};
+
+// 13 · três degraus
+S['13'] = () => {
+  const D = ['Fundação', 'Construção', 'Sistematização'];
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:150px;text-align:center"><div class="serif t2" id="h">Cada momento pede um <span class="cy glowtxt">próximo passo</span> diferente</div></div>
+    <div style="position:absolute;left:260px;right:260px;bottom:170px;height:560px">${D.map((d, i) => `
+      <div class="dg" style="position:absolute;left:${i * 466}px;bottom:0;width:470px;height:${200 + i * 160}px;transform-origin:50% 100%;border-top:4px solid #86F9F8;background:linear-gradient(180deg,rgba(134,249,248,${.16 + i * .08}),rgba(6,36,47,.4));box-shadow:0 -20px 60px rgba(134,249,248,${.05 + i * .06})">
+        <div style="position:absolute;left:40px;top:34px"><div class="kicker" style="font-size:22px">Nível ${i + 1}</div><div class="serif" style="font-size:54px;margin-top:12px">${d}</div></div></div>`).join('')}</div>`;
+  wordsIn('#h', .2);
+  $$('.dg').forEach((d, i) => { tl.from(d, { scaleY: 0, duration: .9, ease: 'power4.out' }, 1.2 + i * .45); tl.from($('div', d), { opacity: 0, y: 20, duration: .5 }, 1.7 + i * .45); });
+  return { steps: [4.2] };
+};
+
+// 14 · 1h (2 cliques: o número e a frase; depois a resposta)
+S['14'] = () => {
+  C.innerHTML = `<div class="center">
+      <div class="serif cy glowtxt" id="big" style="font-size:380px;line-height:.9;font-weight:500">1h</div>
+      <div class="serif t3" id="l1" style="margin-top:30px">por semana fora da cadeira, cuidando da gestão</div>
+      <div class="body" id="l2" style="margin-top:40px;font-size:36px;color:var(--ink)">É isso que separa a clínica que cresce da clínica que trava.</div>
+      <div class="serif t3" id="l3" style="margin-top:60px;color:var(--muted)">Só 1 hora? <span class="cy glowtxt" id="l4">Sim. Feita do jeito certo.</span></div></div>`;
+  tl.from('#big', { opacity: 0, scale: 1.6, filter: 'blur(20px)', duration: .7, ease: 'power4.out' }, .2);
+  flash(.25);
+  wordsIn('#l1', .8); wordsIn('#l2', 1.5, { st: .03, y: 20 });
+  tl.set('#l3', { opacity: 0 }, 0);
+  tl.to('#l3', { opacity: 1, duration: .5 }, 3.15);
+  tl.from('#l4', { opacity: 0, x: -20, filter: 'blur(6px)', duration: .7, ease: E }, 3.9);
+  return { steps: [3.1, 5] };
+};
+
+// 15 e 27 · o portal
+const portal = (side, txt, sub) => {
+  const left = side === 'right';
+  C.innerHTML = `<div style="position:absolute;${left ? 'left:150px' : 'right:150px'};top:0;bottom:0;width:820px;display:flex;flex-direction:column;justify-content:center;${left ? '' : 'text-align:right'}">
+      <div class="kicker">${sub}</div><div class="serif" id="h" style="font-size:120px;margin-top:26px">${txt}</div></div>`;
+  fxState.portal = { x: left ? 1400 : 520, y: 540, s: 0, o: 0 };
+  tl.to(fxState.portal, { s: 1, o: 1, duration: 1.6, ease: 'expo.out' }, .2);
+  flash(.2);
+  tl.from('.kicker', { opacity: 0, y: 14, duration: .6 }, .9);
+  wordsIn('#h', 1.1, { st: .09 });
+  return { steps: [3.2], loop: [3.2, 3.2 + P] };
+};
+S['15'] = () => portal('right', 'Vamos voltar <span class="cy glowtxt">no tempo</span>', 'Viagem no tempo');
+S['27'] = () => portal('left', 'Vamos voltar <span class="cy glowtxt">ao presente</span>', 'De volta');
+
+// 19 · equação
+S['19'] = () => {
+  const ic = [
+    `<svg viewBox="0 0 100 100" width="200"><path d="M50 14c-17 0-28 13-28 30 0 12 5 22 13 28v14h30V72c8-6 13-16 13-28 0-17-11-30-28-30z" fill="none" stroke="#86F9F8" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/><path d="M38 44c3-3 7-3 10 0M54 44c3-3 7-3 10 0M42 60c5 4 11 4 16 0" fill="none" stroke="#86F9F8" stroke-width="3" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>`,
+    `<svg viewBox="0 0 100 100" width="200"><path d="M50 84S16 62 16 38c0-12 9-20 19-20 7 0 12 4 15 9 3-5 8-9 15-9 10 0 19 8 19 20 0 24-34 46-34 46z" fill="none" stroke="#86F9F8" stroke-width="3" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>`,
+    `<svg viewBox="0 0 100 100" width="250"><path d="M14 84h74M22 84V62M40 84V50M58 84V38M76 84V24M18 50l22-16 16 10 28-24M70 20h14v14" fill="none" stroke="#86F9F8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg>`];
+  const T = ['Transformar rostos', 'Transformar vidas', 'Clínica que cresce'];
+  C.innerHTML = `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:50px">
+    ${T.map((t, i) => `<div class="eq" style="display:flex;flex-direction:column;align-items:center;width:${i === 2 ? 520 : 420}px">${ic[i]}<div class="serif ${i === 2 ? 'cy glowtxt' : ''}" style="font-size:${i === 2 ? 70 : 54}px;margin-top:36px;text-align:center">${t}</div></div>${i < 2 ? '<div class="serif eqs" style="font-size:110px;color:var(--pool)">=</div>' : ''}`).join('')}</div>`;
+  const eq = $$('.eq'), es = $$('.eqs');
+  eq.forEach((e, i) => {
+    const a = .3 + i * 1.1;
+    tl.to($$('path', e), { strokeDashoffset: 0, duration: 1, ease: IO, stagger: .15 }, a);
+    tl.from($('.serif', e), { opacity: 0, y: 30, duration: .7, ease: E }, a + .3);
+    if (i < 2) tl.from(es[i], { opacity: 0, scale: .4, duration: .5, ease: 'back.out(2)' }, a + .8);
+  });
+  tl.to(eq[2], { scale: 1.06, duration: .6, ease: E }, 2.9);
+  flash(2.9);
+  return { steps: [4.4] };
+};
+
+// 28 · os 6 sins (1 clique por pergunta)
+S['28'] = () => {
+  const Q = ['Você se sente mais confiante com as técnicas que aprendeu hoje?', 'Você ficou feliz por estar aqui hoje?', 'Percebe a vantagem de quem sai daqui com um plano, frente a quem não veio?', 'Você se imagina usando tudo isso na sua prática clínica?', 'Você diria que o seu tempo foi bem gasto?', 'Gostaria de passar mais tempo comigo, aprofundando?'];
+  C.innerHTML = `<div style="position:absolute;left:0;right:0;top:110px;text-align:center"><div class="serif t2" id="h">Responda <span class="cy glowtxt">comigo</span></div></div>
+    <div style="position:absolute;left:130px;right:130px;top:280px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px">
+    ${Q.map((q, i) => `<div class="card sq" style="height:310px;padding:40px 38px;position:relative;opacity:.38">
+      <div class="lit" style="position:absolute;inset:0;border-radius:16px;border:2px solid #86F9F8;box-shadow:0 0 60px rgba(134,249,248,.28),inset 0 0 80px rgba(134,249,248,.08);opacity:0"></div>
+      <div style="display:flex;align-items:center;gap:18px"><div class="ck" style="width:58px;height:58px;border-radius:50%;border:2px solid var(--dim);display:flex;align-items:center;justify-content:center;position:relative">
+        <svg width="30" height="30" viewBox="0 0 30 30"><path d="M6 16l6 6 12-14" fill="none" stroke="#011A24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+        <div class="sim" style="font-family:Galano;font-weight:600;font-size:26px;letter-spacing:.3em;color:var(--cyan);opacity:0">SIM</div></div>
+      <div style="font-family:Galano;font-size:31px;line-height:1.38;margin-top:28px">${q}</div></div>`).join('')}</div>`;
+  wordsIn('#h', .2);
+  $$('.sq').forEach((s, i) => tl.from(s, { opacity: 0, y: 40, duration: .6, ease: E }, .6 + i * .08));
+  const steps = [1.9];
+  $$('.sq').forEach((s, i) => {
+    const a = steps[steps.length - 1] + .05;
+    tl.to(s, { opacity: 1, duration: .4 }, a);
+    tl.to($('.lit', s), { opacity: 1, duration: .45 }, a);
+    tl.to($('.ck', s), { backgroundColor: '#86F9F8', borderColor: '#86F9F8', duration: .3 }, a + .1);
+    tl.from($('.ck', s), { scale: .5, duration: .5, ease: 'back.out(2.4)', immediateRender: false }, a + .1);
+    tl.to($('.ck path', s), { strokeDashoffset: 0, duration: .35, ease: E }, a + .25);
+    tl.to($('.sim', s), { opacity: 1, duration: .4 }, a + .3);
+    if (i > 0) tl.to($('.lit', $$('.sq')[i - 1]), { opacity: .35, duration: .4 }, a);
+    if (i === 5) { tl.to($$('.lit'), { opacity: 1, duration: .5 }, a + .7); flash(a + .7); }
+    steps.push(a + (i === 5 ? 1.9 : 1.1));
+  });
+  return { steps };
+};
+
+// 46 · Quanto vale? recibo: itens um a um, total por último
+S['46'] = () => {
+  brand(true);
+  const I = [['Mentoria de 6 meses com o Dr. João e o Luca', 35000], ['Todos os cursos online por 12 meses', 20000], ['8 calls individuais com especialistas', 8000], ['Grupo da turma e encontro presencial', 5000], ['Diagnóstico da clínica nos 4 pilares', 2000]];
+  C.innerHTML = `<div style="position:absolute;left:130px;top:0;bottom:0;width:720px;display:flex;flex-direction:column;justify-content:center">
+      <div class="kicker">Tudo o que está incluído</div><div class="serif" id="h" style="font-size:150px;margin-top:20px">Quanto <span class="cy glowtxt">vale?</span></div></div>
+    <div id="rcpt"><div class="hd"><span>ELITE MENTORING</span><span>RECIBO</span></div>
+      ${I.map(it => `<div class="it"><span class="nm">${it[0]}</span><span class="dots"></span><span class="v">R$ ${fmt(it[1])}</span></div>`).join('')}
+      <div id="tot"><span class="l">TOTAL</span><span class="v">R$ <b id="tv" style="font-weight:500">0</b></span></div></div>`;
+  wordsIn('#h', .2, { st: .1 });
+  tl.from('.kicker', { opacity: 0, y: 14, duration: .6 }, .2);
+  tl.from('#rcpt', { opacity: 0, y: 160, rotate: 2, duration: 1, ease: E }, .5);
+  tl.set('#tot', { opacity: 0 }, 0);
+  const steps = [2.2], its = $$('.it');
+  its.forEach((it, i) => {
+    const a = steps[steps.length - 1] + .05;
+    tl.from(it, { opacity: 0, x: 40, duration: .55, ease: E }, a);
+    tl.from($('.dots', it), { scaleX: 0, transformOrigin: '0 50%', duration: .5, ease: E }, a + .15);
+    tl.from($('.v', it), { opacity: 0, duration: .4 }, a + .45);
+    steps.push(a + 1.1);
+  });
+  const a = steps[steps.length - 1] + .05, o = { v: 0 };
+  tl.to('#tot', { opacity: 1, duration: .4 }, a);
+  tl.to(o, { v: 70000, duration: 1.4, ease: 'power3.out', onUpdate: () => $('#tv').textContent = fmt(Math.round(o.v / 100) * 100) }, a);
+  tl.fromTo('#tot .v', { scale: 1 }, { scale: 1.08, duration: .3, yoyo: true, repeat: 1, transformOrigin: '100% 50%' }, a + 1.4);
+  steps.push(a + 2.4);
+  return { steps };
+};
+
+// 49 · Tem mais (vinheta reutilizável)
+S['49'] = () => {
+  brand(false);
+  C.innerHTML = `<div class="center"><div class="serif cy glowtxt" id="tm" style="font-size:230px">Tem mais</div></div>`;
+  const tm = $('#tm'); tm.innerHTML = [...tm.textContent].map(c => c === ' ' ? ' ' : `<span class="w">${c}</span>`).join('');
+  tl.from('#tm .w', { opacity: 0, y: 90, rotateX: -80, filter: 'blur(10px)', duration: .9, stagger: .05, ease: E }, .2);
+  flash(.3);
+  tl.fromTo('#tm', { scale: 1 }, { scale: 1.04, duration: 2.2, ease: 'none' }, .3);
+  return { steps: [2.5] };
+};
+
+// 54 · Desafio Clínica Elite
+S['54'] = () => {
+  brand(true);
+  C.innerHTML = `
+    <div id="screen" style="position:absolute;left:560px;top:110px;width:800px;height:340px;border-radius:10px;background:linear-gradient(180deg,#0b3a47,#06242f);border:2px solid rgba(134,249,248,.35);box-shadow:0 0 120px rgba(134,249,248,.25);display:flex;flex-direction:column;align-items:center;justify-content:center">
+      <div class="kicker" style="font-size:22px">A primeira mentorada a bater</div>
+      <div class="serif cy glowtxt" style="font-size:150px;font-weight:500;line-height:1;margin-top:14px">R$ <span id="mv">0</span> mil</div>
+      <div class="body" style="font-size:30px;color:var(--ink);margin-top:6px">em um mês</div></div>
+    <div class="beam" style="position:absolute;left:820px;top:-100px;width:280px;height:1150px;background:linear-gradient(180deg,rgba(220,255,255,.0),rgba(220,255,255,.20) 55%,rgba(220,255,255,.0));clip-path:polygon(40% 0,60% 0,100% 100%,0 100%);filter:blur(8px);transform-origin:50% 0"></div>
+    <div id="stagefloor" style="position:absolute;left:510px;top:860px;width:900px;height:120px;border-radius:50%;background:radial-gradient(closest-side,rgba(190,255,254,.35),transparent)"></div>
+    <div style="position:absolute;left:0;right:0;top:500px;text-align:center"><div class="kicker">Desafio Clínica Elite</div>
+      <div class="serif t2" id="h" style="margin:22px auto 0;max-width:1300px">Sobe ao palco do <span class="cy glowtxt">Elite Injectors Congress 2027</span> para contar o seu caso</div></div>
+    <svg id="crowd" style="position:absolute;left:0;bottom:-10px" width="1920" height="200" viewBox="0 0 1920 200">${Array.from({ length: 34 }, (_, i) => { const x = i * 58 + (i % 2) * 14, h = 40 + ((i * 37) % 30); return `<g fill="#00090d"><circle cx="${x + 26}" cy="${200 - h - 70}" r="${24 + (i % 3) * 3}"/><path d="M${x - 14} 200c0-${h + 30} 16-${h + 40} 40-${h + 40}s40 10 40 ${h + 40}z"/></g>`; }).join('')}</svg>`;
+  tl.from('#screen', { opacity: 0, scale: .9, duration: .9, ease: E }, .2);
+  tl.from('.beam', { opacity: 0, scaleY: 0, duration: 1, ease: E }, .5);
+  tl.to('.beam', { rotate: 4, duration: 3, ease: 'sine.inOut', yoyo: true, repeat: 1 }, 1.4);
+  tl.from('#stagefloor', { opacity: 0, duration: 1 }, .7);
+  tl.from('#crowd', { y: 80, duration: 1.2, ease: E }, .2);
+  const o = { v: 0 };
+  tl.to(o, { v: 300, duration: 1.6, ease: 'power3.out', onUpdate: () => $('#mv').textContent = Math.round(o.v) }, .8);
+  flash(2.3);
+  tl.from('#h + * , .kicker', { opacity: 0, duration: .5 }, 2.4);
+  wordsIn('#h', 2.6, { st: .05 });
+  return { steps: [4.8] };
+};
+
+// 58 · segunda cadeira
+const chair = `<svg viewBox="0 0 200 220" width="300"><g fill="none" stroke="#86F9F8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+  <path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M48 120V44c0-16 12-28 28-28h48c16 0 28 12 28 28v76"/>
+  <path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M26 92c-10 0-16 8-16 18v46c0 8 6 14 14 14h152c8 0 14-6 14-14v-46c0-10-6-18-16-18s-16 8-16 18v22H58v-22c0-10-6-18-16-18z"/>
+  <path pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" d="M40 170v34M160 170v34"/></g></svg>`;
+S['58'] = () => {
+  brand(true);
+  C.innerHTML = `<div id="frame" style="position:absolute;left:120px;top:150px;width:1680px;height:720px;border-radius:24px;border:3px solid #86F9F8;box-shadow:0 0 90px rgba(134,249,248,.25),inset 0 0 90px rgba(134,249,248,.06);clip-path:inset(0 100% 0 0)"></div>
+    <div style="position:absolute;left:220px;top:150px;height:720px;width:820px;display:flex;flex-direction:column;justify-content:center">
+      <div style="display:flex;gap:18px;align-items:center"><span class="kicker" id="k1" style="color:var(--ink)">Até 02/11, 12h</span><span id="free" style="font-family:Galano;font-weight:600;font-size:26px;letter-spacing:.25em;color:#011A24;background:#86F9F8;border-radius:999px;padding:10px 22px">DE GRAÇA</span></div>
+      <div class="serif" id="h" style="font-size:96px;margin-top:34px">Segunda cadeira para o seu <span class="cy glowtxt">sócio ou marido</span></div>
+      <div class="body" id="val" style="margin-top:34px">Valor fora desta oferta: <span style="color:var(--ink)">R$ 12.500</span></div></div>
+    <div style="position:absolute;left:1120px;top:330px;display:flex;gap:30px">
+      <div class="ch">${chair}</div><div class="ch">${chair}<div id="plus" style="position:absolute;margin:-330px 0 0 230px;width:76px;height:76px;border-radius:50%;background:#86F9F8;color:#011A24;font:600 56px/76px Galano;text-align:center;box-shadow:0 0 50px rgba(134,249,248,.7)">+</div></div></div>`;
+  tl.to('#frame', { clipPath: 'inset(0 0% 0 0)', duration: 1.1, ease: IO }, .2);
+  tl.from('#k1', { opacity: 0, y: 14, duration: .6 }, .7);
+  tl.from('#free', { opacity: 0, scale: .4, duration: .6, ease: 'back.out(2.2)' }, 1);
+  wordsIn('#h', 1.2);
+  $$('.ch').forEach((c, i) => tl.to($$('path', c), { strokeDashoffset: 0, duration: 1, stagger: .2, ease: IO }, 1.3 + i * .6));
+  tl.from('#plus', { opacity: 0, scale: 0, duration: .6, ease: 'back.out(2.4)' }, 2.6);
+  flash(2.6);
+  tl.from('#val', { opacity: 0, y: 16, duration: .6 }, 2.9);
+  return { steps: [4.2] };
+};
+
+// 59 e 48 · Por apenas R$ 35.000 (seco)
+S['59'] = () => {
+  brand(true);
+  C.innerHTML = `<div class="center"><div class="kicker" style="color:var(--muted)">Por apenas</div>
+    <div class="serif" id="p" style="font-size:250px;margin-top:30px"><span style="font-size:.42em;vertical-align:.9em;margin-right:.12em">R$</span>35.000</div></div>`;
+  tl.from('.kicker', { opacity: 0, y: 20, duration: .6, ease: E }, .1);
+  tl.from('#p', { opacity: 0, scale: 1.25, filter: 'blur(14px)', duration: .45, ease: 'power4.out' }, .6);
+  return { steps: [1.6] };
+};
+
+// 60 · a revelação
+S['60'] = () => {
+  brand(true);
+  C.innerHTML = `<div class="center"><div class="serif" id="old" style="font-size:92px;color:var(--muted);position:relative;margin-bottom:30px">R$ 35.000<i style="position:absolute;left:-10px;right:-10px;top:54%;height:6px;background:#E0605A;border-radius:3px;transform-origin:0 50%"></i></div>
+    <div class="serif cy glowtxt" id="new" style="font-size:330px;font-weight:500;line-height:1;letter-spacing:-.035em"><span style="font-size:.38em;vertical-align:1.05em;margin-right:.1em;letter-spacing:0">R$</span><span id="nv">35.000</span></div>
+    <div id="terms" style="font-size:44px;margin-top:40px">à vista · ou <b style="color:var(--pool);font-weight:600">12x de R$ 2.500</b> no cartão</div></div>`;
+  tl.from('#old', { opacity: 0, y: 40, scale: 1.4, duration: .5, ease: E }, .1);
+  tl.from('#old i', { scaleX: 0, duration: .45, ease: IO }, .8);
+  tl.to('#old', { color: '#4d6f73', duration: .4 }, 1);
+  tl.set('#new', { opacity: 0 }, 0);
+  tl.to('#new', { opacity: 1, duration: .2 }, 1.5);
+  tl.from('#new', { scale: .6, y: 60, duration: .9, ease: 'back.out(1.4)', immediateRender: false }, 1.5);
+  flash(1.5);
+  const o = { v: 35000 };
+  tl.to(o, { v: 25000, duration: .9, ease: 'power3.out', onUpdate: () => $('#nv').textContent = fmt(Math.round(o.v / 100) * 100) }, 1.5);
+  tl.from('#terms', { opacity: 0, y: 24, duration: .7, ease: E }, 2.5);
+  return { steps: [3.6] };
+};
+
+// 62 · garantia
+S['62'] = () => {
+  brand(true);
+  const ring = 'GARANTIA · 7 DIAS · ELITE MENTORING · ';
+  C.innerHTML = `<div id="seal" style="position:absolute;left:300px;top:250px;width:580px;height:580px">
+      <svg viewBox="0 0 580 580" width="580" height="580" id="sealsvg"><defs><path id="cp" d="M290 290m-230 0a230 230 0 1 1 460 0a230 230 0 1 1-460 0"/></defs>
+        <circle cx="290" cy="290" r="285" fill="none" stroke="#86F9F8" stroke-width="2" opacity=".5"/>
+        <circle cx="290" cy="290" r="270" fill="rgba(6,36,47,.9)" stroke="#86F9F8" stroke-width="4"/>
+        <circle cx="290" cy="290" r="190" fill="none" stroke="#86F9F8" stroke-width="2" stroke-dasharray="4 10" opacity=".7"/>
+        <g id="rtxt"><text font-family="Galano" font-weight="600" font-size="31" letter-spacing="9" fill="#86F9F8"><textPath href="#cp">${ring + ring}</textPath></text></g></svg>
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+        <div class="serif cy glowtxt" style="font-size:230px;line-height:.9;font-weight:500">7</div>
+        <div style="font-family:Galano;font-weight:600;font-size:34px;letter-spacing:.35em;margin-top:8px">DIAS</div></div></div>
+    <div style="position:absolute;left:1010px;top:0;bottom:0;width:780px;display:flex;flex-direction:column;justify-content:center">
+      <div class="kicker">Garantia</div><div class="serif" id="h" style="font-size:96px;margin-top:26px"><span class="cy glowtxt">7 dias</span> de garantia na mentoria</div></div>`;
+  tl.from('#seal', { opacity: 0, scale: .3, rotate: -120, duration: 1.2, ease: 'back.out(1.3)' }, .2);
+  tl.fromTo('#rtxt', { rotate: 0, svgOrigin: '290 290' }, { rotate: 40, svgOrigin: '290 290', duration: 4, ease: 'none' }, .2);
+  flash(.9);
+  tl.from('.kicker', { opacity: 0, y: 14, duration: .6 }, 1);
+  wordsIn('#h', 1.2);
+  return { steps: [3.6] };
+};
+
+// 67 · Bem-vinda, Clínica Elite (fundo em loop para a fila no palco)
+S['67'] = () => {
+  $('#bigmark').style.display = 'block';
+  C.innerHTML = `<div class="center"><img id="mono" src="assets/logo/em16.svg" style="width:230px"><div class="kicker" style="margin-top:46px">Bem-vinda,</div><div class="serif cy glowtxt" id="h" style="font-size:170px;margin-top:10px">Clínica Elite</div><img src="assets/logo/em1.svg" id="wm" style="height:70px;margin-top:60px;opacity:.85"></div>`;
+  fxState.portal = { x: 960, y: 300, s: 0, o: 0 };
+  tl.to(fxState.portal, { s: .52, o: .55, duration: 1.6, ease: 'expo.out' }, .2);
+  tl.from('#mono', { opacity: 0, y: 40, scale: .7, duration: 1, ease: 'back.out(1.5)' }, .2);
+  flash(.3);
+  tl.from('.kicker', { opacity: 0, y: 14, duration: .6 }, .9);
+  wordsIn('#h', 1.1, { st: .1 });
+  tl.from('#wm', { opacity: 0, duration: .8 }, 1.8);
+  // loop: o monograma "respira" num ciclo exato de P segundos
+  const br = { v: 0 };
+  tl.to(br, { v: 1, duration: P, ease: 'none', onUpdate: () => { const s = Math.sin(br.v * 2 * Math.PI); $('#mono').style.filter = `drop-shadow(0 0 ${30 + 25 * s}px rgba(134,249,248,${.35 + .2 * s}))`; } }, 3);
+  return { steps: [3], loop: [3, 3 + P] };
+};
+
+// ---------- escolha do slide ----------
+const id = new URLSearchParams(location.search).get('s') || '10';
+const meta = S[id]();
+window.STEPS = meta.steps; window.LOOP = meta.loop || null;
+window.DURATION = Math.max(meta.steps[meta.steps.length - 1], meta.loop ? meta.loop[1] : 0);
+window.seek = (t) => { tl.seek(t, false); drawFx(t); };
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>

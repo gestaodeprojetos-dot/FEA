@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Modelo de animação FEA</title>
+<script src="gsap.min.js"></script>
+<style>
+  /* Trocar as cores e fontes pela identidade da peça (ver SKILL.md, item 1). */
+  :root { --bg: #011A24; --ink: #F2FBFB; --accent: #86F9F8; --muted: #8FB3B6; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--bg); }
+  body { font-family: Georgia, serif; color: var(--ink); }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(1000px 640px at 50% 46%, rgba(45,185,179,.22), transparent 70%), var(--bg); }
+  canvas { position: absolute; inset: 0; }
+  .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .kicker { font-family: system-ui, sans-serif; font-size: 26px; letter-spacing: .32em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-size: 120px; font-weight: 400; letter-spacing: -.02em; margin-top: 24px; }
+  .cy { color: var(--accent); }
+  .w { display: inline-block; }
+  #fade { position: absolute; inset: 0; background: #000; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="fx" width="1920" height="1080"></canvas>
+  <div class="center">
+    <div class="kicker">Elite Mentoring</div>
+    <h1 id="h">Clique <span class="cy">um</span>, clique <span class="cy">dois</span></h1>
+  </div>
+  <div id="fade"></div>
+</div>
+<script>
+// Partículas que dependem só do tempo (semente fixa): o mesmo quadro sai sempre igual.
+const P_LOOP = 8, cv = document.getElementById('fx'), cx = cv.getContext('2d');
+let seed = 5; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const PT = Array.from({ length: 140 }, () => ({ x: rnd() * 1920, y: rnd() * 1300, r: .5 + rnd() * 1.8, v: 6 + rnd() * 16, a: .08 + rnd() * .3, off: rnd() }));
+function drawFx(t) {
+  cx.clearRect(0, 0, 1920, 1080); cx.fillStyle = '#86F9F8';
+  for (const p of PT) {
+    const ph = ((t / P_LOOP) + p.off) % 1;                       // periódico: o loop fecha sem salto
+    cx.globalAlpha = p.a * Math.sin(Math.PI * ph);
+    cx.beginPath(); cx.arc(p.x, p.y - p.v * ph * P_LOOP, p.r, 0, 6.283); cx.fill();
+  }
+  cx.globalAlpha = 1;
+}
+
+// Quebra em palavras só em espaço normal (respeita &nbsp;)
+function splitWords(el) {
+  const walk = (node) => [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) {
+      const f = document.createDocumentFragment();
+      n.nodeValue.split(/([ \t\n]+)/).forEach(part => {
+        if (!part) return;
+        if (/^[ \t\n]+$/.test(part)) f.appendChild(document.createTextNode(part));
+        else { const s = document.createElement('span'); s.className = 'w'; s.textContent = part; f.appendChild(s); }
+      });
+      n.replaceWith(f);
+    } else if (n.nodeType === 1) walk(n);
+  });
+  walk(el); return [...el.querySelectorAll('.w')];
+}
+
+const tl = gsap.timeline({ paused: true }), E = 'power3.out';
+tl.to('#fade', { opacity: 0, duration: .6 }, 0);
+tl.from('.kicker', { opacity: 0, y: 16, duration: .6, ease: E }, .3);
+const words = splitWords(document.getElementById('h'));
+// clique 1: primeira metade do título
+tl.from(words.slice(0, 2), { opacity: 0, y: 40, filter: 'blur(8px)', duration: .7, stagger: .08, ease: E }, .5);
+// clique 2: segunda metade
+tl.from(words.slice(2), { opacity: 0, y: 40, filter: 'blur(8px)', duration: .7, stagger: .08, ease: E }, 2.1);
+
+window.STEPS = [1.8, 3.2];            // fim de cada clique (PowerPoint)
+window.LOOP = [3.2, 3.2 + P_LOOP];    // trecho que pode ficar em loop
+window.DURATION = 3.2 + P_LOOP;
+window.seek = (t) => { tl.seek(t, false); drawFx(t); };
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>

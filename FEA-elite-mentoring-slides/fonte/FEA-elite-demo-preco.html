@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Elite Mentoring demo preço</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'Canela'; src: url('assets/fonts/canela-italic.otf'); font-weight: 400; font-style: italic; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-medium.otf'); font-weight: 500; }
+  @font-face { font-family: 'Galano'; src: url('assets/fonts/galano-semibold.otf'); font-weight: 600; }
+  :root { --navy: #011A24; --teal: #2DB9B3; --pool: #62B9B4; --cyan: #86F9F8; --ink: #F2FBFB; --muted: #8FB3B6; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--navy); }
+  body { font-family: 'Galano', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+  #stage { position: absolute; inset: 0; overflow: hidden; }
+  #glow { position: absolute; inset: 0; background: radial-gradient(900px 620px at 50% 46%, rgba(45,185,179,.28), transparent 70%), radial-gradient(1400px 900px at 50% 120%, rgba(134,249,248,.10), transparent 60%); }
+  canvas { position: absolute; inset: 0; }
+  /* chevrons gigantes ao fundo, como no KV */
+  #bigmark { position: absolute; left: 50%; top: 50%; width: 1500px; margin: -740px 0 0 -750px; opacity: .06; filter: blur(1px); }
+  .scene { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; opacity: 0; }
+  .tm { font-family: 'Canela'; font-weight: 400; font-size: 210px; letter-spacing: -.02em; line-height: 1; color: var(--cyan); text-shadow: 0 0 80px rgba(134,249,248,.35); }
+  .tm .ch { display: inline-block; }
+  .kicker { font-family: 'Galano'; font-weight: 500; font-size: 30px; letter-spacing: .32em; text-transform: uppercase; color: var(--muted); }
+  .price { font-family: 'Canela'; font-weight: 400; font-size: 250px; letter-spacing: -.03em; line-height: 1; margin-top: 30px; font-variant-numeric: lining-nums; }
+  .price small { font-size: .42em; vertical-align: .9em; margin-right: .12em; letter-spacing: 0; }
+  #old { position: absolute; left: 50%; top: 290px; transform: translateX(-50%); font-family: 'Canela'; font-size: 92px; color: var(--muted); white-space: nowrap; }
+  #old i { position: absolute; left: -10px; right: -10px; top: 54%; height: 6px; background: #E0605A; border-radius: 3px; transform-origin: 0 50%; }
+  #new { font-family: 'Canela'; font-weight: 500; font-size: 330px; letter-spacing: -.035em; line-height: 1; color: var(--cyan); text-shadow: 0 0 120px rgba(134,249,248,.45); margin-top: 120px; }
+  #new small { font-size: .38em; vertical-align: 1.05em; margin-right: .1em; letter-spacing: 0; }
+  #terms { font-family: 'Galano'; font-weight: 400; font-size: 44px; color: var(--ink); margin-top: 40px; letter-spacing: .01em; }
+  #terms b { color: var(--pool); font-weight: 600; }
+  #logo { position: absolute; right: 80px; bottom: 64px; height: 92px; opacity: 0; }
+  #foot { position: absolute; left: 80px; bottom: 74px; font-size: 20px; color: #5f8589; letter-spacing: .02em; opacity: 0; }
+  #flash { position: absolute; inset: 0; background: radial-gradient(800px 500px at 50% 55%, rgba(134,249,248,.55), transparent 70%); opacity: 0; mix-blend-mode: screen; }
+  #fade { position: absolute; inset: 0; background: #000; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="glow"></div>
+  <img id="bigmark" src="assets/logo/em16.svg" alt="">
+  <canvas id="fx" width="1920" height="1080"></canvas>
+
+  <section class="scene" id="s1"><div class="tm">Tem mais</div></section>
+
+  <section class="scene" id="s2">
+    <div class="kicker">Por apenas</div>
+    <div class="price" id="p35"><small>R$</small><span>35.000</span></div>
+  </section>
+
+  <section class="scene" id="s3">
+    <div id="old">R$ 35.000<i></i></div>
+    <div id="new"><small>R$</small><span id="nv">25.000</span></div>
+    <div id="terms">à vista · ou <b>12x de R$ 2.500</b> no cartão</div>
+  </section>
+
+  <div id="flash"></div>
+  <img id="logo" src="assets/logo/em15.svg" alt="">
+  <div id="foot">Os resultados dependem da implementação de cada aluno.</div>
+  <div id="fade"></div>
+</div>
+<script>
+// partículas em ascensão (o monograma fala de crescimento)
+const cv = document.getElementById('fx'), cx = cv.getContext('2d');
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const P = Array.from({ length: 140 }, () => ({ x: rnd() * 1920, y: rnd() * 1080, r: .5 + rnd() * 1.7, v: 8 + rnd() * 22, a: .06 + rnd() * .28, ph: rnd() * 6.28 }));
+function drawFx(t, boost) {
+  cx.clearRect(0, 0, 1920, 1080);
+  for (const p of P) {
+    const y = ((p.y - p.v * t * (1 + boost * 3)) % 1080 + 1080) % 1080, x = p.x + Math.sin(t * .6 + p.ph) * 12;
+    cx.globalAlpha = Math.min(1, p.a * (1 + boost * 2)) * (.6 + .4 * Math.sin(t * 1.4 + p.ph));
+    cx.fillStyle = '#86F9F8'; cx.beginPath(); cx.arc(x, y, p.r, 0, 6.283); cx.fill();
+  }
+  cx.globalAlpha = 1;
+}
+// letras do "Tem mais"
+const tm = document.querySelector('#s1 .tm');
+tm.innerHTML = [...tm.textContent].map(c => c === ' ' ? ' ' : `<span class="ch">${c}</span>`).join('');
+
+const tl = gsap.timeline({ paused: true }), E = 'power3.out', boost = { v: 0 };
+tl.to('#fade', { opacity: 0, duration: .6 }, 0);
+tl.to('#bigmark', { scale: 1.08, rotate: 1.5, duration: 18, ease: 'none' }, 0);
+
+// 1. Tem mais (0 a 3.4)
+tl.set('#s1', { opacity: 1 }, .2);
+tl.from('#s1 .ch', { opacity: 0, y: 90, rotateX: -80, filter: 'blur(10px)', duration: .9, stagger: .05, ease: E }, .3);
+tl.to(boost, { v: 1, duration: .4 }, .3).to(boost, { v: 0, duration: 1.4 }, .7);
+tl.to('#s1 .tm', { scale: 1.05, duration: 3, ease: 'none' }, .3);
+tl.to('#s1', { opacity: 0, y: -40, filter: 'blur(8px)', duration: .5, ease: 'power2.in' }, 3);
+
+// 2. Por apenas R$ 35.000 (3.6 a 8.6): entra seco e fica, em silêncio
+tl.set('#s2', { opacity: 1 }, 3.6);
+tl.from('#s2 .kicker', { opacity: 0, y: 20, duration: .6, ease: E }, 3.6);
+tl.from('#p35', { opacity: 0, scale: 1.25, filter: 'blur(14px)', duration: .45, ease: 'power4.out' }, 4.1);
+tl.to('#logo', { opacity: .9, duration: .8 }, 4.1);
+tl.to('#foot', { opacity: 1, duration: .8 }, 4.4);
+tl.to('#p35', { scale: 1.03, duration: 4, ease: 'none' }, 4.6);
+tl.to('#s2', { opacity: 0, duration: .35 }, 8.4);
+
+// 3. A revelação (8.8 em diante)
+tl.set('#s3', { opacity: 1 }, 8.7);
+tl.from('#old', { opacity: 0, y: 40, scale: 1.4, duration: .5, ease: E }, 8.7);
+tl.from('#old i', { scaleX: 0, duration: .45, ease: 'power2.inOut' }, 9.5);
+tl.to('#old', { color: '#4d6f73', duration: .4 }, 9.7);
+tl.to('#flash', { opacity: 1, duration: .12 }, 10.2).to('#flash', { opacity: 0, duration: 1.2 }, 10.32);
+tl.to(boost, { v: 1.4, duration: .2 }, 10.2).to(boost, { v: 0, duration: 2 }, 10.4);
+tl.from('#new', { opacity: 0, scale: .6, y: 60, duration: .9, ease: 'back.out(1.4)' }, 10.2);
+const cnt = { v: 35000 };
+tl.to(cnt, { v: 25000, duration: .9, ease: 'power3.out', onUpdate: () => document.getElementById('nv').textContent = Math.round(cnt.v / 100) * 100 >= 0 ? (Math.round(cnt.v / 100) * 100).toLocaleString('pt-BR') : '' }, 10.2);
+tl.from('#terms', { opacity: 0, y: 24, duration: .7, ease: E }, 11.2);
+tl.to('#new', { scale: 1.025, duration: 4.6, ease: 'none' }, 11.1);
+
+window.DURATION = 16;
+window.seek = (t) => { tl.seek(t, false); drawFx(t, boost.v); };
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>

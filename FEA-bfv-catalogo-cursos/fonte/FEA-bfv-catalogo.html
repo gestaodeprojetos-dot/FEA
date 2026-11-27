@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>BFV catálogo de cursos</title>
+<style>
+  @font-face { font-family: 'Sora'; src: url('fonts/sora.ttf') format('truetype'); font-weight: 100 800; }
+  @font-face { font-family: 'Montserrat'; src: url('fonts/montserrat.ttf') format('truetype'); font-weight: 100 900; }
+  :root { --gold: #E6B873; --gold-soft: rgba(230,184,115,.35); --ink: #F3E6CF; --muted: #B9A88E; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: #070605; }
+  #stage { position: absolute; inset: 0; overflow: hidden; perspective: 1500px; perspective-origin: 50% 48%; font-family: 'Montserrat', sans-serif; }
+  #bg { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  #vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(1300px 820px at 50% 52%, transparent 50%, rgba(0,0,0,.6) 100%); z-index: 400; }
+  #logo { position: absolute; left: 88px; top: 58px; width: 212px; height: 84px; z-index: 500; }
+  .card { position: absolute; left: 876px; top: 440.5px; width: 168px; height: 239px; transform-origin: 50% 50%; will-change: transform, opacity, filter; }
+  .card img { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .card .shine { position: absolute; left: 6px; top: 6px; right: 6px; bottom: 6px; border-radius: 9px; overflow: hidden; mix-blend-mode: screen; }
+  .card .shine i { position: absolute; top: -40%; bottom: -40%; width: 45%; background: linear-gradient(100deg, transparent 0%, rgba(255,226,170,0) 20%, rgba(255,226,170,.38) 50%, rgba(255,226,170,0) 80%, transparent 100%); transform: skewX(-18deg); }
+  .card .flash { position: absolute; left: 6px; top: 6px; right: 6px; bottom: 6px; border-radius: 10px; box-shadow: 0 0 0 1.5px rgba(230,184,115,.9), 0 0 38px 6px rgba(230,184,115,.5); opacity: 0; }
+  /* janela de vídeo */
+  #win { position: absolute; left: 0; top: 0; overflow: hidden; border-radius: 18px; opacity: 0; z-index: 300;
+         box-shadow: 0 0 0 1px var(--gold-soft), 0 40px 90px rgba(0,0,0,.65), 0 0 70px rgba(230,184,115,.12); background: #000; }
+  #win img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+  #win .grade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.35)); }
+  /* painel lateral */
+  #panel { position: absolute; left: 1250px; top: 600px; width: 600px; z-index: 310; }
+  .eyebrow { font-family: 'Montserrat'; font-weight: 600; font-size: 15px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+  .eyebrow b { color: var(--muted); font-weight: 500; }
+  .title { font-family: 'Sora'; font-weight: 600; font-size: 40px; line-height: 1.12; letter-spacing: -.015em; color: var(--ink); margin-top: 14px; }
+  .rule { width: 56px; height: 2px; background: linear-gradient(90deg, var(--gold), transparent); margin-top: 22px; }
+  #caption { position: absolute; left: 0; right: 0; top: 820px; text-align: center; z-index: 310; }
+  #caption .title { font-size: 34px; }
+  #counter { position: absolute; right: 88px; top: 74px; z-index: 500; font-family: 'Sora'; font-weight: 500; font-size: 18px; color: var(--muted); letter-spacing: .08em; }
+  #counter b { color: var(--gold); font-weight: 600; }
+  #ants { position: absolute; left: 1665px; top: 552px; width: 156px; height: 226px; opacity: 0; overflow: visible; z-index: 320; }
+  #fade { position: absolute; inset: 0; background: #000; pointer-events: none; z-index: 900; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="bg" width="960" height="540"></canvas>
+  <div id="cards"></div>
+  <div id="win"><img id="vid" alt=""><div class="grade"></div></div>
+  <div id="panel"><div class="eyebrow" id="pEye"></div><div class="title" id="pTitle"></div><div class="rule"></div></div>
+  <div id="caption"><div class="eyebrow" id="cEye"></div><div class="title" id="cTitle"></div></div>
+  <svg id="ants" viewBox="0 0 156 226"><rect x="1" y="1" width="154" height="224" rx="9" fill="none" stroke="#E6B873" stroke-width="2.2" stroke-dasharray="9 7"/></svg>
+  <div id="counter"></div>
+  <div id="vig"></div>
+  <img id="logo" src="logo.png" alt="">
+  <div id="fade"></div>
+</div>
+<script src="frames.js"></script>
+<script>
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, p) => a + (b - a) * p;
+const ease3 = (x) => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+const win = (t, a, b) => clamp((t - a) / (b - a));
+
+// ---------- cursos (ordem do slide 11) ----------
+// clip: pasta em seq/ com os quadros (30 fps); null = só a capa
+const COURSES = [
+  { kind: 'Formação', title: 'Formação Especialista em Preenchimento', clip: 'fep' },
+  { kind: 'Formação', title: 'Formação Especialista em Botox', clip: 'botox' },
+  { kind: 'Formação', title: 'Formação Especialista em Fios', clip: 'fios' },
+  { kind: 'Formação', title: 'Formação Especialista em Corporal', clip: 'corporal' },
+  { kind: 'Formação', title: 'Formação Especialista em Escultura Labial', clip: 'esclabial' },
+  { kind: 'Formação', title: 'Formação Especialista em Anatomia', clip: 'anat' },
+  { kind: 'Formação', title: 'Formação Especialista em Bioestimuladores', clip: 'febio' },
+  { kind: 'Curso', title: 'Curso Avançado de Complicações', clip: 'comp' },
+  { kind: 'Imersão', title: 'Imersão Avançada em Rinomodelação', clip: 'rino' },
+  { kind: 'Imersão', title: 'Imersão Avançada em Preenchimento de Olheiras', clip: 'olheiras' },
+  { kind: 'Imersão', title: 'Imersão Avançada em Preenchimento Labial', clip: 'prlabial' },
+  { kind: 'Curso', title: 'Curso de Preenchimento Labial Express', clip: 'plx' },
+  { kind: 'Imersão', title: 'Imersão Avançada em Full Face com menos de 5 ml', clip: 'ff5' },
+  { kind: 'Imersão', title: 'Imersão Avançada em Full Face com mais de 10 ml', clip: 'ff10' },
+  { kind: 'Curso', title: 'Atenda todo Santo dia', clip: 'atenda' },
+  { kind: 'Curso', title: 'Curso de Preenchimento Express', clip: 'cpx' },
+  { kind: 'Curso', title: 'Curso de Toxina Express · Protocolo Glabela', clip: 'ctx' },
+  { kind: 'Ebook', title: 'Preenchimento Tridimensional de Olheiras', clip: 'eb_olh' },
+  { kind: 'Ebook', title: 'Intercorrências no Preenchimento Facial', clip: 'eb_int' },
+  { kind: '', title: '+ Novos cursos', clip: null },
+];
+const FRAMES = window.FRAMES || {};   // preenchido abaixo com o número de quadros de cada clipe
+COURSES.forEach((c, n) => {
+  c.n = n; c.r = Math.floor(n / 10); c.i = n % 10;
+  c.gx = 99 + 174 * c.i + 78 - 960; c.gy = (c.r ? 551 : 301) + 113.5 - 540;
+  c.src = `cards/c${c.r}${c.i}.png`;
+});
+
+// ---------- roteiro de tempos ----------
+const STEP = .62, OPEN = .55, CLOSE = .45, HOLD_COVER = 1.35, CLIP_MAX = 3.0;
+const segs = [];          // {n, t0, t1, type:'step'|'show'|'cover', ...}
+let T = 2.1;              // carrossel chega na FEP
+const clipList = (c) => c.clip ? [].concat(c.clip) : [];
+const clipDur = (c) => Math.min(CLIP_MAX, clipList(c).reduce((s, k) => s + (FRAMES[k] || 0) / 30, 0));
+COURSES.forEach((c, n) => {
+  if (n > 0) { segs.push({ type: 'step', from: n - 1, to: n, t0: T, t1: T + STEP }); T += STEP; }
+  if (n === COURSES.length - 1) { segs.push({ type: 'cover', n, t0: T, t1: T + 1.1 }); T += 1.1; return; }
+  if (clipList(c).length) {
+    const d = clipDur(c);
+    segs.push({ type: 'show', n, t0: T, t1: T + OPEN + d + CLOSE, d }); T += OPEN + d + CLOSE;
+  } else { segs.push({ type: 'cover', n, t0: T, t1: T + HOLD_COVER }); T += HOLD_COVER; }
+});
+const T_GRID = T + .1, GRID_DUR = 1.6;
+window.DURATION = Math.ceil(T_GRID + GRID_DUR + .7 + 4);
+
+function focusAt(t) {
+  if (t < 2.1) return -4 + 4 * easeOut(win(t, .3, 2.1));
+  for (const s of segs) {
+    if (t < s.t0) break;
+    if (s.type === 'step' && t < s.t1) return lerp(s.from, s.to, ease3(win(t, s.t0, s.t1)));
+  }
+  let f = 0; for (const s of segs) { if (t >= s.t0) f = s.type === 'step' ? s.to : s.n; } return f;
+}
+function showAt(t) {   // segmento de vitrine ativo e seu progresso 0..1
+  for (const s of segs) if (s.type === 'show' && t >= s.t0 && t < s.t1) {
+    const o = easeOut(win(t, s.t0, s.t0 + OPEN)) * (1 - ease3(win(t, s.t1 - CLOSE, s.t1)));
+    return { s, p: o, local: t - s.t0 - OPEN * .6 };
+  }
+  return null;
+}
+function coverAt(t) {
+  for (const s of segs) if (s.type === 'cover' && t >= s.t0 && t < s.t1) return { s, p: Math.min(easeOut(win(t, s.t0, s.t0 + .35)), 1 - win(t, s.t1 - .25, s.t1)) };
+  return null;
+}
+
+// ---------- fundo dourado (curvas de nível) ----------
+const cv = document.getElementById('bg'), cx = cv.getContext('2d');
+const W = 960, H = 540, img = cx.createImageData(W, H);
+const F = new Float32Array(W * H), BASE = new Float32Array(W * H * 3);
+(function prep() {
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
+    const i = y * W + x;
+    const dA = Math.hypot(x - 670, y - 62), dB = Math.hypot(x + 140, y - 690) * .92 - 120;
+    const k = 90, h = clamp(.5 + .5 * (dB - dA) / k);
+    F[i] = lerp(dB, dA, h) - k * h * (1 - h);
+    const r = Math.hypot((x - 670) / 1.15, y - 62) / 760, g = Math.pow(clamp(1 - r), 1.6), br = clamp((x / W) * (y / H)) * .35;
+    BASE[i * 3] = 7 + 34 * g + 8 * br; BASE[i * 3 + 1] = 6 + 25 * g + 5 * br; BASE[i * 3 + 2] = 4 + 13 * g + 2 * br;
+  }
+})();
+function drawBg(t) {
+  const d = img.data, SP = 23.5, ph = t * .45;
+  for (let i = 0, n = W * H; i < n; i++) {
+    const v = F[i] / SP - ph, fr = Math.abs(v - Math.round(v)) * SP, line = Math.exp(-fr * fr * 1.6) * .13;
+    d[i * 4] = BASE[i * 3] + 230 * line; d[i * 4 + 1] = BASE[i * 3 + 1] + 184 * line; d[i * 4 + 2] = BASE[i * 3 + 2] + 115 * line; d[i * 4 + 3] = 255;
+  }
+  cx.putImageData(img, 0, 0);
+}
+
+// ---------- cards ----------
+const FOCUS = 1.75, CY = 20;      // escala da capa em destaque; deslocamento vertical do carrossel
+const PANEL = { x: 1250 + 84 * 1.25 - 960, y: 250 + 119.5 * 1.25 - 540, s: 1.25 };   // capa na coluna da direita
+const host = document.getElementById('cards');
+const inst = COURSES.map(c => {
+  const el = document.createElement('div'); el.className = 'card';
+  el.innerHTML = `<img src="${c.src}" alt=""><div class="shine"><i></i></div><div class="flash"></div>`;
+  host.appendChild(el);
+  return { c, el, shine: el.querySelector('.shine i'), flash: el.querySelector('.flash') };
+});
+function flow(d) {
+  const a = Math.abs(d), sg = Math.sign(d), near = Math.min(a, 1), far = Math.max(a - 1, 0);
+  return { x: sg * (near * 320 + far * 150), z: -near * 300 - far * 70, ry: -clamp(d, -1, 1) * 48, s: FOCUS, bright: 1 - Math.min(a, 3.2) * .22, op: 1 - clamp((a - 4.5) / 1.2) };
+}
+function drawCards(t) {
+  const f = focusAt(t), sh = showAt(t);
+  const vel = Math.abs(f - focusAt(t - 1 / 30)) * 30;   // capas por segundo (calculado, não depende do quadro anterior)
+  const mblur = clamp((vel - .8) / 2.5) * 5;
+  const sp = sh ? sh.p : 0, showN = sh ? sh.s.n : -1;
+  for (const o of inst) {
+    const c = o.c, d = c.n - f, A = flow(d);
+    const g = ease3(win(t, T_GRID + c.n * .035, T_GRID + c.n * .035 + GRID_DUR));   // montagem final
+    let x = A.x, y = CY + Math.sin(t * 1.3 + c.n) * 5, z = A.z, ry = A.ry, s = A.s, op = A.op, br = A.bright, blur = Math.abs(d) > .3 ? mblur : mblur * .3;
+    if (c.n === showN) {           // capa vai para o painel da direita
+      x = lerp(x, PANEL.x, sp); y = lerp(y, PANEL.y, sp); z = lerp(z, 0, sp); ry = lerp(ry, 0, sp); s = lerp(s, PANEL.s, sp);
+    } else if (sp > 0) {           // demais recuam e escurecem
+      op *= 1 - .88 * sp; blur += 6 * sp; z -= 200 * sp;
+    }
+    x = lerp(x, c.gx, g); y = lerp(y, c.gy, g); z = lerp(z, 0, g) + Math.sin(g * Math.PI) * 70; ry = lerp(ry, 0, g); s = lerp(s, 1, g);
+    op = lerp(op, 1, g); br = lerp(br, 1, g); blur = lerp(blur, 0, g);
+    if (op < .02) { o.el.style.display = 'none'; continue; }
+    o.el.style.display = '';
+    o.el.style.transform = `translate3d(${x}px,${y}px,${z}px) rotateY(${ry}deg) scale(${s})`;
+    o.el.style.opacity = op;
+    o.el.style.filter = `brightness(${br})` + (blur > .05 ? ` blur(${blur.toFixed(2)}px)` : '');
+    o.el.style.zIndex = c.n === showN ? 290 : Math.round(lerp(200 - Math.abs(d) * 10, 100, g));
+    o.el.style.webkitBoxReflect = g < .5 && sp < .5 ? 'below 10px linear-gradient(transparent 62%, rgba(0,0,0,.26))' : 'none';
+    // brilho ao chegar no centro e varredura final
+    const focusAmt = Math.max(0, 1 - Math.abs(d) * 2.2) * (1 - g);
+    const arrive = (segs.find(s2 => s2.type !== 'step' && s2.n === c.n) || { t0: -9 }).t0;
+    const shp = (t - arrive) / .5, sw = (t - (T_GRID + GRID_DUR + .5) - (c.gx + 960) / 1920 * .9 - c.r * .12) / .55;
+    if (g < 1) { o.shine.style.left = `${lerp(-60, 130, clamp(shp))}%`; o.shine.style.opacity = shp > 0 && shp < 1 ? focusAmt : 0; }
+    else { o.shine.style.left = `${lerp(-60, 130, clamp(sw))}%`; o.shine.style.opacity = sw > 0 && sw < 1 ? 1 : 0; }
+    const land = T_GRID + c.n * .035 + GRID_DUR;
+    o.flash.style.opacity = Math.max(focusAmt * .5 * (1 - sp), c.n === showN ? sp * .7 : 0, Math.max(0, 1 - Math.abs(t - land) / .35) * (t > land - .1 ? 1 : 0));
+  }
+  return { sh, f };
+}
+
+// ---------- janela de vídeo e textos ----------
+const winEl = document.getElementById('win'), vid = document.getElementById('vid');
+const WR = { x: 80, y: 250, w: 1080, h: 400 };
+const WR_V = { x: 80 + (1080 - 420) / 2, y: 190, w: 420, h: 560 };   // ebooks: janela vertical 3:4
+const CARD_C = { x: 960, y: 560 + CY, w: 168 * FOCUS, h: 239 * FOCUS };
+function frameFor(c, local) {
+  const list = clipList(c); let t = clamp(local, 0, clipDur(c) - 1 / 30);
+  for (const k of list) { const d = (FRAMES[k] || 0) / 30; if (t < d) return `seq/${k}/${String(Math.floor(t * 30) + 1).padStart(3, '0')}.jpg`; t -= d; }
+  const k = list[list.length - 1]; return `seq/${k}/${String(FRAMES[k]).padStart(3, '0')}.jpg`;
+}
+const pEye = document.getElementById('pEye'), pTitle = document.getElementById('pTitle'), panel = document.getElementById('panel');
+const cEye = document.getElementById('cEye'), cTitle = document.getElementById('cTitle'), caption = document.getElementById('caption');
+const counter = document.getElementById('counter');
+const label = (c) => c.kind ? `${c.kind} <b>· ${String(c.n + 1).padStart(2, '0')}/19</b>` : '';
+async function drawWin(t, sh) {
+  if (!sh) { winEl.style.opacity = 0; panel.style.opacity = 0; return; }
+  const c = sh.s.n, C = COURSES[c], p = sh.p;
+  const R = C.kind === 'Ebook' ? WR_V : WR;
+  const r = { x: lerp(CARD_C.x - CARD_C.w / 2, R.x, p), y: lerp(CARD_C.y - CARD_C.h / 2, R.y, p), w: lerp(CARD_C.w, R.w, p), h: lerp(CARD_C.h, R.h, p) };
+  Object.assign(winEl.style, { left: r.x + 'px', top: r.y + 'px', width: r.w + 'px', height: r.h + 'px', opacity: clamp(p * 2.2), borderRadius: lerp(10, 18, p) + 'px' });
+  const src = frameFor(C, sh.local);
+  if (vid.getAttribute('src') !== src) { vid.setAttribute('src', src); try { await vid.decode(); } catch (e) {} }
+  pEye.innerHTML = label(C); pTitle.textContent = C.title;
+  const tp = clamp((p - .55) / .45);
+  panel.style.opacity = tp; panel.style.transform = `translateY(${(1 - easeOut(tp)) * 18}px)`;
+}
+function drawCaption(t) {
+  const cv2 = coverAt(t);
+  if (!cv2) { caption.style.opacity = 0; return; }
+  const C = COURSES[cv2.s.n];
+  cEye.innerHTML = label(C); cTitle.textContent = C.n === 19 ? '' : C.title;
+  caption.style.opacity = C.n === 19 ? 0 : cv2.p; caption.style.transform = `translateY(${(1 - cv2.p) * 14}px)`;
+}
+
+const fade = document.getElementById('fade'), logo = document.getElementById('logo'), ants = document.getElementById('ants'), rect = ants.querySelector('rect');
+window.seek = async (t) => {
+  drawBg(t);
+  const { sh, f } = drawCards(t);
+  await drawWin(t, sh);
+  drawCaption(t);
+  const n = Math.round(clamp(f, 0, 18));
+  counter.innerHTML = t > 2 && t < T_GRID ? `<b>${String(n + 1).padStart(2, '0')}</b> / 19` : '';
+  counter.style.opacity = clamp(win(t, 1.8, 2.3)) * (1 - win(t, T_GRID - .3, T_GRID));
+  fade.style.opacity = 1 - easeOut(win(t, 0, .9));
+  logo.style.opacity = easeOut(win(t, .3, 1.2));
+  const a = easeOut(win(t, T_GRID + GRID_DUR + 1.2, T_GRID + GRID_DUR + 1.9));
+  ants.style.opacity = a * (.75 + .25 * Math.sin(t * 3.2));
+  rect.style.strokeDashoffset = -t * 22;
+  ants.style.filter = `drop-shadow(0 0 ${6 + 6 * Math.sin(t * 3.2)}px rgba(230,184,115,.7))`;
+};
+window.ready = Promise.all([...document.images].filter(i => i.src).map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>

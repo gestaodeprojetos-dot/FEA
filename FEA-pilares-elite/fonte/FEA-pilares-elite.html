@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Pilares Elite Experience</title>
+<script src="assets/gsap.min.js"></script>
+<style>
+  @font-face { font-family: 'Canela'; src: url('assets/canela-regular.otf'); font-weight: 400; }
+  @font-face { font-family: 'Canela'; src: url('assets/canela-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Galano'; src: url('assets/galano-light.otf'); font-weight: 300; }
+  @font-face { font-family: 'Galano'; src: url('assets/galano-medium.otf'); font-weight: 500; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1920px; height: 1080px; overflow: hidden; background: #ffe2e9; }
+  #stage { position: absolute; inset: 0; overflow: hidden; background: radial-gradient(1100px 700px at 50% 52%, #ffe6ec, #ffe0e8 70%); }
+  #bigtext { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+  #elite { position: absolute; left: 0; right: 0; top: 196px; text-align: center; font-family: 'Canela'; font-weight: 300; font-size: 470px; line-height: 1; letter-spacing: .01em; color: rgba(176, 82, 112, .075); }
+  #exp { position: absolute; left: 0; right: 0; top: 628px; text-align: center; font-family: 'Galano'; font-weight: 300; font-size: 128px; line-height: 1; letter-spacing: .52em; padding-left: .52em; color: rgba(176, 82, 112, .07); }
+  .ch { display: inline-block; }
+  canvas { position: absolute; inset: 0; }
+  .lab { position: absolute; width: 400px; margin-left: -200px; text-align: center; }
+  .lab .n { font-family: 'Galano'; font-weight: 500; font-size: 21px; letter-spacing: .32em; padding-left: .32em; color: #a3294f; }
+  .lab .t { font-family: 'Canela'; font-weight: 400; font-size: 56px; letter-spacing: -.01em; color: #151012; margin-top: 14px; line-height: 1; }
+  #sphereWrap { position: absolute; left: 852px; top: 412px; width: 216px; height: 216px; }
+  #sphere { position: absolute; inset: 0; width: 216px; height: 216px; }
+  #sshadow { position: absolute; left: 862px; top: 590px; width: 196px; height: 56px; border-radius: 50%; background: radial-gradient(closest-side, rgba(150, 30, 70, .28), rgba(150, 30, 70, 0)); }
+  #halo { position: absolute; left: 960px; top: 520px; width: 900px; height: 900px; margin: -450px 0 0 -450px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 255, 255, .85), rgba(255, 210, 222, .35) 40%, rgba(255, 226, 233, 0) 70%); opacity: 0; }
+  #fade { position: absolute; inset: 0; background: #ffe2e9; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bigtext"><div id="elite">ELITE</div><div id="exp">EXPERIENCE</div></div>
+  <canvas id="rings" width="1920" height="1080"></canvas>
+  <div class="lab" id="l1" style="left:960px;top:156px"><div class="n">01</div><div class="t">Atrair</div></div>
+  <div class="lab" id="l2" style="left:786px;top:830px"><div class="n">02</div><div class="t">Converter</div></div>
+  <div class="lab" id="l3" style="left:1132px;top:830px"><div class="n">03</div><div class="t">Entregar</div></div>
+  <div id="halo"></div>
+  <div id="sshadow"></div>
+  <div id="sphereWrap"><img id="sphere" src="assets/sphere.png" alt=""></div>
+  <div id="fade"></div>
+</div>
+<script>
+// Os três círculos (medidos na arte do André): centro, raios e de onde o traço começa
+const R = [
+  { cx: 960, cy: 448, rx: 320, ry: 176, a0: Math.PI * 1.08, dir: 1, dark: 'left' },
+  { cx: 786, cy: 621, rx: 320, ry: 178, a0: Math.PI * 0.55, dir: 1, dark: 'left' },
+  { cx: 1132, cy: 621, rx: 320, ry: 178, a0: Math.PI * 0.45, dir: -1, dark: 'right' },
+];
+const st = R.map(() => ({ y: -760, o: 0, k: .55 }));   // y: deslocamento vertical; k: achatamento (perspectiva)
+const cv = document.getElementById('rings'), cx = cv.getContext('2d');
+
+function ringPath(r, s) {
+  cx.beginPath();
+  cx.ellipse(r.cx, r.cy + s.y, r.rx, r.ry * s.k, 0, 0, Math.PI * 2);
+}
+function draw() {
+  cx.clearRect(0, 0, 1920, 1080);
+  R.forEach((r, i) => {
+    const s = st[i];
+    if (s.o <= 0) return;
+    cx.save(); cx.globalAlpha = s.o;
+    // sombra suave do anel: só "pousa" quando o anel chega perto do lugar
+    const near = Math.max(0, 1 - Math.abs(s.y) / 260);
+    cx.save(); cx.filter = 'blur(14px)'; cx.translate(0, 26);
+    ringPath(r, s); cx.strokeStyle = `rgba(165, 55, 90, ${.13 * near})`; cx.lineWidth = 20; cx.stroke(); cx.restore();
+    const g = cx.createLinearGradient(r.cx - r.rx, r.cy + s.y - r.ry, r.cx + r.rx, r.cy + s.y + r.ry);
+    const dark = '#9a2449', light = '#f8dbe2';
+    if (r.dark === 'left') { g.addColorStop(0, dark); g.addColorStop(.5, '#d0869b'); g.addColorStop(1, light); }
+    else { g.addColorStop(0, light); g.addColorStop(.5, '#d0869b'); g.addColorStop(1, dark); }
+    ringPath(r, s); cx.strokeStyle = g; cx.lineWidth = 3.6; cx.stroke();
+    cx.restore();
+  });
+}
+
+// letras do ELITE EXPERIENCE para revelar uma a uma
+['elite', 'exp'].forEach(id => { const el = document.getElementById(id); el.innerHTML = [...el.textContent].map(c => `<span class="ch">${c}</span>`).join(''); });
+
+const tl = gsap.timeline({ paused: true }), E = 'power3.out', IO = 'power2.inOut';
+tl.to('#fade', { opacity: 0, duration: .6 }, 0);
+gsap.set(['#elite .ch', '#exp .ch'], { opacity: 0 });
+
+// cada círculo desce de cima, encaixa no lugar e então a palavra dele é escrita
+const RING_AT = [0.4, 2.5, 4.6], FALL = 1.3;
+RING_AT.forEach((t, i) => {
+  tl.to(st[i], { o: 1, duration: .5, ease: 'power1.out' }, t);
+  tl.to(st[i], { y: 0, duration: FALL, ease: 'back.out(1.15)' }, t);
+  tl.to(st[i], { k: 1, duration: FALL, ease: 'power2.out' }, t);
+  const lab = `#l${i + 1}`;
+  tl.from(`${lab} .n`, { opacity: 0, y: 10, duration: .5, ease: E }, t + FALL - .15);
+  tl.fromTo(`${lab} .t`, { clipPath: 'inset(-20% 100% -20% 0)', opacity: .2 }, { clipPath: 'inset(-20% 0% -20% 0)', opacity: 1, duration: .85, ease: 'power2.inOut' }, t + FALL - .05);
+});
+
+// o Elite aparece
+const REVEAL = 6.9;
+tl.to('#halo', { opacity: .55, scale: 1.05, duration: .8, ease: 'sine.out' }, REVEAL).to('#halo', { opacity: 0, scale: 1.2, duration: 1.6, ease: 'sine.inOut' }, REVEAL + .8);
+tl.fromTo('#sphereWrap', { scale: .6, opacity: 0, filter: 'blur(10px)' }, { scale: 1, opacity: 1, filter: 'blur(0px)', duration: 1.4, ease: 'power3.out' }, REVEAL + .15);
+tl.fromTo('#sshadow', { opacity: 0, scale: .3 }, { opacity: 1, scale: 1, duration: 1, ease: E }, REVEAL + .1);
+tl.to('#elite .ch', { opacity: 1, duration: 1.2, stagger: .1, ease: 'power1.out' }, REVEAL);
+tl.fromTo('#elite', { scale: 1.06 }, { scale: 1, duration: 3, ease: E }, REVEAL);
+tl.to('#exp .ch', { opacity: 1, duration: .7, stagger: .05, ease: 'power1.out' }, REVEAL + .7);
+tl.fromTo('#exp', { letterSpacing: '.7em' }, { letterSpacing: '.52em', duration: 2.4, ease: E }, REVEAL + .7);
+// respiração final
+tl.to('#sphereWrap', { y: -5, duration: 1.5, ease: 'sine.inOut', yoyo: true, repeat: 1 }, REVEAL + 1.5);
+tl.to('#stage', { scale: 1.02, duration: 12, ease: 'none' }, 0);
+
+window.DURATION = 12;
+window.seek = (t) => { tl.seek(t, false); draw(); };
+window.ready = Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+seek(0);
+</script>
+</body>
+</html>
