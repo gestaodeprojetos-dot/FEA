@@ -10,7 +10,7 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 
 ## 1. Velocidade
 - Mensagem da Keila ou da Gabi: no mínimo "recebido" dentro do intervalo da ronda. Trabalho longo vai para agente em segundo plano; a ronda nunca para.
-- Rondas: seg a sex 7h a 19h59 de 2 em 2 min; seg a sex 20h a 23h59 e sáb/dom 7h a 23h59 de 5 em 5 min; madrugada (0h a 6h59) de 15 em 15 min.
+- Rondas (Keila, 26/11 22h50): seg a sex 8h a 19h59 de 2 em 2 min; 20h a 23h59 todos os dias e sáb/dom 8h a 19h59 de 5 em 5 min; vigia DESLIGADA de 0h às 7h59 (economia). A 1ª rodada das 8h lê toda a madrugada e leva o resumo da noite ao Gestão FEA. Ronda de retornos: 8h53 e 17h53.
 
 - Nunca prometer "em instantes" se depende de validação: dar o prazo real; rascunho com alguém esperando = lembrete a cada 5 min; erro apontado = desculpa + causa + regra (Keila, 24/11).
 
