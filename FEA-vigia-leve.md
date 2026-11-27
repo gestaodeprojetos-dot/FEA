@@ -77,3 +77,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Thumbs do YouTube: com a Gabi; marcar ela (Keila 27/11).
 - Abrir o arquivo/formulário no ar antes de afirmar o que ele contém; texto da task não é o arquivo (erro 767, 27/11).
 - Todo retorno à gestão diz: o que fiz, o próximo passo e para quem foi ("agora foi para fulano, mensagem enviada") (Keila 27/11 10h35, regra).
+- PR sempre com nome da página: PR-PLX-LATAM-18, PR-MASTERBIO-20, PR-AULAZERO-15 (Keila 27/11 10h38).
