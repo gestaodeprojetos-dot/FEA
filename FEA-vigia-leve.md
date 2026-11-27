@@ -79,3 +79,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Todo retorno à gestão diz: o que fiz, o próximo passo e para quem foi ("agora foi para fulano, mensagem enviada") (Keila 27/11 10h35, regra).
 - PR sempre com nome da página: PR-PLX-LATAM-18, PR-MASTERBIO-20, PR-AULAZERO-15 (Keila 27/11 10h38).
 - Tarefas de WordPress vão para o Claude Design, não para a sessão principal (Keila 27/11).
+- Versão da Keila (para o Luca) só quando ela pedir (Keila 27/11 10h47).
