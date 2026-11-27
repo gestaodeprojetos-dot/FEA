@@ -8,10 +8,11 @@ Leia antes, uma vez: `CLAUDE.md` (regras de escrita e de cada pessoa), `FEA-regr
 
 | Quando (UTC) | Janela |
 |---|---|
-| `*/2 10-22 * * 1-5` | seg a sex, 7h a 19h59 BRT |
-| `*/5 10-22 * * 0,6` | sáb e dom, 7h a 19h59 |
+| `*/2 11-22 * * 1-5` | seg a sex, 8h a 19h59 BRT |
+| `*/5 11-22 * * 0,6` | sáb e dom, 8h a 19h59 |
 | `*/5 0-2,23 * * *` | 20h a 23h59, todo dia (a partir das 22h só urgente) |
-| `*/15 3-9 * * *` | madrugada (só urgente; o resto vai no resumo das 8h) |
+
+**Madrugada desligada (Keila, 27/11, economia):** nada roda de 00h às 8h BRT (03h a 11h UTC). A primeira rodada das 8h lê tudo desde o `.vigia-ultimo` e leva ao Gestão FEA o resumo da noite.
 
 Prompt de cada job: "VIGIA LEVE FEA: ler o horário em /home/user/FEA/.vigia-ultimo, gravar o horário UTC atual e rodar novidades com desde = horário lido menos 30 s (somente_grupos=false). Aplicar FEA-vigia-leve.md. Sem novidade: silêncio, uma linha."
 
