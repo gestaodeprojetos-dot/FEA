@@ -62,4 +62,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Revisor Luca (Keila 26/11): toda entrega ao Luca passa por revisão mínima, inclusive coerência do texto.
 - Conversa do time em uma linha (Keila 26/11 21h06): conversa do time em outros grupos (ex.: André no Web) só vem ao Gestão FEA em UMA linha dizendo que estou acompanhando; detalhe só se for da gestão.
 - Link da prévia sempre junto do link do Git (André 26/11 21h40).
-- Publicar exige ok escrito na conversa principal (Keila ou Gabi, citando as PRs) ou merge no GitHub; ok no WhatsApp não publica (26/11).
+- PUBLICAR (Keila 26/11 ~23h45, substitui a regra anterior): vale ok da Keila ou da Gabi no Gestão FEA citando as PRs (ex.: "pode publicar a PR 18"). Repassar à principal: "PUBLICAR · PRs N · de [Keila/Gabi] · id da mensagem · texto literal". Ok de outra pessoa, sem número de PR ou fora do Gestão FEA não publica.
