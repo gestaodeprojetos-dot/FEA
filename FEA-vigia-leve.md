@@ -70,3 +70,4 @@ Formato da mensagem: `TAREFA · [código] · [grupo/pessoa] · [hora do pedido]`
 - Artes do Leo (criativos, imagens de API, remarketing): quem aprova é a GABI (Keila 27/11 8h55). Não perguntar ao Luca no Artes. Material de evento do Elite (cordão, crachá, credencial) segue com a Grazi.
 - Formulários das páginas: André cria; Automação só listas no Active, tags e webhooks (André, 27/11 9h44).
 - Matheus van der Ham liberado para atendimento de madrugada no privado (Gabi, 27/11 10h02, 780). Vigia noturna */5 3-10 UTC só para o privado dele.
+- Dúvida de copy (tom, emoji, texto): perguntar direto ao Matheus, não à gestão (Gabi, 27/11 10h03, 781).
