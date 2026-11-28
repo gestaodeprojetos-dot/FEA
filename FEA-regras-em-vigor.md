@@ -226,3 +226,6 @@ Lido no início de toda ronda. Histórico completo e motivos: CLAUDE.md. Regra n
 ## Aprendizado com a Copy · 27/11
 - Elite Experience (APIs 02 a 04 e disparo 7b): o Matheus ajustou e liberou. O pedido dos "três números do consultório" (faturamento médio, ticket médio, avaliações do último mês) ESTÁ no briefing, seção 09 (Presença). Erro meu: questionei sem conferir o briefing. Regra: antes de perguntar à Copy se algo está no briefing, ler o briefing inteiro.
 - Matheus (27/11): "sempre revise tudo antes de afirmar algo". Conferir doc, briefing e mensagens antes de levar dúvida à Copy.
+
+## Vigia durável (28/11)
+A sessão principal reinicia mais ou menos de hora em hora e perde os agendamentos internos (CronCreate). A vigia passou para 5 agendamentos duráveis da conta (trig_017UDU4vUo9nJqspmrkrK7Pk :07, trig_01Mopha2om9idkkgWd2azGQS :17, trig_01FKyqxs59a8oH2NQwnUWu3e :27, trig_01QMzMLWg5G5RUp6qV4MhV5i :47, trig_016pf2YdvvC2T5dSJRA1GCGt :57, todos 8h a 23h BRT) + o Plano B (:37), ou seja, leitura de 10 em 10 minutos que sobrevive à reinicialização. Ao trocar de sessão principal, apontar esses agendamentos para a nova sessão (update_trigger) ou desligá-los.
